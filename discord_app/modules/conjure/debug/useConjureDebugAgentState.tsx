@@ -1,10 +1,10 @@
-// === Module 13034: useConjureDebugAgentState ===
+// === Module 13170: useConjureDebugAgentState ===
 
-// Module 13034 (useConjureDebugAgentState)
-import conjureDebugConnection from "conjureDebugConnection" /* 10893 */;
+// Module 13170 (useConjureDebugAgentState)
+import conjureDebugConnection from "conjureDebugConnection" /* 11023 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10857 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10987 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/useConjureDebug
 
 export default function useConjureDebugAgentState(arg0, agent) {
   _require = arg0;
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureDebugStore.getLastTurnUsage(closure_0), items1);
   const obj = require("initialize");

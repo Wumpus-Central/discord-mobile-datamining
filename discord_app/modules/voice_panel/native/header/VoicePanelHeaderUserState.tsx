@@ -1,17 +1,19 @@
-// === Module 19219: VoicePanelHeaderUserState ===
+// === Module 19377: VoicePanelHeaderUserState ===
 
-// Module 19219 (VoicePanelHeaderUserState)
+// Module 19377 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5254 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import native from "native" /* 8992 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9233 */;
-import useStableParticipant from "useStableParticipant" /* 19218 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19220 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import native from "native" /* 9120 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9361 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import useStableParticipant from "useStableParticipant" /* 19376 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19378 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import module_1652 from "module_1652" /* 1652 */;
 
+const require = globalThis.__r;
+const useStableParticipantDefault = useStableParticipant;
 const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 
 require = fn;
@@ -27,7 +29,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     id = participant.user.id;
   }
   obj = useStableParticipant;
-  const items = [];
+  items = [];
   const iter = tmp4(type, id, guildId)[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -65,9 +67,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8992).BackgroundBlurView);
-const OPACITY_TIMING = { duration: 100 };
-const createStyles = fn(5014);
+let closure_6 = module_1652.createAnimatedComponent(fn(9120).BackgroundBlurView);
+let closure_7 = { duration: 100 };
+const createStyles = fn(5141);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -78,47 +80,55 @@ const size1 = { width: 12, height: 12, tintColor: nativeDefault.colors.WHITE };
 obj.floatingIcon = size1;
 obj.leftMargin = { marginLeft: 4 };
 let closure_8 = createStyles.createStyles(obj);
-const __initData = { code: "function VoicePanelHeaderUserStateTsx1(){const{withTiming,isHeaderHidden,OPACITY_TIMING}=this.__closure;return{opacity:withTiming(isHeaderHidden.get()?1:0,OPACITY_TIMING)};}" };
+let closure_10 = { code: "(function VoicePanelHeaderUserStateTsx1(){let[withTiming,isHeaderHidden,OPACITY_TIMING]=this.__closure;return{opacity:withTiming(isHeaderHidden.get()?1:0,OPACITY_TIMING)};})" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx");
 
 export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
-  isHeaderHidden = isHeaderHidden.isHeaderHidden;
-  let channelId;
-  const context = noop.useContext(channelId(11222));
-  channelId = context.channelId;
+  const context = noop.useContext(VoicePanelStateContextDefault);
+  const channelId = context.channelId;
+  _require = channelId;
   const guildId = context.guildId;
   const tmp2 = closure_8();
-  const items = [ChannelRTCStore];
-  const stateFromStores = isHeaderHidden(504).useStateFromStores(items, () => {
-    const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channelId);
+  items = [ChannelRTCStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const selectedParticipant = ChannelRTCStore.getSelectedParticipant(c0);
     let id;
     if (selectedParticipant != null) {
       id = selectedParticipant.id;
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(19218)(stateFromStores, channelId, guildId), guildId);
-  isHeaderHidden(5095);
-  const fn = function h() {
-    let num = 0;
-    if (isHeaderHidden.get()) {
-      num = 1;
+  const tmp4 = useVoicePanelHeaderUserStateIcons(useStableParticipantDefault(stateFromStores, channelId, guildId), guildId);
+  require("module_1652");
+  const items1 = [closure_10, require("timing/timing").withTiming, isHeaderHidden.isHeaderHidden, closure_7];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp6, tmp7, tmp8, tmp9] = items1;
+  class VoicePanelHeaderUserStateTsx1 {
+    constructor() {
+      tmp = closure_0;
+      num = 0;
+      if (closure_1.get()) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_2) };
+      return obj;
     }
-    return { opacity: timing.withTiming(num, closure_7) };
-  };
-  let obj = isHeaderHidden(504);
-  fn.__closure = { withTiming: isHeaderHidden(5254).withTiming, isHeaderHidden, OPACITY_TIMING };
-  fn.__workletHash = 7032221979181;
-  fn.__initData = __initData;
-  let tmp7 = null;
-  if (null != tmp4) {
-    const obj3 = { blurTheme: "dark", style: null, pointerEvents: "none", children: null };
-    const items1 = [tmp2.container, tmp6];
-    obj3.style = items1;
-    obj3.children = tmp4;
-    tmp7 = <closure_6 blurTheme="dark" style={null} pointerEvents="none">{null}</closure_6>;
   }
-  return tmp7;
+  const items2 = [tmp7, tmp8, tmp9];
+  VoicePanelHeaderUserStateTsx1.__closure = items2;
+  VoicePanelHeaderUserStateTsx1.__workletHash = 15393024042132;
+  VoicePanelHeaderUserStateTsx1.__initData = tmp6;
+  let tmp11 = null;
+  if (null != tmp4) {
+    const obj2 = { blurTheme: "dark", style: null, pointerEvents: "none", children: null };
+    const items3 = [tmp2.container, tmp10];
+    obj2.style = items3;
+    obj2.children = tmp4;
+    tmp11 = <closure_6 blurTheme="dark" style={null} pointerEvents="none">{null}</closure_6>;
+  }
+  return tmp11;
 });
 export { useVoicePanelHeaderUserStateIcons };

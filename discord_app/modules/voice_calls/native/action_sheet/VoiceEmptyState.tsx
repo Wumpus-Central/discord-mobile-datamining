@@ -1,21 +1,21 @@
-// === Module 15193: VoiceEmptyState ===
+// === Module 15334: VoiceEmptyState ===
 
-// Module 15193 (VoiceEmptyState)
+// Module 15334 (VoiceEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import _modDef15194 from "module_15194" /* 15194 */;
-import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 15195 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _modDef15335 from "module_15335" /* 15335 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 15336 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6723 */;
+import TextStyles_mod from "TextStyles" /* 6843 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { justifyContent: "center" }, button: { paddingHorizontal: 12, paddingTop: 16 }, emptyTitle: null, emptyBody: null };
 const obj3 = {};
 let TextStyles = TextStyles_mod;
@@ -36,15 +36,15 @@ const result = size.fileFinishedImporting("modules/voice_calls/native/action_she
 export default function VoiceEmptyState(channel) {
   const tmp = closure_6();
   const obj = { style: null, children: null };
-  const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.style = items;
   const obj4 = { title: null, body: null, lightSource: null, darkSource: null, titleStyle: null, bodyStyle: null, imageStyle: null };
   const intl = util.intl;
   obj4.title = intl.string(util.t["/HABZo"]);
   const intl2 = util.intl;
   obj4.body = intl2.string(util.t["5Jy2FY"]);
-  obj4.lightSource = _modDef15194;
-  obj4.darkSource = _modDef15194;
+  obj4.lightSource = _modDef15335;
+  obj4.darkSource = _modDef15335;
   ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
   obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [React4(native.ThemedEmptyState, obj4), React4(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button })];

@@ -1,9 +1,9 @@
-// === Module 18664: useOtherGuildJoinRequestsForUser ===
+// === Module 18822: useOtherGuildJoinRequestsForUser ===
 
-// Module 18664 (useOtherGuildJoinRequestsForUser)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6916 */;
+// Module 18822 (useOtherGuildJoinRequestsForUser)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7036 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export function useOtherGuildJoinRequestsForUser(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const selectedJoinRequestId = guildId.selectedJoinRequestId;
-  let items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const items1 = [guildId, userId];
   const stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(items, () => GuildJoinRequestStore.getRequestsForUser(guildId, userId), items1);
   const items2 = [guildId, userId, stateFromStores];
@@ -24,7 +24,7 @@ export function useOtherGuildJoinRequestsForUser(guildId) {
   }, items2);
   const items3 = [stateFromStores, selectedJoinRequestId];
   return stateFromStores.useMemo(() => {
-    let items = stateFromStores;
+    items = stateFromStores;
     if (stateFromStores == null) {
       items = [];
     }

@@ -1,10 +1,10 @@
-// === Module 12157: useConjureLinkedApps ===
+// === Module 12293: useConjureLinkedApps ===
 
-// Module 12157 (useConjureLinkedApps)
+// Module 12293 (useConjureLinkedApps)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ export default function useConjureLinkedApps(arg0, arg1) {
   [callers, asyncGeneratorStep] = stateFromStoresObject.useState(closure_7);
   const tmp3 = _slicedToArray(stateFromStoresObject.useState(false), 2);
   _slicedToArray = tmp3[1];
-  let items = [arg0, arg1];
+  items = [arg0, arg1];
   const effect = stateFromStoresObject.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
@@ -60,13 +60,13 @@ export default function useConjureLinkedApps(arg0, arg1) {
   const items2 = [callers];
   stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => Object.fromEntries(first.map((project_id) => {
     project_id = project_id.project_id;
-    const items = [project_id, project.getProject(project_id)];
+    items = [project_id, project.getProject(project_id)];
     return items;
   })), items2);
   const items3 = [callers, stateFromStoresObject];
   const memo = stateFromStoresObject.useMemo(() => Object.fromEntries(first.map((project_id) => {
     project_id = project_id.project_id;
-    const items = [project_id, ];
+    items = [project_id, ];
     let name;
     if (stateFromStoresObject[project_id] != null) {
       name = tmp.name;

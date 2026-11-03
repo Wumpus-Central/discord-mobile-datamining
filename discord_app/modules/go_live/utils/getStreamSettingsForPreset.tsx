@@ -1,14 +1,14 @@
-// === Module 11922: getStreamSettingsForPreset ===
+// === Module 12059: getStreamSettingsForPreset ===
 
-// Module 11922 (getStreamSettingsForPreset)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5909 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 11923 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5864 */;
+// Module 12059 (getStreamSettingsForPreset)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6029 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 12060 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5984 */;
 import size from "module_2" /* 2 */;
 
 function getApplicationStreamPresetValues() {
-  const items = [{ resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 }, { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_5 }];
+  items = [{ resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 }, { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_5 }];
   const items1 = [{ resolution: hasOwnProperty.RESOLUTION_1440, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_1080, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_60 }, { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 }];
   const items2 = [{ resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 }];
   const items3 = [{ resolution: hasOwnProperty.RESOLUTION_480, fps: React3.FPS_30 }];
@@ -38,7 +38,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
                   if (item10011.resolution !== hasOwnProperty.RESOLUTION_SOURCE) {
                     if (item10011.resolution < tmp12.maxResolution) {
                       if (item10011.fps <= tmp12.maxFPS) {
-                        let items = [, ];
+                        items = [, ];
                         ({ maxResolution: arr2[0], maxFPS: arr2[1] } = tmp12);
                         obj2.return();
                         return items;

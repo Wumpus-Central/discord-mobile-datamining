@@ -1,22 +1,22 @@
-// === Module 10728: SearchableUserList ===
+// === Module 10858: SearchableUserList ===
 
-// Module 10728 (SearchableUserList)
+// Module 10858 (SearchableUserList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import shared from "shared" /* 5021 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10730 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import shared from "shared" /* 5148 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10860 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "dispatch", minHeight: false }, searchBarRowContainer: null, noResults: null };
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
+let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "disabled", minHeight: false }, searchBarRowContainer: null, noResults: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
 let obj4 = { paddingTop: nativeDefault.space.PX_8 };
@@ -99,9 +99,9 @@ export default function SearchableUserList(selectedUserIds) {
   const tmp5 = handleMessage(ACTIONS.useState(""), 2);
   const tmp8 = disabledUserIds(onSelectUser[8])({ query: tmp5[0], withGuildMembers: flag3, withAffinitySuggestions: flag4, withAlphabeticalSections: flag5, withFriends: flag6, withGameFriends: flag7, withFriendSuggestions: flag12, withFriendRequests: flag8, withFriendRequestsIncoming: flag9, withFriendRequestsOutgoing: flag10, withFriendRequestsSpam: flag11 });
   closure_5 = tmp8;
-  let items = [selectedUserIds];
+  items = [selectedUserIds];
   const memo = ACTIONS.useMemo(() => {
-    let items = selectedUserIds;
+    items = selectedUserIds;
     if (selectedUserIds == null) {
       items = [];
     }

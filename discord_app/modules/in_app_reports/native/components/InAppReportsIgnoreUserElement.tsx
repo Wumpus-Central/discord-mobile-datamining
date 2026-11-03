@@ -1,12 +1,12 @@
-// === Module 15166: InAppReportsIgnoreUserElement ===
+// === Module 15307: InAppReportsIgnoreUserElement ===
 
-// Module 15166 (InAppReportsIgnoreUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
+// Module 15307 (InAppReportsIgnoreUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -18,7 +18,7 @@ export default function IgnoreUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [user];
   const stateFromStoresObject = user(reportId[5]).useStateFromStoresObject(items, () => ({ isIgnored: RelationshipStore.isIgnored(user.id), isBlocked: RelationshipStore.isBlocked(user.id) }), items1);
   ({ isIgnored, isBlocked } = stateFromStoresObject);

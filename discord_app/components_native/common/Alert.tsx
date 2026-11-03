@@ -1,17 +1,17 @@
-// === Module 6030: common/Alert ===
+// === Module 6150: common/Alert ===
 
-// Module 6030 (common/Alert)
+// Module 6150 (common/Alert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import Timers from "Timers" /* 4858 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import CustomMarkupAll from "CustomMarkup" /* 6031 */;
-import Pressables from "Pressables" /* 6980 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import Timers from "Timers" /* 4985 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import CustomMarkupAll from "CustomMarkup" /* 6151 */;
+import Pressables from "Pressables" /* 7106 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8897 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { alert: { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.titleText = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -122,14 +122,14 @@ prototype["renderHeader"] = function renderHeader() {
   if (null != title) {
     tmp3Result = null;
     if ("" !== title) {
-      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: tmp.titleText, children: null };
+      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/semibold", color: "text-default", style: tmp.titleText, children: null };
       let renderContentResult = title;
       if (typeof title === "string") {
         renderContentResult = self.renderContent(title);
       }
       const obj = { children: null };
       obj2.children = renderContentResult;
-      const items = [React5(Text_Text.Text, obj2), ];
+      items = [React5(Text_Text.Text, obj2), ];
       const obj3 = { style: tmp.divider };
       items[1] = React5(hasOwnProperty, obj3);
       obj.children = items;
@@ -157,7 +157,7 @@ prototype["renderBody"] = function renderBody() {
     tmp5Result = React5(timestampProducer, obj);
   }
   const obj4 = { children: null };
-  const items = [tmp5Result, props.children];
+  items = [tmp5Result, props.children];
   obj4.children = items;
   return React6(React7, obj4);
 };
@@ -240,7 +240,7 @@ prototype["renderButtons"] = function renderButtons() {
       obj6.iconPosition = str2;
       renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
     }
-    const items = [renderConfirmButtonResult, tmp6, tmp11];
+    items = [renderConfirmButtonResult, tmp6, tmp11];
     obj5.children = items;
     tmp15Result = React6(hasOwnProperty, obj5);
   }
@@ -261,7 +261,7 @@ prototype["render"] = function render() {
   const width = props.width;
   const obj = { children: null };
   ({ style, isLandscape, onClose } = props);
-  const items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
+  items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
   const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
   const items1 = [tmp.alert, style, { width }];
   obj3.style = items1;
@@ -280,7 +280,7 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(5080).ThemeContext;
+Alert.contextType = fn(5207).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
 Alert.defaultProps = { confirmColor: fn(1187).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = noop.memo(function AlertConnected(arg0) {

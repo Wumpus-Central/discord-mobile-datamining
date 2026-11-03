@@ -1,6 +1,6 @@
-// === Module 5627: DevSettingsStore ===
+// === Module 5750: DevSettingsStore ===
 
-// Module 5627 (DevSettingsStore)
+// Module 5750 (DevSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -54,7 +54,7 @@ prototype["allByCategory"] = function allByCategory(PREMIUM) {
   });
   return found.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, , ];
+    items = [tmp, , ];
     let flag = toggleStates[tmp];
     if (flag == null) {
       flag = false;

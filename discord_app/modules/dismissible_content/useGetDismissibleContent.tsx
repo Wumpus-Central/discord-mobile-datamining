@@ -1,18 +1,18 @@
-// === Module 7570: useGetDismissibleContent ===
+// === Module 7694: useGetDismissibleContent ===
 
-// Module 7570 (useGetDismissibleContent)
+// Module 7694 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4846 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4848 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4973 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4850 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4855 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4977 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4982 */;
 
 const require = globalThis.__r;
 
@@ -35,11 +35,11 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
   closure_6 = tmp6;
   let result = null != found1;
   if (result) {
-    result = tmp2(4848).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
-    const tmp2Result = tmp2(4848);
+    result = tmp2(4975).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
+    const tmp2Result = tmp2(4975);
   }
   let obj = require("OverlayTrackingUtils");
-  const items = [ref];
+  items = [ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
@@ -152,7 +152,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(4855).removeCandidateContent;
+const removeCandidateContent = fn(4982).removeCandidateContent;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let closure_13 = {};
@@ -161,7 +161,7 @@ let result = size.fileFinishedImporting("modules/dismissible_content/useGetDismi
 
 export function useGetDismissibleContent(items3, groupName) {
   _require = groupName;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;
@@ -206,7 +206,7 @@ export function useGetDismissibleContent(items3, groupName) {
 export function useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName) {
   _require = latestVersion;
   closure_129_0 = COLLECTIBLES_SHOP_ENTRY_MARKETING;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const lastDismissedVersion = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
@@ -274,7 +274,7 @@ export function useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKET
 export function useGetTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName) {
   _require = groupName;
   closure_129_0 = prop;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
@@ -307,7 +307,7 @@ export function useGetTimeRecurringDismissibleContent(prop, timeRecurringConfig,
     }
     dependencyMap = tmp10;
     tmp5 = tmp10;
-    tmpResult = tmp(5066);
+    tmpResult = tmp(5193);
   }
   const items2 = [useGetVisibleContent(tmp5, stateFromStores1, groupName), ];
   const items3 = [tmp5, groupName, stateFromStores1];
@@ -323,7 +323,7 @@ export function useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, gro
   _require = newSnowflakeId;
   importDefault = groupName;
   closure_129_0 = prop;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const lastDismissedObjectId = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
@@ -393,7 +393,7 @@ export function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnow
   _require = newSnowflakeId;
   importDefault = stateFromStores;
   dependencyMap = GUILD_HEADER_TOOLTIPS;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserSettingsProtoStore.getGuildDismissedContentState(closure_1));
   let tmp4 = null;
   if (null != prop) {
@@ -459,7 +459,7 @@ export function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnow
 }
 export function useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName) {
   _require = newSnowflakeId;
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   closure_3 = null;
   let result = null == contentType;
@@ -485,7 +485,7 @@ export function useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType,
 export function useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES) {
   _require = id;
   const groupName = CHANNEL_NOTICES;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserSettingsProtoStore.getGuildDismissedContentState(closure_0));
   let obj = require("initialize");
   const newUserDismissibleContent = require("NewUserDismissibleContentRegistry").useNewUserDismissibleContent(items4);
@@ -526,7 +526,7 @@ export function useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNE
 export function useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS) {
   _require = id;
   const groupName = GUILD_HEADER_TOOLTIPS;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserSettingsProtoStore.getGuildDismissedContentState(closure_0));
   let tmp4 = null;
   if (null != prop) {
@@ -570,7 +570,7 @@ export function useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cool
   return items1;
 }
 export function useDangerouslyPeekDismissibleContents(arr) {
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   _require = require("initialize").useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;

@@ -1,7 +1,7 @@
-// === Module 16470: useTryItOutUpsellScrollTracking ===
+// === Module 16613: useTryItOutUpsellScrollTracking ===
 
-// Module 16470 (useTryItOutUpsellScrollTracking)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 16613 (useTryItOutUpsellScrollTracking)
+import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,9 +11,9 @@ let result = size.fileFinishedImporting("modules/user_profile/native/useTryItOut
 export default function useTryItOutUpsellScrollTracking(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const sharedValue = ReanimatedRexport.useSharedValue(true);
+  const sharedValue = _mod1652.useSharedValue(true);
   noop.useRef({ contentHeight: 0, viewportHeight: 0, tryItOutSectionHeight: 0 });
-  const items = [arg0, sharedValue, arg1];
+  items = [arg0, sharedValue, arg1];
   const callback = noop.useCallback((arg0) => {
     const merged = Object.assign(ref.current, arg0);
     ({ contentHeight, viewportHeight } = ref.current);

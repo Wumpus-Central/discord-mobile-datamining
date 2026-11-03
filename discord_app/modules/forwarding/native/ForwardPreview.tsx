@@ -1,24 +1,24 @@
-// === Module 13407: ForwardPreview ===
+// === Module 13543: ForwardPreview ===
 
-// Module 13407 (ForwardPreview)
+// Module 13543 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1490 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6087 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9382 */;
-import ClipView from "ClipView" /* 9509 */;
-import ChatItemDefault from "ChatItem" /* 9885 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10535 */;
-import ImagesIcon2 from "ImagesIcon" /* 12803 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13408 */;
-import MosaicMediaType from "MosaicMediaType" /* 13409 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13411 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6207 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9510 */;
+import ClipView from "ClipView" /* 9637 */;
+import ChatItemDefault from "ChatItem" /* 10016 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10665 */;
+import ImagesIcon2 from "ImagesIcon" /* 12939 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13544 */;
+import MosaicMediaType from "MosaicMediaType" /* 13545 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13547 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -33,9 +33,9 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5014).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5141).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
-  const items = [tmp4.seeMoreLabelColor, attachmentCount];
+  items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
     message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
     let num = 2;
@@ -51,7 +51,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5014);
+  let obj = attachmentCount(5141);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -61,7 +61,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -108,7 +108,7 @@ export function ForwardPreview(message) {
       if (num2 > 0) {
         if (length === num2) {
           const obj4 = { style: null, children: null };
-          const items = [, ];
+          items = [, ];
           ({ attachmentPreview: arr[0], attachmentPreviewVideo: arr[1] } = tmp);
           obj4.style = items;
           const size = { style: tmp.videoThumbnail, source: null, width: null, height: null };

@@ -1,10 +1,10 @@
-// === Module 18189: RedesignVoiceUserSummary ===
+// === Module 18333: RedesignVoiceUserSummary ===
 
-// Module 18189 (RedesignVoiceUserSummary)
-import ChannelUtils from "ChannelUtils" /* 6046 */;
+// Module 18333 (RedesignVoiceUserSummary)
+import ChannelUtils from "ChannelUtils" /* 6166 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -15,7 +15,7 @@ export default function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
   const guildId = channels.guildId;
   let stateFromStores;
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [guildId];
   stateFromStores = channels(stateFromStores[4]).useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStates(guildId), items1);
   const obj = channels(stateFromStores[4]);

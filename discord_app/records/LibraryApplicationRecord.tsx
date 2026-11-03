@@ -1,11 +1,11 @@
-// === Module 2037: LibraryApplicationRecord ===
+// === Module 2166: LibraryApplicationRecord ===
 
-// Module 2037 (LibraryApplicationRecord)
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import Record from "Record" /* 1398 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import EntitlementRecord from "EntitlementRecord" /* 2039 */;
+// Module 2166 (LibraryApplicationRecord)
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import Record from "Record" /* 1400 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import EntitlementRecord from "EntitlementRecord" /* 2168 */;
 
 const Constants = fn(1072);
 ({ LibraryApplicationFlags: hasOwnProperty, Distributors: metroRequire, SKUTypes: closure_7 } = Constants);
@@ -32,7 +32,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   const obj2 = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = _modDef2042;
+    entitlements = _modDef2171;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj2.preorderReleaseAt = entitlementsResult;
@@ -58,7 +58,7 @@ LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
   const ENTITLED = hasOwnProperty.ENTITLED;
   const created_at = id.branch.created_at;
   if (typeof LibraryApplicationRecord === "function") {
-    const items = [];
+    items = [];
     const tmp6 = new LibraryApplicationRecord(tmp, tmp2, new.target, id, created_at, ENTITLED, id2, items, branch);
     tmp6.id = id;
     tmp6.createdAt = created_at;

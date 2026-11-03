@@ -1,11 +1,11 @@
-// === Module 17529: ChannelListLayoutSetting ===
+// === Module 17672: ChannelListLayoutSetting ===
 
-// Module 17529 (ChannelListLayoutSetting)
+// Module 17672 (ChannelListLayoutSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5692 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5812 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 function useChannelListLayoutPredicate() {
@@ -27,7 +27,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     obj.label = intl.string(util.t.T7G4Y0);
     obj.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
-    const items = [obj, ];
+    items = [obj, ];
     const obj2 = { label: null, value: null };
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t["7iegX4"]);

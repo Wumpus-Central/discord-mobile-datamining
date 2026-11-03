@@ -1,9 +1,9 @@
-// === Module 14561: useConjureDevicePermissionSettings ===
+// === Module 14692: useConjureDevicePermissionSettings ===
 
-// Module 14561 (useConjureDevicePermissionSettings)
+// Module 14692 (useConjureDevicePermissionSettings)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10952 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 11061 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export default function useConjureDevicePermissionSettings(applicationId) {
   _require = applicationId;
   let tmp = require("useConjureDevicePermissions")(applicationId);
   importDefault = tmp;
-  let items = [ConjureDevicePermissionStore];
+  items = [ConjureDevicePermissionStore];
   const items1 = [applicationId, tmp];
   stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {};
@@ -29,7 +29,7 @@ export default function useConjureDevicePermissionSettings(applicationId) {
     settings: null,
     setAllowed(arg0, allowed) {
       const obj2 = { type: "CONJURE_DEVICE_PERMISSIONS_DECIDE", applicationId, permissions: null, allowed };
-      const items = [arg0];
+      items = [arg0];
       obj2.permissions = items;
       DispatcherDefault.dispatch(obj2);
     }

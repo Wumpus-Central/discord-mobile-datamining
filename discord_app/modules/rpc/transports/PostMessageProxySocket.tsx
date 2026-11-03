@@ -1,10 +1,10 @@
-// === Module 11818: PostMessageProxySocket ===
+// === Module 11955: PostMessageProxySocket ===
 
-// Module 11818 (PostMessageProxySocket)
+// Module 11955 (PostMessageProxySocket)
 import Constants from "Constants" /* 1072 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11807 */;
-import BaseSocket from "BaseSocket" /* 11819 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11944 */;
+import BaseSocket from "BaseSocket" /* 11956 */;
 import size from "module_2" /* 2 */;
 
 const RPCCloseCodes = Constants.RPCCloseCodes;
@@ -22,7 +22,7 @@ class WindowProxySocket extends tmp2 {
       obj1.closeCode = RPCCloseCodes.INVALID_ENCODING;
       tmp17 = globalThis;
       _HermesInternal = HermesInternal;
-      str2 = "Invalid Encoding: ";
+      str3 = "Invalid Encoding: ";
       tmp15 = closure_0(closure_1[2]);
       tmp18 = new.target;
       tmp19 = new.target;
@@ -31,7 +31,7 @@ class WindowProxySocket extends tmp2 {
       tmp22 = tmp151;
       throw tmp151;
     } else {
-      str3 = "etf";
+      str = "etf";
       if ("etf" === encoding) {
         tmp5 = closure_0;
         tmp6 = closure_1;
@@ -39,7 +39,7 @@ class WindowProxySocket extends tmp2 {
         tmp7 = RPCCloseCodes;
         obj.closeCode = RPCCloseCodes.INVALID_ENCODING;
         tmp8 = new.target;
-        str = "Erlpack cannot be used on this client";
+        str2 = "Erlpack cannot be used on this client";
         tmp9 = new.target;
         tmp10 = obj;
         tmp11 = new closure_0(closure_1[2])(obj, "Erlpack cannot be used on this client");
@@ -66,7 +66,7 @@ prototype["send"] = function send(arg0) {
   if (onSendingToRPCClient != null) {
     onSendingToRPCClient(arg0, self.id);
   }
-  const items = [RPCOpcodesDefault.FRAME, arg0];
+  items = [RPCOpcodesDefault.FRAME, arg0];
   const result = self.postMessageToRPCClient(items, self.source.origin);
 };
 prototype["close"] = function close(code, message) {

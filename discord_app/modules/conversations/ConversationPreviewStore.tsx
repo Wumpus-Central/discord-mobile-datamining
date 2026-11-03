@@ -1,17 +1,17 @@
-// === Module 7770: ConversationPreviewStore ===
+// === Module 7894: ConversationPreviewStore ===
 
-// Module 7770 (ConversationPreviewStore)
+// Module 7894 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1451 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7768 */;
-import ConversationsUtils from "ConversationsUtils" /* 7769 */;
+import privDefault from "priv" /* 1453 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7892 */;
+import ConversationsUtils from "ConversationsUtils" /* 7893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function clearMessageIndex(conversationId) {
@@ -109,8 +109,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5655).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5655).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5775).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5775).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -219,7 +219,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
         value.add(str);
       } else {
         const _Set = Set;
-        const items = [str];
+        items = [str];
         const set = new Set(items);
         const result = map1.set(conversationId, set);
       }

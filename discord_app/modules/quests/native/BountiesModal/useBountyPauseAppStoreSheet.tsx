@@ -1,17 +1,17 @@
-// === Module 16938: useBountyPauseAppStoreSheet ===
+// === Module 17081: useBountyPauseAppStoreSheet ===
 
-// Module 16938 (useBountyPauseAppStoreSheet)
+// Module 17081 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9691 */;
-import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14679 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16933 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 16936 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9823 */;
+import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14810 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17076 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 17079 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const ComponentActions = fn(1072).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -39,7 +39,7 @@ export function useBountyPauseAppStoreSheet(bounty) {
   c5 = tmp5;
   isActive.useRef(false);
   isActive.useRef(null);
-  const items = [bounty.id, isActive];
+  items = [bounty.id, isActive];
   const effect = isActive.useEffect(() => {
     closure_6.current = false;
   }, items);

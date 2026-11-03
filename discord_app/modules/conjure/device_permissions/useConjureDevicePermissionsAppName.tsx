@@ -1,9 +1,9 @@
-// === Module 14557: useConjureDevicePermissionsAppName ===
+// === Module 14688: useConjureDevicePermissionsAppName ===
 
-// Module 14557 (useConjureDevicePermissionsAppName)
-import isConjureApplicationDefault from "isConjureApplication" /* 6854 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 14688 (useConjureDevicePermissionsAppName)
+import isConjureApplicationDefault from "isConjureApplication" /* 6974 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/conjure/device_permissions/useC
 
 export default function useConjureDevicePermissionsAppName(arg0) {
   _require = arg0;
-  const items = [ApplicationStore, ConjureProjectStore];
+  items = [ApplicationStore, ConjureProjectStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;

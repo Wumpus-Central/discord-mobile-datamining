@@ -1,8 +1,8 @@
-// === Module 7814: AppStartInfo ===
+// === Module 7938: AppStartInfo ===
 
-// Module 7814 (AppStartInfo)
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5205 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 7815 */;
+// Module 7938 (AppStartInfo)
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5328 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -33,7 +33,7 @@ export const AppStartInfo = {
         const error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
         throw error;
       }
-      const items = [closure_129_0(closure_129_1[3]).getAppStartType(), , ];
+      items = [closure_129_0(closure_129_1[3]).getAppStartType(), , ];
       closure_129_0(closure_129_1[3]);
       items[1] = closure_129_0(closure_129_1[3]).getLaunchScenario();
       closure_129_0(closure_129_1[3]);

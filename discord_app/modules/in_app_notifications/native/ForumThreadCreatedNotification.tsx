@@ -1,13 +1,13 @@
-// === Module 11085: ForumThreadCreatedNotification ===
+// === Module 11222: ForumThreadCreatedNotification ===
 
-// Module 11085 (ForumThreadCreatedNotification)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+// Module 11222 (ForumThreadCreatedNotification)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(11023).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(11156).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -18,7 +18,7 @@ export default function ForumThreadCreatedNotification(notification) {
   let userAuthor;
   const thread = notification.thread;
   ({ threadCreator, parentChannel } = notification);
-  const guild = notification.guild;
+  guild = notification.guild;
   let stringResult = thread(parentChannel[3])(thread);
   if (stringResult == null) {
     const intl = notification(tmp[4]).intl;
@@ -27,14 +27,14 @@ export default function ForumThreadCreatedNotification(notification) {
   const intl2 = notification(tmp[4]).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult });
   userAuthor = notification(parentChannel[5]).getUserAuthor(threadCreator, thread);
-  const items = [parentChannel, guild, userAuthor];
+  items = [parentChannel, guild, userAuthor];
   const items1 = [thread];
   const memo = guild.useMemo(() => ({ type: "message", channel: parentChannel, parentChannel: null, guild, author: userAuthor }), items);
   const items2 = [notification.parentChannel.id];
   const callback = guild.useCallback(() => {
     transitionToChannel.transitionToThread(thread);
   }, items1);
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11067, dependencyMap.paths), { channelId: notification.parentChannel.id }, "in-app-notification-settings-modal"), items2);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11204, dependencyMap.paths), { channelId: notification.parentChannel.id }, "in-app-notification-settings-modal"), items2);
   const obj2 = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   const obj = notification(parentChannel[5]);
   obj2.icon = jsx(notification(parentChannel[11]).Avatar, { size: notification(parentChannel[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });

@@ -1,9 +1,9 @@
-// === Module 9579: useGameProfileShopCollection ===
+// === Module 9711: useGameProfileShopCollection ===
 
-// Module 9579 (useGameProfileShopCollection)
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9455 */;
+// Module 9711 (useGameProfileShopCollection)
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9583 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9322 */;
+import GameProfileStore from "GameProfileStore" /* 9450 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfi
 
 export function useGameProfileShopCollectionState(arg0) {
   _require = arg0;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const isFetching = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {
@@ -52,7 +52,7 @@ export function useGameProfileShopCollectionState(arg0) {
 }
 export function useGameProfileShopCollection(arg0) {
   _require = arg0;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {
@@ -90,7 +90,7 @@ export function useGameProfileShopCollection(arg0) {
 }
 export function useGameProfileShopCollectionProducts(collectionId) {
   let skuIds = collectionId;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = skuIds(collectiblesShopProducts[2]).useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {

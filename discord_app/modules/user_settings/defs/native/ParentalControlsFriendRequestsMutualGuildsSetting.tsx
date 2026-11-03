@@ -1,27 +1,27 @@
-// === Module 17940: ParentalControlsFriendRequestsMutualGuildsSetting ===
+// === Module 18083: ParentalControlsFriendRequestsMutualGuildsSetting ===
 
-// Module 17940 (ParentalControlsFriendRequestsMutualGuildsSetting)
+// Module 18083 (ParentalControlsFriendRequestsMutualGuildsSetting)
 import util from "util" /* 1113 */;
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16722 */;
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16865 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(8432).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8556).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const selectedTeenId = controlledSetting(8371).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16722).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8495).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16865).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
-    const items = [controlledSetting];
+    items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualGuilds;
   },
   onValueChange: function onFriendRequestsMutualGuildsSettingValueChange(arg0) {

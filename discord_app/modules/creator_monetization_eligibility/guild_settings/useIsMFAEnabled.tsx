@@ -1,9 +1,9 @@
-// === Module 19883: useIsMFAEnabled ===
+// === Module 20033: useIsMFAEnabled ===
 
-// Module 19883 (useIsMFAEnabled)
+// Module 20033 (useIsMFAEnabled)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const MFALevels = fn(1072).MFALevels;
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
 export function useIsMFAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [GuildSettingsStore];
   let mfaEnabled;

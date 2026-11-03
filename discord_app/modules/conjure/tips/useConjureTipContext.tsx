@@ -1,10 +1,10 @@
-// === Module 12614: useConjureTipContext ===
+// === Module 12750: useConjureTipContext ===
 
-// Module 12614 (useConjureTipContext)
-import conjureTipImpressions from "conjureTipImpressions" /* 12613 */;
-import conjureTipDismissals from "conjureTipDismissals" /* 12619 */;
-import UserStore from "UserStore" /* 1383 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10869 */;
+// Module 12750 (useConjureTipContext)
+import conjureTipImpressions from "conjureTipImpressions" /* 12749 */;
+import conjureTipDismissals from "conjureTipDismissals" /* 12755 */;
+import UserStore from "UserStore" /* 1385 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10999 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export default function useConjureTipContext(projectId, arr, draftHasText, onAsk
   importDefault = arr;
   let tmp = importDefault;
   const tmp3 = require("useConjurePublishAction")(projectId);
-  const items = [id1];
+  items = [id1];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const currentUser = id1.getCurrentUser();
     let id;

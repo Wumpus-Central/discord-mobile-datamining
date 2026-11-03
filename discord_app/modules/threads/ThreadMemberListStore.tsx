@@ -1,19 +1,19 @@
-// === Module 7444: ThreadMemberListStore ===
+// === Module 7568: ThreadMemberListStore ===
 
-// Module 7444 (ThreadMemberListStore)
+// Module 7568 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7445 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7569 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function handleUserUpdate(user) {
@@ -234,7 +234,7 @@ prototype["findOldState"] = function findOldState(id) {
     if (!(arg0 in tmp3.usersById)) {
       continue;
     } else {
-      let items = [key10004, , ];
+      items = [key10004, , ];
       ({ displayName: arr[1], canViewChannel: arr[2] } = tmp3.usersById[arg0]);
       return items;
     }
@@ -285,7 +285,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   if (nick == null) {
     nick = UserUtilsDefault.getName(user);
   }
-  const items = [str, , ];
+  items = [str, , ];
   let formatted;
   if (nick != null) {
     formatted = nick.toLowerCase();
@@ -300,7 +300,7 @@ class ThreadMemberListStore extends Store {
 const prototype2 = ThreadMemberListStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(ChannelStore, GuildMemberStore, GuildSubscriptionsStore, PresenceStore, SelfPresenceStore, UserStore);
-  const items = [GuildSubscriptionsStore];
+  items = [GuildSubscriptionsStore];
   this.syncWith(items, () => {
     subscribedThreadIds = subscribedThreadIds.getSubscribedThreadIds();
     let flag = false;

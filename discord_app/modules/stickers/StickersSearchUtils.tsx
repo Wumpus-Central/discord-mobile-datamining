@@ -1,23 +1,23 @@
-// === Module 10273: StickersSearchUtils ===
+// === Module 10403: StickersSearchUtils ===
 
-// Module 10273 (StickersSearchUtils)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
-import StickerSendability from "StickerSendability" /* 7516 */;
+// Module 10403 (StickersSearchUtils)
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
+import StickerSendability from "StickerSendability" /* 7640 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");
 
 export function searchAllStickers(arg0) {
-  const items = [arg0];
+  items = [arg0];
   return AutocompleteUtilsDefault.queryStickers(items, true).map((sticker) => sticker.sticker);
 }
 export function searchSendableStickers(arg0, arg1) {
-  const items = [arg0];
+  items = [arg0];
   const items1 = [arg1, (arg0, arg1) => arg1 === StickerSendability.StickerSendability.SENDABLE];
   return AutocompleteUtilsDefault.queryStickers(items, true, items1).map((sticker) => sticker.sticker);
 }
 export function searchUnsendableStickers(arg0, arg1) {
-  const items = [arg0];
+  items = [arg0];
   const items1 = [arg1, (arg0, arg1) => arg1 !== StickerSendability.StickerSendability.SENDABLE];
   return AutocompleteUtilsDefault.queryStickers(items, true, items1).map((sticker) => sticker.sticker);
 }

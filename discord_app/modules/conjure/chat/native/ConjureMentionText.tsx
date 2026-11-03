@@ -1,17 +1,17 @@
-// === Module 12647: ConjureMentionText ===
+// === Module 12783: ConjureMentionText ===
 
-// Module 12647 (ConjureMentionText)
-import UserUtils from "UserUtils" /* 5068 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 12144 */;
-import conjureMentions from "conjureMentions" /* 12637 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12644 */;
+// Module 12783 (ConjureMentionText)
+import UserUtils from "UserUtils" /* 5195 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12280 */;
+import conjureMentions from "conjureMentions" /* 12773 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12780 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function ConjureUserMention(userId) {
   userId = userId.userId;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userId];
   let stateFromStores = userId(504).useStateFromStores(items, () => UserUtils.getName(UserStore.getUser(userId)), items1);
   const obj = userId(504);
@@ -31,7 +31,7 @@ export default function ConjureMentionText(text) {
   require = text;
   const variant = text.variant;
   const requestConjureMentionedUsers = conjureMentions.useRequestConjureMentionedUsers(text);
-  const items = [text];
+  items = [text];
   const memo = noop.useMemo(() => conjureMentions.splitConjureMentions(text), items);
   return closure_5(closure_6, {
     children: memo.map((kind, index) => {

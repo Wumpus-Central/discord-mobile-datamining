@@ -1,6 +1,6 @@
-// === Module 20004: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 20154: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 20004 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 20154 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const CurrencyCodes = fn(1083).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_10 };
@@ -33,7 +33,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = selectedTemplate(newPricesToPick[10]).intl;
   obj4.children = intl.format(selectedTemplate(newPricesToPick[10]).t["5WZ9Ct"], { tierName: selectedTemplate.listings[0].name });
-  let items = [closure_7(selectedTemplate(newPricesToPick[9]).Text, obj4), closure_7(selectedTemplate(newPricesToPick[11]).Spacer, { size: 12 }), , , , , ];
+  items = [closure_7(selectedTemplate(newPricesToPick[9]).Text, obj4), closure_7(selectedTemplate(newPricesToPick[11]).Spacer, { size: 12 }), , , , , ];
   const obj6 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = selectedTemplate(newPricesToPick[10]).intl;
   const obj7 = { price: selectedTemplate(newPricesToPick[12]).formatPrice(selectedTemplate.listings[0].price_tier, CurrencyCodes.USD) };
@@ -62,7 +62,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
     const obj2 = {};
     const merged1 = Object.assign(selectedTemplate.listings[0]);
     obj2.price_tier = newPricesToPick[first];
-    const items = [obj2];
+    items = [obj2];
     obj.listings = items;
     importDefault(obj, true);
   };

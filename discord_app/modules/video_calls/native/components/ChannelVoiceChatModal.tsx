@@ -1,13 +1,13 @@
-// === Module 10998: ChannelVoiceChatModal ===
+// === Module 11131: ChannelVoiceChatModal ===
 
-// Module 10998 (ChannelVoiceChatModal)
-import native from "native" /* 5080 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5194 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5224 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10143 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10999 */;
+// Module 11131 (ChannelVoiceChatModal)
+import native from "native" /* 5207 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5347 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10273 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 11132 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
   const tmp2 = useChannelNameDefault(channel);
-  const items = [channel.id];
+  items = [channel.id];
   const effect = noop.useEffect(() => {
     ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
     return () => {
@@ -33,7 +33,7 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8669).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8793).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

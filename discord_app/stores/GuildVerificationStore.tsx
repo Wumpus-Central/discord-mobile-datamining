@@ -1,15 +1,15 @@
-// === Module 6708: GuildVerificationStore ===
+// === Module 6828: GuildVerificationStore ===
 
-// Module 6708 (GuildVerificationStore)
+// Module 6828 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4932 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 5059 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
   set.add(guildId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const currentUser = UserStore.getCurrentUser();
   let tmp4 = null != guild;
   if (tmp4) {
@@ -143,7 +143,7 @@ function recomputeGuild(guildId) {
                 }
               }
             }
-            const items = [];
+            items = [];
             if (flag2) {
               items.push(num3);
             }
@@ -210,7 +210,7 @@ function handleCreateOrUpdateGuild(guild) {
   recomputeGuild(guild.guild.id);
 }
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ VerificationLevels: closure_8, VerificationCriteria: closure_9, GuildFeatures: c10 } = Constants);
+({ VerificationLevels: closure_8, VerificationCriteria: closure_9, GuildFeatures: closure_10 } = Constants);
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
 let closure_12 = { notClaimed: false, notEmailVerified: false, notPhoneVerified: false, newAccount: false, newMember: false, missingVerificationRole: false, canChat: true };
 let set = new Set();

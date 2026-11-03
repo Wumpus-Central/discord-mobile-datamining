@@ -1,16 +1,16 @@
-// === Module 7579: EntitlementStore ===
+// === Module 7703: EntitlementStore ===
 
-// Module 7579 (EntitlementStore)
+// Module 7703 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
-import EntitlementTypes from "EntitlementTypes" /* 2046 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7580 */;
-import EntitlementSourceTypes from "EntitlementSourceTypes" /* 7581 */;
-import EntitlementRecord from "EntitlementRecord" /* 2039 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import EntitlementTypes from "EntitlementTypes" /* 2175 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7704 */;
+import EntitlementSourceTypes from "EntitlementSourceTypes" /* 7705 */;
+import EntitlementRecord from "EntitlementRecord" /* 2168 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
+import SKUStore from "SKUStore" /* 7016 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -49,7 +49,7 @@ function handlePurchaseSuccess(arg0) {
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
 }
-let closure_6 = fn(1385).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_6 = fn(1387).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_8 = {};
 const dependencyMap2 = {};
@@ -65,7 +65,7 @@ class EntitlementStore extends Store {
 }
 const prototype = EntitlementStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [LibraryApplicationStore];
+  items = [LibraryApplicationStore];
   this.syncWith(items, () => true);
 };
 prototype["get"] = function get(arg0) {
@@ -221,7 +221,7 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [];
+  items = [];
   const date = new Date();
   const forApplication = this.getForApplication(closure_6);
   if (forApplication != null) {
@@ -260,7 +260,7 @@ prototype["isFractionalPremiumActive"] = function isFractionalPremiumActive(arg0
   return this.getFractionalPremium({ includeEnded: false, excludeReverseTrial }).length > 0;
 };
 prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFractionalPremiumUnits() {
-  const items = [];
+  items = [];
   const forApplication = this.getForApplication(closure_6);
   if (forApplication != null) {
     const item = forApplication.forEach((skuId) => {

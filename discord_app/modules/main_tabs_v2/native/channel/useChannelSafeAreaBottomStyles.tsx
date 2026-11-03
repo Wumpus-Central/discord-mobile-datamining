@@ -1,23 +1,23 @@
-// === Module 11250: useChannelSafeAreaBottomStyles ===
+// === Module 11387: useChannelSafeAreaBottomStyles ===
 
-// Module 11250 (useChannelSafeAreaBottomStyles)
+// Module 11387 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const InputModes = fn(1072).InputModes;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
@@ -44,7 +44,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   closure_129_2 = tmp3(tmp2[11])(arg0).needSubscriptionToAccess;
   closure_129_3 = tmp3(tmp2[12])();
   let obj2 = gradientBottom(stateFromStores[17]);
-  const items = [GatewayConnectionStore, ChannelStore, LurkingStore, MediaEngineStore, RTCConnectionStore];
+  items = [GatewayConnectionStore, ChannelStore, LurkingStore, MediaEngineStore, RTCConnectionStore];
   stateFromStores = tmp(stateFromStores[13]).useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(gradientBottom);
     if (channel != null) {

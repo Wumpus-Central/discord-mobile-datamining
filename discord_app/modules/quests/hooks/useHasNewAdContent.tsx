@@ -1,11 +1,11 @@
-// === Module 9671: useHasNewAdContent ===
+// === Module 9803: useHasNewAdContent ===
 
-// Module 9671 (useHasNewAdContent)
+// Module 9803 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1089 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 9672 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 9804 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default function useHasNewAdContent() {
-  const items = [QuestStore];
+  items = [QuestStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const found = Array.from(quests.values()).filter((item) => !stateFromStoresArray(closure_1_1[5]).isQuestExpired(item));
@@ -38,8 +38,8 @@ export default function useHasNewAdContent() {
   const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(4847).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4974).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp6 = _slicedToArray(stateFromStoresArray(7569).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  const tmp6 = _slicedToArray(stateFromStoresArray(7693).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
   return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 };

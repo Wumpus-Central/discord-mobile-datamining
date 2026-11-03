@@ -1,6 +1,6 @@
-// === Module 1376: utils/PlatformUtils ===
+// === Module 1357: utils/PlatformUtils ===
 
-// Module 1376 (utils/PlatformUtils)
+// Module 1357 (utils/PlatformUtils)
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };

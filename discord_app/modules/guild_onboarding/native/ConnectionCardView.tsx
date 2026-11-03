@@ -1,11 +1,11 @@
-// === Module 7339: ConnectionCardView ===
+// === Module 7459: ConnectionCardView ===
 
-// Module 7339 (ConnectionCardView)
+// Module 7459 (ConnectionCardView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftContent: null, icon: null, textContent: null, connectedStatus: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.leftContent = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: nativeDefault.space.PX_12 };
@@ -32,7 +32,7 @@ export default function ConnectionCardView(description) {
   const tmp = closure_6();
   const obj = { style: tmp.card, children: null };
   const obj2 = { style: tmp.leftContent, children: null };
-  const items = [React4(React2, { style: tmp.icon, children: icon }), ];
+  items = [React4(React2, { style: tmp.icon, children: icon }), ];
   const obj4 = { style: tmp.textContent, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
   let tmp4Result = null != description;

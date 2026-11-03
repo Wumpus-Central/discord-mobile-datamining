@@ -1,10 +1,10 @@
-// === Module 9614: DiscoverableGuildsStore ===
+// === Module 9746: DiscoverableGuildsStore ===
 
-// Module 9614 (DiscoverableGuildsStore)
+// Module 9746 (DiscoverableGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7521 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7645 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -19,7 +19,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore);
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  let guild;
+  guild = undefined;
   if (dependencyMap[arg0] != null) {
     guild = tmp.guild;
   }
@@ -30,7 +30,7 @@ prototype["getGuild"] = function getGuild(arg0) {
 };
 prototype["getGuilds"] = function getGuilds(arr) {
   const mapped = arr.map((item) => {
-    let guild;
+    guild = undefined;
     if (dependencyMap[item] != null) {
       guild = tmp.guild;
     }
@@ -79,7 +79,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      let guild;
+      guild = undefined;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;
@@ -119,7 +119,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
       continue;
     }
     map = new Map(guilds.map((id) => {
-      const items = [id.id, GuildDiscoveryUtils.makeDiscoverableGuild(id)];
+      items = [id.id, GuildDiscoveryUtils.makeDiscoverableGuild(id)];
       return items;
     }));
   },
@@ -128,7 +128,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      let guild;
+      guild = undefined;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;

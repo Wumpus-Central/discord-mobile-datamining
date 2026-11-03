@@ -1,8 +1,8 @@
-// === Module 18166: useFavoritesGuildCategoryLongPress ===
+// === Module 18310: useFavoritesGuildCategoryLongPress ===
 
-// Module 18166 (useFavoritesGuildCategoryLongPress)
+// Module 18310 (useFavoritesGuildCategoryLongPress)
 import util from "util" /* 1113 */;
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function useFavoritesGuildCategoryLongPress(getGuildId) {
   }
   require = isFavoritesGuildIdResult;
   const id = getGuildId.id;
-  const items = [isFavoritesGuildIdResult, id];
+  items = [isFavoritesGuildIdResult, id];
   return noop.useMemo(() => {
     let tmp = null;
     if (isFavoritesGuildIdResult) {

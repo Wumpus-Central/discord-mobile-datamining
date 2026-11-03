@@ -1,10 +1,10 @@
-// === Module 13889: SmartSearchUtils ===
+// === Module 14020: SmartSearchUtils ===
 
-// Module 13889 (SmartSearchUtils)
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13890 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13891 */;
-import QueryTokenizer from "QueryTokenizer" /* 13892 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
+// Module 14020 (SmartSearchUtils)
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14021 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 14022 */;
+import QueryTokenizer from "QueryTokenizer" /* 14023 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -15,11 +15,11 @@ function isUnsupportedFilterToken(type) {
   return tmp;
 }
 SmartSearchResultsStoreDefault;
-const SmartSearchConstants = fn(13888);
+const SmartSearchConstants = fn(14019);
 ({ MAX_PRESENTED_CITATIONS: c3, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: closure_4 } = SmartSearchConstants);
 const Constants = fn(1072);
 ({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
-const SearchTabs = fn(9827).SearchTabs;
+const SearchTabs = fn(9958).SearchTabs;
 let items = [, ];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);
@@ -62,7 +62,7 @@ export function isSupportedSearchContext(type) {
   return type.type === constants.GUILD || type.type === tmp.GUILD_CHANNEL;
 }
 export function getChannelFilterKey(channelIds) {
-  const items = [...channelIds];
+  items = [...channelIds];
   const sorted = items.sort();
   return sorted.join(React4);
 }

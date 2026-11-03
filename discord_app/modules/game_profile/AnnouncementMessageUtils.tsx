@@ -1,10 +1,10 @@
-// === Module 9447: AnnouncementMessageUtils ===
+// === Module 9575: AnnouncementMessageUtils ===
 
-// Module 9447 (AnnouncementMessageUtils)
+// Module 9575 (AnnouncementMessageUtils)
 import util from "util" /* 1113 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9449 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9577 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -27,7 +27,7 @@ export function toAnnouncementMessages(messages) {
         const first = tmp2Result.embeds[0];
         let tmp9 = null;
         if (null != first) {
-          const items = [];
+          items = [];
           if (null != first.rawTitle) {
             const _HermesInternal = HermesInternal;
             items.push("# " + first.rawTitle);

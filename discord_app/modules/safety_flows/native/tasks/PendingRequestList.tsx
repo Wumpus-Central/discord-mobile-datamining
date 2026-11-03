@@ -1,14 +1,14 @@
-// === Module 20100: PendingRequestList ===
+// === Module 20250: PendingRequestList ===
 
-// Module 20100 (PendingRequestList)
+// Module 20250 (PendingRequestList)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import _modDef2836 from "module_2836" /* 2836 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16781 */;
-import _modDef16829 from "module_16829" /* 16829 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import _modDef2963 from "module_2963" /* 2963 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16924 */;
+import _modDef16972 from "module_16972" /* 16972 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -231,7 +231,7 @@ export default function PendingRequestList(arg0) {
             const obj = { style: closure_0.divider };
             tmp2 = React5(hasOwnProperty, obj);
           }
-          const items = [tmp2, ];
+          items = [tmp2, ];
           const obj2 = { request, hasMaxConnections, isAcceptLoading: null, isDeclineLoading: null, actionsDisabled: null, onAccept: null, onDecline: null };
           let tmp8 = c3;
           if (c3) {
@@ -254,12 +254,12 @@ export default function PendingRequestList(arg0) {
     };
     tmp8 = c7(c5, obj4);
   }
-  let items = [tmp8, , ];
+  items = [tmp8, , ];
   const obj5 = { style: tmp.dividerRow, children: null };
   const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
   const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1113).intl;
-  obj7.children = intl.string(_modDef2836["/SbB94"]);
+  obj7.children = intl.string(_modDef2963["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
   items1[2] = c7(c5, { style: tmp.dividerLine });
   obj5.children = items1;
@@ -285,11 +285,11 @@ export default function PendingRequestList(arg0) {
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1113).intl;
-  obj12.children = intl2.string(_modDef2836.z9gkwZ);
+  obj12.children = intl2.string(_modDef2963.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12), ];
   const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1113).intl;
-  obj13.children = intl3.string(_modDef2836["9t4+vC"]);
+  obj13.children = intl3.string(_modDef2963["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);
   obj11.children = items4;
   items3[1] = closure_8(c5, obj11);
@@ -305,7 +305,7 @@ export default function PendingRequestList(arg0) {
   const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
   const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1113).intl;
-  obj17.accessibilityLabel = intl5.string(_modDef2836.z9gkwZ);
+  obj17.accessibilityLabel = intl5.string(_modDef2963.z9gkwZ);
   obj17.onPress = onInviteAnotherGuardian;
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);

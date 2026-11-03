@@ -1,13 +1,13 @@
-// === Module 9672: AdContentSeenStore ===
+// === Module 9804: AdContentSeenStore ===
 
-// Module 9672 (AdContentSeenStore)
+// Module 9804 (AdContentSeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7852 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7976 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7843 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7967 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 function getOrCreateSet(QUEST) {
@@ -119,7 +119,7 @@ prototype["initialize"] = function initialize(seenContentIds) {
       continue;
     }
   }
-  const items = [QuestStore, AdDeliveryStore];
+  items = [QuestStore, AdDeliveryStore];
   self.syncWith(items, syncWithQuestStore);
 };
 prototype["getState"] = function getState() {

@@ -1,13 +1,13 @@
-// === Module 18837: GroupDMRecipientLimitTitle ===
+// === Module 18995: GroupDMRecipientLimitTitle ===
 
-// Module 18837 (GroupDMRecipientLimitTitle)
+// Module 18995 (GroupDMRecipientLimitTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11627 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12523 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11764 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12659 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,9 +16,9 @@ get_ActivityIndicator = fn(17);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { title: { textAlign: "center", fontSize: 18 }, subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, subtitle: { textAlign: "center" }, nitroWheelIcon: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let tmp5;
 if (PlatformUtils.isAndroid()) {
   let items = [{ translateY: 2 }];
@@ -54,7 +54,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
   }
   const intl = util.intl;
   const formatToPlainStringResult = intl.formatToPlainString(util.t["9EQix0"], { numMembers: memberCount, maxMemberLimit: recipientLimit });
-  const items = [timestampProducer(Text_Text.Text, { lineClamp: 1, variant: token, color: "mobile-text-heading-primary", style: tmp.title, maxFontSizeMultiplier: 2, children: title }), ];
+  items = [timestampProducer(Text_Text.Text, { lineClamp: 1, variant: token, color: "mobile-text-heading-primary", style: tmp.title, maxFontSizeMultiplier: 2, children: title }), ];
   const obj6 = { style: tmp.subtitleRow, children: null };
   let tmp15Result = null;
   if (tmp9) {

@@ -1,20 +1,20 @@
-// === Module 13636: CheckpointWelcomeScreen ===
+// === Module 13776: CheckpointWelcomeScreen ===
 
-// Module 13636 (CheckpointWelcomeScreen)
+// Module 13776 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import _modDef3060 from "module_3060" /* 3060 */;
-import _modDef3092 from "module_3092" /* 3092 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13637 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 13638 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13640 */;
-import UserStore from "UserStore" /* 1383 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import _modDef3187 from "module_3187" /* 3187 */;
+import _modDef3219 from "module_3219" /* 3219 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 13778 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13780 */;
+import UserStore from "UserStore" /* 1385 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const TextWritingAnimationDefault = TextWritingAnimation;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointWelcomeScreen() {
   const tmp = closure_7();
   const bound = Math.min(useWindowDimensionsDefault().width / 392, 1);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const name = UserUtils.useName(stateFromStores);
   const obj3 = { children: null };
@@ -45,11 +45,11 @@ export default function CheckpointWelcomeScreen() {
   obj6.style = items1;
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj6.text = intl.string(_modDef3060["CdU/PF"]);
+  obj6.text = intl.string(_modDef3187["CdU/PF"]);
   const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), , ];
   const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
   const intl2 = util.intl;
-  obj8.text = intl2.formatToPlainString(_modDef3092.xhZ23b, { username: name });
+  obj8.text = intl2.formatToPlainString(_modDef3219.xhZ23b, { username: name });
   obj8.delay = 100 + TextWritingAnimation.DURATION;
   items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

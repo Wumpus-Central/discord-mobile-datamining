@@ -1,6 +1,6 @@
-// === Module 11868: TooltipStore ===
+// === Module 12005: TooltipStore ===
 
-// Module 11868 (TooltipStore)
+// Module 12005 (TooltipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -29,7 +29,7 @@ class TooltipStore extends Store {
 }
 TooltipStore.prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
-  let items = Storage.get(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, []);
+  items = Storage.get(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, []);
   if (items == null) {
     items = [];
   }

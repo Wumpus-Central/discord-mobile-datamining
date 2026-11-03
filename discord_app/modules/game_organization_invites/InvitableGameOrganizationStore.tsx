@@ -1,14 +1,15 @@
-// === Module 11653: InvitableGameOrganizationStore ===
+// === Module 11790: InvitableGameOrganizationStore ===
 
-// Module 11653 (InvitableGameOrganizationStore)
+// Module 11790 (InvitableGameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11365 */;
+import GameOrganizationModels from "GameOrganizationModels" /* 11502 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11503 */;
 import size from "module_2" /* 2 */;
 
 function fromServerInvitableGameOrganization(game_organization) {
-  const obj = { organization: fromServerGameOrganization.fromServerGameOrganization(game_organization.game_organization), application: null, displayNoun: null };
+  const obj = { organization: GameOrganizationModels.gameOrganizationFromServer(game_organization.game_organization), application: null, displayNoun: null };
   obj.application = fromServerGameOrganization.fromServerGameOrganizationApplication(game_organization.application);
   let display_noun = game_organization.application_config.display_noun;
   if (display_noun == null) {

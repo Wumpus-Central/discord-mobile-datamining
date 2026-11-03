@@ -1,13 +1,13 @@
-// === Module 9626: PromotionsStore ===
+// === Module 9758: PromotionsStore ===
 
-// Module 9626 (PromotionsStore)
+// Module 9758 (PromotionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9666 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9798 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9627 */;
-import UserStore from "UserStore" /* 1383 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9628 */;
+import PromotionRecord from "PromotionRecord" /* 9759 */;
+import UserStore from "UserStore" /* 1385 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9760 */;
 
 const require = fn;
 function createEmptyPromotionsByType() {
@@ -67,7 +67,7 @@ prototype["initialize"] = function initialize(arg0) {
     closure_7 = arg0;
   }
   this.waitFor(UserSettingsProtoStore, UserStore);
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, initializeFromUserSettings);
 };
 Object.defineProperty(prototype, "outboundPromotions", {
@@ -156,7 +156,7 @@ prototype["getMarketingComponentByType"] = function getMarketingComponentByType(
     const currentUser = UserStore.getCurrentUser();
     const _Date = Date;
     const date = new Date();
-    let items = map.get(GIFT_CUSTOMIZATION_BANNER);
+    items = map.get(GIFT_CUSTOMIZATION_BANNER);
     if (items == null) {
       items = [];
     }
@@ -276,7 +276,7 @@ const promotionsStore = new PromotionsStore(DispatcherDefault, {
       const marketing_components = id.marketing_components;
       if (marketing_components != null) {
         const item = marketing_components.forEach((component_type) => {
-          let items = map.get(component_type.component_type);
+          items = map.get(component_type.component_type);
           if (items == null) {
             items = [];
           }
@@ -343,7 +343,7 @@ const promotionsStore = new PromotionsStore(DispatcherDefault, {
     if (closure_16.some((promotion) => promotion.promotion.id === claimedOutboundPromotionCode.promotion.id)) {
       return false;
     } else {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_16, 0)] = claimedOutboundPromotionCode;
       closure_16 = items;
     }

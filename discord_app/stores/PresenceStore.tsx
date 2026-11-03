@@ -1,15 +1,15 @@
-// === Module 5761: PresenceStore ===
+// === Module 5881: PresenceStore ===
 
-// Module 5761 (PresenceStore)
+// Module 5881 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5763 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5883 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function sortActivity(type, type2) {
@@ -70,7 +70,7 @@ function filterPlayingActivities(arg0) {
   if (0 === arg0.length) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     const items1 = [];
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
@@ -147,7 +147,7 @@ function flattenPresence(id) {
         });
         let tmp8 = flatMapResult;
         if (0 !== flatMapResult.length) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(flatMapResult, 0);
           const reversed = items.reverse();
           const _Map = Map;
@@ -157,7 +157,7 @@ function flattenPresence(id) {
             if (party != null) {
               id = party.id;
             }
-            const items = ["" + party.application_id + ":" + id, party];
+            items = ["" + party.application_id + ":" + id, party];
             return items;
           }));
           const items1 = [];
@@ -186,13 +186,13 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      map1 = new Map(reversed1.map((party) => {
+      const map1 = new Map(reversed1.map((party) => {
         party = party.party;
         let id;
         if (party != null) {
           id = party.id;
         }
-        const items = ["" + party.application_id + ":" + id, party];
+        items = ["" + party.application_id + ":" + id, party];
         return items;
       }));
       const items3 = [];
@@ -261,7 +261,7 @@ function updatePresence(arg0) {
     } else {
       let sorted = activities;
       if (activities.length > 1) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(activities, 0);
         sorted = items.sort(sortActivity);
       }
@@ -280,7 +280,7 @@ function updatePresence(arg0) {
           if (party != null) {
             id = party.id;
           }
-          const items = ["" + party.application_id + ":" + id, party];
+          items = ["" + party.application_id + ":" + id, party];
           return items;
         }));
         const items2 = [];
@@ -327,7 +327,7 @@ function updatePresenceInConnectionOpen(arg0) {
     } else {
       let sorted = activities;
       if (activities.length > 1) {
-        let items = [];
+        items = [];
         HermesBuiltin.arraySpread(activities, 0);
         sorted = items.sort(sortActivity);
       }
@@ -346,7 +346,7 @@ function updatePresenceInConnectionOpen(arg0) {
           if (party != null) {
             id = party.id;
           }
-          const items = ["" + party.application_id + ":" + id, party];
+          items = ["" + party.application_id + ":" + id, party];
           return items;
         }));
         const items2 = [];
@@ -403,7 +403,7 @@ prototype["initialize"] = function initialize() {
 prototype["setCurrentUserOnConnectionOpen"] = function setCurrentUserOnConnectionOpen(IDLE, valueResult) {
   closure_11[AuthenticationStore.getId()] = IDLE;
   const id = AuthenticationStore.getId();
-  const items = [...valueResult];
+  items = [...valueResult];
   const sorted = items.sort(sortActivity);
   closure_12[id] = sorted;
   closure_13[id] = filterPlayingActivities(sorted);
@@ -531,7 +531,7 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
   return activities.filter((type) => type.type !== ActivityTypes.ActivityTypes.HANG_STATUS)[0];
 };
 prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
-  const items = [];
+  items = [];
   const keys = SnowflakeUtilsDefault.keys(filteredActivities);
   for (const item10015 of keys) {
     let tmp4 = filteredActivities[item10015];
@@ -730,7 +730,7 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
       }
     }
     statuses[id] = status.status;
-    const items = [...status.activities];
+    items = [...status.activities];
     const sorted = items.sort(sortActivity);
     activities[id] = sorted;
     closure_13[id] = filterPlayingActivities(sorted);

@@ -1,14 +1,14 @@
-// === Module 18780: useSearchMessagesLoadingState ===
+// === Module 18938: useSearchMessagesLoadingState ===
 
-// Module 18780 (useSearchMessagesLoadingState)
+// Module 18938 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18711 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18869 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 require = fn;
-let closure_4 = fn(9827).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(9958).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
 
@@ -16,7 +16,7 @@ export function useSearchMessagesLoadingState(arg0) {
   ({ searchContext: require, tab: dependencyMap } = arg0);
   ({ placeholderHeight, numColumns } = arg0);
   closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  const items = [SearchQueryStore, closure_2];
+  items = [SearchQueryStore, closure_2];
   return initialize.useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(closure_1_0, dependencyMap, searchResultsQuery);

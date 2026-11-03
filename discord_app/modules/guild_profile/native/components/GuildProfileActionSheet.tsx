@@ -1,21 +1,21 @@
-// === Module 9296: GuildProfileActionSheet ===
+// === Module 9424: GuildProfileActionSheet ===
 
-// Module 9296 (GuildProfileActionSheet)
+// Module 9424 (GuildProfileActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9048 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9176 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9046 */;
+import GuildProfileStore from "GuildProfileStore" /* 9174 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const GuildProfileFetchStatus = fn(9046).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(9297).INVALID_ACCESS_ERROR_CODE;
+const GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(9425).INVALID_ACCESS_ERROR_CODE;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, footerStack: { gap: 8 }, scrollView: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function GuildProfileActionSheet(guildId) {
   ({ guildProfile, fetchGuildProfile } = guildProfile1);
   const fetchStatus = guildProfile1.fetchStatus;
   let obj = guildId(analyticsLocations[9]);
-  let items = [GuildProfileStore];
+  items = [GuildProfileStore];
   const stateFromStores = guildId(analyticsLocations[10]).useStateFromStores(items, () => GuildProfileStore.getErrorCode(guildId));
   const obj2 = guildId(analyticsLocations[10]);
   const token = guildId(analyticsLocations[11]).useToken(fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER, tmp4);
@@ -103,7 +103,7 @@ export default function GuildProfileActionSheet(guildId) {
     const items6 = [token1];
     const memo = obj6.useMemo(() => {
       const obj = _modDef671(token1);
-      const items = [_modDef671(token1).alpha(0).hex(), token1];
+      items = [_modDef671(token1).alpha(0).hex(), token1];
       return items;
     }, items6);
     const obj16 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, footer: null, children: null };

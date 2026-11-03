@@ -1,16 +1,16 @@
-// === Module 19126: ActivityPanelUtils ===
+// === Module 19284: ActivityPanelUtils ===
 
-// Module 19126 (ActivityPanelUtils)
+// Module 19284 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5678 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5798 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
@@ -53,7 +53,7 @@ export function isConnectedToActivityInText() {
   }
 }
 export function useIsActivityPanelFullscreen() {
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => {
     const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
     let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === constants.PANEL;
@@ -64,7 +64,7 @@ export function useIsActivityPanelFullscreen() {
   });
 }
 export function useIsConnectedToActivityInText() {
-  const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
+  items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   return initialize.useStateFromStores(items, () => {
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
     let flag = false;

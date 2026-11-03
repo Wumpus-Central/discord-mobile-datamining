@@ -1,17 +1,17 @@
-// === Module 17880: CollectiblesShopOrbsPage ===
+// === Module 18023: CollectiblesShopOrbsPage ===
 
-// Module 17880 (CollectiblesShopOrbsPage)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8747 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 17845 */;
+// Module 18023 (CollectiblesShopOrbsPage)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 17988 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 require = fn;
 const View = fn(17).View;
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { display: "flex", flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopOrbsPage.tsx");
@@ -30,7 +30,7 @@ export default function _default(arg0) {
   const initialProductSkuId = collectiblesShopDeepLinkProps.initialProductSkuId;
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const initialCategorySkuId = collectiblesShopDeepLinkProps.initialCategorySkuId;
-  const items = [initialProductSkuId, initialVariantIndex, initialCategorySkuId, analyticsLocations, collectiblesAnalyticsContext];
+  items = [initialProductSkuId, initialVariantIndex, initialCategorySkuId, analyticsLocations, collectiblesAnalyticsContext];
   const effect = initialProductSkuId.useEffect(() => {
     if (null != initialProductSkuId) {
       if (null != initialCategorySkuId) {

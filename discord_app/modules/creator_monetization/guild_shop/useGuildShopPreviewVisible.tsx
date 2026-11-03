@@ -1,7 +1,7 @@
-// === Module 7437: useGuildShopPreviewVisible ===
+// === Module 7561: useGuildShopPreviewVisible ===
 
-// Module 7437 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 7561 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ export function useGuildShopPreviewVisible(features) {
   const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
   const obj = require("DismissibleContentUnsafeUtils");
   const tmp = _require;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let flag;
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     let canResult = null != closure_0;
@@ -39,9 +39,9 @@ export function useGuildShopPreviewVisible(features) {
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
-  const guildEligibleForGuildProducts = tmp(7432).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(7556).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(7432);
+  const tmpResult = tmp(7556);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

@@ -1,9 +1,9 @@
-// === Module 5950: VideoQualityStats ===
+// === Module 6070: VideoQualityStats ===
 
-// Module 5950 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5772 */;
-import Histogram from "Histogram" /* 5894 */;
-import SystemResourcesDefault from "SystemResources" /* 5902 */;
+// Module 6070 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5892 */;
+import Histogram from "Histogram" /* 6014 */;
+import SystemResourcesDefault from "SystemResources" /* 6022 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -394,7 +394,7 @@ class InboundStats {
     closure_0 = obj;
     values = Object.values(closure_12);
     obj.decoderBuckets = Object.fromEntries(values.map((item) => {
-      const items = [item, 0];
+      items = [item, 0];
       return items;
     }));
     obj.codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
@@ -496,7 +496,7 @@ Object.defineProperty(prototype, "videoStoppedReasons", {
 prototype["continueAggregationFrom"] = function continueAggregationFrom(previousAggregationStats, flag) {
   this.previousAggregationStats = previousAggregationStats.previousAggregationStats;
   if (flag) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(previousAggregationStats.statsWindow, 0);
     tmp.statsWindow = items;
   }
@@ -727,7 +727,7 @@ class OutboundStats extends InboundStats {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     values = Object.values(closure_11);
     applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((item) => {
-      const items = [item, 0];
+      items = [item, 0];
       return items;
     }));
     applyArgumentsResult.encoderCodec = closure_10.UNKNOWN;

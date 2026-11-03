@@ -1,6 +1,6 @@
-// === Module 1890: readAppEntryWindowMetrics ===
+// === Module 2019: readAppEntryWindowMetrics ===
 
-// Module 1890 (readAppEntryWindowMetrics)
+// Module 2019 (readAppEntryWindowMetrics)
 import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1349 */;
 import size from "module_2" /* 2 */;
 

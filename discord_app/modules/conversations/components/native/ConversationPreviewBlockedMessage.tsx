@@ -1,12 +1,12 @@
-// === Module 9882: ConversationPreviewBlockedMessage ===
+// === Module 10013: ConversationPreviewBlockedMessage ===
 
-// Module 9882 (ConversationPreviewBlockedMessage)
+// Module 10013 (ConversationPreviewBlockedMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7135 */;
-import DenyIcon from "DenyIcon" /* 9883 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 7261 */;
+import DenyIcon from "DenyIcon" /* 10014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function ConversationPreviewBlockedMessage(reason) {
   } else {
     EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
   }
-  const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED }), ];
+  items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED }), ];
   const intl = util.intl;
   const t = util.t;
   const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };

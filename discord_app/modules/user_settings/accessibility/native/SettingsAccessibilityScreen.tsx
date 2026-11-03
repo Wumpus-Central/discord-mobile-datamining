@@ -1,17 +1,17 @@
-// === Module 17322: SettingsAccessibilityScreen ===
+// === Module 17465: SettingsAccessibilityScreen ===
 
-// Module 17322 (SettingsAccessibilityScreen)
+// Module 17465 (SettingsAccessibilityScreen)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import _modDef2932 from "module_2932" /* 2932 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 17323 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import _modDef3059 from "module_3059" /* 3059 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 17466 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4840 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4967 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/user_settings/accessibility/n
 export default function SettingsAccessibilityScreen() {
   stackNavigation = stackNavigation(animateEmojiOverrideReason[12]).useStackNavigation();
   let obj = stackNavigation(animateEmojiOverrideReason[12]);
-  let items = [UserSettingsOverridesStore];
+  items = [UserSettingsOverridesStore];
   const stateFromStoresObject = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStoresObject(items, () => ({ gifAutoPlayOverrideReason: UserSettingsOverridesStore.getAppliedOverrideReasonKey("gifAutoPlay"), animateEmojiOverrideReason: UserSettingsOverridesStore.getAppliedOverrideReasonKey("animateEmoji"), animateStickersOverrideReason: UserSettingsOverridesStore.getAppliedOverrideReasonKey("animateStickers") }));
   const gifAutoPlayOverrideReason = stateFromStoresObject.gifAutoPlayOverrideReason;
   animateEmojiOverrideReason = stateFromStoresObject.animateEmojiOverrideReason;
@@ -33,7 +33,7 @@ export default function SettingsAccessibilityScreen() {
   const node = animateStickersOverrideReason.useMemo(() => {
     closure_0 = stackNavigation;
     const obj2 = { settings: null, subLabel: null };
-    const items = [MobileUserSettings.ROLE_COLORS];
+    items = [MobileUserSettings.ROLE_COLORS];
     obj2.settings = items;
     const intl = util.intl;
     const obj3 = { learnMoreLink: null };
@@ -51,7 +51,7 @@ export default function SettingsAccessibilityScreen() {
     const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
     obj6.settings = items3;
     const intl3 = util.intl;
-    obj6.subLabel = intl3.format(_modDef2932.L8U56h, {
+    obj6.subLabel = intl3.format(_modDef3059.L8U56h, {
       onClickOpenModal() {
         closure_0(animateEmojiOverrideReason[9]).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
           closure_1_0(closure_1_2[10]).runAfterInteractions(() => {

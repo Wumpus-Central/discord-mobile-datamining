@@ -1,21 +1,21 @@
-// === Module 13884: GuildDirectoryPlaceholderRow ===
+// === Module 14015: GuildDirectoryPlaceholderRow ===
 
-// Module 13884 (GuildDirectoryPlaceholderRow)
+// Module 14015 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 575 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 13885 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 14016 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { row: { flexDirection: "row", padding: 16 }, rowInner: { flex: 1 }, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", marginRight: 16, backgroundColor: fn(6778).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", marginRight: 16, backgroundColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderAvatar = size;
-obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(6778).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderBody = { width: "100%", marginTop: 10 };
 let closure_5 = createStyles.createStyles(obj);
-let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(6778).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryPlaceholderRow.tsx");
 
@@ -26,7 +26,7 @@ export default noop.memo(() => {
   closure_1 = Math.floor(10 * Math.random());
   let obj = { style: tmp.row, children: null };
   const sum1 = Math.floor(50 * Math.random()) + 10;
-  let items = [closure_3(View, { style: tmp.placeholderAvatar }), ];
+  items = [closure_3(View, { style: tmp.placeholderAvatar }), ];
   const obj3 = { style: tmp.rowInner, children: null };
   const obj4 = { style: null };
   const items1 = [tmp.placeholderText, { width: "" + sum1 + "%" }];
@@ -37,7 +37,7 @@ export default noop.memo(() => {
   const obj5 = { width: "" + sum1 + "%" };
   items2[1] = array.fill(undefined).map((item, index) => {
     const obj = { style: null };
-    const items = [, , ];
+    items = [, , ];
     ({ placeholderText: arr[0], placeholderBody: arr[1] } = closure_0);
     items[2] = { width: "" + getChatPlaceholderRowWidthDefault(closure_1 + index) + "%" };
     obj.style = items;

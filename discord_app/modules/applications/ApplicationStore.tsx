@@ -1,10 +1,10 @@
-// === Module 2038: ApplicationStore ===
+// === Module 2167: ApplicationStore ===
 
-// Module 2038 (ApplicationStore)
+// Module 2167 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 
 function addApplication(fromServer) {
   value = map.get(fromServer.id);
@@ -310,7 +310,7 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetched,
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: handleEntitlementsFetched,
   GUILD_APPLICATIONS_FETCH_SUCCESS: function handleGuildApplicationsFetchSuccess(guildId) {
-    const items = [];
+    items = [];
     const iter = guildId.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -483,7 +483,10 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
   },
   APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
-  APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess
+  APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
+  GAME_ORGANIZATION_FETCH_SUCCESS: function handleGameOrganizationFetchSuccess(application) {
+    addApplication(application.application);
+  }
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/ApplicationStore.tsx");

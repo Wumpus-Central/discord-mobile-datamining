@@ -1,12 +1,12 @@
-// === Module 9911: GPlayActionCreators ===
+// === Module 10042: GPlayActionCreators ===
 
-// Module 9911 (GPlayActionCreators)
+// Module 10042 (GPlayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
@@ -48,7 +48,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -142,7 +142,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           }
           closure_145_9 = {};
           let obj8 = closure_146_0(closure_146_2[12]);
-          let items = [];
+          items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(closure_145_4, 0);
           c21 = 3;
           c22 = 1;
@@ -152,7 +152,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       } else if (2 === tmp4) {
         c20 = 0;
         closure_3.return();
-        throw closure_1_19;
+        throw expandedHeight;
       } else if (3 === tmp4) {
         if (arg0 === 1) {
           c22 = 3;
@@ -299,21 +299,21 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       } else if (4 === tmp4) {
         c20 = 0;
         closure_5.return();
-        throw closure_1_19;
+        throw expandedHeight;
       } else if (5 === tmp4) {
         c20 = 2;
         closure_9.return();
-        throw closure_1_19;
+        throw expandedHeight;
       } else {
         c20 = 0;
         purchaseToken.return();
-        throw closure_1_19;
+        throw expandedHeight;
       }
     }
   }
 };
 function retryFailedInAppSkus() {
-  const items = [...set1];
+  items = [...set1];
   const found = items.filter((item) => {
     let hasItem = set2.has(item);
     if (hasItem) {
@@ -387,7 +387,7 @@ let closure_38 = async function _loadUserCountry() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -421,7 +421,7 @@ let closure_38 = async function _loadUserCountry() {
         const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
         closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -481,7 +481,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -506,7 +506,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(7593).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(7717).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -641,7 +641,7 @@ function captureGPlayBillingException(code, merged) {
         if (!tmp2) {
           code2 = code.code;
         }
-        const items = ["gplay-billing-error", captureBillingException.String(code2)];
+        items = ["gplay-billing-error", captureBillingException.String(code2)];
         let fingerprint = items;
       } else {
         fingerprint = merged.fingerprint;
@@ -659,14 +659,14 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let closure_5 = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(9912);
-({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
+const GPlayAnalyticsStore = fn(10043);
+({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: closure_10 } = GPlayAnalyticsStore);
 let Constants = fn(1072);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(7598);
+Constants = fn(7722);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
 const BillingManager = fn(17).NativeModules.BillingManager;
@@ -682,7 +682,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -768,7 +768,7 @@ asyncGeneratorStep(async () => {
         }
         closure_129_1 = value;
         const obj11 = { type: "GPLAY_SUBSCRIPTION_SKUS_LOADED", skus: null, skusType: null };
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(closure_129_1, 0);
         obj11.skus = items;
         obj11.skusType = closure_130_17.SUBSCRIPTION;
@@ -806,7 +806,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -837,7 +837,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             return obj4;
           } else {
             c4 = 1;
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
@@ -858,7 +858,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -899,7 +899,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -950,7 +950,7 @@ asyncGeneratorStep(async () => {
                 c6 = 1;
                 const obj8 = {
                   value: (function fetchDesktopInAppSkus(arg0) {
-                                  const items = [];
+                                  items = [];
                                   const iter = arg0[Symbol.iterator]();
                                   const nextResult = iter.next();
                                   if (iter === undefined) {
@@ -1007,7 +1007,7 @@ asyncGeneratorStep(async () => {
         }
         closure_129_1 = value;
         const obj11 = { type: "GPLAY_IN_APP_SKUS_LOADED", skus: null, skusType: null };
-        let items = [];
+        items = [];
         HermesBuiltin.arraySpread(closure_129_1, 0);
         obj11.skus = items;
         obj11.skusType = closure_130_17.IN_APP;
@@ -1045,7 +1045,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1076,7 +1076,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             return obj4;
           } else {
             c4 = 1;
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
@@ -1097,7 +1097,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1138,7 +1138,7 @@ asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1152,7 +1152,7 @@ asyncGeneratorStep(async () => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          const items = [importDefaultResultResult(), importDefaultResultResult1()];
+          items = [importDefaultResultResult(), importDefaultResultResult1()];
           c1 = 1;
           c0 = 1;
           const obj4 = { value: Promise.all(items), done: false };
@@ -1167,7 +1167,7 @@ asyncGeneratorStep(async () => {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -1192,7 +1192,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1223,7 +1223,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             return obj4;
           } else {
             c4 = 1;
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
@@ -1244,7 +1244,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1297,7 +1297,7 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1358,7 +1358,7 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
       } else {
         v0 = 0;
         c9 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp36) {
       closure_6 = tmp36;
@@ -1382,7 +1382,7 @@ let closure_0 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1492,7 +1492,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1523,7 +1523,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             return obj4;
           } else {
             c4 = 1;
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
@@ -1544,7 +1544,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1612,7 +1612,7 @@ export function ensureSkusLoaded(items) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -1716,7 +1716,7 @@ export function retainInAppSkus(c0) {
     }
     return map1.set(item, num + 1);
   });
-  const items = [...new Set(c0)];
+  items = [...new Set(c0)];
   const found = items.filter((item) => {
     const hasItem = map.has(item);
     let tmp2 = !hasItem;
@@ -1855,7 +1855,7 @@ export function sendPaymentCompleteAnalytics(productId) {
   }
 }
 export function updatePendingDowngrade(arg0, arg1, c7, subscriptionId) {
-  const items = [IAPStore.getProduct(arg0), IAPStore.getProduct(arg1)];
+  items = [IAPStore.getProduct(arg0), IAPStore.getProduct(arg1)];
   [tmp, tmp2] = items;
   if (null != tmp2) {
     if (null != tmp) {

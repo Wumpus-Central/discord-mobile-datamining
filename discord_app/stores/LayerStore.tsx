@@ -1,6 +1,6 @@
-// === Module 14046: LayerStore ===
+// === Module 14177: LayerStore ===
 
-// Module 14046 (LayerStore)
+// Module 14177 (LayerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -25,7 +25,7 @@ const layerStore = new LayerStore(DispatcherDefault, {
     if (closure_0.indexOf(component) >= 0) {
       return false;
     } else {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_0, 0)] = component;
       closure_0 = items;
     }

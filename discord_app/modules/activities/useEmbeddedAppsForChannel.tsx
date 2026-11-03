@@ -1,11 +1,11 @@
-// === Module 12387: useEmbeddedAppsForChannel ===
+// === Module 12523: useEmbeddedAppsForChannel ===
 
-// Module 12387 (useEmbeddedAppsForChannel)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7330 */;
+// Module 12523 (useEmbeddedAppsForChannel)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7450 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import UserStore from "UserStore" /* 1383 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import UserStore from "UserStore" /* 1385 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 const require = globalThis.__r;
 
@@ -26,10 +26,10 @@ function useEmbeddedApps(arr, arg1) {
     }
     continue;
   }
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [set];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     for (const item10006 of set) {
       arr = items.push(UserStore.getUser(item10006));
       continue;
@@ -45,7 +45,7 @@ function useEmbeddedApps(arr, arg1) {
       }
     });
     const mapped = map.map((embeddedActivity, index) => {
-      const items = [];
+      items = [];
       while (tmp2 !== undefined) {
         value = map.get(tmp3);
         if (null != value) {
@@ -68,13 +68,13 @@ function useEmbeddedApps(arr, arg1) {
     return mapped.filter(closure_0(closure_2[7]).isNotNullish);
   }, items2);
 }
-const NO_ACTIVITIES = fn(4862).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4989).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 
 export default function useEmbeddedAppsForChannel(channel, arg1) {
   _require = channel;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   return useEmbeddedApps(require("initialize").useStateFromStoresArray(items, () => {
     if (null != user) {
       if (null != user.id) {
@@ -89,7 +89,7 @@ export default function useEmbeddedAppsForChannel(channel, arg1) {
 };
 export function useEmbeddedAppsByChannel(arg0) {
   _require = arg0;
-  let items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const tmp = useEmbeddedApps(require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       let embeddedActivitiesForGuild = EmbeddedActivitiesStore.getEmbeddedActivitiesForGuild(tmp);
@@ -105,7 +105,7 @@ export function useEmbeddedAppsByChannel(arg0) {
     const item = closure_1.forEach((embeddedActivity) => {
       const embeddedActivityLocationChannelId = map(dependencyMap[5]).getEmbeddedActivityLocationChannelId(embeddedActivity.embeddedActivity.location);
       if (null != embeddedActivityLocationChannelId) {
-        let items = map.get(embeddedActivityLocationChannelId);
+        items = map.get(embeddedActivityLocationChannelId);
         if (items == null) {
           items = [];
         }
@@ -120,7 +120,7 @@ export function useEmbeddedAppsByChannel(arg0) {
 export { useEmbeddedApps };
 export function useEmbeddedAppsWithPresence(arg0) {
   _require = arg0;
-  const items = [PresenceStore];
+  items = [PresenceStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     const map = new Map();

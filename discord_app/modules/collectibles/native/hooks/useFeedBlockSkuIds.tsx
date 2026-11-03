@@ -1,9 +1,9 @@
-// === Module 17834: useFeedBlockSkuIds ===
+// === Module 17977: useFeedBlockSkuIds ===
 
-// Module 17834 (useFeedBlockSkuIds)
-import ShopHomeSortType from "ShopHomeSortType" /* 17835 */;
+// Module 17977 (useFeedBlockSkuIds)
+import ShopHomeSortType from "ShopHomeSortType" /* 17978 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 
 export default function useFeedBlockSkuIds(sortedSkuIds) {
   _require = sortedSkuIds;
-  let items = [ConsentStore];
+  items = [ConsentStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   sortedSkuIds = undefined;
   if (sortedSkuIds != null) {
@@ -22,7 +22,7 @@ export default function useFeedBlockSkuIds(sortedSkuIds) {
   }
   let items1 = [sortedSkuIds, stateFromStores];
   return noop.useMemo(() => {
-    let items;
+    items = undefined;
     if (sortedSkuIds != null) {
       sortedSkuIds = sortedSkuIds.sortedSkuIds;
       if (sortedSkuIds != null) {

@@ -1,8 +1,8 @@
-// === Module 7726: ProfileEffectRecord ===
+// === Module 7850: ProfileEffectRecord ===
 
-// Module 7726 (ProfileEffectRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1986 */;
+// Module 7850 (ProfileEffectRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2115 */;
 
 require = fn;
 const prototype = function ProfileEffectRecord(arg0) {

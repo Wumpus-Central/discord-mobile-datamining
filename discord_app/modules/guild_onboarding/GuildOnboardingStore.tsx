@@ -1,10 +1,10 @@
-// === Module 7264: GuildOnboardingStore ===
+// === Module 7384: GuildOnboardingStore ===
 
-// Module 7264 (GuildOnboardingStore)
+// Module 7384 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;
@@ -24,7 +24,7 @@ prototype["shouldShowOnboarding"] = function shouldShowOnboarding(id) {
   if (tmp) {
     let hasItem = null != tmp5;
     if (hasItem) {
-      const items = [, ];
+      items = [, ];
       ({ STARTED: arr[0], READY: arr[1] } = obj);
       hasItem = items.includes(tmp5);
     }
@@ -88,7 +88,7 @@ export { GuildOnboardingStatus };
 export function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
-    const items = [, ];
+    items = [, ];
     ({ STARTED: arr[0], READY: arr[1] } = obj);
     hasItem = items.includes(arg0);
   }

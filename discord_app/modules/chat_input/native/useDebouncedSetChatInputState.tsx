@@ -1,6 +1,6 @@
-// === Module 13955: useDebouncedSetChatInputState ===
+// === Module 14086: useDebouncedSetChatInputState ===
 
-// Module 13955 (useDebouncedSetChatInputState)
+// Module 14086 (useDebouncedSetChatInputState)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -17,7 +17,7 @@ export default function useDebouncedSetChatInputState(arg0, arg1) {
       ref.current = null;
     }
   }, []);
-  const items = [callback];
+  items = [callback];
   const effect = noop.useEffect(() => callback, items);
   const obj = { setData: null, setDataImmediate: null };
   const items1 = [callback, arg0, arg1];

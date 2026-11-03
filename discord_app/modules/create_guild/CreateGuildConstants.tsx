@@ -1,9 +1,9 @@
-// === Module 14279: create_guild/CreateGuildConstants ===
+// === Module 14410: create_guild/CreateGuildConstants ===
 
-// Module 14279 (create_guild/CreateGuildConstants)
+// Module 14410 (create_guild/CreateGuildConstants)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ export function getGuildTemplatesMap() {
   const intl3 = util.intl;
   obj4.name = intl3.string(util.t.mobYpC);
   obj4.type = constants.GUILD_CATEGORY;
-  const items = [obj4, , , , , ];
+  items = [obj4, , , , , ];
   const obj5 = { id: "01", parent_id: "00", name: null, type: null };
   const intl4 = util.intl;
   obj5.name = intl4.string(util.t.ao2wxq);

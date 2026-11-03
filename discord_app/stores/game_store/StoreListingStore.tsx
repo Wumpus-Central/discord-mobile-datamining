@@ -1,11 +1,11 @@
-// === Module 16340: StoreListingStore ===
+// === Module 16483: StoreListingStore ===
 
-// Module 16340 (StoreListingStore)
+// Module 16483 (StoreListingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import StoreListingRecord from "StoreListingRecord" /* 16341 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import StoreListingRecord from "StoreListingRecord" /* 16484 */;
 
 require = fn;
 function addRegularStoreListing(id) {
@@ -54,7 +54,7 @@ class StoreListingStore extends Store {
 const prototype = StoreListingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
   locale = LocaleStore.locale;
 };
@@ -75,7 +75,7 @@ prototype["getForSKU"] = function getForSKU(arg0, arg1) {
 };
 prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
   if (null == dependencyMap3[skuId]) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     const mapped = Array.from(tmp).map((item) => dependencyMap[item]);

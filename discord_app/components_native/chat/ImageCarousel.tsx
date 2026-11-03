@@ -1,23 +1,54 @@
-// === Module 10526: ImageCarousel ===
+// === Module 10656: ImageCarousel ===
 
-// Module 10526 (ImageCarousel)
+// Module 10656 (ImageCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useWindowDimensions from "useWindowDimensions" /* 1491 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import spring from "spring" /* 5637 */;
-import _modDef7106 from "module_7106" /* 7106 */;
-import Upload from "Upload" /* 8210 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10528 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10530 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11111 */;
+import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef7232 from "module_7232" /* 7232 */;
+import Upload from "Upload" /* 8334 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9910 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10658 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10660 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11248 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 require = fn;
+function useTileEntranceAnimatedStyle(itemKey) {
+  const sharedValue = _mod1652.useSharedValue(0);
+  items = [sharedValue, itemKey];
+  const effect = noop.useEffect(() => {
+    const result = _undefined.set(1);
+  }, items);
+  const items1 = [closure_14, timing_timing.withTiming, sharedValue, native.STANDARD_EASING, spring_spring.withSpring];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp3, tmp4, tmp5, tmp6, tmp7] = items1;
+  class ImageCarouselTsx1 {
+    constructor() {
+      obj = { opacity: null, transform: null };
+      obj1 = { duration: 300, easing: closure_2 };
+      obj.opacity = closure_0(closure_1.get(), obj1, "respect-motion-settings");
+      obj4 = { scale: closure_3(closure_1.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings") };
+      items = [];
+      items[0] = obj4;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items2 = [tmp4, tmp5, tmp6, tmp7];
+  ImageCarouselTsx1.__closure = items2;
+  ImageCarouselTsx1.__workletHash = 15302288183822;
+  ImageCarouselTsx1.__initData = tmp3;
+  return _mod1652.useAnimatedStyle(ImageCarouselTsx1);
+}
 function Tile(onEdit) {
   onEdit = onEdit.onEdit;
   const onRemove = onEdit.onRemove;
@@ -33,7 +64,7 @@ function Tile(onEdit) {
   ({ item, isVideo, isImage, isThumbnail } = upload);
   onRemove(channelId[12])(item.platform === onEdit(channelId[13]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
   const tmp4 = onRemove(channelId[12]);
-  const items = [UploadAttachmentStore];
+  items = [UploadAttachmentStore];
   const stateFromStores = onEdit(channelId[14]).useStateFromStores(items, () => {
     upload = UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
     let flag;
@@ -152,7 +183,6 @@ class ImageCarouselTile {
       isHighlighted = false;
     }
     ({ onPress, onRemove } = global);
-    closure_0 = onRemove;
     ({ accessibilityLabel, accessibilityHint, removeAccessibilityLabel, children } = global);
     tmp = closure_13();
     tmp2 = isImage;
@@ -175,86 +205,59 @@ class ImageCarouselTile {
     num2 = 192;
     items = [];
     items[0] = onRemove;
-    closure_0 = undefined;
-    tmp8 = closure_0;
-    tmp9 = closure_2;
     callback = closure_3.useCallback((nativeEvent) => {
       if ("remove" === nativeEvent.nativeEvent.actionName) {
-        sharedValue();
+        onRemove();
       }
     }, items);
-    obj = closure_0(closure_2[8]);
-    sharedValue = obj.useSharedValue(0);
-    closure_0 = sharedValue;
-    items1 = [, ];
-    items1[0] = sharedValue;
-    items1[1] = itemKey;
-    effect = closure_3.useEffect(() => {
-      const result = sharedValue.set(1);
-    }, items1);
-    obj2 = closure_0(closure_2[8]);
-    fn = function l() {
-      const obj = { opacity: null, transform: null };
-      const obj3 = { duration: 300, easing: null };
-      value = sharedValue.get();
-      obj3.easing = native.STANDARD_EASING;
-      obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
-      const obj4 = { scale: null };
-      obj4.scale = spring.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-      const items = [obj4];
-      obj.transform = items;
-      return obj;
-    };
-    obj1 = { withTiming: closure_0(closure_2[9]).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: closure_0(closure_2[10]).STANDARD_EASING, withSpring: closure_0(closure_2[11]).withSpring };
-    fn.__closure = obj1;
-    fn.__workletHash = 14458898683767;
-    fn.__initData = closure_14;
-    animatedStyle = obj2.useAnimatedStyle(fn);
-    obj12 = { name: "remove", label: null };
+    tmp8 = useTileEntranceAnimatedStyle(itemKey);
+    obj = { name: "remove", label: null };
+    tmp9 = closure_0;
+    tmp10 = closure_2;
     intl = closure_0(closure_2[16]).intl;
-    obj12.label = intl.string(closure_0(closure_2[16]).t.kFwAsa);
-    items2 = [];
-    items2[0] = obj12;
-    tmp13 = jsxs;
-    tmp15 = jsx;
-    tmp14 = View;
-    obj13 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: items2, onAccessibilityAction: callback, disabled: null == onPress, onPress, style: null, children: null };
-    items3 = [, ];
-    items3[0] = tmp.pressableContainer;
+    obj.label = intl.string(closure_0(closure_2[16]).t.kFwAsa);
+    items1 = [];
+    items1[0] = obj;
+    tmp11 = jsxs;
+    tmp13 = jsx;
+    tmp12 = View;
+    obj1 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: items1, onAccessibilityAction: callback, disabled: null == onPress, onPress, style: null, children: null };
+    items2 = [, ];
+    items2[0] = tmp.pressableContainer;
     if (isHighlighted) {
       isHighlighted = tmp.highlightedTileContainer;
     }
-    obj14 = { children: null };
-    items3[1] = isHighlighted;
-    obj13.style = items3;
-    obj15 = { style: null, children: null };
-    items4 = [, , ];
-    items4[0] = tmp.tileContainer;
-    items4[1] = { width: tmp6, height: diff };
-    items4[2] = animatedStyle;
-    obj15.style = items4;
+    obj9 = { children: null };
+    items2[1] = isHighlighted;
+    obj1.style = items2;
+    obj10 = { style: null, children: null };
+    items3 = [, , ];
+    items3[0] = tmp.tileContainer;
+    items3[1] = { width: tmp6, height: diff };
+    items3[2] = tmp8;
+    obj10.style = items3;
     size = { uri, isImage, isVideo, width: tmp6, height: diff, maxFileWidth: num2, fileName, borderRadius: null };
-    tmp16 = closure_1(tmp9[23]);
-    size.borderRadius = closure_1(tmp9[7]).radii.md;
+    tmp14 = closure_1(tmp10[23]);
+    size.borderRadius = closure_1(tmp10[7]).radii.md;
+    items4 = [, ];
+    items4[0] = tmp13(tmp14, size);
+    items4[1] = children;
+    obj10.children = items4;
+    obj1.children = tmp11(closure_1(tmp10[8]).View, obj10);
     items5 = [, ];
-    items5[0] = tmp15(tmp16, size);
-    items5[1] = children;
-    obj15.children = items5;
-    obj13.children = tmp13(closure_1(tmp9[8]).View, obj15);
+    items5[0] = tmp13(closure_0(closure_2[22]).PressableOpacity, obj1);
+    obj11 = { accessibilityRole: "button", accessibilityLabel: removeAccessibilityLabel, style: tmp.closeButton, onPress: onRemove, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: null };
+    obj12 = { style: null, children: null };
     items6 = [, ];
-    items6[0] = tmp15(closure_0(closure_2[22]).PressableOpacity, obj13);
-    obj16 = { accessibilityRole: "button", accessibilityLabel: removeAccessibilityLabel, style: tmp.closeButton, onPress: onRemove, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: null };
-    obj17 = { style: null, children: null };
-    items7 = [, ];
-    items7[0] = tmp.closeContainer;
-    items7[1] = animatedStyle;
-    obj17.style = items7;
-    obj18 = { source: closure_1(tmp9[24]), size: tmp8(tmp9[10]).Icon.Sizes.MEDIUM, color: closure_1(tmp9[7]).unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon };
-    obj17.children = tmp15(tmp8(tmp9[10]).Icon, obj18);
-    obj16.children = tmp15(closure_1(tmp9[8]).View, obj17);
-    items6[1] = tmp15(tmp8(tmp9[22]).PressableOpacity, obj16);
-    obj14.children = items6;
-    return tmp13(tmp14, obj14);
+    items6[0] = tmp.closeContainer;
+    items6[1] = tmp8;
+    obj12.style = items6;
+    obj13 = { source: closure_1(tmp10[24]), size: tmp9(tmp10[10]).Icon.Sizes.MEDIUM, color: closure_1(tmp10[7]).unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon };
+    obj12.children = tmp13(tmp9(tmp10[10]).Icon, obj13);
+    obj11.children = tmp13(closure_1(tmp10[8]).View, obj12);
+    items5[1] = tmp13(tmp9(tmp10[22]).PressableOpacity, obj11);
+    obj9.children = items5;
+    return tmp11(tmp12, obj9);
   }
 }
 function CustomScrollView(arg0) {
@@ -326,14 +329,14 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7701).DraftType;
-const ImageCarouselConstants = fn(10527);
+const DraftType = fn(7825).DraftType;
+const ImageCarouselConstants = fn(10657);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 }, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -360,8 +363,8 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj.spoilerOverlay = {};
 const rect1 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
 obj.footerRightContainer = rect1;
-createStyles.createStyles(obj);
-const __initData = { code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}" };
+const state = createStyles.createStyles(obj);
+let closure_14 = { code: "(function ImageCarouselTsx1(){let[withTiming,animatedStylePropValue,STANDARD_EASING,withSpring]=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};})" };
 let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_4 };
 let obj9 = {};
 size = fn(2);
@@ -379,7 +382,7 @@ export default noop.memo(function ImageCarousel(arg0) {
   if (tmp) {
     tmp = attachments.length > 0;
   }
-  let items = [channelId];
+  items = [channelId];
   onRemove = noop.useCallback((arg0) => {
     UploadAttachmentActionCreatorsDefault.remove(channelId, arg0, DraftType.ChannelMessage);
   }, items);
@@ -388,7 +391,7 @@ export default noop.memo(function ImageCarousel(arg0) {
     if (callback != null) {
       tmp(arg0);
     }
-    const items = [arg1];
+    items = [arg1];
     MediaKeyboardUtils.addImagesFromPicker(channelId, items, Upload.UploadOrigin.IMAGE_EDITOR);
   }, items1);
   if (!tmp) {
@@ -406,30 +409,6 @@ export default noop.memo(function ImageCarousel(arg0) {
   obj.children = items2;
   return closure_12(ImageCarouselRow, obj);
 });
-export function useTileEntranceAnimatedStyle(arg0) {
-  sharedValue = sharedValue(5095).useSharedValue(0);
-  const items = [sharedValue, arg0];
-  const effect = noop.useEffect(() => {
-    const result = sharedValue.set(1);
-  }, items);
-  const obj = sharedValue(5095);
-  const fn = function l() {
-    const obj = { opacity: null, transform: null };
-    const obj3 = { duration: 300, easing: null };
-    value = sharedValue.get();
-    obj3.easing = native.STANDARD_EASING;
-    obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
-    const obj4 = { scale: null };
-    obj4.scale = spring.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-    const items = [obj4];
-    obj.transform = items;
-    return obj;
-  };
-  const obj2 = sharedValue(5095);
-  fn.__closure = { withTiming: sharedValue(5254).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1187).STANDARD_EASING, withSpring: sharedValue(5637).withSpring };
-  fn.__workletHash = 14458898683767;
-  fn.__initData = __initData;
-  return obj2.useAnimatedStyle(fn);
-}
+export { useTileEntranceAnimatedStyle };
 export { ImageCarouselTile };
 export { ImageCarouselRow };

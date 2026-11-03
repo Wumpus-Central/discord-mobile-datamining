@@ -1,17 +1,17 @@
-// === Module 13445: CheckpointShareCardStats ===
+// === Module 13583: CheckpointShareCardStats ===
 
-// Module 13445 (CheckpointShareCardStats)
+// Module 13583 (CheckpointShareCardStats)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8143 */;
-import ChatIcon from "ChatIcon" /* 8643 */;
-import ReactionIcon from "ReactionIcon" /* 9452 */;
-import GameControllerIcon from "GameControllerIcon" /* 9727 */;
-import ServerIcon from "ServerIcon" /* 9758 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11972 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8267 */;
+import ChatIcon from "ChatIcon" /* 8767 */;
+import ReactionIcon from "ReactionIcon" /* 9580 */;
+import GameControllerIcon from "GameControllerIcon" /* 9859 */;
+import ServerIcon from "ServerIcon" /* 9890 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function StatImage(arg0) {
     const obj = { source: null, style: null };
     const obj3 = { uri };
     obj.source = obj3;
-    const items = [tmp.statImage, ];
+    items = [tmp.statImage, ];
     const size1 = { width: size, height: size };
     items[1] = size1;
     obj.style = items;
@@ -43,7 +43,7 @@ function StatRow(stat) {
   let tmp5 = null;
   if (null != stat) {
     const obj = { style: null, children: null };
-    const items = [tmp.statRow, rowStyle, ];
+    items = [tmp.statRow, rowStyle, ];
     const obj2 = { backgroundColor: tmp4 };
     items[2] = obj2;
     obj.style = items;
@@ -58,7 +58,7 @@ function StatRow(stat) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { statRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 }, statText: null, statImage: null, guildAcronym: null, unicodeEmoji: null };
 let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 };
 obj2.statText = { flexShrink: 1, color: nativeDefault.colors.BLACK };
@@ -111,7 +111,7 @@ export default function CheckpointShareCardStats(arg0) {
     let tmp14 = hasOwnProperty;
   } else {
     const obj6 = { style: null, children: null };
-    const items = [, , ];
+    items = [, , ];
     ({ statImage: arr3[0], guildAcronym: arr3[1] } = tmp);
     const size = { width: iconSize, height: iconSize };
     items[2] = size;

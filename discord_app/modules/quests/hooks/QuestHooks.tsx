@@ -1,49 +1,49 @@
-// === Module 9681: hooks/QuestHooks ===
+// === Module 9813: hooks/QuestHooks ===
 
-// Module 9681 (hooks/QuestHooks)
+// Module 9813 (hooks/QuestHooks)
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import shared from "shared" /* 5021 */;
-import _mod6556 from "module_6556" /* 6556 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6789 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7330 */;
-import QuestDataUtils from "QuestDataUtils" /* 7842 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7852 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7866 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import QuestType from "QuestType" /* 7870 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import QualtricsActionCreators from "QualtricsActionCreators" /* 7928 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 7935 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import AssetUtils from "AssetUtils" /* 9695 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11386 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14684 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14687 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 14688 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14689 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import shared from "shared" /* 5148 */;
+import _mod6676 from "module_6676" /* 6676 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6909 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7450 */;
+import QuestDataUtils from "QuestDataUtils" /* 7966 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7976 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7990 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import QuestType from "QuestType" /* 7994 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import QualtricsActionCreators from "QualtricsActionCreators" /* 8052 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 8059 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import AssetUtils from "AssetUtils" /* 9827 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9832 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9837 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11524 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14815 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14818 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 14819 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14820 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7843 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
-import UserStore from "UserStore" /* 1383 */;
-import BountyStore from "BountyStore" /* 7845 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7967 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
+import UserStore from "UserStore" /* 1385 */;
+import BountyStore from "BountyStore" /* 7969 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 const require = globalThis.__r;
 
@@ -58,17 +58,17 @@ function useQuests(arg0) {
   const tmp = lastFetchedCurrentQuests(isEligibleForQuests.useState(false), 2);
   const hasFetched = tmp[0];
   dependencyMap = tmp[1];
-  let items = [QuestStore];
+  items = [QuestStore];
   let quests = obj(504).useStateFromStoresArray(items, () => {
     const quests = QuestStore.quests;
-    const items = [...quests.values()];
+    items = [...quests.values()];
     return items;
   });
   obj2 = obj(504);
   const items1 = [QuestStore];
   let excludedQuests = obj(504).useStateFromStoresArray(items1, () => {
     const excludedQuests = QuestStore.excludedQuests;
-    const items = [...excludedQuests.values()];
+    items = [...excludedQuests.values()];
     return items;
   });
   let obj3 = obj(504);
@@ -77,7 +77,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(9673).getIsEligibleForQuests();
+  isEligibleForQuests = obj(9805).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -104,7 +104,7 @@ function useQuests(arg0) {
         obj = QuestActionCreators;
         const currentQuests = obj.fetchCurrentQuests();
         if (obj2.isMac()) {
-          const state = DiscordAppStateDefault.getState();
+          state = DiscordAppStateDefault.getState();
         }
         obj2 = PlatformUtils;
       }
@@ -113,7 +113,7 @@ function useQuests(arg0) {
   return { quests, excludedQuests, isFetchingCurrentQuests, hasFetched };
 }
 function defaultSortFn(id, id2, questHomeHero, get) {
-  let tmp2 = id.id === __initData;
+  let tmp2 = id.id === guild;
   if (tmp2) {
     const userStatus = id.userStatus;
     let completedAt;
@@ -122,7 +122,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     tmp2 = null == completedAt;
   }
-  let tmp5 = id2.id === __initData;
+  let tmp5 = id2.id === guild;
   if (tmp5) {
     const userStatus2 = id2.userStatus;
     let completedAt1;
@@ -531,7 +531,7 @@ function seededQuestSortKey(currentUserId, id) {
 function useAllQuests(quests, sortMethod) {
   _require = quests;
   importDefault = sortMethod;
-  const items = [ref2];
+  items = [ref2];
   const stateFromStores = require("initialize").useStateFromStores(items, () => null);
   closure_129_0 = stateFromStores;
   closure_130_1 = undefined;
@@ -628,7 +628,7 @@ function isQuestHiddenFromQuestHome(userStatus) {
 }
 function useIsQuestProgressing(quest) {
   _require = quest;
-  const items = [QuestStore];
+  items = [QuestStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.isProgressingOnDesktop(quest.id));
   closure_129_0 = quest;
   const items1 = [quest];
@@ -651,7 +651,7 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   closure_1 = questTaskDetails;
   const id = quest.id;
   closure_129_0 = id;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [require("initialize").useStateFromStores(items, () => QuestStore.selectedTaskPlatform(closure_0)), ];
   const items2 = [id];
   items1[1] = memo2.useCallback((platform) => QuestActionCreators.selectTaskPlatform(closure_0, platform), items2);
@@ -671,7 +671,7 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   const items6 = [questTaskDetails];
   const memo1 = memo2.useMemo(() => QuestTaskUtils.isQuestProgressingOnConsole(closure_0), items5);
   memo2 = memo2.useMemo(() => {
-    const match = _mod6556.match(closure_1);
+    const match = _mod6676.match(closure_1);
     const withResult = match.with({ percentComplete: 0 }, () => null);
     const obj = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
     const withResult1 = withResult.with({ taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP }, () => constants.DESKTOP);
@@ -703,21 +703,21 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   const items7 = [hasItem1, hasItem, memo2, DESKTOP, selectedPlatform];
   const items8 = [
     obj2.useMemo(() => {
-      const match = _mod6556.match({ lastPlatformProgress: memo2, currentProgressingPlatform: DESKTOP, selectedPlatform });
+      const match = _mod6676.match({ lastPlatformProgress: memo2, currentProgressingPlatform: DESKTOP, selectedPlatform });
       const obj = { lastPlatformProgress: memo2, currentProgressingPlatform: DESKTOP, selectedPlatform };
       obj2 = { currentProgressingPlatform: constants.CONSOLE };
       const obj3 = { currentProgressingPlatform: constants.DESKTOP };
-      const withResult = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE);
+      const withResult = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE);
       const obj4 = { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE };
-      const withResult1 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP);
+      const withResult1 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP);
       const obj5 = { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP };
-      const withResult2 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE);
+      const withResult2 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE);
       const obj6 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE };
-      const withResult3 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP);
+      const withResult3 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP);
       const obj7 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP };
-      const withResult4 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE);
-      const withResult5 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP);
-      return match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6784).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => quest(6784).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
+      const withResult4 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE);
+      const withResult5 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP);
+      return match.with({ currentProgressingPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => quest(6904).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => quest(6904).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
         if (hasItem1) {
           if (hasItem) {
             let SELECT = closure_0(first[46]).TaskPlatformScreen.SELECT;
@@ -733,12 +733,12 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   ];
   return items8;
 }
-const useConsoleQuestUIStore = fn(7847).useConsoleQuestUIStore;
-const QuestConstants = fn(6781);
+const useConsoleQuestUIStore = fn(7971).useConsoleQuestUIStore;
+const QuestConstants = fn(6901);
 ({ QuestTaskPlatform: closure_14, QuestsExperimentLocations: closure_15, MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES: closure_16, QuestHomeSortMethods: closure_17, SORTED_QUEST_HOME_FILTER_GROUPS: closure_18, TaskFilterTypes: closure_19, RewardFilterTypes: closure_20, MOBILE_ORBS_INTRO_QUEST_ID: closure_21, ORBS_INTRO_QUEST_ID: closure_22, QuestVariants: closure_23 } = QuestConstants);
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_24, PlatformTypes: closure_25, ThemeTypes: closure_26, AnalyticEvents: closure_27 } = Constants);
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 let c29 = -1;
 let closure_37 = {};
 let closure_38 = { questHomeHero: null, isQuestHomeHeroShelfEnabled: false, currentUserId: null, isRenewableEndDateSortEnabled: false, isMobileQuestHomeSortPriorityEnabled: false };
@@ -746,7 +746,7 @@ const constants9 = { DESC: 0, [0]: "DESC", ASC: 1, [1]: "ASC" };
 const QuestTabs = { ALL: "all", CLAIMED: "claimed", PREVIEW_TOOL: "preview_tool" };
 function useQuestTaskDetails(quest) {
   closure_0 = quest;
-  const items = [quest];
+  items = [quest];
   const callback = noop.useCallback(() => QuestTaskUtils.getQuestTaskDetails(closure_0), items);
   const tmp2 = _slicedToArray(noop.useState(callback()), 2);
   closure_2 = tmp2[1];
@@ -810,11 +810,11 @@ export function useFilteredQuests(ALL) {
   quests = tmp2.quests;
   ({ excludedQuests, isFetchingCurrentQuests, hasFetched } = tmp2);
   const map = new Map(quests.map((id) => {
-    const items = [id.id, id];
+    items = [id.id, id];
     return items;
   }));
   const tmp4 = (function useCompletedAndClaimedQuests(quests) {
-    const items = [quests];
+    items = [quests];
     const memo = React.useMemo(() => quests.filter((userStatus) => {
       userStatus = userStatus.userStatus;
       let completedAt;
@@ -900,7 +900,7 @@ export function useFilteredQuests(ALL) {
 }
 export function useClaimedQuests() {
   _require = noop.useRef(false);
-  const items = [QuestStore];
+  items = [QuestStore];
   let claimedQuests = require("initialize").useStateFromStoresArray(items, () => {
     const claimedQuests = QuestStore.claimedQuests;
     return Array.from(claimedQuests.values());
@@ -922,12 +922,12 @@ export function useClaimedQuests() {
   return { claimedQuests, isFetchingClaimedQuests };
 }
 export function useExpiredQuestsMap() {
-  const items = [QuestStore];
+  items = [QuestStore];
   return initialize.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
 }
 export function useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility) {
   _require = quest;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [quest];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != c0;
@@ -954,7 +954,7 @@ export function useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility) {
 }
 export function useQuestOrbRewardMultiplier(questId) {
   _require = questId;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [questId];
   return require("initialize").useStateFromStores(items, () => {
     const quest = QuestStore.getQuest(closure_0);
@@ -967,7 +967,7 @@ export function useQuestOrbRewardMultiplier(questId) {
 }
 export function useIsQuestExpired(questDockQuest) {
   _require = questDockQuest;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [questDockQuest];
   return require("initialize").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != c0;
@@ -978,13 +978,13 @@ export function useIsQuestExpired(questDockQuest) {
   }, items1);
 }
 export function useIsQuestAccessSuspended() {
-  const items = [QuestStore];
+  items = [QuestStore];
   return initialize.useStateFromStores(items, () => QuestStore.isQuestAccessSuspended, []);
 }
 export function useIsQuestEligibleForMembersListPopout(userStatus, arg1, arg2) {
   _require = userStatus;
   let channelId = arg1;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     channelId = undefined;
     if (channelId != null) {
@@ -1045,7 +1045,7 @@ export function useQuestFormattedDate(rewardsExpireAt, arg1) {
     obj = { dateStyle: "short" };
   }
   let stateFromStores;
-  const items = [LocaleStore];
+  items = [LocaleStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   const items1 = [rewardsExpireAt, obj, stateFromStores];
   return noop.useMemo(() => {
@@ -1064,9 +1064,9 @@ export function useOnOpenGameClick(quest) {
   const ctaContent = quest.ctaContent;
   const sourceQuestContent = quest.sourceQuestContent;
   const getQuestImpressionId = quest(ctaContent[31]).useGetQuestImpressionId();
-  const items = [quest, content, ctaContent, getQuestImpressionId, sourceQuestContent];
+  items = [quest, content, ctaContent, getQuestImpressionId, sourceQuestContent];
   return noop.useCallback(() => {
-    if (quest.id !== __initData2) {
+    if (quest.id !== closure_2_22) {
       const obj3 = { content, ctaContent, impressionId: getQuestImpressionId(), sourceQuestContent };
       QuestPlatformUtils.openGameLinkDirectly(tmp, obj3);
     } else {
@@ -1077,17 +1077,17 @@ export function useOnOpenGameClick(quest) {
 }
 export function useIsQuestProgressingOnDesktop(arg0) {
   _require = arg0;
-  const items = [QuestStore];
+  items = [QuestStore];
   return require("initialize").useStateFromStores(items, () => QuestStore.isProgressingOnDesktop(quest.id));
 }
 export function useIsQuestProgressingOnConsole(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => QuestTaskUtils.isQuestProgressingOnConsole(closure_0), items);
 }
 export function useIsQuestProgressingVideoQuest(arg0) {
   _require = arg0;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [arg0, require("initialize").useStateFromStores(items, () => QuestStore.getOptimisticProgress(quest.id, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO))];
   return noop.useMemo(() => VideoQuestUtils.isVideoQuestProgressing(closure_0), items1);
 }
@@ -1095,7 +1095,7 @@ export { useIsQuestProgressing };
 export { useQuestTaskDetails };
 export function useThirdPartyTaskDetails(quest) {
   closure_0 = quest;
-  const items = [quest];
+  items = [quest];
   return noop.useMemo(() => QuestTaskUtils.getThirdPartyTaskDetails(closure_0), items);
 }
 export function useConnectedConsoleLinkOnClick(quest) {
@@ -1103,7 +1103,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
   ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
   c3 = undefined;
   closure_4 = undefined;
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStoresObject = quest(504).useStateFromStoresObject(items, () => ({ fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() }));
   ({ fetching, accounts } = stateFromStoresObject);
   closure_129_0 = accounts;
@@ -1118,7 +1118,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
   let obj = quest(504);
   const tmp = quest;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = quest(7868).isConsoleQuest(quest);
+  let isConsoleQuestResult = quest(7992).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1126,8 +1126,8 @@ export function useConnectedConsoleLinkOnClick(quest) {
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  obj2 = quest(7868);
-  closure_4 = tmp(9717).useGetQuestImpressionId();
+  obj2 = quest(7992);
+  closure_4 = tmp(9849).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (c3) {
@@ -1143,7 +1143,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
 }
 export function useGetOrFetchApplicationForConsoleQuests(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     const set = new Set();
     while (tmp2 !== undefined) {
@@ -1160,7 +1160,7 @@ export function useGetOrFetchApplicationForConsoleQuests(arg0) {
 }
 export function useQuestForMemberListSocialEntryPoint(arg0) {
   _require = arg0;
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => quests.quests);
   const arr = Array.from(stateFromStores.values());
   closure_129_0 = arr;
@@ -1177,9 +1177,9 @@ export function useQuestForMemberListSocialEntryPoint(arg0) {
     }
     return Array.from(set);
   }, items1);
-  const items2 = [arg0, stateFromStores, stateFromStores(7330)(memo)];
+  const items2 = [arg0, stateFromStores, stateFromStores(7450)(memo)];
   const memo1 = noop.useMemo(() => {
-    const result = utils_QuestUtils.filterQuestsForSocialEntrypoints(stateFromStores, __initData2);
+    const result = utils_QuestUtils.filterQuestsForSocialEntrypoints(stateFromStores, value2);
     return QuestMatchingUtils.getQuestsFromActivities(result, closure_0);
   }, items2);
   closure_130_0 = memo1;
@@ -1205,7 +1205,7 @@ export function useQuestCollectibles(config) {
   const product = isFetching.product;
   let avatarDecoration;
   if (product != null) {
-    const items = product.items;
+    items = product.items;
     if (items != null) {
       avatarDecoration = items[0];
     }
@@ -1214,31 +1214,31 @@ export function useQuestCollectibles(config) {
 }
 export function useQuestPreviewActions(id) {
   closure_0 = id;
-  let items = [id];
+  items = [id];
   return noop.useMemo(() => ({
     handleComplete() {
-      return closure_0(9682).completeQuestPreview(id);
+      return closure_0(9814).completeQuestPreview(id);
     },
     handleProgress(random) {
-      return closure_0(9682).completeQuestPreview(id, random);
+      return closure_0(9814).completeQuestPreview(id, random);
     },
     handleResetStatusClick() {
-      return closure_0(9682).resetQuestPreviewStatus(id);
+      return closure_0(9814).resetQuestPreviewStatus(id);
     },
     handleResetDismissibilityClick() {
-      return closure_0(9682).resetQuestDismissibilityStatus(id);
+      return closure_0(9814).resetQuestDismissibilityStatus(id);
     },
     handleOverridePreviewClick(placement) {
-      return closure_0(9682).overrideQuestForPlacement(placement, id);
+      return closure_0(9814).overrideQuestForPlacement(placement, id);
     },
     handleResetHasBeenSeenClick() {
-      const items = [id];
-      return closure_0(9682).markAdContentUnseen(closure_0(6788).AdCreativeType.QUEST, items);
+      items = [id];
+      return closure_0(9814).markAdContentUnseen(closure_0(6908).AdCreativeType.QUEST, items);
     }
   }), items);
 }
 export function useConnectedAccounts() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStoresObject = accounts(504).useStateFromStoresObject(items, () => ({ fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() }));
   accounts = stateFromStoresObject.accounts;
   const items1 = [accounts];
@@ -1260,13 +1260,13 @@ export function useManuallyStartConsoleQuest(questId) {
   const tmp = startingConsoleQuest(noop.useState(false), 2);
   startingConsoleQuest = tmp[0];
   noop = tmp[1];
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStores = questId(beforeRequest[14]).useStateFromStores(items, () => accounts.getAccounts());
   const tmp4 = useConsoleQuestUIStore((clearErrorHintsByType) => clearErrorHintsByType.clearErrorHintsByType);
   closure_6 = tmp4;
   const items1 = [questId];
   const callback = noop.useCallback((arg0) => {
-    const state = useConsoleQuestUIStore.getState();
+    state = useConsoleQuestUIStore.getState();
     return state.setErrorHints(questId, arg0);
   }, items1);
   const items2 = [stateFromStores, tmp4, questId];
@@ -1286,7 +1286,7 @@ export function useManuallyStartConsoleQuest(questId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1360,7 +1360,7 @@ export function useManuallyStartConsoleQuest(questId) {
 export function useWaitingForConsoleConnection(quest) {
   quest = quest.quest;
   accounts = undefined;
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStoresObject = accounts(504).useStateFromStoresObject(items, () => ({ fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() }));
   ({ fetching, accounts } = stateFromStoresObject);
   const items1 = [accounts];
@@ -1373,7 +1373,7 @@ export function useWaitingForConsoleConnection(quest) {
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(504);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7868).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7992).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1383,7 +1383,7 @@ export function useWaitingForConsoleConnection(quest) {
   return isConsoleQuestResult;
 }
 export function useQuestHowToHelpArticle() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStoresObject = accounts(504).useStateFromStoresObject(items, () => ({ fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() }));
   ({ fetching, accounts } = stateFromStoresObject);
   const items1 = [accounts];
@@ -1431,7 +1431,7 @@ export function useProgressState(quest) {
   }
   if (typeof useQuestTaskDetails === "function") {
     closure_0 = quest;
-    const items = [quest];
+    items = [quest];
     const callback = noop.useCallback(() => QuestTaskUtils.getQuestTaskDetails(closure_0), items);
     [first, closure_2] = noop.useState(callback());
     const items1 = [callback];
@@ -1500,7 +1500,7 @@ export function useQuestCompletionDetails(quest) {
   [][0] = LocaleStore;
   if (typeof useQuestTaskDetails === "function") {
     _require = quest;
-    const items = [quest];
+    items = [quest];
     const callback = noop.useCallback(() => QuestTaskUtils.getQuestTaskDetails(closure_0), items);
     const tmp9 = _slicedToArray(noop.useState(callback()), 2);
     dependencyMap = tmp9[1];
@@ -1567,8 +1567,8 @@ export function useQuestCompletionDetails(quest) {
       obj.completedRatioDisplay = combined;
       return obj;
     }
-    combined = tmp(1895).formatPercent(tmp4, percentComplete, { roundingMode: "floor" });
-    const tmpResult = tmp(1895);
+    combined = tmp(2024).formatPercent(tmp4, percentComplete, { roundingMode: "floor" });
+    const tmpResult = tmp(2024);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -1576,7 +1576,7 @@ export function useQuestCompletionDetails(quest) {
 }
 export function useSelectedTaskPlatform(arg0) {
   _require = arg0;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [require("initialize").useStateFromStores(items, () => QuestStore.selectedTaskPlatform(closure_0)), ];
   const items2 = [arg0];
   items1[1] = noop.useCallback((platform) => QuestActionCreators.selectTaskPlatform(closure_0, platform), items2);
@@ -1588,7 +1588,7 @@ export function useQuestWarningTips(userStatus) {
   [][0] = userStatus;
   if (typeof useQuestTaskDetails === "function") {
     closure_129_0 = userStatus;
-    const items = [userStatus];
+    items = [userStatus];
     const callback = noop.useCallback(() => QuestTaskUtils.getQuestTaskDetails(closure_0), items);
     closure_129_1 = callback;
     [tmp5, closure_129_2] = noop.useState(callback());
@@ -1654,7 +1654,7 @@ export function useQuestWarningTips(userStatus) {
     if (userStatus2 != null) {
       completedAt = userStatus2.completedAt;
     }
-    const DESKTOP = tmp11(6789).FirstPartyQuestTaskTypesSets.DESKTOP;
+    const DESKTOP = tmp11(6909).FirstPartyQuestTaskTypesSets.DESKTOP;
     let hasItem = DESKTOP.has(tmp5.taskType);
     if (hasItem) {
       hasItem = tmp5.percentComplete > 0;
@@ -1670,8 +1670,8 @@ export function useQuestWarningTips(userStatus) {
     }
     if (tmp17) {
       if (!hasItem) {
-        hasItem = 0 === tmp5.percentComplete && _slicedToArray(useTaskPlatformScreen(userStatus, tmp5), 1)[0] === tmp11(6784).TaskPlatformScreen.DESKTOP;
-        const tmp21 = 0 === tmp5.percentComplete && _slicedToArray(useTaskPlatformScreen(userStatus, tmp5), 1)[0] === tmp11(6784).TaskPlatformScreen.DESKTOP;
+        hasItem = 0 === tmp5.percentComplete && _slicedToArray(useTaskPlatformScreen(userStatus, tmp5), 1)[0] === tmp11(6904).TaskPlatformScreen.DESKTOP;
+        const tmp21 = 0 === tmp5.percentComplete && _slicedToArray(useTaskPlatformScreen(userStatus, tmp5), 1)[0] === tmp11(6904).TaskPlatformScreen.DESKTOP;
       }
       tmp17 = hasItem;
     }
@@ -1679,13 +1679,13 @@ export function useQuestWarningTips(userStatus) {
     tmp19 = null != completedAt;
     let tmp22 = require("PlatformUtils").isWeb() && tmp17;
     if (tmp22) {
-      tmp22 = !tmp11(9719).isQuestSupportedOnWeb(userStatus);
-      const tmp11Result3 = tmp11(9719);
+      tmp22 = !tmp11(9851).isQuestSupportedOnWeb(userStatus);
+      const tmp11Result3 = tmp11(9851);
     }
     const tmp11Result = require("PlatformUtils");
     let isMacResult = require("PlatformUtils").isMac();
     if (isMacResult) {
-      isMacResult = tmp5.taskType === tmp11(6789).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
+      isMacResult = tmp5.taskType === tmp11(6909).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
     }
     if (isMacResult) {
       isMacResult = tmp17;
@@ -1705,7 +1705,7 @@ export function useQuestWarningTips(userStatus) {
   }
 }
 export function useQuest(arg0) {
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = initialize.useStateFromStores(items, () => quests.quests);
   value = stateFromStores.get(arg0);
   if (value == null) {
@@ -1716,7 +1716,7 @@ export function useQuest(arg0) {
 export function useNonNullableQuest(questId, callback) {
   _require = questId;
   closure_1 = callback;
-  let items = [QuestStore];
+  items = [QuestStore];
   const items1 = [questId];
   stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
   if (stateFromStores == null) {
@@ -1726,7 +1726,7 @@ export function useNonNullableQuest(questId, callback) {
   const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
       const quests = QuestStore.quests;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(quests.keys(), 0);
       const _Error = Error;
       const _HermesInternal = HermesInternal;
@@ -1754,7 +1754,7 @@ export function useQuestBarOrDockModeChangeTracking(mode) {
     const adContentId = mode.adContentId;
     const adCreativeType = mode.adCreativeType;
   }
-  const items = [questContent, sourceQuestContent, tmp3, tmp, tmp2];
+  items = [questContent, sourceQuestContent, tmp3, tmp, tmp2];
   const callback = sourceQuestContent.useCallback((mode, prevMode) => {
     if (null != questId) {
       obj2 = { mode, prevMode, questContent, questId: tmp, sourceQuestContent };
@@ -1794,7 +1794,7 @@ export function useQuestBarOrDockModeChangeTracking(mode) {
 export function useCosponsoredLogotypeAsset(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(closure_0), items1);
   const tmp2 = require("useTheme")();
@@ -1811,7 +1811,7 @@ export function useCosponsoredLogotypeAsset(arg0, arg1) {
   }, items2);
 }
 export function useClaimedCollectibleRewardMessage(config) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const defaultRewardName = QuestRewardUtils.getDefaultRewardName(config, stateFromStores);
   const collectibleQuestRewardDuration = QuestRewardUtils.getCollectibleQuestRewardDuration(config);
@@ -1859,19 +1859,19 @@ export function useLaunchInGameActivityQuest(quest) {
   return obj2;
 }
 export function useIsPreviewerOnAnyQuest() {
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     quests = quests.quests;
-    const items = [...quests.values()];
+    items = [...quests.values()];
     return items;
   });
   return stateFromStoresArray.some((preview) => preview.preview);
 }
 export function useShouldShowPreviewToolTab() {
-  let items = [QuestStore];
+  items = [QuestStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     quests = quests.quests;
-    const items = [...quests.values()];
+    items = [...quests.values()];
     return items;
   });
   return stateFromStoresArray.some((preview) => preview.preview);
@@ -1891,7 +1891,7 @@ export function useShouldShowQuestsActivityPanelItem(userStatus) {
     tmp5 = null;
   }
   _require = tmp5;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [tmp5];
   let claimedAt;
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -1923,10 +1923,10 @@ export function useShouldShowQuestsActivityPanelItem(userStatus) {
   return !isDismissedResult;
 }
 export function useQuestsWithPreviewAccess() {
-  let items = [QuestStore];
+  items = [QuestStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     quests = quests.quests;
-    const items = [...quests.values()];
+    items = [...quests.values()];
     return items;
   });
   const items1 = [stateFromStoresArray];
@@ -1934,7 +1934,7 @@ export function useQuestsWithPreviewAccess() {
 }
 export function useQuestHomeFilterOptions() {
   closure_0 = closure_18;
-  const items = [closure_18];
+  items = [closure_18];
   return noop.useMemo(() => closure_0.map((item) => {
     [tmp, tmp2] = item;
     const obj = { heading: closure_1_0(closure_1_2[39]).getFilterGroupHeadingText(tmp), options: tmp2 };
@@ -1956,7 +1956,7 @@ export function useQuestHomeSortingFilteringAnalytics(selectedSortMethod) {
   const numQuestsVisible = selectedSortMethod.numQuestsVisible;
   noop.useRef(null);
   noop.useRef(null);
-  const items = [selectedSortMethod];
+  items = [selectedSortMethod];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(constants8.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: selectedSortMethod, previous_sort_method: ref.current });
     ref.current = selectedSortMethod;
@@ -1990,7 +1990,7 @@ export function useShouldShowQuestPreviewOverrides(quest) {
   return preview;
 }
 export function useQuestHomeHeroShelf(questIds) {
-  const items = [QuestStore];
+  items = [QuestStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => quests.quests);
   questIds = undefined;
   if (questIds != null) {
@@ -2031,7 +2031,7 @@ export function useFetchQuestHomeBounties(arg0) {
   obj2 = { location: constants2.QUEST_HOME_MOBILE };
   const obj3 = { location: constants2.QUEST_HOME_MOBILE };
   const tmp = _slicedToArray(noop.useState(enabled), 2);
-  const items = [BountyStore];
+  items = [BountyStore];
   const stateFromStoresObject = previewAdCreativeIds(enabled2[14]).useStateFromStoresObject(items, () => ({ isFetching: BountyStore.isFetchingQuestHomeBounties, questHomeBounties: BountyStore.questHomeBounties }));
   const items1 = [enabled, enabled2, previewAdCreativeIds];
   ({ isFetching, questHomeBounties } = stateFromStoresObject);
@@ -2057,7 +2057,7 @@ export function useFetchQuestHomeBounties(arg0) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2079,13 +2079,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(14691).fetchBountyPreview(arr, previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(14822).fetchBountyPreview(arr, previewAdCreativeIds(6904).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(14691).fetchQuestHomeBounties(previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(14822).fetchQuestHomeBounties(previewAdCreativeIds(6904).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {
@@ -2125,7 +2125,7 @@ export function useFetchQuestHomeBounties(arg0) {
               v0(false);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp34) {
           closure_2 = tmp34;
@@ -2169,7 +2169,7 @@ export function useFetchQuestHomeBounties(arg0) {
   return obj6;
 }
 export function useQuestHomeBounties() {
-  const items = [BountyStore];
+  items = [BountyStore];
   return initialize.useStateFromStoresObject(items, () => ({ questHomeBounties: BountyStore.questHomeBounties, isFetching: BountyStore.isFetchingQuestHomeBounties }));
 }
 export function useQuestBarImpressionSurvey(quest) {
@@ -2182,7 +2182,7 @@ export function useQuestBarImpressionSurvey(quest) {
     enrolledAt = userStatus.enrolledAt;
   }
   dependencyMap = tmp3;
-  const items = [setting, null != enrolledAt, quest.id];
+  items = [setting, null != enrolledAt, quest.id];
   return noop.useCallback(() => {
     if (!closure_2) {
       const fireSurveyAction = QualtricsActionCreators.fireSurveyAction;

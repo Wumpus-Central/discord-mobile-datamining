@@ -1,12 +1,12 @@
-// === Module 18182: VoiceUserNameItem ===
+// === Module 18326: VoiceUserNameItem ===
 
-// Module 18182 (VoiceUserNameItem)
+// Module 18326 (VoiceUserNameItem)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6439 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9290 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 18183 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6559 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9418 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 18327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
@@ -44,7 +44,7 @@ export default function VoiceUserNameItem(arg0) {
     _undefined2(nativeEvent.nativeEvent.layout.width);
   }, []);
   const obj3 = { onLayout: callback, style: null, children: null };
-  const items = [tmp.container, ];
+  items = [tmp.container, ];
   let measuringTag = tmp12;
   const callback2 = noop.useCallback((nativeEvent) => {
     _undefined4(nativeEvent.nativeEvent.layout.width);

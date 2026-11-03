@@ -1,9 +1,9 @@
-// === Module 11915: useHasVideoPermission ===
+// === Module 12052: useHasVideoPermission ===
 
-// Module 11915 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6724 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 12052 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6844 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermis
 
 export default function useHasVideoPermission(arg0) {
   _require = arg0;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null != _private;

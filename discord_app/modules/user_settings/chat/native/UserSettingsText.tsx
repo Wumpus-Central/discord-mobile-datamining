@@ -1,14 +1,14 @@
-// === Module 17456: UserSettingsText ===
+// === Module 17599: UserSettingsText ===
 
-// Module 17456 (UserSettingsText)
+// Module 17599 (UserSettingsText)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5932 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7161 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6052 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import UserStore from "UserStore" /* 1385 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
@@ -18,10 +18,10 @@ require = fn;
 const View = fn(17).View;
 const VideoQualitySettings = fn(1194).VideoQualitySettings;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -41,7 +41,7 @@ export default function UserSettingsText() {
   const RenderReactions = require("UserSettings").RenderReactions;
   const setting3 = RenderReactions.useSetting();
   let obj = require("useToken");
-  const items = [UnsyncedUserSettingsStore];
+  items = [UnsyncedUserSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ lowQualityImageMode: UnsyncedUserSettingsStore.dataSavingMode, videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode }));
   ({ lowQualityImageMode: require, videoUploadQuality } = stateFromStoresObject);
   dataSavingMode = stateFromStoresObject.dataSavingMode;

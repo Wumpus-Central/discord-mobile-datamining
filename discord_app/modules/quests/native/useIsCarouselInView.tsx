@@ -1,7 +1,7 @@
-// === Module 16999: useIsCarouselInView ===
+// === Module 17142: useIsCarouselInView ===
 
-// Module 16999 (useIsCarouselInView)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+// Module 17142 (useIsCarouselInView)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ export default function useIsCarouselInView() {
   const containerRef = noop.useRef(null);
   const height = useWindowDimensionsDefault().height;
   closure_2 = noop.useRef(height);
-  const items = [height];
+  items = [height];
   const effect = noop.useEffect(() => {
     closure_2.current = height;
   }, items);

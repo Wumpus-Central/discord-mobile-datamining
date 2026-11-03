@@ -1,19 +1,19 @@
-// === Module 15788: markGuildsAsRead ===
+// === Module 15931: markGuildsAsRead ===
 
-// Module 15788 (markGuildsAsRead)
+// Module 15931 (markGuildsAsRead)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6841 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7399 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6961 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
@@ -21,7 +21,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   const mapped = _modDef12.flatMap(arr, (guildId) => {
     const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
     const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
-    const items = [...vocalChannelIds];
+    items = [...vocalChannelIds];
     activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
     const iter = selectableChannelIds[Symbol.iterator]();
     while (iter !== undefined) {
@@ -64,7 +64,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   const flatMapResult = _modDef12.flatMap(arr, (guildId) => {
     const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
     const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
-    const items = [...vocalChannelIds];
+    items = [...vocalChannelIds];
     activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
     const iter = selectableChannelIds[Symbol.iterator]();
     while (iter !== undefined) {
@@ -82,7 +82,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7279).bulkAck(mapped, onFinished);
+  return mapped(7399).bulkAck(mapped, onFinished);
 };
 export function markChannelsAsRead(arr, source, onFinished) {
   const mapped = arr.map((channelId) => {

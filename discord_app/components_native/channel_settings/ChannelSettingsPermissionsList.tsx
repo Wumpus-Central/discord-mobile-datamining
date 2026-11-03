@@ -1,15 +1,15 @@
-// === Module 18916: ChannelSettingsPermissionsList ===
+// === Module 19074: ChannelSettingsPermissionsList ===
 
-// Module 18916 (ChannelSettingsPermissionsList)
+// Module 19074 (ChannelSettingsPermissionsList)
 import nativeDefault from "native" /* 575 */;
-import Server from "Server" /* 1992 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
+import Server from "Server" /* 2121 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };
@@ -41,7 +41,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   const tmp5 = guildId(rows.useState(""), 2);
   const first = tmp5[0];
   let obj = channelId(stateFromStores[13]);
-  let items = [rowContentHeight];
+  items = [rowContentHeight];
   stateFromStores = channelId(stateFromStores[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj3 = channelId(stateFromStores[11]);
   let items1 = [GuildRoleStore];
@@ -73,7 +73,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   const memo = obj2.useMemo(() => {
     if (channelId) {
       if (null != navigation) {
-        const items = [];
+        items = [];
         for (const key10003 in GuildMemberStore.getMutableAllGuildsAndMembers()[tmp]) {
           let user = UserStore.getUser(key10003);
           let tmp4 = null != user;
@@ -139,7 +139,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
             return tmp6;
           });
           const obj = { rows: found, sections: null };
-          const items = [found.length];
+          items = [found.length];
           obj.sections = items;
           return obj;
         }

@@ -1,19 +1,19 @@
-// === Module 18842: ShowAllRow ===
+// === Module 19000: ShowAllRow ===
 
-// Module 18842 (ShowAllRow)
+// Module 19000 (ShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRow from "TableRow" /* 6975 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15874 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRow from "TableRow" /* 7101 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 16017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { labelContainer: { flexDirection: "row", alignItems: "center" }, showAllText: { marginLeft: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,7 +28,7 @@ export default function ShowAllRow(users) {
   const obj3 = { size: native.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
   const substr = users.slice(0, 2);
   obj3.children = substr.map((getAvatarSource, index) => closure_1_3(native.Avatar, { source: getAvatarSource.getAvatarSource(null, false, native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL]), size: native.AvatarSizes.XSMALL_20 }, index));
-  const items = [React3(AvatarDuoPile.AvatarDuoPile, obj3), ];
+  items = [React3(AvatarDuoPile.AvatarDuoPile, obj3), ];
   const obj4 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj4.children = intl.format(util.t.NrzztX, { count });

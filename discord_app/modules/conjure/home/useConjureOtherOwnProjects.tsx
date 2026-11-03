@@ -1,7 +1,7 @@
-// === Module 12987: useConjureOtherOwnProjects ===
+// === Module 13123: useConjureOtherOwnProjects ===
 
-// Module 12987 (useConjureOtherOwnProjects)
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 13123 (useConjureOtherOwnProjects)
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/home/useConjureOtherO
 
 export default function useConjureOtherOwnProjects(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     const ownedProjects = ConjureProjectStore.getOwnedProjects();

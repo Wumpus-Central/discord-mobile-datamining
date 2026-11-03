@@ -1,6 +1,6 @@
-// === Module 5142: useRivePlayback ===
+// === Module 5265: useRivePlayback ===
 
-// Module 5142 (useRivePlayback)
+// Module 5265 (useRivePlayback)
 import noop from "module_19" /* 19 */;
 
 const AppState = fn(17).AppState;
@@ -31,7 +31,7 @@ export function useRivePlayback(riveViewRef, isReady) {
       ref.current = null;
     }
   }, []);
-  const items = [callback, riveViewRef];
+  items = [callback, riveViewRef];
   const pause = noop.useCallback(() => {
     callback();
     if (closure_0 != null) {

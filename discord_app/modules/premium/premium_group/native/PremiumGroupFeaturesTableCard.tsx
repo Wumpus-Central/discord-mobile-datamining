@@ -1,25 +1,25 @@
-// === Module 15372: PremiumGroupFeaturesTableCard ===
+// === Module 15513: PremiumGroupFeaturesTableCard ===
 
-// Module 15372 (PremiumGroupFeaturesTableCard)
+// Module 15513 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ColorConstants from "ColorConstants" /* 7617 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9926 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 15373 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ColorConstants from "ColorConstants" /* 7741 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 10057 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 15514 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 class BetaPill {
   constructor() {
     tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
-    obj1 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
+    obj1 = { variant: "text-xs/semibold", style: tmp.betaText, children: null };
     intl = closure_0(closure_2[6]).intl;
     obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
     obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
@@ -52,7 +52,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     const obj = { borderWidth: 2, direction: native.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.sm, style, children: null };
     const obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
     const tmp2Result = LinearGradientDefault;
-    const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
+    items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
     items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
     items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
     obj2.colors = items;

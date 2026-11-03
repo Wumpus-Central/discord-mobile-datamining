@@ -1,13 +1,13 @@
-// === Module 5229: GuildPowerupsStore ===
+// === Module 5352: GuildPowerupsStore ===
 
-// Module 5229 (GuildPowerupsStore)
+// Module 5352 (GuildPowerupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 function calculateAppliedBoosts(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -68,7 +68,7 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty, GuildFeatures: metroRequire } = Constants);
@@ -152,7 +152,7 @@ let items = [
       });
       fromEntriesResult = Object.fromEntries(found.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp, ];
+        items = [tmp, ];
         const obj = {};
         const merged = Object.assign(tmp2);
         let allPowerups = tmp2.allPowerups;

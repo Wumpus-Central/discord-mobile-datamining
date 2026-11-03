@@ -1,13 +1,13 @@
-// === Module 10548: Caption ===
+// === Module 10678: Caption ===
 
-// Module 10548 (Caption)
+// Module 10678 (Caption)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import native from "native" /* 1187 */;
-import createStyles from "createStyles" /* 5014 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
+import createStyles from "createStyles" /* 5141 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -24,7 +24,7 @@ export function Caption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };
-  const items = [tmp.labelContainer, style];
+  items = [tmp.labelContainer, style];
   obj.style = items;
   const obj2 = { style: null, children: label };
   const items1 = [tmp.captionText, textStyle];

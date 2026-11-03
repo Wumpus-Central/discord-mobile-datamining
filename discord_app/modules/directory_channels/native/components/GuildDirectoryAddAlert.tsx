@@ -1,11 +1,11 @@
-// === Module 13870: GuildDirectoryAddAlert ===
+// === Module 14001: GuildDirectoryAddAlert ===
 
-// Module 13870 (GuildDirectoryAddAlert)
+// Module 14001 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, container: { alignItems: "center", justifyContent: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,8 +31,8 @@ export default function GuildDirectoryAddAlert(arg0) {
   const obj3 = { style: tmp.guildIcon, guild, size: null };
   const tmp2 = common_AlertDefault;
   obj3.size = GuildIcon.GuildIconSizes.XLARGE;
-  const items = [React4(GuildIconDefault, obj3), , ];
-  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+  items = [React4(GuildIconDefault, obj3), , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.CueiPY);
   items[1] = React4(Text_Text.Text, obj4);

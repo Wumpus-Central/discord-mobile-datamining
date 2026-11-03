@@ -1,8 +1,8 @@
-// === Module 14197: UserProfileConfirmRemoveFriend ===
+// === Module 14328: UserProfileConfirmRemoveFriend ===
 
-// Module 14197 (UserProfileConfirmRemoveFriend)
+// Module 14328 (UserProfileConfirmRemoveFriend)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function UserProfileConfirmRemoveFriend(userDisplayName) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.cvSt1J);
   obj3.onPress = userDisplayName.onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm-remove"), ];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm-remove"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["eN6+rI"]);

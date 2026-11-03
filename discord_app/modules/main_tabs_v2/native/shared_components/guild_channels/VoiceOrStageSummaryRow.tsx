@@ -1,9 +1,9 @@
-// === Module 18721: guild_channels/VoiceOrStageSummaryRow ===
+// === Module 18879: guild_channels/VoiceOrStageSummaryRow ===
 
-// Module 18721 (guild_channels/VoiceOrStageSummaryRow)
+// Module 18879 (guild_channels/VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -40,14 +40,14 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
   const tmp4 = closure_6(size);
   closure_4 = tmp4;
   let obj2 = { style: null, children: null };
-  let items = [tmp4.container, { height: size + 4 }];
+  items = [tmp4.container, { height: size + 4 }];
   obj2.style = items;
   let items1 = [
     users.map((user, index) => {
       if (index < max) {
         if (index === tmp - 1) {
           if (closure_3 > 0) {
-            const items = [closure_4.wrapper, ];
+            items = [closure_4.wrapper, ];
             let obj2 = 0 !== index;
             if (obj2) {
               obj2 = { marginLeft: -12 };
@@ -90,9 +90,9 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj5.style = items3;
-    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_18722") };
+    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_18880") };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6), ];
-    let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
+    let obj7 = { variant: "text-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[6]).Text, obj7);
     obj5.children = items4;
     obj4.children = closure_5(tmp6, obj5);

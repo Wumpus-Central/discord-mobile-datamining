@@ -1,15 +1,15 @@
-// === Module 8736: GuildTagUtils ===
+// === Module 8860: GuildTagUtils ===
 
-// Module 8736 (GuildTagUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4952 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 8860 (GuildTagUtils)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5079 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8393);
+const GuildTagConstants = fn(8517);
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
@@ -53,7 +53,7 @@ export function getUserPrimaryGuild(primaryGuild) {
 export function useUserPrimaryGuild(pendingPrimaryGuildId) {
   let tmp = pendingPrimaryGuildId;
   _require = pendingPrimaryGuildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [pendingPrimaryGuildId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   if (null != pendingPrimaryGuildId) {
@@ -82,7 +82,7 @@ export function useShouldDisplayGuildTag(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   let tmp = arg2;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const obj = require("initialize");

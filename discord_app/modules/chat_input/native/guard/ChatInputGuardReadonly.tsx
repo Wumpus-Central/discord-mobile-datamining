@@ -1,17 +1,17 @@
-// === Module 14040: ChatInputGuardReadonly ===
+// === Module 14171: ChatInputGuardReadonly ===
 
-// Module 14040 (ChatInputGuardReadonly)
+// Module 14171 (ChatInputGuardReadonly)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -20,9 +20,9 @@ function sortChannelsByLastMessageId(id, id2) {
   const obj = SnowflakeUtilsDefault;
   return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = fn(4867).isTextChannel;
-let closure_6 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(12809).TextAreaCta;
+const isTextChannel = fn(4994).isTextChannel;
+let closure_6 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(12945).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
@@ -43,7 +43,7 @@ export default noop.memo(function ChatInputGuardReadonly(guildId) {
   }
   importDefault = guildId(stateFromStores[11]).useNextMemberAction(guildId, channelId);
   let obj2 = guildId(stateFromStores[11]);
-  const items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   stateFromStores = guildId(stateFromStores[12]).useStateFromStores(items, () => {
     channelId = undefined;
     if (channelId != null) {

@@ -1,26 +1,26 @@
-// === Module 18148: HappeningNowCardActiveChannel ===
+// === Module 18292: HappeningNowCardActiveChannel ===
 
-// Module 18148 (HappeningNowCardActiveChannel)
+// Module 18292 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1099 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 15598 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import TypingStore from "TypingStore" /* 13729 */;
-import UserStore from "UserStore" /* 1383 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 15740 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import TypingStore from "TypingStore" /* 13860 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(15598).MAX_STORED_MESSAGES;
-let closure_10 = fn(17287).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(15740).MAX_STORED_MESSAGES;
+let closure_10 = fn(17430).HappeningNowCardTrackingType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ content: { flexShrink: 1, marginLeft: 4, gap: 2 }, avatarsWrapper: { marginBottom: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
@@ -34,7 +34,7 @@ export default noop.memo(function HappeningNowCardActiveChannel(index) {
     flag = false;
   }
   const tmp = closure_15();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = index(channelId[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = index(channelId[10]);
   const items1 = [TypingStore, UserStore];
@@ -70,7 +70,7 @@ export default noop.memo(function HappeningNowCardActiveChannel(index) {
   const callback = stateFromStoresArray.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.ACTIVITY_CARD_CLICKED, { order: index, guild_id: guildId, type: constants.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId });
     const obj2 = { order: index, guild_id: guildId, type: constants.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId };
-    router_utils.transitionTo(closure_2_12.CHANNEL(guildId, channelId));
+    router_utils.transitionTo(application_id.CHANNEL(guildId, channelId));
   }, items5);
   if (null == stateFromStores) {
     return null;

@@ -1,15 +1,15 @@
-// === Module 14668: AppStoreOverlayStatsCarousel ===
+// === Module 14799: AppStoreOverlayStatsCarousel ===
 
-// Module 14668 (AppStoreOverlayStatsCarousel)
+// Module 14799 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14669 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14670 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14800 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14801 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -71,7 +71,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   if (tmp16) {
     tmp16 = null != onRatingPress;
   }
-  const items = [tmp.statCard, ];
+  items = [tmp.statCard, ];
   if (expanded) {
     expanded = tmp.statCardExpanded;
   }
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
@@ -140,7 +140,7 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
   const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
   dependencyMap = length.useRef(0);
   length = stats.length;
-  const items = [length];
+  items = [length];
   const effect = length.useEffect(() => {
     closure_2.current = 0;
   }, items);

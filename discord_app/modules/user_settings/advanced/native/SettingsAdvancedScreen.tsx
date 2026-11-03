@@ -1,13 +1,13 @@
-// === Module 17526: SettingsAdvancedScreen ===
+// === Module 17669: SettingsAdvancedScreen ===
 
-// Module 17526 (SettingsAdvancedScreen)
+// Module 17669 (SettingsAdvancedScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default noop.memo(function SettingsAdvancedScreen() {
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t["+U02+i"]);
-    const items = [constants.DEVELOPER_MODE];
+    items = [constants.DEVELOPER_MODE];
     obj3.settings = items;
     const intl2 = util.intl;
     obj3.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });

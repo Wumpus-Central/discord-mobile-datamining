@@ -1,10 +1,10 @@
-// === Module 7355: useRoleIconProps ===
+// === Module 7475: useRoleIconProps ===
 
-// Module 7355 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7356 */;
+// Module 7475 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7476 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -20,8 +20,8 @@ export function useRoleIconProps(guildId) {
     num = 20;
   }
   let role = guildId.role;
-  let guild = guildId.guild;
-  const items = [guild, role];
+  guild = guildId.guild;
+  items = [guild, role];
   const items1 = [guildId, roleId, role, guild];
   const stateFromStores = guildId(roleId[3]).useStateFromStores(items, () => {
     let tmp3 = role;
@@ -83,7 +83,7 @@ export function getRoleIconProps(roleIconRole, size) {
 export function useRoleIconPropsForPreview(guildId, role) {
   _require = guildId;
   dependencyMap = role;
-  const items = [GuildStore, GuildRoleStore];
+  items = [GuildStore, GuildRoleStore];
   const items1 = [guildId, role];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     ({ guildId, roleId, role, guild } = { guildId, role });
@@ -121,7 +121,7 @@ export function useRoleIconPropsForPreview(guildId, role) {
     if (null != stateFromStores) {
       const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: false };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj3;

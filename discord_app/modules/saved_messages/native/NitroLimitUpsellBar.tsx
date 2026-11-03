@@ -1,17 +1,17 @@
-// === Module 14596: NitroLimitUpsellBar ===
+// === Module 14727: NitroLimitUpsellBar ===
 
-// Module 14596 (NitroLimitUpsellBar)
+// Module 14727 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import WarningIcon from "WarningIcon" /* 8026 */;
-import _modDef10048 from "module_10048" /* 10048 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10290 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import WarningIcon from "WarningIcon" /* 8150 */;
+import _modDef10178 from "module_10178" /* 10178 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10420 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -30,13 +30,13 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef10048, style: tmp.icon };
+    const obj3 = { source: _modDef10178, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }
-  const items = [tmp4Result, , ];
+  items = [tmp4Result, , ];
   const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
-  const obj5 = { variant: "text-xs/bold", color: "text-brand", children: null };
+  const obj5 = { variant: "text-xs/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.oW0eUd).toUpperCase();
   const items1 = [tmp9(Text_Text.Text, obj5), " \u00B7 ", text];

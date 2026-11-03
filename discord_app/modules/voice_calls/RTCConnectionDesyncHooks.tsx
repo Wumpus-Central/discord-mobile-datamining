@@ -1,13 +1,13 @@
-// === Module 18297: RTCConnectionDesyncHooks ===
+// === Module 18442: RTCConnectionDesyncHooks ===
 
-// Module 18297 (RTCConnectionDesyncHooks)
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 18298 */;
+// Module 18442 (RTCConnectionDesyncHooks)
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 18443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15646 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15789 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/voice_calls/RTCConnectionDesy
 export function useEnsureSyncedChannelVoiceStates(id, voiceStates) {
   _require = id;
   closure_1 = voiceStates;
-  let items = [RTCConnectionDesyncStore, RTCConnectionStore];
+  items = [RTCConnectionDesyncStore, RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     let desyncedVoiceStates = null;
     if (closure_0 === RTCConnectionStore.getChannelId()) {
@@ -31,7 +31,7 @@ export function useEnsureSyncedChannelVoiceStates(id, voiceStates) {
   return noop.useMemo(() => (function syncChannelVoiceStates(stateFromStores, arg1) {
     if (null != stateFromStores) {
       if (0 !== stateFromStores.length) {
-        const items = [];
+        items = [];
         const _Set = Set;
         const set = new Set();
         const iter = arg1[Symbol.iterator]();
@@ -54,7 +54,7 @@ export function useEnsureSyncedChannelVoiceStates(id, voiceStates) {
 }
 export function useDesyncedChannelParticipants(arg0) {
   _require = arg0;
-  const items = [RTCConnectionDesyncStore, RTCConnectionStore];
+  items = [RTCConnectionDesyncStore, RTCConnectionStore];
   return require("initialize").useStateFromStores(items, () => {
     let desyncedParticipants = null;
     if (closure_0 === RTCConnectionStore.getChannelId()) {
@@ -66,7 +66,7 @@ export function useDesyncedChannelParticipants(arg0) {
 export function useEnsureSyncedChannelParticipants(arg0, arg1) {
   _require = arg1;
   closure_129_0 = arg0;
-  let items = [RTCConnectionDesyncStore, RTCConnectionStore];
+  items = [RTCConnectionDesyncStore, RTCConnectionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let desyncedParticipants = null;
     if (closure_0 === RTCConnectionStore.getChannelId()) {
@@ -93,7 +93,7 @@ export function useEnsureSyncedChannelParticipants(arg0, arg1) {
 }
 export function useIsSelfDisconnectedUIVisible(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   let showSelfConnectingUI = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
   const obj = require("initialize");
   const obj2 = VoiceConnectFeedbackExperimentDefault;
@@ -112,10 +112,10 @@ export function useIsSelfDisconnectedUIVisible(arg0) {
   }
   return showSelfConnectingUI;
 }
-export function useIsRTCDisconnectedUIVisible(arg0, id) {
-  _require = arg0;
+export function useIsRTCDisconnectedUIVisible(channelId, id) {
+  _require = channelId;
   closure_1 = id;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_1);
   const obj = require("initialize");
   const items1 = [stateFromStores3];
@@ -167,7 +167,7 @@ export function useIsRTCDisconnectedUIVisible(arg0, id) {
       AuthenticationStore(true);
     }
   }, items4);
-  const items5 = [arg0, stateFromStores1];
+  const items5 = [channelId, stateFromStores1];
   const effect1 = noop.useEffect(() => {
     if (stateFromStores1 !== closure_0) {
       AuthenticationStore(false);

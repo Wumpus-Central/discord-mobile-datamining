@@ -1,11 +1,11 @@
-// === Module 18531: ICYMIStoreUtils ===
+// === Module 18685: ICYMIStoreUtils ===
 
-// Module 18531 (ICYMIStoreUtils)
-import ICYMIItemTypes from "ICYMIItemTypes" /* 18532 */;
+// Module 18685 (ICYMIStoreUtils)
+import ICYMIItemTypes from "ICYMIItemTypes" /* 18686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_8 = async function _hydrateNextPage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -39,7 +39,7 @@ let closure_8 = async function _hydrateNextPage() {
           const readDisplayItems = ICYMIStore.getReadDisplayItems();
           const nextIndexToHydrate = ICYMIStore.getNextIndexToHydrate();
           const obj5 = require("ICYMIUtils");
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(readDisplayItems, HermesBuiltin.arraySpread(unreadDisplayItems, 0));
           const sum = nextIndexToHydrate + require("ICYMITypes").ICYMI_PAGE_SIZE;
           c1 = 1;
@@ -56,7 +56,7 @@ let closure_8 = async function _hydrateNextPage() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -75,7 +75,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       } else {
         const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp36) {
       c4 = tmp;
@@ -212,7 +212,7 @@ const result = size.fileFinishedImporting("modules/icymi/ICYMIStoreUtils.tsx");
 
 export function getViewableFeedItemsArray(viewableItems) {
   let tmp3;
-  const items = [...ICYMIStore.getUnreadDisplayItems(), ...ICYMIStore.getReadDisplayItems()];
+  items = [...ICYMIStore.getUnreadDisplayItems(), ...ICYMIStore.getReadDisplayItems()];
   let id = null;
   let diff = viewableItems.length - 1;
   let tmp2 = null;
@@ -265,7 +265,7 @@ export function regenerateFeedAndClearReadStates() {
 }
 export function useGravityMessage(message) {
   _require = message;
-  const items = [MessageStore, ICYMIStore];
+  items = [MessageStore, ICYMIStore];
   const items1 = [message];
   return require("initialize").useStateFromStores(items, () => {
     message = MessageStore.getMessage(message.getChannelId(), message.id);
@@ -285,14 +285,14 @@ export function useGravityMessage(message) {
 }
 export function useGravityMessageItem(id) {
   _require = id;
-  const items = [ICYMIStore];
+  items = [ICYMIStore];
   const items1 = [id.id];
   return require("initialize").useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
 }
 export function useICYMIMessage(id, before_message_id) {
   _require = id;
   closure_1 = before_message_id;
-  const items = [MessageStore, ICYMIStore];
+  items = [MessageStore, ICYMIStore];
   const items1 = [id, before_message_id];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;

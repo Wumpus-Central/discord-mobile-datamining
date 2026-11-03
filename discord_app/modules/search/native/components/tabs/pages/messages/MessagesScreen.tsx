@@ -1,14 +1,14 @@
-// === Module 18795: MessagesScreen ===
+// === Module 18953: MessagesScreen ===
 
-// Module 18795 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18758 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 18781 */;
+// Module 18953 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18916 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 18939 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 require = fn;
-const SearchConstants = fn(9827);
-({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: metroRequire, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: c10 } = SearchConstants);
+const SearchConstants = fn(9958);
+({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: metroRequire, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: closure_10 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx");
@@ -24,7 +24,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   let item;
   const searchMessages = searchContext(stateFromStores[4]).useSearchMessages(searchContext, tab);
   const obj = searchContext(stateFromStores[4]);
-  let items = [callback];
+  items = [callback];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(items, () => SearchQueryStore.getSearchResultsQuery(searchContext), items1);
   const obj2 = searchContext(stateFromStores[5]);
@@ -61,7 +61,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   item = smartSearchMessages.item;
   const items4 = [callback, item, tmp6, searchMessages, memo, placeholderCount];
   const memo1 = obj4.useMemo(() => {
-    const items = [];
+    items = [];
     if (null != item) {
       items.push(tmp);
     }

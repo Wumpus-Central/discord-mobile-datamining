@@ -1,6 +1,6 @@
-// === Module 14112: useGuildBoostPurchaseHandler ===
+// === Module 14243: useGuildBoostPurchaseHandler ===
 
-// Module 14112 (useGuildBoostPurchaseHandler)
+// Module 14243 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -43,14 +43,14 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10560).getNewAnalyticsLoadId();
-            const obj7 = args(7588);
+            newAnalyticsLoadId = args(10690).getNewAnalyticsLoadId();
+            const obj7 = args(7712);
             c3 = 1;
             c4 = 1;
             const obj4 = {
               value: obj7.goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, newAnalyticsLoadId, () => {
                         const obj2 = { guild_id, load_id: newAnalyticsLoadId, location_stack: null, custom_checkout_flow: null };
-                        const items = [...closure_0];
+                        items = [...closure_0];
                         obj2.location_stack = items;
                         const obj = guild_id(newAnalyticsLoadId[7]);
                         obj2.custom_checkout_flow = args(newAnalyticsLoadId[4]).getCustomCheckoutFlowForAnalytics();
@@ -77,9 +77,9 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6768).closeApplyBoostModal();
+          args(6888).closeApplyBoostModal();
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c4 = tmp;
@@ -87,7 +87,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
       }
     }
   });
-  let items = [arg0];
+  items = [arg0];
   let obj = require("MobileWebRedirectCheckoutUtils");
   return {
     shouldUseMobileWebRedirectCheckout: result,

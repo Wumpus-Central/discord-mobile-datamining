@@ -1,17 +1,17 @@
-// === Module 16366: conjureBackgroundFrames ===
+// === Module 16509: conjureBackgroundFrames ===
 
-// Module 16366 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6849 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
-import leaveFrame from "leaveFrame" /* 10938 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 16292 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16367 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 16369 */;
+// Module 16509 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6969 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11013 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
+import leaveFrame from "leaveFrame" /* 11076 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16436 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16510 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 16512 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function isRunningInBackground(surface) {
@@ -68,7 +68,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");
@@ -80,7 +80,7 @@ export default function useConjureFrameHandoff(arg0, arg1) {
     tmp = closure_7(arg0, arg1);
   }
   closure_1 = tmp;
-  const items = [arg0, tmp];
+  items = [arg0, tmp];
   const effect = noop.useEffect(() => {
     if (null != closure_1) {
       closeBackgroundedConjureAppFrames(closure_0, closure_1);

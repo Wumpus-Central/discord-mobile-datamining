@@ -1,6 +1,6 @@
-// === Module 8878: MediaPlaybackViewNativeComponent ===
+// === Module 9002: MediaPlaybackViewNativeComponent ===
 
-// Module 8878 (MediaPlaybackViewNativeComponent)
+// Module 9002 (MediaPlaybackViewNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
@@ -15,11 +15,11 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default value;
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  seek(arg0, arg1, arg2) {
-    const items = [arg1, arg2];
-    renderElement.dispatchCommand(arg0, "seek", items);
+  seek(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "seek", items);
   },
-  reset(arg0) {
-    renderElement.dispatchCommand(arg0, "reset", []);
+  reset(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "reset", []);
   }
 };

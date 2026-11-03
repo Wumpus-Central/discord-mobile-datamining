@@ -1,7 +1,7 @@
-// === Module 2026: StringUtils ===
+// === Module 2155: StringUtils ===
 
-// Module 2026 (StringUtils)
-import utils_StringUtils from "utils/StringUtils" /* 2027 */;
+// Module 2155 (StringUtils)
+import utils_StringUtils from "utils/StringUtils" /* 2156 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/StringUtils.tsx");

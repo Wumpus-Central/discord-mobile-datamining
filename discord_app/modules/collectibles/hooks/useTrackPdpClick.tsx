@@ -1,8 +1,8 @@
-// === Module 15026: useTrackPdpClick ===
+// === Module 15164: useTrackPdpClick ===
 
-// Module 15026 (useTrackPdpClick)
+// Module 15164 (useTrackPdpClick)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export function useTrackPdpClick(skuId) {
   const currentUserIfAvailable = skuId(analyticsLocations[3]).useCurrentUserIfAvailable();
   const tmpResult = skuId(analyticsLocations[3]);
   shopDiscountSource = skuId(analyticsLocations[4]).getShopDiscountSource(currentUserIfAvailable);
-  const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
+  items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
   return cardId.useCallback((cta, arg1) => {
     let tmp = arg1;
     if (arg1 == null) {

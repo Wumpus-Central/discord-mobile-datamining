@@ -1,32 +1,31 @@
-// === Module 13835: MemberActionChatInputBanner ===
+// === Module 13966: MemberActionChatInputBanner ===
 
-// Module 13835 (MemberActionChatInputBanner)
+// Module 13966 (MemberActionChatInputBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Pressables from "Pressables" /* 6980 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7399 */;
-import _modDef13231 from "module_13231" /* 13231 */;
-import _modDef13834 from "module_13834" /* 13834 */;
-import MemberActionUtils from "MemberActionUtils" /* 13836 */;
-import _modDef13837 from "module_13837" /* 13837 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Pressables from "Pressables" /* 7106 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7523 */;
+import _modDef13367 from "module_13367" /* 13367 */;
+import _modDef13965 from "module_13965" /* 13965 */;
+import MemberActionUtils from "MemberActionUtils" /* 13967 */;
+import _modDef13968 from "module_13968" /* 13968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 function ActionChannelInfo(action) {
   action = action.action;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = action(563).useStateFromStores(items, () => ChannelStore.getChannel(action.channelId));
   const obj = action(563);
   if (null == stateFromStores) {
@@ -43,13 +42,13 @@ function ActionChannelInfo(action) {
     const obj5 = { channelName: tmp4 };
     obj4.children = intl.format(tmp(1113).t.MkzlDL, obj5);
   }
-  return closure_12(action(5624).Text, obj4);
+  return closure_12(action(5747).Text, obj4);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
   let id;
   const tmp = closure_15();
-  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13231 }) };
+  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13367 }) };
   const tmp6 = closure_12(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -58,8 +57,8 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13231 };
-  const items = [EmojiStore];
+  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13367 };
+  items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(items, () => {
     let customEmojiById = null;
@@ -85,8 +84,8 @@ function ChannelActionEmoji(emoji) {
       const tmp5Result5 = UnicodeEmojisDefault;
       tmp2Result = tmp6;
       if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
-        const obj6 = { style: tmp.textEmoji, variant: "heading-lg/normal", children: name };
-        tmp2Result = closure_12(tmp3(5624).Text, obj6);
+        const obj6 = { style: tmp.textEmoji, variant: "heading-lg/medium", children: name };
+        tmp2Result = closure_12(tmp3(5747).Text, obj6);
       }
       tmp5Result6 = UnicodeEmojisDefault;
     }
@@ -95,243 +94,257 @@ function ChannelActionEmoji(emoji) {
 }
 function MemberActionChatInputBanner(channel) {
   channel = channel.channel;
-  let channelAction;
-  let nextMemberAction;
-  let stateFromStores;
-  let useReducedMotion;
-  let first;
-  closure_8 = undefined;
-  let first1;
-  closure_10 = undefined;
+  _require = channel;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  closure_7 = undefined;
+  first1 = undefined;
+  closure_9 = undefined;
   let sharedValue;
   let sharedValue1;
   const tmp = closure_15();
   importDefault = tmp;
-  const memberActionsForChannel = channel(channelAction[21]).useMemberActionsForChannel(channel.guild_id, channel);
-  channelAction = memberActionsForChannel.channelAction;
+  const memberActionsForChannel = require("MemberActionUtils").useMemberActionsForChannel(channel.guild_id, channel);
+  const channelAction = memberActionsForChannel.channelAction;
+  dependencyMap = channelAction;
   const completed = memberActionsForChannel.completed;
-  let obj = channel(channelAction[21]);
+  _slicedToArray = completed;
+  let obj = require("MemberActionUtils");
   let channelId;
   if (channelAction != null) {
     channelId = channelAction.channelId;
   }
-  nextMemberAction = channel(channelAction[21]).useNextMemberAction(channel.guild_id, channelId);
-  let obj2 = channel(channelAction[21]);
-  let items = [useReducedMotion];
-  stateFromStores = channel(channelAction[12]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const nextMemberAction = require("MemberActionUtils").useNextMemberAction(channel.guild_id, channelId);
+  noop = nextMemberAction;
+  let obj2 = require("MemberActionUtils");
+  items = [c6];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => easing2.useReducedMotion);
   let actionType;
   if (channelAction != null) {
     actionType = channelAction.actionType;
   }
-  const tmp9 = actionType === channel(channelAction[22]).NewMemberActionTypes.VIEW;
-  useReducedMotion = tmp9;
-  const tmp10 = completed(nextMemberAction.useState(channel(channelAction[22]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-  first = tmp10[0];
-  closure_8 = tmp12;
-  const tmp13 = completed(nextMemberAction.useState(channel(channelAction[22]).CHANNEL_ACTION_BANNER_HEIGHT), 2);
-  first1 = tmp13[0];
-  closure_10 = tmp15;
-  const tmp2Result = channel(channelAction[12]);
-  sharedValue = channel(channelAction[23]).useSharedValue(0);
-  const tmp2Result5 = channel(channelAction[23]);
+  const tmp9 = actionType === require("GuildOnboardingHomeTypes").NewMemberActionTypes.VIEW;
+  c5 = tmp9;
+  const tmp10 = _slicedToArray(noop.useState(require("GuildOnboardingHomeTypes").CHANNEL_ACTION_BANNER_HEIGHT), 2);
+  const first = tmp10[0];
+  c6 = first;
+  closure_7 = tmp12;
+  [first1, [][0]] = noop.useState(require("GuildOnboardingHomeTypes").CHANNEL_ACTION_BANNER_HEIGHT);
+  closure_9 = tmp15;
+  const tmp2Result = require("useStateFromStores");
+  sharedValue = require("module_1652").useSharedValue(0);
+  const tmp2Result5 = require("module_1652");
   let num = 0;
   if (completed) {
     num = first1;
   }
-  sharedValue1 = channel(channelAction[23]).useSharedValue(num);
+  sharedValue1 = require("module_1652").useSharedValue(num);
   let items1 = [sharedValue, completed, tmp9, first];
   const effect = obj4.useEffect(() => {
-    if (!completed) {
-      if (!closure_6) {
-        const result = sharedValue.set(first);
+    if (!c3) {
+      if (!c5) {
+        const result = sharedValue.set(c6);
       }
     }
     const result1 = sharedValue.set(0);
   }, items1);
   const items2 = [sharedValue1, completed, nextMemberAction, first1];
   const effect1 = obj4.useEffect(() => {
-    if (completed) {
-      if (null != nextMemberAction) {
+    if (c3) {
+      if (null != c4) {
         const result = sharedValue1.set(first1);
       }
     }
     const result1 = sharedValue1.set(0);
   }, items2);
-  const tmp2Result6 = channel(channelAction[23]);
-  class H {
+  const tmp2Result6 = require("module_1652");
+  const items3 = [closure_18, stateFromStores, sharedValue, require("module_1652").withDelay, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items3;
+  class MemberActionChatInputBannerTsx1 {
     constructor() {
       obj = { height: null };
-      if (closure_5) {
-        tmp7 = closure_11;
-        obj.height = closure_11.get();
+      if (closure_0) {
+        tmp7 = closure_1;
+        obj.height = closure_1.get();
         tmp6 = obj;
       } else {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj2 = closure_0(closure_2[23]);
-        tmp3 = completed;
+        tmp2 = closure_3;
         num = 200;
-        if (completed) {
+        tmp = closure_2;
+        if (closure_3) {
           num = 800;
         }
-        tmpResult = tmp(tmp2[24]);
-        tmp4 = closure_11;
+        tmp3 = closure_4;
+        tmp4 = closure_1;
         obj1 = { duration: 400, easing: null };
-        value = closure_11.get();
-        obj1.easing = tmp(tmp2[16]).DECELERATED_EASING;
-        obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
+        tmp5 = closure_5;
+        obj1.easing = closure_5;
+        obj.height = tmp(num, closure_4(closure_1.get(), obj1));
         tmp6 = obj;
       }
       return tmp6;
     }
   }
-  const tmp2Result7 = channel(channelAction[23]);
-  H.__closure = { useReducedMotion: stateFromStores, height: sharedValue, withDelay: channel(channelAction[23]).withDelay, completed, withTiming: channel(channelAction[24]).withTiming, DECELERATED_EASING: channel(channelAction[16]).DECELERATED_EASING };
-  H.__workletHash = 5585837927201;
-  H.__initData = __initData;
-  const animatedStyle = tmp2Result7.useAnimatedStyle(H);
-  let obj3 = { useReducedMotion: stateFromStores, height: sharedValue, withDelay: channel(channelAction[23]).withDelay, completed, withTiming: channel(channelAction[24]).withTiming, DECELERATED_EASING: channel(channelAction[16]).DECELERATED_EASING };
-  class B {
+  const items4 = [tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+  MemberActionChatInputBannerTsx1.__closure = items4;
+  MemberActionChatInputBannerTsx1.__workletHash = 16275727828088;
+  MemberActionChatInputBannerTsx1.__initData = tmp20;
+  const animatedStyle = require("module_1652").useAnimatedStyle(MemberActionChatInputBannerTsx1);
+  const tmp2Result7 = require("module_1652");
+  const items5 = [closure_19, stateFromStores, sharedValue1, require("module_1652").withDelay, tmp9, completed, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35] = items5;
+  class MemberActionChatInputBannerTsx2 {
     constructor() {
       obj = { height: null };
-      if (closure_5) {
-        tmp8 = closure_12;
-        obj.height = closure_12.get();
+      if (closure_0) {
+        tmp8 = closure_1;
+        obj.height = closure_1.get();
         tmp7 = obj;
       } else {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj2 = closure_0(closure_2[23]);
-        tmp3 = closure_6;
+        tmp2 = closure_3;
         num = 0;
-        if (!closure_6) {
-          tmp4 = completed;
+        tmp = closure_2;
+        if (!closure_3) {
+          tmp3 = closure_4;
           num = 0;
-          if (completed) {
+          if (closure_4) {
             num = 1200;
           }
         }
-        tmpResult = tmp(tmp2[24]);
-        tmp5 = closure_12;
+        tmp4 = closure_5;
+        tmp5 = closure_1;
         obj1 = { duration: 400, easing: null };
-        value = closure_12.get();
-        obj1.easing = tmp(tmp2[16]).DECELERATED_EASING;
-        obj.height = obj2.withDelay(num, tmpResult.withTiming(value, obj1));
+        tmp6 = closure_6;
+        obj1.easing = closure_6;
+        obj.height = tmp(num, closure_5(closure_1.get(), obj1));
         tmp7 = obj;
       }
       return tmp7;
     }
   }
-  const tmp2Result8 = channel(channelAction[23]);
-  B.__closure = { useReducedMotion: stateFromStores, nextHeight: sharedValue1, withDelay: channel(channelAction[23]).withDelay, isViewAction: tmp9, completed, withTiming: channel(channelAction[24]).withTiming, DECELERATED_EASING: channel(channelAction[16]).DECELERATED_EASING };
-  B.__workletHash = 10256555667281;
-  B.__initData = __initData2;
-  const items3 = [tmp10[1]];
-  const animatedStyle1 = tmp2Result8.useAnimatedStyle(B);
-  [][0] = tmp13[1];
+  const items6 = [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35];
+  MemberActionChatInputBannerTsx2.__closure = items6;
+  MemberActionChatInputBannerTsx2.__workletHash = 12940138330664;
+  MemberActionChatInputBannerTsx2.__initData = tmp28;
+  const items7 = [tmp10[1]];
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(MemberActionChatInputBannerTsx2);
   const callback = obj4.useCallback((nativeEvent) => {
-    closure_8(nativeEvent.nativeEvent.layout.height);
-  }, items3);
+    closure_7(nativeEvent.nativeEvent.layout.height);
+  }, items7);
   if (null == channelAction) {
     return null;
   } else {
     function renderAction() {
       let tmp3Result = null;
-      if (null != channelAction) {
-        const obj = { style: closure_1.container, children: null };
-        const obj2 = { emoji: channelAction.emoji };
-        const items = [closure_2_12(ChannelActionEmoji, obj2), , ];
-        const obj3 = { style: closure_1.text, children: null };
-        const obj4 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: closure_1.wrap, children: channelAction.title };
-        const items1 = [closure_2_12(Text_Text.Text, obj4), ];
+      if (null != _undefined) {
+        const obj = { style: _undefined.container, children: null };
+        const obj2 = { emoji: _undefined.emoji };
+        items = [application_id(ChannelActionEmoji, obj2), , ];
+        const obj3 = { style: _undefined.text, children: null };
+        const obj4 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: _undefined.wrap, children: _undefined.title };
+        const items1 = [application_id(Text_Text.Text, obj4), ];
         const obj5 = { variant: "text-xxs/normal", color: "text-muted", children: null };
         const intl = util.intl;
         obj5.children = intl.string(util.t["ElGg8+"]);
-        items1[1] = closure_2_12(Text_Text.Text, obj5);
+        items1[1] = application_id(Text_Text.Text, obj5);
         obj3.children = items1;
-        items[1] = map1(View, obj3);
-        let tmp6Result = completed;
-        if (completed) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13837 };
-          tmp6Result = closure_2_12(native.Icon, obj6);
+        items[1] = state(View, obj3);
+        let tmp6Result = c3;
+        if (c3) {
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13968 };
+          tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
         obj.children = items;
-        tmp3Result = map1(View, obj);
+        tmp3Result = state(View, obj);
       }
       return tmp3Result;
     }
-    let obj6 = { style: tmp.measurement, onLayout: callback, children: renderAction() };
-    const items4 = [sharedValue1(stateFromStores, obj6), , ];
-    let tmp30Result = !tmp9;
+    let obj3 = { style: tmp.measurement, onLayout: callback, children: renderAction() };
+    const items8 = [closure_12(c5, obj3), , ];
+    let tmp45Result = !tmp9;
     if (!tmp9) {
-      let obj7 = { style: null, children: null };
-      const items5 = [tmp.animatedContainer, animatedStyle];
-      obj7.style = items5;
-      obj7.children = renderAction();
-      tmp30Result = tmp30(require("ReanimatedRexport").View, obj7);
+      let obj5 = { style: null, children: null };
+      const items9 = [tmp.animatedContainer, animatedStyle];
+      obj5.style = items9;
+      obj5.children = renderAction();
+      tmp45Result = closure_12(_modDef1652.View, obj5);
     }
-    items4[1] = tmp30Result;
-    let tmp28Result = null;
+    items8[1] = tmp45Result;
+    let tmp43Result = null;
     if (completed) {
-      tmp28Result = null;
+      tmp43Result = null;
       if (null != nextMemberAction) {
         function renderNextAction() {
           let tmp2 = null;
-          if (null != nextMemberAction) {
+          if (null != action) {
             const obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.PDTjLN);
-            obj.style = closure_1.container;
+            obj.style = _undefined.container;
             obj.onPress = function onPress() {
-              return channel(channelAction[27]).transitionTo(closure_10.CHANNEL(guild_id.guild_id, channelId.channelId));
+              return c0(c2[27]).transitionTo(sharedValue.CHANNEL(closure_1_0.guild_id, channelId.channelId));
             };
-            const obj2 = { emoji: nextMemberAction.emoji };
-            const items = [closure_2_12(ChannelActionEmoji, obj2), , ];
-            const obj3 = { style: closure_1.text, children: null };
-            const obj4 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: closure_1.wrap, children: null };
+            const obj2 = { emoji: action.emoji };
+            items = [application_id(ChannelActionEmoji, obj2), , ];
+            const obj3 = { style: _undefined.text, children: null };
+            const obj4 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: _undefined.wrap, children: null };
             const intl2 = util.intl;
-            const obj5 = { step: nextMemberAction.title };
+            const obj5 = { step: action.title };
             obj4.children = intl2.format(util.t["/beONw"], obj5);
-            const items1 = [closure_2_12(Text_Text.Text, obj4), ];
-            const obj6 = { action: nextMemberAction };
-            items1[1] = closure_2_12(ActionChannelInfo, obj6);
+            const items1 = [application_id(Text_Text.Text, obj4), ];
+            const obj6 = { action };
+            items1[1] = application_id(ActionChannelInfo, obj6);
             obj3.children = items1;
-            items[1] = map1(View, obj3);
-            const obj7 = { style: closure_1.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef13834 };
-            obj7.children = closure_2_12(native.Icon, obj8);
-            items[2] = closure_2_12(View, obj7);
+            items[1] = state(View, obj3);
+            const obj7 = { style: _undefined.circle, children: null };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13965 };
+            obj7.children = application_id(native.Icon, obj8);
+            items[2] = application_id(View, obj7);
             obj.children = items;
-            tmp2 = map1(Pressables.PressableHighlight, obj);
+            tmp2 = state(Pressables.PressableHighlight, obj);
           }
           return tmp2;
         }
-        let obj8 = { children: null };
-        const obj9 = { style: tmp.measurement, onLayout: tmp23, children: renderNextAction() };
-        const items6 = [tmp30(stateFromStores, obj9), ];
-        const obj10 = { style: null, children: null };
-        const items7 = [tmp.animatedContainer, animatedStyle1];
-        obj10.style = items7;
-        obj10.children = renderNextAction();
-        items6[1] = tmp30(require("ReanimatedRexport").View, obj10);
-        obj8.children = items6;
-        tmp28Result = closure_13(closure_14, obj8);
+        let obj6 = { children: null };
+        let obj7 = { style: tmp.measurement, onLayout: tmp38, children: renderNextAction() };
+        const items10 = [closure_12(c5, obj7), ];
+        let obj8 = { style: null, children: null };
+        const items11 = [tmp.animatedContainer, animatedStyle1];
+        obj8.style = items11;
+        obj8.children = renderNextAction();
+        items10[1] = closure_12(_modDef1652.View, obj8);
+        obj6.children = items10;
+        tmp43Result = closure_13(closure_14, obj6);
       }
     }
-    const obj11 = { children: null };
-    items4[2] = tmp28Result;
-    obj11.children = items4;
-    return closure_13(closure_14, obj11);
+    const obj9 = { children: null };
+    items8[2] = tmp43Result;
+    obj9.children = items8;
+    return closure_13(closure_14, obj9);
   }
-  let obj5 = { useReducedMotion: stateFromStores, nextHeight: sharedValue1, withDelay: channel(channelAction[23]).withDelay, isViewAction: tmp9, completed, withTiming: channel(channelAction[24]).withTiming, DECELERATED_EASING: channel(channelAction[16]).DECELERATED_EASING };
+  const tmp2Result8 = require("module_1652");
 }
 const View = fn(17).View;
 const Routes = fn(1072).Routes;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { animatedContainer: { overflow: "hidden" }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 12, paddingVertical: 8 }, text: { flexGrow: 1, flexShrink: 1, marginLeft: 8 }, wrap: { flexShrink: 1, flexWrap: "wrap" }, emoji: { width: 24, height: 24 }, textEmoji: { width: 24, textAlign: "center" }, emojiPlaceholder: null, circle: null, icon: null };
 let size = { width: 24, height: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, display: "flex", alignItems: "center", justifyContent: "center" };
 obj.emojiPlaceholder = size;
@@ -340,13 +353,13 @@ obj.circle = size1;
 let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 12, paddingVertical: 8 };
 obj.icon = { tintColor: nativeDefault.colors.WHITE };
 let closure_15 = createStyles.createStyles(obj);
-const __initData = { code: "function MemberActionChatInputBannerTsx1(){const{useReducedMotion,height,withDelay,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get()};}return{height:withDelay(completed?800:200,withTiming(height.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
-const __initData2 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
+let closure_18 = { code: "(function MemberActionChatInputBannerTsx1(){let[useReducedMotion,height,withDelay,completed,withTiming,DECELERATED_EASING]=this.__closure;if(useReducedMotion){return{height:height.get()};}return{height:withDelay(completed?800:200,withTiming(height.get(),{duration:400,easing:DECELERATED_EASING}))};})" };
+let closure_19 = { code: "(function MemberActionChatInputBannerTsx2(){let[useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING]=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};})" };
 const memoResult = noop.memo(function MemberActionChatInputBannerGuarded(channel) {
   channel = channel.channel;
-  const canSeeOnboardingHome = channel(7397).useCanSeeOnboardingHome(channel.guild_id);
-  const obj = channel(7397);
-  const items = [GuildMemberStore];
+  const canSeeOnboardingHome = channel(7521).useCanSeeOnboardingHome(channel.guild_id);
+  const obj = channel(7521);
+  items = [GuildMemberStore];
   const stateFromStores = channel(563).useStateFromStores(items, () => {
     const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);
     let isPending;
@@ -389,7 +402,7 @@ export const MemberActionsChatInputBannerGuardedOuter = noop.memo(function ChatI
   }
   if (actionType !== GuildOnboardingHomeTypes.NewMemberActionTypes.VIEW) {
     const obj3 = { channel };
-    let tmp7 = closure_1_12(memoResult, obj3);
+    let tmp7 = application_id(memoResult, obj3);
   } else {
     tmp7 = null;
     if (completed) {

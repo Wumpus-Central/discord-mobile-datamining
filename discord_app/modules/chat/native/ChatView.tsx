@@ -1,33 +1,33 @@
-// === Module 11214: ChatView ===
+// === Module 11351: ChatView ===
 
-// Module 11214 (ChatView)
+// Module 11351 (ChatView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7484 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 10183 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 11235 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11255 */;
-import MessagesDefault from "Messages" /* 11361 */;
-import ChatInputDefault from "ChatInput" /* 13723 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13824 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 14041 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 14213 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 14214 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 14218 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 14222 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7608 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 10313 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 11372 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11392 */;
+import MessagesDefault from "Messages" /* 11498 */;
+import ChatInputDefault from "ChatInput" /* 13854 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 13955 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 14172 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 14344 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 14345 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 14349 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 14353 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 require = fn;
-const createChannelRecord = fn(4867).createChannelRecord;
+const createChannelRecord = fn(4994).createChannelRecord;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { empty: { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, messages: { flex: 1, overflow: "hidden" }, chat: null };
 let obj3 = { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.chat = { backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
@@ -60,7 +60,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let onJumpToPresent;
   let tmp = ref();
   closure_8 = tmp;
-  let items = [channelId, flag];
+  items = [channelId, flag];
   const effect = chatInputRef.useEffect(() => {
     if (!flag) {
       ChatInputUtils.dismissKeyboard();
@@ -84,14 +84,14 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const channelContentGate = flag(11215).useChannelContentGate(guildId, stateFromStores);
+  const channelContentGate = flag(11352).useChannelContentGate(guildId, stateFromStores);
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5612)(() => new channelId(isActive[15])());
-  const tmp10 = channelId(11233)(channelId);
+  channelId(5735)(() => new channelId(isActive[15])());
+  const tmp10 = channelId(11370)(channelId);
   isResourceChannel = tmp10;
-  let obj3 = flag(11215);
+  let obj3 = flag(11352);
   const items3 = [MessageStore];
   const items4 = [channelId, tmp10];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items3, () => {
@@ -154,17 +154,17 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let obj4 = { profile: null, children: null };
   const tmp16 = channel;
   const tmp3Result = flag(504);
-  obj4.profile = flag(11563).Profiles.ChatView;
+  obj4.profile = flag(11700).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(14225), { channelId, guildId }), , ];
+  const items10 = [stateFromStores(channelId(14356), { channelId, guildId }), , ];
   let setInterstitialResult = null;
   if (!flag2) {
-    setInterstitialResult = setInterstitial(tmp9(10736), { absolute: true });
+    setInterstitialResult = setInterstitial(tmp9(10866), { absolute: true });
   }
   items10[1] = setInterstitialResult;
   if (null != channelContentGate) {
-    let result = tmp3(11215).renderChannelContentGate(channelContentGate);
-    const tmp3Result2 = tmp3(11215);
+    let result = tmp3(11352).renderChannelContentGate(channelContentGate);
+    const tmp3Result2 = tmp3(11352);
     tmp9(9).setInterstitial(channelContentGate.kind);
     const tmp9Result = tmp9(9);
   } else {
@@ -173,7 +173,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       const obj3 = { alwaysRespectKeyboard: flag, channel, isActive, screenIndex, chatInputRef, HACK_fixModalInteraction, isResourceChannel, onPressKey, onScroll, ref, style: closure_8.chat, visibleMessagesWindowHandler, children: null };
       const obj2 = { channel, ref, scrollToNewMessages };
       const tmp5 = ChatViewWrapperDefault;
-      const items = [React7(ChatInputDefault, { ref: chatInputRef, channel, isResourceChannel, screenIndex, secondaryTextFieldRef, setNoExtractUI, onJumpToPresent }), ];
+      items = [React7(ChatInputDefault, { ref: chatInputRef, channel, isResourceChannel, screenIndex, secondaryTextFieldRef, setNoExtractUI, onJumpToPresent }), ];
       const obj5 = { channelId, guildId: null, shouldRender: null };
       const obj4 = { ref: chatInputRef, channel, isResourceChannel, screenIndex, secondaryTextFieldRef, setNoExtractUI, onJumpToPresent };
       const tmp9 = MessagesDefault;
@@ -224,12 +224,12 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(14239), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(14370), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(14373), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(14504), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {
@@ -238,5 +238,5 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   }
   items10[2] = result;
   obj4.children = items10;
-  return tmp16(channelId(11563), obj4);
+  return tmp16(channelId(11700), obj4);
 });

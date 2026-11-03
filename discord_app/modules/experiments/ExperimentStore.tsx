@@ -1,14 +1,14 @@
-// === Module 5238: ExperimentStore ===
+// === Module 5361: ExperimentStore ===
 
-// Module 5238 (ExperimentStore)
+// Module 5361 (ExperimentStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage5 from "Storage" /* 510 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1372 */;
-import GuildFilters from "GuildFilters" /* 5240 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1374 */;
+import GuildFilters from "GuildFilters" /* 5363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
@@ -309,7 +309,7 @@ function handleLoadedExperiments(type) {
     }
     c3 = false;
     obj3 = { rawUserExperiments: experiments, rawGuildExperiments: null, source: null, sessionId: null, fingerprint: null };
-    let items = guildExperiments;
+    items = guildExperiments;
     if (guildExperiments == null) {
       items = [];
     }
@@ -556,7 +556,7 @@ function loadLocalOverrides() {
   if (obj == null) {
     obj = {};
   }
-  const items = [obj, , ];
+  items = [obj, , ];
   const Storage2 = Storage5.Storage;
   let value3 = Storage2.get(userExperimentOverrides);
   if (value3 == null) {
@@ -693,7 +693,7 @@ function handleExperimentOverrideBucket(skipCleanup) {
       obj[experimentId] = obj6;
     }
     if (!skipCleanup.skipCleanup) {
-      const items = [obj4, obj];
+      items = [obj4, obj];
       for (const item10037 of items) {
         for (const key10041 in item10037) {
           if (null != dependencyMap[key10041]) {
@@ -721,10 +721,10 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5239);
+const ExperimentConstants = fn(5362);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);
+({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: closure_10 } = Constants);
 let c11 = "scientist:triggered";
 const exerimentOverrides = "exerimentOverrides";
 const userExperimentOverrides = "userExperimentOverrides";
@@ -812,7 +812,7 @@ prototype["loadCache"] = function loadCache() {
       const fingerprint = snapshot.fingerprint;
       c3 = true;
       obj = { rawUserExperiments, rawGuildExperiments: null, source: null, sessionId: null, fingerprint: null };
-      let items = rawGuildExperiments;
+      items = rawGuildExperiments;
       if (rawGuildExperiments == null) {
         items = [];
       }
@@ -946,7 +946,7 @@ prototype["getRecentExposures"] = function getRecentExposures(GUILD, id) {
   });
   return found.map((item) => {
     [str, ] = item;
-    const items = [str.replace(closure_0, ""), tmp];
+    items = [str.replace(closure_0, ""), tmp];
     return items;
   });
 };

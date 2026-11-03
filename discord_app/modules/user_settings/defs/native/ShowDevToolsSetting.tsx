@@ -1,11 +1,11 @@
-// === Module 17578: ShowDevToolsSetting ===
+// === Module 17721: ShowDevToolsSetting ===
 
-// Module 17578 (ShowDevToolsSetting)
-import DevToolsNavigator from "DevToolsNavigator" /* 16435 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16746 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17576 */;
-import DevToolsScreens from "DevToolsScreens" /* 17579 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+// Module 17721 (ShowDevToolsSetting)
+import DevToolsNavigator from "DevToolsNavigator" /* 16579 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16889 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17719 */;
+import DevToolsScreens from "DevToolsScreens" /* 17722 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -17,7 +17,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: DevToolsNavigator.navigateToDevTools,
   usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
+    items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true

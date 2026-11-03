@@ -1,12 +1,12 @@
-// === Module 13423: GuildIconWithChannelType ===
+// === Module 13559: GuildIconWithChannelType ===
 
-// Module 13423 (GuildIconWithChannelType)
+// Module 13559 (GuildIconWithChannelType)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import ClipView from "ClipView" /* 9509 */;
-import Pile from "Pile" /* 13424 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import ClipView from "ClipView" /* 9637 */;
+import Pile from "Pile" /* 13560 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -17,10 +17,10 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { SMALL_32: "SMALL_32" };
 let obj2 = {};
-obj2[obj.SMALL_32] = { pileSize: 32, guildIconSize: fn(6957).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
-const createStyles = fn(5014);
+obj2[obj.SMALL_32] = { pileSize: 32, guildIconSize: fn(7083).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
+const createStyles = fn(5141);
 const obj5 = { typeIconWrapper: null };
-let obj3 = { pileSize: 32, guildIconSize: fn(6957).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
+let obj3 = { pileSize: 32, guildIconSize: fn(7083).GuildIconSizes.XSMALL, typeIconSize: 12, typeIconPadding: 4, gap: 3 };
 obj5.typeIconWrapper = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, width: 20 };
 let closure_8 = createStyles.createStyles(obj5);
 let size = fn(2);
@@ -39,10 +39,10 @@ export function GuildIconWithChannelType(arg0) {
   const sum = typeIconSize + 2 * typeIconPadding;
   c3 = sum;
   const sum1 = 0.5 + gap / tmp5;
-  let items = [tmp5, sum];
+  items = [tmp5, sum];
   const items1 = [typeIconPadding, sum];
   const memo = noop.useMemo(() => {
-    const items = [closure_2, c3];
+    items = [closure_2, c3];
     return items;
   }, items);
   const items2 = [typeIconSize];

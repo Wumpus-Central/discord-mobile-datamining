@@ -1,10 +1,10 @@
-// === Module 17915: useUserSafetySettingsSelectedGuildId ===
+// === Module 18058: useUserSafetySettingsSelectedGuildId ===
 
-// Module 17915 (useUserSafetySettingsSelectedGuildId)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 18058 (useUserSafetySettingsSelectedGuildId)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17911);
+const UserSettingsSafetySelectedGuildStore = fn(18054);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
@@ -18,7 +18,7 @@ export function useAllServersOptionSelected() {
 }
 export function useIsSelectedGuildAHub() {
   const selectedGuildId = closure_4().selectedGuildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
   let flag;
   if (stateFromStores != null) {

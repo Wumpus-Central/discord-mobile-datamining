@@ -1,7 +1,7 @@
-// === Module 15947: WindowsMediaFoundationGpuEncodeIntel ===
+// === Module 16090: WindowsMediaFoundationGpuEncodeIntel ===
 
-// Module 15947 (WindowsMediaFoundationGpuEncodeIntel)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 16090 (WindowsMediaFoundationGpuEncodeIntel)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-wmf-gpu-encode-intel", kind: "user", defaultConfig: { enabled: false }, variations: null };

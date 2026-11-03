@@ -1,22 +1,22 @@
-// === Module 14371: GuildDirectoryCategorySelector ===
+// === Module 14502: GuildDirectoryCategorySelector ===
 
-// Module 14371 (GuildDirectoryCategorySelector)
+// Module 14502 (GuildDirectoryCategorySelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13864 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13860 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13991 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildDirectoryConstants = fn(13853);
+const GuildDirectoryConstants = fn(13984);
 ({ DirectoryEntryCategories: closure_8, getHubCategories: closure_9 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { categoriesListWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,14 +34,14 @@ export default function GuildDirectoryCategorySelector(channel) {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
   const tmp2 = _slicedToArray(stateFromStores.useState(0), 2);
-  let items = [GuildDirectoryStore];
+  items = [GuildDirectoryStore];
   stateFromStores = channel(allEntriesCount[11]).useStateFromStores(items, () => GuildDirectoryStore.getCurrentCategoryId(channel.id));
   const items1 = [channel.id];
   const memo = stateFromStores.useMemo(() => {
     const obj = { value: constants.ALL, label: null, idealSize: 70 };
     const intl = util.intl;
     obj.label = intl.string(util.t.hEAa2a);
-    const items = [obj, ...closure_2_9(channel.id)];
+    items = [obj, ...closure_2_9(channel.id)];
     return items;
   }, items1);
   const items2 = [memo, categoryCounts, allEntriesCount];

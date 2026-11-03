@@ -1,10 +1,10 @@
-// === Module 13937: BaseChannelItem ===
+// === Module 14068: BaseChannelItem ===
 
-// Module 13937 (BaseChannelItem)
+// Module 14068 (BaseChannelItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,12 +48,12 @@ class BaseChannelSubtitle {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11046);
+const RedesignChannelListConstants = fn(11186);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } = RedesignChannelListConstants);
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -105,10 +105,10 @@ export default function BaseChannelItem(mode) {
   const merged = Object.assign(mode, Object.assign({ icon: 0, name: 0, mode: 0, hideIcon: 0, disableHighlightOnPress: 0, channelInfo: 0, children: 0, unread: 0 }));
   const tmp2 = closure_10(mode);
   dependencyMap = tmp2;
-  let items = [hideIcon, mode, tmp2];
+  items = [hideIcon, mode, tmp2];
   const obj = {
     style: noop.useMemo(() => {
-      const items = [channel.channel, , ];
+      items = [channel.channel, , ];
       let rowPaddingNoIcon = hideIcon;
       if (hideIcon) {
         rowPaddingNoIcon = channel.rowPaddingNoIcon;
@@ -130,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(13939);
+      let AnimatedPressableHighlight = hideIcon(14070);
     } else {
-      AnimatedPressableHighlight = mode(8992).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(9120).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -147,8 +147,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(13938), obj3);
-    const tmp9 = hideIcon(13938);
+    closure_8(hideIcon(14069), obj3);
+    const tmp9 = hideIcon(14069);
   }
 };
 export const ChannelModes = obj2;
@@ -157,7 +157,7 @@ export function BaseChannelIcon(arg0) {
   ({ disableColor, mode, IconComponent, style } = arg0);
   ({ source, isChannelLive } = arg0);
   const tmp = closure_10(mode);
-  const items = [tmp.channelIcon];
+  items = [tmp.channelIcon];
   if (true === disableColor) {
     if (null != style) {
       items.push(style);
@@ -235,7 +235,7 @@ export function BaseChannelName(mode) {
     const obj3 = { experimental_useNativeText: true };
     const merged = Object.assign(obj2);
     obj3.lineClamp = 1;
-    const items = [tmp.channelName, textStyle];
+    items = [tmp.channelName, textStyle];
     obj3.style = items;
     obj3.children = name;
     const items1 = [React6(tmp5, obj3), ];

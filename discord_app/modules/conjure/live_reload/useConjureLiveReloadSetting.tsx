@@ -1,10 +1,10 @@
-// === Module 12130: useConjureLiveReloadSetting ===
+// === Module 12266: useConjureLiveReloadSetting ===
 
-// Module 12130 (useConjureLiveReloadSetting)
-import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 10897 */;
+// Module 12266 (useConjureLiveReloadSetting)
+import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 11027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 10864 */;
+import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 10994 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjur
 
 export function useConjureLiveReloadSetting(arg0) {
   _require = arg0;
-  const items = [closure_5];
+  items = [closure_5];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureLiveReloadStore.getLiveReload(closure_0), items1);
   let obj = require("initialize");

@@ -1,9 +1,9 @@
-// === Module 11446: useTieredTenureBadgeForUser ===
+// === Module 11584: useTieredTenureBadgeForUser ===
 
-// Module 11446 (useTieredTenureBadgeForUser)
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7781 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 11584 (useTieredTenureBadgeForUser)
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7905 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/h
 
 export function useTieredTenureBadgeForUser(id) {
   _require = id;
-  const items = [UserProfileStore, UserStore];
+  items = [UserProfileStore, UserStore];
   return require("initialize").useStateFromStores(items, () => {
     let userProfile = null;
     if (null != tieredTenureBadge) {

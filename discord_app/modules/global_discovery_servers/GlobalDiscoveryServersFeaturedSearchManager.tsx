@@ -1,13 +1,13 @@
-// === Module 20044: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 20194: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 20044 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15597 */;
+// Module 20194 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15739 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(9076).DISCOVERY_ALL_CATEGORIES_ID;
+let closure_6 = fn(9204).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1072).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -43,7 +43,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -208,7 +208,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: null };
               const obj8 = isFetchEnabled(tmp49[6]);
               const obj12 = { categories: null };
-              const items = [closure_129_0];
+              items = [closure_129_0];
               obj12.categories = items;
               request.query = isFetchEnabled(tmp49[8]).stringify(obj12);
               const obj11 = isFetchEnabled(tmp49[8]);

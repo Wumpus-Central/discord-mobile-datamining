@@ -1,10 +1,10 @@
-// === Module 12145: conjureStoredAttachments ===
+// === Module 12281: conjureStoredAttachments ===
 
-// Module 12145 (conjureStoredAttachments)
+// Module 12281 (conjureStoredAttachments)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12147 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
 import noop from "module_19" /* 19 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12146 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12282 */;
 
 const require = globalThis.__r;
 
@@ -22,13 +22,13 @@ export function fetchConjureStoredAttachments(projectId) {
     const obj2 = require("conjureAttachmentRequests");
     const nextPromise = result.then((result) => {
       const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-      const items = [...result];
+      items = [...result];
       obj2.attachments = items.reverse();
       closure_1(closure_2[3]).dispatch(obj2);
     });
     result.then((result) => {
       const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-      const items = [...result];
+      items = [...result];
       obj2.attachments = items.reverse();
       closure_1(closure_2[3]).dispatch(obj2);
     }).catch(() => {
@@ -36,7 +36,7 @@ export function fetchConjureStoredAttachments(projectId) {
     }).finally(() => set.delete(closure_0));
     const catchPromise = result.then((result) => {
       const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-      const items = [...result];
+      items = [...result];
       obj2.attachments = items.reverse();
       closure_1(closure_2[3]).dispatch(obj2);
     }).catch(() => {
@@ -46,7 +46,7 @@ export function fetchConjureStoredAttachments(projectId) {
 }
 export function useConjureStoredAttachments(projectId) {
   _require = projectId;
-  const items = [ConjureStoredAttachmentStore];
+  items = [ConjureStoredAttachmentStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => {
     let attachments = ConjureStoredAttachmentStore.getAttachments(closure_0);
@@ -58,7 +58,7 @@ export function useConjureStoredAttachments(projectId) {
 }
 export function useConjureStoredAttachment(context, attachmentId) {
   _require = context;
-  let items = [ConjureStoredAttachmentStore];
+  items = [ConjureStoredAttachmentStore];
   const items1 = [attachmentId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureStoredAttachmentStore.getAttachment(closure_1), items1);
   dependencyMap = tmp2;
@@ -79,13 +79,13 @@ export function useConjureStoredAttachment(context, attachmentId) {
         const result = conjureAttachmentRequests.listStoredAttachments(projectId);
         const nextPromise = result.then((result) => {
           const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-          const items = [...result];
+          items = [...result];
           obj2.attachments = items.reverse();
           closure_1(closure_2[3]).dispatch(obj2);
         });
         result.then((result) => {
           const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-          const items = [...result];
+          items = [...result];
           obj2.attachments = items.reverse();
           closure_1(closure_2[3]).dispatch(obj2);
         }).catch(() => {
@@ -93,7 +93,7 @@ export function useConjureStoredAttachment(context, attachmentId) {
         }).finally(() => set.delete(closure_0));
         const catchPromise = result.then((result) => {
           const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-          const items = [...result];
+          items = [...result];
           obj2.attachments = items.reverse();
           closure_1(closure_2[3]).dispatch(obj2);
         }).catch(() => {

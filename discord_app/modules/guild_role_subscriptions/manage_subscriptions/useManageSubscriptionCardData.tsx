@@ -1,10 +1,10 @@
-// === Module 17212: useManageSubscriptionCardData ===
+// === Module 17355: useManageSubscriptionCardData ===
 
-// Module 17212 (useManageSubscriptionCardData)
+// Module 17355 (useManageSubscriptionCardData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/mana
 export default function useManageSubscriptionCardData(currentPeriodEnd) {
   _require = require("subscriptionUtils").getRoleSubscriptionPlanId(currentPeriodEnd);
   const obj = require("subscriptionUtils");
-  const items = [fetchSubscriptionsSettings];
+  items = [fetchSubscriptionsSettings];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListingForPlan(closure_0));
   const obj2 = require("initialize");
   const items1 = [fetchSubscriptionsSettings];

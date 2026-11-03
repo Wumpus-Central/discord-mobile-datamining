@@ -1,14 +1,14 @@
-// === Module 11497: UserProfileAboutMeCardCommand ===
+// === Module 11634: UserProfileAboutMeCardCommand ===
 
-// Module 11497 (UserProfileAboutMeCardCommand)
+// Module 11634 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11498 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11504 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11635 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11641 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { commandClickable: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 };
@@ -27,7 +27,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
   let obj = {
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
@@ -86,10 +86,10 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
     style: closure_5().commandClickable,
     children: null
   };
-  const items = ["/", command.displayName];
+  items = ["/", command.displayName];
   obj.children = items;
   return jsxs(require("Text/Text").Text, {
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");

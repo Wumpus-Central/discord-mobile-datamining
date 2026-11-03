@@ -1,8 +1,8 @@
-// === Module 14198: UserProfileConfirmRemoveGameFriend ===
+// === Module 14329: UserProfileConfirmRemoveGameFriend ===
 
-// Module 14198 (UserProfileConfirmRemoveGameFriend)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10740 */;
+// Module 14329 (UserProfileConfirmRemoveGameFriend)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileConfirmRemoveGameFriend(gameName) {
   ({ userDisplayName, userId } = gameName);
   const applicationId = gameName.applicationId;
-  const items = [applicationId, userId];
+  items = [applicationId, userId];
   const callback = noop.useCallback(() => {
     const result = UserProfileAnalyticsUtils.trackUserProfileAction({ action: "REMOVE_GAME_FRIEND" });
     PeopleUtilsDefault.removeFriend({ userId, applicationId, location: "UserProfileConfirmRemoveGameFriend" });
@@ -29,12 +29,12 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   const intl3 = userId(1113).intl;
   obj3.text = intl3.string(userId(1113).t.RLcE6x);
   obj3.onPress = callback;
-  const items1 = [closure_4(userId(5964).AlertActionButton, obj3, "confirm-remove"), ];
+  const items1 = [closure_4(userId(6084).AlertActionButton, obj3, "confirm-remove"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = userId(1113).intl;
   obj4.text = intl4.string(userId(1113).t["eN6+rI"]);
-  items1[1] = closure_4(userId(5964).AlertActionButton, obj4, "nevermind");
+  items1[1] = closure_4(userId(6084).AlertActionButton, obj4, "nevermind");
   obj2.children = items1;
-  obj.actions = closure_5(userId(5964).AlertActions, obj2);
-  return closure_4(userId(5964).AlertModal, obj);
+  obj.actions = closure_5(userId(6084).AlertActions, obj2);
+  return closure_4(userId(6084).AlertModal, obj);
 };

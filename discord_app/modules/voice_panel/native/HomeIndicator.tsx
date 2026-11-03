@@ -1,6 +1,6 @@
-// === Module 11703: HomeIndicator ===
+// === Module 11840: HomeIndicator ===
 
-// Module 11703 (HomeIndicator)
+// Module 11840 (HomeIndicator)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -63,15 +63,15 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const obj2 = autoHideHomeIndicator(1259);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = closure_1(1637).setNavigationBarVisible(!tmp);
-      const obj4 = closure_1(1637);
+      const result = closure_1(1639).setNavigationBarVisible(!tmp);
+      const obj4 = closure_1(1639);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
-    obj3 = autoHideHomeIndicator(1375);
+    obj3 = autoHideHomeIndicator(1377);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {

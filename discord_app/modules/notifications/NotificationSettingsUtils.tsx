@@ -1,8 +1,8 @@
-// === Module 16281: notifications/NotificationSettingsUtils ===
+// === Module 16423: notifications/NotificationSettingsUtils ===
 
-// Module 16281 (notifications/NotificationSettingsUtils)
-import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 16282 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 16283 */;
+// Module 16423 (notifications/NotificationSettingsUtils)
+import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 16424 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 16425 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,13 +20,13 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16276);
+const NotificationSettingsConstants = fn(16419);
 ({ NOTIF_CATEGORIES: closure_4, NOTIF_SETTING_MAPPING: hasOwnProperty, NOTIF_SETTING_REDESIGN_MAPPING: metroRequire, NOTIF_SETTINGS: closure_7 } = NotificationSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
 export function getAssignedNotifSettingsAndMappings() {
-  const items = [];
+  items = [];
   const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled("getAssignedNotifSettingsAndMappings");
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
@@ -65,7 +65,7 @@ export function useNotifCategoryVisibility(CATEGORY_CALLS_MESSAGES) {
 }
 export function useNotifSettingVisibility(CALLS) {
   _require = CALLS;
-  const items = [CALLS];
+  items = [CALLS];
   const memo = noop.useMemo(() => (function getExperimentAndConfigBySettingId(arg0) {
     const iter = dependencyMap[Symbol.iterator]();
     const nextResult = iter.next();

@@ -1,19 +1,19 @@
-// === Module 8029: BaseIconButton ===
+// === Module 8153: BaseIconButton ===
 
-// Module 8029 (BaseIconButton)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
-import IconDefault from "Icon" /* 5636 */;
-import ButtonConstants from "ButtonConstants" /* 5640 */;
-import ButtonHooks from "ButtonHooks" /* 5641 */;
-import Button_BaseButton from "Button/BaseButton" /* 5643 */;
-import ButtonPill from "ButtonPill" /* 5645 */;
+// Module 8153 (BaseIconButton)
+import _mod1652 from "module_1652" /* 1652 */;
+import IconDefault from "Icon" /* 5756 */;
+import ButtonConstants from "ButtonConstants" /* 5760 */;
+import ButtonHooks from "ButtonHooks" /* 5761 */;
+import Button_BaseButton from "Button/BaseButton" /* 5763 */;
+import ButtonPill from "ButtonPill" /* 5765 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexport = ReanimatedRexport2;
+const module_1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
@@ -33,7 +33,7 @@ let closure_4 = createStyles.createStyles((arg0, arg1) => {
   obj5.pill = {};
   return obj5;
 });
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
+const Icon = module_1652.createAnimatedComponent(IconDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 
@@ -56,7 +56,7 @@ export function BaseIconButton(ref) {
     num = scaleAmountInPx;
   }
   const tmp4 = closure_4(str, DEFAULT_BUTTON_SIZE);
-  const sharedValue = ReanimatedRexport2.useSharedValue(0);
+  const sharedValue = _mod1652.useSharedValue(0);
   const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
@@ -69,7 +69,7 @@ export function BaseIconButton(ref) {
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.ref = ref.ref;
-  const items = [tmp4.button, style];
+  items = [tmp4.button, style];
   obj4.style = items;
   obj4.pressed = sharedValue;
   obj4.scaleAmountInPx = num;

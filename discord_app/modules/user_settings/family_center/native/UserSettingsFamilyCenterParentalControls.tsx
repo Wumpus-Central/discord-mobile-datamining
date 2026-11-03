@@ -1,10 +1,10 @@
-// === Module 16836: UserSettingsFamilyCenterParentalControls ===
+// === Module 16979: UserSettingsFamilyCenterParentalControls ===
 
-// Module 16836 (UserSettingsFamilyCenterParentalControls)
+// Module 16979 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7717 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const FamilyCenterSubPages = fn(7716).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7840).FamilyCenterSubPages;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 const obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -60,7 +60,7 @@ export default function FamilyCenterParentalControlsSettings() {
     importDefault(nativeEvent.nativeEvent.layout.width);
   }, []);
   const ref = id.useRef(false);
-  const items = [true === autoOpenCreate, id, stackNavigation];
+  items = [true === autoOpenCreate, id, stackNavigation];
   const effect = obj2.useEffect(() => {
     let tmp = closure_3;
     if (closure_3) {
@@ -82,7 +82,7 @@ export default function FamilyCenterParentalControlsSettings() {
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2538["1Op+NP"]);
+        obj.title = intl.string(_modDef2667["1Op+NP"]);
         let fn;
         if (!closure_5) {
           fn = (arg0) => {
@@ -100,7 +100,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "raw", headerRight: "cix" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "flexDirection" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

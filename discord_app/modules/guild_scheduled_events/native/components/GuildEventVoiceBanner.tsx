@@ -1,19 +1,19 @@
-// === Module 15192: GuildEventVoiceBanner ===
+// === Module 15333: GuildEventVoiceBanner ===
 
-// Module 15192 (GuildEventVoiceBanner)
+// Module 15333 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8962 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8985 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9090 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9113 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6855).isGuildScheduledEventActive;
+let closure_6 = fn(6975).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -29,7 +29,7 @@ export default noop.memo(function GuildEventVoiceBanner(channel) {
   let obj = channel(event[7]);
   const imminentUpcomingGuildEvents = channel(event[7]).useImminentUpcomingGuildEvents(channel.id);
   let obj2 = channel(event[7]);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   let tmp7 = activeEvent;
   const stateFromStores = channel(event[8]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {

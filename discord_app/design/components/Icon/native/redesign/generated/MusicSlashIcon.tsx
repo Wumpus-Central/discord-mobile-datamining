@@ -1,9 +1,9 @@
-// === Module 11880: MusicSlashIcon ===
+// === Module 12017: MusicSlashIcon ===
 
-// Module 11880 (MusicSlashIcon)
+// Module 12017 (MusicSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod11881 from "module_11881" /* 11881 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod12018 from "module_12018" /* 12018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MusicSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11881, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12018, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 12596: useConjureManualAppBuildRequest ===
+// === Module 12732: useConjureManualAppBuildRequest ===
 
-// Module 12596 (useConjureManualAppBuildRequest)
+// Module 12732 (useConjureManualAppBuildRequest)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 12597 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ConjureAppBuildRequest from "ConjureAppBuildRequest" /* 12733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,13 +26,13 @@ export default function useConjureManualAppBuildRequest(projectId) {
   if (projectId === projectId) {
     tmp5 = tmp2;
   }
-  const items = [projectId, callback];
+  items = [projectId, callback];
   const items1 = [callback];
   const open = noop.useCallback((str, clearComposer) => {
     const obj = { projectId, request: null, clearComposer: null };
     const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
     const intl = util.intl;
-    obj2.summary = intl.string(_modDef3868["o2++BO"]);
+    obj2.summary = intl.string(_modDef3995["o2++BO"]);
     const trimmed = str.trim();
     obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
     obj.request = obj2;

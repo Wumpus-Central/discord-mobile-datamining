@@ -1,12 +1,12 @@
-// === Module 16312: certifiedDevices ===
+// === Module 16455: certifiedDevices ===
 
-// Module 16312 (certifiedDevices)
-import Constants2 from "Constants" /* 5768 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11810 */;
-import CertifiedDeviceActionCreators from "CertifiedDeviceActionCreators" /* 16313 */;
-import Constants_mod from "Constants" /* 6450 */;
+// Module 16455 (certifiedDevices)
+import Constants2 from "Constants" /* 5888 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11947 */;
+import CertifiedDeviceActionCreators from "CertifiedDeviceActionCreators" /* 16456 */;
+import Constants_mod from "Constants" /* 6570 */;
 import Constants_mod from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ obj2.validation = function validation(array) {
   const obj3 = { type: null, id: null, vendor: null, model: null, related: null, echo_cancellation: null, noise_suppression: null, automatic_gain_control: null, hardware_mute: null };
   const obj5 = createRpcJoiSchemaObjectDefault(array);
   const stringResult = array.string();
-  const items = [, , ];
+  items = [, , ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   obj3.type = array.string().required().valid(items);
   const requiredResult1 = array.string().required();

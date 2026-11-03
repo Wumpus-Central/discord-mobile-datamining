@@ -1,7 +1,7 @@
-// === Module 9332: transformAvatarDecoration ===
+// === Module 9460: transformAvatarDecoration ===
 
-// Module 9332 (transformAvatarDecoration)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1979 */;
+// Module 9460 (transformAvatarDecoration)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/rpc/helpers/transformAvatarDecoration.tsx");

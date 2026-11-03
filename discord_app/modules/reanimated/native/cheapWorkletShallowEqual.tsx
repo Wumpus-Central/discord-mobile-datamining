@@ -1,8 +1,10 @@
-// === Module 10089: cheapWorkletShallowEqual ===
+// === Module 10219: cheapWorkletShallowEqual ===
 
-// Module 10089 (cheapWorkletShallowEqual)
+// Module 10219 (cheapWorkletShallowEqual)
 import size from "module_2" /* 2 */;
 
+const items = [{ code: "(function cheapWorkletShallowEqual_cheapWorkletShallowEqualTsx1(a,b){if(a===b)return true;if(a==null||b==null)return false;for(const key in a){if(a[key]!==b[key])return false;}return true;})" }];
+[tmp2] = items;
 function cheapWorkletShallowEqual(safeAreaState, current) {
   if (safeAreaState === current) {
     return true;
@@ -23,9 +25,10 @@ function cheapWorkletShallowEqual(safeAreaState, current) {
     return false;
   }
 }
-cheapWorkletShallowEqual.__closure = {};
-cheapWorkletShallowEqual.__workletHash = 760221372005;
-cheapWorkletShallowEqual.__initData = { code: "function cheapWorkletShallowEqual_cheapWorkletShallowEqualTsx1(a,b){if(a===b)return true;if(a==null||b==null)return false;for(const key in a){if(a[key]!==b[key])return false;}return true;}" };
+cheapWorkletShallowEqual.__workletHash = 15367694061636;
+cheapWorkletShallowEqual.__initData = tmp2;
+const items1 = [{ code: "(function cheapWorkletArrayShallowEqual_cheapWorkletShallowEqualTsx2(a,b){if(a===b)return true;if(a==null||b==null)return false;if(a.length!==b.length)return false;for(let i=0;i<a.length;i++){if(a[i]!==b[i])return false;}return true;})" }];
+[tmp3] = items1;
 function cheapWorkletArrayShallowEqual(arg0, arg1) {
   if (arg0 === arg1) {
     return true;
@@ -49,9 +52,8 @@ function cheapWorkletArrayShallowEqual(arg0, arg1) {
     return false;
   }
 }
-cheapWorkletArrayShallowEqual.__closure = {};
-cheapWorkletArrayShallowEqual.__workletHash = 3679738010781;
-cheapWorkletArrayShallowEqual.__initData = { code: "function cheapWorkletArrayShallowEqual_cheapWorkletShallowEqualTsx2(a,b){if(a===b)return true;if(a==null||b==null)return false;if(a.length!==b.length)return false;for(let i=0;i<a.length;i++){if(a[i]!==b[i])return false;}return true;}" };
+cheapWorkletArrayShallowEqual.__workletHash = 2673508824668;
+cheapWorkletArrayShallowEqual.__initData = tmp3;
 const result = size.fileFinishedImporting("modules/reanimated/native/cheapWorkletShallowEqual.tsx");
 
 export { cheapWorkletShallowEqual };

@@ -1,17 +1,17 @@
-// === Module 17187: QuestDockLimitedTimePill ===
+// === Module 17330: QuestDockLimitedTimePill ===
 
-// Module 17187 (QuestDockLimitedTimePill)
+// Module 17330 (QuestDockLimitedTimePill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TimerIcon from "TimerIcon" /* 11641 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TimerIcon from "TimerIcon" /* 11778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { pill: { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 };
@@ -21,8 +21,8 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockLimitedTimePill() {
   const tmp = closure_6();
   const obj = { style: tmp.pill, accessible: true, accessibilityRole: "text", children: null };
-  const items = [React4(TimerIcon.TimerIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), ];
-  const obj3 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.text, children: null };
+  items = [React4(TimerIcon.TimerIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), ];
+  const obj3 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["h/uBCR"]);
   items[1] = React4(Text_Text.Text, obj3);

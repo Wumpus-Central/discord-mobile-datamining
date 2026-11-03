@@ -1,213 +1,263 @@
-// === Module 9214: SegmentedControl ===
+// === Module 9342: SegmentedControl ===
 
-// Module 9214 (SegmentedControl)
+// Module 9342 (SegmentedControl)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let c8 = 0.04;
-let SELECTED_INDICATOR_SPRING = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(5014);
-let closure_10 = createStyles.createStyles((borderRadius, paddingVertical) => {
+let closure_8 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
+const createStyles = fn(5141);
+let closure_9 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
   obj.indicator = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
   return obj;
 });
-let closure_11 = { code: "function SegmentedControlNativeTsx1(){const{indicatorWidth}=this.__closure;return indicatorWidth.get();}" };
-let closure_12 = { code: "function SegmentedControlNativeTsx2(_,previous){const{previousIndicatorWidth}=this.__closure;if(previous!=null){previousIndicatorWidth.set(previous);}}" };
-let closure_13 = { code: "function SegmentedControlNativeTsx3(){const{activeIndex,itemCount}=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);}" };
-let closure_14 = { code: "function SegmentedControlNativeTsx4(){const{clampedActiveIndex,defaultActiveIndex,indicatorWidth}=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();}" };
-let closure_15 = { code: "function SegmentedControlNativeTsx5(){const{indicatorTranslateX,pressedIndex,clampedActiveIndex,PRESSED_TRANSLATE_AMOUNT,indicatorWidth,scrollOverflow,interpolate,SCROLL_OVERFLOW_UPPER_BOUND,SCROLL_OVERFLOW_MAX_SCALE,segmentSpacing,itemCount,previousIndicatorWidth,withSpring,SELECTED_INDICATOR_SPRING}=this.__closure;let translateX=indicatorTranslateX.get();let scaleX=1;if(pressedIndex.get()>=0){if(pressedIndex.get()<clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX-=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}else if(pressedIndex.get()>clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}}if(scrollOverflow.get()<0){const scaleFactor=interpolate(scrollOverflow.get(),[-SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=-scaleAmount/2;}else if(scrollOverflow.get()>0){const scaleFactor=interpolate(scrollOverflow.get(),[SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=scaleAmount/2;}if(clampedActiveIndex.get()===0){translateX+=segmentSpacing;}else if(clampedActiveIndex.get()===itemCount-1){translateX-=segmentSpacing;}const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated){previousIndicatorWidth.set(indicatorWidth.get());}return{transform:[{translateX:animated?withSpring(translateX,SELECTED_INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,SELECTED_INDICATOR_SPRING)}]};}" };
-let closure_16 = { code: "function onPanGestureUpdate_SegmentedControlNativeTsx6(event){const{indicatorWidth,panIndex,activeIndex,itemCount}=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));}" };
-let closure_17 = { code: "function SegmentedControlNativeTsx7(){const{panIndex,activeIndex,runOnJS,setActiveIndex}=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));runOnJS(setActiveIndex)(activeIndex.get());}" };
-let closure_18 = { code: "function SegmentedControlNativeTsx8(){const{panIndex,activeIndex}=this.__closure;panIndex.set(activeIndex.get());}" };
+let closure_10 = { code: "(function SegmentedControlNativeTsx1(){let[indicatorWidth]=this.__closure;return indicatorWidth.get();})" };
+let closure_11 = { code: "(function SegmentedControlNativeTsx2(_,previous){let[previousIndicatorWidth]=this.__closure;if(previous!=null){previousIndicatorWidth.set(previous);}})" };
+let closure_12 = { code: "(function SegmentedControlNativeTsx3(){let[activeIndex,itemCount]=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);})" };
+let closure_13 = { code: "(function SegmentedControlNativeTsx4(){let[clampedActiveIndex,defaultActiveIndex,indicatorWidth]=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();})" };
+let closure_14 = { code: "(function SegmentedControlNativeTsx5(){let[indicatorTranslateX,pressedIndex,clampedActiveIndex,PRESSED_TRANSLATE_AMOUNT,indicatorWidth,scrollOverflow,interpolate,SCROLL_OVERFLOW_UPPER_BOUND,SCROLL_OVERFLOW_MAX_SCALE,segmentSpacing,itemCount,previousIndicatorWidth,withSpring,SELECTED_INDICATOR_SPRING]=this.__closure;let translateX=indicatorTranslateX.get();let scaleX=1;if(pressedIndex.get()>=0){if(pressedIndex.get()<clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX-=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}else if(pressedIndex.get()>clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}}if(scrollOverflow.get()<0){const scaleFactor=interpolate(scrollOverflow.get(),[-SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=-scaleAmount/2;}else if(scrollOverflow.get()>0){const scaleFactor=interpolate(scrollOverflow.get(),[SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=scaleAmount/2;}if(clampedActiveIndex.get()===0){translateX+=segmentSpacing;}else if(clampedActiveIndex.get()===itemCount-1){translateX-=segmentSpacing;}const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated){previousIndicatorWidth.set(indicatorWidth.get());}return{transform:[{translateX:animated?withSpring(translateX,SELECTED_INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,SELECTED_INDICATOR_SPRING)}]};})" };
+let closure_15 = { code: "(function onPanGestureUpdate_SegmentedControlNativeTsx6(event){let[indicatorWidth,panIndex,activeIndex,itemCount]=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));})" };
+let closure_16 = { code: "(function SegmentedControlNativeTsx7(){let[panIndex,activeIndex]=this.__closure;panIndex.set(activeIndex.get());})" };
+let closure_17 = { code: "(function SegmentedControlNativeTsx8(){let[panIndex,activeIndex,scheduleOnRN,setActiveIndex]=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));scheduleOnRN(setActiveIndex,activeIndex.get());})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
 
 export function SegmentedControl(keyboardShouldPersistTaps) {
-  let state = keyboardShouldPersistTaps.state;
+  state = keyboardShouldPersistTaps.state;
+  _require = state;
   let str = keyboardShouldPersistTaps.variant;
   if (str === undefined) {
     str = "default";
   }
-  SELECTED_INDICATOR_SPRING = undefined;
-  let length;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  __initData = undefined;
-  let sharedValue3;
-  let derivedValue;
-  let derivedValue1;
+  importDefault = str;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
   let animatedStyle;
-  const activeIndex = state.activeIndex;
-  const scrollOverflow = state.scrollOverflow;
-  let items = state.items;
+  ({ activeIndex, items } = state);
+  dependencyMap = items;
   const pressedIndex = state.pressedIndex;
+  noop = pressedIndex;
   const setActiveIndex = state.setActiveIndex;
-  closure_7 = tmp;
+  c4 = setActiveIndex;
+  c5 = tmp;
   let num = 4;
   if ("experimental_Large" === str) {
     num = 8;
   }
-  const tmp4 = length(state(activeIndex[5]).useToken(str(activeIndex[4]).modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS), num);
-  SELECTED_INDICATOR_SPRING = tmp4;
-  length = items.length;
-  let obj = state(activeIndex[5]);
-  sharedValue = state(activeIndex[6]).useSharedValue(-1);
-  const obj2 = state(activeIndex[6]);
-  sharedValue1 = state(activeIndex[6]).useSharedValue(0);
-  const obj3 = state(activeIndex[6]);
-  sharedValue2 = state(activeIndex[6]).useSharedValue(0);
-  let obj4 = state(activeIndex[6]);
-  class T {
+  c6 = num;
+  const tmp4 = c9(require("useToken").useToken(nativeDefault.modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS), num);
+  c7 = tmp4;
+  c8 = length;
+  let obj = require("useToken");
+  const sharedValue = require("module_1652").useSharedValue(-1);
+  const obj2 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(0);
+  c9 = sharedValue1;
+  const obj3 = require("module_1652");
+  const sharedValue2 = require("module_1652").useSharedValue(0);
+  const obj4 = require("module_1652");
+  let items1 = [c10, sharedValue1];
+  _require = undefined;
+  [tmp8, tmp9] = items1;
+  class SegmentedControlNativeTsx1 {
     constructor() {
-      return closure_12.get();
+      return closure_0.get();
     }
   }
-  T.__closure = { indicatorWidth: sharedValue1 };
-  T.__workletHash = 5223249035388;
-  T.__initData = sharedValue;
-  class R {
+  let items2 = [tmp9];
+  SegmentedControlNativeTsx1.__closure = items2;
+  SegmentedControlNativeTsx1.__workletHash = 1609866190981;
+  SegmentedControlNativeTsx1.__initData = tmp8;
+  let items3 = [c11, sharedValue2];
+  _require = undefined;
+  [tmp10, tmp11] = items3;
+  class SegmentedControlNativeTsx2 {
     constructor(arg0, arg1) {
       if (null != arg1) {
-        tmp = closure_13;
-        result = closure_13.set(arg1);
+        tmp = closure_0;
+        result = closure_0.set(arg1);
       }
       return;
     }
   }
-  R.__closure = { previousIndicatorWidth: sharedValue2 };
-  R.__workletHash = 14748619096684;
-  R.__initData = sharedValue1;
-  const animatedReaction = state(activeIndex[6]).useAnimatedReaction(T, R);
-  const items1 = [sharedValue1];
-  __initData = scrollOverflow.useCallback((nativeEvent) => {
-    const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
-  }, items1);
-  const obj5 = state(activeIndex[6]);
-  sharedValue3 = state(activeIndex[6]).useSharedValue(activeIndex.get());
-  const obj6 = state(activeIndex[6]);
-  const fn = function k() {
-    return Math.min(Math.max(activeIndex.get(), 0), length - 1);
-  };
-  fn.__closure = { activeIndex, itemCount: length };
-  fn.__workletHash = 790542357728;
-  fn.__initData = sharedValue2;
-  derivedValue = state(activeIndex[6]).useDerivedValue(fn);
-  const obj7 = state(activeIndex[6]);
-  class G {
+  let items4 = [tmp11];
+  SegmentedControlNativeTsx2.__closure = items4;
+  SegmentedControlNativeTsx2.__workletHash = 4382534066101;
+  SegmentedControlNativeTsx2.__initData = tmp10;
+  const animatedReaction = require("module_1652").useAnimatedReaction(SegmentedControlNativeTsx1, SegmentedControlNativeTsx2);
+  const items5 = [sharedValue1];
+  const callback = noop.useCallback((nativeEvent) => {
+    const result = _undefined7.set(nativeEvent.nativeEvent.layout.width);
+  }, items5);
+  c10 = callback;
+  const obj5 = require("module_1652");
+  const sharedValue3 = require("module_1652").useSharedValue(activeIndex.get());
+  c11 = sharedValue3;
+  const tmp2Result = require("module_1652");
+  const items6 = [animatedStyle, activeIndex, items.length];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp15, tmp16, tmp17] = items6;
+  class SegmentedControlNativeTsx3 {
     constructor() {
-      value = closure_16.get();
-      diff = value - closure_15.get();
-      return diff * closure_12.get();
+      return Math.min(Math.max(closure_0.get(), 0), closure_1 - 1);
     }
   }
-  G.__closure = { clampedActiveIndex: derivedValue, defaultActiveIndex: sharedValue3, indicatorWidth: sharedValue1 };
-  G.__workletHash = 10116271570175;
-  G.__initData = __initData;
-  derivedValue1 = state(activeIndex[6]).useDerivedValue(G);
-  let obj8 = state(activeIndex[6]);
-  class B {
+  const items7 = [tmp16, tmp17];
+  SegmentedControlNativeTsx3.__closure = items7;
+  SegmentedControlNativeTsx3.__workletHash = 609070730457;
+  SegmentedControlNativeTsx3.__initData = tmp15;
+  const derivedValue = require("module_1652").useDerivedValue(SegmentedControlNativeTsx3);
+  const tmp2Result6 = require("module_1652");
+  const items8 = [c13, derivedValue, sharedValue3, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp19, tmp20, tmp21, tmp22] = items8;
+  class SegmentedControlNativeTsx4 {
     constructor() {
-      value = closure_17.get();
-      obj = pressedIndex;
+      value = closure_0.get();
+      diff = value - closure_1.get();
+      return diff * closure_2.get();
+    }
+  }
+  const items9 = [tmp20, tmp21, tmp22];
+  SegmentedControlNativeTsx4.__closure = items9;
+  SegmentedControlNativeTsx4.__workletHash = 2708340331974;
+  SegmentedControlNativeTsx4.__initData = tmp19;
+  const derivedValue1 = require("module_1652").useDerivedValue(SegmentedControlNativeTsx4);
+  const tmp2Result7 = require("module_1652");
+  const items10 = [closure_14, derivedValue1, pressedIndex, derivedValue, 0.04, sharedValue1, state.scrollOverflow, require("module_1652").interpolate, 50, 0.9, num, items.length, sharedValue2, require("spring/spring").withSpring, c8];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
+  animatedStyle = undefined;
+  c13 = undefined;
+  [tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38] = items10;
+  class SegmentedControlNativeTsx5 {
+    constructor() {
+      value = closure_0.get();
+      obj = closure_1;
       num = 1;
-      if (pressedIndex.get() < 0) {
-        obj3 = scrollOverflow;
-        if (scrollOverflow.get() < 0) {
-          tmp11 = closure_0;
-          tmp12 = closure_2;
-          obj4 = closure_0(closure_2[6]);
+      if (closure_1.get() < 0) {
+        obj3 = closure_5;
+        if (closure_5.get() < 0) {
+          tmp12 = closure_6;
+          tmp13 = closure_7;
+          items = [, ];
+          items[0] = -closure_7;
+          items[1] = 0;
+          tmp14 = closure_8;
+          items1 = [, ];
+          items1[0] = closure_8;
+          items1[1] = 1;
           str = "clamp";
-          tmp13 = obj4;
-          interpolateResult = obj4.interpolate(obj3.get(), [-50, 0], [0.9, 1], "clamp");
-          tmp15 = closure_12;
+          tmp15 = items;
+          tmp16 = items1;
+          tmp17 = closure_6(obj3.get(), items, items1, "clamp");
+          tmp18 = closure_4;
           num5 = 2;
-          sum = value + -closure_12.get() * (1 - interpolateResult) / 2;
-          num = interpolateResult;
+          sum = value + -closure_4.get() * (1 - tmp17) / 2;
+          num = tmp17;
         } else {
           sum = value;
           if (obj3.get() > 0) {
-            tmp31 = closure_0;
-            tmp32 = closure_2;
-            obj13 = closure_0(closure_2[6]);
+            tmp31 = closure_6;
+            tmp32 = closure_7;
+            items2 = [, ];
+            items2[0] = closure_7;
+            items2[1] = 0;
+            tmp33 = closure_8;
+            items3 = [, ];
+            items3[0] = closure_8;
+            items3[1] = 1;
             str2 = "clamp";
-            tmp33 = obj13;
-            interpolateResult1 = obj13.interpolate(obj3.get(), [50, 0], [0.9, 1], "clamp");
-            tmp35 = closure_12;
+            tmp34 = items2;
+            tmp35 = items3;
+            tmp36 = closure_6(obj3.get(), items2, items3, "clamp");
+            tmp37 = closure_4;
             num6 = 2;
-            sum = value + closure_12.get() * (1 - interpolateResult1) / 2;
-            num = interpolateResult1;
+            sum = value + closure_4.get() * (1 - tmp36) / 2;
+            num = tmp36;
           }
         }
-        obj5 = closure_16;
-        if (0 === closure_16.get()) {
-          tmp20 = c8;
-          sum1 = sum + c8;
+        obj4 = closure_2;
+        if (0 === closure_2.get()) {
+          tmp22 = closure_9;
+          sum1 = sum + closure_9;
         } else {
-          tmp17 = length;
+          tmp19 = closure_10;
           sum1 = sum;
-          if (obj5.get() === length - 1) {
-            tmp19 = c8;
-            sum1 = sum - c8;
+          if (obj4.get() === closure_10 - 1) {
+            tmp21 = closure_9;
+            sum1 = sum - closure_9;
           }
         }
-        obj6 = closure_12;
-        obj7 = closure_13;
-        value1 = closure_12.get();
-        tmp22 = value1 === closure_13.get();
-        if (!tmp22) {
-          result = obj7.set(obj6.get());
+        obj5 = closure_4;
+        obj6 = closure_11;
+        value1 = closure_4.get();
+        tmp24 = value1 === closure_11.get();
+        if (!tmp24) {
+          result = obj6.set(obj5.get());
         }
-        withSpringResult = sum1;
-        if (tmp22) {
-          tmp25 = closure_0;
-          tmp26 = closure_2;
-          obj8 = closure_0(closure_2[7]);
-          tmp27 = closure_9;
-          withSpringResult = obj8.withSpring(sum1, closure_9);
+        tmp26 = sum1;
+        if (tmp24) {
+          tmp27 = closure_12;
+          tmp28 = closure_13;
+          tmp26 = closure_12(sum1, closure_13);
         }
         obj1 = { transform: null };
-        obj14 = { translateX: null };
-        obj14.translateX = withSpringResult;
-        items = [, ];
-        items[0] = obj14;
-        obj15 = { scaleX: null };
-        tmp28 = closure_0;
-        tmp29 = closure_2;
-        obj12 = closure_0(closure_2[7]);
-        tmp30 = closure_9;
-        obj15.scaleX = obj12.withSpring(num, closure_9);
-        items[1] = obj15;
-        obj1.transform = items;
+        obj10 = { translateX: null };
+        obj10.translateX = tmp26;
+        items4 = [, ];
+        items4[0] = obj10;
+        obj11 = { scaleX: null };
+        tmp29 = closure_12;
+        tmp30 = closure_13;
+        obj11.scaleX = closure_12(num, closure_13);
+        items4[1] = obj11;
+        obj1.transform = items4;
         return obj1;
       } else {
-        obj2 = closure_16;
+        obj2 = closure_2;
         value2 = obj.get();
-        if (value2 < closure_16.get()) {
-          tmp7 = c8;
-          num2 = 1 + c8;
-          tmp8 = closure_12;
-          num4 = 0.02;
-          diff = value - 0.02 * closure_12.get();
+        if (value2 < closure_2.get()) {
+          tmp7 = closure_3;
+          num2 = 1 + closure_3;
+          tmp8 = closure_4;
+          num4 = 2;
+          diff = value - closure_4.get() * (closure_3 / 2);
         } else {
           value3 = obj.get();
           num2 = 1;
           diff = value;
           if (value3 > obj2.get()) {
-            tmp5 = c8;
-            num2 = 1 + c8;
-            tmp6 = closure_12;
-            num3 = 0.02;
-            diff = value + 0.02 * closure_12.get();
+            tmp5 = closure_3;
+            num2 = 1 + closure_3;
+            tmp6 = closure_4;
+            num3 = 2;
+            diff = value + closure_4.get() * (closure_3 / 2);
           }
         }
         tmp9 = num2;
@@ -216,53 +266,59 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
       return;
     }
   }
-  let obj9 = state(activeIndex[6]);
-  B.__closure = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: num, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[6]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: 0.9, segmentSpacing: num, itemCount: length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[7]).withSpring, SELECTED_INDICATOR_SPRING };
-  B.__workletHash = 5537358752627;
-  B.__initData = sharedValue3;
-  animatedStyle = obj9.useAnimatedStyle(B);
-  const items2 = [items, sharedValue3, __initData, tmp4.indicator, animatedStyle];
-  const items3 = [items, length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
-  const memo = scrollOverflow.useMemo(() => items.map((id, index) => {
-    const tmp = sharedValue3.get() === index;
+  const items11 = [tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38];
+  SegmentedControlNativeTsx5.__closure = items11;
+  SegmentedControlNativeTsx5.__workletHash = 11542678716522;
+  SegmentedControlNativeTsx5.__initData = tmp24;
+  animatedStyle = require("module_1652").useAnimatedStyle(SegmentedControlNativeTsx5);
+  const items12 = [items, sharedValue3, callback, tmp4.indicator, animatedStyle];
+  const items13 = [items, items.length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
+  const memo = obj6.useMemo(() => _undefined3.map((id, index) => {
+    const tmp = _undefined8.get() === index;
     let tmp3;
     if (tmp) {
-      tmp3 = __initData;
+      tmp3 = closure_1_10;
     }
     const obj = { onLayout: tmp3, style: null };
     items = [indicator.indicator, tmp ? animatedStyle : { opacity: 0 }];
     obj.style = items;
-    return setActiveIndex(str(activeIndex[6]).View, obj, id.id);
-  }), items2);
+    return c6(c1(c2[6]).View, obj, id.id);
+  }), items12);
+  const items14 = [closure_15, sharedValue1, sharedValue, activeIndex, items.length];
+  _require = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp42, tmp43, tmp44, tmp45, tmp46] = items14;
   function onPanGestureUpdate(translationX) {
-    const result = translationX.translationX / sharedValue1.get();
-    const result1 = activeIndex.set(Math.min(Math.max(sharedValue.get() + result, 0), length - 1));
+    const result = translationX.translationX / _undefined.get();
+    const result1 = _undefined3.set(Math.min(Math.max(_undefined2.get() + result, 0), c3 - 1));
   }
-  onPanGestureUpdate.__closure = { indicatorWidth: sharedValue1, panIndex: sharedValue, activeIndex, itemCount: length };
-  onPanGestureUpdate.__workletHash = 4853281820821;
-  onPanGestureUpdate.__initData = derivedValue;
-  const memo1 = scrollOverflow.useMemo(() => items.map((item, index) => {
+  const items15 = [tmp43, tmp44, tmp45, tmp46];
+  onPanGestureUpdate.__closure = items15;
+  onPanGestureUpdate.__workletHash = 17036555913324;
+  onPanGestureUpdate.__initData = tmp42;
+  const memo1 = obj6.useMemo(() => _undefined3.map((item, index) => {
     state = index;
     ({ label, id, icon } = item);
     if (0 === index) {
-      let tmp3 = closure_8;
+      let tmp3 = closure_6;
     } else if (index === itemCount - 1) {
-      tmp3 = -closure_8;
+      tmp3 = -closure_6;
     }
     if (0 === index) {
-      let tmp6 = -closure_8;
+      let tmp6 = -closure_6;
     } else if (index === itemCount - 1) {
-      tmp6 = closure_8;
+      tmp6 = closure_6;
     }
     const obj = {
-      style: { minWidth: `${1 / closure_10 * 100}%`, marginStart: tmp3, marginEnd: tmp6 },
+      style: { minWidth: `${1 / closure_8 * 100}%`, marginStart: tmp3, marginEnd: tmp6 },
       index,
       itemCount,
       label,
       state,
       pressed,
       onPress: function handlePress() {
-        setActiveIndex(closure_0);
+        _undefined4(closure_0);
       },
       onPressIn: function handlePressIn() {
         const result = pressed.set(closure_0);
@@ -274,65 +330,74 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
       variant: null
     };
     let tmp9 = null;
-    if (closure_7) {
+    if (closure_5) {
       tmp9 = icon;
     }
     obj.icon = tmp9;
     obj.variant = variant;
-    return setActiveIndex(state(activeIndex[8]).SegmentedControlItem, obj, id);
-  }), items3);
-  const Gesture = state(activeIndex[9]).Gesture;
-  let obj10 = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: num, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[6]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: 0.9, segmentSpacing: num, itemCount: length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[7]).withSpring, SELECTED_INDICATOR_SPRING };
-  class J {
+    return _undefined6(state(_undefined3[8]).SegmentedControlItem, obj, id);
+  }), items13);
+  const Gesture = tmp2(5426).Gesture;
+  const tmp2Result8 = require("module_1652");
+  const items16 = [closure_16, sharedValue, activeIndex];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp47, tmp48, tmp49] = items16;
+  class SegmentedControlNativeTsx7 {
     constructor() {
-      result = closure_11.set(activeIndex.get());
+      result = closure_0.set(closure_1.get());
       return;
     }
   }
-  J.__closure = { panIndex: sharedValue, activeIndex };
-  J.__workletHash = 16822477236158;
-  J.__initData = animatedStyle;
+  const items17 = [tmp48, tmp49];
+  SegmentedControlNativeTsx7.__closure = items17;
+  SegmentedControlNativeTsx7.__workletHash = 8480234970536;
+  SegmentedControlNativeTsx7.__initData = tmp47;
   const PanResult = Gesture.Pan();
-  const onStartResult = Gesture.Pan().onStart(J);
-  class H {
+  const onStartResult = Gesture.Pan().onStart(SegmentedControlNativeTsx7);
+  const items18 = [closure_17, sharedValue, activeIndex, require("module_1705").scheduleOnRN, setActiveIndex];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp50, tmp51, tmp52, tmp53, tmp54] = items18;
+  class SegmentedControlNativeTsx8 {
     constructor() {
-      result = closure_11.set(-1);
-      result1 = activeIndex.set(Math.round(activeIndex.get()));
-      obj = closure_0(closure_2[6]);
-      runOnJSResult = obj.runOnJS(setActiveIndex);
-      tmp3Result = runOnJSResult(activeIndex.get());
+      result = closure_0.set(-1);
+      result1 = closure_1.set(Math.round(closure_1.get()));
+      tmp3 = closure_2(closure_3, closure_1.get());
       return;
     }
   }
-  const onUpdateResult = Gesture.Pan().onStart(J).onUpdate(onPanGestureUpdate);
-  H.__closure = { panIndex: sharedValue, activeIndex, runOnJS: state(activeIndex[6]).runOnJS, setActiveIndex };
-  H.__workletHash = 4531135834116;
-  H.__initData = derivedValue1;
-  let obj11 = { panIndex: sharedValue, activeIndex, runOnJS: state(activeIndex[6]).runOnJS, setActiveIndex };
-  const onEndResult = onUpdateResult.onEnd(H);
+  const items19 = [tmp51, tmp52, tmp53, tmp54];
+  SegmentedControlNativeTsx8.__closure = items19;
+  SegmentedControlNativeTsx8.__workletHash = 15809961228383;
+  SegmentedControlNativeTsx8.__initData = tmp50;
+  const onUpdateResult = Gesture.Pan().onStart(SegmentedControlNativeTsx7).onUpdate(onPanGestureUpdate);
+  const onEndResult = Gesture.Pan().onStart(SegmentedControlNativeTsx7).onUpdate(onPanGestureUpdate).onEnd(SegmentedControlNativeTsx8);
   let str2 = "tablist";
-  if (!obj15.isAndroid()) {
+  if (!tmp2Result9.isAndroid()) {
     let str3;
     if (tmp) {
       str3 = "tabbar";
     }
     str2 = str3;
   }
-  const obj12 = { accessibilityRole: str2, style: tmp4.controlsContainer, children: null };
-  const items4 = [setActiveIndex(items, { accessible: false, style: tmp4.indicatorContainer, children: memo }), memo1];
-  obj12.children = items4;
-  const tmp18 = closure_7(items, obj12, items.length);
-  let obj13 = { accessible: false, style: tmp4.indicatorContainer, children: memo };
-  obj15 = state(activeIndex[10]);
-  const tmp19 = pressedIndex;
+  let obj7 = { accessibilityRole: str2, style: tmp4.controlsContainer, children: null };
+  const items20 = [c6(c4, { accessible: false, style: tmp4.indicatorContainer, children: memo }), memo1];
+  obj7.children = items20;
+  const tmp57 = c7(c4, obj7, items.length);
+  let obj8 = { accessible: false, style: tmp4.indicatorContainer, children: memo };
+  tmp2Result9 = require("PlatformUtils");
+  const tmp58 = c5;
   let str4;
-  if (tmp2Result.isIOS()) {
+  if (tmp2Result10.isIOS()) {
     str4 = "tabbar";
   }
-  let tmp17Result = tmp17(tmp19, { horizontal: true, accessibilityRole: str4, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp18 });
+  let tmp56Result = tmp56(tmp58, { horizontal: true, accessibilityRole: str4, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp57 });
   if ("experimental_Large" === str) {
-    const obj16 = { gesture: onEndResult, children: tmp18 };
-    tmp17Result = tmp17(tmp2(tmp3[9]).GestureDetector, obj16);
+    const obj10 = { gesture: onEndResult, children: tmp57 };
+    tmp56Result = tmp56(tmp2(5426).GestureDetector, obj10);
   }
-  return tmp17Result;
+  return tmp56Result;
 }

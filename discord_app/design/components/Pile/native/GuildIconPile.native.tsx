@@ -1,11 +1,11 @@
-// === Module 14194: GuildIconPile ===
+// === Module 14325: GuildIconPile ===
 
-// Module 14194 (GuildIconPile)
-import GuildIcon from "GuildIcon" /* 6957 */;
-import ClipView from "ClipView" /* 9509 */;
-import ListUtils from "ListUtils" /* 12802 */;
-import Pile from "Pile" /* 13424 */;
-import PileOverflow from "PileOverflow" /* 13425 */;
+// Module 14325 (GuildIconPile)
+import GuildIcon from "GuildIcon" /* 7083 */;
+import ClipView from "ClipView" /* 9637 */;
+import ListUtils from "ListUtils" /* 12938 */;
+import Pile from "Pile" /* 13560 */;
+import PileOverflow from "PileOverflow" /* 13561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export function GuildIconPile(arg0) {
     num = 2;
   }
   obj.gap = num;
-  const items = [children, ];
+  items = [children, ];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
     const obj3 = { size: tmp4, borderRadius: tmp4 / 3, value: totalCount - countResult };

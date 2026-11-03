@@ -1,11 +1,11 @@
-// === Module 9717: ContentImpressionTrackerHooks ===
+// === Module 9849: ContentImpressionTrackerHooks ===
 
-// Module 9717 (ContentImpressionTrackerHooks)
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import QuestImpressionContext from "QuestImpressionContext" /* 9718 */;
+// Module 9849 (ContentImpressionTrackerHooks)
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import QuestImpressionContext from "QuestImpressionContext" /* 9850 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 const size = fn(2);
@@ -20,10 +20,10 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
   if ("adContentId" in questOrQuests) {
     adContentId = questOrQuests.adContentId;
   }
-  let items = [questOrQuests, adContentId];
+  items = [questOrQuests, adContentId];
   const memo = noop.useMemo(() => {
     if (null != memo) {
-      const items = [tmp];
+      items = [tmp];
       let items1 = items;
     } else if (null != questOrQuests) {
       const _Array = Array;
@@ -44,7 +44,7 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
   }
   let items1 = [memo, questOrQuests.questContent, adCreativeType];
   return noop.useMemo(() => {
-    const items = [...memo];
+    items = [...memo];
     const sorted = items.sort();
     const combined = "" + sorted.join("_") + "_" + questOrQuests.questContent;
     const QUEST = AdCreativeType.AdCreativeType.QUEST;
@@ -54,7 +54,7 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
 export function useQuestStatusChanged(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const adCreativeType = adContentIds.adCreativeType;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [adContentIds, adCreativeType];
   stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(items, () => {
     let quest = null;
@@ -101,7 +101,7 @@ export function useQuestImpressionId() {
 }
 export function useGetQuestImpressionId() {
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
-  const items = [context];
+  items = [context];
   return noop.useCallback(() => {
     let id;
     if (context != null) {
@@ -115,7 +115,7 @@ export function useGetQuestImpressionId() {
 }
 export function useGetOptionalQuestImpressionId() {
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
-  const items = [context];
+  items = [context];
   return noop.useCallback(() => {
     let id;
     if (context != null) {

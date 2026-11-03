@@ -1,6 +1,6 @@
-// === Module 8570: ChangelogImageUtils ===
+// === Module 8694: ChangelogImageUtils ===
 
-// Module 8570 (ChangelogImageUtils)
+// Module 8694 (ChangelogImageUtils)
 import size from "module_2" /* 2 */;
 
 function toURL(target) {
@@ -168,7 +168,7 @@ export function splitParagraphAtImages(content) {
       arraySpreadResult4 = HermesBuiltin.arraySpread(items4, arraySpreadResult4);
     }
   }
-  let items = [];
+  items = [];
   closure_1 = [];
   c2 = false;
   const item = content.forEach((type) => {

@@ -1,6 +1,6 @@
-// === Module 7412: SlayerStorefrontPriceUtils ===
+// === Module 7536: SlayerStorefrontPriceUtils ===
 
-// Module 7412 (SlayerStorefrontPriceUtils)
+// Module 7536 (SlayerStorefrontPriceUtils)
 import Constants from "Constants" /* 1072 */;
 import Constants2 from "Constants" /* 1083 */;
 import size from "module_2" /* 2 */;

@@ -1,19 +1,19 @@
-// === Module 14028: ChatInputGuardLurking ===
+// === Module 14159: ChatInputGuardLurking ===
 
-// Module 14028 (ChatInputGuardLurking)
+// Module 14159 (ChatInputGuardLurking)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6906 */;
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7521 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9130 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11195 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7026 */;
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7645 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9258 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11332 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
-const TextAreaCta = fn(12809).TextAreaCta;
+const TextAreaCta = fn(12945).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -23,7 +23,7 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 export default noop.memo(function ChatInputGuardLurking(channel) {
   channel = channel.channel;
   let guildId = channel.getGuildId();
-  const items = [LurkingStore];
+  items = [LurkingStore];
   const items1 = [guildId];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let isLurkingResult = null != guildId;
@@ -82,8 +82,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl11 = tmp2(1113).intl;
     obj2.buttonPrimaryText = intl11.string(tmp2(1113).t.RLch70);
     obj2.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(14021), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-    const tmp14 = guildId(14021);
+    let tmp15Result = jsx(guildId(14152), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    const tmp14 = guildId(14152);
   } else {
     if (null != pendingGameProfileReturn) {
       let obj3 = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryLoading: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
@@ -123,8 +123,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj9.buttonPrimaryText = intl2.string(tmp2(1113).t.RLch70);
       obj9.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(14021), obj9);
-    const tmp17 = guildId(14021);
+    tmp15Result = jsx(guildId(14152), obj9);
+    const tmp17 = guildId(14152);
   }
   return tmp15Result;
 });

@@ -1,16 +1,16 @@
-// === Module 7905: _guildRoomConnect ===
+// === Module 8029: _guildRoomConnect ===
 
-// Module 7905 (_guildRoomConnect)
+// Module 8029 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7907 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 7908 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 7927 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7937 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8031 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 8032 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 8051 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 8061 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 7906 */;
+import GuildRoomStore from "GuildRoomStore" /* 8030 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0) {
@@ -24,7 +24,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -115,7 +115,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
             if (null != closure_136_8) {
               let obj12 = { updateType: "position", updateReason: "default", position: null };
               obj12.position = closure_136_8.position;
-              let items = [obj12, , , ];
+              items = [obj12, , , ];
               let obj15 = { updateType: "seat", updateReason: "default", seat: null };
               obj15.seat = closure_136_8.seat;
               items[1] = obj15;
@@ -151,7 +151,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           }
           c11 = 0;
           c13 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         c11 = 1;
@@ -177,7 +177,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -328,7 +328,7 @@ let closure_9 = async function _guildRoomUpdate(arg0) {
           }
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp81) {
         closure_5 = tmp81;
@@ -419,7 +419,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -473,7 +473,7 @@ let closure_16 = async function _createGuildRoomNote(arg0) {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         closure_6 = tmp27;
@@ -498,7 +498,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -536,7 +536,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0) {
           const obj = closure_132_0(closure_132_2[8]);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c6 = tmp;

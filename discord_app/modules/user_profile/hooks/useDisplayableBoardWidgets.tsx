@@ -1,10 +1,10 @@
-// === Module 14971: useDisplayableBoardWidgets ===
+// === Module 15108: useDisplayableBoardWidgets ===
 
-// Module 14971 (useDisplayableBoardWidgets)
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7774 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7777 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14972 */;
+// Module 15108 (useDisplayableBoardWidgets)
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7902 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15092 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,6 +30,6 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplay
 export function useDisplayableBoardWidgets(id) {
   const tmp = useUserProfileWidgetsDefault(id);
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
 }

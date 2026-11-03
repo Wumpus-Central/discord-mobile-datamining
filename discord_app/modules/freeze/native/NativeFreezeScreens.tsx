@@ -1,14 +1,14 @@
-// === Module 18078: NativeFreezeScreens ===
+// === Module 18222: NativeFreezeScreens ===
 
-// Module 18078 (NativeFreezeScreens)
-import enableScreens from "enableScreens" /* 5966 */;
+// Module 18222 (NativeFreezeScreens)
+import enableScreens from "enableScreens" /* 6086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
@@ -48,7 +48,7 @@ export function NativeFreezeScreens(detachInactiveScreens) {
     tmp4 = activeIndex < num;
   }
   flag(flag2[4])(tmp4, "NativeFreezeScreens: invalid activeIndex");
-  let items = [activeIndex];
+  items = [activeIndex];
   const tmp7 = flag3(flag4.useState(items), 2);
   first = tmp7[0];
   if (!first.includes(activeIndex)) {
@@ -81,7 +81,7 @@ export function NativeFreezeScreens(detachInactiveScreens) {
     if (activeIndex === index) {
       num = 2;
     }
-    const items = [StyleSheet.absoluteFill, ];
+    items = [StyleSheet.absoluteFill, ];
     let num2 = -1;
     if (activeIndex === index) {
       num2 = 0;

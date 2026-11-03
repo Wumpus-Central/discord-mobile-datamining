@@ -1,11 +1,11 @@
-// === Module 14729: GuildProfileTraits ===
+// === Module 14860: GuildProfileTraits ===
 
-// Module 14729 (GuildProfileTraits)
+// Module 14860 (GuildProfileTraits)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import EmojiDefault from "Emoji" /* 7300 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import EmojiDefault from "Emoji" /* 7420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,14 +27,14 @@ function TraitEmoji(emoji) {
 function GuildProfileTraitView(trait) {
   trait = trait.trait;
   const obj = { style: closure_7().trait, children: null };
-  const items = [hasOwnProperty(TraitEmoji, { emoji: trait.emoji }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label })];
+  items = [hasOwnProperty(TraitEmoji, { emoji: trait.emoji }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE }, emojiImage: { width: 16, height: 16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/native/componen
 
 export default function GuildProfileTraits(profile) {
   profile = profile.profile;
-  const items = [profile];
+  items = [profile];
   const memo = noop.useMemo(() => {
     const traits = profile.traits;
     const mapped = traits.map((item, index) => {

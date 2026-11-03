@@ -1,9 +1,9 @@
-// === Module 12656: ConjureSettingsRequestCard ===
+// === Module 12792: ConjureSettingsRequestCard ===
 
-// Module 12656 (ConjureSettingsRequestCard)
+// Module 12792 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12127 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12263 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -11,7 +11,7 @@ const ConjureSettingsSheetDefault = ConjureSettingsSheet;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default function ConjureSettingsRequestCard(projectId) {
   let obj = flag;
   const conjureSettingsAsk = projectId(flag[4]).useConjureSettingsAsk(projectId, request, projectId.askId);
   ({ done, summary, markSaved } = conjureSettingsAsk);
-  const items = [markSaved, flag, projectId, request];
+  items = [markSaved, flag, projectId, request];
   const callback = markSaved.useCallback(() => {
     const obj2 = { content: React4(ConjureSettingsSheetDefault, { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: flag, onSaved: markSaved, isPreview: true }), key: ConjureSettingsSheet.CONJURE_SETTINGS_SHEET_KEY };
     ActionSheetActionCreators.showActionSheet(obj2);

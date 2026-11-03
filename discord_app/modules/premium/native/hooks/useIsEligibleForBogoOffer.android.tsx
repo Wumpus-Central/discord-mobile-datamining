@@ -1,29 +1,29 @@
-// === Module 10572: useIsEligibleForBogoOffer ===
+// === Module 10702: useIsEligibleForBogoOffer ===
 
-// Module 10572 (useIsEligibleForBogoOffer)
+// Module 10702 (useIsEligibleForBogoOffer)
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export function useIsEligibleForBogoOffer() {
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStores = forceUpdate(504).useStateFromStores(items, () => activeBogoRewardPromotion.getActiveBogoRewardPromotion());
   const obj = forceUpdate(504);
   const items1 = [SubscriptionStore];
   const stateFromStores1 = forceUpdate(504).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(504);
-  const premiumTrialOffer = forceUpdate(7627).usePremiumTrialOffer();
-  const obj4 = forceUpdate(7627);
-  const premiumDiscountOffer = forceUpdate(10571).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10571);
-  const isPaymentsBlocked = forceUpdate(7602).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(7602);
-  forceUpdate = forceUpdate(10573).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(7751).usePremiumTrialOffer();
+  const obj4 = forceUpdate(7751);
+  const premiumDiscountOffer = forceUpdate(10701).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10701);
+  const isPaymentsBlocked = forceUpdate(7726).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(7726);
+  forceUpdate = forceUpdate(10703).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

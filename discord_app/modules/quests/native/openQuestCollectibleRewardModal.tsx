@@ -1,36 +1,36 @@
-// === Module 14709: openQuestCollectibleRewardModal ===
+// === Module 14840: openQuestCollectibleRewardModal ===
 
-// Module 14709 (openQuestCollectibleRewardModal)
+// Module 14840 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import getQuestLogger from "getQuestLogger" /* 7853 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9681 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14495 */;
-import UserStore from "UserStore" /* 1383 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import getQuestLogger from "getQuestLogger" /* 7977 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9813 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9832 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14626 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
   const tmp = closure_8();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const defaultRewardNameWithArticle = QuestRewardUtils.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   const obj4 = { children: null };
   const claimedCollectibleRewardMessage = hooks_QuestHooks.useClaimedCollectibleRewardMessage(quest.config);
-  const obj5 = { variant: "heading-xl/bold", style: tmp.title, children: null };
+  const obj5 = { variant: "heading-xl/semibold", style: tmp.title, children: null };
   const intl = util.intl;
   obj5.children = intl.format(util.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
   const items1 = [hasOwnProperty(Text_Text.Text, obj5), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", style: tmp.title, children: claimedCollectibleRewardMessage })];
   obj4.children = items1;
   return React5(timestampProducer, obj4);
 }
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { title: { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

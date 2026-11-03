@@ -1,13 +1,13 @@
-// === Module 19985: GuildRoleSubscriptionTierDesignModal ===
+// === Module 20135: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 19985 (GuildRoleSubscriptionTierDesignModal)
+// Module 20135 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5596 */;
-import RoleIconUtils from "RoleIconUtils" /* 7356 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17228 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19952 */;
+import useToken from "useToken" /* 5719 */;
+import RoleIconUtils from "RoleIconUtils" /* 7476 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17371 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function MemberPreviews(role) {
   const obj5 = { children: null };
   const token3 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
   const obj6 = { style: null, textStyle: { color: token3 }, role };
-  const items = [, , ];
+  items = [, , ];
   ({ member: arr[0], memberLight: arr[1] } = tmp);
   items[2] = { backgroundColor: token1 };
   obj6.style = items;
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(19950)();
+  const tmp3 = role(20100)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -44,7 +44,7 @@ function Content() {
   const tmp6 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useRoleColor(editStateId, guildId), 2);
   _require = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useRoleIcon(editStateId, guildId), 2)[1];
   role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(editStateId, guildId);
-  const items = [role];
+  items = [role];
   const customIconSrc = noop.useMemo(() => {
     let roleIconData = RoleIconUtils.getRoleIconData(role);
     if (roleIconData == null) {
@@ -76,26 +76,26 @@ function Content() {
   obj9.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj9.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj9.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "y" });
   };
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items3[1] = closure_9(role(19951), obj9);
+  items3[1] = closure_9(role(20101), obj9);
   obj7.children = items3;
   items2[1] = closure_10(View, obj7);
   const obj10 = { title: null, hasIcons: true, children: null };
   const intl3 = tmp4(1113).intl;
   obj10.title = intl3.string(require("util").t["W7hH+z"]);
-  obj10.children = closure_9(role(19986), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj10.children = closure_9(role(20136), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
   obj6.children = items2;
   return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(17196).GuildRoleSubscriptionsTierScenes;
+const constants = fn(17339).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_26 }, member: null, memberLight: null, memberDark: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_26 };
 obj2.member = { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };

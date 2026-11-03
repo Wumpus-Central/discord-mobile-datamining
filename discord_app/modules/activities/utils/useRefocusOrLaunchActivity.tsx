@@ -1,13 +1,13 @@
-// === Module 14689: useRefocusOrLaunchActivity ===
+// === Module 14820: useRefocusOrLaunchActivity ===
 
-// Module 14689 (useRefocusOrLaunchActivity)
+// Module 14820 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 const require = fn;
-const FrameLayoutModes = fn(6847).FrameLayoutModes;
+const FrameLayoutModes = fn(6967).FrameLayoutModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 
@@ -19,7 +19,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
   let stateFromStores1;
   const data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
   let obj = applicationId(runBeforeLaunchAttempt[5]);
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () => stateFromStores1.getCurrentEmbeddedActivity());
   const obj2 = applicationId(runBeforeLaunchAttempt[6]);
   const items1 = [stateFromStores];
@@ -36,7 +36,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

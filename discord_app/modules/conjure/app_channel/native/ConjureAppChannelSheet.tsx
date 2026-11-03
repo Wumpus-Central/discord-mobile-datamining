@@ -1,21 +1,21 @@
-// === Module 14585: ConjureAppChannelSheet ===
+// === Module 14716: ConjureAppChannelSheet ===
 
-// Module 14585 (ConjureAppChannelSheet)
+// Module 14716 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7420 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8199 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10848 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10976 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14583 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7544 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8323 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10978 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11109 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14714 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14582 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14713 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;
 
@@ -26,7 +26,7 @@ function ConjureAppChannelSheetHeader(channel) {
   const tmp3 = useChannelNameDefault(channel);
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
   const obj2 = { spacing: nativeDefault.space.PX_4, align: "center", children: null };
-  const items = [closure_1_10(Text_Text.Heading, { variant: "heading-lg/bold", lineClamp: 1, style: tmp.centered, children: tmp3 }), ];
+  items = [closure_1_10(Text_Text.Heading, { variant: "heading-lg/semibold", lineClamp: 1, style: tmp.centered, children: tmp3 }), ];
   let tmp7Result = null;
   if (null != appChannelApplication) {
     const obj4 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.centered, children: appChannelApplication.name };
@@ -56,7 +56,7 @@ function ConjureAppChannelSheetContent(channel) {
   let obj2 = channel(remixProject[15]);
   const isConjureMobileEnabled1 = channel(remixProject[15]).useIsConjureMobileEnabled(null != tmp7, "ConjureAppChannelSheet");
   let obj3 = channel(remixProject[15]);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   const stateFromStoresObject = channel(remixProject[17]).useStateFromStoresObject(items, () => ({ canManageChannel: PermissionStore.can(constants2.MANAGE_CHANNELS, channel), canInvite: PermissionStore.can(constants2.CREATE_INSTANT_INVITE, channel) }), items1);
   canManageChannel = stateFromStoresObject.canManageChannel;
@@ -215,7 +215,7 @@ function ConjureAppChannelSheetContent(channel) {
       tmp24Result9 = null;
       if (null != guild_id) {
         const obj11 = { onPress: callback, icon: null, label: null };
-        const obj12 = { IconComponent: tmp2(tmp3[29]).RemixIcon };
+        const obj12 = { IconComponent: tmp2(tmp3[29]).PaperPlusIcon };
         obj11.icon = closure_10(tmp2(tmp3[25]).TableRowIcon, obj12);
         const intl3 = tmp2(tmp3[27]).intl;
         obj11.label = intl3.string(tmp5(tmp3[30])["276ll6"]);
@@ -318,8 +318,8 @@ function ConjureAppChannelSheetContent(channel) {
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_7, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, centered: { textAlign: "center" } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -329,7 +329,7 @@ let result = size.fileFinishedImporting("modules/conjure/app_channel/native/Conj
 export default noop.memo(function ConjureAppChannelSheet(channelId) {
   channelId = channelId.channelId;
   const tmp = closure_13();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores];
@@ -346,10 +346,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6027).Stack, obj5);
-    obj3.children = closure_10(tmp2(7292).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5275).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5272).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6147).Stack, obj5);
+    obj3.children = closure_10(tmp2(7412).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5398).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5395).BottomSheet, obj2);
   }
   return tmp6;
 });

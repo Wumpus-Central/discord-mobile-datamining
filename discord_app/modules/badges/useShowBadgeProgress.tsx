@@ -1,9 +1,9 @@
-// === Module 11466: useShowBadgeProgress ===
+// === Module 11603: useShowBadgeProgress ===
 
-// Module 11466 (useShowBadgeProgress)
+// Module 11603 (useShowBadgeProgress)
 import initialize from "initialize" /* 504 */;
-import BadgeUtils from "BadgeUtils" /* 11460 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import BadgeUtils from "BadgeUtils" /* 11597 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.t
 
 export default function useShowBadgeProgress(arg0) {
   ({ badge, viewerBadge, isViewingOtherUser } = arg0);
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   if (viewerBadge == null) {
     viewerBadge = badge;

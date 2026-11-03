@@ -1,12 +1,12 @@
-// === Module 9619: useGameProfileCommunitiesLocaleOptions ===
+// === Module 9751: useGameProfileCommunitiesLocaleOptions ===
 
-// Module 9619 (useGameProfileCommunitiesLocaleOptions)
+// Module 9751 (useGameProfileCommunitiesLocaleOptions)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
-import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 9617 */;
+import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 9749 */;
 
 require = fn;
-let closure_4 = fn(9617).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9749).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
 
@@ -17,7 +17,7 @@ export default function useGameProfileCommunitiesLocaleOptions(dependencyMap, ar
   noop = tmp;
   let tmp2 = GameProfileCommunitiesLocaleFilterStore((toggleLocale) => toggleLocale.toggleLocale);
   GameProfileCommunitiesLocaleFilterStore = tmp2;
-  const items = [arg1];
+  items = [arg1];
   memo = noop.useMemo(() => {
     const availableLocales = util.getAvailableLocales();
     const mapped = dependencyMap.map((locale) => {
@@ -49,7 +49,7 @@ export default function useGameProfileCommunitiesLocaleOptions(dependencyMap, ar
   obj.options = noop.useMemo(() => {
     closure_1.filter((item) => !set.has(item)).length;
     return memo.map((label) => {
-      locale = label.locale;
+      const locale = label.locale;
       const hasItem = set.has(locale);
       let tmp2 = !hasItem;
       const obj = { locale, label: label.label, checked: tmp2, disabled: null };

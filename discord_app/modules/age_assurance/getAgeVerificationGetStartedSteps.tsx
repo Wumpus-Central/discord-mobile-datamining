@@ -1,10 +1,10 @@
-// === Module 8159: getAgeVerificationGetStartedSteps ===
+// === Module 8283: getAgeVerificationGetStartedSteps ===
 
-// Module 8159 (getAgeVerificationGetStartedSteps)
+// Module 8283 (getAgeVerificationGetStartedSteps)
 import Constants from "Constants" /* 1072 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export function getAgeVerificationGetStartedSteps(modalSessionId) {
   obj.title = intl.string(require("util").t.HphYKp);
   const intl2 = require("util").intl;
   obj.description = intl2.string(require("util").t["GCZC+9"]);
-  const items = [obj, , ];
+  items = [obj, , ];
   let obj2 = { title: null, description: null };
   const intl3 = require("util").intl;
   obj2.title = intl3.string(require("util").t.nkO4L3);

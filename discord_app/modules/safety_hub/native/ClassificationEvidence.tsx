@@ -1,17 +1,17 @@
-// === Module 13323: ClassificationEvidence ===
+// === Module 13459: ClassificationEvidence ===
 
-// Module 13323 (ClassificationEvidence)
+// Module 13459 (ClassificationEvidence)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 13324 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 13460 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
 const native = fn(1187);
 obj2.cardShadow = native.generateBoxShadowStyle(fn(1187).FOUR_DP_ELEVATION_SHADOW_PARAMS);
@@ -31,7 +31,7 @@ export default function ClassificationEvidence(flaggedContent) {
     const obj2 = { variant: "eyebrow", color: "text-default", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t.s64CMg);
-    const items = [React4(Text_Text.Text, obj2), ];
+    items = [React4(Text_Text.Text, obj2), ];
     const obj3 = { style: null, children: null };
     const items1 = [, ];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);

@@ -1,7 +1,7 @@
-// === Module 8824: useProfileTileGradient ===
+// === Module 8948: useProfileTileGradient ===
 
-// Module 8824 (useProfileTileGradient)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
+// Module 8948 (useProfileTileGradient)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ export default function useProfileTileGradient(userId) {
   [tmp5, tmp6] = themeColors;
   const tmp3Result = _slicedToArray(themeColors, 2);
   isVideoBackgroundProfileFetchEnabled = userId(isVideoBackgroundProfileFetchEnabled[3]).useIsVideoBackgroundProfileFetchEnabled(userId.location);
-  const items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
+  items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
   const effect = noop.useEffect(() => {
     let tmp2 = null != userId;
     if (tmp2) {

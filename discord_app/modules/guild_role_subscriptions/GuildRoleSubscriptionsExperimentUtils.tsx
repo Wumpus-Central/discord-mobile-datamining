@@ -1,7 +1,7 @@
-// === Module 15721: GuildRoleSubscriptionsExperimentUtils ===
+// === Module 15864: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 15721 (GuildRoleSubscriptionsExperimentUtils)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 15864 (GuildRoleSubscriptionsExperimentUtils)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export function hasEnabledMonetization(arg0) {
   return someResult;
 }
 export function isGuildEligibleForTierTemplates(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let flag;
   if (guild != null) {
     const features = guild.features;
@@ -39,7 +39,7 @@ export function useGuildEligibleForTierTemplates(guildId) {
   _require = guildId;
   items = [GuildStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;

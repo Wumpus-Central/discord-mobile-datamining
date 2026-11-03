@@ -1,8 +1,8 @@
-// === Module 5075: NitroFileUploadExperiments ===
+// === Module 5202: NitroFileUploadExperiments ===
 
-// Module 5075 (NitroFileUploadExperiments)
-import PremiumConstants from "PremiumConstants" /* 1385 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1447 */;
+// Module 5202 (NitroFileUploadExperiments)
+import PremiumConstants from "PremiumConstants" /* 1387 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);
@@ -27,7 +27,7 @@ export function getNitroFileUploadLimitBytes(arg0) {
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_3.getConfig({ location: _location }, { autoTrackExposure: obj2.autoTrackExposure }).enabled ? framebus : React;
+  return closure_3.getConfig({ location: _location }, { autoTrackExposure: obj2.autoTrackExposure }).enabled ? duration : React;
 }
 export function getNitroFileUploadRolloutConfig(arg0) {
   let autoTrackExposure = arg0;

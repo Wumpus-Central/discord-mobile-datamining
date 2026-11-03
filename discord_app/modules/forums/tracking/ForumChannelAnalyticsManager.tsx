@@ -1,6 +1,6 @@
-// === Module 8334: ForumChannelAnalyticsManager ===
+// === Module 8458: ForumChannelAnalyticsManager ===
 
-// Module 8334 (ForumChannelAnalyticsManager)
+// Module 8458 (ForumChannelAnalyticsManager)
 import "ChannelStore";
 
 const obj2 = Object.create(function ForumChannelAnalyticsManager() {
@@ -20,7 +20,7 @@ const obj2 = Object.create(function ForumChannelAnalyticsManager() {
   obj.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
     if (null != obj.filterTagIds) {
       const _Array = Array;
-      let items = Array.from(tmp.filterTagIds);
+      items = Array.from(tmp.filterTagIds);
     } else {
       items = [];
     }
@@ -80,7 +80,7 @@ obj2.setTagSetting = function setTagSetting(tagSetting) {
 obj2.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   if (null != obj.filterTagIds) {
     const _Array = Array;
-    let items = Array.from(tmp.filterTagIds);
+    items = Array.from(tmp.filterTagIds);
   } else {
     items = [];
   }

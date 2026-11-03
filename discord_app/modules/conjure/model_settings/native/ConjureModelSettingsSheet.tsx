@@ -1,18 +1,18 @@
-// === Module 12164: ConjureModelSettingsSheet ===
+// === Module 12300: ConjureModelSettingsSheet ===
 
-// Module 12164 (ConjureModelSettingsSheet)
+// Module 12300 (ConjureModelSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 10898 */;
-import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 12165 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 12166 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 11028 */;
+import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 12301 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 12302 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10850 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10865 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10980 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10995 */;
 
 require = fn;
 class ConjureModelSettingsContent {
@@ -44,7 +44,7 @@ class ConjureModelSettingsContent {
 function ModelSettingsPicker(projectId) {
   projectId = projectId.projectId;
   const modelSettings = projectId.modelSettings;
-  const items = [ConjureConnectionStore];
+  items = [ConjureConnectionStore];
   const items1 = [projectId];
   const tmp = "open" !== projectId(504).useStateFromStores(items, () => ConjureConnectionStore.getConnState(projectId), items1);
   const items2 = [projectId];
@@ -55,15 +55,15 @@ function ModelSettingsPicker(projectId) {
   const items3 = [closure_8(ConjureEffortPickerDefault, { settings: tmp4, tiers: modelSettings.tiers, choices: modelSettings.choices, disabled: tmp, onChange: tmp5 }), ];
   const intl = projectId(1113).intl;
   const string = intl.string;
-  const tmp8 = _modDef3868;
+  const tmp8 = _modDef3995;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5624).Text, { variant: "text-xs/normal", color: "text-muted", children: stringResult });
+  items3[1] = closure_8(projectId(5747).Text, { variant: "text-xs/normal", color: "text-muted", children: stringResult });
   obj2.children = items3;
-  return closure_9(projectId(6027).Stack, obj2);
+  return closure_9(projectId(6147).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -75,7 +75,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3868["3E7Yc0"]);
+  obj2.title = intl.string(_modDef3995["3E7Yc0"]);
   obj.header = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React6(View, { children: React6(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React6(ActionSheet.ActionSheet, obj);

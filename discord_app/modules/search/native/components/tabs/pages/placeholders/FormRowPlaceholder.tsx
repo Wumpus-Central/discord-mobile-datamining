@@ -1,17 +1,17 @@
-// === Module 18742: FormRowPlaceholder ===
+// === Module 18900: FormRowPlaceholder ===
 
-// Module 18742 (FormRowPlaceholder)
+// Module 18900 (FormRowPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18711 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18869 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(9827).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
+const createStyles = fn(5141);
+let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(9958).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, marginRight: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.avatar = size;
 obj2.innerContainer = { justifyContent: "center", flex: 1 };
@@ -27,7 +27,7 @@ export default function FormRowPlaceholderItem(style) {
   const tmp = closure_6();
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const obj2 = { style: null, pointerEvents: "none", children: null };
-  const items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
+  items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
   obj2.style = items;
   const items1 = [React4(View, { style: tmp.avatar }), ];
   const obj4 = { style: tmp.innerContainer, children: null };
@@ -35,5 +35,5 @@ export default function FormRowPlaceholderItem(style) {
   obj4.children = items2;
   items1[1] = hasOwnProperty(View, obj4);
   obj2.children = items1;
-  return hasOwnProperty(ReanimatedRexportDefault.View, obj2);
+  return hasOwnProperty(_modDef1652.View, obj2);
 };

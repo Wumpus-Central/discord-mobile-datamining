@@ -1,25 +1,38 @@
-// === Module 14950: UserProfileWidgetsBoard ===
+// === Module 15079: UserProfileWidgetsBoard ===
 
-// Module 14950 (UserProfileWidgetsBoard)
+// Module 15079 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7777 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9316 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12258 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14956 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14957 */;
-import QuoteIcon from "QuoteIcon" /* 14958 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 14967 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7902 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9444 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12394 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15085 */;
+import GameCoverImageDefault from "GameCoverImage" /* 15086 */;
+import QuoteIcon from "QuoteIcon" /* 15087 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15089 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function WidgetRenderer(arg0) {
-  ({ userId, widget, cardStyle } = arg0);
+function AddGameButton(widgetType) {
+  widgetType = widgetType.widgetType;
+  const ref = noop.useRef(null);
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(widgetType(9704).PlusSmallIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const intl = widgetType(1113).intl;
+  obj.accessibilityLabel = intl.string(widgetType(1113).t.E3l3Zx);
+  obj.disabled = widgetType.disabled;
+  obj.onPress = function onPress() {
+    return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
+  };
+  return closure_8(widgetType(8152).IconButton, obj);
+}
+function WidgetRenderer(isEditing) {
+  ({ userId, widget, cardStyle } = isEditing);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
     const obj2 = { userId, widget, cardStyle };
     let tmp3Result = React6(UserProfileApplicationWidgetCardDefault, obj2);
@@ -27,18 +40,18 @@ function WidgetRenderer(arg0) {
     const obj3 = { userId, widget, cardStyle };
     tmp3Result = React6(UserProfilePersonalWidgetCardDefault, obj3);
   } else {
-    const obj = { userId, widget, cardStyle };
+    const obj = { userId, widget, cardStyle, isEditing: isEditing.isEditing };
     tmp3Result = React6(memoResult, obj);
   }
   return tmp3Result;
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8754).UserProfileSections;
+const UserProfileSections = fn(8878).UserProfileSections;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, favoriteRow: null, favoriteDetails: null, list: null, listRow: null, listDetails: null, comment: null, commentText: null, grid: null, tags: null, tag: null, viewMore: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.favoriteRow = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -73,7 +86,7 @@ let closure_13 = noop.memo(function WidgetTags(tags) {
     const widgetGameTagMetadata = closure_0(dependencyMap[10]).getWidgetGameTagMetadata(tag);
     if (null != widgetGameTagMetadata) {
       const obj2 = { tag, meta: widgetGameTagMetadata };
-      const items = [obj2];
+      items = [obj2];
       let items1 = items;
     } else {
       items1 = [];
@@ -87,7 +100,7 @@ let closure_13 = noop.memo(function WidgetTags(tags) {
       children: flatMapResult.map((meta) => {
           meta = meta.meta;
           const obj = { style: closure_0.tag, children: null };
-          const items = [React6(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
+          items = [React6(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
           const obj2 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
           items[1] = React6(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: meta.getText() });
           obj.children = items;
@@ -130,7 +143,7 @@ let closure_14 = noop.memo(function FavoriteGameItem(game) {
   const merged = Object.assign(tmp4);
   obj4.width = coverWidth;
   obj3.children = React6(GameCoverImageDefault, obj4);
-  const items = [React6(hasOwnProperty, obj3), ];
+  items = [React6(hasOwnProperty, obj3), ];
   const obj5 = { style: tmp.favoriteDetails, children: null };
   const tmp2Result = GameCoverImageDefault;
   const items1 = [
@@ -217,7 +230,7 @@ let closure_15 = noop.memo(function GameListRow(game) {
   const merged = Object.assign(tmp4);
   obj4.width = coverWidth;
   obj3.children = React6(GameCoverImageDefault, obj4);
-  const items = [React6(hasOwnProperty, obj3), ];
+  items = [React6(hasOwnProperty, obj3), ];
   const obj5 = { style: tmp.listDetails, children: null };
   const tmp2Result = GameCoverImageDefault;
   const items1 = [
@@ -276,6 +289,10 @@ const memoResult = noop.memo(function WidgetSection(style) {
   const userId = style.userId;
   const widget = style.widget;
   const disableInteraction = style.disableInteraction;
+  let flag = style.isEditing;
+  if (flag === undefined) {
+    flag = false;
+  }
   _slicedToArray = undefined;
   noop = undefined;
   const tmp = closure_12();
@@ -284,17 +301,17 @@ const memoResult = noop.memo(function WidgetSection(style) {
   [tmp5, c4] = noop.useState(0);
   const result = (tmp5 - 2 * widget(disableInteraction[6]).space.PX_16) / 3;
   c5 = result;
-  const items = [widget.games];
+  items = [widget.games];
   const memo = noop.useMemo(() => _modDef12.uniqBy(widget.games, "gameId"), items);
   const type = widget.type;
-  if (userId(disableInteraction[17]).WidgetType.FAVORITE_GAMES === type) {
+  if (userId(disableInteraction[21]).WidgetType.FAVORITE_GAMES === type) {
     let tmp32 = tmp5 > 0;
     if (tmp32) {
       const obj2 = { userId, game: memo[0], coverWidth: result, disableInteraction };
       tmp32 = closure_8(closure_14, obj2);
     }
     let tmp12Result = tmp32;
-  } else if (tmp9(tmp7[17]).WidgetType.CURRENT_GAMES === type) {
+  } else if (tmp9(tmp7[21]).WidgetType.CURRENT_GAMES === type) {
     let substr = memo;
     if (!tmp3) {
       substr = memo.slice(0, 2);
@@ -333,8 +350,8 @@ const memoResult = noop.memo(function WidgetSection(style) {
       closure_8(c5, obj5);
     }
   } else {
-    if (tmp9(tmp7[17]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-      if (tmp9(tmp7[17]).WidgetType.PLAYED_GAMES !== type) {
+    if (tmp9(tmp7[21]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+      if (tmp9(tmp7[21]).WidgetType.PLAYED_GAMES !== type) {
         return null;
       }
     }
@@ -376,16 +393,23 @@ const memoResult = noop.memo(function WidgetSection(style) {
       closure_8(c5, obj9);
     }
   }
-  const obj12 = { userId, widget, style: style.cardStyle, disableInteraction, children: null };
-  const obj13 = {
+  const obj12 = { userId, widget, style: style.cardStyle, disableInteraction, actionButtons: null, children: null };
+  let tmp37;
+  const tmp4 = _slicedToArray(noop.useState(0), 2);
+  if (flag) {
+    const obj13 = { widgetType: widget.type, disabled: tmp9(tmp7[23]).isGameLimitReached(widget) };
+    const items3 = [closure_8(AddGameButton, obj13, "add-game")];
+    tmp37 = items3;
+    const tmp9Result = tmp9(tmp7[23]);
+  }
+  obj12.actionButtons = tmp37;
+  obj12.children = closure_8(closure_6, {
     onLayout(nativeEvent) {
       return _undefined2(nativeEvent.nativeEvent.layout.width);
     },
     children: tmp12Result
-  };
-  const tmp4 = _slicedToArray(noop.useState(0), 2);
-  obj12.children = closure_8(closure_6, obj13);
-  return closure_8(widget(disableInteraction[19]), obj12);
+  });
+  return closure_8(widget(disableInteraction[22]), obj12);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
@@ -396,16 +420,16 @@ export default function UserProfileWidgetsBoard(userId) {
   if (flag === undefined) {
     flag = true;
   }
-  const cardStyle = userId.cardStyle;
+  ({ cardStyle: importDefault, isEditing: dependencyMap } = userId);
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(14971).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(15108).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(14971);
-  const trackUserProfileAction = userId(8761).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = userId(15108);
+  const trackUserProfileAction = userId(8885).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);
-  const items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];
+  items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];
   const effect = noop.useEffect(() => {
     if (userId) {
       let tmp2 = cardStyle;
@@ -414,7 +438,7 @@ export default function UserProfileWidgetsBoard(userId) {
       }
       if (tmp2) {
         const obj = { action: "VIEW", section: UserProfileSections.WIDGETS };
-        dependencyMap(obj);
+        isEditing(obj);
         ref.current = true;
       }
     } else {
@@ -423,7 +447,7 @@ export default function UserProfileWidgetsBoard(userId) {
   }, items);
   let tmp4 = null;
   if (0 !== displayableBoardWidgets.length) {
-    const obj3 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => React6(WidgetRenderer, { userId, widget, cardStyle }, widget.getUniqueKey())) };
+    const obj3 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => React6(WidgetRenderer, { userId, widget, cardStyle, isEditing }, widget.getUniqueKey())) };
     tmp4 = closure_8(closure_6, obj3);
   }
   return tmp4;

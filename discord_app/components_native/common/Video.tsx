@@ -1,11 +1,11 @@
-// === Module 8873: common/Video ===
+// === Module 8997: common/Video ===
 
-// Module 8873 (common/Video)
+// Module 8997 (common/Video)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7207 */;
-import openMediaModal from "openMediaModal" /* 8833 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7328 */;
+import openMediaModal from "openMediaModal" /* 8957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,7 +92,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -129,7 +129,7 @@ class Video extends PureComponent {
         const merged = Object.assign(src);
         obj3.width = width;
         obj3.height = height;
-        const items = [obj3];
+        items = [obj3];
         obj2.initialSources = items;
         obj2.originViewOrOriginLayout = current;
         openMediaModal.openMediaModal(obj2);
@@ -159,7 +159,7 @@ prototype["renderVideo"] = function renderVideo() {
       let tmp13;
       if (null != videoURI) {
         const obj = { style: null, source: null, poster: null, muted: null, paused: null, resizeMode: null, posterResizeMode: null, ariaHidden: null, disableFocus: null, httpEngine: null };
-        const items = [tmp.video, , ];
+        items = [tmp.video, , ];
         const size = { width: tmp3, height: tmp4 };
         items[1] = size;
         items[2] = tmp7;
@@ -206,7 +206,7 @@ prototype["render"] = function render() {
   const props = this.props;
   let accessibilityLabel = props.accessibilityLabel;
   const obj = { ref: this.ref, style: null, accessible: null, accessibilityLabel: null, children: null };
-  const items = [closure_9(this.context).container, { width: props.width, height: props.height }, props.style];
+  items = [closure_9(this.context).container, { width: props.width, height: props.height }, props.style];
   obj.style = items;
   obj.accessible = null != accessibilityLabel;
   obj.accessibilityLabel = accessibilityLabel;
@@ -232,7 +232,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5080).ThemeContext;
+Video.contextType = fn(5207).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

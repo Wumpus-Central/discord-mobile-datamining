@@ -1,8 +1,8 @@
-// === Module 16382: VoiceSettingsEventsFactory ===
+// === Module 16525: VoiceSettingsEventsFactory ===
 
-// Module 16382 (VoiceSettingsEventsFactory)
+// Module 16525 (VoiceSettingsEventsFactory)
 import Constants2 from "Constants" /* 1072 */;
-import Constants from "Constants" /* 6450 */;
+import Constants from "Constants" /* 6570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export default function createVoiceSettingsEventHandlers(getDeprecatedVoiceSetti
   const obj = {};
   const obj2 = { scope: null, handler: null };
   const obj3 = {};
-  const items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
+  items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
   obj3[constants.ANY] = items;
   obj2.scope = obj3;
   obj2.handler = function handler() {

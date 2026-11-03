@@ -1,12 +1,12 @@
-// === Module 15050: ProductDetailsActionSheetVariants ===
+// === Module 15191: ProductDetailsActionSheetVariants ===
 
-// Module 15050 (ProductDetailsActionSheetVariants)
+// Module 15191 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 6980 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7303 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9537 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9571 */;
+import Pressables from "Pressables" /* 7106 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7423 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9665 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function VariantOption(arg0) {
   obj2.onPress = onSelect;
   obj2.style = tmp.variantOption;
   const obj4 = { style: null, children: null };
-  const items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
+  items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
   obj4.style = items;
   if (isPurchased) {
     const obj5 = { variant };
@@ -46,7 +46,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { container: { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, headerRow: null, variantsContainer: null, text: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -54,7 +54,7 @@ let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
   const colors = nativeDefault.colors;
@@ -79,10 +79,10 @@ export default function ProductDetailsActionSheetVariants(disabled) {
   if (obj.getIsVariantProduct(product)) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.headerRow, children: null };
-    const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = selectedVariantIndex(tmp3[7]).intl;
     obj4.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
-    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4), ];
+    items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj5 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };

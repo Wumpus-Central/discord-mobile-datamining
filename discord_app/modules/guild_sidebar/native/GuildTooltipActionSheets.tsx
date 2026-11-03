@@ -1,28 +1,28 @@
-// === Module 18304: GuildTooltipActionSheets ===
+// === Module 18449: GuildTooltipActionSheets ===
 
-// Module 18304 (GuildTooltipActionSheets)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10520 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10521 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 18314 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 18315 */;
+// Module 18449 (GuildTooltipActionSheets)
+import _mod1705 from "module_1705" /* 1705 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10650 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10651 */;
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 18459 */;
+import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 18460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(18305, dependencyMap.paths);
+  return asyncRequireImpl(18450, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(18307, dependencyMap.paths);
+  return asyncRequireImpl(18452, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(18310, dependencyMap.paths);
+  return asyncRequireImpl(18455, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(18312, dependencyMap.paths);
+  return asyncRequireImpl(18457, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {
@@ -71,28 +71,34 @@ class GuildTooltipActionSheets {
     return jsx(tmp4(tmp2[14]), obj1);
   }
 }
-const hasOwnProperty = fn(4860).DismissibleContentGroupName;
+const hasOwnProperty = fn(4987).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
-let closure_13 = { code: "function GuildTooltipActionSheetsTsx1(){const{runOnJS,setShouldRender}=this.__closure;return runOnJS(setShouldRender)(true);}" };
+let closure_13 = { code: "(function GuildTooltipActionSheetsTsx1(){let[scheduleOnRN,setShouldRender]=this.__closure;return scheduleOnRN(setShouldRender,true);})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildTooltipActionSheets.tsx");
 
 export default function GuildTooltipActionSheetsGuard(arg0) {
   [tmp2, require] = noop.useState(false);
   const effect = noop.useEffect(() => {
-    const fn = function t() {
-      return setShouldRender(dependencyMap[16]).runOnJS(closure_1_0)(true);
-    };
-    const obj = ReanimatedRexport;
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setShouldRender };
-    fn.__workletHash = 6076095421855;
-    fn.__initData = __initData;
-    obj.runOnUI(fn)();
+    items = [closure_13, _mod1705.scheduleOnRN, closure_1_0];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp, tmp2, tmp3] = items;
+    class GuildTooltipActionSheetsTsx1 {
+      constructor() {
+        return closure_0(closure_1, true);
+      }
+    }
+    const items1 = [tmp2, tmp3];
+    GuildTooltipActionSheetsTsx1.__closure = items1;
+    GuildTooltipActionSheetsTsx1.__workletHash = 14288497747211;
+    GuildTooltipActionSheetsTsx1.__initData = tmp;
+    _mod1705.scheduleOnUI(GuildTooltipActionSheetsTsx1);
   }, []);
   let tmp4 = null;
   if (tmp2) {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     tmp4 = <GuildTooltipActionSheets />;
   }

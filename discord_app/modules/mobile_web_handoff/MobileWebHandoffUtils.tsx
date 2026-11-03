@@ -1,6 +1,6 @@
-// === Module 7506: MobileWebHandoffUtils ===
+// === Module 7630: MobileWebHandoffUtils ===
 
-// Module 7506 (MobileWebHandoffUtils)
+// Module 7630 (MobileWebHandoffUtils)
 import v1 from "v1" /* 1266 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _createHandoffToken(key) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

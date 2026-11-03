@@ -1,11 +1,11 @@
-// === Module 19873: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 20023: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 19873 (GuildSettingsRoleSubscriptionsEmpty)
-import useNavigation from "useNavigation" /* 1497 */;
-import PlaceholderDefault from "Placeholder" /* 19875 */;
-import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 19876 */;
+// Module 20023 (GuildSettingsRoleSubscriptionsEmpty)
+import useNavigation from "useNavigation" /* 1499 */;
+import PlaceholderDefault from "Placeholder" /* 20025 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 20026 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
@@ -34,14 +34,14 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
 }
 const Constants = fn(1072);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     let tmp5 = jsx(PlaceholderDefault, {});

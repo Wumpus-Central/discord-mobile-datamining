@@ -1,7 +1,7 @@
-// === Module 19933: useCreatorMonetizationIneligibleReasons ===
+// === Module 20083: useCreatorMonetizationIneligibleReasons ===
 
-// Module 19933 (useCreatorMonetizationIneligibleReasons)
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 19882 */;
+// Module 20083 (useCreatorMonetizationIneligibleReasons)
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 20032 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
@@ -12,7 +12,7 @@ export function useCreatorMonetizationIneligibleReasons(eligibility) {
   if (obj != null) {
     flatMapResult = obj.flatMap((checked) => {
       if (checked.checked) {
-        let items = [];
+        items = [];
       } else {
         items = [checked.key];
       }

@@ -1,8 +1,8 @@
-// === Module 13929: GuildInvitesDisabledUtils ===
+// === Module 14060: GuildInvitesDisabledUtils ===
 
-// Module 13929 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11010 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 14060 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11143 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildIn
 
 export function useInvitesDisabledPermission(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
@@ -26,7 +26,7 @@ export function useInvitesDisabledPermission(guild) {
 }
 export function useInvitesDisabled(features) {
   _require = features;
-  const items = [GuildIncidentsStore];
+  items = [GuildIncidentsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
@@ -58,7 +58,7 @@ export function useInvitesDisabled(features) {
 }
 export function useShouldShowInvitesDisabledNotif(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;

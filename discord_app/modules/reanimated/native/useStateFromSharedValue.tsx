@@ -1,15 +1,15 @@
-// === Module 8841: useStateFromSharedValue ===
+// === Module 8965: useStateFromSharedValue ===
 
-// Module 8841 (useStateFromSharedValue)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 8965 (useStateFromSharedValue)
+import _mod1705 from "module_1705" /* 1705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let c4 = 9999999;
 const map = new Map();
-let closure_6 = { code: "function useStateFromSharedValueTsx1(id,listener,sharedValue){const{runOnJS}=this.__closure;sharedValue.addListener(id,function(value){return runOnJS(listener)(value);});}" };
-let closure_7 = { code: "function useStateFromSharedValueTsx2(id,sharedValue){sharedValue.removeListener(id);}" };
+let closure_6 = { code: "(function useStateFromSharedValueTsx1(id,listener,sharedValue){let[scheduleOnRN]=this.__closure;sharedValue.addListener(id,function(value){return scheduleOnRN(listener,value);});})" };
+let closure_7 = { code: "(function useStateFromSharedValueTsx2(id,sharedValue){sharedValue.removeListener(id);})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
 
@@ -17,19 +17,20 @@ export default function useStateFromSharedValue(arg0) {
   const tmp = _slicedToArray(noop.useState(() => closure_0.get()), 2);
   closure_0 = arg0;
   closure_1 = tmp2;
-  const items = [arg0, tmp[1]];
+  items = [arg0, tmp[1]];
   const layoutEffect = noop.useLayoutEffect(() => {
-    value = map.get(set);
+    value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      set = new Set();
+      const set = new Set();
+      c0 = set;
       const obj2 = {
         sharedValue: tmp,
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1259).batchUpdates(() => {
-              for (const item10005 of set) {
+            _undefined(current[2]).batchUpdates(() => {
+              for (const item10005 of c0) {
                 let item10005Result = item10005(closure_0);
                 continue;
               }
@@ -41,33 +42,37 @@ export default function useStateFromSharedValue(arg0) {
       obj2.listenerId = sum;
       value = obj2;
     }
-    set = value;
+    c0 = value;
     let listeners = value.listeners;
     listeners.add(callback);
     if (1 === value.listeners.size) {
       const result = map.set(tmp, value);
-      let fn = function n(arg0, arg1, addListener) {
-        closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(5095).runOnJS(closure_0)(arg0));
-      };
-      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
-      fn.__closure = obj4;
-      fn.__workletHash = 568027628003;
-      fn.__initData = __initData;
-      activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
       const obj3 = activeIndex(callback[3]);
+      items = [closure_1_6, activeIndex(callback[3]).scheduleOnRN];
+      c0 = undefined;
+      [tmp11, tmp12] = items;
+      function useStateFromSharedValueTsx1(arg0, arg1, addListener) {
+        closure_0 = arg1;
+        addListener.addListener(arg0, (arg0) => c0(closure_0, arg0));
+      }
+      const items1 = [tmp12];
+      useStateFromSharedValueTsx1.__closure = items1;
+      useStateFromSharedValueTsx1.__workletHash = 17232455290583;
+      useStateFromSharedValueTsx1.__initData = tmp11;
+      obj3.scheduleOnUI(useStateFromSharedValueTsx1, value.listenerId, value.valueListener, tmp);
     }
     return () => {
-      const listeners = set.listeners;
+      const listeners = _undefined.listeners;
       listeners.delete(callback);
-      if (0 === set.listeners.size) {
-        const fn = function n(arg0, removeListener) {
+      if (0 === _undefined.listeners.size) {
+        items = [closure_7];
+        [tmp3] = items;
+        function useStateFromSharedValueTsx2(arg0, removeListener) {
           removeListener.removeListener(arg0);
-        };
-        fn.__closure = {};
-        fn.__workletHash = 15997703035823;
-        fn.__initData = __initData;
-        ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
+        }
+        useStateFromSharedValueTsx2.__workletHash = 7876346397934;
+        useStateFromSharedValueTsx2.__initData = tmp3;
+        _mod1705.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };
@@ -82,21 +87,22 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
   });
   current = noop.useCallback((arg0) => {
     closure_0 = arg0;
-    return closure_2((current) => ref.current(closure_0, current));
+    return closure_2((items1) => ref.current(closure_0, items1));
   }, []);
-  const items = [activeIndex, current];
+  items = [activeIndex, current];
   const layoutEffect1 = noop.useLayoutEffect(() => {
-    value = map.get(set);
+    value = map.get(c0);
     if (value == null) {
       const _Set = Set;
-      set = new Set();
+      const set = new Set();
+      c0 = set;
       const obj2 = {
         sharedValue: tmp,
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1259).batchUpdates(() => {
-              for (const item10005 of set) {
+            _undefined(current[2]).batchUpdates(() => {
+              for (const item10005 of c0) {
                 let item10005Result = item10005(closure_0);
                 continue;
               }
@@ -108,33 +114,37 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
       obj2.listenerId = sum;
       value = obj2;
     }
-    set = value;
+    c0 = value;
     let listeners = value.listeners;
     listeners.add(callback);
     if (1 === value.listeners.size) {
       const result = map.set(tmp, value);
-      let fn = function n(arg0, arg1, addListener) {
-        closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(5095).runOnJS(closure_0)(arg0));
-      };
-      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
-      fn.__closure = obj4;
-      fn.__workletHash = 568027628003;
-      fn.__initData = __initData;
-      activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
       const obj3 = activeIndex(callback[3]);
+      items = [closure_1_6, activeIndex(callback[3]).scheduleOnRN];
+      c0 = undefined;
+      [tmp11, tmp12] = items;
+      function useStateFromSharedValueTsx1(arg0, arg1, addListener) {
+        closure_0 = arg1;
+        addListener.addListener(arg0, (arg0) => c0(closure_0, arg0));
+      }
+      const items1 = [tmp12];
+      useStateFromSharedValueTsx1.__closure = items1;
+      useStateFromSharedValueTsx1.__workletHash = 17232455290583;
+      useStateFromSharedValueTsx1.__initData = tmp11;
+      obj3.scheduleOnUI(useStateFromSharedValueTsx1, value.listenerId, value.valueListener, tmp);
     }
     return () => {
-      const listeners = set.listeners;
+      const listeners = _undefined.listeners;
       listeners.delete(callback);
-      if (0 === set.listeners.size) {
-        const fn = function n(arg0, removeListener) {
+      if (0 === _undefined.listeners.size) {
+        items = [closure_7];
+        [tmp3] = items;
+        function useStateFromSharedValueTsx2(arg0, removeListener) {
           removeListener.removeListener(arg0);
-        };
-        fn.__closure = {};
-        fn.__workletHash = 15997703035823;
-        fn.__initData = __initData;
-        ReanimatedRexport.runOnUI(fn)(set.listenerId, closure_0);
+        }
+        useStateFromSharedValueTsx2.__workletHash = 7876346397934;
+        useStateFromSharedValueTsx2.__initData = tmp3;
+        _mod1705.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };

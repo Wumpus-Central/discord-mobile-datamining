@@ -1,24 +1,24 @@
-// === Module 19900: CreatorBenefitsSection ===
+// === Module 20050: CreatorBenefitsSection ===
 
-// Module 19900 (CreatorBenefitsSection)
+// Module 20050 (CreatorBenefitsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5021 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AvatarRoseExample from "AvatarRoseExample" /* 19901 */;
-import AvatarLokyExample from "AvatarLokyExample" /* 19905 */;
-import AvatarGraggleExample from "AvatarGraggleExample" /* 19909 */;
-import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 19913 */;
-import StarKeySpotIllustration from "StarKeySpotIllustration" /* 19917 */;
-import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 19921 */;
+import shared from "shared" /* 5148 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AvatarRoseExample from "AvatarRoseExample" /* 20051 */;
+import AvatarLokyExample from "AvatarLokyExample" /* 20055 */;
+import AvatarGraggleExample from "AvatarGraggleExample" /* 20059 */;
+import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 20063 */;
+import StarKeySpotIllustration from "StarKeySpotIllustration" /* 20067 */;
+import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 20071 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function EarningPreview() {
   const tmp2 = useThemeDefault();
   const tmp3 = closure_7();
-  const items = [tmp3.earningMetricsShadowContainer, ];
+  items = [tmp3.earningMetricsShadowContainer, ];
   const obj2 = { style: items, children: null };
   items[1] = shared.isThemeDark(tmp2) && tmp3.earningMetricsShadowContainerDarkMode;
   const items1 = [, , ];
@@ -33,7 +33,7 @@ function EarningPreview() {
   const items2 = [hasOwnProperty(Text_Text.Text, obj4), ];
   const tmp6Result = shared;
   const obj5 = { children: null };
-  const obj6 = { style: shared.isThemeDark(tmp2) ? tmp3.greenTextDarkMode : tmp3.greenTextLightMode, variant: "heading-lg/extrabold", children: null };
+  const obj6 = { style: shared.isThemeDark(tmp2) ? tmp3.greenTextDarkMode : tmp3.greenTextLightMode, variant: "heading-lg/semibold", children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.LdjJG5);
   items2[1] = hasOwnProperty(Text_Text.Text, obj6);
@@ -49,7 +49,7 @@ function ConsistentEarningBenefit() {
   const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["9CdmS8"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {}), ];
+  items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {}), ];
   const obj3 = { style: null, children: null };
   const items1 = [, ];
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp);
@@ -70,19 +70,19 @@ function FollowerAwardBenefit() {
   const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.qsKRUQ);
-  const items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(View, { style: tmp.starKeyIllo, children: hasOwnProperty(StarKeySpotIllustration.StarKeySpotIllustration, { width: 160 }) })];
+  items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(View, { style: tmp.starKeyIllo, children: hasOwnProperty(StarKeySpotIllustration.StarKeySpotIllustration, { width: 160 }) })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 function RevenueShareBenefit() {
   const tmp3 = closure_7();
   const obj = { style: null, children: null };
-  const items = [, ];
+  items = [, ];
   ({ benefitCard: arr[0], revenueShareContainer: arr[1] } = tmp3);
   obj.style = items;
   const items1 = [tmp3.revenueShare, ];
   const tmp2 = useThemeDefault();
-  const obj3 = { style: null, variant: "heading-xxl/extrabold", color: "status-positive", children: null };
+  const obj3 = { style: null, variant: "heading-xxl/semibold", color: "status-positive", children: null };
   items1[1] = shared.isThemeDark(tmp2) ? tmp3.greenTextDarkMode : tmp3.greenTextLightMode;
   obj3.style = items1;
   obj3.children = `${closure_4}%`;
@@ -101,10 +101,10 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(17196).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(17339).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { horizontalContainer: { flex: 1, flexDirection: "row" }, benefitAvatarContainer: { padding: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, benefitCard: null, benefitAvatar: null, benefitAvatars: null, benefitCardTitle: null, earningMetricsShadowContainer: null, earningMetricsShadowContainerDarkMode: null, earningMetrics: null, earningMetricsDarkMode: null, earningMetricsLightMode: null, greenTextDarkMode: null, greenTextLightMode: null, starKeyIllo: null, revenueShare: null, revenueShareContainer: null, revenueShareIllo: null, revenueShareDescription: null };
 let obj3 = { padding: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.benefitCard = { marginVertical: 6, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
@@ -134,7 +134,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function CreatorBenefitsSection() {
   const obj = { children: null };
-  const items = [hasOwnProperty(ConsistentEarningBenefit, {}), hasOwnProperty(FollowerAwardBenefit, {}), hasOwnProperty(RevenueShareBenefit, {})];
+  items = [hasOwnProperty(ConsistentEarningBenefit, {}), hasOwnProperty(FollowerAwardBenefit, {}), hasOwnProperty(RevenueShareBenefit, {})];
   obj.children = items;
   return timestampProducer(View, obj);
 };

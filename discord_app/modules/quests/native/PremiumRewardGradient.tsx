@@ -1,12 +1,12 @@
-// === Module 17139: PremiumRewardGradient ===
+// === Module 17282: PremiumRewardGradient ===
 
-// Module 17139 (PremiumRewardGradient)
+// Module 17282 (PremiumRewardGradient)
 import nativeDefault from "native" /* 575 */;
-import design_shared from "design/shared" /* 5022 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import _modDef7038 from "module_7038" /* 7038 */;
+import design_shared from "design/shared" /* 5149 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import _modDef7164 from "module_7164" /* 7164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ function PremiumRewardFillGradient(arg0) {
   const tmp = closure_8();
   const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
   const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
-  let items = [token, token1];
+  items = [token, token1];
   const memo = noop.useMemo(() => {
-    const items = [token, token1];
+    items = [token, token1];
     return items;
   }, items);
   const tmp5 = closure_13();
@@ -34,7 +34,7 @@ function PremiumRewardFillGradient(arg0) {
   obj4.style = items2;
   const memo1 = noop.useMemo(() => {
     if (c4) {
-      const items = [transparentBlack, opaqueBlack];
+      items = [transparentBlack, opaqueBlack];
       let items1 = items;
     } else {
       items1 = [transparentWhite, opaqueWhite];
@@ -50,9 +50,9 @@ function PremiumRewardGlowGradient(arg0) {
   const tmp = closure_8();
   const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
   const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
-  let items = [token, token1];
+  items = [token, token1];
   const memo = noop.useMemo(() => {
-    const items = [token, token1];
+    items = [token, token1];
     return items;
   }, items);
   const tmp7 = useThemeDefault();
@@ -67,7 +67,7 @@ function PremiumRewardGlowGradient(arg0) {
   }
   const obj5 = { style: items2, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }) };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef7038, obj5), children];
+  const items3 = [timestampProducer(_modDef7164, obj5), children];
   obj4.children = items3;
   return React5(hasOwnProperty, obj4);
 }
@@ -75,16 +75,16 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(5011);
-const ColorUtils = fn(5011);
+fn(5138);
+const ColorUtils = fn(5138);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_13 = createStyles.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: nativeDefault.colors.BLACK, transparentWhite: ColorUtils.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: nativeDefault.colors.WHITE });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");

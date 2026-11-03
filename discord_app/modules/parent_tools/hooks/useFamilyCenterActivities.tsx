@@ -1,28 +1,28 @@
-// === Module 16798: useFamilyCenterActivities ===
+// === Module 16941: useFamilyCenterActivities ===
 
-// Module 16798 (useFamilyCenterActivities)
+// Module 16941 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const TeenActionDisplayType = fn(7716).TeenActionDisplayType;
+const TeenActionDisplayType = fn(7840).TeenActionDisplayType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
 
 export function useActionsForDisplayType(displayType) {
   _require = displayType;
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return require("useStateFromStores").useStateFromStoresArray(items, () => FamilyCenterStore.getActionsForDisplayType(closure_0));
 }
 export function useActionTotalsForDisplayType(displayType) {
   _require = displayType;
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return require("useStateFromStores").useStateFromStores(items, () => FamilyCenterStore.getTotalForDisplayType(closure_0));
 }
 export function useHasActionForAnyDisplayType() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return useStateFromStores.useStateFromStores(items, () => {
     const values = Object.values(TeenActionDisplayType);
     return values.some((item) => totalForDisplayType.getTotalForDisplayType(item) > 0);
@@ -30,13 +30,13 @@ export function useHasActionForAnyDisplayType() {
 }
 export function useFormattedTotalForDisplayType(displayType) {
   _require = displayType;
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   let num = require("useStateFromStores").useStateFromStores(items, () => FamilyCenterStore.getTotalForDisplayType(closure_0));
   if (num == null) {
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    return tmp(8372).formatTotalTime(num);
+    return tmp(8496).formatTotalTime(num);
   } else if (displayType === TeenActionDisplayType.PURCHASES) {
     const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
     const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();
@@ -44,8 +44,8 @@ export function useFormattedTotalForDisplayType(displayType) {
     if (null != totalSpendAmount) {
       result = num;
       if (null != totalSpendCurrency) {
-        result = tmp(7413).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
-        const tmpResult3 = tmp(7413);
+        result = tmp(7537).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
+        const tmpResult3 = tmp(7537);
       }
     }
     return result;
@@ -53,8 +53,8 @@ export function useFormattedTotalForDisplayType(displayType) {
     const totalGiftValue = FamilyCenterStore.getTotalGiftValue();
     let result1 = num;
     if (null != totalGiftValue) {
-      result1 = tmp(7413).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
-      const tmpResult4 = tmp(7413);
+      result1 = tmp(7537).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
+      const tmpResult4 = tmp(7537);
     }
     return result1;
   } else {

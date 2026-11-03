@@ -1,22 +1,22 @@
-// === Module 15112: InviteEmbed ===
+// === Module 15253: InviteEmbed ===
 
-// Module 15112 (InviteEmbed)
-import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10114 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10115 */;
-import invite_GuildInvite from "invite/GuildInvite" /* 15113 */;
-import GroupDMInvite from "GroupDMInvite" /* 15115 */;
-import FriendInvite from "FriendInvite" /* 15116 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 15117 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 15120 */;
-import GuildProfileInvite from "GuildProfileInvite" /* 15122 */;
-import InviteStore from "InviteStore" /* 5749 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 15253 (InviteEmbed)
+import InviteTypeUtils from "InviteTypeUtils" /* 8002 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10244 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10245 */;
+import invite_GuildInvite from "invite/GuildInvite" /* 15254 */;
+import GroupDMInvite from "GroupDMInvite" /* 15256 */;
+import FriendInvite from "FriendInvite" /* 15257 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 15258 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 15261 */;
+import GuildProfileInvite from "GuildProfileInvite" /* 15263 */;
+import InviteStore from "InviteStore" /* 5869 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
 
@@ -61,7 +61,7 @@ export function createInviteEmbed(author, code, theme) {
               } else if (InviteTypeUtils.GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
                 return GuildProfileInvite.createGuildProfileInvite(invite, theme);
               } else if (InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
-                const guild = invite.guild;
+                guild = invite.guild;
                 let id1;
                 if (guild != null) {
                   id1 = guild.id;

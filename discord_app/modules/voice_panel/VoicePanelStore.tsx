@@ -1,6 +1,6 @@
-// === Module 6875: VoicePanelStore ===
+// === Module 6995: VoicePanelStore ===
 
-// Module 6875 (VoicePanelStore)
+// Module 6995 (VoicePanelStore)
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         closure_0((channels) => {
           const obj = {};
           const merged = Object.assign(channels);
-          const items = [closure_1_0, ...Array.from(channels.channels)];
+          items = [closure_1_0, ...Array.from(channels.channels)];
           obj.channels = new Set(items);
           const items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
           const set = new Set(items);
@@ -115,20 +115,20 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       });
     });
   };
-  obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(channelId, lockEnabled) {
+  obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(c0, lockEnabled) {
     dependencyMap = lockEnabled;
-    channelId(1259).batchUpdates(() => {
-      channelId((voicePanelsFullscreen) => {
+    c0(1259).batchUpdates(() => {
+      c0((voicePanelsFullscreen) => {
         const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
-        const hasItem = set.has(channelId);
+        const hasItem = set.has(closure_1_0);
         if (lockEnabled) {
           if (hasItem) {
             return voicePanelsFullscreen;
           } else {
-            set.add(channelId);
+            set.add(closure_1_0);
           }
         } else if (hasItem) {
-          set.delete(channelId);
+          set.delete(closure_1_0);
         } else {
           return voicePanelsFullscreen;
         }
@@ -139,23 +139,23 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       });
     });
   };
-  obj.setChannelPanelOpen = function setChannelPanelOpen(channelId, arg1) {
+  obj.setChannelPanelOpen = function setChannelPanelOpen(c0, arg1) {
     dependencyMap = arg1;
-    channelId(1259).batchUpdates(() => {
-      channelId((channels) => {
+    c0(1259).batchUpdates(() => {
+      c0((channels) => {
         channels = channels.channels;
-        if (channels.has(channelId)) {
+        if (channels.has(closure_1_0)) {
           const _Set = Set;
           const set = new Set(channels.voicePanelsOpened);
-          const hasItem = set.has(channelId);
+          const hasItem = set.has(closure_1_0);
           if (closure_1_1) {
             if (hasItem) {
               return channels;
             } else {
-              set.add(channelId);
+              set.add(closure_1_0);
             }
           } else if (hasItem) {
-            set.delete(channelId);
+            set.delete(closure_1_0);
           } else {
             return channels;
           }
@@ -173,20 +173,20 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const voicePanelsOpened = dependencyMap().voicePanelsOpened;
     return voicePanelsOpened.has(arg0);
   };
-  obj.setChannelPanelPIP = function setChannelPanelPIP(channelId, arg1) {
+  obj.setChannelPanelPIP = function setChannelPanelPIP(c0, arg1) {
     dependencyMap = arg1;
-    channelId(1259).batchUpdates(() => {
-      channelId((voicePanelsPIP) => {
+    c0(1259).batchUpdates(() => {
+      c0((voicePanelsPIP) => {
         const set = new Set(voicePanelsPIP.voicePanelsPIP);
-        const hasItem = set.has(channelId);
+        const hasItem = set.has(closure_1_0);
         if (closure_1_1) {
           if (hasItem) {
             return voicePanelsPIP;
           } else {
-            set.add(channelId);
+            set.add(closure_1_0);
           }
         } else if (hasItem) {
-          set.delete(channelId);
+          set.delete(closure_1_0);
         } else {
           return voicePanelsPIP;
         }
@@ -197,20 +197,20 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       });
     });
   };
-  obj.setChannelPanelWithDock = function setChannelPanelWithDock(channelId, arg1) {
+  obj.setChannelPanelWithDock = function setChannelPanelWithDock(c0, arg1) {
     dependencyMap = arg1;
-    channelId(1259).batchUpdates(() => {
-      channelId((voicePanelsWithDock) => {
+    c0(1259).batchUpdates(() => {
+      c0((voicePanelsWithDock) => {
         voicePanelsWithDock = voicePanelsWithDock.voicePanelsWithDock;
-        if (voicePanelsWithDock.has(channelId) === closure_1_1) {
+        if (voicePanelsWithDock.has(closure_1_0) === closure_1_1) {
           return voicePanelsWithDock;
         } else {
           const _Set = Set;
           const set = new Set(voicePanelsWithDock.voicePanelsWithDock);
           if (tmp2) {
-            set.add(channelId);
+            set.add(closure_1_0);
           } else {
-            set.delete(channelId);
+            set.delete(closure_1_0);
           }
           const obj = {};
           const merged = Object.assign(voicePanelsWithDock);

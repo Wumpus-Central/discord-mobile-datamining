@@ -1,11 +1,11 @@
-// === Module 19378: HcaptchaModal ===
+// === Module 19536: HcaptchaModal ===
 
-// Module 19378 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6538 */;
+// Module 19536 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6658 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import UserStore from "UserStore" /* 1383 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 class HcaptchaModal {
@@ -62,7 +62,7 @@ class HcaptchaModal {
       obj15 = { spacing: null, align: "center", children: null };
       obj15.spacing = tmp9(tmp4[16]).space.PX_16;
       tmp16 = jsx;
-      obj16 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
+      obj16 = { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
       obj16.style = tmp2.title;
       obj16.children = stringResult;
       items2 = [, ];
@@ -113,8 +113,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
-createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
+const createStyles = fn(5141);
+const state = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: fn(1072).ModalAnimation.FADE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");

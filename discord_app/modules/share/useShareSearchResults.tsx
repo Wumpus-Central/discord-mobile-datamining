@@ -1,16 +1,16 @@
-// === Module 13396: useShareSearchResults ===
+// === Module 13532: useShareSearchResults ===
 
-// Module 13396 (useShareSearchResults)
-import formatResultsDefault from "formatResults" /* 13384 */;
-import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 13397 */;
+// Module 13532 (useShareSearchResults)
+import formatResultsDefault from "formatResults" /* 13520 */;
+import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 13533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import FrecencyStore from "FrecencyStore" /* 6895 */;
+import FrecencyStore from "FrecencyStore" /* 7015 */;
 
 require = fn;
-const ALLOWED_TYPES = fn(13385).ALLOWED_TYPES;
+const ALLOWED_TYPES = fn(13521).ALLOWED_TYPES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
@@ -24,7 +24,7 @@ export function makeAutocompleterSearchParams(arg0) {
   }
   let queryMode2 = null;
   if (hasItem) {
-    const items = [queryMode];
+    items = [queryMode];
     queryMode2 = queryMode;
     resultTypes = items;
   }
@@ -53,13 +53,13 @@ export function useShareSearchResults(targetDestination) {
   let stateFromStores1;
   let stateFromStores2;
   let hasQuery;
-  let items = [search];
+  items = [search];
   const stateFromStores = targetDestination(originDestination[7]).useStateFromStores(items, () => search.getId());
   const items1 = [stateFromStores];
   const memo = flag.useMemo(() => {
     const obj = { searchOptions: null };
     const obj2 = { blacklist: null, frecencyBoosters: true, userFilters: null };
-    const items = ["user:" + stateFromStores];
+    items = ["user:" + stateFromStores];
     obj2.blacklist = new Set(items);
     obj.searchOptions = obj2;
     return obj;
@@ -97,7 +97,7 @@ export function useShareSearchResults(targetDestination) {
     }
     queryMode2 = null;
     if (hasItem) {
-      const items = [queryMode];
+      items = [queryMode];
       queryMode2 = queryMode;
       resultTypes = items;
     }

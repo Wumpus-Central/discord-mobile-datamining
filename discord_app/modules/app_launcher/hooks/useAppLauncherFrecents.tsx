@@ -1,12 +1,12 @@
-// === Module 12448: useAppLauncherFrecents ===
+// === Module 12584: useAppLauncherFrecents ===
 
-// Module 12448 (useAppLauncherFrecents)
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7332 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10316 */;
+// Module 12584 (useAppLauncherFrecents)
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7452 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10446 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
-import UserStore from "UserStore" /* 1383 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12449 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
+import UserStore from "UserStore" /* 1385 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12585 */;
 
 const require = fn;
 function useFrecentApps(onlyActivityApps) {
@@ -17,7 +17,7 @@ function useFrecentApps(onlyActivityApps) {
   noop = undefined;
   let memo;
   let stateFromStores1;
-  let items = [memo];
+  items = [memo];
   stateFromStores = context(stateFromStores[8]).useStateFromStores(items, () => memo.getFetchState());
   const items1 = [includeAuthorizedAppsAndFetch, stateFromStores];
   const effect = noop.useEffect(() => {
@@ -47,7 +47,7 @@ function useFrecentApps(onlyActivityApps) {
   const items3 = ["contextless" === context.type];
   let found = sectionDescriptors.filter((id) => id.id !== constants.FRECENCY && id.id !== tmp.BUILT_IN);
   memo = noop.useMemo(() => {
-    const items = [];
+    items = [];
     if (closure_4) {
       items.push(WATCH_YOUTUBE_PROD_APP_ID);
     }
@@ -97,12 +97,12 @@ function useFrecentApps(onlyActivityApps) {
     return found2;
   }, items5);
 }
-const FetchState = fn(7276).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(2018).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(6035);
+const FetchState = fn(7396).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2147).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(6155);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(1992).ApplicationCommandType.CHAT, fn(1992).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2121).ApplicationCommandType.CHAT, fn(2121).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = { placeholderCount: 0, limit: ApplicationCommandConstants.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 const size = fn(2);
@@ -118,7 +118,7 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
   const commands = discovery.commands;
   commandsByActiveSection = discovery.commandsByActiveSection;
   ({ sectionDescriptors, filterSection } = discovery);
-  let items = [filterSection];
+  items = [filterSection];
   const effect = stateFromStores.useEffect(() => {
     filterSection(BuiltInSectionId.FRECENCY);
   }, items);
@@ -141,7 +141,7 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
       const found = commands.find((id) => id.id === stateFromStores);
       let tmp6 = data;
       if (null != found) {
-        const items = [found];
+        items = [found];
         HermesBuiltin.arraySpread(data.filter((id) => id.id !== stateFromStores), 1);
         tmp6 = items;
       }

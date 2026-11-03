@@ -1,9 +1,9 @@
-// === Module 12016: useMyCurrentStageChannelRole ===
+// === Module 12153: useMyCurrentStageChannelRole ===
 
-// Module 12016 (useMyCurrentStageChannelRole)
+// Module 12153 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6757 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6877 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentSt
 
 export default function useMyCurrentStageChannelRole(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
+  items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     const id = AuthenticationStore.getId();

@@ -1,9 +1,9 @@
-// === Module 14796: MediaModalLoadingOverlay ===
+// === Module 14927: MediaModalLoadingOverlay ===
 
-// Module 14796 (MediaModalLoadingOverlay)
+// Module 14927 (MediaModalLoadingOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -32,7 +32,7 @@ export default noop.memo(function MediaModalLoadingOverlay(progress) {
   ({ style, status } = progress);
   const tmp = closure_7();
   const obj = { style: null, children: null };
-  const items = [tmp.loader, style];
+  items = [tmp.loader, style];
   obj.style = items;
   if ("error" === status) {
     const obj2 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };

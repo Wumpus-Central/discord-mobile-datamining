@@ -1,11 +1,11 @@
-// === Module 14794: MediaModalVideo ===
+// === Module 14925: MediaModalVideo ===
 
-// Module 14794 (MediaModalVideo)
-import MediaViewerVideoPerfExperiment from "MediaViewerVideoPerfExperiment" /* 8847 */;
-import common_Video from "common/Video" /* 8873 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 14795 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 14796 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 14797 */;
+// Module 14925 (MediaModalVideo)
+import MediaViewerVideoPerfExperiment from "MediaViewerVideoPerfExperiment" /* 8971 */;
+import common_Video from "common/Video" /* 8997 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 14926 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 14927 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 14928 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default noop.memo(function MediaModalVideo(source) {
     uri = source.uri;
   }
   const isMediaViewerVideoPerfEnabled = MediaViewerVideoPerfExperiment.useIsMediaViewerVideoPerfEnabled();
-  const items = [uri, , ];
+  items = [uri, , ];
   ({ width: arr[1], height: arr[2] } = source);
   ({ hasError, isLoadingVisible, handleLoadStart, handleLoad, handleError } = useMediaLoadingDefault({ onError, onLoad, onLoadingVisible }));
   if (hasError) {

@@ -1,25 +1,25 @@
-// === Module 6714: ApplicationStreamingStore ===
+// === Module 6834: ApplicationStreamingStore ===
 
-// Module 6714 (ApplicationStreamingStore)
+// Module 6834 (ApplicationStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import windowSourceMatchesDefault from "windowSourceMatches" /* 6718 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 6719 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6724 */;
-import canSpectateDefault from "canSpectate" /* 6755 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import windowSourceMatchesDefault from "windowSourceMatches" /* 6838 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 6839 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6844 */;
+import canSpectateDefault from "canSpectate" /* 6875 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 require = fn;
 function reset() {
@@ -49,7 +49,7 @@ function handleStreamUpdate(streamKey) {
 }
 const Constants = fn(1072);
 ({ ApplicationStreamStates: closure_18, RTCConnectionStates: closure_19, ApplicationStreamDeleteReasons: closure_20, NULL_STRING_GUILD_ID: closure_21, BasicPermissions: closure_22 } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -65,7 +65,7 @@ class ApplicationStreamingStore extends PersistedStore {
 }
 const prototype = ApplicationStreamingStore.prototype;
 prototype["initialize"] = function initialize(selfStreamParticipantsHidden) {
-  const items = [PermissionStore];
+  items = [PermissionStore];
   this.syncWith(items, () => true);
   this.waitFor(AuthenticationStore, ChannelStore, PermissionStore, RTCConnectionStore, RunningGameStore, SelectedChannelStore);
   let prop;
@@ -106,7 +106,7 @@ prototype["getLastActiveStream"] = function getLastActiveStream() {
 prototype["getAllActiveStreams"] = function getAllActiveStreams() {
   if (canSpectateDefault(MediaEngineStore)) {
     const _Array = Array;
-    let items = Array.from(map.values());
+    items = Array.from(map.values());
   } else {
     items = [];
   }
@@ -291,13 +291,13 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
     return null;
   }
 };
-prototype["getStreamForUser"] = function getStreamForUser(userId, guildId) {
+prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
   if (canSpectateDefault(MediaEngineStore)) {
     let tmp5;
-    if (streamsByUserAndGuild[userId] != null) {
+    if (streamsByUserAndGuild[id] != null) {
       let tmp6 = guildId;
       if (guildId == null) {
-        tmp6 = __initData;
+        tmp6 = guild;
       }
       tmp5 = tmp4[tmp6];
     }
@@ -345,7 +345,7 @@ prototype["getRTCStream"] = function getRTCStream(arg0) {
   return tmp;
 };
 prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
-  const items = [];
+  items = [];
   if (canSpectateDefault(MediaEngineStore)) {
     for (const key10011 in streamsByUserAndGuild) {
       let keys = Object.keys();
@@ -383,7 +383,7 @@ prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
 };
 prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStreamsForChannel(id) {
   closure_0 = id;
-  const items = [];
+  items = [];
   if (canSpectateDefault(MediaEngineStore)) {
     for (const key10012 in streamsByUserAndGuild) {
       let keys = Object.keys();
@@ -673,7 +673,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6717);
+    const obj = sourceId(6837);
     const encodeStreamKeyResult = obj.encodeStreamKey({ streamType, guildId, channelId, ownerId: AuthenticationStore.getId() });
     let startsWithResult;
     if (sourceId != null) {
@@ -752,11 +752,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6720, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6840, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6720, dependencyMap.paths);
+        const promise = asyncRequireImpl(6840, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

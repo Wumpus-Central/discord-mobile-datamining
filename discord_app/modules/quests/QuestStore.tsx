@@ -1,17 +1,17 @@
-// === Module 7846: QuestStore ===
+// === Module 7970: QuestStore ===
 
-// Module 7846 (QuestStore)
+// Module 7970 (QuestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7844 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7851 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7852 */;
-import getQuestLogger from "getQuestLogger" /* 7853 */;
-import QuestServerUtils from "QuestServerUtils" /* 7854 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7968 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7975 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7976 */;
+import getQuestLogger from "getQuestLogger" /* 7977 */;
+import QuestServerUtils from "QuestServerUtils" /* 7978 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7847 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7848 */;
+import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7971 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7972 */;
 
 require = fn;
 function initializeState() {
@@ -160,7 +160,7 @@ function _runExpirationCheck() {
   }
   const obj = require("QuestExpirationUtils");
 }
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -341,7 +341,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       c34 = null;
     }
     initializeState();
-    const state = VideoQuestUIStore.getState();
+    state = VideoQuestUIStore.getState();
     state.clearState();
     const state1 = ConsoleQuestUIStore.getState();
     state1.reset();
@@ -351,7 +351,7 @@ const questStore = new QuestStore(DispatcherDefault, {
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function handleFetchCurrentQuestsSuccess(arg0) {
     ({ quests, excludedQuests, questEnrollmentBlockedUntil, questAccessSuspendedUntil } = arg0);
-    const items = [...map.keys()];
+    items = [...map.keys()];
     const mapped = quests.map((id) => id.id);
     const found = items.filter((item) => !mapped.includes(item));
     if (found.length > 0) {
@@ -372,11 +372,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(7852);
+      let obj5 = mapped(7976);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(6784).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(7853);
+      if (targetedContent.includes(mapped(6904).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(7977);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -398,7 +398,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(7852);
+        let obj10 = mapped(7976);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;
@@ -1195,7 +1195,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       const map3 = new Map(map);
       map = map3;
       map3.delete(previewQuestUserStatus.questId);
-      const state = VideoQuestUIStore.getState();
+      state = VideoQuestUIStore.getState();
       state.resetQuest(previewQuestUserStatus.questId);
     }
     const value4 = map.get(previewQuestUserStatus.questId);
@@ -1242,7 +1242,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     if (map4.has(questId)) {
       map4.delete(questId);
     }
-    const state = VideoQuestUIStore.getState();
+    state = VideoQuestUIStore.getState();
     state.resetQuest(questId);
   },
   QUESTS_USER_COMPLETION_UPDATE: function handleUserCompletionUpdate(quest_enrollment_blocked_until) {

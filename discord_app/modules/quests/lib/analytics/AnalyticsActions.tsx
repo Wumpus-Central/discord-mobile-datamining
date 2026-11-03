@@ -1,20 +1,20 @@
-// === Module 7862: AnalyticsActions ===
+// === Module 7986: AnalyticsActions ===
 
-// Module 7862 (AnalyticsActions)
+// Module 7986 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7641 */;
-import QuestDataUtils from "QuestDataUtils" /* 7842 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7865 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7866 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7765 */;
+import QuestDataUtils from "QuestDataUtils" /* 7966 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7989 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7990 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7987 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

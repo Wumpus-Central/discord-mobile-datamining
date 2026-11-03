@@ -1,19 +1,19 @@
-// === Module 18091: ChannelUnreadBadge ===
+// === Module 18235: ChannelUnreadBadge ===
 
-// Module 18091 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5642 */;
-import shared_components_Badge from "shared_components/Badge" /* 9818 */;
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
+// Module 18235 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5762 */;
+import shared_components_Badge from "shared_components/Badge" /* 9949 */;
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
 import noop from "module_19" /* 19 */;
 
 const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6776).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
@@ -29,7 +29,7 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
   useFontScale;
   let tmp8Result = null;
   if (unread) {
-    const items = [tmp.unreadBadge, , , ];
+    items = [tmp.unreadBadge, , , ];
     let unreadBadgePanel;
     if (flag) {
       unreadBadgePanel = tmp.unreadBadgePanel;

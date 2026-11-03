@@ -1,8 +1,8 @@
-// === Module 9557: TestModeUtils ===
+// === Module 9689: TestModeUtils ===
 
-// Module 9557 (TestModeUtils)
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5674 */;
-import TestModeStore from "TestModeStore" /* 5673 */;
+// Module 9689 (TestModeUtils)
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5794 */;
+import TestModeStore from "TestModeStore" /* 5793 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export function isAnyApplicationInTestMode() {
 }
 export function useIsTestModeForApplication(id) {
   _require = id;
-  const items = [TestModeStore, DeveloperActivityShelfStore];
+  items = [TestModeStore, DeveloperActivityShelfStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;

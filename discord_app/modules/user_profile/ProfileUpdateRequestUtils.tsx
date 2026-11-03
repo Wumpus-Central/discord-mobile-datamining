@@ -1,9 +1,9 @@
-// === Module 11516: ProfileUpdateRequestUtils ===
+// === Module 11653: ProfileUpdateRequestUtils ===
 
-// Module 11516 (ProfileUpdateRequestUtils)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7160 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11517 */;
+// Module 11653 (ProfileUpdateRequestUtils)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7281 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11654 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
@@ -58,7 +58,7 @@ export function getProfileChangesForUpdateRequest(pendingBanner, id) {
   if (collectibles == null) {
     collectibles = [];
   }
-  const items = [...collectibles];
+  items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
     const found = items.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;

@@ -1,6 +1,6 @@
-// === Module 15211: Timer ===
+// === Module 15352: Timer ===
 
-// Module 15211 (Timer)
+// Module 15352 (Timer)
 import _modDef12 from "module_12" /* 12 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ class Timer extends PureComponent {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      const state = closure_0.state;
+      state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -32,7 +32,7 @@ class Timer extends PureComponent {
       closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      const state = closure_0.state;
+      state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {
@@ -143,7 +143,7 @@ prototype["render"] = function render() {
     padStartResult = seconds;
   }
   const obj4 = { style, accessibilityRole: "timer", children: null };
-  const items = [str, str5, padStartResult];
+  items = [str, str5, padStartResult];
   obj4.children = items;
   return jsxs(native.LegacyText, { style, accessibilityRole: "timer", children: null });
 };

@@ -1,27 +1,27 @@
-// === Module 17401: DisplayNameStylesAccessibilitySetting ===
+// === Module 17544: DisplayNameStylesAccessibilitySetting ===
 
-// Module 17401 (DisplayNameStylesAccessibilitySetting)
+// Module 17544 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import _modDef2932 from "module_2932" /* 2932 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16270 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import _modDef3059 from "module_3059" /* 3059 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16413 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function useValue() {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2932["2gFUEw"]);
+    return intl.string(_modDef3059["2gFUEw"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
 });

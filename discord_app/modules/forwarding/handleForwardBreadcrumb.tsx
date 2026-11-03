@@ -1,10 +1,10 @@
-// === Module 13377: handleForwardBreadcrumb ===
+// === Module 13513: handleForwardBreadcrumb ===
 
-// Module 13377 (handleForwardBreadcrumb)
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7521 */;
+// Module 13513 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7645 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 let closure_9 = async function _handleForwardBreadcrumb(arg0) {
@@ -23,7 +23,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
               }
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c4 = 0;

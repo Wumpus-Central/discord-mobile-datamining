@@ -1,10 +1,10 @@
-// === Module 7947: ChannelPermissionsConstants ===
+// === Module 8071: ChannelPermissionsConstants ===
 
-// Module 7947 (ChannelPermissionsConstants)
+// Module 8071 (ChannelPermissionsConstants)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 7948 */;
-import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 7949 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 8072 */;
+import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 8073 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

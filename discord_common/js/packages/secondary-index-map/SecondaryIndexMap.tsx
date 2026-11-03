@@ -1,7 +1,7 @@
-// === Module 4941: SecondaryIndexMap ===
+// === Module 5068: SecondaryIndexMap ===
 
-// Module 4941 (SecondaryIndexMap)
-import sortedIndexByDefault from "sortedIndexBy" /* 4942 */;
+// Module 5068 (SecondaryIndexMap)
+import sortedIndexByDefault from "sortedIndexBy" /* 5069 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 let closure_3 = [];
@@ -50,7 +50,7 @@ prototype["indexes"] = function indexes() {
         const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
           let tmp9 = _slicedToArray(tmp6, 2);
-          let items = [];
+          items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp9[1], 0);
           obj[tmp9[0]] = items;
           continue;
@@ -200,7 +200,7 @@ prototype["delete"] = function delete(arg0) {
 prototype["getIndex"] = function getIndex(arg0) {
   let tmp2 = this.valueIndexes[arg0];
   if (null == tmp2) {
-    const items = [];
+    items = [];
     tmp.valueIndexes[arg0] = items;
     tmp2 = items;
   }

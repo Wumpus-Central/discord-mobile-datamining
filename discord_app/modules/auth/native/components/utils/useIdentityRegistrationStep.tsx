@@ -1,8 +1,8 @@
-// === Module 17999: useIdentityRegistrationStep ===
+// === Module 18143: useIdentityRegistrationStep ===
 
-// Module 17999 (useIdentityRegistrationStep)
+// Module 18143 (useIdentityRegistrationStep)
 import util from "util" /* 1113 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7130 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,10 +10,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(17990);
-({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
+const RegistrationConstants = fn(18133);
+({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: closure_10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1072).AbortCodes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
@@ -35,7 +35,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
   }, []);
   const tmp9 = closure_8((errors) => errors.errors);
   closure_8 = tmp9;
-  let items = [tmp9];
+  items = [tmp9];
   const memo = noop.useMemo(() => {
     const intl = util.intl;
     return intl.string(util.t.F8UYVY);
@@ -55,7 +55,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -91,14 +91,14 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
             closure_130_5 = closure_4;
             if (closure_130_5 instanceof sourceState(navigation[10]).CaptchaCancelError) {
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               authenticationErrorsFromAPIError = sourceState(navigation[11]).getAuthenticationErrorsFromAPIError(closure_130_5);
               first1(authenticationErrorsFromAPIError);
               const _Object = Object;
               const keys = Object.keys(authenticationErrorsFromAPIError);
               closure_130_4 = keys.filter((item) => {
-                const items = ["phone"];
+                items = ["phone"];
                 return items.includes(item);
               });
               if (closure_130_4.length <= 0) {
@@ -108,7 +108,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
                 }
                 if (tmp30) {
                   const obj10 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
-                  let items = [sourceState(navigation[12]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code)];
+                  items = [sourceState(navigation[12]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code)];
                   obj10.details = items;
                   tmp3(obj10);
                   let obj4 = sourceState(navigation[12]);
@@ -163,7 +163,7 @@ export function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
             };
             tmp5.push(sourceState(navigation[13]).AuthStates.VERIFY_PHONE, obj13);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp55) {
           closure_4 = tmp55;

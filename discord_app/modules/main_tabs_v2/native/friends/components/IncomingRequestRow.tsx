@@ -1,13 +1,13 @@
-// === Module 18843: IncomingRequestRow ===
+// === Module 19001: IncomingRequestRow ===
 
-// Module 18843 (IncomingRequestRow)
+// Module 19001 (IncomingRequestRow)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14203 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18101 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14334 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;
 function IncomingRequestRow(user) {
@@ -22,7 +22,7 @@ function IncomingRequestRow(user) {
   const merged = Object.assign(user, Object.assign({ user: 0, applicationId: 0, accepted: 0, onAcceptIncomingRequest: 0, onDeclineIncomingRequest: 0, accessibilityLabel: 0, acceptRequestAccessibilityLabel: 0, ignoreRequestAccessibilityLabel: 0, acceptedRequestLabel: 0, acceptedRequestAccessibilityLabel: 0 }));
   const sharedValue = user(accepted[6]).useSharedValue(false);
   let obj = user(accepted[6]);
-  let items = [onDeclineIncomingRequest];
+  items = [onDeclineIncomingRequest];
   const stateFromStores = user(accepted[7]).useStateFromStores(items, () => onDeclineIncomingRequest.useReducedMotion);
   let items1 = [accepted, sharedValue];
   const effect = onAcceptIncomingRequest.useEffect(() => {
@@ -37,7 +37,7 @@ function IncomingRequestRow(user) {
       const intl = util.intl;
       const obj2 = { username: UserUtilsDefault.getName(user) };
       obj.label = intl.formatToPlainString(util.t.m0zYbV, obj2);
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       obj.name = stateFromStores1.ACCEPT;
@@ -116,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
@@ -145,7 +145,7 @@ export function ConnectedIncomingGameFriendRequestRow(applicationId) {
   applicationId = applicationId.applicationId;
   let tmp = null;
   const merged = Object.assign(applicationId, Object.assign({ user: 0, applicationId: 0 }));
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = applicationId(563).useStateFromStores(items, () => ApplicationStore.getApplication(applicationId));
   if (null != stateFromStores) {
     const obj2 = { user: applicationId.user, application: stateFromStores };

@@ -1,93 +1,103 @@
-// === Module 15860: ContextMenuPopout ===
+// === Module 16003: ContextMenuPopout ===
 
-// Module 15860 (ContextMenuPopout)
+// Module 16003 (ContextMenuPopout)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import native from "native" /* 5080 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import spring from "spring" /* 5637 */;
-import ContextMenuState from "ContextMenuState" /* 9875 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9876 */;
+import util from "util" /* 1113 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import native from "native" /* 5207 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import Backdrop from "Backdrop" /* 5721 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6142 */;
+import ContextMenuState from "ContextMenuState" /* 10006 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 10007 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function ContextMenuDivider() {
   return timestampProducer(hasOwnProperty, { style: closure_9().divider });
 }
-function ContextMenuBackdrop(onDismiss) {
-  const visible = onDismiss.visible;
+function ContextMenuBackdrop(arg0) {
+  ({ onPress, visible } = arg0);
   const tmp = closure_15();
-  const fn = function n() {
-    const obj = { opacity: null };
-    value = visible.get();
-    obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
-    return obj;
-  };
-  let obj = visible(5095);
-  fn.__closure = { withSpring: visible(5637).withSpring, visible, CONTEXT_MENU_SPRING: visible(9876).CONTEXT_MENU_SPRING };
-  fn.__workletHash = 6862317967896;
-  fn.__initData = __initData2;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj3 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
-  const obj2 = { withSpring: visible(5637).withSpring, visible, CONTEXT_MENU_SPRING: visible(9876).CONTEXT_MENU_SPRING };
-  const obj4 = visible(1375);
-  const intl = visible(1113).intl;
+  items = [closure_16, spring_spring.withSpring, visible, ContextMenuConstants.CONTEXT_MENU_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  class ContextMenuPopoutNativeTsx5 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), closure_2) };
+      return obj;
+    }
+  }
+  const items1 = [tmp5, tmp6, tmp7];
+  ContextMenuPopoutNativeTsx5.__closure = items1;
+  ContextMenuPopoutNativeTsx5.__workletHash = 16904658975809;
+  ContextMenuPopoutNativeTsx5.__initData = tmp4;
+  const animatedStyle = _mod1652.useAnimatedStyle(ContextMenuPopoutNativeTsx5);
+  const obj2 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onPress, accessibilityLabel: null };
+  const tmp2Result = PlatformUtils;
+  const intl = util.intl;
   const string = intl.string;
-  const t = visible(1113).t;
+  const t = util.t;
   if (isAndroidResult) {
     let stringResult = string(t.hPBScv);
   } else {
     stringResult = string(t.xs0juG);
   }
-  obj3.accessibilityLabel = stringResult;
-  return closure_6(visible(5598).Backdrop, obj3);
+  obj2.accessibilityLabel = stringResult;
+  return timestampProducer(Backdrop.Backdrop, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9876).CONTEXT_MENU_MIN_WIDTH };
-let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9876).CONTEXT_MENU_MIN_WIDTH };
-obj2.titleContainer = { padding: fn(9876).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9876).CONTEXT_MENU_ITEM_PADDING };
-obj2.divider = { borderBottomWidth: fn(9876).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(10007).CONTEXT_MENU_MIN_WIDTH };
+let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(10007).CONTEXT_MENU_MIN_WIDTH };
+obj2.titleContainer = { padding: fn(10007).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(10007).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = { borderBottomWidth: fn(10007).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_9 = createStyles.createStyles(obj2);
-let closure_10 = { code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}" };
-let __initData = { code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}" };
-let closure_12 = { code: "function update_ContextMenuPopoutNativeTsx3(e){const{updateContextMenuState,state}=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);}" };
-let closure_13 = { code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}" };
-createStyles = fn(5014);
+let closure_10 = { code: "(function ContextMenuPopoutNativeTsx1(finished){let[transitionState,TransitionStates,scheduleOnRN,cleanUp,onClose]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);scheduleOnRN(onClose);}})" };
+let closure_11 = { code: "(function ContextMenuPopoutNativeTsx2(){let[maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,_worklet_13810141093226_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp,onClose]=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function ContextMenuPopoutNativeTsx1Factory([_worklet_13810141093226_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp,onClose]){const ContextMenuPopoutNativeTsx1=function(finished){if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);scheduleOnRN(onClose);}};ContextMenuPopoutNativeTsx1.__closure=[transitionState,TransitionStates,scheduleOnRN,cleanUp,onClose];ContextMenuPopoutNativeTsx1.__workletHash=13810141093226;ContextMenuPopoutNativeTsx1.__initData=_worklet_13810141093226_init_data;return ContextMenuPopoutNativeTsx1;}([_worklet_13810141093226_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp,onClose])),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};})" };
+let closure_12 = { code: "(function update_ContextMenuPopoutNativeTsx3(e){let[updateContextMenuState,state]=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);})" };
+let closure_13 = { code: "(function ContextMenuPopoutNativeTsx4(){let[state,scheduleOnRN,requestClose]=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;scheduleOnRN(requestClose,isDismiss);})" };
+createStyles = fn(5141);
 let obj7 = { accessibleDismiss: null };
 let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj8.height = "auto";
 obj7.accessibleDismiss = obj8;
 let closure_15 = createStyles.createStyles(obj7);
-const __initData2 = { code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}" };
+let closure_16 = { code: "(function ContextMenuPopoutNativeTsx5(){let[withSpring,visible,CONTEXT_MENU_SPRING]=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
 
 export function ContextMenuPopout(cleanUp) {
   ({ menu, transitionState } = cleanUp);
-  cleanUp = cleanUp.cleanUp;
-  positionX = undefined;
-  state = undefined;
-  let sharedValue;
-  let diff2;
-  __initData = undefined;
+  _require = transitionState;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
   let callback1;
-  ({ x, positionX } = menu);
-  const positionY = menu.positionY;
-  const height = menu.height;
-  ({ items, state } = menu);
+  ({ x, positionX, positionY, height, items, state } = menu);
+  importDefault = state;
   const requestClose = menu.requestClose;
-  const onClose = menu.onClose;
+  dependencyMap = requestClose;
   ({ title, keyboardShouldPersistTaps } = menu);
   let str = "handled";
   if (undefined !== keyboardShouldPersistTaps) {
@@ -95,195 +105,238 @@ export function ContextMenuPopout(cleanUp) {
   }
   const y = menu.y;
   let num = 0;
-  if (transitionState === transitionState(positionX[8]).TransitionStates.MOUNTED) {
+  if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = transitionState(positionX[7]).useSharedValue(num);
+  const sharedValue = require("module_1652").useSharedValue(num);
+  _slicedToArray = sharedValue;
   let items1 = [transitionState, sharedValue];
-  const effect = height.useEffect(() => {
-    if (transitionState === native.TransitionStates.YEETED) {
-      const result = sharedValue.set(0);
+  const effect = noop.useEffect(() => {
+    if (c0 === native.TransitionStates.YEETED) {
+      const result = _undefined3.set(0);
     } else {
-      const result1 = sharedValue.set(1);
+      const result1 = _undefined3.set(1);
     }
   }, items1);
-  const tmp5 = diff2();
-  ({ top, bottom } = cleanUp(positionX[9])({ includeKeyboardHeight: true }).insets);
+  const tmp5 = c9();
+  ({ top, bottom } = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets);
   let obj3 = { ignoreKeyboard: null };
-  let obj = transitionState(positionX[7]);
-  let tmp7 = cleanUp(positionX[10]);
-  obj3.ignoreKeyboard = transitionState(positionX[11]).isAndroid();
+  let obj = require("module_1652");
+  let tmp7 = useWindowDimensionsDefault;
+  obj3.ignoreKeyboard = require("PlatformUtils").isAndroid();
   const size = tmp7(obj3);
   let diff = size.height - y;
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    diff2 = diff1 - transitionState(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
+    let diff2 = diff1 - tmp(10007).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - transitionState(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - tmp(10007).CONTEXT_MENU_EDGE_OFFSET;
   }
-  const tmp13 = positionY(height.useState(height >= diff2), 2);
-  __initData = tmp13[1];
+  noop = diff2;
+  [first, c6] = noop.useState(height >= diff2);
+  c5 = first;
   let str2 = "bottom";
   if ("below" === positionY) {
     str2 = "top";
   }
-  let obj4 = { [str2]: y, [positionX]: x, maxHeight: diff2, maxWidth: size.width - transitionState(positionX[6]).CONTEXT_MENU_EDGE_OFFSET - x };
-  let tmpResult = transitionState(positionX[11]);
-  class R {
+  let obj4 = { [str2]: y, [positionX]: x, maxHeight: diff2, maxWidth: size.width - require("ContextMenuConstants").CONTEXT_MENU_EDGE_OFFSET - x };
+  let tmpResult = require("PlatformUtils");
+  let items2 = [c11, diff2, height, require("ContextMenuConstants").CONTEXT_MENU_MIN_WIDTH, positionY, positionX, require("ContextMenuConstants").CONTEXT_MENU_MIN_SCALE, require("spring/spring").withSpring, require("module_1652").interpolate, sharedValue, require("ContextMenuConstants").CONTEXT_MENU_SPRING, c10, transitionState, require("native").TransitionStates, require("module_1705").scheduleOnRN, cleanUp.cleanUp, menu.onClose];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  callback1 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
+  c12 = undefined;
+  c13 = undefined;
+  c14 = undefined;
+  c15 = undefined;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31] = items2;
+  class ContextMenuPopoutNativeTsx2 {
     constructor() {
-      result = Math.min(closure_9, height) / 2;
-      tmp2 = closure_0;
-      tmp3 = closure_2;
-      result1 = closure_0(closure_2[6]).CONTEXT_MENU_MIN_WIDTH / 2;
+      result = Math.min(closure_0, closure_1) / 2;
+      result1 = closure_2 / 2;
       num = 1;
-      if ("below" === positionY) {
+      if ("below" === closure_3) {
         num = -1;
       }
       num2 = 1;
-      if ("left" === positionX) {
+      if ("left" === closure_4) {
         num2 = -1;
       }
-      obj = { opacity: null, transform: null };
-      tmp2Result = tmp2(tmp3[12]);
-      tmp2Result1 = tmp2(tmp3[7]);
-      interpolateResult = tmp2Result1.interpolate(closure_8.get(), [0, 1], [0, 1]);
-      fn = function t(arg0) {
-        let tmp = arg0;
-        if (arg0) {
-          tmp = closure_1_0 === transitionState(positionX[8]).TransitionStates.YEETED;
+      tmp3 = closure_6;
+      tmp4 = closure_7;
+      obj = closure_8;
+      tmp5 = closure_7(closure_8.get(), [0, 1], [0, 1]);
+      tmp6 = closure_9;
+      items = [, , , , , ];
+      items[0] = closure_10;
+      items[1] = closure_11;
+      items[2] = closure_12;
+      items[3] = closure_13;
+      items[4] = closure_14;
+      items[5] = closure_15;
+      closure_0 = undefined;
+      closure_1 = undefined;
+      closure_2 = undefined;
+      closure_3 = undefined;
+      closure_4 = undefined;
+      [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items;
+      obj1 = { opacity: null, transform: null };
+      class ContextMenuPopoutNativeTsx1 {
+        constructor(arg0) {
+          tmp = cleanUp;
+          if (cleanUp) {
+            tmp2 = closure_0;
+            tmp3 = closure_1;
+            tmp = closure_0 === closure_1.YEETED;
+          }
+          if (tmp) {
+            tmp4 = closure_2;
+            tmp5 = closure_3;
+            tmp6 = closure_2(closure_3);
+            tmp7 = closure_4;
+            tmp8 = closure_2(closure_4);
+          }
+          return;
         }
-        if (tmp) {
-          transitionState(positionX[7]).runOnJS(cleanUp)();
-          const obj = transitionState(positionX[7]);
-          transitionState(positionX[7]).runOnJS(onClose)();
-          const obj2 = transitionState(positionX[7]);
-        }
-      };
-      obj1 = { transitionState, TransitionStates: tmp2(tmp3[8]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp, onClose };
-      fn.__closure = obj1;
-      fn.__workletHash = 4025068986009;
-      fn.__initData = closure_11;
-      obj.opacity = tmp2Result.withSpring(interpolateResult, tmp2(tmp3[6]).CONTEXT_MENU_SPRING, "respect-motion-settings", fn);
-      obj14 = { translateX: null };
-      tmp2Result2 = tmp2(tmp3[12]);
-      tmp2Result3 = tmp2(tmp3[7]);
-      value = closure_8.get();
-      items = [, ];
-      items[0] = num2 * result1 + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num2 * result1;
-      items[1] = 0;
-      interpolateResult1 = tmp2Result3.interpolate(value, [0, 1], items);
-      obj14.translateX = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1 = [, , ];
-      items1[0] = obj14;
-      obj15 = { translateY: null };
-      tmp2Result4 = tmp2(tmp3[12]);
-      tmp2Result5 = tmp2(tmp3[7]);
-      value1 = closure_8.get();
+      }
+      items1 = [, , , , ];
+      items1[0] = tmp8;
+      items1[1] = tmp9;
+      items1[2] = tmp10;
+      items1[3] = tmp11;
+      items1[4] = tmp12;
+      ContextMenuPopoutNativeTsx1.__closure = items1;
+      ContextMenuPopoutNativeTsx1.__workletHash = 13810141093226;
+      ContextMenuPopoutNativeTsx1.__initData = tmp7;
+      obj1.opacity = tmp3(tmp5, tmp6, "respect-motion-settings", ContextMenuPopoutNativeTsx1);
+      obj6 = { translateX: null };
       items2 = [, ];
-      items2[0] = num * result + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num * result;
+      items2[0] = num2 * result1 + closure_5 * -num2 * result1;
       items2[1] = 0;
-      interpolateResult2 = tmp2Result5.interpolate(value1, [0, 1], items2);
-      obj15.translateY = tmp2Result4.withSpring(interpolateResult2, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[1] = obj15;
-      obj16 = { scale: null };
-      tmp2Result6 = tmp2(tmp3[12]);
-      tmp2Result7 = tmp2(tmp3[7]);
-      value2 = closure_8.get();
-      items3 = [, ];
-      items3[0] = tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE;
-      items3[1] = 1;
-      interpolateResult3 = tmp2Result7.interpolate(value2, [0, 1], items3);
-      obj16.scale = tmp2Result6.withSpring(interpolateResult3, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[2] = obj16;
-      obj.transform = items1;
-      return obj;
+      obj6.translateX = tmp3(tmp4(obj.get(), [0, 1], items2), tmp6);
+      items3 = [, , ];
+      items3[0] = obj6;
+      obj7 = { translateY: null };
+      items4 = [, ];
+      items4[0] = num * result + closure_5 * -num * result;
+      items4[1] = 0;
+      obj7.translateY = tmp3(tmp4(obj.get(), [0, 1], items4), tmp6);
+      items3[1] = obj7;
+      obj8 = { scale: null };
+      items5 = [, ];
+      items5[0] = closure_5;
+      items5[1] = 1;
+      obj8.scale = tmp3(tmp4(obj.get(), [0, 1], items5), tmp6);
+      items3[2] = obj8;
+      obj1.transform = items3;
+      return obj1;
     }
   }
-  const tmpResult2 = transitionState(positionX[7]);
-  R.__closure = { maxHeight: diff2, height, CONTEXT_MENU_MIN_WIDTH: transitionState(positionX[6]).CONTEXT_MENU_MIN_WIDTH, positionY, positionX, CONTEXT_MENU_MIN_SCALE: transitionState(positionX[6]).CONTEXT_MENU_MIN_SCALE, withSpring: transitionState(positionX[12]).withSpring, interpolate: transitionState(positionX[7]).interpolate, visible: sharedValue, CONTEXT_MENU_SPRING: transitionState(positionX[6]).CONTEXT_MENU_SPRING, transitionState, TransitionStates: transitionState(positionX[8]).TransitionStates, runOnJS: transitionState(positionX[7]).runOnJS, cleanUp, onClose };
-  R.__workletHash = 16778623591634;
-  R.__initData = __initData;
-  let items2 = [state, requestClose, __initData];
-  const animatedStyle = tmpResult2.useAnimatedStyle(R);
-  let items3 = [diff2];
+  let items3 = [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31];
+  ContextMenuPopoutNativeTsx2.__closure = items3;
+  ContextMenuPopoutNativeTsx2.__workletHash = 221976609707;
+  ContextMenuPopoutNativeTsx2.__initData = tmp15;
+  let items4 = [state, requestClose, first];
+  const animatedStyle = require("module_1652").useAnimatedStyle(ContextMenuPopoutNativeTsx2);
+  let items5 = [diff2];
   const memo = obj2.useMemo(() => {
+    items = [closure_12, ContextMenuState.updateContextMenuState, c1];
+    c1 = undefined;
+    [tmp4, tmp5, tmp6] = items;
     function update(absoluteX) {
-      const result = transitionState(positionX[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, activeIndex);
+      _undefined(absoluteX.absoluteX, absoluteX.absoluteY, c1);
     }
-    update.__closure = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
-    update.__workletHash = 4218299258082;
-    update.__initData = __initData2;
+    const items1 = [tmp5, tmp6];
+    update.__closure = items1;
+    update.__workletHash = 16389563863227;
+    update.__initData = tmp4;
     const Gesture = LegacyBaseButton.Gesture;
-    const obj = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
     const PanResult = Gesture.Pan();
-    const enabledResult = Gesture.Pan().enabled(!first);
-    const onStartResult = Gesture.Pan().enabled(!first).onStart(update);
-    const fn = function t() {
-      activeIndex = activeIndex.activeIndex;
-      value = activeIndex.get();
-      transitionState(positionX[7]).runOnJS(requestClose)(-1 === value);
-    };
-    const onUpdateResult = Gesture.Pan().enabled(!first).onStart(update).onUpdate(update);
-    fn.__closure = { state, runOnJS: ReanimatedRexport.runOnJS, requestClose };
-    fn.__workletHash = 14495067009140;
-    fn.__initData = __initData3;
-    return onUpdateResult.onEnd(fn);
-  }, items2);
-  const items4 = [requestClose];
+    const tmp3 = c1;
+    const enabledResult = Gesture.Pan().enabled(!c5);
+    const onStartResult = Gesture.Pan().enabled(!c5).onStart(update);
+    const items2 = [closure_13, tmp3, _mod1705.scheduleOnRN, c2];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    [tmp7, tmp8, tmp9, tmp10] = items2;
+    class ContextMenuPopoutNativeTsx4 {
+      constructor() {
+        activeIndex = closure_0.activeIndex;
+        tmp = closure_1(closure_2, -1 === activeIndex.get());
+        return;
+      }
+    }
+    const items3 = [tmp8, tmp9, tmp10];
+    ContextMenuPopoutNativeTsx4.__closure = items3;
+    ContextMenuPopoutNativeTsx4.__workletHash = 3496590121856;
+    ContextMenuPopoutNativeTsx4.__initData = tmp7;
+    return Gesture.Pan().enabled(!c5).onStart(update).onUpdate(update).onEnd(ContextMenuPopoutNativeTsx4);
+  }, items4);
+  const items6 = [requestClose];
   const callback = obj2.useCallback((nativeEvent) => {
     const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
-    __initData(rounded >= Math.round(diff2));
-  }, items3);
-  callback1 = obj2.useCallback(() => {
-    requestClose(true);
-  }, items4);
-  const items5 = [requestClose];
-  const callback2 = obj2.useCallback(() => {
-    requestClose(false);
+    _undefined5(rounded >= Math.round(c4));
   }, items5);
-  cleanUp(positionX[15])(() => {
+  callback1 = obj2.useCallback(() => {
+    state(true);
+  }, items6);
+  const items7 = [requestClose];
+  const callback2 = obj2.useCallback(() => {
+    state(false);
+  }, items7);
+  useBackPressHandlerDefault(() => {
     callback1();
     return true;
   });
-  const items6 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue }), ];
-  const obj6 = { gesture: memo, children: null };
-  const obj7 = { onLayout: callback, bounces: false, style: null, keyboardShouldPersistTaps: str, accessibilityRole: "list", children: null };
-  const items7 = [tmp5.container, obj4, animatedStyle];
-  obj7.style = items7;
-  let tmp21Result = null;
+  const items8 = [c6(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue }), ];
+  let obj5 = { gesture: memo, children: null };
+  const obj6 = { onLayout: callback, bounces: false, style: null, keyboardShouldPersistTaps: str, accessibilityRole: "list", children: null };
+  const items9 = [tmp5.container, obj4, animatedStyle];
+  obj6.style = items9;
+  let tmp38Result = null;
   if (null != title) {
-    const obj8 = { children: null };
-    const obj9 = { style: tmp5.titleContainer, children: null };
-    const obj10 = { variant: "text-md/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
-    obj9.children = tmp23(transitionState(tmp2[16]).Text, obj10);
-    const items8 = [tmp23(state, obj9), tmp23(ContextMenuDivider, {})];
-    obj8.children = items8;
-    tmp21Result = tmp21(tmp22, obj8);
+    const obj7 = { children: null };
+    const obj8 = { style: tmp5.titleContainer, children: null };
+    const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
+    obj8.children = tmp40(tmp(5747).Text, obj9);
+    const items10 = [tmp40(c5, obj8), tmp40(c14, {})];
+    obj7.children = items10;
+    tmp38Result = tmp38(tmp39, obj7);
   }
-  const obj11 = { children: null };
-  const items9 = [tmp21Result, ];
+  const obj10 = { children: null };
+  const items11 = [tmp38Result, ];
   closure_129_0 = items;
   closure_129_1 = title;
   closure_129_2 = state;
   closure_129_3 = callback2;
   const dividerIndexes = menu.dividerIndexes;
-  items9[1] = items.map((item, index) => {
-    ({ label, action: transitionState } = item);
+  items11[1] = items.map((item, index) => {
+    ({ label, action: c0 } = item);
     ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = item);
-    const diff = transitionState.length - 1;
+    const diff = _undefined.length - 1;
     let obj = { index, label, start: null, end: null, lastInSection: null, iconSource: null, IconComponent: null, trailingIndicator: null, state: null, onPress: null, variant: null, accessibilityRole: null };
     let tmp3 = 0 === index;
     if (tmp3) {
-      tmp3 = null == cleanUp;
+      tmp3 = null == c1;
     }
     obj.start = tmp3;
     obj.end = index === diff;
-    obj.lastInSection = height.includes(index + 1);
+    obj.lastInSection = _undefined4.includes(index + 1);
     obj.iconSource = iconSource;
     obj.IconComponent = IconComponent;
     obj.trailingIndicator = trailingIndicator;
-    obj.state = positionX;
+    obj.state = state;
     obj.onPress = function onPress(arg0) {
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
@@ -291,28 +344,28 @@ export function ContextMenuPopout(cleanUp) {
         const tmpResult = useIsScreenReaderEnabled;
       }
       if (isAndroidResult) {
-        transitionState();
+        _undefined();
       }
-      if (positionY != null) {
+      if (c3 != null) {
         tmp6(arg0);
       }
     };
     obj.variant = variant;
     obj.accessibilityRole = accessibilityRole;
-    const tmp2Result = requestClose(transitionState(positionX[17]).ContextMenuItem, obj, "" + label + "-" + index);
+    const tmp2Result = _undefined5(_undefined(state[18]).ContextMenuItem, obj, "" + label + "-" + index);
     let tmp7 = tmp2Result;
-    if (height.includes(index)) {
+    if (_undefined4.includes(index)) {
       const obj2 = { children: null };
       const _HermesInternal = HermesInternal;
-      const items = [requestClose(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
+      items = [_undefined5(c14, {}, "divider-" + index), tmp2Result];
       obj2.children = items;
-      tmp7 = sharedValue(onClose, obj2);
+      tmp7 = _undefined6(callback1, obj2);
     }
     return tmp7;
   });
-  obj7.children = items9;
-  obj6.children = sharedValue(cleanUp(positionX[7]).ScrollView, obj7);
-  items6[1] = requestClose(transitionState(positionX[14]).GestureDetector, obj6);
-  obj11.children = items6;
-  return sharedValue(onClose, obj11);
+  obj6.children = items11;
+  obj5.children = c8(_modDef1652.ScrollView, obj6);
+  items8[1] = c6(require("LegacyBaseButton").GestureDetector, obj5);
+  obj10.children = items8;
+  return c8(callback1, obj10);
 }

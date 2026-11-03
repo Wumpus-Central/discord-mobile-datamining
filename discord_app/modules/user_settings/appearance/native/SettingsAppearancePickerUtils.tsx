@@ -1,13 +1,13 @@
-// === Module 17292: SettingsAppearancePickerUtils ===
+// === Module 17435: SettingsAppearancePickerUtils ===
 
-// Module 17292 (SettingsAppearancePickerUtils)
+// Module 17435 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import utils_ColorDefault from "utils/Color" /* 5012 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import utils_ColorDefault from "utils/Color" /* 5139 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5373 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function convertBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   if (num3 === undefined) {
     num3 = 5;
   }
-  const items = [];
+  items = [];
   for (let num4 = 0; num4 < num3; num4 = num4 + 1) {
     if (num4 < mapped.length) {
       let arr = items.push(mapped[num4]);
@@ -142,8 +142,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5012)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5012)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(5139)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5139)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -155,7 +155,7 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   if (num2 === undefined) {
     num2 = 5;
   }
-  const items = [];
+  items = [];
   for (let num3 = 0; num3 < num2; num3 = num3 + 1) {
     if (num3 < mapped.length) {
       let arr = items.push(mapped[num3]);
@@ -171,7 +171,7 @@ const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
 
-export function convertThemesToAnimatedThemes(themes) {
+export function convertThemesToAnimatedThemes(c1) {
   let num = prop;
   if (prop === undefined) {
     num = 0.7;
@@ -180,15 +180,16 @@ export function convertThemesToAnimatedThemes(themes) {
   if (prop1 === undefined) {
     num2 = 0.8;
   }
-  let items = memo;
-  if (memo === undefined) {
+  items = c4;
+  if (c4 === undefined) {
     items = [];
   }
-  if (BACKGROUND_SURFACE_HIGH === undefined) {
+  let BACKGROUND_SURFACE_HIGH = c3;
+  if (c3 === undefined) {
     BACKGROUND_SURFACE_HIGH = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
   const items1 = [];
-  const iter = themes[Symbol.iterator]();
+  const iter = importDefault[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp5 = nextResult;
@@ -206,13 +207,13 @@ export function convertThemesToAnimatedThemes(themes) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5596).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
-  let items = [token];
+  token = token(5719).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };
     const intl = util.intl;
     obj.name = intl.string(util.t.zlvNOj);
-    const items = [{ hex: token, stop: 20 }, { hex: token, stop: 40 }, { hex: token, stop: 60 }, { hex: token, stop: 80 }, { hex: token, stop: 100 }];
+    items = [{ hex: token, stop: 20 }, { hex: token, stop: 40 }, { hex: token, stop: 60 }, { hex: token, stop: 80 }, { hex: token, stop: 100 }];
     let num = getMaxColors();
     if (num === undefined) {
       num = 5;

@@ -1,21 +1,21 @@
-// === Module 18497: ForYouItemImage ===
+// === Module 18651: ForYouItemImage ===
 
-// Module 18497 (ForYouItemImage)
+// Module 18651 (ForYouItemImage)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Pressables from "Pressables" /* 6980 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;
+import Pressables from "Pressables" /* 7106 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8944 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const getGuildAcronym = fn(4881).getGuildAcronym;
-const Constants = fn(18498);
+const getGuildAcronym = fn(5008).getGuildAcronym;
+const Constants = fn(18652);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -34,7 +34,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj = { fallbackImage: { color: nativeDefault.colors.WHITE }, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
 let obj4 = { color: nativeDefault.colors.WHITE };
 obj.fallbackImageV2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -64,7 +64,7 @@ export const ForYouItemImage = noop.memo(function ForYouItemImageWrapped(item) {
   if (other_user != null) {
     id = other_user.id;
   }
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = item(obj[21]).useStateFromStores(items, () => UserStore.getUser(id));
   const items1 = [stateFromStores, compactMode, , , , ];
   ({ acked: arr2[2], guild_id: arr2[3], message_id: arr2[4] } = item);
@@ -163,7 +163,7 @@ export const ForYouItemImage = noop.memo(function ForYouItemImageWrapped(item) {
           brandBackground1 = tmp3.brandBackground;
           const tmp2Result4 = tmp2(obj[15]);
         } else {
-          const guild = GuildStore.getGuild(item.guild_id);
+          guild = GuildStore.getGuild(item.guild_id);
           let tmp9 = null;
           if (null != guild) {
             tmp9 = getGuildAcronym(guild);

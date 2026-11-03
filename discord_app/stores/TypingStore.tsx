@@ -1,12 +1,12 @@
-// === Module 13729: TypingStore ===
+// === Module 13860: TypingStore ===
 
-// Module 13729 (TypingStore)
+// Module 13860 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function handleTypingStart(arg0) {
@@ -106,7 +106,7 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(7830).SlowmodeType;
+const SlowmodeType = fn(7954).SlowmodeType;
 const Endpoints = fn(1072).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
@@ -136,12 +136,12 @@ prototype["getTypingUsersByGuild"] = function getTypingUsersByGuild(arg0) {
   }
   return tmp;
 };
-prototype["isTyping"] = function isTyping(isStage, id) {
-  let tmp = dependencyMap[isStage];
+prototype["isTyping"] = function isTyping(id, id2) {
+  let tmp = dependencyMap[id];
   if (tmp == null) {
     tmp = closure_13;
   }
-  return null != tmp[id];
+  return null != tmp[id2];
 };
 prototype["getCustomTypingIndicatorConfig"] = function getCustomTypingIndicatorConfig(arg0) {
   let tmp = closure_12[arg0];
@@ -159,7 +159,7 @@ const typingStore = new TypingStore(DispatcherDefault, {
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(7396).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(7520).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;

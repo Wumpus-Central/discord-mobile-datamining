@@ -1,6 +1,6 @@
-// === Module 7734: CollectiblesDebugStore ===
+// === Module 7858: CollectiblesDebugStore ===
 
-// Module 7734 (CollectiblesDebugStore)
+// Module 7858 (CollectiblesDebugStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const useCollectiblesDebugStore = module_560.create((arg0) => {
       closure_0 = arg0;
       return closure_0((logs) => {
         const obj = { logs: null };
-        const items = [...logs.logs];
+        items = [...logs.logs];
         const date = new Date();
         items[tmp] = "[" + new Date().toISOString().split("T")[0] + "] " + closure_0;
         obj.logs = items;
@@ -29,6 +29,6 @@ const result = size.fileFinishedImporting("modules/collectibles/CollectiblesDebu
 export { useCollectiblesDebugStore };
 export function addDebugLog(arg0) {
   const date = new Date();
-  const state = obj.getState();
+  state = obj.getState();
   state.addLog("[" + new Date().toLocaleTimeString("en-US", { hour12: false }) + "] " + arg0);
 }

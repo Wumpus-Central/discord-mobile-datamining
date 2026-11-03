@@ -1,14 +1,14 @@
-// === Module 14428: CollectiblesShopGiftModal ===
+// === Module 14559: CollectiblesShopGiftModal ===
 
-// Module 14428 (CollectiblesShopGiftModal)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import BadgeId from "BadgeId" /* 8755 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import openGiftModal from "openGiftModal" /* 14427 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 14430 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 14433 */;
+// Module 14559 (CollectiblesShopGiftModal)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import BadgeId from "BadgeId" /* 8879 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
+import openGiftModal from "openGiftModal" /* 14558 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 14561 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 14564 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 require = fn;
 function CollectiblesShopGiftModalContent(product) {
@@ -34,7 +34,7 @@ function CollectiblesShopGiftModalContent(product) {
     }
     tmp5 = result;
   }
-  const items = [onGiftModalDismiss];
+  items = [onGiftModalDismiss];
   obj = require("PlatformUtils");
   const callback = noop.useCallback(() => {
     openGiftModal.closeShopGiftModal();
@@ -80,7 +80,7 @@ export default function CollectiblesShopGiftModal(skuId) {
   ({ lockedRecipientUser, giftingOrigin } = skuId);
   const GiftingBadgeExperiment = skuId(skuId1[15]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
-  const items = [enabled];
+  items = [enabled];
   const effect = noop.useEffect(() => {
     if (enabled) {
       const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);

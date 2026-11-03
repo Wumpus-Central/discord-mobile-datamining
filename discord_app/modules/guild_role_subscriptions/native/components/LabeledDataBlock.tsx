@@ -1,16 +1,16 @@
-// === Module 17211: LabeledDataBlock ===
+// === Module 17354: LabeledDataBlock ===
 
-// Module 17211 (LabeledDataBlock)
+// Module 17354 (LabeledDataBlock)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, titleSection: { flexDirection: "row", alignItems: "center", marginBottom: 16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function LabeledDataBlock(arg0) {
   ({ title, style, onPressIcon } = arg0);
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const obj2 = { style: tmp.titleSection, children: null };
   const items1 = [React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title }), ];

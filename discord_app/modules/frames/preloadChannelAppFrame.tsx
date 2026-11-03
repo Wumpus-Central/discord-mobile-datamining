@@ -1,28 +1,28 @@
-// === Module 18287: preloadChannelAppFrame ===
+// === Module 18430: preloadChannelAppFrame ===
 
-// Module 18287 (preloadChannelAppFrame)
-import getURLForApplicationDefault from "getURLForApplication" /* 5672 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6753 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6849 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
-import createProxyTicket from "createProxyTicket" /* 10885 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 10886 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import FramesStore from "FramesStore" /* 6846 */;
+// Module 18430 (preloadChannelAppFrame)
+import getURLForApplicationDefault from "getURLForApplication" /* 5792 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6873 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6969 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
+import createProxyTicket from "createProxyTicket" /* 11015 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 11016 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1072);
-({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);
+({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: closure_10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/preloadChannelAppFrame.tsx");
 
 export function preloadChannelAppFrame(id) {
   const channel = ChannelStore.getChannel(id);
-  let application_id;
+  application_id = undefined;
   if (channel != null) {
     application_id = channel.application_id;
   }
@@ -53,7 +53,7 @@ export function preloadChannelAppFrame(id) {
         const tmp11Result2 = createProxyTicket;
         loadEmbeddedAppCSPForLaunchDefault(application_id).catch(React7);
         const useApplication = ApplicationActionCreators.useApplication;
-        const items = [application_id];
+        items = [application_id];
         const many = useApplication.fetchMany(items);
         many.catch(React7);
         const promise = loadEmbeddedAppCSPForLaunchDefault(application_id);

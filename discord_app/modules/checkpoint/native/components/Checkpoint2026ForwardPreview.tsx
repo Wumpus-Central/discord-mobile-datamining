@@ -1,9 +1,9 @@
-// === Module 13415: Checkpoint2026ForwardPreview ===
+// === Module 13551: Checkpoint2026ForwardPreview ===
 
-// Module 13415 (Checkpoint2026ForwardPreview)
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6087 */;
+// Module 13551 (Checkpoint2026ForwardPreview)
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6207 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
 let obj3 = { transform: null };
 let items = [{ translateY: -2 }];
@@ -30,7 +30,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
   const isCheckpointCardEnabled = require("CheckpointExperiments").useIsCheckpointCardEnabled("Checkpoint2026ForwardPreview");
   let obj = require("CheckpointExperiments");
   const tmp2 = _require;
-  let items = [character];
+  items = [character];
   const memo = noop.useMemo(() => {
     if (null != character) {
       const _Math = Math;
@@ -51,13 +51,13 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
     if (null != character) {
       let mapped = memo.map((uri) => {
         const obj = { source: { uri }, style: null };
-        const items = [absoluteFill.absoluteFill, layer.layer];
+        items = [absoluteFill.absoluteFill, layer.layer];
         obj.style = items;
         return jsx(FastImageDefault, { source: { uri }, style: null }, uri);
       });
     } else {
       const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(13416).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      mapped = jsx(tmp2(13552).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

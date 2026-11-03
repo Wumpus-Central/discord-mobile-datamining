@@ -1,9 +1,9 @@
-// === Module 19217: useVoicePanelNavArrowPressed ===
+// === Module 19375: useVoicePanelNavArrowPressed ===
 
-// Module 19217 (useVoicePanelNavArrowPressed)
+// Module 19375 (useVoicePanelNavArrowPressed)
 import noop from "module_19" /* 19 */;
 
-const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
@@ -13,7 +13,7 @@ export default function useVoicePanelNavArrowPressed() {
   setFocused = context.setFocused;
   dismissPanel = context.dismissPanel;
   const controlsSpecs = context.controlsSpecs;
-  const items = [focused, controlsSpecs, dismissPanel, setFocused];
+  items = [focused, controlsSpecs, dismissPanel, setFocused];
   return dismissPanel.useCallback(() => {
     value = focused.get();
     let id;

@@ -1,9 +1,9 @@
-// === Module 9381: GameProfileMediaSources ===
+// === Module 9509: GameProfileMediaSources ===
 
-// Module 9381 (GameProfileMediaSources)
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2030 */;
-import StoreUtils from "StoreUtils" /* 6455 */;
+// Module 9509 (GameProfileMediaSources)
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2159 */;
+import StoreUtils from "StoreUtils" /* 6575 */;
 import size_mod from "module_2" /* 2 */;
 
 let c2 = 366;
@@ -26,7 +26,7 @@ export function getCarouselPreviewPixelSize() {
 }
 export function buildMediaEntries(game) {
   if (null == game) {
-    let items = [];
+    items = [];
   } else {
     let trailers = game.trailers;
     if (trailers == null) {

@@ -1,13 +1,13 @@
-// === Module 16465: HexagonActionCreators ===
+// === Module 16608: HexagonActionCreators ===
 
-// Module 16465 (HexagonActionCreators)
+// Module 16608 (HexagonActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5041 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5168 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function enrollInHexagonCampaign() {
@@ -31,7 +31,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -80,7 +80,7 @@ let closure_11 = async function _enrollAndWaitForHexagonCampaignPerk(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -256,7 +256,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(5039).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(5166).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 5 * DurationsDefault.Millis.SECOND;
 let closure_10 = null;

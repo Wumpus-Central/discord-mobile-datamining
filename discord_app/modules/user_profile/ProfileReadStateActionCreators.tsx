@@ -1,11 +1,11 @@
-// === Module 15000: ProfileReadStateActionCreators ===
+// === Module 15136: ProfileReadStateActionCreators ===
 
-// Module 15000 (ProfileReadStateActionCreators)
+// Module 15136 (ProfileReadStateActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 15001 */;
+import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 15137 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let closure_7 = async function _ackProfileWishlist(arg0) {
@@ -19,7 +19,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
             const ProfileReadStateEndpoints = ProfileReadStateEndpoints2.ProfileReadStateEndpoints;
             request.url = ProfileReadStateEndpoints.PROFILE_READ_STATE(closure_0);
             const obj4 = { sections: null };
-            const items = [constants.WISHLIST];
+            items = [constants.WISHLIST];
             obj4.sections = items;
             request.body = obj4;
             c6 = 2;
@@ -104,7 +104,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
     }
   }
 };
-const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
 let closure_6 = new LoggerDefault("ProfileReadStateActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateActionCreators.tsx");

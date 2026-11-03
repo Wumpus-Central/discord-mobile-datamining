@@ -1,13 +1,13 @@
-// === Module 17902: SponsoredContentPreferencesScreen ===
+// === Module 18045: SponsoredContentPreferencesScreen ===
 
-// Module 17902 (SponsoredContentPreferencesScreen)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+// Module 18045 (SponsoredContentPreferencesScreen)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_settings/privacy_and_saf
 
 export default function SponsoredContentPreferencesScreen() {
   const obj = { settings: null, subLabel: null };
-  const items = [MobileUserSettings.USE_DATA_FOR_QUESTS_SPONSORED_CONTENT];
+  items = [MobileUserSettings.USE_DATA_FOR_QUESTS_SPONSORED_CONTENT];
   obj.settings = items;
   const intl = items1(1113).intl;
   const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };

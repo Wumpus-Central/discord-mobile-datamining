@@ -1,7 +1,7 @@
-// === Module 12114: useConjureAppIdentity ===
+// === Module 12250: useConjureAppIdentity ===
 
-// Module 12114 (useConjureAppIdentity)
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 12250 (useConjureAppIdentity)
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/identity/useConjureAp
 
 export default function useConjureAppIdentity(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);

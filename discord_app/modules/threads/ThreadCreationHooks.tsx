@@ -1,17 +1,17 @@
-// === Module 9776: ThreadCreationHooks ===
+// === Module 9908: ThreadCreationHooks ===
 
-// Module 9776 (ThreadCreationHooks)
+// Module 9908 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ThreadHooks from "ThreadHooks" /* 7443 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7455 */;
-import MessageParserDefault from "MessageParser" /* 7824 */;
+import ThreadHooks from "ThreadHooks" /* 7567 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7579 */;
+import MessageParserDefault from "MessageParser" /* 7948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7476 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7600 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 require = fn;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {
@@ -83,7 +83,7 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     const str4 = MessageParserDefault.unparse(str3, stateFromStores.id, true);
     const tmp17Result = sanitizeThreadNameDefault;
     let str7 = sanitizeThreadNameDefault(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
-    const items = [];
+    items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
       if (null == match.index) {
@@ -414,13 +414,13 @@ let closure_26 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7701).DraftType;
-const SlowmodeType = fn(7830).SlowmodeType;
+const DraftType = fn(7825).DraftType;
+const SlowmodeType = fn(7954).SlowmodeType;
 const ThreadConstants = fn(1112);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1072);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
@@ -461,7 +461,7 @@ export function useCreateThreadCommon(parentChannel) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -561,24 +561,24 @@ export function useCreateThreadCommon(parentChannel) {
                 }
                 if (null != items1) {
                   if (items1.length > 0) {
-                    const obj4 = closure_1_1(7636);
+                    const obj4 = closure_1_1(7760);
                     id = id.id;
                     const obj3 = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7824).parse(id, arg1), obj3);
-                    const obj5 = closure_1_1(7824);
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7948).parse(id, arg1), obj3);
+                    const obj5 = closure_1_1(7948);
                   }
                   return sendStickersResult;
                 }
-                obj = closure_1_1(7636);
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7824).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
-                const obj2 = closure_1_1(7824);
+                obj = closure_1_1(7760);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7948).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
+                const obj2 = closure_1_1(7948);
                 const obj6 = { location: constants.THREAD_CREATION };
               })(closure_132_7, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj9 = parentMessageId(threadSettings[19]);
             }
             parentMessageId(threadSettings[20]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp42) {
           c7 = tmp;
@@ -587,7 +587,7 @@ export function useCreateThreadCommon(parentChannel) {
       }
     })();
   });
-  const items = [parentChannel, parentMessageId, threadSettings, onThreadCreated, privateThreadMode, _location, useDefaultThreadName, uploadHandler];
+  items = [parentChannel, parentMessageId, threadSettings, onThreadCreated, privateThreadMode, _location, useDefaultThreadName, uploadHandler];
   return onThreadCreated.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -635,7 +635,7 @@ export function useCreateForumPostCommon(parentChannel) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -721,7 +721,7 @@ export function useCreateForumPostCommon(parentChannel) {
               }
               if (tmp95) {
                 let activity = tmp93.activity;
-                let application_id;
+                application_id = undefined;
                 if (activity != null) {
                   application_id = activity.application_id;
                 }
@@ -855,7 +855,7 @@ export function useCreateForumPostCommon(parentChannel) {
       }
     })();
   });
-  const items = [parentChannel, name, appliedTags, onThreadCreated, analyticsLocations, upload, activityAction, voiceChatEnabled, applicationId];
+  items = [parentChannel, name, appliedTags, onThreadCreated, analyticsLocations, upload, activityAction, voiceChatEnabled, applicationId];
   return upload.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

@@ -1,23 +1,23 @@
-// === Module 11622: useMemberListAction ===
+// === Module 11759: useMemberListAction ===
 
-// Module 11622 (useMemberListAction)
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11626 */;
+// Module 11759 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10734).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10864).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1072);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "raw", listActionHeight: "cix" };
-const createStyles = fn(5014);
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "flexDirection" };
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
@@ -45,7 +45,7 @@ export default function useMemberListAction(channel) {
   let callback1;
   let tmp = closure_17();
   importDefault = tmp;
-  let items = [flag2];
+  items = [flag2];
   stateFromStores = channel(stateFromStores[11]).useStateFromStores(items, () => {
     let isDMResult;
     if (channel != null) {
@@ -261,7 +261,7 @@ export default function useMemberListAction(channel) {
           obj6.subLabel = sublabel;
           tmp42Result = closure_14(channel(stateFromStores[30]).RowButton, obj6);
         }
-        const items = [tmp42Result, ];
+        items = [tmp42Result, ];
         let tmp42Result2 = null;
         if (closure_6) {
           tmp42Result2 = null;

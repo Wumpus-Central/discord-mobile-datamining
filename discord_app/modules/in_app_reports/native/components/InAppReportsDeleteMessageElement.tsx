@@ -1,11 +1,11 @@
-// === Module 15171: InAppReportsDeleteMessageElement ===
+// === Module 15312: InAppReportsDeleteMessageElement ===
 
-// Module 15171 (InAppReportsDeleteMessageElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
+// Module 15312 (InAppReportsDeleteMessageElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -19,7 +19,7 @@ export default function DeleteMessageElement(message) {
   let stateFromStores;
   const tmp = stateFromStores(noop.useState(false), 2);
   dependencyMap = tmp[1];
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [message];
   stateFromStores = message(504).useStateFromStores(items, () => null == MessageStore.getMessage(message.getChannelId(), message.id), items1);
   const items2 = [stateFromStores];
@@ -43,6 +43,6 @@ export default function DeleteMessageElement(message) {
   obj2.description = intl3.string(message(1113).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(5738).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(15167), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  obj2.icon = jsx(message(5858).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(15308), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

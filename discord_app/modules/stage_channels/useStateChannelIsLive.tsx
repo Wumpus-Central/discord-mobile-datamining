@@ -1,7 +1,7 @@
-// === Module 7943: useStateChannelIsLive ===
+// === Module 8067: useStateChannelIsLive ===
 
-// Module 7943 (useStateChannelIsLive)
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+// Module 8067 (useStateChannelIsLive)
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStateChanne
 
 export default function useStageChannelIsLive(arg0) {
   _require = arg0;
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => StageInstanceStore.isLive(closure_0), items1);
 };

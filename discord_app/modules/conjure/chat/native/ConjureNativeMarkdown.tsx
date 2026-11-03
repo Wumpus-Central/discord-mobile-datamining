@@ -1,11 +1,11 @@
-// === Module 12197: ConjureNativeMarkdown ===
+// === Module 12333: ConjureNativeMarkdown ===
 
-// Module 12197 (ConjureNativeMarkdown)
+// Module 12333 (ConjureNativeMarkdown)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import conjureMarkup from "conjureMarkup" /* 12142 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12198 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12199 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import conjureMarkup from "conjureMarkup" /* 12278 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12334 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,10 +26,10 @@ class ConjureNativeMarkdown {
               let tmp4 = React4(Text_Text.Text, obj2, index);
             } else {
               obj = { style: list.list, accessibilityRole: "list", children: null };
-              let items = kind.items;
+              items = kind.items;
               obj.children = items.map((children, index) => {
                 const obj = { style: null, children: null };
-                const items = [list.item, { paddingLeft: children.depth * PX_16 }];
+                items = [list.item, { paddingLeft: children.depth * PX_16 }];
                 obj.style = items;
                 const obj3 = { style: list.marker, children: closure_2_4(source(dependencyMap[6]).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
                 const items1 = [closure_2_4(View, obj3), ];
@@ -56,7 +56,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };

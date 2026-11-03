@@ -1,11 +1,11 @@
-// === Module 15703: ActivateDevice ===
+// === Module 15846: ActivateDevice ===
 
-// Module 15703 (ActivateDevice)
+// Module 15846 (ActivateDevice)
 import nativeDefault from "native" /* 575 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1893 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 14174 */;
-import _modDef15707 from "module_15707" /* 15707 */;
-import _modDef15708 from "module_15708" /* 15708 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 14305 */;
+import _modDef15850 from "module_15850" /* 15850 */;
+import _modDef15851 from "module_15851" /* 15851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -45,7 +45,7 @@ export (onClose) => {
   importDefault = tmp4;
   [first1, _slicedToArray] = deviceCodeAuthorizeCallback.useState(null);
   const activateDeviceStepTracking = first(first1[6]).useActivateDeviceStepTracking(first);
-  let items = [tmp2[1]];
+  items = [tmp2[1]];
   const callback = deviceCodeAuthorizeCallback.useCallback(() => {
     closure_1({ type: "user-code-input" });
   }, items);
@@ -79,13 +79,13 @@ export (onClose) => {
   const effect = deviceCodeAuthorizeCallback.useEffect(() => {
     if ("userCodeData" in first) {
       const userCodeData = first.userCodeData;
-      const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
+      items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef15707);
+        closure_3(_modDef15850);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef15708);
+          closure_3(_modDef15851);
         }
       }
     }
@@ -121,7 +121,7 @@ export (onClose) => {
   const obj7 = { source: null, style: null };
   let obj2 = first(first1[7]);
   const tmp23 = require("FastImage");
-  obj7.source = first(first1[18]).makeSource(require("module_15715"));
+  obj7.source = first(first1[18]).makeSource(require("module_15858"));
   obj7.style = tmp.imageStyle;
   const items6 = [closure_8(tmp23, obj7), ];
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };

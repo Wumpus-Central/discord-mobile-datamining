@@ -1,10 +1,10 @@
-// === Module 6834: IAPEligibility ===
+// === Module 6954: IAPEligibility ===
 
-// Module 6834 (IAPEligibility)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import getSystemVersion from "getSystemVersion" /* 6835 */;
+// Module 6954 (IAPEligibility)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import getSystemVersion from "getSystemVersion" /* 6955 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 let c4 = "13.2";
@@ -55,7 +55,7 @@ export function canUseRoleSubscriptionIAP(guildId) {
         }
       }
       if (-1 !== num3) {
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         let everyResult = null != guild;
         if (everyResult) {
           everyResult = items.every((item) => {
@@ -75,7 +75,7 @@ export function canUseRoleSubscriptionIAP(guildId) {
 export function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(6835).getSystemVersion();
+    const str = guildId(6955).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
@@ -120,11 +120,11 @@ export function useCanUseRoleSubscriptionIAP(guildId) {
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1375).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1377).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let everyResult = null != guild;
       if (everyResult) {
         everyResult = items.every((item) => {

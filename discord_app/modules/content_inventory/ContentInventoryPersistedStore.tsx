@@ -1,6 +1,6 @@
-// === Module 13431: ContentInventoryPersistedStore ===
+// === Module 13567: ContentInventoryPersistedStore ===
 
-// Module 13431 (ContentInventoryPersistedStore)
+// Module 13567 (ContentInventoryPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
@@ -115,7 +115,7 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(Dispat
     for (const item10017 of tmp) {
       if (!set1.has(item10017)) {
         let itemImpressions = closure_2.itemImpressions;
-        let items = [item10017, tmp4];
+        items = [item10017, tmp4];
         let arr = itemImpressions.push(items);
         flag = true;
       }

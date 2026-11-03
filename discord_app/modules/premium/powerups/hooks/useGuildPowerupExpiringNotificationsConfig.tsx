@@ -1,12 +1,12 @@
-// === Module 14131: useGuildPowerupExpiringNotificationsConfig ===
+// === Module 14262: useGuildPowerupExpiringNotificationsConfig ===
 
-// Module 14131 (useGuildPowerupExpiringNotificationsConfig)
+// Module 14262 (useGuildPowerupExpiringNotificationsConfig)
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import _modDef2996 from "module_2996" /* 2996 */;
-import Powerups from "Powerups" /* 5233 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 14132 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 14133 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import _modDef3123 from "module_3123" /* 3123 */;
+import Powerups from "Powerups" /* 5356 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 14263 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 14264 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
@@ -18,9 +18,9 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef2996["B3OfL/"]);
+      stringResult = intl.string(_modDef3123["B3OfL/"]);
     }
-    const items = [];
+    items = [];
     const arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
     if (null != stringResult) {
       const items1 = [stringResult];
@@ -32,11 +32,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      items3.push(intl2.string(_modDef2570.Sfr0Jw));
+      items3.push(intl2.string(_modDef2699.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      items3.push(intl3.string(_modDef2996.wiungr));
+      items3.push(intl3.string(_modDef3123.wiungr));
     }
     const obj2 = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj2;

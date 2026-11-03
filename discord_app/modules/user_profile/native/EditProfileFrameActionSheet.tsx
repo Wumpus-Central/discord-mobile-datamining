@@ -1,16 +1,16 @@
-// === Module 16505: EditProfileFrameActionSheet ===
+// === Module 16648: EditProfileFrameActionSheet ===
 
-// Module 16505 (EditProfileFrameActionSheet)
+// Module 16648 (EditProfileFrameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8735 */;
-import useShopProductItems from "useShopProductItems" /* 8742 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 16507 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8859 */;
+import useShopProductItems from "useShopProductItems" /* 8866 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 16650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ function EditProfileFrameInner(user) {
   const guildId = user.guildId;
   const getOrFetchCollectiblesCategoriesAndPurchases = user(guildId[20]).useGetOrFetchCollectiblesCategoriesAndPurchases();
   const obj = user(guildId[20]);
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   const stateFromStores = user(guildId[21]).useStateFromStores(items, () => isFetching.isFetching);
   const obj2 = user(guildId[21]);
   const tmp6 = setSelectedProfileFrame(guildId[22])();
@@ -106,11 +106,11 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8744)(previewSkuId);
+  const tmp2 = purchase(8868)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
-  const items = [purchase, product];
+  items = [purchase, product];
   const obj = { style: tmp.previewContainer, children: null };
   const memo = noop.useMemo(() => {
     let first;
@@ -130,21 +130,21 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11506), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [closure_9(purchase(11643), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5587), obj2);
+  items1[1] = closure_9(purchase(5710), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, previewContainer: { overflow: "hidden", height: 300, alignItems: "center" }, previewGradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -172,7 +172,7 @@ export default function EditProfileFrameActionSheet(arg0) {
   const tmp4 = require("useDisplayProfile");
   let obj = guildId(selectedProfileFrame[10]);
   const analyticsLocations = require("useAnalyticsLocations")(tmp2(tmp3[12]).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
-  const items = [guildId, tmp4Result];
+  items = [guildId, tmp4Result];
   memo = noop.useMemo(() => {
     const obj = { type: AnalyticsLocationDefault.EDIT_PROFILE_FRAME_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
     let tmp = null != closure_1;

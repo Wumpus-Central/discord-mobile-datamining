@@ -1,6 +1,6 @@
-// === Module 12397: ArraySearch ===
+// === Module 12533: ArraySearch ===
 
-// Module 12397 (ArraySearch)
+// Module 12533 (ArraySearch)
 import size from "module_2" /* 2 */;
 
 function sortGroup(arr, arg1) {
@@ -65,7 +65,7 @@ export function queryData(apps, limit) {
           bucketPredicates1 = [];
         }
         tmp = (function applyBucketing(found, bucketPredicates1, limit) {
-          const items = [];
+          items = [];
           let tmp = found;
           const iter = bucketPredicates1[Symbol.iterator]();
           while (iter !== undefined) {
@@ -92,7 +92,7 @@ export function queryData(apps, limit) {
       }
     }
   }
-  let items = [found];
+  items = [found];
   let sortComparers = limit.sortComparers;
   if (sortComparers == null) {
     sortComparers = [];

@@ -1,6 +1,6 @@
-// === Module 13815: downsampleWaveform ===
+// === Module 13946: downsampleWaveform ===
 
-// Module 13815 (downsampleWaveform)
+// Module 13946 (downsampleWaveform)
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ export default function downsampleWaveform(arg0, arg1) {
   if (arg0.length === arg1) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     let num5 = 0;
     while (items.length < arg1) {
       let _Math = Math;

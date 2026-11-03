@@ -1,10 +1,10 @@
-// === Module 9341: useInAppBrowserReturn ===
+// === Module 9469: useInAppBrowserReturn ===
 
-// Module 9341 (useInAppBrowserReturn)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9320 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+// Module 9469 (useInAppBrowserReturn)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9448 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9322 */;
+import GameProfileStore from "GameProfileStore" /* 9450 */;
 
 require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useIn
 export default function useInAppBrowserReturn(gameId) {
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
-  const items = [gameId, scrollY];
+  items = [gameId, scrollY];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       if (obj.isIOS()) {

@@ -1,17 +1,17 @@
-// === Module 11861: VoicePanelUtils ===
+// === Module 11998: VoicePanelUtils ===
 
-// Module 11861 (VoicePanelUtils)
+// Module 11998 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import VoicePanelStore from "VoicePanelStore" /* 6875 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import VoicePanelStore from "VoicePanelStore" /* 6995 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export function useIsVoicePanelShowing() {
-  const items = [ChannelStore, RTCConnectionStore];
+  items = [ChannelStore, RTCConnectionStore];
   return useStateFromStores.useStateFromStores(items, () => {
     channel = channel.getChannel(channelId.getChannelId());
     return null != channel && !channel.isGuildStageVoice();

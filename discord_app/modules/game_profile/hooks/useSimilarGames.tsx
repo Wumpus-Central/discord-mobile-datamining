@@ -1,42 +1,59 @@
-// === Module 9585: useSimilarGames ===
+// === Module 9717: useSimilarGames ===
 
-// Module 9585 (useSimilarGames)
-import GameStore from "GameStore" /* 2014 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 9717 (useSimilarGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8806 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9445 */;
+import useGameArtwork from "useGameArtwork" /* 9504 */;
+import GameStore from "GameStore" /* 2143 */;
+import UserStore from "UserStore" /* 1385 */;
 
-const require = fn;
-fn(9456).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+require = fn;
+fn(9584).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
 export default function useSimilarGames(arg0) {
-  const hasItem = set.has(arg0);
-  const similarGameIds = data(9455).useSimilarGameIds(arg0, !hasItem);
-  ({ data, isLoading, error } = similarGameIds);
-  if (hasItem) {
-    let tmp7 = closure_5;
-  } else {
-    tmp7 = data;
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = !set.has(arg0);
   }
-  data = tmp7;
-  const obj = data(9455);
-  const tmp2 = !hasItem;
-  const games = data(7480).useGames(tmp7);
-  const tmp3Result = data(7480);
-  const items = [GameStore];
-  const items1 = [tmp7];
+  const similarGameIds = data(9583).useSimilarGameIds(arg0, tmp);
+  ({ data, isLoading, error } = similarGameIds);
+  if (!tmp) {
+    let tmp6 = closure_5;
+  } else {
+    tmp6 = data;
+  }
+  data = tmp6;
+  const obj = data(9583);
+  const games = data(7604).useGames(tmp6);
+  const tmp3Result = data(7604);
+  items = [GameStore];
+  const items1 = [tmp6];
   const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);
   data(504);
   const items2 = [GameStore, UserStore];
-  [][0] = tmp7;
-  if (hasItem) {
-    const obj2 = { isFetching: false, similarGames };
+  [][0] = tmp6;
+  if (tmp) {
+    const obj2 = { isFetching: null == error && null == data || isLoading || stateFromStores, similarGames: tmp10 };
     let obj3 = obj2;
+    const tmp12 = null == error && null == data || isLoading || stateFromStores;
   } else {
-    obj3 = { isFetching: null == error && null == data || isLoading || stateFromStores, similarGames: tmp11 };
-    const tmp13 = null == error && null == data || isLoading || stateFromStores;
+    obj3 = { isFetching: false, similarGames };
   }
   return obj3;
 };
+export function isShowableSimilarGame(game, nsfwAllowed) {
+  let gameIsAcceptableResult = useShouldOpenGameProfileModal.gameIsAcceptable(game);
+  if (gameIsAcceptableResult) {
+    gameIsAcceptableResult = !useGameProfileObscured.isGameProfileObscured(game, nsfwAllowed);
+    const tmpResult = useGameProfileObscured;
+  }
+  if (gameIsAcceptableResult) {
+    gameIsAcceptableResult = useGameArtwork.hasGameArtwork(game);
+    const tmpResult2 = useGameArtwork;
+  }
+  return gameIsAcceptableResult;
+}

@@ -1,7 +1,7 @@
-// === Module 18493: useNotificationCenterItemAcked ===
+// === Module 18647: useNotificationCenterItemAcked ===
 
-// Module 18493 (useNotificationCenterItemAcked)
-import NotificationCenterStore from "NotificationCenterStore" /* 18486 */;
+// Module 18647 (useNotificationCenterItemAcked)
+import NotificationCenterStore from "NotificationCenterStore" /* 18640 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/notification_center/useNotifi
 
 export function useNotificationCenterItemAcked(forceUnacked, ackedBeforeId) {
   _require = forceUnacked;
-  const items = [NotificationCenterStore];
+  items = [NotificationCenterStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => NotificationCenterStore.isLocalItemAcked(closure_0));
   forceUnacked = forceUnacked.forceUnacked;
   let tmp4 = !forceUnacked;

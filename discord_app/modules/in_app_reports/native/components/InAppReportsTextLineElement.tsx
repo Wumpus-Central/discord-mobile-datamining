@@ -1,9 +1,9 @@
-// === Module 8374: InAppReportsTextLineElement ===
+// === Module 8498: InAppReportsTextLineElement ===
 
-// Module 8374 (InAppReportsTextLineElement)
+// Module 8498 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 575 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,8 +12,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, description: { marginBottom: 16 }, trailingButtonContainer: { paddingHorizontal: 8 }, smsInfoContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, smsNumberContainer: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 }, smsNumberContainerSuccess: null, startButtonContainer: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 };
 obj2.smsNumberContainerSuccess = { borderColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -38,7 +38,7 @@ export default function TextLineElement(element) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function TextLineElement(element) {
             const obj = tmp3(dependencyMap[11]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -105,8 +105,8 @@ export default function TextLineElement(element) {
   [tmp3, c2] = noop.useState(false);
   if (is_localized) {
     let obj = { style: tmp.container, children: null };
-    let obj2 = { style: tmp.header, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
-    const items = [closure_9(sms(tmp4[12]).Text, obj2), , ];
+    let obj2 = { style: tmp.header, variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
+    items = [closure_9(sms(tmp4[12]).Text, obj2), , ];
     let obj3 = { style: tmp.description, variant: "text-md/medium", children: tmp5(body) };
     items[1] = closure_9(sms(tmp4[12]).Text, obj3);
     let obj4 = { style: tmp.smsInfoContainer, children: null };

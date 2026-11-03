@@ -1,6 +1,6 @@
-// === Module 19665: guildSpaceWidgetLayout ===
+// === Module 19815: guildSpaceWidgetLayout ===
 
-// Module 19665 (guildSpaceWidgetLayout)
+// Module 19815 (guildSpaceWidgetLayout)
 import size from "module_2" /* 2 */;
 
 function byOrder(position, position2) {
@@ -12,14 +12,14 @@ export const LEFT_COLUMN = 0;
 export const RIGHT_COLUMN = 1;
 export function splitWidgetsByColumn(arr) {
   const found = arr.filter((position) => 1 !== position.position.column);
-  const items = [found.sort(byOrder), ];
+  items = [found.sort(byOrder), ];
   const found1 = arr.filter((position) => 1 === position.position.column);
   items[1] = found1.sort(byOrder);
   return items;
 }
 export function renumberWidgets(arr) {
   const found = arr.filter((position) => 1 !== position.position.column);
-  const items = [found.sort(byOrder), ];
+  items = [found.sort(byOrder), ];
   const found1 = arr.filter((position) => 1 === position.position.column);
   items[1] = found1.sort(byOrder);
   return items.flatMap((arr, index) => {
@@ -40,7 +40,7 @@ export function renumberWidgets(arr) {
 }
 export function addWidget(arr, arg1, column) {
   const found = arr.filter((position) => 1 !== position.position.column);
-  const items = [found.sort(byOrder), ];
+  items = [found.sort(byOrder), ];
   const found1 = arr.filter((position) => 1 === position.position.column);
   items[1] = found1.sort(byOrder);
   column = undefined;
@@ -103,7 +103,7 @@ export function moveWidget(arr, arg1, arg2, arg3) {
     return null;
   } else {
     const found1 = arr.filter((position) => 1 !== position.position.column);
-    const items = [found1.sort(byOrder), ];
+    items = [found1.sort(byOrder), ];
     const found2 = arr.filter((position) => 1 === position.position.column);
     items[1] = found2.sort(byOrder);
     const first = items[0];

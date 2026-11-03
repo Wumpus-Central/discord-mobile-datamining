@@ -1,14 +1,14 @@
-// === Module 8811: useUserProfileColors ===
+// === Module 8935: useUserProfileColors ===
 
-// Module 8811 (useUserProfileColors)
+// Module 8935 (useUserProfileColors)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import useToken from "useToken" /* 5596 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7353 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8802 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import useToken from "useToken" /* 5719 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7473 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8926 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const ThemeTypes = fn(1083).ThemeTypes;
@@ -19,7 +19,7 @@ export function useUserProfileColors(theme) {
   ({ primaryColor, secondaryColor } = theme);
   const tmp2 = useThemeDefault();
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const obj3 = { gradientFallbackBackground: null, gradientSecondaryBackground: null, containerBackground: null, containerBorderColor: null, avatarBackground: null, statusBackground: null };
   const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   obj3.gradientFallbackBackground = useToken.useToken(nativeDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);

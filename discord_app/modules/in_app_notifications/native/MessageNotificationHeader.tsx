@@ -1,18 +1,18 @@
-// === Module 11078: MessageNotificationHeader ===
+// === Module 11215: MessageNotificationHeader ===
 
-// Module 11078 (MessageNotificationHeader)
+// Module 11215 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import ChatIcon2 from "ChatIcon" /* 8643 */;
-import ThreadIcon2 from "ThreadIcon" /* 8645 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import ChatIcon2 from "ChatIcon" /* 8767 */;
+import ThreadIcon2 from "ThreadIcon" /* 8769 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function LocationText(channel) {
@@ -25,7 +25,7 @@ function LocationText(channel) {
   if (str == null) {
     str = "text-muted";
   }
-  const items = [channel, parentChannel, tmp.icon, str];
+  items = [channel, parentChannel, tmp.icon, str];
   let obj = { style: tmp.secondaryTextContainer, children: null };
   let tmp5 = null != author;
   const memo = noop.useMemo(() => {
@@ -51,7 +51,7 @@ function LocationText(channel) {
     }
   }, items);
   if (tmp5) {
-    const obj2 = { variant: "text-md/bold", color: str, maxFontSizeMultiplier: 1.75, style: tmp.separator, children: "\u00B7" };
+    const obj2 = { variant: "text-md/semibold", color: str, maxFontSizeMultiplier: 1.75, style: tmp.separator, children: "\u00B7" };
     tmp5 = closure_7(channel(parentChannel[8]).Text, obj2);
   }
   const items1 = [tmp5, memo, closure_7(channel(parentChannel[8]).Text, { variant: "text-md/semibold", color: str, lineClamp: 1, style: tmp.secondaryText, children: _location })];
@@ -61,7 +61,7 @@ function LocationText(channel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, headerContent: { flex: 1, flexDirection: "row", alignItems: "center" }, primaryText: { flexShrink: 1, marginRight: 2 }, secondaryTextContainer: { flexDirection: "row", alignItems: "center", gap: 2, flex: 1, overflow: "hidden" }, separator: { marginHorizontal: 2 }, icon: { width: 16, height: 16 }, secondaryText: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -70,7 +70,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/M
 export default function MessageNotificationHeader(locationTextColor) {
   ({ channel, parentChannel, guild, author } = locationTextColor);
   const tmp = closure_9();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   if (author != null) {
     const colorString = author.colorString;
@@ -176,13 +176,13 @@ export function SimpleNotificationHeader(secondaryText) {
   const tmp = closure_9();
   const obj = { style: tmp.container, children: null };
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: text };
-  const items = [tmp.primaryText, labelStyle];
+  items = [tmp.primaryText, labelStyle];
   obj2.style = items;
   const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     const obj3 = { style: tmp.secondaryTextContainer, children: null };
-    const obj4 = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: tmp.separator, children: "\u00B7" };
+    const obj4 = { variant: "text-md/semibold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: tmp.separator, children: "\u00B7" };
     const items2 = [React5(Text_Text.Text, obj4), ];
     const obj5 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.secondaryText, children: secondaryText };
     items2[1] = React5(Text_Text.Text, obj5);

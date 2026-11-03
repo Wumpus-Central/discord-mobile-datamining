@@ -1,19 +1,19 @@
-// === Module 14576: useActivityStatusLabel ===
+// === Module 14707: useActivityStatusLabel ===
 
-// Module 14576 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10747 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10748 */;
-import isGameActivityDefault from "isGameActivity" /* 10755 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10759 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 14707 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10877 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10878 */;
+import isGameActivityDefault from "isGameActivity" /* 10885 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10889 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const util = v0wJXSh(1113);
-const VoiceActivityStatus = v0wJXSh(10764);
+const VoiceActivityStatus = v0wJXSh(10894);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");
@@ -22,14 +22,14 @@ export default function useActivityStatusLabel(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   let gameMentionsAsPlainText;
-  let items = [PresenceStore];
+  items = [PresenceStore];
   let items1 = [userId];
   const stateFromStores = userId(gameMentionsAsPlainText[6]).useStateFromStores(items, () => {
     if (null == userId) {
       return null;
     } else {
       const activities = PresenceStore.getActivities(tmp);
-      let state;
+      state = undefined;
       if (activities != null) {
         const found = activities.find((type) => type.type === userId(gameMentionsAsPlainText[7]).ActivityTypes.CUSTOM_STATUS);
         if (found != null) {
@@ -62,7 +62,7 @@ export default function useActivityStatusLabel(userId) {
     }
     let v0wJXSh = require;
     let obj = dependencyMap;
-    const items = [ApplicationStreamingStore, RelationshipStore];
+    items = [ApplicationStreamingStore, RelationshipStore];
     const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(userId, items);
     const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity({ userId, guildId }, { ChannelStore, PermissionStore, VoiceStateStore }).voiceChannel;
     if (null != discoverableApplicationStream) {

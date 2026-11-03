@@ -1,8 +1,8 @@
-// === Module 6055: MarkupAttachmentLinkRule ===
+// === Module 6175: MarkupAttachmentLinkRule ===
 
-// Module 6055 (MarkupAttachmentLinkRule)
-import _modDef1943 from "module_1943" /* 1943 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 6056 */;
+// Module 6175 (MarkupAttachmentLinkRule)
+import _modDef2072 from "module_2072" /* 2072 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 6176 */;
 import size from "module_2" /* 2 */;
 
 const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));
@@ -10,14 +10,14 @@ const regExp = new RegExp("^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" + 
 let obj = { attachmentLink: null };
 const arr = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES);
 obj.attachmentLink = {
-  order: _modDef1943.defaultRules.url.order - 0.5,
+  order: _modDef2072.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     return regExp.exec(arg0);
   },
   parse(attachmentUrl) {
     const obj = { type: "attachmentLink", content: null, attachmentUrl: attachmentUrl[0], attachmentName: attachmentUrl[1] };
-    const items = [{ type: "text", content: attachmentUrl[1] }];
+    items = [{ type: "text", content: attachmentUrl[1] }];
     obj.content = items;
     return obj;
   }

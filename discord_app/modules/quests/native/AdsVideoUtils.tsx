@@ -1,7 +1,7 @@
-// === Module 16944: AdsVideoUtils ===
+// === Module 17087: AdsVideoUtils ===
 
-// Module 16944 (AdsVideoUtils)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+// Module 17087 (AdsVideoUtils)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [-1000, -1003, -1004, -1008];

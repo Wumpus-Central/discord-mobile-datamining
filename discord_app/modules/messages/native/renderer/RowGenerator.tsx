@@ -1,19 +1,19 @@
-// === Module 8377: RowGenerator ===
+// === Module 8501: RowGenerator ===
 
-// Module 8377 (RowGenerator)
+// Module 8501 (RowGenerator)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import BlockedGroup from "BlockedGroup" /* 8380 */;
-import MessageWithContent from "MessageWithContent" /* 8382 */;
-import Separator from "Separator" /* 15156 */;
-import Loading from "Loading" /* 15157 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import BlockedGroup from "BlockedGroup" /* 8504 */;
+import MessageWithContent from "MessageWithContent" /* 8506 */;
+import Separator from "Separator" /* 15297 */;
+import Loading from "Loading" /* 15298 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({ RowType: closure_4, SeparatorType: hasOwnProperty, LoadingType: metroRequire } = RowGeneratorConstants);
 let obj = { constrainedWidth: 0, animatingStickerMessageId: null, forcedTheme: null, shouldObscureSpoiler: true, shouldDisableInteractiveComponents: true };
-let merged = Object.assign(fn(8379).DEFAULT_OPTIONS);
+let merged = Object.assign(fn(8503).DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
     merged = Object.assign({ options: null });

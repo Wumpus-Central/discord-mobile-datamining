@@ -1,6 +1,6 @@
-// === Module 1398: Record ===
+// === Module 1400: Record ===
 
-// Module 1398 (Record)
+// Module 1400 (Record)
 import size from "module_2" /* 2 */;
 
 let Record;
@@ -97,7 +97,7 @@ prototype["update"] = function update(arg0, arg1, arg2) {
   } else {
     const _Array = Array;
     if (tmp3 instanceof Array) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(tmp3, 0);
     } else {
       const _Object = Object;
@@ -164,7 +164,7 @@ prototype2["update"] = function update(arg0, value, fn) {
   } else {
     const _Array = Array;
     if (tmp instanceof Array) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(tmp, 0);
     } else {
       const _Object = Object;

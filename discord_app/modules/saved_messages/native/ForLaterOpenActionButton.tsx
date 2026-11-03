@@ -1,17 +1,17 @@
-// === Module 18479: ForLaterOpenActionButton ===
+// === Module 18633: ForLaterOpenActionButton ===
 
-// Module 18479 (ForLaterOpenActionButton)
+// Module 18633 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import useToken from "useToken" /* 5596 */;
-import ButtonHooks from "ButtonHooks" /* 5641 */;
-import ClockIcon from "ClockIcon" /* 5740 */;
-import ClipViewDefault from "ClipView" /* 9509 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10192 */;
-import showForLaterModal from "showForLaterModal" /* 11150 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11161 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import useToken from "useToken" /* 5719 */;
+import ButtonHooks from "ButtonHooks" /* 5761 */;
+import ClockIcon from "ClockIcon" /* 5860 */;
+import ClipViewDefault from "ClipView" /* 9637 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10322 */;
+import showForLaterModal from "showForLaterModal" /* 11287 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11298 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10191 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10321 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -26,7 +26,7 @@ function BadgedIcon(arg0) {
     BookmarkIcon = BookmarkIcon2.BookmarkIcon;
   }
   const obj3 = { style: null, children: null };
-  const items = [tmp6.container, iconSizeStyles];
+  items = [tmp6.container, iconSizeStyles];
   obj3.style = items;
   if (showRedDot) {
     const obj4 = { style: tmp6.iconAnchor, children: null };
@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(9509).CutoutShape.Circle, x: fn(14714).ICON_SIZE.sm - 7, y: fn(14714).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(5014);
+const point = { shape: fn(9637).CutoutShape.Circle, x: fn(14845).ICON_SIZE.sm - 7, y: fn(14845).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(5141);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(14714).ICON_SIZE.sm, height: fn(14714).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(14845).ICON_SIZE.sm, height: fn(14845).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
-  const items = [SavedMessagesStore];
+  items = [SavedMessagesStore];
   const items1 = [onOpen, type];
   const stateFromStores = type(504).useStateFromStores(items, () => SavedMessagesStore.hasOverdueReminder(), []);
   const obj2 = { ref: ref.ref, children: null };
@@ -76,14 +76,14 @@ export default function ForLaterActionButton(ref) {
   const obj3 = { type, showRedDot: null };
   const obj = type(504);
   const obj4 = { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, obj3), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj3.showRedDot = type === type(10192).SavedMessageSortTypes.REMINDER && stateFromStores;
+  obj3.showRedDot = type === type(10322).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(1113).intl;
-  if (type === type(10192).SavedMessageSortTypes.REMINDER) {
+  if (type === type(10322).SavedMessageSortTypes.REMINDER) {
     let aUXxzT = tmp(1113).t.aUXxzT;
   } else {
     aUXxzT = tmp(1113).t["2pAkDA"];
   }
   obj4.accessibilityLabel = intl.string(aUXxzT);
-  obj2.children = closure_6(type(8028).IconButton, obj4);
+  obj2.children = closure_6(type(8152).IconButton, obj4);
   return closure_6(View, obj2);
 };

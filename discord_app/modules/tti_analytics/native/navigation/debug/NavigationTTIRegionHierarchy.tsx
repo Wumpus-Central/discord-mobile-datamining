@@ -1,6 +1,6 @@
-// === Module 18613: NavigationTTIRegionHierarchy ===
+// === Module 18771: NavigationTTIRegionHierarchy ===
 
-// Module 18613 (NavigationTTIRegionHierarchy)
+// Module 18771 (NavigationTTIRegionHierarchy)
 import LoggerDefault from "Logger" /* 3 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -118,7 +118,7 @@ export function useNavigationTTIRegionHierarchy(name) {
       return map;
     });
   }, []);
-  const items = [depth, updateChild];
+  items = [depth, updateChild];
   let includedDescendants = 0;
   sum1 = 0;
   let excludedDescendants = 0;

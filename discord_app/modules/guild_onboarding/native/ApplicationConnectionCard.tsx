@@ -1,11 +1,11 @@
-// === Module 7325: ApplicationConnectionCard ===
+// === Module 7445: ApplicationConnectionCard ===
 
-// Module 7325 (ApplicationConnectionCard)
+// Module 7445 (ApplicationConnectionCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -19,7 +19,7 @@ export default function ApplicationConnectionCard(connection) {
   const _location = connection.location;
   let analyticsLocations;
   let startAuthorization;
-  const items = [analyticsLocations];
+  items = [analyticsLocations];
   const items1 = [connection.application_id];
   const stateFromStores = connection(_location[4]).useStateFromStores(items, () => {
     let application = null;
@@ -70,7 +70,7 @@ export default function ApplicationConnectionCard(connection) {
     const obj = AnalyticsUtilsDefault;
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
     obj2.connection_type = "application";
-    const application_id = connection.application_id;
+    application_id = connection.application_id;
     obj2.application_id = application_id;
     obj2.location = _location;
     obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj2);

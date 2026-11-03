@@ -1,12 +1,12 @@
-// === Module 8208: UploadAttachmentStore ===
+// === Module 8332: UploadAttachmentStore ===
 
-// Module 8208 (UploadAttachmentStore)
+// Module 8332 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DraftStore from "DraftStore" /* 7701 */;
-import CloudUpload from "CloudUpload" /* 8209 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8218 */;
+import DraftStore from "DraftStore" /* 7825 */;
+import CloudUpload from "CloudUpload" /* 8333 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8342 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -73,8 +73,8 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
   }
   return value2;
 };
-prototype["getUploadCount"] = function getUploadCount(c1, ChannelMessage) {
-  map = map.get(c1);
+prototype["getUploadCount"] = function getUploadCount(c0, ChannelMessage) {
+  map = map.get(c0);
   if (map == null) {
     const _Map = Map;
     map = new Map();
@@ -139,7 +139,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     if (value3 == null) {
       value3 = closure_7;
     }
-    const items = [...value3];
+    items = [...value3];
     items.shift();
     let value4 = obj.get(channelId);
     if (value4 == null) {
@@ -152,7 +152,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
   UPLOAD_ATTACHMENT_ADD_FILES: function handleAddFiles(arg0) {
     ({ files, channelId } = arg0);
     ({ draftType, allowOptimization: importDefault } = arg0);
-    let items;
+    items = undefined;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
@@ -265,7 +265,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     if (value3 == null) {
       value3 = closure_7;
     }
-    const items = [...value3];
+    items = [...value3];
     const findIndexResult = items.findIndex((item) => uploader_UploadUtils.doesImageMatchUpload({ uri: filename, filename }, item));
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
@@ -281,7 +281,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
   },
   UPLOAD_ATTACHMENT_REMOVE_FILES: function handleRemoveFiles(arg0) {
     ({ channelId, attachmentIds, draftType } = arg0);
-    let items;
+    items = undefined;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
@@ -346,7 +346,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     if (value3 == null) {
       value3 = closure_7;
     }
-    const items = [...value3];
+    items = [...value3];
     const found = items.filter((id) => id.id !== require);
     const cloudUpload = new CloudUpload.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);

@@ -1,20 +1,20 @@
-// === Module 18798: messages/PinsScreen ===
+// === Module 18956: messages/PinsScreen ===
 
-// Module 18798 (messages/PinsScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
-import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14534 */;
-import MessagesScreenDefault from "MessagesScreen" /* 18795 */;
+// Module 18956 (messages/PinsScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14665 */;
+import MessagesScreenDefault from "MessagesScreen" /* 18953 */;
 import noop from "module_19" /* 19 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 14535 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 14666 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = fn;
 function InitialPinsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const isFocused = searchContext.isFocused;
   let stateFromStores;
-  let items;
+  items = undefined;
   let callback;
   placeholderHeight = undefined;
   const items1 = [callback];
@@ -137,10 +137,10 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null
   });
 }
-const FetchState = fn(14535).FetchState;
-const SearchConstants = fn(9827);
-({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10 } = SearchConstants);
-let closure_11 = fn(9826).SearchResultContentEntityTypes;
+const FetchState = fn(14666).FetchState;
+const SearchConstants = fn(9958);
+({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_10 } = SearchConstants);
+let closure_11 = fn(9957).SearchResultContentEntityTypes;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -149,7 +149,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/tabs/p
 export default noop.memo(function PinsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   ({ tab, isFocused } = searchContext);
-  const items = [SearchQueryStore];
+  items = [SearchQueryStore];
   const items1 = [searchContext];
   if (!obj.useStateFromStores(items, () => SearchQueryStore.isInitialSearchQuery(searchContext), items1)) {
     const obj2 = { searchContext, tab, isFocused };

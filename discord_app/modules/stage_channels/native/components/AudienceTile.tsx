@@ -1,12 +1,12 @@
-// === Module 12051: AudienceTile ===
+// === Module 12188: AudienceTile ===
 
-// Module 12051 (AudienceTile)
+// Module 12188 (AudienceTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7950 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 function RaisedHandIcon(rtsState) {
@@ -20,18 +20,18 @@ function RaisedHandIcon(rtsState) {
     PRIMARY_800 = unsafe_rawColors.PRIMARY_800;
     tmp5 = importDefault;
   }
-  const items = [tmp.raisedHandContainer, ];
+  items = [tmp.raisedHandContainer, ];
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11904), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12041), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
 let size = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: nativeDefault.colors.WHITE };
 obj.raisedHandContainer = size;
@@ -56,7 +56,7 @@ export default noop.memo(function AudienceTile(channel) {
   const tmp = styles();
   const diff = user(guildId[9])().width - 46;
   guildId = channel.getGuildId();
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [guildId, user.id];
   let stateFromStores = channel(guildId[10]).useStateFromStores(items, () => {
     let tmp2 = null != guildId;

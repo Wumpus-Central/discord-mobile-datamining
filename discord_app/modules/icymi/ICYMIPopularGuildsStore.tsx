@@ -1,9 +1,9 @@
-// === Module 18559: ICYMIPopularGuildsStore ===
+// === Module 18713: ICYMIPopularGuildsStore ===
 
-// Module 18559 (ICYMIPopularGuildsStore)
+// Module 18713 (ICYMIPopularGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 let closure_3 = [];
@@ -33,7 +33,7 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(DispatcherDefault, {
     let set1;
     if (0 === offset) {
       categoryIds = categoryIds.categoryIds;
-      let items = [];
+      items = [];
       offset = 0;
     }
     set = new Set(items.map((id) => id.id));

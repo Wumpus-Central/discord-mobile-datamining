@@ -1,13 +1,13 @@
-// === Module 14086: useGuildPowerupRollbackModalConfig ===
+// === Module 14217: useGuildPowerupRollbackModalConfig ===
 
-// Module 14086 (useGuildPowerupRollbackModalConfig)
+// Module 14217 (useGuildPowerupRollbackModalConfig)
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14074 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14205 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
@@ -23,11 +23,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2570["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2699["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      const items = [intl2.formatToPlainString(_modDef2570.jd8fki, obj5)];
+      items = [intl2.formatToPlainString(_modDef2699.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 
 export default function useGuildPowerupRollbackModalConfig(guildId, useGuildPowerupNewPerkMarketingVersion) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   flag = require("useHasAllocateBoostPermission")(guildId);
   if (flag == null) {

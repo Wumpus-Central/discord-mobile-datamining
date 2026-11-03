@@ -1,16 +1,16 @@
-// === Module 10950: conjurePublishConnection ===
+// === Module 11087: conjurePublishConnection ===
 
-// Module 10950 (conjurePublishConnection)
+// Module 11087 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10941 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10951 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10953 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10959 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11059 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11060 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11079 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -37,7 +37,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10960).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(11093).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
@@ -127,7 +127,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -144,7 +144,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);
@@ -277,7 +277,7 @@ export const publishStepHandlers = {
                 if (typeof published_revision.message_id === "string") {
                   const obj = { publishedRevision: null, guildId: null, channelId: null, messageId: null };
                   ({ published_revision: obj.publishedRevision, guild_id: obj.guildId, channel_id: obj.channelId, message_id: obj.messageId } = published_revision);
-                  const items = [obj];
+                  items = [obj];
                 }
                 return [];
               }
@@ -332,7 +332,7 @@ export const publishStepHandlers = {
       if ("user" === install_scope) {
         if ("" !== project.application_id) {
           if (null != previewDevicePermissions) {
-            const application_id = project.application_id;
+            application_id = project.application_id;
             const obj2 = { applicationId: application_id, appName: null, iframeId: null, permissions: null };
             const application = ApplicationStore.getApplication(application_id);
             let name;
@@ -652,7 +652,7 @@ export function requestPublishOptions(id) {
       const str1 = Math.random().toString(36);
     } else {
       const obj3 = { destinations: null, selected_destination_id: "conjuring" };
-      const items = [{ id: "conjuring", label: "Conjuring" }];
+      items = [{ id: "conjuring", label: "Conjuring" }];
       obj3.destinations = items;
       resolve(obj3);
     }

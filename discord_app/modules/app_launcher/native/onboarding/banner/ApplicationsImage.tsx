@@ -1,16 +1,16 @@
-// === Module 12378: ApplicationsImage ===
+// === Module 12514: ApplicationsImage ===
 
-// Module 12378 (ApplicationsImage)
+// Module 12514 (ApplicationsImage)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12379 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { appIconContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.sm + 3, position: "absolute", padding: 3 }, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-10deg" }];
@@ -49,7 +49,7 @@ export default function ApplicationsImage(arg0) {
   }
   const obj5 = { children: null };
   const obj6 = { style: null, children: tmp12 };
-  const items = [, ];
+  items = [, ];
   ({ appIconContainer: arr[0], appIconLeftContainer: arr[1] } = tmp);
   obj6.style = items;
   const items1 = [React4(View, obj6), ];

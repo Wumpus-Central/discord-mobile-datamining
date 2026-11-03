@@ -1,20 +1,20 @@
-// === Module 13344: AppealIngestionRequestSent ===
+// === Module 13480: AppealIngestionRequestSent ===
 
-// Module 13344 (AppealIngestionRequestSent)
-import FastImageDefault from "FastImage" /* 5717 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13339 */;
-import _modDef13345 from "module_13345" /* 13345 */;
+// Module 13480 (AppealIngestionRequestSent)
+import FastImageDefault from "FastImage" /* 5837 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13475 */;
+import _modDef13481 from "module_13481" /* 13481 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
@@ -30,10 +30,10 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef13345;
+  obj4.source = _modDef13481;
   obj4.style = tmp.checkboxPng;
-  const items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
-  const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
+  items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_6(require("Text/Text").Text, obj5);

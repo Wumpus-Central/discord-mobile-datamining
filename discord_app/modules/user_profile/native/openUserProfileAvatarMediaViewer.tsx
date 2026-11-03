@@ -1,8 +1,8 @@
-// === Module 8832: openUserProfileAvatarMediaViewer ===
+// === Module 8956: openUserProfileAvatarMediaViewer ===
 
-// Module 8832 (openUserProfileAvatarMediaViewer)
-import openMediaModal from "openMediaModal" /* 8833 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+// Module 8956 (openUserProfileAvatarMediaViewer)
+import openMediaModal from "openMediaModal" /* 8957 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const AVATAR_MAX_SIZE = fn(1072).AVATAR_MAX_SIZE;
@@ -21,7 +21,7 @@ export default function openUserProfileAvatarMediaViewer(user) {
   if (typeof avatarURL === "string") {
     const obj2 = { initialSources: null, originViewOrOriginLayout: null, analyticsSource: "user_profile_avatar", openAs: "action-sheet", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
     const size = { uri: avatarURL, mediaIndex: 0, height: AVATAR_MAX_SIZE, width: AVATAR_MAX_SIZE, accessoryType: "embed" };
-    const items = [size];
+    items = [size];
     obj2.initialSources = items;
     obj2.originViewOrOriginLayout = originViewOrOriginLayout;
     openMediaModal.openMediaModal(obj2);

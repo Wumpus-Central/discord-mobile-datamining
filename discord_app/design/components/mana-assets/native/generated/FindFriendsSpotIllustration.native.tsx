@@ -1,19 +1,19 @@
-// === Module 14260: FindFriendsSpotIllustration ===
+// === Module 14391: FindFriendsSpotIllustration ===
 
-// Module 14260 (FindFriendsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14261 from "module_14261" /* 14261 */;
-import _modDef14262 from "module_14262" /* 14262 */;
-import _modDef14263 from "module_14263" /* 14263 */;
+// Module 14391 (FindFriendsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef14392 from "module_14392" /* 14392 */;
+import _modDef14393 from "module_14393" /* 14393 */;
+import _modDef14394 from "module_14394" /* 14394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14261 }, 3: null };
-let obj2 = { uri: _modDef14261 };
-obj[2] = { uri: _modDef14262 };
-const obj3 = { uri: _modDef14262 };
-obj[3] = { uri: _modDef14263 };
+let obj = { 1: null, 2: { uri: _modDef14392 }, 3: null };
+let obj2 = { uri: _modDef14392 };
+obj[2] = { uri: _modDef14393 };
+const obj3 = { uri: _modDef14393 };
+obj[3] = { uri: _modDef14394 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FindFriendsSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function FindFriendsSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

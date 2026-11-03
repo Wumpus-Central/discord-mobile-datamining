@@ -1,11 +1,11 @@
-// === Module 13330: NavigationSpanTracker ===
+// === Module 13466: NavigationSpanTracker ===
 
-// Module 13330 (NavigationSpanTracker)
+// Module 13466 (NavigationSpanTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import v1 from "v1" /* 1266 */;
-import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 13331 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13332 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 13333 */;
+import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 13467 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13468 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 13469 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -474,7 +474,7 @@ prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
   spanTtiProperties.trace_start_timestamp_ms = startEpochMs;
   spanTtiProperties.span_status = INTERRUPTED;
   const obj2 = { navigation: { spanTtiName: definition.rootEventName, spanTtiProperties }, components: null, firstPaint, settled };
-  const items = [...active.components];
+  items = [...active.components];
   obj2.components = items;
   return obj2;
 };

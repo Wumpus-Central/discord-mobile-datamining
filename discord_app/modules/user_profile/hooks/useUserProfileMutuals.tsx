@@ -1,12 +1,12 @@
-// === Module 14180: useUserProfileMutuals ===
+// === Module 14311: useUserProfileMutuals ===
 
-// Module 14180 (useUserProfileMutuals)
+// Module 14311 (useUserProfileMutuals)
 import _mod12 from "module_12" /* 12 */;
-import usePrevValueDefault from "usePrevValue" /* 9098 */;
+import usePrevValueDefault from "usePrevValue" /* 9226 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
@@ -17,9 +17,9 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileMutuals(arg0) {
   _require = arg0;
-  let items = [UserProfileStore];
+  items = [UserProfileStore];
   const tmp = stateFromStores(require("initialize").useStateFromStoresArray(items, () => {
-    const items = [UserProfileStore.getMutualFriendsCount(closure_0.id), UserProfileStore.getMutualFriends(closure_0.id), UserProfileStore.getMutualGuilds(closure_0.id), UserProfileStore.isFetchingProfile(closure_0.id), UserProfileStore.isFetchingFriends(closure_0.id)];
+    items = [UserProfileStore.getMutualFriendsCount(closure_0.id), UserProfileStore.getMutualFriends(closure_0.id), UserProfileStore.getMutualGuilds(closure_0.id), UserProfileStore.isFetchingProfile(closure_0.id), UserProfileStore.isFetchingFriends(closure_0.id)];
     return items;
   }), 5);
   [tmp2, tmp3] = tmp;
@@ -58,7 +58,7 @@ export default function useUserProfileMutuals(arg0) {
       if (length.length >= 2) {
         const _Object = Object;
         closure_0 = Object.fromEntries(stateFromStores1.map((item, index) => {
-          const items = [item, index];
+          items = [item, index];
           return items;
         }));
         return closure_0(length[6]).sortBy(length, (arg0) => {

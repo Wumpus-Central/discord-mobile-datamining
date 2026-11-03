@@ -1,111 +1,172 @@
-// === Module 15866: ToastContainer ===
+// === Module 16009: ToastContainer ===
 
-// Module 15866 (ToastContainer)
+// Module 16009 (ToastContainer)
 import nativeDefault from "native" /* 575 */;
-import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5086 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import OverlayViewDefault from "OverlayView" /* 5965 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5213 */;
+import OverlayViewDefault from "OverlayView" /* 6085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function AnimatedToast(position) {
-  position = position.position;
-  const state = position.state;
-  const cleanUp = position.cleanUp;
-  let first1;
-  ({ entry, enterDelayMs } = position);
-  let tmp = closure_12();
-  const sharedValue = position(cleanUp[5]).useSharedValue(0);
-  obj2 = position(cleanUp[5]);
-  const sharedValue1 = obj2.useSharedValue(first1.HIDDEN);
-  obj = position(cleanUp[5]);
-  const tmp2 = position;
-  const tmp3 = cleanUp;
-  const sharedValue2 = position(cleanUp[5]).useSharedValue(false);
-  const tmp7 = sharedValue(sharedValue1.useState(false), 2);
-  const first = tmp7[0];
-  jsx = tmp7[1];
-  first1 = sharedValue(sharedValue1.useState(enterDelayMs), 1)[0];
-  const obj3 = position(cleanUp[5]);
-  let fn = function f() {
-    if ("top" === position) {
-      value = -sharedValue.get();
-    } else {
-      value = sharedValue.get();
-    }
-    if (sharedValue2.get()) {
-      let num2 = 0;
-      if (sharedValue1.get() === obj.VISIBLE) {
-        num2 = first1;
-      }
-      items = [value, 0];
-      const interpolateResult = ReanimatedRexport.interpolate(sharedValue1.get(), items, items);
-      obj2 = { opacity: null, transform: null };
-      const obj6 = ReanimatedRexport;
-      obj2.opacity = obj6.withDelay(num2, timing.withTiming(sharedValue1.get(), obj2));
-      const obj5 = { translateY: null };
-      const obj10 = timing;
-      const fn = function n(arg0) {
-        let tmp = true === arg0;
-        if (tmp) {
-          tmp = state === position(cleanUp[8]).TransitionStates.YEETED;
-        }
-        if (tmp) {
-          position(cleanUp[5]).runOnJS(closure_1_2)();
-          obj = position(cleanUp[5]);
-        }
-      };
-      const obj8 = { state, TransitionStates: TransitionGroup_TransitionGroup.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-      fn.__closure = obj8;
-      fn.__workletHash = 3860990525987;
-      fn.__initData = __initData;
-      obj5.translateY = ReanimatedRexport.withDelay(num2, obj10.withTiming(interpolateResult, obj2, "respect-motion-settings", fn));
-      const items1 = [obj5];
-      obj2.transform = items1;
-      return obj2;
-    } else {
-      obj = { opacity: 0, transform: null };
-      const obj11 = { translateY: value };
-      const items2 = [obj11];
-      obj.transform = items2;
-      return obj;
-    }
-  };
-  let obj4 = position(cleanUp[5]);
-  fn.__closure = { position, toastHeight: sharedValue, hasEntered: sharedValue2, animationState: sharedValue1, AnimationState: first1, enterDelayMs: first1, interpolate: position(cleanUp[5]).interpolate, ANIMATION_STATE_INPUT: items, withDelay: position(cleanUp[5]).withDelay, withTiming: position(cleanUp[7]).withTiming, TIMING: obj2, state, TransitionStates: position(cleanUp[8]).TransitionStates, runOnJS: position(cleanUp[5]).runOnJS, cleanUp };
-  fn.__workletHash = 12110637972000;
-  fn.__initData = __initData;
-  items = [sharedValue1, cleanUp, sharedValue2, first, state];
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  const effect = sharedValue1.useEffect(() => {
-    if (state === TransitionGroup_TransitionGroup.TransitionStates.YEETED) {
-      if (sharedValue2.get()) {
-        const result = sharedValue1.set(obj.HIDDEN);
+function AnimatedToast(cleanUp) {
+  ({ position, state } = cleanUp);
+  _require = state;
+  cleanUp = cleanUp.cleanUp;
+  ({ entry, enterDelayMs } = cleanUp);
+  let tmp = c12();
+  const sharedValue = require("module_1652").useSharedValue(0);
+  obj = require("module_1652");
+  const tmp2 = _require;
+  const sharedValue1 = require("module_1652").useSharedValue(c8.HIDDEN);
+  _slicedToArray = sharedValue1;
+  obj2 = require("module_1652");
+  const sharedValue2 = require("module_1652").useSharedValue(false);
+  noop = sharedValue2;
+  [first, c6] = noop.useState(false);
+  const obj3 = require("module_1652");
+  items = [c14, position, sharedValue, sharedValue2, sharedValue1, c8, _slicedToArray(noop.useState(enterDelayMs), 1)[0], require("module_1652").interpolate, c9, require("module_1652").withDelay, require("timing/timing").withTiming, c10, c13, state, require("TransitionGroup/TransitionGroup").TransitionStates, require("module_1705").scheduleOnRN, cleanUp];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  jsx = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
+  c12 = undefined;
+  c13 = undefined;
+  c14 = undefined;
+  c15 = undefined;
+  [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items;
+  class ToastContainerNativeTsx2 {
+    constructor() {
+      if ("top" === closure_0) {
+        tmp3 = closure_1;
+        value = -closure_1.get();
       } else {
-        cleanUp();
+        tmp = closure_1;
+        value = closure_1.get();
+      }
+      if (closure_2.get()) {
+        obj3 = closure_3;
+        tmp4 = closure_4;
+        num = 0;
+        num2 = 0;
+        if (closure_3.get() === closure_4.VISIBLE) {
+          num2 = closure_5;
+        }
+        tmp5 = closure_6;
+        tmp6 = closure_7;
+        items = [, ];
+        items[0] = value;
+        items[1] = 0;
+        tmp7 = closure_6(obj3.get(), closure_7, items);
+        obj1 = { opacity: null, transform: null };
+        tmp8 = closure_8;
+        tmp9 = closure_9;
+        tmp10 = closure_10;
+        obj1.opacity = closure_8(num2, closure_9(obj3.get(), closure_10));
+        tmp11 = closure_11;
+        items1 = [, , , , ];
+        items1[0] = closure_11;
+        tmp12 = closure_12;
+        items1[1] = closure_12;
+        tmp13 = closure_13;
+        items1[2] = closure_13;
+        tmp14 = closure_14;
+        items1[3] = closure_14;
+        tmp15 = closure_15;
+        items1[4] = closure_15;
+        closure_0 = undefined;
+        closure_1 = undefined;
+        closure_2 = undefined;
+        closure_3 = undefined;
+        tmp16 = items1;
+        [tmp17, tmp18, tmp19, tmp20, tmp21] = items1;
+        obj6 = { translateY: null };
+        class ToastContainerNativeTsx1 {
+          constructor(arg0) {
+            tmp = true === cleanUp;
+            if (tmp) {
+              tmp2 = closure_0;
+              tmp3 = closure_1;
+              tmp = closure_0 === closure_1.YEETED;
+            }
+            if (tmp) {
+              tmp4 = closure_2;
+              tmp5 = closure_3;
+              tmp6 = closure_2(closure_3);
+            }
+            return;
+          }
+        }
+        items2 = [, , , ];
+        items2[0] = tmp18;
+        items2[1] = tmp19;
+        items2[2] = tmp20;
+        items2[3] = tmp21;
+        ToastContainerNativeTsx1.__closure = items2;
+        num3 = 3943080115640;
+        ToastContainerNativeTsx1.__workletHash = 3943080115640;
+        ToastContainerNativeTsx1.__initData = tmp17;
+        str = "respect-motion-settings";
+        tmp22 = tmp7;
+        tmp23 = tmp10;
+        tmp24 = ToastContainerNativeTsx1;
+        obj6.translateY = tmp8(num2, tmp9(tmp7, tmp10, "respect-motion-settings", ToastContainerNativeTsx1));
+        items3 = [];
+        items3[0] = obj6;
+        obj1.transform = items3;
+        return obj1;
+      } else {
+        obj = { opacity: 0, transform: null };
+        obj7 = { translateY: null };
+        obj7.translateY = value;
+        items4 = [];
+        items4[0] = obj7;
+        obj.transform = items4;
+        return obj;
+      }
+    }
+  }
+  let items1 = [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25];
+  ToastContainerNativeTsx2.__closure = items1;
+  ToastContainerNativeTsx2.__workletHash = 2210438006804;
+  ToastContainerNativeTsx2.__initData = tmp9;
+  let items2 = [sharedValue1, cleanUp, sharedValue2, first, state];
+  const animatedStyle = require("module_1652").useAnimatedStyle(ToastContainerNativeTsx2);
+  const effect = obj4.useEffect(() => {
+    if (c0 === TransitionGroup_TransitionGroup.TransitionStates.YEETED) {
+      if (_undefined4.get()) {
+        const result = _undefined3.set(obj.HIDDEN);
+      } else {
+        _undefined();
       }
       return tmp10;
-    } else if (first) {
-      const result1 = sharedValue2.set(true);
-      const result2 = sharedValue1.set(obj.VISIBLE);
+    } else if (c5) {
+      const result1 = _undefined4.set(true);
+      const result2 = _undefined3.set(obj.VISIBLE);
     }
-  }, items);
-  let items1 = [sharedValue];
-  const callback = sharedValue1.useCallback((nativeEvent) => {
+  }, items2);
+  let items3 = [sharedValue];
+  const callback = obj4.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    const result = sharedValue.set(height);
+    const result = _undefined2.set(height);
     if (height > 0) {
-      closure_7(true);
+      _undefined5(true);
     }
-  }, items1);
-  let obj6 = { onLayout: callback, style: null, children: null };
-  let items2 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
-  obj6.style = items2;
+  }, items3);
+  const obj6 = { onLayout: callback, style: null, children: null };
+  let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
+  obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(tmp3[9]).Toast, {});
-  return jsx(state(cleanUp[5]).View, obj6);
+  obj6.children = jsx(tmp2(16005).Toast, {});
+  return jsx(_modDef1652.View, obj6);
 }
 function getItemKey(key) {
   return String(key.key);
@@ -120,10 +181,10 @@ let items = [, ];
 let obj2 = { duration: null, easing: null };
 const ANIMATION_DURATION_MS = nativeDefault.modules.toast.ANIMATION_DURATION_MS;
 obj2.duration = ANIMATION_DURATION_MS.resolve({});
-obj2.easing = fn(5095).Easing.linear;
+obj2.easing = fn(1652).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -134,8 +195,8 @@ obj4.toast = { position: "absolute", alignSelf: "center", maxWidth: "100%" };
 obj4.toastTop = { top: 0 };
 obj4.toastBottom = { bottom: 0 };
 let closure_12 = createStyles.createStyles(obj4);
-const __initData = { code: "function ToastContainerNativeTsx1(){const{position,toastHeight,hasEntered,animationState,AnimationState,enterDelayMs,interpolate,ANIMATION_STATE_INPUT,withDelay,withTiming,TIMING,state,TransitionStates,runOnJS,cleanUp}=this.__closure;const offscreenTranslateY=position==='top'?-toastHeight.get():toastHeight.get();if(!hasEntered.get()){return{opacity:0,transform:[{translateY:offscreenTranslateY}]};}const isEntering=animationState.get()===AnimationState.VISIBLE;const delayMs=isEntering?enterDelayMs:0;const translateY=interpolate(animationState.get(),ANIMATION_STATE_INPUT,[offscreenTranslateY,0]);return{opacity:withDelay(delayMs,withTiming(animationState.get(),TIMING)),transform:[{translateY:withDelay(delayMs,withTiming(translateY,TIMING,'respect-motion-settings',function(finished){if(finished===true&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}))}]};}" };
-let closure_14 = { code: "function ToastContainerNativeTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished===true&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
+let closure_13 = { code: "(function ToastContainerNativeTsx1(finished){let[state,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;if(finished===true&&state===TransitionStates.YEETED){scheduleOnRN(cleanUp);}})" };
+let closure_14 = { code: "(function ToastContainerNativeTsx2(){let[position,toastHeight,hasEntered,animationState,AnimationState,enterDelayMs,interpolate,ANIMATION_STATE_INPUT,withDelay,withTiming,TIMING,_worklet_3943080115640_init_data,state,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;const offscreenTranslateY=position==='top'?-toastHeight.get():toastHeight.get();if(!hasEntered.get()){return{opacity:0,transform:[{translateY:offscreenTranslateY}]};}const isEntering=animationState.get()===AnimationState.VISIBLE;const delayMs=isEntering?enterDelayMs:0;const translateY=interpolate(animationState.get(),ANIMATION_STATE_INPUT,[offscreenTranslateY,0]);return{opacity:withDelay(delayMs,withTiming(animationState.get(),TIMING)),transform:[{translateY:withDelay(delayMs,withTiming(translateY,TIMING,'respect-motion-settings',function ToastContainerNativeTsx1Factory([_worklet_3943080115640_init_data,state,TransitionStates,scheduleOnRN,cleanUp]){const ToastContainerNativeTsx1=function(finished){if(finished===true&&state===TransitionStates.YEETED){scheduleOnRN(cleanUp);}};ToastContainerNativeTsx1.__closure=[state,TransitionStates,scheduleOnRN,cleanUp];ToastContainerNativeTsx1.__workletHash=3943080115640;ToastContainerNativeTsx1.__initData=_worklet_3943080115640_init_data;return ToastContainerNativeTsx1;}([_worklet_3943080115640_init_data,state,TransitionStates,scheduleOnRN,cleanUp])))}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/mana/components/Toast/ToastContainer.native.tsx");
 
@@ -155,7 +216,7 @@ export function ToastContainer(surface) {
   let first;
   const tmp = closure_12();
   const container = tmp;
-  const toastContainer = flag(entry[10]).useToastContainer(str);
+  const toastContainer = flag(entry[11]).useToastContainer(str);
   entry = toastContainer.entry;
   const position = toastContainer.position;
   let num;
@@ -192,7 +253,7 @@ export function ToastContainer(surface) {
     }
     return items1;
   }, items1);
-  obj = flag(entry[10]);
+  obj = flag(entry[11]);
   let tmp2 = flag;
   const tmp3 = entry;
   [tmp8, tmp9] = position(num.useState(null), 2);

@@ -1,106 +1,129 @@
-// === Module 19348: VoicePanelControlsAppLauncher ===
+// === Module 19506: VoicePanelControlsAppLauncher ===
 
-// Module 19348 (VoicePanelControlsAppLauncher)
+// Module 19506 (VoicePanelControlsAppLauncher)
+import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8965 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12545 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13960 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+
+const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11221);
+const VoicePanelControlsConstants = fn(11358);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
-const __initData = { code: "function VoicePanelControlsAppLauncherTsx1(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().active;}" };
-const __initData2 = { code: "function VoicePanelControlsAppLauncherTsx2(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().isDrawer;}" };
-const __initData3 = { code: "function VoicePanelControlsAppLauncherTsx3(){const{isGestureActive,isGestureDrawerMode,windowDimensions,safeArea}=this.__closure;const height=isGestureActive.get()||!isGestureDrawerMode.get()?windowDimensions.height-safeArea.top:'100%';return{height:height};}" };
+let closure_11 = { code: "(function VoicePanelControlsAppLauncherTsx1(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().active;})" };
+let closure_12 = { code: "(function VoicePanelControlsAppLauncherTsx2(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().isDrawer;})" };
+let closure_13 = { code: "(function VoicePanelControlsAppLauncherTsx3(){let[isGestureActive,isGestureDrawerMode,windowDimensions,safeArea]=this.__closure;const height=isGestureActive.get()||!isGestureDrawerMode.get()?windowDimensions.height-safeArea.top:'100%';return{height:height};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
 
 export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   gestureSpecs = gestureSpecs.gestureSpecs;
-  let setControlsMode;
-  dependencyMap = undefined;
-  noop = undefined;
-  let derivedValue1;
+  _require = undefined;
+  importDefault = undefined;
   const tmp = closure_10();
-  const gradientTop = gestureSpecs(9821).useGradientTop();
-  const context = noop.useContext(setControlsMode(11222));
-  setControlsMode = context.setControlsMode;
-  ({ channelId: c2, safeArea, windowDimensions } = context);
-  const tmp4 = setControlsMode(8841)(windowDimensions);
-  noop = tmp4;
-  const rect = setControlsMode(8841)(safeArea);
-  const obj = gestureSpecs(9821);
-  const items = [rect];
-  const stateFromStores = gestureSpecs(504).useStateFromStores(items, () => ChannelStore.getChannel(c2));
-  setControlsMode(38)(null != stateFromStores, "channel should not be null");
-  const obj2 = gestureSpecs(504);
+  const gradientTop = require("ClientThemesOverrides").useGradientTop();
+  const context = noop.useContext(VoicePanelStateContextDefault);
+  const setControlsMode = context.setControlsMode;
+  _require = setControlsMode;
+  ({ channelId: c1, safeArea, windowDimensions } = context);
+  const tmp7 = useStateFromSharedValueDefault(windowDimensions);
+  const rect = useStateFromSharedValueDefault(safeArea);
+  const obj = require("ClientThemesOverrides");
+  items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(c1));
+  _modDef38(null != stateFromStores, "channel should not be null");
+  const obj2 = require("initialize");
   const items1 = [setControlsMode];
-  const controlsDrawerOpenWidth = gestureSpecs(13828).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
+  const controlsDrawerOpenWidth = require("VoicePanelControlsUtils").getControlsDrawerOpenWidth(tmp7.width, rect.left, rect.right);
   const callback = noop.useCallback(() => {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     ComponentDispatch.dispatch(ComponentActions.SELECT_ACTIVITY);
-    setControlsMode({ mode: hasOwnProperty.HIDDEN });
+    _undefined({ mode: constants.HIDDEN });
   }, items1);
-  const obj3 = gestureSpecs(13828);
-  const appLauncherChatInputRefDummy = gestureSpecs(11501).useAppLauncherChatInputRefDummy({ noop: true });
-  const obj4 = gestureSpecs(11501);
-  const ref = noop.useRef(gestureSpecs(11501).AppLauncherKeyboardCloseReason.DISMISSED);
+  const obj3 = require("VoicePanelControlsUtils");
+  const appLauncherChatInputRefDummy = require("AppLauncherContext").useAppLauncherChatInputRefDummy({ noop: true });
+  const obj4 = require("AppLauncherContext");
+  const ref = noop.useRef(require("AppLauncherContext").AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = noop.useRef(undefined);
-  const sharedValue = gestureSpecs(5095).useSharedValue(0);
-  const obj5 = gestureSpecs(5095);
-  const sharedValue1 = gestureSpecs(5095).useSharedValue(0);
-  const obj6 = gestureSpecs(5095);
-  const fn = function y() {
-    return gestureSpecs.get().active;
-  };
-  fn.__closure = { gestureSpecs };
-  fn.__workletHash = 1130089519653;
-  fn.__initData = __initData;
-  const derivedValue = gestureSpecs(5095).useDerivedValue(fn);
-  const obj7 = gestureSpecs(5095);
-  class E {
+  const sharedValue = require("module_1652").useSharedValue(0);
+  const obj5 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(0);
+  const obj6 = require("module_1652");
+  const items2 = [closure_11, gestureSpecs];
+  _require = undefined;
+  [tmp17, tmp18] = items2;
+  class VoicePanelControlsAppLauncherTsx1 {
     constructor() {
-      return gestureSpecs.get().isDrawer;
+      return closure_0.get().active;
     }
   }
-  E.__closure = { gestureSpecs };
-  E.__workletHash = 13970291088135;
-  E.__initData = __initData2;
-  derivedValue1 = gestureSpecs(5095).useDerivedValue(E);
-  const obj8 = gestureSpecs(5095);
-  class L {
+  const items3 = [tmp18];
+  VoicePanelControlsAppLauncherTsx1.__closure = items3;
+  VoicePanelControlsAppLauncherTsx1.__workletHash = 16735872110268;
+  VoicePanelControlsAppLauncherTsx1.__initData = tmp17;
+  const derivedValue = require("module_1652").useDerivedValue(VoicePanelControlsAppLauncherTsx1);
+  const obj7 = require("module_1652");
+  const items4 = [closure_12, gestureSpecs];
+  _require = undefined;
+  [tmp20, tmp21] = items4;
+  class VoicePanelControlsAppLauncherTsx2 {
     constructor() {
-      if (closure_5.get()) {
-        tmp2 = closure_3;
-        tmp3 = closure_4;
-        height = closure_3.height - closure_4.top;
+      return closure_0.get().isDrawer;
+    }
+  }
+  const items5 = [tmp21];
+  VoicePanelControlsAppLauncherTsx2.__closure = items5;
+  VoicePanelControlsAppLauncherTsx2.__workletHash = 13454461717534;
+  VoicePanelControlsAppLauncherTsx2.__initData = tmp20;
+  const derivedValue1 = require("module_1652").useDerivedValue(VoicePanelControlsAppLauncherTsx2);
+  const tmp2Result = require("module_1652");
+  const items6 = [closure_13, derivedValue, derivedValue1, tmp7, rect];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp23, tmp24, tmp25, tmp26, tmp27] = items6;
+  class VoicePanelControlsAppLauncherTsx3 {
+    constructor() {
+      if (closure_0.get()) {
+        tmp2 = closure_2;
+        tmp3 = closure_3;
+        height = closure_2.height - closure_3.top;
       } else {
-        tmp = closure_6;
+        tmp = closure_1;
         height = "100%";
       }
       return { height };
     }
   }
-  L.__closure = { isGestureActive: derivedValue, isGestureDrawerMode: derivedValue1, windowDimensions: tmp4, safeArea: rect };
-  L.__workletHash = 3671157204025;
-  L.__initData = __initData3;
-  const obj10 = { children: null };
-  const animatedStyle = gestureSpecs(5095).useAnimatedStyle(L);
-  const obj11 = { style: null, children: null };
-  const items2 = [tmp.container, gradientTop, animatedStyle];
-  obj11.style = items2;
-  const obj9 = gestureSpecs(5095);
-  const items3 = [closure_7(setControlsMode(12409), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11502).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
-  const obj13 = { title: null, disablePill: true };
-  const obj12 = { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(11502).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth };
-  const intl = gestureSpecs(1113).intl;
-  obj13.title = intl.string(gestureSpecs(1113).t.shUONg);
-  items3[1] = closure_7(setControlsMode(13829), obj13);
-  obj11.children = items3;
-  obj10.children = closure_8(setControlsMode(5095).View, obj11);
-  return closure_7(closure_9, obj10);
+  const items7 = [tmp24, tmp25, tmp26, tmp27];
+  VoicePanelControlsAppLauncherTsx3.__closure = items7;
+  VoicePanelControlsAppLauncherTsx3.__workletHash = 7444393630336;
+  VoicePanelControlsAppLauncherTsx3.__initData = tmp23;
+  const obj8 = { children: null };
+  const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelControlsAppLauncherTsx3);
+  const obj9 = { style: null, children: null };
+  const items8 = [tmp.container, gradientTop, animatedStyle];
+  obj9.style = items8;
+  const tmp2Result2 = require("module_1652");
+  const items9 = [closure_7(AppLauncherNavigatorDefault, { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: require("AppLauncherTypes").AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const obj11 = { title: null, disablePill: true };
+  const obj10 = { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: require("AppLauncherTypes").AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth };
+  const intl = tmp2(1113).intl;
+  obj11.title = intl.string(require("util").t.shUONg);
+  items9[1] = closure_7(VoicePanelControlsDrawerTitleDefault, obj11);
+  obj9.children = items9;
+  obj8.children = closure_8(_modDef1652.View, obj9);
+  return closure_7(closure_9, obj8);
 });

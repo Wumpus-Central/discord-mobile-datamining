@@ -1,11 +1,11 @@
-// === Module 1984: utils ===
+// === Module 2113: utils ===
 
-// Module 1984 (utils)
+// Module 2113 (utils)
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import NameplateRecord from "NameplateRecord" /* 1985 */;
-import constants from "constants" /* 1988 */;
-import decodeImageDefault from "decodeImage" /* 1990 */;
+import NameplateRecord from "NameplateRecord" /* 2114 */;
+import constants from "constants" /* 2117 */;
+import decodeImageDefault from "decodeImage" /* 2119 */;
 import size from "module_2" /* 2 */;
 
 const isNameplateRecord = NameplateRecord.isNameplateRecord;

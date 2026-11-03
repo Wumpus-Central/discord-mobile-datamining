@@ -1,8 +1,8 @@
-// === Module 17787: UserSettingsDesignSystemTabs ===
+// === Module 17930: UserSettingsDesignSystemTabs ===
 
-// Module 17787 (UserSettingsDesignSystemTabs)
+// Module 17930 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -33,10 +33,10 @@ export default function UserSettingsDesignSystemTabs() {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   const tmp12 = closure_9();
   closure_129_2 = tmp12;
-  let items = [first, tmp12.item, tmp7];
+  items = [first, tmp12.item, tmp7];
   const memo = noop.useMemo(() => {
     let sum;
-    const items = [];
+    items = [];
     let num = 0;
     if (0 < closure_0) {
       do {
@@ -54,7 +54,7 @@ export default function UserSettingsDesignSystemTabs() {
         let _HermesInternal2 = HermesInternal;
         obj.id = "item-" + sum;
         let obj2 = { style: closure_2.item, children: null };
-        let obj3 = { variant: "heading-xxl/bold", children: null };
+        let obj3 = { variant: "heading-xxl/semibold", children: null };
         let items1 = ["Item ", sum];
         obj3.children = items1;
         obj2.children = React5(Text_Text.Text, obj3);
@@ -81,7 +81,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(tmp18(14372), obj5);
+    tmp20Result = closure_8(tmp18(14503), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };

@@ -1,19 +1,19 @@
-// === Module 18111: ActivitiesTogetherSpotIllustration ===
+// === Module 18255: ActivitiesTogetherSpotIllustration ===
 
-// Module 18111 (ActivitiesTogetherSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef18112 from "module_18112" /* 18112 */;
-import _modDef18113 from "module_18113" /* 18113 */;
-import _modDef18114 from "module_18114" /* 18114 */;
+// Module 18255 (ActivitiesTogetherSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef18256 from "module_18256" /* 18256 */;
+import _modDef18257 from "module_18257" /* 18257 */;
+import _modDef18258 from "module_18258" /* 18258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18112 }, 3: null };
-let obj2 = { uri: _modDef18112 };
-obj[2] = { uri: _modDef18113 };
-const obj3 = { uri: _modDef18113 };
-obj[3] = { uri: _modDef18114 };
+let obj = { 1: null, 2: { uri: _modDef18256 }, 3: null };
+let obj2 = { uri: _modDef18256 };
+obj[2] = { uri: _modDef18257 };
+const obj3 = { uri: _modDef18257 };
+obj[3] = { uri: _modDef18258 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ActivitiesTogetherSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function ActivitiesTogetherSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

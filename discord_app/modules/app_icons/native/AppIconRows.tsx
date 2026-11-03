@@ -1,16 +1,16 @@
-// === Module 17522: AppIconRows ===
+// === Module 17665: AppIconRows ===
 
-// Module 17522 (AppIconRows)
+// Module 17665 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
-import AppIconTypes from "AppIconTypes" /* 9980 */;
-import AppIconUtils from "AppIconUtils" /* 15344 */;
-import AppIconRowDefault from "AppIconRow" /* 17523 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17524 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
+import AppIconTypes from "AppIconTypes" /* 10112 */;
+import AppIconUtils from "AppIconUtils" /* 15485 */;
+import AppIconRowDefault from "AppIconRow" /* 17666 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17667 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function BackwardsCompatibleAppIconRows(arg0) {
@@ -43,16 +43,16 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(7060).TableRowGroup, obj2);
+    obj.children = closure_9(merged(7186).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 }
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(9979).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(10111).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
@@ -62,7 +62,7 @@ export default function AppIconRows(onSelect) {
   let tmp = closure_12();
   const appIcons = AppIconUtils.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
   const someResult = limitedTimeAppIcons.some((id) => isHexagonCampaignAppIcon(id.id));

@@ -1,13 +1,13 @@
-// === Module 13688: CheckpointHeaderButton ===
+// === Module 13588: CheckpointHeaderButton ===
 
-// Module 13688 (CheckpointHeaderButton)
+// Module 13588 (CheckpointHeaderButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const Pressable = fn(17).Pressable;
-const CHECKPOINT_PRIMARY = fn(6066).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ button: { width: 32, height: 32, alignItems: "center", justifyContent: "center", borderWidth: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointHeaderButton.tsx");
@@ -18,7 +18,7 @@ export default function CheckpointHeaderButton(color) {
   if (color === undefined) {
     color = CHECKPOINT_PRIMARY;
   }
-  const items = [color];
+  items = [color];
   const obj = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const items1 = [closure_6().button, noop.useMemo(() => ({ borderColor: color }), items)];
   obj.style = items1;
@@ -28,3 +28,4 @@ export default function CheckpointHeaderButton(color) {
   obj.children = children;
   return <Pressable style={null} hitSlop={null} onPress={null} accessibilityRole="button" accessibilityLabel={null}>{null}</Pressable>;
 };
+export const CHECKPOINT_HEADER_BUTTON_SIZE = 32;

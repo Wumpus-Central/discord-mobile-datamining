@@ -1,22 +1,22 @@
-// === Module 19411: background_sync/BackgroundSync ===
+// === Module 19569: background_sync/BackgroundSync ===
 
-// Module 19411 (background_sync/BackgroundSync)
+// Module 19569 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
-import modules_Messages from "modules/Messages" /* 7656 */;
-import GuildVersionsDefault from "GuildVersions" /* 7795 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7796 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7798 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
+import modules_Messages from "modules/Messages" /* 7780 */;
+import GuildVersionsDefault from "GuildVersions" /* 7919 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7920 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7922 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
-import FileSystemStore from "FileSystemStore" /* 7658 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+import FileSystemStore from "FileSystemStore" /* 7782 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -35,7 +35,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -191,7 +191,7 @@ let closure_17 = async function _backgroundSync(arg0) {
                     return obj23;
                   }
                 }
-                const items = [closure_131_19(closure_130_6, closure_130_4, closure_130_5), closure_131_23(closure_130_6, closure_130_4, closure_130_5, closure_130_2), ];
+                items = [closure_131_19(closure_130_6, closure_130_4, closure_130_5), closure_131_23(closure_130_6, closure_130_4, closure_130_5, closure_130_2), ];
                 if (closure_130_1) {
                   let resolved = Promise.resolve();
                 } else {
@@ -272,7 +272,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -422,7 +422,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
           let guilds;
           let api_code_version;
           closure_131_11 = undefined;
-          const items = [GuildVersionsDefault.getCommittedVersions(), , ];
+          items = [GuildVersionsDefault.getCommittedVersions(), , ];
           items[1] = NonGuildVersionsDefault.getCommittedVersions();
           items[2] = KvCacheVersionDefault.canUseGuildVersions();
           c5 = 1;
@@ -610,7 +610,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -676,7 +676,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
             let iter = sortByResult.slice(0, 25);
             let valueResult = iter.value();
             closure_145_5 = valueResult;
-            let verboseResult = value.verbose("Guild Message Background Syncing for ", valueResult.map((channelId) => channelId.channelId));
+            let verboseResult = gesture.verbose("Guild Message Background Syncing for ", valueResult.map((channelId) => channelId.channelId));
             if (0 !== valueResult.length) {
               let _Promise = Promise;
               c21 = 1;
@@ -685,7 +685,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               return obj6;
             }
           } else {
-            let logResult = value.log("Aborting BG sync because there is no database");
+            let logResult = gesture.log("Aborting BG sync because there is no database");
           }
         }
       } else {
@@ -904,7 +904,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -951,7 +951,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             let arr4 = tmp26[1];
             closure_135_6 = arr4;
             let push = new_messages.push;
-            let items = [];
+            items = [];
             let arraySpreadResult = HermesBuiltin.arraySpread(tmp26[0], 0);
             let applyResult = HermesBuiltin.apply(items, new_messages);
             if (arr4.length > 0) {
@@ -963,7 +963,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1024,14 +1024,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6837);
-const ChannelStore = fn(4863);
-const EmojiStore = fn(6796);
-const GuildStore = fn(4885);
+const StickersStore = fn(6957);
+const ChannelStore = fn(4990);
+const EmojiStore = fn(6916);
+const GuildStore = fn(5012);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

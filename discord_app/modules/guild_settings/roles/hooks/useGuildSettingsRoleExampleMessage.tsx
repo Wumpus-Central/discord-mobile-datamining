@@ -1,12 +1,12 @@
-// === Module 19799: useGuildSettingsRoleExampleMessage ===
+// === Module 19949: useGuildSettingsRoleExampleMessage ===
 
-// Module 19799 (useGuildSettingsRoleExampleMessage)
+// Module 19949 (useGuildSettingsRoleExampleMessage)
 import util from "util" /* 1113 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import UserActionCreatorsAll from "UserActionCreators" /* 8752 */;
-import createMessageDefault from "createMessage" /* 10319 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 8876 */;
+import createMessageDefault from "createMessage" /* 10449 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import UserRecord from "UserRecord" /* 1399 */;
 
 require = fn;
 const MessageStates = fn(1072).MessageStates;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/us
 
 export function useGuildSettingsRoleExampleMessage(intl) {
   const content = intl;
-  const items = [intl];
+  items = [intl];
   return noop.useMemo(() => {
     const obj2 = {};
     const merged = Object.assign(createMessageDefault({ channelId: "1337", content }));

@@ -1,20 +1,20 @@
-// === Module 7080: ConfirmEmailCode ===
+// === Module 7206: ConfirmEmailCode ===
 
-// Module 7080 (ConfirmEmailCode)
+// Module 7206 (ConfirmEmailCode)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6997);
-({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
+const ChangeEmailStore = fn(7123);
+({ useChangeEmailError: closure_9, ChangeEmailFields: closure_10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.input = { marginTop: nativeDefault.space.PX_24 };
@@ -32,7 +32,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
   noop = undefined;
   ({ headerText, confirmButtonText } = onFormSubmit);
   const tmp = closure_13();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = onFormSubmit(onResend[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp5 = _slicedToArray(noop.useState(""), 2);
   value = tmp5[0];
@@ -52,7 +52,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -126,7 +126,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
     let obj3 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     ({ background: obj2.style, contentContainer: obj2.contentContainerStyle } = tmp);
     let obj4 = { children: null };
-    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: headerText };
+    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: headerText };
     const items2 = [closure_11(tmp2(tmp3[11]).Text, obj5), , , ];
     const obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
     let intl = tmp2(tmp3[12]).intl;

@@ -1,17 +1,17 @@
-// === Module 12188: Tag ===
+// === Module 12324: Tag ===
 
-// Module 12188 (Tag)
+// Module 12324 (Tag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TagGroupTypes from "TagGroupTypes" /* 12186 */;
-import TagGraphic from "TagGraphic" /* 12189 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TagGroupTypes from "TagGroupTypes" /* 12322 */;
+import TagGraphic from "TagGraphic" /* 12325 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = { flexDirection: "row", alignItems: "center", gap: TagGroupTypes.getTagGap(arg0), minHeight: null, paddingVertical: null, paddingHorizontal: null, borderWidth: null, borderRadius: null, borderColor: null, backgroundColor: null };
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("design/components/TagGroup/native/Tag
 export function Tag(variant) {
   ({ item, size, inline } = variant);
   const tmp = closure_6(size, variant.variant);
-  const items = [tmp.tag, ];
+  items = [tmp.tag, ];
   if (inline) {
     inline = tmp.inline;
   }

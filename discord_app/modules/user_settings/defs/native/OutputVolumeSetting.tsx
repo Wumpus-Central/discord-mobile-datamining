@@ -1,29 +1,29 @@
-// === Module 17242: OutputVolumeSetting ===
+// === Module 17385: OutputVolumeSetting ===
 
-// Module 17242 (OutputVolumeSetting)
+// Module 17385 (OutputVolumeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11943 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12080 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
   onValueChange: AudioActionCreatorsDefault.setOutputVolume,
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3182VD"]), ];
+    items = [intl.string(util.t["3182VD"]), ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["DGq/PR"]);
     return items;

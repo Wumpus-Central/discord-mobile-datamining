@@ -1,13 +1,13 @@
-// === Module 8721: ApplicationAssetUtils ===
+// === Module 8845: ApplicationAssetUtils ===
 
-// Module 8721 (ApplicationAssetUtils)
+// Module 8845 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8722 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8846 */;
 
 require = fn;
 function updateAssets() {
@@ -71,7 +71,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -137,7 +137,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
         throw closure_1_6;
       }
       c9 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   }
 };
@@ -481,7 +481,7 @@ export function getAssetImage(application_id, media_assets_large_image, items) {
 export { getAssets };
 export { fetchAssetIds };
 export function getAssetIds(id, arr) {
-  const items = [];
+  items = [];
   let num = 0;
   if (arr.filter((item) => {
     let startsWithResult;

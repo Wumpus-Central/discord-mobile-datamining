@@ -1,11 +1,11 @@
-// === Module 19116: ConjureAppPictureInPictures ===
+// === Module 19274: ConjureAppPictureInPictures ===
 
-// Module 19116 (ConjureAppPictureInPictures)
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16371 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19120 */;
-import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19124 */;
+// Module 19274 (ConjureAppPictureInPictures)
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16514 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19278 */;
+import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19282 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 require = fn;
 function ConjureAppPictureInPictureLayer(frameIds) {
@@ -25,7 +25,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
   const tmp2 = width;
   const tmp3 = height;
   const sharedValue1 = frameIds(height[10]).useSharedValue(false);
-  const items = [width, height, tmp4];
+  items = [width, height, tmp4];
   const memo = noop.useMemo(() => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_3), items);
   let obj2 = frameIds(height[10]);
   const items1 = [sharedValue];
@@ -76,7 +76,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
 function ConjureAppPictureInPictureWithSize(frameId) {
   frameId = frameId.frameId;
   const windowWidth = frameId.windowWidth;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [frameId];
   stateFromStores = frameId(stateFromStores[12]).useStateFromStores(items, () => React5(timestampProducer(FramesStore.getFrame(frameId))), items1);
   const items2 = [windowWidth, stateFromStores];
@@ -88,11 +88,11 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   return closure_8(windowWidth(stateFromStores[14]), obj2);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ layer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, hidden: { opacity: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/background_frames/native/ConjureAppPictureInPictures.tsx");

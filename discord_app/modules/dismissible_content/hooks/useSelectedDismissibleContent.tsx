@@ -1,8 +1,8 @@
-// === Module 7569: useSelectedDismissibleContent ===
+// === Module 7693: useSelectedDismissibleContent ===
 
-// Module 7569 (useSelectedDismissibleContent)
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7570 */;
-import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7572 */;
+// Module 7693 (useSelectedDismissibleContent)
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7694 */;
+import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7696 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_
   [tmp2, tmp3] = useGetDismissibleContent.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetSingleUseGuildDismissibleContent_UNSAFE(items4, id, CHANNEL_NOTICES), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName) {
@@ -42,7 +42,7 @@ export function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_M
   [tmp2, tmp3] = useGetDismissibleContent.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName) {
@@ -53,7 +53,7 @@ export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringCo
   [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
@@ -64,7 +64,7 @@ export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId
   [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
@@ -74,7 +74,7 @@ export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSn
   [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnowflakeId, id, GUILD_HEADER_TOOLTIPS);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnowflakeId, id, GUILD_HEADER_TOOLTIPS), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, timeRecurringConfig, groupName) {
@@ -85,13 +85,13 @@ export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(content
   [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS) {
   [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS);
   const tmp = _slicedToArray(useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, false, id);
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }

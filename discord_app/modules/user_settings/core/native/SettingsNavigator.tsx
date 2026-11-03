@@ -1,19 +1,19 @@
-// === Module 18992: SettingsNavigator ===
+// === Module 19150: SettingsNavigator ===
 
-// Module 18992 (SettingsNavigator)
+// Module 19150 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16592 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 18478 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 18993 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16735 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 18632 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19151 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16590 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
 
 const require = globalThis.__r;
 
@@ -31,11 +31,11 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = React7(Text_Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
+  const tmp5 = React7(Text_Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
   let tmp6 = tmp5;
   if (null != persistentBadge) {
     const obj = { style: tmp.headerContainerRow, children: null };
-    const items = [tmp5, ];
+    items = [tmp5, ];
     const obj2 = { badge: persistentBadge };
     items[1] = React7(SettingHeaderBadge, obj2);
     obj.children = items;
@@ -47,10 +47,10 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const NativeStackNavigator = fn(9987);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
@@ -90,7 +90,7 @@ export default noop.memo(function SettingsNavigator() {
   let navigation = require("Link").useNavigation();
   const tmp2Result = require("Link");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp2(tmp3[14]).OpenUserSettingsTriggerPoint);
-  const items = [screen];
+  items = [screen];
   const effect = onClose.useEffect(() => {
     obj2 = { destinationPane: screen, source: { page: constants.USER_SETTINGS } };
     const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj2);

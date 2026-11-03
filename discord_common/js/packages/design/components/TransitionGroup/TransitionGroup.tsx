@@ -1,6 +1,6 @@
-// === Module 5086: TransitionGroup/TransitionGroup ===
+// === Module 5213: TransitionGroup/TransitionGroup ===
 
-// Module 5086 (TransitionGroup/TransitionGroup)
+// Module 5213 (TransitionGroup/TransitionGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -86,7 +86,7 @@ class TransitionGroup {
             set.delete(tmp2);
           }
           if (value.state === map.YEETED) {
-            let state = map.ENTERED;
+            state = map.ENTERED;
           } else {
             state = value.state;
           }
@@ -164,10 +164,10 @@ export { TransitionStates };
 export { TransitionGroup };
 export function TransitionItem(renderItem) {
   const item = renderItem.item;
-  let items = [item];
+  items = [item];
   return <TransitionGroup items={noop.useMemo(() => {
     if (null != item) {
-      const items = [tmp];
+      items = [tmp];
       let items1 = items;
     } else {
       items1 = [];

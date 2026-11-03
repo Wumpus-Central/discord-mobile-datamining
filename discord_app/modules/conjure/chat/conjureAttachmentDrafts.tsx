@@ -1,10 +1,10 @@
-// === Module 12586: conjureAttachmentDrafts ===
+// === Module 12722: conjureAttachmentDrafts ===
 
-// Module 12586 (conjureAttachmentDrafts)
+// Module 12722 (conjureAttachmentDrafts)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12118 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12147 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12254 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -97,7 +97,7 @@ function discardProject(projectId, arg1) {
       }
       continue;
     }
-    const items = [projectId];
+    items = [projectId];
     const obj = { draftsByProject: _objectWithoutProperties(draftsByProject, items.map(_toPropertyKey)) };
     zustandStore.setState(obj);
   }
@@ -119,7 +119,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
     setDrafts(projectId, chat, closure_7);
     return arr.flatMap((ref) => {
       if (null != ref.ref) {
-        const items = [ref.ref];
+        items = [ref.ref];
         let items1 = items;
       } else {
         items1 = [];
@@ -129,10 +129,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10850).sendUserMessage;
+const sendUserMessage = fn(10980).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5211).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5334).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -156,7 +156,7 @@ export function conjureAttachmentTooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3868.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3995.JZ59Bo, obj);
 }
 export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
@@ -168,7 +168,7 @@ export function uploadConjureAttachment(arg0, size, name, contentType) {
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3868.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3995.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }
@@ -202,7 +202,7 @@ export function addConjureAttachmentDrafts(substr, chat, mapped) {
       obj.upload = draft.upload;
       return obj;
     });
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(mapped.map((draft) => draft.draft), HermesBuiltin.arraySpread(getConjureAttachmentDrafts(substr, chat), 0));
     setDrafts(substr, chat, items);
     for (const item10006 of mapped) {
@@ -280,7 +280,7 @@ export function sendConjureCardReply(projectId, implementation_prompt, arg2) {
     if (chat.every((status) => "ready" === status.status)) {
       let items1 = takeConjureAttachmentRefs(projectId, "chat");
     }
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(attachments, 0));
     const obj2 = { clarificationAnswers };
     sendUserMessage(projectId, implementation_prompt, items, obj2);

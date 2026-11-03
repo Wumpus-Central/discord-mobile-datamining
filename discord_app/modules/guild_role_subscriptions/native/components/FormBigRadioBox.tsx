@@ -1,18 +1,18 @@
-// === Module 19947: FormBigRadioBox ===
+// === Module 20097: FormBigRadioBox ===
 
-// Module 19947 (FormBigRadioBox)
+// Module 20097 (FormBigRadioBox)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FormRadio from "FormRadio" /* 7062 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FormRadio from "FormRadio" /* 7188 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 }, containerSelected: null, indicator: null, iconContainer: null, iconContainerSelected: null, title: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 };
 obj2.containerSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -37,7 +37,7 @@ export default function FormBigRadioBox(arg0) {
   const tmp = closure_6();
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  const items = [tmp.container, , , ];
+  items = [tmp.container, , , ];
   let containerSelected = selected;
   if (selected) {
     containerSelected = tmp.containerSelected;

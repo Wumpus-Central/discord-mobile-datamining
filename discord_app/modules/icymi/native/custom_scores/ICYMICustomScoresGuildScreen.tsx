@@ -1,22 +1,22 @@
-// === Module 18535: ICYMICustomScoresGuildScreen ===
+// === Module 18689: ICYMICustomScoresGuildScreen ===
 
-// Module 18535 (ICYMICustomScoresGuildScreen)
+// Module 18689 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ChannelListState from "ChannelListState" /* 7707 */;
-import ICYMIUtils from "ICYMIUtils" /* 8923 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11414 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18537 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ChannelListState from "ChannelListState" /* 7831 */;
+import ICYMIUtils from "ICYMIUtils" /* 9047 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11552 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelListStore from "ChannelListStore" /* 7705 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import ChannelListStore from "ChannelListStore" /* 7829 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 require = fn;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -24,7 +24,7 @@ function ICYMICustomScoreChannelRow(channelId) {
   let stateFromStores1;
   ({ start, end, disabled } = channelId);
   const tmp = closure_14();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(stateFromStores1[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const tmp6 = stateFromStores(stateFromStores1[12])(stateFromStores);
   let obj = channelId(stateFromStores1[11]);
@@ -108,7 +108,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 }, guildHeader: null, categoryHeader: null, channelNameContainer: null, channelMutedIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.guildHeader = { marginBottom: nativeDefault.space.PX_32 };
@@ -129,7 +129,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   let guildChannels;
   const tmp = closure_14();
   dependencyMap = tmp;
-  let items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = navigation(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let items1 = [navigation, ];
   let name;
@@ -151,14 +151,14 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(8923).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(9047).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(8923);
+  const tmp2Result3 = navigation(9047);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () => ChannelListStore.getGuild(guildId)).guildChannels;
   const items4 = [numberToCustomScoreResult, guildChannels];
   const memo = obj2.useMemo(() => {
-    const items = [];
+    items = [];
     items.push({ kind: "header" });
     const sections = guildChannels.getSections(false);
     const entries = sections.entries();
@@ -228,7 +228,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
         const obj3 = { style: closure_2.guildHeader, children: null };
         const obj4 = { guild: tmp15 };
         obj3.children = closure_2_11(ICYMIContentSettingControl.GuildScoreSettings, obj4);
-        const items = [closure_2_11(View, obj3), , ];
+        items = [closure_2_11(View, obj3), , ];
         const obj5 = { variant: "text-sm/semibold", color: "text-default", children: null };
         const intl = util.intl;
         obj5.children = intl.string(util.t["0jRosn"]);
@@ -240,7 +240,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
         obj6.children = intl2.string(util.t.l52PX4);
         items[2] = closure_2_11(Text_Text.Text, obj6);
         obj2.children = items;
-        tmp16 = closure_2_12(map1, obj2);
+        tmp16 = application_id(state, obj2);
       }
       return tmp16;
     } else if ("categoryHeader" === kind) {
@@ -250,7 +250,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
       const obj10 = { variant: "text-sm/semibold", color: "text-default", children: item.title };
       items1[1] = closure_2_11(Text_Text.Text, obj10);
       obj8.children = items1;
-      return closure_2_12(View, obj8);
+      return application_id(View, obj8);
     } else if ("channel" === kind) {
       const obj = { disabled: null, channelId: null, start: null, end: null };
       ({ disabled: obj.disabled, channelId: obj.channelId, start: obj.start, end: obj.end } = item);
@@ -260,11 +260,11 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     }
   }, items5);
   let obj4 = { contentInset: null, showsVerticalScrollIndicator: false, renderItem: null, data: null, keyExtractor: null };
-  const rect = { bottom: guildId(1625)().bottom, top: guildId(575).space.PX_12 };
+  const rect = { bottom: guildId(1627)().bottom, top: guildId(575).space.PX_12 };
   obj4.contentInset = rect;
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(7294).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(7414).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 };

@@ -1,26 +1,26 @@
-// === Module 18999: OrbsArcadeGameScreen ===
+// === Module 19157: OrbsArcadeGameScreen ===
 
-// Module 18999 (OrbsArcadeGameScreen)
+// Module 19157 (OrbsArcadeGameScreen)
 import nativeDefault from "native" /* 575 */;
-import Link from "Link" /* 1498 */;
-import leaveFrame from "leaveFrame" /* 10938 */;
+import Link from "Link" /* 1500 */;
+import leaveFrame from "leaveFrame" /* 11076 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
 
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ getFrameLaunchParams: closure_8, isLaunched: closure_9, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(19000).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(19158).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
+const createStyles = fn(5141);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.wrapper = { flex: 1, overflow: "hidden", borderTopStartRadius: nativeDefault.radii.lg, borderTopEndRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5657).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
+let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5777).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
 obj2.header = rect;
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default function OrbsArcadeGameScreen(navigation) {
   const claimableRewardIdsAtLaunch = params.claimableRewardIdsAtLaunch;
   const tmp = closure_13();
   const rect = route(frameId[13])();
-  const items = [closure_5];
+  items = [closure_5];
   const items1 = [frameId];
   const stateFromStores = navigation(frameId[14]).useStateFromStores(items, () => FramesStore.getFrame(frameId), items1);
   closure_5 = tmp6;

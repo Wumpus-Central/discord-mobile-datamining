@@ -1,13 +1,13 @@
-// === Module 2056: PremiumSubscriptionInvoiceItem ===
+// === Module 2185: PremiumSubscriptionInvoiceItem ===
 
-// Module 2056 (PremiumSubscriptionInvoiceItem)
+// Module 2185 (PremiumSubscriptionInvoiceItem)
 import _modDef12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export function coalesceInvoiceItems(arr) {
-  const items = [];
+  items = [];
   const set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {

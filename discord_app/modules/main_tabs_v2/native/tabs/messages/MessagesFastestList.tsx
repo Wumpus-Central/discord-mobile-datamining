@@ -1,21 +1,21 @@
-// === Module 18160: MessagesFastestList ===
+// === Module 18304: MessagesFastestList ===
 
-// Module 18160 (MessagesFastestList)
+// Module 18304 (MessagesFastestList)
 import nativeDefault from "native" /* 575 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7230 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7232 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 18088 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18098 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18099 */;
-import useMessagesData from "useMessagesData" /* 18102 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18155 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7351 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7353 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 18232 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18242 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18243 */;
+import useMessagesData from "useMessagesData" /* 18246 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 18299 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;
@@ -54,7 +54,7 @@ export default noop.memo(function MessagesFastestList(listItemSizes) {
       }
     }
   }), []);
-  const items = [channelFavorites, listItemHeight, channels, friendSuggestions, setAddedFriendSuggestions, listItemSuggestedFriendHeight];
+  items = [channelFavorites, listItemHeight, channels, friendSuggestions, setAddedFriendSuggestions, listItemSuggestedFriendHeight];
   const items1 = [listTop, listLeft, scrollPosition];
   const callback = listLeft.useCallback((arg0, row) => {
     if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {

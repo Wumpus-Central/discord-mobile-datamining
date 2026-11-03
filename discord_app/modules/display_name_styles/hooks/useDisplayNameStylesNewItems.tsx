@@ -1,20 +1,20 @@
-// === Module 17331: useDisplayNameStylesNewItems ===
+// === Module 17474: useDisplayNameStylesNewItems ===
 
-// Module 17331 (useDisplayNameStylesNewItems)
+// Module 17474 (useDisplayNameStylesNewItems)
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16475 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16618 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const DisplayNameStylesConstants = fn(1401);
+const DisplayNameStylesConstants = fn(1403);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");
 
 export function useDisplayNameStylesNewFonts(visibleFontOrder) {
   _require = visibleFontOrder;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => seenFonts.getSeenFonts());
   const obj2 = {
     dotFontIds: null,
@@ -34,7 +34,7 @@ export function useDisplayNameStylesNewFonts(visibleFontOrder) {
 }
 export function useDisplayNameStylesNewEffects(visibleEffectOrder) {
   _require = visibleEffectOrder;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => seenEffects.getSeenEffects());
   const obj2 = {
     dotEffectIds: null,
@@ -54,7 +54,7 @@ export function useDisplayNameStylesNewEffects(visibleEffectOrder) {
 }
 export function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
   _require = visibleFontOrder;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   const items1 = [visibleFontOrder];
   const stateFromStores = require("initialize").useStateFromStores(items, () => newFontsBadgeDismissed.getNewFontsBadgeDismissed());
   const obj = require("initialize");
@@ -68,7 +68,7 @@ export function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
 }
 export function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
   _require = visibleEffectOrder;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   const items1 = [visibleEffectOrder];
   const stateFromStores = require("initialize").useStateFromStores(items, () => newEffectsBadgeDismissed.getNewEffectsBadgeDismissed());
   const obj = require("initialize");

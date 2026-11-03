@@ -1,6 +1,6 @@
-// === Module 6025: BackPressTracking ===
+// === Module 6145: BackPressTracking ===
 
-// Module 6025 (BackPressTracking)
+// Module 6145 (BackPressTracking)
 import noop from "module_19" /* 19 */;
 
 fn(17).BackHandler;
@@ -53,7 +53,7 @@ export function addBackPressListener(fn) {
   };
 }
 export function useTrackNavigationBackPress(navigationContainerRef) {
-  const items = [navigationContainerRef];
+  items = [navigationContainerRef];
   const effect = noop.useEffect(() => {
     if (null != navigationContainerRef) {
       if (navigationContainerRef.isReady()) {

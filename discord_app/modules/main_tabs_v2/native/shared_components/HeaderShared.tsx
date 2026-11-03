@@ -1,17 +1,17 @@
-// === Module 9812: HeaderShared ===
+// === Module 9943: HeaderShared ===
 
-// Module 9812 (HeaderShared)
+// Module 9943 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import _mod7005 from "module_7005" /* 7005 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9814 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9819 */;
-import ChannelActionsDefault from "ChannelActions" /* 9824 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14572 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import _mod7131 from "module_7131" /* 7131 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9945 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9950 */;
+import ChannelActionsDefault from "ChannelActions" /* 9955 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14703 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -47,7 +47,7 @@ class GenericHeaderTitle {
     renderTitleContainer = function renderTitleContainer(header) {
       if (null != dependencyMap) {
         const obj2 = { accessible: true, accessibilityRole: header, style: closure_5.titleContainer, children: null };
-        const items = [tmp, ];
+        items = [tmp, ];
         const obj3 = { lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
         items[1] = timestampProducer(Text_Text.Text, obj3);
         obj2.children = items;
@@ -125,17 +125,17 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9813).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9944).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 let obj5 = {};
-let merged = Object.assign(fn(5624).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(5747).TextStyleSheet["text-md/semibold"]);
 obj5.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
@@ -170,9 +170,9 @@ const memoResult = noop.memo(function HeaderInner(style) {
   const obj = style(num[14]);
   const tmp2 = importDefault;
   gradientTop = style(num[15]).useGradientTop();
-  let items = [num, gradientTop, tmp, style];
+  items = [num, gradientTop, tmp, style];
   const memo = gradientTop.useMemo(() => {
-    const items = [headerWrapper.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + MIN_HEADER_HEIGHT }, style];
+    items = [headerWrapper.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + MIN_HEADER_HEIGHT }, style];
     return items;
   }, items);
   if (typeof headerTitle === "string") {

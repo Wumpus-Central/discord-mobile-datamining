@@ -1,9 +1,9 @@
-// === Module 6791: UserSettingsURLUtils ===
+// === Module 6911: UserSettingsURLUtils ===
 
-// Module 6791 (UserSettingsURLUtils)
+// Module 6911 (UserSettingsURLUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsKeys from "UserSettingsKeys" /* 6792 */;
-import keysSorter from "keysSorter" /* 6793 */;
+import UserSettingsKeys from "UserSettingsKeys" /* 6912 */;
+import keysSorter from "keysSorter" /* 6913 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export function parseSettingsUrl(arg0) {
     str5 = str2.toLowerCase().replace(re7, "-");
     const str6 = str2.toLowerCase();
   }
-  const items = [str5, ];
+  items = [str5, ];
   if (null != tmp[3]) {
     str4 = str3.toLowerCase().replace(re7, "-");
     const str8 = str3.toLowerCase();

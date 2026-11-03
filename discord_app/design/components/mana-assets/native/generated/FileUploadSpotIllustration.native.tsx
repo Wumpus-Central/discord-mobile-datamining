@@ -1,19 +1,19 @@
-// === Module 19048: FileUploadSpotIllustration ===
+// === Module 19206: FileUploadSpotIllustration ===
 
-// Module 19048 (FileUploadSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef19049 from "module_19049" /* 19049 */;
-import _modDef19050 from "module_19050" /* 19050 */;
-import _modDef19051 from "module_19051" /* 19051 */;
+// Module 19206 (FileUploadSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef19207 from "module_19207" /* 19207 */;
+import _modDef19208 from "module_19208" /* 19208 */;
+import _modDef19209 from "module_19209" /* 19209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19049 }, 3: null };
-let obj2 = { uri: _modDef19049 };
-obj[2] = { uri: _modDef19050 };
-const obj3 = { uri: _modDef19050 };
-obj[3] = { uri: _modDef19051 };
+let obj = { 1: null, 2: { uri: _modDef19207 }, 3: null };
+let obj2 = { uri: _modDef19207 };
+obj[2] = { uri: _modDef19208 };
+const obj3 = { uri: _modDef19208 };
+obj[3] = { uri: _modDef19209 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function FileUploadSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

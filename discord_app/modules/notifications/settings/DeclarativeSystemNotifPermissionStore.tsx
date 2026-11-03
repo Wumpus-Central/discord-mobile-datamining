@@ -1,10 +1,10 @@
-// === Module 17965: DeclarativeSystemNotifPermissionStore ===
+// === Module 18108: DeclarativeSystemNotifPermissionStore ===
 
-// Module 17965 (DeclarativeSystemNotifPermissionStore)
+// Module 18108 (DeclarativeSystemNotifPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17966 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17967 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 18109 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 18110 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -44,7 +44,7 @@ prototype["isDisabled"] = function isDisabled(arg0) {
   return true === obj.disabledSettings[arg0];
 };
 prototype["getDisabledSettings"] = function getDisabledSettings() {
-  const items = [];
+  items = [];
   const entries = Object.entries(obj.disabledSettings);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

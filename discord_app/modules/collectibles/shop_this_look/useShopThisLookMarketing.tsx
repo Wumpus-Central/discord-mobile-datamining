@@ -1,9 +1,9 @@
-// === Module 14821: useShopThisLookMarketing ===
+// === Module 14952: useShopThisLookMarketing ===
 
-// Module 14821 (useShopThisLookMarketing)
-import dismissible_content from "dismissible_content" /* 4847 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
-import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8788 */;
+// Module 14952 (useShopThisLookMarketing)
+import dismissible_content from "dismissible_content" /* 4974 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
+import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8912 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -14,7 +14,7 @@ export function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnable
   useSelectedDismissibleContent;
   if (isShopThisLookMobileEnabled) {
     if (tmp3) {
-      const items = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
+      items = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
     const tmp8 = _slicedToArray(tmp5([], { bypassAutoDismiss: true }), 2);
     const obj2 = { isVisible: null != tmp8[0], markAsDismissed: tmp8[1] };

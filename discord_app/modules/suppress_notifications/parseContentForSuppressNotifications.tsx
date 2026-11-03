@@ -1,6 +1,6 @@
-// === Module 7826: parseContentForSuppressNotifications ===
+// === Module 7950: parseContentForSuppressNotifications ===
 
-// Module 7826 (parseContentForSuppressNotifications)
+// Module 7950 (parseContentForSuppressNotifications)
 import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/suppress_notifications/parseC
 
 export default function parseContentForSuppressNotifications(str) {
   if (null == str) {
-    const items = [false, ""];
+    items = [false, ""];
     let items2 = items;
   } else if (null == str.match(regExp)) {
     const items1 = [false, str];

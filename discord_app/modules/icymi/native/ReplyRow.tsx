@@ -1,17 +1,17 @@
-// === Module 18583: ReplyRow ===
+// === Module 18739: ReplyRow ===
 
-// Module 18583 (ReplyRow)
+// Module 18739 (ReplyRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import ReactionIcon from "ReactionIcon" /* 9452 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import ReactionIcon from "ReactionIcon" /* 9580 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
   const obj = { separator: null, container: null, buttonContainer: null, feedbackContainer: null, icon: null, feedbackButtonIcon: null, input: null, contentInventoryPressable: null, contentInventoryContainer: null, contentInventoryText: null, replyContainer: null };
   const size = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: marginLeft.margin, width: "100%" };
@@ -43,7 +43,7 @@ export function ContentInventoryReplyRow(onPress) {
   const obj = { style: tmp.replyContainer, children: null };
   const obj2 = { accessibilityRole: "button", onPress: onPress.onReply, style: tmp.contentInventoryPressable, accessibilityLabel: reactText, pointerEvents: "box-only", children: null };
   const obj3 = { style: tmp.contentInventoryContainer, children: null };
-  const items = [React4(Text_Text.Text, { variant: "text-md/medium", color: "input-placeholder-text-default", lineClamp: 1, style: tmp.contentInventoryText, children: reactText }), React4(ReactionIcon.ReactionIcon, { style: tmp.icon, size: "custom" })];
+  items = [React4(Text_Text.Text, { variant: "text-md/medium", color: "input-placeholder-text-default", lineClamp: 1, style: tmp.contentInventoryText, children: reactText }), React4(ReactionIcon.ReactionIcon, { style: tmp.icon, size: "custom" })];
   obj3.children = items;
   obj2.children = hasOwnProperty(View, obj3);
   obj.children = React4(Pressables.PressableOpacity, obj2);

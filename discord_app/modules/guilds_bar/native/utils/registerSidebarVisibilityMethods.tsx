@@ -1,9 +1,9 @@
-// === Module 18240: registerSidebarVisibilityMethods ===
+// === Module 18384: registerSidebarVisibilityMethods ===
 
-// Module 18240 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 6772 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9683 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 18384 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 6892 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9815 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const SortedGuildStore = SortedGuildStore2;
@@ -19,7 +19,7 @@ export function registerGuildVisibilityMethod(fastListRef) {
       if (null == current) {
         return [];
       } else {
-        const items = current.getItems();
+        items = current.getItems();
         const scrollPosition = current.getScrollPosition();
         const containerSize = current.containerSize;
         const guilds = GuildStore.getGuilds();
@@ -67,7 +67,7 @@ export function registerFastListChannelVisibilityMethod(ref, guildChannels) {
       if (null == containerSize) {
         return [];
       } else {
-        const items = obj.getItems();
+        items = obj.getItems();
         let channelFromSectionRow = obj.getScrollPosition();
         containerSize = obj.containerSize;
         const items1 = [];

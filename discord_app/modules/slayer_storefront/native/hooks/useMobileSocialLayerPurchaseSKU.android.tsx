@@ -1,8 +1,8 @@
-// === Module 10681: useMobileSocialLayerPurchaseSKU ===
+// === Module 10811: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10681 (useMobileSocialLayerPurchaseSKU)
-import GPlayActionCreators from "GPlayActionCreators" /* 9911 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10682 */;
+// Module 10811 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 10042 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,10 +35,10 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
       tmp4 = null;
     }
     c0 = tmp4;
-    let items = [tmp4];
+    items = [tmp4];
     const effect = noop.useEffect(() => {
       if (null != c0) {
-        const items = [tmp];
+        items = [tmp];
         const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
       }
     }, items);

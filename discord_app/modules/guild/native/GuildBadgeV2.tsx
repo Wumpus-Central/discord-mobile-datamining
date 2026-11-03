@@ -1,18 +1,18 @@
-// === Module 9306: GuildBadgeV2 ===
+// === Module 9434: GuildBadgeV2 ===
 
-// Module 9306 (GuildBadgeV2)
+// Module 9434 (GuildBadgeV2)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5021 */;
-import GuildTraits from "GuildTraits" /* 9304 */;
-import BadgeCategory from "BadgeCategory" /* 9305 */;
-import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 9307 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9310 */;
+import shared from "shared" /* 5148 */;
+import GuildTraits from "GuildTraits" /* 9432 */;
+import BadgeCategory from "BadgeCategory" /* 9433 */;
+import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 9435 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
@@ -34,7 +34,7 @@ export default function GuildBadgeV2(arg0) {
       const iconSize = native.getIconSize(size);
       const obj = { size: "custom", color: nativeDefault.colors.BADGE_INVERTED_BACKGROUND, secondaryColor: nativeDefault.colors.BADGE_INVERTED_TEXT, style: null };
       const size1 = { width: iconSize, height: iconSize };
-      const items = [size1, ];
+      items = [size1, ];
       let icon = merged.style;
       if (icon == null) {
         icon = tmp4.icon;

@@ -1,27 +1,27 @@
-// === Module 19232: VoicePanelHeaderSpeaker ===
+// === Module 19390: VoicePanelHeaderSpeaker ===
 
-// Module 19232 (VoicePanelHeaderSpeaker)
+// Module 19390 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9228 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14742 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19150 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19235 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9356 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14873 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19308 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19393 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import AudioRouteStore from "AudioRouteStore" /* 5784 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19234 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import AudioRouteStore from "AudioRouteStore" /* 5904 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19392 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19233).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(19391).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -57,7 +57,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   const awaitingRemoteSessionInfo = channelId(style[15])();
   let obj = isConnectedToVoiceChannel(style[13]);
   let tmp = channelId;
-  let items = [awaitingRemoteSessionInfo];
+  items = [awaitingRemoteSessionInfo];
   const stateFromStores = isConnectedToVoiceChannel(style[16]).useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   let obj2 = isConnectedToVoiceChannel(style[16]);
   const items1 = [disabled];
@@ -147,7 +147,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   const memo = obj5.useMemo(() => {
     if (!obj.isAndroid()) {
       if (closure_15) {
-        const items = [];
+        items = [];
         let tmp4 = closure_7;
         let tmp5 = closure_7;
         if (!closure_7) {
@@ -245,7 +245,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "Array" };
+        const obj = { onPress, ref: "y" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };
@@ -257,7 +257,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
         tmp9 = isConnectedToVoiceChannel;
       }
       obj2.canShowTooltip = tmp9;
-      const items = [closure_2_14(closure_18, obj2), ];
+      items = [gesture(closure_18, obj2), ];
       const obj3 = { style, ref, children: null };
       const tmp3 = _objectWithoutProperties(tmp, closure_3);
       const obj4 = { ref: tmp.ref };
@@ -280,10 +280,10 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
       obj4.icon = tmp15;
       const intl = util.intl;
       obj4.accessibilityLabel = intl.string(util.t.dnI0AL);
-      obj3.children = closure_2_14(VoicePanelIconButtonDefault, obj4);
-      items[1] = closure_2_14(tmp11, obj3);
+      obj3.children = gesture(VoicePanelIconButtonDefault, obj4);
+      items[1] = gesture(tmp11, obj3);
       obj5.children = items;
-      return __initData2(__initData, obj5);
+      return value2(closure_2_15, obj5);
     }
     if (!tmp4Result2.isAndroid()) {
       if (tmp10) {

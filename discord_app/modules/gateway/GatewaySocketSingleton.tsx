@@ -1,18 +1,18 @@
-// === Module 15525: GatewaySocketSingleton ===
+// === Module 15666: GatewaySocketSingleton ===
 
-// Module 15525 (GatewaySocketSingleton)
+// Module 15666 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DiscordNativeDefault from "DiscordNative" /* 4825 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10212 */;
-import GatewaySocketDefault from "GatewaySocket" /* 15527 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 15564 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 15567 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15526 */;
+import DiscordNativeDefault from "DiscordNative" /* 4952 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10342 */;
+import GatewaySocketDefault from "GatewaySocket" /* 15668 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 15705 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 15708 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15667 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkUtils_mod from "NetworkUtils" /* 1475 */;
+import NetworkUtils_mod from "NetworkUtils" /* 1477 */;
 
 let closure_5 = new LoggerDefault("ConnectionStore");
 const socket = new GatewaySocketDefault();
@@ -25,7 +25,7 @@ socket.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = DiscordAppStateDefault.getState();
+    state = DiscordAppStateDefault.getState();
     const installationForTracking = AuthenticationStore.getInstallationForTracking();
     const obj3 = { token, userId: null, properties: null, presence: null };
     let id = AuthenticationStore.getId();
@@ -52,7 +52,7 @@ socket.handleIdentify = () => {
   }
   const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

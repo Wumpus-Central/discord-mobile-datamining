@@ -1,8 +1,8 @@
-// === Module 19266: useActivityUsers ===
+// === Module 19424: useActivityUsers ===
 
-// Module 19266 (useActivityUsers)
-import UserStore from "UserStore" /* 1383 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+// Module 19424 (useActivityUsers)
+import UserStore from "UserStore" /* 1385 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/activities/useActivityUsers.t
 export default function useActivityUsers(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let items = [EmbeddedActivitiesStore, UserStore];
+  items = [EmbeddedActivitiesStore, UserStore];
   const items1 = [arg1, arg0];
   return require("useStateFromStores").useStateFromStoresArray(items, () => {
     if (null == closure_1) {
@@ -22,7 +22,7 @@ export default function useActivityUsers(arg0, arg1) {
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
       const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === closure_1_0);
       if (null == found) {
-        let items = [];
+        items = [];
       } else {
         const _Array = Array;
         const mapped = Array.from(found.userIds).map((item) => user.getUser(item));

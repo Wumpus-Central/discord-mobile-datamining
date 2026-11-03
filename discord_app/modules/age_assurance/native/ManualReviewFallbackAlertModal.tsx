@@ -1,11 +1,11 @@
-// === Module 8171: ManualReviewFallbackAlertModal ===
+// === Module 8295: ManualReviewFallbackAlertModal ===
 
-// Module 8171 (ManualReviewFallbackAlertModal)
+// Module 8295 (ManualReviewFallbackAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import _modDef3192 from "module_3192" /* 3192 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8172 */;
+import _modDef3319 from "module_3319" /* 3319 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,17 +17,17 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/ManualRe
 export default function ManualReviewFallbackAlertModal() {
   const obj = { title: null, content: null, actions: null, trackingProps: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3192["+c5sxg"]);
+  obj.title = intl.string(_modDef3319["+c5sxg"]);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3192["RFLH++"]);
+  obj.content = intl2.string(_modDef3319["RFLH++"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t["NX+WJN"]);
-  const items = [React3(AlertModal.AlertActionButton, obj3, "got-it"), ];
+  items = [React3(AlertModal.AlertActionButton, obj3, "got-it"), ];
   const obj4 = { variant: "secondary", text: null, onPress: null };
   const intl4 = util.intl;
-  obj4.text = intl4.string(_modDef3192.Z61nkt);
+  obj4.text = intl4.string(_modDef3319.Z61nkt);
   obj4.onPress = function onPress() {
     return ManualReviewActionCreators.handleManualReviewCta();
   };

@@ -1,19 +1,19 @@
-// === Module 11544: ActivitiesActionCreators ===
+// === Module 11681: ActivitiesActionCreators ===
 
-// Module 11544 (ActivitiesActionCreators)
+// Module 11681 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, AnalyticEvents: metroRequire, LoggingInviteTypes: closure_7 } = Constants);
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -90,7 +90,7 @@ export default {
           APPLICATION = constants3.APPLICATION;
         }
         obj2.invite_type = APPLICATION;
-        let application_id;
+        application_id = undefined;
         if (activity != null) {
           application_id = activity.application_id;
         }

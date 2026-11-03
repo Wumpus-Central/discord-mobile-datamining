@@ -1,8 +1,8 @@
-// === Module 17120: MobileCustomMuxIntegration ===
+// === Module 17263: MobileCustomMuxIntegration ===
 
-// Module 17120 (MobileCustomMuxIntegration)
+// Module 17263 (MobileCustomMuxIntegration)
 import logger_Logger from "logger/Logger" /* 4 */;
-import UDefault from "U" /* 17118 */;
+import UDefault from "U" /* 17261 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("MobileCustomMuxIntegration");
@@ -259,7 +259,7 @@ prototype["emitError"] = function emitError(error) {
       if (error != null) {
         localizedDescription = error.localizedDescription;
       }
-      const items = [localizedDescription, , ];
+      items = [localizedDescription, , ];
       let errorString;
       if (error != null) {
         errorString = tmp5.errorString;

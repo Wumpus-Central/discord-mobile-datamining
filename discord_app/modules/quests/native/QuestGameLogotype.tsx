@@ -1,28 +1,32 @@
-// === Module 17128: QuestGameLogotype ===
+// === Module 17271: QuestGameLogotype ===
 
-// Module 17128 (QuestGameLogotype)
+// Module 17271 (QuestGameLogotype)
 import nativeDefault from "native" /* 575 */;
-import spring from "spring" /* 5637 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5638).springSlow);
-SPRING_CONFIG.overshootClamping = true;
-const createStyles = fn(5014);
+const obj = {};
+const merged = Object.assign(fn(5758).springSlow);
+obj.overshootClamping = true;
+const createStyles = fn(5141);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
-const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}" };
+let closure_10 = { code: "(function QuestGameLogotypeTsx1(){let[withSpring,logoDimensionStyles,SPRING_CONFIG]=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};})" };
 let obj4 = { marginBottom: nativeDefault.space.PX_4 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
 
 export default noop.memo(function QuestGameLogotype(assetUrl) {
   assetUrl = assetUrl.assetUrl;
+  _require = assetUrl;
   let num = assetUrl.width;
   if (num === undefined) {
     num = 120;
@@ -35,7 +39,7 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
   const tmp2 = maxWidth(maxHeight.useState(null), 2);
   const first = tmp2[0];
   closure_6 = tmp2[1];
-  const items = [first, num, height, maxWidth, maxHeight];
+  items = [first, num, height, maxWidth, maxHeight];
   const memo = maxHeight.useMemo(() => {
     size = first;
     if (null != first) {
@@ -44,7 +48,7 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
         const size1 = { height, width: height * result };
         let size2 = size1;
       } else {
-        size2 = { height: num / result, width: num };
+        size2 = { height: width / result, width };
       }
       if (null != maxWidth) {
         const _Math = Math;
@@ -61,7 +65,7 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
   }, items);
   const items1 = [assetUrl];
   const effect = maxHeight.useEffect(() => {
-    size = size.getSize(assetUrl, (width, height) => {
+    size = size.getSize(c0, (width, height) => {
       if (tmp) {
         size = { width, height };
         closure_1_6(size);
@@ -69,43 +73,48 @@ export default noop.memo(function QuestGameLogotype(assetUrl) {
       tmp = width > 0 && height > 0;
     });
   }, items1);
-  SPRING_CONFIG = assetUrl(height[7]);
-  class C {
+  const items2 = [closure_10, require("spring/spring").withSpring, memo, maxHeight];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp8, tmp9, tmp10, tmp11] = items2;
+  class QuestGameLogotypeTsx1 {
     constructor() {
-      obj = closure_0(closure_2[8]);
       num = 1;
-      if (null == closure_7) {
+      tmp = closure_0;
+      if (null == closure_1) {
         num = 0;
       }
-      obj1 = { opacity: obj.withSpring(num, closure_8, "animate-always") };
-      return obj1;
+      obj = { opacity: tmp(num, closure_2, "animate-always") };
+      return obj;
     }
   }
-  C.__closure = { withSpring: assetUrl(height[8]).withSpring, logoDimensionStyles: memo, SPRING_CONFIG };
-  C.__workletHash = 11242802634598;
-  C.__initData = __initData;
-  const items2 = [assetUrl];
-  const animatedStyle = SPRING_CONFIG.useAnimatedStyle(C);
-  const memo1 = maxHeight.useMemo(() => assetUrl.endsWith(".svg"), items2);
+  const items3 = [tmp9, tmp10, tmp11];
+  QuestGameLogotypeTsx1.__closure = items3;
+  QuestGameLogotypeTsx1.__workletHash = 2309549072991;
+  QuestGameLogotypeTsx1.__initData = tmp8;
+  const items4 = [assetUrl];
+  const animatedStyle = require("module_1652").useAnimatedStyle(QuestGameLogotypeTsx1);
+  const memo1 = obj.useMemo(() => _undefined.endsWith(".svg"), items4);
   const obj3 = { style: null, children: null };
-  const items3 = [animatedStyle, assetUrl.style];
-  obj3.style = items3;
+  const items5 = [animatedStyle, assetUrl.style];
+  obj3.style = items5;
   if (memo1) {
     const obj4 = { style: null, children: null };
-    const items4 = [memo, tmp.logo];
-    obj4.style = items4;
+    const items6 = [memo, tmp.logo];
+    obj4.style = items6;
     size = { height: "100%", width: "100%", uri: assetUrl, onError };
-    obj4.children = tmp10(assetUrl(tmp7[9]).SvgUri, size);
-    let tmp10Result = tmp10(first, obj4);
+    obj4.children = jsx(require("inlineStyles").SvgUri, { height: "100%", width: "100%", uri: assetUrl, onError });
+    let tmp14Result = <first style={null}>{null}</first>;
   } else {
     const obj5 = { source: null, style: null, onError: null };
     const obj6 = { uri: assetUrl };
     obj5.source = obj6;
-    const items5 = [memo, tmp.logo];
-    obj5.style = items5;
+    const items7 = [memo, tmp.logo];
+    obj5.style = items7;
     obj5.onError = onError;
-    tmp10Result = tmp10(num(tmp7[10]), obj5);
+    tmp14Result = jsx(FastImageDefault, { source: null, style: null, onError: null });
   }
-  obj3.children = tmp10Result;
-  return memo(num(height[7]).View, obj3);
+  obj3.children = tmp14Result;
+  return jsx(_modDef1652.View, { style: null, children: null });
 });

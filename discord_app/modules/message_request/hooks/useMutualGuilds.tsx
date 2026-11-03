@@ -1,10 +1,10 @@
-// === Module 18969: useMutualGuilds ===
+// === Module 19127: useMutualGuilds ===
 
-// Module 18969 (useMutualGuilds)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
+// Module 19127 (useMutualGuilds)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useMutu
 
 export function useMutualGuildsForMessageRequests(userId) {
   _require = userId;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));
   const obj = require("initialize");
   const items1 = [UserProfileStore];

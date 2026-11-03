@@ -1,6 +1,6 @@
-// === Module 20117: ManagerRegistryShared ===
+// === Module 20267: ManagerRegistryShared ===
 
-// Module 20117 (ManagerRegistryShared)
+// Module 20267 (ManagerRegistryShared)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ function populateMap(actions) {
   if (tmp) {
     let tmp2 = actions;
     if (!actions.includes("POST_CONNECTION_OPEN")) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(actions, 0)] = "POST_CONNECTION_OPEN";
       tmp2 = items;
     }
@@ -48,7 +48,7 @@ function handleAction(type) {
     c3 = true;
   }
   if (type.type in closure_2) {
-    const items = [];
+    items = [];
     for (const item10018 of tmp5) {
       if (!c3) {
         if (item10018.neverLoadBeforeConnectionOpen) {

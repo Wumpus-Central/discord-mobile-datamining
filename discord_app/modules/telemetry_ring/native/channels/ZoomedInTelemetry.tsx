@@ -1,10 +1,10 @@
-// === Module 1997: ZoomedInTelemetry ===
+// === Module 2126: ZoomedInTelemetry ===
 
-// Module 1997 (ZoomedInTelemetry)
-import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1998 */;
-import TelemetryRingNative2 from "TelemetryRingNative" /* 2001 */;
+// Module 2126 (ZoomedInTelemetry)
+import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 2127 */;
+import TelemetryRingNative2 from "TelemetryRingNative" /* 2130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 1999 */;
+import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 2128 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
@@ -47,7 +47,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -63,7 +63,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             return obj5;
           } else {
             c5 = 1;
-            let items = [];
+            items = [];
             closure_1 = closure_0;
             closure_0 = closure_0[Symbol.iterator]();
             while (closure_0 !== undefined) {
@@ -125,7 +125,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
     }
   })();
 };
-let items = [fn(2001).TelemetryChannel.ZOOMED];
+let items = [fn(2130).TelemetryChannel.ZOOMED];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 

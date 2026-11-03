@@ -1,14 +1,14 @@
-// === Module 12348: UserProfileApplicationWidgetSkeletons ===
+// === Module 12484: UserProfileApplicationWidgetSkeletons ===
 
-// Module 12348 (UserProfileApplicationWidgetSkeletons)
+// Module 12484 (UserProfileApplicationWidgetSkeletons)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { skeleton: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL } };
 let closure_4 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export function ImageSkeleton(style) {
   const obj = { style: null };
-  const items = [closure_4().skeleton, style.style];
+  items = [closure_4().skeleton, style.style];
   obj.style = items;
   return <View style={null} />;
 }
@@ -28,7 +28,7 @@ export function TextSkeleton(widthChars) {
   }
   const tmp2 = Text_Text.TextStyleSheet[widthChars.variant];
   const obj = { style: null };
-  const items = [closure_4().skeleton, ];
+  items = [closure_4().skeleton, ];
   const size = { width: 0.46 * tmp2.fontSize * num, height: 0.8 * tmp2.lineHeight };
   items[1] = size;
   obj.style = items;

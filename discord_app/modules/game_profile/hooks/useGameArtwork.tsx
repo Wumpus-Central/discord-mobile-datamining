@@ -1,7 +1,7 @@
-// === Module 9376: useGameArtwork ===
+// === Module 9504: useGameArtwork ===
 
-// Module 9376 (useGameArtwork)
-import getGameMediaRefURL from "getGameMediaRefURL" /* 2025 */;
+// Module 9504 (useGameArtwork)
+import getGameMediaRefURL from "getGameMediaRefURL" /* 2154 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameArt
 
 export default function useGameArtwork(arg0, arg1) {
   [first, closure_1] = noop.useState({});
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   let found = items.find((item) => {
     let tmp = null != item;
     if (tmp) {

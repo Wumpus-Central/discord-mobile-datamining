@@ -1,8 +1,8 @@
-// === Module 19961: RoleTierEditScenesModal ===
+// === Module 20111: RoleTierEditScenesModal ===
 
-// Module 19961 (RoleTierEditScenesModal)
+// Module 20111 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,12 +21,12 @@ function orderify(scene, arg1) {
   }
   return obj2;
 }
-const RoleTierEditStore = fn(19949);
+const RoleTierEditStore = fn(20099);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-let closure_7 = fn(17196).GuildRoleSubscriptionsTierScenes;
+let closure_7 = fn(17339).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");
@@ -44,7 +44,7 @@ export default function RoleTierEditScenesModal(modalKey) {
   closure_6 = closure_6();
   const tmp3 = onClose(noop.useState(0), 2);
   closure_7 = tmp3[1];
-  let items = [modalKey];
+  items = [modalKey];
   closure_8 = noop.useCallback(() => {
     ModalActionCreatorsDefault.popWithKey(modalKey);
   }, items);
@@ -479,7 +479,7 @@ export default function RoleTierEditScenesModal(modalKey) {
     _modDef38(memo.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
     if (null == noop) {
       const obj20 = { name: memo[0] };
-      const items = [obj20];
+      items = [obj20];
       let tmp35 = items;
     } else {
       const items1 = [];

@@ -1,10 +1,10 @@
-// === Module 11493: BioText ===
+// === Module 11630: BioText ===
 
-// Module 11493 (BioText)
+// Module 11630 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11494 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11631 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,17 +20,17 @@ function LinkButton(arg0) {
     children: null
   };
   const obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
-  const items = ["\n", text];
+  items = ["\n", text];
   obj2.children = items;
   obj.children = React5(Text_Text.Text, obj2);
   return React6(Pressable, obj);
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(4916).CHANGELOG_URL;
+const CHANGELOG_URL = fn(5043).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
@@ -44,7 +44,7 @@ export default function BioText(lineClamp) {
     str = "text-md/normal";
   }
   const tmp = closure_10();
-  const items = [bio, guildId, str];
+  items = [bio, guildId, str];
   let memo = str.useMemo(() => {
     const obj2 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
     const obj = BioMarkupUtils;

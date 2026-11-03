@@ -1,9 +1,9 @@
-// === Module 10190: ReportToModStore ===
+// === Module 10320: ReportToModStore ===
 
-// Module 10190 (ReportToModStore)
+// Module 10320 (ReportToModStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 function handleSelectedGuildChange() {
   let lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
@@ -29,11 +29,11 @@ prototype["initialize"] = function initialize(reportedMessages) {
     const entries = Object.entries(reportedMessages.reportedMessages);
     closure_3.reportedMessages = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, new Set(tmp2)];
+      items = [tmp, new Set(tmp2)];
       return items;
     }));
   }
-  let items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   this.syncWith(items, handleSelectedGuildChange);
 };
 prototype["getState"] = function getState() {

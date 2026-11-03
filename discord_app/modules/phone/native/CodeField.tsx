@@ -1,10 +1,10 @@
-// === Module 7248: CodeField ===
+// === Module 7368: CodeField ===
 
-// Module 7248 (CodeField)
+// Module 7368 (CodeField)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6954 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function SingleCodeInput(loading) {
     setCode(str.replace(NUMERIC === obj.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
   };
   obj2.disabled = disabled;
-  const items = [closure_7(NUMERIC(code[7]).TextInput, obj2), ];
+  items = [closure_7(NUMERIC(code[7]).TextInput, obj2), ];
   const obj3 = { style: tmp2.singleInputButton, children: null };
   const obj4 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl2 = tmp6(code[8]).intl;
@@ -69,12 +69,12 @@ function CodeFieldInner(loading) {
   ({ actions, footer, backgroundStyle, disabled } = loading);
   const tmp2 = closure_10();
   obj = { style: null, contentContainerStyle: tmp2.backgroundFlex, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-  const items = [tmp2.background, backgroundStyle];
+  items = [tmp2.background, backgroundStyle];
   obj.style = items;
   const obj2 = { style: tmp2.container, children: null };
   [tmp4, tmp5] = noop.useState("");
-  const items1 = [React5(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), React5(Text_Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
-  const obj3 = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
+  const items1 = [React5(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), React5(Text_Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
+  const obj3 = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title };
   const obj4 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   items1[2] = React5(hasOwnProperty, { style: tmp2.inputContainer, children: React5(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });
@@ -89,7 +89,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { viewWrapper: { flex: 1 }, background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, backgroundFlex: { flex: 1, justifyContent: "space-between" }, container: { padding: 16 }, title: { textAlign: "center" }, subtitle: { marginTop: 8, lineHeight: 18, textAlign: "center" }, inputContainer: { marginTop: 20, width: "100%", alignItems: "center" }, codeContainer: { maxWidth: 336, width: "100%", flexDirection: "row", justifyContent: "space-around" }, spacer: { width: 4 }, inputWrapper: null, inputWrapperError: null, input: null, singleInputWrapper: null, singleInputButton: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj3.inputWrapper = { borderWidth: 1, borderRadius: 5, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -139,7 +139,7 @@ export function CodeBlocks(onCodeEntered) {
   const effect = noop.useEffect(() => {
     closure_5.current = num2;
   });
-  let items = [first];
+  items = [first];
   const effect1 = noop.useEffect(() => {
     if (first.every((item) => "" !== item.trim())) {
       ref.current(first.join(""));
@@ -190,7 +190,7 @@ export function CodeBlocks(onCodeEntered) {
         }
       } else if ("" === dependencyMap[tmp]) {
         const diff = tmp - 1;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(dependencyMap, 0);
         items[diff] = "";
         _slicedToArray(items);
@@ -210,7 +210,7 @@ export function CodeBlocks(onCodeEntered) {
       if ("" === str4) {
         parts = [""];
       }
-      const items = [...tmp2];
+      items = [...tmp2];
       const items1 = [num2, 1, ...parts];
       items.splice.apply(items1);
       _slicedToArray(items.slice(0, importDefault));

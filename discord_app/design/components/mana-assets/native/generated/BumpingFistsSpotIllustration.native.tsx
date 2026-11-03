@@ -1,19 +1,19 @@
-// === Module 14833: BumpingFistsSpotIllustration ===
+// === Module 14964: BumpingFistsSpotIllustration ===
 
-// Module 14833 (BumpingFistsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14834 from "module_14834" /* 14834 */;
-import _modDef14835 from "module_14835" /* 14835 */;
-import _modDef14836 from "module_14836" /* 14836 */;
+// Module 14964 (BumpingFistsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef14965 from "module_14965" /* 14965 */;
+import _modDef14966 from "module_14966" /* 14966 */;
+import _modDef14967 from "module_14967" /* 14967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14834 }, 3: null };
-let obj2 = { uri: _modDef14834 };
-obj[2] = { uri: _modDef14835 };
-const obj3 = { uri: _modDef14835 };
-obj[3] = { uri: _modDef14836 };
+let obj = { 1: null, 2: { uri: _modDef14965 }, 3: null };
+let obj2 = { uri: _modDef14965 };
+obj[2] = { uri: _modDef14966 };
+const obj3 = { uri: _modDef14966 };
+obj[3] = { uri: _modDef14967 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function BumpingFistsSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

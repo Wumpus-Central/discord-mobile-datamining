@@ -1,16 +1,16 @@
-// === Module 6912: MemberVerificationAlert ===
+// === Module 7032: MemberVerificationAlert ===
 
-// Module 6912 (MemberVerificationAlert)
+// Module 7032 (MemberVerificationAlert)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerImage: { marginLeft: "auto", marginRight: "auto", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 }, header: { marginTop: 8, marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, marginBottom: 8, textAlign: "center" }, buttons: { marginTop: 16, marginBottom: 8, gap: 12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function MemberVerificationAlert(arg0) {
     const obj2 = { style: tmp2.headerImage, children: React4(icon, { size: "lg" }) };
     tmp7 = React4(View, obj2);
   }
-  const items = [tmp7, React4(Text_Text.Heading, { style: tmp2.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: header }), , ];
+  items = [tmp7, React4(Text_Text.Heading, { style: tmp2.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: header }), , ];
   let tmp10Result = null;
   if (null != subtitle) {
     const obj4 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };

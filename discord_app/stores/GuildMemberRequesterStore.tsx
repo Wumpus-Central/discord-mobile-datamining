@@ -1,14 +1,14 @@
-// === Module 6760: GuildMemberRequesterStore ===
+// === Module 6880: GuildMemberRequesterStore ===
 
-// Module 6760 (GuildMemberRequesterStore)
+// Module 6880 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MessageTypes from "MessageTypes" /* 1088 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4934 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6761 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5061 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6881 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function handleConnectionReset() {
@@ -62,7 +62,7 @@ function handleLoadSearchResults(arg0) {
   if (null == guildId) {
     return false;
   } else {
-    const items = [];
+    items = [];
     guildId = items;
     let item = data.forEach((messages) => {
       messages = messages.messages;
@@ -92,7 +92,7 @@ function handleLoadSearchResults(arg0) {
 }
 const navigation = new GuildMemberRequesterDefault(GuildMemberStore.isMember, (arg0, userIds) => {
   const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: null, userIds };
-  const items = [arg0];
+  items = [arg0];
   obj2.guildIds = items;
   DispatcherDefault.dispatch(obj2);
 });

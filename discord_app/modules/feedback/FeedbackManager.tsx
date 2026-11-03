@@ -1,13 +1,13 @@
-// === Module 19456: feedback/FeedbackManager ===
+// === Module 19614: feedback/FeedbackManager ===
 
-// Module 19456 (feedback/FeedbackManager)
+// Module 19614 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import FeedbackConfig from "FeedbackConfig" /* 19458 */;
-import HotspotStore from "hotspot/HotspotStore" /* 7382 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19457 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import FeedbackConfig from "FeedbackConfig" /* 19616 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7502 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19615 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function optOutEligibilityCheck(hotspot) {
@@ -93,7 +93,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
       return obj;
     });
   }
-  const items = [lastImpressionTime, tmp7];
+  items = [lastImpressionTime, tmp7];
   let num = _mod12.max(items);
   if (num == null) {
     num = 0;
@@ -117,7 +117,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(10158);
+const Constants = fn(10288);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
 class FeedbackManager extends tmp3 {
   constructor() {
@@ -156,7 +156,7 @@ FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFe
   if (eligibilityChecks == null) {
     eligibilityChecks = [];
   }
-  const items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
+  items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
   if (!tmp4) {
     if (fn != null) {
       fn();

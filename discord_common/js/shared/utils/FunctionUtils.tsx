@@ -1,6 +1,6 @@
-// === Module 5144: utils/FunctionUtils ===
+// === Module 5267: utils/FunctionUtils ===
 
-// Module 5144 (utils/FunctionUtils)
+// Module 5267 (utils/FunctionUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -97,7 +97,7 @@ prototype["many"] = function many(items, fn) {
   if (items1.length <= 0) {
     Promise.all(items.map((() => {
       closure_0 = map(function*(arg0) {
-        const items = [closure_0, ];
+        items = [closure_0, ];
         yield items.get(closure_0);
         items[1] = value;
         return items;
@@ -123,7 +123,7 @@ prototype["many"] = function many(items, fn) {
     });
     const allPromises = Promise.all(items.map((() => {
       closure_0 = map(function*(arg0) {
-        const items = [closure_0, ];
+        items = [closure_0, ];
         yield items.get(closure_0);
         items[1] = value;
         return items;
@@ -194,7 +194,7 @@ export function areArraysShallowlyEqual(arg0, arg1) {
 }
 export function cachedFunction(arg0) {
   closure_0 = arg0;
-  let items = null;
+  items = null;
   closure_2 = null;
   return () => {
     items = [...arguments];

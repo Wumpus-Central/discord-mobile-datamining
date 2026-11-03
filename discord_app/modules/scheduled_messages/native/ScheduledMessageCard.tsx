@@ -1,16 +1,16 @@
-// === Module 14593: ScheduledMessageCard ===
+// === Module 14724: ScheduledMessageCard ===
 
-// Module 14593 (ScheduledMessageCard)
+// Module 14724 (ScheduledMessageCard)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9808 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 11175 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12560 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 14594 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9939 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 11312 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12696 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 14725 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function ScheduledMessageCardStatusHeader(isPendingRemoval) {
@@ -35,7 +35,7 @@ const View = fn(17).View;
 const Routes = fn(1072).Routes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, attachmentCount: { flexDirection: "row", alignItems: "center", gap: 4 }, pendingRemoval: { alignItems: "center", paddingVertical: 16 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -46,7 +46,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
   scheduledMessage = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
   const tmp = closure_9();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = scheduledMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(scheduledMessage.createArgs.channelId));
   [][0] = stateFromStores;
   if (null == stateFromStores) {
@@ -56,11 +56,11 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(ScheduledMessageCardStatusHeader, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(11176).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(11313).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6953).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(7080).ActivityIndicator, { size: "small" }) };
       let tmp10Result = closure_7(View, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -68,21 +68,21 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(575).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10535).AttachmentIcon, obj9), ];
+        const items2 = [closure_7(tmp2(10665).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1113).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1113).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(5624).Text, obj10);
+        items2[1] = closure_7(tmp2(5747).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(11177).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(11314).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(6977).Card, obj2);
+    return closure_8(tmp2(7103).Card, obj2);
   }
   const obj = scheduledMessage(504);
 });

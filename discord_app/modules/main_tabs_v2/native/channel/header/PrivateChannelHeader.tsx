@@ -1,23 +1,23 @@
-// === Module 14575: PrivateChannelHeader ===
+// === Module 14706: PrivateChannelHeader ===
 
-// Module 14575 (PrivateChannelHeader)
+// Module 14706 (PrivateChannelHeader)
 import nativeDefault from "native" /* 575 */;
-import ChannelHeader from "ChannelHeader" /* 14572 */;
+import ChannelHeader from "ChannelHeader" /* 14703 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, StatusTypes: c10 } = Constants);
+({ ChannelTypes: closure_9, StatusTypes: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { activityStatusText: { color: nativeDefault.colors.TEXT_MUTED }, groupDMIconAnchor: { marginRight: 12, flexShrink: 0 } };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.TEXT_MUTED };
@@ -30,7 +30,7 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   const pressable = channelId.pressable;
   let stateFromStores;
   const tmp = closure_16();
-  let items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(stateFromStores[11]);
   const items1 = [UserStore];
@@ -122,7 +122,7 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     }
     if (null != channelId) {
       if (null != id) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(channelId.recipients, 0)] = id;
         const obj = {
           onlineCount: items.reduce((acc, item) => {

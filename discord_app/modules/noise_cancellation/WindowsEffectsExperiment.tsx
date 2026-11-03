@@ -1,11 +1,11 @@
-// === Module 11959: WindowsEffectsExperiment ===
+// === Module 12096: WindowsEffectsExperiment ===
 
-// Module 11959 (WindowsEffectsExperiment)
+// Module 12096 (WindowsEffectsExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 const require = fn;
 const obj = { preferSystemEffects: false };
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const obj3 = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
 const obj4 = { 1: null };
 const obj5 = {};
@@ -22,6 +22,6 @@ export function getWindowsAudioEffectsExperimentConfig(location) {
 }
 export function useWindowsAudioEffectsExperimentConfig(location) {
   location = location.location;
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));
 }

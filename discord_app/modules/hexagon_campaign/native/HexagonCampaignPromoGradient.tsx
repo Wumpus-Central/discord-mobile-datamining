@@ -1,9 +1,9 @@
-// === Module 16483: HexagonCampaignPromoGradient ===
+// === Module 16626: HexagonCampaignPromoGradient ===
 
-// Module 16483 (HexagonCampaignPromoGradient)
+// Module 16626 (HexagonCampaignPromoGradient)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,13 +13,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const angleCenter = { x: 0.5, y: 0.5 };
-[closure_9, c10, closure_11, closure_12] = fn(16484).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
-const prop = fn(16484).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+[closure_9, closure_10, closure_11, closure_12] = fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+const prop = fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
 const locations = prop.map((location) => location.location);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { shade: null };
-const importDefaultResultResult = _slicedToArray(fn(16484).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
-obj2.shade = { backgroundColor: nativeDefault.colors[fn(undefined, 16484).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN] };
+const importDefaultResultResult = _slicedToArray(fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
+obj2.shade = { backgroundColor: nativeDefault.colors[fn(undefined, 16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN] };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPromoGradient.tsx");
@@ -32,7 +32,7 @@ export default function HexagonCampaignPromoGradient(angle) {
   const obj5 = { children: null };
   const token3 = useToken.useToken(nativeDefault.colors[user4.token]);
   const obj6 = { useAngle: true, angle: angle.angle, angleCenter, colors: null, locations, style: React3.absoluteFill, pointerEvents: "none" };
-  const items = [token, token1, token2, token3];
+  items = [token, token1, token2, token3];
   obj6.colors = items;
   const items1 = [hasOwnProperty(LinearGradientDefault, obj6), ];
   const obj7 = { style: null, pointerEvents: "none" };

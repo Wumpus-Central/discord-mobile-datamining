@@ -1,19 +1,19 @@
-// === Module 11409: CustomStatusPreview ===
+// === Module 11547: CustomStatusPreview ===
 
-// Module 11409 (CustomStatusPreview)
+// Module 11547 (CustomStatusPreview)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7377);
+const Constants = fn(7497);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = nativeDefault.colors;
@@ -47,11 +47,11 @@ export default function CustomStatusPreview(user) {
   const tmp8 = pendingStatusText(pendingStatusEmoji[9])();
   const tmp5 = pendingStatusText(pendingStatusEmoji[8])({ user, displayProfile: tmp3 });
   const userProfileColors = user(pendingStatusEmoji[10]).useUserProfileColors({ theme, primaryColor, secondaryColor });
-  const items = [user, pendingStatusText, pendingStatusEmoji];
+  items = [user, pendingStatusText, pendingStatusEmoji];
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11410, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11548, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
   const obj3 = { style: tmp7.profileContainer, children: null };

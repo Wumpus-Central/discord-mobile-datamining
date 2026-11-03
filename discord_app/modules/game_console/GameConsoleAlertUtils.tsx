@@ -1,7 +1,7 @@
-// === Module 11983: GameConsoleAlertUtils ===
+// === Module 12120: GameConsoleAlertUtils ===
 
-// Module 11983 (GameConsoleAlertUtils)
-import game_console_GameConsoleAlertUtils from "game_console/GameConsoleAlertUtils" /* 11984 */;
+// Module 12120 (GameConsoleAlertUtils)
+import game_console_GameConsoleAlertUtils from "game_console/GameConsoleAlertUtils" /* 12121 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");

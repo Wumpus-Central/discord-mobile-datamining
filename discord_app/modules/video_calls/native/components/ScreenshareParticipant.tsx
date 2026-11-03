@@ -1,16 +1,16 @@
-// === Module 12009: ScreenshareParticipant ===
+// === Module 12146: ScreenshareParticipant ===
 
-// Module 12009 (ScreenshareParticipant)
+// Module 12146 (ScreenshareParticipant)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 
 const require = fn;
 const View = fn(17).View;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function ScreenshareParticipant(participant) {
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
-  const items = [onSingleTap, participant];
+  items = [onSingleTap, participant];
   const items1 = [onDoubleTap, participant];
   const callback = noop.useCallback(() => {
     let tmpResult;
@@ -41,7 +41,7 @@ export default function ScreenshareParticipant(participant) {
   const items2 = [ApplicationStreamingStore];
   const stateFromStores = participant(onDoubleTap[8]).useStateFromStores(items2, () => {
     currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
-    let state;
+    state = undefined;
     if (currentUserActiveStream != null) {
       state = currentUserActiveStream.state;
     }
@@ -51,7 +51,7 @@ export default function ScreenshareParticipant(participant) {
   const obj3 = { style: null, children: null };
   const items3 = [tmp5.container, participant.containerStyle];
   obj3.style = items3;
-  const obj4 = { style: tmp5.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp5.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = participant(onDoubleTap[11]).intl;
   const string = intl.string;
   const t = participant(onDoubleTap[11]).t;

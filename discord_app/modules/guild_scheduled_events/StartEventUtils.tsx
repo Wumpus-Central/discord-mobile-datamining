@@ -1,9 +1,9 @@
-// === Module 9103: StartEventUtils ===
+// === Module 9231: StartEventUtils ===
 
-// Module 9103 (StartEventUtils)
+// Module 9231 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -27,7 +27,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           closure_131_2 = undefined;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
-          let items = closure_2;
+          items = closure_2;
           if (closure_2 === undefined) {
             items = [];
           }
@@ -104,7 +104,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
   }
 };
 function findOrCreateEventChannel(guild_id, arg1) {
-  const guild = GuildStore.getGuild(guild_id.guild_id);
+  guild = GuildStore.getGuild(guild_id.guild_id);
   if (null == guild) {
     return Promise.resolve(null);
   } else {
@@ -133,7 +133,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -240,8 +240,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "flexDirection";
 };
-let closure_4 = fn(4867).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4869);
+let closure_4 = fn(4994).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4996);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);

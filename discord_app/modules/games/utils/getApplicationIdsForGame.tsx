@@ -1,8 +1,8 @@
-// === Module 14385: getApplicationIdsForGame ===
+// === Module 14516: getApplicationIdsForGame ===
 
-// Module 14385 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import GameStore from "GameStore" /* 2014 */;
+// Module 14516 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import GameStore from "GameStore" /* 2143 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ export default function getApplicationIdsForGame(arg0) {
 };
 export function useApplicationIdsForGame(gameId) {
   _require = gameId;
-  const items = [GameStore, ApplicationStore];
+  items = [GameStore, ApplicationStore];
   const items1 = [gameId];
   return require("initialize").useStateFromStoresArray(items, () => {
     const set = new Set();

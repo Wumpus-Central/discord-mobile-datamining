@@ -1,7 +1,7 @@
-// === Module 15789: GuildActionSheetUtils ===
+// === Module 15932: GuildActionSheetUtils ===
 
-// Module 15789 (GuildActionSheetUtils)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 15932 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/Gui
 
 export function useGuildActionSheetPermissions(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (null == closure_0) {

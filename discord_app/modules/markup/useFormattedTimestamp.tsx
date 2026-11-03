@@ -1,8 +1,8 @@
-// === Module 11058: useFormattedTimestamp ===
+// === Module 11194: useFormattedTimestamp ===
 
-// Module 11058 (useFormattedTimestamp)
+// Module 11194 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1089 */;
-import _modDef2042 from "module_2042" /* 2042 */;
+import _modDef2171 from "module_2171" /* 2171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = fn;
 function getTimestampUpdateInterval(parsed) {
   let tmp = timestamp;
   if (timestamp === undefined) {
-    tmp = _modDef2042();
+    tmp = _modDef2171();
   }
   const absolute = Math.abs(parsed.diff(tmp));
   const obj = items1[Symbol.iterator]();
@@ -41,7 +41,7 @@ let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.ts
 export default function useFormattedTimestamp(format) {
   _require = format;
   [tmp2, importDefault] = noop.useState(null);
-  const items = [, ];
+  items = [, ];
   ({ format: arr[0], parsed: arr[1] } = format);
   const effect = noop.useEffect(() => {
     if ("R" === format.format) {

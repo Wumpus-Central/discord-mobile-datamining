@@ -1,15 +1,15 @@
-// === Module 17333: DisplayNameStylesSheetHeader ===
+// === Module 17476: DisplayNameStylesSheetHeader ===
 
-// Module 17333 (DisplayNameStylesSheetHeader)
+// Module 17476 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 }, row: null, title: null, titleText: null, leading: null, trailing: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 };
 obj2.row = { minHeight: nativeDefault.space.PX_32, justifyContent: "center" };
@@ -29,8 +29,8 @@ export default function DisplayNameStylesSheetHeader(children) {
   const tmp = closure_5();
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.row, children: null };
-  const obj3 = { style: tmp.title, children: React3(Text_Text.Heading, { variant: "redesign/heading-18/bold", color: "text-default", style: tmp.titleText, children: children.title }) };
-  const items = [React3(View, obj3), , ];
+  const obj3 = { style: tmp.title, children: React3(Text_Text.Heading, { variant: "redesign/heading-18/semibold", color: "text-default", style: tmp.titleText, children: children.title }) };
+  items = [React3(View, obj3), , ];
   let tmp2Result = null != leading;
   if (tmp2Result) {
     const obj5 = { style: tmp.leading, children: leading };

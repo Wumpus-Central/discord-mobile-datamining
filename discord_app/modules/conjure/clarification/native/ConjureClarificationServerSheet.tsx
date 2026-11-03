@@ -1,8 +1,8 @@
-// === Module 12755: ConjureClarificationServerSheet ===
+// === Module 12891: ConjureClarificationServerSheet ===
 
-// Module 12755 (ConjureClarificationServerSheet)
+// Module 12891 (ConjureClarificationServerSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { list: { paddingBottom: nativeDefault.space.PX_64 }, empty: null };
 let obj3 = { paddingBottom: nativeDefault.space.PX_64 };
 obj2.empty = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -28,7 +28,7 @@ export default function ConjureClarificationServerSheet(title) {
   const trimmed = str.trim();
   const toLocaleLowerCaseResult = trimmed.toLocaleLowerCase();
   _slicedToArray = toLocaleLowerCaseResult;
-  const items = [guilds, toLocaleLowerCaseResult];
+  items = [guilds, toLocaleLowerCaseResult];
   const memo = noop.useMemo(() => {
     if ("" === c3) {
       let found = guilds;

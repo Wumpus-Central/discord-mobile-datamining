@@ -1,8 +1,8 @@
-// === Module 18898: useVoiceChannelApp ===
+// === Module 19056: useVoiceChannelApp ===
 
-// Module 18898 (useVoiceChannelApp)
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 19056 (useVoiceChannelApp)
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceCh
 
 export function useIsVoiceChannelAppEnabled(guild_id) {
   _require = guild_id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     guild_id = undefined;
     if (guild_id != null) {
@@ -47,7 +47,7 @@ export function useIsVoiceChannelAppEnabled(guild_id) {
 }
 export function useVoiceChannelApplicationId(guild_id) {
   _require = guild_id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     guild_id = undefined;
     if (guild_id != null) {
@@ -78,7 +78,7 @@ export function useVoiceChannelApplicationId(guild_id) {
   }
   let tmp8 = null;
   if (tmp4) {
-    let application_id;
+    application_id = undefined;
     if (guild_id != null) {
       application_id = guild_id.application_id;
     }
@@ -92,7 +92,7 @@ export function useVoiceChannelApplicationId(guild_id) {
 export function useCanConfigureVoiceChannelApp(channel) {
   _require = channel;
   closure_129_0 = channel;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     guild_id = undefined;
     if (guild_id != null) {

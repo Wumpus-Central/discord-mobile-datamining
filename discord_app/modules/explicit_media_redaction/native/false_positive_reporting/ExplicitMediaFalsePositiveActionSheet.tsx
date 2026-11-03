@@ -1,15 +1,15 @@
-// === Module 13309: ExplicitMediaFalsePositiveActionSheet ===
+// === Module 13445: ExplicitMediaFalsePositiveActionSheet ===
 
-// Module 13309 (ExplicitMediaFalsePositiveActionSheet)
+// Module 13445 (ExplicitMediaFalsePositiveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8687 */;
-import media_playback_VideoDefault from "media_playback/Video" /* 8874 */;
-import ShieldIcon from "ShieldIcon" /* 11281 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
+import media_playback_VideoDefault from "media_playback/Video" /* 8998 */;
+import ShieldIcon from "ShieldIcon" /* 11418 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ function ExplicitMediaFalsePositivePreview(url) {
   url = url.url;
   const tmp = closure_11();
   const obj2 = { style: null, children: null };
-  const items = [, ];
+  items = [, ];
   ({ mediaContainer: arr[0], elevationShadow: arr[1] } = tmp);
   obj2.style = items;
   if (obj.isVideo(url)) {
@@ -68,7 +68,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { content: { padding: nativeDefault.space.PX_16 }, contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" }, heading: null, mediaContainer: null, elevationShadow: null, image: null, media: null, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.heading = { marginBottom: nativeDefault.space.PX_8 };
@@ -103,7 +103,7 @@ export function ExplicitMediaFalsePositiveActionSheet(channelId) {
   ({ isReportFalsePositiveLoading, attachmentPreview, embedPreview, onConfirmPress } = channelId);
   const analyticsContext = channelId.analyticsContext;
   const tmp = closure_11();
-  const items = [channelId, messageId, analyticsContext];
+  items = [channelId, messageId, analyticsContext];
   const items1 = [channelId, messageId, analyticsContext, onConfirmPress];
   const callback = analyticsContext.useCallback(() => {
     const obj = ExplicitMediaRedactionUtils;
@@ -124,7 +124,7 @@ export function ExplicitMediaFalsePositiveActionSheet(channelId) {
     const result = obj.trackMediaRedactionAction({ action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId, messageId, context: analyticsContext });
   }, items2);
   let obj = { style: tmp.content, contentContainerStyle: tmp.contentContainer, children: null };
-  let obj2 = { style: tmp.heading, variant: "heading-lg/bold", children: null };
+  let obj2 = { style: tmp.heading, variant: "heading-lg/semibold", children: null };
   const intl = channelId(onConfirmPress[11]).intl;
   obj2.children = intl.string(channelId(onConfirmPress[11]).t.TPpVkI);
   const items3 = [closure_6(channelId(onConfirmPress[16]).Text, obj2), , , ];

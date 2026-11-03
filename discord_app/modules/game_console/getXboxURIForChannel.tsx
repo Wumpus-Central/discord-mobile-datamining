@@ -1,16 +1,16 @@
-// === Module 11992: getXboxURIForChannel ===
+// === Module 12129: getXboxURIForChannel ===
 
-// Module 11992 (getXboxURIForChannel)
+// Module 12129 (getXboxURIForChannel)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const GameConsoleConstants = fn(9737);
+const GameConsoleConstants = fn(9869);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/game_console/getXboxURIForCha
 export default function getXboxURIForChannel(channelId, arg1) {
   ({ nonce, forQRCode } = arg1);
   const guildId = channelId.getGuildId();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
     tmp4 = React7;

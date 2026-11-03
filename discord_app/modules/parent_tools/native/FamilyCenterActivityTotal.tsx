@@ -1,17 +1,17 @@
-// === Module 16799: FamilyCenterActivityTotal ===
+// === Module 16942: FamilyCenterActivityTotal ===
 
-// Module 16799 (FamilyCenterActivityTotal)
+// Module 16942 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8372 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 16798 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8496 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 16941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
 obj2.container = { display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
@@ -40,7 +40,7 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj4.children = num;
-  const items = [React3(Text_Text.Text, obj4), React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  items = [React3(Text_Text.Text, obj4), React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
   obj3.children = items;
   return React4(View, obj3);
 };

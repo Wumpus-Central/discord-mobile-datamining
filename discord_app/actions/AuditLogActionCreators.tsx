@@ -1,9 +1,9 @@
-// === Module 19715: AuditLogActionCreators ===
+// === Module 19865: AuditLogActionCreators ===
 
-// Module 19715 (AuditLogActionCreators)
+// Module 19865 (AuditLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19710 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19860 */;
 
 require = fn;
 function makeRequest(arg0, arg1) {

@@ -1,19 +1,19 @@
-// === Module 9797: ReactionsSpotIllustration ===
+// === Module 9928: ReactionsSpotIllustration ===
 
-// Module 9797 (ReactionsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef9798 from "module_9798" /* 9798 */;
-import _modDef9799 from "module_9799" /* 9799 */;
-import _modDef9800 from "module_9800" /* 9800 */;
+// Module 9928 (ReactionsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef9929 from "module_9929" /* 9929 */;
+import _modDef9930 from "module_9930" /* 9930 */;
+import _modDef9931 from "module_9931" /* 9931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9798 }, 3: null };
-let obj2 = { uri: _modDef9798 };
-obj[2] = { uri: _modDef9799 };
-const obj3 = { uri: _modDef9799 };
-obj[3] = { uri: _modDef9800 };
+let obj = { 1: null, 2: { uri: _modDef9929 }, 3: null };
+let obj2 = { uri: _modDef9929 };
+obj[2] = { uri: _modDef9930 };
+const obj3 = { uri: _modDef9930 };
+obj[3] = { uri: _modDef9931 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function ReactionsSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

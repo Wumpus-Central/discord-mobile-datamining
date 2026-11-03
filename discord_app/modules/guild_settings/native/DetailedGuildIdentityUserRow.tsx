@@ -1,22 +1,22 @@
-// === Module 10819: DetailedGuildIdentityUserRow ===
+// === Module 10949: DetailedGuildIdentityUserRow ===
 
-// Module 10819 (DetailedGuildIdentityUserRow)
+// Module 10949 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import TableRow from "TableRow" /* 6975 */;
-import Form from "Form" /* 8177 */;
-import DiscordTagDefault from "DiscordTag" /* 9201 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import TableRow from "TableRow" /* 7101 */;
+import Form from "Form" /* 8301 */;
+import DiscordTagDefault from "DiscordTag" /* 9329 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: { marginRight: nativeDefault.space.PX_4 }, mainTag: null };
 let obj3 = { marginRight: nativeDefault.space.PX_4 };
 obj.mainTag = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
@@ -31,12 +31,12 @@ const memoResult = noop.memo(function DetailedGuildIdentityUser(height) {
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   const obj2 = { style: { height: height.contentHeight }, children: null };
-  const items = [hasOwnProperty(DiscordTagDefault, { user, nick: nickname }), ];
+  items = [hasOwnProperty(DiscordTagDefault, { user, nick: nickname }), ];
   if (hasAvatarForGuildResult) {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];
@@ -63,7 +63,7 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
   ({ disabled, guildId, leading, onPress, trailing, userId: require, subLabel, accessibilityRole, accessibilityState } = arrow);
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(require));
   if (null == stateFromStores) {
     return null;

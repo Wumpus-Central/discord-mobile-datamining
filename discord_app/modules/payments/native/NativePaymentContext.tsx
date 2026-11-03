@@ -1,11 +1,11 @@
-// === Module 10689: NativePaymentContext ===
+// === Module 10819: NativePaymentContext ===
 
-// Module 10689 (NativePaymentContext)
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7431 */;
-import ContextUtilsDefault from "ContextUtils" /* 7613 */;
+// Module 10819 (NativePaymentContext)
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7555 */;
+import ContextUtilsDefault from "ContextUtils" /* 7737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
 
 require = fn;
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -21,7 +21,7 @@ export function NativePaymentContextProvider(children) {
   const nativeIAPPayments = activeSubscription(nativePaymentsConnected[6]).useNativeIAPPayments();
   nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
   const storeFront = nativeIAPPayments.storeFront;
-  const items = [storeFront, skuIDs];
+  items = [storeFront, skuIDs];
   const effect = storeFront.useEffect(() => {
     let isFetchingForSKUsResult = null == storeFront;
     if (!isFetchingForSKUsResult) {

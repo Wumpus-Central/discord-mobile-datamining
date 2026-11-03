@@ -1,16 +1,16 @@
-// === Module 18700: useSuggestedSearches ===
+// === Module 18858: useSuggestedSearches ===
 
-// Module 18700 (useSuggestedSearches)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13908 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13910 */;
+// Module 18858 (useSuggestedSearches)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14039 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14041 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13887 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 14018 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(13887).EMPTY_SUGGESTED_SEARCHES;
-let closure_6 = fn(13888).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(14018).EMPTY_SUGGESTED_SEARCHES;
+let closure_6 = fn(14019).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");
 
@@ -25,7 +25,7 @@ export function useSuggestedSearches(memo1, source) {
   }
   const isNlpSearchEnabled = require("SmartSearchExperiments").useIsNlpSearchEnabled(guildId, source);
   let obj = require("SmartSearchExperiments");
-  const items = [suggestedSearches];
+  items = [suggestedSearches];
   const items1 = [memo1, isNlpSearchEnabled];
   suggestedSearches = require("initialize").useStateFromStoresArray(items, () => {
     if (null != closure_0) {

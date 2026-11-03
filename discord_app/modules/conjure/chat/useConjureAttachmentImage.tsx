@@ -1,7 +1,7 @@
-// === Module 12149: useConjureAttachmentImage ===
+// === Module 12285: useConjureAttachmentImage ===
 
-// Module 12149 (useConjureAttachmentImage)
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12147 */;
+// Module 12285 (useConjureAttachmentImage)
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ export function useConjureAttachmentImage(projectId, id) {
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   noop = tmp2[1];
   [first, closure_5] = noop.useState(0);
-  const items = [projectId, id, first];
+  items = [projectId, id, first];
   const effect = noop.useEffect(() => {
     c0 = false;
     const attachmentUrl = projectId(closure_1[2]).getAttachmentUrl(c0, closure_1);

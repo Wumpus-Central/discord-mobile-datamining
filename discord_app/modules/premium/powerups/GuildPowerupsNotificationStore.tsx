@@ -1,12 +1,12 @@
-// === Module 14068: GuildPowerupsNotificationStore ===
+// === Module 14199: GuildPowerupsNotificationStore ===
 
-// Module 14068 (GuildPowerupsNotificationStore)
+// Module 14199 (GuildPowerupsNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14069 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14200 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 require = fn;
 let closure_5 = {};
@@ -43,7 +43,7 @@ GuildPowerupsNotificationStore.migrations = items;
 const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(DispatcherDefault, {
   GUILD_POWERUPS_ACK_NOTIFICATION: function handleAckNotification(guildId) {
     guildId = guildId.guildId;
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let num;
     if (guild != null) {
       num = guild.premiumSubscriberCount;
@@ -60,7 +60,7 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(Dispat
     if (unlockedPowerups == null) {
       unlockedPowerups = {};
     }
-    const items = [...Object.values(unlockedPowerups)];
+    items = [...Object.values(unlockedPowerups)];
     let entitlements;
     if (stateForGuild1 != null) {
       entitlements = stateForGuild1.entitlements;

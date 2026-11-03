@@ -1,9 +1,9 @@
-// === Module 13692: TraitPickerControls ===
+// === Module 13820: TraitPickerControls ===
 
-// Module 13692 (TraitPickerControls)
+// Module 13820 (TraitPickerControls)
 import jsxProd from "jsxProd" /* 21 */;
-import useTraitPickerSelection from "useTraitPickerSelection" /* 13693 */;
-import TraitPickerDefault from "TraitPicker" /* 13694 */;
+import useTraitPickerSelection from "useTraitPickerSelection" /* 13821 */;
+import TraitPickerDefault from "TraitPicker" /* 13822 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -17,5 +17,5 @@ export default function TraitPickerControls(onSelectOption) {
   const merged1 = Object.assign(merged);
   obj3.customizationOption = activeCustomizationOption;
   ({ optionIds: obj2.optionIds, savedOptionId: obj2.savedOptionId, selectedOptionId: obj2.selectedOptionId, onSelectOption: obj2.onSelectOption } = traitPickerSelection);
-  return jsx(TraitPickerDefault, {}, activeCustomizationOption);
+  return jsx(TraitPickerDefault, {});
 };

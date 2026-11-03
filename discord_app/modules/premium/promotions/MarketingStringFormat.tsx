@@ -1,6 +1,6 @@
-// === Module 16886: MarketingStringFormat ===
+// === Module 17029: MarketingStringFormat ===
 
-// Module 16886 (MarketingStringFormat)
+// Module 17029 (MarketingStringFormat)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import intl_util from "intl/util" /* 1115 */;

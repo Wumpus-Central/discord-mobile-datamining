@@ -1,12 +1,12 @@
-// === Module 19930: useCreatorMonetizationEligibility ===
+// === Module 20080: useCreatorMonetizationEligibility ===
 
-// Module 19930 (useCreatorMonetizationEligibility)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 19880 */;
+// Module 20080 (useCreatorMonetizationEligibility)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 20030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_6 = fn(19877).CreatorMonetizationApplicationState;
+let closure_6 = fn(20027).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = closure_3;
-            const tmp45 = new closure_0(6447)(closure_129_1);
+            const tmp45 = new closure_0(6567)(closure_129_1);
             tmp4(tmp45);
             c4 = 0;
             closure_1(false);
@@ -74,7 +74,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
             obj6.notNSFW = 0 === Object.keys(closure_129_0.nsfw_properties).length;
             obj6.canApply = closure_129_0.can_apply;
             const latest_request2 = closure_129_0.latest_request;
-            let state;
+            state = undefined;
             if (latest_request2 != null) {
               state = latest_request2.state;
             }
@@ -141,7 +141,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
     return applyArgumentsResult;
   }, []);
   let obj = { error: tmp4, loading: tmp2, eligibility: tmp5[0], refresh: null };
-  const items = [arg0, callback];
+  items = [arg0, callback];
   obj.refresh = noop.useCallback(() => {
     if (null != closure_0) {
       callback(tmp);

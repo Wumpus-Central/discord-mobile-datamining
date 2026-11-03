@@ -1,8 +1,8 @@
-// === Module 8989: EditGuildEventStepContainer ===
+// === Module 9117: EditGuildEventStepContainer ===
 
-// Module 8989 (EditGuildEventStepContainer)
+// Module 9117 (EditGuildEventStepContainer)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, paddingHorizontal: 0, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%" }, flex: { flex: 1 }, scroller: { paddingHorizontal: 16 }, buttonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.buttonContainer = rect;
@@ -26,7 +26,7 @@ export default function EditGuildEventsStepContainer(arg0) {
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   const obj = { style: tmp.container, children: null };
   const obj2 = { ref, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", style: null, contentContainerStyle: tmp.scroller, children };
-  const items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
+  items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
   obj2.style = items;
   const callback = noop.useCallback((nativeEvent) => {
     closure_0(nativeEvent.nativeEvent.layout.height);

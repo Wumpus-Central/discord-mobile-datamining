@@ -1,8 +1,8 @@
-// === Module 15002: useTrackUserProfileWishlistView ===
+// === Module 15138: useTrackUserProfileWishlistView ===
 
-// Module 15002 (useTrackUserProfileWishlistView)
+// Module 15138 (useTrackUserProfileWishlistView)
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9471 */;
+import WishlistStore from "WishlistStore" /* 9599 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);
@@ -17,7 +17,7 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
     flag = true;
   }
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = wishlistId(onAction[2]).useStateFromStores(items, () => WishlistStore.isFetching(wishlistId));
   flag(false);
   const items1 = [flag, stateFromStores, onAction, wishlistId, productLines];

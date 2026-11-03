@@ -1,9 +1,9 @@
-// === Module 18697: useSmartSearchStatus ===
+// === Module 18855: useSmartSearchStatus ===
 
-// Module 18697 (useSmartSearchStatus)
-import SmartSearchUtils from "SmartSearchUtils" /* 13889 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13890 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13891 */;
+// Module 18855 (useSmartSearchStatus)
+import SmartSearchUtils from "SmartSearchUtils" /* 14020 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14021 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 14022 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/intelligence_layer/search/nat
 
 export function useSmartSearchStatus(memo) {
   _require = memo;
-  const items = [SmartSearchResultsStore];
+  items = [SmartSearchResultsStore];
   const items1 = [memo];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (null == closure_0) {

@@ -1,17 +1,17 @@
-// === Module 15532: GatewaySocketDispatcher ===
+// === Module 15673: GatewaySocketDispatcher ===
 
-// Module 15532 (GatewaySocketDispatcher)
+// Module 15673 (GatewaySocketDispatcher)
 import LoggerDefault from "Logger" /* 3 */;
-import TimeUtils from "TimeUtils" /* 5772 */;
-import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 15536 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 15537 */;
-import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 15538 */;
-import ConnectionStateDefault from "ConnectionState" /* 15539 */;
-import ActionBatcherDefault from "ActionBatcher" /* 15540 */;
+import TimeUtils from "TimeUtils" /* 5892 */;
+import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 15677 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 15678 */;
+import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 15679 */;
+import ConnectionStateDefault from "ConnectionState" /* 15680 */;
+import ActionBatcherDefault from "ActionBatcher" /* 15681 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_4 = fn(15533).DISPATCHER_IDEAL_TIME_LIMIT_MS;
+let closure_4 = fn(15674).DISPATCHER_IDEAL_TIME_LIMIT_MS;
 let closure_5 = new LoggerDefault("GatewaySocket");
 const set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
@@ -93,7 +93,7 @@ prototype["hasStuffToDispatchNow"] = function hasStuffToDispatchNow() {
 };
 prototype["processFirstQueuedDispatch"] = function processFirstQueuedDispatch(set) {
   const self = this;
-  const items = [];
+  items = [];
   if (this.queue.length > 0) {
     if (set.has(self.queue[0].type)) {
       if (self.queue[0].status === closure_11.Loaded) {
@@ -163,10 +163,10 @@ prototype["maybePreload"] = function maybePreload(item10007) {
   }
   return false;
 };
-prototype["shouldFlushImmediately"] = function shouldFlushImmediately(type) {
-  let hasItem = set1.has(type);
+prototype["shouldFlushImmediately"] = function shouldFlushImmediately(arg0) {
+  let hasItem = set1.has(arg0);
   if (!hasItem) {
-    let result = set2.has(type);
+    let result = set2.has(arg0);
     if (result) {
       result = VoiceServerUpdateImmediateExperiment.isVoiceServerUpdateImmediateEnabled("GatewaySocketDispatcher");
     }
@@ -174,18 +174,18 @@ prototype["shouldFlushImmediately"] = function shouldFlushImmediately(type) {
   }
   return hasItem;
 };
-prototype["scheduleFlush"] = function scheduleFlush(type) {
+prototype["scheduleFlush"] = function scheduleFlush(arg0) {
   const self = this;
   if (!this.paused) {
     const scheduler = self.scheduler;
-    if (self.shouldFlushImmediately(type)) {
+    if (self.shouldFlushImmediately(arg0)) {
       scheduler.clearWorkTimeout();
       self.flush();
     } else if (!scheduler.hasWorkScheduled) {
       const scheduler2 = self.scheduler;
       const workTimeout = scheduler2.requestWorkTimeout(self.flush);
     }
-    if (set4.has(type)) {
+    if (set4.has(arg0)) {
       const scheduler3 = self.scheduler;
       const result = scheduler3.markCriticalWorkScheduled();
     }
@@ -296,7 +296,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(15536).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(15677).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];

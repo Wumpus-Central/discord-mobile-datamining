@@ -1,13 +1,13 @@
-// === Module 7165: UserSettingsUtils ===
+// === Module 7286: UserSettingsUtils ===
 
-// Module 7165 (UserSettingsUtils)
+// Module 7286 (UserSettingsUtils)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7166 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7287 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -76,7 +76,7 @@ export function generateNonSpamRetrainingOptInSettingOptions() {
   const intl2 = util.intl;
   obj.desc = intl2.string(util.t["3fzkPq"]);
   obj.value = obj.OPTIN;
-  const items = [obj, , ];
+  items = [obj, , ];
   const obj2 = { name: null, desc: null, value: null };
   const intl3 = util.intl;
   obj2.name = intl3.string(util.t["21fP2b"]);

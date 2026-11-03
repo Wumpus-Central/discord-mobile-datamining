@@ -1,14 +1,14 @@
-// === Module 8788: useMaybeFetchEquippedCollectibleProducts ===
+// === Module 8912: useMaybeFetchEquippedCollectibleProducts ===
 
-// Module 8788 (useMaybeFetchEquippedCollectibleProducts)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8790 */;
+// Module 8912 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8914 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {
   _require = id;
-  let items = [skuId3];
+  items = [skuId3];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const tmp2 = skuId(skuId1[3])(id, guildId);
@@ -40,7 +40,7 @@ function useEquippedCollectibleSkuIds(id, guildId) {
   }
   const items2 = [skuId, skuId1, skuId2, skuId3];
   return skuId2.useMemo(() => {
-    const items = [skuId, skuId1, skuId2, skuId3];
+    items = [skuId, skuId1, skuId2, skuId3];
     return items.filter((item) => null != item);
   }, items2);
 }
@@ -51,7 +51,7 @@ export default function useMaybeFetchEquippedCollectibleProducts(id, guildId, ar
   closure_0 = arg2;
   let tmp = useEquippedCollectibleSkuIds(id, guildId);
   const skuIds = tmp;
-  const items = [arg2, tmp];
+  items = [arg2, tmp];
   const effect = noop.useEffect(() => {
     let tmp = closure_0;
     if (closure_0) {

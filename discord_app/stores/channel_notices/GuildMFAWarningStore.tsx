@@ -1,10 +1,10 @@
-// === Module 15648: GuildMFAWarningStore ===
+// === Module 15791: GuildMFAWarningStore ===
 
-// Module 15648 (GuildMFAWarningStore)
+// Module 15791 (GuildMFAWarningStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import UserStore from "UserStore" /* 1385 */;
 
 function handleUserStoreUpdates() {
   const currentUser = UserStore.getCurrentUser();
@@ -23,7 +23,7 @@ class GuildMFAWarningStore extends Store {
 const prototype = GuildMFAWarningStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserStore, GuildChannelStore);
-  const items = [UserStore, GuildChannelStore];
+  items = [UserStore, GuildChannelStore];
   this.syncWith(items, handleUserStoreUpdates);
 };
 prototype["isVisible"] = function isVisible(mfaLevel) {

@@ -1,12 +1,12 @@
-// === Module 17826: CollectiblesShopSetting ===
+// === Module 17969: CollectiblesShopSetting ===
 
-// Module 17826 (CollectiblesShopSetting)
+// Module 17969 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import ShopIcon from "ShopIcon" /* 12468 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import ShopIcon from "ShopIcon" /* 12604 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ const route = SettingBuilders.createRoute({
   usePreNavigationAction() {
     return () => {
       const obj2 = { analyticsLocations: null, analyticsSource: null };
-      const items = [AnalyticsLocationDefault.USER_SETTINGS];
+      items = [AnalyticsLocationDefault.USER_SETTINGS];
       obj2.analyticsLocations = items;
       obj2.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
       const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);

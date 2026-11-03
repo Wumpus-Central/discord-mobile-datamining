@@ -1,6 +1,6 @@
-// === Module 6703: fetchConnectedAccounts ===
+// === Module 6823: fetchConnectedAccounts ===
 
-// Module 6703 (fetchConnectedAccounts)
+// Module 6823 (fetchConnectedAccounts)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

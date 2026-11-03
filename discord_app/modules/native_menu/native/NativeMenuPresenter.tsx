@@ -1,15 +1,15 @@
-// === Module 19008: NativeMenuPresenter ===
+// === Module 19166: NativeMenuPresenter ===
 
-// Module 19008 (NativeMenuPresenter)
+// Module 19166 (NativeMenuPresenter)
 import initialize from "initialize" /* 504 */;
-import NativeMenuStore from "NativeMenuStore" /* 10204 */;
+import NativeMenuStore from "NativeMenuStore" /* 10334 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
 
 export default function MenuContainer() {
-  const items = [NativeMenuStore];
+  items = [NativeMenuStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ key: NativeMenuStore.getKey(), menu: NativeMenuStore.getMenu() }), []);
   const menu = stateFromStoresObject.menu;
   let tmp2 = null;

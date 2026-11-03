@@ -1,10 +1,10 @@
-// === Module 7410: SKUPricesStore ===
+// === Module 7534: SKUPricesStore ===
 
-// Module 7410 (SKUPricesStore)
+// Module 7534 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 function resetStoreState() {
@@ -16,7 +16,7 @@ class SKUPricesStore extends Store {
 const prototype = SKUPricesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, resetStoreState);
 };
 prototype["getPricesForSkuId"] = function getPricesForSkuId(id) {
@@ -118,7 +118,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
           const _HermesInternal = HermesInternal;
           combined = "skus:" + obj.skuId;
         }
-        const items = [combined, obj];
+        items = [combined, obj];
         return items;
       })));
     }
@@ -156,7 +156,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
           const _HermesInternal = HermesInternal;
           combined = "skus:" + obj.skuId;
         }
-        const items = [combined, obj];
+        items = [combined, obj];
         return items;
       })));
       obj4 = obj3;
@@ -192,7 +192,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
               const _HermesInternal = HermesInternal;
               combined = "skus:" + obj.skuId;
             }
-            const items = [combined, obj];
+            items = [combined, obj];
             return items;
           })));
           obj4 = obj10;
@@ -243,7 +243,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
           const _HermesInternal = HermesInternal;
           combined = "skus:" + obj.skuId;
         }
-        const items = [combined, obj];
+        items = [combined, obj];
         return items;
       })));
     }

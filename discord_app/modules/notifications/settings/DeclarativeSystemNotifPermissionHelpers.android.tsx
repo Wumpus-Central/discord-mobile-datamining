@@ -1,12 +1,12 @@
-// === Module 17966: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 18109: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 17966 (DeclarativeSystemNotifPermissionHelpers)
+// Module 18109 (DeclarativeSystemNotifPermissionHelpers)
 import _mod17 from "module_17" /* 17 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1374 */;
-import DeviceUtils from "DeviceUtils" /* 4971 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7110 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16276 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16280 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
+import DeviceUtils from "DeviceUtils" /* 5098 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7236 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16419 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16427 */;
 import size from "module_2" /* 2 */;
 
 function refreshSystemNotifPermissions() {
@@ -19,7 +19,7 @@ function refreshSystemNotifPermissions() {
     }
   }
   if (null != androidNotifChannelStates) {
-    const items = [];
+    items = [];
     const _Set = Set;
     const set = new Set();
     const iter = androidNotifChannelStates[Symbol.iterator]();
@@ -53,7 +53,7 @@ function openSystemNotifSettings(arg0) {
         let entry = { key: "android.provider.extra.APP_PACKAGE", value: null };
         let obj4 = ClientInfoUtilsAll;
         entry.value = obj4.getConstants().Identifier;
-        let items = [entry, ];
+        items = [entry, ];
         let entry1 = { key: "android.provider.extra.CHANNEL_ID", value: string_id };
         items[1] = entry1;
         let str = "android.settings.CHANNEL_NOTIFICATION_SETTINGS";

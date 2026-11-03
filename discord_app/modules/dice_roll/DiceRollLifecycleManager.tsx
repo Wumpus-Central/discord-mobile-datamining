@@ -1,19 +1,19 @@
-// === Module 19435: DiceRollLifecycleManager ===
+// === Module 19593: DiceRollLifecycleManager ===
 
-// Module 19435 (DiceRollLifecycleManager)
+// Module 19593 (DiceRollLifecycleManager)
 import util from "util" /* 1113 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import MessageParserDefault from "MessageParser" /* 7824 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import DiceRollStore from "DiceRollStore" /* 13724 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import MessageParserDefault from "MessageParser" /* 7948 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import DiceRollStore from "DiceRollStore" /* 13855 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
-const INITIAL_STATE = fn(13724).INITIAL_STATE;
-const DiceRollConstants = fn(9771);
-({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const INITIAL_STATE = fn(13855).INITIAL_STATE;
+const DiceRollConstants = fn(9903);
+({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: closure_10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
+const MessageSendLocation = fn(5146).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -49,7 +49,7 @@ class DiceRollLifecycleManager extends tmp3 {
       }
       let num3;
       closure_2 = undefined;
-      let items;
+      items = undefined;
       if (channelId.getChannelId() === channelId) {
         if (null == state.getState().channelId) {
           num3 = 42;

@@ -1,9 +1,9 @@
-// === Module 19254: useCameraEncodeError ===
+// === Module 19412: useCameraEncodeError ===
 
-// Module 19254 (useCameraEncodeError)
-import AVError from "AVError" /* 5947 */;
+// Module 19412 (useCameraEncodeError)
+import AVError from "AVError" /* 6067 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11759 */;
+import AVErrorStore from "AVErrorStore" /* 11896 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/errors/hooks/useCameraEncodeE
 
 export default function useCameraEncodeError(arg0) {
   _require = arg0;
-  const items = [AVErrorStore, AuthenticationStore];
+  items = [AVErrorStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() === closure_0) {
       const first = AVErrorStore.getActiveErrorsOfType(AVError.AVError.CAMERA_SEND_LOW_FPS)[0];

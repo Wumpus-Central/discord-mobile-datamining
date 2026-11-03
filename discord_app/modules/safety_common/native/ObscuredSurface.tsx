@@ -1,18 +1,18 @@
-// === Module 9367: ObscuredSurface ===
+// === Module 9495: ObscuredSurface ===
 
-// Module 9367 (ObscuredSurface)
+// Module 9495 (ObscuredSurface)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 9368 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 9496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, warning: null };
 let obj3 = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj2.warning = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
@@ -28,7 +28,7 @@ export default function ObscuredSurface(obscured) {
     const obj = { value: ObscuredSurfaceContext.OBSCURED_VALUE, children: null };
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.content, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessible: false, "aria-hidden": true, children };
-    const items = [React4(View, obj3), , ];
+    items = [React4(View, obj3), , ];
     const obj4 = { style: tmp.cover };
     items[1] = React4(View, obj4);
     const obj5 = { style: tmp.warning, children: null };

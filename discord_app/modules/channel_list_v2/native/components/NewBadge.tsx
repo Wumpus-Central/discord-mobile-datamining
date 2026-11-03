@@ -1,19 +1,19 @@
-// === Module 13844: NewBadge ===
+// === Module 13975: NewBadge ===
 
-// Module 13844 (NewBadge)
+// Module 13975 (NewBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import shared from "shared" /* 5021 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9822 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import shared from "shared" /* 5148 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9953 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let num = 0;
   if (obj.isIOS()) {
@@ -40,7 +40,7 @@ export default function NewBadge() {
   const tmp3 = useThemeDefault();
   const tmp4 = closure_5(useIsUsingClientThemeDefault(), tmp3);
   const obj = { style: tmp4.base, children: null };
-  const obj2 = { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null };
+  const obj2 = { variant: "text-xxs/semibold", style: tmp4.text, color: null, children: null };
   const tmp2 = useIsUsingClientThemeDefault();
   if (obj3.isThemeLight(tmp3)) {
     let str = "text-overlay-light";
@@ -50,6 +50,6 @@ export default function NewBadge() {
   obj2.color = str;
   const intl = util.intl;
   obj2.children = intl.string(util.t.y2b7CA);
-  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/semibold", style: tmp4.text, color: null, children: null });
   return <View style={tmp4.base}>{null}</View>;
 };

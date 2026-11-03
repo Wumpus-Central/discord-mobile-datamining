@@ -1,11 +1,11 @@
-// === Module 7942: useIsOnStartStageScreenStore ===
+// === Module 8066: useIsOnStartStageScreenStore ===
 
-// Module 7942 (useIsOnStartStageScreenStore)
+// Module 8066 (useIsOnStartStageScreenStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4871 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ export function setIsOnStartStageScreen(arg0) {
 }
 export function useUpdateIsOnStartStageScreenEffect(id) {
   _require = id;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => SelectedChannelStore.getVoiceChannelId() === id.id);
   let obj = require("initialize");
   const items1 = [PermissionStore];
@@ -30,7 +30,7 @@ export function useUpdateIsOnStartStageScreenEffect(id) {
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(7943)(id.id);
+    tmp3 = !stateFromStores(8067)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

@@ -1,6 +1,6 @@
-// === Module 16922: BountiesModal ===
+// === Module 17065: BountiesModal ===
 
-// Module 16922 (BountiesModal)
+// Module 17065 (BountiesModal)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ export default noop.memo(function BountiesModal(bountyId) {
   const sourceQuestContent = bountyId.sourceQuestContent;
   const variant = bountyId.variant;
   const bounty = bountyId.bounty;
-  const items = [bounty, bountyId, sourceQuestContent, variant];
+  items = [bounty, bountyId, sourceQuestContent, variant];
   const memo = bounty.useMemo(() => ({
     [closure_2_5]: {
       fullscreen: true,

@@ -1,19 +1,19 @@
-// === Module 8928: ForumPostMediaUtils ===
+// === Module 9054: ForumPostMediaUtils ===
 
-// Module 8928 (ForumPostMediaUtils)
+// Module 9054 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6065 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6185 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7477 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import UserStore from "UserStore" /* 1383 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7601 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -204,7 +204,7 @@ function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1379).isNotNullish);
+          let found = mapped.filter(tmp(1380).isNotNullish);
         }
         return found;
       }
@@ -215,7 +215,7 @@ function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
 }
 function useForumPostMediaProperties(firstResult, flag) {
   const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
-  const items = [...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()), ...useForumPostEmbeds(firstResult, flag)];
+  items = [...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()), ...useForumPostEmbeds(firstResult, flag)];
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
   if (null == firstResult) {
     let items1 = [];
@@ -263,7 +263,7 @@ function useForumPostMediaProperties(firstResult, flag) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -338,7 +338,7 @@ function useForumPostMediaProperties(firstResult, flag) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -489,7 +489,7 @@ export function useForumPostComponentsMedia(components) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -564,7 +564,7 @@ export function useForumPostComponentsMedia(components) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -616,7 +616,7 @@ export function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
   }
   const tmp = useForumPostMediaProperties(firstMessage, flag);
   closure_1 = tmp;
-  let items = [stateFromStores1, tmp];
+  items = [stateFromStores1, tmp];
   return noop.useMemo(() => {
     if (null == stateFromStores1) {
       return [];
@@ -625,7 +625,7 @@ export function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
       if (stateFromStores1.isMediaChannel()) {
         const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
         if (null != found) {
-          const items = [found];
+          items = [found];
           arr = items;
         }
         return arr;
@@ -641,7 +641,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
   if (null == firstMessage) {
-    let items = [];
+    items = [];
   } else {
     const components = firstMessage.components;
     if (tmp5) {
@@ -686,7 +686,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -761,7 +761,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -821,7 +821,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
   if (null == firstMessage) {
-    let items = [];
+    items = [];
   } else {
     const components = firstMessage.components;
     if (tmp5) {
@@ -866,7 +866,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {
@@ -941,7 +941,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
             }
             return tmp6;
           } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
+            items = type.items;
             return items.map((item) => {
               ({ media, spoiler } = item);
               if (spoiler == null) {

@@ -1,17 +1,17 @@
-// === Module 7700: ApplicationCommandUtils ===
+// === Module 7824: ApplicationCommandUtils ===
 
-// Module 7700 (ApplicationCommandUtils)
+// Module 7824 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1083 */;
-import Server from "Server" /* 1992 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import DraftStore from "DraftStore" /* 7701 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7703 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6035 */;
+import Server from "Server" /* 2121 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import DraftStore from "DraftStore" /* 7825 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7827 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6155 */;
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -24,7 +24,7 @@ function buildCommand(arg0) {
     tmp = rootCommand.permissions.length > 0;
   }
   if (!tmp) {
-    let items = subCommandPath;
+    items = subCommandPath;
     if (subCommandPath == null) {
       items = [];
     }
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124143 */ function() { ... });
+                      mapped = choices.map(/* F124003 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F91334 */ function() { ... });
+                      mapped1 = options.map(/* F91670 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -329,7 +329,7 @@ function buildSubCommands(arg0) {
   ({ rootCommand, command, applicationId, subCommandPath, useKeyedPermissions } = arg0);
   if (command.hasOwnProperty("id")) {
     const obj2 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
-    const items = [buildCommand(obj2)];
+    items = [buildCommand(obj2)];
     return items;
   } else if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
     if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -460,7 +460,7 @@ export function isSnowflake(text) {
 export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   regex = regExp;
   closure_1 = arg2;
-  const items = [];
+  items = [];
   const item = _modDef12(contextCommands).forEach((displayName) => {
     let isMatch = regex.test(displayName.displayName);
     if (isMatch) {

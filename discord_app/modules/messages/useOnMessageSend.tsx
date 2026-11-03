@@ -1,6 +1,6 @@
-// === Module 18836: useOnMessageSend ===
+// === Module 18994: useOnMessageSend ===
 
-// Module 18836 (useOnMessageSend)
+// Module 18994 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx
 export default function useOnMessageSend(arg0) {
   closure_0 = arg0;
   dependencyMap = tmp;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const effect = noop.useEffect(() => {
     function handleMessage(channelId) {
       let tmp2 = undefined !== handleMessageCreate;

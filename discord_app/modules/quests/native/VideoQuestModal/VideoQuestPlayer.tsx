@@ -1,24 +1,24 @@
-// === Module 17111: VideoQuestPlayer ===
+// === Module 17254: VideoQuestPlayer ===
 
-// Module 17111 (VideoQuestPlayer)
-import ClientInfoUtils from "ClientInfoUtils" /* 1374 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import AssetUtils from "AssetUtils" /* 9695 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14684 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16933 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 17114 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 17122 */;
+// Module 17254 (VideoQuestPlayer)
+import ClientInfoUtils from "ClientInfoUtils" /* 1376 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import AssetUtils from "AssetUtils" /* 9827 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14815 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17076 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 17257 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 17265 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7848 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7972 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(16933).PlayerState;
+export const PlayerState = fn(17076).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
@@ -40,7 +40,7 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   }
   let memo;
   let memo1;
-  let duration;
+  duration = undefined;
   closure_11 = undefined;
   let targetSeconds;
   closure_13 = undefined;
@@ -74,7 +74,7 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  const items = [quest];
+  items = [quest];
   memo = contentInsets.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_VIDEO, undefined, true), items);
   const items1 = [quest];
   memo1 = contentInsets.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_VIDEO_HLS, undefined, true), items1);
@@ -370,11 +370,11 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
     }
   }, items11);
   const items13 = [quest, flag, contentInsets];
-  const callback13 = obj3.useCallback((flag2) => {
-    handleBufferAnalytics(flag2);
+  const callback13 = obj3.useCallback((c2) => {
+    handleBufferAnalytics(c2);
     const current = closure_29.current;
     if (current != null) {
-      current.onBuffer(flag2);
+      current.onBuffer(c2);
     }
   }, items12);
   const items14 = [memo1, memo];

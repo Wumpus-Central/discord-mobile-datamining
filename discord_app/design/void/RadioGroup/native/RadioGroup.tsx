@@ -1,9 +1,9 @@
-// === Module 15979: RadioGroup ===
+// === Module 16122: RadioGroup ===
 
-// Module 15979 (RadioGroup)
+// Module 16122 (RadioGroup)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import FormRowDefault from "FormRow" /* 7309 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import FormRowDefault from "FormRow" /* 7429 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function RadioEmpty(size) {
 function RadioSelected(style) {
   ({ size, active } = style);
   const tmp = closure_10();
-  const items = [tmp.radioIcon, , , ];
+  items = [tmp.radioIcon, , , ];
   let MEDIUM = size;
   if (size === undefined) {
     MEDIUM = obj.MEDIUM;
@@ -77,7 +77,7 @@ function RadioBar(arg0) {
     tmp7 = onPress;
   }
   obj3.onPress = tmp7;
-  const items = [style, , ];
+  items = [style, , ];
   if (disabled) {
     disabled = tmp.disabled;
   }
@@ -231,7 +231,7 @@ class RadioGroup {
     obj = {
       children: options.map((option, index) => {
             const obj = { option, checked: value === option.value, style: null, size: null, disabled: null, onPress: null, indicatorLeft: null, showIndicator: null };
-            const items = [dependencyMap, ];
+            items = [dependencyMap, ];
             if (index === options.length - 1) {
               let obj2 = { marginBottom: 0 };
             } else {
@@ -266,7 +266,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const Sizes = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 const dependencyMap = { [Sizes.SMALL]: 2, [Sizes.MEDIUM]: 3, [Sizes.LARGE]: 4 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { radioIcon: { flex: 0, marginRight: 8, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.TEXT_MUTED, borderWidth: 2 }, radioIconSelected: null, radioTick: null, disabled: null, divider: null, collapsibleStyle: null, collapsibleBackgroundSelected: null, collapsibleBackground: null, collapsibleContainer: null };
 const obj4 = { flex: 0, marginRight: 8, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.TEXT_MUTED, borderWidth: 2 };
 obj3.radioIconSelected = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

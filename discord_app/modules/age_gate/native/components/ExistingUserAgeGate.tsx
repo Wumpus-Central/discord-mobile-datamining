@@ -1,11 +1,11 @@
-// === Module 19396: ExistingUserAgeGate ===
+// === Module 19554: ExistingUserAgeGate ===
 
-// Module 19396 (ExistingUserAgeGate)
+// Module 19554 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
 
 const require = globalThis.__r;
 
@@ -13,12 +13,12 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_8, AgeGateSource: closure_9 } = AgeGateConstants);
-let closure_10 = fn(19392).ExistingUserAgeGateScreens;
+let closure_10 = fn(19550).ExistingUserAgeGateScreens;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
@@ -51,7 +51,7 @@ export default function ExistingUserAgeGate(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ export default function ExistingUserAgeGate(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -155,7 +155,7 @@ export default function ExistingUserAgeGate(source) {
             return obj3;
           } else {
             v1(38)(null != date, "Cannot submit null birthday.");
-            const diffResult = v1(2042)().diff(date, "years");
+            const diffResult = v1(2171)().diff(date, "years");
             if (diffResult < 18) {
               const obj4 = {
                 source,
@@ -171,7 +171,7 @@ export default function ExistingUserAgeGate(source) {
               const obj5 = { value: submitBirthday(date), done: false };
               return obj5;
             }
-            const obj6 = v1(2042)();
+            const obj6 = v1(2171)();
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -182,7 +182,7 @@ export default function ExistingUserAgeGate(source) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp10) {
         c0 = tmp;
         throw tmp10;
@@ -207,7 +207,7 @@ export default function ExistingUserAgeGate(source) {
   [tmp12, c6] = date(noop.useState(false), 2);
   const tmp11 = date(noop.useState(false), 2);
   const ref = noop.useRef(null);
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.getAction());
   const items1 = [stateFromStores, onClose];
   const effect = noop.useEffect(() => {
@@ -253,7 +253,7 @@ export default function ExistingUserAgeGate(source) {
         }
       }
       let obj3 = { top: true, style: tmp.container, children: null };
-      let obj5 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult1 };
+      let obj5 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult1 };
       const items3 = [closure_13(require("Text/Text").Heading, obj5), , , ];
       let obj7 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: stringResult };
       items3[1] = closure_13(require("Text/Text").Text, obj7);

@@ -1,26 +1,26 @@
-// === Module 15626: BlockedUserInVoiceChannelActionSheet ===
+// === Module 15768: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 15626 (BlockedUserInVoiceChannelActionSheet)
+// Module 15768 (BlockedUserInVoiceChannelActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const setDismissalTimeForUser = fn(15623).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(15625);
+const setDismissalTimeForUser = fn(15765).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(15767);
 ({ BlockWarningEngagements: closure_8, VoiceChannelWarningSurfaces: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_11, jsxs: closure_12, jsx: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, headerText: null, centerText: null, buttonGroup: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.headerText = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
@@ -35,7 +35,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   ({ channelId: require, blockedUserId } = arg0);
   let stateFromStores;
   const tmp = closure_14();
-  let items = [RelationshipStore];
+  items = [RelationshipStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.isBlocked(blockedUserId));
   let obj = require("initialize");
   let items1 = [ChannelStore];
@@ -66,7 +66,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj5.style = tmp.headerImage;
   const items4 = [closure_13(blockedUserId(stateFromStores[14]), obj5), , , ];
   const obj6 = { style: tmp.headerText, children: null };
-  const obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
+  const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl4 = require("util").intl;
   obj7.children = intl4.string(require("util").t["1/gpFh"]);
   const items5 = [closure_13(require("Text/Text").Text, obj7), closure_13(require("Text/Text").Text, { variant: "text-md/medium", style: tmp.centerText, children: tmp7Result })];
@@ -107,7 +107,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       SelectedChannelActionCreatorsDefault.disconnect();
       const obj4 = { action: constants.CLICK_TO_LEAVE, channel_id, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
       if (stateFromStores) {
-        const items = [blockedUserId];
+        items = [blockedUserId];
         let items1 = items;
       } else {
         items1 = [];
@@ -135,7 +135,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       setDismissalTimeForUser(blockedUserId);
       const obj3 = { action: constants.CLICK_TO_STAY, channel_id, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
       if (stateFromStores) {
-        const items = [blockedUserId];
+        items = [blockedUserId];
         let items1 = items;
       } else {
         items1 = [];

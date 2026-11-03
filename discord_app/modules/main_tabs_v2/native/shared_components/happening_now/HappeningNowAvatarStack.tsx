@@ -1,26 +1,27 @@
-// === Module 18142: HappeningNowAvatarStack ===
+// === Module 18286: HappeningNowAvatarStack ===
 
-// Module 18142 (HappeningNowAvatarStack)
+// Module 18286 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import ClipView from "ClipView" /* 9509 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import ClipView from "ClipView" /* 9637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(14885).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15016).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5014);
-createStyles.createStyles((arg0, marginLeft) => {
+let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
+const createStyles = fn(5141);
+let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
   obj.userCounter = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: native.AVATAR_SIZE_MAP[arg0], minWidth: native.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
@@ -30,142 +31,166 @@ createStyles.createStyles((arg0, marginLeft) => {
   obj.ellipsisBorder = { borderColor: nativeDefault.colors.CARD_SECONDARY_BG };
   return obj;
 });
-const __initData = { code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };
-let closure_13 = { code: "function HappeningNowAvatarStackTsx2(finished){const{runOnJS,setRenderComponents,isTyping}=this.__closure;if(!finished)return;runOnJS(setRenderComponents)(isTyping);}" };
-const __initData2 = { code: "function HappeningNowAvatarStackTsx3(){const{isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG}=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};}" };
+let closure_12 = { code: "(function HappeningNowAvatarStackTsx1(){let[interpolate,typingValue,ELLIPSIS_WIDTH]=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};})" };
+let closure_13 = { code: "(function HappeningNowAvatarStackTsx2(finished){let[scheduleOnRN,setRenderComponents,isTyping]=this.__closure;if(!finished)return;scheduleOnRN(setRenderComponents,isTyping);})" };
+let closure_14 = { code: "(function HappeningNowAvatarStackTsx3(){let[isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG]=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
 
 export function HappeningNowAvatarStack(userLimit) {
-  ({ users, guildId: require, isTyping } = userLimit);
+  ({ users, guildId: c0, isTyping } = userLimit);
   if (isTyping === undefined) {
     isTyping = false;
   }
+  importDefault = isTyping;
   let num = userLimit.userLimit;
   if (num === undefined) {
     num = 3;
   }
   ({ userCount, isStage } = userLimit);
+  dependencyMap = isStage;
   let XSMALL_20 = userLimit.avatarSize;
   if (XSMALL_20 === undefined) {
     XSMALL_20 = require("native").AvatarSizes.XSMALL_20;
   }
+  dependencyMap2 = XSMALL_20;
   let num2 = userLimit.avatarBorderWidth;
   if (num2 === undefined) {
     num2 = 2;
   }
+  noop = num2;
   let num3 = userLimit.avatarOverlap;
   if (num3 === undefined) {
     num3 = 4;
   }
+  c5 = num3;
   const style = userLimit.style;
   c7 = undefined;
   let sharedValue;
   let substr;
-  SPRING_CONFIG = undefined;
-  let mapped;
-  const tmp3 = mapped(XSMALL_20, num3);
-  closure_6 = tmp3;
-  [tmp5, c7] = XSMALL_20(num2.useState(() => isTyping), 2);
-  let obj = num2;
-  const tmp4 = XSMALL_20(num2.useState(() => isTyping), 2);
+  c10 = undefined;
+  const tmp3 = closure_11(XSMALL_20, num3);
+  c6 = tmp3;
+  [tmp5, c7] = dependencyMap2(noop.useState(() => c1), 2);
+  let obj = noop;
+  let tmp4 = dependencyMap2(noop.useState(() => c1), 2);
   let num4 = 0;
   if (isTyping) {
     num4 = 1;
   }
-  sharedValue = require("ReanimatedRexport").useSharedValue(num4);
-  let obj2 = require("ReanimatedRexport");
-  let items = [closure_6];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => closure_6.locale);
+  sharedValue = require("module_1652").useSharedValue(num4);
+  let obj2 = require("module_1652");
+  items = [c6];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => _undefined3.locale);
   const tmp6Result = require("useStateFromStores");
-  class V {
+  let items1 = [closure_12, require("module_1652").interpolate, sharedValue, 28];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp10, tmp11, tmp12, tmp13] = items1;
+  class HappeningNowAvatarStackTsx1 {
     constructor() {
-      obj = { opacity: null, width: null };
-      obj2 = closure_0(closure_2[9]);
-      obj.opacity = obj2.interpolate(closure_8.get(), [0, 1], [0, 1]);
-      obj3 = closure_0(closure_2[9]);
-      obj.width = obj3.interpolate(closure_8.get(), [0, 1], [0, 28]);
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0, 1]), width: null };
+      items = [0];
+      items[1] = closure_2;
+      obj.width = closure_0(closure_1.get(), [0, 1], items);
       return obj;
     }
   }
-  const tmp6Result5 = require("ReanimatedRexport");
-  V.__closure = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
-  V.__workletHash = 14140918847743;
-  V.__initData = __initData;
-  const items1 = [isTyping, sharedValue];
-  const animatedStyle = tmp6Result5.useAnimatedStyle(V);
+  const items2 = [tmp11, tmp12, tmp13];
+  HappeningNowAvatarStackTsx1.__closure = items2;
+  HappeningNowAvatarStackTsx1.__workletHash = 15788813600806;
+  HappeningNowAvatarStackTsx1.__initData = tmp10;
+  const items3 = [isTyping, sharedValue];
+  const animatedStyle = require("module_1652").useAnimatedStyle(HappeningNowAvatarStackTsx1);
   const effect = obj.useEffect(() => {
     let num = 0;
-    if (isTyping) {
+    if (c1) {
       num = 1;
     }
-    const fn = function t(arg0) {
-      if (arg0) {
-        guildId(isStage[9]).runOnJS(setRenderComponents)(isTyping);
-        const obj = guildId(isStage[9]);
+    items = [closure_13, _mod1705.scheduleOnRN, c7, c1];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    [tmp6, tmp7, tmp8, tmp9] = items;
+    class HappeningNowAvatarStackTsx2 {
+      constructor(arg0) {
+        if (arg0) {
+          tmp = closure_0;
+          tmp2 = closure_1;
+          tmp3 = closure_2;
+          tmp4 = closure_0(closure_1, closure_2);
+        }
+        return;
       }
-    };
-    let obj = spring;
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
-    fn.__workletHash = 2498652829757;
-    fn.__initData = __initData;
-    const result = sharedValue.set(obj.withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
-    const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
-  }, items1);
+    }
+    const items1 = [tmp7, tmp8, tmp9];
+    HappeningNowAvatarStackTsx2.__closure = items1;
+    HappeningNowAvatarStackTsx2.__workletHash = 10871831369161;
+    HappeningNowAvatarStackTsx2.__initData = tmp6;
+    const result = sharedValue.set(spring_spring.withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", HappeningNowAvatarStackTsx2));
+  }, items3);
   substr = users.slice(0, num);
   if (userCount == null) {
     userCount = users.length;
   }
   let diff = userCount - substr.length;
-  SPRING_CONFIG = diff;
-  mapped = substr.map((user, index) => {
+  c10 = diff;
+  const mapped = substr.map((user, index) => {
     const diff = substr.length - 1;
-    const tmp6 = React6(native.Avatar, { user, guildId, size: XSMALL_20 });
+    const tmp6 = React6(native.Avatar, { user, guildId, size });
     let shiftedAvatar;
     if (0 !== index) {
-      shiftedAvatar = closure_6.shiftedAvatar;
+      shiftedAvatar = _undefined3.shiftedAvatar;
     }
     const obj2 = { style: shiftedAvatar, children: null };
     if (index !== diff) {
       const obj3 = { cutouts: null, children: null };
-      const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[XSMALL_20] - num3 - num2, y: -num2, size: native.AVATAR_SIZE_MAP[XSMALL_20] + 2 * num2 };
-      const items = [point];
+      const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[size] - c5 - c4, y: -c4, size: native.AVATAR_SIZE_MAP[size] + 2 * c4 };
+      items = [point];
       obj3.cutouts = items;
       obj3.children = tmp6;
       let tmp2Result = React6(ClipViewDefault, obj3);
     } else {
       tmp2Result = tmp6;
-      if (!isStage) {
+      if (!c2) {
         tmp2Result = tmp6;
       }
     }
     obj2.children = tmp2Result;
     return React6(View, obj2, user.id);
   });
-  let obj3 = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
-  class H {
+  const tmp6Result5 = require("module_1652");
+  const items4 = [closure_14, isStage, diff, mapped, require("native").AVATAR_SIZE_MAP, XSMALL_20, num3, require("spring/spring").withSpring, c10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  dependencyMap2 = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items4;
+  class HappeningNowAvatarStackTsx3 {
     constructor() {
       num = 0;
-      if (!isStage) {
-        tmp = closure_10;
+      if (!closure_0) {
+        tmp = closure_1;
         num = 0;
-        if (closure_10 > 0) {
+        if (closure_1 > 0) {
           num = 1;
         }
       }
-      sum = closure_11.length + num;
+      sum = closure_2.length + num;
       num2 = 0;
       if (sum > 0) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        tmp5 = XSMALL_20;
-        tmp6 = c5;
+        tmp3 = closure_3;
+        tmp4 = closure_4;
+        tmp5 = closure_5;
         num3 = 1;
-        num2 = sum * closure_0(closure_2[8]).AVATAR_SIZE_MAP[XSMALL_20] - (sum - 1) * c5;
+        num2 = sum * closure_3[closure_4] - (sum - 1) * closure_5;
       }
-      obj = { width: null, marginRight: null };
-      obj2 = closure_0(closure_2[11]);
-      obj.width = obj2.withSpring(num2, closure_10);
+      obj = { width: closure_6(num2, closure_7), marginRight: null };
       num4 = 4;
       if (0 === sum) {
         num4 = 0;
@@ -174,61 +199,61 @@ export function HappeningNowAvatarStack(userLimit) {
       return obj;
     }
   }
-  const tmp6Result6 = require("ReanimatedRexport");
-  H.__closure = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: require("native").AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: require("spring").withSpring, SPRING_CONFIG };
-  H.__workletHash = 5027466437777;
-  H.__initData = __initData2;
-  const animatedStyle1 = tmp6Result6.useAnimatedStyle(H);
-  const obj5 = { style: null, children: null };
+  const items5 = [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+  HappeningNowAvatarStackTsx3.__closure = items5;
+  HappeningNowAvatarStackTsx3.__workletHash = 14791568232776;
+  HappeningNowAvatarStackTsx3.__initData = tmp18;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(HappeningNowAvatarStackTsx3);
+  let obj3 = { style: null, children: null };
   if (isStage) {
-    const items2 = [tmp3.stageAvatarStack, style];
-    obj5.style = items2;
-    const obj6 = { style: null, children: null };
-    const items3 = [tmp3.avatars, animatedStyle1];
-    obj6.style = items3;
-    obj6.children = mapped;
-    const items4 = [sharedValue(isTyping(isStage[9]).View, obj6), ];
-    const obj7 = { color: "text-default", variant: "text-xs/semibold", children: require("NumberUtils").humanizeValue(userCount, stateFromStores) };
-    items4[1] = sharedValue(require("Text/Text").Text, obj7);
-    obj5.children = items4;
-    let tmp20 = obj5;
-    const tmp6Result7 = require("NumberUtils");
+    const items6 = [tmp3.stageAvatarStack, style];
+    obj3.style = items6;
+    const obj4 = { style: null, children: null };
+    const items7 = [tmp3.avatars, animatedStyle1];
+    obj4.style = items7;
+    obj4.children = mapped;
+    const items8 = [sharedValue(_modDef1652.View, obj4), ];
+    const obj5 = { color: "text-default", variant: "text-xs/semibold", children: tmp6(2024).humanizeValue(userCount, stateFromStores) };
+    items8[1] = sharedValue(tmp6(5747).Text, obj5);
+    obj3.children = items8;
+    let tmp33 = obj3;
+    const tmp6Result7 = tmp6(2024);
   } else {
-    const items5 = [tmp3.avatarStack, style];
-    obj5.style = items5;
-    const obj8 = { style: null, children: null };
-    const items6 = [tmp3.avatarBubbles, animatedStyle1];
-    obj8.style = items6;
-    const obj9 = { style: tmp3.avatars, children: mapped };
-    const items7 = [sharedValue(tmp16, obj9), ];
-    let tmp18Result = null;
+    const items9 = [tmp3.avatarStack, style];
+    obj3.style = items9;
+    const obj6 = { style: null, children: null };
+    const items10 = [tmp3.avatarBubbles, animatedStyle1];
+    obj6.style = items10;
+    const obj7 = { style: tmp3.avatars, children: mapped };
+    const items11 = [sharedValue(tmp29, obj7), ];
+    let tmp31Result = null;
     if (diff > 0) {
-      const obj10 = { style: tmp3.userCounter, children: null };
-      const obj11 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
-      const items8 = ["+", require("NumberUtils").humanizeValue(diff, stateFromStores)];
-      obj11.children = items8;
-      obj10.children = tmp15(require("Text/Text").Text, obj11);
-      tmp18Result = tmp18(tmp16, obj10);
-      const tmp6Result8 = require("NumberUtils");
+      const obj8 = { style: tmp3.userCounter, children: null };
+      const obj9 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
+      const items12 = ["+", tmp6(2024).humanizeValue(diff, stateFromStores)];
+      obj9.children = items12;
+      obj8.children = tmp28(tmp6(5747).Text, obj9);
+      tmp31Result = tmp31(tmp29, obj8);
+      const tmp6Result8 = tmp6(2024);
     }
-    items7[1] = tmp18Result;
-    obj8.children = items7;
-    const items9 = [tmp15(isTyping(isStage[9]).View, obj8), ];
-    if (!tmp18Result2) {
-      tmp18Result2 = isTyping;
+    items11[1] = tmp31Result;
+    obj6.children = items11;
+    const items13 = [tmp28(_modDef1652.View, obj6), ];
+    if (!tmp31Result2) {
+      tmp31Result2 = isTyping;
     }
-    if (tmp18Result2) {
-      const obj12 = { style: null, children: null };
-      const items10 = [tmp3.ellipsisWrapper, animatedStyle];
-      obj12.style = items10;
-      const obj13 = { style: tmp3.ellipsisBorder };
-      obj12.children = tmp18(require("typing_indicators/TypingIndicator").TypingIndicator, obj13);
-      tmp18Result2 = tmp18(tmp17(isStage[9]).View, obj12);
+    if (tmp31Result2) {
+      const obj10 = { style: null, children: null };
+      const items14 = [tmp3.ellipsisWrapper, animatedStyle];
+      obj10.style = items14;
+      const obj11 = { style: tmp3.ellipsisBorder };
+      obj10.children = tmp31(tmp6(18287).TypingIndicator, obj11);
+      tmp31Result2 = tmp31(tmp30(1652).View, obj10);
     }
-    items9[1] = tmp18Result2;
-    obj5.children = items9;
-    tmp20 = obj5;
-    tmp17 = isTyping;
+    items13[1] = tmp31Result2;
+    obj3.children = items13;
+    tmp33 = obj3;
+    tmp30 = importDefault;
   }
-  return substr(num3, tmp20);
+  return substr(c5, tmp33);
 }

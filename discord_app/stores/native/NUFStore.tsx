@@ -1,10 +1,10 @@
-// === Module 7785: NUFStore ===
+// === Module 7909: NUFStore ===
 
-// Module 7785 (NUFStore)
+// Module 7909 (NUFStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 function handleCacheOrSocketLoaded() {
   let flag = false;
@@ -46,7 +46,7 @@ class NUFStore extends PersistedStore {
 const prototype = NUFStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RelationshipStore, GuildStore);
-  const items = [RelationshipStore, GuildStore];
+  items = [RelationshipStore, GuildStore];
   this.syncWith(items, handleUpdate);
 };
 prototype["getState"] = function getState() {

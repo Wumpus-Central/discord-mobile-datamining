@@ -1,6 +1,6 @@
-// === Module 10041: EmojiPickerNativeComponent ===
+// === Module 10172: EmojiPickerNativeComponent ===
 
-// Module 10041 (EmojiPickerNativeComponent)
+// Module 10172 (EmojiPickerNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
@@ -19,11 +19,11 @@ export const Commands = {
     renderElement.dispatchCommand(current, "refreshEmojis", []);
   },
   scrollingEnabled(current, arg1) {
-    const items = [arg1];
+    items = [arg1];
     renderElement.dispatchCommand(current, "scrollingEnabled", items);
   },
-  scrollToHeaderIndex(arg0, arg1, arg2) {
-    const items = [arg1, arg2];
-    renderElement.dispatchCommand(arg0, "scrollToHeaderIndex", items);
+  scrollToHeaderIndex(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollToHeaderIndex", items);
   }
 };

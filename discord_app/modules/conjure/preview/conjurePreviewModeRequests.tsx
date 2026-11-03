@@ -1,6 +1,6 @@
-// === Module 10949: conjurePreviewModeRequests ===
+// === Module 11086: conjurePreviewModeRequests ===
 
-// Module 10949 (conjurePreviewModeRequests)
+// Module 11086 (conjurePreviewModeRequests)
 import noop from "module_19" /* 19 */;
 
 const set = new Set();
@@ -19,7 +19,7 @@ export function useConjurePreviewModeRequests(projectId, current) {
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [projectId];
+  items = [projectId];
   const effect = noop.useEffect(() => {
     if (null != listener) {
       listener = function listener(arg0, AUTO_DISMISS) {

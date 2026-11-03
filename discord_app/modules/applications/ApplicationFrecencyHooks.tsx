@@ -1,9 +1,9 @@
-// === Module 12450: ApplicationFrecencyHooks ===
+// === Module 12586: ApplicationFrecencyHooks ===
 
-// Module 12450 (ApplicationFrecencyHooks)
+// Module 12586 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9763 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9895 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
     const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[3]).FrecencyUserSettingsActionCreators;
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(memo2.FRECENCY_AND_FAVORITES_SETTINGS);
   }, []);
-  let items = [memo1];
+  items = [memo1];
   stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getApplicationFrecencyWithoutLoadingLatest());
   let items1 = [found, stateFromStoresArray];
   memo = memo.useMemo(() => {
@@ -70,7 +70,7 @@ export function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
     if (mapped == null) {
       mapped = [];
     }
-    const items = [...memo];
+    items = [...memo];
     const items1 = [...mapped];
     items.push.apply(items1);
     const sorted = items.sort((id, id2) => {
@@ -114,7 +114,7 @@ export function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
       if (recentUses == null) {
         recentUses = [];
       }
-      const items = [...recentUses];
+      items = [...recentUses];
       applyResult = Math.max.apply(items);
       let tmp3 = null == applyResult;
       if (!tmp3) {
@@ -134,7 +134,7 @@ export function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
     if (str == null) {
       str = "";
     }
-    let items = [...memo2.filter((id) => id.id === str), ...memo2.filter((id) => id.id !== str)];
+    items = [...memo2.filter((id) => id.id === str), ...memo2.filter((id) => id.id !== str)];
     return items;
   }, items4);
 }

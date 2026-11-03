@@ -1,22 +1,22 @@
-// === Module 14538: AppInteractionInfoActionSheet ===
+// === Module 14669: AppInteractionInfoActionSheet ===
 
-// Module 14538 (AppInteractionInfoActionSheet)
+// Module 14669 (AppInteractionInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 6980 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import UserActionCreators from "UserActionCreators" /* 8752 */;
+import Pressables from "Pressables" /* 7106 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7128 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import UserActionCreators from "UserActionCreators" /* 8876 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function AppInteractionInfoActionSheet(message) {
   noop = undefined;
   let stateFromStores;
   let id;
-  const items = [onBack];
+  items = [onBack];
   const interactionMetadata = message.interactionMetadata;
   let tmp3;
   const memo = noop.useMemo(() => {
@@ -49,13 +49,13 @@ export default function AppInteractionInfoActionSheet(message) {
     return React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   }, items);
   if (interactionMetadata != null) {
-    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5651).ApplicationIntegrationType.USER_INSTALL];
+    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5771).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp3;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp6;
   if (interactionMetadata2 != null) {
-    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5651).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5771).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp6;
   const interactionMetadata3 = message.interactionMetadata;
@@ -97,14 +97,14 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { icon: null, label: null, subLabel: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(6957).GuildIconSizes.SMALL_32 };
-    obj5.icon = closure_7(onBack(6957), obj6);
+    const obj6 = { guild: stateFromStores1, size: tmp10(7083).GuildIconSizes.SMALL_32 };
+    obj5.icon = closure_7(onBack(7083), obj6);
     obj5.label = stateFromStores1.name;
     let intl2 = tmp10(1113).intl;
     const obj7 = { application: message.author.username };
     obj5.subLabel = intl2.formatToPlainString(tmp10(1113).t.ShLXXB, obj7);
-    let tmp25 = closure_7(tmp10(6975).TableRow, obj5);
-    const tmp28 = onBack(6957);
+    let tmp25 = closure_7(tmp10(7101).TableRow, obj5);
+    const tmp28 = onBack(7083);
   } else {
     tmp25 = null;
     if (null != stateFromStores) {
@@ -118,7 +118,7 @@ export default function AppInteractionInfoActionSheet(message) {
       obj8.onPress = function onPress() {
         return showUserProfileActionSheetDefault({ userId: stateFromStores.id, channelId: message.channel_id });
       };
-      tmp25 = closure_7(tmp10(6975).TableRow, obj8);
+      tmp25 = closure_7(tmp10(7101).TableRow, obj8);
     }
   }
   const obj11 = { header: memo, bodyStyles: tmp.body, children: null };
@@ -134,9 +134,9 @@ export default function AppInteractionInfoActionSheet(message) {
     obj12.onPress = function onPress() {
       return showUserProfileActionSheetDefault({ userId: id.id, channelId: message.channel_id });
     };
-    tmp29Result = closure_7(tmp10(6975).TableRow, obj12);
+    tmp29Result = closure_7(tmp10(7101).TableRow, obj12);
   }
   items5[1] = tmp29Result;
-  obj11.children = closure_8(message(7060).TableRowGroup, { hasIcons: true, children: items5 });
-  return closure_7(message(5272).BottomSheet, obj11);
+  obj11.children = closure_8(message(7186).TableRowGroup, { hasIcons: true, children: items5 });
+  return closure_7(message(5395).BottomSheet, obj11);
 };

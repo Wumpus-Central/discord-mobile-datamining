@@ -1,18 +1,18 @@
-// === Module 11507: NameplatePreview ===
+// === Module 11644: NameplatePreview ===
 
-// Module 11507 (NameplatePreview)
+// Module 11644 (NameplatePreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8944 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -57,7 +57,7 @@ export function NameplatePreview(aria_hidden) {
   const avatarDecoration = user(pendingAvatarSrc[8]).useAvatarDecoration(user, guildId);
   pendingAvatarDecoration = guildId(pendingAvatarSrc[9])({ guildId }).pendingAvatarDecoration;
   let obj2 = user(pendingAvatarSrc[8]);
-  const items = [pendingAvatarDecoration];
+  items = [pendingAvatarDecoration];
   stateFromStores = user(pendingAvatarSrc[10]).useStateFromStores(items, () => pendingAvatarDecoration.useReducedMotion);
   let obj3 = user(pendingAvatarSrc[10]);
   const items1 = [GuildMemberStore];

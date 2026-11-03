@@ -1,6 +1,6 @@
-// === Module 7129: PhoneOrEmailInput ===
+// === Module 7255: PhoneOrEmailInput ===
 
-// Module 7129 (PhoneOrEmailInput)
+// Module 7255 (PhoneOrEmailInput)
 import util from "util" /* 1113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -94,7 +94,7 @@ export default function PhoneOrEmailInput(onChange) {
   const tmp2 = forceMode(noop.useState(""), 2);
   const tmp6 = onChange;
   const tmp7 = onPressCountrySelector;
-  const items = [countryCode, forceMode, onChange];
+  items = [countryCode, forceMode, onChange];
   const result = onChange(onPressCountrySelector[3]).shouldShowCountryCodeSelector(forceMode, tmp3);
   const callback = noop.useCallback((value) => {
     _undefined(value);

@@ -1,20 +1,20 @@
-// === Module 13687: CheckpointRecapCard ===
+// === Module 13817: CheckpointRecapCard ===
 
-// Module 13687 (CheckpointRecapCard)
+// Module 13817 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6433 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13439 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13629 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13642 */;
+import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6553 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13577 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13600 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(13642);
+const CheckpointStatNumber = fn(13782);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -38,9 +38,9 @@ export default function CheckpointRecapCard(character) {
     num = Math.min(Math.max(maxHeight / 268, 0.75), 1);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6091).getCharacterCardColorPalette(character);
-  const obj2 = character(6091);
-  const items = [character];
+  const characterCardColorPalette = character(6211).getCharacterCardColorPalette(character);
+  const obj2 = character(6211);
+  items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
     if (null != character) {
@@ -50,7 +50,7 @@ export default function CheckpointRecapCard(character) {
   }, items);
   const obj4 = { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: num, clydeSize: 28, characterLayout: rect, children: null };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6091);
+  const obj3 = character(6211);
   obj5.children = jsx(CheckpointStatNumberDefault, { value: 2026, color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor, size: 64 });
   obj4.children = <View style={tmp.year}>{null}</View>;
   const tmp11 = jsx(CheckpointCardFrameDefault, { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: num, clydeSize: 28, characterLayout: rect, children: null });

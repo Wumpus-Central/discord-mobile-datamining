@@ -1,6 +1,6 @@
-// === Module 14403: FavoritesGuildAddChannelModal ===
+// === Module 14534: FavoritesGuildAddChannelModal ===
 
-// Module 14403 (FavoritesGuildAddChannelModal)
+// Module 14534 (FavoritesGuildAddChannelModal)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,11 +8,11 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-let closure_7 = fn(4876).MAX_FAVORITES_ADD_CHANNEL_COUNT;
-const UserRowModes = fn(10727).UserRowModes;
+let closure_7 = fn(5003).MAX_FAVORITES_ADD_CHANNEL_COUNT;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,12 +24,12 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   dependencyMap = undefined;
   let height;
   const tmp = closure_11();
-  first(14405)(parentId.source);
+  first(14536)(parentId.source);
   [first, dependencyMap] = noop.useState([]);
   const callback = noop.useCallback((arg0) => {
     closure_2(arg0);
   }, []);
-  const items = [parentId, first];
+  items = [parentId, first];
   const callback1 = noop.useCallback(height(function*() {
     if (c4 === 2) {
       c4 = 3;
@@ -41,7 +41,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -60,7 +60,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
             closure_129_0 = undefined;
             c3 = 1;
             c4 = 1;
-            const obj6 = { value: Promise.all(first.map(parentId(13384).getOrResolveChannelIdFromDestinationId)), done: false };
+            const obj6 = { value: Promise.all(first.map(parentId(13520).getOrResolveChannelIdFromDestinationId)), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -71,7 +71,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          closure_129_0 = value.filter(parentId(1379).isNotNullish);
+          closure_129_0 = value.filter(parentId(1380).isNotNullish);
           if (0 !== closure_129_0.length) {
             const obj8 = { channelIds: closure_129_0, parentId: null, source: "modal" };
             parentId = closure_130_0;
@@ -79,14 +79,14 @@ export default function FavoritesGuildAddChannelModal(parentId) {
               parentId = null;
             }
             obj8.parentId = parentId;
-            parentId(10831).addFavoriteChannels(obj8);
-            const obj2 = parentId(10831);
-            const result = parentId(14402).closeFavoritesGuildAddChannelModal();
-            const obj4 = parentId(14402);
+            parentId(10961).addFavoriteChannels(obj8);
+            const obj2 = parentId(10961);
+            const result = parentId(14533).closeFavoritesGuildAddChannelModal();
+            const obj4 = parentId(14533);
           } else {
             const intl = parentId(1113).intl;
-            parentId(5711).presentError(intl.string(parentId(1113).t.R0RpRX));
-            const obj = parentId(5711);
+            parentId(5831).presentError(intl.string(parentId(1113).t.R0RpRX));
+            const obj = parentId(5831);
           }
           c4 = 3;
         }
@@ -96,7 +96,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
       }
     }
   }), items);
-  height = first(1491)({ ignoreKeyboard: true }).height;
+  height = first(1493)({ ignoreKeyboard: true }).height;
   const items1 = [height];
   let obj = {
     style: noop.useMemo(() => {
@@ -107,27 +107,27 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   };
   let obj2 = { title: null, onClose: null };
   const tmp2 = first;
-  const tmp4 = first(14404)();
+  const tmp4 = first(14535)();
   let intl = parentId(1113).intl;
-  obj2.title = intl.string(first(3450).Rp35U1);
-  obj2.onClose = parentId(14402).closeFavoritesGuildAddChannelModal;
-  const items2 = [closure_9(first(13394), obj2), ];
+  obj2.title = intl.string(first(3577).Rp35U1);
+  obj2.onClose = parentId(14533).closeFavoritesGuildAddChannelModal;
+  const items2 = [closure_9(first(13530), obj2), ];
   let obj3 = { style: tmp.container, children: null };
-  const items3 = [closure_9(first(10736), { absolute: true }), , ];
+  const items3 = [closure_9(first(10866), { absolute: true }), , ];
   let obj4 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp4, insetEnd: null, disableGradient: true, disableStickySections: true, disableSelection: null };
   let num = 0;
-  const tmp12 = first(13394);
+  const tmp12 = first(13530);
   if (first.length > 0) {
     num = tmp2(575).space.PX_80;
   }
   obj4.insetEnd = num;
   obj4.disableSelection = first.length >= closure_7;
-  items3[1] = closure_9(first(13395), obj4);
+  items3[1] = closure_9(first(13531), obj4);
   let obj5 = { isVisible: first.length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null };
-  const tmp14 = first(13395);
-  obj5.text = parentId(14406).getFavoritesAddButtonLabel(first.length);
+  const tmp14 = first(13531);
+  obj5.text = parentId(14537).getFavoritesAddButtonLabel(first.length);
   obj5.onPress = callback1;
-  items3[2] = closure_9(parentId(13419).ModalFloatingAction, obj5);
+  items3[2] = closure_9(parentId(13555).ModalFloatingAction, obj5);
   obj3.children = items3;
   items2[1] = closure_10(View, obj3);
   obj.children = items2;

@@ -1,7 +1,7 @@
-// === Module 9954: useCoachmark ===
+// === Module 10085: useCoachmark ===
 
-// Module 9954 (useCoachmark)
-import AnimatedCoachmark from "AnimatedCoachmark" /* 9962 */;
+// Module 10085 (useCoachmark)
+import AnimatedCoachmark from "AnimatedCoachmark" /* 10093 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export function useCoachmark(targetRef, memo) {
   let context;
   let obj = require("v1");
   context = noop.useContext(require("LayerContext").LayerContext);
-  const items = [context, memo];
+  items = [context, memo];
   const callback = noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
     const obj = {};
     const merged = Object.assign(closure_0);

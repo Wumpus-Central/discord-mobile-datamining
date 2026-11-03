@@ -1,9 +1,9 @@
-// === Module 14066: storeListingToGuildPowerup ===
+// === Module 14197: storeListingToGuildPowerup ===
 
-// Module 14066 (storeListingToGuildPowerup)
-import EmojiConstants from "EmojiConstants" /* 1386 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5230 */;
-import PremiumConstants from "PremiumConstants" /* 1385 */;
+// Module 14197 (storeListingToGuildPowerup)
+import EmojiConstants from "EmojiConstants" /* 1388 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5353 */;
+import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_SOUND_SLOTS: closure_0, DEFAULT_STICKER_SLOTS: closure_1 } = PremiumConstants);
@@ -26,7 +26,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
     if (null != powerup_metadata1) {
       const obj2 = { title: powerup_metadata.summary, skuId: powerup_metadata.sku.id, cost: powerup_metadata1.boost_price, dependencies: null, animatedImageUrl: null, staticImageUrl: null, storeRemovalDate: null, deactivationCooldownPeriodDays: null };
       if (null != powerup_metadata.sku.dependent_sku_id) {
-        const items = [powerup_metadata.sku.dependent_sku_id];
+        items = [powerup_metadata.sku.dependent_sku_id];
         let items1 = items;
       } else {
         items1 = [];
@@ -71,7 +71,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
         if (null != guild_features1) {
           const sum = DEFAULT_EMOJI_SLOTS + guild_features1.additional_emoji_slots;
           let sum1 = React + guild_features1.additional_sound_slots;
-          let sum2 = framebus + guild_features1.additional_sticker_slots;
+          let sum2 = duration + guild_features1.additional_sticker_slots;
           const dependent_sku_id = powerup_metadata.sku.dependent_sku_id;
           let dependent_sku_id1 = dependent_sku_id;
           let tmp22 = sum;

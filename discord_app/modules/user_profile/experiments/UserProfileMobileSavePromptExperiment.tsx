@@ -1,7 +1,7 @@
-// === Module 11408: UserProfileMobileSavePromptExperiment ===
+// === Module 11546: UserProfileMobileSavePromptExperiment ===
 
-// Module 11408 (UserProfileMobileSavePromptExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 11546 (UserProfileMobileSavePromptExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-user-profile-mobile-save-prompt", kind: "user", defaultConfig: { enabled: false }, variations: null };

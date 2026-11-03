@@ -1,14 +1,14 @@
-// === Module 11451: BadgeCatalogIcon ===
+// === Module 11588: BadgeCatalogIcon ===
 
-// Module 11451 (BadgeCatalogIcon)
-import FastImageDefault from "FastImage" /* 5717 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11452 */;
+// Module 11588 (BadgeCatalogIcon)
+import FastImageDefault from "FastImage" /* 5837 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 function BadgeCatalogRasterIcon(style) {
   ({ badge, size } = style);
-  const items = [, , ];
+  items = [, , ];
   ({ simple_icon_raster_url: arr[0], complex_icon_static_url: arr[1], complex_icon_animated_url: arr[2] } = badge);
   const found = items.filter((item) => null != item);
   const joined = found.join("|");

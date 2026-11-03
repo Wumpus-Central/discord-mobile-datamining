@@ -1,22 +1,22 @@
-// === Module 18005: useInitialRegistrationStep ===
+// === Module 18149: useInitialRegistrationStep ===
 
-// Module 18005 (useInitialRegistrationStep)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17988 */;
+// Module 18149 (useInitialRegistrationStep)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18131 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(17989).resetRegistration;
+const resetRegistration = fn(18132).resetRegistration;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
 export default function useInitialRegistrationStep(arg0) {
   _require = arg0;
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
   const effect = noop.useEffect(() => {

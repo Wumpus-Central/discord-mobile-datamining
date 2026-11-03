@@ -1,47 +1,47 @@
-// === Module 15453: EntitlementGiftGroupCard ===
+// === Module 15594: EntitlementGiftGroupCard ===
 
-// Module 15453 (EntitlementGiftGroupCard)
+// Module 15594 (EntitlementGiftGroupCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import GameIconDefault from "GameIcon" /* 7334 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7378 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9521 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11371 */;
-import SubscriptionUtils from "SubscriptionUtils" /* 11382 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11414 */;
-import _modDef14442 from "module_14442" /* 14442 */;
-import _modDef15097 from "module_15097" /* 15097 */;
-import _modDef15098 from "module_15098" /* 15098 */;
-import _modDef15099 from "module_15099" /* 15099 */;
-import _modDef15100 from "module_15100" /* 15100 */;
-import _modDef15101 from "module_15101" /* 15101 */;
-import _modDef15102 from "module_15102" /* 15102 */;
-import _modDef15103 from "module_15103" /* 15103 */;
-import _modDef15104 from "module_15104" /* 15104 */;
-import _modDef15105 from "module_15105" /* 15105 */;
-import _modDef15108 from "module_15108" /* 15108 */;
-import _modDef15109 from "module_15109" /* 15109 */;
-import GiftCodeRowDefault from "GiftCodeRow" /* 15454 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import GameIconDefault from "GameIcon" /* 7454 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7498 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9649 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11509 */;
+import SubscriptionUtils from "SubscriptionUtils" /* 11520 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11552 */;
+import _modDef14573 from "module_14573" /* 14573 */;
+import _modDef15238 from "module_15238" /* 15238 */;
+import _modDef15239 from "module_15239" /* 15239 */;
+import _modDef15240 from "module_15240" /* 15240 */;
+import _modDef15241 from "module_15241" /* 15241 */;
+import _modDef15242 from "module_15242" /* 15242 */;
+import _modDef15243 from "module_15243" /* 15243 */;
+import _modDef15244 from "module_15244" /* 15244 */;
+import _modDef15245 from "module_15245" /* 15245 */;
+import _modDef15246 from "module_15246" /* 15246 */;
+import _modDef15249 from "module_15249" /* 15249 */;
+import _modDef15250 from "module_15250" /* 15250 */;
+import GiftCodeRowDefault from "GiftCodeRow" /* 15595 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GiftCodeStore from "GiftCodeStore" /* 11370 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import GiftCodeStore from "GiftCodeStore" /* 11508 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
+import SKUStore from "SKUStore" /* 7016 */;
 import initialize from "initialize" /* 504 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes: closure_11, PremiumSubscriptionSKUs: closure_12, PremiumGiftStyles: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { giftGroupCard: { overflow: "hidden", marginTop: 8 }, giftGroupCardRefresh: { borderWidth: 1, borderColor: nativeDefault.colors.CARD_BORDER_DEFAULT, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT }, title: null, arrow: null, subtitle: null, titleContainer: null, groupCardHeader: null, groupCardHeaderLegacy: null, rowArrow: null, giftIcon: null, generateGiftRow: null, generateGiftRowLegacy: null, generateGiftRowText: null, generateGiftButton: null, loading: null, generateButtonContainer: null, groupCardHeaderOpen: null, groupCardHeaderOpenRefresh: null, subtitleContainer: null, socialLayerSubtitleContainer: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.CARD_BORDER_DEFAULT, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT };
 obj2.title = { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -108,18 +108,18 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   const obj2 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.generateGiftRowText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.lELyPj);
-  const items = [closure_1_14(Text_Text.Text, obj2), ];
+  items = [gesture(Text_Text.Text, obj2), ];
   const obj3 = { style: tmp.generateButtonContainer, children: null };
   const obj4 = { style: tmp.generateGiftButton, children: null };
   const obj5 = { text: null, size: "sm", onPress: null };
   const intl2 = util.intl;
   obj5.text = intl2.string(util.t["w4+/BA"]);
   obj5.onPress = this.handleGenerateGiftCode;
-  obj4.children = closure_1_14(components_Button_Button.Button, obj5);
-  obj3.children = closure_1_14(React4, obj4);
-  items[1] = closure_1_14(React4, obj3);
+  obj4.children = gesture(components_Button_Button.Button, obj5);
+  obj3.children = gesture(React4, obj4);
+  items[1] = gesture(React4, obj3);
   obj.children = items;
-  return __initData(React4, obj);
+  return closure_1_15(React4, obj);
 };
 prototype["renderHeader"] = function renderHeader(source, children) {
   const tmp = closure_16(this.context);
@@ -130,7 +130,7 @@ prototype["renderHeader"] = function renderHeader(source, children) {
     isGameItemSKUResult = null != application;
   }
   const obj2 = { accessibilityRole: "button", accessibilityState: { expanded: isOpen }, onPress: this.handleToggleOpen, children: null };
-  const items = [tmp.groupCardHeader, ];
+  items = [tmp.groupCardHeader, ];
   let prop = null;
   if (isOpen) {
     prop = tmp.groupCardHeaderOpenRefresh;
@@ -142,18 +142,18 @@ prototype["renderHeader"] = function renderHeader(source, children) {
     const tmp14 = SlayerStorefrontItemCardDefault;
     obj4.size = native.getIconSize(native.Icon.Sizes.LARGE);
     obj4.containerStyle = tmp.giftIcon;
-    let tmp6Result = closure_1_14(tmp14, obj4);
+    let tmp6Result = gesture(tmp14, obj4);
     const tmp2Result = native;
   } else {
     tmp6Result = null;
     if (null != source) {
       const obj5 = { resizeMode: "contain", source, disableColor: true, size: native.Icon.Sizes.LARGE, style: tmp.giftIcon };
-      tmp6Result = closure_1_14(native.Icon, obj5);
+      tmp6Result = gesture(native.Icon, obj5);
     }
   }
   const items1 = [tmp6Result, , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const items2 = [closure_1_14(Text_Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
+  const items2 = [gesture(Text_Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
   let socialLayerSubtitleContainer = isGameItemSKUResult;
   if (isGameItemSKUResult) {
     socialLayerSubtitleContainer = tmp.socialLayerSubtitleContainer;
@@ -164,7 +164,7 @@ prototype["renderHeader"] = function renderHeader(source, children) {
   let tmp6Result2 = isGameItemSKUResult;
   if (isGameItemSKUResult) {
     const obj9 = { game: application, size: GameIconDefault.Sizes.SIZE_24, skuId: sku.id };
-    tmp6Result2 = closure_1_14(GameIconDefault, obj9);
+    tmp6Result2 = gesture(GameIconDefault, obj9);
   }
   const items4 = [tmp6Result2, ];
   const obj10 = { variant: "text-md/normal", color: "text-subtle", style: tmp.subtitle, children: null };
@@ -179,52 +179,52 @@ prototype["renderHeader"] = function renderHeader(source, children) {
     formatResult = format(t.zMcvcA, obj12);
   }
   obj10.children = formatResult;
-  items4[1] = closure_1_14(Text_Text.Text, obj10);
+  items4[1] = gesture(Text_Text.Text, obj10);
   obj8.children = items4;
-  items2[1] = __initData(React4, obj8);
+  items2[1] = closure_1_15(React4, obj8);
   obj6.children = items2;
-  items1[1] = __initData(React4, obj6);
+  items1[1] = closure_1_15(React4, obj6);
   if (isOpen) {
     let ChevronSmallRightIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
   } else {
     ChevronSmallRightIcon = ChevronSmallRightIcon2.ChevronSmallRightIcon;
   }
-  items1[2] = closure_1_14(ChevronSmallRightIcon, {});
+  items1[2] = gesture(ChevronSmallRightIcon, {});
   obj3.children = items1;
-  obj2.children = __initData(React4, obj3);
-  return closure_1_14(timestampProducer, obj2);
+  obj2.children = closure_1_15(React4, obj3);
+  return gesture(timestampProducer, obj2);
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef15097;
+    return _modDef15238;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef15099;
+    return _modDef15240;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef15100;
+    return _modDef15241;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef15098;
+    return _modDef15239;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef15101;
+    return _modDef15242;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef15102;
+    return _modDef15243;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef15103;
+    return _modDef15244;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef15104;
+    return _modDef15245;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef14442 };
+    const obj = { uri: _modDef14573 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef15105;
+    return _modDef15246;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef15108;
+    return _modDef15249;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef15109;
+    return _modDef15250;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -265,7 +265,7 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ giftCodes, sku } = props);
   const obj = { style: null, children: null };
-  const items = [, ];
+  items = [, ];
   ({ giftGroupCard: arr[0], giftGroupCardRefresh: arr[1] } = loading);
   obj.style = items;
   ({ entitlements, isFetching } = props);
@@ -286,7 +286,7 @@ prototype["render"] = function render() {
         result = self.renderGenerateGiftCodeRow();
       }
       const obj3 = { children: null };
-      const items2 = [result, giftCodes.map((giftCode, index) => closure_2_14(GiftCodeRowDefault, { giftCode, sku, isFirst: 0 === index }, giftCode.code))];
+      const items2 = [result, giftCodes.map((giftCode, index) => gesture(GiftCodeRowDefault, { giftCode, sku, isFirst: 0 === index }, giftCode.code))];
       obj3.children = items2;
       tmpResult = closure_15(noop.Fragment, obj3);
     }
@@ -294,7 +294,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(5080).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(5207).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 19066: LaunchPadPullTabCache ===
+// === Module 19224: LaunchPadPullTabCache ===
 
-// Module 19066 (LaunchPadPullTabCache)
+// Module 19224 (LaunchPadPullTabCache)
 import Storage2 from "Storage" /* 510 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import useWindowDimensions from "useWindowDimensions" /* 1491 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7110 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11536 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7236 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11673 */;
 import size from "module_2" /* 2 */;
 
 function setLaunchPadPullTabExclusionRect(arg0) {
@@ -52,7 +52,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     if (!tmp15) {
       const rect = { left: diff, right: width, top: tmp, bottom: sum };
       _undefined = rect;
-      const items = [_undefined];
+      items = [_undefined];
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
     const tmp7Result2 = useWindowDimensions;

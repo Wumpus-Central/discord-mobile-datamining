@@ -1,9 +1,9 @@
-// === Module 10149: CountDown ===
+// === Module 10279: CountDown ===
 
-// Module 10149 (CountDown)
+// Module 10279 (CountDown)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / DurationsDefault.Seconds.DAY), , , ];
+      items = [Math.floor(result / DurationsDefault.Seconds.DAY), , , ];
       const _Math2 = Math;
       const result1 = result % DurationsDefault.Seconds.DAY;
       items[1] = Math.floor(result1 / DurationsDefault.Seconds.HOUR);

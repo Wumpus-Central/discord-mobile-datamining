@@ -1,18 +1,19 @@
-// === Module 16930: useBountiesRecapScroll ===
+// === Module 17073: useBountiesRecapScroll ===
 
-// Module 16930 (useBountiesRecapScroll)
+// Module 17073 (useBountiesRecapScroll)
 import noop from "module_19" /* 19 */;
 
-function getRevealProgress(scrollY, c25, height3) {
+let items = [{ code: "(function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;})" }];
+[tmp2] = items;
+function getRevealProgress(arg0, arg1, arg2) {
   let num = 0;
-  if (height3 > 0) {
-    num = (scrollY - c25) / height3;
+  if (arg2 > 0) {
+    num = (arg0 - arg1) / arg2;
   }
   return num;
 }
-getRevealProgress.__closure = {};
-getRevealProgress.__workletHash = 9769647749947;
-getRevealProgress.__initData = { code: "function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;}" };
+getRevealProgress.__workletHash = 7613259850010;
+getRevealProgress.__initData = tmp2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
 
@@ -22,7 +23,7 @@ export function useBountiesRecapScroll(listRef) {
   listRef = listRef.listRef;
   const enabled = listRef.enabled;
   const offsets = listRef.offsets;
-  const items = [listRef];
+  items = [listRef];
   const callback = listRef.useCallback((offset) => {
     if (null != listRef.current) {
       const current = tmp.current;

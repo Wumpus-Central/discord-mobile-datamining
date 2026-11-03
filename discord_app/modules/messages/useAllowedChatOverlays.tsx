@@ -1,15 +1,15 @@
-// === Module 11359: useAllowedChatOverlays ===
+// === Module 11496: useAllowedChatOverlays ===
 
-// Module 11359 (useAllowedChatOverlays)
+// Module 11496 (useAllowedChatOverlays)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5678 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5798 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
-const ChatOverlays = fn(11357).ChatOverlays;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ChatOverlays = fn(11494).ChatOverlays;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, , ];
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverla
 
 export default function useAllowedChatOverlays() {
   obj = useStateFromStores;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());
   const items1 = [EmbeddedActivitiesStore];
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => EmbeddedActivitiesStore.getActivityPanelMode());

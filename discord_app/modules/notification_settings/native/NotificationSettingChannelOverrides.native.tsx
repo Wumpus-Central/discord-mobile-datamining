@@ -1,26 +1,26 @@
-// === Module 20009: NotificationSettingChannelOverrides ===
+// === Module 20159: NotificationSettingChannelOverrides ===
 
-// Module 20009 (NotificationSettingChannelOverrides)
+// Module 20159 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7281 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(4867).isGuildReadableType;
+const isGuildReadableType = fn(4994).isGuildReadableType;
 const Constants = fn(1072);
-({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
+({ ChannelTypes: closure_10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -35,7 +35,7 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
   let first;
   let channels;
   let tmp = closure_14();
-  let items = [GuildCategoryStore];
+  items = [GuildCategoryStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildCategoryStore.getCategories(require));
   const tmp6 = first(channels.useState(""), 2);
   first = tmp6[0];
@@ -69,7 +69,7 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
       }
     }).map((channel) => channel.channel);
     let obj = { channels: mapped, sections: null };
-    const items = [mapped.length];
+    items = [mapped.length];
     obj.sections = items;
     return obj;
   }, items1);

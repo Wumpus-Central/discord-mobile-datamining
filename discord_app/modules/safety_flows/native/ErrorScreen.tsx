@@ -1,6 +1,6 @@
-// === Module 20106: ErrorScreen ===
+// === Module 20256: ErrorScreen ===
 
-// Module 20106 (ErrorScreen)
+// Module 20256 (ErrorScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" }, buttonContainer: null };
 let obj3 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
@@ -32,7 +32,7 @@ export default function ErrorScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ export default function ErrorScreen() {
           c3 = 0;
           closure_129_0(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp4 === c3) {
@@ -97,7 +97,7 @@ export default function ErrorScreen() {
   const obj3 = { variant: "heading-lg/semibold", children: null };
   const intl = require("util").intl;
   obj3.children = intl.string(require("util").t.c6kn6F);
-  const items = [closure_7(require("Text/Text").Text, obj3), , ];
+  items = [closure_7(require("Text/Text").Text, obj3), , ];
   let obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t.ZUEGFn);

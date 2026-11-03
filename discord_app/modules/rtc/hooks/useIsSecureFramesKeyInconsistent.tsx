@@ -1,10 +1,10 @@
-// === Module 9276: useIsSecureFramesKeyInconsistent ===
+// === Module 9404: useIsSecureFramesKeyInconsistent ===
 
-// Module 9276 (useIsSecureFramesKeyInconsistent)
-import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;
+// Module 9404 (useIsSecureFramesKeyInconsistent)
+import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
 
 require = fn;
 const size = fn(2);
@@ -12,9 +12,9 @@ let result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyI
 
 export function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
-  const items = [RTCConnectionStore, StreamRTCConnectionStore];
+  items = [RTCConnectionStore, StreamRTCConnectionStore];
   return userId(504).useStateFromStores(items, () => {
-    const items = [RTCConnectionStore, StreamRTCConnectionStore];
+    items = [RTCConnectionStore, StreamRTCConnectionStore];
     return SecureFramesUtils.getIsSecureFramesKeyInconsistent(channelId, items);
   });
 }
@@ -25,9 +25,9 @@ export function useAlertIfSecureFramesKeyInconsistent(channelId) {
   const onAlertOpen = channelId.onAlertOpen;
   let stateFromStores;
   closure_129_0 = userId;
-  let items = [onAlertOpen, stateFromStores];
+  items = [onAlertOpen, stateFromStores];
   stateFromStores = channelId(userId[3]).useStateFromStores(items, () => {
-    const items = [RTCConnectionStore, StreamRTCConnectionStore];
+    items = [RTCConnectionStore, StreamRTCConnectionStore];
     return SecureFramesUtils.getIsSecureFramesKeyInconsistent(channelId, items);
   });
   nickname.useRef(null);

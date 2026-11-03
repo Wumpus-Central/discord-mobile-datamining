@@ -1,6 +1,6 @@
-// === Module 10939: conjurePausedPreviewViews ===
+// === Module 11077: conjurePausedPreviewViews ===
 
-// Module 10939 (conjurePausedPreviewViews)
+// Module 11077 (conjurePausedPreviewViews)
 import noop from "module_19" /* 19 */;
 
 const map = new Map();
@@ -39,7 +39,7 @@ export function registerConjurePausedPreview(arg0) {
 }
 export function useConjurePausedPreviewView(arg0) {
   noop = arg0;
-  const items = [arg0];
+  items = [arg0];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (null != closure_0) {
       closure_0 = tmp;

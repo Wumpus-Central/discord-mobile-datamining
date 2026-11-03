@@ -1,6 +1,6 @@
-// === Module 5211: ZustandStore ===
+// === Module 5334: ZustandStore ===
 
-// Module 5211 (ZustandStore)
+// Module 5334 (ZustandStore)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 export function createZustandStore(arg0) {
   _require = arg0;
   let obj = require("module_1254");
-  dependencyMap = obj.createWithEqualityFn(require("module_5212").subscribeWithSelector((arg0, arg1, arg2) => {
+  dependencyMap = obj.createWithEqualityFn(require("module_5335").subscribeWithSelector((arg0, arg1, arg2) => {
     closure_0 = arg0;
     return closure_0((arg0) => {
       closure_0 = arg0;
@@ -33,7 +33,7 @@ export function createZustandStore(arg0) {
       return closure_1(arg0, tmp);
     },
     getState(fn) {
-      const state = closure_1.getState();
+      state = closure_1.getState();
       let tmp2 = state;
       if (null != fn) {
         tmp2 = fn(state);

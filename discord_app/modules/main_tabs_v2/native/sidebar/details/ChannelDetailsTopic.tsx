@@ -1,202 +1,241 @@
-// === Module 18816: ChannelDetailsTopic ===
+// === Module 18974: ChannelDetailsTopic ===
 
-// Module 18816 (ChannelDetailsTopic)
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import spring from "spring" /* 5637 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
-import ChannelUtils from "ChannelUtils" /* 6046 */;
+// Module 18974 (ChannelDetailsTopic)
+import _modDef1652 from "module_1652" /* 1652 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import MentionPillOffset from "MentionPillOffset" /* 11189 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function GuildChannelDetailsTopic(channel) {
   channel = channel.channel;
+  _require = channel;
   let flag = channel.initialExpanded;
   if (flag === undefined) {
     flag = false;
   }
-  first = undefined;
   _slicedToArray = undefined;
-  first1 = undefined;
-  closure_5 = undefined;
+  noop = undefined;
   absoluteFill = undefined;
-  const tmp = closure_15();
-  const channelTopicGradientBackground = channel(first[9]).useChannelTopicGradientBackground();
-  [first, _slicedToArray] = first1.useState(true);
-  [first1, closure_5] = first1.useState(flag);
-  let obj = channel(first[9]);
-  [tmp10, c6] = first1.useState();
-  const tmp9 = _slicedToArray(first1.useState(), 2);
-  const sharedValue = channel(first[10]).useSharedValue(undefined);
-  let obj2 = channel(first[10]);
-  const sharedValue1 = channel(first[10]).useSharedValue(undefined);
-  const obj3 = channel(first[10]);
-  const sharedValue2 = channel(first[10]).useSharedValue(constants.HIDDEN);
-  const obj4 = channel(first[10]);
-  const fn = function _() {
-    value = sharedValue1.get();
-    value2 = sharedValue.get();
-    if (null != value2) {
-      if (null != value) {
-        if (first1) {
-          value2 = value;
-        }
-        let obj2 = { height: spring.withSpring(value2, React7) };
-      }
-      return obj2;
-    }
-    obj2 = closure_16;
-  };
-  const obj5 = channel(first[10]);
-  let expanded = EMPTY_STYLE;
-  fn.__closure = { expandedHeight: sharedValue1, truncatedHeight: sharedValue, EMPTY_STYLE, withSpring: channel(first[11]).withSpring, expanded: first1, SPRING_CHANNEL_DETAILS: sharedValue2 };
-  fn.__workletHash = 11932535786068;
-  fn.__initData = __initData;
-  const animatedStyle = obj5.useAnimatedStyle(fn);
-  const obj6 = { expandedHeight: sharedValue1, truncatedHeight: sharedValue, EMPTY_STYLE, withSpring: channel(first[11]).withSpring, expanded: first1, SPRING_CHANNEL_DETAILS: sharedValue2 };
-  const fn2 = function f() {
-    if (null == sharedValue1.get()) {
-      let obj2 = closure_16;
-    } else {
-      obj2 = { height: sharedValue1.get() };
-    }
-    return obj2;
-  };
-  fn2.__closure = { expandedHeight: sharedValue1, EMPTY_STYLE };
-  fn2.__workletHash = 13643982891313;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = channel(first[10]).useAnimatedStyle(fn2);
-  const obj7 = channel(first[10]);
-  class L {
+  const tmp = closure_14();
+  const channelTopicGradientBackground = require("ChannelDetailsTopicGradient").useChannelTopicGradientBackground();
+  [first, _slicedToArray] = noop.useState(true);
+  [first1, c5] = noop.useState(flag);
+  noop = first1;
+  let obj = require("ChannelDetailsTopicGradient");
+  [tmp10, c6] = noop.useState();
+  const tmp9 = _slicedToArray(noop.useState(), 2);
+  const sharedValue = require("module_1652").useSharedValue(undefined);
+  const obj3 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(undefined);
+  const obj4 = require("module_1652");
+  const sharedValue2 = require("module_1652").useSharedValue(constants.HIDDEN);
+  const obj5 = require("module_1652");
+  items = [closure_17, sharedValue1, sharedValue, , , , ];
+  let expanded = closure_15;
+  items[3] = closure_15;
+  items[4] = require("spring/spring").withSpring;
+  items[5] = first1;
+  items[6] = sharedValue2;
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21] = items;
+  class ChannelDetailsTopicTsx1 {
     constructor() {
-      obj = { opacity: null };
-      obj2 = closure_0(closure_2[11]);
-      obj.opacity = obj2.withSpring(closure_9.get(), SPRING_CHANNEL_DETAILS);
+      value = closure_0.get();
+      value1 = closure_1.get();
+      if (null != value1) {
+        if (null != value) {
+          tmp4 = closure_4;
+          tmp3 = closure_3;
+          if (closure_4) {
+            value1 = value;
+          }
+          obj = { height: null };
+          tmp5 = closure_5;
+          obj.height = tmp3(value1, closure_5);
+        }
+        return obj;
+      }
+      obj = closure_2;
+      return;
+    }
+  }
+  const items1 = [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21];
+  ChannelDetailsTopicTsx1.__closure = items1;
+  ChannelDetailsTopicTsx1.__workletHash = 13417147111917;
+  ChannelDetailsTopicTsx1.__initData = tmp15;
+  const animatedStyle = require("module_1652").useAnimatedStyle(ChannelDetailsTopicTsx1);
+  const obj6 = require("module_1652");
+  const tmp14 = sharedValue2;
+  const items2 = [closure_18, sharedValue1, expanded];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp23, tmp24, tmp25] = items2;
+  class ChannelDetailsTopicTsx2 {
+    constructor() {
+      obj = closure_0;
+      if (null == closure_0.get()) {
+        obj1 = closure_1;
+      } else {
+        obj1 = { height: null };
+        obj1.height = obj.get();
+      }
+      return obj1;
+    }
+  }
+  const items3 = [tmp24, tmp25];
+  ChannelDetailsTopicTsx2.__closure = items3;
+  ChannelDetailsTopicTsx2.__workletHash = 9247180573864;
+  ChannelDetailsTopicTsx2.__initData = tmp23;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(ChannelDetailsTopicTsx2);
+  const tmp2Result = require("module_1652");
+  const items4 = [closure_19, require("spring/spring").withSpring, sharedValue2, tmp14];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp27, tmp28, tmp29, tmp30] = items4;
+  class ChannelDetailsTopicTsx3 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), closure_2) };
       return obj;
     }
   }
-  const obj8 = channel(first[10]);
-  L.__closure = { withSpring: channel(first[11]).withSpring, gradient: sharedValue2, SPRING_CHANNEL_DETAILS: sharedValue2 };
-  L.__workletHash = 12423301233362;
-  L.__initData = __initData3;
-  const items = [sharedValue2, first1];
-  const animatedStyle2 = obj8.useAnimatedStyle(L);
-  const callback = first1.useCallback((nativeEvent) => {
-    closure_3(nativeEvent.nativeEvent.lines.length > React6);
+  const items5 = [tmp28, tmp29, tmp30];
+  ChannelDetailsTopicTsx3.__closure = items5;
+  ChannelDetailsTopicTsx3.__workletHash = 16443247307275;
+  ChannelDetailsTopicTsx3.__initData = tmp27;
+  const items6 = [sharedValue2, first1];
+  const animatedStyle2 = require("module_1652").useAnimatedStyle(ChannelDetailsTopicTsx3);
+  const callback = obj2.useCallback((nativeEvent) => {
+    _undefined3(nativeEvent.nativeEvent.lines.length > React6);
     if (nativeEvent.nativeEvent.lines.length > React6) {
-      if (!first1) {
+      if (!c4) {
         let HIDDEN = constants.VISIBLE;
       }
       tmp4(HIDDEN);
     }
     HIDDEN = constants.HIDDEN;
-  }, items);
-  const items1 = [sharedValue1];
-  const callback1 = first1.useCallback((nativeEvent) => {
+  }, items6);
+  const items7 = [sharedValue1];
+  const callback1 = obj2.useCallback((nativeEvent) => {
     const lines = nativeEvent.nativeEvent.lines;
     const substr = lines.slice(0, React6);
     const mapped = substr.map((text) => text.text);
-    _undefined(mapped.join(""));
+    _undefined5(mapped.join(""));
   }, []);
-  const items2 = [first, first1, sharedValue2];
-  const callback2 = first1.useCallback((nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height), items1);
-  const memo = first1.useMemo(() => first ? (() => {
-    closure_1_5(!first1);
-    const result = sharedValue2.set(first1 ? constants.VISIBLE : constants.HIDDEN);
-  }) : undefined, items2);
-  const items3 = [sharedValue];
-  const items4 = [, ];
-  ({ id: arr5[0], topic: arr5[1] } = channel);
-  const callback3 = first1.useCallback((nativeEvent) => {
+  const items8 = [first, first1, sharedValue2];
+  const callback2 = obj2.useCallback((nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height), items7);
+  const memo = obj2.useMemo(() => c2 ? (() => {
+    _undefined4(!closure_1_4);
+    const result = sharedValue2.set(closure_1_4 ? constants.VISIBLE : constants.HIDDEN);
+  }) : undefined, items8);
+  const items9 = [sharedValue];
+  const items10 = [, ];
+  ({ id: arr11[0], topic: arr11[1] } = channel);
+  const callback3 = obj2.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
-  }, items3);
-  let memo1 = first1.useMemo(() => {
+  }, items9);
+  let memo1 = obj2.useMemo(() => {
     const obj = MarkupUtilsDefault;
-    return obj.parseTopic("" + channel.topic.replace(/(\r\n|\n|\r)/gm, " "), true, { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num });
-  }, items4);
-  const items5 = [, ];
-  ({ id: arr6[0], topic: arr6[1] } = channel);
-  const memo2 = first1.useMemo(() => MarkupUtilsDefault.parseTopic(channel.topic, true, { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num }), items5);
-  const items6 = [channel.id, sharedValue, sharedValue1, flag];
-  const effect = first1.useEffect(() => {
+    const obj2 = { channelId: _undefined.id, shouldNavigateBack: true, mentionPillOffsetY: null };
+    const replaced = "" + _undefined.topic.replace(/(\r\n|\n|\r)/gm, " ");
+    obj2.mentionPillOffsetY = MentionPillOffset.MENTION_PILL_OFFSET_Y;
+    return obj.parseTopic(replaced, true, obj2);
+  }, items10);
+  const items11 = [, ];
+  ({ id: arr12[0], topic: arr12[1] } = channel);
+  const memo2 = obj2.useMemo(() => {
+    const obj = MarkupUtilsDefault;
+    return obj.parseTopic(_undefined.topic, true, { channelId: _undefined.id, shouldNavigateBack: true, mentionPillOffsetY: MentionPillOffset.MENTION_PILL_OFFSET_Y });
+  }, items11);
+  const items12 = [channel.id, sharedValue, sharedValue1, flag];
+  const effect = obj2.useEffect(() => {
     const result = sharedValue.set(undefined);
     const result1 = sharedValue1.set(undefined);
-    closure_5(flag);
-    _undefined("");
-  }, items6);
+    _undefined4(c1);
+    _undefined5("");
+  }, items12);
   if (null == memo) {
-    let PressableOpacity = closure_5;
+    let PressableOpacity = c5;
   } else {
-    PressableOpacity = tmp2(tmp3[13]).PressableOpacity;
+    PressableOpacity = tmp2(7106).PressableOpacity;
   }
-  const obj10 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(channel(first[14]).Text, { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 }) };
-  const items7 = [closure_11(closure_5, obj10), , ];
-  const obj12 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(channel(first[14]).Text, { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback1, children: memo1 }) };
-  items7[1] = closure_11(closure_5, obj12);
-  const obj14 = { style: null, children: null };
-  const items8 = [tmp.topic, animatedStyle];
-  obj14.style = items8;
-  const obj15 = { style: animatedStyle1, children: null };
-  const obj16 = { onPress: memo, activeOpacity: 0.7 };
+  const obj7 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 }) };
+  const items13 = [closure_11(c5, obj7), , ];
+  const obj9 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 }) };
+  items13[1] = closure_11(c5, obj9);
+  const obj11 = { style: null, children: null };
+  const items14 = [tmp.topic, animatedStyle];
+  obj11.style = items14;
+  const obj12 = { style: animatedStyle1, children: null };
+  const obj13 = { onPress: memo, activeOpacity: 0.7 };
   if (null == memo) {
-    const merged = Object.assign(tmp31);
-    const obj17 = { pointerEvents: str2, children: null };
-    const obj18 = { color: "interactive-text-default", variant: "heading-sm/normal", onLayout: callback3, lineClamp: null, style: null, children: null };
-    let tmp36;
+    const merged = Object.assign(tmp46);
+    const obj14 = { pointerEvents: str2, children: null };
+    const obj15 = { color: "interactive-text-default", variant: "heading-sm/medium", onLayout: callback3, lineClamp: null, style: null, children: null };
+    let tmp51;
     if (!first1) {
-      tmp36 = sharedValue1;
+      tmp51 = sharedValue1;
     }
-    obj18.lineClamp = tmp36;
-    const items9 = [tmp.topicText, , ];
+    obj15.lineClamp = tmp51;
+    const items15 = [tmp.topicText, , ];
     if (first1) {
       expanded = tmp.expanded;
     }
-    items9[1] = expanded;
-    const obj19 = { textAlign: channel.textAlign };
-    items9[2] = obj19;
-    obj18.style = items9;
+    items15[1] = expanded;
+    const obj16 = { textAlign: channel.textAlign };
+    items15[2] = obj16;
+    obj15.style = items15;
     if (first1) {
       memo1 = memo2;
     }
-    const obj20 = { children: null };
-    obj18.children = memo1;
-    obj17.children = closure_11(tmp2(tmp3[14]).Text, obj18);
-    obj16.children = closure_11(tmp28, obj17);
-    obj15.children = closure_11(PressableOpacity, obj16);
-    const items10 = [closure_11(tmp30, obj15), ];
-    const obj21 = { style: null, pointerEvents: "none", children: null };
-    const items11 = [absoluteFill.absoluteFill, animatedStyle2];
-    obj21.style = items11;
-    const obj22 = { style: tmp.gradient, start: null, end: null, colors: null };
-    ({ START: obj24.start, END: obj24.end } = VerticalGradient);
-    obj22.colors = channelTopicGradientBackground;
-    obj21.children = closure_11(tmp29(tmp3[16]), obj22);
-    items10[1] = closure_11(tmp29(tmp3[10]).View, obj21);
-    obj14.children = items10;
-    items7[2] = closure_12(flag(tmp3[10]).View, obj14);
-    obj20.children = items7;
-    return closure_12(closure_13, obj20);
+    const obj17 = { children: null };
+    obj15.children = memo1;
+    obj14.children = closure_11(tmp2(5747).Text, obj15);
+    obj13.children = closure_11(tmp43, obj14);
+    obj12.children = closure_11(PressableOpacity, obj13);
+    const items16 = [closure_11(tmp45, obj12), ];
+    const obj18 = { style: null, pointerEvents: "none", children: null };
+    const items17 = [absoluteFill.absoluteFill, animatedStyle2];
+    obj18.style = items17;
+    const obj19 = { style: tmp.gradient, start: null, end: null, colors: null };
+    ({ START: obj23.start, END: obj23.end } = VerticalGradient);
+    obj19.colors = channelTopicGradientBackground;
+    obj18.children = closure_11(tmp44(5710), obj19);
+    items16[1] = closure_11(tmp44(1652).View, obj18);
+    obj11.children = items16;
+    items13[2] = closure_12(_modDef1652.View, obj11);
+    obj17.children = items13;
+    return closure_12(closure_13, obj17);
   } else {
     let str = "";
     if (!first1) {
       str = tmp10;
     }
-    const obj23 = { accessibilityRole: "button", accessibilityLabel: str, accessibilityHint: null, accessibilityState: null };
-    const intl = tmp2(tmp3[15]).intl;
-    const t = tmp2(tmp3[15]).t;
-    obj23.accessibilityHint = intl.string(first1 ? t["6MwJo/"] : t.lBeKY2);
-    const obj41 = { expanded: first1 };
-    obj23.accessibilityState = obj41;
+    const obj20 = { accessibilityRole: "button", accessibilityLabel: str, accessibilityHint: null, accessibilityState: null };
+    const intl = tmp2(1113).intl;
+    const t = tmp2(1113).t;
+    obj20.accessibilityHint = intl.string(first1 ? t["6MwJo/"] : t.lBeKY2);
+    const obj21 = { expanded: first1 };
+    obj20.accessibilityState = obj21;
   }
-  const obj11 = { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 };
-  const obj13 = { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback1, children: memo1 };
-  const obj9 = { withSpring: channel(first[11]).withSpring, gradient: sharedValue2, SPRING_CHANNEL_DETAILS: sharedValue2 };
-  tmp28 = closure_5;
+  const obj10 = { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 };
+  const obj8 = { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 };
+  const tmp2Result2 = require("module_1652");
+  tmp43 = c5;
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     const user = UserStore.getUser(channel.getRecipientId());
     let isProvisional;
@@ -211,43 +250,42 @@ function PrivateChannelDetailsTopic(channel) {
   });
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
+    const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", style: null, children: null };
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5624).Text, obj2);
+    tmp4 = closure_11(channel(5747).Text, obj2);
   }
   return tmp4;
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelUtils.getPrivateChannelUserTagsString(channel.recipients, UserStore));
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
+    const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", style: null, children: null };
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5624).Text, obj2);
+    tmp4 = closure_11(channel(5747).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10137);
+const ChannelDetailsConstants = fn(10267);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1375);
-const createStyles = fn(5014);
-let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
-const EMPTY_STYLE = {};
+const createStyles = fn(5141);
+let closure_14 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
+let closure_15 = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
-const __initData = { code: "function ChannelDetailsTopicTsx1(){const{expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS}=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};}" };
-const __initData2 = { code: "function ChannelDetailsTopicTsx2(){const{expandedHeight,EMPTY_STYLE}=this.__closure;if(expandedHeight.get()==null)return EMPTY_STYLE;return{height:expandedHeight.get()};}" };
-const __initData3 = { code: "function ChannelDetailsTopicTsx3(){const{withSpring,gradient,SPRING_CHANNEL_DETAILS}=this.__closure;return{opacity:withSpring(gradient.get(),SPRING_CHANNEL_DETAILS)};}" };
+let closure_17 = { code: "(function ChannelDetailsTopicTsx1(){let[expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS]=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};})" };
+let closure_18 = { code: "(function ChannelDetailsTopicTsx2(){let[expandedHeight,EMPTY_STYLE]=this.__closure;if(expandedHeight.get()==null)return EMPTY_STYLE;return{height:expandedHeight.get()};})" };
+let closure_19 = { code: "(function ChannelDetailsTopicTsx3(){let[withSpring,gradient,SPRING_CHANNEL_DETAILS]=this.__closure;return{opacity:withSpring(gradient.get(),SPRING_CHANNEL_DETAILS)};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx");
 

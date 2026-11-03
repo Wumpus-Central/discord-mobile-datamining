@@ -1,14 +1,14 @@
-// === Module 8509: PollResultSystemMessage ===
+// === Module 8633: PollResultSystemMessage ===
 
-// Module 8509 (PollResultSystemMessage)
+// Module 8633 (PollResultSystemMessage)
 import util from "util" /* 1113 */;
-import EmojiConstants from "EmojiConstants" /* 1386 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8418 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8420 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8510 */;
+import EmojiConstants from "EmojiConstants" /* 1388 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8542 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8544 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8634 */;
 import size from "module_2" /* 2 */;
 
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
@@ -47,7 +47,7 @@ export function createPollResultSystemMessage(message) {
         obj8.percentage = combined;
         formatToPartsResult = intl2.formatToParts(util.t.dqftZ2, obj8);
       } else {
-        const items = [];
+        items = [];
         let id = tmp3.victorEmoji;
         if (null == id) {
           const obj9 = { type: "text", content: tmp3.victorAnswerText };

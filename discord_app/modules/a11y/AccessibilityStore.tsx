@@ -1,13 +1,13 @@
-// === Module 5015: AccessibilityStore ===
+// === Module 5142: AccessibilityStore ===
 
-// Module 5015 (AccessibilityStore)
+// Module 5142 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5020 */;
-import shared from "shared" /* 5021 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5147 */;
+import shared from "shared" /* 5148 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GameModeStore from "GameModeStore" /* 5016 */;
+import GameModeStore from "GameModeStore" /* 5143 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -94,7 +94,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1072);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5019);
+const MessageConstants = fn(5146);
 ({ MESSAGE_GROUP_SPACING: closure_11, DEFAULT_COMPACT_SPACING: closure_12, DEFAULT_COZY_SPACING: map1 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
@@ -134,7 +134,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (closure_11.indexOf(num2) < 0) {
     obj.messageGroupSpacing = null;
   }
-  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
+  items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
   let isThrottling = false;
   const items1 = [GameModeStore];
@@ -271,7 +271,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
       const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_1_12 : map1;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? application_id : state;
     }
     return messageGroupSpacing;
   },
@@ -280,14 +280,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? application_id : state);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? application_id : state);
   },
   set: undefined
 });

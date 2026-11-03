@@ -1,14 +1,14 @@
-// === Module 12122: ConjureProjectIcon ===
+// === Module 12258: ConjureProjectIcon ===
 
-// Module 12122 (ConjureProjectIcon)
+// Module 12258 (ConjureProjectIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import useToken from "useToken" /* 5596 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11340 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11343 */;
-import MagicWandIcon from "MagicWandIcon" /* 12123 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import useToken from "useToken" /* 5719 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11477 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11480 */;
+import MagicWandIcon from "MagicWandIcon" /* 12259 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureProjectIconDefault = useConjureProjectIcon;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = { frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" }, image: { width, height: width }, border: null, glyph: null };
   const obj2 = {};
@@ -31,7 +31,7 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   obj.glyph = { width: width2, height: width2 };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { tile: { backgroundColor } };
   return obj;
@@ -59,7 +59,7 @@ export default function ConjureProjectIcon(project) {
     tmp9 = hasOwnProperty;
     tmp10 = hasOwnProperty(ConjureAppIconTileDefault, obj5);
   }
-  const items = [tmp10, tmp9(React4, { style: tmp5.border, pointerEvents: "none" })];
+  items = [tmp10, tmp9(React4, { style: tmp5.border, pointerEvents: "none" })];
   obj.children = items;
   return timestampProducer(React4, obj);
 };
@@ -69,7 +69,7 @@ export function ConjureNewProjectIcon(arg0) {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   const obj3 = _modDef671(token);
   const obj4 = { style: null, children: null };
-  const items = [tmp3.frame, closure_9(_modDef671(token).alpha(0.24).css()).tile];
+  items = [tmp3.frame, closure_9(_modDef671(token).alpha(0.24).css()).tile];
   obj4.style = items;
   const alphaResult = _modDef671(token).alpha(0.24);
   obj4.children = hasOwnProperty(MagicWandIcon.MagicWandIcon, { size: "custom", style: tmp3.glyph, color: nativeDefault.colors.ICON_BRAND });

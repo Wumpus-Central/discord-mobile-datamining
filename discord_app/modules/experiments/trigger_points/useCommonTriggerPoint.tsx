@@ -1,9 +1,9 @@
-// === Module 15346: useCommonTriggerPoint ===
+// === Module 15487: useCommonTriggerPoint ===
 
-// Module 15346 (useCommonTriggerPoint)
+// Module 15487 (useCommonTriggerPoint)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 
 const require = globalThis.__r;
 
@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting("modules/experiments/trigger_points/us
 
 export function useCommonTriggerPoint(OpenNitroTriggerPoint) {
   _require = OpenNitroTriggerPoint;
-  let items = [ExperimentStore];
+  items = [ExperimentStore];
   const obj = require("initialize");
   const items1 = [OpenNitroTriggerPoint, , ];
   [arr2[1], arr2[2]] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
+    items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
     return items;
   });
   const effect = noop.useEffect(() => {

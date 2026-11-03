@@ -1,6 +1,6 @@
-// === Module 19581: ConnectGuardianModal ===
+// === Module 19731: ConnectGuardianModal ===
 
-// Module 19581 (ConnectGuardianModal)
+// Module 19731 (ConnectGuardianModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
@@ -8,10 +8,10 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const FamilyCenterAction = fn(7716).FamilyCenterAction;
+const FamilyCenterAction = fn(7840).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, centered: null, header: null, title: null, description: null, cardSection: null, scanPrompt: null, grow: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.centered = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -34,9 +34,9 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(19582).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(19732).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
-  const items = [connectGuardianGate.state, onComplete];
+  items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
     let current = "error" !== connectGuardianGate.state;
     if (!current) {
@@ -56,35 +56,35 @@ export default function ConnectGuardianModal(route) {
     const items1 = [, ];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
     obj2.style = items1;
-    obj2.children = closure_7(tmp4(6953).ActivityIndicator, {});
+    obj2.children = closure_7(tmp4(7080).ActivityIndicator, {});
     let tmp9 = closure_7(View, obj2);
   } else {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.header, children: null };
-    const obj5 = { style: tmp.title, variant: "heading-xl/bold", color: "text-default", children: null };
+    const obj5 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-default", children: null };
     const intl = tmp4(1113).intl;
-    obj5.children = intl.string(tmp2(2538).ITlV6p);
-    const items2 = [closure_7(tmp4(5624).Text, obj5), ];
+    obj5.children = intl.string(tmp2(2667).ITlV6p);
+    const items2 = [closure_7(tmp4(5747).Text, obj5), ];
     const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1113).intl;
-    obj6.children = intl2.format(tmp2(2538).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = closure_7(tmp4(5624).Text, obj6);
+    obj6.children = intl2.format(tmp2(2667).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+    items2[1] = closure_7(tmp4(5747).Text, obj6);
     obj4.children = items2;
     const items3 = [closure_8(View, obj4), , , ];
     const obj7 = { style: tmp.cardSection, children: null };
     const obj8 = { style: tmp.scanPrompt, variant: "text-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1113).intl;
-    obj8.children = intl3.string(tmp2(2538).Mi60fm);
-    const items4 = [closure_7(tmp4(5624).Text, obj8), ];
+    obj8.children = intl3.string(tmp2(2667).Mi60fm);
+    const items4 = [closure_7(tmp4(5747).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(16785).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = closure_7(tmp4(16928).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
     items3[1] = closure_8(View, obj7);
     const obj11 = { style: tmp.grow };
     items3[2] = closure_7(View, obj11);
     const obj12 = { style: null, children: null };
     const items5 = [tmp.footer, ];
-    const obj13 = { paddingBottom: connectGuardianGate(1625)().bottom + tmp2(575).space.PX_16 };
+    const obj13 = { paddingBottom: connectGuardianGate(1627)().bottom + tmp2(575).space.PX_16 };
     items5[1] = obj13;
     obj12.style = items5;
     const obj25 = { variant: "primary", size: "lg", text: null, onPress: null };
@@ -97,7 +97,7 @@ export default function ConnectGuardianModal(route) {
       }
       return tmpResult;
     };
-    obj12.children = closure_7(tmp4(5634).Button, obj25);
+    obj12.children = closure_7(tmp4(5754).Button, obj25);
     items3[3] = closure_7(View, obj12);
     obj3.children = items3;
     tmp9 = closure_8(View, obj3);

@@ -1,25 +1,25 @@
-// === Module 10603: GiftingPromotionUtils ===
+// === Module 10733: GiftingPromotionUtils ===
 
-// Module 10603 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10608 */;
-import MarketingComponentType from "MarketingComponentType" /* 10609 */;
+// Module 10733 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10738 */;
+import MarketingComponentType from "MarketingComponentType" /* 10739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionPlans = fn(1385).SubscriptionPlans;
+const SubscriptionPlans = fn(1387).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp[1];
-  const items = [fetchPurchasesError];
+  items = [fetchPurchasesError];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => fetchPurchasesError.getGiftPromotionRewardSkuIds());
   const obj = require("initialize");
   const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
@@ -51,7 +51,7 @@ export function getRewardAssetIdMap(arr) {
   return map;
 }
 export function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
-  const items = [, , ];
+  items = [, , ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -72,7 +72,7 @@ export function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
   return tmp4;
 }
 export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
-  const items = [, , ];
+  items = [, , ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -92,7 +92,7 @@ export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
   return tmp3;
 }
 export function useIsPlanEligibleForGiftingPromotion(id) {
-  const items = [, , ];
+  items = [, , ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {

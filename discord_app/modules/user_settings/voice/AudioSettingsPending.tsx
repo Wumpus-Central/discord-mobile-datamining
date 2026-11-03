@@ -1,6 +1,6 @@
-// === Module 15956: AudioSettingsPending ===
+// === Module 16099: AudioSettingsPending ===
 
-// Module 15956 (AudioSettingsPending)
+// Module 16099 (AudioSettingsPending)
 import _slicedToArray from "module_32" /* 32 */;
 
 let dependencyMap = {};
@@ -19,7 +19,7 @@ export function updatePendingSettings(context, userId, arg2) {
 export function drainPendingAudioSettings(fn) {
   for (const key10006 in closure_1) {
     let tmp3 = _slicedToArray(key10006.split(":"), 2);
-    let items = [, ];
+    items = [, ];
     [arr[0], arr[1]] = tmp3;
     let tmp4 = _slicedToArray(items, 2);
     let tmp6 = arg0(tmp4[0], tmp4[1], dependencyMap[key10006]);

@@ -1,20 +1,20 @@
-// === Module 19808: SelectConnectionActionSheet ===
+// === Module 19958: SelectConnectionActionSheet ===
 
-// Module 19808 (SelectConnectionActionSheet)
+// Module 19958 (SelectConnectionActionSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7682 */;
-import SegmentedControlState from "SegmentedControlState" /* 8980 */;
-import SegmentedControl from "SegmentedControl" /* 9214 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11591 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7806 */;
+import SegmentedControlState from "SegmentedControlState" /* 9108 */;
+import SegmentedControl from "SegmentedControl" /* 9342 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11728 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -145,7 +145,7 @@ export default function SelectConnectionActionSheet(arg0) {
     num = 0;
   }
   const intl2 = util.intl;
-  const items = [intl2.string(util.t["3fe7U5"])];
+  items = [intl2.string(util.t["3fe7U5"])];
   if (num > 0) {
     const intl3 = util.intl;
     items.push(intl3.string(util.t.PHjkRE));

@@ -1,7 +1,7 @@
-// === Module 7090: useTextField ===
+// === Module 7216: useTextField ===
 
-// Module 7090 (useTextField)
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6021 */;
+// Module 7216 (useTextField)
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ export function useTextFieldState(onClear) {
   if (first == null) {
     first = tmp[0];
   }
-  const items = [onChange];
+  items = [onChange];
   const setTextValue = noop.useCallback((arg0) => {
     obj3(arg0);
     if (onChange != null) {
@@ -46,7 +46,7 @@ export function useTextFieldState(onClear) {
 }
 export function useTextField(merged, ref) {
   ref = callback1.useRef(null);
-  const items = [ref, merged.onClear];
+  items = [ref, merged.onClear];
   const obj2 = {};
   const callback = callback1.useCallback(() => {
     const current = onClear.current;

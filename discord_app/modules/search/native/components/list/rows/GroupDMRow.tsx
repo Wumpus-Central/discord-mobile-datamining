@@ -1,12 +1,12 @@
-// === Module 18717: rows/GroupDMRow ===
+// === Module 18875: rows/GroupDMRow ===
 
-// Module 18717 (rows/GroupDMRow)
+// Module 18875 (rows/GroupDMRow)
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10800 */;
-import SearchListRow from "SearchListRow" /* 18702 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10930 */;
+import SearchListRow from "SearchListRow" /* 18860 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default function GroupDMRow(channel) {
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
   let str = useChannelNameDefault(channel);
-  const items = [channel.id, onPress];
+  items = [channel.id, onPress];
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);

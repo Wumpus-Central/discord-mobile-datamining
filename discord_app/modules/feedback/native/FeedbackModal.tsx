@@ -1,7 +1,7 @@
-// === Module 10180: FeedbackModal ===
+// === Module 10310: FeedbackModal ===
 
-// Module 10180 (FeedbackModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+// Module 10310 (FeedbackModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function FeedbackForm(result) {
     titleLabel = intl.string(tmp6(tmp7[6]).t.vcqwCj);
   }
   obj.title = titleLabel;
-  const items = [closure_7(require("Form").FormInput, obj, "channel-input"), closure_7(require("Form").FormDivider, {}), ];
+  items = [closure_7(require("Form").FormInput, obj, "channel-input"), closure_7(require("Form").FormDivider, {}), ];
   const obj2 = { value, title: null, onChange: null, multiline: true, numberOfLines: 4, autoCorrect: true };
   if (descriptionLabel == null) {
     const intl2 = tmp6(tmp7[6]).intl;
@@ -75,7 +75,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");

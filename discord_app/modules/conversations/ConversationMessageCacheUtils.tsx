@@ -1,10 +1,10 @@
-// === Module 7768: ConversationMessageCacheUtils ===
+// === Module 7892: ConversationMessageCacheUtils ===
 
-// Module 7768 (ConversationMessageCacheUtils)
-import ReactionUtils from "ReactionUtils" /* 4958 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
+// Module 7892 (ConversationMessageCacheUtils)
+import ReactionUtils from "ReactionUtils" /* 5085 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 const size = fn(2);
@@ -21,7 +21,7 @@ export function applyHydratedMessages(arg0) {
       return false;
     }
   }
-  const items = [];
+  items = [];
   for (const item10014 of messages) {
     let obj = MessageRecordUtils;
     let messageRecord = obj.createMessageRecord(item10014);

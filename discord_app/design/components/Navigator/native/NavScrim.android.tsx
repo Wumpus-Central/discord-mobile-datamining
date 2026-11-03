@@ -1,14 +1,14 @@
-// === Module 5606: NavScrim ===
+// === Module 5729: NavScrim ===
 
-// Module 5606 (NavScrim)
+// Module 5729 (NavScrim)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { androidNavScrim: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -24,7 +24,7 @@ export const NavScrim = noop.memo(function NavScrim() {
   let tmp2 = null;
   if (0 !== insets.bottom) {
     const obj = { style: null, pointerEvents: "none" };
-    const items = [tmp.androidNavScrim, ];
+    items = [tmp.androidNavScrim, ];
     const obj2 = { height: insets.bottom };
     items[1] = obj2;
     obj.style = items;

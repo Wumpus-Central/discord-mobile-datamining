@@ -1,10 +1,10 @@
-// === Module 15597: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 15739: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 15597 (GlobalDiscoveryServersSearchResultsStore)
+// Module 15739 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6446 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9076 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6566 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9204 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_RESULTS_QUERY_PREFIX: c2, SEARCH_RESULTS_CATEGORY_PREFIX: c3, SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: closure_4 } = GlobalDiscoveryServersConstants);
@@ -32,7 +32,7 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
 prototype["handleSearchSuccess"] = function handleSearchSuccess(arg0) {
   const self = this;
   ({ total, guilds } = arg0);
-  let items;
+  items = undefined;
   this.error = null;
   this.isFetching = false;
   this.isInitialFetchComplete = true;
@@ -53,7 +53,7 @@ prototype2["getGuild"] = function getGuild(arg0) {
   return map1.get(arg0);
 };
 prototype2["getGuildIds"] = function getGuildIds(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let guildIds = null;
   if (null != value) {
@@ -62,7 +62,7 @@ prototype2["getGuildIds"] = function getGuildIds(query) {
   return guildIds;
 };
 prototype2["getIsFetching"] = function getIsFetching(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let isFetching = null;
   if (null != value) {
@@ -71,7 +71,7 @@ prototype2["getIsFetching"] = function getIsFetching(query) {
   return isFetching;
 };
 prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let prop = null;
   if (null != value) {
@@ -80,7 +80,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(que
   return prop;
 };
 prototype2["getOffset"] = function getOffset(nativeElementReference) {
-  const items = [React2, nativeElementReference.query, React3, nativeElementReference.categoryId, React4, nativeElementReference.languageCode];
+  items = [React2, nativeElementReference.query, React3, nativeElementReference.categoryId, React4, nativeElementReference.languageCode];
   value = map.get(items.join("-"));
   let offset = null;
   if (null != value) {
@@ -89,7 +89,7 @@ prototype2["getOffset"] = function getOffset(nativeElementReference) {
   return offset;
 };
 prototype2["getTotal"] = function getTotal(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let total = null;
   if (null != value) {
@@ -98,7 +98,7 @@ prototype2["getTotal"] = function getTotal(query) {
   return total;
 };
 prototype2["getLastFetchTimestamp"] = function getLastFetchTimestamp(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let lastFetchTimestamp = null;
   if (null != value) {
@@ -107,7 +107,7 @@ prototype2["getLastFetchTimestamp"] = function getLastFetchTimestamp(query) {
   return lastFetchTimestamp;
 };
 prototype2["getError"] = function getError(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let error = null;
   if (null != value) {
@@ -116,7 +116,7 @@ prototype2["getError"] = function getError(query) {
   return error;
 };
 prototype2["getErrorMessage"] = function getErrorMessage(query) {
-  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
   value = map.get(items.join("-"));
   let tmp2 = null;
   if (null != value) {
@@ -139,7 +139,7 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function handleGlobalDiscoveryServersSearchStart(reset) {
     ({ query, categoryId, languageCode } = reset);
-    const items = [React2, query, React3, categoryId, React4, languageCode];
+    items = [React2, query, React3, categoryId, React4, languageCode];
     if (reset.reset) {
       map.delete(tmp4);
     }
@@ -161,7 +161,7 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function handleGlobalDiscoveryServersSearchSuccess(total) {
     ({ query, guilds } = total);
-    const items = [React2, query, React3, total.categoryId, React4, total.languageCode];
+    items = [React2, query, React3, total.categoryId, React4, total.languageCode];
     const joined = items.join("-");
     value = map.get(joined);
     if (value == null) {
@@ -182,7 +182,7 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function handleGlobalDiscoveryServersSearchFailure(query) {
     query = query.query;
-    const items = [React2, query, React3, query.categoryId, React4, query.languageCode];
+    items = [React2, query, React3, query.categoryId, React4, query.languageCode];
     const joined = items.join("-");
     value = map.get(joined);
     if (value == null) {

@@ -1,11 +1,11 @@
-// === Module 9485: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 9613: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 9485 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 9613 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import _mod12 from "module_12" /* 12 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7774 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7777 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
 import noop from "module_19" /* 19 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7406 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7530 */;
 
 const require = globalThis.__r;
 
@@ -20,14 +20,14 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   let stateFromStoresArray;
   const tmp = usersPlayingStorefrontEnabledGamesApplicationIds(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[2])(userId.userId);
   _require = tmp;
-  let items = [tmp];
+  items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
     if (application != null) {
       userId = application.userId;
     }
     if (null != userId) {
-      const items = [application.userId];
+      items = [application.userId];
       let items1 = items;
     } else {
       items1 = [];
@@ -91,7 +91,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
       application = application.application;
     }
     if (null != application) {
-      let items = [];
+      items = [];
     } else {
       const items1 = [];
       HermesBuiltin.arraySpread(stateFromStoresArray, HermesBuiltin.arraySpread(areUsersInSocialLayerStorefrontMutualGuildsApplicationIds, HermesBuiltin.arraySpread(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, HermesBuiltin.arraySpread(usersPlayingStorefrontEnabledGamesApplicationIds, 0))));

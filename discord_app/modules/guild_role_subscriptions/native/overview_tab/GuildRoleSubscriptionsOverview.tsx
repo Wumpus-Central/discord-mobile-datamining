@@ -1,22 +1,22 @@
-// === Module 18615: GuildRoleSubscriptionsOverview ===
+// === Module 18773: GuildRoleSubscriptionsOverview ===
 
-// Module 18615 (GuildRoleSubscriptionsOverview)
+// Module 18773 (GuildRoleSubscriptionsOverview)
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9910 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17204 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 18616 */;
-import GuildRoleSubscriptionPurchasePageDefault from "GuildRoleSubscriptionPurchasePage" /* 18617 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 10041 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17347 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 18774 */;
+import GuildRoleSubscriptionPurchasePageDefault from "GuildRoleSubscriptionPurchasePage" /* 18775 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5049 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5176 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function serverNameHook(children) {
-  return jsx(Text_Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
+  return jsx(Text_Text.Text, { variant: "heading-lg/semibold", color: "interactive-text-active", children });
 }
 class RoleSubscriptionsUnavailableNotice {
   constructor(arg0) {
@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default function GuildRoleSubscriptionsOverview(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   let obj = guildId(stateFromStores1[11]);

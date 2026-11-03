@@ -1,14 +1,14 @@
-// === Module 13701: CheckpointNavigationControls ===
+// === Module 13832: CheckpointNavigationControls ===
 
-// Module 13701 (CheckpointNavigationControls)
+// Module 13832 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13691 */;
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13831 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6066 */;
+import CheckpointConstants from "CheckpointConstants" /* 6186 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
     let obj = require("CheckpointCustomizationUtils");
   }
   const rect = flag(flag2[8])();
-  const items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
+  items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
   let token = require("useToken").useToken("text-subtle");
   const intl = require("util").intl;
   const obj2 = require("useToken");
@@ -102,8 +102,8 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5709);
-              return obj.openURL(flag(2061).getArticleURL(constants.CHECKPOINT));
+              const obj = flag(5829);
+              return obj.openURL(flag(2190).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children

@@ -1,10 +1,10 @@
-// === Module 7882: StreamerApplicationSelectors ===
+// === Module 8006: StreamerApplicationSelectors ===
 
-// Module 7882 (StreamerApplicationSelectors)
+// Module 8006 (StreamerApplicationSelectors)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7883 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8007 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ export function getStreamerApplication(decodeStreamKeyResult, PresenceStore) {
 }
 export function useGetStreamApplication(stream) {
   _require = stream;
-  const items = [PresenceStore];
+  items = [PresenceStore];
   const items1 = [stream];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;

@@ -1,14 +1,14 @@
-// === Module 17930: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 18073: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 17930 (useIsAllowGameFriendDMsSettingVisible)
+// Module 18073 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");
 
 export function useIsAllowGameFriendDMsSettingVisible() {
-  const items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
 }

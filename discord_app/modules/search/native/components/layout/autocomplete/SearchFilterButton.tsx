@@ -1,10 +1,10 @@
-// === Module 18694: SearchFilterButton ===
+// === Module 18852: SearchFilterButton ===
 
-// Module 18694 (SearchFilterButton)
+// Module 18852 (SearchFilterButton)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx");
@@ -14,7 +14,7 @@ export default noop.memo(function SearchFilterButton(searchContext) {
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
   validOrderedFilterTokens = searchContext(validOrderedFilterTokens[3]).useValidOrderedFilterTokens(searchContext);
-  const items = [searchContext, validOrderedFilterTokens];
+  items = [searchContext, validOrderedFilterTokens];
   const memo = noop.useMemo(() => validOrderedFilterTokens.map((item) => {
     const obj = { label: searchContext(validOrderedFilterTokens[4]).getSearchTokenLabel(closure_1_0, item), IconComponent: null, action: null };
     const obj2 = searchContext(validOrderedFilterTokens[4]);

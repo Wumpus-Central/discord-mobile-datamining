@@ -1,20 +1,20 @@
-// === Module 7565: GuildBoostingMarketingOverview ===
+// === Module 7689: GuildBoostingMarketingOverview ===
 
-// Module 7565 (GuildBoostingMarketingOverview)
+// Module 7689 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7583 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
@@ -28,7 +28,7 @@ export default function GuildBoostingMarketingOverview(guildId) {
     const first = guildBoostSlots[0];
   }
   let obj = guildId(stateFromStores[8]);
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = guildId(stateFromStores[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp2Result = guildId(stateFromStores[9]);
   const navigation = guildId(stateFromStores[10]).useNavigation();

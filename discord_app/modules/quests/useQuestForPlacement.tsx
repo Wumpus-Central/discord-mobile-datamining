@@ -1,14 +1,14 @@
-// === Module 17095: useQuestForPlacement ===
+// === Module 17238: useQuestForPlacement ===
 
-// Module 17095 (useQuestForPlacement)
+// Module 17238 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1089 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
-import QuestsEligibility from "QuestsEligibility" /* 9673 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
+import QuestsEligibility from "QuestsEligibility" /* 9805 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7843 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7967 */;
+import QuestStore from "QuestStore" /* 7970 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
   _require = arg0;
   closure_5(null);
   closure_129_0 = arg0;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
@@ -126,7 +126,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
 };
 export function useAdDecisionForPlacement(arg0) {
   _require = arg0;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
@@ -141,7 +141,7 @@ export function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
   _require = MOBILE_HOME_DOCK_AREA;
   closure_1 = closure_5(null);
   closure_129_0 = MOBILE_HOME_DOCK_AREA;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
@@ -177,7 +177,7 @@ export function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
 }
 export function useDeliveredCreativeForPlacement(MOBILE_HOME_DOCK_AREA, QUEST_BAR_MOBILE) {
   _require = QUEST_BAR_MOBILE;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [QUEST_BAR_MOBILE];
   stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuestPreviewOverride(closure_0), items1);
   closure_129_0 = MOBILE_HOME_DOCK_AREA;

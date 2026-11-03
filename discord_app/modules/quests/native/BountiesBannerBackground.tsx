@@ -1,11 +1,11 @@
-// === Module 16997: BountiesBannerBackground ===
+// === Module 17140: BountiesBannerBackground ===
 
-// Module 16997 (BountiesBannerBackground)
+// Module 17140 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import common_Video from "common/Video" /* 8873 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import common_Video from "common/Video" /* 8997 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesBannerB
 
 export default noop.memo(function BountiesBannerBackground(arg0) {
   ({ children, style, uri } = arg0);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const obj2 = { style, children: null };
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [timestampProducer(common_Video.VideoComponent, { source: { uri }, style: React3.absoluteFillObject, resizeMode: "cover", muted: true, disableFocus: true, paused: stateFromStores, importantForAccessibility: "no-hide-descendants" }), timestampProducer(LinearGradientDefault, { colors, locations, style: React3.absoluteFillObject }), children];

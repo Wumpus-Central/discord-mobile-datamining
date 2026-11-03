@@ -1,19 +1,19 @@
-// === Module 7223: FastestList ===
+// === Module 7344: FastestList ===
 
-// Module 7223 (FastestList)
-import FastestListNativeComponentDefault from "FastestListNativeComponent" /* 7224 */;
+// Module 7344 (FastestList)
+import FastestListNativeComponentDefault from "FastestListNativeComponent" /* 7345 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 5095 */;
+import module_1652_mod from "module_1652" /* 1652 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let ReanimatedRexport = ReanimatedRexport_mod;
-ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-let ReanimatedRexport = ReanimatedRexport_mod;
-const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(5275);
-let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5275).SCROLLABLE_TYPE.SCROLLVIEW, FastestListNativeComponent);
+let module_1652 = module_1652_mod;
+module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
+let module_1652 = module_1652_mod;
+const FastestListNativeComponent = module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
+const BottomSheetModal = fn(5398);
+let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5398).SCROLLABLE_TYPE.SCROLLVIEW, FastestListNativeComponent);
 let closure_9 = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
@@ -79,7 +79,7 @@ export default function FastestList(ref) {
   ref = listId.useRef(null);
   ref1 = listId.useRef(null);
   ref2 = listId.useRef(merged);
-  const items = [merged];
+  items = [merged];
   const effect = listId.useEffect(() => {
     ref2.current = merged;
   }, items);

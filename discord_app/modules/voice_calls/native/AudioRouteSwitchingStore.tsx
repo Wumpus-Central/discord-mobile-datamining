@@ -1,13 +1,13 @@
-// === Module 19234: AudioRouteSwitchingStore ===
+// === Module 19392: AudioRouteSwitchingStore ===
 
-// Module 19234 (AudioRouteSwitchingStore)
+// Module 19392 (AudioRouteSwitchingStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 5785 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import AudioRouteStore from "AudioRouteStore" /* 5784 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 5905 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import AudioRouteStore from "AudioRouteStore" /* 5904 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged() {
@@ -44,7 +44,7 @@ class AudioRouteSwitchingStore extends Store {
 const prototype = AudioRouteSwitchingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(AudioRouteStore, ChannelStore, RTCConnectionStore);
-  const items = [AudioRouteStore];
+  items = [AudioRouteStore];
   this.syncWith(items, handleAudioRouteChanged);
 };
 prototype["getConnectedChannelId"] = function getConnectedChannelId() {

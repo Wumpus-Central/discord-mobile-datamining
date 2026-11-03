@@ -1,9 +1,9 @@
-// === Module 11405: useSafeAreaAvoidingInputs ===
+// === Module 11543: useSafeAreaAvoidingInputs ===
 
-// Module 11405 (useSafeAreaAvoidingInputs)
+// Module 11543 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 575 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 5608 */;
-import ViewMeasureUtils from "ViewMeasureUtils" /* 11406 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 5731 */;
+import ViewMeasureUtils from "ViewMeasureUtils" /* 11544 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ let closure_5 = async function _calculateScrollOffset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_5 = async function _calculateScrollOffset(arg0) {
               return obj8;
             } else {
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         }
@@ -102,7 +102,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
   const scrollViewRef = insets.scrollViewRef;
   let onFocus;
   asyncGeneratorStep = onFocus.useRef(inputs);
-  const items = [inputs];
+  items = [inputs];
   const effect = onFocus.useEffect(() => {
     closure_3.current = inputs;
   }, items);
@@ -118,7 +118,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
               if (null != current2) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(11406).measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp2(11544).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
@@ -173,7 +173,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
             closure_128_2 = value;
             dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: tmp2(11406).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            const obj6 = { value: tmp2(11544).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
         } else {
@@ -191,7 +191,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 if (null != closure_128_3) {
                   dependencyMap = 3;
                   c3 = 1;
-                  const obj9 = { value: tmp2(11406).measureViewInWindow(closure_128_0), done: false };
+                  const obj9 = { value: tmp2(11544).measureViewInWindow(closure_128_0), done: false };
                   return obj9;
                 }
               }

@@ -1,7 +1,7 @@
-// === Module 17913: useDMPermissionsOverrideCount ===
+// === Module 18056: useDMPermissionsOverrideCount ===
 
-// Module 17913 (useDMPermissionsOverrideCount)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 18056 (useDMPermissionsOverrideCount)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 const size = fn(2);
@@ -12,7 +12,7 @@ export function useDMPermissionsOverrideCount() {
   setting = RestrictedGuildIds.useSetting();
   defaultGuildsRestricted = setting(defaultGuildsRestricted[2]).useDefaultGuildsRestricted();
   const obj = setting(defaultGuildsRestricted[2]);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [setting, defaultGuildsRestricted];
   return setting(defaultGuildsRestricted[3]).useStateFromStores(items, () => {
     set = new Set(set);

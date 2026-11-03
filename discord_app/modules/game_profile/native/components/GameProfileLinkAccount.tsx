@@ -1,14 +1,14 @@
-// === Module 9436: GameProfileLinkAccount ===
+// === Module 9564: GameProfileLinkAccount ===
 
-// Module 9436 (GameProfileLinkAccount)
+// Module 9564 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 575 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import GameProfileSection from "GameProfileSection" /* 9437 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9438 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import GameProfileSection from "GameProfileSection" /* 9565 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9566 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, userAvatar: null, cardContent: null, cardText: null, skeletonCardImage: null, skeletonUserAvatar: null, skeletonEllipse: null, skeletonCardContent: null, skeletonAnimationRoot: null, skeletonCardImagesContainerSmall: null, skeletonCardContentHeading: null, skeletonCardContentBody: null, skeletonCardContentBodySecondary: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.cardImagesContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
@@ -56,7 +56,7 @@ let closure_11 = noop.memo(function GameProfileLinkAccountSkeleton() {
   const tmp4 = useIsWindowLargeDefault();
   const obj = { style: tmp.card, children: null };
   const obj2 = { style: tmp.skeletonAnimationRoot, children: null };
-  const items = [tmp.cardImagesContainer, ];
+  items = [tmp.cardImagesContainer, ];
   let skeletonCardImagesContainerSmall = !tmp4;
   if (!tmp4) {
     skeletonCardImagesContainerSmall = tmp.skeletonCardImagesContainerSmall;
@@ -100,7 +100,7 @@ export default function GameProfileLinkAccount(analyticsLocations) {
   startAuthorization = tmp4.startAuthorization;
   const connectionApp = tmp4.connectionApp;
   ({ fetched, hasAlreadyLinked, canStartAuthorization } = tmp4);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = trackAction(startAuthorization[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const officialApplicationId = game.getOfficialApplicationId();
   const obj = trackAction(startAuthorization[11]);

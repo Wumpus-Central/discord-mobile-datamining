@@ -1,7 +1,7 @@
-// === Module 11903: useCanRaiseHand ===
+// === Module 12040: useCanRaiseHand ===
 
-// Module 11903 (useCanRaiseHand)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 12040 (useCanRaiseHand)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -12,6 +12,6 @@ const result = size.fileFinishedImporting("modules/stage_channels/useCanRaiseHan
 
 export function useCanRaiseHand(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.REQUEST_TO_SPEAK, closure_0));
 }

@@ -1,23 +1,23 @@
-// === Module 11037: MessagePreviewText ===
+// === Module 11170: MessagePreviewText ===
 
-// Module 11037 (MessagePreviewText)
+// Module 11170 (MessagePreviewText)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5692 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11022 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 11038 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 11039 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11059 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 11064 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 11065 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5812 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11155 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 11171 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 11172 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11196 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 11201 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 11202 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function NativeMessagePreviewContent(arg0) {
@@ -51,7 +51,7 @@ function EmbedMediaThumbnail(media) {
     }
   }
   const obj = { style: null, children: React6(FastImageDefault, { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" }) };
-  const items = [tmp.embedMediaContainer, { aspectRatio: num }];
+  items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj.style = items;
   return React6(View, obj);
 }
@@ -82,7 +82,7 @@ function EmbedCard(embed) {
   let tmp9 = null != int2hslResult;
   if (tmp9) {
     const obj3 = { style: null };
-    const items = [tmp.embedAccentBar, ];
+    items = [tmp.embedAccentBar, ];
     const obj4 = { backgroundColor: int2hslResult };
     items[1] = obj4;
     obj3.style = items;
@@ -133,16 +133,16 @@ function EmbedCard(embed) {
   return React7(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11023);
+const InAppNotificationConstants = fn(11156);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5014);
-const PlatformUtils = fn(1376);
+let createStyles = fn(5141);
+const PlatformUtils = fn(1357);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -173,7 +173,7 @@ export default function MessagePreviewText(message) {
   ({ text, secondaryText } = previewableMediaText);
   const tmpResult = usePreviewableMediaText;
   const getInitialMessagePreview = useGetInitialMessagePreview.useGetInitialMessagePreview({ message });
-  const items = [message.embeds];
+  items = [message.embeds];
   const memo = noop.useMemo(() => {
     const embeds = message.embeds;
     return embeds.filter((image) => null != image.image || null != image.thumbnail);

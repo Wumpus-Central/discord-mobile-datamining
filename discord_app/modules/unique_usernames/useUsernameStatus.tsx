@@ -1,7 +1,7 @@
-// === Module 16607: useUsernameStatus ===
+// === Module 16750: useUsernameStatus ===
 
-// Module 16607 (useUsernameStatus)
-import useUsernameLiveCheck from "useUsernameLiveCheck" /* 16608 */;
+// Module 16750 (useUsernameStatus)
+import useUsernameLiveCheck from "useUsernameLiveCheck" /* 16751 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ export (username) => {
   const usernameLiveCheck = useUsernameLiveCheck.useUsernameLiveCheck(username, flag, flag2);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   closure_3 = tmp3[1];
-  const items = [usernameLiveCheck, username, username];
+  items = [usernameLiveCheck, username, username];
   const effect = noop.useEffect(() => {
     if ("" !== closure_0) {
       if (tmp !== closure_1) {

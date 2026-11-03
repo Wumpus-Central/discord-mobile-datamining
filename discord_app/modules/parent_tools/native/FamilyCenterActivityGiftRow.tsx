@@ -1,21 +1,21 @@
-// === Module 16809: FamilyCenterActivityGiftRow ===
+// === Module 16952: FamilyCenterActivityGiftRow ===
 
-// Module 16809 (FamilyCenterActivityGiftRow)
+// Module 16952 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8744 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 16797 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16806 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16807 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16808 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 16940 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16949 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16950 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -62,7 +62,7 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj5.product = product;
     obj5.isSubscription = isSubscription;
     obj5.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(FamilyCenterActivityItemPreviewDefault, obj5), ];
+    items = [React4(FamilyCenterActivityItemPreviewDefault, obj5), ];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
     const items1 = [React4(Text_Text.Text, obj7), ];

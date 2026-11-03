@@ -1,8 +1,8 @@
-// === Module 15053: OrbCheckoutModalContext ===
+// === Module 15194: OrbCheckoutModalContext ===
 
-// Module 15053 (OrbCheckoutModalContext)
+// Module 15194 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
-import OrbCheckoutHooks from "OrbCheckoutHooks" /* 15054 */;
+import OrbCheckoutHooks from "OrbCheckoutHooks" /* 15195 */;
 import noop from "module_19" /* 19 */;
 import v1 from "v1" /* 1266 */;
 import size from "module_2" /* 2 */;
@@ -44,10 +44,10 @@ export function OrbCheckoutModalContextProvider(children) {
   ({ orbProductContext, skuProductLine, skuApplicationId } = orbProductContext1);
   const orbCheckoutRedemption = OrbCheckoutHooks.useOrbCheckoutRedemption({ skuId: skuId2, loadId: loadId2, onCheckoutSuccess, onSignFailure, order });
   ({ onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = orbCheckoutRedemption);
-  let items = [skuId, skuProductLine, skuApplicationId, loadId, analyticsLocations, analyticsSourceLocation, orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError];
+  items = [skuId, skuProductLine, skuApplicationId, loadId, analyticsLocations, analyticsSourceLocation, orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError];
   return <redux.Provider value={React3(() => {
     const obj = { skuId, skuProductLine, skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
-    let items = analyticsLocations;
+    items = analyticsLocations;
     if (analyticsLocations == null) {
       items = [];
     }

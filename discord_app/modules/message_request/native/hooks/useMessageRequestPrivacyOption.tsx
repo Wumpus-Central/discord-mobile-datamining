@@ -1,22 +1,22 @@
-// === Module 15736: useMessageRequestPrivacyOption ===
+// === Module 15879: useMessageRequestPrivacyOption ===
 
-// Module 15736 (useMessageRequestPrivacyOption)
-import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 14018 */;
+// Module 15879 (useMessageRequestPrivacyOption)
+import UserSettings from "UserSettings" /* 4966 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 14149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4839).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4966).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4839).RestrictedGuildIds;
+  const RestrictedGuildIds = id(4966).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
-  const items = [id];
+  items = [id];
   const callback = noop.useCallback((arg0) => {
     const sanitizedMessageRequestRestrictedGuilds = UserSettingsUtils.getSanitizedMessageRequestRestrictedGuilds();
     if (arg0) {
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7368).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7488).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

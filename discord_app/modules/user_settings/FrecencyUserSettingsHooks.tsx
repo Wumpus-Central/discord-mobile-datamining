@@ -1,7 +1,7 @@
-// === Module 10249: FrecencyUserSettingsHooks ===
+// === Module 10379: FrecencyUserSettingsHooks ===
 
-// Module 10249 (FrecencyUserSettingsHooks)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4844 */;
+// Module 10379 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
@@ -13,7 +13,7 @@ export function useFrecencySettings() {
   if (flag === undefined) {
     flag = true;
   }
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     if (flag) {
       const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;

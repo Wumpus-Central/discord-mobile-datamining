@@ -1,8 +1,8 @@
-// === Module 14057: useLoadGuildPowerups ===
+// === Module 14188: useLoadGuildPowerups ===
 
-// Module 14057 (useLoadGuildPowerups)
-import GameServerActionCreators from "GameServerActionCreators" /* 14058 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14064 */;
+// Module 14188 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 14189 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14195 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoa
 export default function useLoadGuildPowerups(guildId) {
   _require = guildId;
   gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useLoadGuildPowerups");
-  const items = [guildId, gameServerEnabled];
+  items = [guildId, gameServerEnabled];
   const effect = noop.useEffect(() => {
     if (gameServerEnabled) {
       const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);

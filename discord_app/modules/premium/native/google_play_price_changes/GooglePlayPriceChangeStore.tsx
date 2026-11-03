@@ -1,10 +1,10 @@
-// === Module 19028: GooglePlayPriceChangeStore ===
+// === Module 19186: GooglePlayPriceChangeStore ===
 
-// Module 19028 (GooglePlayPriceChangeStore)
+// Module 19186 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 require = fn;
 function onInitializeSync() {
@@ -44,7 +44,7 @@ class GooglePlayPriceChangeStore extends Store {
 }
 const prototype = GooglePlayPriceChangeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   this.syncWith(items, onInitializeSync);
   this.waitFor(SubscriptionStore);
 };

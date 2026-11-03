@@ -1,8 +1,8 @@
-// === Module 15791: GameOrganizationInviteList ===
+// === Module 15934: GameOrganizationInviteList ===
 
-// Module 15791 (GameOrganizationInviteList)
+// Module 15934 (GameOrganizationInviteList)
 import nativeDefault from "native" /* 575 */;
-import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 15792 */;
+import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 15935 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,7 +10,7 @@ function keyExtractor(id) {
   return id.id;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { content: { paddingBottom: arg0 + nativeDefault.space.PX_16 }, emptyState: { backgroundColor: "transparent" } };
   return obj;
@@ -23,7 +23,7 @@ export default function GameOrganizationInviteList(users) {
   const getSendState = users.getSendState;
   const onInvite = users.onInvite;
   const tmp = closure_5(getSendState(onInvite[4])({ isKeyboardAwareOnAndroid: false }).insets.bottom);
-  const items = [users.length, getSendState, onInvite];
+  items = [users.length, getSendState, onInvite];
   const callback = noop.useCallback((arg0) => {
     ({ item, index } = arg0);
     const obj = { user: item, start: 0 === index, end: index === users.length - 1, sendState: getSendState(item.id), onInvite };

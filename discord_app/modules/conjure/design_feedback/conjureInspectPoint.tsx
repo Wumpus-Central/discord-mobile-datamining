@@ -1,7 +1,7 @@
-// === Module 10922: conjureInspectPoint ===
+// === Module 11052: conjureInspectPoint ===
 
-// Module 10922 (conjureInspectPoint)
-import conjurePreviewCall from "conjurePreviewCall" /* 10919 */;
+// Module 11052 (conjureInspectPoint)
+import conjurePreviewCall from "conjurePreviewCall" /* 11049 */;
 import size from "module_2" /* 2 */;
 
 function targetFromPreviewElement(element) {
@@ -63,7 +63,7 @@ export const CONJURE_INSPECT_CLEAR_POINT = frozen;
 export function inspectPreviewPointRequest(arg0) {
   const obj = { steps: null, timeoutMs: conjurePreviewCall.INSPECT_TIMEOUT_MS, passive: true };
   const point = { action: "inspect", x: arg0.x, y: arg0.y };
-  const items = [point];
+  items = [point];
   obj.steps = items;
   return obj;
 }

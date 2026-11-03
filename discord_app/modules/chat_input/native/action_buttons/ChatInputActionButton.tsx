@@ -1,15 +1,15 @@
-// === Module 12805: ChatInputActionButton ===
+// === Module 12941: ChatInputActionButton ===
 
-// Module 12805 (ChatInputActionButton)
+// Module 12941 (ChatInputActionButton)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import Pressables from "Pressables" /* 6980 */;
+import useToken from "useToken" /* 5719 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
   const obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };
@@ -45,7 +45,7 @@ export default noop.memo(function Button(active) {
   }
   const bound = Math.max(0, (token2 - tmp9) / 2);
   const obj4 = { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null };
-  const items = [tmp6.actionButton, style, ];
+  items = [tmp6.actionButton, style, ];
   let tmp12 = flag;
   if (flag) {
     tmp12 = !disabled;

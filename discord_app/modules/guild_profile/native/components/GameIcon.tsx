@@ -1,18 +1,18 @@
-// === Module 14723: components/GameIcon ===
+// === Module 14854: components/GameIcon ===
 
-// Module 14723 (components/GameIcon)
+// Module 14854 (components/GameIcon)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = FireIcon(6980);
-const FireIcon2 = FireIcon(14725);
+const Pressables = FireIcon(7106);
+const FireIcon2 = FireIcon(14856);
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.gameIconImage = size;
@@ -32,7 +32,7 @@ export default function GameIcon(arg0) {
   if (null != iconURL) {
     source = AvatarUtilsDefault.makeSource(iconURL);
   }
-  const items = [game, onPress];
+  items = [game, onPress];
   let callback = noop.useCallback(() => {
     if (onPress != null) {
       tmp(game);

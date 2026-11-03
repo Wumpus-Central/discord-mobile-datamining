@@ -1,15 +1,22 @@
-// === Module 12572: MediaKeyboardBottomSheet ===
+// === Module 12708: MediaKeyboardBottomSheet ===
 
-// Module 12572 (MediaKeyboardBottomSheet)
+// Module 12708 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
+import BottomSheetModalDefault from "BottomSheetModal" /* 5398 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function MediaKeyboardBackground(arg0) {
@@ -17,61 +24,61 @@ function MediaKeyboardBackground(arg0) {
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.XONG6A);
-  const items = [style, closure_13().background];
+  items = [style, closure_13().background];
   obj.style = items;
   return React7(View, obj);
 }
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1621);
+const MediaKeyboardConstants = fn(1623);
 ({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const MetaQuestUtils = fn(1622);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const MetaQuestUtils = fn(1624);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1375);
-const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5014);
+const PlatformUtils = fn(1377);
+let closure_12 = PlatformUtils.isIOS();
+const createStyles = fn(5141);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
-const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
-const __initData2 = { code: "function MediaKeyboardBottomSheetTsx2(isOpen,wasOpen){const{IS_IOS,runOnJS,handleSheetOpenChange}=this.__closure;if(IS_IOS&&isOpen!==wasOpen&&(wasOpen!=null||isOpen)){runOnJS(handleSheetOpenChange)(isOpen);}}" };
-const __initData3 = { code: "function MediaKeyboardBottomSheetTsx3(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
-const __initData4 = { code: "function MediaKeyboardBottomSheetTsx4(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
-let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
+let closure_15 = { code: "(function MediaKeyboardBottomSheetTsx1(){let[animatedIndex]=this.__closure;return animatedIndex.get()>=0;})" };
+let closure_16 = { code: "(function MediaKeyboardBottomSheetTsx2(isOpen,wasOpen){let[IS_IOS,scheduleOnRN,handleSheetOpenChange]=this.__closure;if(IS_IOS&&isOpen!==wasOpen&&(wasOpen!=null||isOpen)){scheduleOnRN(handleSheetOpenChange,isOpen);}})" };
+let closure_17 = { code: "(function MediaKeyboardBottomSheetTsx3(){let[animatedIndex]=this.__closure;return Math.max(animatedIndex.get(),0)>0;})" };
+let closure_18 = { code: "(function MediaKeyboardBottomSheetTsx4(result,previous){let[scheduleOnRN,setAccessibilityViewIsModal]=this.__closure;if(result===previous)return;scheduleOnRN(setAccessibilityViewIsModal,result);})" };
+const obj5 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
 
-export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
-  animatedIndex = animatedIndex.animatedIndex;
-  const bottomSheetRef = animatedIndex.bottomSheetRef;
-  const onClose = animatedIndex.onClose;
-  _slicedToArray = animatedIndex.onAccessibilityFocusRestore;
-  handleHeight = undefined;
+export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
+  ({ animatedIndex, bottomSheetRef } = onClose);
+  _require = bottomSheetRef;
+  onClose = onClose.onClose;
+  importDefault = onClose;
+  dependencyMap = onClose.onAccessibilityFocusRestore;
+  let isScreenReaderEnabled;
   let ref;
-  let ref2;
-  let callback3;
-  ({ accessoriesComponent, animatedPosition, children, handleComponent, transitionState, animationConfigs, overlayComponent } = animatedIndex);
-  const tmp4 = bottomSheetRef(onClose[11])({ forceMaxHeight: false });
-  const tmp6 = transitionState === animatedIndex(onClose[12]).TransitionStates.YEETED;
-  noop = tmp6;
+  handleHeight = undefined;
+  ({ accessoriesComponent, animatedPosition, children, handleComponent, transitionState, animationConfigs, overlayComponent } = onClose);
+  const tmp4 = useCustomKeyboardBottomSheetConfigDefault({ forceMaxHeight: false });
+  const tmp6 = transitionState === require("native").TransitionStates.YEETED;
+  _slicedToArray = tmp6;
   let tmp = closure_13();
-  const callback = noop.useCallback((arg0) => {
+  const callback = isScreenReaderEnabled.useCallback((arg0) => {
     const merged = Object.assign(arg0);
-    return ref2(MediaKeyboardBackground, {});
+    return closure_1_9(MediaKeyboardBackground, {});
   }, []);
-  const items = [tmp6, onClose];
-  const callback1 = noop.useCallback((arg0) => {
+  items = [tmp6, onClose];
+  const callback1 = isScreenReaderEnabled.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.ViewComponent = bottomSheetRef(onClose[15]);
+    obj.ViewComponent = _undefined2(_undefined3[15]).View;
     obj.pressBehavior = "collapse";
-    return ref2(animatedIndex(onClose[14]).BottomSheetBackdrop, obj);
+    return closure_1_9(_undefined(_undefined3[14]).BottomSheetBackdrop, obj);
   }, []);
-  const callback2 = noop.useCallback((arg0, arg1) => {
-    if (closure_4) {
+  const callback2 = isScreenReaderEnabled.useCallback((arg0, arg1) => {
+    if (closure_3) {
       if (-1 !== arg1) {
-        if (onClose != null) {
+        if (c1 != null) {
           tmp9();
         }
       }
@@ -86,19 +93,19 @@ export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
       AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj3);
     }
   }, items);
-  const tmp7 = bottomSheetRef(onClose[13])();
-  const isScreenReaderEnabled = animatedIndex(onClose[19]).useIsScreenReaderEnabled();
+  const tmp7 = useColorThemeBackgroundDefault();
+  isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   let tmp12 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     tmp12 = tmp6;
   }
-  const tmp13 = _slicedToArray(noop.useState(false), 2);
-  handleHeight = tmp14;
-  obj.useRef(null);
-  ref = obj.useRef(false);
-  ref2 = obj.useRef(null);
+  let obj2 = require("useIsScreenReaderEnabled");
+  [tmp14, tmp15] = isScreenReaderEnabled.useState(false);
+  ref = obj.useRef(null);
+  handleHeight = obj.useRef(false);
+  isScreenReaderEnabled.useRef(null);
   const items1 = [isScreenReaderEnabled];
-  callback3 = obj.useCallback((arg0) => {
+  const callback3 = obj.useCallback((arg0) => {
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref2.current);
@@ -113,135 +120,154 @@ export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
         const _setTimeout = setTimeout;
         ref2.current = setTimeout(() => {
           ref2.current = null;
-          closure_1_8.current = true;
-          const result = animatedIndex(onClose[20]).setAccessibilityFocus({ ref });
+          closure_1_6.current = true;
+          const result = c0(c2[20]).setAccessibilityFocus({ ref });
         }, 100);
       }
     } else {
       ref.current = false;
     }
   }, items1);
-  let obj2 = animatedIndex(onClose[19]);
-  class T {
+  const tmp13 = _slicedToArray(isScreenReaderEnabled.useState(false), 2);
+  const items2 = [closure_15, animatedIndex];
+  _require = undefined;
+  [tmp18, tmp19] = items2;
+  class MediaKeyboardBottomSheetTsx1 {
     constructor() {
-      return animatedIndex.get() >= 0;
+      return closure_0.get() >= 0;
     }
   }
-  T.__closure = { animatedIndex };
-  T.__workletHash = 14174017487042;
-  T.__initData = __initData;
-  class D {
+  const items3 = [tmp19];
+  MediaKeyboardBottomSheetTsx1.__closure = items3;
+  MediaKeyboardBottomSheetTsx1.__workletHash = 5695849548059;
+  MediaKeyboardBottomSheetTsx1.__initData = tmp18;
+  const items4 = [closure_16, closure_12, require("module_1705").scheduleOnRN, callback3];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp20, tmp21, tmp22, tmp23] = items4;
+  class MediaKeyboardBottomSheetTsx2 {
     constructor(arg0, arg1) {
-      tmp = closure_12;
-      if (closure_12) {
-        tmp = animatedIndex !== arg1;
+      tmp = closure_0;
+      if (closure_0) {
+        tmp = onClose !== arg1;
       }
       if (tmp) {
         tmp2 = null;
-        tmp3 = null != arg1 || animatedIndex;
+        tmp3 = null != arg1 || onClose;
         tmp = tmp3;
       }
       if (tmp) {
-        tmp4 = closure_0;
+        tmp4 = closure_1;
         tmp5 = closure_2;
-        obj = closure_0(closure_2[21]);
-        tmp6 = closure_10;
-        tmp7 = obj.runOnJS(closure_10)(animatedIndex);
+        tmp6 = closure_1(closure_2, onClose);
       }
       return;
     }
   }
-  const tmp5Result = animatedIndex(onClose[21]);
-  D.__closure = { IS_IOS, runOnJS: animatedIndex(onClose[21]).runOnJS, handleSheetOpenChange: callback3 };
-  D.__workletHash = 12464478404147;
-  D.__initData = __initData2;
-  const animatedReaction = tmp5Result.useAnimatedReaction(T, D);
-  let obj3 = { IS_IOS, runOnJS: animatedIndex(onClose[21]).runOnJS, handleSheetOpenChange: callback3 };
-  class H {
+  const items5 = [tmp21, tmp22, tmp23];
+  MediaKeyboardBottomSheetTsx2.__closure = items5;
+  MediaKeyboardBottomSheetTsx2.__workletHash = 6228277612359;
+  MediaKeyboardBottomSheetTsx2.__initData = tmp20;
+  const animatedReaction = require("module_1652").useAnimatedReaction(MediaKeyboardBottomSheetTsx1, MediaKeyboardBottomSheetTsx2);
+  const tmp5Result = require("module_1652");
+  const items6 = [closure_17, animatedIndex];
+  _require = undefined;
+  [tmp25, tmp26] = items6;
+  class MediaKeyboardBottomSheetTsx3 {
     constructor() {
-      return Math.max(animatedIndex.get(), 0) > 0;
+      return Math.max(closure_0.get(), 0) > 0;
     }
   }
-  H.__closure = { animatedIndex };
-  H.__workletHash = 12101028946794;
-  H.__initData = __initData3;
-  const fn = function w(arg0, arg1) {
-    if (arg0 !== arg1) {
-      ReanimatedRexport.runOnJS(closure_6)(arg0);
+  const items7 = [tmp26];
+  MediaKeyboardBottomSheetTsx3.__closure = items7;
+  MediaKeyboardBottomSheetTsx3.__workletHash = 4645791951827;
+  MediaKeyboardBottomSheetTsx3.__initData = tmp25;
+  const items8 = [closure_18, require("module_1705").scheduleOnRN, tmp15];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp27, tmp28, tmp29] = items8;
+  class MediaKeyboardBottomSheetTsx4 {
+    constructor(arg0, arg1) {
+      if (onClose !== arg1) {
+        tmp = closure_0;
+        tmp2 = closure_1;
+        tmp3 = closure_0(closure_1, onClose);
+      }
+      return;
     }
-  };
-  const tmp5Result2 = animatedIndex(onClose[21]);
-  fn.__closure = { runOnJS: animatedIndex(onClose[21]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
-  fn.__workletHash = 4587285719468;
-  fn.__initData = __initData4;
-  const animatedReaction1 = tmp5Result2.useAnimatedReaction(H, fn);
-  bottomSheetRef(onClose[22])(() => () => {
+  }
+  const items9 = [tmp28, tmp29];
+  MediaKeyboardBottomSheetTsx4.__closure = items9;
+  MediaKeyboardBottomSheetTsx4.__workletHash = 10381616509048;
+  MediaKeyboardBottomSheetTsx4.__initData = tmp27;
+  const animatedReaction1 = require("module_1652").useAnimatedReaction(MediaKeyboardBottomSheetTsx3, MediaKeyboardBottomSheetTsx4);
+  useMountEffectDefault(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
     }
-    if (onClose != null) {
+    if (_undefined2 != null) {
       tmp4();
     }
   });
-  const items2 = [bottomSheetRef, tmp6, onClose];
+  const items10 = [bottomSheetRef, tmp6, onClose];
   const layoutEffect = obj.useLayoutEffect(() => {
-    if (closure_4) {
-      if (null != bottomSheetRef.current) {
-        const current = bottomSheetRef.current;
+    if (closure_3) {
+      if (null != _undefined.current) {
+        const current = _undefined.current;
         current.forceClose();
         const _setTimeout = setTimeout;
-        const timeout = setTimeout(() => {
+        _undefined = setTimeout(() => {
           let tmp;
-          if (onClose != null) {
-            tmp = onClose();
+          if (_undefined2 != null) {
+            tmp = _undefined2();
           }
           return tmp;
         }, 500);
         return () => clearTimeout(closure_0);
-      } else if (onClose != null) {
+      } else if (c1 != null) {
         tmp2();
       }
     }
-  }, items2);
-  const obj4 = { runOnJS: animatedIndex(onClose[21]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
-  ({ left, right } = bottomSheetRef(onClose[23])());
-  const obj5 = { gradient: tmp7, children: null };
-  const obj6 = { style: { marginLeft: left, marginRight: right }, BodyComponent: null, ref: null, animationConfigs: null, animatedIndex: null, animatedPosition: null, enableContentPanningGesture: null, enableHandlePanningGesture: null, handleComponent: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, onAnimate: null, handleHeight: null, onClose: null };
-  const tmp21 = bottomSheetRef(onClose[23])();
-  const tmp22 = callback3;
-  obj6.BodyComponent = bottomSheetRef(onClose[15]);
-  obj6.ref = bottomSheetRef;
-  obj6.animationConfigs = animationConfigs;
-  obj6.animatedIndex = animatedIndex;
-  obj6.animatedPosition = animatedPosition;
-  let tmp25 = !tmp12;
+  }, items10);
+  const tmp5Result2 = require("module_1652");
+  ({ left, right } = useSafeAreaInsetsDefault());
+  let obj3 = { gradient: tmp7, children: null };
+  const obj4 = { style: { marginLeft: left, marginRight: right }, BodyComponent: null, ref: null, animationConfigs: null, animatedIndex: null, animatedPosition: null, enableContentPanningGesture: null, enableHandlePanningGesture: null, handleComponent: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, onAnimate: null, handleHeight: null, onClose: null };
+  const tmp33 = useSafeAreaInsetsDefault();
+  obj4.BodyComponent = _modDef1652.View;
+  obj4.ref = bottomSheetRef;
+  obj4.animationConfigs = animationConfigs;
+  obj4.animatedIndex = animatedIndex;
+  obj4.animatedPosition = animatedPosition;
+  let tmp37 = !tmp12;
   if (!tmp12) {
-    tmp25 = !closure_11;
+    tmp37 = !closure_11;
   }
-  obj6.enableContentPanningGesture = tmp25;
-  obj6.enableHandlePanningGesture = !tmp12;
-  obj6.handleComponent = handleComponent;
-  obj6.backgroundComponent = callback;
-  obj6.backgroundStyle = tmp.background;
-  obj6.backdropComponent = callback1;
-  obj6.onAnimate = callback2;
-  obj6.handleHeight = handleHeight;
-  obj6.onClose = onClose;
+  obj4.enableContentPanningGesture = tmp37;
+  obj4.enableHandlePanningGesture = !tmp12;
+  obj4.handleComponent = handleComponent;
+  obj4.backgroundComponent = callback;
+  obj4.backgroundStyle = tmp.background;
+  obj4.backdropComponent = callback1;
+  obj4.onAnimate = callback2;
+  obj4.handleHeight = handleHeight;
+  obj4.onClose = onClose;
   let merged = Object.assign(tmp4);
-  obj6.children = ref2(animatedIndex(onClose[24]).AccessibilityViewAnimated, {
+  obj4.children = closure_9(require("AccessibilityView").AccessibilityViewAnimated, {
     ref,
     nativeID: "media-keyboard-sheet",
     onAccessibilityEscape: function handleClose() {
-      if (closure_3 != null) {
+      if (c2 != null) {
         tmp();
       }
       ChatInputUtils.dismissKeyboard();
     },
-    accessibilityViewIsModal: tmp13[0],
+    accessibilityViewIsModal: tmp14,
     children
   });
-  const items3 = [ref2(bottomSheetRef(onClose[14]), obj6), accessoriesComponent(tmp4), overlayComponent];
-  obj5.children = items3;
-  return tmp22(animatedIndex(onClose[12]).ThemeContextProvider, obj5);
+  const items11 = [closure_9(BottomSheetModalDefault, obj4), accessoriesComponent(tmp4), overlayComponent];
+  obj3.children = items11;
+  return closure_10(require("native").ThemeContextProvider, obj3);
 });

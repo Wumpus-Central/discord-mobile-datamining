@@ -1,14 +1,14 @@
-// === Module 13981: MultiAccountActionCreators ===
+// === Module 14112: MultiAccountActionCreators ===
 
-// Module 13981 (MultiAccountActionCreators)
+// Module 14112 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TokenManagerAll from "TokenManager" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 13977 */;
+import MultiAccountStore from "MultiAccountStore" /* 14108 */;
 
 const require = fn;
 const Constants = fn(1072);
@@ -31,7 +31,7 @@ export function validateMultiAccountTokens() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

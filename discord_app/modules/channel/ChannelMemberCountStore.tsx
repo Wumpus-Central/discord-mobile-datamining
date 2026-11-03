@@ -1,11 +1,11 @@
-// === Module 14582: ChannelMemberCountStore ===
+// === Module 14713: ChannelMemberCountStore ===
 
-// Module 14582 (ChannelMemberCountStore)
+// Module 14713 (ChannelMemberCountStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};

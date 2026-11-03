@@ -1,6 +1,6 @@
-// === Module 2034: FunctionUtils ===
+// === Module 2163: FunctionUtils ===
 
-// Module 2034 (FunctionUtils)
+// Module 2163 (FunctionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/FunctionUtils.tsx");
@@ -28,7 +28,7 @@ export function areArraysShallowlyEqual(found, found2) {
 }
 export function cachedFunction(_computeCategories) {
   closure_0 = _computeCategories;
-  let items = null;
+  items = null;
   closure_2 = null;
   return () => {
     items = [...arguments];

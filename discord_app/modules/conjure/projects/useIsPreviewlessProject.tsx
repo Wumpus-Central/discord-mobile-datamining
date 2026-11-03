@@ -1,8 +1,8 @@
-// === Module 12131: useIsPreviewlessProject ===
+// === Module 12267: useIsPreviewlessProject ===
 
-// Module 12131 (useIsPreviewlessProject)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6845 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 12267 (useIsPreviewlessProject)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/conjure/projects/useIsPreview
 
 export default function useIsPreviewlessProject(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   return require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let isPreviewlessProjectResult = null != project;

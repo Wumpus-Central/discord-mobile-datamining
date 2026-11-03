@@ -1,7 +1,7 @@
-// === Module 11260: useChannelSafetyWarning ===
+// === Module 11397: useChannelSafetyWarning ===
 
-// Module 11260 (useChannelSafetyWarning)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10804 */;
+// Module 11397 (useChannelSafetyWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10934 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/self_mod/hooks/useChannelSafe
 export function useChannelSafetyWarning(channelId, LIKELY_ATO) {
   _require = channelId;
   dependencyMap = LIKELY_ATO;
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0), items1);
   const found = stateFromStores.filter((type) => type.type === closure_1);

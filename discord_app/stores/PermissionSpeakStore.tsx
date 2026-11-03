@@ -1,11 +1,11 @@
-// === Module 15642: PermissionSpeakStore ===
+// === Module 15785: PermissionSpeakStore ===
 
-// Module 15642 (PermissionSpeakStore)
+// Module 15785 (PermissionSpeakStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const hideSuppressWarning = "hideSuppressWarning";
@@ -26,7 +26,7 @@ prototype["isAFKChannel"] = function isAFKChannel() {
   if (null == channel) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(channel.getGuildId());
+    guild = GuildStore.getGuild(channel.getGuildId());
     return null != guild && channel.id === guild.afkChannelId;
   }
 };

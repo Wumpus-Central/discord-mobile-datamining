@@ -1,7 +1,7 @@
-// === Module 19055: MainViewTooltipActionSheetsDisabledExperiment ===
+// === Module 19213: MainViewTooltipActionSheetsDisabledExperiment ===
 
-// Module 19055 (MainViewTooltipActionSheetsDisabledExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 19213 (MainViewTooltipActionSheetsDisabledExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-01-mobile-action-sheet-killswitch", defaultConfig: { disabled: false }, variations: { 0: { disabled: false }, 1: { disabled: true } } });

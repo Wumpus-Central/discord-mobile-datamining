@@ -1,51 +1,63 @@
-// === Module 12023: StageChannelAnimationUtils ===
+// === Module 12160: StageChannelAnimationUtils ===
 
-// Module 12023 (StageChannelAnimationUtils)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
+// Module 12160 (StageChannelAnimationUtils)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import StageChannelHeightHooks from "StageChannelHeightHooks" /* 11992 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11994 */;
 import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
 let obj = { duration: 250, easing: null };
-const Easing = ReanimatedRexport.Easing;
+const Easing = _mod1652.Easing;
 obj.easing = Easing.bezier(0.66, 0, 0.2, 1);
-let closure_4 = { code: "function StageChannelAnimationUtilsTsx1(){const{isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding}=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;}" };
-const __initData = { code: "function StageChannelAnimationUtilsTsx2(){const{withTiming,paddingTop,TIMING_CONFIG}=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};}" };
+let closure_4 = { code: "(function StageChannelAnimationUtilsTsx1(){let[isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding]=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;})" };
+let closure_5 = { code: "(function StageChannelAnimationUtilsTsx2(){let[withTiming,paddingTop,TIMING_CONFIG]=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};})" };
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelAnimationUtils.tsx");
 
-export function useStageActionBarAnimation(channelId, controlPadding) {
-  _require = controlPadding;
-  const tmp = require("useIsInvitedToSpeak")();
-  importDefault = tmp;
-  getActionBarHeight = require("StageChannelHeightHooks").useGetActionBarHeight(channelId);
-  const top = require("useSafeAreaInsets")().top;
-  obj = require("StageChannelHeightHooks");
-  class A {
+export function useStageActionBarAnimation(channelId, arg1) {
+  obj = StageChannelHeightHooks;
+  const getActionBarHeight = obj.useGetActionBarHeight(channelId);
+  const tmp2 = useIsInvitedToSpeakDefault();
+  items = [closure_4, tmp2, getActionBarHeight, 10, useSafeAreaInsetsDefault().top, arg1];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items;
+  class StageChannelAnimationUtilsTsx1 {
     constructor() {
-      if (closure_1) {
-        tmp2 = closure_2;
-        num = 10;
-        tmp3 = top;
-        sum = closure_2 + 10 + top;
+      if (closure_0) {
+        tmp2 = closure_1;
+        tmp3 = closure_2;
+        tmp4 = closure_3;
+        sum = closure_1 + closure_2 + closure_3;
       } else {
-        sum = closure_0;
+        sum = closure_4;
       }
       return sum;
     }
   }
-  A.__closure = { isInvited: tmp, actionBarHeight: getActionBarHeight, ACTION_BAR_SAFE_AREA_PADDING: 10, safeAreaTop: top, controlPadding };
-  A.__workletHash = 2568370943746;
-  A.__initData = derivedValue;
-  derivedValue = require("ReanimatedRexport").useDerivedValue(A);
-  const obj2 = require("ReanimatedRexport");
-  const fn = function c() {
-    obj = { paddingTop: timing.withTiming(derivedValue.get(), obj) };
-    return obj;
-  };
-  const obj3 = require("ReanimatedRexport");
-  fn.__closure = { withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top };
-  fn.__workletHash = 16816216105718;
-  fn.__initData = __initData;
-  return obj3.useAnimatedStyle(fn);
+  const items1 = [tmp6, tmp7, tmp8, tmp9, tmp10];
+  StageChannelAnimationUtilsTsx1.__closure = items1;
+  StageChannelAnimationUtilsTsx1.__workletHash = 554637474683;
+  StageChannelAnimationUtilsTsx1.__initData = tmp5;
+  const derivedValue = _mod1652.useDerivedValue(StageChannelAnimationUtilsTsx1);
+  const items2 = [closure_5, timing_timing.withTiming, derivedValue, obj];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp12, tmp13, tmp14, tmp15] = items2;
+  class StageChannelAnimationUtilsTsx2 {
+    constructor() {
+      obj = { paddingTop: closure_0(closure_1.get(), closure_2) };
+      return obj;
+    }
+  }
+  const items3 = [tmp13, tmp14, tmp15];
+  StageChannelAnimationUtilsTsx2.__closure = items3;
+  StageChannelAnimationUtilsTsx2.__workletHash = 6071132596271;
+  StageChannelAnimationUtilsTsx2.__initData = tmp12;
+  return _mod1652.useAnimatedStyle(StageChannelAnimationUtilsTsx2);
 }

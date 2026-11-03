@@ -1,7 +1,7 @@
-// === Module 11711: usePipDimensions ===
+// === Module 11848: usePipDimensions ===
 
-// Module 11711 (usePipDimensions)
-import DeviceOrientation from "DeviceOrientation" /* 8903 */;
+// Module 11848 (usePipDimensions)
+import DeviceOrientation from "DeviceOrientation" /* 9027 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default function usePipDimensions(channelId) {
   const size = isViewingActivity(width[2])();
   width = size.width;
   let height = size.height;
-  const items = [height, width, forcedOrientation, isViewingActivity];
+  items = [height, width, forcedOrientation, isViewingActivity];
   return height.useMemo(() => {
     let tmp3 = width > height;
     let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;

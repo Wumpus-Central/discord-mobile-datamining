@@ -1,12 +1,12 @@
-// === Module 5207: ChatInputUtils ===
+// === Module 5330: ChatInputUtils ===
 
-// Module 5207 (ChatInputUtils)
-import KeyboardUIStore from "KeyboardUIStore" /* 1495 */;
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5208 */;
-import useKeyboardType from "useKeyboardType" /* 5209 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5210 */;
+// Module 5330 (ChatInputUtils)
+import KeyboardUIStore from "KeyboardUIStore" /* 1497 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5331 */;
+import useKeyboardType from "useKeyboardType" /* 5332 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5333 */;
 import size from "module_2" /* 2 */;
 
 function getHighestIndexForScreenIndexMap(map1) {
@@ -36,7 +36,7 @@ function getHighestIndexForScreenIndexMap(map1) {
               });
               if (0 !== found.length) {
                 const _Math = Math;
-                const items = [];
+                items = [];
                 HermesBuiltin.arraySpread(found, 0);
                 const _Math2 = Math;
                 str = HermesBuiltin.apply(items, Math);
@@ -160,7 +160,7 @@ export function getHighestActiveScreenIndex() {
       });
       if (0 !== found.length) {
         const _Math = Math;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found, 0);
         const _Math2 = Math;
         return HermesBuiltin.apply(items, Math);

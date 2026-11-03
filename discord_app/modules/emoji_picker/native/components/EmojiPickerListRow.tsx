@@ -1,17 +1,17 @@
-// === Module 10025: EmojiPickerListRow ===
+// === Module 10156: EmojiPickerListRow ===
 
-// Module 10025 (EmojiPickerListRow)
+// Module 10156 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1187 */;
-import PlatformUtils2 from "PlatformUtils" /* 1375 */;
-import shared from "shared" /* 5021 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Pressables from "Pressables" /* 6980 */;
-import _modDef7302 from "module_7302" /* 7302 */;
-import LockIcon from "LockIcon" /* 8667 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 10026 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10027 */;
+import PlatformUtils2 from "PlatformUtils" /* 1377 */;
+import shared from "shared" /* 5148 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef7422 from "module_7422" /* 7422 */;
+import LockIcon from "LockIcon" /* 8791 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 10157 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10158 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -92,14 +92,14 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9942);
+const EmojiPickerListConstants = fn(10073);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 28;
 if (PlatformUtils.isAndroid()) {
   num = 26;
@@ -119,7 +119,7 @@ let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
   emojis = emojis.emojis;
   ({ emojisDisabled, category: importDefault, rowSize, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emojis);
   ({ containerWidth, row, isSectionNitroLocked } = emojis);
-  const items = [];
+  items = [];
   const result = row * rowSize;
   let sum = result;
   if (result < result + rowSize) {
@@ -157,8 +157,8 @@ let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
         dependencyMap(found, importDefault);
       }
     },
-    onLongPressEmoji(callback) {
-      const nativeEvent = callback;
+    onLongPressEmoji(arg0) {
+      const nativeEvent = arg0;
       const found = emojis.find((name) => name.name === nativeEvent.nativeEvent.emojiName);
       if (null != found) {
         closure_1_3(found);
@@ -171,7 +171,7 @@ let closure_13 = noop.memo(function EmojiPickerListRow(arg0) {
   ({ emojisDisabled, rowSize } = arg0);
   ({ emojis, category, row, onPressEmoji, onLongPressEmoji, animateEmoji, isSectionNitroLocked } = arg0);
   const tmp = closure_9();
-  const items = [];
+  items = [];
   const result = row * rowSize;
   let sum = result;
   if (result < result + rowSize) {

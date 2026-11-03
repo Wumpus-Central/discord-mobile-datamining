@@ -1,14 +1,14 @@
-// === Module 14621: Checkbox ===
+// === Module 14752: Checkbox ===
 
-// Module 14621 (Checkbox)
+// Module 14752 (Checkbox)
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import FormCheckbox from "FormCheckbox" /* 6989 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import FormCheckbox from "FormCheckbox" /* 7115 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ Pressable: c2, View: c3 } = get_ActivityIndicator);
@@ -39,12 +39,12 @@ export function Checkbox(onToggle) {
   obj2.onPress = function onPress() {
     return onToggle(!checked);
   };
-  const items = [React4(FormCheckbox.FormCheckbox, { checked }), ];
+  items = [React4(FormCheckbox.FormCheckbox, { checked }), ];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.labelContainer, children: null };
   const items1 = [label, ];
   if (required) {
-    const obj5 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
+    const obj5 = { variant: "text-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = util.intl;
     obj5["aria-label"] = intl2.string(util.t.EkokLy);
     obj5.children = [" ", "*"];

@@ -1,15 +1,15 @@
-// === Module 9486: SocialLayerStorefrontEligibilityHooks ===
+// === Module 9614: SocialLayerStorefrontEligibilityHooks ===
 
-// Module 9486 (SocialLayerStorefrontEligibilityHooks)
+// Module 9614 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8912 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9036 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9487 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7406 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7530 */;
 
 const require = globalThis.__r;
 
@@ -19,10 +19,10 @@ const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/Socia
 
 export function useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds(userIds) {
   userIds = userIds.userIds;
-  let items = [ContentInventoryOutboxStore, SocialLayerStorefrontStore];
+  items = [ContentInventoryOutboxStore, SocialLayerStorefrontStore];
   const items1 = [userIds];
   return userIds(504).useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let userOutbox = ContentInventoryOutboxStore.getUserOutbox(tmp3);
       let entries;
@@ -51,10 +51,10 @@ export function useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds(u
 }
 export function useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(memo) {
   _require = memo;
-  let items = [UserProfileStore, SocialLayerStorefrontStore];
+  items = [UserProfileStore, SocialLayerStorefrontStore];
   const items1 = [memo];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let mutualGuilds = UserProfileStore.getMutualGuilds(tmp3);
       if (null != mutualGuilds) {
@@ -77,10 +77,10 @@ export function useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(mem
 export function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
   userIds = userIds.userIds;
   let stateFromStoresArray;
-  const items = [PresenceStore, SocialLayerStorefrontStore];
+  items = [PresenceStore, SocialLayerStorefrontStore];
   const items1 = [userIds];
   stateFromStoresArray = userIds(stateFromStoresArray[7]).useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let activities = PresenceStore.getActivities(tmp3);
       for (const item10017 of activities) {
@@ -101,7 +101,7 @@ export function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
   const items2 = [stateFromStoresArray, slayerStorefrontDevApplicationIdOverride];
   return slayerStorefrontDevApplicationIdOverride.useMemo(() => {
     if (null != slayerStorefrontDevApplicationIdOverride) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = tmp;
       let tmp2 = items;
     } else {
@@ -113,10 +113,10 @@ export function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
 export function useAreUsersPlayingStorefrontEnabledGames(userIds) {
   userIds = userIds.userIds;
   let stateFromStoresArray;
-  let items = [PresenceStore, SocialLayerStorefrontStore];
+  items = [PresenceStore, SocialLayerStorefrontStore];
   const items1 = [userIds];
   stateFromStoresArray = userIds(stateFromStoresArray[7]).useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let activities = PresenceStore.getActivities(tmp3);
       for (const item10017 of activities) {
@@ -137,7 +137,7 @@ export function useAreUsersPlayingStorefrontEnabledGames(userIds) {
   const items2 = [stateFromStoresArray, slayerStorefrontDevApplicationIdOverride];
   return slayerStorefrontDevApplicationIdOverride.useMemo(() => {
     if (null != slayerStorefrontDevApplicationIdOverride) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = tmp;
       let tmp2 = items;
     } else {
@@ -147,9 +147,9 @@ export function useAreUsersPlayingStorefrontEnabledGames(userIds) {
   }, items2).length > 0;
 }
 export function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
-  let items = [RunningGameStore, SocialLayerStorefrontStore];
+  items = [RunningGameStore, SocialLayerStorefrontStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     gamesSeen = gamesSeen.getGamesSeen(false, false);
     const iter = gamesSeen[Symbol.iterator]();
     const nextResult = iter.next();
@@ -166,9 +166,9 @@ export function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
   });
 }
 export function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() {
-  const items = [RunningGameStore, SocialLayerStorefrontStore];
+  items = [RunningGameStore, SocialLayerStorefrontStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     const runningGames = RunningGameStore.getRunningGames();
     const iter = runningGames[Symbol.iterator]();
     const nextResult = iter.next();
@@ -188,9 +188,9 @@ export function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() 
   }, []);
 }
 export function useIsCurrentUserPlayingSocialLayerStorefrontGames() {
-  let items = [RunningGameStore, SocialLayerStorefrontStore];
+  items = [RunningGameStore, SocialLayerStorefrontStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     const runningGames = RunningGameStore.getRunningGames();
     const iter = runningGames[Symbol.iterator]();
     const nextResult = iter.next();
@@ -210,13 +210,13 @@ export function useIsCurrentUserPlayingSocialLayerStorefrontGames() {
   }, []).length > 0;
 }
 export function useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds() {
-  let items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => guildIds.getGuildIds());
   const obj = stateFromStores(504);
   const items1 = [SocialLayerStorefrontStore];
   const items2 = [stateFromStores];
   return stateFromStores(504).useStateFromStoresArray(items1, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(tmp3);
       if (null != applicationIdFromGuildId) {

@@ -1,21 +1,21 @@
-// === Module 15315: TieredTenureBadgePerkCard ===
+// === Module 15456: TieredTenureBadgePerkCard ===
 
-// Module 15315 (TieredTenureBadgePerkCard)
+// Module 15456 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import BadgeId from "BadgeId" /* 8755 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11418 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11463 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import BadgeId from "BadgeId" /* 8879 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11556 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11600 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
@@ -40,7 +40,7 @@ export function TieredTenureBadgePerkCard() {
   const timeUntilNextBadge = isBadgeDirectoryUpdatesEnabled(stateFromStores[10]).useTimeUntilNextBadge();
   const tmp9 = closure_9();
   const tmpResult7 = isBadgeDirectoryUpdatesEnabled(stateFromStores[10]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = isBadgeDirectoryUpdatesEnabled(stateFromStores[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmpResult8 = isBadgeDirectoryUpdatesEnabled(stateFromStores[11]);
   let id;
@@ -115,7 +115,7 @@ export function TieredTenureBadgePerkCard() {
     const items3 = [closure_8(View, obj7), ];
     let tmp33Result = null != formatResult;
     if (tmp33Result) {
-      const obj10 = { variant: "heading-sm/normal", color: "text-muted", children: formatResult };
+      const obj10 = { variant: "heading-sm/medium", color: "text-muted", children: formatResult };
       tmp33Result = closure_7(tmp(tmp2[22]).Text, obj10);
     }
     const obj11 = { children: null };

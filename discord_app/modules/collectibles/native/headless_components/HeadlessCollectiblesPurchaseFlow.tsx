@@ -1,16 +1,16 @@
-// === Module 15063: HeadlessCollectiblesPurchaseFlow ===
+// === Module 15204: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 15063 (HeadlessCollectiblesPurchaseFlow)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2059 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8747 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9537 */;
-import ACOMExperiments from "ACOMExperiments" /* 9909 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10676 */;
-import NativePaymentContext from "NativePaymentContext" /* 10689 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 14429 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 15064 */;
+// Module 15204 (HeadlessCollectiblesPurchaseFlow)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2188 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9665 */;
+import ACOMExperiments from "ACOMExperiments" /* 10040 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10806 */;
+import NativePaymentContext from "NativePaymentContext" /* 10819 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 14560 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 15205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     checkoutAnalyticsFields: { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id },
     children: null
   };
-  const items = [product.skuId];
+  items = [product.skuId];
   obj4.skuIds = items;
   obj2 = PlatformUtils;
   const obj5 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id };

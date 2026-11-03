@@ -1,6 +1,6 @@
-// === Module 4934: GuildLeaderboardTypes ===
+// === Module 5061: GuildLeaderboardTypes ===
 
-// Module 4934 (GuildLeaderboardTypes)
+// Module 5061 (GuildLeaderboardTypes)
 import size from "module_2" /* 2 */;
 
 const GamingLeaderboardStat = { GAMING_LEADERBOARD_STAT_UNSPECIFIED: 0, [0]: "GAMING_LEADERBOARD_STAT_UNSPECIFIED", GAMING_LEADERBOARD_STAT_HOURS_PLAYED: 1, [1]: "GAMING_LEADERBOARD_STAT_HOURS_PLAYED", GAMING_LEADERBOARD_STAT_DAYS_PLAYED: 2, [2]: "GAMING_LEADERBOARD_STAT_DAYS_PLAYED", GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED: 3, [3]: "GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED" };
@@ -11,7 +11,7 @@ export { GamingLeaderboardStat };
 export const GuildSpaceLeaderboardEvent = obj2;
 export function getGuildSpaceLeaderboardUserIds(leaderboard) {
   if (null == leaderboard) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [, ];
     ({ user_id: arr[0], secondary_user_id: arr[1] } = leaderboard);

@@ -1,10 +1,10 @@
-// === Module 18362: getGuildsBarGuildMenuItems ===
+// === Module 18507: getGuildsBarGuildMenuItems ===
 
-// Module 18362 (getGuildsBarGuildMenuItems)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15734 */;
+// Module 18507 (getGuildsBarGuildMenuItems)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15877 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -57,10 +57,10 @@ export default function getGuildsBarGuildMenuItems(arg0) {
             const obj = { value, done: true };
             return obj;
           } else {
-            const items = [closure_128_0];
+            items = [closure_128_0];
             value.default(items, constants.GUILD_LIST);
             paths = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           paths = tmp;
@@ -69,7 +69,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       }
     })();
   };
-  let items = [obj, , ];
+  items = [obj, , ];
   let obj2 = { IconComponent: require("BellIcon").BellIcon, label: null, action: null };
   const intl2 = require("util").intl;
   obj2.label = intl2.string(require("util").t.HcoRu0);
@@ -81,7 +81,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
   const intl3 = require("util").intl;
   obj3.label = intl3.string(require("util").t.PdRCRg);
   obj3.action = function action() {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     if (null != guild) {
       openGuildActionSheetDefault(guild);
     }

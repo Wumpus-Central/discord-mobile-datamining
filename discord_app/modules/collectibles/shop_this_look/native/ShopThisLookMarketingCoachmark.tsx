@@ -1,9 +1,9 @@
-// === Module 14832: ShopThisLookMarketingCoachmark ===
+// === Module 14963: ShopThisLookMarketingCoachmark ===
 
-// Module 14832 (ShopThisLookMarketingCoachmark)
+// Module 14963 (ShopThisLookMarketingCoachmark)
 import util from "util" /* 1113 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14826 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 14833 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14957 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 14964 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,10 +11,10 @@ function ShopThisLookMarketingCoachmarkImage() {
   return <View style={closure_7().imageContainer}>{jsx(BumpingFistsSpotIllustration.BumpingFistsSpotIllustration, { width: 100, height: 56, resizeMode: "contain" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");
@@ -24,7 +24,7 @@ export default function ShopThisLookMarketingCoachmark(visible) {
   const onDismiss = visible.onDismiss;
   const onPress = visible.onPress;
   closure_3 = onPress.useRef(false);
-  const items = [onDismiss, onPress];
+  items = [onDismiss, onPress];
   const onButtonPress = onPress.useCallback(() => {
     closure_3.current = true;
     const result = ShopThisLookAnalyticsUtils.trackShopThisLookMenuAction(ShopThisLookAnalyticsUtils.ShopThisLookMenuAction.COACHMARK_CTA_CLICKED, UserProfileThemeTypes.ACTION_SHEET);

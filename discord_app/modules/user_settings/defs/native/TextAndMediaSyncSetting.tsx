@@ -1,21 +1,21 @@
-// === Module 17466: TextAndMediaSyncSetting ===
+// === Module 17609: TextAndMediaSyncSetting ===
 
-// Module 17466 (TextAndMediaSyncSetting)
+// Module 17609 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5932 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6052 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8432).MobileUserSettings.CHAT,
+  parent: fn(8556).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
-    const items = [SelectivelySyncedUserSettingsStore];
+    items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
   },
   onValueChange: UserSettingsActionCreatorsDefault.setShouldSyncTextSettings

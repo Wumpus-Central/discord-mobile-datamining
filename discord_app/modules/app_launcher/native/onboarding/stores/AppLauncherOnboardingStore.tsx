@@ -1,12 +1,12 @@
-// === Module 12373: AppLauncherOnboardingStore ===
+// === Module 12509: AppLauncherOnboardingStore ===
 
-// Module 12373 (AppLauncherOnboardingStore)
+// Module 12509 (AppLauncherOnboardingStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 12371 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import useCanShowAppLauncherOnboarding from "useCanShowAppLauncherOnboarding" /* 12507 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Store = initializeDefault.Store;
@@ -36,7 +36,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefa
       const _Date = Date;
       obj.timeMs = Date.now();
       obj.applicationId = command.applicationId;
-      const guild = context.guild;
+      guild = context.guild;
       let id;
       if (guild != null) {
         id = guild.id;

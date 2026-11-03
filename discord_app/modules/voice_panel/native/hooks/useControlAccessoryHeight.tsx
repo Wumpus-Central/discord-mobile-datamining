@@ -1,32 +1,35 @@
-// === Module 19334: useControlAccessoryHeight ===
+// === Module 19492: useControlAccessoryHeight ===
 
-// Module 19334 (useControlAccessoryHeight)
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19305 */;
+// Module 19492 (useControlAccessoryHeight)
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19463 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
-let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };
+let closure_4 = { code: "(function useControlAccessoryHeightTsx1(){let[consoleStatusHeight,floatingCTAHeight]=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
 
 export default function useControlAccessoryHeight() {
-  const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[1])).channelId;
-  const isConnectingOrConnectedToConsole = sharedValue(shouldShowFloatingCTA[2])(channelId).isConnectingOrConnectedToConsole;
-  sharedValue = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useSharedValue(0);
-  const items = [sharedValue, isConnectingOrConnectedToConsole];
+  const channelId = sharedValue1.useContext(require("VoicePanelStateContext")).channelId;
+  const isConnectingOrConnectedToConsole = require("useConsoleConnectingInfo")(channelId).isConnectingOrConnectedToConsole;
+  _require = isConnectingOrConnectedToConsole;
+  const sharedValue = require("module_1652").useSharedValue(0);
+  items = [sharedValue, isConnectingOrConnectedToConsole];
   const effect = sharedValue1.useEffect(() => {
     let num = 0;
-    if (isConnectingOrConnectedToConsole) {
+    if (c0) {
       num = VoicePanelConsoleStatus.CONSOLE_STATUS_HEIGHT;
     }
-    const result = sharedValue.set(num);
+    const result = _undefined2.set(num);
   }, items);
-  const obj = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]);
-  shouldShowFloatingCTA = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[5]).useShouldShowFloatingCTA(channelId);
-  const obj2 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[5]);
-  sharedValue1 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useSharedValue(0);
-  const obj3 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]);
-  const floatingCTATotalViewHeight = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[6]).getFloatingCTATotalViewHeight();
+  const obj = require("module_1652");
+  shouldShowFloatingCTA = require("VoicePanelFloatingCTAUtils").useShouldShowFloatingCTA(channelId);
+  const obj2 = require("VoicePanelFloatingCTAUtils");
+  sharedValue1 = require("module_1652").useSharedValue(0);
+  const obj3 = require("module_1652");
+  const floatingCTATotalViewHeight = require("VoicePanelFloatingCTAContainer").getFloatingCTATotalViewHeight();
   const items1 = [sharedValue1, shouldShowFloatingCTA, floatingCTATotalViewHeight];
   const effect1 = sharedValue1.useEffect(() => {
     let num = 0;
@@ -35,13 +38,18 @@ export default function useControlAccessoryHeight() {
     }
     const result = sharedValue1.set(num);
   }, items1);
-  const obj4 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[6]);
-  const fn = function l() {
-    value = sharedValue.get();
-    return value + sharedValue1.get();
-  };
-  fn.__closure = { consoleStatusHeight: sharedValue, floatingCTAHeight: sharedValue1 };
-  fn.__workletHash = 7974849446653;
-  fn.__initData = floatingCTATotalViewHeight;
-  return isConnectingOrConnectedToConsole(shouldShowFloatingCTA[3]).useDerivedValue(fn);
+  const obj4 = require("VoicePanelFloatingCTAContainer");
+  const items2 = [floatingCTATotalViewHeight, sharedValue, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp7, tmp8, tmp9] = items2;
+  function useControlAccessoryHeightTsx1() {
+    value = _undefined.get();
+    return value + _undefined2.get();
+  }
+  const items3 = [tmp8, tmp9];
+  useControlAccessoryHeightTsx1.__closure = items3;
+  useControlAccessoryHeightTsx1.__workletHash = 1979848822852;
+  useControlAccessoryHeightTsx1.__initData = tmp7;
+  return require("module_1652").useDerivedValue(useControlAccessoryHeightTsx1);
 };

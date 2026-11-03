@@ -1,9 +1,9 @@
-// === Module 19949: RoleTierEditStore ===
+// === Module 20099: RoleTierEditStore ===
 
-// Module 19949 (RoleTierEditStore)
+// Module 20099 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod4929 from "module_4929" /* 4929 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17203 */;
+import _mod5056 from "module_5056" /* 5056 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -11,14 +11,14 @@ require = fn;
 function usePriceTiers(guildId) {
   _require = guildId;
   let tmp = _slicedToArray(withEqualityFn((arg0) => {
-    const items = [, , ];
+    items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, require("module_4929").shallow), 3);
+  }, require("module_5056").shallow), 3);
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5593)(() => {
+  tiers(5716)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;
@@ -77,7 +77,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7430).getPriceTiers(priceTiers);
+      await closure_2_2(7554).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
@@ -109,7 +109,7 @@ export function resetImperatively() {
   withEqualityFn.getState().reset();
 }
 export function useCurrentTierEditScene() {
-  const items = [, ];
+  items = [, ];
   ({ currentScene: arr[0], setScene: arr[1] } = withEqualityFn());
   return items;
 }
@@ -135,22 +135,22 @@ export function usePriceTiersAvailableInGuild(guildId) {
 }
 export function useGroupCoverState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }

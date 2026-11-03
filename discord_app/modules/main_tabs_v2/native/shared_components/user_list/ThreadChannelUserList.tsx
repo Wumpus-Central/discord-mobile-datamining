@@ -1,13 +1,13 @@
-// === Module 18773: ThreadChannelUserList ===
+// === Module 18931: ThreadChannelUserList ===
 
-// Module 18773 (ThreadChannelUserList)
+// Module 18931 (ThreadChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const RelationshipTypes = fn(1072).RelationshipTypes;
@@ -22,7 +22,7 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
   closure_6 = undefined;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
   const analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
-  const items = [closure_6];
+  items = [closure_6];
   const stateFromStores = channelId(onUserPress[8]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = channelId(onUserPress[8]);
   const threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);

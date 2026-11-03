@@ -1,8 +1,8 @@
-// === Module 9224: useChannelVideoLimit ===
+// === Module 9352: useChannelVideoLimit ===
 
-// Module 9224 (useChannelVideoLimit)
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+// Module 9352 (useChannelVideoLimit)
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const require = globalThis.__r;
 
@@ -13,11 +13,11 @@ let result = size.fileFinishedImporting("modules/video_calls/useChannelVideoLimi
 
 export default function useChannelVideoLimit(arg0) {
   _require = arg0;
-  const items = [SortedVoiceStateStore, GuildStore];
+  items = [SortedVoiceStateStore, GuildStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     const result = SortedVoiceStateStore.countVoiceStatesForChannel(guildId.id);
-    const guild = GuildStore.getGuild(guildId.getGuildId());
+    guild = GuildStore.getGuild(guildId.getGuildId());
     if (null == guild) {
       let obj = { reachedLimit: false, limit: -1 };
     } else if (guildId.type === ChannelTypes.GUILD_STAGE_VOICE) {
@@ -32,7 +32,7 @@ export default function useChannelVideoLimit(arg0) {
 };
 export function getChannelVideoLimit(channel) {
   const result = SortedVoiceStateStore.countVoiceStatesForChannel(channel.id);
-  const guild = GuildStore.getGuild(channel.getGuildId());
+  guild = GuildStore.getGuild(channel.getGuildId());
   if (null == guild) {
     let obj = { reachedLimit: false, limit: -1 };
   } else if (channel.type === ChannelTypes.GUILD_STAGE_VOICE) {

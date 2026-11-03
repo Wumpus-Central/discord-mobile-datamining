@@ -1,8 +1,8 @@
-// === Module 10564: useGiftOptionsSyncDebounce ===
+// === Module 10694: useGiftOptionsSyncDebounce ===
 
-// Module 10564 (useGiftOptionsSyncDebounce)
+// Module 10694 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 5612 */;
+import useInitialValueDefault from "useInitialValue" /* 5735 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function useGiftOptionsSyncDebounce(arg0) {
       continue;
     }
   }, []);
-  const items = [tmp, resolveSyncs];
+  items = [tmp, resolveSyncs];
   const effect = noop.useEffect(() => () => {
     closure_1_4.cancel();
     resolveSyncs(false);

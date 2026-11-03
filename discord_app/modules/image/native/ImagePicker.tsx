@@ -1,12 +1,12 @@
-// === Module 8221: ImagePicker ===
+// === Module 8345: ImagePicker ===
 
-// Module 8221 (ImagePicker)
+// Module 8345 (ImagePicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 8222 */;
-import launchCameraAll from "launchCamera" /* 8223 */;
-import openPickerDefault from "openPicker" /* 8225 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 8346 */;
+import launchCameraAll from "launchCamera" /* 8347 */;
+import openPickerDefault from "openPicker" /* 8349 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;

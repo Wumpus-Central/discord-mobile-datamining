@@ -1,7 +1,9 @@
-// === Module 16578: ProfileCustomizationScrollAwayTabs ===
+// === Module 16721: ProfileCustomizationScrollAwayTabs ===
 
-// Module 16578 (ProfileCustomizationScrollAwayTabs)
+// Module 16721 (ProfileCustomizationScrollAwayTabs)
 import nativeDefault from "native" /* 575 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import ProfileCustomizationHeaderContextDefault from "ProfileCustomizationHeaderContext" /* 16606 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,65 +13,72 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, overflow: "hidden" }, header: null };
 const rect = { position: "absolute", zIndex: 1, top: 0, left: 0, right: 0, paddingTop: nativeDefault.space.PX_4 };
 obj2.header = rect;
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = { code: "function ProfileCustomizationScrollAwayTabsTsx1(){const{activeIndex,mainScrollY,height,guildScrollY}=this.__closure;const guildPageVisibility=Math.min(Math.max(activeIndex.get(),0),1);const mainOffset=Math.min(Math.max(mainScrollY.get(),0),height);const guildOffset=Math.min(Math.max(guildScrollY.get(),0),height);const offset=mainOffset*(1-guildPageVisibility)+guildOffset*guildPageVisibility;return{transform:[{translateY:-offset}]};}" };
+let closure_9 = { code: "(function ProfileCustomizationScrollAwayTabsTsx1(){let[activeIndex,mainScrollY,height,guildScrollY]=this.__closure;const guildPageVisibility=Math.min(Math.max(activeIndex.get(),0),1);const mainOffset=Math.min(Math.max(mainScrollY.get(),0),height);const guildOffset=Math.min(Math.max(guildScrollY.get(),0),height);const offset=mainOffset*(1-guildPageVisibility)+guildOffset*guildPageVisibility;return{transform:[{translateY:-offset}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationScrollAwayTabs.tsx");
 
 export default function ProfileCustomizationScrollAwayTabs(state) {
   state = state.state;
-  let token;
-  let sharedValue;
   let sharedValue1;
   const tmp = closure_8();
-  const tmp2 = sharedValue(sharedValue1.useState(0), 2);
-  const height = tmp2[0];
-  importDefault = tmp2[1];
-  token = height(token[6]).useToken(require("native").colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let obj = height(token[6]);
-  sharedValue = height(token[7]).useSharedValue(0);
-  let obj2 = height(token[7]);
-  sharedValue1 = height(token[7]).useSharedValue(0);
-  const activeIndex = state.activeIndex;
+  [first, importDefault] = sharedValue1.useState(0);
+  _require = first;
+  const token = require("useToken").useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  let obj = sharedValue1;
+  let obj2 = require("useToken");
+  const sharedValue = require("module_1652").useSharedValue(0);
+  const obj3 = require("module_1652");
+  sharedValue1 = require("module_1652").useSharedValue(0);
   const memo = sharedValue1.useMemo(() => {
     let NativeResult;
     if (obj.isAndroid()) {
-      const Gesture = first(token[9]).Gesture;
+      const Gesture = height(backgroundColor[9]).Gesture;
       NativeResult = Gesture.Native();
     }
     return NativeResult;
   }, []);
   const callback = sharedValue1.useCallback((nativeEvent) => {
-    closure_1(nativeEvent.nativeEvent.layout.height);
+    _undefined(nativeEvent.nativeEvent.layout.height);
   }, []);
-  const obj3 = height(token[7]);
-  const fn = function f() {
-    const bound = Math.min(Math.max(activeIndex.get(), 0), 1);
-    const obj = { transform: null };
-    const obj2 = { translateY: null };
-    const result = Math.min(Math.max(sharedValue.get(), 0), first) * (1 - bound);
-    obj2.translateY = -result + Math.min(Math.max(sharedValue1.get(), 0), first) * bound;
-    const items = [obj2];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { activeIndex, mainScrollY: sharedValue, height, guildScrollY: sharedValue1 };
-  fn.__workletHash = 14885523841037;
-  fn.__initData = __initData;
-  let items = [height, token, sharedValue, sharedValue1, memo];
-  const animatedStyle = height(token[7]).useAnimatedStyle(fn);
-  const memo1 = sharedValue1.useMemo(() => ({ height, backgroundColor: token, mainScrollY: sharedValue, guildScrollY: sharedValue1, pagerGesture: memo }), items);
-  const obj5 = { value: memo1, children: null };
-  const obj6 = { style: tmp.container, children: null };
-  const obj7 = { style: null, onLayout: callback, children: memo(height(token[11]).Tabs, { state }) };
-  const items1 = [tmp.header, { backgroundColor: token }, animatedStyle];
-  obj7.style = items1;
-  const items2 = [memo(require("ReanimatedRexport").View, obj7), memo(height(token[12]).SegmentedControlPages, { state, nativeGesture: memo })];
-  obj6.children = items2;
-  obj5.children = closure_7(activeIndex, obj6);
-  return memo(require("ProfileCustomizationHeaderContext").Provider, obj5);
+  const obj4 = require("module_1652");
+  items = [closure_9, state.activeIndex, sharedValue, first, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  [tmp12, tmp13, tmp14, tmp15, tmp16] = items;
+  class ProfileCustomizationScrollAwayTabsTsx1 {
+    constructor() {
+      bound = Math.min(Math.max(closure_0.get(), 0), 1);
+      obj = { transform: null };
+      obj1 = { translateY: null };
+      result = Math.min(Math.max(closure_1.get(), 0), closure_2) * (1 - bound);
+      obj1.translateY = -result + Math.min(Math.max(closure_3.get(), 0), closure_2) * bound;
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items1 = [tmp13, tmp14, tmp15, tmp16];
+  ProfileCustomizationScrollAwayTabsTsx1.__closure = items1;
+  ProfileCustomizationScrollAwayTabsTsx1.__workletHash = 6091010255124;
+  ProfileCustomizationScrollAwayTabsTsx1.__initData = tmp12;
+  const items2 = [first, token, sharedValue, sharedValue1, memo];
+  const animatedStyle = require("module_1652").useAnimatedStyle(ProfileCustomizationScrollAwayTabsTsx1);
+  const memo1 = obj.useMemo(() => ({ height, backgroundColor, mainScrollY, guildScrollY: sharedValue1, pagerGesture: memo }), items2);
+  const obj6 = { value: memo1, children: null };
+  const obj7 = { style: tmp.container, children: null };
+  const obj8 = { style: null, onLayout: callback, children: closure_6(require("Tabs/Tabs").Tabs, { state }) };
+  const items3 = [tmp.header, { backgroundColor: token }, animatedStyle];
+  obj8.style = items3;
+  const items4 = [closure_6(_modDef1652.View, obj8), closure_6(require("SegmentedControlPages").SegmentedControlPages, { state, nativeGesture: memo })];
+  obj7.children = items4;
+  obj6.children = closure_7(memo, obj7);
+  return closure_6(ProfileCustomizationHeaderContextDefault.Provider, obj6);
 };

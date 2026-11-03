@@ -1,20 +1,20 @@
-// === Module 12565: useRenderPollAnswerImage ===
+// === Module 12701: useRenderPollAnswerImage ===
 
-// Module 12565 (useRenderPollAnswerImage)
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import EmojiTypes from "EmojiTypes" /* 4963 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import EmojiDefault from "Emoji" /* 7300 */;
+// Module 12701 (useRenderPollAnswerImage)
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import EmojiTypes from "EmojiTypes" /* 5090 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import EmojiDefault from "Emoji" /* 7420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(7701).DraftType;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const DraftType = fn(7825).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
@@ -25,7 +25,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   dependencyMap = mediaAttachmentState;
   _slicedToArray = arg3;
   noop = arg4;
-  const items = [closure_7];
+  items = [closure_7];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UploadAttachmentStore.getUpload(closure_0, closure_1, DraftType.Poll));
   const tmp4 = _slicedToArray(noop.useState(), 2);
   const first = tmp4[0];

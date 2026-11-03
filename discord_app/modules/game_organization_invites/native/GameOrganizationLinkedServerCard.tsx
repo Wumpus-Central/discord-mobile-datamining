@@ -1,13 +1,13 @@
-// === Module 13210: GameOrganizationLinkedServerCard ===
+// === Module 13346: GameOrganizationLinkedServerCard ===
 
-// Module 13210 (GameOrganizationLinkedServerCard)
+// Module 13346 (GameOrganizationLinkedServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import Card from "Card" /* 6977 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import Card from "Card" /* 7103 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -16,8 +16,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(6957).GuildIconSizes.XLARGE;
-const createStyles = fn(5014);
+const XLARGE = fn(7083).GuildIconSizes.XLARGE;
+const createStyles = fn(5141);
 const obj2 = { card: { padding: nativeDefault.space.PX_16 }, icon: null, info: null, autoWidth: null, dot: null, onlineDot: null, membersDot: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.icon = { borderRadius: nativeDefault.radii.lg };
@@ -42,7 +42,7 @@ export default function GameOrganizationLinkedServerCard(linkedGuild) {
   const guildIconURL = obj.getGuildIconURL({ id, icon, size: GuildIcon.ImageSizes[XLARGE] });
   const obj3 = { border: "subtle", style: tmp.card, children: null };
   const obj4 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_16, children: null };
-  const items = [React4(GuildIconDefault, { icon: guildIconURL, value: name, size: XLARGE, selected: false, style: tmp.icon }), ];
+  items = [React4(GuildIconDefault, { icon: guildIconURL, value: name, size: XLARGE, selected: false, style: tmp.icon }), ];
   const obj6 = { spacing: nativeDefault.space.PX_4, style: tmp.info, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "text-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: name }), ];
   const obj7 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_20, style: tmp.autoWidth, children: null };

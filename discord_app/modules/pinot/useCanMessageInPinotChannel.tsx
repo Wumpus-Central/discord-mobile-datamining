@@ -1,7 +1,7 @@
-// === Module 11324: useCanMessageInPinotChannel ===
+// === Module 11461: useCanMessageInPinotChannel ===
 
-// Module 11324 (useCanMessageInPinotChannel)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 11461 (useCanMessageInPinotChannel)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/pinot/useCanMessageInPinotCha
 
 export function useCanMessageInPinotChannel(guild_id) {
   _require = guild_id;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild_id];
   return require("initialize").useStateFromStores(items, () => {
     if (null == guild_id) {

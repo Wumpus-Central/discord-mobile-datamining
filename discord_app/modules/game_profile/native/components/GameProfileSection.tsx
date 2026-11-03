@@ -1,12 +1,12 @@
-// === Module 9437: GameProfileSection ===
+// === Module 9565: GameProfileSection ===
 
-// Module 9437 (GameProfileSection)
+// Module 9565 (GameProfileSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9438 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9566 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, header: null, skeletonTitle: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -30,7 +30,7 @@ export default function GameProfileSection(onPressViewAll) {
   ({ children, headerStyle, style, title } = onPressViewAll);
   const tmp = closure_6();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const obj2 = { style: null, children: null };
   const items1 = [tmp.header, headerStyle];
@@ -56,7 +56,7 @@ export function GameProfileSectionSkeleton(showViewAllSkeleton) {
   ({ animationDelayMs, children, headerStyle, skeletonTitleWidth, style } = showViewAllSkeleton);
   const tmp = closure_6();
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const obj2 = { animationDelayMs, style: null, children: null };
   const items1 = [tmp.header, headerStyle];

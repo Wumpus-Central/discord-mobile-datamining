@@ -1,13 +1,13 @@
-// === Module 10766: ActivityEmoji ===
+// === Module 10896: ActivityEmoji ===
 
-// Module 10766 (ActivityEmoji)
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import EmojiDefault from "Emoji" /* 7300 */;
+// Module 10896 (ActivityEmoji)
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import EmojiDefault from "Emoji" /* 7420 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "system-ui" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
@@ -25,7 +25,7 @@ export default function ActivityEmoji(emoji) {
   importDefault = undefined;
   const tmp = closure_5();
   let ReactionIcon = emoji;
-  const AnimateEmoji = emoji(4839).AnimateEmoji;
+  const AnimateEmoji = emoji(4966).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -43,7 +43,7 @@ export default function ActivityEmoji(emoji) {
   if (emoji != null) {
     id = emoji.id;
   }
-  const items = [id, BooleanResult];
+  items = [id, BooleanResult];
   const memo = noop.useMemo(() => {
     let id;
     if (emoji != null) {
@@ -60,7 +60,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(9452).ReactionIcon;
+    ReactionIcon = ReactionIcon(9580).ReactionIcon;
     const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

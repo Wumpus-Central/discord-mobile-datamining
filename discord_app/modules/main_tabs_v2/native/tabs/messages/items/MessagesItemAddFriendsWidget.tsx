@@ -1,15 +1,15 @@
-// === Module 18157: MessagesItemAddFriendsWidget ===
+// === Module 18301: MessagesItemAddFriendsWidget ===
 
-// Module 18157 (MessagesItemAddFriendsWidget)
+// Module 18301 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
-import IconActionButtonDefault from "IconActionButton" /* 14555 */;
-import _modDef15678 from "module_15678" /* 15678 */;
-import _modDef18158 from "module_18158" /* 18158 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
+import IconActionButtonDefault from "IconActionButton" /* 14686 */;
+import _modDef15820 from "module_15820" /* 15820 */;
+import _modDef18302 from "module_18302" /* 18302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_11 = async function _getFriendInviteCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_13 = async function _handleShare() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_13 = async function _handleShare() {
         const obj6 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
         obj5.handleOpenShareSheet(closure_128_0, null, intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj6), closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c3 = tmp;
@@ -177,7 +177,7 @@ let closure_15 = async function _handleLink() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_15 = async function _handleLink() {
         closure_128_0 = value;
         closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -222,8 +222,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(14555).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const sum = fn(14686).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5141);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj.title = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.md, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -258,14 +258,14 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.afcl67);
   obj2.children = React5(Text_Text.Text, obj3);
-  const items = [React5(Pressables.PressableHighlight, obj2), ];
+  items = [React5(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15678, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15820, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef18158;
+  obj6.source = _modDef18302;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

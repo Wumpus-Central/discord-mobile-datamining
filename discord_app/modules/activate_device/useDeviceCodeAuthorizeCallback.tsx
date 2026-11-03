@@ -1,10 +1,10 @@
-// === Module 15706: useDeviceCodeAuthorizeCallback ===
+// === Module 15849: useDeviceCodeAuthorizeCallback ===
 
-// Module 15706 (useDeviceCodeAuthorizeCallback)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 9735 */;
-import oauth2_actions from "oauth2/actions" /* 9749 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15705 */;
+// Module 15849 (useDeviceCodeAuthorizeCallback)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7467 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 9867 */;
+import oauth2_actions from "oauth2/actions" /* 9881 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -47,7 +47,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
             closure_133_2 = undefined;
             let url;
             closure_133_4 = undefined;
-            let state;
+            state = undefined;
             const result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0);
             closure_133_2 = result;
             if (null == result) {
@@ -181,7 +181,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
           } else {
             c8 = 0;
             c10 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c10 = 3;
@@ -249,7 +249,7 @@ export function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -365,7 +365,7 @@ export function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
       }
     }
   });
-  const items = [callback, callback2, callback1];
+  items = [callback, callback2, callback1];
   return noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

@@ -1,17 +1,17 @@
-// === Module 19157: FramePanelPIPView ===
+// === Module 19315: FramePanelPIPView ===
 
-// Module 19157 (FramePanelPIPView)
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 12250 */;
-import FrameStackLevel from "FrameStackLevel" /* 12254 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 19133 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19155 */;
+// Module 19315 (FramePanelPIPView)
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 12386 */;
+import FrameStackLevel from "FrameStackLevel" /* 12390 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 19291 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19313 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
-let closure_8 = fn(19000).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19158).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
@@ -21,7 +21,7 @@ export default noop.memo(function FramePanelPIPView(transitionState) {
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
   let landscapeSafeAreasConfig;
-  const items = [landscapeSafeAreasConfig];
+  items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => closure_1_5(landscapeSafeAreasConfig.getMainFrame()));
   const tmp2 = closure_7(stateFromStores);
   noop = tmp2;

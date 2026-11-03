@@ -1,22 +1,25 @@
-// === Module 18495: ForYouItemActionButtons ===
+// === Module 18649: ForYouItemActionButtons ===
 
-// Module 18495 (ForYouItemActionButtons)
+// Module 18649 (ForYouItemActionButtons)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import parseURLDefault from "parseURL" /* 5745 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10740 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15674 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18101 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import parseURLDefault from "parseURL" /* 5865 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6979 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15816 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -35,232 +38,305 @@ function focusChatInput(channelId) {
 }
 class IncomingFriendRequestActions {
   constructor(arg0) {
-    pressed = global.pressed;
-    compactMode = global.compactMode;
+    ({ pressed, compactMode } = global);
+    closure_0 = undefined;
     closure_1 = undefined;
     closure_2 = undefined;
     closure_3 = undefined;
-    closure_4 = undefined;
     ({ onAccept, onIgnore, onWavePress } = global);
-    tmp2 = pressed;
+    tmp2 = closure_0;
     tmp3 = closure_2;
     tmp = closure_14();
-    obj = pressed(closure_2[9]);
+    obj = closure_0(closure_2[9]);
     sharedValue = obj.useSharedValue(0);
-    closure_1 = sharedValue;
-    obj2 = pressed(closure_2[9]);
+    closure_0 = sharedValue;
+    obj2 = closure_0(closure_2[9]);
     sharedValue1 = obj2.useSharedValue(-1);
-    closure_2 = sharedValue1;
-    obj3 = pressed(closure_2[9]);
+    closure_1 = sharedValue1;
+    obj3 = closure_0(closure_2[9]);
     sharedValue2 = obj3.useSharedValue(-1);
-    closure_3 = sharedValue2;
-    obj4 = pressed(closure_2[9]);
+    closure_2 = sharedValue2;
+    obj4 = closure_0(closure_2[9]);
     sharedValue3 = obj4.useSharedValue(-1);
-    closure_4 = sharedValue3;
-    obj5 = pressed(closure_2[9]);
-    fn = function u() {
-      let num = 1;
-      if (pressed.get()) {
-        num = 0;
-      }
-      const obj3 = { opacity: timing.withTiming(num, { duration: 150 }), pointerEvents: null };
-      let str = "auto";
-      if (pressed.get()) {
-        str = "none";
-      }
-      obj3.pointerEvents = str;
-      return obj3;
-    };
-    obj1 = { withTiming: pressed(closure_2[10]).withTiming, pressed };
-    fn.__closure = obj1;
-    fn.__workletHash = 100815030677;
-    fn.__initData = closure_17;
-    animatedStyle = obj5.useAnimatedStyle(fn);
-    obj7 = pressed(closure_2[9]);
-    fn2 = function _() {
-      let num = 1;
-      if (!pressed.get()) {
-        value = sharedValue.get();
-        num = value / sharedValue1.get();
-      }
-      value2 = sharedValue1.get();
-      const diff = value2 - sharedValue1.get() * num;
-      let num2 = 0;
-      if (!pressed.get()) {
-        num2 = -diff / 2;
-      }
-      const obj2 = { transform: null, opacity: null, pointerEvents: null };
-      const obj3 = { scaleX: timing.withTiming(num) };
-      const items = [obj3, ];
-      const obj5 = { translateX: null };
-      obj5.translateX = timing.withTiming(num2);
-      items[1] = obj5;
-      obj2.transform = items;
-      let num4 = 0;
-      if (pressed.get()) {
-        num4 = 1;
-      }
-      obj2.opacity = timing.withTiming(num4);
-      let str = "none";
-      if (pressed.get()) {
+    closure_3 = sharedValue3;
+    obj5 = closure_0(closure_2[9]);
+    items = [, , ];
+    items[0] = closure_17;
+    items[1] = closure_0(closure_2[10]).withTiming;
+    items[2] = pressed;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    [tmp8, tmp9, tmp10] = items;
+    class ForYouItemActionButtonsTsx1 {
+      constructor() {
+        obj = closure_1;
+        tmp = closure_0;
+        num = 1;
+        if (closure_1.get()) {
+          num = 0;
+        }
+        obj1 = { opacity: tmp(num, { duration: 150 }), pointerEvents: null };
         str = "auto";
+        if (obj.get()) {
+          str = "none";
+        }
+        obj1.pointerEvents = str;
+        return obj1;
       }
-      obj2.pointerEvents = str;
-      return obj2;
-    };
-    obj23 = { pressed, acceptButtonWidth: sharedValue, buttonWidth: sharedValue1, withTiming: pressed(closure_2[10]).withTiming };
-    fn2.__closure = obj23;
-    fn2.__workletHash = 12358515723480;
-    fn2.__initData = closure_18;
-    animatedStyle1 = obj7.useAnimatedStyle(fn2);
-    obj9 = pressed(closure_2[9]);
-    class E {
+    }
+    items1 = [, ];
+    items1[0] = tmp9;
+    items1[1] = tmp10;
+    ForYouItemActionButtonsTsx1.__closure = items1;
+    ForYouItemActionButtonsTsx1.__workletHash = 938545958540;
+    ForYouItemActionButtonsTsx1.__initData = tmp8;
+    animatedStyle = obj5.useAnimatedStyle(ForYouItemActionButtonsTsx1);
+    tmp2Result = tmp2(tmp3[9]);
+    items2 = [, , , , ];
+    items2[0] = closure_18;
+    items2[1] = pressed;
+    items2[2] = sharedValue;
+    items2[3] = sharedValue1;
+    items2[4] = tmp2(tmp3[10]).withTiming;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    [tmp12, tmp13, tmp14, tmp15, tmp16] = items2;
+    class ForYouItemActionButtonsTsx2 {
+      constructor() {
+        obj = closure_0;
+        num = 1;
+        if (!closure_0.get()) {
+          tmp = closure_1;
+          tmp3 = closure_2;
+          value = closure_1.get();
+          num = value / closure_2.get();
+        }
+        value1 = closure_2.get();
+        diff = value1 - closure_2.get() * num;
+        num2 = 0;
+        if (!obj.get()) {
+          num3 = 2;
+          num2 = -diff / 2;
+        }
+        obj1 = { transform: null, opacity: null, pointerEvents: null };
+        obj5 = { scaleX: closure_3(num) };
+        tmp6 = closure_3;
+        items = [, ];
+        items[0] = obj5;
+        obj6 = { translateX: closure_3(num2) };
+        items[1] = obj6;
+        obj1.transform = items;
+        num4 = 0;
+        if (obj.get()) {
+          num4 = 1;
+        }
+        obj1.opacity = tmp6(num4);
+        str = "none";
+        if (obj.get()) {
+          str = "auto";
+        }
+        obj1.pointerEvents = str;
+        return obj1;
+      }
+    }
+    items3 = [, , , ];
+    items3[0] = tmp13;
+    items3[1] = tmp14;
+    items3[2] = tmp15;
+    items3[3] = tmp16;
+    ForYouItemActionButtonsTsx2.__closure = items3;
+    ForYouItemActionButtonsTsx2.__workletHash = 14181259880641;
+    ForYouItemActionButtonsTsx2.__initData = tmp12;
+    animatedStyle1 = tmp2Result.useAnimatedStyle(ForYouItemActionButtonsTsx2);
+    tmp2Result1 = tmp2(tmp3[9]);
+    items4 = [, , ];
+    items4[0] = closure_19;
+    items4[1] = sharedValue2;
+    items4[2] = sharedValue3;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    [tmp18, tmp19, tmp20] = items4;
+    class ForYouItemActionButtonsTsx3 {
       constructor() {
         obj = { transform: null };
-        obj1 = { translateX: closure_3.get() / 2 };
+        obj1 = { translateX: closure_0.get() / 2 };
         items = [, ];
         items[0] = obj1;
-        obj4 = { translateY: closure_4.get() / 2 };
+        obj4 = { translateY: closure_1.get() / 2 };
         items[1] = obj4;
         obj.transform = items;
         return obj;
       }
     }
-    E.__closure = { waveWidth: sharedValue2, waveHeight: sharedValue3 };
-    E.__workletHash = 667441788226;
-    E.__initData = closure_19;
-    animatedStyle2 = obj9.useAnimatedStyle(E);
-    obj10 = pressed(closure_2[9]);
-    class I {
+    items5 = [, ];
+    items5[0] = tmp19;
+    items5[1] = tmp20;
+    ForYouItemActionButtonsTsx3.__closure = items5;
+    ForYouItemActionButtonsTsx3.__workletHash = 8815114936763;
+    ForYouItemActionButtonsTsx3.__initData = tmp18;
+    animatedStyle2 = tmp2Result1.useAnimatedStyle(ForYouItemActionButtonsTsx3);
+    tmp2Result2 = tmp2(tmp3[9]);
+    items6 = [, , , , , , , ];
+    items6[0] = closure_20;
+    items6[1] = tmp2(tmp3[9]).withDelay;
+    items6[2] = tmp2(tmp3[9]).withRepeat;
+    items6[3] = tmp2(tmp3[10]).withTiming;
+    items6[4] = pressed;
+    items6[5] = tmp2(tmp3[9]).Easing;
+    items6[6] = sharedValue2;
+    items6[7] = sharedValue3;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    [tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29] = items6;
+    class ForYouItemActionButtonsTsx4 {
       constructor() {
         tmp = closure_0;
-        tmp2 = closure_2;
-        obj = closure_0(closure_2[9]);
-        obj2 = closure_0(closure_2[9]);
-        obj3 = closure_0(closure_2[10]);
+        tmp2 = closure_1;
+        tmp3 = closure_2;
         str = "-2deg";
-        if (pressed.get()) {
+        if (closure_3.get()) {
           str = "8deg";
         }
-        obj1 = { transform: null };
-        obj9 = { rotateZ: null };
-        obj10 = { duration: 150, easing: null };
-        Easing = tmp(tmp2[9]).Easing;
-        obj10.easing = Easing.inOut(tmp(tmp2[9]).Easing.quad);
-        obj9.rotateZ = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj10), 4, true));
+        obj = { transform: null };
+        obj1 = { rotateZ: null };
+        obj6 = { duration: 150, easing: closure_4.inOut(closure_4.quad) };
+        obj1.rotateZ = tmp(450, tmp2(tmp3(str, obj6), 4, true));
         items = [, , ];
-        items[0] = obj9;
-        obj11 = { translateX: -closure_3.get() / 2 };
-        items[1] = obj11;
-        obj12 = { translateY: -closure_4.get() / 2 };
-        items[2] = obj12;
-        obj1.transform = items;
-        return obj1;
+        items[0] = obj1;
+        obj7 = { translateX: -closure_5.get() / 2 };
+        items[1] = obj7;
+        obj8 = { translateY: -closure_6.get() / 2 };
+        items[2] = obj8;
+        obj.transform = items;
+        return obj;
       }
     }
-    obj24 = { withDelay: pressed(closure_2[9]).withDelay, withRepeat: pressed(closure_2[9]).withRepeat, withTiming: pressed(closure_2[10]).withTiming, pressed, Easing: pressed(closure_2[9]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
-    I.__closure = obj24;
-    I.__workletHash = 498167545082;
-    I.__initData = closure_20;
-    animatedStyle3 = obj10.useAnimatedStyle(I);
-    obj12 = pressed(closure_2[9]);
-    fn3 = function p() {
-      value = pressed.get();
-      return { pointerEvents: "none" };
-    };
-    fn3.__closure = { pressed };
-    fn3.__workletHash = 3473531476662;
-    fn3.__initData = closure_21;
-    animatedProps = obj12.useAnimatedProps(fn3);
-    tmp13 = jsxs;
-    tmp14 = View;
-    tmp15 = jsx;
-    tmp16 = closure_1;
-    obj25 = { style: null, children: null };
-    items = [, ];
-    items[0] = tmp.actionButtonsContainer;
-    items[1] = animatedStyle;
-    obj25.style = items;
-    obj26 = {
+    items7 = [, , , , , , ];
+    items7[0] = tmp23;
+    items7[1] = tmp24;
+    items7[2] = tmp25;
+    items7[3] = tmp26;
+    items7[4] = tmp27;
+    items7[5] = tmp28;
+    items7[6] = tmp29;
+    ForYouItemActionButtonsTsx4.__closure = items7;
+    ForYouItemActionButtonsTsx4.__workletHash = 9813687280195;
+    ForYouItemActionButtonsTsx4.__initData = tmp22;
+    animatedStyle3 = tmp2Result2.useAnimatedStyle(ForYouItemActionButtonsTsx4);
+    tmp2Result3 = tmp2(tmp3[9]);
+    items8 = [, ];
+    items8[0] = closure_21;
+    items8[1] = pressed;
+    closure_0 = undefined;
+    [tmp31, tmp32] = items8;
+    class ForYouItemActionButtonsTsx5 {
+      constructor() {
+        value = closure_0.get();
+        return { pointerEvents: "none" };
+      }
+    }
+    items9 = [];
+    items9[0] = tmp32;
+    ForYouItemActionButtonsTsx5.__closure = items9;
+    ForYouItemActionButtonsTsx5.__workletHash = 4550653159023;
+    ForYouItemActionButtonsTsx5.__initData = tmp31;
+    animatedProps = tmp2Result3.useAnimatedProps(ForYouItemActionButtonsTsx5);
+    tmp34 = jsxs;
+    tmp35 = View;
+    tmp36 = jsx;
+    tmp37 = closure_1;
+    obj1 = { style: null, children: null };
+    items10 = [, ];
+    items10[0] = tmp.actionButtonsContainer;
+    items10[1] = animatedStyle;
+    obj1.style = items10;
+    obj20 = {
       onLayout: function handleAcceptButtonLayout(nativeEvent) {
-            const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
+            const result = _undefined.set(nativeEvent.nativeEvent.layout.width);
           },
       children: null
     };
-    obj27 = { text: null, variant: "primary", size: null, onPress: null };
-    intl = pressed(closure_2[13]).intl;
-    obj27.text = intl.string(pressed(closure_2[13]).t.zf5jU5);
+    obj21 = { text: null, variant: "primary", size: null, onPress: null };
+    intl = tmp2(tmp3[13]).intl;
+    obj21.text = intl.string(tmp2(tmp3[13]).t.zf5jU5);
     str = "md";
     str2 = "md";
     if (compactMode) {
       str2 = "sm";
     }
-    obj27.size = str2;
-    obj27.onPress = onAccept;
-    obj26.children = tmp15(pressed(closure_2[12]).Button, obj27, "accept_friend_request");
-    items1 = [, ];
-    items1[0] = tmp15(tmp14, obj26);
-    obj28 = { text: null, variant: "secondary", size: null, onPress: null };
+    obj21.size = str2;
+    obj21.onPress = onAccept;
+    obj20.children = tmp36(tmp2(tmp3[12]).Button, obj21, "accept_friend_request");
+    items11 = [, ];
+    items11[0] = tmp36(tmp35, obj20);
+    obj22 = { text: null, variant: "secondary", size: null, onPress: null };
     intl2 = tmp2(tmp3[13]).intl;
-    obj28.text = intl2.string(tmp2(tmp3[13]).t.EBN847);
+    obj22.text = intl2.string(tmp2(tmp3[13]).t.EBN847);
     str3 = str;
     if (compactMode) {
       str3 = "sm";
     }
-    obj29 = { direction: "horizontal", spacing: 8, children: null };
-    obj28.size = str3;
-    obj28.onPress = onIgnore;
-    items1[1] = tmp15(tmp2(tmp3[12]).Button, obj28, "ignore_friend_request");
-    obj29.children = items1;
-    obj25.children = tmp13(pressed(closure_2[11]).Stack, obj29);
-    items2 = [, ];
-    items2[0] = tmp15(closure_1(closure_2[9]).View, obj25);
-    obj30 = {
+    obj23 = { direction: "horizontal", spacing: 8, children: null };
+    obj22.size = str3;
+    obj22.onPress = onIgnore;
+    items11[1] = tmp36(tmp2(tmp3[12]).Button, obj22, "ignore_friend_request");
+    obj23.children = items11;
+    obj1.children = tmp34(tmp2(tmp3[11]).Stack, obj23);
+    items12 = [, ];
+    items12[0] = tmp36(closure_1(tmp3[9]).View, obj1);
+    obj24 = {
       style: animatedStyle1,
       onLayout: function handleButtonsLayout(nativeEvent) {
-            const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
+            const result = _undefined2.set(nativeEvent.nativeEvent.layout.width);
           }
     };
     merged = Object.assign(animatedProps);
-    obj31 = { variant: "secondary", text: null, icon: null, size: null, onPress: null };
+    obj25 = { variant: "secondary", text: null, icon: null, size: null, onPress: null };
     intl3 = tmp2(tmp3[13]).intl;
-    obj31.text = intl3.string(tmp2(tmp3[13]).t.n8nU4W);
-    obj32 = { style: animatedStyle2, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj33 = {
+    obj25.text = intl3.string(tmp2(tmp3[13]).t.n8nU4W);
+    obj26 = { style: animatedStyle2, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj27 = {
       style: animatedStyle3,
       onLayout: function handleWaveLayout(nativeEvent) {
-            const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
-            const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
+            const result = _undefined3.set(nativeEvent.nativeEvent.layout.width);
+            const result1 = _undefined4.set(nativeEvent.nativeEvent.layout.height);
           },
-      children: tmp15(tmp2(tmp3[14]).Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
+      children: tmp36(tmp2(tmp3[14]).Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
     };
-    obj32.children = tmp15(tmp16(tmp3[9]).View, obj33);
-    obj31.icon = tmp15(tmp16(tmp3[9]).View, obj32);
+    obj26.children = tmp36(tmp37(tmp3[9]).View, obj27);
+    obj25.icon = tmp36(tmp37(tmp3[9]).View, obj26);
     if (compactMode) {
       str = "sm";
     }
-    obj34 = { children: null };
-    obj31.size = str;
-    obj31.onPress = onWavePress;
-    obj30.children = tmp15(tmp2(tmp3[12]).Button, obj31);
-    items2[1] = tmp15(tmp16(tmp3[9]).View, obj30);
-    obj34.children = items2;
-    return tmp13(tmp14, obj34);
+    obj28 = { children: null };
+    obj25.size = str;
+    obj25.onPress = onWavePress;
+    obj24.children = tmp36(tmp2(tmp3[12]).Button, obj25);
+    items12[1] = tmp36(tmp37(tmp3[9]).View, obj24);
+    obj28.children = items12;
+    return tmp34(tmp35, obj28);
   }
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, ComponentActions: closure_9, EMPTY_STRING_SNOWFLAKE_ID: c10, MessageTypes: closure_11 } = Constants);
+({ AnalyticEvents: closure_8, ComponentActions: closure_9, EMPTY_STRING_SNOWFLAKE_ID: closure_10, MessageTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
-let value = createStyles.createStyles({ buttonsContainer: { flexDirection: "row", marginTop: 8 }, actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 } });
+const createStyles = fn(5141);
+const gesture = createStyles.createStyles({ buttonsContainer: { flexDirection: "row", marginTop: 8 }, actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 } });
 const constants2 = { ACCEPT: "accept", IGNORE: "ignore", WAVE: "wave", ACTION: "action" };
-let __initData = { code: "function ForYouItemActionButtonsTsx1(){const{withTiming,pressed}=this.__closure;return{opacity:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
-const collapsedCategories = { code: "function ForYouItemActionButtonsTsx2(){const{pressed,acceptButtonWidth,buttonWidth,withTiming}=this.__closure;const scaleX=!pressed.get()?acceptButtonWidth.get()/buttonWidth.get():1;const scaledWidth=buttonWidth.get()-buttonWidth.get()*scaleX;const translateX=!pressed.get()?-scaledWidth/2:0;return{transform:[{scaleX:withTiming(scaleX)},{translateX:withTiming(translateX)}],opacity:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}" };
-const __initData3 = { code: "function ForYouItemActionButtonsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
-let dependencyMap = { code: "function ForYouItemActionButtonsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
-__initData = { code: "function ForYouItemActionButtonsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
+let closure_17 = { code: "(function ForYouItemActionButtonsTsx1(){let[withTiming,pressed]=this.__closure;return{opacity:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};})" };
+let closure_18 = { code: "(function ForYouItemActionButtonsTsx2(){let[pressed,acceptButtonWidth,buttonWidth,withTiming]=this.__closure;const scaleX=!pressed.get()?acceptButtonWidth.get()/buttonWidth.get():1;const scaledWidth=buttonWidth.get()-buttonWidth.get()*scaleX;const translateX=!pressed.get()?-scaledWidth/2:0;return{transform:[{scaleX:withTiming(scaleX)},{translateX:withTiming(translateX)}],opacity:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};})" };
+let closure_19 = { code: "(function ForYouItemActionButtonsTsx3(){let[waveWidth,waveHeight]=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};})" };
+let closure_20 = { code: "(function ForYouItemActionButtonsTsx4(){let[withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight]=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};})" };
+let closure_21 = { code: "(function ForYouItemActionButtonsTsx5(){let[pressed]=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/ForYouItemActionButtons.tsx");
 
@@ -292,7 +368,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   }
   notification_center_v2 = "notification_center_v2";
   let tmp2 = _require;
-  const items = [id];
+  items = [id];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const message = other_user.message;
     let channel_id;
@@ -319,7 +395,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
     onSoftAckItem(closure_0);
   }, items1);
   let obj2 = require("canReplyToMessage");
-  sharedValue = tmp2(5095).useSharedValue(false);
+  sharedValue = tmp2(1652).useSharedValue(false);
   const items2 = [forceHoistItem, sharedValue, other_user, id, arg6];
   callback1 = noop.useCallback(() => {
     const obj2 = { userId: id, applicationId: null, location: null, onConfirm: null };
@@ -369,7 +445,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15674)({ payload: closure_1(5745)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(15816)({ payload: closure_1(5865)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {
@@ -406,7 +482,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -443,7 +519,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         closure_128_1();
         focusChatInput(closure_128_0.message_channel_id);
         navigation = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp18) {
         navigation = tmp;
         throw tmp18;
@@ -470,10 +546,10 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
     let obj3 = { actionButtons: [] };
     return obj3;
   } else {
-    if (other_user.type !== tmp2(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-      if (other_user.type !== tmp2(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-        if (other_user.type !== tmp2(6859).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-          if (other_user.type === tmp2(6859).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+    if (other_user.type !== tmp2(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+      if (other_user.type !== tmp2(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type !== tmp2(6979).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+          if (other_user.type === tmp2(6979).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
             let obj4 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             let obj5 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
             const intl15 = tmp2(1113).intl;
@@ -488,7 +564,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
             obj4.accessibilityActions = items10;
             obj4.onAccessibilityAction = callback3;
             return obj4;
-          } else if (other_user.type === tmp2(6859).NotificationCenterItems.GO_LIVE_PUSH) {
+          } else if (other_user.type === tmp2(6979).NotificationCenterItems.GO_LIVE_PUSH) {
             const obj7 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             const obj8 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
             const intl13 = tmp2(1113).intl;
@@ -504,11 +580,11 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
             obj7.onAccessibilityAction = callback;
             return obj7;
           } else {
-            if (other_user.type !== tmp2(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-              if (other_user.type !== tmp2(6859).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                if (other_user.type !== tmp2(6859).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                  if (other_user.type !== tmp2(6859).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                    if (other_user.type === tmp2(6859).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+            if (other_user.type !== tmp2(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+              if (other_user.type !== tmp2(6979).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                if (other_user.type !== tmp2(6979).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                  if (other_user.type !== tmp2(6979).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                    if (other_user.type === tmp2(6979).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
                       const obj10 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj11 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl9 = tmp2(1113).intl;
@@ -523,7 +599,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
                       obj10.accessibilityActions = items14;
                       obj10.onAccessibilityAction = callback5;
                       return obj10;
-                    } else if (other_user.type === tmp2(6859).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+                    } else if (other_user.type === tmp2(6979).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
                       const obj13 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj14 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl7 = tmp2(1113).intl;
@@ -538,24 +614,24 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
                       obj13.accessibilityActions = items16;
                       obj13.onAccessibilityAction = callback;
                       return obj13;
-                    } else if (other_user.type === tmp2(6859).NotificationCenterItems.LIFECYCLE_ITEM) {
+                    } else if (other_user.type === tmp2(6979).NotificationCenterItems.LIFECYCLE_ITEM) {
                       const item_enum = other_user.item_enum;
-                      if (tmp2(6859).ItemEnum.UPDATE_PROFILE === item_enum) {
+                      if (tmp2(6979).ItemEnum.UPDATE_PROFILE === item_enum) {
                         const intl6 = tmp2(1113).intl;
                         let stringResult = intl6.string(tmp2(1113).t.zMRcWL);
                         let str2 = "update_profile";
-                      } else if (tmp2(6859).ItemEnum.FIND_FRIENDS === item_enum) {
+                      } else if (tmp2(6979).ItemEnum.FIND_FRIENDS === item_enum) {
                         const intl5 = tmp2(1113).intl;
                         stringResult = intl5.string(tmp2(1113).t["vwL/4s"]);
                         str2 = "find_friends";
-                      } else if (tmp2(6859).ItemEnum.ADD_FRIEND === item_enum) {
+                      } else if (tmp2(6979).ItemEnum.ADD_FRIEND === item_enum) {
                         const intl4 = tmp2(1113).intl;
                         stringResult = intl4.string(tmp2(1113).t["boL/YX"]);
                         str2 = "add_friend";
                       } else {
                         str2 = null;
                         stringResult = null;
-                        if (tmp2(6859).ItemEnum.FIRST_MESSAGE === item_enum) {
+                        if (tmp2(6979).ItemEnum.FIRST_MESSAGE === item_enum) {
                           const intl20 = tmp2(1113).intl;
                           stringResult = intl20.string(tmp2(1113).t["GuUH7/"]);
                           str2 = "send_message";
@@ -577,9 +653,9 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
                       const obj19 = { actionButtons: [] };
                       obj16 = obj19;
                     } else {
-                      if (other_user.type !== tmp2(6859).NotificationCenterItems.RECENT_MENTION) {
-                        if (other_user.type !== tmp2(6859).NotificationCenterItems.REPLY_MENTION) {
-                          if (other_user.type === tmp2(6859).NotificationCenterItems.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER) {
+                      if (other_user.type !== tmp2(6979).NotificationCenterItems.RECENT_MENTION) {
+                        if (other_user.type !== tmp2(6979).NotificationCenterItems.REPLY_MENTION) {
+                          if (other_user.type === tmp2(6979).NotificationCenterItems.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER) {
                             const intl3 = tmp2(1113).intl;
                             const stringResult1 = intl3.string(tmp2(1113).t.TI8qgg);
                             const obj20 = { id: "share_trials", text: stringResult1, variant: null, size: "md", onPress: null };
@@ -598,7 +674,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
                             obj21.onAccessibilityAction = callback;
                             return obj21;
                           } else {
-                            if (other_user.type === tmp2(6859).NotificationCenterItems.TRENDING_CONTENT) {
+                            if (other_user.type === tmp2(6979).NotificationCenterItems.TRENDING_CONTENT) {
                               const obj23 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                               const obj24 = { id: "read_summary", text: null, variant: "secondary", size: "md", onPress: null };
                               let intl = tmp2(1113).intl;
@@ -666,7 +742,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
     const obj34 = { actionsNode: null, accessibilityActions: null, onAccessibilityAction: null };
     const obj35 = { onWavePress: callback, onAccept: callback1, onIgnore: callback2, pressed: sharedValue, compactMode };
     obj34.actionsNode = callback2(IncomingFriendRequestActions, obj35);
-    if (other_user.type === tmp2(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+    if (other_user.type === tmp2(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
       const obj36 = { name: constants2.WAVE, label: null };
       const intl17 = tmp2(1113).intl;
       obj36.label = intl17.string(tmp2(1113).t.n8nU4W);
@@ -695,7 +771,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
     };
     return obj34;
   }
-  const tmp2Result = tmp2(5095);
+  const tmp2Result = tmp2(1652);
 }
 export function ForYouItemActionButtons(arg0) {
   ({ item: require, rowIndex: importDefault, onSoftAckItem: dependencyMap, actionButtons, actionsNode, compactMode } = arg0);
@@ -728,7 +804,7 @@ export function ForYouItemActionButtons(arg0) {
         return closure_1_12(require("components/Button/Button").Button, obj, id);
       });
     }
-    const items = [mapped, ];
+    items = [mapped, ];
     let tmp11 = null;
     if (tmp4) {
       tmp11 = actionsNode;

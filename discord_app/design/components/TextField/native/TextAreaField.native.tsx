@@ -1,22 +1,22 @@
-// === Module 7254: TextAreaField ===
+// === Module 7374: TextAreaField ===
 
-// Module 7254 (TextAreaField)
+// Module 7374 (TextAreaField)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5187 */;
-import useTextField from "useTextField" /* 7090 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
+import native from "native" /* 5310 */;
+import useTextField from "useTextField" /* 7216 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1113);
-const Text_Text = prop(5624);
-const NativeTextInput = prop(7100);
-const propsForNativeTextInput = prop(7103);
-const useCharacterLimitAnnouncement = prop(7255);
+const Text_Text = prop(5747);
+const NativeTextInput = prop(7226);
+const propsForNativeTextInput = prop(7229);
+const useCharacterLimitAnnouncement = prop(7375);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj2.maxLengthIndicator = rect;
@@ -55,7 +55,7 @@ export function TextAreaField(ref) {
   const propResult2 = propsForNativeTextInput;
   const merged2 = Object.assign(propResult2.propsForNativeTextInput(native.mergeProps(inputProps, focusProps)));
   obj8.ref = innerRef;
-  const items = [, , ];
+  items = [, , ];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
   items[2] = tmp4.area;
   obj8.style = items;

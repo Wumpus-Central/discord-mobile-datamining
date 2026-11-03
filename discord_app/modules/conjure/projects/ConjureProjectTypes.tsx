@@ -1,6 +1,6 @@
-// === Module 6845: ConjureProjectTypes ===
+// === Module 6965: ConjureProjectTypes ===
 
-// Module 6845 (ConjureProjectTypes)
+// Module 6965 (ConjureProjectTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7, ACTIVITY: 8 });
@@ -13,8 +13,8 @@ export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_APP_DESCRIPTION_LENGTH = 400;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const ConjureProjectFlags = frozen1;
-export function isProjectGuildCollaborationEnabled(flags) {
-  let num = flags.flags;
+export function isProjectGuildCollaborationEnabled(stateFromStores) {
+  let num = stateFromStores.flags;
   if (num == null) {
     num = 0;
   }

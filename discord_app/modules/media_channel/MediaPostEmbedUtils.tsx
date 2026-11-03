@@ -1,17 +1,17 @@
-// === Module 6049: MediaPostEmbedUtils ===
+// === Module 6169: MediaPostEmbedUtils ===
 
-// Module 6049 (MediaPostEmbedUtils)
+// Module 6169 (MediaPostEmbedUtils)
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import LinkUtils from "LinkUtils" /* 5654 */;
-import findCodedLinks from "findCodedLinks" /* 5748 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6050 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import LinkUtils from "LinkUtils" /* 5774 */;
+import findCodedLinks from "findCodedLinks" /* 5868 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6170 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -158,7 +158,7 @@ export function getMediaPostEmbedChannelPath(url) {
   }
 }
 export function canUseMediaPostEmbed(guildId, isMediaChannel) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
       const features = guild.features;

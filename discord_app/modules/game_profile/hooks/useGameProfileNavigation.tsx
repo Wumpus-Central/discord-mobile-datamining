@@ -1,6 +1,6 @@
-// === Module 9364: useGameProfileNavigation ===
+// === Module 9492: useGameProfileNavigation ===
 
-// Module 9364 (useGameProfileNavigation)
+// Module 9492 (useGameProfileNavigation)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {};
-obj[fn(9365).GameProfileNavTab.OVERVIEW] = fn(9340).GameProfileTrackActionActions.Overview;
-obj[fn(9365).GameProfileNavTab.COMMUNITIES] = fn(9340).GameProfileTrackActionActions.Communities;
-obj[fn(9365).GameProfileNavTab.COMMERCE] = fn(9340).GameProfileTrackActionActions.GameShop;
+obj[fn(9493).GameProfileNavTab.OVERVIEW] = fn(9468).GameProfileTrackActionActions.Overview;
+obj[fn(9493).GameProfileNavTab.COMMUNITIES] = fn(9468).GameProfileTrackActionActions.Communities;
+obj[fn(9493).GameProfileNavTab.COMMERCE] = fn(9468).GameProfileTrackActionActions.GameShop;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileNavigation.tsx");
 
@@ -29,7 +29,7 @@ export default function useGameProfileNavigation(arg0) {
     closure_2(arg0);
     _undefined((arg0) => arg0 + 1);
   }, []);
-  const items = [selectedTab, callback, arg0];
+  items = [selectedTab, callback, arg0];
   const callback1 = noop.useCallback((arg0) => {
     if (arg0 !== first) {
       if (null != obj[arg0]) {

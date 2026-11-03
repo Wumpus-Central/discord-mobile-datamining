@@ -1,146 +1,165 @@
-// === Module 17976: DevWidget ===
+// === Module 18119: DevWidget ===
 
-// Module 17976 (DevWidget)
+// Module 18119 (DevWidget)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
-import Pressables from "Pressables" /* 6980 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17576 */;
-import VEVOODefault from "VEVOO" /* 17977 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import springPresets from "springPresets" /* 5758 */;
+import Pressables from "Pressables" /* 7106 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11381 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12950 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17719 */;
+import VEVOODefault from "VEVOO" /* 18120 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7987 */;
 
 const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
-function DraggableContainer(children) {
-  const x = children.x;
-  _require = x;
-  const y = children.y;
-  importDefault = y;
-  const contentWidth = children.contentWidth;
-  const contentHeight = children.contentHeight;
-  let num = children.dragBoundsPadding;
-  if (num === undefined) {
-    num = 0;
+function DraggableContainer(arg0) {
+  ({ x, y, contentWidth, contentHeight, dragBoundsPadding } = arg0);
+  if (dragBoundsPadding === undefined) {
+    dragBoundsPadding = 0;
   }
-  const onChangePosition = children.onChangePosition;
-  closure_9 = undefined;
-  let getClampedPosition;
+  ({ onChangePosition, children } = arg0);
   const tmp = closure_9();
-  const sharedValue = require("ReanimatedRexport").useSharedValue(x.get());
-  let obj = require("ReanimatedRexport");
-  const sharedValue1 = require("ReanimatedRexport").useSharedValue(y.get());
-  const tmp4 = require("useSafeAreaInsetsSharedValue")();
-  closure_8 = tmp4;
-  const tmp5 = require("useWindowDimensionsSharedValue")();
-  closure_9 = tmp5;
-  class D {
+  const sharedValue = _mod1652.useSharedValue(x.get());
+  const sharedValue1 = _mod1652.useSharedValue(y.get());
+  const tmp7 = useSafeAreaInsetsSharedValueDefault();
+  const tmp8 = useWindowDimensionsSharedValueDefault();
+  items = [closure_10, tmp8, tmp7, _mod1652.clamp, dragBoundsPadding, contentWidth, contentHeight];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16] = items;
+  class DevWidgetTsx1 {
     constructor(arg0, arg1) {
-      value = closure_9.get();
+      value = closure_0.get();
       ({ width, height } = value);
-      rect = closure_8.get();
-      point = { x: null, y: null };
-      obj2 = closure_0(closure_2[6]);
-      point.x = obj2.clamp(children, rect.left + c4, width - rect.right - contentWidth - c4);
-      obj3 = closure_0(closure_2[6]);
-      point.y = obj3.clamp(arg1, rect.top + c4, height - rect.bottom - contentHeight - c4);
+      rect = closure_1.get();
+      point = { x: closure_2(arg0, rect.left + closure_3, width - rect.right - closure_4 - closure_3), y: closure_2(arg1, rect.top + closure_3, height - rect.bottom - closure_5 - closure_3) };
       return point;
     }
   }
-  let obj2 = require("ReanimatedRexport");
-  D.__closure = { windowDimensionsSharedValue: tmp5, insetsSharedValue: tmp4, clamp: require("ReanimatedRexport").clamp, dragBoundsPadding: num, contentWidth, contentHeight };
-  D.__workletHash = 729779775192;
-  D.__initData = getClampedPosition;
-  let items = [contentHeight, contentWidth, num, tmp4, tmp5];
-  getClampedPosition = contentHeight.useCallback(D, items);
-  let obj3 = { windowDimensionsSharedValue: tmp5, insetsSharedValue: tmp4, clamp: require("ReanimatedRexport").clamp, dragBoundsPadding: num, contentWidth, contentHeight };
-  const obj5 = { onActivate: null, onUpdate: null, onDeactivate: null };
-  class C {
+  const items1 = [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16];
+  DevWidgetTsx1.__closure = items1;
+  DevWidgetTsx1.__workletHash = 7329108226657;
+  DevWidgetTsx1.__initData = tmp10;
+  const items2 = [contentHeight, contentWidth, dragBoundsPadding, tmp7, tmp8];
+  const callback = noop.useCallback(DevWidgetTsx1, items2);
+  const items3 = [closure_11, sharedValue, x, sharedValue1, y];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp18, tmp19, tmp20, tmp21, tmp22] = items3;
+  const obj3 = { onActivate: null, onUpdate: null, onDeactivate: null };
+  class DevWidgetTsx2 {
     constructor() {
-      result = closure_6.set(closure_0.get());
-      result1 = closure_7.set(closure_1.get());
+      result = closure_0.set(closure_1.get());
+      result1 = closure_2.set(closure_3.get());
       return;
     }
   }
-  C.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
-  C.__workletHash = 11333606215108;
-  C.__initData = __initData;
-  obj5.onActivate = C;
-  const fn = function f(translationX) {
-    const sum = sharedValue.get() + translationX.translationX;
-    const point = callback(sum, sharedValue1.get() + translationX.translationY);
-    const result = closure_0.set(point.x);
-    const result1 = closure_1.set(point.y);
-  };
-  fn.__closure = { getClampedPosition, originalX: sharedValue, originalY: sharedValue1, x, y };
-  fn.__workletHash = 10056531764801;
-  fn.__initData = __initData2;
-  obj5.onUpdate = fn;
-  class P {
-    constructor() {
-      obj = closure_0(closure_2[6]);
-      point = { x: null, y: null };
-      runOnJSResult = obj.runOnJS(onChangePosition);
-      point.x = closure_0.get();
-      point.y = closure_1.get();
-      tmpResult = runOnJSResult(point);
+  const items4 = [tmp19, tmp20, tmp21, tmp22];
+  DevWidgetTsx2.__closure = items4;
+  DevWidgetTsx2.__workletHash = 13170682718653;
+  DevWidgetTsx2.__initData = tmp18;
+  obj3.onActivate = DevWidgetTsx2;
+  const items5 = [closure_12, callback, sharedValue, sharedValue1, x, y];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28] = items5;
+  class DevWidgetTsx3 {
+    constructor(arg0) {
+      sum = closure_1.get() + arg0.translationX;
+      point = closure_0(sum, closure_2.get() + arg0.translationY);
+      result = closure_3.set(point.x);
+      result1 = closure_4.set(point.y);
       return;
     }
   }
-  let point = { runOnJS: require("ReanimatedRexport").runOnJS, onChangePosition, x, y };
-  P.__closure = point;
-  P.__workletHash = 10003102447058;
-  P.__initData = __initData3;
-  obj5.onDeactivate = P;
-  const panGesture = require("LegacyBaseButton").usePanGesture(obj5);
-  let obj4 = require("LegacyBaseButton");
-  class W {
+  const items6 = [tmp24, tmp25, tmp26, tmp27, tmp28];
+  DevWidgetTsx3.__closure = items6;
+  DevWidgetTsx3.__workletHash = 9152627460216;
+  DevWidgetTsx3.__initData = tmp23;
+  obj3.onUpdate = DevWidgetTsx3;
+  const items7 = [closure_13, _mod1705.scheduleOnRN, onChangePosition, x, y];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp29, tmp30, tmp31, tmp32, tmp33] = items7;
+  class DevWidgetTsx4 {
     constructor() {
-      value = closure_0.get();
-      tmp2 = closure_10(value, closure_1.get());
+      point = { x: closure_2.get(), y: closure_3.get() };
+      tmp = closure_0(closure_1, point);
+      return;
+    }
+  }
+  const items8 = [tmp30, tmp31, tmp32, tmp33];
+  DevWidgetTsx4.__closure = items8;
+  DevWidgetTsx4.__workletHash = 9806948257030;
+  DevWidgetTsx4.__initData = tmp29;
+  obj3.onDeactivate = DevWidgetTsx4;
+  const panGesture = LegacyBaseButton.usePanGesture(obj3);
+  const tmp2Result = LegacyBaseButton;
+  const items9 = [closure_14, callback, x, y, spring_spring.withSpring, springPresets.springUnclamped];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp35, tmp36, tmp37, tmp38, tmp39, tmp40] = items9;
+  class DevWidgetTsx5 {
+    constructor() {
+      value = closure_1.get();
+      point = closure_0(value, closure_2.get());
       obj = { transform: null };
-      obj1 = { translateX: null };
-      ({ x, y } = tmp2);
-      obj3 = closure_0(closure_2[10]);
-      obj1.translateX = obj3.withSpring(x, closure_0(closure_2[11]).springUnclamped);
+      obj1 = { translateX: closure_3(point.x, closure_4) };
       items = [, ];
       items[0] = obj1;
-      obj6 = { translateY: null };
-      obj5 = closure_0(closure_2[10]);
-      obj6.translateY = obj5.withSpring(y, closure_0(closure_2[11]).springUnclamped);
-      items[1] = obj6;
+      obj4 = { translateY: closure_3(point.y, closure_4) };
+      items[1] = obj4;
       obj.transform = items;
       return obj;
     }
   }
-  const point1 = { getClampedPosition, x, y, withSpring: require("spring").withSpring, springUnclamped: require("springPresets").springUnclamped };
-  W.__closure = point1;
-  W.__workletHash = 6251354551691;
-  W.__initData = __initData4;
-  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(W);
-  const obj6 = { gesture: panGesture, children: null };
-  const obj8 = { style: null, children: children.children };
-  const items1 = [tmp.widgetContainer, animatedStyle];
-  obj8.style = items1;
-  obj6.children = sharedValue(require("ReanimatedRexport").View, obj8);
-  return sharedValue(require("LegacyBaseButton").GestureDetector, obj6);
+  const items10 = [tmp36, tmp37, tmp38, tmp39, tmp40];
+  DevWidgetTsx5.__closure = items10;
+  DevWidgetTsx5.__workletHash = 4562461506226;
+  DevWidgetTsx5.__initData = tmp35;
+  const animatedStyle = _mod1652.useAnimatedStyle(DevWidgetTsx5);
+  const obj4 = { gesture: panGesture, children: null };
+  const obj5 = { style: null, children };
+  const items11 = [tmp.widgetContainer, animatedStyle];
+  obj5.style = items11;
+  obj4.children = timestampProducer(_modDef1652.View, obj5);
+  return timestampProducer(LegacyBaseButton.GestureDetector, obj4);
 }
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj.widget = size;
 let closure_9 = createStyles.createStyles(obj);
-let closure_10 = { code: "function DevWidgetTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
-const __initData = { code: "function DevWidgetTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
-const __initData2 = { code: "function DevWidgetTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
-const __initData3 = { code: "function DevWidgetTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
-const __initData4 = { code: "function DevWidgetTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
+let closure_10 = { code: "(function DevWidgetTsx1(x,y){let[windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight]=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};})" };
+let closure_11 = { code: "(function DevWidgetTsx2(){let[originalX,x,originalY,y]=this.__closure;originalX.set(x.get());originalY.set(y.get());})" };
+let closure_12 = { code: "(function DevWidgetTsx3(event){let[getClampedPosition,originalX,originalY,x,y]=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);})" };
+let closure_13 = { code: "(function DevWidgetTsx4(){let[scheduleOnRN,onChangePosition,x,y]=this.__closure;scheduleOnRN(onChangePosition,{x:x.get(),y:y.get()});})" };
+let closure_14 = { code: "(function DevWidgetTsx5(){let[getClampedPosition,x,y,withSpring,springUnclamped]=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};})" };
 let closure_16 = noop.memo(function DevWidgetContent() {
   const tmp = closure_9();
   return timestampProducer(Pressables.PressableOpacity, {
@@ -157,10 +176,10 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
+  const sharedValue = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
+  const sharedValue1 = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
   const obj3 = { children: null };
-  const items = [timestampProducer(VEVOODefault, { x: sharedValue, y: sharedValue1 }), ];
+  items = [timestampProducer(VEVOODefault, { x: sharedValue, y: sharedValue1 }), ];
   const point = {
     x: sharedValue,
     y: sharedValue1,

@@ -1,18 +1,18 @@
-// === Module 17518: UserSettingsHighlightNotifications ===
+// === Module 17661: UserSettingsHighlightNotifications ===
 
-// Module 17518 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 6957 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
+// Module 17661 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 7083 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 require = fn;
 function Row(guildId) {
   guildId = guildId.guildId;
-  const items = [guildId];
+  items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = noop.useCallback((arg0) => {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
@@ -35,7 +35,7 @@ function Row(guildId) {
     }
     let obj2 = { guild };
     const obj3 = { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd };
-    return jsx(tmp2(7369).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
+    return jsx(tmp2(7489).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
   }
   let obj = guildId(504);
   tmp2 = guildId;
@@ -46,13 +46,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
 
 export default function UserSettingsHighlightNotifications() {
-  const items = [SortedGuildStore];
+  items = [SortedGuildStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => flattenedGuildIds.getFlattenedGuildIds());
   [][0] = stateFromStoresArray;
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8177).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8301).Form, { children: tmp3 });
   }
   return tmp4;
 };

@@ -1,26 +1,29 @@
-// === Module 19119: getAdjustedBottomOffsets ===
+// === Module 19277: getAdjustedBottomOffsets ===
 
-// Module 19119 (getAdjustedBottomOffsets)
-import PlatformUtils_mod from "PlatformUtils" /* 1375 */;
+// Module 19277 (getAdjustedBottomOffsets)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
-let PlatformUtils = PlatformUtils_mod;
-PlatformUtils = PlatformUtils.isAndroid();
-const fn = function t(arg0) {
+const items = [{ code: "(function getAdjustedBottomOffsets_getAdjustedBottomOffsetsTsx1({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight}){let[IS_ANDROID]=this.__closure;let bottomOffset=screenBottomOffset;if(keyboardHeight>0){bottomOffset+=(IS_ANDROID?0:keyboardHeight)-safeAreaBottom;}return{bottomOffset:bottomOffset};})" }, ];
+items[1] = PlatformUtils.isAndroid();
+let c0;
+[tmp2, tmp3] = items;
+function getAdjustedBottomOffsets(arg0) {
   ({ screenBottomOffset, keyboardHeight } = arg0);
   let bottomOffset = screenBottomOffset;
   if (keyboardHeight > 0) {
     let num = 0;
-    if (!PlatformUtils) {
+    if (!c0) {
       num = keyboardHeight;
     }
     bottomOffset = screenBottomOffset + (num - tmp);
   }
   return { bottomOffset };
-};
-fn.__closure = { IS_ANDROID: PlatformUtils };
-fn.__workletHash = 9166664651792;
-fn.__initData = { code: "function getAdjustedBottomOffsets_getAdjustedBottomOffsetsTsx1({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight}){const{IS_ANDROID}=this.__closure;let bottomOffset=screenBottomOffset;if(keyboardHeight>0){bottomOffset+=(IS_ANDROID?0:keyboardHeight)-safeAreaBottom;}return{bottomOffset:bottomOffset};}" };
+}
+const items1 = [tmp3];
+getAdjustedBottomOffsets.__closure = items1;
+getAdjustedBottomOffsets.__workletHash = 5580789789641;
+getAdjustedBottomOffsets.__initData = tmp2;
 const result = size.fileFinishedImporting("modules/panels/morphable/native/getAdjustedBottomOffsets.tsx");
 
-export default fn;
+export default getAdjustedBottomOffsets;

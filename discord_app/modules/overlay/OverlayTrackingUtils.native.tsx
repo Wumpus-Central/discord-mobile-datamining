@@ -1,6 +1,6 @@
-// === Module 7571: OverlayTrackingUtils ===
+// === Module 7695: OverlayTrackingUtils ===
 
-// Module 7571 (OverlayTrackingUtils)
+// Module 7695 (OverlayTrackingUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
@@ -15,6 +15,6 @@ export function useAnyOverlayRenderingLocked() {
   return false;
 }
 export function useOverlayLockState() {
-  const items = [false, null];
+  items = [false, null];
   return items;
 }

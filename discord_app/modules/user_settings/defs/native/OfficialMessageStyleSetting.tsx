@@ -1,15 +1,15 @@
-// === Module 17325: OfficialMessageStyleSetting ===
+// === Module 17468: OfficialMessageStyleSetting ===
 
-// Module 17325 (OfficialMessageStyleSetting)
+// Module 17468 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16270 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16413 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function useOfficialMessageStyleSettingValue() {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
@@ -20,7 +20,7 @@ function useOfficialMessageStyleSettingOptions() {
     const obj = { label: null, value: "default" };
     const intl = util.intl;
     obj.label = intl.string(util.t.ERaS6f);
-    const items = [obj, , , ];
+    items = [obj, , , ];
     const obj2 = { label: null, value: "no_text_color" };
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t.JKfipk);
@@ -36,13 +36,13 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: useOfficialMessageStyleSettingOptions

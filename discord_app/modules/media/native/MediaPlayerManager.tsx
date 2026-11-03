@@ -1,26 +1,26 @@
-// === Module 16397: MediaPlayerManager ===
+// === Module 16540: MediaPlayerManager ===
 
-// Module 16397 (MediaPlayerManager)
+// Module 16540 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import Constants2 from "Constants" /* 1083 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5657 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5777 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import VoicePanelStore from "VoicePanelStore" /* 6875 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16398 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import VoicePanelStore from "VoicePanelStore" /* 6995 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16541 */;
 import module_560 from "module_560" /* 560 */;
-import LifecycleManager from "LifecycleManager" /* 1996 */;
+import LifecycleManager from "LifecycleManager" /* 2125 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,22 +33,21 @@ const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
 const useMediaPlayerManagerStore = module_560.create((arg0) => {
   closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "PX_8",
-    canAccessMedia: "dispatch",
+    canAccessMedia: "disabled",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "flexDirection",
-    showPip: "#E893FF",
+    showPip: "ModulesLoader",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: null
+    currentlyDisplayedChannelId: 116.148
   };
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {
@@ -81,7 +80,7 @@ const prototype = MediaPlayerManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   const obj = new React3(React4.MediaPlayerManager);
-  const items = [obj.addListener("MediaPlayerPlaybackSourceChanged", this.handleMediaPlayerPlaybackSourceChanged), obj.addListener("MediaPlayerPlaybackProgressUpdated", this.handleMediaPlayerPlaybackProgressUpdated), obj.addListener("MediaPlayerPlaybackRateChanged", this.handleMediaPlayerPlaybackRateChanged), obj.addListener("MediaPlayerViewWillAppear", this.handleMediaPlayerViewWillAppear), obj.addListener("MediaPlayerViewDidDisappear", this.handleMediaPlayerViewDidDisappear)];
+  items = [obj.addListener("MediaPlayerPlaybackSourceChanged", this.handleMediaPlayerPlaybackSourceChanged), obj.addListener("MediaPlayerPlaybackProgressUpdated", this.handleMediaPlayerPlaybackProgressUpdated), obj.addListener("MediaPlayerPlaybackRateChanged", this.handleMediaPlayerPlaybackRateChanged), obj.addListener("MediaPlayerViewWillAppear", this.handleMediaPlayerViewWillAppear), obj.addListener("MediaPlayerViewDidDisappear", this.handleMediaPlayerViewDidDisappear)];
   this.subscriptions = items;
   MediaPlayerManager = React4.MediaPlayerManager;
   const result = MediaPlayerManager.subscribeToPlaybackEvents();
@@ -179,7 +178,7 @@ prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   });
 };
 prototype["handleVoicePanelStateUpdated"] = function handleVoicePanelStateUpdated() {
-  const state = VoicePanelStore.getState();
+  state = VoicePanelStore.getState();
   let result = state.isVoicePanelFullscreen();
   if (!result) {
     result = state.voicePanelsPIP.size > 0;
@@ -207,7 +206,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
       id = source.id;
     }
     closure_16.verbose("Playback rate changed to " + _require + ": " + id);
-    const state = obj.getState();
+    state = obj.getState();
     ({ activeMediaPlayerSource, isPlaying, wasPipClosedByUser } = state);
     if (tmp9(activeMediaPlayerSource, source)) {
       const obj2 = { rate: _require, isPlaying: 0 !== _require, wasPipClosedByUser: null };
@@ -234,7 +233,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
 prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlayerPlaybackProgressUpdated(arg0) {
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
   ReactBatchUpdates.batchUpdates(() => {
-    const state = obj.getState();
+    state = obj.getState();
     if (tmp2(state.activeMediaPlayerSource, _require)) {
       const currentlyDisplayedChannelId = state.currentlyDisplayedChannelId;
       if (state.showPip) {
@@ -243,7 +242,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
           const obj2 = { time, duration: dependencyMap, isCompleted: null };
           let flag;
           if (dependencyMap > 0) {
-            flag = dependencyMap - time <= map1;
+            flag = dependencyMap - time <= closure_2_13;
           }
           if (flag == null) {
             flag = false;
@@ -255,7 +254,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
         let tmp9 = null != progress && null != tmp7;
         if (tmp9) {
           const _Math = Math;
-          tmp9 = Math.abs(tmp7.time - progress.time) < closure_2_14;
+          tmp9 = Math.abs(tmp7.time - progress.time) < gesture;
         }
         if (tmp9) {
           tmp9 = tmp7.time !== tmp7.duration;
@@ -279,14 +278,14 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
   source = source.source;
   source(1259).batchUpdates(() => {
     let id;
-    const state = obj.getState();
+    state = obj.getState();
     if (source != null) {
       id = source.id;
     }
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "dispatch", rate: false, isPlaying: false, wasPipClosedByUser: "getAlert" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: "setValue" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);
@@ -356,7 +355,7 @@ prototype["handleMediaPlayerViewWillAppear"] = function handleMediaPlayerViewWil
   ({ mediaItemIds: importDefault, channelId: require } = arg0);
   require("ReactBatchUpdates").batchUpdates(() => {
     const displayedMediaItemIdsPerChannel = obj.getState().displayedMediaItemIdsPerChannel;
-    let items = displayedMediaItemIdsPerChannel[_require];
+    items = displayedMediaItemIdsPerChannel[_require];
     if (items == null) {
       items = [];
     }
@@ -377,7 +376,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
       const _Set = Set;
       set = new Set();
     }
-    const items = [...set];
+    items = [...set];
     const set1 = new Set(items.filter((item) => !closure_1_1.includes(item)));
     if (0 === set1.size) {
       delete tmp2[tmp];
@@ -390,7 +389,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
 };
 function updateDisplayState() {
   ReactBatchUpdates.batchUpdates(() => {
-    const state = useMediaPlayerManagerStore.getState();
+    state = useMediaPlayerManagerStore.getState();
     ({ displayedMediaItemIdsPerChannel, activeMediaPlayerSource } = state);
     if (undefined === activeMediaPlayerSource) {
       activeMediaPlayerSource = {};
@@ -478,6 +477,6 @@ export default updateDisplayState1;
 export { useMediaPlayerManagerStore };
 export function isPlaybackComplete(duration) {
   if (duration.duration > 0) {
-    return duration.duration - duration.time <= map1;
+    return duration.duration - duration.time <= state;
   }
 }

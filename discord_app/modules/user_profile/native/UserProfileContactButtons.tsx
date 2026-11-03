@@ -1,17 +1,17 @@
-// === Module 15019: UserProfileContactButtons ===
+// === Module 15155: UserProfileContactButtons ===
 
-// Module 15019 (UserProfileContactButtons)
+// Module 15155 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11504 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14195 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 14570 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11641 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14326 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 14701 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -40,19 +40,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8761).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8885).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7326)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7446)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8761);
+  let obj = user(8885);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14920).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14920);
-  const items = [userDisplayName];
+  const gameFriendsForUser = user(15049).useGameFriendsForUser(user.id);
+  const tmp3Result = user(15049);
+  items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5068).useName(user);
+  userDisplayName = tmp(5195).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -61,9 +61,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(15020).UserClockIcon;
+          let UserPlusIcon = tmp3(15156).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(5721).UserPlusIcon;
+          UserPlusIcon = tmp3(5841).UserPlusIcon;
         }
         const intl = tmp3(1113).intl;
         const string = intl.string;
@@ -114,7 +114,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -129,7 +129,7 @@ export default function UserProfileContactButtons(user) {
   trackUserProfileAction = user(trackUserProfileAction[9]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp3 = closure_8();
   let obj = user(trackUserProfileAction[9]);
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStores = user(trackUserProfileAction[11]).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   let obj2 = user(trackUserProfileAction[11]);
   const gameFriendsForUser = user(trackUserProfileAction[10]).useGameFriendsForUser(user.id);

@@ -1,171 +1,166 @@
-// === Module 17991: Welcome ===
+// === Module 18134: Welcome ===
 
-// Module 17991 (Welcome)
+// Module 18134 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Link from "Link" /* 1498 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7654 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 14236 */;
-import _modDef15124 from "module_15124" /* 15124 */;
-import _mod15685 from "module_15685" /* 15685 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17988 */;
+import Link from "Link" /* 1500 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7778 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 14367 */;
+import _modDef15265 from "module_15265" /* 15265 */;
+import _mod15829 from "module_15829" /* 15829 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18131 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17992 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7637 */;
-import MultiAccountStore from "MultiAccountStore" /* 13977 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import InviteStore from "InviteStore" /* 5749 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 9123 */;
+import AgeGateStore from "AgeGateStore" /* 18135 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7761 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import InviteStore from "InviteStore" /* 5869 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 9251 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function InviteCard(invite) {
   invite = invite.invite;
-  const tmp = closure_23();
+  const tmp = closure_22();
   ({ guild, inviter } = invite);
   if (invite.state !== constants4.RESOLVED) {
     return null;
   } else {
     if (null != guild) {
       const obj3 = { guild };
-      let tmp14 = dependencyMap(GuildInviteIconDefault, obj3);
+      let tmp14 = expandedHeight(GuildInviteIconDefault, obj3);
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t["3rE1P8"]);
       let name = guild.name;
       let tmp17 = require;
-      let tmp18 = dependencyMap;
+      let tmp18 = expandedHeight;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "Array" };
+      const obj = { user: null, guildId: "y" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
-      tmp14 = dependencyMap(native.Avatar, obj);
+      tmp14 = expandedHeight(native.Avatar, obj);
       const intl = util.intl;
       stringResult = intl.string(util.t.OsdY8B);
       name = UserUtilsDefault.getFormattedName(inviter);
       tmp17 = require;
-      tmp18 = dependencyMap;
+      tmp18 = expandedHeight;
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "Array" };
+      const obj4 = { user: null, guildId: "y" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
       stringResult = intl3.string(util.t["+ITYkQ"]);
-      const tmp35 = dependencyMap(native.Avatar, obj4);
+      const tmp35 = expandedHeight(native.Avatar, obj4);
       name = UserUtilsDefault.getFormattedName(inviter, true);
       tmp14 = tmp35;
       tmp17 = require;
-      tmp18 = dependencyMap;
+      tmp18 = expandedHeight;
     }
     const obj5 = { style: null, children: null };
-    const items = [tmp.container, invite.style];
+    items = [tmp.container, invite.style];
     obj5.style = items;
     const items1 = [tmp14, ];
     const obj6 = { style: tmp.text, children: null };
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5624).Text, obj7), ];
+    const items2 = [tmp18(tmp17(5747).Text, obj7), ];
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5624).Text, obj8);
+    items2[1] = tmp18(tmp17(5747).Text, obj8);
     obj6.children = items2;
-    items1[1] = __initData(React4, obj6);
+    items1[1] = dependencyMap(React4, obj6);
     obj5.children = items1;
-    return __initData(React4, obj5);
+    return dependencyMap(React4, obj5);
   }
 }
 function GuildTemplateCard(arg0) {
   ({ guildTemplate, style } = arg0);
-  const tmp = closure_23();
+  const tmp = closure_22();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15124 };
-  const items1 = [dependencyMap(FastImageDefault, obj2), ];
+  const obj2 = { source: _modDef15265 };
+  const items1 = [expandedHeight(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.QzUORX);
-  const items2 = [dependencyMap(Text_Text.Text, obj4), dependencyMap(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
+  const items2 = [expandedHeight(Text_Text.Text, obj4), expandedHeight(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
   obj3.children = items2;
-  items1[1] = __initData(React4, obj3);
+  items1[1] = dependencyMap(React4, obj3);
   obj.children = items1;
-  return __initData(React4, obj);
+  return dependencyMap(React4, obj);
 }
 function Centerpiece(inlineButtons) {
   ({ invite, guildTemplate } = inlineButtons);
   const tmp3 = useIsWindowLargeDefault();
-  const tmp4 = closure_22(tmp3);
-  const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
-  let tmp9 = null != guildTemplate;
-  if (tmp9) {
-    tmp9 = guildTemplate.state === GuildTemplateStates.RESOLVED;
+  const tmp4 = closure_21(tmp3);
+  let tmp8 = null != guildTemplate;
+  if (tmp8) {
+    tmp8 = guildTemplate.state === GuildTemplateStates.RESOLVED;
   }
-  const obj2 = { style: tmp4.centerpieceContainer, children: null };
-  const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  const items = [dependencyMap(FastImageDefault, { style: tmp4.logo, source: _mod15685 }), , ];
-  const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
-  const items1 = [tmp4.header, typeConsolidationTextTransform];
-  obj5.style = items1;
+  const obj = { style: tmp4.centerpieceContainer, children: null };
+  const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
+  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod15829 }), , ];
+  const obj4 = { style: tmp4.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
   if (tmp3) {
     num = 1;
   }
-  obj5.lineClamp = num;
+  obj4.lineClamp = num;
   const intl = util.intl;
-  obj5.children = intl.string(util.t["3S2xmm"]);
-  const items2 = [dependencyMap(Text_Text.Heading, obj5), , , ];
-  const items3 = [tmp4.subHeader, ];
+  obj4.children = intl.string(util.t["3S2xmm"]);
+  const items1 = [expandedHeight(Text_Text.Heading, obj4), , , ];
+  const items2 = [tmp4.subHeader, ];
   if (null != invite) {
     let subHeaderWithInvite = tmp4.subHeaderWithInvite;
   } else {
     subHeaderWithInvite = null;
   }
-  const obj6 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
-  items3[1] = subHeaderWithInvite;
+  const obj5 = { variant: "text-md/medium", color: "text-overlay-light", style: items2, maxFontSizeMultiplier: 3, children: null };
+  items2[1] = subHeaderWithInvite;
   const intl2 = util.intl;
-  obj6.children = intl2.string(util.t.Gtcthl);
-  items2[1] = dependencyMap(Text_Text.Text, obj6);
-  let tmp11Result = null;
+  obj5.children = intl2.string(util.t.Gtcthl);
+  items1[1] = expandedHeight(Text_Text.Text, obj5);
+  let tmp10Result = null;
   if (null != invite) {
-    const obj7 = { invite };
-    tmp11Result = dependencyMap(InviteCard, obj7);
+    const obj6 = { invite };
+    tmp10Result = expandedHeight(InviteCard, obj6);
   }
-  items2[2] = tmp11Result;
-  let tmp11Result2 = null;
-  if (tmp9) {
-    const obj8 = { guildTemplate };
-    tmp11Result2 = dependencyMap(GuildTemplateCard, obj8);
+  items1[2] = tmp10Result;
+  let tmp10Result2 = null;
+  if (tmp8) {
+    const obj7 = { guildTemplate };
+    tmp10Result2 = expandedHeight(GuildTemplateCard, obj7);
   }
-  items2[3] = tmp11Result2;
-  items[1] = __initData(React4, { children: items2 });
+  items1[3] = tmp10Result2;
+  items[1] = dependencyMap(React4, { children: items1 });
   items[2] = inlineButtons.inlineButtons;
-  obj3.children = items;
-  obj2.children = __initData(hasOwnProperty, obj3);
-  return dependencyMap(React4, obj2);
+  obj2.children = items;
+  obj.children = dependencyMap(hasOwnProperty, obj2);
+  return expandedHeight(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: map1, StorageKeys: closure_14, AuthStates: closure_15, InviteStates: closure_16, ThemeTypes: closure_17 } = Constants);
-const GuildTemplateStates = fn(7501).GuildTemplateStates;
-const InviteTypes = fn(7879).InviteTypes;
+({ AnalyticEvents: closure_12, StorageKeys: map1, AuthStates: closure_14, InviteStates: closure_15, ThemeTypes: closure_16 } = Constants);
+const GuildTemplateStates = fn(7625).GuildTemplateStates;
+const InviteTypes = fn(8003).InviteTypes;
 const jsxProd = fn(21);
-({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-let createStyles = fn(5014);
-let closure_22 = createStyles.createStyles((arg0) => {
-  const obj = { container: { height: "100%", flex: 1, padding: 16 }, logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 }, scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8, textTransform: "uppercase" }, subHeader: null, subHeaderWithInvite: null, centerpieceContainer: null, buttonContainer: null };
+({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
+let createStyles = fn(5141);
+let closure_21 = createStyles.createStyles((arg0) => {
+  const obj = { container: { height: "100%", flex: 1, padding: 16 }, logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 }, scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8 }, subHeader: null, subHeaderWithInvite: null, centerpieceContainer: null, buttonContainer: null };
   let num = 300;
   if (arg0) {
     num = 480;
@@ -176,21 +171,21 @@ let closure_22 = createStyles.createStyles((arg0) => {
   obj.buttonContainer = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, flexDirection: "row", borderRadius: nativeDefault.radii.sm }, text: { marginLeft: 16 } };
-let closure_23 = createStyles.createStyles(obj3);
+let closure_22 = createStyles.createStyles(obj3);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/Welcome.tsx");
 
 export default function Welcome() {
   const tmp3 = require("useIsWindowLarge")();
-  const tmp4 = closure_22(tmp3);
+  const tmp4 = closure_21(tmp3);
   _require = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
   const tmp = importDefault;
   ({ top, bottom } = require("useSafeAreaInsets")());
   let tmp6 = require("useSafeAreaInsets")();
-  const items = [DisplayedInviteStore];
+  items = [DisplayedInviteStore];
   importDefault = require("initialize").useStateFromStores(items, () => displayedInviteCode.getDisplayedInviteCode());
   let obj2 = require("initialize");
   const items1 = [InviteStore];
@@ -208,11 +203,6 @@ export default function Welcome() {
   const items3 = [AgeGateStore];
   noop = require("initialize").useStateFromStores(items3, () => underageAnonymous.isUnderageAnonymous());
   const obj5 = require("initialize");
-  const items4 = [MultiAccountStore];
-  const stateFromStores2 = require("initialize").useStateFromStores(items4, () => MultiAccountStore.getHasLoggedInAccounts());
-  const obj6 = require("initialize");
-  const items5 = [MultiAccountStore];
-  const stateFromStores3 = require("initialize").useStateFromStores(items5, () => MultiAccountStore.getCanUseMultiAccountMobile());
   require("useMountEffect")(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
     const result = TTIAnalyticsUtils.trackAppLaunchCompleted();
@@ -229,7 +219,7 @@ export default function Welcome() {
     obj4.invite_type = tmp6;
     let id;
     if (stateFromStores != null) {
-      const guild = stateFromStores.guild;
+      guild = stateFromStores.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -251,7 +241,7 @@ export default function Welcome() {
     AnalyticsUtilsDefault.track(constants.APP_LANDING_VIEWED, obj4);
   });
   const effect = noop.useEffect(() => {
-    const locationMetadata = closure_1(stateFromStores[33]).getLocationMetadata();
+    const locationMetadata = closure_1(stateFromStores[32]).getLocationMetadata();
   }, []);
   require("useInitialValue")(ExperimentStore.hasLoadedExperiments);
   const effect1 = noop.useEffect(() => {
@@ -260,66 +250,66 @@ export default function Welcome() {
   const effect2 = noop.useEffect(() => {
 
   });
-  if (stateFromStores3) {
-    if (stateFromStores2) {
-      return closure_20(tmp(tmp2[35]), {});
+  if (tmp9) {
+    return closure_19(tmp(tmp2[34]), {});
+  } else {
+    const obj6 = { style: tmp4.buttonContainer, children: null };
+    const obj7 = { children: null };
+    const obj8 = {
+      size: "lg",
+      variant: "primary-overlay",
+      onPress: function handlePressRegister() {
+          if (closure_3) {
+            navigation.navigate(constants3.AGE_GATE_UNDERAGE, { fromRegister: true });
+          } else {
+            const nextAuthState = RegistrationStepsUtils.getNextAuthState(constants3.WELCOME);
+            const CommonActions = Link.CommonActions;
+            navigation.dispatch(CommonActions.navigate(nextAuthState));
+            AnalyticsUtilsDefault.track(constants.REGISTER_VIEWED);
+          }
+        },
+      text: null
+    };
+    const intl = tmp5(tmp2[15]).intl;
+    obj8.text = intl.string(tmp5(tmp2[15]).t.pV8xeR);
+    const items4 = [closure_19(tmp5(tmp2[38]).Button, obj8), ];
+    const obj9 = {
+      size: "lg",
+      variant: "secondary-overlay",
+      onPress: function handlePressLogin() {
+          navigation.navigate(constants3.LOGIN);
+          AnalyticsUtilsDefault.track(constants.LOGIN_VIEWED, { source: "welcome" });
+        },
+      text: null
+    };
+    const intl2 = tmp5(tmp2[15]).intl;
+    obj9.text = intl2.string(tmp5(tmp2[15]).t.dKhVQN);
+    items4[1] = closure_19(tmp5(tmp2[38]).Button, obj9);
+    obj7.children = items4;
+    obj6.children = closure_20(tmp5(tmp2[37]).ButtonGroup, obj7);
+    const tmp15Result = closure_19(closure_4, obj6);
+    const obj10 = { theme: constants5.DARK, children: null };
+    const obj11 = { style: null, children: null };
+    const items5 = [tmp4.container, ];
+    const obj12 = { paddingTop: top + tmp5(tmp2[40]).NAV_BAR_HEIGHT, paddingBottom: bottom };
+    items5[1] = obj12;
+    obj11.style = items5;
+    const obj13 = { invite: stateFromStores, guildTemplate: stateFromStores1, inlineButtons: null };
+    let tmp21 = null;
+    if (tmp3) {
+      tmp21 = tmp15Result;
     }
+    obj13.inlineButtons = tmp21;
+    const items6 = [closure_19(Centerpiece, obj13), , ];
+    let tmp22 = !tmp3;
+    if (!tmp3) {
+      tmp22 = tmp15Result;
+    }
+    items6[1] = tmp22;
+    items6[2] = closure_19(tmp5(tmp2[41]).TTIFirstContentfulPaint, { label: "welcome" });
+    obj11.children = items6;
+    obj10.children = closure_20(closure_4, obj11);
+    return closure_19(tmp5(tmp2[39]).ThemeContextProvider, obj10);
   }
-  const obj8 = { style: tmp4.buttonContainer, children: null };
-  const obj9 = { children: null };
-  const obj10 = {
-    size: "lg",
-    variant: "primary-overlay",
-    onPress: function handlePressRegister() {
-      if (closure_3) {
-        navigation.navigate(constants3.AGE_GATE_UNDERAGE, { fromRegister: true });
-      } else {
-        const nextAuthState = RegistrationStepsUtils.getNextAuthState(constants3.WELCOME);
-        const CommonActions = Link.CommonActions;
-        navigation.dispatch(CommonActions.navigate(nextAuthState));
-        AnalyticsUtilsDefault.track(constants.REGISTER_VIEWED);
-      }
-    },
-    text: null
-  };
-  const intl = tmp5(tmp2[16]).intl;
-  obj10.text = intl.string(require("util").t.pV8xeR);
-  const items6 = [closure_20(require("components/Button/Button").Button, obj10), ];
-  const obj11 = {
-    size: "lg",
-    variant: "secondary-overlay",
-    onPress: function handlePressLogin() {
-      navigation.navigate(constants3.LOGIN);
-      AnalyticsUtilsDefault.track(constants.LOGIN_VIEWED, { source: "welcome" });
-    },
-    text: null
-  };
-  const intl2 = tmp5(tmp2[16]).intl;
-  obj11.text = intl2.string(require("util").t.dKhVQN);
-  items6[1] = closure_20(require("components/Button/Button").Button, obj11);
-  obj9.children = items6;
-  obj8.children = closure_21(require("ButtonGroup").ButtonGroup, obj9);
-  const tmp19 = closure_20(closure_4, obj8);
-  const obj12 = { theme: constants5.DARK, children: null };
-  const obj13 = { style: null, children: null };
-  const items7 = [tmp4.container, ];
-  const obj7 = require("initialize");
-  items7[1] = { paddingTop: top + require("NavigatorConstants").NAV_BAR_HEIGHT, paddingBottom: bottom };
-  obj13.style = items7;
-  const obj15 = { invite: stateFromStores, guildTemplate: stateFromStores1, inlineButtons: null };
-  let tmp21 = null;
-  if (tmp3) {
-    tmp21 = tmp19;
-  }
-  obj15.inlineButtons = tmp21;
-  const items8 = [closure_20(Centerpiece, obj15), , ];
-  let tmp22 = !tmp3;
-  if (!tmp3) {
-    tmp22 = tmp19;
-  }
-  items8[1] = tmp22;
-  items8[2] = closure_20(require("TTIFirstContentfulPaint").TTIFirstContentfulPaint, { label: "welcome" });
-  obj13.children = items8;
-  obj12.children = closure_21(closure_4, obj13);
-  return closure_20(require("native").ThemeContextProvider, obj12);
+  tmp9 = require("useShouldShowChooseAccount")();
 };

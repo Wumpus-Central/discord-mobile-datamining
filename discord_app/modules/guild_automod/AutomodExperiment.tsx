@@ -1,7 +1,7 @@
-// === Module 19678: AutomodExperiment ===
+// === Module 19828: AutomodExperiment ===
 
-// Module 19678 (AutomodExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 19828 (AutomodExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-automod-application-rules", kind: "guild", defaultConfig: { enabled: false }, variations: null };

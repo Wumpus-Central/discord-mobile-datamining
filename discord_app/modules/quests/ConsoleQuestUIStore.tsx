@@ -1,6 +1,6 @@
-// === Module 7847: ConsoleQuestUIStore ===
+// === Module 7971: ConsoleQuestUIStore ===
 
-// Module 7847 (ConsoleQuestUIStore)
+// Module 7971 (ConsoleQuestUIStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let obj = module_560.create((arg0, arg1) => {
         if (0 === length.length) {
           errorHintsByQuestId1.delete(closure_0);
         } else {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(length, 0);
           const result = errorHintsByQuestId1.set(closure_0, items);
         }

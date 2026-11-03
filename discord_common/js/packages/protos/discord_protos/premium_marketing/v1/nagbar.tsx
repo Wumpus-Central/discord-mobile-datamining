@@ -1,10 +1,10 @@
-// === Module 9649: nagbar ===
+// === Module 9781: nagbar ===
 
-// Module 9649 (nagbar)
+// Module 9781 (nagbar)
 import _mod1197 from "module_1197" /* 1197 */;
 import wrappers from "wrappers" /* 1227 */;
-import localized_string from "localized_string" /* 9631 */;
-import help_article from "help_article" /* 9632 */;
+import localized_string from "localized_string" /* 9763 */;
+import help_article from "help_article" /* 9764 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class Nagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", require("cta_button").ButtonAction, "BUTTON_ACTION_"];
+            items = ["discord_protos.premium_marketing.v1.ButtonAction", require("cta_button").ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -188,7 +188,7 @@ let items = [
     name: "cta_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", require("cta_button").ButtonAction, "BUTTON_ACTION_"];
+      items = ["discord_protos.premium_marketing.v1.ButtonAction", require("cta_button").ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },

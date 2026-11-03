@@ -1,10 +1,10 @@
-// === Module 16558: useDesaturatedUserColorValue ===
+// === Module 16701: useDesaturatedUserColorValue ===
 
-// Module 16558 (useDesaturatedUserColorValue)
+// Module 16701 (useDesaturatedUserColorValue)
 import _mod19 from "module_19" /* 19 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import tinycolorDefault from "tinycolor" /* 7730 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import tinycolorDefault from "tinycolor" /* 7854 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/colors/useDesaturatedUserColo
 
 export default function useDesaturatedUserColorValue(arg0) {
   _require = arg0;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let num = 1;
     if (AccessibilityStore.desaturateUserColors) {

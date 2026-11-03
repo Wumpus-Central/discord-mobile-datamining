@@ -1,12 +1,12 @@
-// === Module 8573: GifTag ===
+// === Module 8697: GifTag ===
 
-// Module 8573 (GifTag)
+// Module 8697 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import createStyles from "createStyles" /* 5014 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import createStyles from "createStyles" /* 5141 */;
 import n from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 
@@ -25,11 +25,11 @@ const result = size.fileFinishedImporting("modules/user_profile/native/GifTag.ts
 export default function GifTag(style) {
   const tmp = closure_4();
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [tmp.gifTag, style.style];
+  items = [tmp.gifTag, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-sm/bold", color: "none", style: tmp.gifTagText, children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "none", style: tmp.gifTagText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.I5gL2H);
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/bold", color: "none", style: tmp.gifTagText, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "none", style: tmp.gifTagText, children: null });
   return <View style={null} pointerEvents="none">{null}</View>;
 };

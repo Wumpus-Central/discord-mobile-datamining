@@ -1,8 +1,8 @@
-// === Module 11304: SafetyToolsActionSheetWrapper ===
+// === Module 11441: SafetyToolsActionSheetWrapper ===
 
-// Module 11304 (SafetyToolsActionSheetWrapper)
+// Module 11441 (SafetyToolsActionSheetWrapper)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ export default function SafetyToolsActionSheetWrapper(channelId) {
   const onClose = channelId.onClose;
   let stateFromStores;
   ({ headerTitle, hasHeaderBack, warningId, warningType, recipientId, children } = channelId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[3]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const items1 = [stateFromStores, onClose];
   const effect = noop.useEffect(() => {

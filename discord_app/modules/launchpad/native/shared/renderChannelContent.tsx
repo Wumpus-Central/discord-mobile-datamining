@@ -1,13 +1,13 @@
-// === Module 18730: renderChannelContent ===
+// === Module 18888: renderChannelContent ===
 
-// Module 18730 (renderChannelContent)
-import Text_Text from "Text/Text" /* 5624 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7275 */;
-import WarningIcon from "WarningIcon" /* 8026 */;
-import LockIcon from "LockIcon" /* 8667 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18176 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18727 */;
-import ChannelTitleDefault from "ChannelTitle" /* 18731 */;
+// Module 18888 (renderChannelContent)
+import Text_Text from "Text/Text" /* 5747 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7395 */;
+import WarningIcon from "WarningIcon" /* 8150 */;
+import LockIcon from "LockIcon" /* 8791 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18320 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18885 */;
+import ChannelTitleDefault from "ChannelTitle" /* 18889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ function ChannelContent(arg0) {
   }
   const obj2 = { style: tmp.channelContent, children: null };
   const obj3 = { style: tmp.channelContainer, children: null };
-  const items = [tmp.leftBox, ];
+  items = [tmp.leftBox, ];
   let str = "center";
   if (isValidElementResult) {
     str = "space-between";
@@ -55,7 +55,7 @@ function ChannelContent(arg0) {
   const items1 = [React5(ChannelTitleDefault, obj6), , ];
   let tmp9Result = null;
   if (null != channelCategoryName) {
-    const obj7 = { variant: "text-xs/bold", color: "text-muted", style: { marginRight: 4 }, children: channelCategoryName };
+    const obj7 = { variant: "text-xs/semibold", color: "text-muted", style: { marginRight: 4 }, children: channelCategoryName };
     tmp9Result = React5(Text_Text.Text, obj7);
   }
   items1[1] = tmp9Result;
@@ -150,19 +150,19 @@ function ChannelContent(arg0) {
   return React5(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11046).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6776).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(11186).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
-let PlatformUtils = fn(1375);
+const createStyles = fn(5141);
+let PlatformUtils = fn(1377);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

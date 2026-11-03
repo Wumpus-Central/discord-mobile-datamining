@@ -1,10 +1,10 @@
-// === Module 9461: useTrackShopCardImpression ===
+// === Module 9589: useTrackShopCardImpression ===
 
-// Module 9461 (useTrackShopCardImpression)
+// Module 9589 (useTrackShopCardImpression)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useTrackImpression from "useTrackImpression" /* 6028 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7731 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import useTrackImpression from "useTrackImpression" /* 6148 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7855 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ export function useTrackShopCardImpression(product, selectedProduct) {
   const ref = analyticsLocations.useRef(null);
   closure_8 = analyticsLocations.useRef(false);
   closure_9 = analyticsLocations.useRef(false);
-  const items = [selectedProduct.skuId];
+  items = [selectedProduct.skuId];
   const effect = analyticsLocations.useEffect(() => {
     closure_8.current = false;
     closure_9.current = false;

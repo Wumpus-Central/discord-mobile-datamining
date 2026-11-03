@@ -1,8 +1,8 @@
-// === Module 15220: PoggermodeUtils ===
+// === Module 15361: PoggermodeUtils ===
 
-// Module 15220 (PoggermodeUtils)
+// Module 15361 (PoggermodeUtils)
 import shims from "shims" /* 574 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7821 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7945 */;
 import size from "module_2" /* 2 */;
 
 ({ ShakeLevel: c2, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: closure_4 } = PoggermodeConstants);
@@ -22,7 +22,7 @@ export function getComboShakeIntensity(userCombo) {
   if (LEVEL_4 === undefined) {
     LEVEL_3 = LEVEL_3.LEVEL_3;
   }
-  const items = [React3[LEVEL_3], React4[LEVEL_3]];
+  items = [React3[LEVEL_3], React4[LEVEL_3]];
   c0 = undefined;
   c1 = undefined;
   [arr2, ] = items;
@@ -50,7 +50,7 @@ export function getComboShakeIntensity(userCombo) {
   return num;
 }
 export function getComboPercentage(value) {
-  const items = [closure_5, closure_6];
+  items = [closure_5, closure_6];
   [arr2, ] = items;
   const result = value.value * value.multiplier;
   c2 = result;

@@ -1,12 +1,12 @@
-// === Module 18732: GuildTextChannelRow ===
+// === Module 18890: GuildTextChannelRow ===
 
-// Module 18732 (GuildTextChannelRow)
-import SearchUtils from "SearchUtils" /* 13893 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18720 */;
+// Module 18890 (GuildTextChannelRow)
+import SearchUtils from "SearchUtils" /* 14024 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(9827).CHANNEL_LIST_SEARCH_LAYOUT;
+let closure_4 = fn(9958).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
@@ -24,7 +24,7 @@ export default noop.memo(function GuildTextChannelRow(channel) {
     const obj = onPress(id[3]);
   }
   c4 = extractTimestampResult;
-  const items = [id, guild_id, extractTimestampResult];
+  items = [id, guild_id, extractTimestampResult];
   const items1 = [channel.id, onPress];
   const memo = guild_id.useMemo(() => {
     let channelActiveAgoTimestamp = null;

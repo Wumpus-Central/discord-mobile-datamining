@@ -1,27 +1,27 @@
-// === Module 11130: ReactionNotification ===
+// === Module 11267: ReactionNotification ===
 
-// Module 11130 (ReactionNotification)
+// Module 11267 (ReactionNotification)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11022 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11024 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 11038 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 11039 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11059 */;
-import ForumPostReactionButton from "ForumPostReactionButton" /* 11131 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11155 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11157 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 11171 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 11172 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11196 */;
+import ForumPostReactionButton from "ForumPostReactionButton" /* 11268 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -48,7 +48,7 @@ function ReactionNotificationBody(arg0) {
     }
   }
   children[2] = tmp8Result2;
-  return closure_1_12(closure_1_11, { children });
+  return application_id(closure_1_11, { children });
 }
 function ReactionNotificationBodyWrapper(arg0) {
   ({ message, reaction, reactionCount } = arg0);
@@ -67,10 +67,10 @@ function ReactionNotificationBodyWrapper(arg0) {
   dependencyMap = tmp3;
   const tmp4 = closure_13();
   noop = tmp4;
-  const AnimateEmoji = message(4839).AnimateEmoji;
+  const AnimateEmoji = message(4966).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const previewableMedia = message(11059).usePreviewableMedia(message);
-  const items = [setting, reaction, , , ];
+  const previewableMedia = message(11196).usePreviewableMedia(message);
+  items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
   const emojiHook = noop.useCallback(() => {
     let name;
@@ -208,9 +208,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj = message(11059);
-  const hasPreviewableMedia = message(11022).useHasPreviewableMedia(message);
-  let obj2 = message(11022);
+  let obj = message(11196);
+  const hasPreviewableMedia = message(11155).useHasPreviewableMedia(message);
+  let obj2 = message(11155);
   if (hasPreviewableMedia) {
     message = obj3.useGetInitialMessagePreview({ message });
   }
@@ -237,7 +237,7 @@ function ReactionNotificationBodyWrapper(arg0) {
     let obj9 = { text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
     return closure_10(ReactionNotificationBody, obj9);
   }
-  obj3 = message(11065);
+  obj3 = message(11202);
 }
 function ReactorNotificationIcon(notification) {
   ({ user, guild, channel } = notification.notification);
@@ -264,23 +264,23 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11023);
+const InAppNotificationConstants = fn(11156);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_8, MessageEmbedTypes: closure_9 } = Constants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
-let PlatformUtils = fn(1376);
+let PlatformUtils = fn(1357);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 obj2.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1357);
 obj2.italic = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 let obj5 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
@@ -297,7 +297,7 @@ export default function ReactionNotification(notification) {
   let userAuthor;
   const tmp = closure_13();
   const channel = notification.channel;
-  const guild = notification.guild;
+  guild = notification.guild;
   const parentChannel = notification.parentChannel;
   let id1;
   if (guild != null) {
@@ -315,7 +315,7 @@ export default function ReactionNotification(notification) {
   let tmp6 = channel.type === constants.GUILD_ANNOUNCEMENT;
   const result = notification(guild[18]).isReactionMilestoneNotification(message.reactions, type);
   c7 = result;
-  const items = [message.reactions];
+  items = [message.reactions];
   const memo = parentChannel.useMemo(() => _mod12.sumBy(message.reactions, (count_details) => {
     count_details = count_details.count_details;
     let num;
@@ -384,7 +384,7 @@ export default function ReactionNotification(notification) {
     transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
     InAppNotificationActionCreatorsDefault.clearNotification();
   }, items3);
-  const callback1 = obj2.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11067, dependencyMap.paths), { channelId: id }, "in-app-notification-settings-modal"), items4);
+  const callback1 = obj2.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11204, dependencyMap.paths), { channelId: id }, "in-app-notification-settings-modal"), items4);
   let obj4 = { icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }), accessoryLabelNode: tmp13Result, header: memo1, onPress: callback, onSettingsPress: callback1, notification, rightAccessory: closure_10(notification(guild[34]).MediaPreviewRightAccessory, { message }), children: null };
   const tmp3Result2 = notification(guild[27]);
   obj4.children = closure_10(id1, { style: tmp.container, children: closure_10(ReactionNotificationBodyWrapper, { message, reaction: notification.reaction, reactionCount: memo, renderAnnouncementText: tmp6, isMilestone: result }) });

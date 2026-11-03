@@ -1,21 +1,21 @@
-// === Module 14760: BlockedDomainActionSheet ===
+// === Module 14891: BlockedDomainActionSheet ===
 
-// Module 14760 (BlockedDomainActionSheet)
+// Module 14891 (BlockedDomainActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 7065 */;
-import URLCallout from "URLCallout" /* 14761 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 7191 */;
+import URLCallout from "URLCallout" /* 14892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, warningMessage: { textAlign: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,8 +26,8 @@ export default function BlockedDomainActionSheet(url) {
   const obj = { startExpanded: true, children: null };
   const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), , ];
-  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["2B3wj8"]);
   items[1] = React3(Text_Text.Text, obj4);

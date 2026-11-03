@@ -1,17 +1,17 @@
-// === Module 11021: useFormattedMessagePreview ===
+// === Module 11154: useFormattedMessagePreview ===
 
-// Module 11021 (useFormattedMessagePreview)
+// Module 11154 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1088 */;
 import util from "util" /* 1113 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6438 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8438 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8443 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8538 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6558 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8562 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8567 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8662 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -366,7 +366,7 @@ export function isMessageContentPreviewable(messageRecord) {
 }
 export function useFormattedMessagePreview(message, channel) {
   _require = message;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [message.author.id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ isBlocked: RelationshipStore.isBlocked(message.author.id), isIgnored: RelationshipStore.isIgnored(message.author.id) }), items1);
   ({ isBlocked, isIgnored } = stateFromStoresObject);

@@ -1,18 +1,18 @@
-// === Module 8800: useProfileTheme ===
+// === Module 8924: useProfileTheme ===
 
-// Module 8800 (useProfileTheme)
+// Module 8924 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 574 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import shared from "shared" /* 5021 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import useAvatarColor from "useAvatarColor" /* 8715 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8802 */;
+import shared from "shared" /* 5148 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import useAvatarColor from "useAvatarColor" /* 8839 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(8801).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8925).useEffectiveThemeOverride;
 const ThemeTypes = fn(1072).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -22,7 +22,7 @@ export default function useProfileTheme(arg0) {
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;

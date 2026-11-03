@@ -1,7 +1,7 @@
-// === Module 6048: useAudienceRequestToSpeakState ===
+// === Module 6168: useAudienceRequestToSpeakState ===
 
-// Module 6048 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 6168 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useAudienceReq
 export default function useAudienceRequestToSpeakState(stateFromStores, id) {
   _require = stateFromStores;
   dependencyMap = id;
-  const items = [VoiceStateStore];
+  items = [VoiceStateStore];
   const items1 = [stateFromStores, id];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {

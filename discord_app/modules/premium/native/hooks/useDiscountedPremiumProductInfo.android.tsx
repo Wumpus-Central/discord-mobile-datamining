@@ -1,8 +1,8 @@
-// === Module 9924: useDiscountedPremiumProductInfo ===
+// === Module 10055: useDiscountedPremiumProductInfo ===
 
-// Module 9924 (useDiscountedPremiumProductInfo)
-import PriceUtils from "PriceUtils" /* 7413 */;
-import ProductIds from "ProductIds" /* 7593 */;
+// Module 10055 (useDiscountedPremiumProductInfo)
+import PriceUtils from "PriceUtils" /* 7537 */;
+import ProductIds from "ProductIds" /* 7717 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   _require = premiumDiscountOffer;
   const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(premiumDiscountOffer, items3);
   discountedProduct = discountedPremiumPlan.discountedProduct;
-  const items = [premiumDiscountOffer, discountedProduct];
+  items = [premiumDiscountOffer, discountedProduct];
   const obj = require("useDiscountedPremiumPlan");
   return {
     discountedPlan: discountedPremiumPlan.discountedPlan,

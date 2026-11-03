@@ -1,10 +1,10 @@
-// === Module 7353: useProfileThemeValues ===
+// === Module 7473: useProfileThemeValues ===
 
-// Module 7353 (useProfileThemeValues)
+// Module 7473 (useProfileThemeValues)
 import _mod19 from "module_19" /* 19 */;
 import shims from "shims" /* 574 */;
 import nativeDefault from "native" /* 575 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeV
 
 export function useProfileThemeValues(theme) {
   _require = theme;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => saturation.saturation);
   const items1 = [theme, stateFromStores];
   return useMemo(() => {

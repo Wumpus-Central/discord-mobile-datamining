@@ -1,7 +1,9 @@
-// === Module 19071: useLaunchPadPullTabMinimized ===
+// === Module 19229: useLaunchPadPullTabMinimized ===
 
-// Module 19071 (useLaunchPadPullTabMinimized)
+// Module 19229 (useLaunchPadPullTabMinimized)
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -11,26 +13,26 @@ if (DCDScrollTracker) {
   tmp32 = new tmp3(DCDScrollTracker);
 }
 let closure_3 = tmp32;
-const __initData = { code: "function useLaunchPadPullTabMinimizedTsx1(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}" };
+let closure_4 = { code: "(function useLaunchPadPullTabMinimizedTsx1(){let[launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll]=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");
 
-export default function useLaunchPadPullTabMinimized(launchPadSharedState) {
-  launchPadSharedState = launchPadSharedState.launchPadSharedState;
-  let launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
-  const isVoicePanelFullscreen = launchPadSharedState(launchPadPullTabState[3]).useIsVoicePanelFullscreen();
-  const obj = launchPadSharedState(launchPadPullTabState[3]);
-  const sharedValue = launchPadSharedState(launchPadPullTabState[2]).useSharedValue(false);
-  closure_129_0 = sharedValue;
-  const items = [sharedValue];
-  const effect = isVoicePanelFullscreen.useEffect(() => {
+export default function useLaunchPadPullTabMinimized(arg0) {
+  ({ launchPadSharedState, launchPadPullTabState } = arg0);
+  _require = undefined;
+  const isVoicePanelFullscreen = require("VoicePanelUtils").useIsVoicePanelFullscreen();
+  const obj = require("VoicePanelUtils");
+  const sharedValue = require("module_1652").useSharedValue(false);
+  _require = sharedValue;
+  items = [sharedValue];
+  const effect = noop.useEffect(() => {
     closure_0 = -1;
     let addListenerResult;
-    if (sharedValue != null) {
-      addListenerResult = sharedValue.addListener("isScrollingOrDragging", (isScrollingOrDragging) => {
+    if (_undefined3 != null) {
+      addListenerResult = _undefined3.addListener("isScrollingOrDragging", (isScrollingOrDragging) => {
         clearTimeout(timeout);
         if (isScrollingOrDragging.isScrollingOrDragging) {
-          let result = launchPadSharedState.set(true);
+          let result = c0.set(true);
         } else {
           const _setTimeout = setTimeout;
           timeout = setTimeout(() => {
@@ -39,7 +41,7 @@ export default function useLaunchPadPullTabMinimized(launchPadSharedState) {
         }
       });
     }
-    launchPadPullTabState = addListenerResult;
+    c1 = addListenerResult;
     return () => {
       clearTimeout(closure_0);
       if (addListenerResult != null) {
@@ -47,19 +49,26 @@ export default function useLaunchPadPullTabMinimized(launchPadSharedState) {
       }
     };
   }, items);
-  const obj2 = launchPadSharedState(launchPadPullTabState[2]);
-  const fn = function u() {
-    value = launchPadPullTabState.get().minimized || isVoicePanelFullscreen;
+  const obj2 = require("module_1652");
+  const items1 = [closure_4, launchPadPullTabState, isVoicePanelFullscreen, launchPadSharedState, sharedValue];
+  _require = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c3 = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8] = items1;
+  function useLaunchPadPullTabMinimizedTsx1() {
+    value = _undefined.get().minimized || c1;
     if (value) {
-      value = launchPadSharedState.get() <= 0;
+      value = _undefined2.get() <= 0;
     }
     if (!value) {
-      value = sharedValue.get();
+      value = _undefined3.get();
     }
     return value;
-  };
-  fn.__closure = { launchPadPullTabState, isVoicePanelOpen: isVoicePanelFullscreen, launchPadSharedState, isMinimizedDuringScroll: sharedValue };
-  fn.__workletHash = 14263056934448;
-  fn.__initData = __initData;
-  return launchPadSharedState(launchPadPullTabState[2]).useDerivedValue(fn);
+  }
+  const items2 = [tmp5, tmp6, tmp7, tmp8];
+  useLaunchPadPullTabMinimizedTsx1.__closure = items2;
+  useLaunchPadPullTabMinimizedTsx1.__workletHash = 11967190027017;
+  useLaunchPadPullTabMinimizedTsx1.__initData = tmp4;
+  return require("module_1652").useDerivedValue(useLaunchPadPullTabMinimizedTsx1);
 };

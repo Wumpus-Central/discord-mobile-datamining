@@ -1,10 +1,10 @@
-// === Module 15121: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 15262: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 15121 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+// Module 15262 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import UserStore from "UserStore" /* 1383 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   activity = activity.activity;
   const guildId = activity.guildId;
   let memo;
-  const items = [activity];
+  items = [activity];
   memo = memo.useMemo(() => {
     let userIds;
     if (activity != null) {

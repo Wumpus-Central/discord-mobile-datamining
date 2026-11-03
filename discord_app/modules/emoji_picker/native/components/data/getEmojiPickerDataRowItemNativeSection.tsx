@@ -1,7 +1,7 @@
-// === Module 10019: getEmojiPickerDataRowItemNativeSection ===
+// === Module 10150: getEmojiPickerDataRowItemNativeSection ===
 
-// Module 10019 (getEmojiPickerDataRowItemNativeSection)
-import useEmojiPickerData from "useEmojiPickerData" /* 10018 */;
+// Module 10150 (getEmojiPickerDataRowItemNativeSection)
+import useEmojiPickerData from "useEmojiPickerData" /* 10149 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
@@ -13,7 +13,7 @@ export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLoc
     flag = false;
   }
   if (flag) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(emojisDisabled);

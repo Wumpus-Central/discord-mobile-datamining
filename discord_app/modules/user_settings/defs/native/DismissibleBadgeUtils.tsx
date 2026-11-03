@@ -1,7 +1,7 @@
-// === Module 16624: DismissibleBadgeUtils ===
+// === Module 16767: DismissibleBadgeUtils ===
 
-// Module 16624 (DismissibleBadgeUtils)
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16623 */;
+// Module 16767 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16766 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);
@@ -25,7 +25,7 @@ export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) 
   return function usePreNavigationAction() {
     const tmp = closure_1();
     if (tmp) {
-      const items = [first];
+      items = [first];
       let tmp2 = items;
     } else {
       tmp2 = closure_1_7;
@@ -53,7 +53,7 @@ export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
     usePreNavigationAction() {
       const tmp = closure_1();
       if (tmp) {
-        const items = [first];
+        items = [first];
         let tmp2 = items;
       } else {
         tmp2 = closure_1_7;

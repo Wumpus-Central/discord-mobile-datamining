@@ -1,13 +1,13 @@
-// === Module 18303: SectionFooterHelpers ===
+// === Module 18448: SectionFooterHelpers ===
 
-// Module 18303 (SectionFooterHelpers)
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import ChannelListState from "ChannelListState" /* 7707 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7286 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 18448 (SectionFooterHelpers)
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import ChannelListState from "ChannelListState" /* 7831 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7406 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
@@ -64,12 +64,12 @@ export function getSectionFooterConfig(guildChannels, optInChannelsEnabled, sect
 export function getSectionFooterActiveVoiceChannels(arg0) {
   ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
-    let items = [];
+    items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
       if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
-        let items = require[id.id];
+        items = require[id.id];
         if (items == null) {
           items = [];
         }
@@ -91,12 +91,12 @@ export function getSectionFooterActiveVoiceChannels(arg0) {
 export function isSectionFooterWithActiveVoiceChannels(arg0) {
   ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
-    let items = [];
+    items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
       if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
-        let items = require[id.id];
+        items = require[id.id];
         if (items == null) {
           items = [];
         }

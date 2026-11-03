@@ -1,11 +1,11 @@
-// === Module 18295: useVoiceChannelStartTime ===
+// === Module 18440: useVoiceChannelStartTime ===
 
-// Module 18295 (useVoiceChannelStartTime)
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11547 */;
+// Module 18440 (useVoiceChannelStartTime)
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11684 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10116 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10246 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartT
 
 export function useStartTime(channel) {
   _require = channel;
-  const items = [VoiceChannelStartTimeStore, closure_4];
+  items = [VoiceChannelStartTimeStore, closure_4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(channel.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(channel), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(channel.guild_id) }));
   hasRequestedStartTimes = stateFromStoresObject.hasRequestedStartTimes;
   const isGuildUnavailable = stateFromStoresObject.isGuildUnavailable;

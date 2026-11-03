@@ -1,10 +1,10 @@
-// === Module 15720: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
+// === Module 15863: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
 
-// Module 15720 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
+// Module 15863 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -23,7 +23,7 @@ export default {
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [ExperimentStore, PermissionStore];
+    items = [ExperimentStore, PermissionStore];
     return initialize.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);

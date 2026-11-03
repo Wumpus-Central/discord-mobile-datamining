@@ -1,7 +1,7 @@
-// === Module 12026: StageChannelListStore ===
+// === Module 12163: StageChannelListStore ===
 
-// Module 12026 (StageChannelListStore)
-import _mod4929 from "module_4929" /* 4929 */;
+// Module 12163 (StageChannelListStore)
+import _mod5056 from "module_5056" /* 5056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,13 +25,13 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/StageCh
 
 export function useActiveSpeakerPillScrollHandler() {
   const tmp = _slicedToArray(closure_4((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow), 2);
+  }, _mod5056.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
-  let items = [tmp[1]];
+  items = [tmp[1]];
   const items1 = [
     noop.useCallback((arg0) => {
       closure_1(arg0);
@@ -48,8 +48,8 @@ export function useActiveSpeakerPillScrollHandler() {
 }
 export function useActiveSpeakerPillState() {
   return closure_4((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }

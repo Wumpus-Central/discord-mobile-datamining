@@ -1,9 +1,9 @@
-// === Module 9558: useFetchVirtualCurrencyTotalRedeemed ===
+// === Module 9690: useFetchVirtualCurrencyTotalRedeemed ===
 
-// Module 9558 (useFetchVirtualCurrencyTotalRedeemed)
+// Module 9690 (useFetchVirtualCurrencyTotalRedeemed)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9556 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9555 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9688 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9687 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFet
 
 export function useFetchVirtualCurrencyTotalRedeemed(disableFetch) {
   _require = disableFetch;
-  const items = [error];
+  items = [error];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ totalRedeemed: error.totalRedeemed, isFetching: error.isFetchingTotalRedeemed, error: error.fetchTotalRedeemedError }));
   totalRedeemed = stateFromStoresObject.totalRedeemed;
   const isFetching = stateFromStoresObject.isFetching;

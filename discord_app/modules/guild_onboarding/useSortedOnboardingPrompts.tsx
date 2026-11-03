@@ -1,8 +1,8 @@
-// === Module 11581: useSortedOnboardingPrompts ===
+// === Module 11718: useSortedOnboardingPrompts ===
 
-// Module 11581 (useSortedOnboardingPrompts)
+// Module 11718 (useSortedOnboardingPrompts)
 import noop from "module_19" /* 19 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
 
 const require = globalThis.__r;
 
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/useSortedOnb
 
 export default function useSortedOnboardingPrompts(arg0) {
   _require = arg0;
-  let items = [GuildOnboardingPromptsStore];
+  items = [GuildOnboardingPromptsStore];
   stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0));
   let items1 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     const items2 = [];
     const items3 = [];

@@ -1,21 +1,21 @@
-// === Module 14840: UserProfileTextButtonGroup ===
+// === Module 14971: UserProfileTextButtonGroup ===
 
-// Module 14840 (UserProfileTextButtonGroup)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+// Module 14971 (UserProfileTextButtonGroup)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7377).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
 export default function UserProfileTextButtonGroup(arg0) {
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
-  let items = closure_6();
+  items = closure_6();
   const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (null != maxWidth) {

@@ -1,21 +1,21 @@
-// === Module 11620: RoleMembersActionSheet ===
+// === Module 11757: RoleMembersActionSheet ===
 
-// Module 11620 (RoleMembersActionSheet)
+// Module 11757 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7299 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7419 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7446).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7570).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, headerText: { flex: 1 }, roleDot: { paddingTop: 0 }, memberCount: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberCount = { color: nativeDefault.colors.TEXT_MUTED };
@@ -32,7 +32,7 @@ export default function RoleMembersActionSheet(guildId) {
   c5 = undefined;
   const tmp = closure_10();
   dependencyMap = tmp;
-  let items = [guildId, roleId];
+  items = [guildId, roleId];
   const effect = stateFromStores.useEffect(() => {
     if (roleId !== obj.castGuildIdAsEveryoneGuildRoleId(guildId)) {
       const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(guildId, roleId);
@@ -57,7 +57,7 @@ export default function RoleMembersActionSheet(guildId) {
   let obj2 = guildId(504);
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(7297)(guildId);
+  const tmp11 = roleId(7417)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -80,9 +80,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11621), obj5);
-    tmp16Result = closure_8(tmp3(5272).BottomSheet, obj4);
-    let tmp9Result = tmp9(11621);
+    obj4.children = closure_8(tmp9(11758), obj5);
+    tmp16Result = closure_8(tmp3(5395).BottomSheet, obj4);
+    let tmp9Result = tmp9(11758);
   }
   return tmp16Result;
 };

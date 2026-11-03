@@ -1,6 +1,6 @@
-// === Module 10885: createProxyTicket ===
+// === Module 11015: createProxyTicket ===
 
-// Module 10885 (createProxyTicket)
+// Module 11015 (createProxyTicket)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -17,7 +17,7 @@ let closure_7 = async function _createProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_7 = async function _createProxyTicket(arg0) {
 };
 function prefetchKey(arg0, arg1, arg2) {
   let str = arg1;
-  const items = [AuthenticationStore.getId(), arg0, , ];
+  items = [AuthenticationStore.getId(), arg0, , ];
   if (arg1 == null) {
     str = "";
   }
@@ -168,7 +168,7 @@ export function createProxyTicket() {
   return applyArgumentsResult;
 }
 export function prefetchProxyTicket(application_id, arg1, type) {
-  const items = [AuthenticationStore.getId(), application_id, , ];
+  items = [AuthenticationStore.getId(), application_id, , ];
   let str = arg1;
   if (arg1 == null) {
     str = "";
@@ -198,7 +198,7 @@ export function prefetchProxyTicket(application_id, arg1, type) {
 }
 export function rememberProxyTicket(proxy_ticket, id, CONJURE_UNKNOWN_CHANNEL, APP_CHANNEL) {
   let str = CONJURE_UNKNOWN_CHANNEL;
-  const items = [AuthenticationStore.getId(), id, , ];
+  items = [AuthenticationStore.getId(), id, , ];
   if (CONJURE_UNKNOWN_CHANNEL == null) {
     str = "";
   }

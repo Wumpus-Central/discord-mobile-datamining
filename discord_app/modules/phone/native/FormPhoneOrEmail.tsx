@@ -1,10 +1,10 @@
-// === Module 7214: FormPhoneOrEmail ===
+// === Module 7335: FormPhoneOrEmail ===
 
-// Module 7214 (FormPhoneOrEmail)
+// Module 7335 (FormPhoneOrEmail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ function CountryCodeSelector(alpha2) {
     obj3.accessibilityHint = intl.string(util.t.GwAW3k);
     const obj4 = { style: tmp.selectorText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: combined };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
-    const items = [hasOwnProperty(Pressables.PressableOpacity, obj3), ];
+    items = [hasOwnProperty(Pressables.PressableOpacity, obj3), ];
     const obj5 = { style: tmp.separator };
     items[1] = hasOwnProperty(View, obj5);
     obj2.children = items;
@@ -39,7 +39,7 @@ function CountryCodeSelector(alpha2) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 }, selectorOuterContainer: { overflow: "hidden" }, selectorContainer: { flex: 1, flexDirection: "row" }, selectorPressable: { justifyContent: "center" }, selectorText: { alignSelf: "center" }, separator: { borderLeftWidth: 1, borderLeftColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default function FormPhoneOrEmail(arg0) {
   const effect = noop.useEffect(() => {
     closure_7.current = obj2;
   });
-  const items = [countryCode];
+  items = [countryCode];
   const effect1 = noop.useEffect(() => {
     ref.current.handleChangeText(ref.current.value);
   }, items);

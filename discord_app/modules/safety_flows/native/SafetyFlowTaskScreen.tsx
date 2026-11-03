@@ -1,19 +1,19 @@
-// === Module 20091: SafetyFlowTaskScreen ===
+// === Module 20241: SafetyFlowTaskScreen ===
 
-// Module 20091 (SafetyFlowTaskScreen)
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import ModalScreen from "ModalScreen" /* 7972 */;
-import ModalContent from "ModalContent" /* 7973 */;
-import ModalFooter from "ModalFooter" /* 13208 */;
-import ModalActionButton from "ModalActionButton" /* 13420 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20089 */;
+// Module 20241 (SafetyFlowTaskScreen)
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import ModalScreen from "ModalScreen" /* 8096 */;
+import ModalContent from "ModalContent" /* 8097 */;
+import ModalFooter from "ModalFooter" /* 13344 */;
+import ModalActionButton from "ModalActionButton" /* 13556 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
@@ -36,7 +36,7 @@ export default function SafetyFlowTaskScreen(action) {
   if (tmp6) {
     tmp6 = ImageComponent;
   }
-  const items = [tmp6, React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title }), ];
+  items = [tmp6, React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title }), ];
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
     const obj2 = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };

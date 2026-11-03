@@ -1,16 +1,16 @@
-// === Module 14960: UserProfileWidgetContainer ===
+// === Module 15101: UserProfileWidgetContainer ===
 
-// Module 14960 (UserProfileWidgetContainer)
+// Module 15101 (UserProfileWidgetContainer)
 import nativeDefault from "native" /* 575 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7376 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 14965 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7496 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 15102 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { actions: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,14 +24,14 @@ export default function UserProfileWidgetContainer(style) {
     disableInteraction = false;
   }
   let actions = closure_6();
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => AuthenticationStore.getId() === userId);
   const obj2 = { style: style.style, title: null, titleLeadingIcon: null, trailingAction: null, children: null };
   const obj = userId(504);
   const tmp = userId;
   if (title == null) {
-    title = tmp(14961).getWidgetTitle(widget);
-    const tmpResult = tmp(14961);
+    title = tmp(15096).getWidgetTitle(widget);
+    const tmpResult = tmp(15096);
   }
   obj2.title = title;
   obj2.titleLeadingIcon = titleLeadingIcon;

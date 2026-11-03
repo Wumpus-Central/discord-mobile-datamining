@@ -1,10 +1,10 @@
-// === Module 17346: DisplayNameStylesGradientPickerSheet ===
+// === Module 17489: DisplayNameStylesGradientPickerSheet ===
 
-// Module 17346 (DisplayNameStylesGradientPickerSheet)
+// Module 17489 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,11 +13,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
-const SHEET_CONTENT_MAX_WIDTH = fn(17337).SHEET_CONTENT_MAX_WIDTH;
+const SHEET_CONTENT_MAX_WIDTH = fn(17480).SHEET_CONTENT_MAX_WIDTH;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, body: null, gradientContainer: null, colorStopRow: null, colorStop: null, gradient: null, optionContainer: null, pressable: null, selectedRing: null, option: null, resetButtonContainer: null };
   const obj2 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
@@ -66,7 +66,7 @@ export default function DisplayNameStylesGradientPickerSheet(onSelectColors) {
     return defaultColors;
   });
   const arr2 = selectedEffectId(onSelectColors[11])(selectedEffectId);
-  let items = [colors, onSelectColors];
+  items = [colors, onSelectColors];
   const items1 = [arr2, displayNameStylesEffectConfig.defaultColors];
   const callback = displayNameStylesEffectConfig.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -85,7 +85,7 @@ export default function DisplayNameStylesGradientPickerSheet(onSelectColors) {
     if (colors == null) {
       colors = displayNameStylesEffectConfig.defaultColors;
     }
-    const items = [...colors];
+    items = [...colors];
     closure_6(items);
   }, items1);
   closure_8 = displayNameStylesEffectConfig.useCallback((arg0) => {
@@ -111,7 +111,7 @@ export default function DisplayNameStylesGradientPickerSheet(onSelectColors) {
     }, "stack");
   }, items2);
   closure_9 = displayNameStylesEffectConfig.useCallback((arg0) => {
-    const items = [...arg0];
+    items = [...arg0];
     closure_6(items);
   }, []);
   let obj3 = { backgroundStyles: tmp.sheetBackground, header: null, children: null };
@@ -136,7 +136,7 @@ export default function DisplayNameStylesGradientPickerSheet(onSelectColors) {
   const tmp8 = selectedEffectId(onSelectColors[20]);
   obj9.children = Array.from({ length: effectColorCount }).map((item, index) => {
     closure_0 = index;
-    const items = [closure_3.colorStop, ];
+    items = [closure_3.colorStop, ];
     let num = first[index];
     if (num == null) {
       num = 0;
@@ -184,7 +184,7 @@ export default function DisplayNameStylesGradientPickerSheet(onSelectColors) {
       obj3.locations = selectedEffectId(onSelectColors[22])(selectedEffectId, colors);
       obj3.start = { x: 0, y: 0 };
       obj3.end = { x: 1, y: 0 };
-      const items = [closure_1_10(selectedEffectId(onSelectColors[20]), obj3), ];
+      items = [closure_1_10(selectedEffectId(onSelectColors[20]), obj3), ];
       if (isEqualResult) {
         const obj4 = { style: closure_3.selectedRing, pointerEvents: "none" };
         isEqualResult = closure_1_10(first, obj4);

@@ -1,14 +1,14 @@
-// === Module 7329: useAuthorizationApp ===
+// === Module 7449: useAuthorizationApp ===
 
-// Module 7329 (useAuthorizationApp)
+// Module 7449 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
@@ -49,7 +49,7 @@ export function useAuthorizationApp(getOfficialApplicationId) {
     }
   }
   getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(officialApplicationId);
-  const items = [getOfficialApplicationId, getOrFetchApplication];
+  items = [getOfficialApplicationId, getOrFetchApplication];
   return noop.useMemo(() => {
     let application = closure_0;
     if (null == closure_0) {

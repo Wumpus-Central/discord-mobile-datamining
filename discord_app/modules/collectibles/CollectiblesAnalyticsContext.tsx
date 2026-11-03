@@ -1,6 +1,6 @@
-// === Module 9462: CollectiblesAnalyticsContext ===
+// === Module 9590: CollectiblesAnalyticsContext ===
 
-// Module 9462 (CollectiblesAnalyticsContext)
+// Module 9590 (CollectiblesAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -16,7 +16,7 @@ export function CollectiblesAnalyticsProvider(children) {
   const newValue = children.newValue;
   context = undefined;
   context = noop.useContext(context);
-  const items = [context, newValue];
+  items = [context, newValue];
   return <context.Provider value={noop.useMemo(() => {
     const merged = Object.assign(context);
     const merged1 = Object.assign(newValue);

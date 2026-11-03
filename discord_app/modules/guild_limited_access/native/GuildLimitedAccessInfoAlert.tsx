@@ -1,20 +1,20 @@
-// === Module 6721: GuildLimitedAccessInfoAlert ===
+// === Module 6841: GuildLimitedAccessInfoAlert ===
 
-// Module 6721 (GuildLimitedAccessInfoAlert)
+// Module 6841 (GuildLimitedAccessInfoAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 require = fn;
-const helpdeskArticle = fn(6722).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6842).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1072).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -30,7 +30,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
   const tmp = closure_7();
   const intl = util.intl;
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let formatResult1 = intl.format(util.t.ZqkXsC, { helpdeskArticle });
   if (null != guild) {
     const intl2 = util.intl;
@@ -43,7 +43,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   const obj4 = { style: tmp.header, children: null };
   const intl3 = util.intl;
   obj4.children = intl3.string(util.t.kJwpBW);
-  const items = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  items = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
   obj3.children = items;
   return timestampProducer(common_AlertDefault, obj3);
 };

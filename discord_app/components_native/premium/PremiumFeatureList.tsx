@@ -1,16 +1,16 @@
-// === Module 9936: PremiumFeatureList ===
+// === Module 10067: PremiumFeatureList ===
 
-// Module 9936 (PremiumFeatureList)
+// Module 10067 (PremiumFeatureList)
 import nativeDefault from "native" /* 575 */;
-import Form from "Form" /* 8177 */;
+import Form from "Form" /* 8301 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
 const merged = Object.assign(TextStyles(fn(1072).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.label = {};
@@ -27,7 +27,7 @@ export default function PremiumFeatureList(style) {
     style: style.style,
     children: found.map((color, index) => {
       const obj = { style: null, children: null };
-      const items = [closure_4.item, closure_1_3];
+      items = [closure_4.item, closure_1_3];
       obj.style = items;
       const obj2 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
       const obj3 = { size: "md", color: color.color, style: null };

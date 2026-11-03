@@ -1,14 +1,14 @@
-// === Module 11584: ChannelBrowser ===
+// === Module 11721: ChannelBrowser ===
 
-// Module 11584 (ChannelBrowser)
+// Module 11721 (ChannelBrowser)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7711 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import NewChannelsStore from "NewChannelsStore" /* 7835 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 const require = globalThis.__r;
 
@@ -17,10 +17,10 @@ function keyExtractor(section) {
   return "" + section.section + "-" + section.row;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1 }, header: { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 }, categoryContainer: null, categoryTitle: null, channelTitle: null, selectAllContainer: null, selectAllCheckbox: null, newBadge: null, nuxCard: null, nuxCloseContainer: null, nuxHeader: null, nuxHeaderText: null, nuxBody: null };
 let obj3 = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 };
 obj.categoryContainer = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
@@ -45,11 +45,11 @@ let closure_17 = noop.memo(function CategoryRow(channel) {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_15();
-  const tmp3 = onChannelClick(5652)(channel);
-  const items = [UserGuildSettingsStore];
+  const tmp3 = onChannelClick(5772)(channel);
+  items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj = channel(504);
-  const checkboxA11yNative = channel(5082).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(5209).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -69,35 +69,35 @@ let closure_17 = noop.memo(function CategoryRow(channel) {
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj3.accessibilityState = accessibilityState;
-  const items1 = [closure_12(channel(7060).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
+  const items1 = [closure_12(channel(7186).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = closure_12(tmp4(6989).FormCheckbox, obj7);
+    obj6.children = closure_12(tmp4(7115).FormCheckbox, obj7);
     const items2 = [closure_12(View, obj6), ];
     const obj8 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1113).intl;
     obj8.children = intl.string(tmp4(1113).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5624).Text, obj8);
+    items2[1] = closure_12(tmp4(5747).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(6980).PressableOpacity, obj3);
+  return closure_12(channel(7106).PressableOpacity, obj3);
 });
 let closure_18 = noop.memo(function ChannelRow(channel) {
   channel = channel.channel;
-  const guild = channel.guild;
+  guild = channel.guild;
   const onChannelClick = channel.onChannelClick;
   _slicedToArray = undefined;
   ({ isFirst, isLast, forceChecked } = channel);
   const tmp = closure_15();
   [tmp3, c3] = noop.useState(0);
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   let stateFromStores = channel(onChannelClick[15]).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj2 = channel(onChannelClick[15]);
   const items1 = [NewChannelsStore];
@@ -210,7 +210,7 @@ export default function ChannelBrowser(guildId) {
   const tmp2 = stateFromStores(filterCategoriesByQuery.useState(""), 2);
   importDefault = tmp2[1];
   onChannelClick = require("useBatchUpdateChannelSettings")(guildId).onChannelClick;
-  let items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = guildId(onChannelClick[15]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = guildId(onChannelClick[15]);
   const items1 = [GuildCategoryStore];
@@ -226,7 +226,7 @@ export default function ChannelBrowser(guildId) {
   const channelBrowserSections = guildId(onChannelClick[16]).useChannelBrowserSections(guildId, filterCategoriesByQuery, 64);
   const items3 = [filterCategoriesByQuery, channelBrowserSections];
   const memo = filterCategoriesByQuery.useMemo(() => {
-    const items = [];
+    items = [];
     const item = channelBrowserSections.forEach((rowCount, section) => {
       if (rowCount.rowCount > 0) {
         const channel = filterCategoriesByQuery._categories[section].channel;
@@ -262,10 +262,10 @@ export default function ChannelBrowser(guildId) {
     } else if (tmp) {
       const obj2 = { channel: id, onChannelClick };
       id = id.id;
-      let tmp4Result = closure_2_12(closure_17, obj2, id);
+      let tmp4Result = application_id(closure_17, obj2, id);
     } else {
       const obj = { channel: id, guild: stateFromStores, isFirst: 0 === tmp2, isLast: tmp3, forceChecked: result1, onChannelClick };
-      tmp4Result = closure_2_12(closure_18, obj, id.id);
+      tmp4Result = application_id(closure_18, obj, id.id);
     }
   }, items4);
   obj9.children = closure_12(guildId(onChannelClick[20]).SearchBar, {

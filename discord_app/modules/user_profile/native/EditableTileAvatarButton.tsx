@@ -1,18 +1,18 @@
-// === Module 16560: EditableTileAvatarButton ===
+// === Module 16703: EditableTileAvatarButton ===
 
-// Module 16560 (EditableTileAvatarButton)
+// Module 16703 (EditableTileAvatarButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16549 */;
-import SpinAnimationDefault from "SpinAnimation" /* 16555 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16559 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8864 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16692 */;
+import SpinAnimationDefault from "SpinAnimation" /* 16698 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16702 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 
 require = fn;
 class EditableTileAvatarButtonBase {
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/EditableT
 export default EditableTileAvatarButtonBase;
 export function TryItOutEditableTileAvatarButton(arg0) {
   ({ user, onPress } = arg0);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const tryItOutAvatar = UserProfileSettingsStore.getTryItOutChanges().tryItOutAvatar;
     let pendingAvatar = tryItOutAvatar;

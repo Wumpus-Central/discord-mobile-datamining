@@ -1,19 +1,19 @@
-// === Module 17091: WumpusCouchSpotIllustration ===
+// === Module 17234: WumpusCouchSpotIllustration ===
 
-// Module 17091 (WumpusCouchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef17092 from "module_17092" /* 17092 */;
-import _modDef17093 from "module_17093" /* 17093 */;
-import _modDef17094 from "module_17094" /* 17094 */;
+// Module 17234 (WumpusCouchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef17235 from "module_17235" /* 17235 */;
+import _modDef17236 from "module_17236" /* 17236 */;
+import _modDef17237 from "module_17237" /* 17237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17092 }, 3: null };
-let obj2 = { uri: _modDef17092 };
-obj[2] = { uri: _modDef17093 };
-const obj3 = { uri: _modDef17093 };
-obj[3] = { uri: _modDef17094 };
+let obj = { 1: null, 2: { uri: _modDef17235 }, 3: null };
+let obj2 = { uri: _modDef17235 };
+obj[2] = { uri: _modDef17236 };
+const obj3 = { uri: _modDef17236 };
+obj[3] = { uri: _modDef17237 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function WumpusCouchSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

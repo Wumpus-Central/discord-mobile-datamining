@@ -1,16 +1,16 @@
-// === Module 9366: GameProfileStoreLinksActionSheet ===
+// === Module 9494: GameProfileStoreLinksActionSheet ===
 
-// Module 9366 (GameProfileStoreLinksActionSheet)
+// Module 9494 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9323 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9451 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, headerText: { textAlign: "center" }, buttons: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.buttons = { gap: nativeDefault.space.PX_12 };
@@ -38,7 +38,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   const obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t["/4gj6r"]);
-  const items = [closure_4(Text_Text.Text, obj5), ];
+  items = [closure_4(Text_Text.Text, obj5), ];
   const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.format(util.t["0acM2Y"], { gameName: gameName.gameName });

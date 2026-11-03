@@ -1,13 +1,13 @@
-// === Module 18007: RegisterPhoneOrEmailInput ===
+// === Module 18151: RegisterPhoneOrEmailInput ===
 
-// Module 18007 (RegisterPhoneOrEmailInput)
+// Module 18151 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7130 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7256 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7109 */;
+import PhoneStore from "PhoneStore" /* 7235 */;
 
 require = fn;
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -34,7 +34,7 @@ export function RegisterPhoneOrEmailInput(loginPhone) {
   obj3.enabled = autoFocus;
   loginEmail(setLoginPhone[5])(obj3);
   const tmp6 = loginEmail(setLoginPhone[5]);
-  const items = [inputMode];
+  items = [inputMode];
   const stateFromStores = loginPhone(setLoginPhone[6]).useStateFromStores(items, () => inputMode.getCountryCode());
   const tmp9 = ref((errors) => errors.errors);
   closure_7 = tmp9;

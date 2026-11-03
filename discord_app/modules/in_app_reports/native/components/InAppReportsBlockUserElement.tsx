@@ -1,13 +1,13 @@
-// === Module 15169: InAppReportsBlockUserElement ===
+// === Module 15310: InAppReportsBlockUserElement ===
 
-// Module 15169 (InAppReportsBlockUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7496 */;
+// Module 15310 (InAppReportsBlockUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -19,7 +19,7 @@ export default function BlockUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [user];
   const stateFromStores = user(reportId[5]).useStateFromStores(items, () => RelationshipStore.isBlocked(user.id), items1);
   let obj = user(reportId[5]);

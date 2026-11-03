@@ -1,6 +1,6 @@
-// === Module 10156: Constants ===
+// === Module 10286: Constants ===
 
-// Module 10156 (Constants)
+// Module 10286 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/native/Constants.tsx");

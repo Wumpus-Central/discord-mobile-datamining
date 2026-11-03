@@ -1,21 +1,21 @@
-// === Module 9138: UserSearchManager ===
+// === Module 9266: UserSearchManager ===
 
-// Module 9138 (UserSearchManager)
+// Module 9266 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9139 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9267 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {
@@ -85,7 +85,7 @@ function setNick(nicknames, id, nick) {
 }
 function getDMUpdates(channel) {
   closure_0 = channel;
-  const items = [];
+  items = [];
   if (null != channel) {
     if (isPrivate(channel.type)) {
       let recipients = channel.recipients;
@@ -108,7 +108,7 @@ function getDMUpdates(channel) {
 }
 function updateMembersList(members, guildId) {
   closure_0 = guildId;
-  const items = [];
+  items = [];
   const item = members.forEach((user) => {
     const tmp = closure_2_12(user.user);
     if (null != tmp) {
@@ -131,7 +131,7 @@ function updateMembersList(members, guildId) {
 function getUsersFromMessage(arg0) {
   ({ message, nicknameContextId } = arg0);
   nicknameContextId = undefined;
-  let items;
+  items = undefined;
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != nicknameContextId) {
     items = [];
@@ -447,7 +447,7 @@ class UserSearchManager extends tmp2 {
       const timerId = setTimeout(() => {
         _modDef12.flatMap(guilds, (arg0) => {
           ({ members, id: closure_0 } = arg0);
-          const items = [];
+          items = [];
           const item = members.forEach((user) => {
             const tmp = closure_2_12(user.user);
             if (null != tmp) {
@@ -467,10 +467,10 @@ class UserSearchManager extends tmp2 {
           });
           return items;
         });
-        let items = [
+        items = [
           ..._modDef12.flatMap(guilds, (activity_instances) => {
             closure_0 = activity_instances;
-            const items = [];
+            items = [];
             activity_instances = activity_instances.activity_instances;
             if (activity_instances != null) {
               let item = activity_instances.forEach((participants) => {
@@ -547,7 +547,7 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleCurrentUserUpdate = function _handleCurrentUserUpdate(user) {
       const tmp = getTransformedUser(user.user);
       if (null != tmp) {
-        const items = [tmp];
+        items = [tmp];
         applyArgumentsResult.updateUsers(items, "current_user_update");
       }
     };
@@ -555,7 +555,7 @@ class UserSearchManager extends tmp2 {
       guild = guild.guild;
       const members = guild.members;
       const id = guild.id;
-      const items = [];
+      items = [];
       const item = members.forEach((user) => {
         const tmp = closure_2_12(user.user);
         if (null != tmp) {
@@ -576,7 +576,7 @@ class UserSearchManager extends tmp2 {
       applyArgumentsResult.updateUsers(items, "guild_create");
     };
     applyArgumentsResult._handleGuildMembersChunkBatch = function _handleGuildMembersChunkBatch(arg0) {
-      const items = [];
+      items = [];
       const iter = arg0.chunks[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -602,13 +602,13 @@ class UserSearchManager extends tmp2 {
           }
           tmp.nicknames[nick.guildId] = tmp2;
         }
-        const items = [tmp];
+        items = [tmp];
         applyArgumentsResult.updateUsers(items, "guild_member_update");
       }
     };
     applyArgumentsResult._handlePassiveUpdateV2 = function _handlePassiveUpdateV2(arg0) {
       ({ members, guildId: closure_0 } = arg0);
-      const items = [];
+      items = [];
       const item = members.forEach((user) => {
         const tmp = closure_2_12(user.user);
         if (null != tmp) {
@@ -629,21 +629,21 @@ class UserSearchManager extends tmp2 {
       applyArgumentsResult.updateUsers(items, "passive_update_v2");
     };
     applyArgumentsResult._handleRelationshipAdd = function _handleRelationshipAdd(relationship) {
-      const items = [getTransformedUser(relationship.relationship.user)];
+      items = [getTransformedUser(relationship.relationship.user)];
       applyArgumentsResult.updateUsers(items, "relationship_add");
     };
     applyArgumentsResult._handleRelationshipUpdate = function _handleRelationshipUpdate(relationship) {
-      const items = [getTransformedUser(UserStore.getUser(relationship.relationship.id))];
+      items = [getTransformedUser(UserStore.getUser(relationship.relationship.id))];
       applyArgumentsResult.updateUsers(items, "relationship_update");
     };
     applyArgumentsResult._handleRelationshipRemove = function _handleRelationshipRemove(relationship) {
-      const items = [getTransformedUser(UserStore.getUser(relationship.relationship.id))];
+      items = [getTransformedUser(UserStore.getUser(relationship.relationship.id))];
       applyArgumentsResult.updateUsers(items, "relationship_remove");
     };
     applyArgumentsResult._handleDMCreate = function _handleDMCreate(channel) {
       const id = channel.channel.id;
       channel = ChannelStore.getChannel(id);
-      const items = [];
+      items = [];
       if (null != channel) {
         if (isPrivate(channel.type)) {
           let recipients = channel.recipients;
@@ -692,13 +692,13 @@ class UserSearchManager extends tmp2 {
         if (null != tmp4) {
           tmp4.nicknames[tmp] = null;
         }
-        const items = [tmp4];
+        items = [tmp4];
         applyArgumentsResult.updateUsers(items, "recipient_changes");
       }
     };
     applyArgumentsResult._handleThreadListSync = function _handleThreadListSync(arg0) {
       ({ guildId: closure_0, mostRecentMessages } = arg0);
-      let items;
+      items = undefined;
       if (null != mostRecentMessages) {
         items = [];
         let item = mostRecentMessages.forEach((message) => {
@@ -709,7 +709,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleLoadForumPosts = function _handleLoadForumPosts(guildId) {
       guildId = guildId.guildId;
-      let items = [];
+      items = [];
       const values = Object.values(guildId.threads);
       let item = values.forEach((item) => {
         ({ first_message, most_recent_message, owner } = item);
@@ -755,7 +755,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleLoadPinnedMessagesSuccess = function _handleLoadPinnedMessagesSuccess(pins) {
       pins = pins.pins;
-      const items = [];
+      items = [];
       let item = pins.forEach((message) => {
         const item = getUsersFromMessage({ message: message.message }).forEach((item) => items.push(item));
       });
@@ -763,7 +763,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleSearchMessagesSuccess = function _handleSearchMessagesSuccess(data) {
       data = data.data;
-      const items = [];
+      items = [];
       let item = data.forEach((messages) => {
         messages = messages.messages;
         let item = messages.forEach((arr) => {
@@ -777,7 +777,7 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleLoadThreadsSuccess = function _handleLoadThreadsSuccess(guildId) {
       guildId = guildId.guildId;
       ({ firstMessages, mostRecentMessages, owners } = guildId);
-      const items = [];
+      items = [];
       let items1 = items;
       if (firstMessages != null) {
         let item = firstMessages.forEach((message) => {
@@ -817,7 +817,7 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess = function _handleGuildScheduledEventUsersFetchSuccess(arg0) {
       ({ guildId: closure_0, guildScheduledEventUsers } = arg0);
-      const items = [];
+      items = [];
       const item = guildScheduledEventUsers.forEach((member) => {
         member = member.member;
         const tmp = getTransformedUser(member.user);

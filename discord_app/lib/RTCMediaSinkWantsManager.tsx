@@ -1,16 +1,16 @@
-// === Module 5870: RTCMediaSinkWantsManager ===
+// === Module 5990: RTCMediaSinkWantsManager ===
 
-// Module 5870 (RTCMediaSinkWantsManager)
+// Module 5990 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5873 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5993 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5792 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -25,12 +25,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1072).VideoToggleState;
-const SimulcastOverrideQuality = fn(5768).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(5888).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5871);
+const BrowserUtils = fn(5991);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {
@@ -117,7 +117,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       if (activeOutputSinkTrackingEnabled) {
         const _Date = Date;
         const timestamp = Date.now();
-        const items = [];
+        items = [];
         const entries = SnowflakeUtilsDefault.entries(closure_0.streamIds);
         const tmp14 = entries[Symbol.iterator]();
         while (tmp14 !== undefined) {
@@ -169,7 +169,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       closure_0.update();
     };
     tmp11.update = function update() {
-      let items = arg0;
+      items = arg0;
       if (arg0 === undefined) {
         items = [];
       }
@@ -576,7 +576,7 @@ prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedPa
   if (selectedParticipantId === this.selectedParticipantId) {
     return self.latestWants;
   } else {
-    const items = [];
+    items = [];
     if (tmp) {
       items.push(self.selectedParticipantId);
     }
@@ -606,7 +606,7 @@ prototype["setPipOpen"] = function setPipOpen(pipOpen) {
   const self = this;
   this.pipOpen = pipOpen;
   if (null != this.selectedParticipantId) {
-    const items = [self.selectedParticipantId];
+    items = [self.selectedParticipantId];
     let latestWants = self.update(items);
   } else {
     latestWants = self.latestWants;

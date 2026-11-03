@@ -1,11 +1,11 @@
-// === Module 18313: OnboardingV2Utils ===
+// === Module 18458: OnboardingV2Utils ===
 
-// Module 18313 (OnboardingV2Utils)
+// Module 18458 (OnboardingV2Utils)
 import Constants from "Constants" /* 1072 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7434 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7558 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ export function useCanSeeCreatorMonetizationOnboardingV2Upsell(id) {
   const obj3 = require("GuildRoleSubscriptionSettingUtils");
 }
 export function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   if (null == guild) {
     return false;
   } else {

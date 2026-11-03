@@ -1,9 +1,9 @@
-// === Module 13973: PushNotificationPermissionStore ===
+// === Module 14104: PushNotificationPermissionStore ===
 
-// Module 13973 (PushNotificationPermissionStore)
+// Module 14104 (PushNotificationPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PushNotificationDefault from "PushNotification" /* 10914 */;
+import PushNotificationDefault from "PushNotification" /* 11044 */;
 
 let obj = { INIT: 0, [0]: "INIT", REQUESTED: 1, [1]: "REQUESTED", PROMPT_SEEN: 2, [2]: "PROMPT_SEEN", PROMPT_SKIPPED: 3, [3]: "PROMPT_SKIPPED" };
 const obj2 = { MESSAGE_SENT: 0, [0]: "MESSAGE_SENT", INVITE_ACCEPTED: 1, [1]: "INVITE_ACCEPTED", FRIEND_REQUEST_SENT: 2, [2]: "FRIEND_REQUEST_SENT", DM_SPACE: 3, [3]: "DM_SPACE", CHANNEL_BANNER: 5, [5]: "CHANNEL_BANNER", POST_REACTION_BANNER: 6, [6]: "POST_REACTION_BANNER", GUILD_OPEN_BOTTOM_SHEET: 7, [7]: "GUILD_OPEN_BOTTOM_SHEET", CALL_DISCONNECT_BOTTOM_SHEET: 8, [8]: "CALL_DISCONNECT_BOTTOM_SHEET" };
@@ -29,7 +29,7 @@ prototype["initialize"] = function initialize(promptLastSeen) {
   }
   const merged3 = Object.assign(promptLastSeen);
   obj.promptLastSeen = {};
-  const items = [...tmp.eligiblePromptTypes];
+  items = [...tmp.eligiblePromptTypes];
   let eligiblePromptTypes;
   if (promptLastSeen != null) {
     eligiblePromptTypes = promptLastSeen.eligiblePromptTypes;
@@ -64,7 +64,7 @@ Object.defineProperty(prototype, "permissionState", {
 });
 Object.defineProperty(prototype, "promptSeen", {
   get: function promptSeen() {
-    const items = [, ];
+    items = [, ];
     ({ PROMPT_SEEN: arr[0], PROMPT_SKIPPED: arr[1] } = obj);
     return items.includes(obj.permissionState);
   },

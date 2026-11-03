@@ -1,9 +1,9 @@
-// === Module 8469: GameServerStore ===
+// === Module 8593: GameServerStore ===
 
-// Module 8469 (GameServerStore)
+// Module 8593 (GameServerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8471 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8595 */;
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);
@@ -65,7 +65,7 @@ prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(arg0
     let applyResult = null;
     if (0 !== values.length) {
       const _Math = Math;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(values.map((baseCost) => baseCost.baseCost), 0);
       const _Math2 = Math;
       applyResult = HermesBuiltin.apply(items, Math);

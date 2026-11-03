@@ -1,9 +1,9 @@
-// === Module 17680: ClipboardCopyInput ===
+// === Module 17823: ClipboardCopyInput ===
 
-// Module 17680 (ClipboardCopyInput)
+// Module 17823 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
@@ -26,7 +26,7 @@ export default function ClipboardCopyInput(arg0) {
   _require = noop.useRef(null);
   const ref = noop.useRef(null);
   const tmp = closure_9();
-  const items = [AppStateStore];
+  items = [AppStateStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => state.getState());
   let obj = require("initialize");
   const tmp5 = ref(stateFromStores[8])(isValidClipboardCode);
@@ -44,7 +44,7 @@ export default function ClipboardCopyInput(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export default function ClipboardCopyInput(arg0) {
               }
             }
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp31) {
           v3 = tmp;

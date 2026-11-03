@@ -1,12 +1,12 @@
-// === Module 7993: ExpressiveModalV2Experiment ===
+// === Module 8117: ExpressiveModalV2Experiment ===
 
-// Module 7993 (ExpressiveModalV2Experiment)
+// Module 8117 (ExpressiveModalV2Experiment)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7969 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = { kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null, 2: { enabled: true } };
 obj3[2] = { enabled: true };
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/ExpressiveModal
 
 export function useIsExpressiveModalV2Enabled(AUTOMATED_UNDERAGE_APPEALS) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled());
   let enabled = closure_3.useConfig({ location: AUTOMATED_UNDERAGE_APPEALS }).enabled;
   if (isSuspendedUser) {

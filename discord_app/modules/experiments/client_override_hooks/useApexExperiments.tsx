@@ -1,9 +1,9 @@
-// === Module 11551: useApexExperiments ===
+// === Module 11688: useApexExperiments ===
 
-// Module 11551 (useApexExperiments)
-import apex_ApexTypes from "apex/ApexTypes" /* 1450 */;
-import ExperimentManager from "ExperimentManager" /* 5243 */;
-import experiment from "experiment" /* 8588 */;
+// Module 11688 (useApexExperiments)
+import apex_ApexTypes from "apex/ApexTypes" /* 1452 */;
+import ExperimentManager from "ExperimentManager" /* 5366 */;
+import experiment from "experiment" /* 8712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
@@ -28,7 +28,7 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
       mapped2 = [];
     }
     obj = { system: ExperimentManager.ExperimentSystem.APEX, kind: apex_ApexTypes.UnitTypeToKind[variants.unitType], name: variants.name, title: variants.title, variants: null };
-    const items = [...mapped2];
+    items = [...mapped2];
     obj.variants = items.sort((id, id2) => id.id - id2.id);
     obj[_slicedToArray] = obj;
   }
@@ -91,7 +91,7 @@ export function useApexExperiments() {
   closure_3(() => {
     const apexExperimentsMetadata = stateFromStores(stateFromStores1[6]).fetchApexExperimentsMetadata(stateFromStores(stateFromStores1[3]).Experiment_Surface.APP);
   }, []);
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   stateFromStores = stateFromStores(stateFromStores1[7]).useStateFromStores(items, () => ApexExperimentStore.getExperimentsMetadata());
   const obj = stateFromStores(stateFromStores1[7]);
   const items1 = [ApexExperimentStore];

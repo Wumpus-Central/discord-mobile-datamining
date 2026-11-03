@@ -1,11 +1,11 @@
-// === Module 17408: ToastDurationSetting ===
+// === Module 17551: ToastDurationSetting ===
 
-// Module 17408 (ToastDurationSetting)
+// Module 17551 (ToastDurationSetting)
 import util from "util" /* 1113 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11489 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17305 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11626 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17448 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function formatToastDuration(seconds) {
@@ -14,15 +14,15 @@ function formatToastDuration(seconds) {
 }
 const Accessibility = fn(1072).Accessibility;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useProps: function useToastDurationSettingProps() {
-    const items = [AccessibilityStore];
+    items = [AccessibilityStore];
     stateFromStores = stateFromStores(onChange[6]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);
     onChange = noop.useCallback((arg0) => {
       stateFromStores(callback[7]).setMinToastDuration(1000 * arg0);

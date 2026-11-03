@@ -1,6 +1,6 @@
-// === Module 8791: StorefrontProductStore ===
+// === Module 8915: StorefrontProductStore ===
 
-// Module 8791 (StorefrontProductStore)
+// Module 8915 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -13,7 +13,7 @@ const prototype = StorefrontProductStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let tmp;
   if (null != arg0) {
-    let state;
+    state = undefined;
     if (dependencyMap[arg0] != null) {
       state = tmp3.state;
     }
@@ -24,7 +24,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
 prototype["getFetchStateForSku"] = function getFetchStateForSku(item10006) {
   let tmp;
   if (null != item10006) {
-    let state;
+    state = undefined;
     if (dependencyMap2[item10006] != null) {
       state = tmp3.state;
     }
@@ -83,7 +83,7 @@ prototype["getProduct"] = function getProduct(arg0) {
   }
   let product = null;
   if (null != tmp) {
-    let state;
+    state = undefined;
     if (tmp != null) {
       state = tmp.state;
     }
@@ -170,7 +170,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       skuIds = skuIds.skuIds;
       const item = skuIds.forEach((item) => {
         if (null == acc[item]) {
-          const items = [closure_1];
+          items = [closure_1];
           acc[item] = items;
         } else {
           acc[item].push(closure_1);
@@ -205,7 +205,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       let item = products.forEach((id) => {
         includePricing = id;
         if (!includePricing) {
-          let state;
+          state = undefined;
           if (tmp3 != null) {
             state = tmp3.state;
           }
@@ -220,7 +220,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
               const skuIds = id.skuIds;
               const item = skuIds.forEach((item) => {
                 const obj = { state: "success", products: null, fetchedAt };
-                const items = [closure_0];
+                items = [closure_0];
                 obj.products = items;
                 closure_1[item] = obj;
               });
@@ -238,7 +238,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       products = products.products;
       const item = products.forEach((id) => {
         if (!includePricing) {
-          let state;
+          state = undefined;
           if (tmp3 != null) {
             state = tmp3.state;
           }
@@ -266,7 +266,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
         const skuIds = product.skuIds;
         const item = skuIds.forEach((item) => {
           const obj = { state: "success", products: null, fetchedAt };
-          const items = [closure_0];
+          items = [closure_0];
           obj.products = items;
           dependencyMap2[item] = obj;
         });

@@ -1,21 +1,21 @@
-// === Module 18368: useGuildsBarProps ===
+// === Module 18513: useGuildsBarProps ===
 
-// Module 18368 (useGuildsBarProps)
-import useWindowDimensions from "useWindowDimensions" /* 1491 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 18421 */;
+// Module 18513 (useGuildsBarProps)
+import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 18566 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 15636 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15644 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18361 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 15779 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15787 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18506 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(6772).GuildsNodeType;
-const GuildsBarConstants = fn(18358);
+const GuildsNodeType = fn(6892).GuildsNodeType;
+const GuildsBarConstants = fn(18503);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -85,63 +85,67 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuil
 
 export default function useGuildsBarProps(arg0) {
   _require = arg0;
-  const tmp = isScreenReaderEnabled();
+  const tmp = pendingFolderNode();
   importDefault = tmp;
   token = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  let obj = require("useToken");
+  const token1 = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_PADDING);
   let rect = require("useSafeAreaInsets")();
   const top = rect.top;
   const bottom = rect.bottom;
-  let obj = require("useToken");
+  let obj2 = require("useToken");
   const mobileQuestDockHeight = require("QuestHooks").useMobileQuestDockHeight();
-  let obj2 = require("QuestHooks");
+  let obj3 = require("QuestHooks");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
-  let obj3 = require("useYouBarTotalHeight");
+  let obj4 = require("useYouBarTotalHeight");
   const youBarTotalHeight1 = require("useYouBarTotalHeight").useYouBarTotalHeight(4);
-  let items = [mobileQuestDockHeight, top, youBarTotalHeight];
-  const effect = top.useEffect(() => {
+  items = [mobileQuestDockHeight, top, youBarTotalHeight];
+  const effect = token1.useEffect(() => {
     const listInsets = GuildsBarDnDStore.getState().listInsets;
     const result = listInsets.set({ start: top, end: mobileQuestDockHeight + youBarTotalHeight });
   }, items);
+  let obj5 = require("useYouBarTotalHeight");
+  const waterwheelsDiscoverEnabled = require("WaterwheelsDiscoverExperiment").useWaterwheelsDiscoverEnabled("guilds_bar");
   let num = 0;
   if (require("useIsFavoritesGuildVisible")()) {
     num = 1;
   }
-  let obj4 = require("useYouBarTotalHeight");
-  let items1 = [stateFromStores1, youBarTotalHeight, youBarTotalHeight1];
+  let obj7 = require("WaterwheelsDiscoverExperiment");
+  let items1 = [stateFromStores, mobileQuestDockHeight, youBarTotalHeight];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
-    const unreadPrivateChannelIds = stateFromStores1.getUnreadPrivateChannelIds();
-    const items = [youBarTotalHeight, youBarTotalHeight1];
-    return ref(token[36]).filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items);
+    const unreadPrivateChannelIds = stateFromStores.getUnreadPrivateChannelIds();
+    items = [mobileQuestDockHeight, youBarTotalHeight];
+    return ref(token[38]).filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items);
   }, []);
   const tmp2Result = require("initialize");
-  const items2 = [bottom];
-  const stateFromStores = require("initialize").useStateFromStores(items2, () => bottom.isConnected());
+  const items2 = [top];
+  stateFromStores = require("initialize").useStateFromStores(items2, () => top.isConnected());
   const tmp2Result8 = require("initialize");
-  const items3 = [num];
-  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => num.getGeoRestrictedGuilds());
+  const items3 = [youBarTotalHeight1];
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => youBarTotalHeight1.getGeoRestrictedGuilds());
   const tmp2Result9 = require("initialize");
-  const items4 = [mobileQuestDockHeight];
-  stateFromStores1 = require("initialize").useStateFromStores(items4, () => mobileQuestDockHeight.lurkingGuildIds());
+  const items4 = [bottom];
+  const stateFromStores1 = require("initialize").useStateFromStores(items4, () => bottom.lurkingGuildIds());
   const tmp2Result10 = require("initialize");
-  const items5 = [stateFromStoresArray1, stateFromStores];
+  const items5 = [stateFromStoresArray, num];
   const stateFromStoresArray2 = require("initialize").useStateFromStoresArray(items5, () => {
-    const guildIds = stateFromStoresArray1.getGuildIds();
+    const guildIds = stateFromStoresArray.getGuildIds();
     return guildIds.filter((item) => currentUserGuest.isCurrentUserGuest(item));
   });
   const tmp2Result11 = require("initialize");
-  const items6 = [guildsNFolders];
-  const stateFromStores2 = require("initialize").useStateFromStores(items6, () => ({ guildsNFolders: guildsNFolders.getFastListGuildFolders(), version: guildsNFolders.getGuildsTree().version }), [], tmp4(tmp3[37]));
-  guildsNFolders = stateFromStores2.guildsNFolders;
-  const tmp16 = require("useGuildsBarCreatePendingFolderNode")();
-  const expanded = tmp16.expanded;
-  const pendingFolderNode = tmp16.pendingFolderNode;
+  const items6 = [stateFromStores1];
+  const stateFromStores2 = require("initialize").useStateFromStores(items6, () => ({ guildsNFolders: stateFromStores1.getFastListGuildFolders(), version: stateFromStores1.getGuildsTree().version }), [], tmp4(tmp3[39]));
+  const guildsNFolders = stateFromStores2.guildsNFolders;
+  const tmp18 = require("useGuildsBarCreatePendingFolderNode")();
+  const expanded = tmp18.expanded;
+  pendingFolderNode = tmp18.pendingFolderNode;
   const tmp2Result12 = require("initialize");
-  const items7 = [stateFromStoresArray];
-  const stateFromStores3 = require("initialize").useStateFromStores(items7, () => stateFromStoresArray.totalUnavailableGuilds);
+  const items7 = [waterwheelsDiscoverEnabled];
+  const stateFromStores3 = require("initialize").useStateFromStores(items7, () => waterwheelsDiscoverEnabled.totalUnavailableGuilds);
   const tmp2Result13 = require("initialize");
-  isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const items8 = [isScreenReaderEnabled, token, youBarTotalHeight, bottom, top, mobileQuestDockHeight, youBarTotalHeight1];
-  const memo = obj5.useMemo(() => {
+  const memo = obj6.useMemo(() => {
     const obj = { showsVerticalScrollIndicator: !isScreenReaderEnabled, scrollIndicatorInsets: null, insetStart: null, insetEnd: null, chunkBase: null };
     const rect = { top: 3 * token, bottom: null };
     if (youBarTotalHeight > 0) {
@@ -159,7 +163,7 @@ export default function useGuildsBarProps(arg0) {
   const items9 = [, , ];
   ({ insetStart: arr10[0], insetEnd: arr10[1] } = memo);
   items9[2] = arg0;
-  const callback = obj5.useCallback((arg0, arg1) => {
+  const callback = obj6.useCallback((arg0, arg1) => {
     if (null != arg0) {
       const tmp5 = findGuildSectionIndex(arg0);
       if (null != tmp5) {
@@ -180,11 +184,11 @@ export default function useGuildsBarProps(arg0) {
     }
   }, items9);
   require("useGuildsBarSelectedGuildScroller")(callback);
-  const memo1 = obj5.useMemo(() => {
-    const guildId = stateFromStoresArray2.getGuildId();
+  const memo1 = obj6.useMemo(() => {
+    const guildId = stateFromStoresArray1.getGuildId();
     let tmp2;
     if (null != guildId) {
-      tmp2 = memo1(guildId);
+      tmp2 = isScreenReaderEnabled(guildId);
     }
     if (null != tmp2) {
       const obj = { initialScrollItem: null, initialScrollSection: null };
@@ -192,12 +196,12 @@ export default function useGuildsBarProps(arg0) {
       return obj;
     }
   }, []);
-  const items10 = [num, pendingFolderNode, stateFromStores1, stateFromStoresArray2, stateFromStoresArray, stateFromStoresArray1, stateFromStores3, stateFromStores, guildsNFolders, memo1, stateFromStores2.version, expanded, token, tmp];
+  const items10 = [num, pendingFolderNode, stateFromStores1, stateFromStoresArray2, stateFromStoresArray, stateFromStoresArray1, stateFromStores3, stateFromStores, guildsNFolders, memo1, stateFromStores2.version, expanded, token, tmp, waterwheelsDiscoverEnabled, token1];
   const tmp2Result14 = require("useIsScreenReaderEnabled");
   return {
     listProps: memo,
-    listDataProps: top.useMemo(() => {
-      const items = [1, num];
+    listDataProps: token1.useMemo(() => {
+      items = [1, num];
       num = 0;
       if (null != pendingFolderNode) {
         let num2 = 1;
@@ -213,14 +217,14 @@ export default function useGuildsBarProps(arg0) {
       items[6] = 1;
       for (const item10028 of guildsNFolders) {
         let element = item10028;
-        if (item10028.type === expanded.GUILD) {
+        if (item10028.type === stateFromStoresArray2.GUILD) {
           let arr = items.push(1);
         } else if (element.type === tmp3.FOLDER) {
           let push = items.push;
           if (element.expanded) {
             let arr3 = push(element.children.length);
           } else {
-            let arr10 = push(1);
+            let arr11 = push(1);
           }
         }
         continue;
@@ -242,18 +246,21 @@ export default function useGuildsBarProps(arg0) {
       if (tmp13) {
         items1.push("empty-nux");
       }
+      if (waterwheelsDiscoverEnabled) {
+        items1.push("waterwheels");
+      }
       items1.push("create-join-guild");
       let obj = {};
       const merged = Object.assign(memo1);
       obj.sections = items;
       obj.sectionSize = function sectionSize(arg0) {
-        if (arg0 !== stateFromStores3.PENDING_JOIN_REQUESTS) {
+        if (arg0 !== expanded.PENDING_JOIN_REQUESTS) {
           num = 0;
-          if (arg0 >= stateFromStores3.GUILDS) {
+          if (arg0 >= expanded.GUILDS) {
             let num2 = 0;
-            if (null != tmp[arg0 - stateFromStores3.GUILDS]) {
+            if (null != tmp[arg0 - expanded.GUILDS]) {
               num2 = 0;
-              if (tmp6.type === expanded.FOLDER) {
+              if (tmp6.type === stateFromStoresArray2.FOLDER) {
                 num2 = closure_1_1;
               }
             }
@@ -266,15 +273,15 @@ export default function useGuildsBarProps(arg0) {
       };
       obj.itemSize = function itemSize(arg0, arg1) {
         num = closure_1_1;
-        if (stateFromStores3.MESSAGES !== arg0) {
+        if (expanded.MESSAGES !== arg0) {
           num = closure_1_1;
-          if (stateFromStores3.FAVORITES !== arg0) {
+          if (expanded.FAVORITES !== arg0) {
             num = closure_1_1;
-            if (stateFromStores3.LURKING_GUILDS !== arg0) {
+            if (expanded.LURKING_GUILDS !== arg0) {
               num = closure_1_1;
-              if (stateFromStores3.GUEST_GUILDS !== arg0) {
+              if (expanded.GUEST_GUILDS !== arg0) {
                 let num6 = arg1;
-                if (stateFromStores3.UNREAD_PRIVATE_CHANNELS === arg0) {
+                if (expanded.UNREAD_PRIVATE_CHANNELS === arg0) {
                   if (num6 == null) {
                     num6 = -1;
                   }
@@ -283,9 +290,9 @@ export default function useGuildsBarProps(arg0) {
                     num7 = closure_1_1;
                   }
                   num = num7;
-                } else if (stateFromStores3.SEPARATOR === arg0) {
+                } else if (expanded.SEPARATOR === arg0) {
                   num = 1 + 2 * tmp5;
-                } else if (stateFromStores3.PENDING_JOIN_REQUESTS === arg0) {
+                } else if (expanded.PENDING_JOIN_REQUESTS === arg0) {
                   let num3 = 0;
                   if (null != num6) {
                     num3 = 0;
@@ -303,15 +310,15 @@ export default function useGuildsBarProps(arg0) {
                 } else {
                   num = 0;
                   if (null != num6) {
-                    const diff = arg0 - stateFromStores3.GUILDS;
+                    const diff = arg0 - expanded.GUILDS;
                     if (guildsNFolders.length < diff) {
                       const element = guildsNFolders[diff];
                       let num2 = 0;
                       if (null != element) {
                         num2 = 0;
-                        if (element.type !== expanded.ROOT) {
-                          if (element.type !== expanded.GUILD) {
-                            if (element.type !== expanded.FOLDER) {
+                        if (element.type !== stateFromStoresArray2.ROOT) {
+                          if (element.type !== stateFromStoresArray2.GUILD) {
+                            if (element.type !== stateFromStoresArray2.FOLDER) {
                               num2 = closure_1_1;
                             } else {
                               num2 = 0;
@@ -337,77 +344,83 @@ export default function useGuildsBarProps(arg0) {
         return num;
       };
       obj.footerSize = function footerSize() {
-        return items1.length * closure_1 + 8;
+        const result = items1.length * closure_1;
+        const sum = 1 + 2 * token + token1;
+        let sum1 = result;
+        if (items1.includes("waterwheels")) {
+          sum1 = result + sum;
+        }
+        return sum1 + 8;
       };
       obj.renderSection = function renderSection(arg0) {
-        if (arg0 >= stateFromStores3.GUILDS) {
+        if (arg0 >= expanded.GUILDS) {
           let tmp5 = null;
-          if (tmp[arg0 - stateFromStores3.GUILDS].type === expanded.FOLDER) {
+          if (tmp[arg0 - expanded.GUILDS].type === stateFromStoresArray2.FOLDER) {
             ({ id: obj2.id, expanded: obj2.expanded, name: obj2.name, color: obj2.color, children: obj2.childNodes } = tmp9);
-            tmp5 = memo(closure_1(token[15]), { id: null, expanded: null, name: null, color: null, childNodes: null });
+            tmp5 = stateFromStores3(closure_1(token[15]), { id: null, expanded: null, name: null, color: null, childNodes: null });
             const obj3 = { id: null, expanded: null, name: null, color: null, childNodes: null };
           }
         } else {
           tmp5 = null;
-          if (arg0 === stateFromStores3.PENDING_JOIN_REQUESTS) {
+          if (arg0 === expanded.PENDING_JOIN_REQUESTS) {
             tmp5 = null;
             if (null != pendingFolderNode) {
               const obj = { id: null, expanded: null, childNodes: null };
               ({ id: obj.id, expanded: obj.expanded, children: obj.childNodes } = pendingFolderNode);
-              tmp5 = memo(closure_1(token[16]), obj);
+              tmp5 = stateFromStores3(closure_1(token[16]), obj);
             }
           }
         }
         return tmp5;
       };
       obj.renderItem = function renderItem(arg0, arg1) {
-        if (stateFromStores3.MESSAGES === arg0) {
-          let tmp8 = memo(closure_1(token[17]), {});
-        } else if (stateFromStores3.FAVORITES === arg0) {
-          tmp8 = memo(closure_1(token[18]), {});
-        } else if (stateFromStores3.LURKING_GUILDS === arg0) {
+        if (expanded.MESSAGES === arg0) {
+          let tmp8 = stateFromStores3(closure_1(token[17]), {});
+        } else if (expanded.FAVORITES === arg0) {
+          tmp8 = stateFromStores3(closure_1(token[18]), {});
+        } else if (expanded.LURKING_GUILDS === arg0) {
           let tmp40 = null;
           if (null != tmp2[arg1]) {
             const obj2 = { guildId: tmp39 };
-            tmp40 = memo(closure_1(token[19]), obj2);
+            tmp40 = stateFromStores3(closure_1(token[19]), obj2);
           }
           tmp8 = tmp40;
-        } else if (stateFromStores3.GUEST_GUILDS === arg0) {
+        } else if (expanded.GUEST_GUILDS === arg0) {
           let tmp35 = null;
           if (null != tmp3[arg1]) {
             const obj3 = { guildId: tmp34 };
-            tmp35 = memo(closure_1(token[19]), obj3);
+            tmp35 = stateFromStores3(closure_1(token[19]), obj3);
           }
           tmp8 = tmp35;
-        } else if (stateFromStores3.UNREAD_PRIVATE_CHANNELS === arg0) {
+        } else if (expanded.UNREAD_PRIVATE_CHANNELS === arg0) {
           let tmp30 = null;
           if (null != tmp[arg1]) {
             const obj4 = { channelId: tmp29 };
-            tmp30 = memo(closure_1(token[20]), obj4);
+            tmp30 = stateFromStores3(closure_1(token[20]), obj4);
           }
           tmp8 = tmp30;
-        } else if (stateFromStores3.SEPARATOR === arg0) {
-          tmp8 = memo(closure_1(token[21]), {});
-        } else if (stateFromStores3.PENDING_JOIN_REQUESTS === arg0) {
+        } else if (expanded.SEPARATOR === arg0) {
+          tmp8 = stateFromStores3(closure_1(token[21]), {});
+        } else if (expanded.PENDING_JOIN_REQUESTS === arg0) {
           tmp8 = null;
           if (null != pendingFolderNode) {
             let tmp21 = null;
             if (null != pendingFolderNode.children[arg1]) {
               tmp21 = null;
-              if (tmp20.type === expanded.GUILD) {
+              if (tmp20.type === stateFromStoresArray2.GUILD) {
                 const obj5 = { guildId: tmp20.id };
-                tmp21 = memo(closure_1(token[22]), obj5);
+                tmp21 = stateFromStores3(closure_1(token[22]), obj5);
               }
             }
             tmp8 = tmp21;
           }
         } else {
-          const diff = arg0 - stateFromStores3.GUILDS;
+          const diff = arg0 - expanded.GUILDS;
           if (diff >= guildsNFolders.length) {
             let tmp15 = null;
             if (null != tmp4[arg1]) {
               const obj6 = { restrictedGuild: tmp14 };
-              tmp15 = memo(closure_1(token[23]), obj6);
+              tmp15 = stateFromStores3(closure_1(token[23]), obj6);
             }
             tmp8 = tmp15;
           } else {
@@ -415,18 +428,18 @@ export default function useGuildsBarProps(arg0) {
             tmp8 = null;
             if (null != element) {
               tmp8 = null;
-              if (element.type !== expanded.ROOT) {
-                if (element.type !== expanded.GUILD) {
+              if (element.type !== stateFromStoresArray2.ROOT) {
+                if (element.type !== stateFromStoresArray2.GUILD) {
                   let tmp9 = element;
-                  if (element.type === expanded.FOLDER) {
+                  if (element.type === stateFromStoresArray2.FOLDER) {
                     tmp9 = element.children[arg1];
                   }
                   let tmp10 = null;
                   if (null != tmp9) {
                     tmp10 = null;
-                    if (tmp9.type === expanded.GUILD) {
+                    if (tmp9.type === stateFromStoresArray2.GUILD) {
                       const obj = { guildId: tmp9.id };
-                      tmp10 = memo(closure_1(token[19]), obj);
+                      tmp10 = stateFromStores3(closure_1(token[19]), obj);
                     }
                   }
                   tmp8 = tmp10;
@@ -443,32 +456,36 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18422), {}, item);
+              return closure_1_19(closure_1_1(18567), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18423), {}, item);
+              return closure_1_19(closure_1_1(18568), {}, item);
+            } else if ("waterwheels" === item) {
+              return closure_1_19(closure_1_1(18569), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18424), {}, item);
+              return closure_1_19(closure_1_1(18578), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18422), {}, item);
+              return closure_1_19(closure_1_1(18567), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18423), {}, item);
+              return closure_1_19(closure_1_1(18568), {}, item);
+            } else if ("waterwheels" === item) {
+              return closure_1_19(closure_1_1(18569), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18424), {}, item);
+              return closure_1_19(closure_1_1(18578), {}, item);
             }
           })
         });
       };
       obj.getRecyclerKey = function getRecyclerKey(SECTION, section, item1) {
-        if (section >= stateFromStores3.GUILDS) {
+        if (section >= expanded.GUILDS) {
           const element = guildsNFolders[section - tmp3.GUILDS];
           if (null != element) {
-            if (element.type !== expanded.ROOT) {
-              if (element.type === expanded.FOLDER) {
+            if (element.type !== stateFromStoresArray2.ROOT) {
+              if (element.type === stateFromStoresArray2.FOLDER) {
                 if (null == item1) {
                   const _HermesInternal2 = HermesInternal;
                   return "" + element.id;
@@ -481,18 +498,18 @@ export default function useGuildsBarProps(arg0) {
         }
       };
       obj.renderAccessory = function renderAccessory(memo1) {
-        return memo(closure_1_1(token[28]), { fastList: memo1 });
+        return stateFromStores3(closure_1_1(token[29]), { fastList: memo1 });
       };
       obj.getAnchorIdFromIndex = function getAnchorIdFromIndex(section, item) {
-        if (null == pendingFolderNode.getState().dropSpecs) {
-          if (null == pendingFolderNode.getState().dragSpecs) {
-            if (stateFromStores3.MESSAGES === section) {
-              let SEPARATOR = constants.MESSAGES;
-            } else if (stateFromStores3.FAVORITES === section) {
-              SEPARATOR = constants.FAVORITES;
-            } else if (stateFromStores3.PENDING_JOIN_REQUESTS === section) {
+        if (null == guildsNFolders.getState().dropSpecs) {
+          if (null == guildsNFolders.getState().dragSpecs) {
+            if (expanded.MESSAGES === section) {
+              let SEPARATOR = memo.MESSAGES;
+            } else if (expanded.FAVORITES === section) {
+              SEPARATOR = memo.FAVORITES;
+            } else if (expanded.PENDING_JOIN_REQUESTS === section) {
               if (null == item) {
-                SEPARATOR = constants.PENDING_JOIN_REQUESTS;
+                SEPARATOR = memo.PENDING_JOIN_REQUESTS;
               } else {
                 let id1;
                 if (pendingFolderNode != null) {
@@ -503,39 +520,39 @@ export default function useGuildsBarProps(arg0) {
                 let combined;
                 if (null != id1) {
                   const _HermesInternal5 = HermesInternal;
-                  combined = "" + constants.PENDING_JOIN_REQUESTS + ":" + id1;
+                  combined = "" + memo.PENDING_JOIN_REQUESTS + ":" + id1;
                 }
                 SEPARATOR = combined;
               }
-            } else if (stateFromStores3.LURKING_GUILDS === section) {
+            } else if (expanded.LURKING_GUILDS === section) {
               if (null == item) {
-                let LURKING_GUILDS = constants.LURKING_GUILDS;
+                let LURKING_GUILDS = memo.LURKING_GUILDS;
               } else {
                 const _HermesInternal4 = HermesInternal;
-                LURKING_GUILDS = "" + constants.LURKING_GUILDS + ":" + tmp2[item];
+                LURKING_GUILDS = "" + memo.LURKING_GUILDS + ":" + tmp2[item];
               }
               SEPARATOR = LURKING_GUILDS;
-            } else if (stateFromStores3.GUEST_GUILDS === section) {
+            } else if (expanded.GUEST_GUILDS === section) {
               if (null == item) {
-                let GUEST_GUILDS = constants.GUEST_GUILDS;
+                let GUEST_GUILDS = memo.GUEST_GUILDS;
               } else {
                 const _HermesInternal3 = HermesInternal;
-                GUEST_GUILDS = "" + constants.GUEST_GUILDS + ":" + tmp3[item];
+                GUEST_GUILDS = "" + memo.GUEST_GUILDS + ":" + tmp3[item];
               }
               SEPARATOR = GUEST_GUILDS;
-            } else if (stateFromStores3.UNREAD_PRIVATE_CHANNELS === section) {
+            } else if (expanded.UNREAD_PRIVATE_CHANNELS === section) {
               if (null == item) {
-                let UNREAD_PRIVATE_CHANNELS = constants.UNREAD_PRIVATE_CHANNELS;
+                let UNREAD_PRIVATE_CHANNELS = memo.UNREAD_PRIVATE_CHANNELS;
               } else {
                 const _HermesInternal2 = HermesInternal;
-                UNREAD_PRIVATE_CHANNELS = "" + constants.UNREAD_PRIVATE_CHANNELS + ":" + tmp4[item];
+                UNREAD_PRIVATE_CHANNELS = "" + memo.UNREAD_PRIVATE_CHANNELS + ":" + tmp4[item];
               }
               SEPARATOR = UNREAD_PRIVATE_CHANNELS;
-            } else if (stateFromStores3.SEPARATOR === section) {
-              SEPARATOR = constants.SEPARATOR;
+            } else if (expanded.SEPARATOR === section) {
+              SEPARATOR = memo.SEPARATOR;
             } else {
-              const GUILDS = stateFromStores3.GUILDS;
-              const diff = section - stateFromStores3.GUILDS;
+              const GUILDS = expanded.GUILDS;
+              const diff = section - expanded.GUILDS;
               if (null == guildsNFolders[diff]) {
                 let tmp9;
                 if (diff >= guildsNFolders.length) {
@@ -555,7 +572,7 @@ export default function useGuildsBarProps(arg0) {
               }
               if (null != id) {
                 const _HermesInternal = HermesInternal;
-                SEPARATOR = "" + constants.GUILDS + ":" + id;
+                SEPARATOR = "" + memo.GUILDS + ":" + id;
               }
             }
             return SEPARATOR;

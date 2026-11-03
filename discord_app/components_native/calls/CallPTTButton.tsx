@@ -1,35 +1,38 @@
-// === Module 11210: CallPTTButton ===
+// === Module 11347: CallPTTButton ===
 
-// Module 11210 (CallPTTButton)
+// Module 11347 (CallPTTButton)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11211 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11329 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11348 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
+const require = globalThis.__r;
+
+const _modDef1652 = View(1652);
 require = fn;
 const InputModes = fn(1072).InputModes;
 const jsx = fn(21).jsx;
 const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
-let ColorUtils = fn(5011);
+let ColorUtils = fn(5138);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj2.container = obj4;
 obj2.buttonBlur = { backgroundColor: "transparent" };
 const obj5 = { backgroundColor: null };
-ColorUtils = fn(5011);
+ColorUtils = fn(5138);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
 obj2.buttonBlurPressed = obj5;
 obj2.textStyle = { fontSize: 16 };
 obj2.brandButtonContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_11 = createStyles.createStyles(obj2);
-const __initData = { code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}" };
-const __initData2 = { code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}" };
+let closure_12 = { code: "(function CallPTTButtonTsx1(){let[scheduleOnRN,setDragging,setPressed,setIsSwipeToChatDisabled]=this.__closure;scheduleOnRN(setDragging,true);scheduleOnRN(setPressed,false);if(setIsSwipeToChatDisabled!=null){scheduleOnRN(setIsSwipeToChatDisabled,false);}})" };
+let closure_13 = { code: "(function CallPTTButtonTsx2(){let[scheduleOnRN,setDragging]=this.__closure;scheduleOnRN(setDragging,false);})" };
 let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
@@ -40,30 +43,34 @@ export default noop.memo((look) => {
     BRAND = obj.BRAND;
   }
   ({ style, sendCallback } = look);
-  let stateFromStores1;
-  let first;
+  _require = sendCallback;
+  importDefault = stopCallback;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
   noop = undefined;
   let first1;
   let mode;
   let ref;
   let prop;
   let string = closure_11();
-  let handleStartSend = stateFromStores1;
-  obj = sendCallback(stateFromStores1[10]);
-  const items = [mode];
+  let handleStartSend = dependencyMap;
+  obj = require("initialize");
+  items = [mode];
   const stateFromStores = obj.useStateFromStores(items, () => mode.getMode());
   const items1 = [ref];
-  stateFromStores1 = sendCallback(stateFromStores1[10]).useStateFromStores(items1, () => ref.getChannelId());
-  let obj2 = sendCallback(stateFromStores1[10]);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ref.getChannelId());
+  dependencyMap = stateFromStores1;
+  const obj2 = require("initialize");
   const items2 = [first1];
   const items3 = [stateFromStores1];
-  const stateFromStores2 = sendCallback(stateFromStores1[10]).useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores1), items3);
-  let View = stopCallback;
-  const obj3 = sendCallback(stateFromStores1[10]);
-  const tmp6 = first(noop.useState(false), 2);
-  first = tmp6[0];
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => ChannelStore.getChannel(c2), items3);
+  let View = importDefault;
+  const obj3 = require("initialize");
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp6[0];
+  _slicedToArray = first;
   noop = tmp8;
-  const tmp9 = first(noop.useState(false), 2);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
   first1 = tmp9[0];
   mode = tmp11;
   let isGuildStageVoiceResult;
@@ -74,79 +81,84 @@ export default noop.memo((look) => {
     isGuildStageVoiceResult = !tmp5;
   }
   ref = obj5.useRef(false);
-  tmp5 = look.stopCallback(stateFromStores1[11])(stateFromStores1);
-  const voiceChatNavigationContext = sendCallback(handleStartSend[12]).useVoiceChatNavigationContext();
+  tmp5 = useCanSpeakInChannelDefault(stateFromStores1);
+  const voiceChatNavigationContext = require("VoiceChatModalContext").useVoiceChatNavigationContext();
   prop = undefined;
   if (voiceChatNavigationContext != null) {
     prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
   }
   const items4 = [ref, first, first1, sendCallback, look.stopCallback];
   const effect = obj5.useEffect(() => {
-    let tmp = first;
-    if (!first) {
+    let tmp = c3;
+    if (!c3) {
       tmp = first1;
     }
     if (tmp !== ref.current) {
       MediaEngineActionCreators.setPushToTalkState(MediaEngineStore.getMediaEngine(), tmp);
       if (tmp) {
-        if (sendCallback != null) {
-          sendCallback();
+        if (_undefined != null) {
+          _undefined();
         }
-      } else if (stopCallback != null) {
-        stopCallback();
+      } else if (_undefined2 != null) {
+        _undefined2();
       }
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = sendCallback(handleStartSend[14]).Gesture;
-  const tmp2Result = sendCallback(handleStartSend[12]);
-  class F {
+  const Gesture = tmp2(5426).Gesture;
+  const tmp2Result = require("VoiceChatModalContext");
+  const items5 = [closure_12, require("module_1705").scheduleOnRN, tmp9[1], tmp6[1], prop];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  [tmp17, tmp18, tmp19, tmp20, tmp21] = items5;
+  class CallPTTButtonTsx1 {
     constructor() {
       tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[15]);
-      tmp3 = obj.runOnJS(closure_6)(true);
-      obj2 = closure_0(closure_2[15]);
-      tmp4 = obj2.runOnJS(closure_4)(false);
-      if (null != setIsSwipeToChatDisabled) {
-        tmpResult = tmp(tmp2[15]);
-        tmp6 = tmpResult.runOnJS(tmp5)(false);
+      tmp2 = closure_0(closure_1, true);
+      tmp3 = closure_0(closure_2, false);
+      if (null != closure_3) {
+        tmpResult = tmp(closure_3, false);
       }
       return;
     }
   }
+  const items6 = [tmp18, tmp19, tmp20, tmp21];
+  CallPTTButtonTsx1.__closure = items6;
+  CallPTTButtonTsx1.__workletHash = 7400317648187;
+  CallPTTButtonTsx1.__initData = tmp17;
   const PanResult = Gesture.Pan();
-  F.__closure = { runOnJS: sendCallback(handleStartSend[15]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
-  F.__workletHash = 10056118853836;
-  F.__initData = __initData2;
-  const obj4 = { runOnJS: sendCallback(handleStartSend[15]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
-  class N {
+  const items7 = [closure_13, require("module_1705").scheduleOnRN, tmp9[1]];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp22, tmp23, tmp24] = items7;
+  class CallPTTButtonTsx2 {
     constructor() {
-      obj = closure_0(closure_2[15]);
-      tmp = obj.runOnJS(closure_6)(false);
+      tmp = closure_0(closure_1, false);
       return;
     }
   }
-  const onStartResult = PanResult.onStart(F);
-  N.__closure = { runOnJS: sendCallback(handleStartSend[15]).runOnJS, setDragging: tmp9[1] };
-  N.__workletHash = 8439106360958;
-  N.__initData = __initData;
-  let onEndResult = onStartResult.onEnd(N);
-  let tmp18 = null;
+  const items8 = [tmp23, tmp24];
+  CallPTTButtonTsx2.__closure = items8;
+  CallPTTButtonTsx2.__workletHash = 9346672580777;
+  CallPTTButtonTsx2.__initData = tmp22;
+  let onEndResult = Gesture.Pan().onStart(CallPTTButtonTsx1).onEnd(CallPTTButtonTsx2);
+  let tmp26 = null;
   if (null != stateFromStores1) {
-    tmp18 = null;
+    tmp26 = null;
     if (prop.VOICE_ACTIVITY !== stateFromStores) {
-      tmp18 = null;
+      tmp26 = null;
       if (!isGuildStageVoiceResult) {
         if (BRAND === obj.BRAND) {
-          const items5 = [string.brandButtonContainer];
-          const items6 = [string.button, style];
-          let buttonBlurPressed = items6;
-          let items7 = items5;
+          const items9 = [string.brandButtonContainer];
+          const items10 = [string.button, style];
+          let buttonBlurPressed = items10;
+          let items11 = items9;
         } else {
-          items7 = [, , ];
-          ({ button: arr6[0], container: arr6[1] } = string);
-          items7[2] = style;
+          items11 = [, , ];
+          ({ button: arr10[0], container: arr10[1] } = string);
+          items11[2] = style;
           if (!first) {
             if (!first1) {
               buttonBlurPressed = string.buttonBlur;
@@ -154,14 +166,14 @@ export default noop.memo((look) => {
           }
           buttonBlurPressed = string.buttonBlurPressed;
         }
-        const obj7 = { gesture: onEndResult, children: null };
-        View = View(handleStartSend[15]).View;
-        const obj8 = { style: items7, children: null };
-        style = sendCallback(handleStartSend[16]).Button;
-        const obj9 = { style: buttonBlurPressed, textStyle: string.textStyle, text: null, onTouchStart: null, onTouchEnd: null, darkenOnPress: true };
-        const intl = sendCallback(handleStartSend[17]).intl;
+        const obj4 = { gesture: onEndResult, children: null };
+        View = _modDef1652.View;
+        const obj6 = { style: items11, children: null };
+        style = tmp2(1187).Button;
+        const obj7 = { style: buttonBlurPressed, textStyle: string.textStyle, text: null, onTouchStart: null, onTouchEnd: null, darkenOnPress: true };
+        const intl = tmp2(1113).intl;
         string = intl.string;
-        obj9.text = string(sendCallback(handleStartSend[17]).t.Q8gkVL);
+        obj7.text = string(tmp2(1113).t.Q8gkVL);
         handleStartSend = function handleStartSend() {
           closure_4(true);
           mode(false);
@@ -169,20 +181,20 @@ export default noop.memo((look) => {
             prop(true);
           }
         };
-        obj9.onTouchStart = handleStartSend;
-        obj9.onTouchEnd = function handleStopSend() {
+        obj7.onTouchStart = handleStartSend;
+        obj7.onTouchEnd = function handleStopSend() {
           closure_4(false);
           if (prop != null) {
             prop(false);
           }
         };
-        obj8.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
-        onEndResult = <View style={items7}>{null}</View>;
-        obj7.children = onEndResult;
-        jsx(sendCallback(handleStartSend[14]).GestureDetector, { gesture: onEndResult, children: null });
+        obj6.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
+        onEndResult = <View style={items11}>{null}</View>;
+        obj4.children = onEndResult;
+        jsx(tmp2(5426).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }
-  return tmp18;
+  return tmp26;
 });
 export { CallPTTButtonLooks };

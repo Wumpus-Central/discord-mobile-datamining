@@ -1,10 +1,10 @@
-// === Module 17975: useIsNotifSettingDisabled ===
+// === Module 18118: useIsNotifSettingDisabled ===
 
-// Module 17975 (useIsNotifSettingDisabled)
-import _modDef2868 from "module_2868" /* 2868 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17966 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17967 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17965 */;
+// Module 18118 (useIsNotifSettingDisabled)
+import _modDef2995 from "module_2995" /* 2995 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 18109 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 18110 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 18108 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/notifications/settings/native/u
 
 export default function useIsNotifSettingDisabled(CALLS) {
   _require = CALLS;
-  const items = [DeclarativeSystemNotifPermissionStore];
+  items = [DeclarativeSystemNotifPermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => DeclarativeSystemNotifPermissionStore.isDisabled(closure_0));
   let tmp4 = !stateFromStores;
   if (stateFromStores) {
@@ -24,7 +24,7 @@ export default function useIsNotifSettingDisabled(CALLS) {
   if (!tmp4) {
     const obj2 = { label: null, onPress: null };
     const intl = require("util").intl;
-    obj2.label = intl.string(_modDef2868.TVZ0Fm);
+    obj2.label = intl.string(_modDef2995.TVZ0Fm);
     obj2.onPress = function handleOpenSystem() {
       const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
       const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;

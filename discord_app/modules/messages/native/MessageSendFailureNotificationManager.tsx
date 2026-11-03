@@ -1,15 +1,15 @@
-// === Module 20034: MessageSendFailureNotificationManager ===
+// === Module 20184: MessageSendFailureNotificationManager ===
 
-// Module 20034 (MessageSendFailureNotificationManager)
+// Module 20184 (MessageSendFailureNotificationManager)
 import util from "util" /* 1113 */;
-import PushNotificationDefault from "PushNotification" /* 10914 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11022 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11024 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1383 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import PushNotificationDefault from "PushNotification" /* 11044 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11155 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11157 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserStore from "UserStore" /* 1385 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -76,7 +76,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1072);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(10903).LocalNotificationTypes;
+const LocalNotificationTypes = fn(11033).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

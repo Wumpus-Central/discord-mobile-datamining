@@ -1,9 +1,9 @@
-// === Module 9775: useMessageMaxLength ===
+// === Module 9907: useMessageMaxLength ===
 
-// Module 9775 (useMessageMaxLength)
+// Module 9907 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import UserStore from "UserStore" /* 1383 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
 
 export default function useMessageMaxLength() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => PremiumUtilsDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_1_4 : closure_1_5);
 };
 export function getMaxMessageLength() {

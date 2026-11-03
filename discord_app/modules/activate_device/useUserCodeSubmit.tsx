@@ -1,12 +1,12 @@
-// === Module 15711: useUserCodeSubmit ===
+// === Module 15854: useUserCodeSubmit ===
 
-// Module 15711 (useUserCodeSubmit)
+// Module 15854 (useUserCodeSubmit)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const OAuthConstants = fn(15710).OAuthConstants;
+const OAuthConstants = fn(15853).OAuthConstants;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
 
@@ -18,7 +18,7 @@ export function useUserCodeSubmit(arr, onUserCodeAccepted, onClose) {
   _slicedToArray = submitting[1];
   const error = _slicedToArray(noop.useState(null), 2);
   noop = error[1];
-  const items = [arr, onUserCodeAccepted, onClose];
+  items = [arr, onUserCodeAccepted, onClose];
   const manualSubmit = noop.useCallback(asyncGeneratorStep(async () => {
     v0(true);
     await closure_0(tmp3[5]).verifyUserCode(closure_0);

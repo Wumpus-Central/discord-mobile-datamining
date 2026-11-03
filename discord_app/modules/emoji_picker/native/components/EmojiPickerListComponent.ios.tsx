@@ -1,12 +1,12 @@
-// === Module 10042: components/EmojiPickerListComponent ===
+// === Module 10173: components/EmojiPickerListComponent ===
 
-// Module 10042 (components/EmojiPickerListComponent)
+// Module 10173 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(9942);
+const EmojiPickerListConstants = fn(10073);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: metroRequire, LABEL_BOTTOM_PADDING: closure_7 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function EmojiPickerListComponent(paddingTop) {
   const paddingBottom = paddingTop.paddingBottom;
   ({ onShowNitroUpsell, renderItem, ref } = paddingTop);
   const ref2 = paddingBottom.useRef(null);
-  const items = [paddingTop, paddingBottom];
+  items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
   const keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
@@ -81,5 +81,5 @@ export default function EmojiPickerListComponent(paddingTop) {
     }
   }));
   const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
-  return jsx(require("module_7294").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref: ref2, renderItem, stickyHeaderIndices });
+  return jsx(require("module_7414").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref: ref2, renderItem, stickyHeaderIndices });
 };

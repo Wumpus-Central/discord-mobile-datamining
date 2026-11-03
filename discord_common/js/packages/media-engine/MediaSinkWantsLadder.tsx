@@ -1,7 +1,7 @@
-// === Module 5804: MediaSinkWantsLadder ===
+// === Module 5924: MediaSinkWantsLadder ===
 
-// Module 5804 (MediaSinkWantsLadder)
-import Constants from "Constants" /* 5768 */;
+// Module 5924 (MediaSinkWantsLadder)
+import Constants from "Constants" /* 5888 */;
 import size from "module_2" /* 2 */;
 
 ({ defaultVideoQualityOptions: closure_0, VIDEO_QUALITY_FRAMERATE: closure_1, VIDEO_QUALITY_FRAMERATE_MUTED_2: c2, VIDEO_QUALITY_FRAMERATE_MUTED: c3 } = Constants);
@@ -82,7 +82,7 @@ prototype["getResolution"] = function getResolution(arg0) {
 };
 MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) {
   const set = new Set([0, 4, 8, 10]);
-  const items = [];
+  items = [];
   let num = 1;
   do {
     let result = 16 * num / 9;
@@ -137,7 +137,7 @@ MediaSinkWantsLadder["getMutedFramerate"] = function getMutedFramerate(arg0) {
   return arg0 <= 20 ? React2 : React3;
 };
 MediaSinkWantsLadder["calculateOrderedLadder"] = function calculateOrderedLadder(ladder) {
-  const items = [];
+  items = [];
   const keys = Object.keys(ladder);
   const mapped = keys.map((item) => Number(item));
   const sorted = mapped.sort((arg0, arg1) => arg0 - arg1);

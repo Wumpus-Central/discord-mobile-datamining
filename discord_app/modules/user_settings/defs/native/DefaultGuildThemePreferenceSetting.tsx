@@ -1,21 +1,21 @@
-// === Module 17303: DefaultGuildThemePreferenceSetting ===
+// === Module 17446: DefaultGuildThemePreferenceSetting ===
 
-// Module 17303 (DefaultGuildThemePreferenceSetting)
+// Module 17446 (DefaultGuildThemePreferenceSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5234 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5357 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
-  useValue: fn(4839).DefaultGuildThemePreference.useSetting,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
+  useValue: fn(4966).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
@@ -26,7 +26,7 @@ const radio = SettingBuilders.createRadio({
       const intl = util.intl;
       obj.label = intl.string(util.t.aN3RNQ);
       obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
-      const items = [obj, ];
+      items = [obj, ];
       const obj2 = { label: null, value: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.js8y7t);

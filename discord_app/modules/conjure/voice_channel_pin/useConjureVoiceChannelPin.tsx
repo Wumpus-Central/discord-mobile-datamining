@@ -1,23 +1,23 @@
-// === Module 12655: useConjureVoiceChannelPin ===
+// === Module 12791: useConjureVoiceChannelPin ===
 
-// Module 12655 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5652 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10959 */;
+// Module 12791 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5772 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 10871 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 11001 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/use
 
 export function useConjureVoiceChannelPinOutcome(projectId) {
   _require = projectId;
-  const items = [ConjureVoiceChannelPinStore];
+  items = [ConjureVoiceChannelPinStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => ConjureVoiceChannelPinStore.getOutcome(closure_0));
   let obj = require("initialize");
   const items1 = [ChannelStore, UserStore, RelationshipStore];
@@ -52,7 +52,7 @@ export function useConjureVoiceChannelPinOutcome(projectId) {
 }
 export function useConjureVoiceChannelPinForm(projectId) {
   _require = projectId;
-  let items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureProjectStore.getProject(closure_0), items1);
   let guild_id;
@@ -68,7 +68,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
   const items3 = [guild_id];
   const channels = require("initialize").useStateFromStoresArray(items2, () => {
     if (null == closure_0) {
-      let items = [];
+      items = [];
     } else {
       const mapped = GuildChannelStore.getChannels(tmp)[GUILD_VOCAL_CHANNELS_KEY].map((channel) => channel.channel);
       items = mapped.filter((type) => {
@@ -92,7 +92,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
   if (selected == null) {
     selected = null;
   }
-  let application_id;
+  application_id = undefined;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

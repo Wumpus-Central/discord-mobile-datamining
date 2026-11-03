@@ -1,8 +1,8 @@
-// === Module 7095: useInputAttachments ===
+// === Module 7221: useInputAttachments ===
 
-// Module 7095 (useInputAttachments)
-import Text_Text from "Text/Text" /* 5624 */;
-import IconSize from "IconSize" /* 7096 */;
+// Module 7221 (useInputAttachments)
+import Text_Text from "Text/Text" /* 5747 */;
+import IconSize from "IconSize" /* 7222 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ class InputAttachmentContainer {
         tmp7 = pressableProps;
         merged = Object.assign(pressableProps);
         pressableProps = function style(pressed) {
-          const items = [style, { pointerEvents: "auto" }, ];
+          items = [style, { pointerEvents: "auto" }, ];
           let obj;
           if (pressed.pressed) {
             obj = { opacity: 0.2 };

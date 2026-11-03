@@ -1,16 +1,16 @@
-// === Module 13758: LegacyCommands ===
+// === Module 13889: LegacyCommands ===
 
-// Module 13758 (LegacyCommands)
-import UserSettings from "UserSettings" /* 4839 */;
-import ReactionUtils from "ReactionUtils" /* 4958 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8405 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9774 */;
+// Module 13889 (LegacyCommands)
+import UserSettings from "UserSettings" /* 4966 */;
+import ReactionUtils from "ReactionUtils" /* 5085 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8529 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9906 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import t_mod from "module_1943" /* 1943 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import t_mod from "module_2072" /* 2072 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -150,7 +150,7 @@ export function handleLegacyCommands(text, arg1) {
     if (null == str.match) {
       continue;
     } else {
-      let regex = str.match.regex;
+      regex = str.match.regex;
       let isMatch;
       if (regex != null) {
         isMatch = regex.test(arg0);

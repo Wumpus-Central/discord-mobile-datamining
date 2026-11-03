@@ -1,16 +1,16 @@
-// === Module 10683: SKUActionCreators ===
+// === Module 10813: SKUActionCreators ===
 
-// Module 10683 (SKUActionCreators)
+// Module 10813 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BillingUtils from "BillingUtils" /* 4827 */;
-import StoreUtils from "StoreUtils" /* 6455 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6553 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7762 */;
-import TestModeUtils from "TestModeUtils" /* 9557 */;
+import BillingUtils from "BillingUtils" /* 4954 */;
+import StoreUtils from "StoreUtils" /* 6575 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6673 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7886 */;
+import TestModeUtils from "TestModeUtils" /* 9689 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9481 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9609 */;
+import SKUStore from "SKUStore" /* 7016 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -28,7 +28,7 @@ let closure_8 = async function _fetchSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_9 = async function _fetchPublicSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -194,7 +194,7 @@ let closure_10 = async function _fetchPublishedSKU(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_11 = async function _fetchTestSKUsForApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -387,7 +387,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -511,7 +511,7 @@ let closure_13 = async function _grantChannelBranchEntitlement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -596,7 +596,7 @@ let closure_15 = async function _orderSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -618,7 +618,7 @@ let closure_15 = async function _orderSKU() {
             c8 = 1;
             const obj4 = { order_line_items: null, billing_facet: null, location_facet: null };
             const obj6 = { sku_id, quantity: 1, purchase_type: 1 };
-            const items = [obj6];
+            items = [obj6];
             obj4.order_line_items = items;
             const obj8 = { payment_source_id };
             obj4.billing_facet = obj8;
@@ -691,7 +691,7 @@ let closure_16 = async function _purchaseSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -925,7 +925,7 @@ let closure_17 = async function _resendPaymentVerificationEmail() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

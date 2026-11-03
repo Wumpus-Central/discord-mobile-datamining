@@ -1,7 +1,7 @@
-// === Module 7231: useFastestListSections ===
+// === Module 7352: useFastestListSections ===
 
-// Module 7231 (useFastestListSections)
-import FastestListItemTypeDefault from "FastestListItemType" /* 7232 */;
+// Module 7352 (useFastestListSections)
+import FastestListItemTypeDefault from "FastestListItemType" /* 7353 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function useFastestListSections(fastestListId) {
     };
   });
   closure_8 = tmp;
-  let items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
+  items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
   const memo = keyExtractor.useMemo(() => {
     let tmp2Result = num;
     if (typeof num !== "number") {
@@ -65,7 +65,7 @@ export default function useFastestListSections(fastestListId) {
     if (str2 == null) {
       str2 = "";
     }
-    const items = [];
+    items = [];
     const items1 = [];
     const items2 = [];
     if (null == keyExtractor) {

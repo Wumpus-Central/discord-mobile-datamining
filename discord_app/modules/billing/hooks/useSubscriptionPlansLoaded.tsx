@@ -1,10 +1,10 @@
-// === Module 15287: useSubscriptionPlansLoaded ===
+// === Module 15428: useSubscriptionPlansLoaded ===
 
-// Module 15287 (useSubscriptionPlansLoaded)
+// Module 15428 (useSubscriptionPlansLoaded)
 import LoggerDefault from "Logger" /* 3 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 2049 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 2178 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 const require = fn;
 function getSubscriptionPlansLoaded() {
@@ -47,7 +47,7 @@ function getSubscriptionPlansLoaded() {
   }
   return obj.isLoadedForSKUs(tmp);
 }
-const ACTIVE_PREMIUM_SKUS = fn(1385).ACTIVE_PREMIUM_SKUS;
+const ACTIVE_PREMIUM_SKUS = fn(1387).ACTIVE_PREMIUM_SKUS;
 new LoggerDefault("useSubscriptionPlansLoaded");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
@@ -55,7 +55,7 @@ const result = size.fileFinishedImporting("modules/billing/hooks/useSubscription
 export function useSubscriptionPlansLoaded() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    let items = [];
+    items = [];
     HermesBuiltin.arraySpread(ACTIVE_PREMIUM_SKUS, 0);
     tmp = items;
   }

@@ -1,11 +1,11 @@
-// === Module 8025: InlineNotice ===
+// === Module 8149: InlineNotice ===
 
-// Module 8025 (InlineNotice)
+// Module 8149 (InlineNotice)
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import _modDef2075 from "module_2075" /* 2075 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import _modDef2204 from "module_2204" /* 2204 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,13 +16,13 @@ function NoticeMessageList(children) {
   dependencyMap = tmp;
   obj = { style: tmp.stack, children: null };
   const items1 = [
-    closure_5(variant(5624).Text, { variant, color, children: children.intro }),
+    closure_5(variant(5747).Text, { variant, color, children: children.intro }),
     closure_5(View, {
       accessibilityRole: "list",
       style: tmp.stack,
       children: items.map((children, index) => {
         obj = { style: closure_2.listItem, children: null };
-        const items = [hasOwnProperty(Text_Text.Text, { variant, color, accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), hasOwnProperty(Text_Text.Text, { variant, color, style: closure_2.listItemText, children })];
+        items = [hasOwnProperty(Text_Text.Text, { variant, color, accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), hasOwnProperty(Text_Text.Text, { variant, color, style: closure_2.listItemText, children })];
         obj.children = items;
         return timestampProducer(View, obj, index);
       })
@@ -34,20 +34,20 @@ function NoticeMessageList(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { critical: { Icon: fn(7086).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2075.uKMqrF }, warning: null, info: null, success: null };
-let obj2 = { Icon: fn(7086).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2075.uKMqrF };
-obj.warning = { Icon: fn(8026).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2075["7vL/d/"] };
-let obj3 = { Icon: fn(8026).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2075["7vL/d/"] };
-obj.info = { Icon: fn(5735).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2075.BReS7U };
-let obj4 = { Icon: fn(5735).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2075.BReS7U };
-obj.success = { Icon: fn(7340).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2075["1MXXPf"] };
-const TextVariantsFlat = fn(5625).TextVariantsFlat;
-let found = TextVariantsFlat.find((name) => "experimental/body-sm/normal" === name.name);
+let obj = { critical: { Icon: fn(7212).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF }, warning: null, info: null, success: null };
+let obj2 = { Icon: fn(7212).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF };
+obj.warning = { Icon: fn(8150).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
+let obj3 = { Icon: fn(8150).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
+obj.info = { Icon: fn(5855).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
+let obj4 = { Icon: fn(5855).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
+obj.success = { Icon: fn(7460).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
+const TextVariantsFlat = fn(5748).TextVariantsFlat;
+let found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0, height) => {
   obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border }, iconAndText: null, iconContainer: null, contents: null, copy: null, cta: null };
   const obj2 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border };
@@ -61,9 +61,9 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
   obj.cta = { alignSelf: "flex-start" };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj8 = { stack: null, listItem: null, listItemText: null };
-let obj5 = { Icon: fn(7340).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2075["1MXXPf"] };
+let obj5 = { Icon: fn(7460).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
 obj8.stack = { gap: nativeDefault.space.PX_4 };
 let obj9 = { gap: nativeDefault.space.PX_4 };
 obj8.listItem = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -85,7 +85,7 @@ export function InlineNotice(hidden) {
   ({ Icon, iconColor, typeLabel } = obj[type]);
   const intl = role(tmp2[13]).intl;
   const stringResult = intl.string(typeLabel);
-  const items = [stringResult, role(joined[14]).getNodeText(title), ];
+  items = [stringResult, role(joined[14]).getNodeText(title), ];
   const tmpResult = role(joined[14]);
   items[2] = role(joined[14]).getNodeText(message);
   let items1 = messageList;
@@ -139,15 +139,15 @@ export function InlineNotice(hidden) {
     const obj8 = { style: tmp3Result.copy, children: null };
     let tmp16Result = null;
     if (null != title) {
-      const obj9 = { variant: "experimental/body-sm/semibold", color: "text-strong", children: title };
+      const obj9 = { variant: "body-sm/semibold", color: "text-strong", children: title };
       tmp16Result = closure_5(role(tmp2[11]).Text, obj9);
     }
     const items4 = [tmp16Result, ];
     if (null != messageList) {
-      const obj10 = { intro: message, items: messageList, variant: "experimental/body-sm/normal", color: "text-strong" };
+      const obj10 = { intro: message, items: messageList, variant: "body-sm/normal", color: "text-strong" };
       let tmp16Result4 = closure_5(NoticeMessageList, obj10);
     } else {
-      const obj11 = { variant: "experimental/body-sm/normal", color: "text-strong", children: message };
+      const obj11 = { variant: "body-sm/normal", color: "text-strong", children: message };
       tmp16Result4 = closure_5(role(tmp2[11]).Text, obj11);
     }
     items4[1] = tmp16Result4;

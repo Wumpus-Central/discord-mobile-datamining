@@ -1,6 +1,6 @@
-// === Module 12165: useConjureModelSettingsDraft ===
+// === Module 12301: useConjureModelSettingsDraft ===
 
-// Module 12165 (useConjureModelSettingsDraft)
+// Module 12301 (useConjureModelSettingsDraft)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ export default function useConjureModelSettingsDraft(arg0, arg1) {
     tmp4[1](arg0);
     tmp3(null);
   }
-  const items = [tmp2, ];
+  items = [tmp2, ];
   const items1 = [arg1];
   items[1] = noop.useCallback((arg0) => {
     tmp3(arg0);

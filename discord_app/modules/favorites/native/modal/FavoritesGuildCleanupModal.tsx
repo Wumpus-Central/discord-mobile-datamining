@@ -1,15 +1,15 @@
-// === Module 18199: FavoritesGuildCleanupModal ===
+// === Module 18343: FavoritesGuildCleanupModal ===
 
-// Module 18199 (FavoritesGuildCleanupModal)
+// Module 18343 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3450 from "module_3450" /* 3450 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import Modal from "Modal" /* 11482 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18202 */;
+import _modDef3577 from "module_3577" /* 3577 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import Modal from "Modal" /* 11619 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function CleanupScreen() {
   const obj4 = { variant: "text-md/normal", children: null };
   const intl = validDays(loading[10]).intl;
   obj4.children = intl.string(stage(loading[11]).DbeF7Y);
-  let items = [closure_6(validDays(loading[9]).Text, obj4), , ];
+  items = [closure_6(validDays(loading[9]).Text, obj4), , ];
   const obj5 = { children: null };
   if ("filter" === stage) {
     const obj6 = { label: null, value: null, onChange: null, keyboardType: "number-pad", maxLength: 5, disabled: null, errorMessage: null };
@@ -99,7 +99,7 @@ function CleanupScreen() {
             selectedIds = arg0;
             return selectedIds.setSelectedIds((arr) => {
               if (id) {
-                const items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(arr, 0)] = id.id;
                 let found = items;
               } else {
@@ -215,7 +215,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -232,13 +232,13 @@ export default function FavoritesGuildCleanupModal() {
     let obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
     let intl = util.intl;
-    obj2.title = intl.string(_modDef3450["b081B+"]);
+    obj2.title = intl.string(_modDef3577["b081B+"]);
     obj2.headerLeft = function headerLeft() {
       const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
       const intl = closure_1_0(1113).intl;
       obj.text = intl.string(closure_1_0(1113).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5634).Button, obj);
+      return closure_1_6(closure_1_0(5754).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

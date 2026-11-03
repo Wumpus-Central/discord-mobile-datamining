@@ -1,13 +1,13 @@
-// === Module 17202: useActiveGuildSubscriptions ===
+// === Module 17345: useActiveGuildSubscriptions ===
 
-// Module 17202 (useActiveGuildSubscriptions)
-import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 6535 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 17197 */;
+// Module 17345 (useActiveGuildSubscriptions)
+import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 6655 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 17340 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 const require = fn;
-const constants = fn(17196).UserGuildRoleSubscriptionRelationship;
+const constants = fn(17339).UserGuildRoleSubscriptionRelationship;
 let closure_7 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
@@ -23,7 +23,7 @@ export default function useActiveGuildSubscriptions() {
   }
   const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   let stateFromStores = flag(504).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
   noop.useRef(false);
   const items1 = [flag, tmp];

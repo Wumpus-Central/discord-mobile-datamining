@@ -1,6 +1,6 @@
-// === Module 8979: LazyAPIPromise ===
+// === Module 9107: LazyAPIPromise ===
 
-// Module 8979 (LazyAPIPromise)
+// Module 9107 (LazyAPIPromise)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ export default function useLazyAPIPromise(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function useLazyAPIPromise(arg0, arg1) {
   closure_2 = tmp[1];
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = tmp2[1];
-  const items = [
+  items = [
     function execFn() {
       const self = this;
       const apply = closure_4.apply;

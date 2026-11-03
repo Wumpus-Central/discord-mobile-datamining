@@ -1,11 +1,11 @@
-// === Module 18776: GroupDMNitroCapBanner ===
+// === Module 18934: GroupDMNitroCapBanner ===
 
-// Module 18776 (GroupDMNitroCapBanner)
+// Module 18934 (GroupDMNitroCapBanner)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15306 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 }, pill: null, iconContainer: null, trailing: null, gradientClip: null, border: null, text: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 obj2.pill = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -39,7 +39,7 @@ export default function GroupDMNitroCapBanner(showLeadingIcon) {
   const tmp = closure_8();
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
   const obj2 = { style: null, children: null };
-  const items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
+  items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
   obj2.style = items;
   const obj3 = { style: null, children: null };
   const items1 = [tmp.pill, { borderRadius: token }];

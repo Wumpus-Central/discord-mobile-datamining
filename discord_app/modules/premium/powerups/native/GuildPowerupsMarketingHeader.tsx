@@ -1,16 +1,16 @@
-// === Module 15465: GuildPowerupsMarketingHeader ===
+// === Module 15606: GuildPowerupsMarketingHeader ===
 
-// Module 15465 (GuildPowerupsMarketingHeader)
+// Module 15606 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14064 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14087 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15466 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15467 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14195 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14218 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15607 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15608 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 require = fn;
 function PerkText(children) {
@@ -18,7 +18,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef671("#000000");
@@ -37,7 +37,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
   const tmp = closure_7();
   const arr = useMarketablePowerupPerksDefault(guild.id);
-  const items = [guild.id];
+  items = [guild.id];
   const effect = noop.useEffect(() => {
     if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
       const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(guild.id);
@@ -72,13 +72,13 @@ export default function GuildPowerupsMarketingHeader(guild) {
             obj4.perk1 = <PerkText powerup={first[0]} />;
             const obj6 = { powerup: first[1] };
             obj4.perk2 = <PerkText powerup={first[1]} />;
-            formatResult = intl2.format(_modDef2570.MNO3sG, obj4);
+            formatResult = intl2.format(_modDef2699.MNO3sG, obj4);
           }
         }
       }
       const obj7 = { perks: str2 };
-      obj2.children = intl.format(_modDef2570["7lwpzR"], obj7);
-      obj.children = jsx(guild(5624).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj2.children = intl.format(_modDef2699["7lwpzR"], obj7);
+      obj.children = jsx(guild(5747).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

@@ -1,12 +1,12 @@
-// === Module 7099: BaseTextField ===
+// === Module 7225: BaseTextField ===
 
-// Module 7099 (BaseTextField)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import mergeProps from "mergeProps" /* 5189 */;
-import useFocus from "useFocus" /* 5190 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
-import NativeTextInput from "NativeTextInput" /* 7100 */;
-import propsForNativeTextInput from "propsForNativeTextInput" /* 7103 */;
+// Module 7225 (BaseTextField)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import mergeProps from "mergeProps" /* 5312 */;
+import useFocus from "useFocus" /* 5313 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import NativeTextInput from "NativeTextInput" /* 7226 */;
+import propsForNativeTextInput from "propsForNativeTextInput" /* 7229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ export function BaseTextField(onChangeText) {
     tmp6 = obj5;
     tmpResult7 = PlatformUtils;
   }
-  const items = [onChangeText];
+  items = [onChangeText];
   const callback = noop.useCallback((str) => {
     let replaced = str;
     if (null != str) {

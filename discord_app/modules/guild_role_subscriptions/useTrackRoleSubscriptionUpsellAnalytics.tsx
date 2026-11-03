@@ -1,10 +1,10 @@
-// === Module 18618: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 18776: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 18618 (useTrackRoleSubscriptionUpsellAnalytics)
+// Module 18776 (useTrackRoleSubscriptionUpsellAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -21,10 +21,10 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
   const is_premium_member = tmp2;
   let obj = guildId(_location[3]);
-  let items = [groupListingsFetchContext];
+  items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
   const stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(items, () => {
-    let items = relevantSubscriptionListingIds;
+    items = relevantSubscriptionListingIds;
     if (relevantSubscriptionListingIds == null) {
       items = [];
     }

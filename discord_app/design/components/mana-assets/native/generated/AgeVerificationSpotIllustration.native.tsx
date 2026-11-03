@@ -1,19 +1,19 @@
-// === Module 8021: AgeVerificationSpotIllustration ===
+// === Module 8145: AgeVerificationSpotIllustration ===
 
-// Module 8021 (AgeVerificationSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef8022 from "module_8022" /* 8022 */;
-import _modDef8023 from "module_8023" /* 8023 */;
-import _modDef8024 from "module_8024" /* 8024 */;
+// Module 8145 (AgeVerificationSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef8146 from "module_8146" /* 8146 */;
+import _modDef8147 from "module_8147" /* 8147 */;
+import _modDef8148 from "module_8148" /* 8148 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef8022 }, 3: null };
-let obj2 = { uri: _modDef8022 };
-obj[2] = { uri: _modDef8023 };
-const obj3 = { uri: _modDef8023 };
-obj[3] = { uri: _modDef8024 };
+let obj = { 1: null, 2: { uri: _modDef8146 }, 3: null };
+let obj2 = { uri: _modDef8146 };
+obj[2] = { uri: _modDef8147 };
+const obj3 = { uri: _modDef8147 };
+obj[3] = { uri: _modDef8148 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function AgeVerificationSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

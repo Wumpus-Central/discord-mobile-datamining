@@ -1,23 +1,23 @@
-// === Module 9111: usePrivacyLevelHelpText ===
+// === Module 9239: usePrivacyLevelHelpText ===
 
-// Module 9111 (usePrivacyLevelHelpText)
+// Module 9239 (usePrivacyLevelHelpText)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const constants = fn(4869).GuildScheduledEventPrivacyLevel;
+const constants = fn(4996).GuildScheduledEventPrivacyLevel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level, arg2) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, closure_0));
   const obj = require("initialize");
   const obj2 = PermissionUtilsAll;

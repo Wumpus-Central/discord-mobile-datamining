@@ -1,17 +1,17 @@
-// === Module 18198: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 18342: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 18198 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10831 */;
+// Module 18342 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10961 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+import UserStore from "UserStore" /* 1385 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -34,9 +34,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     }
   }, items2);
   const intl = stateFromStores(1113).intl;
-  obj3.label = intl.string(stateFromStores1(3450).DIyQIF);
+  obj3.label = intl.string(stateFromStores1(3577).DIyQIF);
   const intl2 = stateFromStores(1113).intl;
-  obj3.subLabel = intl2.string(stateFromStores1(3450).g2vHYJ);
+  obj3.subLabel = intl2.string(stateFromStores1(3577).g2vHYJ);
   obj3.toggle = callback;
   return obj3;
 };

@@ -1,20 +1,20 @@
-// === Module 6957: GuildIcon ===
+// === Module 7083: GuildIcon ===
 
-// Module 6957 (GuildIcon)
+// Module 7083 (GuildIcon)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(6958).ExpressionSourceGuildRecord;
-const GuildRecord = fn(4881);
+let closure_5 = fn(7084).ExpressionSourceGuildRecord;
+const GuildRecord = fn(5008);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1072).Fonts;
 const jsx = fn(21).jsx;
 const GuildIconSizes = { XXXSMALL: "XXXSMALL", XXSMALL_12: "XXSMALL_12", XXSMALL: "XXSMALL", XSMALL_20: "XSMALL_20", XSMALL: "XSMALL", SMALL: "SMALL", SMALL_32: "SMALL_32", SMALL_36: "SMALL_36", NORMAL: "NORMAL", LARGE: "LARGE", XLARGE: "XLARGE", XXLARGE: "XXLARGE" };
 let closure_10 = { [GuildIconSizes.XXXSMALL]: [6, 4, 4, 4, 2, 1], [GuildIconSizes.XXSMALL_12]: [8, 6, 6, 4, 4, 2], [GuildIconSizes.XXSMALL]: [10, 8, 8, 6, 6, 4], [GuildIconSizes.XSMALL_20]: [12, 10, 10, 8, 8, 6], [GuildIconSizes.XSMALL]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.SMALL]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.SMALL_32]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.SMALL_36]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.NORMAL]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.LARGE]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.XLARGE]: [16, 16, 16, 14, 14, 12], [GuildIconSizes.XXLARGE]: [16, 16, 16, 14, 14, 12] };
 let obj2 = { [GuildIconSizes.XXXSMALL]: 10, [GuildIconSizes.XXSMALL_12]: 12, [GuildIconSizes.XXSMALL]: 16, [GuildIconSizes.XSMALL_20]: 20, [GuildIconSizes.XSMALL]: 24, [GuildIconSizes.SMALL]: 30, [GuildIconSizes.SMALL_32]: 32, [GuildIconSizes.SMALL_36]: 36, [GuildIconSizes.NORMAL]: 40, [GuildIconSizes.LARGE]: 48, [GuildIconSizes.XLARGE]: 64, [GuildIconSizes.XXLARGE]: 80 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj3[GuildIconSizes.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj3[GuildIconSizes.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };
@@ -146,7 +146,7 @@ export default noop.memo(function GuildIconInner(guild) {
   const effect = obj2.useEffect(() => () => {
     closure_1_12.current = false;
   }, []);
-  let items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
+  items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
   const effect1 = obj2.useEffect(() => {
     if (null != obj2) {
       if (null != obj.icon) {
@@ -244,7 +244,7 @@ export default noop.memo(function GuildIconInner(guild) {
   let items1 = [style, size, tmp3, tmp29, undefined, tmp34, selected, textStyle, null == tmp15];
   const memo = obj2.useMemo(() => {
     let items1 = guildIcon;
-    const items = [guildIcon.guildIcon, guildIcon[size], style];
+    items = [guildIcon.guildIcon, guildIcon[size], style];
     if (null != loadingStyle) {
       items.push(tmp);
     }

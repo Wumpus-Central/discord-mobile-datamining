@@ -1,11 +1,11 @@
-// === Module 14675: AppStoreOverlayMediaModalWrapper ===
+// === Module 14806: AppStoreOverlayMediaModalWrapper ===
 
-// Module 14675 (AppStoreOverlayMediaModalWrapper)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8862 */;
-import MediaModalDefault from "MediaModal" /* 8863 */;
+// Module 14806 (AppStoreOverlayMediaModalWrapper)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8986 */;
+import MediaModalDefault from "MediaModal" /* 8987 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 const require = fn;
 const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
@@ -18,7 +18,7 @@ export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
   const effect = noop.useEffect(() => () => {
     const result = onCloseCallback(closure_1_2[4]).clearMediaModalFooterAction();
   }, []);
-  const items = [onCloseCallback.onCloseCallback];
+  items = [onCloseCallback.onCloseCallback];
   const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();

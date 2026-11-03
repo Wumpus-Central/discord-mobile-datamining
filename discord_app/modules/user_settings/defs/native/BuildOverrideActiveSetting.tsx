@@ -1,17 +1,17 @@
-// === Module 17759: BuildOverrideActiveSetting ===
+// === Module 17902: BuildOverrideActiveSetting ===
 
-// Module 17759 (BuildOverrideActiveSetting)
+// Module 17902 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import _modDef2141 from "module_2141" /* 2141 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13192 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16435 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16746 */;
-import DevToolsContent from "DevToolsContent" /* 17757 */;
+import _modDef2270 from "module_2270" /* 2270 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13328 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16579 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16889 */;
+import DevToolsContent from "DevToolsContent" /* 17900 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11362 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11499 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -19,16 +19,16 @@ function handleBuildOverrideActivePress() {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const obj2 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2141.jBvMiO);
+    return intl.string(_modDef2270.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12219).RefreshIcon,
+  IconComponent: fn(12355).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
-    const items = [BuildOverrideStore];
+    items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let tmp;
@@ -43,7 +43,7 @@ const obj2 = {
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2141.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2270.d11XdP) + " ";
       obj3.value = stateFromStores.id;
       const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), , ];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -55,7 +55,7 @@ const obj2 = {
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2141.VBPcR9);
+        obj5.text = intl3.string(_modDef2270.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj5);
       }
@@ -67,7 +67,7 @@ const obj2 = {
     return tmp6Result;
   },
   usePredicate: function useHasBuildOverrideActive() {
-    const items = [BuildOverrideStore];
+    items = [BuildOverrideStore];
     return null != initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let tmp;
@@ -84,12 +84,12 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/Bui
 export default SettingBuilders.createStatic({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2141.jBvMiO);
+    return intl.string(_modDef2270.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12219).RefreshIcon,
+  IconComponent: fn(12355).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
-    const items = [BuildOverrideStore];
+    items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let tmp;
@@ -104,7 +104,7 @@ export default SettingBuilders.createStatic({
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2141.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2270.d11XdP) + " ";
       obj3.value = stateFromStores.id;
       const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), , ];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -116,7 +116,7 @@ export default SettingBuilders.createStatic({
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2141.VBPcR9);
+        obj5.text = intl3.string(_modDef2270.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj5);
       }
@@ -128,7 +128,7 @@ export default SettingBuilders.createStatic({
     return tmp6Result;
   },
   usePredicate: function useHasBuildOverrideActive() {
-    const items = [BuildOverrideStore];
+    items = [BuildOverrideStore];
     return null != initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let tmp;

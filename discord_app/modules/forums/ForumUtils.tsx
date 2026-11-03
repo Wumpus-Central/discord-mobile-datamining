@@ -1,11 +1,11 @@
-// === Module 7478: ForumUtils ===
+// === Module 7602: ForumUtils ===
 
-// Module 7478 (ForumUtils)
+// Module 7602 (ForumUtils)
 import util from "util" /* 1113 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4872 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4999 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 require = fn;
 function getCreationDefaultFormatter() {
@@ -14,8 +14,8 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(7454).ForumTimestampFormats;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ForumTimestampFormats = fn(7578).ForumTimestampFormats;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
@@ -43,7 +43,7 @@ export function getForumPostReadStates(isArchivedThread, guild) {
 export function getForumPostReadStatesById(item) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [ChannelStore, GuildStore, ReadStateStore];
+    items = [ChannelStore, GuildStore, ReadStateStore];
     tmp = items;
   }
   [obj, obj2, tmp5] = tmp;
@@ -51,7 +51,7 @@ export function getForumPostReadStatesById(item) {
   if (null == channel) {
     return null;
   } else {
-    const guild = obj2.getGuild(channel.guild_id);
+    guild = obj2.getGuild(channel.guild_id);
     let tmp11 = null;
     if (null != guild) {
       const items1 = [tmp5];

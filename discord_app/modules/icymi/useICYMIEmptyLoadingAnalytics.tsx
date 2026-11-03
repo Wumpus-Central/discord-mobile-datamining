@@ -1,7 +1,7 @@
-// === Module 18564: useICYMIEmptyLoadingAnalytics ===
+// === Module 18720: useICYMIEmptyLoadingAnalytics ===
 
-// Module 18564 (useICYMIEmptyLoadingAnalytics)
-import ICYMIAnalytics3 from "ICYMIAnalytics" /* 16232 */;
+// Module 18720 (useICYMIEmptyLoadingAnalytics)
+import ICYMIAnalytics3 from "ICYMIAnalytics" /* 16375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ export function useICYMIEmptyLoadingAnalytics(loading, isFocused) {
   closure_0 = loading;
   closure_1 = isFocused;
   noop = noop.useRef(null);
-  const items = [loading, isFocused];
+  items = [loading, isFocused];
   const effect = noop.useEffect(() => {
     if (closure_1) {
       if (closure_0) {

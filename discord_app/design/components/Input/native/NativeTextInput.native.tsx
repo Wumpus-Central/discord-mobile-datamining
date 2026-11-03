@@ -1,8 +1,8 @@
-// === Module 7100: NativeTextInput ===
+// === Module 7226: NativeTextInput ===
 
-// Module 7100 (NativeTextInput)
+// Module 7226 (NativeTextInput)
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1493 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 
 const require = globalThis.__r;
 
@@ -11,13 +11,13 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const KeyboardThemes = fn(1072).KeyboardThemes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
 
 export function useKeyboardBlurring(ref) {
   closure_0 = ref;
-  const items = [ref];
+  items = [ref];
   const effect = noop.useEffect(() => {
     let systemKeyboardOpen = ref(defaultValue[5]).getKeyboardIsOpen();
     return subscribeToKeyboardUIStore((systemKeyboardOpen) => {
@@ -35,7 +35,7 @@ export function useKeyboardBlurring(ref) {
 export const NativeTextInput = function TextInput(ref) {
   const iter = Object.assign(ref, Object.assign({ ref: 0 }));
   ref = noop.useRef(null);
-  const items = [ref];
+  items = [ref];
   const effect = noop.useEffect(() => {
     let systemKeyboardOpen = ref(defaultValue[5]).getKeyboardIsOpen();
     return subscribeToKeyboardUIStore((systemKeyboardOpen) => {
@@ -99,8 +99,8 @@ export const NativeTextInput = function TextInput(ref) {
   ref(defaultValue[9]);
   if (null != iter.keyboardAppearance) {
     const obj3 = {};
-    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "raw", defaultValue: "cix" }));
-    const obj4 = { value: "raw", defaultValue: "cix" };
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Array", defaultValue: "flexDirection" }));
+    const obj4 = { value: "Array", defaultValue: "flexDirection" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref.ref);
     const tmp18 = closure_10(closure_5, obj3);

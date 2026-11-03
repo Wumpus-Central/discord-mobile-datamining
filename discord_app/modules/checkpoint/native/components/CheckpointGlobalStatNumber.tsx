@@ -1,14 +1,14 @@
-// === Module 13651: CheckpointGlobalStatNumber ===
+// === Module 13791: CheckpointGlobalStatNumber ===
 
-// Module 13651 (CheckpointGlobalStatNumber)
+// Module 13791 (CheckpointGlobalStatNumber)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13642 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13643 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13652 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13783 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13792 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function GlobalStatValue(value) {
@@ -48,7 +48,7 @@ export default function CheckpointGlobalStatNumber(arg0) {
     accessibilityLabel = toLocaleStringResult;
   }
   const obj2 = { accessible: true, accessibilityLabel, style: null, children: null };
-  const items = [iter.container, ];
+  items = [iter.container, ];
   if (obj.isCheckpointStatNumberShrunk(value)) {
     items[1] = iter.croppedContainer;
     obj2.style = items;

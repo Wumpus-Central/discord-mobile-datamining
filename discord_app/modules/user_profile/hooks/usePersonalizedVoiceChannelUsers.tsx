@@ -1,10 +1,10 @@
-// === Module 14881: usePersonalizedVoiceChannelUsers ===
+// === Module 15012: usePersonalizedVoiceChannelUsers ===
 
-// Module 14881 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
-import UserStore from "UserStore" /* 1383 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+// Module 15012 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
+import UserStore from "UserStore" /* 1385 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/usePersona
 
 export default function usePersonalizedVoiceChannelUsers(arg0) {
   _require = arg0;
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [, ];
   ({ id: arr2[0], guild_id: arr2[1] } = arg0);
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {

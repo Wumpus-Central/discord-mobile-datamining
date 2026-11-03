@@ -1,10 +1,10 @@
-// === Module 12990: useConjureAppSlotsLeft ===
+// === Module 13126: useConjureAppSlotsLeft ===
 
-// Module 12990 (useConjureAppSlotsLeft)
+// Module 13126 (useConjureAppSlotsLeft)
 import initialize from "initialize" /* 504 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useConjureAppSlotsLeft() {
   const effect = noop.useEffect(() => {
     const projectLimit = ConjureActionCreators.fetchProjectLimit();
   }, []);
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   return initialize.useStateFromStores(items, () => {
     maxProjects = maxProjects.getMaxProjects();
     let bound = null;

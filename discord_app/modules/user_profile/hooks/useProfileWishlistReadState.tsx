@@ -1,15 +1,15 @@
-// === Module 14999: useProfileWishlistReadState ===
+// === Module 15135: useProfileWishlistReadState ===
 
-// Module 14999 (useProfileWishlistReadState)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7783 */;
-import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15000 */;
+// Module 15135 (useProfileWishlistReadState)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7907 */;
+import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9471 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import WishlistStore from "WishlistStore" /* 9599 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
-const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
 
@@ -21,12 +21,12 @@ export default function useProfileWishlistReadState(ownerId) {
     flag = true;
   }
   let stateFromStores1;
-  closure_5 = undefined;
+  closure_4 = undefined;
   const profileReadStateConfigPeek = ownerId(wishlistId[5]).useProfileReadStateConfigPeek();
   let obj = ownerId(wishlistId[5]);
   let tmp = ownerId;
   const tmp2 = wishlistId;
-  const items = [closure_5];
+  items = [UserProfileStore];
   const items1 = [ownerId];
   const stateFromStores = ownerId(wishlistId[6]).useStateFromStores(items, () => {
     let profileReadStateSectionAckedAt = null;
@@ -35,7 +35,7 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     return profileReadStateSectionAckedAt;
   }, items1);
-  const tmp6 = flag(stateFromStores.useState(undefined), 2);
+  const tmp6 = flag(stateFromStores1.useState(undefined), 2);
   const first = tmp6[0];
   let tmp8 = flag;
   if (flag) {
@@ -54,25 +54,24 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     tmp6[1](tmp11);
   }
-  const obj2 = ownerId(wishlistId[6]);
-  const obj3 = stateFromStores;
-  const tmp4 = closure_5;
-  const items2 = [stateFromStores1, tmp4];
-  const items3 = [ownerId, wishlistId, stateFromStores];
+  let obj2 = ownerId(wishlistId[6]);
+  const obj3 = stateFromStores1;
+  const items2 = [closure_4, UserProfileStore];
+  const items3 = [ownerId, wishlistId];
   stateFromStores1 = tmp(tmp2[6]).useStateFromStores(items2, () => {
     if (null != ownerId) {
       if (null != wishlistId) {
         if (null != WishlistStore.getWishlist(wishlistId)) {
           if (!WishlistStore.isFetching(wishlistId)) {
             if (null == WishlistStore.getError(wishlistId)) {
-              const wishlistSettings = UserProfileStore.getWishlistSettings(tmp, wishlistId);
+              const wishlistSettings = UserProfileStore.getWishlistSettings(ownerId, wishlistId);
               let updated_at;
               if (wishlistSettings != null) {
                 updated_at = wishlistSettings.updated_at;
               }
               let shouldAckWishlistResult = null == updated_at || WishlistStore.getUpdatedAt(wishlistId) === updated_at;
               if (shouldAckWishlistResult) {
-                shouldAckWishlistResult = ProfileReadStateUtils.shouldAckWishlist(wishlistSettings, stateFromStores);
+                shouldAckWishlistResult = ProfileReadStateUtils.shouldAckWishlist(wishlistSettings, UserProfileStore.getProfileReadState(ownerId));
               }
               return shouldAckWishlistResult;
             }
@@ -82,12 +81,12 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     return false;
   }, items3);
-  closure_5 = tmp14;
+  closure_4 = tmp14;
   const items4 = [flag, undefined !== first, stateFromStores1, ownerId];
   const effect = obj3.useEffect(() => {
     let tmp = flag;
     if (flag) {
-      tmp = closure_5;
+      tmp = closure_4;
     }
     if (tmp) {
       tmp = stateFromStores1;

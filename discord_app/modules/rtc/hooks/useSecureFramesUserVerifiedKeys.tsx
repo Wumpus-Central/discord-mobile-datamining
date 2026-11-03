@@ -1,8 +1,8 @@
-// === Module 17890: useSecureFramesUserVerifiedKeys ===
+// === Module 18033: useSecureFramesUserVerifiedKeys ===
 
-// Module 17890 (useSecureFramesUserVerifiedKeys)
+// Module 18033 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9249 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9377 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUser
 
 export function useSecureFramesUserVerifiedKeys(userId) {
   _require = userId;
-  const items = [VerifiedKeyStore];
+  items = [VerifiedKeyStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const entries = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((item) => {

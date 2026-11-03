@@ -1,16 +1,16 @@
-// === Module 17866: CollectiblesShopCardsGrid ===
+// === Module 18009: CollectiblesShopCardsGrid ===
 
-// Module 17866 (CollectiblesShopCardsGrid)
+// Module 18009 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9459 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9462 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9587 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9590 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 require = fn;
 function ShopCardGridItem(index) {
   index = index.index;
-  const items = [index];
+  items = [index];
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } = index);
   const memo = noop.useMemo(() => ({ tilePosition: index }), items);
   return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
@@ -18,8 +18,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9459).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(5141);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9587).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -33,15 +33,15 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(17865).useCardLayout();
+  const cardLayout = products(18008).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
-  const items = [products, columns];
+  items = [products, columns];
   ({ rowWidth, ref, onLayout } = cardLayout);
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, ref, onLayout, contentContainerStyle: null, children: null };
-  let obj = products(17865);
-  obj2.contentContainerStyle = { gap: products(9459).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: rowWidth, alignSelf: "center" };
+  let obj = products(18008);
+  obj2.contentContainerStyle = { gap: products(9587).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(muteBundleStaticBackground, {

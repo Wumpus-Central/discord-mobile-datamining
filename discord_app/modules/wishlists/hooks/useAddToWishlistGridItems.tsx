@@ -1,11 +1,11 @@
-// === Module 15006: useAddToWishlistGridItems ===
+// === Module 15142: useAddToWishlistGridItems ===
 
-// Module 15006 (useAddToWishlistGridItems)
-import WishlistUtils from "WishlistUtils" /* 14917 */;
+// Module 15142 (useAddToWishlistGridItems)
+import WishlistUtils from "WishlistUtils" /* 15046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1385).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 
@@ -19,11 +19,11 @@ export function useAddToWishlistGridItems(userId) {
   const recommendationsForSingleUser = wishlist(maxWishlistItemsToShow[2]).useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
   const recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
-  let items = [wishlist];
+  items = [wishlist];
   const memo = recommendations.useMemo(() => {
     let mapped;
     if (wishlist != null) {
-      const items = wishlist.items;
+      items = wishlist.items;
       mapped = items.map((skuId) => skuId.skuId);
     }
     if (mapped == null) {

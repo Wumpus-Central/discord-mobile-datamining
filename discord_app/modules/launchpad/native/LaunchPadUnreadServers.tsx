@@ -1,15 +1,15 @@
-// === Module 19073: LaunchPadUnreadServers ===
+// === Module 19231: LaunchPadUnreadServers ===
 
-// Module 19073 (LaunchPadUnreadServers)
+// Module 19231 (LaunchPadUnreadServers)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import transitionToGuild from "transitionToGuild" /* 7522 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 19079 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import transitionToGuild from "transitionToGuild" /* 7646 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 19237 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function HistorySeparator() {
@@ -24,8 +24,8 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, privateChannelWrapper: { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" }, privateChannelIcon: { width: 48, height: 48, borderRadius: 24, overflow: "hidden" }, badgeWrapper: { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 }, guildWrapper: { paddingVertical: 2, justifyContent: "center", alignItems: "center" }, guildHistorySeparatorWrapper: { flex: 1, justifyContent: "center", alignItems: "center" }, guildHistorySeparator: null };
 let size = { width: 2, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.guildHistorySeparator = size;
@@ -34,7 +34,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   guildId = guildId.guildId;
   const onGuildSelect = guildId.onGuildSelect;
   const tmp = closure_12();
-  const items = [guildId, onGuildSelect];
+  items = [guildId, onGuildSelect];
   const items1 = [guildId];
   const callback = noop.useCallback(() => {
     onGuildSelect(guildId);
@@ -43,14 +43,14 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19074), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
+  obj.children = closure_10(onGuildSelect(19232), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
   const tmp = closure_12();
-  let items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(stateFromStores1[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(stateFromStores1[11]);
   const items1 = [UserStore];
@@ -135,7 +135,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   let tmp = prop;
   const categoryStyles = selectedGuildId(prop[19]).useCategoryStyles();
   unreadGuilds.useRef(-1);
-  const items = [setSelectedGuild, selectedGuildId];
+  items = [setSelectedGuild, selectedGuildId];
   const onGuildSelect = unreadGuilds.useCallback((id) => {
     if (ref.current < 0) {
       if (isGuildSelectableDefault(id)) {

@@ -1,11 +1,11 @@
-// === Module 18959: ContextMenuCommandAppScreen ===
+// === Module 19117: ContextMenuCommandAppScreen ===
 
-// Module 18959 (ContextMenuCommandAppScreen)
+// Module 19117 (ContextMenuCommandAppScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -16,10 +16,10 @@ export default function ContextMenuCommandAppScreen(route) {
   let section = params.section;
   const commands = params.commands;
   const onPressCommand = params.onPressCommand;
-  let items = [commands.length];
+  items = [commands.length];
   const items1 = [commands, onPressCommand, section];
   const memo = onPressCommand.useMemo(() => {
-    const items = [commands.length];
+    items = [commands.length];
     return items;
   }, items);
   const callback = onPressCommand.useCallback((arg0, arg1) => {

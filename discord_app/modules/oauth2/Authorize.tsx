@@ -1,14 +1,14 @@
-// === Module 9742: Authorize ===
+// === Module 9874: Authorize ===
 
-// Module 9742 (Authorize)
+// Module 9874 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import QueryStringUtils from "QueryStringUtils" /* 5751 */;
-import keysSorter from "keysSorter" /* 6793 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
-import scopes from "scopes" /* 9743 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import QueryStringUtils from "QueryStringUtils" /* 5871 */;
+import keysSorter from "keysSorter" /* 6913 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
+import scopes from "scopes" /* 9875 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -56,7 +56,7 @@ export function parseOAuth2AuthorizeProps(query) {
     }
     const deserializeResult = deserializer.deserialize(str2);
     const tmp12 = (function sanitizeOAuthGuild(guild_id) {
-      const items = [closure_1_7, closure_1_6, closure_1_5];
+      items = [closure_1_7, closure_1_6, closure_1_5];
       if (!items.includes(guild_id)) {
         return tmp;
       }

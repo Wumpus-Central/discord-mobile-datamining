@@ -1,6 +1,6 @@
-// === Module 6036: ChannelAutocompleteConstants ===
+// === Module 6156: ChannelAutocompleteConstants ===
 
-// Module 6036 (ChannelAutocompleteConstants)
+// Module 6156 (ChannelAutocompleteConstants)
 import size from "module_2" /* 2 */;
 
 let closure_0 = [];
@@ -27,7 +27,7 @@ export const GAME_MENTION_RAW_RE = tmp2;
 export const GAME_MENTION_RAW_RE_GLOBAL = regExp;
 export function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
     let mapped = items.map((item) => item[1]);
     if (mapped.length <= 0) {

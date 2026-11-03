@@ -1,28 +1,28 @@
-// === Module 10203: ForumComposerModal ===
+// === Module 10333: ForumComposerModal ===
 
-// Module 10203 (ForumComposerModal)
+// Module 10333 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1495 */;
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1888 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10202 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1497 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9910 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10332 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10204 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import DraftStore from "DraftStore" /* 7701 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7458 */;
+import NativeMenuStore from "NativeMenuStore" /* 10334 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import DraftStore from "DraftStore" /* 7825 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -102,7 +102,7 @@ export default function ForumComposerModal(parentChannelId) {
   const tmp = closure_12();
   const tmp2 = threadId;
   const tmp4 = parentChannelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [parentChannelId];
   const stateFromStores = parentChannelId(isEdit[16]).useStateFromStores(items, () => ChannelStore.getChannel(parentChannelId), items1);
   let obj = parentChannelId(isEdit[16]);

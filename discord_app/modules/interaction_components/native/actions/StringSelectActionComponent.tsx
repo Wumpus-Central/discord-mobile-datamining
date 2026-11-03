@@ -1,9 +1,9 @@
-// === Module 17723: StringSelectActionComponent ===
+// === Module 17866: StringSelectActionComponent ===
 
-// Module 17723 (StringSelectActionComponent)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6065 */;
+// Module 17866 (StringSelectActionComponent)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6185 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export default function StringSelectActionComponent(type) {
   _require = type;
   type = type.type;
   const options = type.options;
-  const items = [options];
+  items = [options];
   const selectPlaceholder = require("InteractionComponentUtils").getSelectPlaceholder(type);
   const memo = componentStateContext.useMemo(() => {
     const found = options.filter((item) => item.default);
@@ -40,7 +40,7 @@ export default function StringSelectActionComponent(type) {
     tmp8 = obj4;
   }
   const componentState = componentStateContext.useComponentState(type, tmp8);
-  const state = componentState.state;
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [options, type, state];
   const customId = componentStateContext.modal.customId;
@@ -81,7 +81,7 @@ export default function StringSelectActionComponent(type) {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { selectionActionComponent, labelComponent, channelId: componentStateContext.channelId, containerId: customId, onSubmit: executeStateUpdate, allowEmpty: null };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(13250, dependencyMap.paths);
+    const tmp = asyncRequireImpl(13386, dependencyMap.paths);
     obj2.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj2);
   };

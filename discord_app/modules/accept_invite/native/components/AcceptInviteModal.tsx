@@ -1,15 +1,15 @@
-// === Module 19388: AcceptInviteModal ===
+// === Module 19546: AcceptInviteModal ===
 
-// Module 19388 (AcceptInviteModal)
+// Module 19546 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5750 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 14326 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5870 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 14457 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CreateGuildModalStates = fn(7147).CreateGuildModalStates;
+const CreateGuildModalStates = fn(7270).CreateGuildModalStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
@@ -20,7 +20,7 @@ export default function AcceptInviteModal(arg0) {
 
   }, []);
   let obj = { screens: null, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE };
-  const items = [arg0];
+  items = [arg0];
   obj.screens = noop.useMemo(() => {
     let obj = {};
     const obj2 = { fullscreen: true, headerShown: false, impressionName: discord_common_AnalyticsUtils.ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };
@@ -29,7 +29,7 @@ export default function AcceptInviteModal(arg0) {
     obj2.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(9444).clearDisplayedInvite;
+      obj.onPressClose = closure_0(9572).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj2;

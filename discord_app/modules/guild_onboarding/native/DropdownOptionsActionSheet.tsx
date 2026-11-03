@@ -1,18 +1,18 @@
-// === Module 7305: DropdownOptionsActionSheet ===
+// === Module 7425: DropdownOptionsActionSheet ===
 
-// Module 7305 (DropdownOptionsActionSheet)
+// Module 7425 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
 
 require = fn;
 function DropdownOptionRow(option) {
@@ -20,7 +20,7 @@ function DropdownOptionRow(option) {
   ({ responses, onSelect } = option);
   let selected;
   const tmp = closure_10();
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = option(selected[7]).useStateFromStores(items, () => {
     const emoji = option.emoji;
     let id;
@@ -95,10 +95,10 @@ function DropdownOptionRow(option) {
   return closure_8(onSelect(selected[12]), { label, selected, leading, trailing, onPress });
 }
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");
@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/native/Dropd
 export default function DropdownOptionsActionSheet(arg0) {
   ({ guildId: require, promptId: importDefault, canBeNew: dependencyMap, onSelect: noop } = arg0);
   const tmp = closure_10();
-  const items = [GuildOnboardingPromptsStore];
+  items = [GuildOnboardingPromptsStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => GuildOnboardingPromptsStore.getOnboardingPrompt(importDefault));
   const items1 = [GuildOnboardingPromptsStore];
   const responses = useStateFromStores.useStateFromStoresArray(items1, () => GuildOnboardingPromptsStore.getOnboardingResponsesForPrompt(require, importDefault));

@@ -1,13 +1,13 @@
-// === Module 15526: MultiAccountSwitchStore ===
+// === Module 15667: MultiAccountSwitchStore ===
 
-// Module 15526 (MultiAccountSwitchStore)
+// Module 15667 (MultiAccountSwitchStore)
 import LoggerDefault from "Logger" /* 3 */;
 import fast_connect from "fast_connect" /* 15 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TokenManagerAll from "TokenManager" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MultiAccountStore from "MultiAccountStore" /* 13977 */;
+import MultiAccountStore from "MultiAccountStore" /* 14108 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -194,7 +194,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
           const token = TokenManagerAll.getToken(id);
           if (null != token) {
             if ("" !== token) {
-              let items = token2.get(token);
+              items = token2.get(token);
               if (items == null) {
                 items = [];
               }

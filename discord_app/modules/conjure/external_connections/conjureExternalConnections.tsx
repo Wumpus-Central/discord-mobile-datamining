@@ -1,6 +1,6 @@
-// === Module 12176: conjureExternalConnections ===
+// === Module 12312: conjureExternalConnections ===
 
-// Module 12176 (conjureExternalConnections)
+// Module 12312 (conjureExternalConnections)
 import size from "module_2" /* 2 */;
 
 function externalConnectionOffer(nextResult) {
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/conjure/external_connections/
 
 export { externalConnectionOffer };
 export function externalConnectionOffers(stateFromStores) {
-  const items = [];
+  items = [];
   set = new Set();
   const iter = stateFromStores[Symbol.iterator]();
   const nextResult = iter.next();

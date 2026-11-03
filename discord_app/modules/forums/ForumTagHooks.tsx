@@ -1,11 +1,11 @@
-// === Module 7456: ForumTagHooks ===
+// === Module 7580: ForumTagHooks ===
 
-// Module 7456 (ForumTagHooks)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ReportToModUtils from "ReportToModUtils" /* 7457 */;
+// Module 7580 (ForumTagHooks)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ReportToModUtils from "ReportToModUtils" /* 7581 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export function useAvailableTags(parent_id) {
   if (parent_id != null) {
     parent_id = parent_id.parent_id;
   }
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [parent_id];
   return parent_id(504).useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -46,7 +46,7 @@ export function useAppliedTags(thread) {
     parent_id = thread.parent_id;
   }
   closure_129_0 = parent_id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [parent_id];
   stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -103,7 +103,7 @@ export function useSomeAppliedTags(thread, arg1) {
     parent_id = thread.parent_id;
   }
   closure_129_0 = parent_id;
-  let items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [parent_id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -148,13 +148,13 @@ export function useSomeAppliedTags(thread, arg1) {
   }, items2);
   const items3 = [memo, num];
   return noop.useMemo(() => {
-    const items = [memo.slice(0, closure_0), Math.max(0, memo.length - closure_0)];
+    items = [memo.slice(0, closure_0), Math.max(0, memo.length - closure_0)];
     return items;
   }, items3);
 }
 export function useVisibleForumTags(parentChannel) {
   _require = parentChannel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.MANAGE_THREADS, closure_0));
   const items1 = [stateFromStores, ];
   let availableTags;
@@ -170,7 +170,7 @@ export function useVisibleForumTags(parentChannel) {
     if (availableTags == null) {
       availableTags = [];
     }
-    const items = [...availableTags];
+    items = [...availableTags];
     if (!closure_1) {
       const found = items.filter((moderated) => !moderated.moderated);
     }
@@ -180,7 +180,7 @@ export function useVisibleForumTags(parentChannel) {
 export function useVisibleAppliedForumTags(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let parent_id;
@@ -208,7 +208,7 @@ export function useVisibleAppliedForumTags(arg0, arg1) {
     if (availableTags == null) {
       availableTags = [];
     }
-    const items = [...availableTags];
+    items = [...availableTags];
     if (!closure_1) {
       const found = items.filter((moderated) => !moderated.moderated);
     }

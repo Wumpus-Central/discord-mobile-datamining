@@ -1,18 +1,18 @@
-// === Module 9232: FormComponents ===
+// === Module 9360: FormComponents ===
 
-// Module 9232 (FormComponents)
+// Module 9360 (FormComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7487 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7882 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9233 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7611 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8006 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9361 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -27,7 +27,7 @@ function VoiceBadges(arg0) {
     tmp6 = hasOwnProperty(NativeViewDefault, obj2);
     const tmp3Result = NativeViewDefault;
   }
-  const items = [tmp6, ];
+  items = [tmp6, ];
   let tmp10 = null;
   if (null != videoIconState) {
     const obj4 = { style: tmp.iconWrapper, children: null };
@@ -42,7 +42,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;
@@ -56,7 +56,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/For
 export function VoicePanelFormSection(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
   const obj = { style: null, children: null };
-  const items = [closure_7().container, style.style];
+  items = [closure_7().container, style.style];
   obj.style = items;
   const tmp2 = closure_7();
   const merged1 = Object.assign(merged);
@@ -96,7 +96,7 @@ export function MemberRowItem(user) {
   const obj5 = { userId: user.id, guildId };
   const tmp9 = channelId(flag[13])({ userId: user.id, guildId });
   const displayNameStylesFont = user(flag[14]).useDisplayNameStylesFont({ displayNameStyles: tmp9 });
-  let items = [id, channelId, analyticsLocations];
+  items = [id, channelId, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
     showUserProfileActionSheetDefault({ userId: id, channelId, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
   }, items);
@@ -105,7 +105,7 @@ export function MemberRowItem(user) {
   const items1 = [id];
   const stateFromStores = user(flag[16]).useStateFromStores(items1, () => StreamerApplicationSelectors.getStreamerActivityByUserId(id, PresenceStore));
   const first = channelId(flag[18])(id, guildId, flag2)[0];
-  let application_id;
+  application_id = undefined;
   if (first != null) {
     application_id = first.application_id;
   }
@@ -186,7 +186,7 @@ export function MemberRowItem(user) {
       size: "sm",
       variant: "secondary",
       onPress() {
-          const items = [user.id];
+          items = [user.id];
           return CallActionCreatorsDefault.ring(channelId, items, "voice_panel_floating_cta");
         },
       text: null

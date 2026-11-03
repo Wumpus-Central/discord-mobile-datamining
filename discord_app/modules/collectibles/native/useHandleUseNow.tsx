@@ -1,13 +1,13 @@
-// === Module 11513: useHandleUseNow ===
+// === Module 11650: useHandleUseNow ===
 
-// Module 11513 (useHandleUseNow)
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+// Module 11650 (useHandleUseNow)
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RootNavigatorScreen = fn(11514).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11651).RootNavigatorScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 
@@ -16,7 +16,7 @@ export function useHandleUseNow(analyticsLocations) {
   require = product;
   const stageCollectibleChangeForEditProfile = analyticsLocations.stageCollectibleChangeForEditProfile;
   let onSuccess;
-  const items = [onSuccess, stageCollectibleChangeForEditProfile];
+  items = [onSuccess, stageCollectibleChangeForEditProfile];
   onSuccess = onSuccess.useCallback(() => {
     if (null == onSuccess) {
       ActionSheetActionCreatorsDefault.hideAllActionSheets();

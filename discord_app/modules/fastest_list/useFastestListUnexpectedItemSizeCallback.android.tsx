@@ -1,7 +1,7 @@
-// === Module 7226: useFastestListUnexpectedItemSizeCallback ===
+// === Module 7347: useFastestListUnexpectedItemSizeCallback ===
 
-// Module 7226 (useFastestListUnexpectedItemSizeCallback)
-import FastestListLogger from "FastestListLogger" /* 7227 */;
+// Module 7347 (useFastestListUnexpectedItemSizeCallback)
+import FastestListLogger from "FastestListLogger" /* 7348 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
-  const items = [arg0];
+  items = [arg0];
   return noop.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const current = ref.current;

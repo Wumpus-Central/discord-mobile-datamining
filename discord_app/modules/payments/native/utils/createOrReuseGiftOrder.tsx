@@ -1,14 +1,14 @@
-// === Module 10613: createOrReuseGiftOrder ===
+// === Module 10743: createOrReuseGiftOrder ===
 
-// Module 10613 (createOrReuseGiftOrder)
+// Module 10743 (createOrReuseGiftOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef2042 from "module_2042" /* 2042 */;
+import _modDef2171 from "module_2171" /* 2171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ItemPurchaseType = fn(5747).ItemPurchaseType;
-const SubscriptionPlanInfo = fn(1385).SubscriptionPlanInfo;
+const ItemPurchaseType = fn(5867).ItemPurchaseType;
+const SubscriptionPlanInfo = fn(1387).SubscriptionPlanInfo;
 const PaymentGateways = fn(1083).PaymentGateways;
 let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
 const size = fn(2);
@@ -26,7 +26,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,9 +70,9 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
             } else {
               skuId = closure_129_3.skuId;
               c4 = 1;
-              let getOrCreateOrder = _location(7614).getOrCreateOrder;
+              let getOrCreateOrder = _location(7738).getOrCreateOrder;
               const obj6 = { skuId, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
-              const tmp60 = _location(7614);
+              const tmp60 = _location(7738);
               let obj8 = PaymentGateways;
               if (obj16.isAndroid()) {
                 let APPLE = obj8.GOOGLE;
@@ -82,20 +82,20 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
               obj6.paymentGateway = APPLE;
               obj6.recipientUserId = closure_129_1;
               obj6.purchaseType = constants.ONE_TIME;
-              obj16 = _location(1375);
-              const obj7 = _modDef2042();
-              const utcResult = _modDef2042().utc();
-              obj6.createdAfter = _modDef2042().utc().subtract(_location(7614).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+              obj16 = _location(1377);
+              const obj7 = _modDef2171();
+              const utcResult = _modDef2171().utc();
+              obj6.createdAfter = _modDef2171().utc().subtract(_location(7738).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
               obj6.subscriptionPlanId = closure_129_0;
               obj8 = { line_items: null };
               const obj9 = { external_product_id: closure_129_2 };
-              const items = [obj9];
+              items = [obj9];
               obj8.line_items = items;
               obj6.externalGatewayFacet = obj8;
               getOrCreateOrder = getOrCreateOrder(obj6);
               c5 = 3;
               c6 = 1;
-              const subtractResult = _modDef2042().utc().subtract(_location(7614).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+              const subtractResult = _modDef2171().utc().subtract(_location(7738).DRAFT_ORDER_LOOKBACK_DAYS, "days");
             }
           }
         } else if (2 === tmp7) {
@@ -108,7 +108,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
           const _HermesInternal = HermesInternal;
           obj12.source = "" + _location + "_createOrder";
           obj11.tags = obj12;
-          const result = _location(4827).captureBillingException(closure_129_5, obj11);
+          const result = _location(4954).captureBillingException(closure_129_5, obj11);
           throw closure_129_5;
         } else if (_location === 1) {
           c6 = 3;
@@ -135,7 +135,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
       }
     }
   });
-  let items = [GiftPurchaseButton];
+  items = [GiftPurchaseButton];
   return noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

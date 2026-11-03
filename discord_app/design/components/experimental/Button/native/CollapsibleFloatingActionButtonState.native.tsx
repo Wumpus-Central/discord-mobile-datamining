@@ -1,16 +1,16 @@
-// === Module 9000: CollapsibleFloatingActionButtonState ===
+// === Module 9128: CollapsibleFloatingActionButtonState ===
 
-// Module 9000 (CollapsibleFloatingActionButtonState)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 9128 (CollapsibleFloatingActionButtonState)
+import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const __initData = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}" };
+let closure_3 = { code: "(function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){let[initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD]=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: ReanimatedRexport.useSharedValue(0) };
+  const obj = { collapseText: _mod1652.useSharedValue(0) };
   return obj;
 }
 export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState) {
@@ -19,34 +19,54 @@ export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActi
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  const sharedValue = ReanimatedRexport.useSharedValue(num);
-  const fn = function s(nativeEvent) {
-    nativeEvent = nativeEvent.nativeEvent;
-    if (null != nativeEvent) {
-      const y = nativeEvent.contentOffset.y;
-      if (y >= num) {
-        if (y + nativeEvent.layoutMeasurement.height <= tmp8) {
-          const diff = y - sharedValue.get();
-          if (y < 10) {
-            const result = collapseText.set(0);
-          } else {
-            const _Math = Math;
-            if (Math.abs(diff) > 10) {
-              let num2 = 1;
-              if (diff < 0) {
+  const sharedValue = _mod1652.useSharedValue(num);
+  items = [_undefined2, num, sharedValue, 10, collapseText, 10];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7] = items;
+  class CollapsibleFloatingActionButtonStateNativeTsx1 {
+    constructor(arg0) {
+      nativeEvent = collapsibleFloatingActionButtonState.nativeEvent;
+      if (null != nativeEvent) {
+        y = nativeEvent.contentOffset.y;
+        tmp11 = closure_0;
+        if (y >= closure_0) {
+          if (y + nativeEvent.layoutMeasurement.height <= tmp10) {
+            obj = closure_1;
+            diff = y - closure_1.get();
+            tmp2 = closure_2;
+            if (y < closure_2) {
+              tmp7 = closure_3;
+              num3 = 0;
+              result = closure_3.set(0);
+            } else {
+              tmp3 = globalThis;
+              _Math = Math;
+              tmp4 = closure_4;
+              if (Math.abs(diff) > closure_4) {
+                num = 1;
                 num2 = 0;
+                tmp5 = closure_3;
+                if (diff < 0) {
+                  num = 0;
+                }
+                result1 = closure_3.set(num);
               }
-              const result1 = collapseText.set(num2);
             }
+            result2 = obj.set(y);
           }
-          const result2 = sharedValue.set(y);
         }
       }
+      return;
     }
-  };
-  fn.__closure = { initialScrollStart: num, previousOffset: sharedValue, MINIMUM_SCROLL_DISTANCE_TO_CLOSE: 10, collapseText, SCROLL_OFFSET_THRESHOLD: 10 };
-  fn.__workletHash = 10435259247914;
-  fn.__initData = __initData;
-  const items = [num, sharedValue, collapseText];
-  return noop.useCallback(fn, items);
+  }
+  const items1 = [tmp3, tmp4, tmp5, tmp6, tmp7];
+  CollapsibleFloatingActionButtonStateNativeTsx1.__closure = items1;
+  CollapsibleFloatingActionButtonStateNativeTsx1.__workletHash = 13314443291347;
+  CollapsibleFloatingActionButtonStateNativeTsx1.__initData = tmp2;
+  const items2 = [num, sharedValue, collapseText];
+  return noop.useCallback(CollapsibleFloatingActionButtonStateNativeTsx1, items2);
 }

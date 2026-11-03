@@ -58,7 +58,7 @@ export function transformColorForReducedContrast(arg0, arg1, arg2) {
 }
 export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
   if ("border" === arg2) {
-    const items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
+    items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
   } else if ("text" === arg2) {
     let set = _modDef671(arg0).set;
@@ -90,7 +90,7 @@ export function transformColorForReducedSaturation(result, category, saturation)
   const obj = _modDef671(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
-    const items = [0.25, 1];
+    items = [0.25, 1];
     [tmp5, tmp6] = items;
     const _HermesInternal2 = HermesInternal;
     result = obj.set("hsl.s", "*" + tmp5 + (saturation - tmp2) / (tmp3 - tmp2) * (tmp6 - tmp5));

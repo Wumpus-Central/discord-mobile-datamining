@@ -1,18 +1,18 @@
-// === Module 19258: UserVideoFailed ===
+// === Module 19416: UserVideoFailed ===
 
-// Module 19258 (UserVideoFailed)
+// Module 19416 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import AVError from "AVError" /* 5947 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11769 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import AVError from "AVError" /* 6067 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11906 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -29,7 +29,7 @@ export default function UserVideoFailed(arg0) {
   const tmp2 = closure_7();
   const obj2 = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.container, style];
+  items = [tmp2.container, style];
   obj2.style = items;
   const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
   const intl = util.intl;

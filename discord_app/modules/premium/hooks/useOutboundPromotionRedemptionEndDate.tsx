@@ -1,9 +1,9 @@
-// === Module 15448: useOutboundPromotionRedemptionEndDate ===
+// === Module 15589: useOutboundPromotionRedemptionEndDate ===
 
-// Module 15448 (useOutboundPromotionRedemptionEndDate)
-import DateUtils from "DateUtils" /* 4836 */;
+// Module 15589 (useOutboundPromotionRedemptionEndDate)
+import DateUtils from "DateUtils" /* 4963 */;
 import noop from "module_19" /* 19 */;
-import hooks from "module_2042" /* 2042 */;
+import hooks from "module_2171" /* 2171 */;
 
 require = fn;
 let closure_4 = hooks.duration(30, "days");
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/premium/hooks/useOutboundProm
 export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     let tmp = dependencyMap;
     DateUtils;

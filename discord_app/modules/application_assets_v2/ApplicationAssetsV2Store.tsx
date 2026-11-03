@@ -1,6 +1,6 @@
-// === Module 12356: ApplicationAssetsV2Store ===
+// === Module 12492: ApplicationAssetsV2Store ===
 
-// Module 12356 (ApplicationAssetsV2Store)
+// Module 12492 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -12,7 +12,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
   const entries = Object.entries(require("module_12").groupBy(flatResult, (application_id) => application_id.application_id));
   const mapped = entries.map((item) => {
     [tmp, obj] = item;
-    const items = [
+    items = [
       tmp,
       obj.flatMap((resolved_assets) => {
         resolved_assets = resolved_assets.resolved_assets;
@@ -48,7 +48,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
     c0 = true;
     const merged = Object.assign(map.get(tmp));
     const merged1 = Object.assign(Object.fromEntries(arr.map((key) => {
-      const items = [key.key, key];
+      items = [key.key, key];
       return items;
     })));
     return map.set(tmp, {});
@@ -72,7 +72,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
     const entries = Object.entries(require("module_12").groupBy(configs.configs, (application_id) => application_id.application_id));
     const mapped = entries.map((item) => {
       [tmp, obj] = item;
-      const items = [
+      items = [
         tmp,
         obj.flatMap((resolved_assets) => {
           resolved_assets = resolved_assets.resolved_assets;
@@ -108,7 +108,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
       c0 = true;
       const merged = Object.assign(map.get(tmp));
       const merged1 = Object.assign(Object.fromEntries(arr.map((key) => {
-        const items = [key.key, key];
+        items = [key.key, key];
         return items;
       })));
       return map.set(tmp, {});

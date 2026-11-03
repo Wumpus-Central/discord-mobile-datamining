@@ -1,8 +1,8 @@
-// === Module 13774: MediaPostGridThumbnail ===
+// === Module 13905: MediaPostGridThumbnail ===
 
-// Module 13774 (MediaPostGridThumbnail)
-import FastImageDefault from "FastImage" /* 5717 */;
-import ForumPostMedia from "ForumPostMedia" /* 13772 */;
+// Module 13905 (MediaPostGridThumbnail)
+import FastImageDefault from "FastImage" /* 5837 */;
+import ForumPostMedia from "ForumPostMedia" /* 13903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function MediaPostGridThumbnailAndroid(resizeMode) {
   if (null == backgroundImagesource) {
     const obj = { style: androidStyle, children: null };
     const obj2 = { style: null, source: null, blurRadius: null, resizeMode: "cover" };
-    const items = [React4.absoluteFill, ];
+    items = [React4.absoluteFill, ];
     const size = { width, height };
     items[1] = size;
     obj2.style = items;
@@ -53,7 +53,7 @@ function MediaPostGridThumbnailIOS(arg0) {
   if (null == backgroundImagesource) {
     const obj = { children: null };
     const obj2 = { style: iosStyle, source, resizeMode };
-    const items = [hasOwnProperty(FastImageDefault, obj2), ];
+    items = [hasOwnProperty(FastImageDefault, obj2), ];
     const obj3 = { shouldSpoiler, blurTheme };
     items[1] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj3);
     obj.children = items;

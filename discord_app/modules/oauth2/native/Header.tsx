@@ -1,13 +1,13 @@
-// === Module 14625: oauth2/Header ===
+// === Module 14756: oauth2/Header ===
 
-// Module 14625 (oauth2/Header)
+// Module 14756 (oauth2/Header)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BotTagDefault from "BotTag" /* 9202 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BotTagDefault from "BotTag" /* 9330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const UserFlags = fn(1072).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexDirection: "column", justifyContent: "center", alignItems: "center" }, applicationNameWrapper: { flexDirection: "row" }, headerIcons: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", marginBottom: 24 }, ellipseGroup: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 24 }, ellipse: null, botTag: null };
 let size = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.1, borderRadius: 2 };
 obj2.ellipse = size;
@@ -36,7 +36,7 @@ export default function Header(accountScopes) {
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { style: tmp.headerIcons, children: null };
   const obj2 = { id: application.id, icon: application.icon };
-  const items = [hasOwnProperty(native.Avatar, { source: applicationIconSource, size: native.AvatarSizes.XLARGE }), , ];
+  items = [hasOwnProperty(native.Avatar, { source: applicationIconSource, size: native.AvatarSizes.XLARGE }), , ];
   const obj6 = { style: tmp.ellipseGroup, children: null };
   const items1 = [hasOwnProperty(View, { style: tmp.ellipse }), hasOwnProperty(View, { style: tmp.ellipse }), hasOwnProperty(View, { style: tmp.ellipse })];
   obj6.children = items1;
@@ -49,7 +49,7 @@ export default function Header(accountScopes) {
   obj4.children = items;
   const items2 = [timestampProducer(View, obj4), , ];
   const obj11 = { style: tmp.applicationNameWrapper, children: null };
-  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: application.name }), ];
   let tmp8Result = null;
   if (null != bot) {
     const obj13 = { style: tmp.botTag, verified: null };
@@ -72,7 +72,7 @@ export default function Header(accountScopes) {
     const intl = util.intl;
     stringResult = intl.string(util.t["X+Fdpo"]);
   }
-  items2[2] = hasOwnProperty(Text_Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
+  items2[2] = hasOwnProperty(Text_Text.Text, { variant: "heading-md/medium", color: "text-default", children: stringResult });
   obj3.children = items2;
   return timestampProducer(View, obj3);
 };

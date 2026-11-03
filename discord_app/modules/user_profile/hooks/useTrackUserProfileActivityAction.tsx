@@ -1,9 +1,9 @@
-// === Module 14870: useTrackUserProfileActivityAction ===
+// === Module 15001: useTrackUserProfileActivityAction ===
 
-// Module 14870 (useTrackUserProfileActivityAction)
+// Module 15001 (useTrackUserProfileActivityAction)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9487 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export default function useTrackUserProfileActivityAction(activity) {
     analyticsLocations = display(activity[3])().analyticsLocations;
   }
   const obj = require("UserProfileAnalyticsContext");
-  const items = [stream];
+  items = [stream];
   stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryOutboxStore.getUserOutbox(id.id));
   const items1 = [trackUserProfileAction, context, display, activity, stream, entry, stateFromStores, voiceChannelId, analyticsLocations];
   return entry((action) => {

@@ -1,23 +1,23 @@
-// === Module 15686: RemoteAuthModal ===
+// === Module 15830: RemoteAuthModal ===
 
-// Module 15686 (RemoteAuthModal)
+// Module 15830 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5609 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import ButtonGroup from "ButtonGroup" /* 6767 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
-import _modDef15685 from "module_15685" /* 15685 */;
-import _modDef15687 from "module_15687" /* 15687 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15688 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15692 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ButtonGroup from "ButtonGroup" /* 6887 */;
+import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7073 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
+import _modDef15829 from "module_15829" /* 15829 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15831 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15835 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ function RemoteAuthBody(remoteAuthFingerprint) {
   [tmp3, importDefault] = noop.useState(constants.LOADING);
   const tmp2 = _slicedToArray(noop.useState(constants.LOADING), 2);
   [tmp5, dependencyMap] = noop.useState(null);
-  const items = [remoteAuthFingerprint];
+  items = [remoteAuthFingerprint];
   const effect = noop.useEffect(() => {
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.REMOTE_AUTH_INITIALIZE, body: { fingerprint: remoteAuthFingerprint }, oldFormErrors: true, rejectWithError: true };
@@ -36,10 +36,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5732).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5732).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -98,8 +98,8 @@ function RemoteAuthLogin(arg0) {
       closure_1_1(constants.NOT_FOUND);
     });
   }, 1000, { leading: true, trailing: false });
-  const items = [closure_7(closure_5, { style: tmp.mainImage, children: closure_7(QrLoginSpotIllustration.QrLoginSpotIllustration, { scale: 0.75 }) }), , , ];
-  const obj4 = { variant: "heading-md/extrabold", children: null };
+  items = [closure_7(View, { style: tmp.mainImage, children: closure_7(QrLoginSpotIllustration.QrLoginSpotIllustration, { scale: 0.75 }) }), , , ];
+  const obj4 = { variant: "heading-md/semibold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.jD2pqF);
   items[1] = closure_7(Text_Text.Heading, obj4);
@@ -132,8 +132,8 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_10();
   const obj = { children: null };
-  const items = [React5(hasOwnProperty, { style: tmp.mainImage, children: React5(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale: 0.75 }) }), , , ];
-  const obj3 = { variant: "heading-xl/extrabold", children: null };
+  items = [React5(View, { style: tmp.mainImage, children: React5(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale: 0.75 }) }), , , ];
+  const obj3 = { variant: "heading-xl/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.HbwTOZ);
   items[1] = React5(Text_Text.Heading, obj3);
@@ -154,10 +154,10 @@ function RemoteAuthLoginSucceeded() {
 function RemoteAuthNotFound() {
   const tmp = closure_10();
   const obj = { children: null };
-  const obj2 = { variant: "heading-xl/extrabold", children: null };
+  const obj2 = { variant: "heading-xl/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.NShI3Q);
-  const items = [React5(Text_Text.Heading, obj2), , ];
+  items = [React5(Text_Text.Heading, obj2), , ];
   const obj3 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.Ygezov);
@@ -173,26 +173,15 @@ function RemoteAuthNotFound() {
   return React6(React7, obj);
 }
 function RemoteAuthLoading() {
-  return React5(hasOwnProperty, { style: closure_10().loadingContainer, children: React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
+  return React5(View, { style: closure_10().loadingContainer, children: React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
 }
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const View = fn(17).View;
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: null, logo: null, mainImage: null, warningCaption: null, caption: null, mainCard: null, buttonGroup: null, loadingContainer: null };
-let obj3 = {};
-let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.width = "100%";
-obj3.height = "100%";
-obj3.resizeMode = "cover";
-obj2.imageStyle = obj3;
-obj2.logo = { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 };
-obj2.mainImage = { marginTop: 16, marginBottom: 32 };
-obj2.warningCaption = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
-obj2.caption = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
+const createStyles = fn(5141);
+let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 }, caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 }, mainCard: null, buttonGroup: null, loadingContainer: null };
+let obj3 = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
 obj2.mainCard = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: nativeDefault.radii.sm, padding: 16, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
 obj2.buttonGroup = { paddingVertical: 0 };
 obj2.loadingContainer = { height: 300, justifyContent: "center" };
@@ -204,19 +193,18 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15687, style: tmp.imageStyle };
-  const items = [React5(FastImageDefault, obj2), , ];
-  const obj3 = { style: null, source: null };
+  items = [React5(AuthBackgroundArtDefault, {}), , ];
+  const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
-  obj3.style = items1;
-  obj3.source = _modDef15685;
-  items[1] = React5(FastImageDefault, obj3);
-  const obj4 = { style: tmp.container, children: null };
-  const obj5 = { style: tmp.mainCard, children: null };
+  obj2.style = items1;
+  obj2.source = _modDef15829;
+  items[1] = React5(FastImageDefault, obj2);
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { style: tmp.mainCard, children: null };
   const merged = Object.assign(arg0);
-  obj5.children = React5(RemoteAuthBody, {});
-  obj4.children = React5(hasOwnProperty, obj5);
-  items[2] = React5(hasOwnProperty, obj4);
+  obj4.children = React5(RemoteAuthBody, {});
+  obj3.children = React5(View, obj4);
+  items[2] = React5(View, obj3);
   obj.children = items;
-  return React6(hasOwnProperty, obj);
+  return React6(View, obj);
 };

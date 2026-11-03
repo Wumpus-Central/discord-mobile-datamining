@@ -1,10 +1,10 @@
-// === Module 12535: useUploadDisabled ===
+// === Module 12671: useUploadDisabled ===
 
-// Module 12535 (useUploadDisabled)
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7396 */;
-import DraftStore from "DraftStore" /* 7701 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+// Module 12671 (useUploadDisabled)
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7520 */;
+import DraftStore from "DraftStore" /* 7825 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/media_keyboard/native/useUplo
 
 export default function useUploadDisabled(arg0) {
   _require = arg0;
-  const items = [PermissionStore, UploadAttachmentStore];
+  items = [PermissionStore, UploadAttachmentStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = UploadAttachmentStore.getUploads(id.id, DraftType.ChannelMessage).length >= hasOwnProperty;
     if (!tmp) {

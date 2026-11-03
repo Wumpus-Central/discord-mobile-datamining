@@ -1,14 +1,15 @@
-// === Module 1372: BuildOverrideUtils ===
+// === Module 1374: BuildOverrideUtils ===
 
-// Module 1372 (BuildOverrideUtils)
+// Module 1374 (BuildOverrideUtils)
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BuildOverrideConstants from "BuildOverrideConstants" /* 1373 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import UrlAll from "Url" /* 1380 */;
-import _modDef1382 from "module_1382" /* 1382 */;
-import ClientInfoUtils_mod from "ClientInfoUtils" /* 1374 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+import BuildOverrideConstants from "BuildOverrideConstants" /* 1375 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import UrlAll from "Url" /* 1381 */;
+import AdsManagerBuildOverrideUtils from "AdsManagerBuildOverrideUtils" /* 1383 */;
+import _modDef1384 from "module_1384" /* 1384 */;
+import ClientInfoUtils_mod from "ClientInfoUtils" /* 1376 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 let closure_4 = BuildOverrideConstants.BUILD_OVERRIDE_COOKIE_NAME;
@@ -51,6 +52,7 @@ function manualOverrideLinkMeta(str) {
 }
 const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
+const s = "s";
 const set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);
 const result = size.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
@@ -74,46 +76,52 @@ export function getBuildOverride() {
   return resolved;
 }
 export function getBuildOverrideMeta(url) {
-  let isMatch = null != url;
-  if (isMatch) {
-    isMatch = regExp1.test(url);
-  }
-  if (isMatch) {
-    const match = url.match(regExp1);
-    let tmp13 = null;
-    if (null != match) {
-      tmp13 = null;
-      if (2 === match.length) {
-        const obj2 = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
-        const obj5 = {};
-        const _HermesInternal = HermesInternal;
-        const obj6 = { type: "branch", id: match[1] };
-        obj5["discord_" + PlatformUtils.getNativePlatform()] = obj6;
-        obj2.targetBuildOverride = obj5;
-        obj2.validForUserIds = [];
-        tmp13 = obj2;
-      }
-    }
-    return Promise.resolve(tmp13);
+  if (obj.isAdsManagerBuildOverrideLink(url)) {
+    return Promise.resolve(AdsManagerBuildOverrideUtils.adsManagerOverrideLinkMeta(url));
   } else {
-    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(url);
-    if (null == safeParseWithQueryResult) {
-      let resolved = Promise.resolve(null);
-    } else {
-      safeParseWithQueryResult.search = null;
-      safeParseWithQueryResult.query.meta = "true";
-      if (Version) {
-        safeParseWithQueryResult.query.version = tmp16;
-      }
-      const _window = window;
-      safeParseWithQueryResult.host = window.location.host;
-      const HTTP = HTTPUtils.HTTP;
-      const obj7 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
-      value = HTTP.get(obj7);
-      resolved = value.then((body) => body.body || null, () => null);
+    let isMatch = null != url;
+    if (isMatch) {
+      isMatch = regExp1.test(url);
     }
-    return resolved;
+    if (isMatch) {
+      const match = url.match(regExp1);
+      let tmp14 = null;
+      if (null != match) {
+        tmp14 = null;
+        if (2 === match.length) {
+          const obj3 = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
+          const obj5 = {};
+          const _HermesInternal = HermesInternal;
+          const obj6 = { type: "branch", id: match[1] };
+          obj5["discord_" + PlatformUtils.getNativePlatform()] = obj6;
+          obj3.targetBuildOverride = obj5;
+          obj3.validForUserIds = [];
+          tmp14 = obj3;
+          const tmpResult2 = PlatformUtils;
+        }
+      }
+      return Promise.resolve(tmp14);
+    } else {
+      const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(url);
+      if (null == safeParseWithQueryResult) {
+        let resolved = Promise.resolve(null);
+      } else {
+        safeParseWithQueryResult.search = null;
+        safeParseWithQueryResult.query.meta = "true";
+        if (Version) {
+          safeParseWithQueryResult.query.version = tmp16;
+        }
+        const _window = window;
+        safeParseWithQueryResult.host = window.location.host;
+        const HTTP = HTTPUtils.HTTP;
+        const obj7 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
+        value = HTTP.get(obj7);
+        resolved = value.then((body) => body.body || null, () => null);
+      }
+      return resolved;
+    }
   }
+  obj = AdsManagerBuildOverrideUtils;
 }
 export function probablyHasBuildOverride() {
   return -1 !== cookie.indexOf("" + closure_4 + "=");
@@ -121,7 +129,7 @@ export function probablyHasBuildOverride() {
 export function getBuildOverrideExperiments() {
   try {
     const _window = window;
-    const tmp5 = _modDef1382.parse(window.document.cookie)[closure_4];
+    const tmp5 = _modDef1384.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {
       let obj2 = {};
     } else {
@@ -138,46 +146,58 @@ export function getBuildOverrideExperiments() {
   }
 }
 export function isBuildOverrideLink(target) {
-  let isMatch = null != target;
-  if (isMatch) {
-    isMatch = regExp.test(target);
+  let tmp = null != target;
+  if (tmp) {
+    tmp = regExp.test(target) || false;
+    const tmp3 = regExp.test(target) || false;
   }
-  return isMatch;
+  return tmp;
 }
 export { isManualBuildOverrideLink };
 export { manualOverrideLinkMeta };
 export function validateURL(url) {
-  let isMatch = null != url;
-  if (isMatch) {
-    isMatch = regExp1.test(url);
-  }
-  if (isMatch) {
-    const obj2 = { payload: null, url };
-    return obj2;
+  if (obj.isAdsManagerBuildOverrideLink(url)) {
+    const obj3 = { payload: null, url: null };
+    const _URL = URL;
+    const uRL = new URL(url);
+    const searchParams = uRL.searchParams;
+    obj3.payload = searchParams.get(s);
+    obj3.url = url;
+    return obj3;
   } else {
-    url = URLUtilsDefault.safeParseWithQuery(url);
-    if (null == url) {
-      return null;
+    let isMatch = null != url;
+    if (isMatch) {
+      isMatch = regExp1.test(url);
+    }
+    if (isMatch) {
+      const obj5 = { payload: null, url };
+      return obj5;
     } else {
-      if (set.has(url.hostname)) {
-        if ("s" in url.query) {
-          if (set1.has(url.pathname)) {
-            for (const key10021 in url.query) {
-              if ("s" === key10021) {
-                continue;
-              } else {
-                let query = url.query;
-                delete tmp[tmp2];
+      url = URLUtilsDefault.safeParseWithQuery(url);
+      if (null == url) {
+        return null;
+      } else {
+        if (set.has(url.hostname)) {
+          if (s in url.query) {
+            if (set1.has(url.pathname)) {
+              for (const key10026 in url.query) {
+                if (key10026 === s) {
+                  continue;
+                } else {
+                  let query = url.query;
+                  delete tmp[tmp2];
+                  continue;
+                }
                 continue;
               }
-              continue;
+              const obj6 = { payload: url.query[s], url: UrlAll.format(url) };
+              return obj6;
             }
-            const obj4 = { payload: url.query.s, url: UrlAll.format(url) };
-            return obj4;
           }
         }
+        return null;
       }
-      return null;
     }
   }
+  obj = AdsManagerBuildOverrideUtils;
 }

@@ -1,6 +1,6 @@
-// === Module 16577: CollectiblesRecommendationActionCreators ===
+// === Module 16720: CollectiblesRecommendationActionCreators ===
 
-// Module 16577 (CollectiblesRecommendationActionCreators)
+// Module 16720 (CollectiblesRecommendationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -12,7 +12,7 @@ let closure_5 = async function _maybeFetchCollectiblesRecommendations() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: "/storefront/recommended-items", query: null, rejectWithError: true };
   const obj4 = { application_ids: null, limit: 100 };
-  const items = [React4];
+  items = [React4];
   obj4.application_ids = items;
   request.query = obj4;
   await HTTP.get(request);

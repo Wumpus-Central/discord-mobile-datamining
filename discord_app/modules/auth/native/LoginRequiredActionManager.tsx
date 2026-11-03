@@ -1,10 +1,10 @@
-// === Module 19521: LoginRequiredActionManager ===
+// === Module 19679: LoginRequiredActionManager ===
 
-// Module 19521 (LoginRequiredActionManager)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
-import UserStore from "UserStore" /* 1383 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4856 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 19679 (LoginRequiredActionManager)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
+import UserStore from "UserStore" /* 1385 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4983 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 const require = fn;
 const Constants = fn(1072);
@@ -19,7 +19,7 @@ class LoginRequiredActionManager extends tmp3 {
 LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    let items = [constants.UPDATE_PASSWORD];
+    items = [constants.UPDATE_PASSWORD];
     const result = LoginRequiredActionStore.wasLoginAttemptedInSession(currentUser.id);
     const result1 = LoginRequiredActionStore.requiredActionsIncludes(currentUser.id, items);
     if (result) {
@@ -28,14 +28,14 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
           screen: constants3.ACCOUNT_CHANGE_PASSWORD,
           params: { isLoginRequiredAction: true },
           onClose() {
-                  const items = [constants.UPDATE_PASSWORD];
+                  items = [constants.UPDATE_PASSWORD];
                   if (LoginRequiredActionStore.requiredActionsIncludes(currentUser.id, items)) {
                     AuthenticationActionCreatorsDefault.logout("login_required_account_manager", constants2.LOGIN);
                   }
                 }
         };
-        currentUser(7563).openUserSettings(obj3);
-        const obj2 = currentUser(7563);
+        currentUser(7687).openUserSettings(obj3);
+        const obj2 = currentUser(7687);
       }
     }
     if (result1) {

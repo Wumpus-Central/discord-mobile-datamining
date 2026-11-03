@@ -1,7 +1,7 @@
-// === Module 14795: useMediaLoading ===
+// === Module 14926: useMediaLoading ===
 
-// Module 14795 (useMediaLoading)
-import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7132 */;
+// Module 14926 (useMediaLoading)
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ export default function useMediaLoading(onLoad) {
       ref.current = null;
     }
   }, []);
-  const items = [callback];
+  items = [callback];
   const effect = noop.useEffect(() => callback, items);
   const tmp7 = hooks_useStableCallbackDefault(() => {
     let tmp;

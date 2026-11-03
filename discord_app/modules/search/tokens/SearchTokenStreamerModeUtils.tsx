@@ -1,8 +1,8 @@
-// === Module 13899: SearchTokenStreamerModeUtils ===
+// === Module 14030: SearchTokenStreamerModeUtils ===
 
-// Module 13899 (SearchTokenStreamerModeUtils)
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13897 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
+// Module 14030 (SearchTokenStreamerModeUtils)
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 14028 */;
+import StreamerModeStore from "StreamerModeStore" /* 5196 */;
 
 require = fn;
 function getValidOrderedFilterTokens(type, items) {
@@ -43,7 +43,7 @@ let result = size.fileFinishedImporting("modules/search/tokens/SearchTokenStream
 export function isFromUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;
@@ -52,7 +52,7 @@ export function isFromUserFilterSupported() {
 export function isMentionsUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;
@@ -61,7 +61,7 @@ export function isMentionsUserFilterSupported() {
 export function isInChannelFilterSupported(selectedSearchContext) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;

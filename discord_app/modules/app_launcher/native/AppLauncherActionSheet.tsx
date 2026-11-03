@@ -1,14 +1,14 @@
-// === Module 12532: AppLauncherActionSheet ===
+// === Module 12668: AppLauncherActionSheet ===
 
-// Module 12532 (AppLauncherActionSheet)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 5591 */;
-import AppLauncherContext from "AppLauncherContext" /* 11501 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11502 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11503 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12409 */;
-import getAppDMApplication from "getAppDMApplication" /* 12533 */;
+// Module 12668 (AppLauncherActionSheet)
+import _mod1652 from "module_1652" /* 1652 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 5714 */;
+import AppLauncherContext from "AppLauncherContext" /* 11638 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11640 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12545 */;
+import getAppDMApplication from "getAppDMApplication" /* 12669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ require = fn;
 function AppLauncherActionSheet(arg0) {
   ({ chatInputRef: require, channel } = arg0);
   const ref = noop.useRef(null);
-  const sharedValue = ReanimatedRexport.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const sharedValue = _mod1652.useSharedValue(-1);
+  const sharedValue1 = _mod1652.useSharedValue(0);
   const ref1 = noop.useRef(undefined);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const ref2 = noop.useRef(AppLauncherContext.AppLauncherKeyboardCloseReason.DISMISSED);
-  const items = [channel];
+  items = [channel];
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   const memo = noop.useMemo(() => ({ channel, type: "channel" }), items);
   const obj4 = {
@@ -133,7 +133,7 @@ function AppLauncherActionSheet(arg0) {
   })} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
   return jsx(Sheet_BottomSheet.BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
 }
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
@@ -156,7 +156,7 @@ export function useAppLauncherActionSheet(arg0) {
     }
   }), []);
   let obj = { appLauncherActionSheet: null, setAppLauncherActionSheetEnabled: tmp[1] };
-  const items = [memo, first, arg0];
+  items = [memo, first, arg0];
   obj.appLauncherActionSheet = noop.useMemo(() => {
     let tmp = null;
     if (first) {

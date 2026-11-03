@@ -1,10 +1,10 @@
-// === Module 13350: CtaButtonUtils ===
+// === Module 13486: CtaButtonUtils ===
 
-// Module 13350 (CtaButtonUtils)
+// Module 13486 (CtaButtonUtils)
 import initialize from "initialize" /* 504 */;
-import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 13351 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13352 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11367 */;
+import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 13487 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13488 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11505 */;
 
 require = fn;
 const CtaButtonType = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen", AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review" };
@@ -33,7 +33,7 @@ export function useCtaButtonType(id, channel_id) {
   const obj = useShouldRenderReportFalsePositiveButton;
   const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
   const result = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);
-  const items = [FamilyCenterPendingConnectionStore];
+  items = [FamilyCenterPendingConnectionStore];
   let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
   if (result1) {
     result1 = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);

@@ -1,21 +1,21 @@
-// === Module 19703: TimeoutDurationActionSheet ===
+// === Module 19853: TimeoutDurationActionSheet ===
 
-// Module 19703 (TimeoutDurationActionSheet)
+// Module 19853 (TimeoutDurationActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import getActionInfo from "getActionInfo" /* 19682 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import getActionInfo from "getActionInfo" /* 19832 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodActionType = fn(13292).AutomodActionType;
-let closure_4 = fn(4928).getDisableCommunicationDurationOptions;
+const AutomodActionType = fn(13428).AutomodActionType;
+let closure_4 = fn(5055).getDisableCommunicationDurationOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -39,7 +39,7 @@ export default function TimeoutDurationActionSheet(triggerType) {
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.DWGBAh);
-  const items = [closure_5(Text_Text.Text, obj3), ];
+  items = [closure_5(Text_Text.Text, obj3), ];
   let headerText;
   if (actionInfo != null) {
     headerText = actionInfo.headerText;

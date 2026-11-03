@@ -1,18 +1,18 @@
-// === Module 4927: useCommunicationDisabledNoticeStore ===
+// === Module 5054: useCommunicationDisabledNoticeStore ===
 
-// Module 4927 (useCommunicationDisabledNoticeStore)
+// Module 5054 (useCommunicationDisabledNoticeStore)
 import _mod1254 from "module_1254" /* 1254 */;
-import _mod4929 from "module_4929" /* 4929 */;
+import _mod5056 from "module_5056" /* 5056 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4928).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(5055).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
   let Storage = require("Storage").Storage;
-  let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
+  items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
   }
@@ -51,12 +51,12 @@ let result = size.fileFinishedImporting("modules/guild_communication_disabled/us
 
 export function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, (arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow), 2);
+  }, _mod5056.shallow), 2);
   const first = tmp[0];
-  let items = [!first.has(arg0), tmp[1]];
+  items = [!first.has(arg0), tmp[1]];
   return items;
 }
 export function clearCommunicationDisabledNotice(arg0) {

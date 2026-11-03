@@ -1,13 +1,13 @@
-// === Module 16659: TwoFASetupModalHeader ===
+// === Module 16802: TwoFASetupModalHeader ===
 
-// Module 16659 (TwoFASetupModalHeader)
+// Module 16802 (TwoFASetupModalHeader)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" }, circleIcon: null, horizontalLine: null, filledCircle: null };
 let size = { width: 14, height: 14, borderRadius: 7, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.circleIcon = size;
@@ -25,7 +25,7 @@ export const PageMarker = noop.memo(function PageMarker(arg0) {
   closure_1 = tmp;
   const ArrayResult = Array(numMarkers);
   const obj = { style: null, children: null };
-  const items = [tmp.pageMarkerContainer, { width: 20 * numMarkers }];
+  items = [tmp.pageMarkerContainer, { width: 20 * numMarkers }];
   obj.style = items;
   const mapped = Array(numMarkers).fill(undefined).map((item, index) => {
     const style = [closure_1.circleIcon, ];
@@ -35,7 +35,7 @@ export const PageMarker = noop.memo(function PageMarker(arg0) {
       filledCircle = closure_1.filledCircle;
     }
     style[1] = filledCircle;
-    return framebus(View, { style }, sum);
+    return duration(View, { style }, sum);
   });
   const items1 = [closure_1(View, { style: tmp.horizontalLine }), mapped];
   obj.children = items1;

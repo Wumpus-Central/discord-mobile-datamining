@@ -1,22 +1,22 @@
-// === Module 17013: DisplayNameStylesEditPreview ===
+// === Module 17156: DisplayNameStylesEditPreview ===
 
-// Module 17013 (DisplayNameStylesEditPreview)
+// Module 17156 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import _modDef2932 from "module_2932" /* 2932 */;
-import DateUtils from "DateUtils" /* 4836 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6853 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8730 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
-import types from "types" /* 10773 */;
+import _modDef3059 from "module_3059" /* 3059 */;
+import DateUtils from "DateUtils" /* 4963 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6973 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8854 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8864 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8944 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10902 */;
+import types from "types" /* 10903 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 
 require = fn;
 function ChatPreview(chatMessage) {
@@ -29,7 +29,7 @@ function ChatPreview(chatMessage) {
   const tmp = closure_9();
   const avatarDecoration = useAvatarDecoration.useAvatarDecoration(user, guildId);
   const pendingAvatarDecoration = usePendingAvatarSettingsDefault({ guildId, isTryItOut }).pendingAvatarDecoration;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp8 = avatarDecoration;
   const memo = noop.useMemo(() => {
@@ -63,7 +63,7 @@ function ChatPreview(chatMessage) {
   const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   if (chatMessage == null) {
     const intl = util.intl;
-    chatMessage = intl.string(_modDef2932.h5Cuej);
+    chatMessage = intl.string(_modDef3059.h5Cuej);
   }
   obj10.children = chatMessage;
   items3[1] = React5(Text_Text.Text, obj10);
@@ -75,7 +75,7 @@ function ChatPreview(chatMessage) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, previewSectionTilted: { marginBottom: 0 }, profilePreviewTilted: null, chatPreviewWrapper: null, chatPreviewWrapperTilted: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-2.63deg" }];
@@ -96,11 +96,11 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = { position: "absolute", top: 64, right: 0, borderRadius: nativeDefault.radii.xl, borderCurve: "continuous", borderWidth: 0, transform: null };
-  const items = [{ rotate: "15deg" }, { scale }];
+  items = [{ rotate: "15deg" }, { scale }];
   rect.transform = items;
   obj.appIconTilted = rect;
   return obj;
@@ -149,7 +149,7 @@ export default function DisplayNameStylesEditPreview(chatMessage) {
   const obj = user(selectedFontId[7]);
   let nameplateData = user(selectedFontId[8]).getNameplateData(guildNameplate);
   const obj2 = user(selectedFontId[8]);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStores = user(selectedFontId[9]).useStateFromStores(items, () => {
     if (flag) {
       let pendingAvatar = UserProfileSettingsStore.getTryItOutChanges().tryItOutAvatar;

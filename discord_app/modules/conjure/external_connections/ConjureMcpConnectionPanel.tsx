@@ -1,6 +1,6 @@
-// === Module 12174: ConjureMcpConnectionPanel ===
+// === Module 12310: ConjureMcpConnectionPanel ===
 
-// Module 12174 (ConjureMcpConnectionPanel)
+// Module 12310 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -89,7 +89,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             let connection = null;
             if (!closure_129_0) {
@@ -192,7 +192,7 @@ export function useMcpConnectionPanel(projectId) {
   closure_0 = projectId;
   [tmp2, dependencyMap] = noop.useState({ connection: null, loading: true, failed: false });
   _slicedToArray = noop.useRef(null);
-  const items = [projectId];
+  items = [projectId];
   const effect = noop.useEffect(() => {
     if (typeof McpConnectionPanel === "function") {
       const fn = (regenerate) => merged(dependencyMap[3]).fetchProjectMcpConnection(merged, { regenerate });

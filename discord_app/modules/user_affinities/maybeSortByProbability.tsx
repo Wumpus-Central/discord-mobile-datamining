@@ -1,7 +1,7 @@
-// === Module 8539: maybeSortByProbability ===
+// === Module 8663: maybeSortByProbability ===
 
-// Module 8539 (maybeSortByProbability)
-import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8540 */;
+// Module 8663 (maybeSortByProbability)
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8664 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
@@ -12,7 +12,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(sort, 0);
     sort = items.sort;
     let sorted = sort((id, id2) => {

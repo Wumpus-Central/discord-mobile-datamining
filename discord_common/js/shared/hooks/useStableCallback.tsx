@@ -1,6 +1,6 @@
-// === Module 7132: hooks/useStableCallback ===
+// === Module 7258: hooks/useStableCallback ===
 
-// Module 7132 (hooks/useStableCallback)
+// Module 7258 (hooks/useStableCallback)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -12,7 +12,7 @@ export default function useStableCallback(current) {
     closure_1.current = current;
   });
   return noop.useCallback(() => {
-    const items = [...HermesBuiltin.copyRestArgs()];
+    items = [...HermesBuiltin.copyRestArgs()];
     return ref.current.apply(items);
   }, []);
 };

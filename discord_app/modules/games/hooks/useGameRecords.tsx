@@ -1,8 +1,8 @@
-// === Module 19573: useGameRecords ===
+// === Module 15094: useGameRecords ===
 
-// Module 19573 (useGameRecords)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GameStore from "GameStore" /* 2014 */;
+// Module 15094 (useGameRecords)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GameStore from "GameStore" /* 2143 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export default function useGameRecords(memo) {
   _require = memo;
   const games = require("useGame").useGames(memo);
   const obj = require("useGame");
-  const items = [GameStore];
+  items = [GameStore];
   const items1 = [memo];
   return require("initialize").useStateFromStoresArray(items, () => {
     const mapped = memo.map((item) => game.getGame(item));

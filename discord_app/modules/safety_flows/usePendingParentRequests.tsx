@@ -1,24 +1,24 @@
-// === Module 20098: usePendingParentRequests ===
+// === Module 20248: usePendingParentRequests ===
 
-// Module 20098 (usePendingParentRequests)
-import useUserLinks from "useUserLinks" /* 8369 */;
-import useFamilyCenterActions from "useFamilyCenterActions" /* 13359 */;
+// Module 20248 (usePendingParentRequests)
+import useUserLinks from "useUserLinks" /* 8493 */;
+import useFamilyCenterActions from "useFamilyCenterActions" /* 13495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
-import UserStore from "UserStore" /* 1383 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const UserLinkStatus = fn(7716).UserLinkStatus;
+const UserLinkStatus = fn(7840).UserLinkStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
 
 export function useDerivedPendingRequests(arr, stateFromStores1) {
   _require = arr;
   dependencyMap = stateFromStores1;
-  let items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   let obj = require("initialize");
   const items1 = [UserStore];
@@ -35,10 +35,10 @@ export function useDerivedPendingRequests(arr, stateFromStores1) {
     if (closure_1) {
       const _Map = Map;
       const map = new Map(closure_0.map((parent_id) => {
-        const items = [parent_id.parent_id, parent_id];
+        items = [parent_id.parent_id, parent_id];
         return items;
       }));
-      let items = [];
+      items = [];
       const _Object = Object;
       const values = Object.values(stateFromStores);
       const iter = values[Symbol.iterator]();
@@ -146,7 +146,7 @@ export function usePendingRequestListController(pendingRequests) {
       }
     });
   }, []);
-  let items = [tmp6, callback, acceptLinkRequest];
+  items = [tmp6, callback, acceptLinkRequest];
   const items1 = [tmp6, callback, declineLinkRequest];
   const callback1 = noop.useCallback((arg0) => {
     if (!isDeclineLoading) {
@@ -196,7 +196,7 @@ export function usePendingRequestListController(pendingRequests) {
     tmp16(pendingRequests);
     tmp13((arr) => {
       const map = new Map(arr.map((parent_id) => {
-        const items = [parent_id.parent_id, parent_id];
+        items = [parent_id.parent_id, parent_id];
         return items;
       }));
       for (const item10015 of pendingRequests) {
@@ -210,7 +210,7 @@ export function usePendingRequestListController(pendingRequests) {
 }
 export function usePendingRequestResolution(parent_id) {
   _require = parent_id;
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const tmp = FamilyCenterStore.getLinkedUsers()[closure_0];
     let link_status;

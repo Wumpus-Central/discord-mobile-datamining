@@ -1,9 +1,9 @@
-// === Module 18760: EnglishAnalyzer ===
+// === Module 18918: EnglishAnalyzer ===
 
-// Module 18760 (EnglishAnalyzer)
+// Module 18918 (EnglishAnalyzer)
 import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 18761 */;
-import Search from "Search" /* 18763 */;
+import snowballStemmer from "snowballStemmer" /* 18919 */;
+import Search from "Search" /* 18921 */;
 import size from "module_2" /* 2 */;
 
 function stripPossessive(item10009) {
@@ -54,7 +54,7 @@ function highlightAST(content, c0, c1) {
       return item;
     });
   } else if ("list" === content.type) {
-    const items = content.items;
+    items = content.items;
     const item1 = items.forEach((item) => {
       highlightAST(item, closure_0, closure_1);
       return item;
@@ -115,7 +115,7 @@ function splitHighlights(content, words) {
   if (0 === words.size) {
     return null;
   } else {
-    const items = [];
+    items = [];
     let str = "";
     const parts = content.split(/(\W+)/g);
     for (const item10009 of parts) {

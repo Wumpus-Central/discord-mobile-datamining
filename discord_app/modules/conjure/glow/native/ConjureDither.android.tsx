@@ -1,10 +1,12 @@
-// === Module 12608: ConjureDither ===
+// === Module 12744: ConjureDither ===
 
-// Module 12608 (ConjureDither)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import inlineStyles from "inlineStyles" /* 8031 */;
-import _mod12609 from "module_12609" /* 12609 */;
+// Module 12744 (ConjureDither)
+import _modDef1652 from "module_1652" /* 1652 */;
+import inlineStyles from "inlineStyles" /* 8155 */;
+import _mod12745 from "module_12745" /* 12745 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function BandPicture(width) {
@@ -22,7 +24,7 @@ function BandPicture(width) {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[3]).TILE, height: state(height[3]).TILE, children: null };
   const tmp8 = width(height[4]);
   size1.children = state(height[3]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod12609.CELL, height: _mod12609.CELL, rx: _mod12609.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod12745.CELL, height: _mod12745.CELL, rx: _mod12745.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[4]).Pattern, size1), , , ];
@@ -38,10 +40,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod12609;
+    const obj3 = _mod12745;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod12609.blobReach(peak, radius, closure_5 + _mod12609.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod12609.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod12745.blobReach(peak, radius, closure_5 + _mod12745.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod12745.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return React5(inlineStyles.RadialGradient, obj, index);
@@ -58,7 +60,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod12609.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod12745.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -88,95 +90,115 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [0, Math.PI];
-const __initData = { code: "function ConjureDitherAndroidTsx1(frame){const{STATE_LERP_MS,speed,targetSpeed,phase,CYCLE_MS}=this.__closure;var _frame$timeSincePrevi;const dtMs=Math.min(64,(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:16);const lerp=1-Math.exp(-dtMs/STATE_LERP_MS);speed.set(speed.get()+(targetSpeed.get()-speed.get())*lerp);phase.set(phase.get()+dtMs/CYCLE_MS*2*Math.PI*speed.get());}" };
-const __initData2 = { code: "function ConjureDitherAndroidTsx2(){const{phase}=this.__closure;return{opacity:(1+Math.cos(phase.get()))/2};}" };
-const __initData3 = { code: "function ConjureDitherAndroidTsx3(){const{phase}=this.__closure;return{opacity:(1-Math.cos(phase.get()))/2};}" };
+let closure_10 = { code: "(function ConjureDitherAndroidTsx1(frame){let[STATE_LERP_MS,speed,targetSpeed,phase,CYCLE_MS]=this.__closure;var _frame$timeSincePrevi;const dtMs=Math.min(64,(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:16);const lerp=1-Math.exp(-dtMs/STATE_LERP_MS);speed.set(speed.get()+(targetSpeed.get()-speed.get())*lerp);phase.set(phase.get()+dtMs/CYCLE_MS*2*Math.PI*speed.get());})" };
+let closure_11 = { code: "(function ConjureDitherAndroidTsx2(){let[phase]=this.__closure;return{opacity:(1+Math.cos(phase.get()))/2};})" };
+let closure_12 = { code: "(function ConjureDitherAndroidTsx3(){let[phase]=this.__closure;return{opacity:(1-Math.cos(phase.get()))/2};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/glow/native/ConjureDither.android.tsx");
 
 export default function ConjureDither(width) {
   width = width.width;
-  ({ height: importDefault, thinking } = width);
-  ({ fill: noop, fillOpacity: closure_4 } = width);
-  let sharedValue1;
+  _require = width;
+  ({ height: c1, thinking } = width);
+  dependencyMap = thinking;
+  ({ fill: c3, fillOpacity: c4 } = width);
   let sharedValue2;
-  closure_8 = undefined;
-  closure_9 = undefined;
-  const sharedValue = width(thinking[5]).useSharedValue(0);
-  let obj = width(thinking[5]);
+  closure_6 = undefined;
+  closure_7 = undefined;
+  const sharedValue = require("module_1652").useSharedValue(0);
+  let obj = require("module_1652");
   let num = 1;
   let num2 = 1;
   if (thinking) {
     num2 = 3;
   }
-  sharedValue1 = width(thinking[5]).useSharedValue(num2);
-  const obj2 = width(thinking[5]);
+  const sharedValue1 = require("module_1652").useSharedValue(num2);
+  const obj2 = require("module_1652");
   if (thinking) {
     num = 3;
   }
-  sharedValue2 = width(thinking[5]).useSharedValue(num);
+  sharedValue2 = require("module_1652").useSharedValue(num);
   items = [sharedValue2, thinking];
   const effect = noop.useEffect(() => {
     let num = 1;
-    if (thinking) {
+    if (c2) {
       num = 3;
     }
     const result = sharedValue2.set(num);
   }, items);
-  const tmpResult = width(thinking[5]);
-  const fn = function m(timeSincePreviousFrame) {
-    let num = timeSincePreviousFrame.timeSincePreviousFrame;
-    if (num == null) {
-      num = 16;
+  const tmpResult = require("module_1652");
+  const items1 = [closure_10, 80, sharedValue1, sharedValue2, sharedValue, 9000];
+  _require = undefined;
+  c1 = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  absoluteFill = undefined;
+  [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items1;
+  class ConjureDitherAndroidTsx1 {
+    constructor(arg0) {
+      num = width.timeSincePreviousFrame;
+      if (num == null) {
+        num = 16;
+      }
+      bound = Math.min(64, num);
+      diff = 1 - Math.exp(-bound / closure_0);
+      value = closure_1.get();
+      value1 = closure_2.get();
+      result = closure_1.set(value + (value1 - closure_1.get()) * diff);
+      value2 = closure_3.get();
+      result1 = bound / closure_4 * 2 * Math.PI;
+      result2 = closure_3.set(value2 + result1 * closure_1.get());
+      return;
     }
-    const bound = Math.min(64, num);
-    const diff = 1 - Math.exp(-bound / 80);
-    value = sharedValue1.get();
-    const value3 = sharedValue2.get();
-    const result = sharedValue1.set(value + (value3 - sharedValue1.get()) * diff);
-    const value4 = sharedValue.get();
-    const result1 = bound / 9000 * 2 * Math.PI;
-    const result2 = sharedValue.set(value4 + result1 * sharedValue1.get());
-  };
-  fn.__closure = { STATE_LERP_MS: 80, speed: sharedValue1, targetSpeed: sharedValue2, phase: sharedValue, CYCLE_MS: 9000 };
-  fn.__workletHash = 11384723541155;
-  fn.__initData = __initData;
-  width(thinking[5]).useFrameCallback(fn);
-  const tmpResult4 = width(thinking[5]);
-  class M {
+  }
+  const items2 = [tmp8, tmp9, tmp10, tmp11, tmp12];
+  ConjureDitherAndroidTsx1.__closure = items2;
+  ConjureDitherAndroidTsx1.__workletHash = 13577503851898;
+  ConjureDitherAndroidTsx1.__initData = tmp7;
+  require("module_1652").useFrameCallback(ConjureDitherAndroidTsx1);
+  const tmpResult4 = require("module_1652");
+  const items3 = [closure_11, sharedValue];
+  _require = undefined;
+  [tmp14, tmp15] = items3;
+  class ConjureDitherAndroidTsx2 {
     constructor() {
-      obj = { opacity: (1 + Math.cos(closure_5.get())) / 2 };
+      obj = { opacity: (1 + Math.cos(closure_0.get())) / 2 };
       return obj;
     }
   }
-  M.__closure = { phase: sharedValue };
-  M.__workletHash = 5313469085775;
-  M.__initData = __initData2;
-  closure_8 = width(thinking[5]).useAnimatedStyle(M);
-  const tmpResult5 = width(thinking[5]);
-  const fn2 = function b() {
-    return { opacity: (1 - Math.cos(sharedValue.get())) / 2 };
-  };
-  fn2.__closure = { phase: sharedValue };
-  fn2.__workletHash = 8854151976840;
-  fn2.__initData = __initData3;
-  closure_9 = width(thinking[5]).useAnimatedStyle(fn2);
-  let tmp8 = null;
-  if (width > 0) {
-    const obj3 = { style: fillOpacity.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(thinking[3]).LEVELS;
-    obj3.children = LEVELS.map((item, index) => {
-      const band = index;
-      return closure_8.map((item, state) => {
-        items = [React4.absoluteFill, ];
-        const obj = { style: items, renderToHardwareTextureAndroid: true, children: null };
-        items[1] = 0 === state ? closure_8 : closure_9;
-        const size = { band, state, width, height, fill, fillOpacity };
-        obj.children = timestampProducer(BandPicture, size);
-        return timestampProducer(ReanimatedRexportDefault.View, obj, "" + band + "-" + state);
-      });
-    });
-    tmp8 = sharedValue1(sharedValue, obj3);
+  const items4 = [tmp15];
+  ConjureDitherAndroidTsx2.__closure = items4;
+  ConjureDitherAndroidTsx2.__workletHash = 2589685812342;
+  ConjureDitherAndroidTsx2.__initData = tmp14;
+  closure_6 = require("module_1652").useAnimatedStyle(ConjureDitherAndroidTsx2);
+  const tmpResult5 = require("module_1652");
+  const items5 = [closure_12, sharedValue];
+  _require = undefined;
+  [tmp16, tmp17] = items5;
+  class ConjureDitherAndroidTsx3 {
+    constructor() {
+      obj = { opacity: (1 - Math.cos(closure_0.get())) / 2 };
+      return obj;
+    }
   }
-  return tmp8;
+  const items6 = [tmp17];
+  ConjureDitherAndroidTsx3.__closure = items6;
+  ConjureDitherAndroidTsx3.__workletHash = 9176560266449;
+  ConjureDitherAndroidTsx3.__initData = tmp16;
+  closure_7 = require("module_1652").useAnimatedStyle(ConjureDitherAndroidTsx3);
+  let tmp18 = null;
+  if (width > 0) {
+    const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
+    const LEVELS = tmp(12745).LEVELS;
+    obj3.children = LEVELS.map((item, index) => items.map((item, state) => {
+      items = [React4.absoluteFill, ];
+      const obj = { style: items, renderToHardwareTextureAndroid: true, children: null };
+      items[1] = 0 === state ? closure_6 : closure_7;
+      const size = { band: index, state, width: index, height, fill, fillOpacity };
+      obj.children = timestampProducer(BandPicture, size);
+      return timestampProducer(_modDef1652.View, obj, "" + index + "-" + state);
+    }));
+    tmp18 = closure_6(sharedValue2, obj3);
+  }
+  return tmp18;
 };

@@ -1,6 +1,6 @@
-// === Module 8741: useBottomSheetRef ===
+// === Module 8865: useBottomSheetRef ===
 
-// Module 8741 (useBottomSheetRef)
+// Module 8865 (useBottomSheetRef)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/useBot
 
 export function useBottomSheetRef() {
   const ref = noop.useRef(null);
-  const items = [ref];
+  items = [ref];
   return {
     bottomSheetRef: ref,
     bottomSheetClose: noop.useCallback(() => {

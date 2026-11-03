@@ -1,24 +1,24 @@
-// === Module 9302: GuildProfileHeader ===
+// === Module 9430: GuildProfileHeader ===
 
-// Module 9302 (GuildProfileHeader)
+// Module 9430 (GuildProfileHeader)
 import nativeDefault from "native" /* 575 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import transitionToGuild from "transitionToGuild" /* 7522 */;
-import GuildTraits from "GuildTraits" /* 9304 */;
-import BadgeCategory from "BadgeCategory" /* 9305 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import transitionToGuild from "transitionToGuild" /* 7646 */;
+import GuildTraits from "GuildTraits" /* 9432 */;
+import BadgeCategory from "BadgeCategory" /* 9433 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9303).getBadgeTooltip;
+const getBadgeTooltip = fn(9431).getBadgeTooltip;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;
@@ -41,7 +41,7 @@ export default function GuildProfileHeader(icon) {
   let id;
   let stateFromStores1;
   const tmp = styles();
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = profile(stateFromStores1[9]).useStateFromStores(items, () => locale.locale);
   let obj = profile(stateFromStores1[9]);
   let obj2 = profile(stateFromStores1[10]);

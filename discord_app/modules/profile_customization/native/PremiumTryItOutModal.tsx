@@ -1,17 +1,17 @@
-// === Module 16551: PremiumTryItOutModal ===
+// === Module 16694: PremiumTryItOutModal ===
 
-// Module 16551 (PremiumTryItOutModal)
+// Module 16694 (PremiumTryItOutModal)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/PremiumTryItOutModal.tsx");
@@ -21,7 +21,7 @@ export default function PremiumTryItOutModal(initialTarget) {
   const onClose = initialTarget.onClose;
   let stateFromStores;
   let shuffleButtonLocation;
-  const items = [shuffleButtonLocation];
+  items = [shuffleButtonLocation];
   stateFromStores = initialTarget(stateFromStores[5]).useStateFromStores(items, () => shuffleButtonLocation.getCurrentUser());
   let obj = initialTarget(stateFromStores[5]);
   const tmp2Result = onClose(stateFromStores[6])(onClose(stateFromStores[7]).USER_SETTINGS_TRY_OUT_PREMIUM);

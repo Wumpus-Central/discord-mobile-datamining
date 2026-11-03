@@ -1,13 +1,13 @@
-// === Module 12094: useConjureNativePublishButton ===
+// === Module 12230: useConjureNativePublishButton ===
 
-// Module 12094 (useConjureNativePublishButton)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 10957 */;
-import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12095 */;
-import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12096 */;
+// Module 12230 (useConjureNativePublishButton)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 11090 */;
+import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12231 */;
+import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12232 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/native/useCon
 export default function useConjureNativePublishButton(arg0, arg1) {
   _require = arg0;
   obj = require("initialize");
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     obj = { integrationStatusChecked: null != ConjureProjectStore.getIntegrationStatus(closure_0), previewAppId: null };

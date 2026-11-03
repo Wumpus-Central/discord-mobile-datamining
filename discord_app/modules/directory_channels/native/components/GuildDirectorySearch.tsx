@@ -1,18 +1,18 @@
-// === Module 13850: GuildDirectorySearch ===
+// === Module 13981: GuildDirectorySearch ===
 
-// Module 13850 (GuildDirectorySearch)
+// Module 13981 (GuildDirectorySearch)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13848 */;
-import _modDef13854 from "module_13854" /* 13854 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13856 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13864 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13979 */;
+import _modDef13985 from "module_13985" /* 13985 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13987 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 13851 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 13982 */;
 
 const require = globalThis.__r;
 
@@ -20,33 +20,27 @@ require = fn;
 function DefaultState() {
   const tmp = closure_12();
   _require = tmp;
-  importDefault = require("useTypeConsolidationTextTransform").useTypeConsolidationTextTransform("GuildDirectorySearch");
-  const obj2 = { style: tmp.emptyWrapper, children: null };
-  const obj3 = { style: tmp.emptyStateImage, source: null };
-  let obj = require("useTypeConsolidationTextTransform");
-  obj3.source = _modDef13854;
-  let items = [closure_10(FastImageDefault, obj3), ];
-  const obj4 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj = { style: tmp.emptyWrapper, children: null };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef13985 };
+  items = [closure_10(FastImageDefault, obj2), ];
+  const obj3 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
-  obj4.children = intl.format(require("util").t.aYLd8O, {
+  obj3.children = intl.format(require("util").t.aYLd8O, {
     protipHook(children) {
-      const obj = { style: null, children };
-      const items = [proTip.proTip, closure_1];
-      obj.style = items;
-      return closure_2_10(native.LegacyText, obj, "protip");
+      return closure_2_10(native.LegacyText, { style: proTip.proTip, children }, "protip");
     }
   });
-  items[1] = closure_10(require("Text/Text").Text, obj4);
-  obj2.children = items;
-  return closure_11(View, obj2);
+  items[1] = closure_10(require("Text/Text").Text, obj3);
+  obj.children = items;
+  return closure_11(View, obj);
 }
 function EmptyState(channel) {
   channel = channel.channel;
   const tmp = closure_12();
-  const items = [GuildStore];
+  items = [GuildStore];
   importDefault = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
   const obj = channel(504);
-  const canCreateOrAddGuildInDirectory = channel(13855).useCanCreateOrAddGuildInDirectory(channel);
+  const canCreateOrAddGuildInDirectory = channel(13986).useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1113).intl;
   if (canCreateOrAddGuildInDirectory) {
     const obj3 = {
@@ -60,14 +54,14 @@ function EmptyState(channel) {
   }
   const obj4 = { style: tmp.emptyWrapper, children: null };
   const obj5 = { style: tmp.emptyStateImage, source: null };
-  const obj2 = channel(13855);
-  obj5.source = _modDef13854;
+  const obj2 = channel(13986);
+  obj5.source = _modDef13985;
   const items1 = [closure_10(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1113).intl;
   obj6.children = intl2.string(channel(1113).t["6HXiuE"]);
-  items1[1] = closure_10(channel(5624).Text, obj6);
-  items1[2] = closure_10(channel(5624).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = closure_10(channel(5747).Text, obj6);
+  items1[2] = closure_10(channel(5747).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj4.children = items1;
   return closure_11(View, obj4);
 }
@@ -75,13 +69,13 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { flex: { flex: 1, height: "100%" }, fauxHeader: { paddingHorizontal: 0 }, scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateText: { textAlign: "center" }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, proTip: null };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.proTip = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
+obj2.proTip = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360 };
 let closure_12 = createStyles.createStyles(obj2);
-let obj4 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
+let obj4 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360 };
 let closure_15 = Array(20).fill(null);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearch.tsx");
@@ -95,8 +89,8 @@ export default function GuildDirectorySearch(channel) {
   importDefault = tmp2[1];
   const tmp3 = searchResults(noop.useState(""), 2);
   closure_2 = tmp3[0];
-  const items = [GuildDirectorySearchStore];
-  const stateFromStoresObject = channel(searchFetching[15]).useStateFromStoresObject(items, () => {
+  items = [GuildDirectorySearchStore];
+  const stateFromStoresObject = channel(searchFetching[14]).useStateFromStoresObject(items, () => {
     const searchState = GuildDirectorySearchStore.getSearchState(channel.id);
     return { searchFetching: searchState.fetching, searchResults: GuildDirectorySearchStore.getSearchResults(channel.id, searchState.mostRecentQuery) };
   });
@@ -115,8 +109,8 @@ export default function GuildDirectorySearch(channel) {
     let obj2 = { style: tmp.flex, children: null };
     let obj3 = { style: tmp.fauxHeader, children: null };
     const obj4 = { placeholder: null, onChange: null, onClose: null, onSubmitEditing: null };
-    const intl = tmp4(tmp5[13]).intl;
-    obj4.placeholder = intl.string(tmp4(tmp5[13]).t.nL2wKD);
+    const intl = tmp4(tmp5[12]).intl;
+    obj4.placeholder = intl.string(tmp4(tmp5[12]).t.nL2wKD);
     obj4.onChange = tmp3[1];
     obj4.onClose = function onClose() {
       GuildDirectoryActionCreatorsAll.clearDirectorySearch(channel.id);
@@ -134,8 +128,8 @@ export default function GuildDirectorySearch(channel) {
         }
       }
     };
-    obj3.children = closure_10(tmp7(tmp5[23]), obj4);
-    const items2 = [closure_10(tmp4(tmp5[22]).FauxHeader, obj3), tmp9];
+    obj3.children = closure_10(tmp7(tmp5[22]), obj4);
+    const items2 = [closure_10(tmp4(tmp5[21]).FauxHeader, obj3), tmp9];
     obj2.children = items2;
     return closure_11(View, obj2);
   } else {
@@ -151,9 +145,9 @@ export default function GuildDirectorySearch(channel) {
           item = item.item;
           if (null != item) {
             const obj = { entry: item };
-            let tmp4 = closure_1_10(closure_1(searchFetching[19]), obj);
+            let tmp4 = closure_1_10(closure_1(searchFetching[18]), obj);
           } else {
-            tmp4 = closure_1_10(closure_1(searchFetching[20]), {});
+            tmp4 = closure_1_10(closure_1(searchFetching[19]), {});
           }
           return tmp4;
         },
@@ -183,8 +177,8 @@ export default function GuildDirectorySearch(channel) {
     bottom = bottom + 16;
     memo.paddingBottom = bottom;
     obj6.contentContainerStyle = memo;
-    tmp8Result = closure_10(tmp4(tmp5[21]).FlashList, obj6);
+    tmp8Result = closure_10(tmp4(tmp5[20]).FlashList, obj6);
   }
-  let obj = channel(searchFetching[15]);
+  let obj = channel(searchFetching[14]);
   tmp7 = importDefault;
 };

@@ -1,19 +1,19 @@
-// === Module 18995: useAutoSettingsSearchSessionAnalytics ===
+// === Module 19153: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 18995 (useAutoSettingsSearchSessionAnalytics)
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import usePreviousDefault from "usePrevious" /* 6732 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7166 */;
+// Module 19153 (useAutoSettingsSearchSessionAnalytics)
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import usePreviousDefault from "usePrevious" /* 6852 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7287 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16590 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
 
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export function useAutoSettingsSearchSessionAnalytics() {
-  const items = [AppStateStore];
+  items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
     return state === stateFromStores(dependencyMap[4]).AppStates.ACTIVE;

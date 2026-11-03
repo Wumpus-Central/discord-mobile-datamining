@@ -1,16 +1,20 @@
-// === Module 19298: VoicePanelControlUtils ===
+// === Module 19456: VoicePanelControlUtils ===
 
-// Module 19298 (VoicePanelControlUtils)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
-import size from "module_2" /* 2 */;
+// Module 19456 (VoicePanelControlUtils)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
 
-function getDrawerSpec(height, top) {
-  const diff = height - top;
-  return { minHeight: roundToNearestPixelDefault(0.65 * diff), maxHeight: diff };
+const items = [{ code: "(function getDrawerSpec_VoicePanelControlUtilsTsx1(height,top){let[roundToNearestPixel]=this.__closure;const maxHeight=height-top;return{minHeight:roundToNearestPixel(maxHeight*0.65),maxHeight:maxHeight};})" }, roundToNearestPixelDefault];
+let c0;
+[tmp2, tmp3] = items;
+function getDrawerSpec(arg0, arg1) {
+  const diff = arg0 - arg1;
+  return { minHeight: _undefined(0.65 * diff), maxHeight: diff };
 }
-getDrawerSpec.__closure = { roundToNearestPixel: roundToNearestPixelDefault };
-getDrawerSpec.__workletHash = 3647675988513;
-getDrawerSpec.__initData = { code: "function getDrawerSpec_VoicePanelControlUtilsTsx1(height,top){const{roundToNearestPixel}=this.__closure;const maxHeight=height-top;return{minHeight:roundToNearestPixel(maxHeight*0.65),maxHeight:maxHeight};}" };
+const items1 = [tmp3];
+getDrawerSpec.__closure = items1;
+getDrawerSpec.__workletHash = 7203255088056;
+getDrawerSpec.__initData = tmp2;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/utils/VoicePanelControlUtils.tsx");
 
 export { getDrawerSpec };

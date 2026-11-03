@@ -1,16 +1,16 @@
-// === Module 12662: useConjurePatchNotesLink ===
+// === Module 12798: useConjurePatchNotesLink ===
 
-// Module 12662 (useConjurePatchNotesLink)
+// Module 12798 (useConjurePatchNotesLink)
 import router_utils from "router_utils" /* 1099 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 12097 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 12233 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6844).canPublishProject;
+const canPublishProject = fn(6964).canPublishProject;
 const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesLink.tsx");
@@ -30,7 +30,7 @@ export default function useConjurePatchNotesLink(arg0, published_revision) {
   if (published_revision == null) {
     published_revision = null;
   }
-  const items = [ConjurePublishStatusStore, published_revision];
+  items = [ConjurePublishStatusStore, published_revision];
   const items1 = [arg0, published_revision, published_revision.update, guildId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const publishStatus = ConjurePublishStatusStore.getPublishStatus(closure_0);
@@ -68,7 +68,7 @@ export default function useConjurePatchNotesLink(arg0, published_revision) {
       update = null != project;
     }
     if (update) {
-      update = "user" !== project.install_scope;
+      update = "guild" === project.install_scope;
     }
     if (update) {
       update = canPublishProject(project);

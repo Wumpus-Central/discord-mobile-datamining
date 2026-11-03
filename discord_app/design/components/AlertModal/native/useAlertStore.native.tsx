@@ -1,7 +1,7 @@
-// === Module 5960: useAlertStore ===
+// === Module 6080: useAlertStore ===
 
-// Module 5960 (useAlertStore)
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5963 */;
+// Module 6080 (useAlertStore)
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6083 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("design/components/AlertModal/native/u
 export const useAlertStore = obj3;
 export function dismissAlerts() {
   const alerts = obj3.getState().alerts;
-  const items = [[], []];
+  items = [[], []];
   const tmp = _slicedToArray(alerts.reduce((acc, dismissable) => {
     let num = 0;
     if (false === dismissable.dismissable) {
@@ -37,7 +37,7 @@ export function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(5961)();
+    arr4(6081)();
   }
   const obj = first(1259);
   tmp4 = 0 === tmp[1].length && first.length > 0;
@@ -69,7 +69,7 @@ export function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(5961)();
+      found(6081)();
     }
     let obj = require("ReactBatchUpdates");
   }

@@ -1,12 +1,12 @@
-// === Module 13823: useShowConvoStarterInDM ===
+// === Module 13954: useShowConvoStarterInDM ===
 
-// Module 13823 (useShowConvoStarterInDM)
+// Module 13954 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -36,7 +36,7 @@ export function useShowConvoStarterInDM(channel) {
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
   UserStore = hasFlagResult;
   const obj = require("useStrangerDangerWarning");
-  const items = [recipientId, closure_3, strangerDangerWarning, UserStore];
+  items = [recipientId, closure_3, strangerDangerWarning, UserStore];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
   return require("initialize").useStateFromStores(items, () => {
     if (ref2.current !== id.id) {

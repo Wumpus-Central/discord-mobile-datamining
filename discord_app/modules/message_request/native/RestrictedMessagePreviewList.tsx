@@ -1,15 +1,15 @@
-// === Module 18987: RestrictedMessagePreviewList ===
+// === Module 19145: RestrictedMessagePreviewList ===
 
-// Module 18987 (RestrictedMessagePreviewList)
+// Module 19145 (RestrictedMessagePreviewList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DateUtils from "DateUtils" /* 4836 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 18990 */;
+import DateUtils from "DateUtils" /* 4963 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 19148 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = globalThis.__r;
 
@@ -18,10 +18,10 @@ function HiddenMedia(length) {
   const tmp = closure_10();
   _require = tmp;
   let obj = { children: null };
-  let items = [
+  items = [
     Array.from({ length: length.count }, (arg0, arg1) => {
       const obj = { style: mediaPlaceholderCard.mediaPlaceholderCard, children: null };
-      const items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
+      items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.B2xSxL);
@@ -46,11 +46,11 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
-const createStyles = fn(5014);
-let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(18988).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(18988).RESTRICTED_CONTENT_INSET, height: fn(18988).RESTRICTED_AVATAR_SIZE };
+const createStyles = fn(5141);
+let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let size = { position: "absolute", top: 0, left: 0, width: fn(19146).RESTRICTED_CONTENT_INSET, height: fn(19146).RESTRICTED_AVATAR_SIZE };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(18988).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -70,7 +70,7 @@ export default function RestrictedMessagePreviewList(channelId) {
   let tmp = closure_10();
   importDefault = tmp;
   analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
-  let items = [renderMessage];
+  items = [renderMessage];
   let items1 = [channelId];
   const items2 = [channelId, analyticsLocations];
   const stateFromStoresArray = channelId(analyticsLocations[13]).useStateFromStoresArray(items, () => {
@@ -89,7 +89,7 @@ export default function RestrictedMessagePreviewList(channelId) {
   renderMessage = callback.useCallback((message) => {
     const tmp = closure_1(analyticsLocations[16])(message);
     const obj = { style: closure_1.messageRow, children: null };
-    const items = [arr5(closure_1(analyticsLocations[17]), { pointerEvents: "none", message, rowGenerator: memo }), ];
+    items = [arr5(closure_1(analyticsLocations[17]), { pointerEvents: "none", message, rowGenerator: memo }), ];
     const obj3 = { style: closure_1.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
     const intl = channelId(analyticsLocations[9]).intl;
     obj3.accessibilityLabel = intl.string(channelId(analyticsLocations[9]).t.iXAna6);
@@ -110,7 +110,7 @@ export default function RestrictedMessagePreviewList(channelId) {
     return closure_1_7(closure_1_8, { children });
   }, items3);
   const arr5 = (function groupMessages(stateFromStoresArray) {
-    const items = [];
+    items = [];
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -162,7 +162,7 @@ export default function RestrictedMessagePreviewList(channelId) {
         if (tmp6Result) {
           const obj2 = { style: closure_1.dateDivider, children: null };
           const obj3 = { style: closure_1.dividerLine };
-          const items = [timestampProducer(View, obj3), , ];
+          items = [timestampProducer(View, obj3), , ];
           const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: DateUtils.dateFormat(message.timestamp, "LL") };
           items[1] = timestampProducer(Text_Text.Text, obj4);
           const obj6 = { style: closure_1.dividerLine };

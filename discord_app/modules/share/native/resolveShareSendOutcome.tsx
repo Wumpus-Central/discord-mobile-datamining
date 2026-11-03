@@ -1,7 +1,7 @@
-// === Module 15728: resolveShareSendOutcome ===
+// === Module 15871: resolveShareSendOutcome ===
 
-// Module 15728 (resolveShareSendOutcome)
-import formatResults from "formatResults" /* 13384 */;
+// Module 15871 (resolveShareSendOutcome)
+import formatResults from "formatResults" /* 13520 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/resolveShareSendOutcome.tsx");
@@ -18,7 +18,7 @@ export function getShareUploadError(uploadError) {
 }
 export function pairDestinationsWithChannels(arr, arg1) {
   closure_0 = arg1;
-  const items = [];
+  items = [];
   const item = arr.forEach((destination, index) => {
     if (null != closure_0[index]) {
       const obj = { destination, channelId: tmp };
@@ -29,12 +29,12 @@ export function pairDestinationsWithChannels(arr, arg1) {
 }
 export function withoutSentDestinations(arr, arr2) {
   if (0 === arr2.length) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr, 0);
     return items;
   } else {
     const _Set = Set;
-    set = new Set(arr2.map(set(13384).destinationKey));
+    set = new Set(arr2.map(set(13520).destinationKey));
     return arr.filter((item) => !set.has(formatResults.destinationKey(item)));
   }
 }

@@ -1,9 +1,9 @@
-// === Module 18255: ShowAllVoiceChannelsButton ===
+// === Module 18399: ShowAllVoiceChannelsButton ===
 
-// Module 18255 (ShowAllVoiceChannelsButton)
-import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 18256 */;
+// Module 18399 (ShowAllVoiceChannelsButton)
+import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 18400 */;
 import noop from "module_19" /* 19 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7712 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7836 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -15,7 +15,7 @@ export default noop.memo(function ShowAllVoiceChannelsButton(guildId) {
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = guildId(section[3]).useStateFromStores(items, () => ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId));
   const items1 = [stateFromStores, guildId, section, listRef];
   const callback = listRef.useCallback(() => {

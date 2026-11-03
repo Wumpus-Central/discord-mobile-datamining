@@ -1,11 +1,11 @@
-// === Module 11822: useEmbeddedAppCSP ===
+// === Module 11959: useEmbeddedAppCSP ===
 
-// Module 11822 (useEmbeddedAppCSP)
-import getURLForApplication from "getURLForApplication" /* 5672 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10888 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 10889 */;
+// Module 11959 (useEmbeddedAppCSP)
+import getURLForApplication from "getURLForApplication" /* 5792 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 11018 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 11019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10887 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 11017 */;
 
 require = fn;
 const initialize = fn(504);
@@ -38,7 +38,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

@@ -1,40 +1,39 @@
-// === Module 9740: useOAuth2AuthorizeForm ===
+// === Module 9872: useOAuth2AuthorizeForm ===
 
-// Module 9740 (useOAuth2AuthorizeForm)
+// Module 9872 (useOAuth2AuthorizeForm)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5651 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
-import Authorize from "Authorize" /* 9742 */;
-import scopes2 from "scopes" /* 9743 */;
-import SamsungManagerDefault from "SamsungManager" /* 9744 */;
-import permissions2 from "permissions" /* 9752 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5771 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6142 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7001 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
+import Authorize from "Authorize" /* 9874 */;
+import scopes2 from "scopes" /* 9875 */;
+import SamsungManagerDefault from "SamsungManager" /* 9876 */;
+import permissions2 from "permissions" /* 9884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4961 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
-import UserStore from "UserStore" /* 1383 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 5088 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let Constants = fn(9741);
+let Constants = fn(9873);
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_15, Endpoints: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_20 = createStyles.createStyles({ loading: { flex: 1, alignSelf: "center", justifyContent: "center" } });
-let __initData = { code: "function useOAuth2AuthorizeFormTsx1(){const{shouldReduceMotion,withSequence,withTiming,Easing,withRepeat}=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};}" };
+let closure_21 = { code: "(function useOAuth2AuthorizeFormTsx1(){let[shouldReduceMotion,withSequence,withTiming,Easing,withRepeat]=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/native/useOAuth2AuthorizeForm.tsx");
 
@@ -42,10 +41,14 @@ export default function useOAuth2AuthorizeForm(clientId) {
   clientId = clientId.clientId;
   _require = clientId;
   let responseType = clientId.responseType;
+  importDefault = responseType;
   let redirectUri = clientId.redirectUri;
+  importAll = redirectUri;
   let codeChallenge = clientId.codeChallenge;
+  dependencyMap = codeChallenge;
   let codeChallengeMethod = clientId.codeChallengeMethod;
-  let state = clientId.state;
+  asyncGeneratorStep = codeChallengeMethod;
+  state = clientId.state;
   let text1 = state;
   let nonce = clientId.nonce;
   const _prompt = clientId.prompt;
@@ -91,24 +94,23 @@ export default function useOAuth2AuthorizeForm(clientId) {
   closure_36 = undefined;
   let first7;
   closure_38 = undefined;
-  let stateFromStores2;
   let isScreenReaderEnabled;
   let memo1;
   let first8;
-  closure_43 = undefined;
+  closure_42 = undefined;
   let memo2;
   let requestedScopes;
   let memo4;
   let first9;
-  closure_48 = undefined;
+  closure_47 = undefined;
   let first11;
-  closure_51 = undefined;
+  closure_50 = undefined;
   let first12;
-  closure_53 = undefined;
+  closure_52 = undefined;
   let callback1;
   let callback2;
+  closure_55 = undefined;
   closure_56 = undefined;
-  closure_57 = undefined;
   let callback3;
   let memo5;
   let AUTHORIZE_SCOPES;
@@ -118,9 +120,9 @@ export default function useOAuth2AuthorizeForm(clientId) {
   let tmp2 = text1(nonce.useState(null), 2);
   const first = tmp2[0];
   closure_19 = tmp2[1];
-  const tmp4 = text1(nonce.useState(null), 2);
+  let tmp4 = text1(nonce.useState(null), 2);
   first1 = tmp4[0];
-  __initData = tmp4[1];
+  closure_21 = tmp4[1];
   const tmp6 = text1(nonce.useState(null), 2);
   const first2 = tmp6[0];
   closure_23 = tmp6[1];
@@ -141,11 +143,11 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const tmpResult10 = text1(nonce.useState(channelId), 2);
   first4 = tmpResult10[0];
   closure_29 = tmp15;
-  const tmpResult11 = text1(nonce.useState(redirectUri(codeChallenge[13]).NONE), 2);
+  const tmpResult11 = text1(nonce.useState(PermissionUtilsAll.NONE), 2);
   first5 = tmpResult11[0];
   closure_31 = tmpResult11[1];
   const tmp8 = text1(nonce.useState(false), 2);
-  let items = [callbackWithoutPost];
+  items = [callbackWithoutPost];
   const stateFromStores = require("initialize").useStateFromStores(items, () => callbackWithoutPost.getCurrentUser());
   nsfwAllowed = undefined;
   if (stateFromStores != null) {
@@ -183,52 +185,42 @@ export default function useOAuth2AuthorizeForm(clientId) {
   closure_38 = tmp30;
   const tmp20Result = require("initialize");
   const items4 = [permissions];
-  stateFromStores2 = require("initialize").useStateFromStores(items4, () => permissions.useReducedMotion);
+  const stateFromStores2 = require("initialize").useStateFromStores(items4, () => permissions.useReducedMotion);
   const tmp20Result8 = require("initialize");
   isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmp20Result9 = require("useIsScreenReaderEnabled");
-  class V {
-    constructor() {
-      if (closure_39) {
-        obj = {};
-      } else {
-        obj = { transform: null };
-        obj1 = { translateY: null };
-        tmp = closure_0;
-        tmp2 = closure_3;
-        obj3 = closure_0(closure_3[16]);
-        obj4 = closure_0(closure_3[17]);
-        obj9 = { duration: 250, easing: null };
-        Easing = closure_0(closure_3[16]).Easing;
-        obj9.easing = Easing.inOut(closure_0(closure_3[16]).Easing.quad);
-        num = -5;
-        withTimingResult = obj4.withTiming(-5, obj9);
-        obj6 = closure_0(closure_3[16]);
-        obj7 = closure_0(closure_3[17]);
-        obj10 = { duration: 500, easing: null };
-        Easing2 = closure_0(closure_3[16]).Easing;
-        obj10.easing = Easing2.inOut(closure_0(closure_3[16]).Easing.quad);
-        num2 = 5;
-        flag = true;
-        num3 = -1;
-        obj1.translateY = obj3.withSequence(withTimingResult, obj6.withRepeat(obj7.withTiming(5, obj10), -1, true));
-        items = [];
-        items[0] = obj1;
-        obj.transform = items;
-      }
-      return obj;
+  const items5 = [closure_21, stateFromStores2, require("module_1652").withSequence, require("timing/timing").withTiming, require("module_1652").Easing, require("module_1652").withRepeat];
+  _require = undefined;
+  importDefault = undefined;
+  importAll = undefined;
+  dependencyMap = undefined;
+  asyncGeneratorStep = undefined;
+  [tmp33, tmp34, tmp35, tmp36, tmp37, tmp38] = items5;
+  function useOAuth2AuthorizeFormTsx1() {
+    if (closure_0) {
+      let obj = {};
+    } else {
+      obj = { transform: null };
+      const obj2 = { translateY: null };
+      const obj3 = { duration: 250, easing: _undefined3.inOut(_undefined3.quad) };
+      const obj4 = { duration: 500, easing: _undefined3.inOut(_undefined3.quad) };
+      obj2.translateY = _undefined(_undefined2(-5, obj3), _undefined4(_undefined2(5, obj4), -1, true));
+      items = [obj2];
+      obj.transform = items;
+      const tmp4 = _undefined2(-5, obj3);
     }
+    return obj;
   }
-  const tmp20Result10 = require("ReanimatedRexport");
-  V.__closure = { shouldReduceMotion: stateFromStores2, withSequence: require("ReanimatedRexport").withSequence, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, withRepeat: require("ReanimatedRexport").withRepeat };
-  V.__workletHash = 1476082137097;
-  V.__initData = __initData;
-  const animatedStyle = tmp20Result10.useAnimatedStyle(V);
+  const items6 = [tmp34, tmp35, tmp36, tmp37, tmp38];
+  useOAuth2AuthorizeFormTsx1.__closure = items6;
+  useOAuth2AuthorizeFormTsx1.__workletHash = 9714380430000;
+  useOAuth2AuthorizeFormTsx1.__initData = tmp33;
+  const animatedStyle = require("module_1652").useAnimatedStyle(useOAuth2AuthorizeFormTsx1);
   let length;
   if (scopes != null) {
     length = scopes.length;
   }
-  const items5 = [length, redirectUri, integrationType];
+  const items7 = [length, redirectUri, integrationType];
   memo1 = obj.useMemo(() => {
     let tmp = null == integrationType;
     if (tmp) {
@@ -242,25 +234,25 @@ export default function useOAuth2AuthorizeForm(clientId) {
       tmp = 0 === num;
     }
     if (tmp) {
-      tmp = null == redirectUri;
+      tmp = null == c2;
     }
     return tmp;
-  }, items5);
+  }, items7);
   const tmpResult14 = text1(nonce.useState(null), 2);
   first8 = tmpResult14[0];
-  closure_43 = tmpResult14[1];
-  const items6 = [clientId, memo1];
+  closure_42 = tmpResult14[1];
+  const items8 = [clientId, memo1];
   const effect = obj.useEffect(() => {
     if (memo1) {
       const application = ApplicationActionCreatorsDefault.fetchApplication(closure_0);
-      application.then((result) => closure_1_43(integrationType.createFromServer(result)));
+      application.then((result) => closure_1_42(integrationType.createFromServer(result)));
     }
-  }, items6);
+  }, items8);
   let prop;
   if (first8 != null) {
     prop = first8.integrationTypesConfig;
   }
-  const items7 = [prop, first6];
+  const items9 = [prop, first6];
   memo2 = obj.useMemo(() => {
     let tmp2 = null;
     if (null != first6) {
@@ -276,19 +268,19 @@ export default function useOAuth2AuthorizeForm(clientId) {
       tmp2 = oauth2InstallParams;
     }
     return tmp2;
-  }, items7);
+  }, items9);
   let scopes1;
   if (memo2 != null) {
     scopes1 = memo2.scopes;
   }
-  const items8 = [scopes1, scopes, memo1];
+  const items10 = [scopes1, scopes, memo1];
   const memo3 = obj.useMemo(() => {
     if (memo1) {
       scopes = undefined;
       if (memo2 != null) {
         scopes = memo2.scopes;
       }
-      let items = scopes;
+      items = scopes;
     } else {
       items = scopes;
     }
@@ -299,14 +291,14 @@ export default function useOAuth2AuthorizeForm(clientId) {
     closure_0 = filterScopesResult;
     const OrderedAccountScopes = scopes2.OrderedAccountScopes;
     return { requestedScopes: filterScopesResult, accountScopes: OrderedAccountScopes.filter((item) => filterScopesResult.includes(item)) };
-  }, items8);
+  }, items10);
   requestedScopes = memo3.requestedScopes;
   const accountScopes = memo3.accountScopes;
   let permissions1;
   if (memo2 != null) {
     permissions1 = memo2.permissions;
   }
-  const items9 = [permissions1, permissions, memo1];
+  const items11 = [permissions1, permissions, memo1];
   memo4 = obj.useMemo(() => {
     if (memo1) {
       const deserializer = BigFlagUtilsAll;
@@ -325,49 +317,49 @@ export default function useOAuth2AuthorizeForm(clientId) {
       NONE = PermissionUtilsAll.NONE;
     }
     return NONE;
-  }, items9);
+  }, items11);
   const tmpResult15 = text1(nonce.useState(false), 2);
   first9 = tmpResult15[0];
-  closure_48 = tmpResult15[1];
-  const items10 = [clientId];
+  closure_47 = tmpResult15[1];
+  const items12 = [clientId];
   const effect1 = obj.useEffect(() => {
-    SamsungManagerDefault.checkIfOAuthRequest(closure_0).then(closure_48);
-  }, items10);
-  let obj3 = { shouldReduceMotion: stateFromStores2, withSequence: require("ReanimatedRexport").withSequence, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, withRepeat: require("ReanimatedRexport").withRepeat };
+    SamsungManagerDefault.checkIfOAuthRequest(closure_0).then(closure_47);
+  }, items12);
+  const tmp20Result10 = require("module_1652");
   const first10 = text1(nonce.useState(null), 2)[0];
-  let tmp51 = state;
+  let tmp57 = state;
   if (first9) {
-    tmp20(tmp17[23]);
-    const text = `${obj8.getAPIBaseURL(false)}/v6${flag5.OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK}`;
-    redirectUri = text;
-    if (tmp54) {
-      tmp50(tmp20(tmp17[24]).v4());
-      const tmp20Result12 = tmp20(tmp17[24]);
+    tmp20(1282);
+    const text = `${obj7.getAPIBaseURL(false)}/v6${flag5.OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK}`;
+    importAll = text;
+    if (tmp60) {
+      tmp56(tmp20(1266).v4());
+      const tmp20Result12 = tmp20(1266);
     }
-    let tmp56 = state;
+    let tmp62 = state;
     if (null != first10) {
       text1 = state;
       if (state == null) {
-        text1 = `SA${tmp49}`;
+        text1 = `SA${tmp55}`;
       }
-      tmp56 = text1;
+      tmp62 = text1;
     }
-    tmp51 = tmp56;
+    tmp57 = tmp62;
     redirectUri = text;
-    tmp54 = null == state && null == first10;
+    tmp60 = null == state && null == first10;
   }
   nonce.useRef(false);
-  let items11 = disclosures;
+  let items13 = disclosures;
   if (disclosures == null) {
-    items11 = [];
+    items13 = [];
   }
-  const tmpResult17 = text1(nonce.useState(items11), 2);
+  const tmpResult17 = text1(nonce.useState(items13), 2);
   first11 = tmpResult17[0];
-  closure_51 = tmp60;
+  closure_50 = tmp66;
   const tmpResult18 = text1(nonce.useState(null != disclosures), 2);
   first12 = tmpResult18[0];
-  closure_53 = tmp63;
-  const items12 = [clientId, disclosures, tmpResult17[1], tmpResult18[1]];
+  closure_52 = tmp69;
+  const items14 = [clientId, disclosures, tmpResult17[1], tmpResult18[1]];
   const effect2 = obj.useEffect(() => {
     closure_0 = async function _doGetDisclosures() {
       if (c5 === 2) {
@@ -380,7 +372,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -404,7 +396,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               c3 = 2;
               c4 = 3;
               c5 = 1;
-              const obj5 = { value: application_id(codeChallenge[25]).getDisclosures(closure_0), done: false };
+              const obj5 = { value: application_id(_undefined3[25]).getDisclosures(closure_0), done: false };
               return obj5;
             }
           } else if (1 === tmp8) {
@@ -432,8 +424,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
               closure_128_0 = value;
               disclosures = closure_128_0.disclosures;
               allAcked = closure_128_0.allAcked;
-              closure_1_53(!allAcked);
-              closure_1_51(disclosures);
+              closure_1_52(!allAcked);
+              closure_1_50(disclosures);
               c3 = 1;
               c3 = 0;
               ref.current = false;
@@ -471,7 +463,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         })();
       }
     }
-  }, items12);
+  }, items14);
   let prop1;
   if (first != null) {
     prop1 = first.application.content_classification;
@@ -485,7 +477,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }
   const tmpResult16 = text1(nonce.useState(null), 2);
   let result = require("Utils").isContentClassificationRestricted(prop1, nsfwAllowed);
-  _require = codeChallengeMethod(function*(clientId) {
+  _require = asyncGeneratorStep(async (clientId) => {
     if (nonce === 2) {
       nonce = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -496,7 +488,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -510,8 +502,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            redirectUri = tmp4;
-            responseType = tmp8;
+            const redirectUri = tmp4;
+            const responseType = tmp8;
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
@@ -541,7 +533,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               const obj7 = { value: undefined, done: true };
               return obj7;
             } else if (null != integrationType) {
-              codeChallengeMethod = 2;
+              let codeChallengeMethod = 2;
               closure_1_24(true);
               const obj9 = { authorize: closure_129_0, clientId, scopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, state, nonce, permissions: null, guildId: null, channelId: null, integrationType: null, connectedAccountProvider: null };
               const obj8 = clientId(codeChallenge[27]);
@@ -681,14 +673,14 @@ export default function useOAuth2AuthorizeForm(clientId) {
       }
     }
   });
-  const items13 = [first6, callbackWithoutPost, clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp51, nonce, memo4, first5, first3, first4, first11, dismissOAuthModal, callback, flag5, , , ];
+  const items15 = [first6, callbackWithoutPost, clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp57, nonce, memo4, first5, first3, first4, first11, dismissOAuthModal, callback, flag5, , , ];
   let application;
   if (first != null) {
     application = first.application;
   }
-  items13[18] = application;
-  items13[19] = memo;
-  items13[20] = connectedAccountProvider;
+  items15[18] = application;
+  items15[19] = memo;
+  items15[20] = connectedAccountProvider;
   callback1 = obj.useCallback(function(arg0) {
     const self = this;
     const apply = closure_0.apply;
@@ -698,8 +690,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }, items13);
-  const items14 = [callback1];
+  }, items15);
+  const items16 = [callback1];
   callback2 = obj.useCallback((isAuthorized) => new Promise((arg0) => {
     isAuthorized = arg0;
     return callback1({
@@ -708,50 +700,50 @@ export default function useOAuth2AuthorizeForm(clientId) {
         closure_0(arg0);
       }
     });
-  }), items14);
-  const items15 = [clientId, first9, responseType, callback1, callback2, tmp51, dismissOAuthModal, requestedScopes];
-  closure_56 = obj.useCallback((isAuthorized) => {
+  }), items16);
+  const items17 = [clientId, first9, responseType, callback1, callback2, tmp57, dismissOAuthModal, requestedScopes];
+  closure_55 = obj.useCallback((isAuthorized) => {
     if (first9) {
-      const result = responseType(codeChallenge[22]).showConnectionDisclaimer();
-      const obj2 = responseType(codeChallenge[22]);
-      const nextPromise = result.then(() => responseType(9744).getAccountUrlAndAuthCode());
-      const nextPromise1 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
+      const result = _undefined(_undefined3[22]).showConnectionDisclaimer();
+      const obj2 = _undefined(_undefined3[22]);
+      const nextPromise = result.then(() => _undefined(9876).getAccountUrlAndAuthCode());
+      const nextPromise1 = result.then(() => _undefined(9876).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
-        const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
+        items = [tmp2, isAuthorized(9881).startSamsungAuthorization(isAuthorized, requestedScopes, _undefined, tmp, text1)];
         return Promise.all(items);
       });
-      const nextPromise2 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise2 = result.then(() => _undefined(9876).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
-        const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
+        items = [tmp2, isAuthorized(9881).startSamsungAuthorization(isAuthorized, requestedScopes, _undefined, tmp, text1)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, ] = result;
-        const items = [tmp, callback2(closure_0)];
+        items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       });
-      const nextPromise3 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise3 = result.then(() => _undefined(9876).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
-        const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
+        items = [tmp2, isAuthorized(9881).startSamsungAuthorization(isAuthorized, requestedScopes, _undefined, tmp, text1)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, ] = result;
-        const items = [tmp, callback2(closure_0)];
+        items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, tmp2] = result;
-        return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
+        return c1(9876).finishSamsungAuthorization(tmp, tmp2, text1);
       });
-      result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
+      result.then(() => _undefined(9876).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
-        const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
+        items = [tmp2, isAuthorized(9881).startSamsungAuthorization(isAuthorized, requestedScopes, _undefined, tmp, text1)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, ] = result;
-        const items = [tmp, callback2(closure_0)];
+        items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, tmp2] = result;
-        return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
+        return c1(9876).finishSamsungAuthorization(tmp, tmp2, text1);
       }).then(() => {
         let tmp;
         if (dismissOAuthModal != null) {
@@ -759,19 +751,19 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         return tmp;
       }).catch((error) => {
-        responseType(1242).captureException(error);
+        _undefined(1242).captureException(error);
       });
-      const nextPromise4 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise4 = result.then(() => _undefined(9876).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
-        const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
+        items = [tmp2, isAuthorized(9881).startSamsungAuthorization(isAuthorized, requestedScopes, _undefined, tmp, text1)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, ] = result;
-        const items = [tmp, callback2(closure_0)];
+        items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       }).then((result) => {
         [tmp, tmp2] = result;
-        return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
+        return c1(9876).finishSamsungAuthorization(tmp, tmp2, text1);
       }).then(() => {
         let tmp;
         if (dismissOAuthModal != null) {
@@ -783,10 +775,10 @@ export default function useOAuth2AuthorizeForm(clientId) {
       const obj = { isAuthorized };
       callback1(obj);
     }
-  }, items15);
-  closure_57 = obj.useRef(false);
-  const items16 = [clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp51, first6, connectedAccountProvider, _prompt, callback1, first12, nsfwAllowed];
-  callback3 = obj.useCallback(codeChallengeMethod(function*() {
+  }, items17);
+  closure_56 = obj.useRef(false);
+  const items18 = [clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp57, first6, connectedAccountProvider, _prompt, callback1, first12, nsfwAllowed];
+  callback3 = obj.useCallback(asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -797,7 +789,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -821,7 +813,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               c6 = 3;
             } else {
               ref.current = true;
-              c4 = 2;
+              let codeChallengeMethod = 2;
               const obj5 = { clientId: _undefined, scopes: requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, state: text1, integrationType: null, connectedAccountProvider: null };
               _undefined = first6;
               if (first6 == null) {
@@ -831,14 +823,14 @@ export default function useOAuth2AuthorizeForm(clientId) {
               obj5.connectedAccountProvider = connectedAccountProvider;
               c5 = 3;
               c6 = 1;
-              const obj6 = { value: _undefined(tmp62[27]).fetchAuthorization(obj5), done: false };
+              const obj6 = { value: _undefined(codeChallenge[27]).fetchAuthorization(obj5), done: false };
               return obj6;
             }
           }
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
-            c4 = 1;
-            body = tmp62.body;
+            codeChallengeMethod = 1;
+            body = codeChallenge.body;
             if (null != body.message) {
               let message = body.message;
             } else {
@@ -853,44 +845,45 @@ export default function useOAuth2AuthorizeForm(clientId) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
-            closure_130_57.current = false;
+            codeChallengeMethod = 0;
+            closure_130_56.current = false;
             c6 = 3;
             const obj7 = { value, done: true };
             return obj7;
           } else {
             closure_129_0 = value;
-            closure_129_1 = _undefined(tmp62[31]).convertOAuth2Authorization(closure_129_0);
+            closure_129_1 = _undefined(codeChallenge[31]).convertOAuth2Authorization(closure_129_0);
             closure_130_19(closure_129_1);
-            const obj9 = _undefined(tmp62[31]);
-            closure_129_2 = _undefined(tmp62[26]).isContentClassificationRestricted(closure_129_1.application.content_classification, closure_130_32);
-            let tmp11 = closure_130_7 !== _undefined(tmp62[32]).OAuth2Prompts.NONE;
+            const obj9 = _undefined(codeChallenge[31]);
+            closure_129_2 = _undefined(codeChallenge[26]).isContentClassificationRestricted(closure_129_1.application.content_classification, closure_130_32);
+            let tmp11 = closure_130_7 !== _undefined(codeChallenge[32]).OAuth2Prompts.NONE;
             if (!tmp11) {
               tmp11 = !closure_129_0.authorized;
             }
             if (!tmp11) {
-              tmp11 = closure_130_52;
+              tmp11 = closure_130_51;
             }
             if (!tmp11) {
               tmp11 = closure_129_2;
             }
             if (!tmp11) {
-              closure_130_54({ isAuthorized: true });
+              closure_130_53({ isAuthorized: true });
             }
-            const obj10 = _undefined(tmp62[26]);
+            const obj10 = _undefined(codeChallenge[26]);
             const obj8 = { application_id: closure_129_0.application.id };
-            _undefined(tmp62[33]).trackWithMetadata(closure_1_15.OAUTH2_AUTHORIZE_VIEWED, obj8);
-            c4 = 1;
-            c4 = 0;
-            closure_130_57.current = false;
-            const obj = _undefined(tmp62[33]);
+            _undefined(codeChallenge[33]).trackWithMetadata(closure_1_15.OAUTH2_AUTHORIZE_VIEWED, obj8);
+            codeChallengeMethod = 1;
+            codeChallengeMethod = 0;
+            closure_130_56.current = false;
+            const obj = _undefined(codeChallenge[33]);
           }
         }
-        c4 = 0;
-        closure_130_57.current = false;
-        throw tmp62;
+        codeChallengeMethod = 0;
+        closure_130_56.current = false;
+        throw codeChallenge;
       } catch (tmp62) {
-        if (tmp5 === c4) {
+        codeChallenge = tmp62;
+        if (tmp5 === codeChallengeMethod) {
           c6 = tmp3;
           throw tmp62;
         } else if (tmp2 === tmp64) {
@@ -900,8 +893,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
       }
     }
-  }), items16);
-  const items17 = [first8, memo1];
+  }), items18);
+  const items19 = [first8, memo1];
   memo5 = obj.useMemo(() => {
     if (null != first8) {
       if (memo1) {
@@ -921,17 +914,17 @@ export default function useOAuth2AuthorizeForm(clientId) {
       }
       return [];
     }
-  }, items17);
+  }, items19);
   nonce.useRef(null);
-  const items18 = [clientId, first6, memo4, requestedScopes, first1];
+  const items20 = [clientId, first6, memo4, requestedScopes, first1];
   const effect3 = obj.useEffect(() => {
     if (first1 !== ref2.current) {
       ref2.current = first1;
       const obj2 = { step: first1, application_id, integration_type: first6, scopes: requestedScopes, permissions: memo4.toString() };
-      AppAnalyticsUtils.trackWithMetadata(__initData.OAUTH2_AUTHORIZE_STEP_VIEWED, obj2);
+      AppAnalyticsUtils.trackWithMetadata(closure_2_15.OAUTH2_AUTHORIZE_STEP_VIEWED, obj2);
     }
-  }, items18);
-  const items19 = [memo5, first8, memo1, integrationType, first1, connectedAccountProvider, null == connectedAccountProvider || null != stateFromStores1];
+  }, items20);
+  const items21 = [memo5, first8, memo1, integrationType, first1, connectedAccountProvider, null == connectedAccountProvider || null != stateFromStores1];
   const effect4 = obj.useEffect(() => {
     let tmp = null != first1;
     if (!tmp) {
@@ -960,8 +953,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
         closure_21(constants.AUTHORIZE_SCOPES);
       }
     }
-  }, items19);
-  const items20 = [first1, null == connectedAccountProvider || null != stateFromStores1, integrationType];
+  }, items21);
+  const items22 = [first1, null == connectedAccountProvider || null != stateFromStores1, integrationType];
   const effect5 = obj.useEffect(() => {
     let tmp2 = first1 === constants.CONNECT_ACCOUNT;
     if (tmp2) {
@@ -975,8 +968,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
       closure_36(USER_INSTALL);
       closure_21(constants.AUTHORIZE_SCOPES);
     }
-  }, items20);
-  const items21 = [callback3, requestedScopes, memo4, first6, first, first2];
+  }, items22);
+  const items23 = [callback3, requestedScopes, memo4, first6, first, first2];
   const effect6 = obj.useEffect(() => {
     if (null != first6) {
       if (null == first) {
@@ -986,7 +979,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             closure_29(null);
           }
           const found = requestedScopes.filter((item) => {
-            const ValidScopes = application_id(codeChallenge[20]).ValidScopes;
+            const ValidScopes = application_id(_undefined3[20]).ValidScopes;
             return !ValidScopes.includes(item);
           });
           if (0 === requestedScopes.length) {
@@ -1011,8 +1004,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
       }
     }
-  }, items21);
-  const items22 = [isScreenReaderEnabled, first7];
+  }, items23);
+  const items24 = [isScreenReaderEnabled, first7];
   const callback4 = obj.useCallback(() => {
     let tmp = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {
@@ -1021,14 +1014,14 @@ export default function useOAuth2AuthorizeForm(clientId) {
     if (tmp) {
       closure_38(true);
     }
-  }, items22);
+  }, items24);
   if (first1 === disclosures.AUTHORIZE_SCOPES) {
     if (memo5.length > 1) {
-      const SELECT_INSTALL_TYPE = tmp78.SELECT_INSTALL_TYPE;
+      const SELECT_INSTALL_TYPE = tmp84.SELECT_INSTALL_TYPE;
       AUTHORIZE_SCOPES = SELECT_INSTALL_TYPE;
-      let tmp79 = SELECT_INSTALL_TYPE;
+      let tmp85 = SELECT_INSTALL_TYPE;
     }
-    const items23 = [tmp79, dismissOAuthModal, callback1];
+    const items25 = [tmp85, dismissOAuthModal, callback1];
     callback5 = obj.useCallback(() => {
       if (null != AUTHORIZE_SCOPES) {
         closure_21(tmp);
@@ -1039,8 +1032,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
       }
       return true;
-    }, items23);
-    responseType(tmp17[35])(callback5, flag4);
+    }, items25);
+    useBackPressHandlerDefault(callback5, flag4);
     const callback6 = obj.useCallback((arg0) => {
       closure_36(arg0);
       closure_19(null);
@@ -1048,22 +1041,22 @@ export default function useOAuth2AuthorizeForm(clientId) {
     }, []);
     let _Error = Error;
     if (first2 instanceof Error) {
-      let obj4 = { body: null, goBackOrCancel: null, footer: null, obscured: false };
-      let obj5 = { error: first2.message, hideFooter: true };
-      obj4.body = loading(tmp81(tmp17[36]), obj5);
-      obj4.goBackOrCancel = callback5;
-      let obj6 = { size: "lg", text: null, onPress: null };
-      const intl = tmp20(tmp17[38]).intl;
-      obj6.text = intl.string(tmp20(tmp17[38]).t.cpT0Cq);
-      obj6.onPress = function onPress() {
+      let obj3 = { body: null, goBackOrCancel: null, footer: null, obscured: false };
+      let obj4 = { error: first2.message, hideFooter: true };
+      obj3.body = loading(tmp87(9885), obj4);
+      obj3.goBackOrCancel = callback5;
+      let obj5 = { size: "lg", text: null, onPress: null };
+      const intl = tmp20(1113).intl;
+      obj5.text = intl.string(tmp20(1113).t.cpT0Cq);
+      obj5.onPress = function onPress() {
         return callback5();
       };
-      obj4.footer = loading(tmp20(tmp17[37]).Button, obj6);
-      return obj4;
+      obj3.footer = loading(tmp20(5754).Button, obj5);
+      return obj3;
     } else {
       let str4 = "";
       if (null != connectedAccountProvider) {
-        value = tmp81(tmp17[40]).get(connectedAccountProvider);
+        value = tmp87(6694).get(connectedAccountProvider);
         let str5;
         class Spinner {
           constructor() {
@@ -1075,7 +1068,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           str5 = "";
         }
         str4 = str5;
-        const tmp81Result = tmp81(tmp17[40]);
+        const tmp87Result = tmp87(6694);
       }
       class Spinner {
         constructor() {
@@ -1091,23 +1084,23 @@ export default function useOAuth2AuthorizeForm(clientId) {
             return jsx(View, obj);
           }
         }
-        let obj7 = { body: null, obscured: false };
+        let obj6 = { body: null, obscured: false };
       } else {
-        if (tmp78.CONNECT_ACCOUNT === first1) {
-          let obj9 = { clientId, platformType: null, platformName: null };
+        if (tmp84.CONNECT_ACCOUNT === first1) {
+          let obj8 = { clientId, platformType: null, platformName: null };
           class Spinner {
             constructor() {
               obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
               return jsx(View, obj);
             }
           }
-          obj9.platformName = str4;
-          let tmp88 = loading(tmp81(tmp17[41]), obj9);
+          obj8.platformName = str4;
+          let tmp94 = loading(tmp87(9887), obj8);
           let flag9 = true;
           let flag6 = false;
           let flag7 = false;
           let flag8 = false;
-        } else if (tmp78.SELECT_INSTALL_TYPE === first1) {
+        } else if (tmp84.SELECT_INSTALL_TYPE === first1) {
           if (null == first8) {
             { body: null, obscured: false }.body = loading(Spinner, {});
             class Spinner {
@@ -1116,30 +1109,30 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 return jsx(View, obj);
               }
             }
-            let obj10 = { body: null, obscured: false };
+            let obj9 = { body: null, obscured: false };
           } else {
-            let obj11 = { application: first8, onSelect: null };
+            let obj10 = { application: first8, onSelect: null };
             class Spinner {
               constructor() {
                 obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
                 return jsx(View, obj);
               }
             }
-            tmp88 = loading(tmp81(tmp17[42]), obj11);
+            tmp94 = loading(tmp87(9889), obj10);
             flag6 = false;
             flag7 = false;
             flag8 = false;
             flag9 = false;
           }
-        } else if (tmp78.AUTHORIZE_SCOPES === first1) {
+        } else if (tmp84.AUTHORIZE_SCOPES === first1) {
           if (null != first) {
             if (null != stateFromStores) {
               if (null != first6) {
                 if (null == first2) {
-                  let obj12 = {};
+                  let obj11 = {};
                 } else {
                   let _Error2 = Error;
-                  obj12 = first2;
+                  obj11 = first2;
                 }
                 if (guilds != null) {
                   let sorted = guilds.sort((name, name2) => {
@@ -1154,15 +1147,15 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   }
                 }
                 if (hasItem) {
-                  hasItem = requestedScopes.includes(tmp20(tmp17[43]).OAuth2Scopes.WEBHOOK_INCOMING);
+                  hasItem = requestedScopes.includes(tmp20(9034).OAuth2Scopes.WEBHOOK_INCOMING);
                 }
-                let tmp92 = hasItem;
+                let tmp98 = hasItem;
                 if (!hasItem) {
-                  const tmp93 = first6 === tmp20(tmp17[28]).ApplicationIntegrationType.GUILD_INSTALL;
-                  if (tmp93) {
-                    let hasItem1 = requestedScopes.includes(tmp20(tmp17[43]).OAuth2Scopes.BOT);
+                  const tmp99 = first6 === tmp20(5771).ApplicationIntegrationType.GUILD_INSTALL;
+                  if (tmp99) {
+                    let hasItem1 = requestedScopes.includes(tmp20(9034).OAuth2Scopes.BOT);
                     if (!hasItem1) {
-                      hasItem1 = requestedScopes.includes(tmp20(tmp17[43]).OAuth2Scopes.APPLICATIONS_COMMANDS);
+                      hasItem1 = requestedScopes.includes(tmp20(9034).OAuth2Scopes.APPLICATIONS_COMMANDS);
                     }
                     class Spinner {
                       constructor() {
@@ -1171,70 +1164,38 @@ export default function useOAuth2AuthorizeForm(clientId) {
                       }
                     }
                   }
-                  tmp92 = tmp93;
+                  tmp98 = tmp99;
                 }
-                let tmp98 = null;
-                const isSocialLayerParentApplication = tmp20(tmp17[44]).getIsSocialLayerParentApplication(first.application);
+                let tmp104 = null;
+                const isSocialLayerParentApplication = tmp20(9880).getIsSocialLayerParentApplication(first.application);
                 if (null != stateFromStores1) {
-                  tmp98 = null;
+                  tmp104 = null;
                   if (tmp25) {
-                    let obj13 = { platformType: stateFromStores1.type, platformName: null, connectedAccount: null, applicationName: null };
+                    let obj12 = { platformType: stateFromStores1.type, platformName: null, connectedAccount: null, applicationName: null };
                     class Spinner {
                       constructor() {
                         obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
                         return jsx(View, obj);
                       }
                     }
-                    obj13.connectedAccount = stateFromStores1;
-                    obj13.applicationName = first.application.name;
-                    tmp98 = loading(tmp20(tmp17[41]).ConnectedAccountCard, obj13);
+                    obj12.connectedAccount = stateFromStores1;
+                    obj12.applicationName = first.application.name;
+                    tmp104 = loading(tmp20(9887).ConnectedAccountCard, obj12);
                   }
                 }
-                const items24 = [tmp98, , , , ];
-                let obj14 = { application: first.application, accountScopes };
-                items24[1] = loading(tmp81(tmp17[45]), obj14);
-                let obj15 = { application: first.application, accountScopes, requestedScopes, integrationType: first6, errors: obj12, isTrustedName: null };
-                const tmp20Result14 = tmp20(tmp17[44]);
+                const items26 = [tmp104, , , , ];
+                let obj13 = { application: first.application, accountScopes };
+                items26[1] = loading(tmp87(14744), obj13);
+                let obj14 = { application: first.application, accountScopes, requestedScopes, integrationType: first6, errors: obj11, isTrustedName: null };
+                const tmp20Result14 = tmp20(9880);
                 if (!flag2) {
                   flag2 = isSocialLayerParentApplication;
                 }
-                obj15.isTrustedName = flag2;
-                items24[2] = loading(tmp81(tmp17[46]), obj15);
-                let tmp96Result = null;
-                if (tmp92) {
-                  const items25 = [tmp100(tmp20(tmp17[47]).AuthorizeFormSeparator, {}), ];
-                  class Spinner {
-                    constructor() {
-                      obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
-                      return jsx(View, obj);
-                    }
-                  }
-                  if (items26 == null) {
-                    items26 = obj12[tmp20(undefined, tmp17[43]).OAuth2Scopes.APPLICATIONS_COMMANDS];
-                  }
-                  if (items26 == null) {
-                    items26 = [];
-                  }
-                  let obj16 = { error: items26[0], selectedGuildId: first3, onGuildChange: tmp12, guilds: null, disabled: null };
-                  if (sorted == null) {
-                    sorted = [];
-                  }
-                  obj16.guilds = sorted;
-                  let tmp104 = "" !== first3;
-                  if (tmp104) {
-                    tmp104 = true === flag;
-                  }
-                  const obj17 = { children: null };
-                  obj16.disabled = tmp104;
-                  items25[1] = tmp100(tmp81(tmp17[48]), obj16);
-                  obj17.children = items25;
-                  tmp96Result = tmp96(tmp97, obj17);
-                  const tmp81Result6 = tmp81(tmp17[48]);
-                }
-                items24[3] = tmp96Result;
-                let tmp96Result3 = null;
-                if (hasItem) {
-                  const items27 = [tmp100(tmp20(tmp17[47]).AuthorizeFormSeparator, {}), ];
+                obj14.isTrustedName = flag2;
+                items26[2] = loading(tmp87(14748), obj14);
+                let tmp102Result = null;
+                if (tmp98) {
+                  const items27 = [tmp106(tmp20(14747).AuthorizeFormSeparator, {}), ];
                   class Spinner {
                     constructor() {
                       obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
@@ -1242,45 +1203,77 @@ export default function useOAuth2AuthorizeForm(clientId) {
                     }
                   }
                   if (items28 == null) {
+                    items28 = obj11[tmp20(undefined, 9034).OAuth2Scopes.APPLICATIONS_COMMANDS];
+                  }
+                  if (items28 == null) {
                     items28 = [];
                   }
-                  const obj18 = { children: null };
-                  const obj19 = { error: items28[0], selectedChannelId: first4, selectedGuildId: first3, onChannelChange: tmp15 };
-                  items27[1] = tmp100(tmp81(tmp17[49]), obj19);
-                  obj18.children = items27;
-                  tmp96Result3 = tmp96(tmp97, obj18);
-                  const tmp81Result7 = tmp81(tmp17[49]);
+                  let obj15 = { error: items28[0], selectedGuildId: first3, onGuildChange: tmp12, guilds: null, disabled: null };
+                  if (sorted == null) {
+                    sorted = [];
+                  }
+                  obj15.guilds = sorted;
+                  let tmp110 = "" !== first3;
+                  if (tmp110) {
+                    tmp110 = true === flag;
+                  }
+                  let obj16 = { children: null };
+                  obj15.disabled = tmp110;
+                  items27[1] = tmp106(tmp87(14749), obj15);
+                  obj16.children = items27;
+                  tmp102Result = tmp102(tmp103, obj16);
+                  const tmp87Result6 = tmp87(14749);
                 }
-                const obj20 = { children: null };
-                items24[4] = tmp96Result3;
-                obj20.children = items24;
-                const tmp81Result5 = tmp81(tmp17[46]);
-                let hasItem2 = requestedScopes.includes(tmp20(tmp17[43]).OAuth2Scopes.BOT);
+                items26[3] = tmp102Result;
+                let tmp102Result3 = null;
+                if (hasItem) {
+                  const items29 = [tmp106(tmp20(14747).AuthorizeFormSeparator, {}), ];
+                  class Spinner {
+                    constructor() {
+                      obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
+                      return jsx(View, obj);
+                    }
+                  }
+                  if (items30 == null) {
+                    items30 = [];
+                  }
+                  const obj17 = { children: null };
+                  const obj18 = { error: items30[0], selectedChannelId: first4, selectedGuildId: first3, onChannelChange: tmp15 };
+                  items29[1] = tmp106(tmp87(14750), obj18);
+                  obj17.children = items29;
+                  tmp102Result3 = tmp102(tmp103, obj17);
+                  const tmp87Result7 = tmp87(14750);
+                }
+                const obj19 = { children: null };
+                items26[4] = tmp102Result3;
+                obj19.children = items26;
+                const tmp87Result5 = tmp87(14748);
+                let hasItem2 = requestedScopes.includes(tmp20(9034).OAuth2Scopes.BOT);
                 if (hasItem2) {
-                  hasItem2 = !tmp16(tmp17[21]).equals(memo4, tmp16(tmp17[13]).NONE);
-                  const tmp16Result = tmp16(tmp17[21]);
+                  hasItem2 = !tmp16(1084).equals(memo4, tmp16(5078).NONE);
+                  const tmp16Result = tmp16(1084);
                 }
                 if (hasItem2) {
-                  AUTHORIZE_BOT_PERMISSIONS = tmp78.AUTHORIZE_BOT_PERMISSIONS;
+                  AUTHORIZE_BOT_PERMISSIONS = tmp84.AUTHORIZE_BOT_PERMISSIONS;
                 }
-                if (tmp92) {
-                  tmp92 = null == memo;
+                if (tmp98) {
+                  tmp98 = null == memo;
                 }
-                if (!tmp92) {
+                if (!tmp98) {
                   if (hasItem) {
                     hasItem = null == first4;
                   }
-                  tmp92 = hasItem;
+                  tmp98 = hasItem;
                 }
-                if (!tmp92) {
-                  tmp92 = !first7;
+                if (!tmp98) {
+                  tmp98 = !first7;
                 }
                 flag6 = true;
-                flag8 = tmp92;
+                flag8 = tmp98;
                 flag7 = true;
                 flag9 = true;
-                tmp88 = closure_19(first, obj20);
-                const tmp96Result4 = closure_19(first, obj20);
+                tmp94 = closure_19(first, obj19);
+                const tmp102Result4 = closure_19(first, obj19);
               }
             }
           }
@@ -1301,7 +1294,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               return jsx(View, obj);
             }
           }
-          if (tmp78.AUTHORIZE_BOT_PERMISSIONS === first1) {
+          if (tmp84.AUTHORIZE_BOT_PERMISSIONS === first1) {
             if (null == first) {
               { body: null, obscured: false }.body = loading(Spinner, {});
               class Spinner {
@@ -1310,19 +1303,19 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   return jsx(View, obj);
                 }
               }
-              const obj22 = { body: null, obscured: false };
+              const obj21 = { body: null, obscured: false };
             } else {
-              const obj23 = { application: first.application, permissions: null, deniedPermissions: null, onPermissionsChange: null, guild: null };
+              const obj22 = { application: first.application, permissions: null, deniedPermissions: null, onPermissionsChange: null, guild: null };
               class Spinner {
                 constructor() {
                   obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
                   return jsx(View, obj);
                 }
               }
-              obj23.deniedPermissions = first5;
-              obj23.onPermissionsChange = tmp84;
-              obj23.guild = memo;
-              tmp88 = loading(tmp81(tmp17[50]), obj23);
+              obj22.deniedPermissions = first5;
+              obj22.onPermissionsChange = tmp90;
+              obj22.guild = memo;
+              tmp94 = loading(tmp87(14751), obj22);
               flag6 = true;
               flag7 = true;
               flag8 = false;
@@ -1330,9 +1323,9 @@ export default function useOAuth2AuthorizeForm(clientId) {
             }
           }
         }
-        let tmp117Result;
+        let tmp123Result;
         if (flag7) {
-          if (tmp89 !== tmp78.AUTHORIZE_BOT_PERMISSIONS) {
+          if (tmp95 !== tmp84.AUTHORIZE_BOT_PERMISSIONS) {
             if (null != first) {
               let prop3;
               if (first != null) {
@@ -1354,21 +1347,21 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   return jsx(View, obj);
                 }
               }
-              const obj24 = { application: first.application, scopes: requestedScopes, disclosures: first11, redirectUri: null, approximateGuildCount: null, isEmbeddedFlow: null, connectedAccount: null };
+              const obj23 = { application: first.application, scopes: requestedScopes, disclosures: first11, redirectUri: null, approximateGuildCount: null, isEmbeddedFlow: null, connectedAccount: null };
               let redirect_uri = first.redirect_uri;
               if (redirect_uri == null) {
                 redirect_uri = null;
               }
-              obj24.redirectUri = redirect_uri;
-              let tmp120 = null;
+              obj23.redirectUri = redirect_uri;
+              let tmp126 = null;
               if (undefined !== prop3) {
-                tmp120 = prop3;
+                tmp126 = prop3;
               }
-              obj24.approximateGuildCount = tmp120;
-              obj24.isEmbeddedFlow = flag3;
-              obj24.connectedAccount = stateFromStores1;
-              tmp117Result = tmp117(tmp81(tmp17[51]), obj24);
-              const tmp81Result8 = tmp81(tmp17[51]);
+              obj23.approximateGuildCount = tmp126;
+              obj23.isEmbeddedFlow = flag3;
+              obj23.connectedAccount = stateFromStores1;
+              tmp123Result = tmp123(tmp87(14753), obj23);
+              const tmp87Result8 = tmp87(14753);
             }
           }
         }
@@ -1381,29 +1374,29 @@ export default function useOAuth2AuthorizeForm(clientId) {
         if (flag6) {
           flag6 = null != stateFromStores;
         }
-        let tmp121;
+        let tmp127;
         if (flag6) {
-          const obj25 = { user: stateFromStores, application: null, accountScopes: null, bot: null };
+          const obj24 = { user: stateFromStores, application: null, accountScopes: null, bot: null };
           class Spinner {
             constructor() {
               obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
               return jsx(View, obj);
             }
           }
-          obj25.accountScopes = accountScopes;
-          obj25.bot = first.bot;
-          tmp121 = loading(tmp81(tmp17[52]), obj25);
+          obj24.accountScopes = accountScopes;
+          obj24.bot = first.bot;
+          tmp127 = loading(tmp87(14756), obj24);
         }
-        let tmp123 = flag8;
+        let tmp129 = flag8;
         if (flag8) {
-          tmp123 = !first7;
+          tmp129 = !first7;
         }
-        const obj26 = { header: tmp121, body: tmp88, footer: null, appDetails: null, backStep: null, sendAuthorize: null, goBackOrCancel: null, allContentSeen: null, setAllContentSeen: null, hasContentBackground: null, obscured: null };
-        let tmp126 = null;
-        if (first1 !== tmp78.SELECT_INSTALL_TYPE) {
-          tmp126 = null;
-          if (first1 !== tmp78.CONNECT_ACCOUNT) {
-            const obj27 = { accessibilityElementsHidden: tmp123, importantForAccessibility: null, children: null };
+        const obj25 = { header: tmp127, body: tmp94, footer: null, appDetails: null, backStep: null, sendAuthorize: null, goBackOrCancel: null, allContentSeen: null, setAllContentSeen: null, hasContentBackground: null, obscured: null };
+        let tmp132 = null;
+        if (first1 !== tmp84.SELECT_INSTALL_TYPE) {
+          tmp132 = null;
+          if (first1 !== tmp84.CONNECT_ACCOUNT) {
+            const obj26 = { accessibilityElementsHidden: tmp129, importantForAccessibility: null, children: null };
             let str6 = "auto";
             class Spinner {
               constructor() {
@@ -1411,13 +1404,13 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 return jsx(View, obj);
               }
             }
-            if (tmp123) {
+            if (tmp129) {
               str6 = "no-hide-descendants";
             }
-            obj27.importantForAccessibility = str6;
-            if (null != tmp89) {
-              const string = tmp20(tmp17[38]).intl.string;
-              const t2 = tmp20(tmp17[38]).t;
+            obj26.importantForAccessibility = str6;
+            if (null != tmp95) {
+              const string = tmp20(1113).intl.string;
+              const t2 = tmp20(1113).t;
               class Spinner {
                 constructor() {
                   obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
@@ -1425,8 +1418,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
               }
             } else {
-              const string2 = tmp20(tmp17[38]).intl.string;
-              const t = tmp20(tmp17[38]).t;
+              const string2 = tmp20(1113).intl.string;
+              const t = tmp20(1113).t;
               class Spinner {
                 constructor() {
                   obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
@@ -1434,26 +1427,26 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
               }
             }
-            obj27.children = tmp124(tmp20(tmp17[37]).Button, tmp127);
-            tmp124(tmp131, obj27);
+            obj26.children = tmp130(tmp20(5754).Button, tmp133);
+            tmp130(tmp137, obj26);
           }
         }
-        const obj28 = { children: tmp126 };
-        obj26.footer = loading(first, obj28);
-        obj26.appDetails = tmp117Result;
-        obj26.backStep = tmp79;
-        obj26.sendAuthorize = callback1;
-        obj26.goBackOrCancel = callback5;
-        obj26.allContentSeen = first7;
-        obj26.setAllContentSeen = tmp30;
-        obj26.hasContentBackground = flag9;
-        obj26.obscured = result;
-        return obj26;
+        const obj27 = { children: tmp132 };
+        obj25.footer = loading(first, obj27);
+        obj25.appDetails = tmp123Result;
+        obj25.backStep = tmp85;
+        obj25.sendAuthorize = callback1;
+        obj25.goBackOrCancel = callback5;
+        obj25.allContentSeen = first7;
+        obj25.setAllContentSeen = tmp30;
+        obj25.hasContentBackground = flag9;
+        obj25.obscured = result;
+        return obj25;
       }
     }
   }
   if (first1 === disclosures.AUTHORIZE_BOT_PERMISSIONS) {
-    AUTHORIZE_SCOPES = tmp78.AUTHORIZE_SCOPES;
-    tmp79 = AUTHORIZE_SCOPES;
+    AUTHORIZE_SCOPES = tmp84.AUTHORIZE_SCOPES;
+    tmp85 = AUTHORIZE_SCOPES;
   }
 };

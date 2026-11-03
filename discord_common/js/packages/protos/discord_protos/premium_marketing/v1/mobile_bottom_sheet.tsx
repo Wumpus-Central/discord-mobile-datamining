@@ -1,10 +1,10 @@
-// === Module 9637: mobile_bottom_sheet ===
+// === Module 9769: mobile_bottom_sheet ===
 
-// Module 9637 (mobile_bottom_sheet)
+// Module 9769 (mobile_bottom_sheet)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import help_article from "help_article" /* 9632 */;
-import cta_button from "cta_button" /* 9633 */;
+import localized_string from "localized_string" /* 9763 */;
+import help_article from "help_article" /* 9764 */;
+import cta_button from "cta_button" /* 9765 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -29,7 +29,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "dismissible_content",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_users.v1.DismissibleContent", require("dismissible_content").DismissibleContent];
+            items = ["discord_protos.discord_users.v1.DismissibleContent", require("dismissible_content").DismissibleContent];
             return items;
           }
     };
@@ -205,7 +205,7 @@ let items = [
     name: "dismissible_content",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.DismissibleContent", require("dismissible_content").DismissibleContent];
+      items = ["discord_protos.discord_users.v1.DismissibleContent", require("dismissible_content").DismissibleContent];
       return items;
     }
   },

@@ -1,9 +1,9 @@
-// === Module 10291: openStickersPremiumUpsellAlert ===
+// === Module 10421: openStickersPremiumUpsellAlert ===
 
-// Module 10291 (openStickersPremiumUpsellAlert)
+// Module 10421 (openStickersPremiumUpsellAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6535 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7431 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6655 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7555 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -41,7 +41,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
             closure_129_0 = _location;
             const obj4 = { type: closure_2_5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL, location: _location };
             AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj4);
-            const items = [SubscriptionPlanActionCreators.fetchPremiumSubscriptionPlans(), ];
+            items = [SubscriptionPlanActionCreators.fetchPremiumSubscriptionPlans(), ];
             items[1] = actions_BillingActionCreators.fetchPaymentSources();
             c3 = 1;
             c4 = 1;
@@ -72,7 +72,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
           };
           closure_130_1(closure_130_2[7]).openLazy(obj8);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c4 = tmp;

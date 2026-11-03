@@ -1,17 +1,17 @@
-// === Module 15677: AddFriendModal ===
+// === Module 15819: AddFriendModal ===
 
-// Module 15677 (AddFriendModal)
+// Module 15819 (AddFriendModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import UserStore from "UserStore" /* 1385 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function AddFriendModalScene(onSkip) {
   let tmp4 = _slicedToArray(navigation.useState(!onSkip(contactSyncAccount[10]).isContactSyncEnabled(contactSyncAccount)), 2);
   const tmp6 = sourceMetadata;
   navigation = onSkip(contactSyncAccount[14]).useNavigation();
-  const items = [onSkip];
+  items = [onSkip];
   const callback = navigation.useCallback(() => {
     if (onSkip != null) {
       tmp();
@@ -79,7 +79,7 @@ function AddFriendModalScene(onSkip) {
     };
     navigation.setOptions(obj);
   }, items1);
-  const obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = onSkip(contactSyncAccount[17]).intl;
   obj4.children = intl.string(onSkip(contactSyncAccount[17]).t.GWMTSE);
   const items2 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj4), , , ];
@@ -109,10 +109,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(14249).ContactPermissions;
+const ContactPermissions = fn(14380).ContactPermissions;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 let obj3 = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -130,7 +130,7 @@ let result = size.fileFinishedImporting("components_native/add_friend/AddFriendM
 
 export default function AddFriendModal(initialParams) {
   _require = initialParams;
-  const items = [initialParams];
+  items = [initialParams];
   const screens = noop.useMemo(() => {
     const obj = { ADD_FRIEND: null };
     const obj2 = { ignoreKeyboard: true, title: null, initialParams: null, render: null };

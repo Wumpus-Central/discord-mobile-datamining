@@ -1,10 +1,10 @@
-// === Module 9702: QuestOrbMultiplierHooks ===
+// === Module 9834: QuestOrbMultiplierHooks ===
 
-// Module 9702 (QuestOrbMultiplierHooks)
+// Module 9834 (QuestOrbMultiplierHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9703 */;
-import UserStore from "UserStore" /* 1383 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9835 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
@@ -36,7 +36,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
 
 export function useQuestOrbMultiplierEligibility() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => getQuestOrbMultiplierEligibilityForUser(currentUser.getCurrentUser()));
 }
 export { getQuestOrbMultiplierEligibilityForUser };

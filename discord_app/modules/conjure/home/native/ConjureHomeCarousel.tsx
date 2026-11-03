@@ -1,24 +1,35 @@
-// === Module 12820: ConjureHomeCarousel ===
+// === Module 12956: ConjureHomeCarousel ===
 
-// Module 12820 (ConjureHomeCarousel)
+// Module 12956 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 12823 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 12959 */;
+import SvgCss from "SvgCss" /* 12960 */;
+import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 13103 */;
+import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 13111 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+
+const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const STEP = 240 + nativeDefault.space.PX_24;
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+let closure_11 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(9727).GameControllerIcon, apps: fn(8678).AppsIcon, profile_widget: fn(12821).WidgetsIcon, overlay_widget: fn(9587).ScreenIcon, automod: fn(11281).ShieldIcon, chat_bot: fn(12105).RobotIcon };
-const createStyles = fn(5014);
+let obj = { games: fn(9859).GameControllerIcon, apps: fn(8802).AppsIcon, profile_widget: fn(12957).WidgetsIcon, overlay_widget: fn(9719).ScreenIcon, automod: fn(11418).ShieldIcon, chat_bot: fn(12241).RobotIcon };
+const createStyles = fn(5141);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };
 obj2.item = rect;
@@ -38,116 +49,130 @@ const size1 = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX
 obj2.categoryIcon = size1;
 obj2.footerText = { flex: 1 };
 let closure_13 = createStyles.createStyles(obj2);
-const __initData = { code: "function ConjureHomeCarouselTsx1(){const{wrapConjureHomeCarouselDistance,index,STEP,offset,loop,conjureHomeCarouselFan,viewportWidth,CARD_WIDTH}=this.__closure;const distance=wrapConjureHomeCarouselDistance(index*STEP,offset.get(),loop);const{angleDeg:angleDeg,dropPx:dropPx}=conjureHomeCarouselFan(distance/STEP,STEP);return{transform:[{translateX:viewportWidth/2-CARD_WIDTH/2+distance},{translateY:dropPx},{rotate:angleDeg+\"deg\"}]};}" };
-let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
-  ({ inspiration, index } = offset);
-  offset = offset.offset;
-  const viewportWidth = offset.viewportWidth;
+let closure_14 = { code: "(function ConjureHomeCarouselTsx1(){let[wrapConjureHomeCarouselDistance,index,STEP,offset,loop,conjureHomeCarouselFan,viewportWidth,CARD_WIDTH]=this.__closure;const distance=wrapConjureHomeCarouselDistance(index*STEP,offset.get(),loop);const{angleDeg:angleDeg,dropPx:dropPx}=conjureHomeCarouselFan(distance/STEP,STEP);return{transform:[{translateX:viewportWidth/2-CARD_WIDTH/2+distance},{translateY:dropPx},{rotate:angleDeg+\"deg\"}]};})" };
+let closure_15 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
+  inspiration = inspiration.inspiration;
+  ({ index, count, offset, viewportWidth } = inspiration);
   const tmp = closure_13();
-  let result = STEP * offset.count;
-  c3 = result;
-  obj = index(viewportWidth[15]);
-  const fn = function u() {
-    const result = index * closure_11;
-    const result1 = conjureHomeCarouselFan.wrapConjureHomeCarouselDistance(result, offset.get(), c3);
-    const result2 = conjureHomeCarouselFan.conjureHomeCarouselFan(result1 / closure_11, closure_11);
-    const obj3 = { transform: null };
-    const items = [{ translateX: viewportWidth / 2 - 120 + result1 }, { translateY: result2.dropPx }, ];
-    const obj4 = { translateX: viewportWidth / 2 - 120 + result1 };
-    items[2] = { rotate: "" + result2.angleDeg + "deg" };
-    obj3.transform = items;
-    return obj3;
-  };
-  fn.__closure = { wrapConjureHomeCarouselDistance: index(viewportWidth[16]).wrapConjureHomeCarouselDistance, index, STEP, offset, loop: result, conjureHomeCarouselFan: index(viewportWidth[16]).conjureHomeCarouselFan, viewportWidth, CARD_WIDTH: 240 };
-  fn.__workletHash = 10891519667070;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj3 = { style: null, children: null };
-  let items = [tmp.item, animatedStyle];
-  obj3.style = items;
-  let obj4 = { style: tmp.promptRow, children: null };
-  const obj5 = { style: tmp.avatar, source: null };
-  let obj2 = { wrapConjureHomeCarouselDistance: index(viewportWidth[16]).wrapConjureHomeCarouselDistance, index, STEP, offset, loop: result, conjureHomeCarouselFan: index(viewportWidth[16]).conjureHomeCarouselFan, viewportWidth, CARD_WIDTH: 240 };
-  const tmp4 = offset(viewportWidth[17]);
-  const obj6 = index(viewportWidth[18]);
-  obj5.source = obj6.makeSource(index(viewportWidth[18]).getDefaultAvatarURL(undefined, inspiration.authorAvatarSeed));
-  const items1 = [closure_9(tmp4, obj5), ];
-  const obj8 = { style: tmp.bubble, children: closure_9(index(viewportWidth[19]).Text, { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt }) };
-  items1[1] = closure_9(View, obj8);
-  obj4.children = items1;
-  const items2 = [closure_10(View, obj4), ];
-  const obj10 = { style: tmp.card, children: null };
-  const obj11 = { style: tmp.thumbnail, children: null };
-  const size = { asset: offset(viewportWidth[21])[inspiration.id], width: "100%", height: "100%" };
-  obj11.children = closure_9(index(viewportWidth[20]).LocalSvg, size);
-  const items3 = [closure_9(View, obj11), ];
-  const obj12 = { style: tmp.footer, children: null };
-  const obj13 = { style: tmp.categoryIcon, children: null };
-  const obj7 = index(viewportWidth[18]);
-  const obj9 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
-  obj13.children = closure_9(obj[inspiration.category], { size: "sm", color: offset(viewportWidth[7]).colors.ICON_STRONG });
-  const items4 = [closure_9(View, obj13), ];
-  const obj15 = { style: tmp.footerText, children: null };
-  const items5 = [closure_9(index(viewportWidth[19]).Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name }), ];
-  const obj17 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
-  const obj14 = { size: "sm", color: offset(viewportWidth[7]).colors.ICON_STRONG };
-  const obj16 = { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name };
-  obj17.children = index(viewportWidth[22]).conjureHomeCategoryLabel(inspiration.category);
-  items5[1] = closure_9(index(viewportWidth[19]).Text, obj17);
-  obj15.children = items5;
-  items4[1] = closure_10(View, obj15);
-  obj12.children = items4;
-  items3[1] = closure_10(View, obj12);
-  obj10.children = items3;
-  items2[1] = closure_10(View, obj10);
-  obj3.children = items2;
-  return closure_10(offset(viewportWidth[15]).View, obj3);
+  obj = _mod1652;
+  items = [closure_14, conjureHomeCarouselFan.wrapConjureHomeCarouselDistance, index, closure_11, offset, closure_11 * count, conjureHomeCarouselFan.conjureHomeCarouselFan, viewportWidth, 240];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items;
+  class ConjureHomeCarouselTsx1 {
+    constructor() {
+      result = closure_1 * closure_2;
+      tmp2 = closure_0(result, closure_3.get(), closure_4);
+      tmp3 = closure_5(tmp2 / closure_2, closure_2);
+      obj = { transform: null };
+      obj1 = { translateX: closure_6 / 2 - closure_7 / 2 + tmp2 };
+      items = [, , ];
+      items[0] = obj1;
+      items[1] = { translateY: tmp3.dropPx };
+      obj4 = { rotate: "" + tmp3.angleDeg + "deg" };
+      items[2] = obj4;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items1 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
+  ConjureHomeCarouselTsx1.__closure = items1;
+  ConjureHomeCarouselTsx1.__workletHash = 12886890817383;
+  ConjureHomeCarouselTsx1.__initData = tmp4;
+  const animatedStyle = obj.useAnimatedStyle(ConjureHomeCarouselTsx1);
+  const obj2 = { style: null, children: null };
+  const items2 = [tmp.item, animatedStyle];
+  obj2.style = items2;
+  const obj3 = { style: tmp.promptRow, children: null };
+  const obj4 = { style: tmp.avatar, source: null };
+  const tmp14 = FastImageDefault;
+  const tmp2Result = AvatarUtils;
+  obj4.source = tmp2Result.makeSource(AvatarUtils.getDefaultAvatarURL(undefined, inspiration.authorAvatarSeed));
+  const items3 = [React7(tmp14, obj4), ];
+  const obj5 = { style: tmp.bubble, children: React7(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt }) };
+  items3[1] = React7(View, obj5);
+  obj3.children = items3;
+  const items4 = [closure_1_10(View, obj3), ];
+  const obj7 = { style: tmp.card, children: null };
+  const obj8 = { style: tmp.thumbnail, children: null };
+  const size = { asset: conjureHomeInspirationArtDefault[inspiration.id], width: "100%", height: "100%" };
+  obj8.children = React7(SvgCss.LocalSvg, size);
+  const items5 = [React7(View, obj8), ];
+  const obj9 = { style: tmp.footer, children: null };
+  const obj10 = { style: tmp.categoryIcon, children: null };
+  const obj6 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
+  const tmp2Result3 = AvatarUtils;
+  obj10.children = React7(obj[inspiration.category], { size: "sm", color: nativeDefault.colors.ICON_STRONG });
+  const items6 = [React7(View, obj10), ];
+  const obj12 = { style: tmp.footerText, children: null };
+  const items7 = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name }), ];
+  const obj14 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
+  const obj11 = { size: "sm", color: nativeDefault.colors.ICON_STRONG };
+  const obj13 = { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name };
+  obj14.children = conjureHomeInspirationEntries.conjureHomeCategoryLabel(inspiration.category);
+  items7[1] = React7(Text_Text.Text, obj14);
+  obj12.children = items7;
+  items6[1] = closure_1_10(View, obj12);
+  obj9.children = items6;
+  items5[1] = closure_1_10(View, obj9);
+  obj7.children = items5;
+  items4[1] = closure_1_10(View, obj7);
+  obj2.children = items4;
+  return closure_1_10(_modDef1652.View, obj2);
 });
-const __initData2 = { code: "function ConjureHomeCarouselTsx2(frame){const{offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop}=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);}" };
+let closure_16 = { code: "(function ConjureHomeCarouselTsx2(frame){let[offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop]=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);})" };
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_10, padding: nativeDefault.space.PX_10 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/home/native/ConjureHomeCarousel.tsx");
 
 export default noop.memo(function ConjureHomeCarousel(onScreen) {
   let sharedValue;
-  noop = undefined;
   let frameCallback;
   onScreen = undefined;
-  const memo = noop.useMemo(() => memo(12975).conjureHomeInspirationEntries(), []);
-  obj = noop;
+  const memo = frameCallback.useMemo(() => _undefined(_undefined2[22]).conjureHomeInspirationEntries(), []);
+  _require = memo;
+  obj = frameCallback;
   const tmp = closure_13();
-  const tmp2 = memo;
-  const items = [onScreen];
-  const stateFromStores = memo(504).useStateFromStores(items, () => onScreen.useReducedMotion);
-  const obj2 = memo(504);
+  const tmp2 = _require;
+  items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = require("initialize");
   const items1 = [AppStateStore];
-  const stateFromStores1 = memo(504).useStateFromStores(items1, () => state.getState() === constants.ACTIVE);
-  const obj3 = memo(504);
-  const isFocused = memo(1498).useIsFocused();
-  const tmp7 = sharedValue(noop.useState(0), 2);
-  const viewportWidth = tmp7[0];
-  dependencyMap = tmp7[1];
-  const obj4 = memo(1498);
-  sharedValue = memo(5095).useSharedValue(0);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => state.getState() === constants.ACTIVE);
+  const obj3 = require("initialize");
+  const isFocused = require("Link").useIsFocused();
+  const tmp7 = sharedValue(frameCallback.useState(0), 2);
+  const first = tmp7[0];
+  const obj4 = require("Link");
+  sharedValue = require("module_1652").useSharedValue(0);
   let result = closure_11 * memo.length;
-  noop = result;
-  const obj5 = memo(5095);
-  class C {
+  const obj5 = require("module_1652");
+  const items2 = [closure_16, sharedValue, require("conjureHomeCarouselFan").CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND, result];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp11, tmp12, tmp13, tmp14] = items2;
+  class ConjureHomeCarouselTsx2 {
     constructor(arg0) {
       num = onScreen.timeSincePreviousFrame;
       if (num == null) {
         num = 0;
       }
-      value = closure_3.get();
-      result = closure_3.set((value + closure_0(closure_2[16]).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND * num / 1000) % closure_4);
+      result = closure_0.set((closure_0.get() + closure_1 * num / 1000) % closure_2);
       return;
     }
   }
-  const obj6 = memo(5095);
-  C.__closure = { offset: sharedValue, CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND: memo(12823).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND, loop: result };
-  C.__workletHash = 7470635772737;
-  C.__initData = __initData2;
-  frameCallback = obj6.useFrameCallback(C, false);
+  const items3 = [tmp12, tmp13, tmp14];
+  ConjureHomeCarouselTsx2.__closure = items3;
+  ConjureHomeCarouselTsx2.__workletHash = 453717571992;
+  ConjureHomeCarouselTsx2.__initData = tmp11;
+  frameCallback = require("module_1652").useFrameCallback(ConjureHomeCarouselTsx2, false);
   onScreen = !stateFromStores;
   if (!stateFromStores) {
     onScreen = stateFromStores1;
@@ -159,23 +184,23 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     onScreen = onScreen.onScreen;
   }
   if (onScreen) {
-    onScreen = viewportWidth > 0;
+    onScreen = first > 0;
   }
-  const items2 = [frameCallback, onScreen];
+  const items4 = [frameCallback, onScreen];
   const effect = obj.useEffect(() => {
     frameCallback.setActive(onScreen);
-  }, items2);
-  const obj8 = { style: tmp.carousel, accessible: true, accessibilityLabel: null, onLayout: null, children: null };
+  }, items4);
+  const obj7 = { style: tmp.carousel, accessible: true, accessibilityLabel: null, onLayout: null, children: null };
   const intl = tmp2(1113).intl;
-  obj8.accessibilityLabel = intl.string(viewportWidth(3868).Qc4S39);
-  obj8.onLayout = function onLayout(nativeEvent) {
-    return dependencyMap(nativeEvent.nativeEvent.layout.width);
+  obj7.accessibilityLabel = intl.string(_modDef3995.Qc4S39);
+  obj7.onLayout = function onLayout(nativeEvent) {
+    return _undefined2(nativeEvent.nativeEvent.layout.width);
   };
   let mapped = null;
-  if (viewportWidth > 0) {
-    mapped = memo.map((inspiration, index) => React7(closure_15, { inspiration, index, count: memo.length, offset: sharedValue, viewportWidth }, inspiration.id));
+  if (first > 0) {
+    mapped = memo.map((inspiration, index) => React7(closure_15, { inspiration, index, count: _undefined.length, offset: sharedValue, viewportWidth }, inspiration.id));
   }
-  obj8.children = mapped;
-  return closure_9(frameCallback, obj8);
+  obj7.children = mapped;
+  return closure_9(onScreen, obj7);
 });
 export const CONJURE_HOME_CAROUSEL_ROOM_BELOW = PX_24;

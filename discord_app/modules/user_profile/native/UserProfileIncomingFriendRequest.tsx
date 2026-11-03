@@ -1,16 +1,16 @@
-// === Module 15013: UserProfileIncomingFriendRequest ===
+// === Module 15149: UserProfileIncomingFriendRequest ===
 
-// Module 15013 (UserProfileIncomingFriendRequest)
+// Module 15149 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default function UserProfileIncomingFriendRequest(style) {
   const cancelFriendRequest = friendRequestActions.cancelFriendRequest;
   const obj3 = { userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[7])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
   let name = items4(trackUserProfileAction[9]).useName(guildId, channelId, user);
-  const items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
+  items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
   let Button = acceptFriendRequest.useCallback(() => {
     acceptFriendRequest();
     let str = "ACCEPT_FRIEND_REQUEST";

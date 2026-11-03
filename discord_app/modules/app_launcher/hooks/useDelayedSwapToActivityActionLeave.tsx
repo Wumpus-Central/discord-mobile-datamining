@@ -1,6 +1,6 @@
-// === Module 12473: useDelayedSwapToActivityActionLeave ===
+// === Module 12609: useDelayedSwapToActivityActionLeave ===
 
-// Module 12473 (useDelayedSwapToActivityActionLeave)
+// Module 12609 (useDelayedSwapToActivityActionLeave)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useDelayed
 export function useDelayedSwapToActivityActionLeave(activityAction) {
   let tmp = _slicedToArray(noop.useState(activityAction), 2);
   dependencyMap = tmp[1];
-  const items = [activityAction];
+  items = [activityAction];
   const layoutEffect = noop.useLayoutEffect(() => {
-    if (activityAction === activityAction(12385).ActivityAction.LEAVE) {
+    if (activityAction === activityAction(12521).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
       activityAction = setTimeout(() => dependencyMap(closure_0), 100);
       return () => clearTimeout(closure_0);

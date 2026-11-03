@@ -1,10 +1,10 @@
-// === Module 7369: TableSwitchRow ===
+// === Module 7489: TableSwitchRow ===
 
-// Module 7369 (TableSwitchRow)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import native from "native" /* 5187 */;
-import TableRow from "TableRow" /* 6975 */;
-import FormSwitch from "FormSwitch" /* 7370 */;
+// Module 7489 (TableSwitchRow)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import native from "native" /* 5310 */;
+import TableRow from "TableRow" /* 7101 */;
+import FormSwitch from "FormSwitch" /* 7490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
@@ -32,7 +32,7 @@ export function TableSwitchRow(value) {
   const nodeText1 = native.getNodeText(subLabel);
   const tmp8 = _slicedToArray(noop.useState(value), 2);
   closure_2 = tmp8[1];
-  const items = [value];
+  items = [value];
   const effect = noop.useEffect(() => {
     closure_2(value);
   }, items);
@@ -50,7 +50,7 @@ export function TableSwitchRow(value) {
         str = "text-feedback-critical";
       }
       const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = hasOwnProperty(tmp3(5624).Text, obj7);
+      tmp10Result = hasOwnProperty(tmp3(5747).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
     obj6.children = items1;

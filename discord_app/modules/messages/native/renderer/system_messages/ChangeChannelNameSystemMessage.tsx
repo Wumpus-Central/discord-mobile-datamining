@@ -1,13 +1,13 @@
-// === Module 8439: ChangeChannelNameSystemMessage ===
+// === Module 8563: ChangeChannelNameSystemMessage ===
 
-// Module 8439 (ChangeChannelNameSystemMessage)
+// Module 8563 (ChangeChannelNameSystemMessage)
 import util from "util" /* 1113 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8411 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8418 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8420 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8425 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8535 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8542 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8544 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8549 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const size = fn(2);
@@ -60,7 +60,7 @@ export function createChangeChannelNameSystemMessage(message) {
       accessibilityActions = [];
     }
     const obj6 = { accessibilityActions: null };
-    const items = [];
+    items = [];
     const obj7 = { label: null, name: null };
     const intl2 = util.intl;
     obj7.label = intl2.string(util.t["5Q9+/L"]);

@@ -1,17 +1,17 @@
-// === Module 10018: useEmojiPickerData ===
+// === Module 10149: useEmojiPickerData ===
 
-// Module 10018 (useEmojiPickerData)
-import getEmojiPickerDataRowItemNativeSectionDefault from "getEmojiPickerDataRowItemNativeSection" /* 10019 */;
-import getEmojiPickerDataRowPremiumInlineRoadblockDefault from "getEmojiPickerDataRowPremiumInlineRoadblock" /* 10020 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10021 */;
-import getEmojiPickerDataRowItemSlimEmojiDefault from "getEmojiPickerDataRowItemSlimEmoji" /* 10023 */;
+// Module 10149 (useEmojiPickerData)
+import getEmojiPickerDataRowItemNativeSectionDefault from "getEmojiPickerDataRowItemNativeSection" /* 10150 */;
+import getEmojiPickerDataRowPremiumInlineRoadblockDefault from "getEmojiPickerDataRowPremiumInlineRoadblock" /* 10151 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10152 */;
+import getEmojiPickerDataRowItemSlimEmojiDefault from "getEmojiPickerDataRowItemSlimEmoji" /* 10154 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 require = fn;
-const LoadState = fn(6796).LoadState;
-const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
-let closure_7 = fn(9942).EmojiPickerRenderingDataType;
+const LoadState = fn(6916).LoadState;
+const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
+let closure_7 = fn(10073).EmojiPickerRenderingDataType;
 const EmojiPickerItemType = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", TITLE: 1, [1]: "TITLE", EMOJI_ROW: 2, [2]: "EMOJI_ROW", EMOJI_ROW_SLIM: 3, [3]: "EMOJI_ROW_SLIM", EMOJI_ROW_NSFW: 4, [4]: "EMOJI_ROW_NSFW", FOOTER_UPSELL: 5, [5]: "FOOTER_UPSELL", PREMIUM_INLINE_ROADBLOCK: 6, [6]: "PREMIUM_INLINE_ROADBLOCK", NATIVE_SECTION: 7, [7]: "NATIVE_SECTION" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/useEmojiPickerData.tsx");
@@ -20,7 +20,7 @@ export default function useEmojiPickerData(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   const rowSize = emojiSections.rowSize;
   const isNativeEmojiPickerEnabled = emojiSections.isNativeEmojiPickerEnabled;
-  let items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = emojiSections(isNativeEmojiPickerEnabled[4]).useStateFromStores(items, () => {
     let tmp = EmojiStore.loadState === LoadState.Loaded;
     if (!tmp) {
@@ -30,7 +30,7 @@ export default function useEmojiPickerData(emojiSections) {
   });
   const items1 = [stateFromStores, emojiSections, rowSize, isNativeEmojiPickerEnabled];
   return stateFromStores.useMemo(() => {
-    const items = [{ type: constants.PLACEHOLDER, isSectionNitroLocked: false }];
+    items = [{ type: constants.PLACEHOLDER, isSectionNitroLocked: false }];
     obj2 = { data: items, rowSize: obj2, headerIndices: [], hasGuildData: stateFromStores, hasSearchData: false, hasSearchUpsell: false };
     const item = items.forEach((isSectionNitroLocked, index) => {
       let tmp2 = tmp;

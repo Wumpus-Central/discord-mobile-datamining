@@ -1,12 +1,12 @@
-// === Module 15047: useOpenNitroSubscribeActionSheet ===
+// === Module 15189: useOpenNitroSubscribeActionSheet ===
 
-// Module 15047 (useOpenNitroSubscribeActionSheet)
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
+// Module 15189 (useOpenNitroSubscribeActionSheet)
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
 import noop from "module_19" /* 19 */;
 
 const Constants = fn(1072);
 ({ AnalyticsPages: c3, AnalyticsSections: closure_4 } = Constants);
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useOpenNitroSubscribeActionSheet.tsx");
 
@@ -17,7 +17,7 @@ export default function useOpenNitroSubscribeActionSheet() {
   }
   let analyticsLocations;
   analyticsLocations = COLLECTIBLES_SHOP(analyticsLocations[3])().analyticsLocations;
-  const items = [analyticsLocations, COLLECTIBLES_SHOP];
+  items = [analyticsLocations, COLLECTIBLES_SHOP];
   return noop.useCallback(() => {
     const obj = { analyticsLocation: { page: constants.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP }, analyticsLocations, premiumType: PremiumTypes.TIER_2 };
     openPremiumPlanSelectionActionSheetDefault(obj);

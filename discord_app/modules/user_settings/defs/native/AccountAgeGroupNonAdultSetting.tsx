@@ -1,14 +1,14 @@
-// === Module 16631: AccountAgeGroupNonAdultSetting ===
+// === Module 16774: AccountAgeGroupNonAdultSetting ===
 
-// Module 16631 (AccountAgeGroupNonAdultSetting)
+// Module 16774 (AccountAgeGroupNonAdultSetting)
 import util from "util" /* 1113 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16584 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16727 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
-    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
       let tmp5 = !isAgeVerified;
       if (isAgeVerified) {

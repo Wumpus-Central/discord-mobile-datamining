@@ -1,19 +1,19 @@
-// === Module 9801: StickersSpotIllustration ===
+// === Module 9932: StickersSpotIllustration ===
 
-// Module 9801 (StickersSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef9802 from "module_9802" /* 9802 */;
-import _modDef9803 from "module_9803" /* 9803 */;
-import _modDef9804 from "module_9804" /* 9804 */;
+// Module 9932 (StickersSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef9933 from "module_9933" /* 9933 */;
+import _modDef9934 from "module_9934" /* 9934 */;
+import _modDef9935 from "module_9935" /* 9935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9802 }, 3: null };
-let obj2 = { uri: _modDef9802 };
-obj[2] = { uri: _modDef9803 };
-const obj3 = { uri: _modDef9803 };
-obj[3] = { uri: _modDef9804 };
+let obj = { 1: null, 2: { uri: _modDef9933 }, 3: null };
+let obj2 = { uri: _modDef9933 };
+obj[2] = { uri: _modDef9934 };
+const obj3 = { uri: _modDef9934 };
+obj[3] = { uri: _modDef9935 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function StickersSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

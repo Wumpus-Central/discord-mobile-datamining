@@ -1,11 +1,11 @@
-// === Module 14172: UserSettingsAuthedAppDeleteWarningModal ===
+// === Module 14303: UserSettingsAuthedAppDeleteWarningModal ===
 
-// Module 14172 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 14303 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import InfoBox from "InfoBox" /* 11391 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11561 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 14173 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import InfoBox from "InfoBox" /* 11529 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11698 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 14304 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -44,7 +44,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     tmp9 = React3(InfoBoxDefault, obj5);
     const tmp8Result = InfoBoxDefault;
   }
-  const items = [tmp9, ];
+  items = [tmp9, ];
   let tmp12 = result;
   if (result) {
     const obj7 = { look: InfoBox.InfoBoxLooks.WARNING, children: null };

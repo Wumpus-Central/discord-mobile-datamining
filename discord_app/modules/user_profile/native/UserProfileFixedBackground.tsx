@@ -1,10 +1,10 @@
-// === Module 8810: UserProfileFixedBackground ===
+// === Module 8934: UserProfileFixedBackground ===
 
-// Module 8810 (UserProfileFixedBackground)
-import native from "native" /* 5080 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useUserProfileColors from "useUserProfileColors" /* 8811 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8812 */;
+// Module 8934 (UserProfileFixedBackground)
+import native from "native" /* 5207 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useUserProfileColors from "useUserProfileColors" /* 8935 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8936 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export default noop.memo(function UserProfileFixedBackground(style) {
       const _Math2 = Math;
       const bound = Math.min(1, Math.max(0, bannerHeight / gradientHeight));
       const obj4 = { colors: null, locations: null, style: null, pointerEvents: "none" };
-      const items = [first, first, tmp5];
+      items = [first, first, tmp5];
       obj4.colors = items;
       const items1 = [0, bound, 1];
       obj4.locations = items1;

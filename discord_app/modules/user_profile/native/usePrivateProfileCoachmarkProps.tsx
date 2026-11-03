@@ -1,9 +1,9 @@
-// === Module 18437: usePrivateProfileCoachmarkProps ===
+// === Module 18591: usePrivateProfileCoachmarkProps ===
 
-// Module 18437 (usePrivateProfileCoachmarkProps)
+// Module 18591 (usePrivateProfileCoachmarkProps)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 18438 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 18592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ function PrivateProfileCoachmarkImage() {
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/usePrivateProfileCoachmarkProps.tsx");
@@ -41,7 +41,7 @@ export function usePrivateProfileCoachmarkProps(visibleContent) {
   }
   let intl = tmp(prop[8]).intl;
   stringResult1 = intl.string(tmp(prop[8]).t.bnNxW1);
-  const items = [stringResult1, markAsDismissed, visibleContent];
+  items = [stringResult1, markAsDismissed, visibleContent];
   return stringResult1.useMemo(() => {
     const obj = { title: null, description: null, position: "top", visible: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;

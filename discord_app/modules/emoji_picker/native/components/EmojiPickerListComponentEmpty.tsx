@@ -1,18 +1,18 @@
-// === Module 10033: EmojiPickerListComponentEmpty ===
+// === Module 10164: EmojiPickerListComponentEmpty ===
 
-// Module 10033 (EmojiPickerListComponentEmpty)
+// Module 10164 (EmojiPickerListComponentEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import SearchEmpty from "SearchEmpty" /* 10034 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10038 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import SearchEmpty from "SearchEmpty" /* 10165 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/emoji_picker/native/component
 export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
-  const items = [insetBottom, insetTop];
+  items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom, marginTop: insetTop, flex: 1 }), items);
   const tmp = closure_5();
   const searchEmptySource = SearchEmpty.useSearchEmptySource();

@@ -1,9 +1,9 @@
-// === Module 8907: ContentInventoryStore ===
+// === Module 9031: ContentInventoryStore ===
 
-// Module 8907 (ContentInventoryStore)
+// Module 9031 (ContentInventoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import matchUtils from "matchUtils" /* 8908 */;
+import matchUtils from "matchUtils" /* 9032 */;
 
 require = fn;
 let map = new Map();
@@ -48,7 +48,7 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
       const entries = feed.entries;
       const reduced = entries.reduce((acc, content) => {
         if (content.content.author_id === require) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = content.content;
           let items1 = items;
         } else {

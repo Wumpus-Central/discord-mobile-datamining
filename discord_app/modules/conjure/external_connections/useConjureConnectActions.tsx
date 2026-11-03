@@ -1,7 +1,7 @@
-// === Module 12210: useConjureConnectActions ===
+// === Module 12346: useConjureConnectActions ===
 
-// Module 12210 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 12176 */;
+// Module 12346 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 12312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ export function useConjureConnectActions(projectId, presentError) {
     ref.current = conjureExternalConnections.endExternalAuthorization(ref.current, arg0);
     dependencyMap(ref.current);
   }, []);
-  const items = [presentError, projectId, callback];
+  items = [presentError, projectId, callback];
   const tmp = callback(noop.useState(set), 2);
   return {
     pending: tmp2,
@@ -35,7 +35,7 @@ export function useConjureConnectActions(projectId, presentError) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -54,7 +54,7 @@ export function useConjureConnectActions(projectId, presentError) {
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj6 = { value: type(12175).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                const obj6 = { value: type(12311).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -69,19 +69,19 @@ export function useConjureConnectActions(projectId, presentError) {
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj8 = { href: closure_128_0.url, trusted: false };
-                type(8940).handleClick(obj8);
+                type(9068).handleClick(obj8);
                 c3 = 3;
-                const obj = type(8940);
+                const obj = type(9068);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1113).intl;
-                let stringResult = intl2.string(presentError(3868)["jCQ/1B"]);
+                let stringResult = intl2.string(presentError(3995)["jCQ/1B"]);
               } else {
                 const intl = type(1113).intl;
-                stringResult = intl.string(presentError(3868).POxkSh);
+                stringResult = intl.string(presentError(3995).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(12176);
+              obj3 = type(12312);
             }
           } catch (tmp34) {
             c3 = tmp;
@@ -90,7 +90,7 @@ export function useConjureConnectActions(projectId, presentError) {
         }
       };
       if (null != projectId) {
-        const result = projectId(12176).beginExternalAuthorization(ref.current, type.type);
+        const result = projectId(12312).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -115,7 +115,7 @@ export function useConjureConnectActions(projectId, presentError) {
             return applyArgumentsResult;
           })();
         }
-        let obj = projectId(12176);
+        let obj = projectId(12312);
       }
     }, items)
   };

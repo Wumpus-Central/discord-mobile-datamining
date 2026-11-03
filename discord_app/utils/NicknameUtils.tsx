@@ -1,11 +1,11 @@
-// === Module 6041: NicknameUtils ===
+// === Module 6161: NicknameUtils ===
 
-// Module 6041 (NicknameUtils)
+// Module 6161 (NicknameUtils)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 function getNickname(id, channelId, id) {
@@ -61,7 +61,7 @@ function useName(guildId, channelId, user) {
   _require = guildId;
   closure_1 = channelId;
   dependencyMap = user;
-  const items = [GuildMemberStore, ChannelStore, RelationshipStore];
+  items = [GuildMemberStore, ChannelStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
 }
 const size = fn(2);

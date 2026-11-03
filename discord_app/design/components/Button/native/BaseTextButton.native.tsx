@@ -1,85 +1,113 @@
-// === Module 5635: BaseTextButton ===
+// === Module 5755: BaseTextButton ===
 
-// Module 5635 (BaseTextButton)
+// Module 5755 (BaseTextButton)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import IconDefault from "Icon" /* 5636 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
-import ButtonHooks from "ButtonHooks" /* 5641 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import IconDefault from "Icon" /* 5756 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import springPresets from "springPresets" /* 5758 */;
+import ButtonHooks from "ButtonHooks" /* 5761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+
+const module_1652 = _mod1652;
 
 require = fn;
 function CollapsingText(children) {
   const collapseText = children.collapseText;
-  let sharedValue;
-  const tmp = closure_10();
-  sharedValue = sharedValue(textCollapsed[6]).useSharedValue(0);
-  let obj = sharedValue(textCollapsed[6]);
-  const fn = function o(nativeEvent) {
-    if (0 === sharedValue.get()) {
-      const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
-    }
-  };
-  fn.__closure = { containerWidth: sharedValue };
-  fn.__workletHash = 5541458715155;
-  fn.__initData = __initData;
-  const items = [sharedValue];
-  closure_129_0 = sharedValue;
-  closure_129_1 = collapseText;
-  let obj2 = sharedValue(textCollapsed[6]);
-  const workletCallback = sharedValue(textCollapsed[6]).useWorkletCallback(fn, items);
-  const fn2 = function o() {
-    if (0 === sharedValue.get()) {
-      let obj2 = {};
-    } else {
-      let num2 = 1;
-      let num = 0;
-      if (1 !== collapseText.get()) {
-        num = sharedValue.get();
+  const tmp2 = closure_10();
+  const sharedValue = _mod1652.useSharedValue(0);
+  items = [closure_14, sharedValue];
+  c0 = undefined;
+  [tmp6, tmp7] = items;
+  class BaseTextButtonNativeTsx1 {
+    constructor(arg0) {
+      obj = closure_0;
+      if (0 === closure_0.get()) {
+        result = obj.set(children.nativeEvent.layout.width);
       }
-      obj2 = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
-      if (num2 === collapseText.get()) {
+      return;
+    }
+  }
+  const items1 = [tmp7];
+  BaseTextButtonNativeTsx1.__closure = items1;
+  BaseTextButtonNativeTsx1.__workletHash = 14918614361674;
+  BaseTextButtonNativeTsx1.__initData = tmp6;
+  const items2 = [sharedValue];
+  const callback = noop.useCallback(BaseTextButtonNativeTsx1, items2);
+  const items3 = [closure_16, sharedValue, spring_spring.withSpring, collapseText, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp9, tmp10, tmp11, tmp12, tmp13] = items3;
+  class BaseTextButtonNativeTsx2 {
+    constructor() {
+      obj = closure_0;
+      if (0 === closure_0.get()) {
+        obj1 = {};
+      } else {
+        tmp = closure_1;
+        obj2 = closure_2;
+        num = 1;
         num2 = 0;
+        if (1 !== closure_2.get()) {
+          num2 = obj.get();
+        }
+        obj1 = { width: null, opacity: null };
+        str = "animate-always";
+        tmp2 = closure_3;
+        obj1.width = tmp(num2, closure_3, "animate-always");
+        if (num === obj2.get()) {
+          num = 0;
+        }
+        obj1.opacity = tmp(num, tmp2, "animate-always");
       }
-      obj2.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
-      const tmpResult = spring;
+      return obj1;
     }
-    return obj2;
-  };
-  const obj3 = sharedValue(textCollapsed[6]);
-  fn2.__closure = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
-  fn2.__workletHash = 493185281611;
-  fn2.__initData = __initData2;
-  const animatedStyle = obj3.useAnimatedStyle(fn2);
-  textCollapsed = closure_10().textCollapsed;
-  let obj4 = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
-  const fn3 = function s() {
-    if (0 === collapseText.get()) {
-      let obj = {};
-    } else {
-      obj = {};
-      const merged = Object.assign(textCollapsed);
-      obj.width = sharedValue.get();
+  }
+  const items4 = [tmp10, tmp11, tmp12, tmp13];
+  BaseTextButtonNativeTsx2.__closure = items4;
+  BaseTextButtonNativeTsx2.__workletHash = 16734752266738;
+  BaseTextButtonNativeTsx2.__initData = tmp9;
+  const animatedStyle = _mod1652.useAnimatedStyle(BaseTextButtonNativeTsx2);
+  const tmp3Result = _mod1652;
+  const items5 = [closure_17, collapseText, closure_10().textCollapsed, sharedValue];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp15, tmp16, tmp17, tmp18] = items5;
+  class BaseTextButtonNativeTsx3 {
+    constructor() {
+      if (0 === closure_0.get()) {
+        obj = {};
+      } else {
+        obj = {};
+        tmp = closure_1;
+        tmp2 = obj;
+        merged = Object.assign(closure_1);
+        tmp4 = closure_2;
+        obj.width = closure_2.get();
+      }
+      return obj;
     }
-    return obj;
-  };
-  fn3.__closure = { collapsed: collapseText, textCollapsed, containerWidth: sharedValue };
-  fn3.__workletHash = 5824483783888;
-  fn3.__initData = __initData3;
-  const animatedStyle1 = sharedValue(textCollapsed[6]).useAnimatedStyle(fn3);
-  obj6 = { style: null, onLayout: workletCallback, children: closure_7(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children }) };
-  const items1 = [tmp.container, animatedStyle];
-  obj6.style = items1;
-  return closure_7(collapseText(textCollapsed[6]).View, obj6);
+  }
+  const items6 = [tmp16, tmp17, tmp18];
+  BaseTextButtonNativeTsx3.__closure = items6;
+  BaseTextButtonNativeTsx3.__workletHash = 8150809859497;
+  BaseTextButtonNativeTsx3.__initData = tmp15;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(BaseTextButtonNativeTsx3);
+  const obj2 = { style: null, onLayout: callback, children: React5(module_1652.View, { style: animatedStyle1, children: children.children }) };
+  const items7 = [tmp2.container, animatedStyle];
+  obj2.style = items7;
+  return React5(module_1652.View, obj2);
 }
 function BaseTextButtonIcon(arg0) {
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(size);
   const obj2 = { source: icon, style: null };
-  const items = [style, iconSizeStyles, closure_18(iconPosition, iconOpticalOffsetMargin).offset];
+  items = [style, iconSizeStyles, closure_18(iconPosition, iconOpticalOffsetMargin).offset];
   obj2.style = items;
   return React5(Icon, obj2);
 }
@@ -343,7 +371,7 @@ get_ActivityIndicator = fn(17);
 ({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 const React7 = createStyles.createStyles((arg0, sm) => {
   const obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
   if (typeof getTextPlatformLineHeight === "function") {
@@ -366,17 +394,17 @@ const React7 = createStyles.createStyles((arg0, sm) => {
     throw new TypeError("Trying to call a non-function");
   }
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj = { entityWrapper: { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" } };
 let closure_11 = createStyles.createStyles(obj);
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
-noop.createContext("md");
-const __initData = { code: "function BaseTextButtonNativeTsx1({nativeEvent:nativeEvent}){const{containerWidth}=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);}" };
-const __initData2 = { code: "function BaseTextButtonNativeTsx2(){const{containerWidth,withSpring,collapsed,SUBTLE_SPRING}=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};}" };
-const __initData3 = { code: "function BaseTextButtonNativeTsx3(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};}" };
-createStyles = fn(5014);
+const Icon = module_1652.createAnimatedComponent(IconDefault);
+const state = noop.createContext("md");
+let closure_14 = { code: "(function BaseTextButtonNativeTsx1({nativeEvent:nativeEvent}){let[containerWidth]=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);})" };
+let closure_16 = { code: "(function BaseTextButtonNativeTsx2(){let[containerWidth,withSpring,collapsed,SUBTLE_SPRING]=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};})" };
+let closure_17 = { code: "(function BaseTextButtonNativeTsx3(){let[collapsed,textCollapsed,containerWidth]=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};})" };
+createStyles = fn(5141);
 let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   if (0 === marginLeft) {
     const obj2 = { offset: {} };
@@ -397,15 +425,15 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5640).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5640).MINIMUM_HIT_AREA - fn(5640).SMALL_BUTTON_HEIGHT) / 2, 0);
+const LARGE_BUTTON_HEIGHT = fn(5760).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5760).MINIMUM_HIT_AREA - fn(5760).SMALL_BUTTON_HEIGHT) / 2, 0);
 const rect = { top: bound, left: "Array", right: "isArray", bottom: bound };
 obj6.sm = rect;
-const LARGE_BUTTON_HEIGHT2 = fn(5640).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5640).MINIMUM_HIT_AREA - fn(5640).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const LARGE_BUTTON_HEIGHT2 = fn(5760).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5760).MINIMUM_HIT_AREA - fn(5760).MEDIUM_BUTTON_HEIGHT) / 2, 0);
 const rect1 = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
 obj6.md = rect1;
-const bound2 = Math.max((fn(5640).MINIMUM_HIT_AREA - fn(5640).LARGE_BUTTON_HEIGHT) / 2, 0);
+const bound2 = Math.max((fn(5760).MINIMUM_HIT_AREA - fn(5760).LARGE_BUTTON_HEIGHT) / 2, 0);
 const rect2 = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
 obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {

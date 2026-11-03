@@ -1,8 +1,8 @@
-// === Module 5693: RegionalFeatureConfigUtils ===
+// === Module 5813: RegionalFeatureConfigUtils ===
 
-// Module 5693 (RegionalFeatureConfigUtils)
+// Module 5813 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5694 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5814 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export function isFeatureAgeGated(AGE_GATED_SPACES) {
 }
 export function useIsFeatureAgeGated(AGE_GATED_SPACES) {
   _require = AGE_GATED_SPACES;
-  const items = [RegionalFeatureConfigStore];
+  items = [RegionalFeatureConfigStore];
   return require("initialize").useStateFromStores(items, () => RegionalFeatureConfigStore.isFeatureAgeGated(closure_0));
 }
 export function isSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
@@ -23,21 +23,21 @@ export function isSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
 }
 export function useIsSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
   _require = GUILD_ACTIVITY_STATUS;
-  const items = [RegionalFeatureConfigStore];
+  items = [RegionalFeatureConfigStore];
   return require("initialize").useStateFromStores(items, () => RegionalFeatureConfigStore.isSettingTeenByDefault(closure_0));
 }
 export function hasAgeGatedFeatures() {
   return RegionalFeatureConfigStore.hasAgeGatedFeatures();
 }
 export function useHasAgeGatedFeatures() {
-  const items = [RegionalFeatureConfigStore];
+  items = [RegionalFeatureConfigStore];
   return initialize.useStateFromStores(items, () => RegionalFeatureConfigStore.hasAgeGatedFeatures());
 }
 export function hasTeenDefaults() {
   return RegionalFeatureConfigStore.hasTeenDefaults();
 }
 export function useHasTeenDefaults() {
-  const items = [RegionalFeatureConfigStore];
+  items = [RegionalFeatureConfigStore];
   return initialize.useStateFromStores(items, () => RegionalFeatureConfigStore.hasTeenDefaults());
 }
 export function shouldCollectAppStoreSignal() {

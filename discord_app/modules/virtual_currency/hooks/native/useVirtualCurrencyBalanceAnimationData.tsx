@@ -1,9 +1,9 @@
-// === Module 14503: useVirtualCurrencyBalanceAnimationData ===
+// === Module 14634: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 14503 (useVirtualCurrencyBalanceAnimationData)
+// Module 14634 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
   noop = undefined;
   let useReducedMotion;
   c7 = undefined;
-  const items = [useReducedMotion];
+  items = [useReducedMotion];
   stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp2 = currentAnimationType(noop.useState(null), 2);
   currentAnimationType = tmp2[0];

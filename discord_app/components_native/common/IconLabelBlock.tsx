@@ -1,12 +1,12 @@
-// === Module 18939: IconLabelBlock ===
+// === Module 19097: IconLabelBlock ===
 
-// Module 18939 (IconLabelBlock)
+// Module 19097 (IconLabelBlock)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5021 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import IconUploaderDefault from "IconUploader" /* 10147 */;
+import shared from "shared" /* 5148 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import IconUploaderDefault from "IconUploader" /* 10277 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, label: null, iconUploaderWrapper: null, text: null };
 let obj3 = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
@@ -31,7 +31,7 @@ prototype["renderLabel"] = function renderLabel() {
   let tmp3 = null;
   if (null != label) {
     const obj = { style: null, children: null };
-    const items = [tmp.label, tmp2];
+    items = [tmp.label, tmp2];
     obj.style = items;
     obj.children = label;
     tmp3 = timestampProducer(native.LegacyText, obj);
@@ -43,7 +43,7 @@ prototype["renderText"] = function renderText() {
   let tmp4 = null;
   if (null != text) {
     const obj = { variant: "heading-md/medium", color: "text-default", style: null, accessibilityRole: null, children: null };
-    const items = [tmp.text, tmp2];
+    items = [tmp.text, tmp2];
     obj.style = items;
     obj.accessibilityRole = tmp3;
     obj.children = text;
@@ -60,7 +60,7 @@ prototype["renderIcon"] = function renderIcon() {
     const obj3 = {};
     const tmp12 = _objectWithoutProperties(iconProps, closure_3);
     const merged = Object.assign(tmp12);
-    const items = [timestampProducer(IconUploaderDefault, obj3), ];
+    items = [timestampProducer(IconUploaderDefault, obj3), ];
     let tmp15Result = null;
     if (null != error) {
       const obj4 = { style: null };
@@ -87,13 +87,13 @@ prototype["renderIcon"] = function renderIcon() {
 };
 prototype["render"] = function render() {
   const obj = { style: null, children: null };
-  const items = [closure_8(this.context).wrapper, this.props.wrapperStyles];
+  items = [closure_8(this.context).wrapper, this.props.wrapperStyles];
   obj.style = items;
   const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
   obj.children = items1;
   return React5(View, obj);
 };
-IconLabelBlock.contextType = fn(5080).ThemeContext;
+IconLabelBlock.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

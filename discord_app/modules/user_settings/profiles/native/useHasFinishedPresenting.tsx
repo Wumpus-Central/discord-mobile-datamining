@@ -1,7 +1,7 @@
-// === Module 16494: useHasFinishedPresenting ===
+// === Module 16637: useHasFinishedPresenting ===
 
-// Module 16494 (useHasFinishedPresenting)
-import useNavigation from "useNavigation" /* 1497 */;
+// Module 16637 (useHasFinishedPresenting)
+import useNavigation from "useNavigation" /* 1499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_settings/profiles/native
 export default function useHasFinishedPresenting() {
   let navigation = useNavigation.useNavigation();
   [first, closure_2] = noop.useState(false);
-  const items = [navigation, first];
+  items = [navigation, first];
   const effect = noop.useEffect(() => {
     if (!timeout) {
       const parent = navigation.getParent();

@@ -1,15 +1,15 @@
-// === Module 17122: VideoQuestCaptions ===
+// === Module 17265: VideoQuestCaptions ===
 
-// Module 17122 (VideoQuestCaptions)
+// Module 17265 (VideoQuestCaptions)
 import nativeDefault from "native" /* 575 */;
-import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 17125 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 17268 */;
 import noop from "module_19" /* 19 */;
 import n from "module_671" /* 671 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_32, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
 obj2.container = rect;
@@ -36,7 +36,7 @@ export function VideoQuestCaptions(currentTime) {
   const tmp = closure_6();
   const videoQuestCaptions = currentTime(captions[6]).useVideoQuestCaptions(quest);
   captions = videoQuestCaptions.captions;
-  const items = [captions, currentTime, flag];
+  items = [captions, currentTime, flag];
   const memo = noop.useMemo(() => {
     let findActiveCaptionResult = null;
     if (null != captions) {

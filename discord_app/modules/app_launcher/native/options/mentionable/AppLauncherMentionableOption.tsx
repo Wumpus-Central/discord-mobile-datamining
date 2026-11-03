@@ -1,27 +1,27 @@
-// === Module 12513: AppLauncherMentionableOption ===
+// === Module 12649: AppLauncherMentionableOption ===
 
-// Module 12513 (AppLauncherMentionableOption)
+// Module 12649 (AppLauncherMentionableOption)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import UserCircleIcon from "UserCircleIcon" /* 10805 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12514 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12515 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12516 */;
-import UsernameTextDefault from "UsernameText" /* 12517 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import UserCircleIcon from "UserCircleIcon" /* 10935 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12650 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12651 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12652 */;
+import UsernameTextDefault from "UsernameText" /* 12653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import UserStore from "UserStore" /* 1383 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
   const tmp = closure_10();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { icon: null, wrapperStyle: null };
   obj2.icon = jsx(UserCircleIcon.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
@@ -45,7 +45,7 @@ function MentionableIcon(mentionable) {
 }
 const StatusTypes = fn(1083).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -86,7 +86,7 @@ export default function AppLauncherMentionableOption(option) {
     }
     return null;
   });
-  const items = [onMentionablePress, option.name, initialValue, mentionable];
+  items = [onMentionablePress, option.name, initialValue, mentionable];
   const effect = channel.useEffect(() => {
     let tmp = null != initialValue;
     if (tmp) {
@@ -124,7 +124,7 @@ export default function AppLauncherMentionableOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12515, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12651, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onMentionablePress(mentionable) {

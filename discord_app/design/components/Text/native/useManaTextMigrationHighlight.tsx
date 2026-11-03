@@ -1,12 +1,12 @@
-// === Module 5626: useManaTextMigrationHighlight ===
+// === Module 5749: useManaTextMigrationHighlight ===
 
-// Module 5626 (useManaTextMigrationHighlight)
+// Module 5749 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("design/components/Text/native/useMana
 
 export function useManaTextMigrationHighlight(fromEntriesResult, style) {
   const tmp = closure_5();
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   if (!obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {
     return null;
   } else {

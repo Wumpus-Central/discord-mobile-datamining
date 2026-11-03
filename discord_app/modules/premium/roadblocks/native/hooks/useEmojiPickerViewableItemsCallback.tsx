@@ -1,8 +1,8 @@
-// === Module 10043: useEmojiPickerViewableItemsCallback ===
+// === Module 10174: useEmojiPickerViewableItemsCallback ===
 
-// Module 10043 (useEmojiPickerViewableItemsCallback)
+// Module 10174 (useEmojiPickerViewableItemsCallback)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks
 export default function useEmojiPickerViewableItemsChanged(arg0) {
   _require = arg0;
   closure_1 = noop.useRef(0);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     const result = closure_1(stateFromStores[3]).canUseEmojisEverywhere(currentUser);

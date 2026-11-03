@@ -1,10 +1,10 @@
-// === Module 11857: useIsInvitedToSpeak ===
+// === Module 11994: useIsInvitedToSpeak ===
 
-// Module 11857 (useIsInvitedToSpeak)
+// Module 11994 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
 
 export default function useIsInvitedToSpeak() {
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   const items1 = [AuthenticationStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => id.getId());

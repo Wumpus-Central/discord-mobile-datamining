@@ -1,14 +1,14 @@
-// === Module 7212: AddPhone ===
+// === Module 7333: AddPhone ===
 
-// Module 7212 (AddPhone)
+// Module 7333 (AddPhone)
 import nativeDefault from "native" /* 575 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7109 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
-import UserStore from "UserStore" /* 1383 */;
+import PhoneStore from "PhoneStore" /* 7235 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const UserFlags = fn(1072).UserFlags;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -50,7 +50,7 @@ export default function AddPhone(reason) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ export default function AddPhone(reason) {
     }
   };
   const tmp = closure_15();
-  const items = [currentUser];
+  items = [currentUser];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const items1 = [action];
@@ -291,7 +291,7 @@ export default function AddPhone(reason) {
     const intl4 = require("util").intl;
     stringResult = intl4.string(require("util").t["64bX0M"]);
   } else {
-    const obj13 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj13 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     if (null != phone) {
       if (!result) {
         const intl = require("util").intl;

@@ -1,8 +1,8 @@
-// === Module 9743: scopes ===
+// === Module 9875: scopes ===
 
-// Module 9743 (scopes)
+// Module 9875 (scopes)
 import util from "util" /* 1113 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
 import size from "module_2" /* 2 */;
 
 let items = [
@@ -51,7 +51,7 @@ export const RemovedScopes = ["rpc.api"];
 export function getScopeNames(nextResult, c2) {
   if (OAuth2Scopes.OAuth2Scopes.IDENTIFY === nextResult) {
     const intl65 = util.intl;
-    const items = [intl65.string(util.t.DD9KQh)];
+    items = [intl65.string(util.t.DD9KQh)];
     return items;
   } else if (OAuth2Scopes.OAuth2Scopes.IDENTIFY_PREMIUM === nextResult) {
     const intl64 = util.intl;

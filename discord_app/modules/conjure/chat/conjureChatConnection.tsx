@@ -1,13 +1,13 @@
-// === Module 10872: conjureChatConnection ===
+// === Module 11002: conjureChatConnection ===
 
-// Module 10872 (conjureChatConnection)
+// Module 11002 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10855 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10873 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10985 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11003 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -98,7 +98,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3868["913RMa"]);
+      const stringResult = intl.string(_modDef3995["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -165,7 +165,7 @@ let obj2 = {
   },
   todos(turn_id, projectId) {
     projectId = projectId.projectId;
-    let items = turn_id.items;
+    items = turn_id.items;
     if (items == null) {
       items = [];
     }
@@ -187,7 +187,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3868["0+RUWx"]);
+      const stringResult = intl.string(_modDef3995["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -232,9 +232,9 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(onSubmit, arg1) {
-    let ts = onSubmit;
-    let tmp = null != onSubmit.clarification;
+  clarification(geKm7t, arg1) {
+    let ts = geKm7t;
+    let tmp = null != geKm7t.clarification;
     if (tmp) {
       const questions = ts.clarification.questions;
       let num;

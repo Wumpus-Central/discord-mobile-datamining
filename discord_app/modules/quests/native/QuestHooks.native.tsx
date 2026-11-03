@@ -1,18 +1,18 @@
-// === Module 17068: QuestHooks ===
+// === Module 17211: QuestHooks ===
 
-// Module 17068 (QuestHooks)
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import AssetUtils from "AssetUtils" /* 9695 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 17095 */;
+// Module 17211 (QuestHooks)
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7001 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import AssetUtils from "AssetUtils" /* 9827 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 17238 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import BountyStore from "BountyStore" /* 7845 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import BountyStore from "BountyStore" /* 7969 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 const require = globalThis.__r;
 
@@ -20,9 +20,9 @@ require = fn;
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(mobileQuestDock);
-  const tmp4 = questDockAdCreativeId(7112)();
+  const tmp4 = questDockAdCreativeId(7238)();
   const obj = require("AdCreativeUtils");
-  const items = [QuestStore];
+  items = [QuestStore];
   let userStatus1;
   const stateFromStores = require("initialize").useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(mobileQuestDock(dependencyMap[11]).QuestContent.QUEST_BAR_MOBILE), []);
   if (questDockQuest != null) {
@@ -30,8 +30,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(7842).isDismissed(questDockQuest.userStatus, tmp(6784).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(7842);
+    isDismissedResult = tmp(7966).isDismissed(questDockQuest.userStatus, tmp(6904).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(7966);
   }
   let claimedAt;
   if (questDockQuest != null) {
@@ -69,7 +69,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }, items4);
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(6788).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(6908).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -80,7 +80,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(6788).AdCreativeType.PLAYABLE === type) {
+  } else if (tmp(6908).AdCreativeType.PLAYABLE === type) {
     let tmp18 = isEligibleForQuests;
     if (isEligibleForQuests) {
       tmp18 = !stateFromStores1;
@@ -89,7 +89,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       tmp18 = !tmp4;
     }
     return tmp18;
-  } else if (tmp(6788).AdCreativeType.QUEST === type) {
+  } else if (tmp(6908).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp16 = null != questDockQuest && !tmp4;
@@ -101,9 +101,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult10 = require("initialize");
 }
-const QuestConstants = fn(6781);
-({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: c10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6546).CAPTCHA_MODAL_KEY;
+const QuestConstants = fn(6901);
+({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: closure_10 } = QuestConstants);
+const CAPTCHA_MODAL_KEY = fn(6666).CAPTCHA_MODAL_KEY;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -129,7 +129,7 @@ export function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuest
   const obj2 = require("NavigationRouteUtils");
   let tmp4 = null != require("NavigationRouteUtils").coerceGuildsRoute({ name: currentNavigationRouteName });
   const obj3 = require("NavigationRouteUtils");
-  const items = [QuestStore];
+  items = [QuestStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     const type = mobileQuestDock.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
@@ -168,11 +168,11 @@ export function useIsMobileQuestDockRendered() {
 }
 export function useQuestGameLogotypeAssetUrl(quest) {
   closure_0 = quest;
-  const items = [quest];
+  items = [quest];
   return noop.useMemo(() => AssetUtils.getQuestAsset(closure_0, AssetUtils.QuestAssetType.LOGO_TYPE, ThemeTypes.DARK).url, items);
 }
 export function useQuestDockHeroAsset(quest) {
-  const items = [quest];
+  items = [quest];
   return noop.useMemo(() => {
     const questAsset = AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO);
     let videoAsset = null;
@@ -189,7 +189,7 @@ export function useQuestDockHeroAsset(quest) {
   }, items);
 }
 export function useHasWatchVideoOnMobileTasks(config) {
-  const items = [config];
+  items = [config];
   return noop.useMemo(() => QuestTaskUtils.hasWatchVideoOnMobileTasks({ config }), items);
 }
 export function useMobileActivityQuest(quest) {
@@ -199,7 +199,7 @@ export function useMobileActivityQuest(quest) {
   let obj = require("QuestTaskUtils");
   const tmp = analyticsLocations;
   const tmp3 = activityApplicationId;
-  let items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ApplicationStore.getApplication(activityApplicationId));
   const obj2 = require("initialize");
   let result = require("canLaunchContextlessFrame").canLaunchContextlessFrame(stateFromStores);
@@ -245,7 +245,7 @@ export function useMobileActivityQuest(quest) {
       hasItem = features.includes(constants.MOBILE_ACTIVITY_QUEST);
     }
     if (hasItem) {
-      const items = [activityApplicationId];
+      items = [activityApplicationId];
       const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items1);
@@ -265,7 +265,7 @@ export function useMobileActivityQuest(quest) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -300,7 +300,7 @@ export function useMobileActivityQuest(quest) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp12) {
           c0 = tmp;
           throw tmp12;

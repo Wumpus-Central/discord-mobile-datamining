@@ -1,10 +1,10 @@
-// === Module 13693: useTraitPickerSelection ===
+// === Module 13821: useTraitPickerSelection ===
 
-// Module 13693 (useTraitPickerSelection)
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6111 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
+// Module 13821 (useTraitPickerSelection)
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6231 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 
 require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ export function useTraitPickerSelection(customizationOption) {
   const onSelectOption = customizationOption.onSelectOption;
   let selectedOptionId;
   noop = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
-  const items = [selectedOptionId];
+  items = [selectedOptionId];
   const savedOptionId = customizationOption(onSelectOption[5]).useStateFromStoresObject(items, () => {
     let tmp7 = tmp4;
     if (customizationOption === CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT) {

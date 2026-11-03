@@ -1,24 +1,24 @@
-// === Module 15803: GuildActionSheet ===
+// === Module 15946: GuildActionSheet ===
 
-// Module 15803 (GuildActionSheet)
+// Module 15946 (GuildActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5595 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8741 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 15737 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15798 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 15804 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 15805 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 15808 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5718 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8865 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 15880 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15941 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 15947 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 15948 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 15951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -40,7 +40,7 @@ export default noop.memo(function GuildActionSheet(arg0) {
     num = 16;
   }
   obj3.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + num };
-  const items = [React4(GuildActionSheetHeaderDefault, { guild }), React4(GuildActionSheetTabItemsDefault, { guild }), , ];
+  items = [React4(GuildActionSheetHeaderDefault, { guild }), React4(GuildActionSheetTabItemsDefault, { guild }), , ];
   const obj5 = { style: tmp.actions, children: null };
   const items1 = [React4(GuildActionSheetActions.GuildUnreadAction, { guild }), React4(GuildActionSheetProgressDefault, { guild }), React4(GuildActionSheetActions.GuildActionSheetPrimaryActions, { guild }), React4(GuildActionSheetActions.GuildActionSheetGameOrganizationActions, { guild }), React4(GuildActionSheetActions.GuildActionSheetSecondaryActions, { guild }), React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild }), React4(GuildActionSheetEmojiSectionDefault, { guildId: guild.id })];
   obj5.children = items1;

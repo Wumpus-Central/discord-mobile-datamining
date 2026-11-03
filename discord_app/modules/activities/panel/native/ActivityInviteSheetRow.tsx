@@ -1,19 +1,19 @@
-// === Module 19144: ActivityInviteSheetRow ===
+// === Module 19302: ActivityInviteSheetRow ===
 
-// Module 19144 (ActivityInviteSheetRow)
+// Module 19302 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7879).InviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;
@@ -28,7 +28,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
   ({ end, error, isSubmitting, start } = row);
   const id = row.item.id;
   let tmp = closure_9();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(id));
   let str = onPressAvatar(row[10])(stateFromStores);
   const type = row.type;
@@ -56,7 +56,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
-        let guild;
+        guild = undefined;
         if (null != guild_id) {
           guild = GuildStore.getGuild(stateFromStores.guild_id);
         }
@@ -75,8 +75,8 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
           } else {
             const obj6 = { style: tmp.acronym, children: null };
             const acronym = require("StringUtils").getAcronym(guild.name);
-            const obj7 = { variant: "text-sm/bold", children: acronym };
-            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/bold", children: acronym });
+            const obj7 = { variant: "text-sm/semibold", children: acronym };
+            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/semibold", children: acronym });
             tmp14 = <id style={tmp.acronym}>{null}</id>;
             const tmp2Result = require("StringUtils");
           }

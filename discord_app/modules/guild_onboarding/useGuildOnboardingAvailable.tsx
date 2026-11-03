@@ -1,7 +1,7 @@
-// === Module 7514: useGuildOnboardingAvailable ===
+// === Module 7638: useGuildOnboardingAvailable ===
 
-// Module 7514 (useGuildOnboardingAvailable)
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
+// Module 7638 (useGuildOnboardingAvailable)
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/useGuildOnbo
 
 export default function useGuildOnboardingAvailable(features) {
   _require = features;
-  const items = [ImpersonateStore];
+  items = [ImpersonateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let id;
     if (user != null) {

@@ -1,22 +1,22 @@
-// === Module 17296: LightModeThemeSetting ===
+// === Module 17439: LightModeThemeSetting ===
 
-// Module 17296 (LightModeThemeSetting)
+// Module 17439 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17297 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17440 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const SystemTheme = fn(1195).SystemTheme;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.NoFvjZ);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    const items = [ThemeStore];
+    items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing() {

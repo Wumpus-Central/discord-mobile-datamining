@@ -1,15 +1,15 @@
-// === Module 17241: VoiceSensitivitySetting ===
+// === Module 17384: VoiceSensitivitySetting ===
 
-// Module 17241 (VoiceSensitivitySetting)
+// Module 17384 (VoiceSensitivitySetting)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 11947 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import createStyles from "createStyles" /* 5014 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 12084 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import createStyles from "createStyles" /* 5141 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -23,7 +23,7 @@ const obj = {
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
     const obj2 = {
@@ -47,7 +47,7 @@ const obj = {
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 };
@@ -61,7 +61,7 @@ export default SettingBuilders.createStatic({
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
     const obj2 = {
@@ -85,7 +85,7 @@ export default SettingBuilders.createStatic({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 });

@@ -1,15 +1,15 @@
-// === Module 10209: UploaderBase ===
+// === Module 10339: UploaderBase ===
 
-// Module 10209 (UploaderBase)
+// Module 10339 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8218 */;
-import UploadTargets from "UploadTargets" /* 8241 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8342 */;
+import UploadTargets from "UploadTargets" /* 8365 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(5019).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5146).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -34,7 +34,7 @@ class UploaderBase extends EventEmitter {
       const timestamp = Date.now();
       const rounded = Math.floor((loaded - closure_0._loaded) / ((timestamp - closure_0._lastUpdate) / 1000));
       if (null != arg2) {
-        const items = obj2._file.items;
+        items = obj2._file.items;
         if (items != null) {
           const item = items.forEach((item) => {
             item.item.progress = closure_0[item.id];
@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "applicationId" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "alignItems" };
     return tmp3;
   }
 }
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -343,7 +343,7 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
   _modDef12;
-  const items = [...arg2];
+  items = [...arg2];
   return _modDef12.set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -406,7 +406,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
                 const index = files1.indexOf(found);
                 itemId = 0;
                 const files2 = self.files;
-                const items = [];
+                items = [];
                 itemId = HermesBuiltin.arraySpread(files2.slice(0, index), itemId);
                 const files3 = self.files;
                 itemId = HermesBuiltin.arraySpread(files3.slice(index + 1), itemId);

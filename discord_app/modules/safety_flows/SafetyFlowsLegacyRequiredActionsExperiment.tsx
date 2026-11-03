@@ -1,9 +1,9 @@
-// === Module 19560: SafetyFlowsLegacyRequiredActionsExperiment ===
+// === Module 19716: SafetyFlowsLegacyRequiredActionsExperiment ===
 
-// Module 19560 (SafetyFlowsLegacyRequiredActionsExperiment)
+// Module 19716 (SafetyFlowsLegacyRequiredActionsExperiment)
 import Constants from "Constants" /* 1072 */;
-import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19561 */;
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 19717 */;
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 function config() {
@@ -11,10 +11,10 @@ function config() {
   return obj;
 }
 function union() {
-  let items = [...arguments];
+  items = [...arguments];
   const obj = {
     requiredActions: new Set(items.flatMap((requiredActions) => {
-      const items = [...requiredActions.requiredActions];
+      items = [...requiredActions.requiredActions];
       return items;
     }))
   };

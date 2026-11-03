@@ -1,24 +1,24 @@
-// === Module 7457: ReportToModUtils ===
+// === Module 7581: ReportToModUtils ===
 
-// Module 7457 (ReportToModUtils)
+// Module 7581 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7439 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7440 */;
-import ReportUtils from "ReportUtils" /* 7460 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7461 */;
-import SelfModUtils from "SelfModUtils" /* 7462 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7467 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 7474 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7458 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import UserStore from "UserStore" /* 1383 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7563 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7564 */;
+import ReportUtils from "ReportUtils" /* 7584 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7585 */;
+import SelfModUtils from "SelfModUtils" /* 7586 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7591 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 7598 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const ReportToModPermissions = fn(7459).ReportToModPermissions;
+const ReportToModPermissions = fn(7583).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
@@ -28,7 +28,7 @@ export function canReportMessageToMods(message) {
     if (null == channel) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         return false;
       } else {
@@ -50,7 +50,7 @@ export function canAccessReportsChannel(arg0) {
   if (null == contextForPermission) {
     return false;
   } else {
-    const guild = contextForPermission.guild;
+    guild = contextForPermission.guild;
     let tmp7 = null == guild;
     if (!tmp7) {
       tmp7 = !getGuildModeratorReportingEnabledDefault(guild);
@@ -68,7 +68,7 @@ export function canAccessReportsChannel(arg0) {
   }
 }
 export function getReportToModChannelId(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let tmp2 = null;
   if (null != guild) {
     tmp2 = getGuildModeratorReportChannelIdDefault(guild);

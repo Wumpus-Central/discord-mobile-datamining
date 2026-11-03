@@ -1,8 +1,8 @@
-// === Module 14948: ConjureCustomWidget ===
+// === Module 15077: ConjureCustomWidget ===
 
-// Module 14948 (ConjureCustomWidget)
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 15077 (ConjureCustomWidget)
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export function useCanConjureCustomWidget(ConjureCustomWidgetAddOption, arg1) {
   if (arg1 === undefined) {
     flag = true;
   }
-  const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
+  items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
   const items1 = [ConjureCustomWidgetAddOption, flag];
   return require("initialize").useStateFromStores(items, () => {
     let result = flag;
@@ -28,6 +28,6 @@ export function useCanConjureCustomWidget(ConjureCustomWidgetAddOption, arg1) {
   }, items1);
 }
 export function composeConjureCustomWidgetPrompt(arg0) {
-  const items = ["Build a profile card (an application profile widget) for my Discord profile.", "Read the data from the public source below \u2014 it must be reachable without a login.", "Recommend which fields the card should show and ask me to confirm or edit them before you build.", "", arg0];
+  items = ["Build a profile card (an application profile widget) for my Discord profile.", "Read the data from the public source below \u2014 it must be reachable without a login.", "Recommend which fields the card should show and ask me to confirm or edit them before you build.", "", arg0];
   return items.join("\n");
 }

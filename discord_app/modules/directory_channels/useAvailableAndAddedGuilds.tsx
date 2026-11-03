@@ -1,13 +1,13 @@
-// === Module 13866: useAvailableAndAddedGuilds ===
+// === Module 13997: useAvailableAndAddedGuilds ===
 
-// Module 13866 (useAvailableAndAddedGuilds)
+// Module 13997 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13860 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13991 */;
 
 const require = globalThis.__r;
 
@@ -21,16 +21,16 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  let items = [GuildDirectoryStore];
+  items = [GuildDirectoryStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildDirectoryStore.getAdminGuildEntryIds(closure_1));
   let obj = require("initialize");
   const items1 = [SortedGuildStore, GuildStore, PermissionStore];
   const items2 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-    const items = [];
+    items = [];
     const item = flattenedGuildIds.forEach((item) => {
-      const guild = GuildStore.getGuild(item);
+      guild = GuildStore.getGuild(item);
       let canResult = null != guild;
       if (canResult) {
         canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
@@ -56,7 +56,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           v3 = tmp;

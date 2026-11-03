@@ -1,17 +1,17 @@
-// === Module 11566: MediaModalOverlayAltTextSheet ===
+// === Module 11703: MediaModalOverlayAltTextSheet ===
 
-// Module 11566 (MediaModalOverlayAltTextSheet)
+// Module 11703 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11567 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11704 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function MediaViewerAltTextSheet(children) {
   const intl = util.intl;
   obj4.title = intl.string(util.t.J3IOO1);
   obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
-  const items = [tmp.container, { minHeight: num }];
+  items = [tmp.container, { minHeight: num }];
   obj3.contentStyles = items;
   obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
   return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });

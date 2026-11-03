@@ -1,9 +1,9 @@
-// === Module 6439: useDisplayNameStyles ===
+// === Module 6559: useDisplayNameStyles ===
 
-// Module 6439 (useDisplayNameStyles)
+// Module 6559 (useDisplayNameStyles)
 import _mod19 from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export default function useDisplayNameStyles() {
   const displayNameStylesEnabled = require("useDisplayNameStylesEnabled").useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
   const obj2 = require("useDisplayNameStylesEnabled");
   const tmp2 = stateFromStores;
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != require) {
       let user = UserStore.getUser(tmp);

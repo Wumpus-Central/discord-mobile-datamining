@@ -1,18 +1,18 @@
-// === Module 17730: CollectiblesTool ===
+// === Module 17873: CollectiblesTool ===
 
-// Module 17730 (CollectiblesTool)
+// Module 17873 (CollectiblesTool)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BaseTextButton from "BaseTextButton" /* 5635 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9459 */;
-import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 11373 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14495 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BaseTextButton from "BaseTextButton" /* 5755 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9587 */;
+import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 11511 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14626 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10563 */;
-import UserStore from "UserStore" /* 1383 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10693 */;
+import UserStore from "UserStore" /* 1385 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 const require = globalThis.__r;
 
@@ -74,15 +74,15 @@ function FramePreviewOverrideSection() {
     const obj = { style: tmp.section, children: null };
     const obj2 = { style: tmp.sectionHeader, children: null };
     const obj3 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Frame Preview Override" };
-    obj2.children = closure_1_14(Text_Text.Text, obj3);
-    const items = [closure_1_14(timestampProducer, obj2), , , , ];
+    obj2.children = gesture(Text_Text.Text, obj3);
+    items = [gesture(timestampProducer, obj2), , , , ];
     const obj4 = { variant: "text-sm/normal", style: tmp.description, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
-    items[1] = closure_1_14(Text_Text.Text, obj4);
+    items[1] = gesture(Text_Text.Text, obj4);
     const obj5 = { variant: "text-xs/normal", style: null, children: null };
     const items1 = [tmp.statusText, statusError];
     obj5.style = items1;
     obj5.children = "Loading\u2026";
-    items[2] = closure_1_14(Text_Text.Text, obj5);
+    items[2] = gesture(Text_Text.Text, obj5);
     const obj6 = {
       pillStyle: tmp.secondaryButton,
       text: "Load from device",
@@ -90,15 +90,15 @@ function FramePreviewOverrideSection() {
           closure_0();
         }
     };
-    items[3] = closure_1_14(BaseTextButton.BaseTextButton, obj6);
+    items[3] = gesture(BaseTextButton.BaseTextButton, obj6);
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj7 = { pillStyle: tmp.secondaryButton, text: "Clear override", onPress: tmp4 };
-      tmp13Result = closure_1_14(BaseTextButton.BaseTextButton, obj7);
+      tmp13Result = gesture(BaseTextButton.BaseTextButton, obj7);
     }
     items[4] = tmp13Result;
     obj.children = items;
-    return __initData(timestampProducer, obj);
+    return closure_1_15(timestampProducer, obj);
   } else if (tmp5) {
     if (str == null) {
       str = "Failed to load";
@@ -119,12 +119,12 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(8776).useFramePreviewOverrideStore;
+let closure_11 = fn(8900).useFramePreviewOverrideStore;
 const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
-const PremiumGiftStyles = fn(1385).PremiumGiftStyles;
+const PremiumGiftStyles = fn(1387).PremiumGiftStyles;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, contentContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
@@ -187,7 +187,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/tooling/C
 
 export default function _default() {
   const tmp = closure_16();
-  const items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => CollectiblesCategoryStore.categories);
   let obj = require("useStateFromStores");
   const items1 = [CollectiblesPurchaseStore];

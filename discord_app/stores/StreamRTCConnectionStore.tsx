@@ -1,20 +1,20 @@
-// === Module 7885: StreamRTCConnectionStore ===
+// === Module 8009: StreamRTCConnectionStore ===
 
-// Module 7885 (StreamRTCConnectionStore)
+// Module 8009 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import canSpectateDefault from "canSpectate" /* 6755 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7882 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 7886 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import canSpectateDefault from "canSpectate" /* 6875 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8006 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 8010 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};
@@ -293,7 +293,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "y" };
         const item = _modDef12.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);

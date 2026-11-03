@@ -1,6 +1,6 @@
-// === Module 9374: useGameProfileHeroBackgroundURL ===
+// === Module 9502: useGameProfileHeroBackgroundURL ===
 
-// Module 9374 (useGameProfileHeroBackgroundURL)
+// Module 9502 (useGameProfileHeroBackgroundURL)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ export default function useGameProfileHeroBackgroundURL(arg0, arg1) {
   let bannerURL = arg0;
   closure_1 = arg1;
   const first = _slicedToArray(noop.useState(() => Math.random()), 1)[0];
-  const items = [arg1, arg0, first];
+  items = [arg1, arg0, first];
   return noop.useMemo(() => {
     bannerURL = bannerURL.getBannerURL(closure_1);
     if (null != bannerURL) {

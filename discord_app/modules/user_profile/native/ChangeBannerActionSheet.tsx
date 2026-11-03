@@ -1,21 +1,21 @@
-// === Module 16446: ChangeBannerActionSheet ===
+// === Module 16590: ChangeBannerActionSheet ===
 
-// Module 16446 (ChangeBannerActionSheet)
+// Module 16590 (ChangeBannerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import Form from "Form" /* 8177 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8735 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16449 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import Form from "Form" /* 8301 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8859 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16593 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -26,12 +26,12 @@ function ChangeBannerColorRow(user) {
   pendingAccentColor = undefined;
   dependencyMap = undefined;
   let tmp = closure_12();
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => pendingChanges.getPendingChanges());
   ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
   const obj = require("initialize");
   let pendingAvatarSrc = require("RecentAvatarUtils").getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
-  const tmp7 = pendingAccentColor(8757)(user.id);
+  const tmp7 = pendingAccentColor(8881)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
@@ -69,14 +69,14 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(16451), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [closure_9(pendingAccentColor(16595), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj8 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result5 = require("VideoBackground");
   obj8.children = require("utils/ColorUtils").int2hex(pendingAccentColor);
   items2[1] = closure_9(require("Text/Text").Text, obj8);
   const tmp2Result6 = require("utils/ColorUtils");
-  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(16456) });
+  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(16600) });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
   obj4.onPress = function handleChangeColor() {
@@ -88,8 +88,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_7, UPLOAD_BANNER_SIZE: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { label: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" }, sublabel: null, nitroWheel: null, bannerColor: null, selectedColor: null, selectedColorHex: null, rowArrow: null, upsellButton: null, remove: null, titleWrapper: null, titleContainer: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -130,7 +130,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -147,11 +147,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             closure_128_0 = undefined;
             let base64;
             let originalMd5;
-            tmp5(5258).hideActionSheet();
-            const obj4 = tmp5(5258);
+            tmp5(5381).hideActionSheet();
+            const obj4 = tmp5(5381);
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(8220).openImagePicker(closure_1_8), done: false };
+            const obj6 = { value: tmp5(8344).openImagePicker(closure_1_8), done: false };
             return obj6;
           }
         } else if (dependencyMap === 1) {
@@ -166,12 +166,12 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           base64 = closure_128_0.base64;
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
-            const obj8 = { assetOrigin: tmp2(7160).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
-            closure_129_0(tmp2(16447).createPendingImage(obj8));
-            const obj = tmp2(16447);
+            const obj8 = { assetOrigin: tmp2(7281).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
+            closure_129_0(tmp2(16591).createPendingImage(obj8));
+            const obj = tmp2(16591);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -181,8 +181,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   };
   const tmp = closure_12();
   if (!flag) {
-    flag = tmp2(2047).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(2047);
+    flag = tmp2(2176).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(2176);
   }
   let obj = { value: useAnalyticsLocationsDefault(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   let obj2 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -194,7 +194,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   obj2.trailing = tmp4Result;
   ({ titleWrapper: obj3.titleWrapperStyle, titleContainer: obj3.titleContainerStyle } = tmp);
-  const items = [closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
+  items = [closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   let tmp4Result4 = null;
   if (!flag) {
     let obj4 = { user };
@@ -234,7 +234,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = closure_9(tmp2(16448), obj10);
+    obj9.children = closure_9(tmp2(16592), obj10);
     tmp4Result6 = closure_9(View, obj9);
   }
   items3[1] = tmp4Result6;

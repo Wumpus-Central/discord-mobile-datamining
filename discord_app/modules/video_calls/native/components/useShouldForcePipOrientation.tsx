@@ -1,14 +1,14 @@
-// === Module 11708: useShouldForcePipOrientation ===
+// === Module 11845: useShouldForcePipOrientation ===
 
-// Module 11708 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6851 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11709 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+// Module 11845 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6971 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11846 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const CallConstants = fn(5681);
+const CallConstants = fn(5801);
 ({ isStreamParticipant: metroRequire, ParticipantTypes: closure_7 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -17,7 +17,7 @@ export function useShouldForcePipOrientation(channel) {
   channel = channel.channel;
   let OrientationType = dependencyMap;
   const tmp = usePipVideoOrStreamDefault(channel.id);
-  const items = [ChannelRTCStore, AuthenticationStore];
+  items = [ChannelRTCStore, AuthenticationStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     const participant = ChannelRTCStore.getParticipant(channel.id, AuthenticationStore.getId());
     let tmp2 = null;
@@ -77,17 +77,17 @@ export function useShouldForcePipOrientation(channel) {
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_6(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8903).OrientationType.LANDSCAPE;
+        return tmp2(9027).OrientationType.LANDSCAPE;
       }
     }
   }
-  if (activityLockOrientation === channel(2019).EmbeddedActivityOrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8903).OrientationType;
+  if (activityLockOrientation === channel(2148).EmbeddedActivityOrientationLockState.LANDSCAPE) {
+    OrientationType = tmp2(9027).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
-    if (activityLockOrientation === tmp2(2019).EmbeddedActivityOrientationLockState.PORTRAIT) {
-      LANDSCAPE = tmp2(8903).OrientationType.PORTRAIT;
+    if (activityLockOrientation === tmp2(2148).EmbeddedActivityOrientationLockState.PORTRAIT) {
+      LANDSCAPE = tmp2(9027).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

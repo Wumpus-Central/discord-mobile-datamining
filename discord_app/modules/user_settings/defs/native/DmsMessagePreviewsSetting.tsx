@@ -1,20 +1,20 @@
-// === Module 17309: DmsMessagePreviewsSetting ===
+// === Module 17452: DmsMessagePreviewsSetting ===
 
-// Module 17309 (DmsMessagePreviewsSetting)
+// Module 17452 (DmsMessagePreviewsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5692 */;
-import useMessagePreviews from "useMessagePreviews" /* 17310 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5812 */;
+import useMessagePreviews from "useMessagePreviews" /* 17453 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
     return useMessagePreviews.useMessagePreviewSetting();
   },
@@ -28,7 +28,7 @@ const radio = SettingBuilders.createRadio({
       const intl = util.intl;
       obj.label = intl.string(util.t["8K53DF"]);
       obj.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
-      const items = [obj, , ];
+      items = [obj, , ];
       const obj2 = { label: null, value: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.Gw11zg);

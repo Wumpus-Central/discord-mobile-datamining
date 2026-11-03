@@ -1,10 +1,10 @@
-// === Module 7206: PostponeRender ===
+// === Module 7327: PostponeRender ===
 
-// Module 7206 (PostponeRender)
+// Module 7327 (PostponeRender)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6954 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7207 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -43,7 +43,7 @@ export function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7208).SceneLoadingIndicator, {});
+    children = jsx(first(7329).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
@@ -51,7 +51,7 @@ export function PostponeRender(children) {
     tmp4Result = KeyboardAwareViewDefault;
   }
   const obj = { style: null, children };
-  const items = [closure_7().view, viewStyle];
+  items = [closure_7().view, viewStyle];
   obj.style = items;
   return <tmp4Result style={null}>{children}</tmp4Result>;
 }

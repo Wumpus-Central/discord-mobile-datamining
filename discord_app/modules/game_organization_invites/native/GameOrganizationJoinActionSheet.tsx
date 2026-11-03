@@ -1,20 +1,20 @@
-// === Module 13215: GameOrganizationJoinActionSheet ===
+// === Module 13351: GameOrganizationJoinActionSheet ===
 
-// Module 13215 (GameOrganizationJoinActionSheet)
+// Module 13351 (GameOrganizationJoinActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 13197 */;
-import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 13216 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 13333 */;
+import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 13352 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(11364).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
+let closure_7 = fn(11501).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { loading: { paddingVertical: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function GameOrganizationJoinActionSheet(code) {
     id = tmp4.application.id;
   }
   const tmp = closure_10();
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = code(id[9]).useStateFromStores(items, () => ApplicationStore.getApplication(id));
   let obj = code(id[9]);
   const items1 = [UserStore];

@@ -1,14 +1,14 @@
-// === Module 8180: BackgroundBlurView ===
+// === Module 8304: BackgroundBlurView ===
 
-// Module 8180 (BackgroundBlurView)
-import BackgroundBlurFill from "BackgroundBlurFill" /* 8181 */;
+// Module 8304 (BackgroundBlurView)
+import BackgroundBlurFill from "BackgroundBlurFill" /* 8305 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");
@@ -19,7 +19,7 @@ export const BackgroundBlurView = function BackgroundBlurViewComponent(arg0) {
   const merged = Object.assign(arg0, Object.assign({ children: 0, style: 0, blurTheme: 0, pressed: 0, android_blurTargetViewNativeId: 0, ref: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [closure_5().container, style];
+  items = [closure_5().container, style];
   obj.style = items;
   obj.ref = ref;
   if (null != pressed) {

@@ -1,13 +1,13 @@
-// === Module 16543: useTryItOutProfileTheme ===
+// === Module 16686: useTryItOutProfileTheme ===
 
-// Module 16543 (useTryItOutProfileTheme)
+// Module 16686 (useTryItOutProfileTheme)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useAvatarColor from "useAvatarColor" /* 8715 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8757 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8800 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import useAvatarColor from "useAvatarColor" /* 8839 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8864 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8881 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8924 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 
 require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/native/use
 
 export default function useTryItOutProfileTheme(id) {
   const tmp3 = useDisplayProfileDefault(id.id);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => tryItOutChanges.getTryItOutChanges());
   ({ tryItOutThemeColors, tryItOutAvatar } = stateFromStoresObject);
   const obj2 = { user: id, displayProfile: tmp3, pendingThemeColors: tryItOutThemeColors, isPreview: true };

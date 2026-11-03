@@ -1,10 +1,9 @@
-// === Module 9792: shouldOpenPremiumUpsellActionSheet ===
+// === Module 9924: shouldOpenPremiumUpsellActionSheet ===
 
-// Module 9792 (shouldOpenPremiumUpsellActionSheet)
+// Module 9924 (shouldOpenPremiumUpsellActionSheet)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5073 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9793 */;
-import MobileStickerPickerUpsellRestyleExperiment from "MobileStickerPickerUpsellRestyleExperiment" /* 10046 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5200 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9925 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
@@ -27,14 +26,10 @@ export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
     openPremiumUpsellActionSheetDefault(ANIMATED_EMOJIS, analyticsLocations4, undefined, appEntryKey4);
     return true;
   } else if (ConstantsIOS.UpsellTypes.GLOBAL_STICKER === initialUpsellKey) {
-    let flag4 = MobileStickerPickerUpsellRestyleExperiment.getMobileStickerPickerUpsellRestyleEnabled("native.shouldOpenPremiumUpsellActionSheet");
-    if (flag4) {
-      const STICKERS_EVERYWHERE = EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
-      ({ analyticsLocations: analyticsLocations3, appEntryKey: appEntryKey3 } = initialUpsellKey);
-      openPremiumUpsellActionSheetDefault(STICKERS_EVERYWHERE, analyticsLocations3, undefined, appEntryKey3);
-      flag4 = true;
-    }
-    return flag4;
+    const STICKERS_EVERYWHERE = EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
+    ({ analyticsLocations: analyticsLocations3, appEntryKey: appEntryKey3 } = initialUpsellKey);
+    openPremiumUpsellActionSheetDefault(STICKERS_EVERYWHERE, analyticsLocations3, undefined, appEntryKey3);
+    return true;
   } else if (ConstantsIOS.UpsellTypes.SOUNDBOARD === initialUpsellKey) {
     const SOUNDBOARD_EVERYWHERE = EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
     ({ analyticsLocations: analyticsLocations2, appEntryKey: appEntryKey2 } = initialUpsellKey);

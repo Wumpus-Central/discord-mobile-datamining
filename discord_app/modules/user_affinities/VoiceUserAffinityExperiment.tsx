@@ -1,7 +1,7 @@
-// === Module 8540: VoiceUserAffinityExperiment ===
+// === Module 8664: VoiceUserAffinityExperiment ===
 
-// Module 8540 (VoiceUserAffinityExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 8664 (VoiceUserAffinityExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-08-voice-user-affinity", defaultConfig: { enabled: false }, variations: { 0: { enabled: false, sortType: "a" }, 1: { enabled: true, sortType: "vc_probability" }, 2: { enabled: true, sortType: "communication_probability" } } });

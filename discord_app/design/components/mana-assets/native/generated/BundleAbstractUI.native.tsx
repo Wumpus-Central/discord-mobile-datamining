@@ -1,19 +1,19 @@
-// === Module 17018: BundleAbstractUI ===
+// === Module 17161: BundleAbstractUI ===
 
-// Module 17018 (BundleAbstractUI)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef17019 from "module_17019" /* 17019 */;
-import _modDef17020 from "module_17020" /* 17020 */;
-import _modDef17021 from "module_17021" /* 17021 */;
+// Module 17161 (BundleAbstractUI)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef17162 from "module_17162" /* 17162 */;
+import _modDef17163 from "module_17163" /* 17163 */;
+import _modDef17164 from "module_17164" /* 17164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17019 }, 3: null };
-let obj2 = { uri: _modDef17019 };
-obj[2] = { uri: _modDef17020 };
-const obj3 = { uri: _modDef17020 };
-obj[3] = { uri: _modDef17021 };
+let obj = { 1: null, 2: { uri: _modDef17162 }, 3: null };
+let obj2 = { uri: _modDef17162 };
+obj[2] = { uri: _modDef17163 };
+const obj3 = { uri: _modDef17163 };
+obj[3] = { uri: _modDef17164 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BundleAbstractUI.native.tsx");
 
@@ -25,7 +25,7 @@ export function BundleAbstractUI(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

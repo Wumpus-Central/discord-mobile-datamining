@@ -1,9 +1,9 @@
-// === Module 13732: useTypingText ===
+// === Module 13863: useTypingText ===
 
-// Module 13732 (useTypingText)
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+// Module 13863 (useTypingText)
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const size = fn(2);
@@ -15,11 +15,11 @@ export default function useTypingText(channelId) {
   const typingUserIds = channelId.typingUserIds;
   let lJ9sZX = channelId;
   let obj = typingUserIds;
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [channelId, guildId, typingUserIds];
   const obj2 = channelId(typingUserIds[2]);
   [tmp2, tmp3, tmp4] = channelId(typingUserIds[2]).useStateFromStoresArray(items, () => {
-    const items = [];
+    items = [];
     while (tmp2 !== undefined) {
       let user = UserStore.getUser(tmp3);
       if (null != user) {

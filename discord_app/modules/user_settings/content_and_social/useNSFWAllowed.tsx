@@ -1,15 +1,15 @@
-// === Module 7390: useNSFWAllowed ===
+// === Module 7510: useNSFWAllowed ===
 
-// Module 7390 (useNSFWAllowed)
+// Module 7510 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
 
 export function useNSFWAllowed() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

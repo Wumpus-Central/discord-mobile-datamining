@@ -1,10 +1,10 @@
-// === Module 8000: ManualAgeAssuranceFallbackExperiment ===
+// === Module 8124: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 8000 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+// Module 8124 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = { kind: "user", name: "2026-07-manual-age-assurance-fallback", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };

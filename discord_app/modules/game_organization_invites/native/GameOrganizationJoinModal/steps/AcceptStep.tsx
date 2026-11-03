@@ -1,16 +1,16 @@
-// === Module 13209: AcceptStep ===
+// === Module 13345: AcceptStep ===
 
-// Module 13209 (AcceptStep)
+// Module 13345 (AcceptStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13201);
+const GameOrganizationJoinModalConstants = fn(13337);
 ({ closeGameOrganizationJoinModal: metroRequire, GameOrganizationJoinScenes: closure_7 } = GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/AcceptStep.tsx");
@@ -30,7 +30,7 @@ export function AcceptStep(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -116,9 +116,9 @@ export function AcceptStep(code) {
     }
   };
   const tmp = closure_10();
-  const tmp4 = character(13203)(code);
-  dependencyMap = code(1497).useNavigation();
-  let obj = code(1497);
+  const tmp4 = character(13339)(code);
+  dependencyMap = code(1499).useNavigation();
+  let obj = code(1499);
   [tmp7, c3] = noop.useState(false);
   if (null == tmp4) {
     return null;
@@ -134,27 +134,27 @@ export function AcceptStep(code) {
     let obj5 = { children: null };
     let obj6 = { children: null };
     let obj7 = { displayNoun: str };
-    obj4.children = intl4.formatToPlainString(tmp2(2404).WmxMAI, obj7);
-    const items = [closure_8(tmp5(5624).Text, obj4), ];
+    obj4.children = intl4.formatToPlainString(tmp2(2533).WmxMAI, obj7);
+    items = [closure_8(tmp5(5747).Text, obj4), ];
     const obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_8(tmp2(13210), obj8);
+    items[1] = closure_8(tmp2(13346), obj8);
     obj3.children = items;
-    const items1 = [closure_9(tmp5(6027).Stack, obj3), ];
+    const items1 = [closure_9(tmp5(6147).Stack, obj3), ];
     const obj9 = { spacing: tmp2(575).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(1113).intl;
-    obj10.children = intl.string(tmp2(2404).yFqGy8);
-    const items2 = [closure_8(tmp5(5624).Text, obj10), closure_8(tmp2(13211), {})];
+    obj10.children = intl.string(tmp2(2533).yFqGy8);
+    const items2 = [closure_8(tmp5(5747).Text, obj10), closure_8(tmp2(13347), {})];
     obj9.children = items2;
-    items1[1] = closure_9(tmp5(6027).Stack, obj9);
+    items1[1] = closure_9(tmp5(6147).Stack, obj9);
     obj2.children = items1;
-    obj6.children = closure_9(tmp5(6027).Stack, obj2);
-    const items3 = [closure_8(tmp5(7973).ModalContent, obj6), ];
+    obj6.children = closure_9(tmp5(6147).Stack, obj2);
+    const items3 = [closure_8(tmp5(8097).ModalContent, obj6), ];
     const obj11 = { children: null };
     const obj12 = { style: tmp.buttonGroup, children: null };
     const obj13 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
     const intl2 = tmp5(1113).intl;
-    obj13.text = intl2.string(tmp2(2404).BaZ6nt);
+    obj13.text = intl2.string(tmp2(2533).BaZ6nt);
     obj13.loading = tmp7;
     obj13.disabled = tmp7;
     obj13.onPress = function handleAcceptInvite() {
@@ -167,18 +167,18 @@ export function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items4 = [closure_8(tmp5(5634).Button, obj13), ];
+    const items4 = [closure_8(tmp5(5754).Button, obj13), ];
     const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
     const intl3 = tmp5(1113).intl;
     obj14.text = intl3.string(tmp5(1113).t["ETE/oC"]);
     obj14.onPress = onPress;
     obj14.disabled = tmp7;
-    items4[1] = closure_8(tmp5(5634).Button, obj14);
+    items4[1] = closure_8(tmp5(5754).Button, obj14);
     obj12.children = items4;
-    obj11.children = closure_9(tmp5(6767).ButtonGroup, obj12);
-    items3[1] = closure_8(tmp5(13208).ModalFooter, obj11);
+    obj11.children = closure_9(tmp5(6887).ButtonGroup, obj12);
+    items3[1] = closure_8(tmp5(13344).ModalFooter, obj11);
     obj5.children = items3;
-    return closure_9(tmp5(7972).ModalScreen, obj5);
+    return closure_9(tmp5(8096).ModalScreen, obj5);
   }
   const tmp6 = _slicedToArray(noop.useState(false), 2);
 }

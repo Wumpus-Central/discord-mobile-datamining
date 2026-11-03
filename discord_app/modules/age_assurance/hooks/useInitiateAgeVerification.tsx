@@ -1,12 +1,12 @@
-// === Module 8019: useInitiateAgeVerification ===
+// === Module 8143: useInitiateAgeVerification ===
 
-// Module 8019 (useInitiateAgeVerification)
+// Module 8143 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7968 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function useAgeVerificationRunner(onComplete) {
@@ -23,7 +23,7 @@ function useAgeVerificationRunner(onComplete) {
   let callback;
   const tmp = _slicedToArray(current.useState(false), 2);
   _slicedToArray = tmp[1];
-  const items = [callback];
+  items = [callback];
   const stateFromStores = require("initialize").useStateFromStores(items, () => callback.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
@@ -49,7 +49,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(7490).SafetyToastType;
+const SafetyToastType = fn(7614).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 
@@ -187,7 +187,7 @@ export function useInitiateAgeVerification(shouldShowExpressiveModal) {
   const tmp2 = useAgeVerificationRunner({ onComplete, entryPoint, shouldShowExpressiveModal: flag });
   let startVerification = tmp2.startVerification;
   const obj = { loading: tmp2.loading, initiateAgeVerification: null };
-  const items = [startVerification, classificationId];
+  items = [startVerification, classificationId];
   obj.initiateAgeVerification = noop.useCallback((method, vendor) => {
     startVerification = vendor;
     return startVerification(() => {
@@ -201,7 +201,7 @@ export function useInitiateAgeVerificationV2(onComplete) {
   const tmp = useAgeVerificationRunner({ onComplete: onComplete.onComplete, entryPoint: onComplete.entryPoint, shouldShowExpressiveModal: true, onMethodUnavailable: onComplete.onMethodUnavailable });
   const startVerification = tmp.startVerification;
   const obj2 = { loading: tmp.loading, initiateAgeVerificationV2: null };
-  const items = [startVerification];
+  items = [startVerification];
   obj2.initiateAgeVerificationV2 = noop.useCallback((arg0) => {
     closure_0 = arg0;
     return startVerification(() => startVerification(dependencyMap[10]).requestAgeVerificationV2(closure_0.method, closure_0.vendor), arg0);

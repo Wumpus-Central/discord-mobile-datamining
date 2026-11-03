@@ -1,9 +1,9 @@
-// === Module 8524: useIsEligibleSenderForReferralProgram ===
+// === Module 8648: useIsEligibleSenderForReferralProgram ===
 
-// Module 8524 (useIsEligibleSenderForReferralProgram)
+// Module 8648 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8525 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8649 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7756 */;
 
 require = fn;
 const size = fn(2);
@@ -14,6 +14,6 @@ export function useIsEligibleSenderForReferralProgram() {
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
-  const items = [ReferralTrialStore];
+  items = [ReferralTrialStore];
   return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 }

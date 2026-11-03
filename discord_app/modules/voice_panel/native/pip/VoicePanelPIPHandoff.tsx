@@ -1,6 +1,6 @@
-// === Module 11231: VoicePanelPIPHandoff ===
+// === Module 11368: VoicePanelPIPHandoff ===
 
-// Module 11231 (VoicePanelPIPHandoff)
+// Module 11368 (VoicePanelPIPHandoff)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -28,39 +28,39 @@ class VoicePanelPIPHandoff {
   }
 }
 const prototype = VoicePanelPIPHandoff.prototype;
-prototype["syncCardPIPLayout"] = function syncCardPIPLayout(id, inPIPLayout) {
+prototype["syncCardPIPLayout"] = function syncCardPIPLayout(c0, c11) {
   const self = this;
   const cards = this.cards;
-  value = cards.get(id);
+  value = cards.get(c0);
   if (null == value) {
     const cards3 = self.cards;
     const obj2 = { inPIPLayout, arrived: true };
-    const result = cards3.set(id, obj2);
+    const result = cards3.set(c0, obj2);
     self.recount();
   } else if (value.inPIPLayout !== inPIPLayout) {
     const cards2 = self.cards;
     const obj = { inPIPLayout, arrived: !inPIPLayout };
-    const result1 = cards2.set(id, obj);
+    const result1 = cards2.set(c0, obj);
     self.recount();
   }
 };
-prototype["setCardArrivedInPIP"] = function setCardArrivedInPIP(id) {
+prototype["setCardArrivedInPIP"] = function setCardArrivedInPIP(c0) {
   const self = this;
   const cards = this.cards;
-  value = cards.get(id);
+  value = cards.get(c0);
   if (!tmp2) {
     const cards2 = self.cards;
     const obj = {};
     const merged = Object.assign(value);
     obj.arrived = true;
-    const result = cards2.set(id, obj);
+    const result = cards2.set(c0, obj);
     self.recount();
   }
 };
-prototype["removeCard"] = function removeCard(id) {
+prototype["removeCard"] = function removeCard(_undefined) {
   const self = this;
   const cards = this.cards;
-  if (cards.delete(id)) {
+  if (cards.delete(_undefined)) {
     self.recount();
   }
 };
@@ -100,10 +100,10 @@ prototype["recount"] = function recount() {
 
 export default VoicePanelPIPHandoff;
 export function usePIPCardsSettled(pipHandoff) {
-  const items = [pipHandoff];
+  items = [pipHandoff];
   return noop.useSyncExternalStore(pipHandoff.subscribe, noop.useCallback(() => pipHandoff.arePIPCardsSettled(), items));
 }
 export function usePIPPanelLayoutCommitted(pipHandoff) {
-  const items = [pipHandoff];
+  items = [pipHandoff];
   return noop.useSyncExternalStore(pipHandoff.subscribe, noop.useCallback(() => pipHandoff.isPanelLayoutCommitted(), items));
 }

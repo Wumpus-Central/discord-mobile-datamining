@@ -1,18 +1,18 @@
-// === Module 18324: useGuildActionRows ===
+// === Module 18469: useGuildActionRows ===
 
-// Module 18324 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 7400 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7514 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13930 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14087 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 18284 */;
+// Module 18469 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 7524 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7638 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 14061 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14218 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 18427 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
@@ -31,7 +31,7 @@ export default function useGuildActionRows(id) {
   const obj4 = require("SlayerStorefrontUtils");
   const canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(id.id);
   const obj5 = require("OnboardingHomeUtils");
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [id.id];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(id.id), items1);
   const obj6 = require("useStateFromStores");
@@ -65,7 +65,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(4847).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(4974).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

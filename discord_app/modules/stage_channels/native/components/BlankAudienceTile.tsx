@@ -1,8 +1,8 @@
-// === Module 12050: BlankAudienceTile ===
+// === Module 12187: BlankAudienceTile ===
 
-// Module 12050 (BlankAudienceTile)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import AudienceTile from "AudienceTile" /* 12051 */;
+// Module 12187 (BlankAudienceTile)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import AudienceTile from "AudienceTile" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 export default noop.memo(function BlankAudienceTile() {
   const audienceTileStyles = AudienceTile.useAudienceTileStyles();
   const obj3 = { style: null };
-  const items = [audienceTileStyles.container, ];
+  items = [audienceTileStyles.container, ];
   items[1] = { width: AudienceTile.getTileWidthStyle(useWindowDimensionsDefault().width) };
   obj3.style = items;
   return <View style={null} />;

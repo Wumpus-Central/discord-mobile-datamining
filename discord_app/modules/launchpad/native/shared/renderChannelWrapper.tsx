@@ -1,8 +1,8 @@
-// === Module 18728: renderChannelWrapper ===
+// === Module 18886: renderChannelWrapper ===
 
-// Module 18728 (renderChannelWrapper)
-import getLayoutStylesDefault from "getLayoutStyles" /* 18727 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18729 */;
+// Module 18886 (renderChannelWrapper)
+import getLayoutStylesDefault from "getLayoutStyles" /* 18885 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18887 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/shared/rende
 
 export default function renderChannelWrapper(children, fontScale) {
   const obj = { style: null, children: null };
-  const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, { minHeight: getScaledChannelRowHeightDefault(fontScale.fontScale) - 2 * closure_4.layout.margin.marginVertical }, closure_4.container.padding];
+  items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, { minHeight: getScaledChannelRowHeightDefault(fontScale.fontScale) - 2 * closure_4.layout.margin.marginVertical }, closure_4.container.padding];
   obj.style = items;
   obj.children = children;
   return <View style={null}>{null}</View>;

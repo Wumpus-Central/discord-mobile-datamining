@@ -1,12 +1,12 @@
-// === Module 14965: UserProfileWidgetReportButton ===
+// === Module 15102: UserProfileWidgetReportButton ===
 
-// Module 14965 (UserProfileWidgetReportButton)
+// Module 15102 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9756 */;
-import ContextMenu from "ContextMenu" /* 9874 */;
-import FlagIcon from "FlagIcon" /* 10084 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 14966 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9888 */;
+import ContextMenu from "ContextMenu" /* 10005 */;
+import FlagIcon from "FlagIcon" /* 10214 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 15103 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function UserProfileWidgetReportButton(arg0) {
   obj.action = function action() {
     return showReportModalForUserWidget.showReportModalForUserWidget(closure_1_0, importDefault);
   };
-  const items = [obj];
+  items = [obj];
   return jsx(ContextMenu.ContextMenu, {
     items,
     children(ref) {

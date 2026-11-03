@@ -1,16 +1,16 @@
-// === Module 10963: conjureRemixConnection ===
+// === Module 11096: conjureRemixConnection ===
 
-// Module 10963 (conjureRemixConnection)
+// Module 11096 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10880 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 let closure_5 = async function _acceptRemix(arg0) {
   closure_3 = tmp2;
-  const items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
+  items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
   await Promise.all(items);
   if (1 === tmp5) {
     if (arg0 === 1) {

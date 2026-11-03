@@ -1,13 +1,13 @@
-// === Module 13398: ChannelTabsStore ===
+// === Module 13534: ChannelTabsStore ===
 
-// Module 13398 (ChannelTabsStore)
+// Module 13534 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import TabsExperimentDefault from "TabsExperiment" /* 13399 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import TabsExperimentDefault from "TabsExperiment" /* 13535 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -16,8 +16,8 @@ function handleChannelDelete(channel) {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = channel(1376).isDesktop();
-    const obj2 = channel(1376);
+    enabled = channel(1357).isDesktop();
+    const obj2 = channel(1357);
   }
   if (enabled) {
     if (0 === found.filter((kind) => {
@@ -48,8 +48,8 @@ function handleChannelDelete(channel) {
         enabled2 = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
       }
       if (enabled2) {
-        enabled2 = channel(1376).isDesktop();
-        const obj4 = channel(1376);
+        enabled2 = channel(1357).isDesktop();
+        const obj4 = channel(1357);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -69,7 +69,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 let tabs = [];
 let c8 = null;
 let closure_9 = 1;
@@ -255,7 +255,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
             obj2.id = String(+closure_9);
             const merged = Object.assign(obj);
             obj2.pinned = false;
-            const items = [obj];
+            items = [obj];
             obj2.entries = items;
             obj2.index = 0;
             const items1 = [obj2];
@@ -356,7 +356,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     const bound = Math.max(0, Math.min(tabId.toIndex, tabs.length - 1));
     if (-1 !== findIndexResult) {
       if (findIndexResult !== bound) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(tabs, 0);
         items.splice(bound, 0, _slicedToArray(items.splice(findIndexResult, 1), 1)[0]);
         tabs = items;
@@ -460,7 +460,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 obj4.id = String(+closure_9);
                 const merged = Object.assign(obj3);
                 obj4.pinned = false;
-                const items = [obj3];
+                items = [obj3];
                 obj4.entries = items;
                 obj4.index = 0;
                 const items1 = [obj4];
@@ -484,8 +484,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1376).isDesktop();
-      const obj2 = obj3(1376);
+      enabled = obj3(1357).isDesktop();
+      const obj2 = obj3(1357);
     }
     if (enabled) {
       obj3 = { kind: "route", routePath, routeLabel: routePath.routeLabel };
@@ -496,7 +496,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         obj4.id = String(+closure_9);
         let merged = Object.assign(obj3);
         obj4.pinned = false;
-        let items = [obj3];
+        items = [obj3];
         obj4.entries = items;
         obj4.index = 0;
         const items1 = [obj4];
@@ -520,7 +520,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 return id;
               } else {
                 const entries = id.entries;
-                const items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = obj3;
                 const obj = { id: null, pinned: null };
                 ({ id: obj.id, pinned: obj.pinned } = id);
@@ -572,8 +572,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1376).isDesktop();
-      const obj2 = obj3(1376);
+      enabled = obj3(1357).isDesktop();
+      const obj2 = obj3(1357);
     }
     if (enabled) {
       if (null != channelId) {
@@ -590,7 +590,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
             obj4.id = String(+closure_9);
             let merged = Object.assign(obj3);
             obj4.pinned = false;
-            let items = [obj3];
+            items = [obj3];
             obj4.entries = items;
             obj4.index = 0;
             const items1 = [obj4];
@@ -614,7 +614,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                     return id;
                   } else {
                     const entries = id.entries;
-                    const items = [];
+                    items = [];
                     items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = obj3;
                     const obj = { id: null, pinned: null };
                     ({ id: obj.id, pinned: obj.pinned } = id);

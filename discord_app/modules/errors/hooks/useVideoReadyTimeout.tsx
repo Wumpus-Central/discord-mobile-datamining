@@ -1,8 +1,8 @@
-// === Module 11768: useVideoReadyTimeout ===
+// === Module 11905: useVideoReadyTimeout ===
 
-// Module 11768 (useVideoReadyTimeout)
+// Module 11905 (useVideoReadyTimeout)
 import DurationsDefault from "Durations" /* 1089 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11769 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function useVideoReadyTimeout(streamId) {
     if (videoSpinnerContext !== tmp(tmp2[3]).VideoSpinnerContext.REMOTE_STREAM) {
       STREAM = tmp(tmp2[4]).MediaEngineContextTypes.DEFAULT;
     }
-    const items = [flag, streamId, loading, STREAM, streamKey, userId];
+    items = [flag, streamId, loading, STREAM, streamKey, userId];
     const effect = obj.useEffect(() => {
       if (loading) {
         if (!flag) {

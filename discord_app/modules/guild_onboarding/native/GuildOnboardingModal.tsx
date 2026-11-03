@@ -1,15 +1,15 @@
-// === Module 7290: GuildOnboardingModal ===
+// === Module 7410: GuildOnboardingModal ===
 
-// Module 7290 (GuildOnboardingModal)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6922 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7273 */;
+// Module 7410 (GuildOnboardingModal)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 7042 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7393 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6948 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7068 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
 
 require = fn;
 function headerTitle() {
@@ -18,9 +18,9 @@ function headerTitle() {
 function headerRight() {
   return null;
 }
-let closure_9 = fn(7265).GuildOnboardingModalStates;
+let closure_9 = fn(7385).GuildOnboardingModalStates;
 const Constants = fn(1072);
-({ GuildFeatures: c10, Routes: closure_11 } = Constants);
+({ GuildFeatures: closure_10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
@@ -34,9 +34,9 @@ export default function GuildOnboardingModal(guildId) {
   const backShouldLeaveGuild = guildId.backShouldLeaveGuild;
   let stateFromStores;
   let callback;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = guildId(onClose[16]).useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;

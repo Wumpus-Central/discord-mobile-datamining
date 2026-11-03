@@ -1,11 +1,11 @@
-// === Module 16360: auth ===
+// === Module 16503: auth ===
 
-// Module 16360 (auth)
+// Module 16503 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2024 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16361 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16504 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -34,7 +34,7 @@ export default AuthCommandsFactoryDefault((arg0) => {
       application = ApplicationStore.getApplication(clientId);
     }
     const obj2 = { clientId, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, guildId: null, channelId: null, permissions: null, prompt: null, disableGuildSelect: null, showLogout: false, callback: null, isEmbeddedFlow: null, disclosures: null, integrationType: null };
-    let items = dependencyMap;
+    items = dependencyMap;
     if (dependencyMap == null) {
       items = [];
     }

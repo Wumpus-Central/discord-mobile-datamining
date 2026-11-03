@@ -1,10 +1,10 @@
-// === Module 5197: useRoutedActiveGuildTheme ===
+// === Module 5320: useRoutedActiveGuildTheme ===
 
-// Module 5197 (useRoutedActiveGuildTheme)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5224 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 5225 */;
+// Module 5320 (useRoutedActiveGuildTheme)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5347 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 5348 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function getGuildIdFromNavigationState(routes) {
         }
       }
       if (null == guildId) {
-        let state;
+        state = undefined;
         if (tmp != null) {
           state = tmp.state;
         }
@@ -48,7 +48,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             }
           }
           if (null == guildId) {
-            let state;
+            state = undefined;
             if (tmp5 != null) {
               state = tmp5.state;
             }
@@ -87,7 +87,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             found = mapped.find((item) => null != item);
           }
         }
-        let state2;
+        state2 = undefined;
         if (found != null) {
           state2 = found.state;
         }

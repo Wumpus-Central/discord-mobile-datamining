@@ -1,21 +1,21 @@
-// === Module 8202: ThreadActionCreators ===
+// === Module 8326: ThreadActionCreators ===
 
-// Module 8202 (ThreadActionCreators)
+// Module 8326 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8344 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8203 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8342 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8327 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8466 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
-let closure_4 = fn(4867).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8203).PAGE_SIZE;
+let closure_4 = fn(4994).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8327).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -91,7 +91,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -149,7 +149,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -207,7 +207,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -362,7 +362,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -409,7 +409,7 @@ export default {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c0 = tmp;
           throw tmp9;
@@ -452,7 +452,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -524,7 +524,7 @@ export default {
                 dispatchThreadMemberLocalUpdate(closure_129_0, false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -566,7 +566,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -664,17 +664,17 @@ export default {
       DispatcherDefault.dispatch(obj2);
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_12.THREAD_MEMBER(channel.id), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: application_id.THREAD_MEMBER(channel.id), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(request);
   },
   removeMember(id, arg1, location) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_12.THREAD_MEMBER(id, arg1), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: application_id.THREAD_MEMBER(id, arg1), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(request);
   },
   setAutoArchiveDuration(id, auto_archive_duration) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_12.CHANNEL(id.id), body: { auto_archive_duration }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: application_id.CHANNEL(id.id), body: { auto_archive_duration }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   pin(dependencyMap) {
@@ -728,7 +728,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -875,7 +875,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

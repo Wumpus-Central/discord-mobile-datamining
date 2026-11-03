@@ -1,16 +1,16 @@
-// === Module 14765: MaskedLinkModal ===
+// === Module 14896: MaskedLinkModal ===
 
-// Module 14765 (MaskedLinkModal)
+// Module 14896 (MaskedLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Form from "Form" /* 8177 */;
-import SharedStateUtils from "SharedStateUtils" /* 14762 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Form from "Form" /* 8301 */;
+import SharedStateUtils from "SharedStateUtils" /* 14893 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
@@ -49,7 +49,7 @@ export default function MaskedLinkModal(isProtocol) {
   }
   const obj4 = { children: null };
   obj3.text = stringResult;
-  const items = [React4(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  items = [React4(AlertModal.AlertActionButton, obj3, "confirm"), ];
   const obj5 = { onPress: handleCancel, variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t["/g10LC"]);

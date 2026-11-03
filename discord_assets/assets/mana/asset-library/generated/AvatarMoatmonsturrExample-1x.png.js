@@ -1,6 +1,6 @@
-// === Module 19914: ? ===
+// === Module 20064: ? ===
 
-// Module 19914
+// Module 20064
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-1x.png.js");

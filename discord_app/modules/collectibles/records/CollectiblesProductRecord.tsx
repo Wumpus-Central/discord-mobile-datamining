@@ -1,13 +1,13 @@
-// === Module 7722: CollectiblesProductRecord ===
+// === Module 7846: CollectiblesProductRecord ===
 
-// Module 7722 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2043 */;
+// Module 7846 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2172 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7723 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7729 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7847 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7853 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7724);
+const CollectiblesItemRecord = fn(7848);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1072);
@@ -103,7 +103,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         if (obj2 == null) {
           obj2 = {};
         }
-        let items = obj2.items;
+        items = obj2.items;
         const first1 = _slicedToArray(first.selectedOptions, 1)[0];
         const obj4 = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, baseVariantName: null, variantLabel: null, premiumType: null, items: null, categorySkuId: null, categoryWillUnpublishAt: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
         ({ id: obj3.storeListingId, id: obj3.skuId } = first);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "children", items: null, categorySkuId: null, categoryWillUnpublishAt: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: "\u{1F6A1}", bundledProducts: 6, isFirstParty: 698 };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "id", items: "l", categorySkuId: "e", categoryWillUnpublishAt: "channel_id", isCategoryReward: "enabled", prices: "it", previewAssets: "flexDirection", googleSkuIds: "o", eligibleOffers: "id", variants: "parent", bundledProducts: "source", isFirstParty: "l" };
               let str;
               if (first != null) {
                 str = first.optionValue;

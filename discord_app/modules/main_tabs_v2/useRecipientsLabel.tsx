@@ -1,10 +1,10 @@
-// === Module 10800: useRecipientsLabel ===
+// === Module 10930: useRecipientsLabel ===
 
-// Module 10800 (useRecipientsLabel)
+// Module 10930 (useRecipientsLabel)
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLab
 
 export function useRecipientsLabel(channel) {
   _require = channel;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((item) => user.getUser(item));

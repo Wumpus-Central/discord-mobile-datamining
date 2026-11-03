@@ -1,20 +1,20 @@
-// === Module 16660: TwoFASetupLanding ===
+// === Module 16803: TwoFASetupLanding ===
 
-// Module 16660 (TwoFASetupLanding)
+// Module 16803 (TwoFASetupLanding)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16657 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 16661 */;
-import _modDef16662 from "module_16662" /* 16662 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16800 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 16804 */;
+import _modDef16805 from "module_16805" /* 16805 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
@@ -26,10 +26,10 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16662;
+  obj5.source = _modDef16805;
   obj5.style = tmp.authIcon;
-  const items = [React4(FastImageDefault, obj5), , ];
-  const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  items = [React4(FastImageDefault, obj5), , ];
+  const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);
   items[1] = React4(Text_Text.Heading, obj6);

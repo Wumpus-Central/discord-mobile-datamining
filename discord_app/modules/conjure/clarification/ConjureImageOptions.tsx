@@ -1,9 +1,9 @@
-// === Module 12759: ConjureImageOptions ===
+// === Module 12895: ConjureImageOptions ===
 
-// Module 12759 (ConjureImageOptions)
+// Module 12895 (ConjureImageOptions)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8943 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 9071 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,9 +11,29 @@ let closure_4 = [];
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/ConjureImageOptions.tsx");
 
-export function isImageQuestion(options) {
-  options = options.options;
-  return options.some((image) => null != image.image);
+export function isImageQuestion(upload) {
+  let someResult = true === upload.upload;
+  if (!someResult) {
+    const options = upload.options;
+    someResult = options.some((image) => null != image.image);
+  }
+  return someResult;
+}
+export function hasTypedAnswer(allow_custom) {
+  let tmp = false !== allow_custom.allow_custom;
+  if (tmp) {
+    let tmp2 = true === allow_custom.upload;
+    if (!tmp2) {
+      let someResult = true === allow_custom.upload;
+      if (!someResult) {
+        const options = allow_custom.options;
+        someResult = options.some((image) => null != image.image);
+      }
+      tmp2 = !someResult;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
 }
 export function imageOptionsLayout(options) {
   let str = "row";
@@ -28,7 +48,7 @@ export function viewableImageOptions(items) {
       const obj = {};
       const merged = Object.assign(image);
       obj.image = image.image;
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       items1 = [];
@@ -42,12 +62,16 @@ export function answeredOptionIds(kind) {
     kind = kind.kind;
   }
   if ("option" === kind) {
-    const items = [kind.optionId];
-    let tmp2 = items;
+    items = [kind.optionId];
+    let tmp3 = items;
   } else {
-    tmp2 = closure_4;
+    let kind1;
+    if (kind != null) {
+      kind1 = kind.kind;
+    }
+    tmp3 = "multi" === kind1 ? kind.optionIds : closure_4;
   }
-  return tmp2;
+  return tmp3;
 }
 export function imageOptionViewerSize(value) {
   const bound = Math.max(1, 480 / Math.max(value.width, value.height));
@@ -57,7 +81,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3868.SUdqCQ);
+  obj.label = intl.string(_modDef3995.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -141,6 +165,27 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3868;
+  const tmp2 = _modDef3995;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
+}
+export function uploadHint(upload) {
+  if (true !== upload.upload) {
+    return null;
+  } else {
+    let tmp2 = dependencyMap;
+    const intl = util.intl;
+    if (upload.options.length > 0) {
+      tmp2 = _modDef3995;
+      let ZZ641e = tmp2.dkzChE;
+    } else {
+      ZZ641e = _modDef3995.ZZ641e;
+    }
+    intl.string(ZZ641e);
+  }
+}
+export function noImageAnswer() {
+  const obj = { kind: "custom", text: null };
+  const intl = util.intl;
+  obj.text = intl.string(_modDef3995.zxSq2q);
+  return obj;
 }

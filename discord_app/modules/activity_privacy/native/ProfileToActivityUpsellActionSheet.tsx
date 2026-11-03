@@ -1,8 +1,8 @@
-// === Module 16756: ProfileToActivityUpsellActionSheet ===
+// === Module 16899: ProfileToActivityUpsellActionSheet ===
 
-// Module 16756 (ProfileToActivityUpsellActionSheet)
-import UserSettings from "UserSettings" /* 4839 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16755 */;
+// Module 16899 (ProfileToActivityUpsellActionSheet)
+import UserSettings from "UserSettings" /* 4966 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16898 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default function ProfileToActivityUpsellActionSheet(direction) {
   const affectedGuildIds = direction.affectedGuildIds;
   const mappedActivityValue = direction.mappedActivityValue;
   const profileToActivityUpsellStrings = direction(mappedActivityValue[2]).getProfileToActivityUpsellStrings(direction === direction(mappedActivityValue[2]).ChangeDirection.RESTRICTING, direction.settingName);
-  const items = [mappedActivityValue, direction, affectedGuildIds];
+  items = [mappedActivityValue, direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = profileToActivityUpsellStrings);
   const onConfirm = noop.useCallback(() => {
     const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;

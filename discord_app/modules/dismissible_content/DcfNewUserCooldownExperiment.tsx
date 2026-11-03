@@ -1,8 +1,8 @@
-// === Module 5067: DcfNewUserCooldownExperiment ===
+// === Module 5194: DcfNewUserCooldownExperiment ===
 
-// Module 5067 (DcfNewUserCooldownExperiment)
+// Module 5194 (DcfNewUserCooldownExperiment)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: { newUserCooldownMs: DurationsDefault.Millis.DAY }, variations: null };

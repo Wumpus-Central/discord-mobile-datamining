@@ -1,6 +1,6 @@
-// === Module 17152: MobileSearchableSelect ===
+// === Module 17295: MobileSearchableSelect ===
 
-// Module 17152 (MobileSearchableSelect)
+// Module 17295 (MobileSearchableSelect)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -117,7 +117,7 @@ class MobileSearchableSelect {
           tmp = found;
           if ("" !== first.trim()) {
             const obj = { label: first.trim(), value: first.trim() };
-            const items = [obj];
+            items = [obj];
             tmp = items;
           }
         }
@@ -188,7 +188,7 @@ class MobileSearchableSelect {
       obj6 = { nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: null };
       obj6.children = memo.map((children, index) => {
         value = children;
-        const items = [dropdownItem.dropdownItem, ];
+        items = [dropdownItem.dropdownItem, ];
         let dropdownItemLast = index === memo.length - 1;
         if (dropdownItemLast) {
           dropdownItemLast = dropdownItem.dropdownItemLast;
@@ -217,7 +217,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, marginTop: nativeDefault.space.PX_4, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, left: 0, right: 0, zIndex: 999999, elevation: 30, shadowColor: "#000", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 8, maxHeight: 250 };
 obj2.dropdownContainer = rect;

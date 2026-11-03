@@ -1,8 +1,8 @@
-// === Module 6800: GuildEmojis ===
+// === Module 6920: GuildEmojis ===
 
-// Module 6800 (GuildEmojis)
+// Module 6920 (GuildEmojis)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new LoggerDefault("GuildEmojis");
@@ -51,7 +51,7 @@ prototype["getAsync"] = function getAsync(arg0) {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   DatabaseDaosDefault.emojisTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, arg1);

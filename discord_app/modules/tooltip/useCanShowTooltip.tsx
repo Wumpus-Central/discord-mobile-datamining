@@ -1,9 +1,9 @@
-// === Module 11867: useCanShowTooltip ===
+// === Module 12004: useCanShowTooltip ===
 
-// Module 11867 (useCanShowTooltip)
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 10251 */;
+// Module 12004 (useCanShowTooltip)
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 10381 */;
 import noop from "module_19" /* 19 */;
-import TooltipStore from "TooltipStore" /* 11868 */;
+import TooltipStore from "TooltipStore" /* 12005 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export function useCanShowTooltip(SCREENSHARE_SWIPE_UP_CONTROLS, arg1) {
   if (arg2 === undefined) {
     flag2 = true;
   }
-  const items = [TooltipStore];
+  items = [TooltipStore];
   const items1 = [flag2, flag, SCREENSHARE_SWIPE_UP_CONTROLS];
   const stateFromStores = require("initialize").useStateFromStores(items, () => TooltipStore.canShowTooltip(closure_0) && flag2);
   const effect = noop.useEffect(() => {

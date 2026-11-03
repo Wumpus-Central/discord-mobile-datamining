@@ -1,22 +1,22 @@
-// === Module 14622: ApplicationDetails ===
+// === Module 14753: ApplicationDetails ===
 
-// Module 14622 (ApplicationDetails)
+// Module 14753 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import LinkIcon from "LinkIcon" /* 5727 */;
-import ClockIcon from "ClockIcon" /* 5740 */;
-import LockIcon from "LockIcon" /* 8667 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9050 */;
-import scopes from "scopes" /* 9743 */;
-import disclosures from "disclosures" /* 9745 */;
-import Utils from "Utils" /* 9747 */;
-import ShieldIcon from "ShieldIcon" /* 11281 */;
-import RobotIcon from "RobotIcon" /* 12105 */;
-import HammerIcon from "HammerIcon" /* 12997 */;
-import EmbedIcon from "EmbedIcon" /* 14623 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import LinkIcon from "LinkIcon" /* 5847 */;
+import ClockIcon from "ClockIcon" /* 5860 */;
+import LockIcon from "LockIcon" /* 8791 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9178 */;
+import scopes from "scopes" /* 9875 */;
+import disclosures from "disclosures" /* 9877 */;
+import Utils from "Utils" /* 9879 */;
+import ShieldIcon from "ShieldIcon" /* 11418 */;
+import RobotIcon from "RobotIcon" /* 12241 */;
+import HammerIcon from "HammerIcon" /* 13133 */;
+import EmbedIcon from "EmbedIcon" /* 14754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,14 +29,14 @@ function ApplicationDetailsEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  const items = [iconComponentResult, React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text })];
+  items = [iconComponentResult, React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;
@@ -73,7 +73,7 @@ export default function ApplicationDetails(arg0) {
     obj4.text = intl.format(util.t["5k5OKD"], obj5);
     tmp15 = React4(ApplicationDetailsEntry, obj4);
   }
-  const items = [tmp15, , , , , , ];
+  items = [tmp15, , , , , , ];
   const obj6 = { iconComponent: LockIcon.LockIcon, text: null };
   obj6.text = Utils.getApplicationDetailsText(application);
   items[1] = React4(ApplicationDetailsEntry, obj6);

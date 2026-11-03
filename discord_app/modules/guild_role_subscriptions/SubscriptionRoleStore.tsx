@@ -1,21 +1,21 @@
-// === Module 4969: SubscriptionRoleStore ===
+// === Module 5096: SubscriptionRoleStore ===
 
-// Module 4969 (SubscriptionRoleStore)
+// Module 5096 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4921 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4936 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5048 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 5063 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 function computeRolesForGuild(guildId) {
   const currentUser = UserStore.getCurrentUser();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != currentUser) {
       const _Set = Set;

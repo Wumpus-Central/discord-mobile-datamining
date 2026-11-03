@@ -1,6 +1,6 @@
-// === Module 7890: combineFragmentVideoStats ===
+// === Module 8014: combineFragmentVideoStats ===
 
-// Module 7890 (combineFragmentVideoStats)
+// Module 8014 (combineFragmentVideoStats)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);
@@ -91,7 +91,7 @@ export default function combineFragmentVideoStats(arr) {
     let applyResult;
     if (found.length > 0) {
       const _Math4 = Math;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found, 0);
       const _Math5 = Math;
       applyResult = HermesBuiltin.apply(items, Math);

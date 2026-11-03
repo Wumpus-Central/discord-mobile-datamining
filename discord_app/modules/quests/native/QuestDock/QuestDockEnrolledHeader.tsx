@@ -1,14 +1,14 @@
-// === Module 17162: QuestDockEnrolledHeader ===
+// === Module 17305: QuestDockEnrolledHeader ===
 
-// Module 17162 (QuestDockEnrolledHeader)
+// Module 17305 (QuestDockEnrolledHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9681 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 14696 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17100 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17110 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9813 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 14827 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17243 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,8 +19,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-md/semibold";
 let c8 = "text-sm/medium";
-let closure_9 = fn(17072).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(5014);
+let closure_9 = fn(17215).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: PX_8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1, minWidth: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");
@@ -39,7 +39,7 @@ export default noop.memo(function QuestDockEnrolledHeader() {
   const obj10 = { style: tmp4.progressIndicatorWrapper, children: null };
   const scaledTextLineHeight1 = useScaledTextLineHeight.useScaledTextLineHeight(variant);
   obj10.children = hasOwnProperty(QuestProgressIndicatorDefault, { quest: questDockQuest, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true });
-  const items = [hasOwnProperty(View, obj10), ];
+  items = [hasOwnProperty(View, obj10), ];
   const obj12 = { style: tmp4.copy, children: null };
   const items1 = [hasOwnProperty(Text_Text.Text, { variant, color: "mobile-text-heading-primary", lineClamp: 1, maxFontSizeMultiplier: 2, children: questBarTitle }), ];
   let tmp13Result = null;

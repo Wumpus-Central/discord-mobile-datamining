@@ -1,15 +1,15 @@
-// === Module 5717: FastImage ===
+// === Module 5837: FastImage ===
 
-// Module 5717 (FastImage)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5719 */;
+// Module 5837 (FastImage)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let FastImageApngExperiment = fn(5718);
+let FastImageApngExperiment = fn(5838);
 FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 let size = fn(2);
 const result1 = size.fileFinishedImporting("components_native/common/FastImage.tsx");
@@ -37,7 +37,7 @@ export default noop.memo(function FastImage(enableAnimation) {
       const _Array = Array;
       let tmp3 = source;
       if (!Array.isArray(source)) {
-        const items = [source];
+        items = [source];
         tmp3 = items;
       }
       const tmp2 = tmp3;

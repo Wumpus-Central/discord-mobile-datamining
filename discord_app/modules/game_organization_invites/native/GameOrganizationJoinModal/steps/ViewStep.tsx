@@ -1,17 +1,17 @@
-// === Module 13202: ViewStep ===
+// === Module 13338: ViewStep ===
 
-// Module 13202 (ViewStep)
+// Module 13338 (ViewStep)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(11364).GameOrganizationCharacterMode;
-let closure_6 = fn(13201).GameOrganizationJoinScenes;
+const constants = fn(11501).GameOrganizationCharacterMode;
+let closure_6 = fn(13337).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ text: { textAlign: "center" }, inlineStack: { width: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/ViewStep.tsx");
@@ -55,7 +55,7 @@ export function ViewStep(code) {
     const obj4 = { spacing: tmp4(tmp3[13]).space.PX_24, children: null };
     const obj5 = { spacing: tmp4(tmp3[13]).space.PX_16, align: "center", children: null };
     const obj6 = { iconUrl: organization.iconUrl, size: 64 };
-    const items = [closure_7(tmp4(tmp3[14]), obj6), ];
+    items = [closure_7(tmp4(tmp3[14]), obj6), ];
     const obj7 = { variant: "heading-xl/semibold", style: tmp.text, children: null };
     const intl3 = tmp2(tmp3[16]).intl;
     const obj8 = { noun: tmp15, orgName: organization.name };

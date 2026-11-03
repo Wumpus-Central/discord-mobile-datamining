@@ -1,6 +1,6 @@
-// === Module 14062: productToGameServerGame ===
+// === Module 14193: productToGameServerGame ===
 
-// Module 14062 (productToGameServerGame)
+// Module 14193 (productToGameServerGame)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
@@ -15,7 +15,7 @@ export function productToGameServerGame(id) {
   let num = 0;
   if (sorted.length > 0) {
     const _Math = Math;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(sorted.map((cost) => cost.cost), 0);
     const _Math2 = Math;
     num = HermesBuiltin.apply(items, Math);

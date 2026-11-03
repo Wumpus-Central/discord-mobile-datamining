@@ -1,23 +1,23 @@
-// === Module 19159: FramePanelHeader ===
+// === Module 19317: FramePanelHeader ===
 
-// Module 19159 (FramePanelHeader)
+// Module 19317 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7330 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 19139 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19141 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19145 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19146 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19155 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19160 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7450 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 19297 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19299 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19303 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19304 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19313 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 require = fn;
 function FramePanelHeaderContentInner(arg0) {
   ({ frame, landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
-  const items = [frame.applicationId];
+  items = [frame.applicationId];
   const first = _slicedToArray(useGetOrFetchApplicationsDefault(items), 1)[0];
   const baseActivityPanelHeaderContent = ActivityPanelHeader.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
@@ -61,11 +61,11 @@ function FramePanelHeaderContentInner(arg0) {
   return React6(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 }
 const View = fn(17).View;
-const asLaunched = fn(6847).asLaunched;
+const asLaunched = fn(6967).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {
-  const items = [FramesStore];
+  items = [FramesStore];
   const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {

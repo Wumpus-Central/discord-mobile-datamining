@@ -1,11 +1,11 @@
-// === Module 19951: FormImagePicker ===
+// === Module 20101: FormImagePicker ===
 
-// Module 19951 (FormImagePicker)
+// Module 20101 (FormImagePicker)
 import nativeDefault from "native" /* 575 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8220 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8344 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_11 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -72,7 +72,7 @@ let closure_11 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c4 = tmp;
@@ -184,7 +184,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between" }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: nativeDefault.space.PX_16 }, imageDescription: null, image: null, imageCentered: null, imageCircle: null, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
 let obj3 = { flex: 1, flexDirection: "column", marginEnd: nativeDefault.space.PX_16 };
 obj2.imageDescription = { flexWrap: "wrap", marginBottom: nativeDefault.space.PX_16 };
@@ -221,9 +221,9 @@ export default function FormImagePicker(children) {
   }
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
-  const items = [
-    closure_6(tmp6(5624).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
-    closure_6(tmp6(5634).Button, {
+  items = [
+    closure_6(tmp6(5747).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
+    closure_6(tmp6(5754).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

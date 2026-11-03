@@ -1,12 +1,12 @@
-// === Module 14207: ChatBeginningRowJoinApplication ===
+// === Module 14338: ChatBeginningRowJoinApplication ===
 
-// Module 14207 (ChatBeginningRowJoinApplication)
+// Module 14338 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 575 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, guildInfoRow: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, divider: null, formQuestion: null };
 let obj3 = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };
@@ -33,7 +33,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
   const tmp4 = joinRequest(joinRequestGuild[8])(channelId);
   joinRequest = tmp4.joinRequest;
   joinRequestGuild = tmp4.joinRequestGuild;
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let userId;
     if (joinRequest != null) {
@@ -83,7 +83,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           }
           const obj = { children: null };
           const obj2 = { style: closure_0.divider };
-          const items = [React5(View, obj2), , ];
+          items = [React5(View, obj2), , ];
           const obj3 = { style: closure_0.formQuestion, variant: "text-xs/semibold", color: "text-muted", children: field_type.label };
           items[1] = React5(Text_Text.Text, obj3);
           const obj4 = { variant: "text-md/medium", color: "text-strong", children: response };

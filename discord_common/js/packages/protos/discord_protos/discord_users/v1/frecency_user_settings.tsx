@@ -397,7 +397,7 @@ class FavoriteGIF$Type extends MessageType3 {
       name: "format",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
+            items = ["discord_protos.discord_users.v1.GIFType", GIFType];
             return items;
           }
     };
@@ -507,7 +507,7 @@ const items1 = [
     name: "format",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
+      items = ["discord_protos.discord_users.v1.GIFType", GIFType];
       return items;
     }
   },

@@ -1,16 +1,16 @@
-// === Module 8240: CloudUploaderUtils ===
+// === Module 8364: CloudUploaderUtils ===
 
-// Module 8240 (CloudUploaderUtils)
+// Module 8364 (CloudUploaderUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UploadUtils from "UploadUtils" /* 8212 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import UploadUtils from "UploadUtils" /* 8336 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "Array" };
   return obj;
 }
 const size = fn(2);
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.
 
 export default { getUploadPayload };
 export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
-  const items = [];
+  items = [];
   const item = arr.forEach((item, index) => {
     const merged = Object.assign(UploadUtils.getAttachmentPayload(item, index));
     items.push({});

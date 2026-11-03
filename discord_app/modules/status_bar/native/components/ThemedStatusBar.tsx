@@ -1,11 +1,11 @@
-// === Module 16432: ThemedStatusBar ===
+// === Module 16576: ThemedStatusBar ===
 
-// Module 16432 (ThemedStatusBar)
+// Module 16576 (ThemedStatusBar)
 import initialize from "initialize" /* 504 */;
-import shared from "shared" /* 5021 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import StatusBarDefault from "StatusBar" /* 11212 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 11858 */;
+import shared from "shared" /* 5148 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import StatusBarDefault from "StatusBar" /* 11349 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 11995 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default function ThemedStatusBar() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => authenticated.isAuthenticated());
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();
   const items1 = [ThemeStore];

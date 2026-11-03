@@ -1,7 +1,7 @@
-// === Module 12179: conjureHistoryRequests ===
+// === Module 12315: conjureHistoryRequests ===
 
-// Module 12179 (conjureHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10948 */;
+// Module 12315 (conjureHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -47,7 +47,7 @@ let closure_4 = async function _restoreSourceHistoryEntry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -179,13 +179,13 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
             closure_2 = tmp2;
             closure_130_0 = undefined;
             closure_130_1 = undefined;
-            const obj4 = { query: null };
-            const obj5 = { environment };
-            obj4.query = obj5;
+            const obj5 = { query: null };
+            const obj6 = { environment };
+            obj5.query = obj6;
             c3 = 1;
             c4 = 1;
-            const obj6 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/database/restore-points", obj4), done: false };
-            return obj6;
+            const obj7 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/database/restore-points", obj5), done: false };
+            return obj7;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -222,13 +222,13 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
           if (Array.isArray(closure_130_1.restorePoints)) {
             const restorePoints = closure_130_1.restorePoints;
           } else {
-            const items = [];
+            items = [];
           }
           c4 = 3;
         }
-      } catch (tmp18) {
+      } catch (tmp22) {
         c4 = tmp;
-        throw tmp18;
+        throw tmp22;
       }
     }
   })();
@@ -266,7 +266,7 @@ let closure_7 = async function _createDatabaseRestorePoint(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_9 = async function _settleDatabaseRestore(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

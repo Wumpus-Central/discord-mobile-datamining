@@ -1,43 +1,53 @@
-// === Module 18417: GuildsBarSeparator ===
+// === Module 18562: GuildsBarSeparator ===
 
-// Module 18417 (GuildsBarSeparator)
+// Module 18562 (GuildsBarSeparator)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import useToken from "useToken" /* 5596 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7241 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18080 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import useToken from "useToken" /* 5719 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18224 */;
 import noop from "module_19" /* 19 */;
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   const tmp = closure_4(guildItemSize);
-  const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-  const fn = function n() {
-    const obj = { transform: null };
-    const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { panelTranslateX, guildItemSize };
-  fn.__workletHash = 7666765056610;
-  fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  let obj = useHomeDrawerGesture;
+  items = [closure_5, obj.useHomeDrawerState().panelTranslateX, guildItemSize];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp3, tmp4, tmp5] = items;
+  class GuildsBarSeparatorTsx1 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { scaleX: Math.max(1, (closure_0.get() + closure_1) / closure_1) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items1 = [tmp4, tmp5];
+  GuildsBarSeparatorTsx1.__closure = items1;
+  GuildsBarSeparatorTsx1.__workletHash = 16141865753371;
+  GuildsBarSeparatorTsx1.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(GuildsBarSeparatorTsx1);
   const obj3 = { style: null };
-  let items = [tmp.separator, animatedStyle];
-  obj3.style = items;
-  return jsx(ReanimatedNativeViewDefault, { style: null });
+  const items2 = [tmp.separator, animatedStyle];
+  obj3.style = items2;
+  return jsx(_modDef1652.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };
   obj.separator = size;
   return obj;
 });
-const __initData = { code: "function GuildsBarSeparatorTsx1(){const{panelTranslateX,guildItemSize}=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};}" };
+let closure_5 = { code: "(function GuildsBarSeparatorTsx1(){let[panelTranslateX,guildItemSize]=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");
 

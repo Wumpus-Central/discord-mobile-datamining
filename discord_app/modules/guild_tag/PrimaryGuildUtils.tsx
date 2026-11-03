@@ -1,6 +1,6 @@
-// === Module 1399: PrimaryGuildUtils ===
+// === Module 1401: PrimaryGuildUtils ===
 
-// Module 1399 (PrimaryGuildUtils)
+// Module 1401 (PrimaryGuildUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");

@@ -1,22 +1,22 @@
-// === Module 10736: ThemedGradient ===
+// === Module 10866: ThemedGradient ===
 
-// Module 10736 (ThemedGradient)
+// Module 10866 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import utils_ColorDefault from "utils/Color" /* 5012 */;
-import shared from "shared" /* 5021 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5192 */;
-import GuildThemePresets from "GuildThemePresets" /* 5195 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5197 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5252 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import utils_ColorDefault from "utils/Color" /* 5139 */;
+import shared from "shared" /* 5148 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5315 */;
+import GuildThemePresets from "GuildThemePresets" /* 5318 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5320 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5375 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -99,7 +99,7 @@ function GradientBase(angleCenter) {
     const obj2 = { width };
     wide = obj2;
   }
-  const items = [wide, , , , ];
+  items = [wide, , , , ];
   if (tall) {
     const obj3 = { height };
     tall = obj3;
@@ -220,7 +220,7 @@ function CustomThemesGradient(arg0) {
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1491)());
+  ({ width, height } = reduced(1493)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -285,7 +285,7 @@ function CustomThemesGradient(arg0) {
   }
   let arr2 = mapped;
   if (1 === mapped.length) {
-    const items = [mapped[0], mapped[0]];
+    items = [mapped[0], mapped[0]];
     arr2 = items;
   }
   let result = (gradientAngle - 90) * Math.PI / 180;
@@ -349,8 +349,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5587), obj);
-    const tmp2Result = reduced(5587);
+    tmp10Result = closure_6(reduced(5710), obj);
+    const tmp2Result = reduced(5710);
   }
   return tmp10Result;
 }
@@ -361,7 +361,7 @@ function ActiveGuildThemeGradient(arg0) {
     const customUserThemeSettings = activeGuildTheme.customUserThemeSettings;
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], theme), 0);
     obj2.colors = items;
     obj2.gradientColorStops = [];
@@ -387,7 +387,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c10 = 0.5;
@@ -409,7 +409,7 @@ export default function ThemedGradient(overlayOpacity) {
   const withOverlay = merged.withOverlay;
   const isThemeDarkResult = shared.isThemeDark(tmp5);
   const tmp9 = useThemeDefault();
-  const items = [ClientThemesBackgroundStore];
+  items = [ClientThemesBackgroundStore];
   const preset = useStateFromStores.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
   const tmp10 = useRoutedActiveGuildThemeDefault();
   const tmp6Result = useStateFromStores;
@@ -569,7 +569,7 @@ export function CustomThemedGradient(overlayOpacity) {
   let tmp12 = tmp11;
   if (merged.withOverlay) {
     const obj3 = { style: tmp2.absolute, children: null };
-    const items = [tmp11, ];
+    items = [tmp11, ];
     const obj4 = { style: null };
     const items1 = [tmp2.softenGradient, ];
     const obj5 = { backgroundColor: ColorUtils.hexWithOpacity(tmp7, num) };

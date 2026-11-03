@@ -147,7 +147,7 @@ export function runMigrations(proto, arg1) {
     }
   }
   let flag = false;
-  const items = [];
+  items = [];
   const iter2 = arg1[Symbol.iterator]();
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {

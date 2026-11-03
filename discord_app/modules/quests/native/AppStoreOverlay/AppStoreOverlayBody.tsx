@@ -1,22 +1,22 @@
-// === Module 14667: AppStoreOverlayBody ===
+// === Module 14798: AppStoreOverlayBody ===
 
-// Module 14667 (AppStoreOverlayBody)
+// Module 14798 (AppStoreOverlayBody)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14668 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14671 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14676 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14799 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14802 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
-let closure_6 = fn(5273).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(5396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, containerWithHeader: { paddingTop: 110 }, iconContainer: null, icon: null, textBlock: null, mediaSection: null, header: null, footer: null, footerGradient: null };
 let size = { width: 84, height: 84, borderRadius: nativeDefault.radii.xl, overflow: "hidden", borderWidth: 6, borderColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.iconContainer = size;
@@ -43,7 +43,7 @@ export function AppStoreOverlayBody(arg0) {
   if (headerUrl == null) {
     headerUrl = null;
   }
-  const items = [onOverlaySurfaceClick];
+  items = [onOverlaySurfaceClick];
   let tmp6 = null != headerUrl;
   const callback = noop.useCallback(() => {
     if (onOverlaySurfaceClick != null) {
@@ -78,14 +78,14 @@ export function AppStoreOverlayBody(arg0) {
   }
   const items3 = [tmp13, , , , ];
   const obj8 = { style: tmp.textBlock, children: null };
-  const items4 = [closure_7(onOverlaySurfaceClick(5624).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title }), ];
+  const items4 = [closure_7(onOverlaySurfaceClick(5747).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title }), ];
   let tmp17Result = null != metadata.subtitle;
   if (tmp17Result) {
     tmp17Result = "" !== metadata.subtitle;
   }
   if (tmp17Result) {
     const obj10 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-    tmp17Result = closure_7(onOverlaySurfaceClick(5624).Text, obj10);
+    tmp17Result = closure_7(onOverlaySurfaceClick(5747).Text, obj10);
   }
   items4[1] = tmp17Result;
   obj8.children = items4;
@@ -108,7 +108,7 @@ export function AppStoreOverlayBody(arg0) {
     const obj13 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = onOverlaySurfaceClick(1113).intl;
     obj13.children = intl.string(onOverlaySurfaceClick(1113).t["EV1W/L"]);
-    const items5 = [closure_7(onOverlaySurfaceClick(5624).Text, obj13), ];
+    const items5 = [closure_7(onOverlaySurfaceClick(5747).Text, obj13), ];
     const obj14 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
     items5[1] = closure_7(AppStoreOverlayMediaCarouselDefault, obj14);
     obj12.children = items5;
@@ -134,24 +134,24 @@ export function AppStoreOverlayFooter(arg0) {
   let token;
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
-  const bottom = token(1625)().bottom;
-  token = bottom(5596).useToken(token(575).colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let items = [token];
+  const bottom = token(1627)().bottom;
+  token = bottom(5719).useToken(token(575).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  items = [token];
   const items1 = [bottom];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(token);
-    const items = [_modDef671(token).alpha(0).hex(), token];
+    items = [_modDef671(token).alpha(0).hex(), token];
     return items;
   }, items);
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
-  const items2 = [closure_7(token(5587), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
+  const items2 = [closure_7(token(5710), { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END }), ];
   const obj4 = { style: memo1, children: null };
   const obj5 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1113).intl;
   obj5.text = intl.string(bottom(1113).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5634).Button, obj5);
+  obj4.children = closure_7(bottom(5754).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

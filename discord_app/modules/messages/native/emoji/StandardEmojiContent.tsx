@@ -1,15 +1,15 @@
-// === Module 10052: StandardEmojiContent ===
+// === Module 10182: StandardEmojiContent ===
 
-// Module 10052 (StandardEmojiContent)
+// Module 10182 (StandardEmojiContent)
 import nativeDefault from "native" /* 575 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10053 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10057 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10183 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10187 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 function Emoji(surrogate) {
@@ -18,23 +18,23 @@ function Emoji(surrogate) {
   const merged = Object.assign(closure_9());
   const merged1 = Object.assign(useSharedMessageEmojiStyles.useSharedMessageEmojiStyles());
   const uRL = EmojiUtilsDefault.getURL(surrogate);
-  const obj4 = { style: obj.emojiWrapper, children: null };
   if ("" !== uRL) {
-    const obj5 = { style: obj.emojiIcon, resizeMode: "contain", source: null };
-    const obj6 = { uri: uRL };
-    obj5.source = obj6;
-    let tmp7Result = timestampProducer(FastImageDefault, obj5);
+    const obj4 = { style: obj.emojiIcon, resizeMode: "contain", source: null };
+    const obj5 = { uri: uRL };
+    obj4.source = obj5;
+    let tmp9 = timestampProducer(FastImageDefault, obj4);
   } else {
+    const obj6 = { style: obj.emojiWrapper, children: null };
     const obj7 = { style: obj.emojiSurrogate, variant: "text-md/medium", children: surrogate };
-    tmp7Result = timestampProducer(Text_Text.Text, obj7);
+    obj6.children = timestampProducer(Text_Text.Text, obj7);
+    tmp9 = timestampProducer(View, obj6);
   }
-  obj4.children = tmp7Result;
-  return timestampProducer(View, obj4);
+  return tmp9;
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: { paddingTop: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default function StandardEmojiContent(nonce) {
   const guildId = SelectedGuildStore.getGuildId();
   const obj2 = emojiNode(isFavoriteEmoji[6]);
   const trackOpenPopout = emojiNode(isFavoriteEmoji[10]).useTrackOpenPopout({ currentGuildId: guildId, nonce: nonce.nonce });
-  const items = [emojiNode.surrogate];
+  items = [emojiNode.surrogate];
   const memo = noop.useMemo(() => UnicodeEmojisDefault.convertSurrogateToBase(emojiNode.surrogate), items);
   const obj3 = emojiNode(isFavoriteEmoji[10]);
   isFavoriteEmoji = emojiNode(isFavoriteEmoji[12]).useIsFavoriteEmoji(guildId, memo);
@@ -58,7 +58,7 @@ export default function StandardEmojiContent(nonce) {
   const obj6 = { surrogate: emojiNode.surrogate };
   const items1 = [closure_6(Emoji, obj6), ];
   const obj7 = { style: obj.emojiDescriptionWrapper, children: null };
-  const items2 = [closure_6(emojiNode(isFavoriteEmoji[9]).Text, { variant: "text-md/bold", color: "mobile-text-heading-primary", children: memo(isFavoriteEmoji[13])(emojiNode.content) }), ];
+  const items2 = [closure_6(emojiNode(isFavoriteEmoji[9]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo(isFavoriteEmoji[13])(emojiNode.content) }), ];
   const obj8 = { variant: "text-sm/medium", children: null };
   const intl = emojiNode(isFavoriteEmoji[14]).intl;
   obj8.children = intl.string(emojiNode(isFavoriteEmoji[14]).t.sXdH8c);

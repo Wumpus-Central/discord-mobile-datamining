@@ -1,25 +1,25 @@
-// === Module 17729: DevToolsShopScreen ===
+// === Module 17872: DevToolsShopScreen ===
 
-// Module 17729 (DevToolsShopScreen)
+// Module 17872 (DevToolsShopScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import TableSwitchRow from "TableSwitchRow" /* 7369 */;
-import FormSwitch from "FormSwitch" /* 7370 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17617 */;
-import DevSettingsActions from "DevSettingsActions" /* 17702 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import FormSwitch from "FormSwitch" /* 7490 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17760 */;
+import DevSettingsActions from "DevSettingsActions" /* 17845 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 
 export default function DevToolsShopScreen() {
   const tmp = closure_7();
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = initialize.useStateFromStores(items, () => DevSettingsStore.get("shop_disable_cache"));
   const items1 = [DevSettingsStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => DevSettingsStore.get("shop_include_unpublished"));

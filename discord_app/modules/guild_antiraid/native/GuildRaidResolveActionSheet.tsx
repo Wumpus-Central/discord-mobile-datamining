@@ -1,13 +1,13 @@
-// === Module 13290: GuildRaidResolveActionSheet ===
+// === Module 13426: GuildRaidResolveActionSheet ===
 
-// Module 13290 (GuildRaidResolveActionSheet)
+// Module 13426 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6954 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import AutomodFeedback from "AutomodFeedback" /* 7697 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import AutomodFeedback from "AutomodFeedback" /* 7821 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,10 +17,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SafetyToastType = fn(7490).SafetyToastType;
+const SafetyToastType = fn(7614).SafetyToastType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingVertical: 24, paddingHorizontal: 16, display: "flex", flexDirection: "column", alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { marginBottom: 16, textAlign: "center" }, optionContainer: { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" }, option: { width: "100%" }, textInputContainer: { paddingLeft: 54, paddingRight: 16, paddingBottom: 16 }, textInput: null };
 let obj3 = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" };
 obj2.textInput = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: nativeDefault.radii.xs };
@@ -53,7 +53,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -128,7 +128,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   let intl = util.intl;
   obj.text = intl.string(util.t.yeaXw5);
   obj.value = AutomodFeedback.RaidResolutionType.LEGITIMATE_ACTIVITY;
-  let items = [obj, , , ];
+  items = [obj, , , ];
   let obj2 = { text: null, value: null };
   const intl2 = util.intl;
   obj2.text = intl2.string(util.t["o++3B8"]);
@@ -147,7 +147,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   let obj5 = { children: null };
   let obj6 = { style: tmp.container, children: null };
   const tmp3 = _slicedToArray(noop.useState(), 2);
-  const obj7 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = { style: tmp.title, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t["1zmw/H"]);
   const items1 = [handleTextInputChange(Text_Text.Text, obj7), , , , ];
@@ -164,7 +164,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
       onPress() {
         closure_0 = value;
         c4(c3.includes(value) ? ((arr) => arr.filter((item) => item !== closure_1_0)) : ((arg0) => {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
           return items;
         }));
@@ -172,7 +172,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
       leading: handleTextInputChange(require("native").Checkbox, { selected: _undefined.includes(value) }),
       label: value.text
     };
-    let items = [handleTextInputChange(require("Form").FormRow, obj2), ];
+    items = [handleTextInputChange(require("Form").FormRow, obj2), ];
     let hasItem = value === require("AutomodFeedback").RaidResolutionType.OTHER;
     if (hasItem) {
       hasItem = _undefined.includes(require("AutomodFeedback").RaidResolutionType.OTHER);

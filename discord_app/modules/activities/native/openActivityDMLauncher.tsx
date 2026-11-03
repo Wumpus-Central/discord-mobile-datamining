@@ -1,6 +1,6 @@
-// === Module 15812: openActivityDMLauncher ===
+// === Module 15955: openActivityDMLauncher ===
 
-// Module 15812 (openActivityDMLauncher)
+// Module 15955 (openActivityDMLauncher)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
             return obj8;
           } else {
             const obj9 = { applicationId: closure_129_0, fromLink: true, linkChannelId: closure_129_4, customId, referrerId: closure_129_1, analyticsLocations: null, commandOrigin: null };
-            const items = [closure_130_1(closure_130_2[4]).ACTIVITY_BOOKMARK];
+            items = [closure_130_1(closure_130_2[4]).ACTIVITY_BOOKMARK];
             obj9.analyticsLocations = items;
             obj9.commandOrigin = closure_130_0(closure_130_2[5]).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
             c3 = 4;
@@ -149,7 +149,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
     }
   }
 };
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 

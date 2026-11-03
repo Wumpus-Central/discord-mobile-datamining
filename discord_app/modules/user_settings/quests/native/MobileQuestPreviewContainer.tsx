@@ -1,11 +1,11 @@
-// === Module 17148: MobileQuestPreviewContainer ===
+// === Module 17291: MobileQuestPreviewContainer ===
 
-// Module 17148 (MobileQuestPreviewContainer)
+// Module 17291 (MobileQuestPreviewContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -25,7 +25,7 @@ export default function MobileQuestPreviewContainer(title) {
     const obj2 = { variant: "text-lg/semibold", color: "text-default", style: tmp.title, children: title };
     tmp4 = React3(Text_Text.Text, obj2);
   }
-  const items = [tmp4, title.children];
+  items = [tmp4, title.children];
   obj.children = items;
   return React4(View, obj);
 };

@@ -1,13 +1,13 @@
-// === Module 18610: NavTTIView ===
+// === Module 18768: NavTTIView ===
 
-// Module 18610 (NavTTIView)
+// Module 18768 (NavTTIView)
 import initialize from "initialize" /* 504 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 18611 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18613 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18614 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 18769 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18771 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18772 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
 
 require = fn;
 function NavTTIMeasuredView(onLayout) {
@@ -15,7 +15,7 @@ function NavTTIMeasuredView(onLayout) {
   ({ measurementProps, children } = onLayout);
   const merged = Object.assign(onLayout, Object.assign({ measurementProps: 0, onLayout: 0, children: 0 }));
   const onLayout2 = measurementProps.onLayout;
-  const items = [onLayout2, onLayout];
+  items = [onLayout2, onLayout];
   const obj = {};
   const callback = noop.useCallback((arg0) => {
     if (onLayout2 != null) {
@@ -51,7 +51,7 @@ function VisualizedNavTTIViewContent(measurementProps) {
   const obj = {};
   const merged = Object.assign(_objectWithoutProperties(props, closure_2));
   obj.measurementProps = measurementProps.measurementProps;
-  const items = [React7(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, { value: hierarchy.contextValue, children: props.children }), React7(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, { name: str, regionId: hierarchy.regionId, tracking, descendantTracking, includedDescendants: hierarchy.includedDescendants, excludedDescendants: hierarchy.excludedDescendants, hierarchyDepth: hierarchy.depth, violation: hierarchy.violation })];
+  items = [React7(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, { value: hierarchy.contextValue, children: props.children }), React7(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, { name: str, regionId: hierarchy.regionId, tracking, descendantTracking, includedDescendants: hierarchy.includedDescendants, excludedDescendants: hierarchy.excludedDescendants, hierarchyDepth: hierarchy.depth, violation: hierarchy.violation })];
   obj.children = items;
   return closure_1_10(NavTTIMeasuredView, obj);
 }
@@ -90,12 +90,12 @@ let closure_3 = ["tracking", "name", "descendantTracking"];
 let closure_4 = ["tracking", "name"];
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTIView.tsx");
 
 export function NavTTIView(tracking) {
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   if (obj.useStateFromStores(items, () => DevSettingsStore.get("navigation_tti_visualizer"))) {
     const obj2 = {};
     const merged = Object.assign(tracking);

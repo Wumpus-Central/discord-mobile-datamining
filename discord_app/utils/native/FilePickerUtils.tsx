@@ -1,6 +1,6 @@
-// === Module 11099: FilePickerUtils ===
+// === Module 11236: FilePickerUtils ===
 
-// Module 11099 (FilePickerUtils)
+// Module 11236 (FilePickerUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _handleDocumentSelection() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_5 = async function _handleDocumentSelection() {
           if (null != closure_129_1) {
             if (closure_129_1.length > 0) {
               tmp56 = (function getPickerTypesForExtensions(arg0) {
-                const items = [];
+                items = [];
                 const iter = arg0[Symbol.iterator]();
                 const nextResult = iter.next();
                 while (iter !== undefined) {
@@ -122,7 +122,7 @@ let closure_5 = async function _handleDocumentSelection() {
         if (obj4.isErrorWithCode(closure_129_5)) {
           if (closure_129_5.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
         obj4 = closure_130_0(closure_130_2[2]);
@@ -138,7 +138,7 @@ let closure_5 = async function _handleDocumentSelection() {
         obj13.body = intl4.string(closure_130_0(closure_130_2[5]).t.fZRH9P);
         closure_130_1(closure_130_2[4]).show(obj13);
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

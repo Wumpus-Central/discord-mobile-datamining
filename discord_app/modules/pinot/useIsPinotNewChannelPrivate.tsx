@@ -1,10 +1,10 @@
-// === Module 9056: useIsPinotNewChannelPrivate ===
+// === Module 9184: useIsPinotNewChannelPrivate ===
 
-// Module 9056 (useIsPinotNewChannelPrivate)
-import PinotEligibility from "PinotEligibility" /* 9053 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 9184 (useIsPinotNewChannelPrivate)
+import PinotEligibility from "PinotEligibility" /* 9181 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/pinot/useIsPinotNewChannelPri
 export function useIsPinotNewChannelPrivate(guildId, categoryId) {
   _require = guildId;
   dependencyMap = categoryId;
-  const items = [ChannelStore, GuildStore, GuildRoleStore];
+  items = [ChannelStore, GuildStore, GuildRoleStore];
   const items1 = [guildId, categoryId];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {

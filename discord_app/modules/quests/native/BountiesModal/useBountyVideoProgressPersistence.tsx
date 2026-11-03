@@ -1,11 +1,11 @@
-// === Module 16941: useBountyVideoProgressPersistence ===
+// === Module 17084: useBountyVideoProgressPersistence ===
 
-// Module 16941 (useBountyVideoProgressPersistence)
-import BountyActionCreators from "BountyActionCreators" /* 14691 */;
-import useBountiesModalTiming from "useBountiesModalTiming" /* 16937 */;
+// Module 17084 (useBountyVideoProgressPersistence)
+import BountyActionCreators from "BountyActionCreators" /* 14822 */;
+import useBountiesModalTiming from "useBountiesModalTiming" /* 17080 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7845 */;
+import BountyStore from "BountyStore" /* 7969 */;
 
 require = fn;
 let closure_5 = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
@@ -21,7 +21,7 @@ export function useBountyVideoProgressPersistence(bountyId) {
     let bountyVideoProgress = BountyStore.getBountyVideoProgress(bountyId);
     if (null != bountyVideoProgress) {
       if (endMode === useBountiesModalTiming.BountyVideoEndMode.LOOP) {
-        const duration = bountyVideoProgress.duration;
+        duration = bountyVideoProgress.duration;
         let tmp6 = duration > 0;
         if (tmp6) {
           tmp6 = tmp5 >= duration - 1;
@@ -36,7 +36,7 @@ export function useBountyVideoProgressPersistence(bountyId) {
   noop.useRef(first.maxTimestampSec);
   noop.useRef(first.duration);
   let obj = { initialProgress: first, handleProgress: null, flushProgress: null };
-  const items = [bountyId];
+  items = [bountyId];
   obj.handleProgress = noop.useCallback((current, current2, current3) => {
     closure_3.current = current3;
     closure_4.current = current;

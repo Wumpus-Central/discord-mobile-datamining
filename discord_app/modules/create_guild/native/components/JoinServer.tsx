@@ -1,17 +1,17 @@
-// === Module 14325: components/JoinServer ===
+// === Module 14456: components/JoinServer ===
 
-// Module 14325 (components/JoinServer)
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
+// Module 14456 (components/JoinServer)
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const CreateGuildConstants = fn(7147);
+const CreateGuildConstants = fn(7270);
 ({ CreateGuildModalStates: hasOwnProperty, NUXGuildTemplatesAnalytics: metroRequire } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5586).NAV_BAR_HEIGHT } };
+const createStyles = fn(5141);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5709).NAV_BAR_HEIGHT } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
@@ -32,7 +32,7 @@ export default function JoinServerContainer(initialRoute) {
   closure_6 = tmp6[1];
   const tmp4 = inviteString(noop.useState(false), 2);
   const navigation = initialRoute(location[6]).useNavigation();
-  const items = [navigation, initialRoute, onClose];
+  items = [navigation, initialRoute, onClose];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (initialRoute === constants.JOIN_SERVER) {
       let headerCloseButton = NavigatorHeader.getHeaderCloseButton(() => {

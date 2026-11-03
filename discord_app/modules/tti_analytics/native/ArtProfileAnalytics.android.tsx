@@ -1,8 +1,8 @@
-// === Module 7818: ArtProfileAnalytics ===
+// === Module 7942: ArtProfileAnalytics ===
 
-// Module 7818 (ArtProfileAnalytics)
-import Timers from "Timers" /* 4858 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 7815 */;
+// Module 7942 (ArtProfileAnalytics)
+import Timers from "Timers" /* 4985 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -43,7 +43,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
           closure_130_6 = undefined;
           const javaBaselineProfileCompilationStatus = NativeTTIModuleDefault.getJavaBaselineProfileCompilationStatus();
           const catchPromise = javaBaselineProfileCompilationStatus.catch(() => closure_1_6);
-          const items = [catchPromise, Timers.timeoutPromise(10000).then(() => closure_1_6)];
+          items = [catchPromise, Timers.timeoutPromise(10000).then(() => closure_1_6)];
           const items1 = [Promise.race(items), ];
           const timeoutPromiseResult = Timers.timeoutPromise(10000);
           items1[1] = NativeTTIModuleDefault.getAndroidArtProfileTelemetry();
@@ -80,7 +80,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
         closure_130_6 = obj5;
         closure_131_1(closure_131_2[5]).track(closure_131_5.ANDROID_ART_PROFILE_SNAPSHOT, closure_130_6, { logEventProperties: true });
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp6) {
       c5 = tmp;

@@ -1,9 +1,9 @@
-// === Module 13804: AppLauncherButtonIcon ===
+// === Module 13935: AppLauncherButtonIcon ===
 
-// Module 13804 (AppLauncherButtonIcon)
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
-import AppsIcon from "AppsIcon" /* 8678 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10828 */;
+// Module 13935 (AppLauncherButtonIcon)
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import AppsIcon from "AppsIcon" /* 8802 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export function AppLauncherButtonIcon(style) {
   if (tmp3 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    const items = [style, ];
+    items = [style, ];
     const obj3 = { transform: null };
     const items1 = [{ rotate: "45deg" }];
     obj3.transform = items1;

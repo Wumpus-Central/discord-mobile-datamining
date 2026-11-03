@@ -1,9 +1,9 @@
-// === Module 14676: AppStoreOverlayAboutSection ===
+// === Module 14807: AppStoreOverlayAboutSection ===
 
-// Module 14676 (AppStoreOverlayAboutSection)
+// Module 14807 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { aboutSection: { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function AppStoreOverlayAboutSection(children) {
   const tmp = closure_9();
   [tmp3, c1] = noop.useState(false);
   [first, closure_3] = noop.useState(null);
-  const items = [first];
+  items = [first];
   const items1 = [onSeeMorePress];
   const callback = noop.useCallback((nativeEvent) => {
     if (null == first) {

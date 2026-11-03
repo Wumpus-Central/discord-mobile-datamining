@@ -1,15 +1,15 @@
-// === Module 12451: useAppsInThisServer ===
+// === Module 12587: useAppsInThisServer ===
 
-// Module 12451 (useAppsInThisServer)
+// Module 12587 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9762).useGuildIndexState;
-const limit = fn(6035).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9894).useGuildIndexState;
+const limit = fn(6155).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
@@ -30,7 +30,7 @@ export default function useAppsInThisServer(context) {
   }
   const tmp2Result = useGuildIndexState(guild_id, true);
   _require = tmp2Result;
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

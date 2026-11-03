@@ -1,6 +1,6 @@
-// === Module 9297: GuildProfileConstants ===
+// === Module 9425: GuildProfileConstants ===
 
-// Module 9297 (GuildProfileConstants)
+// Module 9425 (GuildProfileConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { BOULDER: "Boulder", CASCADE: "Cascade", THUNDER: "Thunder", SOUL: "Soul", MARSH: "Marsh", VOLCANO: "Volcano", EARTH: "Earth", ZEPHYR: "Zephyr", RISING: "Rising" };
@@ -13,6 +13,6 @@ export const BANNER_PALETTE_PRESETS = items;
 export const INVALID_ACCESS_ERROR_CODE = 50001;
 export const HOISTED_SEARCH_GAME_IDS = items1;
 export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = new Map(items1.map((item, index, arg2) => {
-  const items = [item, arg2.length - index];
+  items = [item, arg2.length - index];
   return items;
 }));

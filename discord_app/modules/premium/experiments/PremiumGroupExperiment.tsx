@@ -1,7 +1,7 @@
-// === Module 9576: PremiumGroupExperiment ===
+// === Module 9708: PremiumGroupExperiment ===
 
-// Module 9576 (PremiumGroupExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 9708 (PremiumGroupExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-12-katsudon", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

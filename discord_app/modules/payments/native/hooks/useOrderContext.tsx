@@ -1,6 +1,6 @@
-// === Module 10566: useOrderContext ===
+// === Module 10696: useOrderContext ===
 
-// Module 10566 (useOrderContext)
+// Module 10696 (useOrderContext)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ export function useOrderContext(initialOrder) {
       return tmp;
     });
   }, []);
-  const items = [order, tmp[1], setRevision];
+  items = [order, tmp[1], setRevision];
   return noop.useMemo(() => {
     const obj = { order, setOrder, setRevision, orderId: null, orderLineItemId: null, revision: null };
     let id;

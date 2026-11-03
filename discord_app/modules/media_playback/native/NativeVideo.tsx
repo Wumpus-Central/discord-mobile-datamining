@@ -1,6 +1,6 @@
-// === Module 8877: NativeVideo ===
+// === Module 9001: NativeVideo ===
 
-// Module 8877 (NativeVideo)
+// Module 9001 (NativeVideo)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 0;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { overflow: "hidden" }, content: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.content = {};
@@ -97,7 +97,7 @@ export default function NativeVideo(ref) {
   const tmp5 = str(id.useState({}), 2);
   [tmp20, c7] = str(id.useState(null), 2);
   ref = obj.useRef(merged);
-  const items = [merged];
+  items = [merged];
   const effect = obj.useEffect(() => {
     const current = ref.current;
     ref.current = current;
@@ -124,7 +124,7 @@ export default function NativeVideo(ref) {
         num = 100;
       }
       if (null != ref.current) {
-        const Commands = merged(8878).Commands;
+        const Commands = merged(9002).Commands;
         Commands.seek(tmp.current, arg0, num);
       }
     },
@@ -146,7 +146,7 @@ export default function NativeVideo(ref) {
         tmp3 = null != ref.current;
       }
       if (tmp3) {
-        const Commands = merged(8878).Commands;
+        const Commands = merged(9002).Commands;
         Commands.reset(ref.current);
       }
       dependencyMap((arg0) => {
@@ -160,7 +160,7 @@ export default function NativeVideo(ref) {
   const items1 = [tmp2.container, obj2.style];
   obj5.style = items1;
   const items2 = [
-    ref(ref(8878), {
+    ref(ref(9002), {
       ref,
       style: tmp2.content,
       sourceId: id,
@@ -316,8 +316,8 @@ export default function NativeVideo(ref) {
       str2 = str4;
     }
     obj7.resizeMode = str2;
-    tmp25Result = ref(ref(5717), obj7);
-    const tmp26Result = ref(5717);
+    tmp25Result = ref(ref(5837), obj7);
+    const tmp26Result = ref(5837);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

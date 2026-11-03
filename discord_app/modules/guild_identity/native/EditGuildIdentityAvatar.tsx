@@ -1,20 +1,20 @@
-// === Module 16575: EditGuildIdentityAvatar ===
+// === Module 16718: EditGuildIdentityAvatar ===
 
-// Module 16575 (EditGuildIdentityAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
+// Module 16718 (EditGuildIdentityAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsSections: metroRequire, AnalyticsObjects: closure_7, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");
@@ -32,7 +32,7 @@ export default function EditGuildIdentityAvatar(userId) {
   let avatarDecoration;
   ({ style, statusStyle, avatarStyle } = userId);
   let tmp = closure_12();
-  const items = [handleUploadAvatarSelect];
+  items = [handleUploadAvatarSelect];
   const stateFromStores = guildId(stateFromStores1[7]).useStateFromStores(items, () => handleUploadAvatarSelect.getCurrentUser());
   let obj = guildId(stateFromStores1[7]);
   const items1 = [setPendingAvatar];

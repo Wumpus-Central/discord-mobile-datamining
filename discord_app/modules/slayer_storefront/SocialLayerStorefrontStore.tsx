@@ -1,9 +1,9 @@
-// === Module 7406: SocialLayerStorefrontStore ===
+// === Module 7530: SocialLayerStorefrontStore ===
 
-// Module 7406 (SocialLayerStorefrontStore)
+// Module 7530 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUserSettingsStoreUpdate() {
@@ -37,7 +37,7 @@ class SocialLayerStorefrontStore extends Store {
 const prototype = SocialLayerStorefrontStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore, LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
   locale = LocaleStore.locale;
 };
@@ -151,7 +151,7 @@ prototype["getStorefrontGuildIds"] = function getStorefrontGuildIds() {
   return set1;
 };
 prototype["getSKUEligibility"] = function getSKUEligibility(skuId) {
-  let state;
+  state = undefined;
   if (obj[skuId] != null) {
     state = tmp.state;
   }
@@ -161,7 +161,7 @@ prototype["getSKUEligibilityEntry"] = function getSKUEligibilityEntry(arg0) {
   return obj[arg0];
 };
 prototype["getNormalizedSKUEligibility"] = function getNormalizedSKUEligibility(arg0) {
-  let state;
+  state = undefined;
   if (obj[arg0] != null) {
     state = tmp.state;
   }
@@ -391,7 +391,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "o" };
       const _Date = Date;
       obj.fetchedAt = Date.now();
       if (null != guildId) {
@@ -479,7 +479,7 @@ obj = {
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function handleSKUPurchaseEligibilityCheckCreate(arg0) {
     ({ skuId, interactionId } = arg0);
-    let state;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }
@@ -499,7 +499,7 @@ obj = {
     if (reason === undefined) {
       reason = "http_error";
     }
-    let state;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }

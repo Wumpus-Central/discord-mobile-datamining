@@ -1,12 +1,12 @@
-// === Module 16670: account/MFAUtils ===
+// === Module 16813: account/MFAUtils ===
 
-// Module 16670 (account/MFAUtils)
+// Module 16813 (account/MFAUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
-import MFAUtils from "MFAUtils" /* 7118 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import MFAUtils from "MFAUtils" /* 7244 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -58,7 +58,7 @@ export function getSMSBackupDisabledMessage(stateFromStores) {
   }
 }
 export function useIsMFAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
@@ -67,7 +67,7 @@ export function useIsMFAEnabled() {
 export { MFAAvailability };
 export function useMFAAvailability() {
   const obj = useStateFromStores;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let verified;
@@ -91,7 +91,7 @@ export function use2FARemoveDisableReason() {
   if (arg0 === undefined) {
     flag = false;
   }
-  const items = [GuildStore, PermissionStore, UserStore];
+  items = [GuildStore, PermissionStore, UserStore];
   return flag(563).useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();
     let hasAnyStaffLevelResult;

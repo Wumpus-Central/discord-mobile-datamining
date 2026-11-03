@@ -1,17 +1,17 @@
-// === Module 19982: GuildRoleSubscriptionListingPreview ===
+// === Module 20132: GuildRoleSubscriptionListingPreview ===
 
-// Module 19982 (GuildRoleSubscriptionListingPreview)
+// Module 20132 (GuildRoleSubscriptionListingPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import PriceUtils from "PriceUtils" /* 7413 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17220 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17228 */;
-import GuildRoleSubscriptionsActionCreatorExtras from "GuildRoleSubscriptionsActionCreatorExtras" /* 19958 */;
-import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 19983 */;
-import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview" /* 19984 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import PriceUtils from "PriceUtils" /* 7537 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17363 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17371 */;
+import GuildRoleSubscriptionsActionCreatorExtras from "GuildRoleSubscriptionsActionCreatorExtras" /* 20108 */;
+import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 20133 */;
+import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview" /* 20134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,8 +21,8 @@ function PriceTier(arg0) {
   const merged = Object.assign(arg0, Object.assign({ price: 0, currency: 0 }));
   const tmp2 = closure_9();
   const obj = { style: tmp2.priceGroup, children: null };
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: PriceUtils.formatPrice(price, currency) };
-  const items = [timestampProducer(Text_Text.Text, obj2), ];
+  const obj2 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: PriceUtils.formatPrice(price, currency) };
+  items = [timestampProducer(Text_Text.Text, obj2), ];
   const obj4 = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
   const intl = util.intl;
   const obj5 = { period: null };
@@ -39,7 +39,7 @@ function Header(onPress) {
   const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
   let str = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(listingId), 1)[0];
   const obj5 = { style: tmp.header, children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), , , , ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), , , , ];
   const obj6 = { style: tmp.image, source: null };
   const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
   if (str == null) {
@@ -81,7 +81,7 @@ function LabeledSection(arg0) {
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.label = label;
-  const items = [timestampProducer(SectionLabel, obj2), ];
+  items = [timestampProducer(SectionLabel, obj2), ];
   const obj3 = {};
   const merged2 = Object.assign(merged);
   obj3.children = children;
@@ -148,7 +148,7 @@ class BenefitsSection {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.header = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: nativeDefault.space.PX_16 };
@@ -186,7 +186,7 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
   const obj4 = { style: tmp.container, children: null };
   const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
-  const items = [timestampProducer(Header, {}), , , , ];
+  items = [timestampProducer(Header, {}), , , , ];
   const obj6 = { label: null, children: null };
   const intl = util.intl;
   obj6.label = intl.string(util.t.FJZmYx);

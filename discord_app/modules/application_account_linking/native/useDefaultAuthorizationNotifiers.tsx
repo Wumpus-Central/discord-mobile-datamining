@@ -1,11 +1,11 @@
-// === Module 18327: useDefaultAuthorizationNotifiers ===
+// === Module 18472: useDefaultAuthorizationNotifiers ===
 
-// Module 18327 (useDefaultAuthorizationNotifiers)
+// Module 18472 (useDefaultAuthorizationNotifiers)
 import util from "util" /* 1113 */;
-import _modDef3320 from "module_3320" /* 3320 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ export function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyL
   let stateFromStores;
   let previousWhen;
   noop = noop.useRef(false);
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
   let obj2 = noop;
   const obj3 = require("initialize");
@@ -56,7 +56,7 @@ export function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyL
             if (flag) {
               const obj2 = { text: null };
               const intl = util.intl;
-              obj2.text = intl.string(_modDef3320.uG6teD);
+              obj2.text = intl.string(_modDef3447.uG6teD);
               ToastActionCreatorsDefault.open("account-linked-toast", obj2);
             }
           }

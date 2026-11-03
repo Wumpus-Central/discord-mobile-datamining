@@ -1,11 +1,11 @@
-// === Module 15463: useFetchGuildBoostSlots ===
+// === Module 15604: useFetchGuildBoostSlots ===
 
-// Module 15463 (useFetchGuildBoostSlots)
+// Module 15604 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7585 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7709 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("components_native/premium/premium_gui
 
 export default function useFetchGuildBoostSlots() {
   [first, closure_1] = noop.useState(true);
-  let items = [GuildBoostSlotStore];
+  items = [GuildBoostSlotStore];
   stateFromStores = first(stateFromStores[5]).useStateFromStores(items, () => hasFetched.hasFetched);
   let obj = first(stateFromStores[5]);
   const items1 = [AppStateStore];
@@ -33,7 +33,7 @@ export default function useFetchGuildBoostSlots() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -50,7 +50,7 @@ export default function useFetchGuildBoostSlots() {
                 closure_0 = tmp2;
                 let resolve = globalThis;
                 let appliedGuildBoostsForUser = stateFromStores;
-                let items = [closure_2_1(stateFromStores[7]).init(), , ];
+                items = [closure_2_1(stateFromStores[7]).init(), , ];
                 if (c2) {
                   resolve = resolve.Promise.resolve;
                   let resolveResult = resolve();
@@ -78,7 +78,7 @@ export default function useFetchGuildBoostSlots() {
             } else {
               v1(false);
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp13) {
             c2 = tmp;

@@ -1,10 +1,10 @@
-// === Module 19170: useChannelFloatingCTAContent ===
+// === Module 19328: useChannelFloatingCTAContent ===
 
-// Module 19170 (useChannelFloatingCTAContent)
-import dismissible_content from "dismissible_content" /* 4847 */;
+// Module 19328 (useChannelFloatingCTAContent)
+import dismissible_content from "dismissible_content" /* 4974 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/useChannel
 
 export default function useChannelFloatingCTAContent(arg0) {
   _require = arg0;
-  let items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
@@ -29,7 +29,7 @@ export default function useChannelFloatingCTAContent(arg0) {
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => anyLocalVideoAutoDisabled.isAnyLocalVideoAutoDisabled());
   const items2 = [stateFromStores1, tmp2, stateFromStores];
   return stateFromStores1.useMemo(() => {
-    const items = [];
+    items = [];
     if (stateFromStores1) {
       items.push(dismissible_content.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
     }

@@ -1,17 +1,17 @@
-// === Module 18702: SearchListRow ===
+// === Module 18860: SearchListRow ===
 
-// Module 18702 (SearchListRow)
+// Module 18860 (SearchListRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(9827).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(9958).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = { pressable: { paddingHorizontal: 16, paddingVertical }, body: { flexDirection: "row", alignItems: "center" }, labels: { justifyContent: "center", flex: 1 }, underlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE }, text: { flexShrink: 1 }, iconContainer: { marginRight: 12 }, extrasContainer: { marginLeft } };
   return obj;
@@ -35,7 +35,7 @@ export const SearchListRow = noop.memo(function SearchListRow(accessibilityRole)
   }
   const tmpResult = closure_7(iconWidth);
   const obj = { accessible, accessibilityRole: str, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, style: null, onPress, unstable_pressDelay: 130, underlayColor: tmpResult.underlayColor.backgroundColor, children: null };
-  const items = [tmpResult.pressable, containerStyle];
+  items = [tmpResult.pressable, containerStyle];
   obj.style = items;
   const items1 = [header, , ];
   const obj2 = { style: null, children: null };

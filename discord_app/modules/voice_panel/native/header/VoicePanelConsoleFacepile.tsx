@@ -1,13 +1,13 @@
-// === Module 19238: VoicePanelConsoleFacepile ===
+// === Module 19396: VoicePanelConsoleFacepile ===
 
-// Module 19238 (VoicePanelConsoleFacepile)
+// Module 19396 (VoicePanelConsoleFacepile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11976 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14742 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 12113 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14873 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ function getConsoleInfo(type) {
 }
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { consoleIconContainer: { borderRadius: nativeDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, consoleIcon: null };
 const obj3 = { borderRadius: nativeDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.consoleIcon = { tintColor: nativeDefault.colors.WHITE };
@@ -48,7 +48,7 @@ export default function VoicePanelConsoleFacepile() {
   _require = tmp;
   const tmp2 = useGameConsoleAccountsDefault();
   importDefault = tmp2;
-  let items = [tmp2];
+  items = [tmp2];
   const items1 = [tmp];
   const items2 = noop.useMemo(() => {
     const mapped = closure_1.map(getConsoleInfo);
@@ -56,7 +56,7 @@ export default function VoicePanelConsoleFacepile() {
   }, items);
   const renderItem = noop.useCallback((backgroundColor) => {
     const obj = { style: null, children: null };
-    const items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+    items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
     obj.style = items;
     obj.children = jsx(native.Icon, { style: closure_0.consoleIcon, size: native.Icon.Sizes.MEDIUM, source: backgroundColor.icon });
     return <tmp style={null}>{null}</tmp>;

@@ -1,26 +1,26 @@
-// === Module 17817: UserSettingsDesignSystemFormPrimitives ===
+// === Module 17960: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 17817 (UserSettingsDesignSystemFormPrimitives)
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import TableSwitchRow from "TableSwitchRow" /* 7369 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8673 */;
-import VoiceXIcon from "VoiceXIcon" /* 11950 */;
-import Checkbox from "Checkbox" /* 14621 */;
-import TableSliderRow from "TableSliderRow" /* 15856 */;
-import Slider from "Slider" /* 15857 */;
+// Module 17960 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8797 */;
+import VoiceXIcon from "VoiceXIcon" /* 12087 */;
+import Checkbox from "Checkbox" /* 14752 */;
+import TableSliderRow from "TableSliderRow" /* 15999 */;
+import Slider from "Slider" /* 16000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function Radio() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
   const obj2 = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
   const items1 = [timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
   obj2.children = items1;
@@ -57,7 +57,7 @@ function Switch() {
   [tmp8, c0] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const obj5 = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
   const obj6 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
   obj6.children = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
@@ -98,13 +98,13 @@ function InlineCheckbox(startChecked) {
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), timestampProducer(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(InlineCheckbox, { label: "Trust google.com links from now on" }), timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Inline Checkbox" }), timestampProducer(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(InlineCheckbox, { label: "Trust google.com links from now on" }), timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
   obj.children = items;
   return React5(React6, obj);
 }
 function CheckboxRowDemo() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
   const obj2 = { title: "Who can send you a friend request?", hasIcons: false, children: null };
   const items1 = [timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
   obj2.children = items1;
@@ -114,7 +114,7 @@ function CheckboxRowDemo() {
 }
 function SliderDemo() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Slider" }), ];
   const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onChange: NOOP, accessibilityLabel: "Volume" }) };
   items[1] = timestampProducer(TableRow.TableRow, obj2);
   obj.children = items;
@@ -122,7 +122,7 @@ function SliderDemo() {
 }
 function TableSliderRowDemo() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "TableSliderRow" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "A slider setting with its label and current value, for settings tables" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "TableSliderRow" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "A slider setting with its label and current value, for settings tables" }), ];
   const obj2 = {
     hasIcons: false,
     children: timestampProducer(TableSliderRow.TableSliderRow, {
@@ -143,7 +143,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
@@ -151,7 +151,7 @@ const result = size.fileFinishedImporting("modules/user_settings/design_system/n
 export default function UserSettingsDesignSystemFormPrimitives() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_9().container, children: null };
-  const items = [timestampProducer(Radio, {}), timestampProducer(Switch, {}), timestampProducer(CheckboxRowDemo, {}), timestampProducer(InlineCheckboxDemo, {}), timestampProducer(SliderDemo, {}), timestampProducer(TableSliderRowDemo, {})];
+  items = [timestampProducer(Radio, {}), timestampProducer(Switch, {}), timestampProducer(CheckboxRowDemo, {}), timestampProducer(InlineCheckboxDemo, {}), timestampProducer(SliderDemo, {}), timestampProducer(TableSliderRowDemo, {})];
   obj2.children = items;
   obj.children = React5(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);

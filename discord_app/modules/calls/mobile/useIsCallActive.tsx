@@ -1,20 +1,20 @@
-// === Module 8438: useIsCallActive ===
+// === Module 8562: useIsCallActive ===
 
-// Module 8438 (useIsCallActive)
-import CallStore from "CallStore" /* 6569 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+// Module 8562 (useIsCallActive)
+import CallStore from "CallStore" /* 6689 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 
 export default function useIsCallActive(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [CallStore, ChannelRTCStore];
+  items = [CallStore, ChannelRTCStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     let isCallActiveResult = CallStore.isCallActive(closure_0, closure_1);
@@ -36,7 +36,7 @@ export function checkIsCallActive(channelId, id) {
 export function useIsCallActiveNullable(id, arg1) {
   _require = id;
   dependencyMap = arg1;
-  const items = [CallStore, ChannelRTCStore];
+  items = [CallStore, ChannelRTCStore];
   const items1 = [id, arg1];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;

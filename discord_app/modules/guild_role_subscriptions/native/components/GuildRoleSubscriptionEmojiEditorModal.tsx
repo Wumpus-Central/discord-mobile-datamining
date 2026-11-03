@@ -1,21 +1,21 @@
-// === Module 19976: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 20126: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 19976 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 20126 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4969 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5096 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: { flexGrow: 0 }, emojiListContent: null, emojiImage: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiListContent = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingVertical: nativeDefault.space.PX_24 };
@@ -61,7 +61,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   _slicedToArray = tmp;
   const tmp2 = subscriptionRoleId(onClose[8])(guildId);
   noop = tmp2;
-  let items = [closure_8];
+  items = [closure_8];
   const stateFromStores = guildId(onClose[9]).useStateFromStores(items, () => SubscriptionRoleStore.getSubscriptionRoles(guildId));
   [first, closure_8] = noop.useState(initialTierEmojiIds);
   const items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
@@ -140,7 +140,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
         const obj8 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
         const intl = guildId(onClose[13]).intl;
         obj8.children = intl.string(guildId(onClose[13]).t["1GlN06"]);
-        const items = [set(guildId(onClose[18]).Text, obj8), ];
+        items = [set(guildId(onClose[18]).Text, obj8), ];
         const obj9 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
         const intl2 = guildId(onClose[13]).intl;
         obj9.children = intl2.string(guildId(onClose[13]).t.J0XdJ4);

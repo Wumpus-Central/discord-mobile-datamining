@@ -1,9 +1,9 @@
-// === Module 12401: ApplicationDirectorySimilarApplicationsStore ===
+// === Module 12537: ApplicationDirectorySimilarApplicationsStore ===
 
-// Module 12401 (ApplicationDirectorySimilarApplicationsStore)
+// Module 12537 (ApplicationDirectorySimilarApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1451 */;
+import privDefault from "priv" /* 1453 */;
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_1 = new privDefault({ max: 20 });

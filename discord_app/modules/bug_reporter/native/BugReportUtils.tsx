@@ -1,6 +1,6 @@
-// === Module 11089: BugReportUtils ===
+// === Module 11226: BugReportUtils ===
 
-// Module 11089 (BugReportUtils)
+// Module 11226 (BugReportUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -33,7 +33,7 @@ let closure_6 = async function _getAttachments(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

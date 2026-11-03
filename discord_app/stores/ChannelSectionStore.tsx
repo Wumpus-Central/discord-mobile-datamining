@@ -1,23 +1,23 @@
-// === Module 6862: ChannelSectionStore ===
+// === Module 6982: ChannelSectionStore ===
 
-// Module 6862 (ChannelSectionStore)
+// Module 6982 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import ApexExperiment from "ApexExperiment" /* 1447 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6864 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6865 */;
-import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6866 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApexExperiment from "ApexExperiment" /* 1449 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6984 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6985 */;
+import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6986 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function setIsFriendsOpen(arg0, trackClose) {
@@ -61,11 +61,11 @@ function toggleSection(c17, arg1) {
   let tmp4 = null;
   if (null != channelId) {
     tmp4 = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp8 = null;
       if (null != guildId) {
-        tmp8 = __initData(channelId, guildId);
+        tmp8 = closure_1_15(channelId, guildId);
       }
       tmp4 = tmp8;
     }
@@ -136,7 +136,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(4870);
+const ChannelConstants = fn(4997);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;
@@ -185,7 +185,7 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       guildSidebars = {};
     }
   }
-  const items = [PermissionStore];
+  items = [PermissionStore];
   this.syncWith(items, handlePermissionsChange);
   this.waitFor(ApplicationStore, ChannelStore, ExperimentStore, ApexExperiment.ApexExperimentStore, GuildStore, PermissionStore, SearchMessageStore, SelectedChannelStore, SelectedGuildStore, UserStore);
 };
@@ -199,11 +199,11 @@ prototype["getSection"] = function getSection(arg0, arg1) {
     let tmp3 = null;
     if (null != arg0) {
       tmp3 = arg0;
-      if (closure_1_14(arg0)) {
+      if (gesture(arg0)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(arg0, guildId);
+          tmp7 = closure_1_15(arg0, guildId);
         }
         tmp3 = tmp7;
       }
@@ -242,11 +242,11 @@ prototype["getSidebarState"] = function getSidebarState(channelId) {
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -271,11 +271,11 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -301,11 +301,11 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -439,11 +439,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(baseChannelId, guildId);
+          tmp5 = closure_1_15(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -470,11 +470,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = __initData(baseChannelId, guildId1);
+          tmp5 = closure_1_15(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -494,11 +494,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
       tmp = parentChannelId;
-      if (closure_1_14(parentChannelId)) {
+      if (gesture(parentChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(parentChannelId, guildId);
+          tmp5 = closure_1_15(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -513,11 +513,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let tmp3 = null;
     if (null != baseChannelId) {
       tmp3 = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(baseChannelId, guildId);
+          tmp7 = closure_1_15(baseChannelId, guildId);
         }
         tmp3 = tmp7;
       }
@@ -588,7 +588,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         let tmp17 = sidebars[tmp10];
         let hasItem = null != tmp17;
         if (hasItem) {
-          let items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
+          items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
           hasItem = items.includes(tmp17.type);
         }
         if (hasItem) {
@@ -644,7 +644,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   THREAD_DELETE: function handleThreadDelete(channel) {
     channel = channel.channel;
     if (null != sidebars[channel.parent_id]) {
-      const items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
+      items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
       if (items.includes(tmp3.type)) {
         if (tmp3.channelId === channel.id) {
           const parent_id = channel.parent_id;
@@ -661,6 +661,6 @@ let result = size.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";
 export function isViewChannelSidebar(type) {
-  const items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
+  items = [SidebarActionTypes.SidebarType.VIEW_CHANNEL, SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, SidebarActionTypes.SidebarType.VIEW_MOD_REPORT];
   return items.includes(type.type);
 }

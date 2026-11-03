@@ -1,19 +1,19 @@
-// === Module 14600: NitroScheduleMessageSpotIllustration ===
+// === Module 14731: NitroScheduleMessageSpotIllustration ===
 
-// Module 14600 (NitroScheduleMessageSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14601 from "module_14601" /* 14601 */;
-import _modDef14602 from "module_14602" /* 14602 */;
-import _modDef14603 from "module_14603" /* 14603 */;
+// Module 14731 (NitroScheduleMessageSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef14732 from "module_14732" /* 14732 */;
+import _modDef14733 from "module_14733" /* 14733 */;
+import _modDef14734 from "module_14734" /* 14734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14601 }, 3: null };
-let obj2 = { uri: _modDef14601 };
-obj[2] = { uri: _modDef14602 };
-const obj3 = { uri: _modDef14602 };
-obj[3] = { uri: _modDef14603 };
+let obj = { 1: null, 2: { uri: _modDef14732 }, 3: null };
+let obj2 = { uri: _modDef14732 };
+obj[2] = { uri: _modDef14733 };
+const obj3 = { uri: _modDef14733 };
+obj[3] = { uri: _modDef14734 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function NitroScheduleMessageSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

@@ -1,6 +1,6 @@
-// === Module 8385: Queue ===
+// === Module 8509: Queue ===
 
-// Module 8385 (Queue)
+// Module 8509 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 
@@ -95,7 +95,7 @@ prototype["clear"] = function clear() {
 };
 prototype["remove"] = function remove(fn) {
   const self = this;
-  const items = [];
+  items = [];
   if (this.queue.length > 0) {
     do {
       let queue = self.queue;

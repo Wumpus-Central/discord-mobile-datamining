@@ -1,7 +1,7 @@
-// === Module 18328: useGameClaimCoachmark ===
+// === Module 18473: useGameClaimCoachmark ===
 
-// Module 18328 (useGameClaimCoachmark)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 18473 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export function useCanShowGameClaimCoachmark(id) {
   _require = id;
   let gameClaimCoachmarkEnabled = require("GameClaimCoachmarkExperiment").useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
   const obj = require("GameClaimCoachmarkExperiment");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [id];
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = obj2.useStateFromStores(items, () => PermissionStore.canWithPartialContext(Permissions.ADMINISTRATOR, { guildId }), items1);

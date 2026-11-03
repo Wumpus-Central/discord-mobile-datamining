@@ -1,22 +1,22 @@
-// === Module 17950: ActivityPrivacyDefaultSharingSetting ===
+// === Module 18093: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 17950 (ActivityPrivacyDefaultSharingSetting)
+// Module 18093 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16755 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16898 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8432).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8556).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -24,7 +24,7 @@ const radio = SettingBuilders.createRadio({
       obj.label = intl.string(util.t.FzgQna);
       const intl2 = util.intl;
       obj.subLabel = intl2.string(util.t.SQxoyc);
-      const items = [obj, , ];
+      items = [obj, , ];
       const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
       const intl3 = util.intl;
       obj2.label = intl3.string(util.t["1hvuGH"]);
@@ -55,7 +55,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17951, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18094, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

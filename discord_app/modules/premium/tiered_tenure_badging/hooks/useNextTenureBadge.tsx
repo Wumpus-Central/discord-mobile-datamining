@@ -1,8 +1,8 @@
-// === Module 15318: useNextTenureBadge ===
+// === Module 15459: useNextTenureBadge ===
 
-// Module 15318 (useNextTenureBadge)
-import useTenureBadging from "useTenureBadging" /* 11445 */;
-import PremiumConstants from "PremiumConstants" /* 1385 */;
+// Module 15459 (useNextTenureBadge)
+import useTenureBadging from "useTenureBadging" /* 11583 */;
+import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 ({ TIERED_TENURE_BADGE_ORDER: c2, TENURE_BADGES: c3 } = PremiumConstants);

@@ -1,9 +1,9 @@
-// === Module 19801: GuildSettingsUtils ===
+// === Module 19951: GuildSettingsUtils ===
 
-// Module 19801 (GuildSettingsUtils)
+// Module 19951 (GuildSettingsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4921 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18918 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5048 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 19076 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ export function isRolePowerful(role) {
   return BigFlagUtilsAll.hasAny(role.permissions, React4);
 }
 export function getPowerfulPermissionTitles(arg0, arg1) {
-  const items = [];
+  items = [];
   PermissionSpecUtilsDefault;
   for (const item10015 of closure_1_5) {
     if (hasPermission(arg1, item10015)) {

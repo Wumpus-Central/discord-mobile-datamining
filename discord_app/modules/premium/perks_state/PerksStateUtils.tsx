@@ -1,9 +1,9 @@
-// === Module 1389: PerksStateUtils ===
+// === Module 1391: PerksStateUtils ===
 
-// Module 1389 (PerksStateUtils)
+// Module 1391 (PerksStateUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import types from "types" /* 1390 */;
-import user from "user" /* 1391 */;
+import types from "types" /* 1392 */;
+import user from "user" /* 1393 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function getPerkSource(perks, MONTHLY_ORBS) {
         flag = hasItem;
       }
       if (flag) {
-        const items = [user.PerkSource.SOURCE_NITRO];
+        items = [user.PerkSource.SOURCE_NITRO];
         source = items;
       }
     }

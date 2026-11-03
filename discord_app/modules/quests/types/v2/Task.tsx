@@ -1,10 +1,10 @@
-// === Module 7856: Task ===
+// === Module 7980: Task ===
 
-// Module 7856 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6789 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7857 */;
-import v2_Video from "v2/Video" /* 7858 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7859 */;
+// Module 7980 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6909 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7981 */;
+import v2_Video from "v2/Video" /* 7982 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7983 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {
@@ -60,7 +60,7 @@ export function questTaskConfigV2FromServer(task_config_v2) {
     const entries = Object.entries(task_config_v2.tasks);
     const mapped = entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, ];
+      items = [tmp, ];
       const type = tmp2.type;
       if (FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO === type) {
         const obj2 = { type: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO, target: tmp2.target, assets: v2_Video.desktopVideoAssetsFromServer(tmp2.assets), messages: null };

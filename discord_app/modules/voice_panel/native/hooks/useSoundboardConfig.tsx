@@ -1,12 +1,12 @@
-// === Module 19325: useSoundboardConfig ===
+// === Module 19483: useSoundboardConfig ===
 
-// Module 19325 (useSoundboardConfig)
-import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7556 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19151 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19171 */;
+// Module 19483 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7680 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19309 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19329 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   importDefault = analyticsSource;
   let tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
   let obj = require("initialize");
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
   if (tmp2) {
     if (obj.VOICE_CONTROLS === analyticsSource) {

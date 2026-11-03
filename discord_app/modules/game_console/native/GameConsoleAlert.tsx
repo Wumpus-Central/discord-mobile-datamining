@@ -1,14 +1,14 @@
-// === Module 11985: GameConsoleAlert ===
+// === Module 12122: GameConsoleAlert ===
 
-// Module 11985 (GameConsoleAlert)
+// Module 12122 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
@@ -18,7 +18,7 @@ export function SelfDismissibleAlertBody(errorCodeMessage) {
   errorCodeMessage = errorCodeMessage.errorCodeMessage;
   let stateFromStores;
   const tmp = closure_7();
-  const items = [GameConsoleStore];
+  items = [GameConsoleStore];
   stateFromStores = dismissCallback(stateFromStores[5]).useStateFromStores(items, () => remoteSessionId.getRemoteSessionId());
   const items1 = [stateFromStores, dismissCallback];
   const effect = noop.useEffect(() => {

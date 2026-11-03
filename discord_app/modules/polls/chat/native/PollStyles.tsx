@@ -1,15 +1,15 @@
-// === Module 12547: PollStyles ===
+// === Module 12683: PollStyles ===
 
-// Module 12547 (PollStyles)
-import _mod6556 from "module_6556" /* 6556 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12548 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12549 */;
+// Module 12683 (PollStyles)
+import _mod6676 from "module_6676" /* 6676 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12684 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12685 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, config) {
   closure_0 = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _mod6556.match(config);
+  const match = _mod6676.match(config);
   obj.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
   obj.answerBackground = border.colors.BACKGROUND_MOD_MUTED;
   obj.answerFill = border.colors.BACKGROUND_MOD_SUBTLE;
@@ -22,7 +22,7 @@ function normalVote(colors, config) {
   if (typeof normal === "function") {
     const obj = {};
     const obj2 = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-    const match = _mod6556.match(config);
+    const match = _mod6676.match(config);
     obj2.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
     obj2.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
     obj2.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;
@@ -73,14 +73,14 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(unselected, config) {
+  selected(styles, config) {
     const obj = {};
-    const merged = Object.assign(normalVote(unselected, config));
-    obj.border = unselected.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(styles, config));
+    obj.border = styles.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.FILLED;
-    obj.radioBackground = unselected.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = unselected.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = styles.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = styles.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,

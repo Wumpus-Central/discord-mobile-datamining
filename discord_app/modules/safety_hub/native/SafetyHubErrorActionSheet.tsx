@@ -1,21 +1,21 @@
-// === Module 16645: SafetyHubErrorActionSheet ===
+// === Module 16788: SafetyHubErrorActionSheet ===
 
-// Module 16645 (SafetyHubErrorActionSheet)
+// Module 16788 (SafetyHubErrorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import CircleXIcon from "CircleXIcon" /* 7092 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13314 */;
-import useSafetyHubLoadingDefault from "useSafetyHubLoading" /* 16644 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import CircleXIcon from "CircleXIcon" /* 7218 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13450 */;
+import useSafetyHubLoadingDefault from "useSafetyHubLoading" /* 16787 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { errorContainer: { display: "flex", alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16, minHeight: 120 }, redesignErrorIconContainer: null, redesignErrorIcon: null };
 let size = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.WHITE };
 obj2.redesignErrorIconContainer = size;
@@ -35,8 +35,8 @@ export default function SafetyHubErrorActionSheet(arg0) {
     const obj3 = { style: tmp2.redesignErrorIconContainer, children: null };
     const obj4 = { size: "custom", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, style: tmp2.redesignErrorIcon };
     obj3.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj4);
-    const items = [hasOwnProperty(View, obj3), ];
-    const obj5 = { variant: "heading-lg/normal", children: null };
+    items = [hasOwnProperty(View, obj3), ];
+    const obj5 = { variant: "heading-lg/medium", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t.TDRvqs);
     items[1] = hasOwnProperty(Text_Text.Text, obj5);

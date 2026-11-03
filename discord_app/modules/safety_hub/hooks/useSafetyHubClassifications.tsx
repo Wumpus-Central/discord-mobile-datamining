@@ -1,21 +1,21 @@
-// === Module 13313: useSafetyHubClassifications ===
+// === Module 13449: useSafetyHubClassifications ===
 
-// Module 13313 (useSafetyHubClassifications)
+// Module 13449 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13314 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13450 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ViolationType = fn(7970).ViolationType;
+const ViolationType = fn(8094).ViolationType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
 export function useSafetyHubClassifications() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   return stateFromStoresArray.sort((id, id2) => {
     const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
@@ -24,7 +24,7 @@ export function useSafetyHubClassifications() {
 }
 export function useSafetyHubClassification(classificationId) {
   _require = classificationId;
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
   let obj = require("initialize");
   let tmp = _require;
@@ -43,7 +43,7 @@ export function useSafetyHubClassification(classificationId) {
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(7971).MemberType.OWNER) {
+    if (member_type === tmp(8095).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -73,7 +73,7 @@ export function useSafetyHubClassification(classificationId) {
   obj5 = require("SafetyHubUtils");
 }
 export function useActiveSafetyHubClassifications() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
     const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
@@ -86,7 +86,7 @@ export function useActiveSafetyHubClassifications() {
   });
 }
 export function useExpiredSafetyHubClassifications() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
     const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
@@ -99,6 +99,6 @@ export function useExpiredSafetyHubClassifications() {
   });
 }
 export function useSafetyHubAppealSignal() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => appealSignal.getAppealSignal());
 }

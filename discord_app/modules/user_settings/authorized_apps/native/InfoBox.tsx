@@ -1,17 +1,17 @@
-// === Module 11391: InfoBox ===
+// === Module 11529: InfoBox ===
 
-// Module 11391 (InfoBox)
+// Module 11529 (InfoBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { infoBox: { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 }, infoBoxWarning: null, infoText: null };
 const obj3 = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
 obj2.infoBoxWarning = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
@@ -28,7 +28,7 @@ export default function InfoBox(look) {
     INFO = obj5.INFO;
   }
   const tmp2 = closure_6();
-  const items = [tmp2.infoBox];
+  items = [tmp2.infoBox];
   const items1 = [, ];
   ({ infoBox: arr2[0], infoBoxWarning: arr2[1] } = tmp2);
   const obj = {};

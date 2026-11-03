@@ -1,13 +1,13 @@
-// === Module 2016: ApplicationRecord ===
+// === Module 2145: ApplicationRecord ===
 
-// Module 2016 (ApplicationRecord)
+// Module 2145 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2023 */;
-import Record from "Record" /* 1398 */;
-import CompanyRecord from "CompanyRecord" /* 2017 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2152 */;
+import Record from "Record" /* 1400 */;
+import CompanyRecord from "CompanyRecord" /* 2146 */;
+import UserRecord from "UserRecord" /* 1399 */;
 
 require = fn;
 function createExecutable(os) {
@@ -24,9 +24,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(2018);
+const Constants = fn(2147);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
@@ -332,7 +332,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     const entries = Object.entries(bot.integration_types_config);
     fromEntriesResult = Object.fromEntries(entries.map((item) => {
       [tmp, obj] = item;
-      const items = [tmp, ];
+      items = [tmp, ];
       if (obj == null) {
         obj = {};
       }
@@ -467,7 +467,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     guildId = self.guildId;
   }
   obj.guildId = guildId;
-  let guild = id.guild;
+  guild = id.guild;
   if (guild == null) {
     guild = self.guild;
   }
@@ -689,7 +689,7 @@ prototype2["supportsEmbeddedSurface"] = function supportsEmbeddedSurface(MAIN) {
   return require("EmbeddedSurfaceUtils").supportsEmbeddedSurface(this, MAIN);
 };
 prototype2["supportsIntegrationTypes"] = function supportsIntegrationTypes() {
-  const items = [...arguments];
+  items = [...arguments];
   const integrationTypesConfig = this.integrationTypesConfig;
   return null != integrationTypesConfig && items.every((item) => item in integrationTypesConfig);
 };

@@ -1,27 +1,33 @@
-// === Module 13828: VoicePanelControlsUtils ===
+// === Module 13959: VoicePanelControlsUtils ===
 
-// Module 13828 (VoicePanelControlsUtils)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11221 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11223 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11226 */;
+// Module 13959 (VoicePanelControlsUtils)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11358 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11360 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11363 */;
 import size from "module_2" /* 2 */;
 
-const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;
-const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;
-const CONTROLS_MAX_WIDTH = VoicePanelControlsConstants.CONTROLS_MAX_WIDTH;
+const items = [{ code: "(function getControlsDefaultWidth_VoicePanelControlsUtilsTsx1(windowWidth,safeAreaLeft,safeAreaRight){let[EDGE_GUTTER,CONTROLS_MAX_WIDTH]=this.__closure;safeAreaLeft=Math.max(safeAreaLeft,EDGE_GUTTER);safeAreaRight=Math.max(safeAreaRight,EDGE_GUTTER);return Math.min(windowWidth-safeAreaLeft-safeAreaRight,CONTROLS_MAX_WIDTH);})" }, VoicePanelCardConstants.EDGE_GUTTER, VoicePanelControlsConstants.CONTROLS_MAX_WIDTH];
+let c0;
+let c1;
+[tmp2, tmp3, tmp4] = items;
 function getControlsDefaultWidth(width, left, right) {
-  const bound = Math.max(left, EDGE_GUTTER);
-  return Math.min(width - bound - Math.max(right, EDGE_GUTTER), CONTROLS_MAX_WIDTH);
+  const bound = Math.max(left, c0);
+  return Math.min(width - bound - Math.max(right, c0), c1);
 }
-getControlsDefaultWidth.__closure = { EDGE_GUTTER, CONTROLS_MAX_WIDTH };
-getControlsDefaultWidth.__workletHash = 5986385407902;
-getControlsDefaultWidth.__initData = { code: "function getControlsDefaultWidth_VoicePanelControlsUtilsTsx1(windowWidth,safeAreaLeft,safeAreaRight){const{EDGE_GUTTER,CONTROLS_MAX_WIDTH}=this.__closure;safeAreaLeft=Math.max(safeAreaLeft,EDGE_GUTTER);safeAreaRight=Math.max(safeAreaRight,EDGE_GUTTER);return Math.min(windowWidth-safeAreaLeft-safeAreaRight,CONTROLS_MAX_WIDTH);}" };
+const items1 = [tmp3, tmp4];
+getControlsDefaultWidth.__closure = items1;
+getControlsDefaultWidth.__workletHash = 9916794412647;
+getControlsDefaultWidth.__initData = tmp2;
+const items2 = [{ code: "(function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){let[VOICE_PANEL_DRAWER_MAX_WIDTH]=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);})" }, VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH];
+let closure_129_0;
+[tmp5, tmp6] = items2;
 function getControlsDrawerOpenWidth(width, left, right) {
-  return Math.min(width - left - right, VOICE_PANEL_DRAWER_MAX_WIDTH);
+  return Math.min(width - left - right, c0);
 }
-getControlsDrawerOpenWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
-getControlsDrawerOpenWidth.__workletHash = 10795739180192;
-getControlsDrawerOpenWidth.__initData = { code: "function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){const{VOICE_PANEL_DRAWER_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);}" };
+const items3 = [tmp6];
+getControlsDrawerOpenWidth.__closure = items3;
+getControlsDrawerOpenWidth.__workletHash = 1695943269113;
+getControlsDrawerOpenWidth.__initData = tmp5;
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
 
 export { getControlsDefaultWidth };

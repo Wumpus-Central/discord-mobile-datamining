@@ -1,8 +1,8 @@
-// === Module 10695: UnifiedGiftModalDetailsScreen ===
+// === Module 10825: UnifiedGiftModalDetailsScreen ===
 
-// Module 10695 (UnifiedGiftModalDetailsScreen)
+// Module 10825 (UnifiedGiftModalDetailsScreen)
 import nativeDefault from "native" /* 575 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10694 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" }, scrollView: null, sectionHeader: null };
 let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" };
 obj.scrollView = { paddingBottom: nativeDefault.space.PX_24 };
@@ -35,7 +35,7 @@ export default noop.memo(function UnifiedGiftModalDetailsScreen(recipientUser) {
   [tmp6, c3] = noop.useState(true);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   noop = tmp7[1];
-  const items = [navigation];
+  items = [navigation];
   const items1 = [recipientUser, skuId, validateRecipient];
   const callback = noop.useCallback(() => {
     navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.RECIPENT_SELECT);

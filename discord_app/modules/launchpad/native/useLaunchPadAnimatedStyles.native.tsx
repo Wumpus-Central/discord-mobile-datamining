@@ -1,88 +1,99 @@
-// === Module 19069: useLaunchPadAnimatedStyles ===
+// === Module 19227: useLaunchPadAnimatedStyles ===
 
-// Module 19069 (useLaunchPadAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11536 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import createStyles from "createStyles" /* 5014 */;
+// Module 19227 (useLaunchPadAnimatedStyles)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11673 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12211 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12950 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
-let LAUNCH_PAD_SPRING_CONFIG = LaunchPadConstants.LAUNCH_PAD_SPRING_CONFIG;
-let IS_ANDROID = PlatformUtils.isAndroid();
+const LAUNCH_PAD_SPRING_CONFIG = LaunchPadConstants.LAUNCH_PAD_SPRING_CONFIG;
+let closure_4 = PlatformUtils.isAndroid();
 let closure_5 = createStyles.createStyles({ launchPad: { position: "absolute", top: 0, left: 0, width: "100%", zIndex: 1 }, launchPadCover: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000" } });
-const __initData = { code: "function useLaunchPadAnimatedStylesNativeTsx1(){const{withSpring,interpolate,launchPadSharedState,windowDimensions,LAUNCH_PAD_SPRING_CONFIG,gestureState,launchPadShown,IS_ANDROID,height}=this.__closure;return{transform:[{translateX:withSpring(interpolate(launchPadSharedState.get(),[0,1],[windowDimensions.get().width-16,0]),LAUNCH_PAD_SPRING_CONFIG,'animate-always',function(finished){'worklet';if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}})}],bottom:IS_ANDROID?0:height.get()};}" };
-let closure_7 = { code: "function useLaunchPadAnimatedStylesNativeTsx2(finished){const{gestureState,launchPadSharedState,launchPadShown}=this.__closure;if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}}" };
-const __initData2 = { code: "function useLaunchPadAnimatedStylesNativeTsx3(){const{withSpring,interpolate,launchPadSharedState,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,0.6]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')};}" };
+let closure_6 = { code: "(function useLaunchPadAnimatedStylesNativeTsx1(finished){let[gestureState,launchPadSharedState,launchPadShown]=this.__closure;if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}})" };
+let closure_7 = { code: "(function useLaunchPadAnimatedStylesNativeTsx2(){let[withSpring,interpolate,launchPadSharedState,windowDimensions,LAUNCH_PAD_SPRING_CONFIG,_worklet_6239738479703_init_data,gestureState,launchPadShown,IS_ANDROID,height]=this.__closure;return{transform:[{translateX:withSpring(interpolate(launchPadSharedState.get(),[0,1],[windowDimensions.get().width-16,0]),LAUNCH_PAD_SPRING_CONFIG,'animate-always',function useLaunchPadAnimatedStylesNativeTsx1Factory([_worklet_6239738479703_init_data,gestureState,launchPadSharedState,launchPadShown]){const useLaunchPadAnimatedStylesNativeTsx1=function(finished){if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}};useLaunchPadAnimatedStylesNativeTsx1.__closure=[gestureState,launchPadSharedState,launchPadShown];useLaunchPadAnimatedStylesNativeTsx1.__workletHash=6239738479703;useLaunchPadAnimatedStylesNativeTsx1.__initData=_worklet_6239738479703_init_data;return useLaunchPadAnimatedStylesNativeTsx1;}([_worklet_6239738479703_init_data,gestureState,launchPadSharedState,launchPadShown]))}],bottom:IS_ANDROID?0:height.get()};})" };
+let closure_8 = { code: "(function useLaunchPadAnimatedStylesNativeTsx3(){let[withSpring,interpolate,launchPadSharedState,LAUNCH_PAD_SPRING_CONFIG]=this.__closure;return{opacity:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,0.6]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')};})" };
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx");
 
 export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
-  const gestureState = launchPadSharedState.gestureState;
-  const launchPadShown = launchPadSharedState.launchPadShown;
+  ({ gestureState, launchPadShown } = launchPadSharedState);
   let tmp = closure_5();
-  const tmp2 = gestureState(launchPadShown[3])();
-  LAUNCH_PAD_SPRING_CONFIG = tmp2;
-  let tmp3 = gestureState(launchPadShown[4])();
-  IS_ANDROID = tmp3;
-  let fn = function _() {
+  let tmp3 = useAnimatedKeyboardHeightDefault();
+  const tmp4 = useWindowDimensionsSharedValueDefault();
+  items = [closure_7, spring_spring.withSpring, _mod1652.interpolate, launchPadSharedState, tmp4, LAUNCH_PAD_SPRING_CONFIG, closure_6, gestureState, launchPadShown, closure_4, tmp3];
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items;
+  function useLaunchPadAnimatedStylesNativeTsx2() {
+    value = _undefined3.get();
+    items = [_undefined4.get().width - 16, 0];
+    const items1 = [c5, c6, _undefined3, c7];
+    _undefined = undefined;
+    _undefined2 = undefined;
+    _undefined3 = undefined;
+    [tmp5, tmp6, tmp7, tmp8] = items1;
     const obj = { transform: null, bottom: null };
     const obj2 = { translateX: null };
-    const obj3 = spring;
-    value = launchPadSharedState.get();
-    const items = [closure_4.get().width - 16, ];
-    let num = 0;
-    items[1] = 0;
-    const fn = function h(arg0) {
+    function useLaunchPadAnimatedStylesNativeTsx1(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = !gestureState.get().active;
+        tmp = !_undefined.get().active;
       }
       if (tmp) {
-        let tmp3 = 1 !== launchPadSharedState.get();
+        let tmp3 = 1 !== _undefined2.get();
         if (tmp3) {
-          tmp3 = 0 !== launchPadSharedState.get();
+          tmp3 = 0 !== _undefined2.get();
         }
         if (!tmp3) {
-          const result = launchPadShown.set(1 === launchPadSharedState.get());
+          const result = _undefined3.set(1 === _undefined2.get());
         }
       }
-    };
-    fn.__closure = { gestureState, launchPadSharedState, launchPadShown };
-    fn.__workletHash = 7028378249389;
-    fn.__initData = __initData;
-    obj2.translateX = obj3.withSpring(ReanimatedRexport.interpolate(value, [0, 1], items), LAUNCH_PAD_SPRING_CONFIG, "animate-always", fn);
-    const items1 = [obj2];
-    obj.transform = items1;
-    if (!closure_4) {
-      num = closure_3.get();
+    }
+    const items2 = [tmp6, tmp7, tmp8];
+    useLaunchPadAnimatedStylesNativeTsx1.__closure = items2;
+    useLaunchPadAnimatedStylesNativeTsx1.__workletHash = 6239738479703;
+    useLaunchPadAnimatedStylesNativeTsx1.__initData = tmp5;
+    obj2.translateX = _undefined(_undefined2(value, [0, 1], items), c4, "animate-always", useLaunchPadAnimatedStylesNativeTsx1);
+    const items3 = [obj2];
+    obj.transform = items3;
+    let num = 0;
+    if (!c8) {
+      num = _undefined5.get();
     }
     obj.bottom = num;
     return obj;
-  };
-  let obj = launchPadSharedState(launchPadShown[6]);
-  fn.__closure = { withSpring: launchPadSharedState(launchPadShown[7]).withSpring, interpolate: launchPadSharedState(launchPadShown[6]).interpolate, launchPadSharedState, windowDimensions: tmp3, LAUNCH_PAD_SPRING_CONFIG, gestureState, launchPadShown, IS_ANDROID, height: tmp2 };
-  fn.__workletHash = 1628632614770;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: launchPadSharedState(launchPadShown[7]).withSpring, interpolate: launchPadSharedState(launchPadShown[6]).interpolate, launchPadSharedState, windowDimensions: tmp3, LAUNCH_PAD_SPRING_CONFIG, gestureState, launchPadShown, IS_ANDROID, height: tmp2 };
-  class P {
-    constructor() {
-      obj = { opacity: null };
-      obj2 = closure_0(closure_2[7]);
-      obj3 = closure_0(closure_2[6]);
-      obj.opacity = obj2.withSpring(obj3.interpolate(launchPadSharedState.get(), [0, 1], [0, 0.6]), LAUNCH_PAD_SPRING_CONFIG, "animate-always");
-      return obj;
-    }
   }
-  let obj3 = launchPadSharedState(launchPadShown[6]);
-  P.__closure = { withSpring: launchPadSharedState(launchPadShown[7]).withSpring, interpolate: launchPadSharedState(launchPadShown[6]).interpolate, launchPadSharedState, LAUNCH_PAD_SPRING_CONFIG };
-  P.__workletHash = 6964438968188;
-  P.__initData = __initData2;
-  const obj5 = { launchPadCoverStyles: null, launchPadStyles: null };
-  let items = [tmp.launchPadCover, obj3.useAnimatedStyle(P)];
-  obj5.launchPadCoverStyles = items;
-  let items1 = [tmp.launchPad, animatedStyle, { paddingTop: gestureState(launchPadShown[5])().top }];
-  obj5.launchPadStyles = items1;
-  return obj5;
+  let items1 = [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  useLaunchPadAnimatedStylesNativeTsx2.__closure = items1;
+  useLaunchPadAnimatedStylesNativeTsx2.__workletHash = 1394437830917;
+  useLaunchPadAnimatedStylesNativeTsx2.__initData = tmp7;
+  const animatedStyle = _mod1652.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx2);
+  let items2 = [closure_8, spring_spring.withSpring, _mod1652.interpolate, launchPadSharedState, LAUNCH_PAD_SPRING_CONFIG];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp19, tmp20, tmp21, tmp22, tmp23] = items2;
+  function useLaunchPadAnimatedStylesNativeTsx3() {
+    return { opacity: _undefined(_undefined2(_undefined3.get(), [0, 1], [0, 0.6]), c3, "animate-always") };
+  }
+  let items3 = [tmp20, tmp21, tmp22, tmp23];
+  useLaunchPadAnimatedStylesNativeTsx3.__closure = items3;
+  useLaunchPadAnimatedStylesNativeTsx3.__workletHash = 7887737074117;
+  useLaunchPadAnimatedStylesNativeTsx3.__initData = tmp19;
+  let obj2 = { launchPadCoverStyles: null, launchPadStyles: null };
+  const items4 = [tmp.launchPadCover, _mod1652.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx3)];
+  obj2.launchPadCoverStyles = items4;
+  const items5 = [tmp.launchPad, animatedStyle, { paddingTop: useSafeAreaInsetsDefault().top }];
+  obj2.launchPadStyles = items5;
+  return obj2;
 };

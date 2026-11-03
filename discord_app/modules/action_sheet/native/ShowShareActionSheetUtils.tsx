@@ -1,12 +1,12 @@
-// === Module 8933: ShowShareActionSheetUtils ===
+// === Module 9061: ShowShareActionSheetUtils ===
 
-// Module 8933 (ShowShareActionSheetUtils)
+// Module 9061 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 6943 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8934 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 7063 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 9062 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

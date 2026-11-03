@@ -1,11 +1,11 @@
-// === Module 15143: usePresenceActivityInviteCoverImageURL ===
+// === Module 15284: usePresenceActivityInviteCoverImageURL ===
 
-// Module 15143 (usePresenceActivityInviteCoverImageURL)
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8721 */;
-import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 15145 */;
+// Module 15284 (usePresenceActivityInviteCoverImageURL)
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8845 */;
+import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 15286 */;
 import noop from "module_19" /* 19 */;
-import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 15144 */;
+import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 15285 */;
 
 require = fn;
 function _getPresenceActivityInviteCoverImageURL(messageId) {
@@ -49,7 +49,7 @@ export (messageId) => {
   const presenceActivity = messageId.presenceActivity;
   const application = messageId.application;
   let cachedImageURL;
-  const items = [MessageActivityInviteCoverImageStore];
+  items = [MessageActivityInviteCoverImageStore];
   const items1 = [messageId, presenceActivity, application];
   const stateFromStoresObject = messageId(cachedImageURL[4]).useStateFromStoresObject(items, () => _getPresenceActivityInviteCoverImageURL({ messageId, presenceActivity, application }), items1);
   cachedImageURL = stateFromStoresObject.cachedImageURL;

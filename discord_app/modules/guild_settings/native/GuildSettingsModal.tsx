@@ -1,15 +1,15 @@
-// === Module 19651: GuildSettingsModal ===
+// === Module 19801: GuildSettingsModal ===
 
-// Module 19651 (GuildSettingsModal)
+// Module 19801 (GuildSettingsModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18206 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 require = fn;
 function close() {
@@ -27,7 +27,7 @@ export default function GuildSettingsModal() {
   let bottom = rect.bottom;
   left = rect.left;
   right = rect.right;
-  const items = [left, right];
+  items = [left, right];
   const memo = stateFromStores.useMemo(() => {
     const rect = { left, right };
     return rect;

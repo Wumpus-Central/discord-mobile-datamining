@@ -1,12 +1,12 @@
-// === Module 12458: useNavigationTransitionEnded ===
+// === Module 12594: useNavigationTransitionEnded ===
 
-// Module 12458 (useNavigationTransitionEnded)
-import Link from "Link" /* 1498 */;
+// Module 12594 (useNavigationTransitionEnded)
+import Link from "Link" /* 1500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAppLauncherNavigation = fn(1496).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1498).useAppLauncherNavigation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
@@ -16,7 +16,7 @@ export default function useNavigationTransitionEnded() {
   const tmp3 = useAppLauncherNavigation();
   closure_1 = tmp3;
   const route = Link.useRoute();
-  const items = [tmp3, route, tmp[1]];
+  items = [tmp3, route, tmp[1]];
   const effect = noop.useEffect(() => state.addListener("transitionEnd", () => {
     state = state.getState();
     if (state.routes[state.index].key === key.key) {

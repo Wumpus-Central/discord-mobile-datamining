@@ -1,26 +1,26 @@
-// === Module 11746: confirmExternalAppLaunchAlert ===
+// === Module 11883: confirmExternalAppLaunchAlert ===
 
-// Module 11746 (confirmExternalAppLaunchAlert)
+// Module 11883 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import _modDef11747 from "module_11747" /* 11747 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import _modDef11884 from "module_11884" /* 11884 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11747, style: tmp.announcementBirb };
-  const items = [hasOwnProperty(FastImageDefault, obj2), , , ];
+  const obj2 = { source: _modDef11884, style: tmp.announcementBirb };
+  items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
+  const obj4 = { style: tmp.alertTitleText, variant: "heading-lg/semibold", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
   items[2] = hasOwnProperty(Text_Text.Text, obj4);
@@ -47,10 +47,10 @@ function LinkButton() {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-const PRIVATE_APPS_HELP_ARTICLE = fn(2018).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(2147).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");

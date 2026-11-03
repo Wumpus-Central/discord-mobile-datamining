@@ -1,13 +1,13 @@
-// === Module 18096: usePrivateChannelWaveEligible ===
+// === Module 18240: usePrivateChannelWaveEligible ===
 
-// Module 18096 (usePrivateChannelWaveEligible)
-import MessageStore from "MessageStore" /* 6061 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+// Module 18240 (usePrivateChannelWaveEligible)
+import MessageStore from "MessageStore" /* 6181 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const MessageTypes = fn(1072).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
@@ -23,7 +23,7 @@ export function usePrivateChannelWaveEligible(isDM, arg1) {
   if (tmp) {
     recipientId = isDM.getRecipientId();
   }
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
@@ -63,8 +63,8 @@ export function usePrivateChannelWaveEligible(isDM, arg1) {
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = require("DateUtils");
-  const tmp9 = recipientId(2042)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(2042)(), recipientId(2042)(extractTimestampResult), 1814400000);
+  const tmp9 = recipientId(2171)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(2171)(), recipientId(2171)(extractTimestampResult), 1814400000);
   const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;

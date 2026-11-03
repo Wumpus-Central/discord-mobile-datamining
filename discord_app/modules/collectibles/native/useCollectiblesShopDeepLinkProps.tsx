@@ -1,9 +1,9 @@
-// === Module 17838: useCollectiblesShopDeepLinkProps ===
+// === Module 17981: useCollectiblesShopDeepLinkProps ===
 
-// Module 17838 (useCollectiblesShopDeepLinkProps)
+// Module 17981 (useCollectiblesShopDeepLinkProps)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7759 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7883 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;
@@ -15,7 +15,7 @@ export function useCollectiblesShopDeepLinkProps(categories) {
   const products = categories.products;
   let initialBaseProductSkuId;
   let initialVariantIndex;
-  const items = [initialBaseProductSkuId, initialVariantIndex];
+  items = [initialBaseProductSkuId, initialVariantIndex];
   const stateFromStoresObject = categories(products[3]).useStateFromStoresObject(items, () => {
     const initialProductSkuId = initialVariantIndex.initialProductSkuId;
     const product = initialBaseProductSkuId.getProduct(initialProductSkuId);

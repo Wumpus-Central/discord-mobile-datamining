@@ -1,12 +1,12 @@
-// === Module 9710: QuestBarRenderDelayTracker ===
+// === Module 9842: QuestBarRenderDelayTracker ===
 
-// Module 9710 (QuestBarRenderDelayTracker)
+// Module 9842 (QuestBarRenderDelayTracker)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -29,7 +29,7 @@ prototype["sendMetric"] = function sendMetric(ad_creative_id, ad_creative_type, 
   if (Math.random() <= 0.1) {
     const obj2 = { name: MetricEvents.MetricEvents.QUEST_BAR_RENDER_DELAY, tags: null };
     const _HermesInternal = HermesInternal;
-    const items = ["ad_creative_id:" + ad_creative_id, , ];
+    items = ["ad_creative_id:" + ad_creative_id, , ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[ad_creative_type];
     const _HermesInternal3 = HermesInternal;

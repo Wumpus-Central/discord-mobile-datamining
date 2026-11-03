@@ -1,10 +1,10 @@
-// === Module 14259: NewUserPermissionsOnboarding ===
+// === Module 14390: NewUserPermissionsOnboarding ===
 
-// Module 14259 (NewUserPermissionsOnboarding)
+// Module 14390 (NewUserPermissionsOnboarding)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5586).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-let obj3 = { paddingTop: 80 + fn(5586).NAV_BAR_HEIGHT };
+const createStyles = fn(5141);
+let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5709).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
+let obj3 = { paddingTop: 80 + fn(5709).NAV_BAR_HEIGHT };
 obj2.alertContainerInsideCard = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 let obj4 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -50,7 +50,7 @@ export default function NewUserPermissionsOnboarding(arg0) {
   const tmp = closure_6();
   const obj = { contentContainerStyle: tmp.scrollContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [tmp.alertContainer, ];
+  items = [tmp.alertContainer, ];
   let alertContainerInsideCard = headerInsideCard;
   if (headerInsideCard) {
     alertContainerInsideCard = tmp.alertContainerInsideCard;
@@ -83,7 +83,7 @@ export default function NewUserPermissionsOnboarding(arg0) {
     const obj6 = { style: tmp.header, children: header };
     headerInsideCard = React4(React2, obj6);
   }
-  const items4 = [headerInsideCard, React4(Text_Text.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), React4(Text_Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
+  const items4 = [headerInsideCard, React4(Text_Text.Text, { style: tmp.alertTitle, variant: "heading-lg/semibold", color: "text-default", children: title }), React4(Text_Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
   const items5 = [tmp.buttonWrapper, ];
   let primaryButtonContainer = showSkip;
   if (showSkip) {

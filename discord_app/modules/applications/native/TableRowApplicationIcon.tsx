@@ -1,13 +1,13 @@
-// === Module 9041: TableRowApplicationIcon ===
+// === Module 9169: TableRowApplicationIcon ===
 
-// Module 9041 (TableRowApplicationIcon)
+// Module 9169 (TableRowApplicationIcon)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;

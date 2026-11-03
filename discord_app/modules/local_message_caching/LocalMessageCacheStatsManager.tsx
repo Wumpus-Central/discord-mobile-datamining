@@ -1,14 +1,14 @@
-// === Module 20108: LocalMessageCacheStatsManager ===
+// === Module 20258: LocalMessageCacheStatsManager ===
 
-// Module 20108 (LocalMessageCacheStatsManager)
+// Module 20258 (LocalMessageCacheStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7667 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7791 */;
 import Constants from "Constants" /* 1072 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 import size from "module_2" /* 2 */;
 
 function makeLogLine(channelId) {
-  const items = [channelId.channelId, , , ];
+  items = [channelId.channelId, , , ];
   let str = "-1";
   let str2 = "-1";
   if (null != channelId.localMessageDetails) {

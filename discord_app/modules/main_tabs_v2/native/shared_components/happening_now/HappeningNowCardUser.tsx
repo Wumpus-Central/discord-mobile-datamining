@@ -1,19 +1,19 @@
-// === Module 18149: HappeningNowCardUser ===
+// === Module 18293: HappeningNowCardUser ===
 
-// Module 18149 (HappeningNowCardUser)
+// Module 18293 (HappeningNowCardUser)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import UserStore from "UserStore" /* 1383 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(17287).HappeningNowCardTrackingType;
+let closure_7 = fn(17430).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1187).AvatarSizes.LARGE;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
@@ -29,18 +29,18 @@ export default noop.memo(function HappeningNowCardUser(index) {
   let status;
   const analyticsLocations = userId(guildId[9])().analyticsLocations;
   const tmp = closure_11();
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [userId];
   const stateFromStores = index(guildId[10]).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const items2 = [index, guildId, userId, stateFromStores, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
     const obj2 = { order: index, guild_id: guildId, type: constants.INDIVIDUAL_USER_CARD, highlighted_user_ids: null };
-    const items = [userId];
+    items = [userId];
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(8750, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8750, dependencyMap.paths);
+      asyncRequireImpl(8874, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8874, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

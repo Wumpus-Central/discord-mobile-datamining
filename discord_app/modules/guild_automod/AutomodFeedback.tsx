@@ -1,6 +1,6 @@
-// === Module 7697: AutomodFeedback ===
+// === Module 7821: AutomodFeedback ===
 
-// Module 7697 (AutomodFeedback)
+// Module 7821 (AutomodFeedback)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ export function generateFeedbackOptions() {
   const intl = util.intl;
   obj.name = intl.string(util.t["+MbOX4"]);
   obj.value = obj.BUG;
-  const items = [obj, ];
+  items = [obj, ];
   obj2 = { name: null, value: null };
   const intl2 = util.intl;
   obj2.name = intl2.string(util.t.CRsCRC);

@@ -1,17 +1,17 @@
-// === Module 14991: UserProfilePrivacyNotice ===
+// === Module 15127: UserProfilePrivacyNotice ===
 
-// Module 14991 (UserProfilePrivacyNotice)
+// Module 15127 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import Pressables from "Pressables" /* 6980 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
-import useUserIsTeen from "useUserIsTeen" /* 8368 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import Pressables from "Pressables" /* 7106 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
+import useUserIsTeen from "useUserIsTeen" /* 8492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,10 +20,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,11 +36,11 @@ export default function UserProfilePrivacyNotice() {
   const ProfileVisibility = UserSettings.ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
   closure_129_1 = setting;
-  const items = [userIsTeen, setting];
+  items = [userIsTeen, setting];
   const memo = noop.useMemo(() => {
     if (userIsTeen) {
       if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-        const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
+        items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
       }
       return [];
     }
@@ -93,11 +93,11 @@ export function useIsPrivacyNoticeVisible() {
   userIsTeen = userIsTeen(setting[10]).useUserIsTeen();
   const ProfileVisibility = userIsTeen(setting[11]).ProfileVisibility;
   setting = ProfileVisibility.useSetting();
-  let items = [userIsTeen, setting];
+  items = [userIsTeen, setting];
   const memo = noop.useMemo(() => {
     if (userIsTeen) {
       if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-        const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
+        items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
       }
       return [];
     }

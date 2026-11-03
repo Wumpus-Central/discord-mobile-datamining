@@ -1,22 +1,22 @@
-// === Module 7397: OnboardingHomeUtils ===
+// === Module 7521: OnboardingHomeUtils ===
 
-// Module 7397 (OnboardingHomeUtils)
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7274 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7399 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7400 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7401 */;
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
+// Module 7521 (OnboardingHomeUtils)
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7394 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7523 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7524 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7525 */;
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
@@ -24,7 +24,7 @@ export function useCanSeeOnboardingHome(guild_id) {
   _require = guild_id;
   const tmp = useIsNewMemberDefault(guild_id);
   importDefault = tmp;
-  const items = [ChannelStore, GuildStore, ImpersonateStore, GuildOnboardingHomeSettingsStore];
+  items = [ChannelStore, GuildStore, ImpersonateStore, GuildOnboardingHomeSettingsStore];
   const items1 = [guild_id, tmp];
   return require("useStateFromStores").useStateFromStores(items, () => {
     if (closure_0 !== React6) {
@@ -41,7 +41,7 @@ export function useCanSeeOnboardingHome(guild_id) {
           return tmp7;
         } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
           const id = has.id;
-          const isSettingsEmptyResult = enabled(7399).isSettingsEmpty(GuildOnboardingHomeSettingsStore.getSettings(id));
+          const isSettingsEmptyResult = enabled(7523).isSettingsEmpty(GuildOnboardingHomeSettingsStore.getSettings(id));
           hasItem1 = !isSettingsEmptyResult;
           enabled = GuildOnboardingHomeSettingsStore.getEnabled(id);
           if (!isSettingsEmptyResult) {
@@ -55,7 +55,7 @@ export function useCanSeeOnboardingHome(guild_id) {
             const tmp23 = has(constants.GUILD_ONBOARDING) && !enabled;
           }
           let tmp10 = hasItem1;
-          const enabledResult = enabled(7399);
+          const enabledResult = enabled(7523);
         } else {
           tmp10 = guildHasOnboardingHomeDefault(has);
           if (tmp10) {
@@ -86,7 +86,7 @@ export function useCanSeeOnboardingHome(guild_id) {
   }, items1);
 }
 export function canSeeOnboardingHome(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   if (null == guild) {
     return false;
   } else {

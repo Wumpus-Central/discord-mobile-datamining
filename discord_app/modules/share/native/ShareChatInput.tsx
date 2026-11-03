@@ -1,12 +1,12 @@
-// === Module 13418: ShareChatInput ===
+// === Module 13554: ShareChatInput ===
 
-// Module 13418 (ShareChatInput)
+// Module 13554 (ShareChatInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 6980 */;
-import FormInputDefault from "FormInput" /* 8185 */;
-import ReactionIcon from "ReactionIcon" /* 9452 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9775 */;
+import Pressables from "Pressables" /* 7106 */;
+import FormInputDefault from "FormInput" /* 8309 */;
+import ReactionIcon from "ReactionIcon" /* 9580 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,12 +14,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -49,7 +49,7 @@ export default function ShareChatInput(onFocus) {
   const tmp = closure_8();
   const tmp4 = useMessageMaxLengthDefault();
   [focused, c2] = noop.useState(false);
-  const items = [onFocus];
+  items = [onFocus];
   const items1 = [onBlur];
   const callback = noop.useCallback(() => {
     _undefined(true);

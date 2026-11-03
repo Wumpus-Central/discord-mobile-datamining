@@ -1,12 +1,12 @@
-// === Module 19970: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 20120: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 19970 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 20120 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod4929 from "module_4929" /* 4929 */;
+import _mod5056 from "module_5056" /* 5056 */;
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "children", emojiName: "Button", description: "forEach", refId: "applicationId" });
+let closure_2 = Object.freeze({ name: "", emojiId: "channel_id", emojiName: "min", description: "test", refId: "alignItems" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -37,11 +37,11 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
 export function resetImperatively() {
-  const state = closure_3.getState();
+  state = closure_3.getState();
   state.reset();
 }
 export function initializeImperatively(benefit) {
-  const state = closure_3.getState();
+  state = closure_3.getState();
   ({ setDescription, setEmojiId, setEmojiName, setName, setRefId } = state);
   state.reset();
   if (null != benefit.description) {
@@ -56,36 +56,36 @@ export function initializeImperatively(benefit) {
 }
 export function useDescriptionState() {
   return closure_3((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useEmojiIdState() {
   return closure_3((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useEmojiNameState() {
   return closure_3((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useNameState() {
   return closure_3((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }
 export function useRefIdState() {
   return closure_3((arg0) => {
-    const items = [, ];
+    items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }

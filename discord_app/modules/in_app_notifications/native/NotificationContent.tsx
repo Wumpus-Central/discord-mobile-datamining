@@ -1,8 +1,8 @@
-// === Module 11077: NotificationContent ===
+// === Module 11214: NotificationContent ===
 
-// Module 11077 (NotificationContent)
+// Module 11214 (NotificationContent)
 import nativeDefault from "native" /* 575 */;
-import MessageNotificationHeader from "MessageNotificationHeader" /* 11078 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 11215 */;
 import noop from "module_19" /* 19 */;
 
 const MessageNotificationHeaderDefault = MessageNotificationHeader;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { body: { flex: 1 }, iconContainer: { marginRight: nativeDefault.space.PX_8 }, contentContainer: null, headerContainer: null, labelContainer: null };
 let obj3 = { marginRight: nativeDefault.space.PX_8 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_12, flexDirection: "row" };
@@ -31,7 +31,7 @@ export default function NotificationContent(arg0) {
     const obj2 = { style: tmp.iconContainer, children: icon };
     tmp4 = React4(View, obj2);
   }
-  const items = [tmp4, , ];
+  items = [tmp4, , ];
   const obj3 = { style: tmp.body, children: null };
   const obj4 = { style: tmp.labelContainer, children: null };
   let tmp6 = null;

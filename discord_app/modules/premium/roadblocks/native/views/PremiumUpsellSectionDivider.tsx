@@ -1,20 +1,20 @@
-// === Module 10021: PremiumUpsellSectionDivider ===
+// === Module 10152: PremiumUpsellSectionDivider ===
 
-// Module 10021 (PremiumUpsellSectionDivider)
+// Module 10152 (PremiumUpsellSectionDivider)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10022 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10153 */;
 import noop from "module_19" /* 19 */;
 
-const LockIcon2 = LockIcon(8667);
+const LockIcon2 = LockIcon(8791);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0 === obj2.START) {
@@ -57,7 +57,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
   obj2 = { style: lock.gradient, children: timestampProducer(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
   let LockIcon = require;
   let WHITE = dependencyMap;
-  const items = [timestampProducer(React4, obj2), , ];
+  items = [timestampProducer(React4, obj2), , ];
   const obj3 = { style: lock.divider, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: null };
   if (true === useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;

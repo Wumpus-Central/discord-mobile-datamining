@@ -1,6 +1,6 @@
-// === Module 10141: useNavigatorBackHandler ===
+// === Module 10271: useNavigatorBackHandler ===
 
-// Module 10141 (useNavigatorBackHandler)
+// Module 10271 (useNavigatorBackHandler)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -18,7 +18,7 @@ export default function useNavigatorBackHandler() {
   noop = undefined;
   navigation = onBeforeGoBack(navigation[1]).useNavigation();
   noop = noop.useRef(true);
-  const items = [navigation];
+  items = [navigation];
   const items1 = [navigation, onBeforeGoBack];
   const onGoBack = noop.useCallback(() => {
     let flag = arg0;

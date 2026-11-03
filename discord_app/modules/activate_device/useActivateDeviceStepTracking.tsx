@@ -1,9 +1,9 @@
-// === Module 15704: useActivateDeviceStepTracking ===
+// === Module 15847: useActivateDeviceStepTracking ===
 
-// Module 15704 (useActivateDeviceStepTracking)
+// Module 15847 (useActivateDeviceStepTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import usePreviousDefault from "usePrevious" /* 6732 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15705 */;
+import usePreviousDefault from "usePrevious" /* 6852 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export function useActivateDeviceStepTracking(arg0) {
   closure_0 = arg0;
   const tmp = usePreviousDefault(arg0);
   importDefault = tmp;
-  const items = [tmp, arg0];
+  items = [tmp, arg0];
   const effect = noop.useEffect(() => {
     if (closure_0 !== type) {
       let tmp3 = "user-code-input" !== closure_0.type;

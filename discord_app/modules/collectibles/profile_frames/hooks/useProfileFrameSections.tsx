@@ -1,11 +1,11 @@
-// === Module 16506: useProfileFrameSections ===
+// === Module 16649: useProfileFrameSections ===
 
-// Module 16506 (useProfileFrameSections)
+// Module 16649 (useProfileFrameSections)
 import util from "util" /* 1113 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -17,11 +17,11 @@ let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hoo
 
 export default function useProfileFrameSections() {
   let obj = stateFromStores(563);
-  let items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   stateFromStores = obj.useStateFromStores(items, () => purchases.purchases);
   let items1 = [CollectiblesCategoryStore];
   const tmp2 = _slicedToArray(stateFromStores(563).useStateFromStoresArray(items1, () => {
-    const items = [, ];
+    items = [, ];
     ({ categories: arr[0], products: arr[1] } = CollectiblesCategoryStore);
     return items;
   }), 2);
@@ -29,7 +29,7 @@ export default function useProfileFrameSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15068)(useMemo(() => {
+  return first(15209)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileFrames = obj.getProfileFrames(stateFromStores, first);
     const reduced = profileFrames.reduce((premium_purchase, skuId) => {
@@ -55,7 +55,7 @@ export default function useProfileFrameSections() {
     }, { purchase: [], premium_purchase: [], preview: [] });
     const intl = util.intl;
     obj2 = { section: obj.PURCHASE, items: null, height: 12, header: null };
-    const items = [obj2, obj3];
+    items = [obj2, obj3];
     HermesBuiltin.arraySpread(reduced.purchase, 2);
     obj2.items = items;
     const intl2 = util.intl;

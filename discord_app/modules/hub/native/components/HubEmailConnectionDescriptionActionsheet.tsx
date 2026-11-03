@@ -1,16 +1,16 @@
-// === Module 14347: HubEmailConnectionDescriptionActionsheet ===
+// === Module 14478: HubEmailConnectionDescriptionActionsheet ===
 
-// Module 14347 (HubEmailConnectionDescriptionActionsheet)
+// Module 14478 (HubEmailConnectionDescriptionActionsheet)
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
@@ -21,7 +21,7 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   const obj2 = { title: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t["48kg+O"]);
-  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), , ];
+  items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), , ];
   const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.O1k9XX);

@@ -1,18 +1,18 @@
-// === Module 12566: ImageInputActionSheet ===
+// === Module 12702: ImageInputActionSheet ===
 
-// Module 12566 (ImageInputActionSheet)
+// Module 12702 (ImageInputActionSheet)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12567 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12703 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8406).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+let closure_5 = fn(8530).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: { marginRight: 12, borderRadius: nativeDefault.radii.sm } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -44,7 +44,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
   if (tmp4) {
     let obj = { style: tmp.emojiContainer, children: null };
     const obj2 = { style: tmp.emojiIcon, children: tmp3.renderImage };
-    const items = [closure_6(View, obj2), ];
+    items = [closure_6(View, obj2), ];
     const image2 = answer.image;
     let name;
     if (image2 != null) {
@@ -53,7 +53,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
         name = emoji.name;
       }
     }
-    const obj3 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = ":" + name + ":";
     items[1] = closure_6(tmp7(answer[10]).Text, obj3);

@@ -1,12 +1,12 @@
-// === Module 14459: GiftingSKUSelectScreen ===
+// === Module 14590: GiftingSKUSelectScreen ===
 
-// Module 14459 (GiftingSKUSelectScreen)
+// Module 14590 (GiftingSKUSelectScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 14460 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 14591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
@@ -41,7 +41,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const tmp = closure_9();
   [highlightedSkuId, closure_4] = noop.useState(defaultHighlightedReward);
   [first1, closure_6] = noop.useState(false);
-  const items = [onSelect, highlightedSkuId, claimableRewards];
+  items = [onSelect, highlightedSkuId, claimableRewards];
   const callback = noop.useCallback(() => {
     const found = claimableRewards.find((item) => item === highlightedSkuId);
     if (null != found) {
@@ -82,7 +82,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };
-  const obj4 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  const obj4 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["+ByEeM"]);
   const items3 = [React5(Text_Text.Text, obj4), ];

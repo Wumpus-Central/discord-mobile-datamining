@@ -1,11 +1,11 @@
-// === Module 14875: useCanRequestStreamFromUser ===
+// === Module 15006: useCanRequestStreamFromUser ===
 
-// Module 14875 (useCanRequestStreamFromUser)
+// Module 15006 (useCanRequestStreamFromUser)
 import _modDef12 from "module_12" /* 12 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/request_to_stream/useCanReque
 export default function useCanRequestStreamFromUser(user, arg1) {
   _require = user;
   closure_1 = arg1;
-  const items = [PermissionStore, ChannelStore, GuildMemberStore, GuildRoleStore];
+  items = [PermissionStore, ChannelStore, GuildMemberStore, GuildRoleStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {
       return false;

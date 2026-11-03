@@ -1,10 +1,10 @@
-// === Module 18051: useOrientationLock ===
+// === Module 18195: useOrientationLock ===
 
-// Module 18051 (useOrientationLock)
-import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
-import DeviceUtils from "DeviceUtils" /* 4971 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7111 */;
-import DeviceOrientation from "DeviceOrientation" /* 8903 */;
+// Module 18195 (useOrientationLock)
+import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
+import DeviceUtils from "DeviceUtils" /* 5098 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
+import DeviceOrientation from "DeviceOrientation" /* 9027 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/auth/native/useOrientationLoc
 export default function usePortraitOrientationOnly() {
   const tmp = useWideAuthViewDefault();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   const effect = noop.useEffect(() => {
     const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;

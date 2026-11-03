@@ -1,21 +1,21 @@
-// === Module 1495: KeyboardUIStore ===
+// === Module 1497: KeyboardUIStore ===
 
-// Module 1495 (KeyboardUIStore)
+// Module 1497 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1228 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1494 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1496 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1621 */;
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
-import ChatInputFocused from "ChatInputFocused" /* 1624 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1625 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1637 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1639 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1887 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1375 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1498 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1623 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import ChatInputFocused from "ChatInputFocused" /* 1626 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1639 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2016 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1377 */;
 import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1626 */;
+import SafeAreaStore from "SafeAreaStore" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -232,7 +232,7 @@ KeyboardEvents.addListener(str, (height) => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -251,7 +251,7 @@ KeyboardEvents2.addListener(str2, () => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -267,7 +267,7 @@ const subscription = SafeAreaStore.subscribe(() => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -302,7 +302,7 @@ export function setKeyboardType(keyboardParams) {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;

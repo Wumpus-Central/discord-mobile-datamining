@@ -1,11 +1,11 @@
-// === Module 11542: useSubscribeMissingActivities ===
+// === Module 11679: useSubscribeMissingActivities ===
 
-// Module 11542 (useSubscribeMissingActivities)
-import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 11545 */;
+// Module 11679 (useSubscribeMissingActivities)
+import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 11682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 11543 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 11680 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/activities/useSubscribeMissin
 export default function useSubscribeMissingActivities(arg0, arg1) {
   closure_129_0 = arg0;
   closure_129_1 = arg1;
-  let items = [arg0, arg1];
+  items = [arg0, arg1];
   const tmp = _slicedToArray(noop.useMemo(() => {
     if (_private.isPrivate()) {
       const found = closure_0.filter((application) => {
@@ -39,7 +39,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
         }
         return tmp2;
       });
-      const items = [found, found.map((id) => id.id)];
+      items = [found, found.map((id) => id.id)];
       let items1 = items;
     } else {
       items1 = [closure_8, closure_7];
@@ -51,7 +51,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   let items1 = [PresenceStore];
   const items2 = [first];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
-    const items = [];
+    items = [];
     const item = _slicedToArray.forEach((author) => {
       if (null != PresenceStore.findActivity(author.author.id, (application_id) => {
         const application = author.application;
@@ -87,7 +87,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
     noop.useMemo(() => {
       closure_0 = noop;
       if (0 === _slicedToArray.length) {
-        let items = closure_6;
+        items = closure_6;
       } else {
         items = [];
         const item = _slicedToArray.forEach((application) => {

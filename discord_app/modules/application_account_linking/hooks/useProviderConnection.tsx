@@ -1,10 +1,10 @@
-// === Module 7346: useProviderConnection ===
+// === Module 7466: useProviderConnection ===
 
-// Module 7346 (useProviderConnection)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
+// Module 7466 (useProviderConnection)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/application_account_linking/h
 
 export function useProviderConnection(provider_id) {
   _require = provider_id;
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let account = null;
     if (null != closure_0) {
@@ -40,7 +40,7 @@ export function useProviderConnection(provider_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

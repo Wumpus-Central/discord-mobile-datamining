@@ -1,13 +1,13 @@
-// === Module 9132: useMobileInviteSuggestions ===
+// === Module 9260: useMobileInviteSuggestions ===
 
-// Module 9132 (useMobileInviteSuggestions)
+// Module 9260 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9133 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9261 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const require = globalThis.__r;
 
@@ -21,9 +21,9 @@ export default function useMobileInviteSuggestions(arg0, _location, inviteTarget
   _require = arg0;
   dependencyMap = inviteTargetType;
   _slicedToArray = application_id;
-  let items = [closure_7, SortedVoiceStateStore];
+  items = [closure_7, SortedVoiceStateStore];
   [rows, closure_5] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [InviteSuggestionsStore.getInviteSuggestionRows(), ];
+    items = [InviteSuggestionsStore.getInviteSuggestionRows(), ];
     let voiceStatesForChannel = null;
     if (null != closure_0) {
       voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(tmp);

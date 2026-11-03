@@ -1,9 +1,9 @@
-// === Module 14750: generateDynamicLink ===
+// === Module 14881: generateDynamicLink ===
 
-// Module 14750 (generateDynamicLink)
+// Module 14881 (generateDynamicLink)
 import v1 from "v1" /* 1266 */;
-import formatDefault from "format" /* 1352 */;
-import getDescriptionDefault from "getDescription" /* 14751 */;
+import formatDefault from "format" /* 1353 */;
+import getDescriptionDefault from "getDescription" /* 14882 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -30,7 +30,7 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   }
   const encodeURIComponentResult = encodeURIComponent(str.toString());
   const encodeURIComponentResult1 = encodeURIComponent("discord://app/open#" + str.toString());
-  const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
+  items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const regExp = new RegExp("(" + items.join("|") + ")", "ig");
   const tmp9 = formatDefault;
   let match;

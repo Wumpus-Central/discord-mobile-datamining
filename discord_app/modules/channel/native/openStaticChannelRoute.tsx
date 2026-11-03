@@ -1,21 +1,21 @@
-// === Module 11576: openStaticChannelRoute ===
+// === Module 11713: openStaticChannelRoute ===
 
-// Module 11576 (openStaticChannelRoute)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7421 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 11713 (openStaticChannelRoute)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7545 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_7, Routes: closure_8 } = Constants);
-const GuildOnboardingTab = fn(7269).GuildOnboardingTab;
-let closure_10 = fn(7265).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7389).GuildOnboardingTab;
+let closure_10 = fn(7385).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openStaticChannelRoute.tsx");
 
@@ -25,19 +25,19 @@ export default function openStaticChannelRoute(arg0) {
     navigationReplace = false;
   }
   if (null != guildId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if ("browse" === staticRoute) {
         const features3 = guild.features;
         if (features3.has(constants.COMMUNITY)) {
           const obj3 = { guildId, defaultTab: GuildOnboardingTab.BROWSE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11577, dependencyMap.paths), obj3, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11714, dependencyMap.paths), obj3, closure_10);
         }
       } else if ("customize" === staticRoute) {
         const features2 = guild.features;
         if (features2.has(constants.COMMUNITY)) {
           const obj5 = { guildId, defaultTab: GuildOnboardingTab.CUSTOMIZE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11577, dependencyMap.paths), obj5, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11714, dependencyMap.paths), obj5, closure_10);
         }
       } else {
         if ("home" !== staticRoute) {
@@ -53,14 +53,14 @@ export default function openStaticChannelRoute(arg0) {
                       const _HermesInternal = HermesInternal;
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj6 = { role, guildId };
-                      obj2.openLazy(asyncRequireImpl(11590, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
-                      const tmp9 = asyncRequireImpl(11590, dependencyMap.paths);
+                      obj2.openLazy(asyncRequireImpl(11727, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
+                      const tmp9 = asyncRequireImpl(11727, dependencyMap.paths);
                     }
                   }
                 }
               }
               const obj8 = { guildId };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11599, dependencyMap.paths), obj8);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11736, dependencyMap.paths), obj8);
             } else {
               GlobalUtils.assertNever(staticRoute);
             }

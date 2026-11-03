@@ -1,6 +1,6 @@
-// === Module 8247: webpConversion ===
+// === Module 8371: webpConversion ===
 
-// Module 8247 (webpConversion)
+// Module 8371 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -32,7 +32,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
               const obj4 = { value: constants.ALREADY_WEBP, done: true };
               return obj4;
             } else {
-              const items = ["image/png"];
+              items = ["image/png"];
               if (items.includes(type.type)) {
                 c4 = 1;
                 if (typeof type.arrayBuffer === "function") {
@@ -217,7 +217,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -440,7 +440,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

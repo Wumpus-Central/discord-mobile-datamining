@@ -1,15 +1,15 @@
-// === Module 14847: ContentInventoryActivityStore ===
+// === Module 14978: ContentInventoryActivityStore ===
 
-// Module 14847 (ContentInventoryActivityStore)
+// Module 14978 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import utils from "utils" /* 8718 */;
-import matchUtils from "matchUtils" /* 8908 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8912 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8907 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import utils from "utils" /* 8842 */;
+import matchUtils from "matchUtils" /* 9032 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9036 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 9031 */;
 
 require = fn;
 function entryToKey(content) {
@@ -21,7 +21,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8927).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(9053).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
@@ -45,7 +45,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8718);
+    tmpResult = tmp(8842);
   }
   return tmp3;
 }
@@ -82,7 +82,7 @@ function handlePresenceUpdates() {
     let nextResult = iter.next();
     if (iter === undefined) {
       let obj2 = _modDef12;
-      let items = [];
+      items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(set1, 0);
       let differenceResult = obj2.difference(arr, items);
       for (const item10081 of differenceResult) {
@@ -111,7 +111,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-let items = [fn(8714).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8838).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -138,7 +138,7 @@ class ContentInventoryActivityStore extends Store {
 const prototype = ContentInventoryActivityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ContentInventoryStore, PresenceStore);
-  const items = [PresenceStore];
+  items = [PresenceStore];
   this.syncWith(items, handlePresenceUpdates);
 };
 prototype["getMatchingActivity"] = function getMatchingActivity(author_id) {

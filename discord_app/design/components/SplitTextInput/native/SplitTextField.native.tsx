@@ -1,11 +1,11 @@
-// === Module 7134: SplitTextField ===
+// === Module 7260: SplitTextField ===
 
-// Module 7134 (SplitTextField)
-import useTextField from "useTextField" /* 7090 */;
-import useInputClearButton from "useInputClearButton" /* 7091 */;
-import useInputAttachments from "useInputAttachments" /* 7095 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
-import BaseTextField from "BaseTextField" /* 7099 */;
+// Module 7260 (SplitTextField)
+import useTextField from "useTextField" /* 7216 */;
+import useInputClearButton from "useInputClearButton" /* 7217 */;
+import useInputAttachments from "useInputAttachments" /* 7221 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import BaseTextField from "BaseTextField" /* 7225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export function SplitTextField(ref) {
               if (pressed.pressed) {
                 obj = { opacity: 0.2 };
               }
-              const items = [obj];
+              items = [obj];
               return items;
             }
       };
@@ -52,7 +52,7 @@ export function SplitTextField(ref) {
         if (pressed.pressed) {
           obj = { opacity: 0.2 };
         }
-        const items = [obj];
+        items = [obj];
         return items;
       }} />;
       tmp9 = <React3 style={inputStyles.splitBorder}>{null}</React3>;

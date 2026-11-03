@@ -1,6 +1,6 @@
-// === Module 14976: ContentInventoryHttpApi ===
+// === Module 15112: ContentInventoryHttpApi ===
 
-// Module 14976 (ContentInventoryHttpApi)
+// Module 15112 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -118,7 +118,7 @@ let closure_7 = async function _getContentInventoryOutbox() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -268,7 +268,7 @@ let closure_9 = async function _postTrackToContentInventory() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.MY_SPOTIFY_CONTENT_INVENTORY, body: null, rejectWithError: null };
             const obj4 = { connection_id, tracks: null };
-            const items = [closure_1];
+            items = [closure_1];
             obj4.tracks = items;
             request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
@@ -293,7 +293,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         } else {
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         closure_4 = tmp19;
@@ -307,7 +307,7 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(8922).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(9046).ContentInventoryFeedKey;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");

@@ -1,19 +1,19 @@
-// === Module 14002: ScheduleMessageSpotIllustration ===
+// === Module 14133: ScheduleMessageSpotIllustration ===
 
-// Module 14002 (ScheduleMessageSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14003 from "module_14003" /* 14003 */;
-import _modDef14004 from "module_14004" /* 14004 */;
-import _modDef14005 from "module_14005" /* 14005 */;
+// Module 14133 (ScheduleMessageSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef14134 from "module_14134" /* 14134 */;
+import _modDef14135 from "module_14135" /* 14135 */;
+import _modDef14136 from "module_14136" /* 14136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14003 }, 3: null };
-let obj2 = { uri: _modDef14003 };
-obj[2] = { uri: _modDef14004 };
-const obj3 = { uri: _modDef14004 };
-obj[3] = { uri: _modDef14005 };
+let obj = { 1: null, 2: { uri: _modDef14134 }, 3: null };
+let obj2 = { uri: _modDef14134 };
+obj[2] = { uri: _modDef14135 };
+const obj3 = { uri: _modDef14135 };
+obj[3] = { uri: _modDef14136 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ScheduleMessageSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function ScheduleMessageSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

@@ -1,14 +1,14 @@
-// === Module 12771: ConjurePublishCtaCard ===
+// === Module 12907: ConjurePublishCtaCard ===
 
-// Module 12771 (ConjurePublishCtaCard)
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 12097 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 12102 */;
-import conjurePublishCard from "conjurePublishCard" /* 12579 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12772 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12773 */;
+// Module 12907 (ConjurePublishCtaCard)
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 12233 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 12238 */;
+import conjurePublishCard from "conjurePublishCard" /* 12715 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12908 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export default function ConjurePublishCtaCard(arg0) {
     tmp6Result4 = null;
     if (obj.isConjurePublishCtaVisible(tmp3, cta)) {
       const obj2 = { projectId, publish: tmp3 };
-      const items = [React3(PublishCta, obj2), , ];
+      items = [React3(PublishCta, obj2), , ];
       let tmp6Result = null;
       if (null != tmp3.failure) {
         const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };

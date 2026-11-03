@@ -1,31 +1,31 @@
-// === Module 16758: UseDataToImproveDiscordSetting ===
+// === Module 16901: UseDataToImproveDiscordSetting ===
 
-// Module 16758 (UseDataToImproveDiscordSetting)
+// Module 16901 (UseDataToImproveDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16721 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16759 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16760 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16864 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 16902 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16903 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8432).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8556).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToImproveDiscordSettingValue() {
-    const items = [ConsentStore];
+    items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.USAGE_STATISTICS));
   },
   onValueChange: function handleUsageStatisticsChange(arg0) {
     if (arg0) {
-      let items = [Consents.USAGE_STATISTICS];
+      items = [Consents.USAGE_STATISTICS];
       ConsentActionCreators.setConsents(items, []).catch((error) => showDataPrivacyRateLimitAlert.showDataPrivacyRateLimitAlert(error.message));
       const setConsentsResult = ConsentActionCreators.setConsents(items, []);
     } else {
@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
       obj2.cancelText = intl4.string(util.t.kYpG0u);
       obj2.confirmColor = common_AlertDefault.Colors.RED;
       obj2.onConfirm = function onConfirm() {
-        const items = [constants.USAGE_STATISTICS];
+        items = [constants.USAGE_STATISTICS];
         return ConsentActionCreators.setConsents([], items);
       };
       AlertActionCreatorsDefault.show(obj2);

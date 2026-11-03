@@ -1,27 +1,27 @@
-// === Module 14433: CollectiblesShopGiftPurchaseSection ===
+// === Module 14564: CollectiblesShopGiftPurchaseSection ===
 
-// Module 14433 (CollectiblesShopGiftPurchaseSection)
+// Module 14564 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
-const PremiumConstants = fn(1385);
+({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
+const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -45,7 +45,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   closure_10 = undefined;
   const tmp3 = closure_15(giftOptions(giftingOrigin[11])().insets.bottom);
   const GiftingBadgeExperiment = require("GiftingBadgeExperiment").GiftingBadgeExperiment;
-  const items = [closure_7];
+  items = [closure_7];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { nextTier: closure_7.getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), giftsToNextTier: closure_7.getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), badgeProgress: null };
     const singleRequirementProgress = closure_7.getSingleRequirementProgress(product(giftingOrigin[14]).BadgeId.GIFTING);
@@ -180,7 +180,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

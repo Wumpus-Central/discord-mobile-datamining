@@ -1,73 +1,82 @@
-// === Module 19235: useSpeakerTooltips ===
+// === Module 19393: useSpeakerTooltips ===
 
-// Module 19235 (useSpeakerTooltips)
+// Module 19393 (useSpeakerTooltips)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19238 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const ConsoleVoiceUpsellStore = fn(19233);
+const ConsoleVoiceUpsellStore = fn(19391);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let __initData = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
-const __initData2 = { code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}" };
+let closure_10 = { code: "(function useSpeakerTooltipsTsx1(){let[controlsSpecs]=this.__closure;return controlsSpecs.get().mode;})" };
+let closure_11 = { code: "(function useSpeakerTooltipsTsx2(currentControlsMode,previous){let[scheduleOnRN,setIsShowingControls,VoicePanelControlsModes]=this.__closure;if(currentControlsMode===previous)return;scheduleOnRN(setIsShowingControls,currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useSpeakerTooltips.tsx");
 
 export default function useSpeakerTooltips(targetRef, memo) {
-  let first = memo;
+  let tmp = memo;
   let memo2 = memo;
-  const tmp4 = first(callback1[6])();
-  first = tmp4;
-  const voiceUpsellDismissed = first1().voiceUpsellDismissed;
+  const tmp4 = require("useConsoleConnectedAccountForVoiceUpsell")();
+  importDefault = tmp4;
+  const voiceUpsellDismissed = closure_6().voiceUpsellDismissed;
   callback1 = voiceUpsellDismissed;
-  let tmp5 = first(callback1[7])(undefined);
+  let tmp5 = require("useChannelFloatingCTAContent")(undefined);
   _slicedToArray = tmp5;
   const isVoicePanelFullscreen = memo2(callback1[8]).useIsVoicePanelFullscreen();
-  controlsSpecs = controlsSpecs.useContext(first(callback1[9])).controlsSpecs;
-  const tmp9 = _slicedToArray(controlsSpecs.useState(true), 2);
-  closure_5 = tmp10;
   let obj = memo2(callback1[8]);
-  const tmp2 = first;
+  const tmp2 = importDefault;
   const tmp8 = _slicedToArray;
-  const fn = function v() {
-    return controlsSpecs.get().mode;
-  };
-  fn.__closure = { controlsSpecs };
-  fn.__workletHash = 13952338295275;
-  fn.__initData = __initData;
-  const fn2 = function b(arg0, arg1) {
+  [tmp10, tmp11] = first.useState(true);
+  const tmp9 = _slicedToArray(first.useState(true), 2);
+  items = [closure_10, first.useContext(require("VoicePanelStateContext")).controlsSpecs];
+  memo2 = undefined;
+  [tmp12, tmp13] = items;
+  function useSpeakerTooltipsTsx1() {
+    return memo2.get().mode;
+  }
+  const items1 = [tmp13];
+  useSpeakerTooltipsTsx1.__closure = items1;
+  useSpeakerTooltipsTsx1.__workletHash = 14111641987858;
+  useSpeakerTooltipsTsx1.__initData = tmp12;
+  const items2 = [closure_11, memo2(callback1[11]).scheduleOnRN, tmp11, memo1];
+  memo2 = undefined;
+  importDefault = undefined;
+  callback1 = undefined;
+  [tmp14, tmp15, tmp16, tmp17] = items2;
+  function useSpeakerTooltipsTsx2(arg0, arg1) {
     if (arg0 !== arg1) {
-      ReanimatedRexport.runOnJS(closure_5)(arg0 === VoicePanelControlsModes.FLOATING_DEFAULT);
+      memo2(c1, arg0 === callback1.FLOATING_DEFAULT);
     }
-  };
+  }
+  const items3 = [tmp15, tmp16, tmp17];
+  useSpeakerTooltipsTsx2.__closure = items3;
+  useSpeakerTooltipsTsx2.__workletHash = 11431330900869;
+  useSpeakerTooltipsTsx2.__initData = tmp14;
+  const animatedReaction = memo2(callback1[10]).useAnimatedReaction(useSpeakerTooltipsTsx1, useSpeakerTooltipsTsx2);
+  if (tmp) {
+    tmp = isVoicePanelFullscreen;
+  }
+  if (tmp) {
+    tmp = tmp10;
+  }
+  memo2 = tmp;
+  const items4 = [tmp, tmp5];
+  memo = obj2.useMemo(() => memo2 ? closure_3 : [], items4);
   const obj3 = memo2(callback1[10]);
-  fn2.__closure = { runOnJS: memo2(callback1[10]).runOnJS, setIsShowingControls: tmp9[1], VoicePanelControlsModes };
-  fn2.__workletHash = 5084069556209;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
-  if (memo) {
-    first = isVoicePanelFullscreen;
-  }
-  if (first) {
-    first = tmp9[0];
-  }
-  memo2 = first;
-  const items = [first, tmp5];
-  memo = obj2.useMemo(() => memo2 ? closure_3 : [], items);
-  const obj4 = { runOnJS: memo2(callback1[10]).runOnJS, setIsShowingControls: tmp9[1], VoicePanelControlsModes };
-  const tmp8Result = tmp8(memo2(callback1[11]).useSelectedDismissibleContent(memo), 2);
-  first1 = tmp8Result[0];
-  VoicePanelControlsModes = tmp15;
-  const tmp16 = tmp2(callback1[12])();
-  closure_8 = tmp16;
-  const items1 = [first, tmp8Result[1], first1];
-  const memo1 = obj2.useMemo(() => {
+  const tmp8Result = tmp8(memo2(callback1[12]).useSelectedDismissibleContent(memo), 2);
+  first = tmp8Result[0];
+  closure_5 = tmp22;
+  const tmp23 = tmp2(callback1[13])();
+  closure_6 = tmp23;
+  const items5 = [tmp, tmp8Result[1], first];
+  memo1 = obj2.useMemo(() => {
     const obj = { position: "bottom", title: null, description: null, visible: null, renderImgComponent: null, withBlurBackground: true, onDismiss: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.O2WA4u);
@@ -75,21 +84,21 @@ export default function useSpeakerTooltips(targetRef, memo) {
     obj.description = intl2.string(util.t.fr5bJy);
     let tmp3 = memo2;
     if (memo2) {
-      tmp3 = first1 === dismissible_content.DismissibleContent.DONUT_MOBILE_NUX;
+      tmp3 = first === dismissible_content.DismissibleContent.DONUT_MOBILE_NUX;
     }
     obj.visible = tmp3;
     obj.renderImgComponent = function renderImgComponent() {
-      return memo1(first(callback1[15]), {});
+      return closure_1_9(closure_1_1(callback1[16]), {});
     };
     obj.onDismiss = function onDismiss() {
-      return closure_1_7(constants.UNKNOWN);
+      return closure_1_5(constants.UNKNOWN);
     };
     return obj;
-  }, items1);
-  const items2 = [tmp4, first, voiceUpsellDismissed, memo1.visible];
+  }, items5);
+  const items6 = [tmp4, tmp, voiceUpsellDismissed, memo1.visible];
   memo2 = obj2.useMemo(() => {
     let consoleInfo = null;
-    if (null != first) {
+    if (null != c1) {
       consoleInfo = VoicePanelConsoleFacepile.getConsoleInfo(tmp);
     }
     let tmp5 = memo2;
@@ -128,44 +137,45 @@ export default function useSpeakerTooltips(targetRef, memo) {
       closure_1_5(true);
     };
     return obj2;
-  }, items2);
-  __initData = tmp19;
-  const items3 = [memo1.visible || memo2.visible, tmp16];
+  }, items6);
+  closure_8 = tmp26;
+  const items7 = [memo1.visible || memo2.visible, tmp23];
   const effect = obj2.useEffect(() => {
-    if (closure_10) {
-      closure_8.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
+    if (closure_8) {
+      closure_6.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
     } else {
-      closure_8.unlock();
+      closure_6.unlock();
     }
-  }, items3);
+  }, items7);
   memo2 = memo1;
-  const items4 = [memo1];
+  const items8 = [memo1];
   const callback = obj2.useCallback(() => {
     if (memo2.visible) {
       memo2.onDismiss();
     }
-  }, items4);
+  }, items8);
   callback1 = callback;
-  const items5 = [first, callback];
+  const items9 = [tmp, callback];
   const effect1 = obj2.useEffect(() => {
-    if (!first) {
+    if (!c1) {
       callback1();
     }
-  }, items5);
-  const tmp6Result = memo2(callback1[11]);
-  const coachmark = memo2(callback1[16]).useCoachmark(targetRef, memo1);
-  const items6 = [memo2];
+  }, items9);
+  const tmp6Result = memo2(callback1[12]);
+  const coachmark = memo2(callback1[17]).useCoachmark(targetRef, memo1);
+  importDefault = tmp;
+  const items10 = [memo2];
   callback1 = obj2.useCallback(() => {
     if (memo2.visible) {
       memo2.onDismiss();
     }
-  }, items6);
-  const items7 = [first, callback1];
+  }, items10);
+  const items11 = [tmp, callback1];
   const effect2 = obj2.useEffect(() => {
-    if (!first) {
+    if (!c1) {
       callback1();
     }
-  }, items7);
-  const tmp6Result3 = memo2(callback1[16]);
-  const coachmark1 = memo2(callback1[16]).useCoachmark(targetRef, memo2);
+  }, items11);
+  const tmp6Result3 = memo2(callback1[17]);
+  const coachmark1 = memo2(callback1[17]).useCoachmark(targetRef, memo2);
 };

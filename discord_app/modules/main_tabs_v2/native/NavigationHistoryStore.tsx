@@ -1,12 +1,12 @@
-// === Module 6874: NavigationHistoryStore ===
+// === Module 6994: NavigationHistoryStore ===
 
-// Module 6874 (NavigationHistoryStore)
+// Module 6994 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import useChatLayout from "useChatLayout" /* 5201 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import useChatLayout from "useChatLayout" /* 5324 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function getIdFromHistoryItem(str) {
@@ -84,7 +84,7 @@ const navigationHistoryStore = new NavigationHistoryStore(DispatcherDefault, {
     } else {
       const _HermesInternal = HermesInternal;
       let flag = removeHistoryItem("" + c4 + guild.id);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_6, 0);
       const iter = items[Symbol.iterator]();
       const nextResult = iter.next();

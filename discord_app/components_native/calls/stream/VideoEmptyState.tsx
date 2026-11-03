@@ -1,19 +1,19 @@
-// === Module 11760: VideoEmptyState ===
+// === Module 11897: VideoEmptyState ===
 
-// Module 11760 (VideoEmptyState)
+// Module 11897 (VideoEmptyState)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import StreamActionCreators from "StreamActionCreators" /* 7901 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import StreamActionCreators from "StreamActionCreators" /* 8025 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const VideoEmptyTypes = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, placeholderImage: null, placeholderText: null, buttonWrapper: null };
 let obj4 = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 };
 obj3.placeholderImage = { marginBottom: nativeDefault.space.PX_8, width: "100%", maxWidth: 288, maxHeight: 162, aspectRatio: 1.7777777777777777, flexShrink: 1, minHeight: 0 };
@@ -32,11 +32,11 @@ export default function VideoEmptyState(style) {
   if (obj.STREAM_ENDED === type) {
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
-      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(11761).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
+      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(11898).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
       tmp10 = closure_5(View, obj2);
     }
     let obj3 = { children: null };
-    const items = [tmp10, ];
+    items = [tmp10, ];
     const obj4 = { style: tmp2.placeholderText, children: null };
     const intl2 = stream(1113).intl;
     obj4.children = intl2.formatToMarkdownString(stream(1113).t["1Ww0Hi"], {});
@@ -52,13 +52,13 @@ export default function VideoEmptyState(style) {
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(5947).getErrorInfo(avError).errorCode;
-    const obj6 = stream(5947);
+    let errorCode = stream(6067).getErrorInfo(avError).errorCode;
+    const obj6 = stream(6067);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(5947).getErrorInfo(stream(5947).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(5947);
+      errorCode = stream(6067).getErrorInfo(stream(6067).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(6067);
     }
   }
   const items1 = [ChannelStore];
@@ -85,7 +85,7 @@ export default function VideoEmptyState(style) {
     const intl3 = stream(1113).intl;
     const obj10 = { errorCode };
     obj9.children = intl3.formatToPlainString(stream(1113).t.ejOT95, obj10);
-    tmp29 = closure_5(stream(5624).Text, obj9);
+    tmp29 = closure_5(stream(5747).Text, obj9);
   }
   items4[1] = tmp29;
   let tmp31 = !removeCloseButton;
@@ -98,7 +98,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj11.children = closure_5(stream(5634).Button, obj12);
+    obj11.children = closure_5(stream(5754).Button, obj12);
     tmp31 = closure_5(View, obj11);
   }
   items4[2] = tmp31;

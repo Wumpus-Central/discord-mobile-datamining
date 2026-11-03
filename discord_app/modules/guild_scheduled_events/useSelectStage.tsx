@@ -1,11 +1,11 @@
-// === Module 9210: useSelectStage ===
+// === Module 9338: useSelectStage ===
 
-// Module 9210 (useSelectStage)
+// Module 9338 (useSelectStage)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
   [first, asyncGeneratorStep] = noop.useState(stateFromStores);
   const items1 = [stateFromStores];

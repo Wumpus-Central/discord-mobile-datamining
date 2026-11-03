@@ -1,6 +1,6 @@
-// === Module 5037: Colors ===
+// === Module 5164: shared/Colors ===
 
-// Module 5037 (Colors)
+// Module 5164 (shared/Colors)
 import _modDef671 from "module_671" /* 671 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");
 
 export { WCAGContrastRatios };
-export function getContrastingColor(memo, arg1) {
+export function getContrastingColor(c1, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -24,10 +24,10 @@ export function getContrastingColor(memo, arg1) {
   }
   let base = obj.base;
   if (base == null) {
-    base = memo;
+    base = c1;
   }
   const tmp4Result = _modDef671(base);
-  let obj3 = _modDef671(memo);
+  let obj3 = _modDef671(c1);
   const luminanceResult = tmp4Result.luminance();
   let contrastResult = _modDef671.contrast(tmp4Result, obj3);
   let num2 = 99;

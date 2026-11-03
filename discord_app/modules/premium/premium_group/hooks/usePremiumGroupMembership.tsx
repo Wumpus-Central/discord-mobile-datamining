@@ -1,9 +1,9 @@
-// === Module 15375: usePremiumGroupMembership ===
+// === Module 15516: usePremiumGroupMembership ===
 
-// Module 15375 (usePremiumGroupMembership)
+// Module 15516 (usePremiumGroupMembership)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 15376 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 15517 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;
@@ -22,7 +22,7 @@ export default function usePremiumGroupMembership() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [PremiumGroupStore];
+  items = [PremiumGroupStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({ premiumGroupMembership: PremiumGroupStore.getMembership(), isFetchingMembership: PremiumGroupStore.isFetchingMembership() }));
   const items1 = [flag2, flag];
   ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);

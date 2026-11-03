@@ -20,11 +20,11 @@ function useStateFromStores(items, getCurrentUser, items1) {
   }
   _slicedToArray = tmp;
   let current;
-  let state;
+  state = undefined;
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "__closure" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "disabled" };
     tmp2.current = obj;
   }
   current = tmp2.current;

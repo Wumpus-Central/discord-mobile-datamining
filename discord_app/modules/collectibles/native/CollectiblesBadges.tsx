@@ -1,20 +1,20 @@
-// === Module 9526: CollectiblesBadges ===
+// === Module 9654: CollectiblesBadges ===
 
-// Module 9526 (CollectiblesBadges)
+// Module 9654 (CollectiblesBadges)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import LockIcon from "LockIcon" /* 8667 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9527 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import LockIcon from "LockIcon" /* 8791 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9655 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE }, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
@@ -37,9 +37,9 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 export function NewBadge(style) {
   const tmp = closure_7();
   const obj = { style: null, children: null };
-  const items = [tmp.newIconBadge, style.style];
+  items = [tmp.newIconBadge, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.y2b7CA);
   obj.children = hasOwnProperty(Text_Text.Text, obj2);
@@ -54,11 +54,11 @@ export function LockBadge(isNew) {
   const tmp = closure_7();
   if (flag) {
     const obj2 = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
-    const items = [tmp.newLockIconBadge, style];
+    items = [tmp.newLockIconBadge, style];
     obj2.style = items;
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(LockIcon.LockIcon, obj3), ];
-    const obj4 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+    const obj4 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.y2b7CA);
     items1[1] = hasOwnProperty(Text_Text.Text, obj4);
@@ -83,11 +83,11 @@ export function PremiumBadge(isNew) {
   const tmp = closure_7();
   if (flag) {
     const obj2 = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
-    const items = [tmp.newLockIconBadge, style];
+    items = [tmp.newLockIconBadge, style];
     obj2.style = items;
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj3), ];
-    const obj4 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+    const obj4 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.y2b7CA);
     items1[1] = hasOwnProperty(Text_Text.Text, obj4);
@@ -106,9 +106,9 @@ export function PremiumBadge(isNew) {
 export function LimitedTimeBadge(style) {
   const tmp = closure_7();
   const obj = { style: null, children: null };
-  const items = [tmp.limitedTimeBadge, style.style];
+  items = [tmp.limitedTimeBadge, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "text-xs/semibold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["h/uBCR"]);
   obj.children = hasOwnProperty(Text_Text.Text, obj2);
@@ -118,7 +118,7 @@ export function IconBadgePill(isDark) {
   isDark = isDark.isDark;
   ({ icon, accessibilityLabel } = isDark);
   const tmp = closure_7();
-  const items = [tmp.badgePill, ];
+  items = [tmp.badgePill, ];
   const obj = { style: items, accessibilityLabel, children: null };
   items[1] = isDark ? tmp.badgeSurfaceDarkMode : tmp.badgeSurfaceLightMode;
   let str = "white";
@@ -132,7 +132,7 @@ export function IconTextBadge(isDark) {
   isDark = isDark.isDark;
   ({ icon, label } = isDark);
   const tmp = closure_7();
-  const items = [tmp.iconTextBadge, ];
+  items = [tmp.iconTextBadge, ];
   const obj = { style: items, children: null };
   items[1] = isDark ? tmp.badgeSurfaceDarkMode : tmp.badgeSurfaceLightMode;
   let str = "white";
@@ -144,7 +144,7 @@ export function IconTextBadge(isDark) {
   if (isDark) {
     str2 = "text-overlay-dark";
   }
-  items1[1] = hasOwnProperty(Text_Text.Text, { variant: "text-xs/bold", color: str2, style: tmp.badgeTextUppercase, children: label });
+  items1[1] = hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", color: str2, style: tmp.badgeTextUppercase, children: label });
   obj.children = items1;
   return timestampProducer(View, obj);
 }

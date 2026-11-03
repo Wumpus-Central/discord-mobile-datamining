@@ -1,8 +1,8 @@
-// === Module 13008: useConjureProjectShareTarget ===
+// === Module 13144: useConjureProjectShareTarget ===
 
-// Module 13008 (useConjureProjectShareTarget)
-import _modDef3868 from "module_3868" /* 3868 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 13144 (useConjureProjectShareTarget)
+import _modDef3995 from "module_3995" /* 3995 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 function useConjureProjectShareTargetDetails(project) {
@@ -12,12 +12,12 @@ function useConjureProjectShareTargetDetails(project) {
   }
   let intl = guild_id;
   let stringResult = dependencyMap;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guild_id];
   const stateFromStores = guild_id(504).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != guild_id) {
-      let guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       if (guild == null) {
         guild = null;
       }
@@ -32,10 +32,12 @@ function useConjureProjectShareTargetDetails(project) {
       if ("user" === project.install_scope) {
         const obj2 = { kind: "user", label: null };
         intl = intl(1113).intl;
-        stringResult = intl.string(_modDef3868.KxFFKT);
+        stringResult = intl.string(_modDef3995.KxFFKT);
         obj2.label = stringResult;
-      } else if (null != stateFromStores) {
-        const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
+      } else if ("guild" === project.install_scope) {
+        if (null != stateFromStores) {
+          const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
+        }
       }
     }
   }
@@ -57,9 +59,9 @@ export default function useConjureProjectShareTarget(project) {
 };
 export { useConjureProjectShareTargetDetails };
 export function isConjureProjectWithoutServer(project) {
-  let tmp = null == project.guild_id;
+  let tmp = "guild" === project.install_scope;
   if (tmp) {
-    tmp = "user" !== project.install_scope;
+    tmp = null == project.guild_id;
   }
   if (tmp) {
     tmp = null == project.install_scope_setup;

@@ -1,13 +1,13 @@
-// === Module 9317: useShouldOpenGameProfileModal ===
+// === Module 9445: useShouldOpenGameProfileModal ===
 
-// Module 9317 (useShouldOpenGameProfileModal)
+// Module 9445 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import utils from "utils" /* 5660 */;
-import GameFlags from "GameFlags" /* 9318 */;
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import utils from "utils" /* 5780 */;
+import GameFlags from "GameFlags" /* 9446 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2014 */;
+import GameStore from "GameStore" /* 2143 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
     shouldOpenGameProfile = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_DISABLED);
     const obj2 = require("FlagUtils");
   }
-  let items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
+  items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
   const effect = isLoading.useEffect(() => {
     let current = ref.current;
     if (!current) {
@@ -56,7 +56,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
       _modDef38(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
       let flag = shouldOpenGameProfile;
       if (null == gameRecord) {
-        const items = [obj.NoMatch];
+        items = [obj.NoMatch];
         let tmp11 = items;
       } else {
         const items1 = [];
@@ -94,7 +94,7 @@ export function isGameDisabled(gameFlags) {
 }
 export function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {
-    const items = [obj.NoMatch];
+    items = [obj.NoMatch];
     let arr = items;
   } else {
     const items1 = [];
@@ -114,7 +114,7 @@ export function gameIsAcceptable(gameFlags) {
 export function gameIdIsAcceptable(arg0) {
   const game = GameStore.getGame(arg0);
   if (null == game) {
-    const items = [obj.NoMatch];
+    items = [obj.NoMatch];
     let arr = items;
   } else {
     const items1 = [];

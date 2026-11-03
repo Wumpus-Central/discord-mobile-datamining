@@ -1,9 +1,9 @@
-// === Module 14692: QuestRewardTile ===
+// === Module 14823: QuestRewardTile ===
 
-// Module 14692 (QuestRewardTile)
-import AssetUtils from "AssetUtils" /* 9695 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14693 */;
+// Module 14823 (QuestRewardTile)
+import AssetUtils from "AssetUtils" /* 9827 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9832 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14824 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
   const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
-  const items = [quest];
+  items = [quest];
   const tmp3 = useMemo(() => QuestRewardUtils.getQuestPrimaryReward(quest), items);
   if (null != tmp3.name) {
     let name = tmp3.name;

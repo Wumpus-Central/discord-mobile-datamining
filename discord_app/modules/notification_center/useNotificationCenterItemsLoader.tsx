@@ -1,19 +1,19 @@
-// === Module 18487: useNotificationCenterItemsLoader ===
+// === Module 18641: useNotificationCenterItemsLoader ===
 
-// Module 18487 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18488 */;
+// Module 18641 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7399 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6887 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6858 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18486 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7007 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6978 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18640 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 
@@ -40,7 +40,7 @@ export function useNotificationCenterItemsLoader(isFocused) {
   const items2 = [c7];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => ({ initialized: _undefined.initialized, loading: _undefined.loading, items: _undefined.items, hasMore: _undefined.hasMore, cursor: _undefined.cursor, errored: _undefined.errored }));
   initialized = stateFromStoresObject.initialized;
-  const items = stateFromStoresObject.items;
+  items = stateFromStoresObject.items;
   const hasMore = stateFromStoresObject.hasMore;
   const cursor = stateFromStoresObject.cursor;
   const errored = stateFromStoresObject.errored;
@@ -126,7 +126,7 @@ export function useNotificationCenterItemsLoader(isFocused) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

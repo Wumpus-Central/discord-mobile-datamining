@@ -1,15 +1,15 @@
-// === Module 16932: BountiesScrollVideoItem ===
+// === Module 17075: BountiesScrollVideoItem ===
 
-// Module 16932 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 6786 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14699 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16933 */;
+// Module 17075 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 6906 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14830 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17076 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9555 */;
-import BountyStore from "BountyStore" /* 7845 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9687 */;
+import BountyStore from "BountyStore" /* 7969 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -38,7 +38,7 @@ function BountiesScrollVideoItemInner(bounty) {
   let flushProgress;
   let handleVideoProgressAnalytics;
   isEndCardVisible = undefined;
-  const items = [width, height];
+  items = [width, height];
   const memo = isScrollingInBoundsSharedValue.useMemo(() => {
     const size = { width, height };
     return size;
@@ -124,7 +124,7 @@ function BountiesScrollVideoItemInner(bounty) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ function BountiesScrollVideoItemInner(bounty) {
             });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -210,7 +210,7 @@ function BountiesScrollVideoItemInner(bounty) {
   let obj4 = { bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: initialProgress.duration, wasPreloaded: false, verticalScrollingPosition: index, isActive };
   const tmp2Result6 = bounty(width[14]);
   let obj5 = { endMode: bountyVideoEndMode, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback1, onVideoProgress: callback2, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, playerRef: ref, initialProgressSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: null };
-  let duration = null;
+  duration = null;
   if (initialProgress.duration > 0) {
     duration = initialProgress.duration;
   }
@@ -278,7 +278,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6781).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6901).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -310,10 +310,10 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14699).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14830).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(6788).AdCreativeType.BOUNTY,
-    questContent: bounty(6786).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(6908).AdCreativeType.BOUNTY,
+    questContent: bounty(6906).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

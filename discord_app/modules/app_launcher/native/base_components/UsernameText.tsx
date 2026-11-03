@@ -1,8 +1,8 @@
-// === Module 12517: UsernameText ===
+// === Module 12653: UsernameText ===
 
-// Module 12517 (UsernameText)
-import Text_Text from "Text/Text" /* 5624 */;
-import NicknameUtils from "NicknameUtils" /* 6041 */;
+// Module 12653 (UsernameText)
+import Text_Text from "Text/Text" /* 5747 */;
+import NicknameUtils from "NicknameUtils" /* 6161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function UsernameText(color) {
     let str1 = user.toString();
   } else {
     const obj3 = { children: null };
-    const items = [user.toString(), ];
+    items = [user.toString(), ];
     const obj4 = {};
     const merged = Object.assign(obj);
     obj4.color = "text-muted";

@@ -1,14 +1,14 @@
-// === Module 11059: usePreviewableMedia ===
+// === Module 11196: usePreviewableMedia ===
 
-// Module 11059 (usePreviewableMedia)
+// Module 11196 (usePreviewableMedia)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
-import inlineStyles from "inlineStyles" /* 8031 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9382 */;
-import WaveformIcon from "WaveformIcon" /* 11060 */;
-import FileIcon from "FileIcon" /* 11062 */;
+import useToken from "useToken" /* 5719 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
+import inlineStyles from "inlineStyles" /* 8155 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9510 */;
+import WaveformIcon from "WaveformIcon" /* 11197 */;
+import FileIcon from "FileIcon" /* 11199 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -21,7 +21,7 @@ function VoiceMessageIcon() {
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_SUBTLE);
   const size = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
   size.children = React5(inlineStyles.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
-  const items = [React5(inlineStylesDefault, size), ];
+  items = [React5(inlineStylesDefault, size), ];
   const obj4 = { style: tmp.voiceMessageIconOverlay, children: null };
   const items1 = [React5(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), React5(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" })];
   obj4.children = items1;
@@ -32,7 +32,7 @@ function VoiceMessageIcon() {
 function getBasePreviewableMedia(arg0) {
   let obj;
   ({ message, isForward } = arg0);
-  const items = [];
+  items = [];
   if (message.attachments.length > 0) {
     const attachments = message.attachments;
     if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
@@ -163,7 +163,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -178,9 +178,9 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 
 export { PreviewableMediaTypes };
 export function usePreviewableMedia(message) {
-  let items = [message];
+  items = [message];
   return noop.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [...getBasePreviewableMedia({ message, isForward: false })];
     items.push.apply(items1);
     if (isForwardMessageDefault(message)) {

@@ -1,19 +1,19 @@
-// === Module 16785: ConnectGuardianCard ===
+// === Module 16928: ConnectGuardianCard ===
 
-// Module 16785 (ConnectGuardianCard)
+// Module 16928 (ConnectGuardianCard)
 import nativeDefault from "native" /* 575 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16782 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16925 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7716).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7840).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.compactContainer = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
@@ -40,7 +40,7 @@ export function ConnectGuardianCard(linkCode) {
   }
   let id;
   const tmp = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = linkCode(id[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {

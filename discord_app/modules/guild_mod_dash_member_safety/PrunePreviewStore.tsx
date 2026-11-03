@@ -1,6 +1,6 @@
-// === Module 18657: PrunePreviewStore ===
+// === Module 18815: PrunePreviewStore ===
 
-// Module 18657 (PrunePreviewStore)
+// Module 18815 (PrunePreviewStore)
 import _slicedToArray from "module_32" /* 32 */;
 
 let c1 = 3600000;
@@ -10,7 +10,7 @@ let obj3 = module_560.create((arg0) => {
   return {
     entries: {},
     setPreview(arg0, arg1, arg2, count, isFinished) {
-      const items = [...arg2];
+      items = [...arg2];
       const sorted = items.sort();
       closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
       count((arg0) => {
@@ -50,24 +50,24 @@ const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/
 
 export const CACHE_TTL_MS = 3600000;
 export function getPrunePreviewKey(arg0, arg1, arg2) {
-  const items = [...arg2];
+  items = [...arg2];
   const sorted = items.sort();
   return "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
 }
 export const usePrunePreviewStore = obj3;
 export function setPrunePreview(arg0, arg1, arg2, arg3, arg4) {
-  const state = obj3.getState();
+  state = obj3.getState();
   state.setPreview(arg0, arg1, arg2, arg3, arg4);
 }
 export function clearAllPrunePreviews() {
-  const state = obj3.getState();
+  state = obj3.getState();
   state.clear();
 }
 export function usePrunePreview(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   let tmp = arg2((arg0) => {
-    const items = [...closure_2];
+    items = [...closure_2];
     const sorted = items.sort();
     const tmp = arg0.entries["" + closure_0 + ":" + closure_1 + ":" + sorted.join(sorted, ",")];
     let tmp2 = null;
@@ -93,8 +93,8 @@ export function usePrunePreview(arg0, arg1, arg2) {
   return obj;
 }
 export function getPrunePreview(arg0, arg1, arg2) {
-  const items = [];
-  const state = obj3.getState();
+  items = [];
+  state = obj3.getState();
   HermesBuiltin.arraySpread(arg2, 0);
   const sorted = items.sort();
   const tmp3 = state.entries["" + arg0 + ":" + arg1 + ":" + sorted.join(sorted, ",")];

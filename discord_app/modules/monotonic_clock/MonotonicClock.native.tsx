@@ -1,7 +1,7 @@
-// === Module 7644: MonotonicClock ===
+// === Module 7768: MonotonicClock ===
 
-// Module 7644 (MonotonicClock)
-import clock from "clock" /* 1364 */;
+// Module 7768 (MonotonicClock)
+import clock from "clock" /* 1366 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/monotonic_clock/MonotonicClock.native.tsx");

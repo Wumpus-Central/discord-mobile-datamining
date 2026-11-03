@@ -1,10 +1,10 @@
-// === Module 18735: FileOrLinkGridPlaceholder ===
+// === Module 18893: FileOrLinkGridPlaceholder ===
 
-// Module 18735 (FileOrLinkGridPlaceholder)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import useFontScale from "useFontScale" /* 5642 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18711 */;
-import SearchListCard from "SearchListCard" /* 18736 */;
+// Module 18893 (FileOrLinkGridPlaceholder)
+import _modDef1652 from "module_1652" /* 1652 */;
+import useFontScale from "useFontScale" /* 5762 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18869 */;
+import SearchListCard from "SearchListCard" /* 18894 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   const width = imageStyle.width;
   const sum = imageStyle.height + 108 * useFontScale.useFontScale();
   c1 = sum;
-  const items = [width, sum];
+  items = [width, sum];
   const memo = noop.useMemo(() => {
     const size = { width, height };
     return size;
@@ -26,5 +26,5 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   const obj3 = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj3.style = items1;
-  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
 };

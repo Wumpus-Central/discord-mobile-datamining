@@ -1,12 +1,12 @@
-// === Module 14776: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 14907: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 14776 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 14907 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1113 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10244 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10246 */;
-import GifIcon from "GifIcon" /* 10260 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10374 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10376 */;
+import GifIcon from "GifIcon" /* 10390 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default noop.memo(function GIFFavButton(source) {
   let YELLOW_300 = isFavoriteGIF;
   let obj = source(isFavoriteGIF[2]);
   isFavoriteGIF = obj.useIsFavoriteGIF(source(isFavoriteGIF[3]).gifUrlKey(uri));
-  const items = [isFavoriteGIF, , , , , , , ];
+  items = [isFavoriteGIF, , , , , , , ];
   ({ embedProviderName: arr[1], height: arr[2], isGIFV: arr[3], thumbnail: arr[4], uri: arr[5], width: arr[6] } = source);
   items[7] = uri;
   const callback = noop.useCallback(() => {

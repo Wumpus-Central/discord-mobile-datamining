@@ -1,28 +1,28 @@
-// === Module 19571: InterestGamePicker ===
+// === Module 18575: InterestGamePicker ===
 
-// Module 19571 (InterestGamePicker)
+// Module 18575 (InterestGamePicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2408 from "module_2408" /* 2408 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import useGame2 from "useGame" /* 7480 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8681 */;
+import _modDef2537 from "module_2537" /* 2537 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import useGame2 from "useGame" /* 7604 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2014 */;
+import GameStore from "GameStore" /* 2143 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(19572);
-({ GRID_COLUMNS: c10, GRID_GAP } = InterestGamePickerConstants);
+const InterestGamePickerConstants = fn(18576);
+({ GRID_COLUMNS: closure_10, GRID_GAP } = InterestGamePickerConstants);
 ({ MAX_SELECTIONS: closure_12, MIN_SELECTIONS: map1, SCREEN_HORIZONTAL_PADDING } = InterestGamePickerConstants);
 ({ THUMBNAIL_HIT_SLOP: closure_15, THUMBNAIL_WIDTH } = InterestGamePickerConstants);
 const TILE_ASPECT_RATIO = InterestGamePickerConstants.TILE_ASPECT_RATIO;
 ({ FOOTER_BORDER_WIDTH, FOOTER_BOTTOM_PADDING, FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { screen: { flex: 1 }, body: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, header: null, content: null, intro: null, subtitle: null, search: null, grid: null, tile: null, selected: null, status: null, footer: null, footerContent: null, thumbnails: null, thumbnail: null, footerActions: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.header = { height: nativeDefault.space.PX_64, paddingHorizontal: SCREEN_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "flex-end" };
@@ -59,48 +59,45 @@ export default function InterestGamePicker(catalog) {
   let minSelection = catalog.minSelection;
   ({ title, subtitle } = catalog);
   if (minSelection === undefined) {
-    minSelection = closure_13;
+    minSelection = memo;
   }
   const onContinue = catalog.onContinue;
   const onSkip = catalog.onSkip;
-  noop = undefined;
   first = undefined;
-  closure_6 = undefined;
+  closure_5 = undefined;
   let bound;
   let results;
   onSelect = undefined;
-  closure_13 = undefined;
-  closure_14 = undefined;
-  let memo;
+  closure_11 = undefined;
+  max = undefined;
+  memo = undefined;
   let memo2;
+  let rounded;
   let memo4;
   let memo5;
   let length;
   let ref2;
   let callback;
-  closure_22 = undefined;
-  const tmp = ref2();
+  closure_21 = undefined;
+  const tmp = callback();
   _slicedToArray = tmp;
-  [tmp3, c4] = noop.useState(0);
-  [first, closure_6] = noop.useState([]);
-  const tmp6 = _slicedToArray(noop.useState(""), 2);
-  const rounded = Math.floor((tmp3 - 2 * closure_14 - onSelect * (results - 1)) / results);
-  const ref = noop.useRef(false);
+  [first, closure_5] = first.useState([]);
+  const tmp4 = _slicedToArray(first.useState(""), 2);
+  ref = first.useRef(false);
   if (Number.isFinite(minSelection)) {
     const _Math = Math;
     const _Math2 = Math;
-    bound = Math.min(Math.max(minSelection, closure_13), memo);
+    bound = Math.min(Math.max(minSelection, memo), max);
   } else {
-    bound = closure_13;
+    bound = memo;
   }
-  let tmp2 = _slicedToArray(noop.useState(0), 2);
   const obj2 = catalog(onSkip[9]);
   const debouncedGameAutocomplete = obj2.useDebouncedGameAutocomplete(str, { surface: catalog(onSkip[10]).GameSearchSurface.INTEREST_PICKER, filterGroup: catalog(onSkip[11]).GameSearchFilterGroup.DEFAULT });
   results = debouncedGameAutocomplete.results;
   ({ error, onSelect } = debouncedGameAutocomplete);
-  let items = [results];
+  items = [results];
   memo = obj.useMemo(() => {
-    let items = results;
+    items = results;
     if (results == null) {
       items = [];
     }
@@ -109,33 +106,33 @@ export default function InterestGamePicker(catalog) {
   }, items);
   let items1 = [memo, catalog, first];
   const memo1 = obj.useMemo(() => {
-    const items = [...first];
+    items = [...first];
     return Array.from(new Set(items));
   }, items1);
-  const tmp17 = onContinue(onSkip[13])(memo1);
-  closure_13 = tmp17;
-  const tmp18 = tmp6[0].trim().length > 0;
-  let tmp19 = tmp18;
-  if (tmp18) {
-    tmp19 = null == error;
+  const tmp14 = onContinue(onSkip[13])(memo1);
+  closure_11 = tmp14;
+  const tmp15 = tmp4[0].trim().length > 0;
+  let tmp16 = tmp15;
+  if (tmp15) {
+    tmp16 = null == error;
   }
-  closure_14 = tmp19;
-  let tmp21 = catalog;
-  if (tmp19) {
-    tmp21 = memo;
+  max = tmp16;
+  let tmp18 = catalog;
+  if (tmp16) {
+    tmp18 = memo;
   }
-  memo = tmp21;
+  memo = tmp18;
   let obj3 = { surface: catalog(onSkip[10]).GameSearchSurface.INTEREST_PICKER, filterGroup: catalog(onSkip[11]).GameSearchFilterGroup.DEFAULT };
-  let items2 = [bound];
-  const items3 = [tmp21];
+  let items2 = [onSelect];
+  const items3 = [tmp18];
   const stateFromStores = catalog(onSkip[14]).useStateFromStores(items2, () => memo.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items3);
-  const tmp11Result = catalog(onSkip[14]);
-  const items4 = [bound];
+  const tmp8Result = catalog(onSkip[14]);
+  const items4 = [onSelect];
   const items5 = [catalog];
-  let stateFromStores1 = catalog(onSkip[14]).useStateFromStores(items4, () => catalog.some((item) => bound.didFetchingFail(item)), items5);
-  const items6 = [tmp17];
-  memo2 = obj.useMemo(() => new Map(closure_13.map((id) => {
-    const items = [id.id, id];
+  let stateFromStores1 = catalog(onSkip[14]).useStateFromStores(items4, () => catalog.some((item) => onSelect.didFetchingFail(item)), items5);
+  const items6 = [tmp14];
+  memo2 = obj.useMemo(() => new Map(closure_11.map((id) => {
+    items = [id.id, id];
     return items;
   })), items6);
   const items7 = [catalog, memo2];
@@ -145,7 +142,7 @@ export default function InterestGamePicker(catalog) {
       value = closure_0.get(item);
       if (null != value) {
         if (!obj.isAgeRestrictedContentClassification(value.contentClassification)) {
-          let items = [value];
+          items = [value];
         }
         return items;
       }
@@ -153,14 +150,14 @@ export default function InterestGamePicker(catalog) {
     });
   }, items7);
   const items8 = [memo, memo2];
-  if (tmp19) {
+  if (tmp16) {
     memo3 = obj.useMemo(() => {
       closure_0 = memo2;
       return memo.flatMap((item) => {
         value = closure_0.get(item);
         if (null != value) {
           if (!obj.isAgeRestrictedContentClassification(value.contentClassification)) {
-            let items = [value];
+            items = [value];
           }
           return items;
         }
@@ -168,30 +165,45 @@ export default function InterestGamePicker(catalog) {
       });
     }, items8);
   }
-  let isLoading = tmp18;
-  if (tmp18) {
+  let isLoading = tmp15;
+  if (tmp15) {
     isLoading = debouncedGameAutocomplete.isLoading;
   }
   if (!isLoading) {
     isLoading = stateFromStores;
   }
-  let tmp25 = tmp18;
-  if (tmp18) {
-    tmp25 = !isLoading;
+  let tmp34Result = tmp15;
+  if (tmp15) {
+    tmp34Result = !isLoading;
   }
-  if (tmp25) {
-    tmp25 = null == error;
+  if (tmp34Result) {
+    tmp34Result = null == error;
   }
-  if (tmp25) {
-    tmp25 = 0 === memo3.length;
+  if (tmp34Result) {
+    tmp34Result = 0 === memo3.length;
   }
-  let tmp27 = !tmp18;
-  if (!tmp18) {
-    tmp27 = !isLoading;
+  let tmp34Result2 = !tmp15;
+  if (!tmp15) {
+    tmp34Result2 = !isLoading;
   }
-  if (tmp27) {
-    tmp27 = 0 === memo3.length;
+  if (tmp34Result2) {
+    tmp34Result2 = 0 === memo3.length;
   }
+  let tmp36Result = !isLoading;
+  if (!isLoading) {
+    tmp36Result = !tmp34Result;
+  }
+  if (tmp36Result) {
+    tmp36Result = !tmp34Result2;
+  }
+  const tmp26 = onContinue(onSkip[15])({ isMounted: tmp36Result });
+  const width = tmp26.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp26);
+  if (undefined !== width) {
+    num = width;
+  }
+  rounded = Math.floor((num - 2 * memo2 - closure_11 * (memo - 1)) / memo);
   const items9 = [memo2, first];
   memo4 = obj.useMemo(() => {
     closure_0 = memo2;
@@ -199,7 +211,7 @@ export default function InterestGamePicker(catalog) {
       value = closure_0.get(item);
       if (null != value) {
         if (!obj.isAgeRestrictedContentClassification(value.contentClassification)) {
-          let items = [value];
+          items = [value];
         }
         return items;
       }
@@ -217,18 +229,18 @@ export default function InterestGamePicker(catalog) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl = util.intl;
       const obj = { count: length, max };
-      AccessibilityAnnouncer.announce(intl.formatToPlainString(_modDef2408.v9v0uY, obj));
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(_modDef2537.v9v0uY, obj));
     }
   }, items11);
   callback = obj.useCallback((arg0) => {
     closure_0 = arg0;
-    closure_6((arr) => {
+    closure_5((arr) => {
       if (arr.includes(closure_0)) {
         let found = arr.filter((item) => item !== closure_1_0);
       } else {
         found = arr;
-        if (arr.length < memo) {
-          const items = [];
+        if (arr.length < closure_12) {
+          items = [];
           items[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
           found = items;
         }
@@ -236,19 +248,16 @@ export default function InterestGamePicker(catalog) {
       return found;
     });
   }, []);
-  const items12 = [tmp19, callback, onSelect];
-  closure_22 = obj.useCallback((arg0) => {
-    if (closure_14) {
+  const items12 = [tmp16, callback, onSelect];
+  closure_21 = obj.useCallback((arg0) => {
+    if (closure_12) {
       onSelect(arg0);
     }
     callback(arg0);
   }, items12);
   const items13 = [bound, onContinue, memo5];
-  const callback1 = obj.useCallback((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, []);
   const items14 = [onSkip, memo5];
-  const callback2 = obj.useCallback(() => {
+  const callback1 = obj.useCallback(() => {
     let current = ref.current;
     if (!current) {
       current = memo5.length < bound;
@@ -259,7 +268,7 @@ export default function InterestGamePicker(catalog) {
     }
   }, items13);
   const items15 = [catalog];
-  const callback3 = obj.useCallback(() => {
+  const callback2 = obj.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
       onSkip(memo5);
@@ -267,98 +276,89 @@ export default function InterestGamePicker(catalog) {
   }, items14);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.body, children: null };
-  const callback4 = obj.useCallback(() => {
+  const callback3 = obj.useCallback(() => {
     const useGame = useGame2.useGame;
-    let items = [
+    items = [
       ...catalog.map((item) => {
-        const items = [item];
+        items = [item];
         return items;
       })
     ];
     useGame.fetchMany.apply(items);
   }, items15);
   const obj6 = { top: true, children: null };
-  const tmp11Result2 = catalog(onSkip[14]);
   const tmp28 = memo5.length >= bound;
-  obj6.children = memo5(ref, { style: tmp.header, children: memo5(onContinue(onSkip[20]), { onPress: callback3 }) });
-  const items16 = [memo5(catalog(onSkip[19]).SafeAreaPaddingView, obj6), ];
+  const tmp8Result2 = catalog(onSkip[14]);
+  obj6.children = length(results, { style: tmp.header, children: length(onContinue(onSkip[21]), { onPress: callback2 }) });
+  const items16 = [length(catalog(onSkip[20]).SafeAreaPaddingView, obj6), ];
   const obj8 = { contentContainerStyle: tmp.content, keyboardShouldPersistTaps: "handled", children: null };
   const obj9 = { style: tmp.intro, children: null };
-  const items17 = [memo5(catalog(onSkip[21]).Heading, { variant: "heading-xl/bold", color: "text-strong", children: title }), memo5(catalog(onSkip[21]).Text, { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: subtitle })];
+  const items17 = [length(catalog(onSkip[22]).Heading, { variant: "heading-xl/semibold", color: "text-strong", children: title }), length(catalog(onSkip[22]).Text, { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: subtitle })];
   obj9.children = items17;
-  const items18 = [length(ref, obj9), , , , , ];
+  const items18 = [ref2(results, obj9), , , , , ];
   const obj11 = { style: tmp.search, children: null };
   const obj12 = { accessibilityLabel: null, onChange: null, placeholder: null };
-  let intl = tmp11(tmp12[16]).intl;
-  obj12.accessibilityLabel = intl.string(onContinue(onSkip[17])["8Xenq+"]);
-  obj12.onChange = tmp6[1];
-  const intl2 = tmp11(tmp12[16]).intl;
-  obj12.placeholder = intl2.string(onContinue(onSkip[17])["8Xenq+"]);
-  obj11.children = memo5(catalog(onSkip[22]).SearchBar, obj12);
-  items18[1] = memo5(ref, obj11);
-  let tmp37Result = isLoading;
+  let intl = tmp8(tmp9[17]).intl;
+  obj12.accessibilityLabel = intl.string(onContinue(onSkip[18])["8Xenq+"]);
+  obj12.onChange = tmp4[1];
+  const intl2 = tmp8(tmp9[17]).intl;
+  obj12.placeholder = intl2.string(onContinue(onSkip[18])["8Xenq+"]);
+  obj11.children = length(catalog(onSkip[23]).SearchBar, obj12);
+  items18[1] = length(results, obj11);
   if (isLoading) {
     const obj13 = { style: tmp.status, children: null };
     const obj14 = { accessibilityLabel: null };
-    const intl3 = tmp11(tmp12[16]).intl;
-    obj14.accessibilityLabel = intl3.string(tmp11(tmp12[16]).t.ZTNur7);
-    obj13.children = tmp37(tmp11(tmp12[23]).ActivityIndicator, obj14);
-    tmp37Result = tmp37(tmp36, obj13);
+    const intl3 = tmp8(tmp9[17]).intl;
+    obj14.accessibilityLabel = intl3.string(tmp8(tmp9[17]).t.ZTNur7);
+    obj13.children = tmp36(tmp8(tmp9[24]).ActivityIndicator, obj14);
+    isLoading = tmp36(tmp35, obj13);
   }
-  items18[2] = tmp37Result;
-  let tmp35Result = tmp25;
-  if (tmp25) {
+  items18[2] = isLoading;
+  if (tmp34Result) {
     const obj15 = { style: tmp.status, children: null };
     const obj16 = { variant: "text-md/semibold", color: "text-strong", children: null };
-    const intl4 = tmp11(tmp12[16]).intl;
-    obj16.children = intl4.string(tmp16(tmp12[17]).w5cRz0);
-    const items19 = [tmp37(tmp11(tmp12[21]).Text, obj16), ];
+    const intl4 = tmp8(tmp9[17]).intl;
+    obj16.children = intl4.string(tmp13(tmp9[18]).w5cRz0);
+    const items19 = [tmp36(tmp8(tmp9[22]).Text, obj16), ];
     const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    const intl5 = tmp11(tmp12[16]).intl;
-    obj17.children = intl5.string(tmp16(tmp12[17]).Khsqzs);
-    items19[1] = tmp37(tmp11(tmp12[21]).Text, obj17);
+    const intl5 = tmp8(tmp9[17]).intl;
+    obj17.children = intl5.string(tmp13(tmp9[18]).Khsqzs);
+    items19[1] = tmp36(tmp8(tmp9[22]).Text, obj17);
     obj15.children = items19;
-    tmp35Result = tmp35(tmp36, obj15);
+    tmp34Result = tmp34(tmp35, obj15);
   }
-  items18[3] = tmp35Result;
-  let tmp35Result2 = tmp27;
-  if (tmp27) {
+  items18[3] = tmp34Result;
+  if (tmp34Result2) {
     const obj18 = { style: tmp.status, children: null };
-    const intl6 = tmp11(tmp12[16]).intl;
-    const tmp16Result = tmp16(tmp12[17]);
-    const obj19 = { variant: "text-md/semibold", color: "text-strong", children: intl6.string(stateFromStores1 ? tmp16Result["+np3yH"] : tmp16Result.V7UsE0) };
-    const items20 = [tmp37(tmp11(tmp12[21]).Text, obj19), , ];
-    const intl7 = tmp11(tmp12[16]).intl;
-    const tmp16Result2 = tmp16(tmp12[17]);
-    const obj20 = { variant: "text-sm/normal", color: "text-muted", children: intl7.string(stateFromStores1 ? tmp16Result2.CjS26n : tmp16Result2.qx4Gb6) };
-    items20[1] = tmp37(tmp11(tmp12[21]).Text, obj20);
+    const intl6 = tmp8(tmp9[17]).intl;
+    const tmp13Result = tmp13(tmp9[18]);
+    const obj19 = { variant: "text-md/semibold", color: "text-strong", children: intl6.string(stateFromStores1 ? tmp13Result["+np3yH"] : tmp13Result.V7UsE0) };
+    const items20 = [tmp36(tmp8(tmp9[22]).Text, obj19), , ];
+    const intl7 = tmp8(tmp9[17]).intl;
+    const tmp13Result2 = tmp13(tmp9[18]);
+    const obj20 = { variant: "text-sm/normal", color: "text-muted", children: intl7.string(stateFromStores1 ? tmp13Result2.CjS26n : tmp13Result2.qx4Gb6) };
+    items20[1] = tmp36(tmp8(tmp9[22]).Text, obj20);
     if (stateFromStores1) {
-      const obj21 = { onPress: callback4, size: "sm", text: null, variant: "secondary" };
-      const intl8 = tmp11(tmp12[16]).intl;
-      obj21.text = intl8.string(tmp16(tmp12[17]).uGhymA);
-      stateFromStores1 = tmp37(tmp11(tmp12[24]).Button, obj21);
+      const obj21 = { onPress: callback3, size: "sm", text: null, variant: "secondary" };
+      const intl8 = tmp8(tmp9[17]).intl;
+      obj21.text = intl8.string(tmp13(tmp9[18]).uGhymA);
+      stateFromStores1 = tmp36(tmp8(tmp9[25]).Button, obj21);
     }
     items20[2] = stateFromStores1;
     obj18.children = items20;
-    tmp35Result2 = tmp35(tmp36, obj18);
+    tmp34Result2 = tmp34(tmp35, obj18);
   }
-  items18[4] = tmp35Result2;
-  let tmp37Result2 = !isLoading;
-  if (!isLoading) {
-    tmp37Result2 = !tmp25;
-  }
-  if (tmp37Result2) {
-    tmp37Result2 = !tmp27;
-  }
-  if (tmp37Result2) {
+  items18[4] = tmp34Result2;
+  if (tmp36Result) {
     const obj22 = {
-      onLayout: callback1,
+      ref,
+      onLayout,
       style: tmp.grid,
       children: rounded > 0 && memo3.map((accessibilityLabel) => {
           let hasItem = first.includes(accessibilityLabel.id);
           let tmp2 = !hasItem;
           if (!hasItem) {
-            tmp2 = memo5.length >= memo;
+            tmp2 = memo5.length >= closure_12;
           }
           const obj = {
             accessibilityLabel: accessibilityLabel.name,
@@ -366,33 +366,33 @@ export default function InterestGamePicker(catalog) {
             accessibilityState: { disabled: tmp2, selected: hasItem },
             disabled: tmp2,
             onPress() {
-              return closure_22(accessibilityLabel.id);
+              return closure_21(accessibilityLabel.id);
             },
             style: null,
             children: null
           };
-          const items = [closure_3.tile, ];
-          const size = { width: rounded, height: rounded / memo4 };
+          items = [closure_3.tile, ];
+          const size = { width: rounded, height: rounded / memo5 };
           items[1] = size;
           obj.style = items;
-          const items1 = [memo5(onContinue(onSkip[25]), { game: accessibilityLabel, width: rounded }), ];
+          const items1 = [length(onContinue(onSkip[26]), { game: accessibilityLabel, width: rounded }), ];
           if (hasItem) {
             const obj3 = { pointerEvents: "none", style: null };
-            const items2 = [rounded.absoluteFillObject, closure_3.selected];
+            const items2 = [bound.absoluteFillObject, closure_3.selected];
             obj3.style = items2;
-            hasItem = memo5(closure_8, obj3);
+            hasItem = length(results, obj3);
           }
           items1[1] = hasItem;
           obj.children = items1;
-          return length(first, obj, accessibilityLabel.id);
+          return closure_19(closure_5, obj, accessibilityLabel.id);
         })
     };
-    tmp37Result2 = tmp37(tmp36, obj22);
-    const tmp45 = rounded > 0 && memo3.map((accessibilityLabel) => {
+    tmp36Result = tmp36(tmp35, obj22);
+    const tmp40 = rounded > 0 && memo3.map((accessibilityLabel) => {
       let hasItem = first.includes(accessibilityLabel.id);
       let tmp2 = !hasItem;
       if (!hasItem) {
-        tmp2 = memo5.length >= memo;
+        tmp2 = memo5.length >= closure_12;
       }
       const obj = {
         accessibilityLabel: accessibilityLabel.name,
@@ -400,89 +400,89 @@ export default function InterestGamePicker(catalog) {
         accessibilityState: { disabled: tmp2, selected: hasItem },
         disabled: tmp2,
         onPress() {
-          return closure_22(accessibilityLabel.id);
+          return closure_21(accessibilityLabel.id);
         },
         style: null,
         children: null
       };
-      const items = [closure_3.tile, ];
-      const size = { width: rounded, height: rounded / memo4 };
+      items = [closure_3.tile, ];
+      const size = { width: rounded, height: rounded / memo5 };
       items[1] = size;
       obj.style = items;
-      const items1 = [memo5(onContinue(onSkip[25]), { game: accessibilityLabel, width: rounded }), ];
+      const items1 = [length(onContinue(onSkip[26]), { game: accessibilityLabel, width: rounded }), ];
       if (hasItem) {
         const obj3 = { pointerEvents: "none", style: null };
-        const items2 = [rounded.absoluteFillObject, closure_3.selected];
+        const items2 = [bound.absoluteFillObject, closure_3.selected];
         obj3.style = items2;
-        hasItem = memo5(closure_8, obj3);
+        hasItem = length(results, obj3);
       }
       items1[1] = hasItem;
       obj.children = items1;
-      return length(first, obj, accessibilityLabel.id);
+      return closure_19(closure_5, obj, accessibilityLabel.id);
     });
   }
-  items18[5] = tmp37Result2;
+  items18[5] = tmp36Result;
   obj8.children = items18;
-  items16[1] = length(closure_6, obj8);
+  items16[1] = ref2(ref, obj8);
   obj5.children = items16;
-  const items21 = [length(ref, obj5), ];
+  const items21 = [ref2(results, obj5), ];
   const obj23 = { bottom: true, style: tmp.footer, children: null };
   const obj24 = { style: tmp.footerContent, children: null };
   const obj10 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: subtitle };
-  const obj7 = { style: tmp.header, children: memo5(onContinue(onSkip[20]), { onPress: callback3 }) };
+  const obj7 = { style: tmp.header, children: length(onContinue(onSkip[21]), { onPress: callback2 }) };
   const items22 = [
-    memo5(ref, {
+    length(results, {
       style: tmp.thumbnails,
       children: memo4.map((game) => {
         const obj = { accessibilityHint: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: null, onPress: null, style: null, children: null };
-        const intl = catalog(onSkip[16]).intl;
-        obj.accessibilityHint = intl.string(catalog(onSkip[16]).t.N86XcP);
+        const intl = catalog(onSkip[17]).intl;
+        obj.accessibilityHint = intl.string(catalog(onSkip[17]).t.N86XcP);
         obj.accessibilityLabel = game.name;
-        obj.hitSlop = memo;
+        obj.hitSlop = rounded;
         obj.onPress = function onPress() {
           return callback(game.id);
         };
         obj.style = closure_3.thumbnail;
-        obj.children = memo5(onContinue(onSkip[25]), { game, width: memo2 });
-        return memo5(first, obj, game.id);
+        obj.children = length(onContinue(onSkip[26]), { game, width: memo4 });
+        return length(closure_5, obj, game.id);
       })
     }),
 
   ];
   const obj26 = { style: tmp.footerActions, children: null };
   const obj27 = { variant: "text-sm/medium", color: "text-default", children: null };
-  const intl9 = tmp11(tmp12[16]).intl;
-  obj27.children = intl9.format(onContinue(onSkip[17]).v9v0uY, { count: memo5.length, max: memo });
-  const items23 = [memo5(catalog(onSkip[21]).Text, obj27), ];
+  const intl9 = tmp8(tmp9[17]).intl;
+  obj27.children = intl9.format(onContinue(onSkip[18]).v9v0uY, { count: memo5.length, max });
+  const items23 = [length(catalog(onSkip[22]).Text, obj27), ];
   const obj29 = { accessibilityLabel: null, disabled: null, icon: null, onPress: null, size: "lg", variant: "primary" };
-  const intl10 = tmp11(tmp12[16]).intl;
-  obj29.accessibilityLabel = intl10.string(catalog(onSkip[16]).t["3PatSz"]);
+  const intl10 = tmp8(tmp9[17]).intl;
+  obj29.accessibilityLabel = intl10.string(catalog(onSkip[17]).t["3PatSz"]);
   obj29.disabled = !tmp28;
   const obj25 = {
     style: tmp.thumbnails,
     children: memo4.map((game) => {
       const obj = { accessibilityHint: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: null, onPress: null, style: null, children: null };
-      const intl = catalog(onSkip[16]).intl;
-      obj.accessibilityHint = intl.string(catalog(onSkip[16]).t.N86XcP);
+      const intl = catalog(onSkip[17]).intl;
+      obj.accessibilityHint = intl.string(catalog(onSkip[17]).t.N86XcP);
       obj.accessibilityLabel = game.name;
-      obj.hitSlop = memo;
+      obj.hitSlop = rounded;
       obj.onPress = function onPress() {
         return callback(game.id);
       };
       obj.style = closure_3.thumbnail;
-      obj.children = memo5(onContinue(onSkip[25]), { game, width: memo2 });
-      return memo5(first, obj, game.id);
+      obj.children = length(onContinue(onSkip[26]), { game, width: memo4 });
+      return length(closure_5, obj, game.id);
     })
   };
-  const obj28 = { count: memo5.length, max: memo };
-  obj29.icon = memo5(catalog(onSkip[27]).ArrowLargeRightIcon, { color: onContinue(onSkip[7]).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
-  obj29.onPress = callback2;
-  items23[1] = memo5(catalog(onSkip[26]).IconButton, obj29);
+  const obj28 = { count: memo5.length, max };
+  obj29.icon = length(catalog(onSkip[28]).ArrowLargeRightIcon, { color: onContinue(onSkip[7]).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj29.onPress = callback1;
+  items23[1] = length(catalog(onSkip[27]).IconButton, obj29);
   obj26.children = items23;
-  items22[1] = length(ref, obj26);
+  items22[1] = ref2(results, obj26);
   obj24.children = items22;
-  obj23.children = length(ref, obj24);
-  items21[1] = memo5(catalog(onSkip[19]).SafeAreaPaddingView, obj23);
+  obj23.children = ref2(results, obj24);
+  items21[1] = length(catalog(onSkip[20]).SafeAreaPaddingView, obj23);
   obj4.children = items21;
-  return length(ref, obj4);
+  return ref2(results, obj4);
 };

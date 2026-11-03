@@ -1,20 +1,20 @@
-// === Module 17246: NoiseSuppressionKrispSetting ===
+// === Module 17389: NoiseSuppressionKrispSetting ===
 
-// Module 17246 (NoiseSuppressionKrispSetting)
+// Module 17389 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11956 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11957 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12093 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12094 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },
@@ -27,7 +27,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     obj2.label = intl.string(util.t.rdoNzt);
     obj2.disabled = noiseCancellationDeferredToSystem;
-    const items = [obj2, , ];
+    items = [obj2, , ];
     const obj3 = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
     const intl2 = util.intl;
     obj3.label = intl2.string(util.t.qXeYHw);
@@ -39,12 +39,12 @@ const radio = SettingBuilders.createRadio({
     return items;
   },
   usePredicate: function useHasNoiseSuppressionKrispSetting() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.hmfkCi)];
+    items = [intl.string(util.t.hmfkCi)];
     return items;
   }
 });

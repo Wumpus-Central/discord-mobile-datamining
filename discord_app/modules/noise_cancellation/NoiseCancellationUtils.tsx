@@ -1,9 +1,9 @@
-// === Module 11957: NoiseCancellationUtils ===
+// === Module 12094: NoiseCancellationUtils ===
 
-// Module 11957 (NoiseCancellationUtils)
+// Module 12094 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 11958 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 12095 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
 const size = fn(2);
@@ -18,7 +18,7 @@ export function getNoiseCancellationDeferredToSystem() {
   return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
 }
 export function useNoiseCancellationDeferredToSystem() {
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
     return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);

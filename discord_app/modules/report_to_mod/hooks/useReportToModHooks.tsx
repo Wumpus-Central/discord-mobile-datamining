@@ -1,14 +1,14 @@
-// === Module 10198: useReportToModHooks ===
+// === Module 10328: useReportToModHooks ===
 
-// Module 10198 (useReportToModHooks)
+// Module 10328 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7440 */;
-import ReportToModUtils from "ReportToModUtils" /* 7457 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7461 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import UserActionCreators from "UserActionCreators" /* 8752 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7564 */;
+import ReportToModUtils from "ReportToModUtils" /* 7581 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7585 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import UserActionCreators from "UserActionCreators" /* 8876 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MessageStore from "MessageStore" /* 6181 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -18,12 +18,12 @@ const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReport
 
 export function useIsReportToModEnabled(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
         tmp4 = getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
@@ -35,9 +35,9 @@ export function useIsReportToModEnabled(arg0) {
 }
 export function useReportToModChannelId(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -60,7 +60,7 @@ export function useIsModeratorReportPostChannel(isModeratorReportChannel) {
 }
 export function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
-  const items = [MessageStore];
+  items = [MessageStore];
   const stateFromStores = messageReference(504).useStateFromStores(items, () => {
     let message = null;
     if (null != messageReference) {

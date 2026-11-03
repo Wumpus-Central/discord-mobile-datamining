@@ -1,9 +1,9 @@
-// === Module 17750: BenchmarkResultsList ===
+// === Module 17893: BenchmarkResultsList ===
 
-// Module 17750 (BenchmarkResultsList)
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import startFrameMonitor from "startFrameMonitor" /* 17746 */;
+// Module 17893 (BenchmarkResultsList)
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import startFrameMonitor from "startFrameMonitor" /* 17889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function BenchmarkResultsList(results) {
   let tmp2 = null;
   if (0 !== results.length) {
     let obj = { title: "Results (newest first)", hasIcons: false, children: null };
-    const items = [
+    items = [
       results.map((kind) => {
           if ("mount" === kind.kind) {
             const obj = { label: null, subLabel: null };

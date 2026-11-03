@@ -1,8 +1,8 @@
-// === Module 12653: useConjurePublishedAppName ===
+// === Module 12789: useConjurePublishedAppName ===
 
-// Module 12653 (useConjurePublishedAppName)
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 12789 (useConjurePublishedAppName)
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePub
 
 export default function useConjurePublishedAppName(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore, ApplicationStore];
+  items = [ConjureProjectStore, ApplicationStore];
   return require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let str = "";

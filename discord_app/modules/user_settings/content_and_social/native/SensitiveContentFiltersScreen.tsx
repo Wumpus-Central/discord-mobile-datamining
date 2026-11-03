@@ -1,10 +1,10 @@
-// === Module 16716: SensitiveContentFiltersScreen ===
+// === Module 16859: SensitiveContentFiltersScreen ===
 
-// Module 16716 (SensitiveContentFiltersScreen)
+// Module 16859 (SensitiveContentFiltersScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 16717 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 16860 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
@@ -14,7 +14,7 @@ function SensitiveContentFiltersNotices() {
   const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
   return jsx(SettingsScreenNoticesDefault, { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS });
 }
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");
@@ -25,7 +25,7 @@ export default function UserSettingsSensitiveContentFilters() {
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.GYpoAq);
-    const items = [, , ];
+    items = [, , ];
     ({ EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0], EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1], EXPLICIT_MEDIA_FILTERS_GUILDS: arr[2] } = MobileUserSettings);
     obj3.settings = items;
     const intl2 = util.intl;

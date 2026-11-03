@@ -1,6 +1,6 @@
-// === Module 9746: applications ===
+// === Module 9878: applications ===
 
-// Module 9746 (applications)
+// Module 9878 (applications)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -157,7 +157,7 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
       name: "disclosure_type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
+            items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
             return items;
           }
     };
@@ -256,7 +256,7 @@ const items1 = [
     name: "disclosure_type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
+      items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
       return items;
     }
   },

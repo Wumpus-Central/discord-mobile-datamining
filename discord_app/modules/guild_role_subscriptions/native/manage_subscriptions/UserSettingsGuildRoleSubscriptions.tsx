@@ -1,13 +1,13 @@
-// === Module 17200: UserSettingsGuildRoleSubscriptions ===
+// === Module 17343: UserSettingsGuildRoleSubscriptions ===
 
-// Module 17200 (UserSettingsGuildRoleSubscriptions)
+// Module 17343 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 17201 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 17202 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 17206 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 17207 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 17344 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 17345 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 17349 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 17350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function GuildRoleSubscriptionsSectionHeader() {
   const obj2 = { variant: "eyebrow", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["KzCF/6"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj2), ];
+  items = [hasOwnProperty(Text_Text.Text, obj2), ];
   const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t["Y+ucR7"]);
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
@@ -56,7 +56,7 @@ export default function UserSettingsGuildRoleSubscriptions() {
     const obj4 = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
     ({ listContentContainer: obj3.contentContainerStyle, list: obj3.style } = tmp);
     const obj7 = { key, data: tmp5 };
-    const items = [obj7];
+    items = [obj7];
     obj4.sections = items;
     obj4.keyExtractor = function keyExtractor(id) {
       return id.id;

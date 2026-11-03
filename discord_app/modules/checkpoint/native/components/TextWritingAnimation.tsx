@@ -1,16 +1,16 @@
-// === Module 13638: TextWritingAnimation ===
+// === Module 13778: TextWritingAnimation ===
 
-// Module 13638 (TextWritingAnimation)
+// Module 13778 (TextWritingAnimation)
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 let require = fn;
 const noop = fn(19);
 ({ useContext: closure_4, useEffect: hasOwnProperty, useState: metroRequire } = noop);
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ hiddenText: { opacity: 0 }, animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/TextWritingAnimation.tsx");
@@ -30,7 +30,7 @@ export default function TextWritingAnimation(isStepHeading) {
   _slicedToArray = undefined;
   const tmp = closure_11();
   const tmp4 = closure_4(delay(stateFromStores[6]));
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp6 = _slicedToArray(closure_6(0), 2);
   _slicedToArray = tmp6[1];

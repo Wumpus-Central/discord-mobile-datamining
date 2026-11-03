@@ -1,17 +1,17 @@
-// === Module 16942: useBountiesModalVideoAnalytics ===
+// === Module 17085: useBountiesModalVideoAnalytics ===
 
-// Module 16942 (useBountiesModalVideoAnalytics)
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14684 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16933 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 16944 */;
+// Module 17085 (useBountiesModalVideoAnalytics)
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14815 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17076 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 17087 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 5901 */;
+import NetworkStore from "NetworkStore" /* 6021 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -71,7 +71,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
     return obj.getAdUser(bountyId(rewardDurationMs[8]).getQuestContentName(bountyId(rewardDurationMs[9]).QuestContent.VIDEO_MODAL_MOBILE));
   }), 1)[0];
   closure_12 = flag.useRef({ getImpressionId: getQuestImpressionId, bountyId, sourceQuestContent });
-  let items = [getQuestImpressionId, bountyId, sourceQuestContent];
+  items = [getQuestImpressionId, bountyId, sourceQuestContent];
   const layoutEffect = flag.useLayoutEffect(() => {
     closure_12.current = { getImpressionId: getQuestImpressionId, bountyId, sourceQuestContent };
   }, items);
@@ -98,7 +98,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -120,7 +120,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(6786).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(6906).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -133,7 +133,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(7853).getQuestLogger();
+            const questLogger = closure_0(7977).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -146,11 +146,11 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             return obj7;
           } else {
             closure_129_5 = value;
-            const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(6788).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
+            const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(6908).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
             const obj10 = {};
-            const obj9 = closure_0(7862);
-            const merged = Object.assign(closure_0(7871).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(7819)());
+            const obj9 = closure_0(7986);
+            const merged = Object.assign(closure_0(7995).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(7943)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -161,7 +161,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               if (obj.isIOS()) {
                 advertisingId = closure_129_5.advertisingId;
               }
-              obj = closure_0(1375);
+              obj = closure_0(1377);
             }
             obj10.apple_advertising_id = advertisingId;
             let advertisingId1 = null;
@@ -170,7 +170,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               if (obj2.isAndroid()) {
                 advertisingId1 = closure_129_5.advertisingId;
               }
-              obj2 = closure_0(1375);
+              obj2 = closure_0(1377);
             }
             obj10.android_advertising_id = advertisingId1;
             obj8.properties = obj10;
@@ -178,7 +178,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp35) {
           closure_3 = tmp35;
@@ -417,7 +417,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
     if (tmpResult.isSourceError(error)) {
       const obj5 = { name: MetricEvents.MetricEvents.QUEST_VIDEO_ERROR, tags: null };
       const _HermesInternal = HermesInternal;
-      const items = ["ad_creative_id:" + bountyId, , ];
+      items = ["ad_creative_id:" + bountyId, , ];
       const _HermesInternal2 = HermesInternal;
       items[1] = "ad_creative_type:" + AdCreativeType.AdCreativeType[AdCreativeType.AdCreativeType.BOUNTY];
       items[2] = "error_type:SOURCE_ERROR";

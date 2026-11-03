@@ -1,14 +1,14 @@
-// === Module 12375: AppLauncherOnboardingLayer ===
+// === Module 12511: AppLauncherOnboardingLayer ===
 
-// Module 12375 (AppLauncherOnboardingLayer)
+// Module 12511 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 575 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12376 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12512 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-let closure_3 = fn(9895).useBestActiveChatInputContainerHeight;
+let closure_3 = fn(10026).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: null };
 const rect = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj.container = rect;
@@ -22,7 +22,7 @@ export default noop.memo(function AppLauncherOnboardingLayer(visibleContent) {
   let tmp3 = null;
   if (null != visibleContent) {
     const obj = { style: null, children: null };
-    const items = [tmp.container, ];
+    items = [tmp.container, ];
     const obj2 = { bottom: tmp2 + bottomOffset };
     items[1] = obj2;
     obj.style = items;

@@ -1,8 +1,8 @@
-// === Module 13378: getInlineForwardOptions ===
+// === Module 13514: getInlineForwardOptions ===
 
-// Module 13378 (getInlineForwardOptions)
+// Module 13514 (getInlineForwardOptions)
 import Constants from "Constants" /* 1072 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
 import size from "module_2" /* 2 */;
 
 const MessageReferenceTypes = Constants.MessageReferenceTypes;
@@ -45,7 +45,7 @@ export function getInlineForwardOptions(message, nativeSyntheticEventData) {
     if ("embed" === targetKind) {
       if (null != embedIndex) {
         const obj3 = { onlyEmbedIndices: null };
-        const items = [embedIndex];
+        items = [embedIndex];
         obj3.onlyEmbedIndices = items;
         let obj = obj3;
       }

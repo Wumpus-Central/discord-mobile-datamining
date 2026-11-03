@@ -1,17 +1,17 @@
-// === Module 13752: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 13883: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 13752 (ScheduledMessageDraftCoachmarkHooks)
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
+// Module 13883 (ScheduledMessageDraftCoachmarkHooks)
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_3 = fn(4847).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+let closure_3 = fn(4974).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
 export function useScheduledMessageDraftCoachmarkState(isEligible) {
   if (isEligible.isEligible) {
-    const items = [closure_3];
+    items = [closure_3];
     let items1 = items;
   } else {
     items1 = [];

@@ -1,6 +1,6 @@
-// === Module 4865: GuildMembershipStore ===
+// === Module 4992: GuildMembershipStore ===
 
-// Module 4865 (GuildMembershipStore)
+// Module 4992 (GuildMembershipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 572 */;
 
@@ -49,7 +49,7 @@ prototype["isMember"] = function isMember(arg0) {
   return guildIds.has(arg0);
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds) {
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   this.guildIds = new Set(items);
 };
 prototype["handleCacheLoaded"] = function handleCacheLoaded(guilds) {

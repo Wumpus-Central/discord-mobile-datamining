@@ -1,15 +1,15 @@
-// === Module 7108: Login ===
+// === Module 7234: Login ===
 
-// Module 7108 (Login)
+// Module 7234 (Login)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import Pressables from "Pressables" /* 6980 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7110 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import Pressables from "Pressables" /* 7106 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7236 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7109 */;
+import PhoneStore from "PhoneStore" /* 7235 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -51,8 +51,8 @@ function handlePressPasswordManagerHint() {
 const View = fn(17).View;
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -85,7 +85,7 @@ export default function Login(isMultiAccount) {
   const tmp3 = callback(navigation(ref[15])());
   navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
-  const items = [countryCode];
+  items = [countryCode];
   const stateFromStores = require("initialize").useStateFromStores(items, () => countryCode.getCountryCode());
   ref = noop.useRef(null);
   let obj2 = require("initialize");
@@ -131,7 +131,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -201,7 +201,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           closure_129_4(false);
           v32 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp47) {
         if (tmp5 === c3) {
@@ -226,7 +226,7 @@ export default function Login(isMultiAccount) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -325,7 +325,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

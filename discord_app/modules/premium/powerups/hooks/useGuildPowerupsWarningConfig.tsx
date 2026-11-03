@@ -1,10 +1,10 @@
-// === Module 14135: useGuildPowerupsWarningConfig ===
+// === Module 14266: useGuildPowerupsWarningConfig ===
 
-// Module 14135 (useGuildPowerupsWarningConfig)
+// Module 14266 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
+import _modDef2699 from "module_2699" /* 2699 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14136 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14267 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  const items = [AppliedGuildBoostStore];
+  items = [AppliedGuildBoostStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(items, () => AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(closure_0), items1);
   const items2 = [stateFromStores];
@@ -50,10 +50,10 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2570.n5hQhc);
+      obj.title = intl.string(_modDef2699.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2570.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2699.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

@@ -1,7 +1,7 @@
-// === Module 9479: useGetOrFetchStorefrontPrices ===
+// === Module 9607: useGetOrFetchStorefrontPrices ===
 
-// Module 9479 (useGetOrFetchStorefrontPrices)
-import StorefrontActionCreators from "StorefrontActionCreators" /* 9480 */;
+// Module 9607 (useGetOrFetchStorefrontPrices)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 9608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/storefront/hooks/useGetOrFetc
 
 export function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   applicationId = applicationId.applicationId;
-  const items = [applicationId];
+  items = [applicationId];
   const effect = noop.useEffect(() => {
     if (null != applicationId) {
       const obj2 = { applicationId: tmp };
@@ -20,7 +20,7 @@ export function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
 }
 export function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
   skuIds = skuIds.skuIds;
-  const items = [skuIds];
+  items = [skuIds];
   const effect = noop.useEffect(() => {
     if (0 !== skuIds.length) {
       const obj2 = { skuIds: tmp };

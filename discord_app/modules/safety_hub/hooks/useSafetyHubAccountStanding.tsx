@@ -1,14 +1,14 @@
-// === Module 13315: useSafetyHubAccountStanding ===
+// === Module 13451: useSafetyHubAccountStanding ===
 
-// Module 13315 (useSafetyHubAccountStanding)
+// Module 13451 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
 
 export function useSafetyHubAccountStanding() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => accountStanding.getAccountStanding());
 }

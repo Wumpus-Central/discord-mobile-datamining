@@ -1,9 +1,9 @@
-// === Module 12595: useConjureDraftHasText ===
+// === Module 12731: useConjureDraftHasText ===
 
-// Module 12595 (useConjureDraftHasText)
+// Module 12731 (useConjureDraftHasText)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12584 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12720 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/useConjureDraftHasText.tsx");
@@ -20,6 +20,6 @@ export default function useConjureDraftHasText(arg0) {
     tmp4[1](arg0);
     tmp3(tmp2);
   }
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 };

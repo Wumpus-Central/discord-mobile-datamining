@@ -1,17 +1,17 @@
-// === Module 17471: SelectWebBrowserSetting ===
+// === Module 17614: SelectWebBrowserSetting ===
 
-// Module 17471 (SelectWebBrowserSetting)
+// Module 17614 (SelectWebBrowserSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import BrowserManager from "BrowserManager" /* 5742 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import BrowserManager from "BrowserManager" /* 5862 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
-  const items = [];
+  items = [];
   const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
   if (obj2.useBrowserManagerSupportsInAppBrowser()) {
     const obj3 = { label: null, value: null };

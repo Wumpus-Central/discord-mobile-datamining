@@ -1,9 +1,9 @@
-// === Module 17297: useSyncedModeThemeName ===
+// === Module 17440: useSyncedModeThemeName ===
 
-// Module 17297 (useSyncedModeThemeName)
+// Module 17440 (useSyncedModeThemeName)
 import util from "util" /* 1113 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import _modDef2772 from "module_2772" /* 2772 */;
+import _modDef2899 from "module_2899" /* 2899 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/use
 
 export function useSyncedModeThemeName(DARK) {
   _require = DARK;
-  const items = [ThemeStore];
+  items = [ThemeStore];
   return require("initialize").useStateFromStores(items, () => {
     const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
     const themeName = ClientThemesUtils.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
@@ -25,7 +25,7 @@ export function useSyncedModeThemeName(DARK) {
     }
     if (null != prop) {
       const intl = util.intl;
-      let stringResult = intl.string(_modDef2772.yl1iMm);
+      let stringResult = intl.string(_modDef2899.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

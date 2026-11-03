@@ -1,8 +1,8 @@
-// === Module 9674: useConjureEntryPointPlacement ===
+// === Module 9806: useConjureEntryPointPlacement ===
 
-// Module 9674 (useConjureEntryPointPlacement)
-import ConjureMobileExperimentDefault from "ConjureMobileExperiment" /* 9676 */;
-import ConjureYouBarPinStore from "ConjureYouBarPinStore" /* 9675 */;
+// Module 9806 (useConjureEntryPointPlacement)
+import ConjureMobileExperimentDefault from "ConjureMobileExperiment" /* 9808 */;
+import ConjureYouBarPinStore from "ConjureYouBarPinStore" /* 9807 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export default function useConjureEntryPointPlacement(DMAppChannel) {
   _require = DMAppChannel;
   const hasConjureGuild = require("ConjureGuildExperiment").useHasConjureGuild(DMAppChannel);
   const obj = require("ConjureGuildExperiment");
-  const items = [require("ApexExperiment").ApexExperimentStore];
+  items = [require("ApexExperiment").ApexExperimentStore];
   const items1 = [hasConjureGuild, DMAppChannel];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (hasConjureGuild) {

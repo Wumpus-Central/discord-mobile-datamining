@@ -1,9 +1,9 @@
-// === Module 8838: useMediaItemHasSpoiler ===
+// === Module 8962: useMediaItemHasSpoiler ===
 
-// Module 8838 (useMediaItemHasSpoiler)
-import MediaSourceUtil from "MediaSourceUtil" /* 8839 */;
+// Module 8962 (useMediaItemHasSpoiler)
+import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export function useMediaItemHasSpoiler(index) {
     userRevealedIndexes = userRevealedIndexes.userRevealedIndexes;
     return userRevealedIndexes.has(closure_0);
   });
-  const items = [state];
+  items = [state];
   memo = memo.useMemo(() => {
     let flattenSourceResult;
     if (null != state) {

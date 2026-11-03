@@ -1,6 +1,6 @@
-// === Module 6869: networkAwareRetry ===
+// === Module 6989: networkAwareRetry ===
 
-// Module 6869 (networkAwareRetry)
+// Module 6989 (networkAwareRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

@@ -1,13 +1,13 @@
-// === Module 12205: useConjurePreviewMenu ===
+// === Module 12341: useConjurePreviewMenu ===
 
-// Module 12205 (useConjurePreviewMenu)
+// Module 12341 (useConjurePreviewMenu)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import conjureExternalConnections from "conjureExternalConnections" /* 12176 */;
-import conjureProjectMenuItems from "conjureProjectMenuItems" /* 12211 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import conjureExternalConnections from "conjureExternalConnections" /* 12312 */;
+import conjureProjectMenuItems from "conjureProjectMenuItems" /* 12347 */;
 import noop from "module_19" /* 19 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10869 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10999 */;
 
 require = fn;
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function useConjurePreviewMenu(projectId) {
   const pending2 = conjureConnectActions.pending;
   const connect = conjureConnectActions.connect;
   let obj = projectId(pending[3]);
-  const items = [pending2];
+  items = [pending2];
   const items1 = [projectId];
   const stateFromStores = projectId(pending[5]).useStateFromStores(items, () => ConjureSettingsStore.getDeclaredConnections(projectId), items1);
   const items2 = [stateFromStores];
@@ -40,7 +40,7 @@ export default function useConjurePreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef3868["jCQ/1B"]));
+          ToastUtils.presentError(intl.string(_modDef3995["jCQ/1B"]));
         }
       }
     } else {

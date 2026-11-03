@@ -1,12 +1,12 @@
-// === Module 11370: GiftCodeStore ===
+// === Module 11508: GiftCodeStore ===
 
-// Module 11370 (GiftCodeStore)
+// Module 11508 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6444 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11371 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10563 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6564 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11509 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10693 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,14 +18,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4858).Timeout();
+      const timeout = new code(4985).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef2042().valueOf();
+          const diff = valueOfResult - _modDef2171().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -88,7 +88,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_18.emitChange();
                                           } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F99272 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_5, diff), /* F99475 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[3])();
                                         }
@@ -110,7 +110,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef2042();
+          const obj4 = _modDef2171();
         }
       }
     }

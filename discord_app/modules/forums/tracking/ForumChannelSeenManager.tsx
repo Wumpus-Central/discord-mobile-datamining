@@ -1,8 +1,8 @@
-// === Module 9842: ForumChannelSeenManager ===
+// === Module 9973: ForumChannelSeenManager ===
 
-// Module 9842 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9841 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9843 */;
+// Module 9973 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9972 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9974 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const prototype = function ForumChannelSeenManager(channelId) {
     return () => {
       (function flushSeenItems(trackedFeedItems) {
         trackedFeedItems = trackedFeedItems.trackedFeedItems;
-        const items = [];
+        items = [];
         const items1 = [];
         ({ guildId, channelId, sessionId, isForcedFlush } = trackedFeedItems);
         const keys = Object.keys(trackedFeedItems);

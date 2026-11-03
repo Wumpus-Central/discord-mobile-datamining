@@ -1,8 +1,8 @@
-// === Module 11271: SafetyWarningBanner ===
+// === Module 11408: SafetyWarningBanner ===
 
-// Module 11271 (SafetyWarningBanner)
+// Module 11408 (SafetyWarningBanner)
 import nativeDefault from "native" /* 575 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ class SafetyWarningBanner {
     obj16 = { style: tmp.text, variant: "heading-md/semibold", children: header };
     items3 = [, ];
     items3[0] = jsx(channelId(senderId[13]).Text, obj16);
-    obj17 = { style: tmp.text, variant: "heading-sm/normal", children: description };
+    obj17 = { style: tmp.text, variant: "heading-sm/medium", children: description };
     items3[1] = jsx(channelId(senderId[13]).Text, obj17);
     obj15.children = items3;
     items2[1] = jsxs(View, obj15);
@@ -82,7 +82,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, contentContainer: null, safetyShieldIconContainer: null, safetyShieldIcon: null, textContainer: null, text: null, closeButton: null, closeButtonIcon: null, buttonsContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };

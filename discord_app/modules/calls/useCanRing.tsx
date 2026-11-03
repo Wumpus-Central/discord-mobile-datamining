@@ -1,10 +1,10 @@
-// === Module 7497: useCanRing ===
+// === Module 7621: useCanRing ===
 
-// Module 7497 (useCanRing)
+// Module 7621 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6569 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import CallStore from "CallStore" /* 6689 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 export function useCanRing(user, selectedVoiceChannelId) {
   _require = user;
   dependencyMap = selectedVoiceChannelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_1));
   const obj = require("initialize");
   const items1 = [AuthenticationStore];

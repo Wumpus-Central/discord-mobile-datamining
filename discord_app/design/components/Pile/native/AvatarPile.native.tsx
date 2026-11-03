@@ -1,11 +1,11 @@
-// === Module 14883: AvatarPile ===
+// === Module 15014: AvatarPile ===
 
-// Module 14883 (AvatarPile)
-import ClipView from "ClipView" /* 9509 */;
-import ListUtils from "ListUtils" /* 12802 */;
-import Pile from "Pile" /* 13424 */;
-import PileOverflow from "PileOverflow" /* 13425 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14884 */;
+// Module 15014 (AvatarPile)
+import ClipView from "ClipView" /* 9637 */;
+import ListUtils from "ListUtils" /* 12938 */;
+import Pile from "Pile" /* 13560 */;
+import PileOverflow from "PileOverflow" /* 13561 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 15015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export function AvatarPile(arg0) {
     num = 2;
   }
   obj.gap = num;
-  const items = [children, ];
+  items = [children, ];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
     const obj3 = { size: tmp4, borderRadius: tmp4 / 2, value: totalCount - countResult };

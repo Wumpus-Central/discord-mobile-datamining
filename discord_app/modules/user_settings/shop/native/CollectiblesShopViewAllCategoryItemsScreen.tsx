@@ -1,9 +1,9 @@
-// === Module 17883: CollectiblesShopViewAllCategoryItemsScreen ===
+// === Module 18026: CollectiblesShopViewAllCategoryItemsScreen ===
 
-// Module 17883 (CollectiblesShopViewAllCategoryItemsScreen)
-import useNavigation from "useNavigation" /* 1497 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7164 */;
-import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 17884 */;
+// Module 18026 (CollectiblesShopViewAllCategoryItemsScreen)
+import useNavigation from "useNavigation" /* 1499 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7285 */;
+import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 18027 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_settings/shop/native/Col
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
-  const items = [stackNavigation];
+  items = [stackNavigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({ headerShown: false });
   }, items);

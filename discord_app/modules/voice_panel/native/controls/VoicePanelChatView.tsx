@@ -1,54 +1,58 @@
-// === Module 13827: VoicePanelChatView ===
+// === Module 13958: VoicePanelChatView ===
 
-// Module 13827 (VoicePanelChatView)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+// Module 13958 (VoicePanelChatView)
 import util from "util" /* 1113 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7241 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
-import _modDef10769 from "module_10769" /* 10769 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13825 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
+import _modDef10899 from "module_10899" /* 10899 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13956 */;
 import noop from "module_19" /* 19 */;
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11221).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11358).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1072);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
-const __initData = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
+let closure_9 = { code: "(function VoicePanelChatViewTsx1(){let[windowDimensions]=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};})" };
 let closure_10 = noop.memo(function GradientHack() {
-  const windowDimensions = noop.useContext(VoicePanelStateContextDefault).windowDimensions;
-  const tmp = closure_8();
-  const fn = function n() {
-    const size = { width: windowDimensions.get().width, height: windowDimensions.get().height };
-    return size;
-  };
-  fn.__closure = { windowDimensions };
-  fn.__workletHash = 16775846409623;
-  fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  const obj2 = { style: null, children: null };
-  const items = [tmp.gradientWrapper, animatedStyle];
-  obj2.style = items;
-  obj2.children = timestampProducer(ThemedGradientDefault, { absolute: true });
-  return timestampProducer(ReanimatedNativeViewDefault, obj2);
+  const tmp3 = closure_8();
+  items = [closure_9, noop.useContext(VoicePanelStateContextDefault).windowDimensions];
+  c0 = undefined;
+  [tmp4, tmp5] = items;
+  class VoicePanelChatViewTsx1 {
+    constructor() {
+      size = { width: closure_0.get().width, height: closure_0.get().height };
+      return size;
+    }
+  }
+  const items1 = [tmp5];
+  VoicePanelChatViewTsx1.__closure = items1;
+  VoicePanelChatViewTsx1.__workletHash = 6734453041358;
+  VoicePanelChatViewTsx1.__initData = tmp4;
+  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelChatViewTsx1);
+  const obj2 = { style: null, children: timestampProducer(ThemedGradientDefault, { absolute: true }) };
+  const items2 = [tmp3.gradientWrapper, animatedStyle];
+  obj2.style = items2;
+  return timestampProducer(_modDef1652.View, obj2);
 });
 const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const callback = noop.useCallback(() => {
-    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+    const ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
   }, []);
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10769;
+  obj.icon = _modDef10899;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });
@@ -65,11 +69,11 @@ export default noop.memo(function VoicePanelChatView(shown) {
   const context = channelId.useContext(ref(guildId[11]));
   guildId = context.guildId;
   channelId = context.channelId;
-  const gradientTop = shown(guildId[15]).useGradientTop();
-  const rect = ref(guildId[17])();
-  const obj = shown(guildId[15]);
-  const items = [guildId, channelId];
-  const controlsDrawerOpenWidth = shown(guildId[18]).getControlsDrawerOpenWidth(ref(guildId[16])().width, rect.left, rect.right);
+  const gradientTop = shown(guildId[14]).useGradientTop();
+  const rect = ref(guildId[16])();
+  const obj = shown(guildId[14]);
+  items = [guildId, channelId];
+  const controlsDrawerOpenWidth = shown(guildId[17]).getControlsDrawerOpenWidth(ref(guildId[15])().width, rect.left, rect.right);
   const effect = channelId.useEffect(() => {
     let tmp = guildId;
     if (guildId == null) {
@@ -102,27 +106,27 @@ export default noop.memo(function VoicePanelChatView(shown) {
     const ComponentDispatch = shown(guildId[7]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
   }, []);
-  const obj2 = shown(guildId[18]);
+  const obj2 = shown(guildId[17]);
   const obj3 = { value: controlsDrawerOpenWidth, children: null };
-  const obj4 = { gradient: ref(guildId[20])(), children: null };
+  const obj4 = { gradient: ref(guildId[19])(), children: null };
   const obj5 = { nativeID: "voice-panel-chat-view", accessibilityViewIsModal: shown, onAccessibilityEscape: callback, style: null, children: null };
   const items2 = [tmp.container, gradientTop];
   obj5.style = items2;
   const items3 = [closure_6(closure_10, {}), , ];
   const obj6 = { title: null, disablePill: true, blurStyle: null };
-  const tmp9 = ref(guildId[20])();
+  const tmp9 = ref(guildId[19])();
   const intl = shown(guildId[9]).intl;
   obj6.title = intl.string(shown(guildId[9]).t["/VQax8"]);
   obj6.blurStyle = tmp.titleBlur;
-  items3[1] = closure_6(ref(guildId[24]), obj6);
-  const tmp12 = ref(guildId[24]);
+  items3[1] = closure_6(ref(guildId[23]), obj6);
+  const tmp12 = ref(guildId[23]);
   if (guildId == null) {
     guildId = closure_5;
   }
-  items3[2] = closure_6(ref(guildId[25]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
+  items3[2] = closure_6(ref(guildId[24]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
   obj5.children = items3;
-  obj4.children = closure_7(shown(guildId[23]).AccessibilityView, obj5);
-  obj3.children = closure_6(shown(guildId[22]).ThemeContextProvider, obj4);
-  return closure_6(ref(guildId[21]).Provider, obj3);
+  obj4.children = closure_7(shown(guildId[22]).AccessibilityView, obj5);
+  obj3.children = closure_6(shown(guildId[21]).ThemeContextProvider, obj4);
+  return closure_6(ref(guildId[20]).Provider, obj3);
 });
 export const MemoedVoicePanelDismissChatButton = memoResult;

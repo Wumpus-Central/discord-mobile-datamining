@@ -1,15 +1,15 @@
-// === Module 8344: ApplicationCommandActionCreators ===
+// === Module 8468: ApplicationCommandActionCreators ===
 
-// Module 8344 (ApplicationCommandActionCreators)
+// Module 8468 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import InteractionTypes from "InteractionTypes" /* 6070 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import InteractionTypes from "InteractionTypes" /* 6190 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8345 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8469 */;
 
 require = fn;
 const Endpoints = fn(1072).Endpoints;
@@ -34,7 +34,7 @@ export function updateOptionValidationStates(channelId, arg1) {
   const entries = Object.entries(arg1);
   const fromEntriesResult = Object.fromEntries(entries.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, { lastValidationResult: tmp2 }];
+    items = [tmp, { lastValidationResult: tmp2 }];
     return items;
   }));
   DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId, changedOptionStates: fromEntriesResult });
@@ -84,7 +84,7 @@ export function performAutocomplete(applicationId, autocomplete, data) {
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
       const obj4 = { type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
-      const guild = autocomplete.guild;
+      guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;

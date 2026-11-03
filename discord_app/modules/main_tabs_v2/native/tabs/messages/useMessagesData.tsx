@@ -1,12 +1,12 @@
-// === Module 18102: useMessagesData ===
+// === Module 18246: useMessagesData ===
 
-// Module 18102 (useMessagesData)
+// Module 18246 (useMessagesData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7395 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7519 */;
 
 const require = fn;
 const MessagesDataHeader = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
-  let items = [numFriendSuggestions, friendSuggestions];
+  items = [numFriendSuggestions, friendSuggestions];
   const stateFromStoresObject = connected(channelFavorites[6]).useStateFromStoresObject(items, () => ({ connected: null != numFriendSuggestions.getSessionId(), connectedToGateway: friendSuggestions.isConnected() }));
   connected = stateFromStoresObject.connected;
   const connectedToGateway = stateFromStoresObject.connectedToGateway;
@@ -62,7 +62,7 @@ export default function useMessagesData() {
       const _Math = Math;
       bound = Math.min(tmp4, 5);
     }
-    const items = [];
+    items = [];
     items.push(channelFavorites.length);
     items.push(length.length);
     let num4 = 0;

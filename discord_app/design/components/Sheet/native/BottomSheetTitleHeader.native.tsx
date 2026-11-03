@@ -1,11 +1,11 @@
-// === Module 7321: BottomSheetTitleHeader ===
+// === Module 7441: BottomSheetTitleHeader ===
 
-// Module 7321 (BottomSheetTitleHeader)
+// Module 7441 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6999 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7125 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.titles, children: null };
-  const items = [timestampProducer(Title, { lineClamp: 2, children: children.title }), ];
+  items = [timestampProducer(Title, { lineClamp: 2, children: children.title }), ];
   let tmp2Result = null;
   if (null != subtitle) {
     const obj3 = { children: subtitle };
@@ -32,7 +32,7 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   const tmp = closure_8();
   const tmp2 = closure_10();
   const obj = { style: null, children: null };
-  const items = [tmp.container, tmp2.container];
+  items = [tmp.container, tmp2.container];
   obj.style = items;
   const obj2 = { style: tmp2.accessories, children: null };
   const items1 = [timestampProducer(View, { style: tmp2.item, children: leading }), timestampProducer(View, { style: tmp2.item, children: trailing })];
@@ -70,7 +70,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
     });
   }, []);
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(View, { style: { width: tmp5 } }), , , , ];
+  items = [timestampProducer(View, { style: { width: tmp5 } }), , , , ];
   const obj4 = { style: tmp.titles, children: null };
   const items1 = [timestampProducer(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title }), ];
   let tmp9Result = null;
@@ -110,14 +110,14 @@ function Subtitle(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: { left: nativeDefault.space.PX_16, justifyContent: "flex-start" }, trailing: null };
   const obj2 = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };
@@ -152,7 +152,7 @@ export function BottomSheetTitleHeader(arg0) {
   let tmp16 = tmp5;
   if (null != tmp3) {
     const obj4 = { style: { position: "relative" }, children: null };
-    const items = [tmp5, tmp3];
+    items = [tmp5, tmp3];
     obj4.children = items;
     tmp16 = React5(View, obj4);
   }

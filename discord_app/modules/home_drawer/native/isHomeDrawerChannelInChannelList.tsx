@@ -1,15 +1,15 @@
-// === Module 18393: isHomeDrawerChannelInChannelList ===
+// === Module 18538: isHomeDrawerChannelInChannelList ===
 
-// Module 18393 (isHomeDrawerChannelInChannelList)
+// Module 18538 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
 
 export function useIsHomeDrawerChannelInChannelList() {
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => (guild_id) => {
     const result = closure_1_0(closure_1_1[2]).isOptInEnabledForGuild(guild_id.guild_id);
     let result1 = !result;

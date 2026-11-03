@@ -1,11 +1,11 @@
-// === Module 10311: ApplicationCommandOptionUtils ===
+// === Module 10441: ApplicationCommandOptionUtils ===
 
-// Module 10311 (ApplicationCommandOptionUtils)
+// Module 10441 (ApplicationCommandOptionUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Server from "Server" /* 1992 */;
-import RegexUtilsDefault from "RegexUtils" /* 5656 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6035 */;
-import numberParts from "numberParts" /* 10312 */;
+import Server from "Server" /* 2121 */;
+import RegexUtilsDefault from "RegexUtils" /* 5776 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6155 */;
+import numberParts from "numberParts" /* 10442 */;
 import size from "module_2" /* 2 */;
 
 function getString(arg0, arg1) {
@@ -54,7 +54,7 @@ const result = size.fileFinishedImporting("modules/application_commands/Applicat
 export function filterEmpty(arr) {
   closure_0 = arr;
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.filter((type, index) => {
       let str = type;
@@ -74,7 +74,7 @@ export function filterEmpty(arr) {
 export function getBoolean(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.filter((type, index) => {
       let str = type;
@@ -102,7 +102,7 @@ export function getOptionalBoolean(arg0, arg1) {
   let tmp = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
-      let items = [];
+      items = [];
     } else {
       items = arr.filter((type, index) => {
         let str = type;
@@ -131,7 +131,7 @@ export function getOptionalBoolean(arg0, arg1) {
 export function getChannelId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.filter((type, index) => {
       let str = type;
@@ -159,7 +159,7 @@ export function getOptionalChannelId(arg0, arg1) {
   let channelId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
-      let items = [];
+      items = [];
     } else {
       items = arr.filter((type, index) => {
         let str = type;
@@ -188,7 +188,7 @@ export function getOptionalChannelId(arg0, arg1) {
 export function getUserId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.filter((type, index) => {
       let str = type;
@@ -216,7 +216,7 @@ export function getOptionalUserId(arg0, arg1) {
   let userId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
-      let items = [];
+      items = [];
     } else {
       items = arr.filter((type, index) => {
         let str = type;
@@ -245,7 +245,7 @@ export function getOptionalUserId(arg0, arg1) {
 export function getRoleId(arg0, arg1) {
   const arr = arg0[arg1];
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.filter((type, index) => {
       let str = type;
@@ -273,7 +273,7 @@ export function getOptionalRoleId(arg0, arg1) {
   let roleId = null;
   if (null != arg0[arg1]) {
     if (null == arg0[arg1]) {
-      let items = [];
+      items = [];
     } else {
       items = arr.filter((type, index) => {
         let str = type;

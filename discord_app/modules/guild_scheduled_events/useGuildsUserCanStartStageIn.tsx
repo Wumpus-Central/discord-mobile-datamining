@@ -1,11 +1,11 @@
-// === Module 9004: useGuildsUserCanStartStageIn ===
+// === Module 9132: useGuildsUserCanStartStageIn ===
 
-// Module 9004 (useGuildsUserCanStartStageIn)
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 9132 (useGuildsUserCanStartStageIn)
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 
@@ -17,7 +17,7 @@ export function useChannelsUserCanStartStageIn(guild) {
   if (id == null) {
     id = null;
   }
-  const items = [GuildChannelStore, PermissionStore];
+  items = [GuildChannelStore, PermissionStore];
   const items1 = [id];
   return id(504).useStateFromStoresArray(items, () => GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].reduce((arr, channel) => {
     channel = channel.channel;

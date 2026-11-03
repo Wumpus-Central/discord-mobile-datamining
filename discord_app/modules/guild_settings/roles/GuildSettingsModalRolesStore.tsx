@@ -1,14 +1,14 @@
-// === Module 19772: GuildSettingsModalRolesStore ===
+// === Module 19922: GuildSettingsModalRolesStore ===
 
-// Module 19772 (GuildSettingsModalRolesStore)
+// Module 19922 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5021 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13980 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import shared from "shared" /* 5148 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14111 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {
@@ -97,7 +97,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     c8 = true;
     const sortedRoles = GuildRoleStore.getSortedRoles(guildId);
     c9 = sortedRoles.map((id) => id.id);
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     clearTimeout(closure_15);
   },
   GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER: function handleStopReorder() {
@@ -141,7 +141,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING: function handleStartEditingPermissions(guildId) {
-    const guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
     _null2 = guild;
     let role;
     if (null != guild) {

@@ -1,14 +1,14 @@
-// === Module 14108: useCanGuildPowerupBeToggled ===
+// === Module 14239: useCanGuildPowerupBeToggled ===
 
-// Module 14108 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14076 */;
+// Module 14239 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14207 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5230).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5353).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
@@ -16,7 +16,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
   closure_4 = tmp2;
@@ -26,7 +26,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   items1[4] = tmp2.type;
   return stateFromStores.useMemo(() => {
     if (null == stateFromStores) {
-      return { disabled: true, reason: "a" };
+      return { disabled: true, reason: "Array" };
     } else {
       if (closure_4.type !== constants.LEVEL_ACTIVATED) {
         if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
@@ -56,7 +56,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = closure_0(1113).intl;
-              const tmp11 = skuId(2570);
+              const tmp11 = skuId(2699);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;
@@ -70,7 +70,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           return obj;
         }
       }
-      return { disabled: true, reason: "a" };
+      return { disabled: true, reason: "Array" };
     }
   }, items1);
 };

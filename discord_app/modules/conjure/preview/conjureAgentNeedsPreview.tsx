@@ -1,8 +1,8 @@
-// === Module 12089: conjureAgentNeedsPreview ===
+// === Module 12225: conjureAgentNeedsPreview ===
 
-// Module 12089 (conjureAgentNeedsPreview)
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10923 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
+// Module 12225 (conjureAgentNeedsPreview)
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 11053 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ export function conjureAgentNeedsPreview(id) {
 }
 export function useConjureAgentNeedsPreview(projectId) {
   _require = projectId;
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const items1 = [projectId];
   let stateFromStores = require("initialize").useStateFromStores(items, () => ConjureChatStore.isThinking(closure_0), items1);
   const obj = require("initialize");

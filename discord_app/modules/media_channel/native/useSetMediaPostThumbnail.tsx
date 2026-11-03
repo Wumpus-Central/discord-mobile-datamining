@@ -1,22 +1,22 @@
-// === Module 14521: useSetMediaPostThumbnail ===
+// === Module 14652: useSetMediaPostThumbnail ===
 
-// Module 14521 (useSetMediaPostThumbnail)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
+// Module 14652 (useSetMediaPostThumbnail)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9910 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
 export default function useSetMediaPostThumbnail(arg0, arg1) {
   _require = arg0;
   const user = arg1;
-  const items = [UploadAttachmentStore];
+  items = [UploadAttachmentStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const uploads = UploadAttachmentStore.getUploads(closure_0, DraftType.ChannelMessage);
     let found = uploads.find((item) => {

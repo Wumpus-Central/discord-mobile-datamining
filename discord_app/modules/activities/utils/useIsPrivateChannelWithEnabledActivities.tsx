@@ -1,7 +1,7 @@
-// === Module 11721: useIsPrivateChannelWithEnabledActivities ===
+// === Module 11858: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 11721 (useIsPrivateChannelWithEnabledActivities)
-import ChannelStore from "ChannelStore" /* 4863 */;
+// Module 11858 (useIsPrivateChannelWithEnabledActivities)
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivate
 
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let flag;
   if (stateFromStores != null) {

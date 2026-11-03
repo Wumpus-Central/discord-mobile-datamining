@@ -1,11 +1,11 @@
-// === Module 14922: useBadgeDirectoryNuxPopoverVariant ===
+// === Module 15051: useBadgeDirectoryNuxPopoverVariant ===
 
-// Module 14922 (useBadgeDirectoryNuxPopoverVariant)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14923 */;
+// Module 15051 (useBadgeDirectoryNuxPopoverVariant)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
+import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 15052 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
 
 require = fn;
 function useBadgeDirectoryNuxPopoverState(fetchCatalog) {
@@ -26,7 +26,7 @@ function useBadgeDirectoryNuxPopoverState(fetchCatalog) {
     tmp = currentUserId;
   }
   currentUserId = tmp;
-  const items = [ref];
+  items = [ref];
   const items1 = [tmp];
   stateFromStores = flag(stateFromStores[3]).useStateFromStores(items, () => {
     let hasCatalogForResult = null != currentUserId;

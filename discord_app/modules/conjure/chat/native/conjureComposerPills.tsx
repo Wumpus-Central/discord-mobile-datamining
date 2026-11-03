@@ -1,14 +1,14 @@
-// === Module 12796: conjureComposerPills ===
+// === Module 12932: conjureComposerPills ===
 
-// Module 12796 (conjureComposerPills)
+// Module 12932 (conjureComposerPills)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import _modDef11063 from "module_11063" /* 11063 */;
-import ChatInputParser from "ChatInputParser" /* 12797 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import _modDef11200 from "module_11200" /* 11200 */;
+import ChatInputParser from "ChatInputParser" /* 12933 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1383 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12146 */;
+import UserStore from "UserStore" /* 1385 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12282 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11063).uri;
+  return Image.resolveAssetSource(_modDef11200).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12637).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12773).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -77,7 +77,7 @@ export function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef3868.ff9Q4C);
+          combined = intl.string(_modDef3995.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11063).uri;
+        uri = Image.resolveAssetSource(_modDef11200).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);
@@ -121,7 +121,7 @@ export function decodeConjurePills(draft) {
   };
 }
 export function encodeConjurePills(current, current2) {
-  const items = [...current2.keys()];
+  items = [...current2.keys()];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
   return sorted.reduce((acc, item) => {
     const parts = acc.split(item);
@@ -137,7 +137,7 @@ export function encodeConjurePills(current, current2) {
   }, current);
 }
 export function conjurePillNodes(arr, current, style) {
-  const items = [];
+  items = [];
   while (tmp !== undefined) {
     [first, tmp6] = tmp2;
     let arr2 = first;

@@ -1,17 +1,17 @@
-// === Module 7946: StageChannelUtils ===
+// === Module 8070: StageChannelUtils ===
 
-// Module 7946 (StageChannelUtils)
+// Module 8070 (StageChannelUtils)
 import _mod12 from "module_12" /* 12 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 require = fn;
-const constants = fn(6709).RequestToSpeakPermissionStates;
+const constants = fn(6829).RequestToSpeakPermissionStates;
 const Permissions = fn(1072).Permissions;
-const RowType = fn(7947).RowType;
+const RowType = fn(8071).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
@@ -23,7 +23,7 @@ export function fillChunk(arg0, arg1, arg2) {
   closure_0 = tmp;
   return _mod12.chunk(arg0, arg1).reduce((acc, item) => {
     if (closure_0 <= item.length) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(acc, 0)] = item;
       return items;
     } else {

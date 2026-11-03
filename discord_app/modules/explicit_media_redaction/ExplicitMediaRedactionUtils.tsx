@@ -1,22 +1,22 @@
-// === Module 8687: ExplicitMediaRedactionUtils ===
+// === Module 8811: ExplicitMediaRedactionUtils ===
 
-// Module 8687 (ExplicitMediaRedactionUtils)
+// Module 8811 (ExplicitMediaRedactionUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6731 */;
-import SelfModUtils from "SelfModUtils" /* 7462 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7468 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7464 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6851 */;
+import SelfModUtils from "SelfModUtils" /* 7586 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7592 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7588 */;
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7466);
+const ExplicitMediaRedactionConstants = fn(7590);
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -85,7 +85,7 @@ export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
   const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
-  const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
+  items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj2.tags = items;
   MonitoringAgentDefault.increment(obj2);
 }

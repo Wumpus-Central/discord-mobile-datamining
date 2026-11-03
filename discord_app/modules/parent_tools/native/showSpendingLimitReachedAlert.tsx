@@ -1,12 +1,12 @@
-// === Module 10569: showSpendingLimitReachedAlert ===
+// === Module 10699: showSpendingLimitReachedAlert ===
 
-// Module 10569 (showSpendingLimitReachedAlert)
-import _modDef2538 from "module_2538" /* 2538 */;
-import BillingError from "BillingError" /* 4834 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6446 */;
-import LayerActionCreators from "LayerActionCreators" /* 7760 */;
-import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 10570 */;
+// Module 10699 (showSpendingLimitReachedAlert)
+import _modDef2667 from "module_2667" /* 2667 */;
+import BillingError from "BillingError" /* 4961 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6566 */;
+import LayerActionCreators from "LayerActionCreators" /* 7884 */;
+import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 10700 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
@@ -23,8 +23,8 @@ export function isSpendingLimitError(billingError) {
   return tmp3;
 }
 export function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8369).getActiveLinkUserIds();
-  const obj = activeLinkUserIds(8369);
+  activeLinkUserIds = activeLinkUserIds(8493).getActiveLinkUserIds();
+  const obj = activeLinkUserIds(8493);
   const obj3 = { title: null, body: null, isDismissable: true };
   let intl = activeLinkUserIds(1113).intl;
   obj3.title = intl.string(activeLinkUserIds(1113).t.QJKKrT);
@@ -37,7 +37,7 @@ export function showSpendingLimitReachedAlert() {
     obj4.onConfirm = function onConfirm() {
       return openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
         const intl = activeLinkUserIds(1113).intl;
-        return activeLinkUserIds(5711).presentFailedToast(intl.formatToPlainString(_modDef2538.D1BwNC, { count: length.length }));
+        return activeLinkUserIds(5831).presentFailedToast(intl.formatToPlainString(_modDef2667.D1BwNC, { count: length.length }));
       });
     };
     const intl4 = tmp(1113).intl;

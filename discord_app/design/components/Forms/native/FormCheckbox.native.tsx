@@ -1,16 +1,20 @@
-// === Module 6989: FormCheckbox ===
+// === Module 7115: FormCheckbox ===
 
-// Module 6989 (FormCheckbox)
+// Module 7115 (FormCheckbox)
 import nativeDefault from "native" /* 575 */;
-import IconDefault from "Icon" /* 5636 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
+import IconDefault from "Icon" /* 5756 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import springPresets from "springPresets" /* 5758 */;
+import _modDef7116 from "module_7116" /* 7116 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+
+const module_1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;
@@ -20,72 +24,95 @@ obj2.selected = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEF
 const obj4 = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: nativeDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
 obj2.checkmark = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_5 = createStyles.createStyles(obj2);
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
-const __initData = { code: "function FormCheckboxNativeTsx1(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}" };
-const __initData2 = { code: "function FormCheckboxNativeTsx2(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}" };
+const Icon = module_1652.createAnimatedComponent(IconDefault);
+let closure_7 = { code: "(function FormCheckboxNativeTsx1(){let[withSpring,checked,selected,unselected,SUBTLE_SPRING]=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;})" };
+let closure_8 = { code: "(function FormCheckboxNativeTsx2(){let[useReducedMotion,withSpring,checked,SUBTLE_SPRING]=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};})" };
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/Forms/native/FormCheckbox.native.tsx");
 
 export function FormCheckbox(checked) {
   checked = checked.checked;
   const tmp = closure_5();
-  const enabled = noop.useContext(checked(unselected[6]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const tmp2 = closure_5();
-  const selected = tmp2.selected;
-  unselected = tmp2.unselected;
-  const fn = function _() {
-    if (checked) {
-      let borderColor = selected.borderColor;
-    } else {
-      borderColor = unselected.borderColor;
+  ({ selected, unselected } = closure_5());
+  const tmp4 = closure_5();
+  items = [closure_7, spring_spring.withSpring, checked, selected, unselected, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items;
+  class FormCheckboxNativeTsx1 {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_1;
+      if (closure_1) {
+        tmp4 = closure_2;
+        borderColor = closure_2.borderColor;
+      } else {
+        tmp3 = closure_3;
+        borderColor = closure_3.borderColor;
+      }
+      obj = { borderColor: tmp(borderColor, closure_4, "animate-always"), backgroundColor: null };
+      tmp5 = closure_4;
+      if (tmp2) {
+        tmp7 = closure_2;
+        backgroundColor = closure_2.backgroundColor;
+      } else {
+        tmp6 = closure_3;
+        backgroundColor = closure_3.backgroundColor;
+      }
+      obj.backgroundColor = tmp(backgroundColor, tmp5, "animate-always");
+      return obj;
     }
-    const obj2 = { borderColor: spring.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always"), backgroundColor: null };
-    if (checked) {
-      let backgroundColor = selected.backgroundColor;
-    } else {
-      backgroundColor = unselected.backgroundColor;
+  }
+  const items1 = [tmp6, tmp7, tmp8, tmp9, tmp10];
+  FormCheckboxNativeTsx1.__closure = items1;
+  FormCheckboxNativeTsx1.__workletHash = 16653690425039;
+  FormCheckboxNativeTsx1.__initData = tmp5;
+  const animatedStyle = _mod1652.useAnimatedStyle(FormCheckboxNativeTsx1);
+  const items2 = [closure_8, noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled, spring_spring.withSpring, checked, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp12, tmp13, tmp14, tmp15, tmp16] = items2;
+  class FormCheckboxNativeTsx2 {
+    constructor() {
+      num = 0.5;
+      if (closure_0) {
+        num = 1;
+      }
+      tmp = closure_1;
+      num2 = 0;
+      tmp2 = closure_2;
+      if (closure_2) {
+        num2 = 1;
+      }
+      obj = { opacity: tmp(num2, closure_3, "animate-always"), transform: null };
+      tmp3 = closure_3;
+      num3 = 1;
+      if (!tmp2) {
+        num3 = num;
+      }
+      obj1 = { scale: tmp(num3, tmp3) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
     }
-    obj2.backgroundColor = spring.withSpring(backgroundColor, springPresets.SUBTLE_SPRING, "animate-always");
-    return obj2;
-  };
-  let obj = checked(unselected[4]);
-  fn.__closure = { withSpring: checked(unselected[8]).withSpring, checked, selected, unselected, SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING };
-  fn.__workletHash = 11278373524374;
-  fn.__initData = __initData;
-  closure_129_0 = enabled;
-  closure_129_1 = checked;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: checked(unselected[8]).withSpring, checked, selected, unselected, SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING };
-  const fn2 = function c() {
-    let num = 0.5;
-    if (checked) {
-      num = 1;
-    }
-    let num2 = 0;
-    if (selected) {
-      num2 = 1;
-    }
-    const obj2 = { opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
-    let num3 = 1;
-    if (!selected) {
-      num3 = num;
-    }
-    const tmpResult = spring;
-    const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
-    obj2.transform = items;
-    return obj2;
-  };
-  const obj3 = checked(unselected[4]);
-  fn2.__closure = { useReducedMotion: enabled, withSpring: checked(unselected[8]).withSpring, checked, SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING };
-  fn2.__workletHash = 13939484082835;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = obj3.useAnimatedStyle(fn2);
-  const obj5 = { style: null, children: null };
-  let items = [tmp.checkbox, animatedStyle];
-  obj5.style = items;
-  const obj6 = { source: selected(unselected[7]), size: selected(unselected[5]).Sizes.SMALL_20, style: null };
-  const items1 = [tmp.checkmark, animatedStyle1];
-  obj6.style = items1;
-  obj5.children = <Icon source={selected(unselected[7])} size={selected(unselected[5]).Sizes.SMALL_20} style={null} />;
-  return jsx(selected(unselected[4]).View, { style: null, children: null });
+  }
+  const items3 = [tmp13, tmp14, tmp15, tmp16];
+  FormCheckboxNativeTsx2.__closure = items3;
+  FormCheckboxNativeTsx2.__workletHash = 5917557474474;
+  FormCheckboxNativeTsx2.__initData = tmp12;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(FormCheckboxNativeTsx2);
+  const obj2 = { style: null, children: null };
+  const items4 = [tmp.checkbox, animatedStyle];
+  obj2.style = items4;
+  const obj3 = { source: _modDef7116, size: IconDefault.Sizes.SMALL_20, style: null };
+  const items5 = [tmp.checkmark, animatedStyle1];
+  obj3.style = items5;
+  obj2.children = <Icon source={_modDef7116} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  return jsx(module_1652.View, { style: null, children: null });
 }

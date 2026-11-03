@@ -1,13 +1,13 @@
-// === Module 12733: conjurePlanWidget ===
+// === Module 12869: conjurePlanWidget ===
 
-// Module 12733 (conjurePlanWidget)
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12261 */;
-import ApplicationAssetType from "ApplicationAssetType" /* 12734 */;
-import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 12735 */;
+// Module 12869 (conjurePlanWidget)
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
+import ApplicationAssetType from "ApplicationAssetType" /* 12870 */;
+import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 12871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -148,7 +148,7 @@ export function useConjurePlanWidget(projectId, proposal) {
   if (undefined === widget_preview) {
     widget_preview = closure_8;
   }
-  let items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores1.locale);
   let obj = require("initialize");
   const items1 = [ConjureProjectStore];
@@ -159,7 +159,7 @@ export function useConjurePlanWidget(projectId, proposal) {
       prop = project.preview_application_id;
     }
     if (prop == null) {
-      let application_id;
+      application_id = undefined;
       if (project != null) {
         application_id = project.application_id;
       }
@@ -189,7 +189,7 @@ export function useConjurePlanWidget(projectId, proposal) {
         [, tmp] = item;
         const attachmentUrl = _true(widget_config[8]).getAttachmentUrl(c0, tmp.id);
         return attachmentUrl.then((result) => {
-          const items = [_true, result];
+          items = [_true, result];
           return items;
         }, () => null);
       })).then((arr) => {

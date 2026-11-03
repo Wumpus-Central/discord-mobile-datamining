@@ -1,21 +1,21 @@
-// === Module 13785: ForumPostListBody ===
+// === Module 13916: ForumPostListBody ===
 
-// Module 13785 (ForumPostListBody)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7453 */;
-import ForumPostUsername from "ForumPostUsername" /* 13767 */;
-import ForumPostMedia from "ForumPostMedia" /* 13772 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 13777 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 13778 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 13779 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 13786 */;
+// Module 13916 (ForumPostListBody)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7577 */;
+import ForumPostUsername from "ForumPostUsername" /* 13898 */;
+import ForumPostMedia from "ForumPostMedia" /* 13903 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 13908 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 13909 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 13910 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 13917 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7454).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7578).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
@@ -26,7 +26,7 @@ export default function ForumPostListBody(arg0) {
   const tmp = closure_7();
   const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
   const obj2 = { style: null, children: null };
-  const items = [tmp.body, containerStyle];
+  items = [tmp.body, containerStyle];
   obj2.style = items;
   const obj3 = { style: tmp.contentContainer, children: null };
   const obj4 = { style: tmp.details, children: null };

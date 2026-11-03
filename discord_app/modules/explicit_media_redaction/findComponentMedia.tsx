@@ -1,13 +1,13 @@
-// === Module 7473: findComponentMedia ===
+// === Module 7597: findComponentMedia ===
 
-// Module 7473 (findComponentMedia)
+// Module 7597 (findComponentMedia)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/findComponentMedia.tsx");
 function findComponentMedia(arg0) {
   let obj = arg0;
   if (!Array.isArray(arg0)) {
-    const items = [arg0];
+    items = [arg0];
     obj = items;
   }
   return obj.flatMap((type) => {
@@ -74,7 +74,7 @@ function findComponentMedia(arg0) {
                 type = type.type;
                 if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
                   let items = type.items;
-                  return items.map(/* F123941 */ function() { ... });
+                  return items.map(/* F123800 */ function() { ... });
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
                   return type.media;
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
@@ -90,7 +90,7 @@ function findComponentMedia(arg0) {
                     let items2 = [accessory];
                     obj = items2;
                   }
-                  HermesBuiltin.arraySpread(obj.flatMap(/* F90769 */ function() { ... }).map(/* F90770 */ function() { ... }), arraySpreadResult);
+                  HermesBuiltin.arraySpread(obj.flatMap(/* F91106 */ function() { ... }).map(/* F91107 */ function() { ... }), arraySpreadResult);
                   return items1;
                 } else {
                   if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {

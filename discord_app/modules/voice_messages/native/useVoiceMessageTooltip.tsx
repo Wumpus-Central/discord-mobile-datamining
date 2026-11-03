@@ -1,15 +1,15 @@
-// === Module 13816: useVoiceMessageTooltip ===
+// === Module 13947: useVoiceMessageTooltip ===
 
-// Module 13816 (useVoiceMessageTooltip)
+// Module 13947 (useVoiceMessageTooltip)
 import util from "util" /* 1113 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7101 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7227 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1493 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(13725);
+const VoiceMessagesUIStore = fn(13856);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: metroRequire } = VoiceMessagesUIStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
@@ -18,7 +18,7 @@ export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
   const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
   _require = tmp2;
-  const items = [tmp2];
+  items = [tmp2];
   const items1 = [tmp2];
   const memo = noop.useMemo(() => {
     const obj = { position: "top", label: null, visible: null };

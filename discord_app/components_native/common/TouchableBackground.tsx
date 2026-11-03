@@ -1,6 +1,6 @@
-// === Module 13939: TouchableBackground ===
+// === Module 14070: TouchableBackground ===
 
-// Module 13939 (TouchableBackground)
+// Module 14070 (TouchableBackground)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { default: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function TouchableBackground(onPressOut) {
   c2 = undefined;
   const tmp2 = closure_5();
   [tmp4, c2] = noop.useState(false);
-  const items = [onPressIn];
+  items = [onPressIn];
   const items1 = [onPressOut];
   const callback = noop.useCallback((arg0) => {
     _undefined(true);

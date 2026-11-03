@@ -1,16 +1,16 @@
-// === Module 18427: UnreadBars ===
+// === Module 18581: UnreadBars ===
 
-// Module 18427 (UnreadBars)
+// Module 18581 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
-import TransitionGroup from "TransitionGroup" /* 13987 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
+import TransitionGroup from "TransitionGroup" /* 14118 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 const require = globalThis.__r;
 
@@ -19,16 +19,16 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1072).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.unreadText = {};
 let obj4 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
-let ColorUtils = fn(5011);
+let ColorUtils = fn(5138);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
 obj2.unread = obj4;
 const obj6 = { backgroundColor: null };
-ColorUtils = fn(5011);
+ColorUtils = fn(5138);
 obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
 obj2.mention = obj6;
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -111,7 +111,7 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
     if (bottom) {
       num5 = 72;
     }
-    const items = [num5, ];
+    items = [num5, ];
     let num6 = 0;
     if (this.state.active) {
       num6 = 1;
@@ -132,7 +132,7 @@ prototype["render"] = function render() {
   ({ mention, section } = props.item);
   const obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
   const obj2 = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
-  const items = [tmp.unread, ];
+  items = [tmp.unread, ];
   let mention1;
   if (mention) {
     mention1 = tmp.mention;
@@ -157,7 +157,7 @@ prototype["render"] = function render() {
   return React6(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(5080).ThemeContext;
+UnreadBar.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 
@@ -173,7 +173,7 @@ export default function UnreadBars(contentInset) {
   function handlePress(section) {
     require({ section: section.section, item: section.row, animated: true });
   }
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj = { component: noop.Fragment, children: null };
   let tmp3 = null;

@@ -1,6 +1,6 @@
-// === Module 9502: useClock ===
+// === Module 9630: useClock ===
 
-// Module 9502 (useClock)
+// Module 9630 (useClock)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export default function _default(arg0) {
     cancelAnimationFrame(ref2.current);
     clearTimeout(ref6.current);
   }, []);
-  const items = [allowableMinInterval, callback, num2, droppedFramesCallbackThreshold, droppedFramesCallback, arg0];
+  items = [allowableMinInterval, callback, num2, droppedFramesCallbackThreshold, droppedFramesCallback, arg0];
   const callback2 = allowableMinInterval.useCallback((current) => {
     if (ticking.current) {
       if (null == ref3.current) {

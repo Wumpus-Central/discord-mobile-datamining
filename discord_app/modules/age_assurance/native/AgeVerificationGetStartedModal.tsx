@@ -1,14 +1,14 @@
-// === Module 8157: AgeVerificationGetStartedModal ===
+// === Module 8281: AgeVerificationGetStartedModal ===
 
-// Module 8157 (AgeVerificationGetStartedModal)
+// Module 8281 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 575 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
@@ -28,7 +28,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   const tmp = closure_5();
   closure_5 = tmp;
   const memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
-  const items = [tmp, memo, classificationId, onComplete, entryPoint];
+  items = [tmp, memo, classificationId, onComplete, entryPoint];
   const items1 = [flag, isRetry];
   const memo1 = classificationId.useMemo(() => {
     const modalSessionId = memo;

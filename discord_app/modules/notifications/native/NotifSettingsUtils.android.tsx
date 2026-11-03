@@ -1,10 +1,10 @@
-// === Module 16279: NotifSettingsUtils ===
+// === Module 16426: NotifSettingsUtils ===
 
-// Module 16279 (NotifSettingsUtils)
+// Module 16426 (NotifSettingsUtils)
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16280 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16276 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16427 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16419 */;
 import size from "module_2" /* 2 */;
 
 function inferImportanceFromBehavior(visibility) {
@@ -31,11 +31,11 @@ function formatCategory(id) {
   obj.name = stringId;
   return obj;
 }
-function formatSetting(item10023, importance) {
-  const obj = { id: item10023.string_id, groupId: item10023.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
+function formatSetting(item10037, importance) {
+  const obj = { id: item10037.string_id, groupId: item10037.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
   const intl = util.intl;
-  const stringResult = intl.string(item10023.title);
-  let string_id = item10023.string_id;
+  const stringResult = intl.string(item10037.title);
+  let string_id = item10037.string_id;
   if ("" !== stringResult) {
     string_id = stringResult;
   }
@@ -43,15 +43,15 @@ function formatSetting(item10023, importance) {
   if (importance != null) {
     obj.importance = importance;
     let ringtone;
-    if ("ringtone" in item10023.behavior) {
-      ringtone = item10023.behavior.ringtone;
+    if ("ringtone" in item10037.behavior) {
+      ringtone = item10037.behavior.ringtone;
     }
     obj.ringtone = ringtone;
-    obj.badge = item10023.behavior.badge;
-    obj.vibrate = item10023.behavior.vibrate;
+    obj.badge = item10037.behavior.badge;
+    obj.vibrate = item10037.behavior.vibrate;
     return obj;
   } else {
-    const behavior = item10023.behavior;
+    const behavior = item10037.behavior;
     if (!("ringtone" in behavior)) {
       if ("popup" !== behavior.visibility) {
         if ("hidden" === behavior.visibility) {
@@ -65,85 +65,206 @@ function formatSetting(item10023, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(16281).getAssignedNotifSettingsAndMappings();
-  ({ categories, settings, mappings } = assignedNotifSettingsAndMappings);
-  const obj2 = (function computeInheritedImportances(mappings) {
-    map = new Map();
-    const tmp = NativeNotifSettingsModuleDefault;
-    let prop;
-    if (tmp != null) {
-      prop = tmp.getAndroidNotifChannelStates;
+  const assignedNotifSettingsAndMappings = items(set[2]).getAssignedNotifSettingsAndMappings();
+  ({ categories, settings, mappings, redesignState } = assignedNotifSettingsAndMappings);
+  const tmp2 = map(set[3]);
+  let androidNotifChannelStates;
+  if (tmp2 != null) {
+    const getAndroidNotifChannelStates = tmp2.getAndroidNotifChannelStates;
+    if (getAndroidNotifChannelStates != null) {
+      androidNotifChannelStates = getAndroidNotifChannelStates();
     }
-    if (null == prop) {
-      return map;
-    } else {
-      const _Map2 = Map;
-      map1 = new Map();
-      const propResult = prop();
-      for (const item10020 of propResult) {
-        let result = map1.set(item10020.channelId, item10020.importance);
-        continue;
+  }
+  if (androidNotifChannelStates == null) {
+    androidNotifChannelStates = [];
+  }
+  let obj2 = (function computeInheritedImportances(settings, mappings, androidNotifChannelStates, redesignState) {
+    map = new Map();
+    const map1 = new Map(androidNotifChannelStates.map((item) => {
+      items = [, ];
+      ({ channelId: arr[0], importance: arr[1] } = item);
+      return items;
+    }));
+    const map2 = new Map(set2.map((id) => {
+      items = [id.id, id];
+      return items;
+    }));
+    const map3 = new Map();
+    const map4 = new Map();
+    const iter = set2[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp3 = nextResult;
+      set1 = map4.get(nextResult.string_id);
+      if (set1 == null) {
+        let _Set = Set;
+        let tmp4 = new.target;
+        let tmp5 = new.target;
+        set1 = new Set();
       }
-      const _Map = Map;
-      const map2 = new Map();
-      for (const item10036 of closure_1_4) {
-        let result1 = map2.set(item10036.id, item10036);
-        continue;
+      let addResult = set1.add(inferImportanceFromBehavior(tmp3.behavior));
+      let result = map4.set(tmp3.string_id, set1);
+      continue;
+    }
+    const iter2 = settings[Symbol.iterator]();
+    const nextResult1 = iter2.next();
+    while (iter2 !== undefined) {
+      let tmp11 = nextResult1;
+      let prop = nextResult1.sourceAndroidChannels;
+      if (prop == null) {
+        prop = [];
       }
-      const iter = mappings[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let notifSetting = nextResult.notifSetting;
-        let tmp17 = closure_1_3[nextResult.notifType];
-        if (null != tmp17) {
-          for (const item10055 of tmp17) {
-            if (item10055 !== notifSetting) {
-              value = map2.get(tmp20);
-              let tmp24 = value;
-              if (null != value) {
-                value2 = map1.get(tmp24.string_id);
-                let tmp27 = value2;
-                if (null != value2) {
-                  if (tmp27 !== inferImportanceFromBehavior(tmp24.behavior)) {
-                    let result2 = map.set(notifSetting, tmp27);
-                    obj4.return();
-                    break;
-                  }
-                }
+      let tmp12 = new.target;
+      let tmp13 = new.target;
+      set = new Set(prop);
+      let obj7 = set;
+      if (!redesignState) {
+        for (const item10092 of set2) {
+          let sourceAndroidChannels = item10092.sourceAndroidChannels;
+          let hasItem;
+          if (sourceAndroidChannels != null) {
+            hasItem = sourceAndroidChannels.includes(tmp11.string_id);
+          }
+          if (hasItem) {
+            let addResult1 = obj7.add(item10092.string_id);
+          }
+          continue;
+        }
+      }
+      let result1 = map3.set(tmp11.id, obj7);
+      continue;
+    }
+    const iter3 = mappings[Symbol.iterator]();
+    while (iter3 !== undefined) {
+      ({ notifType, notifSetting } = nextResult2);
+      let value7 = map2.get(notifSetting);
+      let tmp30 = value7;
+      if (null != value7) {
+        if (!("sourceAndroidChannels" in tmp30)) {
+          items = mapped[notifType];
+          if (items == null) {
+            items = [];
+          }
+          for (const item10132 of items) {
+            let value8 = map2.get(item10132);
+            let tmp36 = value8;
+            let tmp37 = null != value8;
+            if (tmp37) {
+              tmp37 = tmp36.string_id !== tmp30.string_id;
+            }
+            if (tmp37) {
+              let value9 = map3.get(notifSetting);
+              if (value9 != null) {
+                let addResult2 = value9.add(tmp36.string_id);
               }
             }
             continue;
           }
         }
-        continue;
       }
-      return map;
+      continue;
     }
-  })(mappings);
-  let items = [];
+    const iter4 = settings[Symbol.iterator]();
+    const nextResult3 = iter4.next();
+    while (iter4 !== undefined) {
+      let tmp44 = nextResult3;
+      if (!map1.has(nextResult3.string_id)) {
+        let tmp47 = inferImportanceFromBehavior(tmp44.behavior);
+        let bound = tmp47;
+        let tmp48 = tmp47;
+        let value10 = map3.get(tmp44.id);
+        if (value10 == null) {
+          value10 = [];
+        }
+        for (const item10173 of value10) {
+          let value11 = map1.get(item10173);
+          let tmp54 = value11;
+          let tmp55 = null == value11;
+          if (!tmp55) {
+            let _Number = Number;
+            tmp55 = !Number.isInteger(tmp54);
+          }
+          if (!tmp55) {
+            tmp55 = tmp54 < constants.NONE;
+          }
+          if (!tmp55) {
+            let value12 = map4.get(item10173);
+            let hasItem1;
+            if (value12 != null) {
+              hasItem1 = value12.has(tmp54);
+            }
+            if (true !== hasItem1) {
+              let _Math = Math;
+              bound = Math.min(bound, tmp54);
+            }
+          }
+          continue;
+        }
+        if (bound < tmp48) {
+          let result2 = map.set(tmp44.id, bound);
+        }
+      }
+      continue;
+    }
+    return map;
+  })(settings, mappings, androidNotifChannelStates, redesignState);
+  items = [];
   map = new Map();
-  for (const item10023 of settings) {
-    let arr = items.push(formatSetting(item10023, obj2.get(item10023.id)));
-    let result = map.set(item10023.id, item10023.string_id);
+  for (const item10037 of settings) {
+    let arr = items.push(formatSetting(item10037, obj2.get(item10037.id)));
+    let result = map.set(item10037.id, item10037.string_id);
     continue;
   }
-  const obj3 = { groups: null, mapping: null, channels: null, inheritedImportances: null };
-  const obj = map(16281);
-  obj3.groups = categories.map(formatCategory);
-  obj3.mapping = mappings.flatMap((notifSetting) => {
-    value = map.get(notifSetting.notifSetting);
-    if (null == value) {
-      let items = [];
-    } else {
-      items = { type: notifSetting.notifType, channel: value };
-    }
-    return items;
-  });
-  obj3.channels = items;
-  obj3.inheritedImportances = obj2;
-  return obj3;
+  set = new Set(items.map((id) => id.id));
+  new Set(androidNotifChannelStates.map((channelId) => channelId.channelId));
+  const mapped = categories.map(formatCategory);
+  const obj = items(set[2]);
+  for (const item10083 of set2) {
+    let tmp9 = (function _loop(item10083) {
+      if (set1.has(item10083.string_id)) {
+        if (!set.has(item10083.string_id)) {
+          items.push(formatSetting(item10083));
+          set.add(item10083.string_id);
+          const found = React3.find((string_id) => string_id.string_id === item10083.category);
+          let hasItem = null == found;
+          if (!hasItem) {
+            hasItem = set2.has(found.string_id);
+          }
+          if (!hasItem) {
+            let string_id = found.string_id;
+            const obj2 = { id: string_id, name: null };
+            const intl = util.intl;
+            const stringResult = intl.string(found.title);
+            if ("" !== stringResult) {
+              string_id = stringResult;
+            }
+            obj2.name = string_id;
+            mapped.push(obj2);
+            set2.add(found.string_id);
+          }
+        }
+      }
+      return 1;
+    })(item10083);
+    continue;
+  }
+  const set2 = new Set(mapped.map((id) => id.id));
+  return {
+    groups: mapped,
+    mapping: mappings.flatMap((notifSetting) => {
+      value = map.get(notifSetting.notifSetting);
+      if (null == value) {
+        items = [];
+      } else {
+        items = { type: notifSetting.notifType, channel: value };
+      }
+      return items;
+    }),
+    channels: items,
+    inheritedImportances: obj2
+  };
 }
-({ NOTIF_SETTING_MAPPING: c3, NOTIF_SETTINGS: closure_4 } = NotificationSettingsConstants);
+({ NOTIF_CATEGORIES: c3, NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 const constants = { NONE: 0, [0]: "NONE", MIN: 1, [1]: "MIN", LOW: 2, [2]: "LOW", DEFAULT: 3, [3]: "DEFAULT", HIGH: 4, [4]: "HIGH" };
 let result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
@@ -160,7 +281,7 @@ export default {
         const tmp4 = buildChannelsAndMapping();
         const obj2 = { message: "Registering declarative notification categories", data: null };
         const obj3 = { channels: channels.map((id) => id.id), entriesWithFallbackNames: null, inheritedImportances: null };
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(channels, HermesBuiltin.arraySpread(groups, 0));
         const found = items.filter((name) => name.name === name.id);
         obj3.entriesWithFallbackNames = found.map((id) => id.id);

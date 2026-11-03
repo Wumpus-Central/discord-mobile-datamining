@@ -1,20 +1,20 @@
-// === Module 10244: GIFPickerActionCreators ===
+// === Module 10374: GIFPickerActionCreators ===
 
-// Module 10244 (GIFPickerActionCreators)
+// Module 10374 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9831 */;
-import GifProvider from "GifProvider" /* 10245 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10246 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10243 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9962 */;
+import GifProvider from "GifProvider" /* 10375 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10376 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10373 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -69,7 +69,7 @@ function doSearchRequest(q, arg1, limit) {
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, SearchTypes: closure_8, GIFPickerResultTypes: closure_9 } = Constants);
 const UserSettingsConstants = fn(1082);
-({ MAX_FAVORITE_GIFS_SIZE: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
+({ MAX_FAVORITE_GIFS_SIZE: closure_10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const re12 = /-/g;
 let closure_14 = apply.debounce(doSearchRequest, 250);
 const re15 = /\.(webp|avif|gif)(\?|$)/i;

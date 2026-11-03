@@ -1,35 +1,35 @@
-// === Module 9967: EmojiPickerList ===
+// === Module 10098: EmojiPickerList ===
 
-// Module 9967 (EmojiPickerList)
+// Module 10098 (EmojiPickerList)
 import util from "util" /* 1113 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9943 */;
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9946 */;
-import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 9973 */;
-import trackEmojiSuggestionSelectedDefault from "trackEmojiSuggestionSelected" /* 10017 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 10018 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10021 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10022 */;
-import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10024 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10025 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10029 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10074 */;
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10077 */;
+import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10105 */;
+import trackEmojiSuggestionSelectedDefault from "trackEmojiSuggestionSelected" /* 10148 */;
+import useEmojiPickerData from "useEmojiPickerData" /* 10149 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10152 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10153 */;
+import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10155 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10156 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9942).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(10073).IMAGE_SIZE;
 const Constants = fn(1072);
 ({ AnalyticsObjects: metroRequire, AnalyticsPages: closure_7, AnalyticsSections: closure_8, UpsellTypes: closure_9 } = Constants);
-const EmojiConstants = fn(1386);
-({ EmojiDisabledReasons: c10, EmojiIntention: closure_11 } = EmojiConstants);
+const EmojiConstants = fn(1388);
+({ EmojiDisabledReasons: closure_10, EmojiIntention: closure_11 } = EmojiConstants);
 const MIN_MARGIN = fn(1228).MIN_MARGIN;
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -72,7 +72,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
   if (newlyAddedEmojis.length > 0) {
     id = newlyAddedEmojis[0].id;
   }
-  let items = [id, guildId];
+  items = [id, guildId];
   const effect = guildId.useEffect(() => {
     const result = TopEmojisActionCreators.updateNewlyAddedLastSeen(guildId, id);
   }, items);
@@ -132,7 +132,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       const obj6 = { page: DM_CHANNEL, section: constants3.EMOJI_PICKER_POPOUT, object: constants.EMOJI };
       obj5.analyticsLocation = obj6;
       if (category === EmojiCategoryTypes.SUGGESTED) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(analyticsLocations, 0)] = AnalyticsLocationDefault.EMOJI_SUGGESTIONS;
         let tmp17 = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
@@ -243,34 +243,34 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
               }
             }
             const obj2 = { label: item.title, isSectionNitroLocked: item.isSectionNitroLocked, useTier0UpsellContent };
-            return closure_2_14(EmojiPickerListComponents.Section, obj2);
+            return gesture(EmojiPickerListComponents.Section, obj2);
           } else if (useEmojiPickerData.EmojiPickerItemType.PREMIUM_INLINE_ROADBLOCK === type) {
             const obj3 = { position: item.position, useTier0UpsellContent };
-            return closure_2_14(PremiumUpsellSectionDividerDefault, obj3);
+            return gesture(PremiumUpsellSectionDividerDefault, obj3);
           } else {
             if (useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW === type) {
               ({ emojis, emojisDisabled, footer, row, isSectionNitroLocked } = item);
               const obj4 = { emojis, emojisDisabled, category: footer, rowSize: rounded, containerWidth, onPressEmoji, onLongPressEmoji: callback1, animateEmoji: setting, row, isSectionNitroLocked };
-              let tmp27Result = closure_2_14(EmojiPickerListRow.EmojiPickerListRow, obj4);
+              let tmp27Result = gesture(EmojiPickerListRow.EmojiPickerListRow, obj4);
             } else if (useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW_NSFW === type) {
-              tmp27Result = closure_2_14(EmojiPickerListComponents.NSFWRow, {});
+              tmp27Result = gesture(EmojiPickerListComponents.NSFWRow, {});
             } else if (useEmojiPickerData.EmojiPickerItemType.FOOTER_UPSELL === type) {
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
               const obj = { guildId: guild_id, analyticsLocations, useTier0UpsellContent };
-              tmp27Result = closure_2_14(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj);
+              tmp27Result = gesture(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj);
             }
             let tmp16 = true === item.isSectionNitroLocked;
             if (tmp16) {
               const obj5 = { useTier0UpsellContent };
-              tmp16 = closure_2_14(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj5);
+              tmp16 = gesture(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj5);
             }
             const obj6 = { children: null };
-            const items = [tmp16, tmp27Result];
+            items = [tmp16, tmp27Result];
             obj6.children = items;
-            return __initData2(__initData, obj6);
+            return value2(closure_2_15, obj6);
           }
         }
       }

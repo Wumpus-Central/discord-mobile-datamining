@@ -1,15 +1,15 @@
-// === Module 12502: AppLauncherAutocompleteOption ===
+// === Module 12638: AppLauncherAutocompleteOption ===
 
-// Module 12502 (AppLauncherAutocompleteOption)
+// Module 12638 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 575 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12501 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ content: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx");
@@ -31,7 +31,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       tmp();
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12503, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12639, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
       option,
       initChoice,
       onChoiceSelect(arg0) {
@@ -67,7 +67,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
   }
   const obj5 = { status: str, children: null };
   const obj6 = { style: null, children: null };
-  const items = [inputStyles.padding, tmp3.content];
+  items = [inputStyles.padding, tmp3.content];
   obj6.style = items;
   const obj7 = { variant: token, color: "text-default", children: null };
   let str2 = " ";

@@ -1,13 +1,13 @@
-// === Module 19952: GuildRoleSubscriptionTierEditStep ===
+// === Module 20102: GuildRoleSubscriptionTierEditStep ===
 
-// Module 19952 (GuildRoleSubscriptionTierEditStep)
+// Module 20102 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import FormSeparatorDefault from "FormSeparator" /* 17208 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import FormSeparatorDefault from "FormSeparator" /* 17351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = closure_8();
   const obj = { top: true, style: tmp.headerContainer, children: null };
-  const items = [timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), timestampProducer(FormSeparatorDefault, { style: tmp.separator })];
+  items = [timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), timestampProducer(FormSeparatorDefault, { style: tmp.separator })];
   obj.children = items;
   return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
 }
@@ -31,18 +31,18 @@ function Footer(arg0) {
     tmp5 = require;
   }
   const obj = { style: null, children: null };
-  const items = [closure_8().footerContainer, ];
+  items = [closure_8().footerContainer, ];
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5634).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5754).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 obj2.headerContainer = { position: "relative", paddingTop: nativeDefault.space.PX_48, paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center" };
@@ -64,7 +64,7 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
   const navigation = useNavigation.useNavigation();
   const nextStep = merged.nextStep;
   const onProceed = merged.onProceed;
-  const items = [navigation, nextStep, onProceed];
+  items = [navigation, nextStep, onProceed];
   const callback = noop.useCallback(() => {
     if (null != onProceed) {
       tmp();

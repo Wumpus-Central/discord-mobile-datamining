@@ -1,20 +1,20 @@
-// === Module 11294: ConfirmBlockUserAlert ===
+// === Module 11431: ConfirmBlockUserAlert ===
 
-// Module 11294 (ConfirmBlockUserAlert)
+// Module 11431 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import ReportModals from "ReportModals" /* 8352 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import ReportModals from "ReportModals" /* 8476 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11256).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11393).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
@@ -33,7 +33,7 @@ export default function ConfirmBlockUserAlert(userId) {
   const onBlock = userId.onBlock;
   let str = userId.blockButtonVariant;
   const tmp = closure_9();
-  const items = [onBlock];
+  items = [onBlock];
   const stateFromStores = userId(onCancel[7]).useStateFromStores(items, () => UserStore.getUser(userId));
   let obj = userId(onCancel[7]);
   const lastChannelMessage = userId(onCancel[8]).useLastChannelMessage(channelId);
@@ -76,7 +76,7 @@ export default function ConfirmBlockUserAlert(userId) {
     children: null
   };
   const obj3 = channelId(onCancel[9]);
-  const obj5 = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = userId(onCancel[15]).intl;
   obj5.children = intl.format(userId(onCancel[15]).t.x5pOn9, { name });
   const items5 = [callback(userId(onCancel[16]).Text, obj5), , ];

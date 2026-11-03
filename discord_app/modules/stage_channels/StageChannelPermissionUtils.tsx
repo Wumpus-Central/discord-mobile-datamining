@@ -1,22 +1,22 @@
-// === Module 6710: StageChannelPermissionUtils ===
+// === Module 6830: StageChannelPermissionUtils ===
 
-// Module 6710 (StageChannelPermissionUtils)
+// Module 6830 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4871 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4881).isGuildOwner;
+const isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
-({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
+({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
@@ -99,11 +99,11 @@ export function isEmptyOverwrite(id) {
 }
 export function useCanCreateStageChannelByGuild(guildId) {
   _require = guildId;
-  const items = [PermissionStore, AuthenticationStore, GuildStore];
+  items = [PermissionStore, AuthenticationStore, GuildStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
     const id = AuthenticationStore.getId();
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let tmp3 = null != guild;
     if (tmp3) {
       const features = guild.features;
@@ -122,7 +122,7 @@ export function useCanCreateStageChannelByGuild(guildId) {
 }
 export function useCanUpdateStageChannelModerators(id) {
   _require = id;
-  const items = [PermissionStore, GuildStore, ChannelStore];
+  items = [PermissionStore, GuildStore, ChannelStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -144,7 +144,7 @@ export function useCanUpdateStageChannelModerators(id) {
 }
 export function useCanModerateRequestToSpeak(id) {
   _require = id;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;

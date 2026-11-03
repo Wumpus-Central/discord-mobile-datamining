@@ -1,12 +1,12 @@
-// === Module 12640: ConjureMessageActionSheet ===
+// === Module 12776: ConjureMessageActionSheet ===
 
-// Module 12640 (ConjureMessageActionSheet)
+// Module 12776 (ConjureMessageActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import CopyIcon from "CopyIcon" /* 5731 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import CopyIcon from "CopyIcon" /* 5851 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -18,7 +18,7 @@ function ConjureMessageActionSheet(content) {
   const onQueuedAction = content.onQueuedAction;
   const onRestoreVersion = content.onRestoreVersion;
   const onViewTrace = content.onViewTrace;
-  const items = [content];
+  items = [content];
   const items1 = [userId];
   const callback = onRestoreVersion.useCallback(() => {
     ClipboardUtils.copy(content);

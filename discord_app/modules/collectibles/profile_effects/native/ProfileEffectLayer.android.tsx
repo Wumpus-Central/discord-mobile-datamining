@@ -1,8 +1,8 @@
-// === Module 9503: ProfileEffectLayer ===
+// === Module 9631: ProfileEffectLayer ===
 
-// Module 9503 (ProfileEffectLayer)
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9500 */;
-import APNGPlayer from "APNGPlayer" /* 9504 */;
+// Module 9631 (ProfileEffectLayer)
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9628 */;
+import APNGPlayer from "APNGPlayer" /* 9632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default noop.memo(function ProfileEffectLayerAndroid(paused) {
   ({ accessibilityLabel, onLoad } = paused);
   const ref = noop.useRef(null);
   const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
-  const items = [animate, paused, aPNGPlayerControls];
+  items = [animate, paused, aPNGPlayerControls];
   const effect = noop.useEffect(() => {
     if (animate) {
       if (!paused) {

@@ -1,28 +1,23 @@
-// === Module 11039: ChannelRowPreview ===
+// === Module 11172: ChannelRowPreview ===
 
-// Module 11039 (ChannelRowPreview)
-import UserSettings from "UserSettings" /* 4839 */;
-import createStyles from "createStyles" /* 5014 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useFontScale from "useFontScale" /* 5642 */;
-import LinkIcon from "LinkIcon" /* 5727 */;
-import RowGeneratorDefault from "RowGenerator" /* 8377 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8381 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9833 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9835 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import MusicIcon from "MusicIcon" /* 10758 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 11021 */;
-import VideoIcon from "VideoIcon" /* 11040 */;
-import StickerIcon from "StickerIcon" /* 11042 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11044 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
+// Module 11172 (ChannelRowPreview)
+import UserSettings from "UserSettings" /* 4966 */;
+import createStyles from "createStyles" /* 5141 */;
+import useToken from "useToken" /* 5719 */;
+import LinkIcon from "LinkIcon" /* 5847 */;
+import RowGeneratorDefault from "RowGenerator" /* 8501 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8505 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9964 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9966 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import MusicIcon from "MusicIcon" /* 10888 */;
+import VideoIcon from "VideoIcon" /* 11173 */;
+import StickerIcon from "StickerIcon" /* 11175 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11184 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -66,95 +61,125 @@ function PreviewIcon(icon) {
 }
 class ChannelRowPreview {
   constructor(arg0) {
-    ({ message, channel, layout, lineClamp } = global);
-    if (lineClamp === undefined) {
-      lineClamp = 1;
+    message = global.message;
+    channel = global.channel;
+    layout = global.layout;
+    num = global.lineClamp;
+    if (num === undefined) {
+      num = 1;
     }
-    ({ variant, color, muted } = global);
-    tmp = closure_0;
-    tmp2 = closure_2;
-    obj = closure_0(closure_2[12]);
+    muted = global.muted;
+    ({ variant, color } = global);
+    closure_4 = undefined;
+    color = undefined;
+    content = undefined;
+    tmp = message;
+    tmp2 = layout;
+    obj = message(layout[12]);
     fontScale = obj.useFontScale();
-    obj2 = closure_0(closure_2[14]);
+    closure_4 = fontScale;
+    obj2 = message(layout[13]);
     formattedMessagePreview = obj2.useFormattedMessagePreview(message, channel);
-    obj3 = closure_0(closure_2[15]);
+    obj3 = message(layout[14]);
     layoutStyles = obj3.getLayoutStyles(layout);
-    tmp6 = closure_0(closure_2[16]);
+    obj4 = message(layout[15]);
+    scaleTextLineHeightResult = obj4.scaleTextLineHeight(layoutStyles.messagePreview.text.variant, fontScale);
+    if (color == null) {
+      color1 = undefined;
+      if (formattedMessagePreview != null) {
+        color1 = formattedMessagePreview.color;
+      }
+      color = color1;
+    }
+    type1 = undefined;
+    if (formattedMessagePreview != null) {
+      type1 = formattedMessagePreview.type;
+    }
+    if ("markup" === type1) {
+      content = formattedMessagePreview.markup;
+    } else {
+      str = "message";
+      if ("message" === type1) {
+        content = formattedMessagePreview.message.content;
+      }
+    }
+    items = [, , , , , , ];
+    items[0] = content;
+    items[1] = muted;
+    items[2] = channel.guild_id;
+    items[3] = message.channel_id;
+    items[4] = layout;
+    items[5] = color;
+    items[6] = fontScale;
+    memo = muted.useMemo(() => {
+      let result;
+      if (null != content) {
+        const obj2 = { content: tmp, muted, guildId: channel.guild_id, channelId: message.channel_id, layout, color, fontScale };
+        result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
+      }
+      return result;
+    }, items);
     if (null == formattedMessagePreview) {
       return null;
     } else {
-      ({ authorLabel, trailingIcon } = formattedMessagePreview);
-      if (color == null) {
-        color = formattedMessagePreview.color;
-      }
-      type = formattedMessagePreview.type;
-      str = "text";
+      ({ authorLabel, trailingIcon, type } = formattedMessagePreview);
+      str5 = "text";
       if ("text" === type) {
         text = formattedMessagePreview.text;
-      } else {
-        str2 = "markup";
-        if ("markup" === type) {
-          tmp8 = jsx;
-          tmp9 = closure_9;
-          if ("markup" === formattedMessagePreview.type) {
-            content = formattedMessagePreview.markup;
-          } else {
-            content = formattedMessagePreview.message.content;
-          }
-          obj1 = { markup: null, channelId: null, guildId: null, muted: null, layout: null, color: null };
-          obj1.markup = content;
-          obj1.channelId = message.channel_id;
-          obj1.guildId = channel.guild_id;
-          obj1.muted = muted;
-          obj1.layout = layout;
-          obj1.color = color;
-          text = tmp8(tmp9, obj1);
-        } else {
-          str3 = "message";
+      } else if ("markup" === type) {
+        content1 = undefined;
+        if (memo != null) {
+          content1 = memo.content;
         }
+        text = content1;
+      } else {
+        str2 = "message";
       }
-      tmp10 = jsxs;
-      obj9 = { style: null, children: null };
-      obj10 = { flexDirection: "row", alignItems: "center", minHeight: null };
-      obj10.minHeight = tmp7;
-      obj9.style = obj10;
-      tmp11 = View;
-      obj11 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
-      obj11.lineClamp = lineClamp;
+      obj1 = { style: null, children: null };
+      obj9 = { flexDirection: "row", alignItems: "center", minHeight: null };
+      obj9.minHeight = scaleTextLineHeightResult;
+      obj1.style = obj9;
+      tmp13 = content;
+      tmp11 = jsxs;
+      tmp12 = closure_4;
+      obj10 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, leadingContent: null, mentions: null, style: null, children: null };
+      obj10.lineClamp = num;
       if (variant == null) {
         variant = "text-sm/normal";
       }
-      obj11.variant = variant;
-      obj11.color = color;
-      obj11.style = { paddingBottom: 2, flexShrink: 1 };
-      combined = null != authorLabel;
-      if (combined) {
-        tmp13 = globalThis;
+      obj10.variant = variant;
+      obj10.color = color;
+      combined = undefined;
+      if (null != authorLabel) {
+        tmp15 = globalThis;
         _HermesInternal = HermesInternal;
-        str4 = ": ";
-        str5 = "";
+        str3 = ": ";
+        str4 = "";
         combined = "" + authorLabel + ": ";
       }
-      items = [, ];
-      items[0] = combined;
-      items[1] = text;
-      obj11.children = items;
-      items1 = [, ];
-      items1[0] = tmp10(tmp(tmp2[17]).Text, obj11);
-      tmp14 = null != trailingIcon;
-      if (tmp14) {
-        tmp15 = jsx;
-        tmp16 = PreviewIcon;
-        obj12 = { icon: null, size: null, color: null, style: null };
-        obj12.icon = trailingIcon;
-        obj12.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
-        obj12.color = color;
-        obj12.style = { marginLeft: 4 };
-        tmp14 = jsx(PreviewIcon, obj12);
+      obj10.leadingContent = combined;
+      mentions = undefined;
+      if (memo != null) {
+        mentions = memo.mentions;
       }
-      items1[1] = tmp14;
-      obj9.children = items1;
-      return tmp10(tmp11, obj9);
+      obj10.mentions = mentions;
+      obj10.style = { paddingBottom: 2, flexShrink: 1 };
+      obj10.children = text;
+      items1 = [, ];
+      items1[0] = tmp13(tmp(tmp2[17]).MessagePreviewParagraph, obj10);
+      tmp13Result = null != trailingIcon;
+      if (tmp13Result) {
+        tmp18 = PreviewIcon;
+        obj11 = { icon: null, size: null, color: null, style: null };
+        obj11.icon = trailingIcon;
+        obj11.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
+        obj11.color = color;
+        obj11.style = { marginLeft: 4 };
+        tmp13Result = tmp13(PreviewIcon, obj11);
+      }
+      items1[1] = tmp13Result;
+      obj1.children = items1;
+      return tmp11(tmp12, obj1);
     }
   }
 }
@@ -235,19 +260,14 @@ class NativeChannelRowPreview {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let closure_9 = noop.memo(function PreviewMarkup(arg0) {
-  ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = useFontScale.useFontScale();
-  return MessagePreviewMarkup.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
-});
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };
 export const NativeMessageChannelRowPreview = noop.memo(function NativeMessageChannelRowPreview(message) {
   _require = message;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [message.message.author.id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.isBlockedOrIgnored(message.message.author.id), items1);
   const obj = require("initialize");

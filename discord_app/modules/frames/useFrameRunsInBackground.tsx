@@ -1,9 +1,9 @@
-// === Module 14414: useFrameRunsInBackground ===
+// === Module 14545: useFrameRunsInBackground ===
 
-// Module 14414 (useFrameRunsInBackground)
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12093 */;
+// Module 14545 (useFrameRunsInBackground)
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12229 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/frames/useFrameRunsInBackgrou
 
 export default function useFrameRunsInBackground(arg0) {
   _require = arg0;
-  const items = [FramesStore, UnsyncedUserSettingsStore];
+  items = [FramesStore, UnsyncedUserSettingsStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => frameRunsInBackgroundDefault(FramesStore.getFrame(closure_0), UnsyncedUserSettingsStore), items1);
 };

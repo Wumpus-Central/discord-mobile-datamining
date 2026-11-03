@@ -1,12 +1,12 @@
-// === Module 9277: SecureFramesExistingVerificationsHelpMessage ===
+// === Module 9405: SecureFramesExistingVerificationsHelpMessage ===
 
-// Module 9277 (SecureFramesExistingVerificationsHelpMessage)
+// Module 9405 (SecureFramesExistingVerificationsHelpMessage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
-import InlineNotice from "InlineNotice" /* 8025 */;
-import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9278 */;
-import createStyles from "createStyles" /* 5014 */;
+import InlineNotice from "InlineNotice" /* 8149 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9406 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -21,7 +21,7 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {
     const obj2 = { style: null, children: null };
-    const items = [tmp.container, style];
+    items = [tmp.container, style];
     obj2.style = items;
     const obj3 = { type: "info", message: null, role: "none" };
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 4858: Timers ===
+// === Module 4985: Timers ===
 
-// Module 4858 (Timers)
+// Module 4985 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -196,7 +196,7 @@ prototype5["queue"] = function queue(items) {
   return resolved;
 };
 prototype5["reset"] = function reset() {
-  const items = [...this._pending];
+  items = [...this._pending];
   const items1 = [...this._promises];
   closure_0 = new prototype3("BatchInvocationManager was reset");
   const _pending = this._pending;
@@ -233,7 +233,7 @@ prototype5["_flush"] = function _flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -258,7 +258,7 @@ prototype5["_flush"] = function _flush() {
             if (self._flushReady) {
               if (self._activeInvocationCount < tmp31) {
                 closure_1 = 0;
-                const items = [];
+                items = [];
                 closure_1 = HermesBuiltin.arraySpread(self._pending, closure_1);
                 const _pending = self._pending;
                 _pending.clear();

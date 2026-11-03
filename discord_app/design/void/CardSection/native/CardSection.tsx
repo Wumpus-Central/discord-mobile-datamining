@@ -1,15 +1,15 @@
-// === Module 8193: CardSection ===
+// === Module 8317: CardSection ===
 
-// Module 8193 (CardSection)
+// Module 8317 (CardSection)
 import nativeDefault from "native" /* 575 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8194 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8318 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
 obj2.title = TextStyles(fn(1072).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 });
 obj2.card = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -22,7 +22,7 @@ export default function CardSection(arg0) {
   ({ titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } = arg0);
   const tmp = closure_5();
   const obj = { style: null, accessibilityRole, accessibilityLabel, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   let tmp4 = null;
   if (null != title) {

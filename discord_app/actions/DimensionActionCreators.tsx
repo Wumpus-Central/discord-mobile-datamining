@@ -1,6 +1,6 @@
-// === Module 11554: DimensionActionCreators ===
+// === Module 11691: DimensionActionCreators ===
 
-// Module 11554 (DimensionActionCreators)
+// Module 11691 (DimensionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ export default {
     }
   },
   updateChannelListScroll(guildId, scrollTop) {
-    let items = arg2;
+    items = arg2;
     if (arg2 === undefined) {
       items = [];
     }

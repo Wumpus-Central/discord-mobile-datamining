@@ -1,8 +1,8 @@
-// === Module 14920: GameRelationshipStoreHooks ===
+// === Module 15049: GameRelationshipStoreHooks ===
 
-// Module 14920 (GameRelationshipStoreHooks)
+// Module 15049 (GameRelationshipStoreHooks)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
 
 const require = globalThis.__r;
 
@@ -13,51 +13,51 @@ const result = size.fileFinishedImporting("modules/game_relationships/GameRelati
 
 export function useGameRelationshipsByType(FRIEND) {
   _require = FRIEND;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [FRIEND];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
-    const items = [GameRelationshipStore.getGameRelationshipsByType(closure_0), GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [GameRelationshipStore.getGameRelationshipsByType(closure_0), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }
 export function useGameFriendsForUser(id) {
   const FRIEND = RelationshipTypes.FRIEND;
   _require = id;
-  const items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [FRIEND, id];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
-    const items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }
 export function useIncomingGameRelationshipsForUser(id) {
   const PENDING_INCOMING = RelationshipTypes.PENDING_INCOMING;
   _require = id;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [PENDING_INCOMING, id];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
-    const items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }
 export function useHasGameRelationshipsForUser(arg0) {
   _require = arg0;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [arg0];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
     const gameRelationshipsForUser = GameRelationshipStore.getGameRelationshipsForUser(closure_0);
-    const items = [gameRelationshipsForUser.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [gameRelationshipsForUser.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }
 export function useHasGameRelationshipsForUserByType(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [arg1, arg0];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, closure_1);
-    const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }

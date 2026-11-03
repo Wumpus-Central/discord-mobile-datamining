@@ -1,15 +1,15 @@
-// === Module 11979: GameConsoleActionCreators ===
+// === Module 12116: GameConsoleActionCreators ===
 
-// Module 11979 (GameConsoleActionCreators)
+// Module 12116 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5921 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11980 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 6041 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 12117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
 
 require = fn;
 function disconnectRemote() {
@@ -54,7 +54,7 @@ let closure_11 = async function _disconnectRemote() {
     }
     tmp24 = null == deviceId;
   }
-  const items = [];
+  items = [];
   if (!tmp24) {
     items.push(cancelCommand(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
   }
@@ -91,7 +91,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_16 = async function _cancelCommand() {
           const obj11 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: closure_131_0, deviceId: closure_131_1, commandId: closure_131_2 };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp28) {
         closure_5 = tmp28;

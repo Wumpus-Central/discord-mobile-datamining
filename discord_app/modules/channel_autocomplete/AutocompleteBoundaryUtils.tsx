@@ -1,8 +1,8 @@
-// === Module 7825: AutocompleteBoundaryUtils ===
+// === Module 7949: AutocompleteBoundaryUtils ===
 
-// Module 7825 (AutocompleteBoundaryUtils)
+// Module 7949 (AutocompleteBoundaryUtils)
 import Constants from "Constants" /* 1072 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6036 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6156 */;
 import size from "module_2" /* 2 */;
 
 function isAutocompleteSeparatingBoundary(c22, selectionStart) {

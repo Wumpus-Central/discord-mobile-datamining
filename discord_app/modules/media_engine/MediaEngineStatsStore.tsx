@@ -1,6 +1,6 @@
-// === Module 5781: MediaEngineStatsStore ===
+// === Module 5901: MediaEngineStatsStore ===
 
-// Module 5781 (MediaEngineStatsStore)
+// Module 5901 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -221,7 +221,7 @@ prototype["getLastConnectionStats"] = function getLastConnectionStats(mediaEngin
 };
 prototype["getStatsHistory"] = function getStatsHistory(arg0) {
   if (null == arg0) {
-    let items = [];
+    items = [];
   } else {
     items = dependencyMap[arg0];
     if (items == null) {

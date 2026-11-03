@@ -1,9 +1,9 @@
-// === Module 6539: CaptchaStore ===
+// === Module 6659: CaptchaStore ===
 
-// Module 6539 (CaptchaStore)
+// Module 6659 (CaptchaStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -50,7 +50,7 @@ export function flushCaptchaServeVolume() {
     let obj = MonitoringAgentDefault;
     let obj2 = { name: MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION, tags: null };
     let _HermesInternal = HermesInternal;
-    let items = ["user_flow:" + tmp6];
+    items = ["user_flow:" + tmp6];
     obj2.tags = items;
     let distributionResult = obj.distribution(obj2, tmp7, true);
     continue;

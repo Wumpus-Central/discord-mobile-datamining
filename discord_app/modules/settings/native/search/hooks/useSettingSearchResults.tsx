@@ -1,14 +1,14 @@
-// === Module 16598: useSettingSearchResults ===
+// === Module 16741: useSettingSearchResults ===
 
-// Module 16598 (useSettingSearchResults)
+// Module 16741 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16592 */;
-import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 16599 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16735 */;
+import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 16742 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16590 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 16437 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16581 */;
 
 require = fn;
 let closure_8 = [];
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
 
 export function useSettingSearchResults() {
-  const items = [memo1];
+  items = [memo1];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => memo1.locale);
   const items1 = [stateFromStores];
   const memo = noop.useMemo(() => {
@@ -35,10 +35,10 @@ export function useSettingSearchResults() {
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const isBlockedResult = scoredSearchResults(16593).isBlocked(setting, closure_0);
+      const isBlockedResult = scoredSearchResults(16736).isBlocked(setting, closure_0);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
-        tmp3 = !stateFromStores(16438).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        tmp3 = !stateFromStores(16582).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });

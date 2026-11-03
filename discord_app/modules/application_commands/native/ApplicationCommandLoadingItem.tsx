@@ -1,17 +1,17 @@
-// === Module 13963: ApplicationCommandLoadingItem ===
+// === Module 14094: ApplicationCommandLoadingItem ===
 
-// Module 13963 (ApplicationCommandLoadingItem)
+// Module 14094 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 575 */;
-import useFontScale from "useFontScale" /* 5642 */;
+import useFontScale from "useFontScale" /* 5762 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10225).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10355).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { applicationCommandLoadingItem: { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, applicationCommandLoadingLeftWrapper: { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" }, applicationCommandLoadingName: null, applicationCommandLoadingDescription: null, applicationCommandLoadingSectionName: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: v16, borderRadius: v16, width: "20%" };
@@ -29,7 +29,7 @@ export default function ApplicationCommandLoadingItem() {
   const tmp = closure_8(useFontScale.useFontScale());
   const obj2 = { style: tmp.applicationCommandLoadingItem, children: null };
   const obj3 = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };
-  const items = [hasOwnProperty(View, { style: tmp.applicationCommandLoadingName }), hasOwnProperty(View, { style: tmp.applicationCommandLoadingDescription })];
+  items = [hasOwnProperty(View, { style: tmp.applicationCommandLoadingName }), hasOwnProperty(View, { style: tmp.applicationCommandLoadingDescription })];
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3), hasOwnProperty(View, { style: tmp.applicationCommandLoadingSectionName })];
   obj2.children = items1;

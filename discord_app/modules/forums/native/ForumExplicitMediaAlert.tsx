@@ -1,8 +1,8 @@
-// === Module 14611: ForumExplicitMediaAlert ===
+// === Module 14742: ForumExplicitMediaAlert ===
 
-// Module 14611 (ForumExplicitMediaAlert)
+// Module 14742 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 575 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 13353 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 13489 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" }, title: null, body: null, buttonContainer: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 obj2.title = { marginBottom: nativeDefault.space.PX_16 };
@@ -28,8 +28,8 @@ export default function ForumExplicitMediaAlert(arg0) {
   ({ channelId: require, messageId: importDefault, onClose } = arg0);
   const tmp = closure_6();
   const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
-  const obj2 = { accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: null, children: null };
-  const items = [, ];
+  const obj2 = { accessibilityRole: "header", variant: "heading-md/semibold", color: "text-default", style: null, children: null };
+  items = [, ];
   ({ title: arr[0], text: arr[1] } = tmp);
   obj2.style = items;
   const intl = require("util").intl;

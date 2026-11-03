@@ -1,6 +1,6 @@
-// === Module 9571: useIsVariantColorLight ===
+// === Module 9703: useIsVariantColorLight ===
 
-// Module 9571 (useIsVariantColorLight)
+// Module 9703 (useIsVariantColorLight)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
 
 export default function useIsVariantColorLight(variantValue) {
-  const items = [variantValue.variantValue];
+  items = [variantValue.variantValue];
   return noop.useMemo(() => {
     let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
     if (isValidHexResult) {

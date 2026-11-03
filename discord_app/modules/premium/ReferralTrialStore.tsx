@@ -1,11 +1,11 @@
-// === Module 7632: ReferralTrialStore ===
+// === Module 7756: ReferralTrialStore ===
 
-// Module 7632 (ReferralTrialStore)
+// Module 7756 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MessageTypes from "MessageTypes" /* 1088 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7633 */;
-import UserStore from "UserStore" /* 1383 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7757 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function emitChanges() {
@@ -68,7 +68,7 @@ class ReferralTrialStore extends Store {
 const prototype = ReferralTrialStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserStore);
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, emitChanges);
 };
 prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRemaining() {

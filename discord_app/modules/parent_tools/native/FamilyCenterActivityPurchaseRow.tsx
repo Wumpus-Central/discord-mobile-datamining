@@ -1,19 +1,19 @@
-// === Module 16805: FamilyCenterActivityPurchaseRow ===
+// === Module 16948: FamilyCenterActivityPurchaseRow ===
 
-// Module 16805 (FamilyCenterActivityPurchaseRow)
+// Module 16948 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import PriceUtils from "PriceUtils" /* 7413 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8744 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16806 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16807 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import PriceUtils from "PriceUtils" /* 7537 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16949 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -55,7 +55,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj3.product = product;
     obj3.isSubscription = isSubscription;
     obj3.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(FamilyCenterActivityItemPreviewDefault, obj3), ];
+    items = [React4(FamilyCenterActivityItemPreviewDefault, obj3), ];
     const obj4 = { style: tmp.textContainer, children: null };
     const obj5 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
     const items1 = [React4(Text_Text.Text, obj5), ];

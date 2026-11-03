@@ -1,8 +1,8 @@
-// === Module 18739: useSearchMessageTimestamp ===
+// === Module 18897: useSearchMessageTimestamp ===
 
-// Module 18739 (useSearchMessageTimestamp)
+// Module 18897 (useSearchMessageTimestamp)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6860 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/search/native/hooks/useSearch
 
 export function useSearchMessageTimestamp(message, channel) {
   let id = channel;
-  const items = [message, channel];
+  items = [message, channel];
   return noop.useMemo(() => {
     id = message.id;
     if (id == null) {

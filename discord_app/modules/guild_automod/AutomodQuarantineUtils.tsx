@@ -1,31 +1,31 @@
-// === Module 13301: AutomodQuarantineUtils ===
+// === Module 13437: AutomodQuarantineUtils ===
 
-// Module 13301 (AutomodQuarantineUtils)
+// Module 13437 (AutomodQuarantineUtils)
 import util from "util" /* 1113 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4952 */;
-import openUserSettings2 from "openUserSettings" /* 7563 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11520 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5079 */;
+import openUserSettings2 from "openUserSettings" /* 7687 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11657 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11459 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11596 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+({ Permissions: closure_9, UserSettingsSections: closure_10 } = Constants);
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 let closure_12 = fn(1082).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
 
 export function useCurrentUserHasAutomodQuarantinedProfile(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore, GuildMemberStore];
+  items = [AuthenticationStore, GuildMemberStore];
   const items1 = [arg0];
   return require("useStateFromStores").useStateFromStores(items, () => {
     if (null == closure_0) {
@@ -38,15 +38,15 @@ export function useCurrentUserHasAutomodQuarantinedProfile(arg0) {
 }
 export function useGuildAutomodProfileQuarantineErrors(id) {
   _require = id;
-  let items = [AuthenticationStore, GuildMemberStore, SelectedGuildStore, GuildStore];
+  items = [AuthenticationStore, GuildMemberStore, SelectedGuildStore, GuildStore];
   let items1 = [id];
   return require("useStateFromStores").useStateFromStoresObject(items, () => {
     let guildId = closure_0;
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "raw", bio: "cix" };
-    let guild = GuildStore.getGuild(guildId);
+    const obj = { nick: "Array", bio: "flexDirection" };
+    guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {
         const member = GuildMemberStore.getMember(guildId, AuthenticationStore.getId());
@@ -59,7 +59,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
           if (!automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
             if (automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
               const intl3 = util.intl;
-              const items = [intl3.string(util.t.dZh1vz)];
+              items = [intl3.string(util.t.dZh1vz)];
               obj.bio = items;
             }
           } else {
@@ -88,7 +88,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
 export function useOpenFixQuarantinedProfileModal(guildId) {
   guildId = guildId.guildId;
   const scrollPosition = guildId.scrollPosition;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(scrollPosition[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   let obj = guildId(scrollPosition[10]);

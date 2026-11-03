@@ -1,25 +1,25 @@
-// === Module 14946: UserProfileWidgetsBoardEditNotice ===
+// === Module 15075: UserProfileWidgetsBoardEditNotice ===
 
-// Module 14946 (UserProfileWidgetsBoardEditNotice)
+// Module 15075 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import Pressables from "Pressables" /* 6980 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10520 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import Pressables from "Pressables" /* 7106 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10650 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,14 +29,14 @@ export default function UserProfileWidgetsBoardEditNotice() {
   _require = closure_7();
   importDefault = UserProfileSharedStylesDefault();
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };
-  let items = [require("dismissible_content").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+  items = [require("dismissible_content").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
   obj.contentTypes = items;
   obj.children = function children(markAsDismissed) {
     markAsDismissed = markAsDismissed.markAsDismissed;
     let tmp3 = null;
     if (markAsDismissed.visibleContent === dismissible_content.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE) {
       const obj = { style: null, children: null };
-      const items = [card.card, closure_0.container];
+      items = [card.card, closure_0.container];
       obj.style = items;
       const obj2 = { style: closure_0.icon, children: null };
       const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };

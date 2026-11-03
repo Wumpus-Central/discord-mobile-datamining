@@ -1,10 +1,10 @@
-// === Module 8425: MessageAccessibilityActions ===
+// === Module 8549: MessageAccessibilityActions ===
 
-// Module 8425 (MessageAccessibilityActions)
+// Module 8549 (MessageAccessibilityActions)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8426 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8429 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8550 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8553 */;
 import size from "module_2" /* 2 */;
 
 const MessageAccessibilityAction = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };
@@ -60,7 +60,7 @@ export function createMessageAccessibilityActions(message, channel) {
     const intl6 = util.intl;
     obj2.label = intl6.string(util.t.iXAna6);
     obj2.name = obj.VIEW_PROFILE;
-    const items = [obj2];
+    items = [obj2];
     if (canAddNewReactionsDefault(channel)) {
       obj = { label: null, name: null };
       const intl = util.intl;

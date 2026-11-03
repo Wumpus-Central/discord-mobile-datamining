@@ -1,9 +1,9 @@
-// === Module 15861: useManaTextMigrationHighlightRestartNotice ===
+// === Module 16004: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15861 (useManaTextMigrationHighlightRestartNotice)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
+// Module 16004 (useManaTextMigrationHighlightRestartNotice)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");
 
 export function useManaTextMigrationHighlightRestartNotice() {
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"));
   _require = noop.useRef(true);
   const items1 = [stateFromStores];

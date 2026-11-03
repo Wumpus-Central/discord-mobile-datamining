@@ -1,7 +1,7 @@
-// === Module 15588: RequestReviewNoTTIExperiment ===
+// === Module 15730: RequestReviewNoTTIExperiment ===
 
-// Module 15588 (RequestReviewNoTTIExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 15730 (RequestReviewNoTTIExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-05-mobile-request-review-no-tti", kind: "user", defaultConfig: { skipTTICheck: false }, variations: { 0: { skipTTICheck: false }, 1: { skipTTICheck: true } } });

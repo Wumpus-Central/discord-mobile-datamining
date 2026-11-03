@@ -1,14 +1,14 @@
-// === Module 15352: LargeCountDownPill ===
+// === Module 15493: LargeCountDownPill ===
 
-// Module 15352 (LargeCountDownPill)
+// Module 15493 (LargeCountDownPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
@@ -34,8 +34,8 @@ export default function LargeCountDownPill(countdownText) {
     children: null
   };
   let obj2 = { style: tmp.largeCountdownPill, children: null };
-  const items = [hasOwnProperty(Text_Text.Text, { variant: "text-xs/bold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() }), ];
-  const obj3 = { variant: "text-xs/bold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() };
+  items = [hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() }), ];
+  const obj3 = { variant: "text-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() };
   items[1] = hasOwnProperty(CircleInformationIcon.CircleInformationIcon, { style: tmp.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE });
   obj2.children = items;
   obj.children = timestampProducer(React4, obj2);

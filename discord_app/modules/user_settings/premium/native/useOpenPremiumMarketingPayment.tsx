@@ -1,27 +1,27 @@
-// === Module 15381: useOpenPremiumMarketingPayment ===
+// === Module 15522: useOpenPremiumMarketingPayment ===
 
-// Module 15381 (useOpenPremiumMarketingPayment)
+// Module 15522 (useOpenPremiumMarketingPayment)
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 let closure_6 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
 
-export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER) {
-  const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(PREMIUM_MARKETING_FOOTER).analyticsLocations;
+export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FLOATING_CTA) {
+  const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(PREMIUM_MARKETING_FLOATING_CTA).analyticsLocations;
   premiumTrialOffer = analyticsLocations(premiumTrialOfferPremiumType[4]).usePremiumTrialOffer();
   let obj = analyticsLocations(premiumTrialOfferPremiumType[4]);
   premiumTrialOfferPremiumType = analyticsLocations(premiumTrialOfferPremiumType[5]).usePremiumTrialOfferPremiumType();
   const obj3 = { openPayment: null, buttonText: null };
-  const items = [analyticsLocations, premiumTrialOfferPremiumType];
+  items = [analyticsLocations, premiumTrialOfferPremiumType];
   obj3.openPayment = noop.useCallback(() => {
     const obj = { analyticsLocation, analyticsLocations, predicate: null, initialSelectedCriteria: null, premiumType: null, showFormTitle: false };
     let fn;

@@ -1,14 +1,14 @@
-// === Module 17567: CacheActionsDiskUsageSection ===
+// === Module 17710: CacheActionsDiskUsageSection ===
 
-// Module 17567 (CacheActionsDiskUsageSection)
+// Module 17710 (CacheActionsDiskUsageSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import FileSizeUtils from "FileSizeUtils" /* 6451 */;
-import Card from "Card" /* 6977 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17570 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import FileSizeUtils from "FileSizeUtils" /* 6571 */;
+import Card from "Card" /* 7103 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17713 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ function SizeRow(children) {
   }
   const iter = closure_9();
   const obj = { direction: "horizontal", justify: "space-between", spacing: nativeDefault.space.PX_16, children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", style: indented ? iter.nestedLabel : iter.label, children: children.label }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", style: indented ? iter.nestedLabel : iter.label, children: children.label }), ];
   const obj3 = { variant: "text-sm/semibold", tabularNumbers: true, style: iter.value, children: null };
   if (null != bytes) {
     let formatKbSizeResult = FileSizeUtils.formatKbSize(bytes);
@@ -86,7 +86,7 @@ function DiskUsageResults(metricKitSize) {
   const intl20 = require("util").intl;
   obj4.label = intl20.string(require("util").t.O20zQi);
   obj4.bytes = report.totalMeasuredBytes;
-  const items = [closure_6(SizeRow, obj4), , ];
+  items = [closure_6(SizeRow, obj4), , ];
   obj2 = require("PlatformUtils");
   let isIOSResult = require("PlatformUtils").isIOS();
   if (isIOSResult) {
@@ -159,7 +159,7 @@ function DiskUsageResults(metricKitSize) {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { label: { flex: 1 }, nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 }, value: { flexShrink: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -219,7 +219,7 @@ export function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ export function useDiskUsageMeasurement() {
                 ref.current = true;
                 _require({ status: "loading" });
                 c3 = 2;
-                const items = [tmp4(tmp51[6]).calculateSize(), ];
+                items = [tmp4(tmp51[6]).calculateSize(), ];
                 const tmp48Result = tmp4(tmp51[6]);
                 const databaseResult = tmp4(tmp51[7]).database();
                 let catchPromise;

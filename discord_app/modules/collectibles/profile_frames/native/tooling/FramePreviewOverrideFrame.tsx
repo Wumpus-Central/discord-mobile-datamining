@@ -1,7 +1,7 @@
-// === Module 8798: FramePreviewOverrideFrame ===
+// === Module 8922: FramePreviewOverrideFrame ===
 
-// Module 8798 (FramePreviewOverrideFrame)
-import FastImageDefault from "FastImage" /* 5717 */;
+// Module 8922 (FramePreviewOverrideFrame)
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 function OverrideProfileFrameLayer(layer) {
@@ -16,7 +16,7 @@ function OverrideProfileFrameLayer(layer) {
   c5 = sum;
   const result = layer.ratio * sum;
   c6 = result;
-  const items = [, , , , , ];
+  items = [, , , , , ];
   ({ anchor: arr[0], type: arr[1], order: arr[2] } = layer);
   items[3] = overflowTop;
   items[4] = overflowBottom;
@@ -107,11 +107,11 @@ function OverrideProfileFrameLayer(layer) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const ProfileFrameConstants = fn(8794);
+const ProfileFrameConstants = fn(8918);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_4, PROFILE_FRAME_Z_INDEX: hasOwnProperty } = ProfileFrameConstants);
-const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, layer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -135,7 +135,7 @@ export default function FramePreviewOverrideFrame(override) {
   let overflowTop;
   jsx = undefined;
   let overflowHorizontal;
-  const items = [override.layers, frameOrder, profileThemeType, filterLayer];
+  items = [override.layers, frameOrder, profileThemeType, filterLayer];
   const memo = noop.useMemo(() => {
     const layers = override.layers;
     return layers.filter((order) => {

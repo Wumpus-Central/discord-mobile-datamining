@@ -1,19 +1,19 @@
-// === Module 9542: NitroCoinSpotIllustration ===
+// === Module 9670: NitroCoinSpotIllustration ===
 
-// Module 9542 (NitroCoinSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef9543 from "module_9543" /* 9543 */;
-import _modDef9544 from "module_9544" /* 9544 */;
-import _modDef9545 from "module_9545" /* 9545 */;
+// Module 9670 (NitroCoinSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef9671 from "module_9671" /* 9671 */;
+import _modDef9672 from "module_9672" /* 9672 */;
+import _modDef9673 from "module_9673" /* 9673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9543 }, 3: null };
-let obj2 = { uri: _modDef9543 };
-obj[2] = { uri: _modDef9544 };
-const obj3 = { uri: _modDef9544 };
-obj[3] = { uri: _modDef9545 };
+let obj = { 1: null, 2: { uri: _modDef9671 }, 3: null };
+let obj2 = { uri: _modDef9671 };
+obj[2] = { uri: _modDef9672 };
+const obj3 = { uri: _modDef9672 };
+obj[3] = { uri: _modDef9673 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function NitroCoinSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

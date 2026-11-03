@@ -1,13 +1,13 @@
-// === Module 17231: useEmojiByIdOrName ===
+// === Module 17374: useEmojiByIdOrName ===
 
-// Module 17231 (useEmojiByIdOrName)
-import EmojiStore from "EmojiStore" /* 6796 */;
+// Module 17374 (useEmojiByIdOrName)
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 const require = fn;
 function useEmojiByIdOrName(guildId, emojiId) {
   _require = guildId;
   dependencyMap = emojiId;
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const items1 = [guildId, emojiId];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {

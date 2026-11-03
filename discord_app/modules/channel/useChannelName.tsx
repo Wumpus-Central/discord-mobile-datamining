@@ -1,13 +1,13 @@
-// === Module 5652: useChannelName ===
+// === Module 5772: useChannelName ===
 
-// Module 5652 (useChannelName)
+// Module 5772 (useChannelName)
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -161,7 +161,7 @@ export default function useChannelName(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [UserStore, ExperimentStore, RelationshipStore];
+  items = [UserStore, ExperimentStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
@@ -213,7 +213,7 @@ export function computeDefaultGroupDmName(recipients, getUser, arg2) {
 }
 export function useComputedGroupDmName(stateFromStores) {
   _require = stateFromStores;
-  const items = [UserStore, RelationshipStore];
+  items = [UserStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null;
     if (null != nickname) {

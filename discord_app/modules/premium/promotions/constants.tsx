@@ -1,6 +1,6 @@
-// === Module 9665: constants ===
+// === Module 9797: constants ===
 
-// Module 9665 (constants)
+// Module 9797 (constants)
 import size from "module_2" /* 2 */;
 
 const items = ["logitech", "youtube", "best_buy", "call_of_duty"];
@@ -20,3 +20,4 @@ export const BEST_BUY_PARTNER_ID = "best_buy";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
 export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);
 export const RECURRING_3P_PARTNER_ORDER = items1;
+export const FALLBACK_PROMOTION_PRIORITY = 101;

@@ -1,9 +1,9 @@
-// === Module 16904: ? ===
+// === Module 17047: ? ===
 
-// Module 16904
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15631 */;
+// Module 17047
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15773 */;
 import noop from "module_19" /* 19 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 15629 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 15771 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/virtual_currency/hooks/OrbCha
 
 export function useFetchOrbChallenges(shouldFetch) {
   _require = fetchChallengesError(false);
-  const items = [shouldFetch];
+  items = [shouldFetch];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ challengesForOrbWallet: shouldFetch.challengesForOrbWallet, hasFetchedChallenges: shouldFetch.hasFetchedChallenges, isFetchingChallenges: shouldFetch.isFetchingChallenges, fetchChallengesError: shouldFetch.fetchChallengesError }));
   hasFetchedChallenges = stateFromStoresObject.hasFetchedChallenges;
   const isFetchingChallenges = stateFromStoresObject.isFetchingChallenges;
@@ -53,7 +53,7 @@ export function useOrbChallengeUnreadState(enabled) {
   }
   _require = tmp;
   dependencyMap = closure_3(false);
-  const items = [OrbChallengesStore];
+  items = [OrbChallengesStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ hasUnreadUpdate: OrbChallengesStore.hasUnreadUpdate, notificationType: OrbChallengesStore.clientUnreadNotificationType }));
   const items1 = [tmp];
   ({ hasUnreadUpdate, notificationType } = stateFromStoresObject);

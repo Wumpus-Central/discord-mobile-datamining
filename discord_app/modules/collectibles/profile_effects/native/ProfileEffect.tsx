@@ -1,17 +1,17 @@
-// === Module 9497: ProfileEffect ===
+// === Module 9625: ProfileEffect ===
 
-// Module 9497 (ProfileEffect)
+// Module 9625 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8799 */;
-import utils from "utils" /* 9498 */;
-import constants from "constants" /* 9499 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9500 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9503 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8923 */;
+import utils from "utils" /* 9626 */;
+import constants from "constants" /* 9627 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9628 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9631 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 function StaticEffect(useThumbnail) {
@@ -27,7 +27,7 @@ function StaticEffect(useThumbnail) {
   c0 = undefined;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = thumbnailUrlOverride.useState(0);
-  const height = reducedMotionSrc(1491)().height;
+  const height = reducedMotionSrc(1493)().height;
   const callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -39,7 +39,7 @@ function StaticEffect(useThumbnail) {
   if (thumbnailUrlOverride == null) {
     thumbnailUrlOverride = thumbnailPreviewSrc;
   }
-  const items = [reducedMotionSrc, thumbnailUrlOverride, tmp3, useThumbnail];
+  items = [reducedMotionSrc, thumbnailUrlOverride, tmp3, useThumbnail];
   const effect = obj.useEffect(() => {
     if (0 !== c2) {
       size = size.getSize(c0 ? thumbnailUrlOverride : reducedMotionSrc, (arg0, arg1) => {
@@ -67,15 +67,15 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5717), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
-    const tmp4Result = tmp4(5717);
+    obj3.children = jsx(tmp4(5837), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
+    const tmp4Result = tmp4(5837);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -88,10 +88,10 @@ function ProfileEffect(profileEffect) {
   const tmp = c10();
   let ref = tmp;
   const tmp2 = ref(noop.useState(0), 2);
-  const height = memo1(1491)().height;
+  const height = memo1(1493)().height;
   noop = tmp2[0];
   const accessibilityLabel = profileEffect.accessibilityLabel;
-  let items = [profileEffect.effects];
+  items = [profileEffect.effects];
   const callback = noop.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -114,7 +114,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(9499).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(9627).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -130,7 +130,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(9502)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(9630)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
@@ -156,7 +156,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(9502);
+  const tmp9 = memo1(9630);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);
@@ -186,7 +186,7 @@ function ProfileEffect(profileEffect) {
   const items8 = [tmp, style];
   const obj = memo(504);
   return <accessibilityLabel style={noop.useMemo(() => {
-    const items = [ref.profileEffects, memo1];
+    items = [ref.profileEffects, memo1];
     return items;
   }, items8)} pointerEvents="none" onLayout={callback}>{memo.map((layerConfig, index) => {
     let flag = _undefined[index];
@@ -203,7 +203,7 @@ const result = size.fileFinishedImporting("modules/collectibles/profile_effects/
 export default function WrappedProfileEffect(skuId) {
   let thumbnailUrlOverride = skuId;
   const tmp = useProfileEffectDefault(skuId.skuId);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   useThumbnail = utils.usePotentiallyRandomizedProfileEffect(tmp);
   if (null == useThumbnail) {
@@ -226,7 +226,7 @@ export default function WrappedProfileEffect(skuId) {
 };
 export function usePreloadProfileEffect(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => new Set(memo.map((src) => src.src)), items);
   closure_2 = noop.useRef(memo);
   const ref = noop.useRef(false);

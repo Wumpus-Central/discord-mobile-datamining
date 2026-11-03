@@ -1,6 +1,6 @@
-// === Module 14136: AppliedGuildBoostStore ===
+// === Module 14267: AppliedGuildBoostStore ===
 
-// Module 14136 (AppliedGuildBoostStore)
+// Module 14267 (AppliedGuildBoostStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -85,7 +85,7 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(DispatcherDefault, {
   GUILD_APPLY_BOOST_SUCCESS: function handleApplyBoostSuccess(appliedGuildBoost) {
     appliedGuildBoost = appliedGuildBoost.appliedGuildBoost;
     const set = new Set(appliedGuildBoost.map((id) => id.id));
-    const items = [...appliedGuildBoost, ...closure_2.filter((id) => !set.has(id.id))];
+    items = [...appliedGuildBoost, ...closure_2.filter((id) => !set.has(id.id))];
     closure_2 = items;
     error = null;
     c4 = false;

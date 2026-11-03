@@ -1,47 +1,47 @@
-// === Module 14804: MediaViewerItemPresenter ===
+// === Module 14935: MediaViewerItemPresenter ===
 
-// Module 14804 (MediaViewerItemPresenter)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 14784 */;
-import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 14805 */;
+// Module 14935 (MediaViewerItemPresenter)
+import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 14915 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14933 */;
+import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 14936 */;
 import noop from "module_19" /* 19 */;
 
+const _modDef1652 = tmp5(1652);
 require = fn;
 function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
+  _require = windowWidth;
   windowHeight = windowHeight.windowHeight;
-  const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
-  const index = windowHeight.index;
-  let num3;
-  let diff2;
-  let diff3;
-  let width2;
-  let height2;
+  importDefault = windowHeight;
+  ({ entranceAnimationDriver, index } = windowHeight);
   ({ useItemVisible, panGestureConfig } = windowHeight);
-  const entranceAnimation = windowWidth(entranceAnimationDriver[5]).useEntranceAnimation(entranceAnimationDriver);
+  const entranceAnimation = require("useEntranceAnimation").useEntranceAnimation(entranceAnimationDriver);
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
-  let obj = windowWidth(entranceAnimationDriver[5]);
-  const mediaItemHasSpoiler = windowWidth(entranceAnimationDriver[6]).useMediaItemHasSpoiler(index);
-  let size = windowHeight(entranceAnimationDriver[7])(windowWidth, windowHeight, source);
+  let obj = require("useEntranceAnimation");
+  const mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(index);
+  let size = getMediaViewerStateForScreenDefault(windowWidth, windowHeight, source);
   const width = size.width;
+  dependencyMap = width;
   const height = size.height;
+  noop = height;
   const itemVisible = useItemVisible(index);
   const overlayEnabled = panGestureConfig.overlayEnabled;
-  let items = [overlayEnabled];
-  const callback = width.useCallback(() => {
-    const result = overlayEnabled.set(!overlayEnabled.get());
+  c4 = overlayEnabled;
+  items = [overlayEnabled];
+  const callback = noop.useCallback(() => {
+    const result = _undefined.set(!_undefined.get());
   }, items);
   let items1 = [];
   if (Array.isArray(source)) {
     if (loads <= 1) {
-      let obj4 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
+      const obj4 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
       const _HermesInternal2 = HermesInternal;
       obj4.key = "0:" + index + ":" + source[0].uri;
       obj4.onLoadStart = handleLoadStart;
       obj4.onLoad = handleLoad;
       obj4.onError = handleError;
       obj4.source = source[0];
-      obj4.style = diff2.platformStyles;
+      obj4.style = c7.platformStyles;
       obj4.index = index;
       obj4.hasSpoiler = mediaItemHasSpoiler;
       obj4.visible = itemVisible;
@@ -49,11 +49,11 @@ function MediaViewerItemPresenter(windowHeight) {
       items1.push(renderMedia(obj4));
     }
     if (loads >= 1) {
-      let obj5 = { key: null, source: null, style: null, onLoad: null, onError: null, pointerEvents: null, fadeDuration: 0, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
+      const obj5 = { key: null, source: null, style: null, onLoad: null, onError: null, pointerEvents: null, fadeDuration: 0, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
       const _HermesInternal3 = HermesInternal;
       obj5.key = "1:" + index + ":" + source[0].uri;
       obj5.source = source[1];
-      obj5.style = diff2.platformStyles;
+      obj5.style = c7.platformStyles;
       obj5.onLoad = handleLoad;
       obj5.onError = handleError;
       let str5 = "auto";
@@ -68,14 +68,14 @@ function MediaViewerItemPresenter(windowHeight) {
       items1.push(renderMedia(obj5));
     }
   } else {
-    let obj6 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
+    const obj6 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, onToggleOverlay: null };
     const _HermesInternal = HermesInternal;
     obj6.key = "0:" + index + ":" + source.uri;
     obj6.onLoadStart = handleLoadStart;
     obj6.onLoad = handleLoad;
     obj6.onError = handleError;
     obj6.source = source;
-    obj6.style = diff2.platformStyles;
+    obj6.style = c7.platformStyles;
     obj6.index = index;
     obj6.hasSpoiler = mediaItemHasSpoiler;
     obj6.visible = itemVisible;
@@ -83,108 +83,105 @@ function MediaViewerItemPresenter(windowHeight) {
     items1.push(renderMedia(obj6));
   }
   let result = width / height;
-  let diff = originLayout.x - (width - originLayout.width) / 2 - (windowWidth - width) / 2;
-  diff2 = diff;
   const result1 = (windowHeight - height) / 2;
-  let diff1 = originLayout.y - (height - originLayout.height) / 2 - result1;
-  diff3 = diff1;
-  width2 = width;
-  height2 = height;
   if ("cover" === originLayout.resizeMode) {
-    width2 = originLayout.width;
-    height2 = originLayout.height;
-    diff2 = originLayout.x - (windowWidth - width) / 2;
-    diff3 = originLayout.y - result1;
-    let tmp19 = height2;
-    let tmp20 = width2;
-    diff1 = diff3;
-    diff = diff2;
-    num3 = 1;
+    ({ width: width2, height: height2 } = originLayout);
+    let diff = originLayout.x - (windowWidth - width) / 2;
+    let diff1 = originLayout.y - result1;
+    let num3 = 1;
   } else {
     let num2 = 1;
     if (result > tmp15) {
       num2 = result;
     }
+    diff = tmp16 - tmp17;
+    diff1 = tmp19 - result1;
     num3 = originLayout.width / width * num2;
-    tmp19 = height;
-    tmp20 = width;
+    height2 = height;
+    width2 = width;
   }
-  let obj2 = windowWidth(entranceAnimationDriver[6]);
-  let obj3 = width;
-  const tmp5 = windowHeight;
-  class G {
+  const obj2 = require("useMediaItemHasSpoiler");
+  const obj3 = noop;
+  let items2 = [c9, entranceAnimationDriver, require("module_1652").interpolate, require("module_1652").Extrapolation, height2, height, width2, width, diff1, diff, c8, num3];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  jsx = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  [tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33] = items2;
+  class MediaViewerItemPresenterTsx1 {
     constructor() {
-      value = entranceAnimationDriver.get();
+      value = closure_0.get();
       size = { height: null, width: null, top: null, left: null, borderRadius: null, transform: null };
       items = [, ];
-      items[0] = height;
-      items[1] = height;
-      obj2 = closure_0(closure_2[8]);
-      size.height = obj2.interpolate(value, [0, 1], items, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      items[0] = closure_3;
+      items[1] = closure_4;
+      size.height = closure_1(value, [0, 1], items, closure_2.CLAMP);
       items1 = [, ];
-      items1[0] = width;
-      items1[1] = width;
-      obj3 = closure_0(closure_2[8]);
-      size.width = obj3.interpolate(value, [0, 1], items1, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      items1[0] = closure_5;
+      items1[1] = closure_6;
+      size.width = closure_1(value, [0, 1], items1, closure_2.CLAMP);
       items2 = [, ];
-      items2[0] = closure_8;
+      items2[0] = closure_7;
       items2[1] = 0;
-      obj4 = closure_0(closure_2[8]);
-      size.top = obj4.interpolate(value, [0, 1], items2, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      size.top = closure_1(value, [0, 1], items2, closure_2.CLAMP);
       items3 = [, ];
-      items3[0] = closure_7;
+      items3[0] = closure_8;
       items3[1] = 0;
-      obj5 = closure_0(closure_2[8]);
-      size.left = obj5.interpolate(value, [0, 1], items3, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      size.left = closure_1(value, [0, 1], items3, closure_2.CLAMP);
       items4 = [16];
-      items4[1] = hairlineWidth;
-      obj6 = closure_0(closure_2[8]);
-      size.borderRadius = obj6.interpolate(value, [0, 0.25], items4, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      items4[1] = closure_9;
+      size.borderRadius = closure_1(value, [0, 0.25], items4, closure_2.CLAMP);
       obj1 = { scale: null };
       items5 = [, ];
-      items5[0] = closure_6;
+      items5[0] = closure_10;
       items5[1] = 1;
-      obj8 = closure_0(closure_2[8]);
-      obj1.scale = obj8.interpolate(value, [0, 1], items5, closure_0(closure_2[8]).Extrapolation.CLAMP);
+      obj1.scale = closure_1(value, [0, 1], items5, closure_2.CLAMP);
       items6 = [];
       items6[0] = obj1;
       size.transform = items6;
       return size;
     }
   }
-  const tmpResult = windowWidth(entranceAnimationDriver[8]);
-  G.__closure = { entranceAnimationDriver, interpolate: windowWidth(entranceAnimationDriver[8]).interpolate, Extrapolation: windowWidth(entranceAnimationDriver[8]).Extrapolation, startHeight: tmp19, sourceHeight: height, startWidth: tmp20, sourceWidth: width, startTranslateY: diff1, startTranslateX: diff, BORDER_RADIUS_END: diff3, startScale: num3 };
-  G.__workletHash = 2455267388296;
-  G.__initData = width2;
-  let items2 = [windowWidth, windowHeight, width, height];
-  const animatedStyle = tmpResult.useAnimatedStyle(G);
+  let items3 = [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33];
+  MediaViewerItemPresenterTsx1.__closure = items3;
+  MediaViewerItemPresenterTsx1.__workletHash = 5465877012081;
+  MediaViewerItemPresenterTsx1.__initData = tmp22;
+  let items4 = [windowWidth, windowHeight, width, height];
+  const animatedStyle = require("module_1652").useAnimatedStyle(MediaViewerItemPresenterTsx1);
   const memo = obj3.useMemo(() => {
     const obj = { container: null, child: null, presenter: { position: "relative", overflow: "hidden", opacity: 1 } };
-    const size = { width: windowWidth, height: windowHeight, alignItems: "center", justifyContent: "center" };
+    const size = { width, height, alignItems: "center", justifyContent: "center" };
     obj.container = size;
-    const size1 = { width, height };
+    const size1 = { width: width2, height: height2 };
     obj.child = size1;
     return StyleSheet.create(obj);
-  }, items2);
-  const obj8 = { collapsable: false, style: memo.container, children: null };
-  const obj9 = { style: memo.child, children: null };
-  const obj10 = { style: null, children: items1 };
-  let items3 = [memo.presenter, animatedStyle];
-  obj10.style = items3;
-  obj9.children = num3(tmp5(entranceAnimationDriver[9]), obj10);
-  obj8.children = num3(height, obj9);
-  return num3(height, obj8);
+  }, items4);
+  const obj7 = { collapsable: false, style: memo.container, children: null };
+  const obj8 = { style: memo.child, children: null };
+  const obj9 = { style: null, children: items1 };
+  let items5 = [memo.presenter, animatedStyle];
+  obj9.style = items5;
+  obj8.children = jsx(_modDef1652.View, { style: null, children: items1 });
+  obj7.children = <c4 style={memo.child}>{null}</c4>;
+  return <c4 collapsable={false} style={memo.container}>{null}</c4>;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+let jsx = fn(21).jsx;
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 if (PlatformUtils.isAndroid()) {
   const _parseInt = parseInt;
-  obj2 = fn(4971);
+  obj2 = fn(5098);
 }
-let closure_9 = { code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}" };
+let closure_9 = { code: "(function MediaViewerItemPresenterTsx1(){let[entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale]=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
 

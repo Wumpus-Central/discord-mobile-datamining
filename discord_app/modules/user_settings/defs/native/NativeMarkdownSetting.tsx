@@ -1,12 +1,12 @@
-// === Module 17532: NativeMarkdownSetting ===
+// === Module 17675: NativeMarkdownSetting ===
 
-// Module 17532 (NativeMarkdownSetting)
+// Module 17675 (NativeMarkdownSetting)
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8561 */;
-import useLabFeatureDefault from "useLabFeature" /* 8564 */;
-import LabFeatureActions from "LabFeatureActions" /* 17531 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import NativeMarkdownExperiment from "NativeMarkdownExperiment" /* 8685 */;
+import useLabFeatureDefault from "useLabFeature" /* 8688 */;
+import LabFeatureActions from "LabFeatureActions" /* 17674 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

@@ -1,15 +1,15 @@
-// === Module 14240: HubProgressBarUtils ===
+// === Module 14371: HubProgressBarUtils ===
 
-// Module 14240 (HubProgressBarUtils)
+// Module 14371 (HubProgressBarUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9131).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9259).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1072).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
@@ -37,7 +37,7 @@ export function useHubProgressBarCompletedSteps(guild) {
     id = guild.id;
   }
   closure_129_0 = id;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = memo(stateFromStores1[5]).useStateFromStores(items, () => {
     let num = 0;
     if (null != memo) {

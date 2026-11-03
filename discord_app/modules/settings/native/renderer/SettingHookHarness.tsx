@@ -1,13 +1,13 @@
-// === Module 16436: SettingHookHarness ===
+// === Module 16580: SettingHookHarness ===
 
-// Module 16436 (SettingHookHarness)
+// Module 16580 (SettingHookHarness)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 16437 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16581 */;
 
 const require = fn;
-const NodeType = fn(11541).NodeType;
+const NodeType = fn(11678).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();
@@ -15,7 +15,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
 
 export default noop.memo(function SettingHookHarness() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = items1(items2[5]).useStateFromStores(items, () => locale.locale);
   const field = SettingBlocklistStore.getField("blocklist");
   items1 = [];

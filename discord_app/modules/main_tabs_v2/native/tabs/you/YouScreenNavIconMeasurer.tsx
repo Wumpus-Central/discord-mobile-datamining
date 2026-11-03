@@ -1,8 +1,8 @@
-// === Module 14715: YouScreenNavIconMeasurer ===
+// === Module 14846: YouScreenNavIconMeasurer ===
 
-// Module 14715 (YouScreenNavIconMeasurer)
+// Module 14846 (YouScreenNavIconMeasurer)
 import nativeDefault from "native" /* 575 */;
-import ContextUtilsDefault from "ContextUtils" /* 7613 */;
+import ContextUtilsDefault from "ContextUtils" /* 7737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,11 +29,11 @@ export function YouScreenNavIconMeasurer(children) {
       const result = current.set(arg0, arg1);
     }
     const current3 = tmp.current;
-    const items = [0];
+    items = [0];
     HermesBuiltin.arraySpread(current3.values(), 1);
     closure_2(PixelRatio.roundToNearestPixel(Math.max.apply(items) + PX_4));
   }, []);
-  let items = [width, onWidthMeasured];
+  items = [width, onWidthMeasured];
   const map = new Map();
   return onWidthMeasured(redux.Provider, { value: width.useMemo(() => ({ width, onWidthMeasured }), items), children: children.children });
 }
@@ -44,7 +44,7 @@ export function useYouScreenNavIconMeasurement() {
   const ref = noop.useRef(null);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   closure_3 = tmp4[1];
-  const items = [id, onWidthMeasured];
+  items = [id, onWidthMeasured];
   const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
     if (null != current) {

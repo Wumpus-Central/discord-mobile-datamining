@@ -1,17 +1,17 @@
-// === Module 16801: FamilyCenterTopUsersBottomSheet ===
+// === Module 16944: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16801 (FamilyCenterTopUsersBottomSheet)
+// Module 16944 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8372 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8496 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function UserRow(userActivity) {
@@ -31,7 +31,7 @@ function UserRow(userActivity) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
@@ -39,10 +39,10 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
   const obj = { children: null };
-  const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
+  const obj2 = { variant: "text-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2538.BxbvS7);
-  const items = [React4(Text_Text.Text, obj2), ];
+  obj2.children = intl.string(_modDef2667.BxbvS7);
+  items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(UserRow, { userActivity }, userActivity.user_id)) });
   obj.children = items;

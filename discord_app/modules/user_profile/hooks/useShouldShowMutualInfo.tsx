@@ -1,16 +1,16 @@
-// === Module 14838: useShouldShowMutualInfo ===
+// === Module 14969: useShouldShowMutualInfo ===
 
-// Module 14838 (useShouldShowMutualInfo)
+// Module 14969 (useShouldShowMutualInfo)
 import initialize from "initialize" /* 504 */;
-import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 14839 */;
-import UserStore from "UserStore" /* 1383 */;
+import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 14970 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");
 
 export default function useShouldShowMutualInfo(id) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {

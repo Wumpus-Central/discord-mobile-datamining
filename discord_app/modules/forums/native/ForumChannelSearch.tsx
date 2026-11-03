@@ -1,16 +1,16 @@
-// === Module 14566: ForumChannelSearch ===
+// === Module 14697: ForumChannelSearch ===
 
-// Module 14566 (ForumChannelSearch)
-import Tracking from "Tracking" /* 8204 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9840 */;
+// Module 14697 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8328 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9971 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ForumSearchStore from "ForumSearchStore" /* 8205 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ForumSearchStore from "ForumSearchStore" /* 8329 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 const memoResult = noop.memo(function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -20,7 +20,7 @@ const memoResult = noop.memo(function SearchButton(channelId) {
   let obj = channelId(route[6]);
   route = channelId(route[6]).useRoute();
   let obj2 = channelId(route[6]);
-  const items = [navigation, route];
+  items = [navigation, route];
   const canSearchForumPostsByChannelId = channelId(route[7]).useCanSearchForumPostsByChannelId(channelId);
   const effect = noop.useEffect(() => () => {
     if (null != navigation) {
@@ -52,9 +52,9 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(11348).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(11348);
-  const items = [ForumSearchStore];
+  const canSearchForumPostsByChannelId = channelId(11485).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(11485);
+  items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     let searchQuery = null;

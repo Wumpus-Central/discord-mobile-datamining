@@ -1,14 +1,14 @@
-// === Module 17709: OrbWalletEntryRow ===
+// === Module 17852: OrbWalletEntryRow ===
 
-// Module 17709 (OrbWalletEntryRow)
+// Module 17852 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2172 from "module_2172" /* 2172 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Card from "Card" /* 6977 */;
-import Badge from "Badge" /* 7306 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
-import OrbsIcon from "OrbsIcon" /* 9532 */;
+import _modDef2301 from "module_2301" /* 2301 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Card from "Card" /* 7103 */;
+import Badge from "Badge" /* 7426 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
+import OrbsIcon from "OrbsIcon" /* 9660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function OrbWalletEntryBadge(notificationType) {
     const obj = { type: null, variant: "primary" };
     const obj2 = { text: null };
     const intl = util.intl;
-    obj2.text = intl.string(_modDef2172.WmfVjs);
+    obj2.text = intl.string(_modDef2301.WmfVjs);
     obj.type = obj2;
     return hasOwnProperty(Badge.Badge, obj);
   } else {
@@ -28,10 +28,10 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(15629).ClientUnreadNotificationType;
+const constants = fn(15771).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 }, balance: null, balanceText: null, trailing: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 };
 obj2.balance = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -62,7 +62,7 @@ export function OrbWalletEntryRow(onPress) {
   obj.accessibilityLabel = intl.formatToPlainString(zPaLL9, { balance: str });
   const obj2 = { style: tmp.row, children: null };
   const obj3 = { style: tmp.balance, children: null };
-  const items = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: nativeDefault.colors.ICON_SUBTLE, accessible: false }), ];
+  items = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: nativeDefault.colors.ICON_SUBTLE, accessible: false }), ];
   const obj5 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.balanceText, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.formatToPlainString(util.t["8xDISf"], { balance: str });

@@ -1,13 +1,13 @@
-// === Module 14962: WidgetStore ===
+// === Module 15091: WidgetStore ===
 
-// Module 14962 (WidgetStore)
+// Module 15091 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1383 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserStore from "UserStore" /* 1385 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
 let c6 = null;
@@ -66,15 +66,15 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
     if (null != _null2) {
       const _Map = Map;
       const map = new Map(_null2.map((id) => {
-        const items = [id.id, id];
+        items = [id.id, id];
         return items;
       }));
       const _Map2 = Map;
-      map1 = new Map(changedWidgets.map((id) => {
-        const items = [id.id, id];
+      const map1 = new Map(changedWidgets.map((id) => {
+        items = [id.id, id];
         return items;
       }));
-      let items = [];
+      items = [];
       const items1 = [];
       const tmp37 = map1[Symbol.iterator]();
       while (tmp37 !== undefined) {

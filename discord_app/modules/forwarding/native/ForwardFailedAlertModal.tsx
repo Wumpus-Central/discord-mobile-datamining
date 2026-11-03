@@ -1,7 +1,7 @@
-// === Module 13421: ForwardFailedAlertModal ===
+// === Module 13557: ForwardFailedAlertModal ===
 
-// Module 13421 (ForwardFailedAlertModal)
-import ForwardModalUtils from "ForwardModalUtils" /* 13379 */;
+// Module 13557 (ForwardFailedAlertModal)
+import ForwardModalUtils from "ForwardModalUtils" /* 13515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ export default function ForwardFailedAlertModal(message) {
   message = message.message;
   const failedDestinations = message.failedDestinations;
   const forwardOptions = message.forwardOptions;
-  const items = [failedDestinations, message, forwardOptions];
+  items = [failedDestinations, message, forwardOptions];
   const callback = noop.useCallback(() => {
     ForwardModalUtils.openForwardModal({ message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions });
   }, items);

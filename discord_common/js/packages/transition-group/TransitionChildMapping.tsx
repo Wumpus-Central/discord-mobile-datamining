@@ -1,6 +1,6 @@
-// === Module 13988: TransitionChildMapping ===
+// === Module 14119: TransitionChildMapping ===
 
-// Module 13988 (TransitionChildMapping)
+// Module 14119 (TransitionChildMapping)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -30,7 +30,7 @@ export function mergeChildMappings() {
     obj2 = {};
   }
   const obj3 = {};
-  let items = [];
+  items = [];
   let arr2 = items;
   const keys = Object.keys();
   if (keys !== undefined) {

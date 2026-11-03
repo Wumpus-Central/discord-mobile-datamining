@@ -1,13 +1,13 @@
-// === Module 12516: AppLauncherRoleListActionSheet ===
+// === Module 12652: AppLauncherRoleListActionSheet ===
 
-// Module 12516 (AppLauncherRoleListActionSheet)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7299 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9059 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12514 */;
+// Module 12652 (AppLauncherRoleListActionSheet)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7419 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9187 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7298 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7418 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 const require = globalThis.__r;
 
@@ -87,10 +87,10 @@ class RoleRow {
     return tmp7(guildRole(closure_3[11]).TableRow, obj1, guildRole.id);
   }
 }
-const isEveryoneRole = fn(4921).isEveryoneRole;
+const isEveryoneRole = fn(5048).isEveryoneRole;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
@@ -103,7 +103,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
   const guild_id = channel.channel.guild_id;
   [first, _slicedToArray] = ref.useState("");
   ref = ref.useRef(null);
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild_id));
   const items1 = [stateFromStores, first];
   const memo = ref.useMemo(() => stateFromStores.filter((id) => {

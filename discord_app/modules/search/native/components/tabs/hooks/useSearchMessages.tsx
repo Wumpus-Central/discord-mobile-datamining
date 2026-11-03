@@ -1,9 +1,9 @@
-// === Module 18779: useSearchMessages ===
+// === Module 18937: useSearchMessages ===
 
-// Module 18779 (useSearchMessages)
-import SearchUtils from "SearchUtils" /* 13893 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+// Module 18937 (useSearchMessages)
+import SearchUtils from "SearchUtils" /* 14024 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 export function useSearchMessages(searchContext, tab) {
   _require = searchContext;
   dependencyMap = tab;
-  const items = [SearchQueryStore, SearchMessageStore];
+  items = [SearchQueryStore, SearchMessageStore];
   const items1 = [searchContext, tab];
   return require("initialize").useStateFromStores(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_0);

@@ -1,16 +1,16 @@
-// === Module 10268: stickers/StickersUtils ===
+// === Module 10398: stickers/StickersUtils ===
 
-// Module 10268 (stickers/StickersUtils)
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
+// Module 10398 (stickers/StickersUtils)
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10269).useStickerPickerStore;
+const useStickerPickerStore = fn(10399).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1072).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const size = fn(2);
@@ -19,17 +19,15 @@ let result = size.fileFinishedImporting("modules/stickers/native/StickersUtils.t
 export function useStickerCategories(channel) {
   _require = channel;
   const stickerPackCategories = require("StickersHooks").useStickerPackCategories(channel);
-  let obj = require("StickersHooks");
-  const items = [UserStore];
+  const obj = require("StickersHooks");
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const guilds = GuildStore.getGuilds();
-  let obj2 = require("initialize");
-  const mobileStickerPickerUpsellRestyleEnabled = require("MobileStickerPickerUpsellRestyleExperiment").useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
-  const items1 = [channel, guilds, stickerPackCategories, mobileStickerPickerUpsellRestyleEnabled, stateFromStores];
+  const items1 = [channel, guilds, stickerPackCategories, stateFromStores];
   return guilds.useMemo(() => {
     const found = stickerPackCategories.filter((stickers) => stickers.stickers.length > 0);
     const found1 = found.filter((type) => {
-      let tmp2 = type.type !== closure_0(stateFromStores[10]).StickerCategoryTypes.GUILD;
+      let tmp2 = type.type !== closure_0(stateFromStores[9]).StickerCategoryTypes.GUILD;
       if (!tmp2) {
         nsfwAllowed = undefined;
         if (nsfwAllowed != null) {
@@ -47,38 +45,34 @@ export function useStickerCategories(channel) {
       return tmp2;
     });
     return found1.map((type) => {
-      let result = mobileStickerPickerUpsellRestyleEnabled;
-      if (mobileStickerPickerUpsellRestyleEnabled) {
-        result = closure_0(stateFromStores[11]).isStickerCategoryNitroLocked(type, nsfwAllowed, channel);
-        const obj = closure_0(stateFromStores[11]);
-      }
-      if (type.type !== closure_0(stateFromStores[10]).StickerCategoryTypes.FAVORITE) {
-        if (type.type !== closure_0(stateFromStores[10]).StickerCategoryTypes.RECENT) {
-          let tmp8 = type;
+      const result = closure_0(stateFromStores[10]).isStickerCategoryNitroLocked(type, nsfwAllowed, channel);
+      if (type.type !== closure_0(stateFromStores[9]).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== closure_0(stateFromStores[9]).StickerCategoryTypes.RECENT) {
+          let tmp4 = type;
           if (result) {
             const obj2 = {};
             const merged = Object.assign(type);
             obj2.isNitroLocked = result;
-            tmp8 = obj2;
+            tmp4 = obj2;
           }
-          return tmp8;
+          return tmp4;
         }
       }
-      if (type.type === closure_0(stateFromStores[10]).StickerCategoryTypes.FAVORITE) {
-        let tmp14 = stickerPackCategories(stateFromStores[12]);
+      if (type.type === closure_0(stateFromStores[9]).StickerCategoryTypes.FAVORITE) {
+        let tmp9 = stickerPackCategories(stateFromStores[11]);
       } else {
-        tmp14 = stickerPackCategories(stateFromStores[13]);
+        tmp9 = stickerPackCategories(stateFromStores[12]);
       }
       const obj3 = {};
       const merged1 = Object.assign(type);
-      obj3.icon = tmp14;
+      obj3.icon = tmp9;
       if (result) {
         obj3.isNitroLocked = result;
-        let tmp18 = obj3;
+        let tmp12 = obj3;
       } else {
-        tmp18 = obj3;
+        tmp12 = obj3;
       }
-      return tmp18;
+      return tmp12;
     });
   }, items1);
 }
@@ -91,7 +85,7 @@ export function dropPreloadedSticker(arg0) {
   NativeLottieUtils.dropPreload(arg0);
 }
 export function openStickerPickerToPackId(arg0, dependencyMap) {
-  const state = useStickerPickerStore.getState();
+  state = useStickerPickerStore.getState();
   state.setPackToScrollTo(dependencyMap);
   const timerId = setTimeout(() => {
     const current = ref.current;

@@ -1,6 +1,6 @@
-// === Module 14592: ScheduledMessageActionCreators ===
+// === Module 14723: ScheduledMessageActionCreators ===
 
-// Module 14592 (ScheduledMessageActionCreators)
+// Module 14723 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -18,7 +18,7 @@ let closure_7 = async function _createScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -172,7 +172,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
           closure_132_1(closure_132_2[3]).dispatch(obj7);
           c6 = 1;
           if (null == closure_131_2) {
-            const items = [closure_131_2, closure_131_3];
+            items = [closure_131_2, closure_131_3];
             let result = items;
           } else {
             const obj8 = { content: closure_131_2, flags: null };
@@ -233,7 +233,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
         obj.dispatch(obj13);
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -261,7 +261,7 @@ let closure_9 = async function _deleteScheduledMessage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -321,7 +321,7 @@ let closure_9 = async function _deleteScheduledMessage() {
           closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -350,7 +350,7 @@ let closure_10 = async function _sendScheduledMessageNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -410,7 +410,7 @@ let closure_10 = async function _sendScheduledMessageNow() {
           closure_131_1(closure_131_2[3]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         closure_4 = tmp39;

@@ -1,6 +1,6 @@
-// === Module 9139: UserSearchWorkerManager ===
+// === Module 9267: UserSearchWorkerManager ===
 
-// Module 9139 (UserSearchWorkerManager)
+// Module 9267 (UserSearchWorkerManager)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

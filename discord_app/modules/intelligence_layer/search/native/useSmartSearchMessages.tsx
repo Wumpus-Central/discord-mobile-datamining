@@ -1,13 +1,13 @@
-// === Module 18796: useSmartSearchMessages ===
+// === Module 18954: useSmartSearchMessages ===
 
-// Module 18796 (useSmartSearchMessages)
-import SmartSearchUtils from "SmartSearchUtils" /* 13889 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13891 */;
+// Module 18954 (useSmartSearchMessages)
+import SmartSearchUtils from "SmartSearchUtils" /* 14020 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 14022 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13887 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 14018 */;
 
 require = fn;
-const SearchListItemTypes = fn(9827).SearchListItemTypes;
+const SearchListItemTypes = fn(9958).SearchListItemTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchMessages.tsx");
 
@@ -18,7 +18,7 @@ export function useSmartSearchMessages(searchContext) {
   const isKeywordFirstPageLoading = searchContext.isKeywordFirstPageLoading;
   let isNlpSearchEnabled;
   let stateFromStores;
-  const items = [searchContext, searchQueryString];
+  items = [searchContext, searchQueryString];
   const memo = hasKeywordResults.useMemo(() => SmartSearchUtils.getSmartSearchQuery(searchContext, searchQueryString), items);
   const smartSearchStatus = searchContext(searchQueryString[4]).useSmartSearchStatus(memo);
   let obj = hasKeywordResults;

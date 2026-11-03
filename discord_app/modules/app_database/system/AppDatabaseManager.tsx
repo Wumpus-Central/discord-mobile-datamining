@@ -1,10 +1,10 @@
-// === Module 7787: AppDatabaseManager ===
+// === Module 7911: AppDatabaseManager ===
 
-// Module 7787 (AppDatabaseManager)
+// Module 7911 (AppDatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Dispatcher from "Dispatcher" /* 572 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4909 */;
-import actions2 from "actions" /* 7788 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 5036 */;
+import actions2 from "actions" /* 7912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -71,7 +71,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === require("module_4893").DatabaseState.Open) {
+        if (stateResult === require("module_5020").DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -120,20 +120,20 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
     }
     continue;
   }
-  const items = [map, mapped];
+  items = [map, mapped];
   return items;
 };
 AppDatabaseManager["register"] = function register(arg0, arr, arg2, arg3) {
   closure_0 = arg3;
   const obj = DispatcherDefault;
   const registerResult = obj.register(arg0, Object.fromEntries(arr.map((item) => {
-    const items = [item, closure_0];
+    items = [item, closure_0];
     return items;
   })), () => {
 
   }, Dispatcher.DispatchBand.Database);
   const fromEntriesResult = Object.fromEntries(arr.map((item) => {
-    const items = [item, closure_0];
+    items = [item, closure_0];
     return items;
   }));
   DispatcherDefault.addDependencies(registerResult, arg2);

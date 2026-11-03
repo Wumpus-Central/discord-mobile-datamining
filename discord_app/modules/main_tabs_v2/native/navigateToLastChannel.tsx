@@ -1,9 +1,9 @@
-// === Module 11504: navigateToLastChannel ===
+// === Module 11641: navigateToLastChannel ===
 
-// Module 11504 (navigateToLastChannel)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11505 */;
+// Module 11641 (navigateToLastChannel)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11642 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");

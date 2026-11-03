@@ -1,17 +1,17 @@
-// === Module 13297: GuildAutomodActionCreators ===
+// === Module 13433: GuildAutomodActionCreators ===
 
-// Module 13297 (GuildAutomodActionCreators)
+// Module 13433 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import AutomodFeedback from "AutomodFeedback" /* 7697 */;
-import DataUtils from "DataUtils" /* 13298 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import AutomodFeedback from "AutomodFeedback" /* 7821 */;
+import DataUtils from "DataUtils" /* 13434 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -170,7 +170,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
           const body = closure_129_0.body;
           const mapped = body.map(closure_130_13);
         } else {
-          const items = [];
+          items = [];
         }
         c4 = 3;
       }
@@ -195,7 +195,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;
@@ -304,7 +304,7 @@ export function executeAlertAction() {
 export function removeMentionRaidRestrictionWithFeedback(arg0, decision_id, arg2) {
   _require = arg0;
   dependencyMap = arg2;
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);

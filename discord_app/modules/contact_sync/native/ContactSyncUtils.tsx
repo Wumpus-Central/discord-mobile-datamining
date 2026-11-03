@@ -1,19 +1,19 @@
-// === Module 14251: ContactSyncUtils ===
+// === Module 14382: ContactSyncUtils ===
 
-// Module 14251 (ContactSyncUtils)
+// Module 14382 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
-import ContactSyncManager from "ContactSyncManager" /* 14252 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
+import ContactSyncManager from "ContactSyncManager" /* 14383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
 
 require = fn;
 let closure_18 = async function _uploadContacts(arg0) {
@@ -27,7 +27,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,10 +99,10 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14250);
+const ContactSyncPersistedStore = fn(14381);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14249);
-({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
+const ContactSyncConstants = fn(14380);
+({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: closure_10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);
 const error = new Error("No contact permissions");
@@ -161,7 +161,7 @@ export function uploadContacts() {
   return applyArgumentsResult;
 }
 export function bulkAddFriends(user_ids, bulkAddToken) {
-  const request = { url: closure_1_12.USER_BULK_RELATIONSHIPS, body: { user_ids, token: bulkAddToken }, trackedActionData: null, rejectWithError: false };
+  const request = { url: application_id.USER_BULK_RELATIONSHIPS, body: { user_ids, token: bulkAddToken }, trackedActionData: null, rejectWithError: false };
   const obj = TrackedHTTPUtilsDefault;
   const obj2 = { user_ids, token: bulkAddToken };
   request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
@@ -174,7 +174,7 @@ export function adminDeleteContactSync() {
   const result = ContactSyncManager.removeLastUserContactsUpload();
   const ContactSyncEnabled = UserSettings.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
-  const obj3 = { url: closure_1_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
+  const obj3 = { url: application_id.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   const obj2 = TrackedHTTPUtilsDefault;
   obj3.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   return obj2.delete(obj3);
@@ -241,11 +241,11 @@ export function getStoredContacts() {
   }
 }
 export function useContactSyncAccount() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   return initialize.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 }
 export function useContactSyncEnabled() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   return initialize.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;

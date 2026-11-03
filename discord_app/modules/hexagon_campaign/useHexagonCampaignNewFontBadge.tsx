@@ -1,24 +1,24 @@
-// === Module 16474: useHexagonCampaignNewFontBadge ===
+// === Module 16617: useHexagonCampaignNewFontBadge ===
 
-// Module 16474 (useHexagonCampaignNewFontBadge)
+// Module 16617 (useHexagonCampaignNewFontBadge)
 import initialize from "initialize" /* 504 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5042 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16465 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5169 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16608 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16475 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16226 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16618 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16369 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5039);
+const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty, HexagonCampaignPerk: metroRequire, HexagonCampaignPerkAvailability: closure_7 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignNewFontBadge.tsx");
 
 export function useHexagonCampaignNewFontBadge(DisplayNameStylesEditScreen) {
   let tmp = HexagonCampaignPerkAvailability.useHexagonCampaignPerkAvailability(constants.DISPLAY_NAME_STYLE, DisplayNameStylesEditScreen) === constants2.SELECTABLE;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   if (tmp) {
     tmp = !obj2.useStateFromStores(items, () => {
       seenFonts = seenFonts.getSeenFonts();
@@ -34,14 +34,14 @@ export function useHexagonCampaignNewFontBadge(DisplayNameStylesEditScreen) {
   };
 }
 export function useHexagonCampaignHasVisitedDisplayNameStyles() {
-  const items = [HexagonCampaignPersistedStore];
+  items = [HexagonCampaignPersistedStore];
   return initialize.useStateFromStores(items, () => HexagonCampaignPersistedStore.hasVisitedDisplayNameStyles);
 }
 export function useMarkHexagonCampaignDisplayNameStylesVisited(DisplayNameStylesEditScreen) {
   let tmp = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.DISPLAY_NAME_STYLE, DisplayNameStylesEditScreen) === constants2.SELECTABLE;
   _require = tmp;
   let obj = require("HexagonCampaignPerkAvailability");
-  const items = [HexagonCampaignPersistedStore];
+  items = [HexagonCampaignPersistedStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => HexagonCampaignPersistedStore.hasVisitedDisplayNameStyles);
   const items1 = [tmp, stateFromStores];
   const effect = noop.useEffect(() => {

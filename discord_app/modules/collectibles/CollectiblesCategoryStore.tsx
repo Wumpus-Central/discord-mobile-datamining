@@ -1,26 +1,26 @@
-// === Module 7720: CollectiblesCategoryStore ===
+// === Module 7844: CollectiblesCategoryStore ===
 
-// Module 7720 (CollectiblesCategoryStore)
+// Module 7844 (CollectiblesCategoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7721 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7845 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {
   closure_14 = map;
-  let items = [...closure_14.values()];
+  items = [...closure_14.values()];
   map = new Map(items.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
+    items = [storeListingId.storeListingId, storeListingId];
     return items;
   }));
   const productsFromCategories = CollectiblesUtils.getProductsFromCategories(closure_14, true);
   map1 = new Map(productsFromCategories.map((skuId) => {
-    const items = [skuId.skuId, skuId];
+    items = [skuId.skuId, skuId];
     return items;
   }));
   const item = closure_9.forEach((skuId) => {
@@ -31,7 +31,7 @@ function updateCategoriesAndProducts(map) {
   closure_9 = map1;
   const productsFromCategories1 = CollectiblesUtils.getProductsFromCategories(closure_14, false);
   map2 = new Map(productsFromCategories1.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
+    items = [storeListingId.storeListingId, storeListingId];
     return items;
   }));
   closure_11 = [...map2.values()];
@@ -72,7 +72,7 @@ class CollectiblesCategoryStore extends Store {
 }
 const prototype = CollectiblesCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, reset);
 };
 Object.defineProperty(prototype, "isFetchingCategories", {
@@ -84,7 +84,7 @@ Object.defineProperty(prototype, "isFetchingCategories", {
 prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    let state;
+    state = undefined;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }
@@ -217,13 +217,13 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
       closure_14 = map;
       closure_9 = map1;
     } else {
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_14.values(), 0);
       if (!obj.isEqual(items, mapped)) {
         if (!categories.noOp) {
           const _Map = Map;
           map = new Map(mapped.map((skuId) => {
-            const items = [skuId.skuId, skuId];
+            items = [skuId.skuId, skuId];
             return items;
           }));
           const _Date = Date;
@@ -275,7 +275,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             const _Map = Map;
             const bundledProducts1 = value.bundledProducts;
             map = new Map(bundledProducts1.map((item) => {
-              const items = [, ];
+              items = [, ];
               ({ skuId: arr[0], prices: arr[1] } = item);
               return items;
             }));
@@ -335,11 +335,11 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
       const _Map = Map;
       const categories = shopHome.shopHome.categories;
       map = new Map(categories.map((skuId) => {
-        const items = [skuId.skuId, skuId];
+        items = [skuId.skuId, skuId];
         return items;
       }));
       const _Map2 = Map;
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(map, HermesBuiltin.arraySpread(closure_14, 0));
       map1 = new Map(items);
       updateCategoriesAndProducts(map1);

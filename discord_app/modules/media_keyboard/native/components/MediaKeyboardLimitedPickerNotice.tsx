@@ -1,16 +1,16 @@
-// === Module 10554: MediaKeyboardLimitedPickerNotice ===
+// === Module 10684: MediaKeyboardLimitedPickerNotice ===
 
-// Module 10554 (MediaKeyboardLimitedPickerNotice)
+// Module 10684 (MediaKeyboardLimitedPickerNotice)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" }, absoluteContainer: { position: "absolute" }, text: { flex: 1 }, button: { marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/media_keyboard/native/compone
 export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
   const tmp = closure_6();
-  const items = [onHeightChange];
+  items = [onHeightChange];
   const items1 = [tmp.container, ];
   let absoluteContainer;
   const callback = noop.useCallback((nativeEvent) => {

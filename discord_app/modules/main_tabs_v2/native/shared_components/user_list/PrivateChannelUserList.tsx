@@ -1,22 +1,22 @@
-// === Module 12521: PrivateChannelUserList ===
+// === Module 12657: PrivateChannelUserList ===
 
-// Module 12521 (PrivateChannelUserList)
+// Module 12657 (PrivateChannelUserList)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12523 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ RelationshipTypes: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
+({ RelationshipTypes: closure_9, MAX_GROUP_DM_PARTICIPANTS: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const size = fn(2);
@@ -47,7 +47,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   let height;
   let callback2;
   const analyticsLocations = hideTitle(onUserPress[8])().analyticsLocations;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = channelId(onUserPress[9]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(onUserPress[9]);
   const items1 = [renderListHeader];
@@ -58,7 +58,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
       const arr2 = _modDef12(tmp.recipients);
       const found = mapped.unshift(UserStore.getCurrentUser()).filter(GlobalUtils.isNotNullish);
       const arr = mapped.unshift(UserStore.getCurrentUser());
-      let items = found.sortBy((username) => username.username.toLowerCase()).value();
+      items = found.sortBy((username) => username.username.toLowerCase()).value();
       const iter = found.sortBy((username) => username.username.toLowerCase());
     } else {
       items = [];
@@ -108,7 +108,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   const items3 = [stateFromStoresArray];
   const items4 = [stateFromStoresArray, hideTitle, tmp11, token, token1, tmp15];
   const sections = listHeaderContent.useMemo(() => {
-    const items = [stateFromStoresArray.length];
+    items = [stateFromStoresArray.length];
     return items;
   }, items3);
   const items5 = [stateFromStoresArray, flag2, tmp6, onUserPress, opensUserProfileOnUserPress, analyticsLocations, channelId];
@@ -201,14 +201,14 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   const items8 = [height, listHeaderSize];
   const callback3 = obj7.useCallback(() => {
     const obj = { onLayout: callback2, children: null };
-    const items = [listHeaderContent, ];
+    items = [listHeaderContent, ];
     let tmp3;
     if (renderListHeader != null) {
       tmp3 = renderListHeader();
     }
     items[1] = tmp3;
     obj.children = items;
-    return closure_2_12(View, obj, channelId);
+    return application_id(View, obj, channelId);
   }, items7);
   const callback4 = obj7.useCallback(() => {
     let num = height;

@@ -165,7 +165,7 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
 };
 prototype["waitFor"] = function waitFor() {
   const self = this;
-  const items = [...arguments];
+  items = [...arguments];
   const mapped = items.map((_dispatcher, index) => {
     let dispatchToken = null;
     _modDef38(null != _dispatcher, "Store.waitFor(...) called with null Store at index " + index + " for store " + self.getName());

@@ -1,24 +1,24 @@
-// === Module 6979: AnimatedPressableHighlight ===
+// === Module 7105: AnimatedPressableHighlight ===
 
-// Module 6979 (AnimatedPressableHighlight)
+// Module 7105 (AnimatedPressableHighlight)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import useIOSPressEffects from "useIOSPressEffects" /* 6982 */;
+import useToken from "useToken" /* 5719 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 7108 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import module_1652 from "module_1652" /* 1652 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(6980).PressableHighlight);
-const PlatformUtils = fn(1375);
+let closure_6 = module_1652.createAnimatedComponent(fn(7106).PressableHighlight);
+const PlatformUtils = fn(1377);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 
 export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
   const token = useToken.useToken(nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
-  const items = [token, ];
+  items = [token, ];
   let androidRippleConfig = merged.androidRippleConfig;
   let cornerRadius;
   if (androidRippleConfig != null) {
@@ -60,7 +60,7 @@ export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function 
   const iOSPressEffects = useIOSPressEffects.useIOSPressEffects(4);
   const obj2 = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
   const merged1 = Object.assign(merged);
-  const items = [iOSPressEffects.pressableStyles, merged.style];
+  items = [iOSPressEffects.pressableStyles, merged.style];
   obj2.style = items;
   obj2.children = children.children;
   return <closure_6 accessibilityRole="button" onPressIn={iOSPressEffects.onPressIn} onPressOut={iOSPressEffects.onPressOut} />;

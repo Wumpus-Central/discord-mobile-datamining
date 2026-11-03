@@ -1,8 +1,8 @@
-// === Module 9319: useResolveGame ===
+// === Module 9447: useResolveGame ===
 
-// Module 9319 (useResolveGame)
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7330 */;
-import useGame from "useGame" /* 7480 */;
+// Module 9447 (useResolveGame)
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
+import useGame from "useGame" /* 7604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function useResolveGame(arg0) {
     tmp3 = applicationId;
   }
   getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
-  const items = [gameId, getOrFetchApplication];
+  items = [gameId, getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let tmp = gameId;
     if (null == gameId) {

@@ -1,16 +1,16 @@
-// === Module 18719: GuildVoiceOrStageChannelRow ===
+// === Module 18877: GuildVoiceOrStageChannelRow ===
 
-// Module 18719 (GuildVoiceOrStageChannelRow)
+// Module 18877 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6765 */;
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
-import renderChannelBadge from "renderChannelBadge" /* 13839 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18720 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 18721 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 18723 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6885 */;
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
+import renderChannelBadge from "renderChannelBadge" /* 13970 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18878 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 18879 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 18881 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 require = fn;
 function GuildVoiceChannelSubtitle(channel) {
@@ -19,7 +19,7 @@ function GuildVoiceChannelSubtitle(channel) {
   const id = channel.id;
   const guild_id = channel.guild_id;
   const tmp = closure_8();
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [channel.id];
   const stateFromStores = channel(id[9]).useStateFromStores(items, () => {
     const stageInstanceByChannel = StageInstanceStore.getStageInstanceByChannel(channel.id);
@@ -156,9 +156,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(9827).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9958).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
@@ -170,7 +170,7 @@ export default noop.memo(function GuildVoiceChannelRow(channel) {
     voiceStates = channel.speakerVoiceStates;
   }
   const mapped = voiceStates.map((user) => user.user);
-  const items = [channel.id, onPress];
+  items = [channel.id, onPress];
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);

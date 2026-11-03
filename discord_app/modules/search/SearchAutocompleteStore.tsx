@@ -1,23 +1,23 @@
-// === Module 18807: SearchAutocompleteStore ===
+// === Module 18965: SearchAutocompleteStore ===
 
-// Module 18807 (SearchAutocompleteStore)
+// Module 18965 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import _modDef5854 from "module_5854" /* 5854 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6779 */;
-import GuildUtilsDefault from "GuildUtils" /* 6901 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9138 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
-import SearchTokens from "SearchTokens" /* 13894 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13897 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
-import UserStore from "UserStore" /* 1383 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13896 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import _modDef5974 from "module_5974" /* 5974 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6899 */;
+import GuildUtilsDefault from "GuildUtils" /* 7021 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9266 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
+import SearchTokens from "SearchTokens" /* 14025 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 14028 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import StreamerModeStore from "StreamerModeStore" /* 5196 */;
+import UserStore from "UserStore" /* 1385 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 14027 */;
 
 const SearchTokensDefault = SearchTokens;
 
@@ -45,7 +45,7 @@ function handleUserSearchResults(searchContext, results) {
           num = 10;
         }
         value.results = (function fixUserResults(results, arg1) {
-          const items = [];
+          items = [];
           const iter = results[Symbol.iterator]();
           while (iter !== undefined) {
             if (items.length >= arg1) {
@@ -184,7 +184,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
       obj = isGuildLikeSearchContext;
     }
     if (null != tmp4) {
-      const items = [tmp4];
+      items = [tmp4];
       let tmp26 = items;
     } else {
       tmp26 = closure_15;
@@ -219,9 +219,9 @@ function rebuildAutocompleteResults(c14) {
   }
 }
 const Constants = fn(1072);
-({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
+({ SearchPopoutModes: closure_10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6897).AutocompleterResultTypes;
+fn(7017).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5854(c14, searchContext)) {
+    if (!_modDef5974(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5854(c14, searchContext)) {
+    if (!_modDef5974(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }

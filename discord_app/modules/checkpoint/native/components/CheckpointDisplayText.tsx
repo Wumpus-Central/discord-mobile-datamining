@@ -1,7 +1,7 @@
-// === Module 13658: CheckpointDisplayText ===
+// === Module 13798: CheckpointDisplayText ===
 
-// Module 13658 (CheckpointDisplayText)
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
+// Module 13798 (CheckpointDisplayText)
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ export default function CheckpointDisplayText(style) {
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.variant = "display-lg";
-  const items = [closure_3, style.style];
+  items = [closure_3, style.style];
   obj.style = items;
   return jsx(CheckpointTextDefault, {});
 };

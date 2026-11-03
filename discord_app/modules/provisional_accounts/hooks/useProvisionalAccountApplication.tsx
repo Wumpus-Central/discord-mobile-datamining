@@ -1,7 +1,7 @@
-// === Module 14205: useProvisionalAccountApplication ===
+// === Module 14336: useProvisionalAccountApplication ===
 
-// Module 14205 (useProvisionalAccountApplication)
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
+// Module 14336 (useProvisionalAccountApplication)
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/us
 
 export default function useProvisionalAccountApplication(arg0) {
   _require = arg0;
-  const items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const gameRelationshipsForUser = GameRelationshipStore.getGameRelationshipsForUser(closure_0);
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;

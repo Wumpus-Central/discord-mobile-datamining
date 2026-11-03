@@ -1,28 +1,28 @@
-// === Module 17009: UserSettingsAppearanceThemeUtils ===
+// === Module 17152: UserSettingsAppearanceThemeUtils ===
 
-// Module 17009 (UserSettingsAppearanceThemeUtils)
+// Module 17152 (UserSettingsAppearanceThemeUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5079 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5932 */;
-import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 13712 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17010 */;
-import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 17011 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5206 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6052 */;
+import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 13843 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17153 */;
+import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 17154 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const SystemThemeState = fn(1195).SystemThemeState;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const constants = fn(1385).AnalyticsPremiumFeatureNames;
+const constants = fn(1387).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
-export function handleSaveTheme(found, analyticsLocations, isSynced) {
+export function handleSaveTheme(found, analyticsLocations, c3) {
   if (found.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-    const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: isSynced, location_stack: analyticsLocations };
+    const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced, location_stack: analyticsLocations };
     AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
     if ("system" === found.theme) {
       const result = ClientThemesBackgroundActionCreators.resetBackgroundGradientPreset();
@@ -68,10 +68,10 @@ export function handleSaveTheme(found, analyticsLocations, isSynced) {
     combined = "default " + found.theme;
   }
 }
-export function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
+export function handleSaveSyncedModeTheme(theme, systemTheme, c10) {
   if ("system" !== theme.theme) {
     if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: false, location_stack: analyticsLocations };
+      const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: false, location_stack };
       AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
       if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         theme = ClientThemesUtils.getCustomThemeBaseTheme(theme.theme);

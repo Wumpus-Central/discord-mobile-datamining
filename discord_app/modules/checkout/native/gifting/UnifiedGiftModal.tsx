@@ -1,10 +1,10 @@
-// === Module 10693: UnifiedGiftModal ===
+// === Module 10823: UnifiedGiftModal ===
 
-// Module 10693 (UnifiedGiftModal)
+// Module 10823 (UnifiedGiftModal)
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10694 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ export default function UnifiedGiftModal(analyticsLocations) {
   const tmp = validateRecipient(renderProductDetails.useState(lockedRecipientUser), 2);
   const first = tmp[0];
   closure_7 = tmp[1];
-  const items = [onGiftModalDismiss];
+  items = [onGiftModalDismiss];
   const callback = renderProductDetails.useCallback(() => {
     ModalActionCreatorsDefault.pop();
     if (onGiftModalDismiss != null) {

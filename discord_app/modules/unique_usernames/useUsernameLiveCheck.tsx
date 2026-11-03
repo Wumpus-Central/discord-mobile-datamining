@@ -1,10 +1,10 @@
-// === Module 16608: useUsernameLiveCheck ===
+// === Module 16751: useUsernameLiveCheck ===
 
-// Module 16608 (useUsernameLiveCheck)
+// Module 16751 (useUsernameLiveCheck)
 import _mod12 from "module_12" /* 12 */;
-import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 16611 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 16754 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16609 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16752 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ export function useUsernameLiveCheck(username) {
     flag3 = false;
   }
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   const items1 = [username];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => UniqueUsernamesStore.validate(closure_0), items1);
   let obj = require("useStateFromStores");

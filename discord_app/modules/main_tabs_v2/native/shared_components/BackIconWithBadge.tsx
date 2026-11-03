@@ -1,14 +1,14 @@
-// === Module 18478: BackIconWithBadge ===
+// === Module 18632: BackIconWithBadge ===
 
-// Module 18478 (BackIconWithBadge)
+// Module 18632 (BackIconWithBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import ClipView from "ClipView" /* 9509 */;
-import XLargeIcon from "XLargeIcon" /* 10768 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7128 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import ClipView from "ClipView" /* 9637 */;
+import XLargeIcon from "XLargeIcon" /* 10898 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -19,7 +19,7 @@ function IconWithBadge(includeNotificationsCount) {
   _require = undefined;
   let memo;
   const tmp = closure_8();
-  const items = [GuildReadStateStore];
+  items = [GuildReadStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let num = 0;
   if (null != stateFromStores) {
@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(18469)().value;
+    num2 = memo(18623)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -64,7 +64,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(9509), obj4), ];
+  const items5 = [closure_6(tmp5(9637), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -80,7 +80,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -93,7 +93,7 @@ export function SettingsLeftIconWithBadge(navigation) {
   if (flag === undefined) {
     flag = false;
   }
-  const items = [navigation];
+  items = [navigation];
   const obj = { includeNotificationsCount: flag, Icon: null };
   if (noop.useMemo(() => navigation.getState().index > 0, items)) {
     obj.Icon = ArrowLargeLeftIcon.ArrowLargeLeftIcon;
@@ -114,7 +114,7 @@ export function LeftBackIconWithBadge(includeNotificationsCount) {
 export function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   const obj = { style: closure_8().iconWithBadge, children: null };
-  const items = [timestampProducer(XLargeIcon.XLargeIcon, { size: "sm", color: "white" }), ];
+  items = [timestampProducer(XLargeIcon.XLargeIcon, { size: "sm", color: "white" }), ];
   let tmp3Result = null;
   if (count > 0) {
     const obj2 = { value: count };

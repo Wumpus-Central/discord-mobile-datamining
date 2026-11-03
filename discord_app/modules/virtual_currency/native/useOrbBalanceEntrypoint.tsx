@@ -1,32 +1,36 @@
-// === Module 16900: useOrbBalanceEntrypoint ===
+// === Module 17043: useOrbBalanceEntrypoint ===
 
-// Module 16900 (useOrbBalanceEntrypoint)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 17043 (useOrbBalanceEntrypoint)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
-let closure_5 = fn(16901).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(17044).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
 export function useOrbBalanceEntrypoint(location) {
-  let isOrbchievementsMobileEnabled;
-  isOrbchievementsMobileEnabled = isOrbchievementsMobileEnabled(16918).useIsOrbchievementsMobileEnabled({ location: location.location });
-  let obj = isOrbchievementsMobileEnabled(16918);
-  const orbChallengeUnreadState = isOrbchievementsMobileEnabled(16904).useOrbChallengeUnreadState({ enabled: isOrbchievementsMobileEnabled });
-  const items = [isOrbchievementsMobileEnabled];
+  _require = undefined;
+  let obj = require("useVirtualCurrencyMobileEnabled");
+  const tmp = _require;
+  const tmp3 = require("OrbchievementsExperiment").useIsOrbchievementsMobileEnabled({ location: location.location }) && obj.useVirtualCurrencyMobileEnabled().enabled;
+  _require = tmp3;
+  let obj2 = require("OrbchievementsExperiment");
+  const orbChallengeUnreadState = tmp(17047).useOrbChallengeUnreadState({ enabled: tmp3 });
+  items = [tmp3];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  let obj2 = isOrbchievementsMobileEnabled(16904);
+  const tmpResult = tmp(17047);
   return {
-    isOrbchievementsEnabled: isOrbchievementsMobileEnabled,
+    isOrbchievementsEnabled: tmp3,
     hasUnreadUpdate,
     notificationType,
     openBalanceWidgetActionSheet: noop.useCallback((arg0) => {
-      closure_0 = isOrbchievementsMobileEnabled;
       let str = "BalanceWidgetActionSheet";
       let obj = ActionSheetActionCreatorsDefault;
-      if (isOrbchievementsMobileEnabled) {
+      if (closure_0) {
         str = closure_5;
       }
       obj.openLazy(asyncGeneratorStep(async () => {
@@ -40,7 +44,7 @@ export function useOrbBalanceEntrypoint(location) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

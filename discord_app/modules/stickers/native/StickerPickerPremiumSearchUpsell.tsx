@@ -1,9 +1,9 @@
-// === Module 10301: StickerPickerPremiumSearchUpsell ===
+// === Module 10431: StickerPickerPremiumSearchUpsell ===
 
-// Module 10301 (StickerPickerPremiumSearchUpsell)
+// Module 10431 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function StickerPickerPremiumSearchUpsell(guildId) {
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(guildId(analyticsLocations[8]).getUpsellType(guildId(analyticsLocations[9]).EntitlementFeatureNames.STICKERS_EVERYWHERE), analyticsLocations);
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   let obj2 = guildId(analyticsLocations[8]);
-  const items = [analyticsLocations, guildId, useTier0UpsellContent];
+  items = [analyticsLocations, guildId, useTier0UpsellContent];
   ({ loading, onPress } = require("usePremiumFeatureUpsellGetNitro")(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants2.PREMIUM_UPSELL_STICKERS_EVERYWHERE));
   const effect = useTier0UpsellContent.useEffect(() => {
     if (!ref.current) {

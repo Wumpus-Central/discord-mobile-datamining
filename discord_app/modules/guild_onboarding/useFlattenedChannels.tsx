@@ -1,14 +1,14 @@
-// === Module 7278: useFlattenedChannels ===
+// === Module 7398: useFlattenedChannels ===
 
-// Module 7278 (useFlattenedChannels)
+// Module 7398 (useFlattenedChannels)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function getFlattenedChannels(guildId, set, found) {
+function getFlattenedChannels(c0, set, found) {
   _require = set;
   importDefault = found;
   if (flag === undefined) {
@@ -16,8 +16,8 @@ function getFlattenedChannels(guildId, set, found) {
   }
   ChannelStore = undefined;
   const tmp = require("module_12");
-  const values = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(guildId)).values();
-  const tmpResult = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(guildId));
+  const values = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(c0)).values();
+  const tmpResult = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(c0));
   ChannelStore = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
   const mapped = require("module_12")(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
@@ -62,7 +62,7 @@ function getFlattenedChannels(guildId, set, found) {
     if (found == null) {
       found = [];
     }
-    const items = [
+    items = [
       ..._modDef12.sortBy(found, (position) => {
         position = position.position;
         if (position.isGuildVocal()) {
@@ -94,7 +94,7 @@ export function useFlattenedChannels(arg0, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const mapped = Array.from(closure_1).map((item) => channel.getChannel(item));
     return getFlattenedChannels(closure_0, closure_1, mapped.filter(GlobalUtils.isNotNullish), flag);

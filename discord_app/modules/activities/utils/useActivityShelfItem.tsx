@@ -1,21 +1,21 @@
-// === Module 12385: useActivityShelfItem ===
+// === Module 12521: useActivityShelfItem ===
 
-// Module 12385 (useActivityShelfItem)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import Server from "Server" /* 1992 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
-import getPlatformDefault from "getPlatform" /* 5682 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7330 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10931 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11788 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11789 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11842 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12386 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12387 */;
+// Module 12521 (useActivityShelfItem)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import Server from "Server" /* 2121 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
+import getPlatformDefault from "getPlatform" /* 5802 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7003 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11069 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11925 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11926 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11979 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12522 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12523 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -97,7 +97,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -147,7 +147,7 @@ function useOnActivityItemSelected(arg0) {
               }
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           dependencyMap = tmp;
@@ -167,7 +167,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp24) {
           dependencyMap = tmp;
           throw tmp24;
@@ -252,7 +252,7 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2018).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2147).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1072).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);

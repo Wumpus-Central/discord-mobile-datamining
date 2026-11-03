@@ -1,18 +1,18 @@
-// === Module 13890: SmartSearchResultsStore ===
+// === Module 14021: SmartSearchResultsStore ===
 
-// Module 13890 (SmartSearchResultsStore)
+// Module 14021 (SmartSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1451 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13891 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import privDefault from "priv" /* 1453 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 14022 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(13888);
+const SmartSearchConstants = fn(14019);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -155,7 +155,7 @@ let obj2 = {
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
     c1 = undefined;
-    let items;
+    items = undefined;
     if (null == channel.guild_id) {
       return false;
     } else {
@@ -266,7 +266,7 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
     c1 = undefined;
-    let items;
+    items = undefined;
     if (null == channel.guild_id) {
       return false;
     } else {

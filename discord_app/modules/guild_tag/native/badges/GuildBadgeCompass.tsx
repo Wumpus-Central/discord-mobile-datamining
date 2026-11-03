@@ -1,8 +1,8 @@
-// === Module 15755: GuildBadgeCompass ===
+// === Module 15898: GuildBadgeCompass ===
 
-// Module 15755 (GuildBadgeCompass)
-import inlineStyles from "inlineStyles" /* 8031 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15745 */;
+// Module 15898 (GuildBadgeCompass)
+import inlineStyles from "inlineStyles" /* 8155 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

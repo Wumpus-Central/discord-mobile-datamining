@@ -1,17 +1,17 @@
-// === Module 13736: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 13867: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 13736 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 13867 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
   const obj2 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -47,7 +47,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     analyticsLocations1 = [];
   }
   analyticsLocations = ref(analyticsLocations[7])(analyticsLocations1, tmp3(tmp4[8]).CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET).analyticsLocations;
-  const items = [markAsDismissed, analyticsLocations];
+  items = [markAsDismissed, analyticsLocations];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     const obj2 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { analyticsLocations } };

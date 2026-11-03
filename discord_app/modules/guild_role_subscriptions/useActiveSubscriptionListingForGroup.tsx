@@ -1,12 +1,12 @@
-// === Module 18619: useActiveSubscriptionListingForGroup ===
+// === Module 18777: useActiveSubscriptionListingForGroup ===
 
-// Module 18619 (useActiveSubscriptionListingForGroup)
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7431 */;
-import subscriptionUtils from "subscriptionUtils" /* 17205 */;
+// Module 18777 (useActiveSubscriptionListingForGroup)
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7555 */;
+import subscriptionUtils from "subscriptionUtils" /* 17348 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useA
 
 export default function useActiveSubscriptionListingForGroup(arg0) {
   _require = arg0;
-  const items = [sku_id];
+  items = [sku_id];
   stateFromStores = require("initialize").useStateFromStores(items, () => sku_id.getSubscriptions());
   const items1 = [stateFromStores];
   noop = noop.useMemo(() => {

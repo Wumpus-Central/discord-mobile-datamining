@@ -1,24 +1,24 @@
-// === Module 15030: BundleProductDetailsActionSheetPreview ===
+// === Module 15172: BundleProductDetailsActionSheetPreview ===
 
-// Module 15030 (BundleProductDetailsActionSheetPreview)
+// Module 15172 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
-import useShopProductItems from "useShopProductItems" /* 8742 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 15032 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import useShopProductItems from "useShopProductItems" /* 8866 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 15174 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ memo, useCallback: closure_4, useLayoutEffect: hasOwnProperty, useMemo: metroRequire, useState: closure_7 } = noop);
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_8, ScrollView: closure_9, View: c10 } = get_ActivityIndicator);
+({ Pressable: closure_8, ScrollView: closure_9, View: closure_10 } = get_ActivityIndicator);
 const ShopCtaEnum = fn(1074).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { previewContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 let size = { width: 56, height: 56, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 obj2.bundleThumbnail = size;
@@ -36,7 +36,7 @@ let closure_15 = memo(function BundleThumbnail(index) {
   ({ isSelected, setSelected } = index);
   const trackedSkuId = index.trackedSkuId;
   const onTrackPress = index.onTrackPress;
-  const items = [setSelected, index, onTrackPress, trackedSkuId];
+  items = [setSelected, index, onTrackPress, trackedSkuId];
   ({ item, label } = index);
   const tmp2 = closure_14();
   const obj = {
@@ -97,7 +97,7 @@ let closure_16 = memo(function BundleThumbnailRow(arg0) {
     }
     obj.trackedSkuId = skuId;
     obj.onTrackPress = onTrackPress;
-    return closure_2_12(closure_15, obj, item.skuId);
+    return application_id(closure_15, obj, item.skuId);
   });
   obj2.children = closure_12(closure_9, obj3);
   return closure_12(LegacyBaseButton.GestureDetector, obj2);
@@ -144,10 +144,10 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   const obj2 = { style: tmp.previewContainer, children: null };
   const tmp7Result = CollectiblesUtils;
   const items3 = [
-    closure_1_12(IndividualProductPreview.IndividualProductPreview, {
+    application_id(IndividualProductPreview.IndividualProductPreview, {
       product: timestampProducer(() => {
         const obj = { skuId: closure_1.skuId, type: closure_1.type, items: null };
-        const items = [closure_1];
+        items = [closure_1];
         obj.items = items;
         return obj;
       }, items2),
@@ -162,29 +162,29 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   ];
   const obj3 = { style: tmp.bundleContainer, children: null };
   const obj4 = { style: tmp.bundleInfoContainer, children: null };
-  const items4 = [closure_1_12(Text_Text.Text, { variant: "heading-xl/bold", children: product.name }), ];
+  const items4 = [application_id(Text_Text.Text, { variant: "heading-xl/semibold", children: product.name }), ];
   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj6.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
-  items4[1] = closure_1_12(Text_Text.Text, obj6);
+  items4[1] = application_id(Text_Text.Text, obj6);
   obj4.children = items4;
-  const items5 = [map1(closure_1_10, obj4), ];
+  const items5 = [state(closure_1_10, obj4), ];
   const obj8 = { style: tmp.bundleInfoContainer, children: null };
-  const items6 = [closure_1_12(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }), ];
+  const items6 = [application_id(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }), ];
   const items7 = [name, ];
   let tmp20Result = null != collectibleTypeLabel;
   if (tmp20Result) {
     const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = " - " + collectibleTypeLabel;
-    tmp20Result = closure_1_12(Text_Text.Text, obj9);
+    tmp20Result = application_id(Text_Text.Text, obj9);
   }
   items7[1] = tmp20Result;
-  items6[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
+  items6[1] = state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
   obj8.children = items6;
-  items5[1] = map1(closure_1_10, obj8);
+  items5[1] = state(closure_1_10, obj8);
   obj3.children = items5;
-  items3[1] = map1(closure_1_10, obj3);
+  items3[1] = state(closure_1_10, obj3);
   obj2.children = items3;
-  return map1(closure_1_10, obj2);
+  return state(closure_1_10, obj2);
 };

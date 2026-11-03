@@ -1,9 +1,9 @@
-// === Module 15871: createAccessibleNativeStackNavigator ===
+// === Module 16014: createAccessibleNativeStackNavigator ===
 
-// Module 15871 (createAccessibleNativeStackNavigator)
-import Link from "Link" /* 1498 */;
-import Navigator from "Navigator" /* 7169 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 9856 */;
+// Module 16014 (createAccessibleNativeStackNavigator)
+import Link from "Link" /* 1500 */;
+import Navigator from "Navigator" /* 7290 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9987 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function AccessibleNativeStackNavigator(arg0) {
   const descriptors = navigationBuilder.descriptors;
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
   const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
-  const items = [descriptors, accessibilityNativeStackOptions];
+  items = [descriptors, accessibilityNativeStackOptions];
   let obj3 = { children: null };
   const memo = noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
@@ -58,7 +58,7 @@ export default function createAccessibleNativeStackNavigator(arg0) {
 export function useAccessibilityPatchedDescriptors(filteredDescriptors) {
   closure_0 = filteredDescriptors;
   const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
-  const items = [filteredDescriptors, accessibilityNativeStackOptions];
+  items = [filteredDescriptors, accessibilityNativeStackOptions];
   return noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return descriptors;

@@ -1,25 +1,25 @@
-// === Module 18330: GuildUpsellChannelList ===
+// === Module 18475: GuildUpsellChannelList ===
 
-// Module 18330 (GuildUpsellChannelList)
+// Module 18475 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15603 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15745 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(18331).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(18476).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, header: null, headerTitle: null, listContainer: null, subheaderWrapper: null, createDescription: null, templateScroll: null, templateRow: null, templateCard: null, templateIconWrapper: null, templateTitle: null, buttonGroup: null, descriptionSpacing: null, joinSection: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
 obj2.header = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
@@ -46,11 +46,11 @@ const obj12 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.joinSection = { gap: nativeDefault.space.PX_4 };
 let closure_14 = createStyles.createStyles(obj2);
 const obj13 = { gap: nativeDefault.space.PX_4 };
-let items = [{ id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14833).BumpingFistsSpotIllustration }, , ];
-const obj14 = { id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14833).BumpingFistsSpotIllustration };
-items[1] = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18332).ChatControllersSpotIllustration };
-const obj15 = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18332).ChatControllersSpotIllustration };
-items[2] = { id: "hobbies", title: fn(1113).t["0Ka6B5"], description: fn(1113).t["5oGAp/"], Icon: fn(18336).MiniaturesSpotIllustration };
+let items = [{ id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14964).BumpingFistsSpotIllustration }, , ];
+const obj14 = { id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14964).BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18477).ChatControllersSpotIllustration };
+const obj15 = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18477).ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: fn(1113).t["0Ka6B5"], description: fn(1113).t["5oGAp/"], Icon: fn(18481).MiniaturesSpotIllustration };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
@@ -100,15 +100,15 @@ export default function GuildUpsellChannelList(style) {
   let items2 = [callback1, callback2, memo.length, tmp];
   const memo1 = callback2.useMemo(() => {
     let obj = { style: closure_0.subheaderWrapper, children: null };
-    const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     let intl = util.intl;
     obj2.children = intl.string(util.t["abaDI+"]);
-    items = [closure_2_12(Text_Text.Text, obj2), , , , ];
+    items = [application_id(Text_Text.Text, obj2), , , , ];
     let obj3 = { variant: "text-sm/medium", color: "text-subtle", style: closure_0.createDescription, children: null };
     let intl2 = util.intl;
     obj3.children = intl2.string(util.t.raDC7V);
-    items[1] = closure_2_12(Text_Text.Text, obj3);
-    items[2] = closure_2_12(hasOwnProperty, {
+    items[1] = application_id(Text_Text.Text, obj3);
+    items[2] = application_id(hasOwnProperty, {
       horizontal: true,
       showsHorizontalScrollIndicator: false,
       style: closure_0.templateScroll,
@@ -117,7 +117,7 @@ export default function GuildUpsellChannelList(style) {
         const obj = { onPress, radius: 16, style: closure_1_0.templateCard, children: null };
         items = [closure_2_12(closure_2_6, { style: closure_1_0.templateIconWrapper, children: closure_2_12(Icon.Icon, { width: 114, height: 64 }) }), ];
         const obj3 = { children: null };
-        const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", style: closure_1_0.templateTitle, children: null };
+        const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: closure_1_0.templateTitle, children: null };
         const intl = closure_0(callback1[9]).intl;
         obj4.children = intl.string(Icon.title);
         const items1 = [closure_2_12(closure_0(callback1[17]).Text, obj4), ];
@@ -136,31 +136,31 @@ export default function GuildUpsellChannelList(style) {
     const intl3 = util.intl;
     obj6.text = intl3.string(util.t.B44MTm);
     obj6.onPress = callback1;
-    let items1 = [closure_2_12(components_Button_Button.Button, obj6), ];
+    let items1 = [application_id(components_Button_Button.Button, obj6), ];
     const obj7 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
     const intl4 = util.intl;
     obj7.text = intl4.string(util.t.wKy7MA);
     obj7.onPress = callback2;
-    items1[1] = closure_2_12(components_Button_Button.Button, obj7);
+    items1[1] = application_id(components_Button_Button.Button, obj7);
     obj5.children = items1;
-    items[3] = map1(timestampProducer, obj5);
+    items[3] = state(timestampProducer, obj5);
     let tmpResult = memo.length > 0;
     if (tmpResult) {
       const obj8 = { style: closure_0.joinSection, children: null };
-      const obj9 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+      const obj9 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl5 = util.intl;
       obj9.children = intl5.string(util.t.rJRote);
-      const items2 = [closure_2_12(Text_Text.Text, obj9), ];
+      const items2 = [application_id(Text_Text.Text, obj9), ];
       const obj10 = { variant: "text-sm/medium", color: "text-subtle", style: closure_0.descriptionSpacing, children: null };
       const intl6 = util.intl;
       obj10.children = intl6.string(util.t.pJT2DK);
-      items2[1] = closure_2_12(Text_Text.Text, obj10);
+      items2[1] = application_id(Text_Text.Text, obj10);
       obj8.children = items2;
-      tmpResult = map1(timestampProducer, obj8);
+      tmpResult = state(timestampProducer, obj8);
     }
     items[4] = tmpResult;
     obj.children = items;
-    return map1(timestampProducer, obj);
+    return state(timestampProducer, obj);
   }, items2);
   let obj2 = require("MobileGameCommunitiesActionCreators");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
@@ -170,7 +170,7 @@ export default function GuildUpsellChannelList(style) {
   obj4.style = items4;
   let obj5 = { style: tmp.header, children: null };
   const memo2 = callback2.useMemo(() => ({ paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + youBarTotalHeight }), items3);
-  let obj6 = { style: tmp.headerTitle, color: "mobile-text-heading-primary", variant: "heading-lg/bold", children: null };
+  let obj6 = { style: tmp.headerTitle, color: "mobile-text-heading-primary", variant: "heading-lg/semibold", children: null };
   let intl = require("util").intl;
   obj6.children = intl.string(require("util").t["7hB4kg"]);
   obj5.children = closure_12(require("Text/Text").Text, obj6);

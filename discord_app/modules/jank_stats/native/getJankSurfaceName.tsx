@@ -1,10 +1,10 @@
-// === Module 18067: getJankSurfaceName ===
+// === Module 18211: getJankSurfaceName ===
 
-// Module 18067 (getJankSurfaceName)
-import getJankScreenName from "getJankScreenName" /* 18062 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18066 */;
+// Module 18211 (getJankSurfaceName)
+import getJankScreenName from "getJankScreenName" /* 18206 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18210 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 require = fn;
 function composeJankSurfaceName(getBaseScreenName) {
@@ -85,7 +85,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(18063);
+const JankScreenConstants = fn(18207);
 ({ CHANNEL_DETAILS_SCREEN: hasOwnProperty, INTERACTION_NONE: metroRequire, PANEL_SURFACE: closure_7, SHEET_SURFACE: closure_8 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);
 const main = "main";
@@ -147,16 +147,16 @@ export function setJankPanelOpen(activity, arg1) {
     }
   }
 }
-export function setJankVoicePanelTab(channelId, arg1) {
-  value = map.get(channelId);
+export function setJankVoicePanelTab(c0, arg1) {
+  value = map.get(c0);
   if (value == null) {
     value = null;
   }
   if (value !== arg1) {
     if (null == arg1) {
-      map.delete(channelId);
+      map.delete(c0);
     } else {
-      const result = map.set(channelId, arg1);
+      const result = map.set(c0, arg1);
     }
     const tmp8 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
     const obj2 = NativeJankSessionModuleDefault;

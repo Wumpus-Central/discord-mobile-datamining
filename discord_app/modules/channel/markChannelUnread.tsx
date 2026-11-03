@@ -1,13 +1,13 @@
-// === Module 10990: markChannelUnread ===
+// === Module 11123: markChannelUnread ===
 
-// Module 10990 (markChannelUnread)
-import markUnreadDefault from "markUnread" /* 10991 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+// Module 11123 (markChannelUnread)
+import markUnreadDefault from "markUnread" /* 11124 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReadState = fn(6842).ReadState;
+const ReadState = fn(6962).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 
@@ -19,6 +19,6 @@ export default function markChannelUnread(arg0) {
 };
 export function useCanMarkChannelUnread(channel) {
   _require = channel;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStores(items, () => ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory());
 }

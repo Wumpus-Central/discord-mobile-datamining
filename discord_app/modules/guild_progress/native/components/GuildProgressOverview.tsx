@@ -1,16 +1,16 @@
-// === Module 15806: GuildProgressOverview ===
+// === Module 15949: GuildProgressOverview ===
 
-// Module 15806 (GuildProgressOverview)
+// Module 15949 (GuildProgressOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7363 */;
-import _modDef11911 from "module_11911" /* 11911 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14047 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14050 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 15807 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7483 */;
+import _modDef12048 from "module_12048" /* 12048 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14178 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14181 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 15950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -66,7 +66,7 @@ export default function GuildProgressOverview(guild) {
   let completed;
   const guildProgressStep = guild(completed[6]).useGuildProgressStep(guild);
   completed = guildProgressStep.completed;
-  let items = [completed, guild.id];
+  items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
   const effect = noop.useEffect(() => {
     if (completed) {
@@ -90,7 +90,7 @@ export default function GuildProgressOverview(guild) {
         obj3.onPress = function onPress() {
           flag(completed[7]).dismissProgress(id.id);
         };
-        const items = [obj3];
+        items = [obj3];
         obj2.options = items;
         const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
       }

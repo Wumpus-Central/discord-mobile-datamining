@@ -1,11 +1,11 @@
-// === Module 17823: UserSettingsDesignSystemAIShimmer ===
+// === Module 17966: UserSettingsDesignSystemAIShimmer ===
 
-// Module 17823 (UserSettingsDesignSystemAIShimmer)
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
-import AIShimmer from "AIShimmer" /* 12785 */;
+// Module 17966 (UserSettingsDesignSystemAIShimmer)
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
+import AIShimmer from "AIShimmer" /* 12921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { padding: 16 }, buttonRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, stage: { minHeight: 28, justifyContent: "center" } });
 const text = ["Reading the channel", "Finding the highlights", "Writing it up"];
 const options = ["text-xs/normal", "text-sm/normal", "text-md/normal", "text-lg/semibold"];
@@ -59,7 +59,7 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };
   const obj4 = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Variant" }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any Mana text variant. The glyph band scales with the font size. Default `text-md/normal`." }), timestampProducer(Picker, { options, value: first, onChange: tmp3[1] }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Variant" }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any Mana text variant. The glyph band scales with the font size. Default `text-md/normal`." }), timestampProducer(Picker, { options, value: first, onChange: tmp3[1] }), ];
   const obj6 = { children: timestampProducer(AIShimmer.AIShimmer, { text, variant: first }) };
   items[3] = timestampProducer(Stage, obj6);
   obj4.children = items;
@@ -67,7 +67,7 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const items1 = [timestampProducer(Card.Card, obj3), , ];
   const obj8 = { children: null };
   const obj9 = { children: null };
-  const items2 = [timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Colors" }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The text and moving glyph band can use different colors." }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Text color" }), timestampProducer(Picker, { options: options2, value: first1, onChange: tmp5[1] }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Glyph color" }), timestampProducer(Picker, { options: options2, value: first2, onChange: tmp7[1] }), ];
+  const items2 = [timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The text and moving glyph band can use different colors." }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Text color" }), timestampProducer(Picker, { options: options2, value: first1, onChange: tmp5[1] }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Glyph color" }), timestampProducer(Picker, { options: options2, value: first2, onChange: tmp7[1] }), ];
   const obj12 = { children: timestampProducer(AIShimmer.AIShimmer, { text, color: first1, glyphColor: first2 }) };
   items2[6] = timestampProducer(Stage, obj12);
   obj9.children = items2;
@@ -75,7 +75,7 @@ export default function UserSettingsDesignSystemAIShimmer() {
   items1[1] = timestampProducer(Card.Card, obj8);
   const obj14 = { children: null };
   const obj15 = { children: null };
-  const items3 = [timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Manual Trigger" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: ["`delay=", null, "` turns off automatic changes. Use play() to run the next animation."] }), , ];
+  const items3 = [timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Manual Trigger" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: ["`delay=", null, "` turns off automatic changes. Use play() to run the next animation."] }), , ];
   const obj16 = { style: tmp.buttonRow, children: null };
   const items4 = [
     timestampProducer(components_Button_Button.Button, {

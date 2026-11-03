@@ -1,8 +1,8 @@
-// === Module 10737: useScaledSectionHeight ===
+// === Module 10867: useScaledSectionHeight ===
 
-// Module 10737 (useScaledSectionHeight)
-import useFontScale from "useFontScale" /* 5642 */;
-import UsersFastListConstants from "UsersFastListConstants" /* 10734 */;
+// Module 10867 (useScaledSectionHeight)
+import useFontScale from "useFontScale" /* 5762 */;
+import UsersFastListConstants from "UsersFastListConstants" /* 10864 */;
 import size from "module_2" /* 2 */;
 
 ({ USERS_LIST_SECTION_HEIGHT: c2, USERS_LIST_SECTION_TEXT_HEIGHT: c3 } = UsersFastListConstants);

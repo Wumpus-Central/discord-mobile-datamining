@@ -1,9 +1,9 @@
-// === Module 8760: DisplayProfile ===
+// === Module 8884: DisplayProfile ===
 
-// Module 8760 (DisplayProfile)
-import PremiumConstants from "PremiumConstants" /* 1385 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8737 */;
+// Module 8884 (DisplayProfile)
+import PremiumConstants from "PremiumConstants" /* 1387 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8861 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -339,7 +339,7 @@ prototype["getBadges"] = function getBadges() {
   if (badges == null) {
     badges = [];
   }
-  const items = [...badges];
+  items = [...badges];
   const _guildMemberProfile = this._guildMemberProfile;
   let badges1;
   if (_guildMemberProfile != null) {

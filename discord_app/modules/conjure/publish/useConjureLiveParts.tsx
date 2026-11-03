@@ -1,23 +1,23 @@
-// === Module 12112: useConjureLiveParts ===
+// === Module 12248: useConjureLiveParts ===
 
-// Module 12112 (useConjureLiveParts)
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 12248 (useConjureLiveParts)
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureLiveParts.tsx");
 
 export default function useConjureLiveParts(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let project = ConjureProjectStore.getProject(closure_0);
@@ -26,7 +26,7 @@ export default function useConjureLiveParts(arg0, arg1) {
     }
     return project;
   }, items1);
-  let application_id;
+  application_id = undefined;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -53,7 +53,7 @@ export default function useConjureLiveParts(arg0, arg1) {
   const stateFromStores2 = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = null;
     if (null != closure_1) {
-      let guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       if (guild == null) {
         guild = null;
       }

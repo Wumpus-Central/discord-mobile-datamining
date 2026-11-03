@@ -1,9 +1,9 @@
-// === Module 12003: useDeafStates ===
+// === Module 12140: useDeafStates ===
 
-// Module 12003 (useDeafStates)
+// Module 12140 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx
 
 export default function useDeafStates(arg0) {
   _require = arg0;
-  const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
+  items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (VoiceStateStore !== undefined) {

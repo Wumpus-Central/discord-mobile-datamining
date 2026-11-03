@@ -1,10 +1,10 @@
-// === Module 7434: GuildRoleSubscriptionSettingUtils ===
+// === Module 7558: GuildRoleSubscriptionSettingUtils ===
 
-// Module 7434 (GuildRoleSubscriptionSettingUtils)
-import GuildRecord from "GuildRecord" /* 4881 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7435 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 7558 (GuildRoleSubscriptionSettingUtils)
+import GuildRecord from "GuildRecord" /* 5008 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7559 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -54,7 +54,7 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   _require = stateFromStores;
   closure_129_0 = stateFromStores;
   const obj = require("initialize");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
     let canResult = null != closure_0;
@@ -152,7 +152,7 @@ export function useCanSeeGuildRoleSubscriptionSettings(guild) {
 }
 export function useCanManageGuildRoleSubscriptions(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;

@@ -1,14 +1,14 @@
-// === Module 19708: ExemptChannelsActionSheet ===
+// === Module 19858: ExemptChannelsActionSheet ===
 
-// Module 19708 (ExemptChannelsActionSheet)
-import TableRow from "TableRow" /* 6975 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7281 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
+// Module 19858 (ExemptChannelsActionSheet)
+import TableRow from "TableRow" /* 7101 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function getChannelOptionId(channel) {
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function ExemptChannelsActionSheet(guildId) {
   guildId = guildId.guildId;
   ({ exemptChannels, onSave } = guildId);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   closure_129_0 = guildId;
@@ -65,5 +65,5 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(19707), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(19857), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 };

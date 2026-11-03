@@ -1,15 +1,15 @@
-// === Module 19829: GuildSettingsModalCommunityIntro ===
+// === Module 19979: GuildSettingsModalCommunityIntro ===
 
-// Module 19829 (GuildSettingsModalCommunityIntro)
+// Module 19979 (GuildSettingsModalCommunityIntro)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19834 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19984 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 const require = globalThis.__r;
 
@@ -18,21 +18,21 @@ function FeatureCard(arg0) {
   ({ icon, header, body } = arg0);
   const tmp = closure_16();
   const obj = { style: tmp.featureCard, children: null };
-  const items = [map1(React4, { style: tmp.featureIcon, children: icon() }), ];
+  items = [state(React4, { style: tmp.featureIcon, children: icon() }), ];
   const obj3 = { style: tmp.featureDescription, children: null };
-  const items1 = [map1(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
+  const items1 = [state(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
   obj3.children = items1;
-  items[1] = closure_1_14(React4, obj3);
+  items[1] = gesture(React4, obj3);
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ HelpdeskArticles: closure_9, GuildFeatures: c10, GuildSettingsSections: closure_11, Permissions: closure_12 } = Constants);
+({ HelpdeskArticles: closure_9, GuildFeatures: closure_10, GuildSettingsSections: closure_11, Permissions: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" }, featureIcon: null, featureDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 obj2.featureIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
@@ -47,7 +47,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   let tmp = closure_16();
   navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(require));
   let obj2 = require("initialize");
   const items1 = [PermissionStore];
@@ -85,7 +85,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   obj7.contentContainerStyle = items4;
   const introHeaderSource = require("IntroHeader").useIntroHeaderSource();
   const items5 = [closure_13(onClose(navigation[18]), { resizeMode: "contain", source: introHeaderSource, style: tmp.headerImage }), , , , , ];
-  const obj9 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj9 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require("util").intl;
   obj9.children = intl.string(require("util").t["M/gBcA"]);
   items5[1] = closure_13(require("Text/Text").Heading, obj9);

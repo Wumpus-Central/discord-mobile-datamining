@@ -1,17 +1,17 @@
-// === Module 11464: BadgeDetailsSheet ===
+// === Module 11601: BadgeDetailsSheet ===
 
-// Module 11464 (BadgeDetailsSheet)
+// Module 11601 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11463 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11479 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11600 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11616 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import UserStore from "UserStore" /* 1383 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import UserStore from "UserStore" /* 1385 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
 
 require = fn;
 function BadgeAccessoryLine(segments) {
@@ -28,7 +28,7 @@ function BadgeAccessoryLine(segments) {
         tmp2 = closure_2_10(React4, obj);
       }
       const obj2 = { children: null };
-      const items = [tmp2, node];
+      items = [tmp2, node];
       obj2.children = items;
       return closure_2_11(noop.Fragment, obj2, key);
     })
@@ -37,7 +37,7 @@ function BadgeAccessoryLine(segments) {
 function InfoNotice(children) {
   const tmp = closure_13();
   const obj = { style: tmp.notice, children: null };
-  const items = [closure_1_10(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_INFO, style: tmp.noticeIcon }), closure_1_10(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", style: tmp.noticeText, children: children.children })];
+  items = [closure_1_10(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_INFO, style: tmp.noticeIcon }), closure_1_10(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", style: tmp.noticeText, children: children.children })];
   obj.children = items;
   return closure_1_11(React4, obj);
 }
@@ -48,7 +48,7 @@ function BadgeDetailsSheetContent(badge) {
   const isViewerOwnershipKnown = badge.isViewerOwnershipKnown;
   let badgeDetailsCta;
   const tmp = closure_13();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = badge(isViewingOtherUser[12]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = badge(isViewingOtherUser[12]);
   const items1 = [UserStore];
@@ -175,7 +175,7 @@ function BadgeDetailsSheetContent(badge) {
   let isBetaBadgeIdResult = badge(isViewingOtherUser[16]).isBetaBadgeId(badge.badge_id);
   if (isBetaBadgeIdResult) {
     const obj15 = { style: tmp.betaPill, children: null };
-    const obj16 = { variant: "text-xs/bold", color: "text-default", style: tmp.uppercase, children: null };
+    const obj16 = { variant: "text-xs/semibold", color: "text-default", style: tmp.uppercase, children: null };
     const intl2 = tmp2(tmp3[27]).intl;
     obj16.children = intl2.string(tmp2(tmp3[27]).t.oW0eUd);
     obj15.children = closure_10(tmp2(tmp3[11]).Text, obj16);
@@ -319,7 +319,7 @@ function BadgeDetailsPage(badgeId) {
   const currentUserId = badgeId.currentUserId;
   ({ isViewingOtherUser, targetUsername, isViewerOwnershipKnown } = badgeId);
   const tmp = closure_13();
-  const items = [BadgeDirectoryStore];
+  items = [BadgeDirectoryStore];
   const items1 = [badgeId, displayedUserId];
   const stateFromStores = badgeId(currentUserId[12]).useStateFromStores(items, () => BadgeDirectoryStore.getBadgeById(badgeId, displayedUserId), items1);
   badgeId(currentUserId[12]);
@@ -337,10 +337,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_9 = fn(5273).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, header: null, betaPill: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_8 };
@@ -379,7 +379,7 @@ export default function BadgeDetailsSheet(badgeId) {
   const isViewingOtherUser = badgeId.isViewingOtherUser;
   let tmp = closure_13();
   const sum = Math.max(displayedUserId(isViewingOtherUser[32])().bottom, closure_9) + 4;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = badgeId(isViewingOtherUser[12]).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

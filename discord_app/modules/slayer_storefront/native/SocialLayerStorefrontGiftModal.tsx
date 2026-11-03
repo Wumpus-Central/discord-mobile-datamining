@@ -1,12 +1,12 @@
-// === Module 10691: SocialLayerStorefrontGiftModal ===
+// === Module 10821: SocialLayerStorefrontGiftModal ===
 
-// Module 10691 (SocialLayerStorefrontGiftModal)
+// Module 10821 (SocialLayerStorefrontGiftModal)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10669 */;
-import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 14423 */;
-import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 14424 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10799 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 14554 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 14555 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import SKUStore from "SKUStore" /* 7016 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -22,7 +22,7 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   let analyticsLocations2;
   productLine = skuId;
   let tmp = applicationId;
-  const items = [analyticsLocations2];
+  items = [analyticsLocations2];
   const items1 = [skuId];
   applicationId = skuId(applicationId[4]).useStateFromStores(items, () => SKUStore.get(skuId), items1);
   let tmp2 = giftingOrigin;

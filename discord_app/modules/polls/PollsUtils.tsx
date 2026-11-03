@@ -1,25 +1,25 @@
-// === Module 8403: PollsUtils ===
+// === Module 8527: PollsUtils ===
 
-// Module 8403 (PollsUtils)
+// Module 8527 (PollsUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
-import utils_StringUtils from "utils/StringUtils" /* 2027 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7396 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8404 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import utils_StringUtils from "utils/StringUtils" /* 2156 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7520 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8528 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5615).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5738).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -28,7 +28,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
       guildId = channel.getGuildId();
     }
   }
-  let items;
+  items = undefined;
   if (reactions != null) {
     items = reactions.values();
   }
@@ -94,15 +94,15 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8406);
+const PollsConstants = fn(8530);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1072);
-({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
+({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "isArray", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "flexDirection", localCreationAnswerId: v1.v4() };
   return obj;
 }
 export function generateLocalCreationAnswerId() {
@@ -124,7 +124,7 @@ export function hasNonVoteReactions(message) {
 }
 export function useCanPostPollsInChannel(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null != _private;
     if (tmp) {
@@ -225,7 +225,7 @@ export function createPollServerDataFromCreateRequest(poll) {
         });
       }
     }
-    let duration;
+    duration = undefined;
     if (poll != null) {
       duration = poll.duration;
     }

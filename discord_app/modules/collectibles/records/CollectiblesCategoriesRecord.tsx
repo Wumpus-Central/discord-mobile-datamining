@@ -1,8 +1,8 @@
-// === Module 7736: CollectiblesCategoriesRecord ===
+// === Module 7860: CollectiblesCategoriesRecord ===
 
-// Module 7736 (CollectiblesCategoriesRecord)
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7737 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7721 */;
+// Module 7860 (CollectiblesCategoriesRecord)
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7861 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7845 */;
 
 const prototype = function CollectiblesCategoriesRecord(categories) {
   const obj = Object.create(new.target.prototype);

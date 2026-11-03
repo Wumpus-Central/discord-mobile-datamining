@@ -1,6 +1,6 @@
-// === Module 7848: VideoQuestUIStore ===
+// === Module 7972: VideoQuestUIStore ===
 
-// Module 7848 (VideoQuestUIStore)
+// Module 7972 (VideoQuestUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -39,21 +39,19 @@ function _toPropertyKey(obj) {
 const VideoProgressState = { UNKNOWN: "UNKNOWN", NOT_STARTED: "NOT_STARTED", IN_PROGRESS: "IN_PROGRESS", COMPLETED: "COMPLETED" };
 let identity = fn(1254);
 identity = identity.createWithEqualityFn();
-fn(5212);
+fn(5335);
 const obj4 = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-const module_5212 = fn(5212);
-obj4.storage = module_5212.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_5335 = fn(5335);
+obj4.storage = module_5335.createJSONStorage(() => require("LocalStorageWrapper"));
 obj4.partialize = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
-const withEqualityFnResult = identity(module_5212.persist((arg0, arg1) => {
+const withEqualityFnResult = identity(module_5335.persist((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   return {
     volume: require("DiscordVideoPlayerTypes").DEFAULT_VIDEO_VOLUME,
     muted: false,
-    transcriptEnabled: false,
-    captionEnabled: false,
     videoProgress: {},
     transcript: null,
     setVolume(volume) {
@@ -82,12 +80,6 @@ const withEqualityFnResult = identity(module_5212.persist((arg0, arg1) => {
         return closure_0(obj);
       });
     },
-    setTranscriptEnabled(transcriptEnabled) {
-      transcriptEnabled(1259).batchUpdates(() => transcriptEnabled({ transcriptEnabled }));
-    },
-    setCaptionEnabled(captionEnabled) {
-      captionEnabled(1259).batchUpdates(() => captionEnabled({ captionEnabled }));
-    },
     getVideoProgress(questId) {
       return closure_1().videoProgress[questId];
     },
@@ -106,7 +98,7 @@ const withEqualityFnResult = identity(module_5212.persist((arg0, arg1) => {
     },
     resetQuest(questId) {
       questId(1259).batchUpdates(() => {
-        const items = [questId];
+        items = [questId];
         questId({ videoProgress: _objectWithoutProperties(closure_1().videoProgress, items.map(_toPropertyKey)) });
       });
     },

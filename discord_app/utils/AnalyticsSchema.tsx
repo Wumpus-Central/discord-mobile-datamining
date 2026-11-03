@@ -1,6 +1,6 @@
-// === Module 1371: utils/AnalyticsSchema ===
+// === Module 1373: utils/AnalyticsSchema ===
 
-// Module 1371 (utils/AnalyticsSchema)
+// Module 1373 (utils/AnalyticsSchema)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

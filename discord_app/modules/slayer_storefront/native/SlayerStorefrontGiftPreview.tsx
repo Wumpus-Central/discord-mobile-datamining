@@ -1,10 +1,10 @@
-// === Module 11390: SlayerStorefrontGiftPreview ===
+// === Module 11528: SlayerStorefrontGiftPreview ===
 
-// Module 11390 (SlayerStorefrontGiftPreview)
+// Module 11528 (SlayerStorefrontGiftPreview)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9521 */;
-import InfoBox from "InfoBox" /* 11391 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9649 */;
+import InfoBox from "InfoBox" /* 11529 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -22,7 +22,7 @@ function WarningBox(application) {
     const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3738).BMMo2K;
+      BMMo2K = name(3865).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -51,7 +51,7 @@ function WarningBox(application) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
@@ -67,8 +67,8 @@ export default function SlayerStorefrontGiftPreview(arg0) {
   if (null != sku) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { sku };
-    const items = [React4(SlayerStorefrontItemCardDefault, obj2), , ];
-    const obj3 = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    items = [React4(SlayerStorefrontItemCardDefault, obj2), , ];
+    const obj3 = { variant: "heading-md/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
     const intl = util.intl;
     const obj4 = { sender, skuName: sku.name, applicationName: null };
     let name;

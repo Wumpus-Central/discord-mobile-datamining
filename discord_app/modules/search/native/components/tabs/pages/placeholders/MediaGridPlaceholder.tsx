@@ -1,25 +1,25 @@
-// === Module 18712: MediaGridPlaceholder ===
+// === Module 18870: MediaGridPlaceholder ===
 
-// Module 18712 (MediaGridPlaceholder)
+// Module 18870 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18711 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18713 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18869 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18871 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -29,16 +29,16 @@ export default function MediaGridPlaceholderItem(arg0) {
   ({ size, containerStyle } = arg0);
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const obj2 = { style: null, pointerEvents: "none", children: React5(GridItemPlaceholderDefault, { height: size, width: size, style: containerStyle }) };
-  const items = [containerStyle, placeholderAnimatedStyle];
+  items = [containerStyle, placeholderAnimatedStyle];
   obj2.style = items;
-  return React5(ReanimatedRexportDefault.View, obj2);
+  return React5(_modDef1652.View, obj2);
 };
 export function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
   let memo;
   let tmp = closure_9();
   dependencyMap = tmp;
-  const items = [numRows];
+  items = [numRows];
   memo = memo.useMemo(() => _mod12.range(0, numRows * numColumns), items);
   const items1 = [memo];
   const memo1 = memo.useMemo(() => _mod12.chunk(memo, numColumns), items1);
@@ -87,5 +87,5 @@ export function RecentsMediaGridPlaceholder(visible) {
     })
   ];
   obj2.children = items4;
-  return closure_8(numRows(5095).View, obj2);
+  return closure_8(numRows(1652).View, obj2);
 }

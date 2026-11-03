@@ -1,10 +1,10 @@
-// === Module 16937: useBountiesModalTiming ===
+// === Module 17080: useBountiesModalTiming ===
 
-// Module 16937 (useBountiesModalTiming)
+// Module 17080 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_2 = fn(6781).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_2 = fn(6901).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
@@ -76,7 +76,7 @@ export function useBountiesModalTiming(endMode) {
   rewardDurationMs.useRef(num3);
   rewardDurationMs.useRef(0);
   rewardDurationMs.useRef(num);
-  const items = [onVideoProgress, onRewardEarned, rewardDurationMs];
+  items = [onVideoProgress, onRewardEarned, rewardDurationMs];
   const items1 = [endMode, onVideoEnd, onVideoLooped, onRewardEarned];
   const callback = obj.useCallback((progress) => {
     ({ currentTime, seekableDuration } = progress);

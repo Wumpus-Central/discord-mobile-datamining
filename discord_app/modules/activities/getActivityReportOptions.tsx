@@ -1,8 +1,8 @@
-// === Module 19465: getActivityReportOptions ===
+// === Module 19623: getActivityReportOptions ===
 
-// Module 19465 (getActivityReportOptions)
+// Module 19623 (getActivityReportOptions)
 import util from "util" /* 1113 */;
-import Constants from "Constants" /* 2018 */;
+import Constants from "Constants" /* 2147 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFeedbackReasons = Constants.ActivityFeedbackReasons;
@@ -25,7 +25,7 @@ export default function getActivityReportOptions(arg0) {
     tmp6 = require;
   }
   obj.label = stringResult;
-  const items = [obj, , , , ];
+  items = [obj, , , , ];
   const obj2 = { value: ActivityFeedbackReasons.LAGGING, label: null };
   const intl2 = tmp6(1113).intl;
   const string2 = intl2.string;

@@ -1,10 +1,10 @@
-// === Module 17848: useTrackProductCardImpression ===
+// === Module 17991: useTrackProductCardImpression ===
 
-// Module 17848 (useTrackProductCardImpression)
+// Module 17991 (useTrackProductCardImpression)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export function useTrackProductCardImpression(categoryStoreListingId, mobile_hom
   let callback;
   const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
   let obj = require("CollectiblesAnalyticsContext");
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => CollectiblesCategoryStore.getProduct(closure_0));
   let obj2 = require("initialize");
   const currentUserIfAvailable = require("useCurrentUser").useCurrentUserIfAvailable();

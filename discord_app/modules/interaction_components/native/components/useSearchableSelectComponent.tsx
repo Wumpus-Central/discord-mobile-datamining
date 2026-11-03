@@ -1,7 +1,7 @@
-// === Module 13252: useSearchableSelectComponent ===
+// === Module 13388: useSearchableSelectComponent ===
 
-// Module 13252 (useSearchableSelectComponent)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 13388 (useSearchableSelectComponent)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,12 +20,12 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   first = tmp[0];
   noop = selectActionComponent(onSubmit[2]).getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
   const tmp3 = first(noop.useState(() => new Map(closure_4.map((value) => {
-    const items = [value.value, value];
+    items = [value.value, value];
     return items;
   }))), 2);
   const first1 = tmp3[0];
   closure_6 = tmp3[1];
-  let items = [first, queryOptions];
+  items = [first, queryOptions];
   closure_7 = selectActionComponent.maxValues > 1;
   const obj2 = {
     options: noop.useMemo(() => queryOptions(first), items),
@@ -56,7 +56,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
         if (hasItem) {
           let _Map1 = new _Map();
         } else {
-          const items = [value.value, value];
+          items = [value.value, value];
           const items1 = [items];
           _Map1 = new _Map(items1);
         }
@@ -70,7 +70,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
     },
     submitSelection() {
       const obj = { type: selectActionComponent.type, selectedOptions: null };
-      const items = [...first1.values()];
+      items = [...first1.values()];
       obj.selectedOptions = items;
       onSubmit(obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();

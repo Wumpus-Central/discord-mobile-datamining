@@ -1,10 +1,10 @@
-// === Module 7629: useTrialOffer ===
+// === Module 7753: useTrialOffer ===
 
-// Module 7629 (useTrialOffer)
+// Module 7753 (useTrialOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import UserOfferStore from "UserOfferStore" /* 7630 */;
+import UserStore from "UserStore" /* 1385 */;
+import UserOfferStore from "UserOfferStore" /* 7754 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export function hasUserTrialOfferExpired(hasExpired) {
 }
 export function useTrialOffer(React3) {
   _require = React3;
-  const items = [UserOfferStore];
+  items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserTrialOffer(closure_0));
   let flag;
   if (stateFromStores != null) {
@@ -102,7 +102,7 @@ export function useTrialOffer(React3) {
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            closure_1_0.start(num, /* F135508 */ function() { ... });
+                            closure_1_0.start(num, /* F136286 */ function() { ... });
                           }
                         }
                       });

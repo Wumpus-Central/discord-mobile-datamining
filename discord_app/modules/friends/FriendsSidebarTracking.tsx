@@ -1,6 +1,6 @@
-// === Module 6866: FriendsSidebarTracking ===
+// === Module 6986: FriendsSidebarTracking ===
 
-// Module 6866 (FriendsSidebarTracking)
+// Module 6986 (FriendsSidebarTracking)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;

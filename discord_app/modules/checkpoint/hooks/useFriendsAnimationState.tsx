@@ -1,7 +1,7 @@
-// === Module 13683: useFriendsAnimationState ===
+// === Module 13813: useFriendsAnimationState ===
 
-// Module 13683 (useFriendsAnimationState)
-import CheckpointNavigation from "CheckpointNavigation" /* 6435 */;
+// Module 13813 (useFriendsAnimationState)
+import CheckpointNavigation from "CheckpointNavigation" /* 6555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ export function useFriendsAnimationState(route, stateFromStores3) {
     tmp5(obj3);
     const tmp6 = first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD;
   }
-  const items = [first.isTransitioning];
+  items = [first.isTransitioning];
   const effect = noop.useEffect(() => {
     if (isTransitioning.isTransitioning) {
       const _setTimeout = setTimeout;

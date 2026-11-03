@@ -1,7 +1,7 @@
-// === Module 11766: useVideoSpinnerTimer ===
+// === Module 11903: useVideoSpinnerTimer ===
 
-// Module 11766 (useVideoSpinnerTimer)
-import VideoSpinnerTimer from "VideoSpinnerTimer" /* 11767 */;
+// Module 11903 (useVideoSpinnerTimer)
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 11904 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ export default function useVideoSpinnerTimer(userId) {
     const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(closure_1_0);
     return videoSpinnerTimer;
   }), 1)[0];
-  const items = [loading, flag, streamId, first, videoSpinnerContext, userId];
+  items = [loading, flag, streamId, first, videoSpinnerContext, userId];
   const effect = streamId.useEffect(() => {
     if (!flag) {
       if (loading) {

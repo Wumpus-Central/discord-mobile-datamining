@@ -1,8 +1,8 @@
-// === Module 12558: useTrackPollEvents ===
+// === Module 12694: useTrackPollEvents ===
 
-// Module 12558 (useTrackPollEvents)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12548 */;
+// Module 12694 (useTrackPollEvents)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx"
 export function useTrackPollCreationEvents(answers, allowMultiSelect) {
   let attachments_count = answers;
   let obj = { trackPollCreationCancelled: null };
-  const items = [answers, allowMultiSelect];
+  items = [answers, allowMultiSelect];
   obj.trackPollCreationCancelled = noop.useCallback(() => {
     attachments_count = 0;
     allowMultiSelect = 0;

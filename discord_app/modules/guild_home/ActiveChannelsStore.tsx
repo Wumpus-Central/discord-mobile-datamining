@@ -1,12 +1,12 @@
-// === Module 15598: ActiveChannelsStore ===
+// === Module 15740: ActiveChannelsStore ===
 
-// Module 15598 (ActiveChannelsStore)
+// Module 15740 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
@@ -33,7 +33,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4870).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4997).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};
@@ -197,12 +197,12 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const guildId = SelectedGuildStore.getGuildId();
     if (null != guildId) {
-      let items = tmp5;
+      items = tmp5;
       if (dependencyMap[guildId] == null) {
         items = [];
       }
       const reduced = Array.from(items).reduce((acc, item) => {
-        let items = dependencyMap2[item];
+        items = dependencyMap2[item];
         if (items == null) {
           items = [];
         }

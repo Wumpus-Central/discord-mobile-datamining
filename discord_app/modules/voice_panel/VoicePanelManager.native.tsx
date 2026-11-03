@@ -1,10 +1,10 @@
-// === Module 20017: VoicePanelManager ===
+// === Module 20167: VoicePanelManager ===
 
-// Module 20017 (VoicePanelManager)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import VoicePanelStore from "VoicePanelStore" /* 6875 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 20167 (VoicePanelManager)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import VoicePanelStore from "VoicePanelStore" /* 6995 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 const prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -12,7 +12,7 @@ const prototype = function VoicePanelManager() {
     VOICE_CHANNEL_SELECT() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         const channel = ChannelStore.getChannel(channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {
@@ -31,7 +31,7 @@ const prototype = function VoicePanelManager() {
     RTC_CONNECTION_STATE() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         const channel = ChannelStore.getChannel(channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {

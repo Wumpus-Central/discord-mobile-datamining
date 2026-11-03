@@ -1,28 +1,28 @@
-// === Module 18485: NotificationCenterForYou ===
+// === Module 18639: NotificationCenterForYou ===
 
-// Module 18485 (NotificationCenterForYou)
+// Module 18639 (NotificationCenterForYou)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import parseURLDefault from "parseURL" /* 5745 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6860 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18488 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18490 */;
+import parseURLDefault from "parseURL" /* 5865 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6979 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6980 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18642 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserStore from "UserStore" /* 1383 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6858 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18486 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserStore from "UserStore" /* 1385 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6978 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18640 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MainTabsConstants = fn(11514);
+const MainTabsConstants = fn(11651);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const jsx = fn(21).jsx;
 let items = [, , , , ];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);
@@ -76,7 +76,7 @@ export (panelVariant) => {
   const notificationCenterItemsLoader = isFocused(setting[18]).useNotificationCenterItemsLoader({ isFocused, navigatedAway: memo, withMentions: true, initialPageSize: memo1 });
   const initialized = notificationCenterItemsLoader.initialized;
   const hasMore = notificationCenterItemsLoader.hasMore;
-  let items = notificationCenterItemsLoader.items;
+  items = notificationCenterItemsLoader.items;
   const setReadNotifItemToAcked = notificationCenterItemsLoader.setReadNotifItemToAcked;
   const errored = notificationCenterItemsLoader.errored;
   ({ loadMore, loadingMore } = notificationCenterItemsLoader);

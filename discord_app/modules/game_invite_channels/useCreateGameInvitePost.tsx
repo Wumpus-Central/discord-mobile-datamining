@@ -1,19 +1,19 @@
-// === Module 14384: useCreateGameInvitePost ===
+// === Module 14515: useCreateGameInvitePost ===
 
-// Module 14384 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7453 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11688 */;
+// Module 14515 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7577 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11825 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11525 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import SlowmodeStore from "SlowmodeStore" /* 7830 */;
+import LocalActivityStore from "LocalActivityStore" /* 11662 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import SlowmodeStore from "SlowmodeStore" /* 7954 */;
 
 require = fn;
-const SlowmodeType = fn(7830).SlowmodeType;
+const SlowmodeType = fn(7954).SlowmodeType;
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
@@ -32,7 +32,7 @@ export function useCreateGameInvitePost(parentChannel) {
   let obj = parentChannel(applicationIdsForGame[8]);
   applicationIdsForGame = parentChannel(applicationIdsForGame[9]).useApplicationIdsForGame(parentChannel.gameId);
   let obj2 = parentChannel(applicationIdsForGame[9]);
-  const items = [c6, c7];
+  items = [c6, c7];
   const items1 = [applicationIdsForGame];
   const stateFromStores = parentChannel(applicationIdsForGame[10]).useStateFromStores(items, () => {
     const obj = applicationIdsForGame[Symbol.iterator]();
@@ -129,7 +129,7 @@ export function useCreateGameInvitePost(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

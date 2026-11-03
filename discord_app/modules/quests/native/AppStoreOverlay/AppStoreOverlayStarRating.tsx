@@ -1,9 +1,9 @@
-// === Module 14670: AppStoreOverlayStarRating ===
+// === Module 14801: AppStoreOverlayStarRating ===
 
-// Module 14670 (AppStoreOverlayStarRating)
+// Module 14801 (AppStoreOverlayStarRating)
 import nativeDefault from "native" /* 575 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10061 */;
-import StarIcon from "StarIcon" /* 10063 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10191 */;
+import StarIcon from "StarIcon" /* 10193 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ function FractionalStar(fillAmount) {
   fillAmount = fillAmount.fillAmount;
   const tmp = closure_6();
   const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
-  const items = [React4(StarOutlineIcon.StarOutlineIcon, { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon }), ];
+  items = [React4(StarOutlineIcon.StarOutlineIcon, { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon }), ];
   let tmp4Result = fillAmount > 0;
   if (tmp4Result) {
     const obj3 = { style: null, children: null };
@@ -30,7 +30,7 @@ function FractionalStar(fillAmount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
 let size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
 obj2.star = size;

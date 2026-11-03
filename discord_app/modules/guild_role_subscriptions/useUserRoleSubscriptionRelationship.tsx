@@ -1,18 +1,18 @@
-// === Module 17197: useUserRoleSubscriptionRelationship ===
+// === Module 17340: useUserRoleSubscriptionRelationship ===
 
-// Module 17197 (useUserRoleSubscriptionRelationship)
+// Module 17340 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 504 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4969 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5096 */;
 
 require = fn;
-const constants = fn(17196).UserGuildRoleSubscriptionRelationship;
+const constants = fn(17339).UserGuildRoleSubscriptionRelationship;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 
 export default function useUserRoleSubscriptionRelationship() {
-  let items = [SubscriptionRoleStore];
+  items = [SubscriptionRoleStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [SubscriptionRoleStore];
+    items = [SubscriptionRoleStore];
     [obj] = items;
     const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
     c1 = false;
@@ -34,7 +34,7 @@ export default function useUserRoleSubscriptionRelationship() {
 export function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [SubscriptionRoleStore];
+    items = [SubscriptionRoleStore];
     tmp = items;
   }
   [obj] = tmp;

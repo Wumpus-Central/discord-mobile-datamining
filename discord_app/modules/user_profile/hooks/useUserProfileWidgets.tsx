@@ -1,9 +1,9 @@
-// === Module 14972: useUserProfileWidgets ===
+// === Module 15092: useUserProfileWidgets ===
 
-// Module 14972 (useUserProfileWidgets)
+// Module 15092 (useUserProfileWidgets)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import WidgetStore from "WidgetStore" /* 14962 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import WidgetStore from "WidgetStore" /* 15091 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileWidgets(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => null != closure_0 && AuthenticationStore.getId() === closure_0, items1);
   const obj = require("initialize");

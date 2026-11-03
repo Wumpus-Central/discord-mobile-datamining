@@ -1,11 +1,11 @@
-// === Module 7994: SafetyHubStore ===
+// === Module 8118: SafetyHubStore ===
 
-// Module 7994 (SafetyHubStore)
+// Module 8118 (SafetyHubStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SafetyHubModels from "SafetyHubModels" /* 7971 */;
-import _modDef7995 from "module_7995" /* 7995 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 7970 */;
+import SafetyHubModels from "SafetyHubModels" /* 8095 */;
+import _modDef8119 from "module_8119" /* 8119 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8094 */;
 import size from "module_2" /* 2 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
@@ -147,7 +147,7 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
   },
   SAFETY_HUB_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility, expressiveModalV2Enabled, showExpressiveModalSubtitleAlt, manualReviewFallbackEnabled, manualReviewDecidedUnderage } = arg0);
-    closure_6 = _modDef7995(classifications, "id");
+    closure_6 = _modDef8119(classifications, "id");
     c9 = false;
     c10 = true;
     error = null;
@@ -233,12 +233,12 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       NONE = AgeCheckStatus.LOADING;
-      for (const key10002 in closure_6) {
-        if (!dependencyMap[key10002].is_coppa) {
+      for (const key10007 in closure_6) {
+        if (!dependencyMap[key10007].is_coppa) {
           continue;
         } else {
           let obj = { status: SafetyHubModels.AppealStatusType.REVIEW_PENDING };
-          dependencyMap[key10002].appeal_status = obj;
+          dependencyMap[key10007].appeal_status = obj;
           continue;
         }
         continue;

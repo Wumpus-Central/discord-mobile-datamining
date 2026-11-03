@@ -1,11 +1,11 @@
-// === Module 17840: useOpenDeepLinkedProduct ===
+// === Module 17983: useOpenDeepLinkedProduct ===
 
-// Module 17840 (useOpenDeepLinkedProduct)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7731 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8747 */;
+// Module 17983 (useOpenDeepLinkedProduct)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7855 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7759 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7883 */;
 
 require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ export default function useOpenDeepLinkedProduct(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const shopAnalyticsContext = analyticsLocations.shopAnalyticsContext;
   noop = undefined;
-  const items = [CollectiblesShopStore];
+  items = [CollectiblesShopStore];
   let stateFromStores;
   if (analyticsLocations.enabled) {
     stateFromStores = obj.useStateFromStores(items, () => initialProductSkuId.initialProductSkuId);

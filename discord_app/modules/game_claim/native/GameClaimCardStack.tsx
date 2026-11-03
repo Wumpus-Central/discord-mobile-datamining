@@ -1,9 +1,9 @@
-// === Module 18251: GameClaimCardStack ===
+// === Module 18395: GameClaimCardStack ===
 
-// Module 18251 (GameClaimCardStack)
+// Module 18395 (GameClaimCardStack)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9572 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9704 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_671" /* 671 */;
 
@@ -24,7 +24,7 @@ let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
 obj.container = { flexDirection: "row", alignItems: "flex-start", justifyContent: "center", width: "100%", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16 + 4 };
@@ -47,7 +47,7 @@ export default function GameClaimCardStack(uri) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.gameCard, children: React4(FastImageDefault, { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" }) };
-  const items = [React4(View, obj2), ];
+  items = [React4(View, obj2), ];
   const obj4 = { style: tmp.addCard, children: React4(View, { style: tmp.addIconWrapper, children: React4(PlusSmallIcon.PlusSmallIcon, { size: "sm", color: "text-brand" }) }) };
   items[1] = React4(View, obj4);
   obj.children = items;

@@ -1,11 +1,11 @@
-// === Module 15083: transformUploaderAttachments ===
+// === Module 15224: transformUploaderAttachments ===
 
-// Module 15083 (transformUploaderAttachments)
+// Module 15224 (transformUploaderAttachments)
 import util from "util" /* 1113 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
-import CloudUpload from "CloudUpload" /* 8209 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8378 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8709 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
+import CloudUpload from "CloudUpload" /* 8333 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8502 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8833 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/tran
 export default function createUploaderAttachments(uploaderFile) {
   uploaderFile = uploaderFile.uploaderFile;
   ({ isFailedMessage: dependencyMap, shouldInlineAttachmentMedia: AttachmentType } = uploaderFile);
-  const items = uploaderFile.items;
+  items = uploaderFile.items;
   let mapped;
   if (items != null) {
     mapped = items.map((filename) => {

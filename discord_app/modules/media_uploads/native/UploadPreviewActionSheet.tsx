@@ -1,25 +1,25 @@
-// === Module 10529: UploadPreviewActionSheet ===
+// === Module 10659: UploadPreviewActionSheet ===
 
-// Module 10529 (UploadPreviewActionSheet)
+// Module 10659 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8220 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10530 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 14522 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8344 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9910 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10660 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 14653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
@@ -53,7 +53,7 @@ export default function UploadPreviewActionSheet(onAdd) {
       tmp();
     }
   });
-  const items = [width, item, tmp];
+  items = [width, item, tmp];
   let size = noop.useMemo(() => {
     ({ height, width } = item);
     const width1 = Math.min(width, ACTION_SHEET_MAX_WIDTH) - 2 * closure_5.contentContainer.padding - 2 * closure_5.imageWrap.padding;

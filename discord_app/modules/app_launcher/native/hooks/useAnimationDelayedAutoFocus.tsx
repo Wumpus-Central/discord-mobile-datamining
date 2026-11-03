@@ -1,7 +1,7 @@
-// === Module 12501: useAnimationDelayedAutoFocus ===
+// === Module 12637: useAnimationDelayedAutoFocus ===
 
-// Module 12501 (useAnimationDelayedAutoFocus)
-import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 12494 */;
+// Module 12637 (useAnimationDelayedAutoFocus)
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 12630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ export function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   closure_1 = onPress;
   const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
   noop.useRef(false);
-  const items = [autoFocus, onPress, awaitAnimationCompletion];
+  items = [autoFocus, onPress, awaitAnimationCompletion];
   const effect = noop.useEffect(() => {
     let tmp = closure_0;
     if (closure_0) {

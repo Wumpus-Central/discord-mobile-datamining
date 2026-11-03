@@ -1,8 +1,8 @@
-// === Module 14196: UserProfileConfirmCancelFriendRequest ===
+// === Module 14327: UserProfileConfirmCancelFriendRequest ===
 
-// Module 14196 (UserProfileConfirmCancelFriendRequest)
+// Module 14327 (UserProfileConfirmCancelFriendRequest)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function UserProfileConfirmCancelFriendRequest(arg0) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t["bTfA//"]);
   obj3.onPress = onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "cancel-friend-request"), ];
+  items = [React2(AlertModal.AlertActionButton, obj3, "cancel-friend-request"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["eN6+rI"]);

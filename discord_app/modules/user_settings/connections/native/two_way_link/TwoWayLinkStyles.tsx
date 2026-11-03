@@ -1,16 +1,15 @@
-// === Module 9730: TwoWayLinkStyles ===
+// === Module 9862: TwoWayLinkStyles ===
 
-// Module 9730 (TwoWayLinkStyles)
+// Module 9862 (TwoWayLinkStyles)
 import nativeDefault from "native" /* 575 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
-const obj = { container: { flex: 1, alignItems: "stretch", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, navHeader: null, content: null, title: null, stepHeader: null, body: null, bodyContent: null, footerContainer: null, footerButton: null };
+const obj = { container: { flex: 1, alignItems: "stretch", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, navHeader: null, content: null, title: null, body: null, bodyContent: null, footerContainer: null, footerButton: null };
 const obj2 = { flex: 1, alignItems: "stretch", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.navHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
 obj.content = { alignItems: "center", flex: 1, paddingTop: 24, paddingHorizontal: 16, maxWidth: 480, alignSelf: "center" };
 obj.title = { textAlign: "center" };
-obj.stepHeader = { textTransform: "uppercase" };
 obj.body = { marginTop: 8, textAlign: "center" };
 obj.bodyContent = { flexDirection: "column", gap: 24, padding: 16 };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };

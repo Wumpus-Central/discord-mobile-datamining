@@ -1,30 +1,30 @@
-// === Module 11864: GlobalStatusContent ===
+// === Module 12001: GlobalStatusContent ===
 
-// Module 11864 (GlobalStatusContent)
+// Module 12001 (GlobalStatusContent)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11192 */;
-import StatusBarDefault from "StatusBar" /* 11212 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11699 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11857 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11860 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11865 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11329 */;
+import StatusBarDefault from "StatusBar" /* 11349 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11836 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11994 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11997 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 12002 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11859).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11996).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -37,7 +37,7 @@ export default function ConnectivityGlobalStatusContent() {
   const tmp = closure_12();
   const tmp4 = useVoiceStateForRemoteSessionDefault();
   _require = tmp4;
-  const items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
+  items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
   const items1 = [tmp4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let channelId;
@@ -58,7 +58,7 @@ export default function ConnectivityGlobalStatusContent() {
       guildId1 = RTCConnectionStore.getGuildId();
     }
     let str;
-    const guild = GuildStore.getGuild(guildId1);
+    guild = GuildStore.getGuild(guildId1);
     if (closure_0 != null) {
       str = closure_0.sessionId;
     }
@@ -105,12 +105,12 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5198).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5198);
+    isScreenLandscape = tmp5(5321).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5321);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1375).isAndroid();
-    const tmp5Result6 = tmp5(1375);
+    isScreenLandscape = tmp5(1377).isAndroid();
+    const tmp5Result6 = tmp5(1377);
   }
   let num = 0;
   if (!isScreenLandscape) {

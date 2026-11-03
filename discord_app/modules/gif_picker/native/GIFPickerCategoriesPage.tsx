@@ -1,18 +1,18 @@
-// === Module 10261: GIFPickerCategoriesPage ===
+// === Module 10391: GIFPickerCategoriesPage ===
 
-// Module 10261 (GIFPickerCategoriesPage)
+// Module 10391 (GIFPickerCategoriesPage)
 import nativeDefault from "native" /* 575 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7230 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10244 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10247 */;
-import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10262 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7351 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10374 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10377 */;
+import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10392 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10243 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10373 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { item: { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING }, placeholder: null };
   const obj2 = { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING };
@@ -41,12 +41,12 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   }
   const tmp6 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
   closure_4 = tmp6;
-  let items = [trendingCategories];
+  items = [trendingCategories];
   trendingCategories = tmp3(tmp2[8]).useStateFromStoresObject(items, () => ({ trendingCategories: trendingCategories.getTrendingCategories() })).trendingCategories;
   let items1 = [columns, favoritesCategory, trendingCategories];
   const memo = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useMemo(() => {
     let bound;
-    const items = [...trendingCategories];
+    items = [...trendingCategories];
     if (null != favoritesCategory) {
       items.unshift(tmp);
     }
@@ -74,7 +74,7 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   }, items2);
   const items3 = [columns, data, onSelectCategory, tmp6];
   const callback = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useCallback((arg0, arg1) => {
-    const items = [];
+    items = [];
     for (let num = 0; num < columns; num = num + 1) {
       let tmp2 = tmp[num];
       if (null != tmp2) {

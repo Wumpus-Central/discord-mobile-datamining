@@ -1,11 +1,11 @@
-// === Module 13819: ChatInputScrimGradient ===
+// === Module 13950: ChatInputScrimGradient ===
 
-// Module 13819 (ChatInputScrimGradient)
+// Module 13950 (ChatInputScrimGradient)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5192 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5315 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ export function ChatInputScrimGradient(scrimBase) {
   }
   const obj4 = { style: { position: "absolute", top: result, left: 0, right: 0, bottom: 0 }, pointerEvents: "none", children: null };
   const obj5 = { colors: null, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] };
-  const items = [str, hex2rgbResult];
+  items = [str, hex2rgbResult];
   obj5.colors = items;
   const items1 = [React4(LinearGradientDefault, obj5), React4(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
   obj4.children = items1;

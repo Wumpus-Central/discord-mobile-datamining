@@ -1,17 +1,17 @@
-// === Module 17706: OrbsFlowTestModal ===
+// === Module 17849: OrbsFlowTestModal ===
 
-// Module 17706 (OrbsFlowTestModal)
+// Module 17849 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
-import LayerScope from "LayerScope" /* 5611 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import HeaderShared from "HeaderShared" /* 9812 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10144 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17707 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17710 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import LayerScope from "LayerScope" /* 5734 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import HeaderShared from "HeaderShared" /* 9943 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10274 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17850 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17853 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ require = fn;
 function BalanceWidgetMenuSection() {
   const tmp = closure_10();
   const obj = { spacing: 16, style: tmp.container, children: null };
-  const items = [React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), React5(BalanceWidgetMenuDefault, {})];
+  items = [React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), React5(BalanceWidgetMenuDefault, {})];
   obj.children = items;
   return React6(Stack_Stack.Stack, obj);
 }
@@ -29,7 +29,7 @@ function BalanceWidgetPillSection() {
   const tmp = closure_10();
   [balance, closure_1] = noop.useState(1000);
   [first1, _slicedToArray] = noop.useState("1000");
-  const items = [first1];
+  items = [first1];
   const callback = noop.useCallback((arg0) => {
     closure_3(arg0);
   }, []);
@@ -76,7 +76,7 @@ function OrbsFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { children: null };
   const obj2 = { style: closure_10().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: null };
-  const items = [React5(BalanceWidgetMenuSection, {}), React5(BalanceWidgetPillSection, {}), React5(OrbCheckoutMenuDefault, {})];
+  items = [React5(BalanceWidgetMenuSection, {}), React5(BalanceWidgetPillSection, {}), React5(OrbCheckoutMenuDefault, {})];
   obj2.children = items;
   obj.children = React6(hasOwnProperty, obj2);
   return React5(LayerScope.LayerScope, obj);
@@ -85,9 +85,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };

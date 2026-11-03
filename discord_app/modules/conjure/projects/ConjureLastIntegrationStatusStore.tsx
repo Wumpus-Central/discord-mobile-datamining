@@ -1,6 +1,6 @@
-// === Module 10876: ConjureLastIntegrationStatusStore ===
+// === Module 11006: ConjureLastIntegrationStatusStore ===
 
-// Module 10876 (ConjureLastIntegrationStatusStore)
+// Module 11006 (ConjureLastIntegrationStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -40,7 +40,7 @@ const conjureLastIntegrationStatusStore = new ConjureLastIntegrationStatusStore(
     projectId = projectId.projectId;
     const statuses = closure_1.statuses;
     obj = { statuses: null };
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(statuses.filter((projectId) => projectId.projectId !== projectId), 0)] = { projectId, status: projectId.integrationStatus };
     obj.statuses = items.slice(-20);
     closure_1 = obj;

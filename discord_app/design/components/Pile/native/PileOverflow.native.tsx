@@ -1,18 +1,18 @@
-// === Module 13425: PileOverflow ===
+// === Module 13561: PileOverflow ===
 
-// Module 13425 (PileOverflow)
+// Module 13561 (PileOverflow)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import NumberUtils from "NumberUtils" /* 1895 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import NumberUtils from "NumberUtils" /* 2024 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 } };
 let closure_6 = createStyles.createStyles(obj2);
 let items = [[64, "text-lg/semibold"], [48, "text-md/semibold"], [40, "text-md/semibold"], [30, "text-sm/semibold"], [24, "text-xs/semibold"], [16, "text-xxs/semibold"]];
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("design/components/Pile/native/PileOve
 export function PileOverflow(size) {
   size = size.size;
   ({ borderRadius, value } = size);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   const items1 = [closure_6().container, ];
   const obj2 = { borderRadius, minWidth: size, height: size, paddingHorizontal: null };

@@ -1,20 +1,20 @@
-// === Module 8802: UserProfileGradientUtils ===
+// === Module 8926: UserProfileGradientUtils ===
 
-// Module 8802 (UserProfileGradientUtils)
+// Module 8926 (UserProfileGradientUtils)
 import _mod12 from "module_12" /* 12 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import utils_ColorDefault from "utils/Color" /* 5012 */;
-import shared from "shared" /* 5021 */;
+import utils_ColorDefault from "utils/Color" /* 5139 */;
+import shared from "shared" /* 5148 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const ThemeTypes = fn(1072).ThemeTypes;
 fn(12);
 const apply = fn(12);
-const memoizeResult = apply.memoize((memo) => {
+const memoizeResult = apply.memoize((c1) => {
   const obj = shared;
-  const contrastingColor = obj.getContrastingColor(memo, { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText });
+  const contrastingColor = obj.getContrastingColor(c1, { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText });
   const obj2 = { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText };
   return utils_ColorUtils.hex2int(contrastingColor);
 }, (arg0) => arg0);
@@ -50,7 +50,7 @@ export function calculateOverlayedColor(secondaryColor, overlay) {
     if (null == parseStringResult) {
       return 0;
     } else {
-      const items = [, , ];
+      items = [, , ];
       ({ red: arr[0], green: arr[1], blue: arr[2] } = parseStringResult);
       const items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult;
@@ -93,7 +93,7 @@ export const calculateModalV2BackgroundColor = apply.memoize((hex2intResult, arg
 export function getGradientPercentageColorInRgb(arg0, arg1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
-  const items = [Math.round(arg0[0] * diff + arg1[0] * result), Math.round(arg0[1] * diff + arg1[1] * result), Math.round(arg0[2] * diff + arg1[2] * result)];
+  items = [Math.round(arg0[0] * diff + arg1[0] * result), Math.round(arg0[1] * diff + arg1[1] * result), Math.round(arg0[2] * diff + arg1[2] * result)];
   return "rgba(" + items[0] + ", " + items[1] + ", " + items[2] + ", 1)";
 }
 export function calculateGradientSplitColors(modalV2BackgroundColor, modalV2BackgroundColor, arg2, arg3, arg4) {
@@ -105,7 +105,7 @@ export function calculateGradientSplitColors(modalV2BackgroundColor, modalV2Back
     const result = 100 * arg3 / arg2 / 100;
     const diff = 1 - result;
     const _Math = Math;
-    const items = [Math.round(int2rgbArrayResult[0] * diff + int2rgbArrayResult1[0] * result), , ];
+    items = [Math.round(int2rgbArrayResult[0] * diff + int2rgbArrayResult1[0] * result), , ];
     const _Math2 = Math;
     items[1] = Math.round(int2rgbArrayResult[1] * diff + int2rgbArrayResult1[1] * result);
     const _Math3 = Math;
@@ -132,7 +132,7 @@ export function getUserProfileGradientContainerColors(result, result1, str) {
     if (null != result) {
       int2rgbaResult = utils_ColorUtils.int2rgba(result, 1);
     }
-    const items = [int2rgbaResult, ];
+    items = [int2rgbaResult, ];
     if (null != result1) {
       int2rgbaResult1 = utils_ColorUtils.int2rgba(result1, 1);
     }

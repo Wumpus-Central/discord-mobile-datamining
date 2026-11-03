@@ -1,15 +1,15 @@
-// === Module 14051: ProgressItem ===
+// === Module 14182: ProgressItem ===
 
-// Module 14051 (ProgressItem)
+// Module 14182 (ProgressItem)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { formCTAContainer: { marginBottom: 8 }, formCTA: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, formCTAFullWidth: { width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function ProgressItem(onPress) {
   const renderEndComponent = onPress.renderEndComponent;
   ({ title, source, description, fullWidth, iconStyle } = onPress);
   const tmp = closure_7();
-  const items = [analyticsAction, analyticsSetupType, onPress, isCompleted];
+  items = [analyticsAction, analyticsSetupType, onPress, isCompleted];
   let obj = { style: tmp.formCTAContainer, children: null };
   const callback = analyticsAction.useCallback(() => {
     let tmp2 = null != analyticsAction;

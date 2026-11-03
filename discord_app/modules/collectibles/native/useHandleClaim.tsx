@@ -1,6 +1,6 @@
-// === Module 15060: useHandleClaim ===
+// === Module 15201: useHandleClaim ===
 
-// Module 15060 (useHandleClaim)
+// Module 15201 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ export function useHandleClaim(product) {
   require = product;
   const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
   const obj = { handleClaim: null };
-  const items = [product, stageCollectibleChangeForEditProfile];
+  items = [product, stageCollectibleChangeForEditProfile];
   obj.handleClaim = noop.useCallback(asyncGeneratorStep(async () => {
     await tmp3(tmp20[2]).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {

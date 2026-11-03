@@ -1,13 +1,13 @@
-// === Module 15170: InAppReportsMuteUserElement ===
+// === Module 15311: InAppReportsMuteUserElement ===
 
-// Module 15170 (InAppReportsMuteUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7496 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 11071 */;
+// Module 15311 (InAppReportsMuteUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 11208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -22,7 +22,7 @@ export default function MuteUserElement(user) {
   const reportId = user.reportId;
   ChannelStore = undefined;
   const dMFromUserId = ChannelStore.getDMFromUserId(user.id);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = user(reportId[6]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];

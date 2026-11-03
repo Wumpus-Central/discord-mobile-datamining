@@ -1,16 +1,16 @@
-// === Module 15173: InAppReportsSettingsUpsellsElement ===
+// === Module 15314: InAppReportsSettingsUpsellsElement ===
 
-// Module 15173 (InAppReportsSettingsUpsellsElement)
+// Module 15314 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import SettingsIcon from "SettingsIcon" /* 7561 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8356 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15167 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import SettingsIcon from "SettingsIcon" /* 7685 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8480 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15308 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function SettingsUpsellsTableRow(arg0) {
@@ -39,8 +39,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
@@ -57,7 +57,7 @@ export default function SettingsUpsellElement(settingsUpsells) {
   const reportSubType = settingsUpsells.reportSubType;
   closure_5 = undefined;
   const tmp = closure_11();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = settingsUpsells(reportId[12]).useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
   let obj = settingsUpsells(reportId[12]);
   let type;

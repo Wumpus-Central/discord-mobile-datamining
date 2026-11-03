@@ -1,7 +1,7 @@
-// === Module 15878: ClipsDefaultSettingsUtils ===
+// === Module 16021: ClipsDefaultSettingsUtils ===
 
-// Module 15878 (ClipsDefaultSettingsUtils)
-import ClipsConstants from "ClipsConstants" /* 8214 */;
+// Module 16021 (ClipsDefaultSettingsUtils)
+import ClipsConstants from "ClipsConstants" /* 8338 */;
 import size from "module_2" /* 2 */;
 
 ({ CLIPS_DEFAULT_SETTINGS_VERSION: closure_0, ClipsEnabledSettingsSource } = ClipsConstants);

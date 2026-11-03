@@ -1,15 +1,15 @@
-// === Module 17203: GuildRoleSubscriptionsHooks ===
+// === Module 17346: GuildRoleSubscriptionsHooks ===
 
-// Module 17203 (GuildRoleSubscriptionsHooks)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7429 */;
-import useRequestDefault from "useRequest" /* 12541 */;
-import subscriptionUtils from "subscriptionUtils" /* 17205 */;
+// Module 17346 (GuildRoleSubscriptionsHooks)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7553 */;
+import useRequestDefault from "useRequest" /* 12677 */;
+import subscriptionUtils from "subscriptionUtils" /* 17348 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function useFetchListingsForGuild(guildId) {
   const countryCode = obj.countryCode;
   const dontFetchWhileTrue = obj.dontFetchWhileTrue;
   let ref;
-  const items = [GatewayConnectionStore];
+  items = [GatewayConnectionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => connected.isConnected());
   let obj2 = require("initialize");
   const items1 = [GuildRoleSubscriptionsStore];
@@ -68,7 +68,7 @@ function useFetchListingsForGuild(guildId) {
   }
   return { listingsLoaded };
 }
-const FetchState = fn(4939).FetchState;
+const FetchState = fn(5066).FetchState;
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");
@@ -86,7 +86,7 @@ export function useCreateSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ export function useCreateSubscriptionGroupListing() {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -182,7 +182,7 @@ export function useUpdateSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ export function useUpdateSubscriptionGroupListing() {
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -274,7 +274,7 @@ export function useSubscriptionListingsForGroup(id, arg1) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const items1 = [id, flag, flag2];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (null == closure_0) {
@@ -284,7 +284,7 @@ export function useSubscriptionListingsForGroup(id, arg1) {
       if (null == subscriptionGroupListing) {
         return [];
       } else {
-        const items = [];
+        items = [];
         const subscription_listings_ids = subscriptionGroupListing.subscription_listings_ids;
         for (const item10009 of subscription_listings_ids) {
           let subscriptionListing = GuildRoleSubscriptionsStore.getSubscriptionListing(item10009);
@@ -313,7 +313,7 @@ export function useSubscriptionListingsForGroup(id, arg1) {
 }
 export function useSubscriptionListing(editStateId) {
   _require = editStateId;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStores(items, () => {
     let subscriptionListing = null;
     if (null != closure_0) {
@@ -324,7 +324,7 @@ export function useSubscriptionListing(editStateId) {
 }
 export function useSubscriptionGroupListing(arg0) {
   _require = arg0;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStores(items, () => {
     let subscriptionGroupListing = null;
     if (null != closure_0) {
@@ -337,7 +337,7 @@ export function useGroupListingsForGuild(guildId) {
   _require = guildId;
   closure_1 = require("GroupListingsFetchContext").useGroupListingsFetchContext("useGroupListingsForGuild");
   const obj = require("GroupListingsFetchContext");
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (closure_1) {
@@ -354,7 +354,7 @@ export function useSubscriptionListingsForGuild(guildId, arg1) {
     const obj = { includeSoftDeleted: false, sortDeletedListingsLast: false };
   }
   useFetchListingsForGuild(guildId);
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
@@ -369,7 +369,7 @@ export function useSubscriptionListingsForGuild(guildId, arg1) {
 export (arg0) => {
   _require = arg0;
   [loading, closure_2] = noop.useState(false);
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => closure_0.map(subscriptionUtils.getRoleSubscriptionPlanId), items);
   const items1 = [GuildRoleSubscriptionsStore];
   const items2 = [memo];
@@ -407,7 +407,7 @@ export function useDeleteSubscriptionListing() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -439,7 +439,7 @@ export function useDeleteSubscriptionListing() {
           c6 = 0;
           closure_131_0(false);
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -503,7 +503,7 @@ export function usePublishSubscriptionListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -554,7 +554,7 @@ export function usePublishSubscriptionListing() {
           c4 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -606,7 +606,7 @@ export function usePublishSubscriptionListing() {
 }
 export function useSubscriptionsSettings(guildId) {
   _require = guildId;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStores(items, () => {
     let subscriptionSettings;
     if (null != closure_0) {
@@ -630,7 +630,7 @@ export function useUpdateSubscriptionsSettings() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -716,7 +716,7 @@ export function useDeleteSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -748,7 +748,7 @@ export function useDeleteSubscriptionGroupListing() {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -812,7 +812,7 @@ export function useFetchSubscriptionsSettings() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -900,7 +900,7 @@ export function useUpdateSubscriptionsTrial() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -976,7 +976,7 @@ export function useUpdateSubscriptionsTrial() {
 }
 export function useSubscriptionTrial(editStateId) {
   _require = editStateId;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   return require("initialize").useStateFromStores(items, () => {
     let subscriptionTrial = null;
     if (null != closure_0) {
@@ -996,7 +996,7 @@ export function useSubscriptionTrialsForGroup(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  let items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const items1 = [arg0, flag, flag2];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     if (null == closure_0) {
@@ -1006,7 +1006,7 @@ export function useSubscriptionTrialsForGroup(arg0) {
       if (null == subscriptionGroupListing) {
         return [];
       } else {
-        const items = [];
+        items = [];
         const subscription_listings_ids = subscriptionGroupListing.subscription_listings_ids;
         for (const item10009 of subscription_listings_ids) {
           let subscriptionListing = GuildRoleSubscriptionsStore.getSubscriptionListing(item10009);
@@ -1045,7 +1045,7 @@ export function useSubscriptionTrialsForGuild(guildId) {
   closure_129_0 = guildId;
   closure_129_1 = { includeSoftDeleted: false, sortDeletedListingsLast: false };
   useFetchListingsForGuild(guildId);
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {

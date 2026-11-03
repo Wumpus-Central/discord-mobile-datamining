@@ -1,8 +1,8 @@
-// === Module 11064: usePreviewableMediaText ===
+// === Module 11201: usePreviewableMediaText ===
 
-// Module 11064 (usePreviewableMediaText)
+// Module 11201 (usePreviewableMediaText)
 import util from "util" /* 1113 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11059 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 export function usePreviewableMediaText(previewableMedia) {
   previewableMedia = previewableMedia.previewableMedia;
   const author = previewableMedia.author;
-  const items = [author, previewableMedia];
+  items = [author, previewableMedia];
   return noop.useMemo(() => {
     if (0 === previewableMedia.length) {
       return { text: null, secondaryText: null };

@@ -1,12 +1,12 @@
-// === Module 12133: ConjureSmartContext ===
+// === Module 12269: ConjureSmartContext ===
 
-// Module 12133 (ConjureSmartContext)
-import conjureSmartContextConnection from "conjureSmartContextConnection" /* 10966 */;
+// Module 12269 (ConjureSmartContext)
+import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10850 */;
-import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10861 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10980 */;
+import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10991 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
   importDefault = contextSwitch;
   const id = contextSwitch.id;
   ({ status, error } = contextSwitch);
-  const items = [ConjureConnectionStore];
+  items = [ConjureConnectionStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => "open" === ConjureConnectionStore.getConnState(closure_0), items1);
   let obj = require("initialize");
@@ -57,9 +57,9 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
   } else if ("reverted" === status) {
     const obj3 = { label: null, body: null, note: null, action: null };
     const intl5 = tmp(tmp2[7]).intl;
-    obj3.label = intl5.string(require("module_3868").uQRAzS);
+    obj3.label = intl5.string(require("module_3995").uQRAzS);
     const intl6 = tmp(tmp2[7]).intl;
-    obj3.body = intl6.string(require("module_3868")["24OcbD"]);
+    obj3.body = intl6.string(require("module_3995")["24OcbD"]);
     return obj3;
   } else {
     let tmp13 = "failed" === error;
@@ -72,9 +72,9 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
     }
     const obj4 = { label: null, body: null, note: null, action: null };
     const intl = tmp(tmp2[7]).intl;
-    obj4.label = intl.string(require("module_3868").iBrh0c);
+    obj4.label = intl.string(require("module_3995").iBrh0c);
     const intl2 = tmp(tmp2[7]).intl;
-    obj4.body = intl2.string(require("module_3868").sRY8wn);
+    obj4.body = intl2.string(require("module_3995").sRY8wn);
     if ("busy" === error) {
       const intl4 = tmp(tmp2[7]).intl;
       let stringResult = intl4.string(tmp14(tmp2[8]).QoixaY);
@@ -119,7 +119,7 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
 }
 export function useConjureSmartContextSetting(arg0) {
   _require = arg0;
-  const items = [ConjureSmartContextStore];
+  items = [ConjureSmartContextStore];
   const items1 = [arg0];
   const items2 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureSmartContextStore.getSmartContext(closure_0), items1);

@@ -1,20 +1,20 @@
-// === Module 9531: LimitedTimeBadge ===
+// === Module 9659: LimitedTimeBadge ===
 
-// Module 9531 (LimitedTimeBadge)
+// Module 9659 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5021 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useCountdownDefault from "useCountdown" /* 7624 */;
+import shared from "shared" /* 5148 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useCountdownDefault from "useCountdown" /* 7748 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTi
 
 export default function LimitedTimeBadge(unpublishedAt) {
   const tmp = closure_7();
-  const items = [ThemeStore];
+  items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));
   const items1 = [LocaleStore];
   const items2 = ["en-US", "en-GB"];
@@ -69,12 +69,12 @@ export default function LimitedTimeBadge(unpublishedAt) {
     if (stateFromStores) {
       str2 = "text-overlay-dark";
     }
-    const obj6 = { color: str2, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
+    const obj6 = { color: str2, variant: "text-xs/semibold", accessibilityLabel: null, allowFontScaling: false, children: null };
     const intl7 = util.intl;
     const obj7 = { daysLeft: days };
     obj6.accessibilityLabel = intl7.formatToPlainString(util.t.TlZULM, obj7);
     obj6.children = sum;
-    obj5.children = jsx(Text_Text.Text, { color: str2, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    obj5.children = jsx(Text_Text.Text, { color: str2, variant: "text-xs/semibold", accessibilityLabel: null, allowFontScaling: false, children: null });
     return <View style={null}>{null}</View>;
   }
   const tmp6 = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true);

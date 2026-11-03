@@ -1,15 +1,15 @@
-// === Module 16737: GoreMediaFiltersGuildsSetting ===
+// === Module 16880: GoreMediaFiltersGuildsSetting ===
 
-// Module 16737 (GoreMediaFiltersGuildsSetting)
+// Module 16880 (GoreMediaFiltersGuildsSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7472 */;
-import useUserIsTeen from "useUserIsTeen" /* 8368 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8687 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16729 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16730 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7596 */;
+import useUserIsTeen from "useUserIsTeen" /* 8492 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16872 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16873 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -32,7 +32,7 @@ const pressable = SettingBuilders.createPressable({
     obj3.handlePress = function handlePress(goreContentGuilds) {
       return SensitiveMediaGoreRedactionSettingsUtils.updateGoreContentSetting({ goreContentGuilds });
     };
-    const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
+    items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
     obj3.excluded = items;
     obj3.currentValue = obj.getGoreContentSettingOrDefault().goreContentGuilds;
     const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
@@ -46,7 +46,7 @@ const pressable = SettingBuilders.createPressable({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["N/oRI+"]), , ];
+    items = [intl.string(util.t["N/oRI+"]), , ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t.QVdYsK);
     const intl3 = util.intl;

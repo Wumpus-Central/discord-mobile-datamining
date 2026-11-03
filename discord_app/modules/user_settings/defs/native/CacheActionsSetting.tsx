@@ -1,27 +1,27 @@
-// === Module 17566: CacheActionsSetting ===
+// === Module 17709: CacheActionsSetting ===
 
-// Module 17566 (CacheActionsSetting)
+// Module 17709 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import BrowserManager from "BrowserManager" /* 5742 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import FileIcon from "FileIcon" /* 11062 */;
-import FileUpIcon from "FileUpIcon" /* 12225 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 17567 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 17568 */;
-import CacheActionCreators from "CacheActionCreators" /* 17571 */;
-import FileWarningIcon from "FileWarningIcon" /* 17572 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import BrowserManager from "BrowserManager" /* 5862 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import FileIcon from "FileIcon" /* 11199 */;
+import FileUpIcon from "FileUpIcon" /* 12361 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 17710 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 17711 */;
+import CacheActionCreators from "CacheActionCreators" /* 17714 */;
+import FileWarningIcon from "FileWarningIcon" /* 17715 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
 
 const CacheActionsDiskUsageSectionDefault = CacheActionsDiskUsageSection;
 
@@ -62,7 +62,7 @@ function CacheActionsActionSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t.GgUIfl));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c2 = tmp;
@@ -101,7 +101,7 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [React5(TableRow.TableRow, obj4), , ];
+  items = [React5(TableRow.TableRow, obj4), , ];
   let tmp7Result3 = null != DiskUsageManagerDefault.calculateSize;
   if (tmp7Result3) {
     let obj5 = { icon: React5(FileIcon.FileIcon, {}), label: null, trailing: null, disabled: null, accessibilityState: null, onPress: null };
@@ -136,7 +136,7 @@ function CacheActionsActionSheet() {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t["23xR5w"]));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp21) {
         c2 = tmp;
@@ -193,19 +193,19 @@ const useState = fn(19).useState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(17572).FileWarningIcon,
+  IconComponent: fn(17715).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },
   usePredicate: function useCacheActionsPredicate() {
-    const items = [GatewayConnectionStore];
+    items = [GatewayConnectionStore];
     const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
     const DeveloperMode = UserSettings.DeveloperMode;
     return DeveloperMode.useSetting() && stateFromStores;

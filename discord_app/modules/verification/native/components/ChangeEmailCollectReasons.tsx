@@ -1,22 +1,22 @@
-// === Module 7056: ChangeEmailCollectReasons ===
+// === Module 7182: ChangeEmailCollectReasons ===
 
-// Module 7056 (ChangeEmailCollectReasons)
+// Module 7182 (ChangeEmailCollectReasons)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(7057);
+const VerificationConstants = fn(7183);
 ({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, radioGroup: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
   let navigation;
   let callback1;
   const tmp = closure_12();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = changeEmailReason(navigation[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = changeEmailReason(navigation[8]);
   navigation = changeEmailReason(navigation[9]).useNavigation();
@@ -58,7 +58,7 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: tmp.background, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[16]).intl;
     obj5.children = intl.string(tmp2(tmp3[16]).t["41NIIh"]);
     const items4 = [closure_10(tmp2(tmp3[15]).Text, obj5), , ];

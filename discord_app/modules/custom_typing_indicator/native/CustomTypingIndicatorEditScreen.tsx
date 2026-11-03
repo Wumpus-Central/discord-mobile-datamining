@@ -1,20 +1,20 @@
-// === Module 17352: CustomTypingIndicatorEditScreen ===
+// === Module 17495: CustomTypingIndicatorEditScreen ===
 
-// Module 17352 (CustomTypingIndicatorEditScreen)
+// Module 17495 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import user from "user" /* 1391 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1405 */;
-import Link from "Link" /* 1498 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13733 */;
+import user from "user" /* 1393 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1407 */;
+import Link from "Link" /* 1500 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function CustomTypingIndicatorEditScreenContent(mode) {
@@ -38,7 +38,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const tmp3 = analyticsLocations;
   const nativeStackNavigation = mode(analyticsLocations[14]).useNativeStackNavigation();
   let obj = mode(analyticsLocations[14]);
-  const items = [first3];
+  items = [first3];
   const stateFromStores = mode(analyticsLocations[15]).useStateFromStores(items, () => first3.getCurrentUser());
   let obj2 = mode(analyticsLocations[15]);
   let result = nativeStackNavigation(analyticsLocations[16]).canUsePremiumProfileCustomization(stateFromStores);
@@ -95,10 +95,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, []);
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17353, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17496, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
   }, items4);
   const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17354, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17497, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   ref = noop.useRef(null);
   const items6 = [analyticsLocations];
@@ -135,7 +135,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -355,10 +355,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { screen: { flex: 1 }, container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 }, previewContainer: null, section: null, description: null };
 let obj3 = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
 obj2.previewContainer = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8 };
@@ -381,5 +381,5 @@ export default function CustomTypingIndicatorEditScreen() {
     analyticsLocations = locationStackFromLocationContext;
   }
   const tmpResult = useAnalyticsLocations;
-  return closure_1_12(useAnalyticsLocations.AnalyticsLocationProvider, { value: analyticsLocations, children: closure_1_12(CustomTypingIndicatorEditScreenContent, { mode }) });
+  return application_id(useAnalyticsLocations.AnalyticsLocationProvider, { value: analyticsLocations, children: application_id(CustomTypingIndicatorEditScreenContent, { mode }) });
 };

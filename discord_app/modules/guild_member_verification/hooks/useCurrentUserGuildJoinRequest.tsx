@@ -1,7 +1,7 @@
-// === Module 6920: useCurrentUserGuildJoinRequest ===
+// === Module 7040: useCurrentUserGuildJoinRequest ===
 
-// Module 6920 (useCurrentUserGuildJoinRequest)
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
+// Module 7040 (useCurrentUserGuildJoinRequest)
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export function useCurrentUserGuildJoinRequest(guildId) {
   _require = guildId;
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
     let request = null;

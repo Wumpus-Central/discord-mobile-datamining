@@ -1,6 +1,6 @@
-// === Module 9066: useAccessibilityPress ===
+// === Module 9194: useAccessibilityPress ===
 
-// Module 9066 (useAccessibilityPress)
+// Module 9194 (useAccessibilityPress)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityP
 
 export default function useAccessibilityPress(current, label) {
   closure_2 = noop.useRef(current);
-  let items = [current];
+  items = [current];
   const effect = noop.useEffect(() => {
     closure_2.current = current;
   }, items);
@@ -22,7 +22,7 @@ export default function useAccessibilityPress(current, label) {
       },
       accessibilityActions: null
     };
-    const items = [{ name: "activate", label }];
+    items = [{ name: "activate", label }];
     obj.accessibilityActions = items;
     return obj;
   }, items1);

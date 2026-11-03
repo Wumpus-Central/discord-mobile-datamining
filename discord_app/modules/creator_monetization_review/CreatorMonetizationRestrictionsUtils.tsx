@@ -1,11 +1,11 @@
-// === Module 4938: CreatorMonetizationRestrictionsUtils ===
+// === Module 5065: CreatorMonetizationRestrictionsUtils ===
 
-// Module 4938 (CreatorMonetizationRestrictionsUtils)
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 5065 (CreatorMonetizationRestrictionsUtils)
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
-const FetchState = fn(4939).FetchState;
-const constants = fn(4940).CreatorMonetizationRestrictions;
+const FetchState = fn(5066).FetchState;
+const constants = fn(5067).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");
@@ -23,7 +23,7 @@ export function shouldHideGuildPurchaseEntryPoints(guildId) {
   } else {
     const monetizationRestrictionsFetchState = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(guildId);
     const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(guildId);
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
       let hasItem = null != monetizationRestrictions;
       if (hasItem) {
@@ -56,7 +56,7 @@ export function shouldRestrictUpdatingCreatorMonetizationSettings(id) {
   } else {
     const monetizationRestrictionsFetchState = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id);
     const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(id);
-    const guild = GuildStore.getGuild(id);
+    guild = GuildStore.getGuild(id);
     if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
       let hasItem = null != monetizationRestrictions;
       if (hasItem) {

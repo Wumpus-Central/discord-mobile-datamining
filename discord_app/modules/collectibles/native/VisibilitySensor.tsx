@@ -1,8 +1,8 @@
-// === Module 17863: VisibilitySensor ===
+// === Module 18006: VisibilitySensor ===
 
-// Module 17863 (VisibilitySensor)
+// Module 18006 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
@@ -31,7 +31,7 @@ export default function _default(onChange) {
   const width = size.width;
   const height = size.height;
   React3(null);
-  const items = [resetKey];
+  items = [resetKey];
   React2(() => {
     closure_2.current = false;
   }, items);

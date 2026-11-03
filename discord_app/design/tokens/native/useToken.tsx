@@ -1,16 +1,16 @@
-// === Module 5596: useToken ===
+// === Module 5719: useToken ===
 
-// Module 5596 (useToken)
+// Module 5719 (useToken)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5080 */;
+import native from "native" /* 5207 */;
 
-const SemanticColorContext = obj(5186);
+const SemanticColorContext = obj(5309);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);
 let closure_4 = Object.fromEntries(keys.map((item) => {
-  const items = [_modDef12.kebabCase(item), item];
+  items = [_modDef12.kebabCase(item), item];
   return items;
 }));
 const size = fn(2);

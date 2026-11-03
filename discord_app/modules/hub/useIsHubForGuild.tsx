@@ -1,7 +1,7 @@
-// === Module 13931: useIsHubForGuild ===
+// === Module 14062: useIsHubForGuild ===
 
-// Module 13931 (useIsHubForGuild)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 14062 (useIsHubForGuild)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
 export default function useIsHubForGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let flag;
       if (guild != null) {
         const features = guild.features;

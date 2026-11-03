@@ -1,7 +1,7 @@
-// === Module 6876: getChannelDetailsFromRoute ===
+// === Module 6996: getChannelDetailsFromRoute ===
 
-// Module 6876 (getChannelDetailsFromRoute)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+// Module 6996 (getChannelDetailsFromRoute)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/navigation/native/getChannelDetailsFromRoute.tsx");
@@ -13,7 +13,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   }
   const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
-    const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
+    items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
     const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);

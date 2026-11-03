@@ -1,19 +1,19 @@
-// === Module 10789: StreakTrophyBadge ===
+// === Module 10919: StreakTrophyBadge ===
 
-// Module 10789 (StreakTrophyBadge)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef10790 from "module_10790" /* 10790 */;
-import _modDef10791 from "module_10791" /* 10791 */;
-import _modDef10792 from "module_10792" /* 10792 */;
+// Module 10919 (StreakTrophyBadge)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef10920 from "module_10920" /* 10920 */;
+import _modDef10921 from "module_10921" /* 10921 */;
+import _modDef10922 from "module_10922" /* 10922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10790 }, 3: null };
-let obj2 = { uri: _modDef10790 };
-obj[2] = { uri: _modDef10791 };
-const obj3 = { uri: _modDef10791 };
-obj[3] = { uri: _modDef10792 };
+let obj = { 1: null, 2: { uri: _modDef10920 }, 3: null };
+let obj2 = { uri: _modDef10920 };
+obj[2] = { uri: _modDef10921 };
+const obj3 = { uri: _modDef10921 };
+obj[3] = { uri: _modDef10922 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StreakTrophyBadge.native.tsx");
 
@@ -25,7 +25,7 @@ export function StreakTrophyBadge(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 24, intrinsicHeight: 24 };
     return assetHelpers.getAssetSizeStyle(size);

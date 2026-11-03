@@ -1,6 +1,6 @@
-// === Module 1449: discord_common/apex/ApexExperiment ===
+// === Module 1451: discord_common/apex/ApexExperiment ===
 
-// Module 1449 (discord_common/apex/ApexExperiment)
+// Module 1451 (discord_common/apex/ApexExperiment)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -24,7 +24,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       dependencyMap = tmp;
       let tmp2 = closure_2("user", location);
       closure_2 = tmp2;
-      const items = [evaluationAndAssignment];
+      items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
       const tmp3 = closure_2(evaluationAndAssignment(504).useStateFromStoresArray(items, () => _location.getEvaluationAndAssignment(closure_2_5, closure_1, logger, closure_2), items1), 2);
       const first = tmp3[0];

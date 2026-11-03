@@ -1,9 +1,9 @@
-// === Module 11702: useIsActivityFocused ===
+// === Module 11839: useIsActivityFocused ===
 
-// Module 11702 (useIsActivityFocused)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6851 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+// Module 11839 (useIsActivityFocused)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6971 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/activities/useIsActivityFocus
 
 export default function useIsActivityFocused(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore, EmbeddedActivitiesStore];
+  items = [ChannelRTCStore, EmbeddedActivitiesStore];
   return require("initialize").useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();

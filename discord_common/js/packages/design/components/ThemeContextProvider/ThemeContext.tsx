@@ -1,6 +1,6 @@
-// === Module 5031: ThemeContext ===
+// === Module 5158: ThemeContext ===
 
-// Module 5031 (ThemeContext)
+// Module 5158 (ThemeContext)
 import noop from "module_19" /* 19 */;
 
 const jsxProd = fn(21);
@@ -41,6 +41,6 @@ export function UseThemeContext(children) {
     throw error;
   } else {
     const obj = { children: children.children(context) };
-    return React2(framebus, obj);
+    return React2(duration, obj);
   }
 }

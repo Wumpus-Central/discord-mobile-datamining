@@ -1,26 +1,26 @@
-// === Module 17985: createChatPanelNativeStackNavigator ===
+// === Module 18128: createChatPanelNativeStackNavigator ===
 
-// Module 17985 (createChatPanelNativeStackNavigator)
-import Link from "Link" /* 1498 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+// Module 18128 (createChatPanelNativeStackNavigator)
+import Link from "Link" /* 1500 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ChatPanelNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
-  let state;
+  state = undefined;
   let descriptors;
   const navigationBuilder = state(descriptors[2]).useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
   const navigation = navigationBuilder.navigation;
-  let items = [state, descriptors];
+  items = [state, descriptors];
   ({ describe, NavigationContent } = navigationBuilder);
   const memo = navigation.useMemo(() => {
     state = {};
     const merged = Object.assign(state);
-    const items = [...state.routes];
+    items = [...state.routes];
     state.routes = items;
     const items1 = [];
     const items2 = [];
@@ -60,7 +60,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return { state, filteredDescriptors: obj };
   }, items);
-  const state2 = memo.state;
+  state2 = memo.state;
   let obj = state(descriptors[2]);
   let items1 = [navigation, , ];
   ({ index: arr2[1], key: arr2[2] } = state2);

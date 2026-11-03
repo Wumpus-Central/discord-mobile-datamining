@@ -1,23 +1,23 @@
-// === Module 4946: PermissionStore ===
+// === Module 5073: PermissionStore ===
 
-// Module 4946 (PermissionStore)
+// Module 5073 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4954 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4955 */;
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 5081 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5082 */;
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function getUncachedChannelPermissions(id, arg1) {
@@ -57,7 +57,7 @@ function getUncachedChannelPermissions(id, arg1) {
                 if (null == currentUser1) {
                   NONE2 = PermissionUtilsAll.NONE;
                 } else {
-                  const guild = GuildStore.getGuild(guildId);
+                  guild = GuildStore.getGuild(guildId);
                   if (null == guild) {
                     let NONE = PermissionUtilsAll.NONE;
                   } else {
@@ -219,7 +219,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         if (null == currentUser) {
           NONE2 = PermissionUtilsAll.NONE;
         } else {
-          const guild = GuildStore.getGuild(id);
+          guild = GuildStore.getGuild(id);
           if (null == guild) {
             let NONE3 = PermissionUtilsAll.NONE;
           } else {
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(4881);
-({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
+const GuildRecord = fn(5008);
+({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(4950).MemberSafetyPagePermissions;
+let closure_18 = fn(5077).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -319,7 +319,7 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
     if (null == currentUser) {
       NONE = PermissionUtilsAll.NONE;
     } else {
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {

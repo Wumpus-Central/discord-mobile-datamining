@@ -1,9 +1,9 @@
-// === Module 8874: media_playback/Video ===
+// === Module 8998: media_playback/Video ===
 
-// Module 8874 (media_playback/Video)
-import MediaPlaybackExperiment from "MediaPlaybackExperiment" /* 8875 */;
-import NativeVideo from "NativeVideo" /* 8877 */;
-import _mod8879 from "module_8879" /* 8879 */;
+// Module 8998 (media_playback/Video)
+import MediaPlaybackExperiment from "MediaPlaybackExperiment" /* 8999 */;
+import NativeVideo from "NativeVideo" /* 9001 */;
+import _mod9003 from "module_9003" /* 9003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default noop.memo(function Video(ref) {
     const obj3 = {};
     const merged2 = Object.assign(merged);
     obj3.ref = ref;
-    return jsx(_mod8879.default, {});
+    return jsx(_mod9003.default, {});
   }
   obj = MediaPlaybackExperiment;
 });

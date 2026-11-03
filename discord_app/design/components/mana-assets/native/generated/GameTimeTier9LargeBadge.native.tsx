@@ -1,19 +1,19 @@
-// === Module 14926: GameTimeTier9LargeBadge ===
+// === Module 15055: GameTimeTier9LargeBadge ===
 
-// Module 14926 (GameTimeTier9LargeBadge)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14927 from "module_14927" /* 14927 */;
-import _modDef14928 from "module_14928" /* 14928 */;
-import _modDef14929 from "module_14929" /* 14929 */;
+// Module 15055 (GameTimeTier9LargeBadge)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef15056 from "module_15056" /* 15056 */;
+import _modDef15057 from "module_15057" /* 15057 */;
+import _modDef15058 from "module_15058" /* 15058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14927 }, 3: null };
-let obj2 = { uri: _modDef14927 };
-obj[2] = { uri: _modDef14928 };
-const obj3 = { uri: _modDef14928 };
-obj[3] = { uri: _modDef14929 };
+let obj = { 1: null, 2: { uri: _modDef15056 }, 3: null };
+let obj2 = { uri: _modDef15056 };
+obj[2] = { uri: _modDef15057 };
+const obj3 = { uri: _modDef15057 };
+obj[3] = { uri: _modDef15058 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameTimeTier9LargeBadge.native.tsx");
 
@@ -25,7 +25,7 @@ export function GameTimeTier9LargeBadge(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 156, intrinsicHeight: 100 };
     return assetHelpers.getAssetSizeStyle(size);

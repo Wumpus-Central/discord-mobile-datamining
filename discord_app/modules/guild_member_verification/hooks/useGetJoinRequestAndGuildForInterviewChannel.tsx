@@ -1,14 +1,14 @@
-// === Module 14208: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 14339: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 14208 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 14339 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 504 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6916 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
 
 const require = globalThis.__r;
 
@@ -24,13 +24,13 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const castResult = first(11).cast(id);
   _slicedToArray = castResult;
   let obj = first(11);
-  const items = [GuildJoinRequestStore, UserGuildJoinRequestStore, joinRequestGuild, PermissionStore];
+  items = [GuildJoinRequestStore, UserGuildJoinRequestStore, joinRequestGuild, PermissionStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const request = GuildJoinRequestStore.getRequest(castResult);
     if (null == request) {
       return { joinRequest: null, isModmin: false, guild: null };
     } else {
-      let guild = GuildStore.getGuild(request.guildId);
+      guild = GuildStore.getGuild(request.guildId);
       if (guild == null) {
         guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
       }

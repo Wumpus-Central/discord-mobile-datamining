@@ -1,17 +1,17 @@
-// === Module 7767: ChannelConversationsStore ===
+// === Module 7891: ChannelConversationsStore ===
 
-// Module 7767 (ChannelConversationsStore)
+// Module 7891 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1451 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7768 */;
+import privDefault from "priv" /* 1453 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7892 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -30,7 +30,7 @@ function removePendingListFetch(channelId, requestKey) {
 }
 function processHydratedMessages(arg0, arg1, messages, fullyHydrated) {
   closure_0 = arg1;
-  const items = [];
+  items = [];
   const peekResult = navigation.peek(arg0);
   c1 = peekResult;
   if (null != peekResult) {
@@ -162,8 +162,8 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(5655);
-({ CONVERSATION_COLORS: closure_8, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9, MAX_CONVERSATIONS_PER_CHANNEL: c10, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
+const ConversationConstants = fn(5775);
+({ CONVERSATION_COLORS: closure_8, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9, MAX_CONVERSATIONS_PER_CHANNEL: closure_10, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
   dispose: function cleanupChannelSideState(arg0) {
@@ -363,7 +363,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         value.add(str);
       } else {
         const _Set = Set;
-        const items = [str];
+        items = [str];
         const set = new Set(items);
         const result = map1.set(conversationId, set);
       }
@@ -461,8 +461,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7769).mapConversation);
-      const found = mapped.filter(set(1379).isNotNullish);
+      const mapped = rawConversations.map(set(7893).mapConversation);
+      const found = mapped.filter(set(1380).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let tmp5 = null;
@@ -478,7 +478,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
           tmp5 = conversation;
         }
         if (null != tmp5) {
-          const items = [tmp5];
+          items = [tmp5];
           let items1 = items;
         } else {
           items1 = [];

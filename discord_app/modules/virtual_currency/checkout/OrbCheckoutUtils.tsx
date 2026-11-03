@@ -1,11 +1,11 @@
-// === Module 7416: OrbCheckoutUtils ===
+// === Module 7540: OrbCheckoutUtils ===
 
-// Module 7416 (OrbCheckoutUtils)
+// Module 7540 (OrbCheckoutUtils)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import util from "util" /* 1113 */;
-import BillingError from "BillingError" /* 4834 */;
-import OrderConstants from "OrderConstants" /* 7417 */;
-import OrderActionCreators from "OrderActionCreators" /* 7418 */;
+import BillingError from "BillingError" /* 4961 */;
+import OrderConstants from "OrderConstants" /* 7541 */;
+import OrderActionCreators from "OrderActionCreators" /* 7542 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -52,7 +52,7 @@ export function getOrbCheckoutDisclaimerMessage(skuId) {
     const intl4 = util.intl;
     stringResult = intl4.string(util.t.FhJ74j);
   }
-  const items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
+  items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
   return items;
 }
 export function resolveOrbCheckoutErrorMessage(code, arg1) {

@@ -1,11 +1,11 @@
-// === Module 9040: useGuildEmbeddedApplications ===
+// === Module 9168: useGuildEmbeddedApplications ===
 
-// Module 9040 (useGuildEmbeddedApplications)
+// Module 9168 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7001 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 const require = fn;
 const initialize = fn(504);
@@ -42,7 +42,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;
@@ -98,7 +98,7 @@ export function useGuildEmbeddedApplications(APP_CHANNEL, guildId, channelId) {
   const isLoading = tmp.isLoading;
   const refetch = tmp.refetch;
   noop.useRef(false);
-  const items = [data, isLoading, error, refetch];
+  items = [data, isLoading, error, refetch];
   const effect = noop.useEffect(() => {
     if (null != data) {
       ref.current = true;

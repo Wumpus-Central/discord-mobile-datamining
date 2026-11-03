@@ -1,6 +1,6 @@
-// === Module 18283: GuildBoostingProgressBarPersistedStore ===
+// === Module 18426: GuildBoostingProgressBarPersistedStore ===
 
-// Module 18283 (GuildBoostingProgressBarPersistedStore)
+// Module 18426 (GuildBoostingProgressBarPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -17,8 +17,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getState"] = function getState() {
   return closure_0;
 };
-prototype["getCountForGuild"] = function getCountForGuild(guildId) {
-  return closure_0[guildId];
+prototype["getCountForGuild"] = function getCountForGuild(c0) {
+  return closure_0[c0];
 };
 GuildBoostingProgressBarPersistedStore.displayName = "GuildBoostingProgressBarPersistedStore";
 GuildBoostingProgressBarPersistedStore.persistKey = "PremiumGuildProgressBarPersistedStore";

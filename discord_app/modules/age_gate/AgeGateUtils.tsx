@@ -1,24 +1,24 @@
-// === Module 6734: AgeGateUtils ===
+// === Module 6854: AgeGateUtils ===
 
-// Module 6734 (AgeGateUtils)
+// Module 6854 (AgeGateUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6725 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6731 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 6736 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6739 */;
-import NSFWContentGate from "NSFWContentGate" /* 6752 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6735 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6845 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6851 */;
+import getAgeNoticeWarningDescriptions from "getAgeNoticeWarningDescriptions" /* 6856 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6859 */;
+import NSFWContentGate from "NSFWContentGate" /* 6872 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6855 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
 import AgeGateConstants from "AgeGateConstants" /* 1097 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -51,7 +51,7 @@ function isChannelContentGated(channel) {
         return true;
       }
     }
-    const guild = GuildStore.getGuild(channel.guild_id);
+    guild = GuildStore.getGuild(channel.guild_id);
     let tmp9 = null != guild;
     if (tmp9) {
       tmp9 = isGuildNSFW(guild) && tmp6;
@@ -184,8 +184,8 @@ export function useAgeGateVerifyContentForGuild(stateFromStores) {
       str = "";
     }
     if (tmp3Result) {
-      let tinyBroncoWarningDescriptions = getTinyBroncoWarningDescriptions.getTinyBroncoWarningDescriptions(tmp3Result, str);
-      const tmpResult = getTinyBroncoWarningDescriptions;
+      let tinyBroncoWarningDescriptions = getAgeNoticeWarningDescriptions.getTinyBroncoWarningDescriptions(tmp3Result, str);
+      const tmpResult = getAgeNoticeWarningDescriptions;
     } else {
       tinyBroncoWarningDescriptions = null;
     }
@@ -304,8 +304,8 @@ export function useAgeGateVerifyContent(source) {
   if (tmpResult3.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES)) {
     tinyBroncoWarningDescriptions = null;
     if (tmp6) {
-      tinyBroncoWarningDescriptions = getTinyBroncoWarningDescriptions.getTinyBroncoWarningDescriptions(true, "");
-      const tmpResult4 = getTinyBroncoWarningDescriptions;
+      tinyBroncoWarningDescriptions = getAgeNoticeWarningDescriptions.getTinyBroncoWarningDescriptions(true, "");
+      const tmpResult4 = getAgeNoticeWarningDescriptions;
     }
   }
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
@@ -462,7 +462,7 @@ export function shouldShowAgeGateForGuildContentLevel(arg0) {
   }
   if (flag) {
     if (null != arg0) {
-      const guild = GuildStore.getGuild(arg0);
+      guild = GuildStore.getGuild(arg0);
       let tmp8 = null != guild;
       if (tmp8) {
         tmp8 = isGuildNSFW(guild);
@@ -550,7 +550,7 @@ export function maybeShowAgeGate(guildId, channelId, JOIN_LARGE_GUILD_UNDERAGE) 
   if (flag) {
     flag3 = false;
     if (null != guildId) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let tmp8 = null != guild;
       if (tmp8) {
         tmp8 = isGuildNSFW(guild);

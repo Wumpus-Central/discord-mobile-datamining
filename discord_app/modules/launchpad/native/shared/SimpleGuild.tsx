@@ -1,17 +1,17 @@
-// === Module 19074: SimpleGuild ===
+// === Module 19232: SimpleGuild ===
 
-// Module 19074 (SimpleGuild)
+// Module 19232 (SimpleGuild)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const View = fn(17).View;
-const getGuildIconSource = fn(4881).getGuildIconSource;
+const getGuildIconSource = fn(5008).getGuildIconSource;
 const ME = fn(1072).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
@@ -42,7 +42,7 @@ export default function SimpleGuild(guildId) {
   const tmp3 = closure_10();
   ({ iconStroke, iconBackground, iconBackgroundBrand } = str(unread2[9])());
   const tmp6 = str(unread2[9])();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(unread2[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   str = undefined;
   if (stateFromStores != null) {

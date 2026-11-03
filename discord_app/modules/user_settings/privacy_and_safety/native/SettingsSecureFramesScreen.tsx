@@ -1,14 +1,14 @@
-// === Module 17889: SettingsSecureFramesScreen ===
+// === Module 18032: SettingsSecureFramesScreen ===
 
-// Module 17889 (SettingsSecureFramesScreen)
+// Module 18032 (SettingsSecureFramesScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import UserActionCreators from "UserActionCreators" /* 8752 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import UserActionCreators from "UserActionCreators" /* 8876 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function UserListItem(userId) {
@@ -16,7 +16,7 @@ function UserListItem(userId) {
   const onPress = userId.onPress;
   let analyticsLocations;
   ({ start, end } = userId);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(analyticsLocations[7]).useStateFromStores(items, () => UserStore.getUser(userId));
   const obj = userId(analyticsLocations[7]);
   const secureFramesUserVerifiedKeys = userId(analyticsLocations[8]).useSecureFramesUserVerifiedKeys(userId);
@@ -70,7 +70,7 @@ function SettingsSecureFramesFooter() {
   const token = navigation(secureFramesVerifiedUserIds[17]).useToken(callback(secureFramesVerifiedUserIds[6]).modules.mobile.TABLE_ROW_HEIGHT);
   const obj = navigation(secureFramesVerifiedUserIds[17]);
   navigation = navigation(secureFramesVerifiedUserIds[18]).useNavigation();
-  const items = [navigation];
+  items = [navigation];
   callback = noop.useCallback((userId) => {
     navigation.navigate(UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
   }, items);
@@ -105,7 +105,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, header: null, list: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.header = { marginTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_8 };
@@ -123,7 +123,7 @@ export default function SettingsSecureFramesScreen() {
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["9Q/PQv"]);
-  const items = [React5(Text_Text.Text, obj3), ];
+  items = [React5(Text_Text.Text, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   const obj5 = { helpArticle: SecureFramesUtils.getSecureFramesHelpdeskArticle() };

@@ -1,12 +1,12 @@
-// === Module 10740: PeopleUtils ===
+// === Module 10870: PeopleUtils ===
 
-// Module 10740 (PeopleUtils)
+// Module 10870 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10741 */;
-import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10742 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10871 */;
+import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10872 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;

@@ -1,11 +1,11 @@
-// === Module 18181: VoiceUserItem ===
+// === Module 18325: VoiceUserItem ===
 
-// Module 18181 (VoiceUserItem)
+// Module 18325 (VoiceUserItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,11 +18,11 @@ const jsxProd = fn(21);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1187).AvatarSizes.XSMALL_20;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11049);
+const ChannelListLayout = fn(11177);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -41,7 +41,7 @@ export default noop.memo(function VoiceUserItem(guildId) {
   ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, voicePlatform } = guildId);
   const tmp = closure_11();
   const first = user(guildId[9])(user.id, guildId)[0];
-  let application_id;
+  application_id = undefined;
   if (first != null) {
     application_id = first.application_id;
   }
@@ -55,7 +55,7 @@ export default noop.memo(function VoiceUserItem(guildId) {
     guildMemberAvatarSource = user.getAvatarSource(guildId);
   }
   const gameRecord = user(tmp3[10])(application_id).gameRecord;
-  const items = [guildId, channelId, application_id];
+  items = [guildId, channelId, application_id];
   if (collapsed) {
     const obj2 = { style: tmp.voiceStateCollapsed, children: null };
     const obj3 = { source: getSource, size: XSMALL_20 };

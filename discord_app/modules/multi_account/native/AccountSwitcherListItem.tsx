@@ -1,20 +1,20 @@
-// === Module 17995: AccountSwitcherListItem ===
+// === Module 18139: AccountSwitcherListItem ===
 
-// Module 17995 (AccountSwitcherListItem)
+// Module 18139 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import Pressables from "Pressables" /* 6980 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import Pressables from "Pressables" /* 7106 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import StreamerModeStore from "StreamerModeStore" /* 5196 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 class AccountStatusIcon {
@@ -52,10 +52,10 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13977).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14108).MultiAccountTokenStatus;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
@@ -68,7 +68,7 @@ export default function AccountSwitcherListItem(arg0) {
   ({ sortHandlers, trailing } = arg0);
   ({ delayLongPress, leading } = arg0);
   const tmp = closure_11();
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
@@ -105,7 +105,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "Array" };
+    const obj9 = { user: obj3, guildId: "y" };
     const items3 = [React7(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };

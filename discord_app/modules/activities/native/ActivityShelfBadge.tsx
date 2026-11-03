@@ -1,16 +1,16 @@
-// === Module 12414: ActivityShelfBadge ===
+// === Module 12550: ActivityShelfBadge ===
 
-// Module 12414 (ActivityShelfBadge)
+// Module 12550 (ActivityShelfBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Server from "Server" /* 1992 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Server from "Server" /* 2121 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = { position: "absolute", top: 4, right: 4, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.badge = rect;
@@ -32,7 +32,7 @@ export default function ActivityShelfBadge(arg0) {
   }
   if (labelType === Server.EmbeddedActivityLabelTypes.NEW) {
     const obj = { style: null, children: null };
-    const items = [replacementStyles, , ];
+    items = [replacementStyles, , ];
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
     obj.style = items;
     const obj2 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };

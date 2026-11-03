@@ -1,14 +1,14 @@
-// === Module 18659: GuildSettingsModalMemberApplications ===
+// === Module 18817: GuildSettingsModalMemberApplications ===
 
-// Module 18659 (GuildSettingsModalMemberApplications)
+// Module 18817 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18660 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18818 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
@@ -61,7 +61,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6975).TableRow, obj2);
+      return closure_7(joinRequest(7101).TableRow, obj2);
     }
   }
 });
@@ -80,7 +80,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
   let obj2 = { guildId, applicationStatus, sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
   const fetchNextPage = applicationStatus(guildJoinRequests[15]).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
   const obj3 = applicationStatus(guildJoinRequests[15]);
-  const items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const stateFromStores = applicationStatus(guildJoinRequests[16]).useStateFromStores(items, () => fetching.isFetching());
   const items1 = [applicationStatus, fetchNextPage];
   const onEndReached = fetchNextPage.useCallback(() => {

@@ -1,17 +1,17 @@
-// === Module 19312: VoicePanelConnectButton ===
+// === Module 19470: VoicePanelConnectButton ===
 
-// Module 19312 (VoicePanelConnectButton)
+// Module 19470 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7950 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14746 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 19313 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 19316 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 19317 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14877 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 19471 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 19474 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 19475 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
@@ -21,7 +21,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { connectButton: { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 }, connectText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -44,7 +44,7 @@ export default function ConnectButton(props) {
   const tmp5 = channelId(guildId[6])(channelId);
   canConnect = tmp5.canConnect;
   let isAtMaxCapacity = tmp5.isAtMaxCapacity;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   if (isAtMaxCapacity) {
     let isGuildStageVoiceResult;

@@ -1,17 +1,17 @@
-// === Module 16586: SafetySettingsNotice ===
+// === Module 16729: SafetySettingsNotice ===
 
-// Module 16586 (SafetySettingsNotice)
+// Module 16729 (SafetySettingsNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16587 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7490).SafetySettingsNoticeAction;
+let closure_4 = fn(7614).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { blockedIgnoredRedirect: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function SafetySettingsNotice(noticeType) {
   noticeType = noticeType.noticeType;
   const count = noticeType.count;
   noop = undefined;
-  const items = [noticeType];
+  items = [noticeType];
   const effect = noop.useEffect(() => {
     const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.VIEWED);
   }, items);

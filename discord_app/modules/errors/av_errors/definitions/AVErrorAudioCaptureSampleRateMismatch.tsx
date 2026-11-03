@@ -1,12 +1,12 @@
-// === Module 20063: AVErrorAudioCaptureSampleRateMismatch ===
+// === Module 20213: AVErrorAudioCaptureSampleRateMismatch ===
 
-// Module 20063 (AVErrorAudioCaptureSampleRateMismatch)
+// Module 20213 (AVErrorAudioCaptureSampleRateMismatch)
 import DurationsDefault from "Durations" /* 1089 */;
-import AVError from "AVError" /* 5947 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5781 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import AVError from "AVError" /* 6067 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5901 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;
@@ -48,7 +48,7 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
         if (Math.abs(num2) > 30) {
           const obj2 = { type: AVError.AVError.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH, audioCaptureSampleRateMismatchPercent: num2 };
           const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-          const items = [obj2];
+          items = [obj2];
           tmp5 = items;
         }
         return tmp5;

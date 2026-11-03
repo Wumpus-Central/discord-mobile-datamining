@@ -1,19 +1,19 @@
-// === Module 13321: useEmitAppealIngestionEvent ===
+// === Module 13457: useEmitAppealIngestionEvent ===
 
-// Module 13321 (useEmitAppealIngestionEvent)
+// Module 13457 (useEmitAppealIngestionEvent)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = fn;
-let closure_5 = fn(7970).SafetyHubAnalyticsActionSource;
+let closure_5 = fn(8094).SafetyHubAnalyticsActionSource;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
 
 export function useEmitAppealIngestionEvent() {
-  let items = [SafetyHubStore];
+  items = [SafetyHubStore];
   stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
   const obj = stateFromStores(safetyHubAccountStanding[4]);
   let tmp5 = stateFromStores;
@@ -32,7 +32,7 @@ export function useEmitAppealIngestionEvent() {
     let tmp2 = null;
     if (null != stateFromStores) {
       const _Number = Number;
-      const items = [Number(tmp)];
+      items = [Number(tmp)];
       tmp2 = items;
     }
     obj2.classification_ids = tmp2;

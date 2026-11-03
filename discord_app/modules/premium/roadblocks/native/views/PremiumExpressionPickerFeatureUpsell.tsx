@@ -1,55 +1,66 @@
-// === Module 10044: PremiumExpressionPickerFeatureUpsell ===
+// === Module 10175: PremiumExpressionPickerFeatureUpsell ===
 
-// Module 10044 (PremiumExpressionPickerFeatureUpsell)
+// Module 10175 (PremiumExpressionPickerFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7101 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 10045 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7227 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 10176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
   obj.container = rect;
   return obj;
 });
-const __initData = { code: "function PremiumExpressionPickerFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
+let closure_6 = { code: "(function PremiumExpressionPickerFeatureUpsellTsx1(){let[shouldShow,inPortalKeyboard,bottomSheetIndex]=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx");
 
-export default function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
-  bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
-  const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
-  const shouldShow = bottomSheetIndex.shouldShow;
-  ({ featureName, analyticsLocation } = bottomSheetIndex);
+export default function PremiumExpressionPickerFeatureUpsell(arg0) {
+  ({ bottomSheetIndex, featureName, analyticsLocation, inPortalKeyboard, shouldShow } = arg0);
   const tmp3 = useKeyboardIsOpenDefault();
-  ReanimatedRexport;
-  const fn = function _() {
-    const value1 = shouldShow.get();
-    if (!value1) {
-      return value1;
-    } else {
-      value = bottomSheetIndex.get();
-      if (inPortalKeyboard) {
-        let tmp5 = 1 === value;
+  _mod1652;
+  items = [closure_6, shouldShow, inPortalKeyboard, bottomSheetIndex];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp6, tmp7, tmp8, tmp9] = items;
+  class PremiumExpressionPickerFeatureUpsellTsx1 {
+    constructor() {
+      tmp = closure_0.get();
+      if (!tmp) {
+        return tmp;
       } else {
-        tmp5 = 0 === value;
+        tmp2 = closure_1;
+        tmp3 = closure_2;
+        value = closure_2.get();
+        if (closure_1) {
+          num2 = 1;
+          tmp5 = 1 === value;
+        } else {
+          num = 0;
+          tmp5 = 0 === value;
+        }
+        tmp6 = tmp5;
       }
+      return;
     }
-  };
-  fn.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };
-  fn.__workletHash = 15061973364879;
-  fn.__initData = __initData;
-  let tmp7 = null;
+  }
+  const items1 = [tmp7, tmp8, tmp9];
+  PremiumExpressionPickerFeatureUpsellTsx1.__closure = items1;
+  PremiumExpressionPickerFeatureUpsellTsx1.__workletHash = 15896580392790;
+  PremiumExpressionPickerFeatureUpsellTsx1.__initData = tmp6;
+  let tmp11 = null;
   if (!tmp3) {
     const obj = { style: tmp4.container, children: null };
-    const obj2 = { shouldShow: tmp6, featureName, analyticsLocation };
-    obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp6, featureName, analyticsLocation });
-    tmp7 = <View style={tmp4.container}>{null}</View>;
+    const obj2 = { shouldShow: tmp10, featureName, analyticsLocation };
+    obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp10, featureName, analyticsLocation });
+    tmp11 = <View style={tmp4.container}>{null}</View>;
   }
-  return tmp7;
+  return tmp11;
 };

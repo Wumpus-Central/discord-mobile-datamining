@@ -1,10 +1,10 @@
-// === Module 6896: SKUStore ===
+// === Module 7016: SKUStore ===
 
-// Module 6896 (SKUStore)
+// Module 7016 (SKUStore)
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SKURecord from "SKURecord" /* 2040 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import SKURecord from "SKURecord" /* 2169 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 function addSku(sku) {
   value = map1.get(sku.id);
@@ -108,7 +108,7 @@ class SKUStore extends Store {
 const prototype = SKUStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
   locale = LocaleStore.locale;
 };
@@ -118,7 +118,7 @@ prototype["get"] = function get(arg0) {
 prototype["getForApplication"] = function getForApplication(arg0) {
   value = map2.get(arg0);
   if (null == value) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(value).map((item) => map1.get(item));
@@ -130,7 +130,7 @@ prototype["isFetching"] = function isFetching(arg0) {
   return set.has(arg0);
 };
 prototype["getFetchingSkuIds"] = function getFetchingSkuIds() {
-  const items = [...set.keys()];
+  items = [...set.keys()];
   return items;
 };
 prototype["getSKUs"] = function getSKUs() {

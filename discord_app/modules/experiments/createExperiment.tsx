@@ -1,17 +1,17 @@
-// === Module 5237: createExperiment ===
+// === Module 5360: createExperiment ===
 
-// Module 5237 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 5243 */;
+// Module 5360 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 5366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(5239);
+const ExperimentConstants = fn(5362);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
@@ -192,7 +192,7 @@ export default function createExperiment(config) {
     const result = map.set(config.id, { description: "Treatment " + config.id + ": " + config.label, config: config.config });
   });
   const obj4 = { id: config.id, title: config.label, commonTriggerPoint: config.commonTriggerPoint, description: null, buckets: [...map.keys()] };
-  let items = [...map.values()];
+  items = [...map.values()];
   obj4.description = items.map((description) => description.description);
   if ("guild" === config.kind) {
     result3 = tmp(tmp2[5]).registerGuildExperiment(obj4);
@@ -262,7 +262,7 @@ export default function createExperiment(config) {
               defaultConfig = commonTriggerPoint.defaultConfig;
             }
           }
-          const items = [defaultConfig, NOT_ELIGIBLE, ];
+          items = [defaultConfig, NOT_ELIGIBLE, ];
           let num = -1;
           if (null != guildExperimentDescriptor) {
             num = guildExperimentDescriptor.revision;
@@ -276,7 +276,7 @@ export default function createExperiment(config) {
       [tmp11, tmp12, tmp13] = trackAutoExposure(tmp9[0], 3);
       const tmp14 = map(result3[7])(guildId);
       closure_6 = tmp14;
-      let items = [flag, false !== obj.autoTrackExposure, tmp14, tmp8Result, tmp12, tmp13, flag2];
+      items = [flag, false !== obj.autoTrackExposure, tmp14, tmp8Result, tmp12, tmp13, flag2];
       subscribe(() => {
         let tmp = flag;
         if (!flag) {
@@ -303,7 +303,7 @@ export default function createExperiment(config) {
           if (arg0[0] === closure_0) {
             return tmp;
           }
-          const items = [closure_0, closure_1, closure_2];
+          items = [closure_0, closure_1, closure_2];
           tmp = items;
         });
       }, { disable: flag }), items1);

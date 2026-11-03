@@ -1,20 +1,20 @@
-// === Module 12524: GroupDMNitroCapInfoActionSheet ===
+// === Module 12660: GroupDMNitroCapInfoActionSheet ===
 
-// Module 12524 (GroupDMNitroCapInfoActionSheet)
+// Module 12660 (GroupDMNitroCapInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11629).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11766).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, title: null, body: null, button: null };
 let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.title = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -33,10 +33,10 @@ export default function GroupDMNitroCapInfoActionSheet() {
   }, []);
   const obj = { showGradient: true, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.title, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  const obj3 = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.u1ilug);
-  const items = [timestampProducer(Text_Text.Text, obj3), , ];
+  items = [timestampProducer(Text_Text.Text, obj3), , ];
   const obj4 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t["mr27w/"], { number });

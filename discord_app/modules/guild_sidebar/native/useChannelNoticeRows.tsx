@@ -1,21 +1,21 @@
-// === Module 18326: useChannelNoticeRows ===
+// === Module 18471: useChannelNoticeRows ===
 
-// Module 18326 (useChannelNoticeRows)
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
+// Module 18471 (useChannelNoticeRows)
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildProgressStore from "GuildProgressStore" /* 14048 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildProgressStore from "GuildProgressStore" /* 14179 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(7713).ChannelListChannelNoticeRow;
+let closure_9 = fn(7837).ChannelListChannelNoticeRow;
 const MFALevels = fn(1072).MFALevels;
-const DismissibleContentConstants = fn(4860);
+const DismissibleContentConstants = fn(4987);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
@@ -23,7 +23,7 @@ let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannel
 export default function useChannelNoticeRows(id) {
   _require = id;
   id = id.id;
-  let items = [guildHasLiveChannelNotice];
+  items = [guildHasLiveChannelNotice];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildProgressStore.hasProgress(id));
   const currentUser = UserStore.getCurrentUser();
   let obj = require("useStateFromStores");
@@ -61,7 +61,7 @@ export default function useChannelNoticeRows(id) {
   const items5 = [closure_7];
   const tmpResult = require("useStateFromStores");
   const tmp12 = id(stateFromStores[11])(require("ApplicationActionCreators").useApplication(tmpResult.useStateFromStoresArray(items5, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let gameApplicationIds;
     if (guild != null) {
       gameApplicationIds = guild.gameApplicationIds;
@@ -114,7 +114,7 @@ export default function useChannelNoticeRows(id) {
   const obj6 = { rows: null, gameClaimMarkAsDismissed: tmp10[1], applicationAccountLinkMarkAsDismissed: tmp16, startApplicationAccountLinkAuthorization: defaultAuthorizationNotifiers, accountLinkApplication: connectionApp };
   const items9 = [stateFromStores, stateFromStores1, guildHasLiveChannelNotice, null != tmp10[0], null != tmp15];
   obj6.rows = stateFromStores1.useMemo(() => {
-    const items = [constants.SPACER];
+    items = [constants.SPACER];
     if (closure_6) {
       items.push(constants.GAME_CLAIM);
     }

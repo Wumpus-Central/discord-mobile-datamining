@@ -1,27 +1,27 @@
-// === Module 17909: ContentAndSocialScreen ===
+// === Module 18052: ContentAndSocialScreen ===
 
-// Module 17909 (ContentAndSocialScreen)
+// Module 18052 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 16719 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17910 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17916 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 16862 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18053 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = { flex: 1, gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/user_settings/content_and_soc
 export default function ContentAndSocialSettings(route) {
   route = route.route;
   const memo = noop.useMemo(() => {
-    const items = [, ];
+    items = [, ];
     ({ CONTENT_AND_SOCIAL_DISCORD: arr[0], CONNECTED_GAMES: arr[1] } = MobileUserSettings);
     return items;
   }, []);
@@ -50,7 +50,7 @@ export default function ContentAndSocialSettings(route) {
     }
     return num;
   }), 2)[0];
-  let items = [defaultIndex, memo];
+  items = [defaultIndex, memo];
   const node = noop.useMemo(() => SettingBuilders.createSegmentedControl({ defaultIndex, settings: memo }), items);
   return closure_9(memo(defaultIndex[17]), { node });
 };
@@ -60,10 +60,10 @@ export function DiscordPermissionsPage() {
   const sensitiveContentFilterHelpArticle = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[14]).useSensitiveContentFilterHelpArticle();
   let obj2 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[14]);
   tinyBroncoMessageRequestsNoticeVariant = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]).useTinyBroncoMessageRequestsNoticeVariant();
-  let items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
+  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
   const memo = noop.useMemo(() => {
     const obj = { settings: null, subLabel: null };
-    const items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
+    items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
     obj.settings = items;
     const intl = util.intl;
     const obj2 = { learnMoreLink: HelpdeskUtilsDefault.getArticleURL(sensitiveContentFilterHelpArticle) };
@@ -130,7 +130,7 @@ export function DiscordPermissionsPage() {
     let tmp15;
     if (allServersOptionSelected) {
       if (tmp8) {
-        tmp15 = React7(TinyBroncoSettingsNoticesLazy.MessageRequestsNotice, {});
+        tmp15 = React7(AgeNoticeSettingsNoticesLazy.MessageRequestsNotice, {});
       }
     }
     obj15.subLabel = tmp15;
@@ -205,7 +205,7 @@ export function ConnectedGamesPage() {
     let obj4 = { variant: "text-md/semibold", color: "text-strong", children: null };
     let intl = util.intl;
     obj4.children = intl.string(util.t["+0U77d"]);
-    let items = [React7(Text_Text.Text, obj4), ];
+    items = [React7(Text_Text.Text, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = util.intl;
     let obj6 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };

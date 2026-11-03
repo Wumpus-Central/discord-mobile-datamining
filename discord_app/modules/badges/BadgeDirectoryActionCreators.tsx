@@ -1,9 +1,9 @@
-// === Module 8768: BadgeDirectoryActionCreators ===
+// === Module 8892: BadgeDirectoryActionCreators ===
 
-// Module 8768 (BadgeDirectoryActionCreators)
+// Module 8892 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
             c6 = 0;
             closure_131_9 = closure_5;
             const obj14 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: null };
-            const items = [closure_131_4, "result:failure", "catalog_state:unknown", closure_131_5];
+            items = [closure_131_4, "result:failure", "catalog_state:unknown", closure_131_5];
             obj14.tags = items;
             const _Date2 = Date;
             closure_132_1(closure_132_2[5]).distribution(obj14, Date.now() - closure_131_6);
@@ -182,7 +182,7 @@ let closure_11 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

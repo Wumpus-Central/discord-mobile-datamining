@@ -1,20 +1,20 @@
-// === Module 18777: ChannelsScreen ===
+// === Module 18935: ChannelsScreen ===
 
-// Module 18777 (ChannelsScreen)
+// Module 18935 (ChannelsScreen)
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13913 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14044 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9826).SearchResultContentEntityTypes;
+let closure_10 = fn(9957).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
@@ -26,7 +26,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
   closure_5 = undefined;
   importDefault = searchContext(stateFromStores[7]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[7]);
-  let items = [closure_5];
+  items = [closure_5];
   stateFromStores = searchContext(stateFromStores[8]).useStateFromStores(items, () => SearchGuildChannelTabStore.getTextChannels(closure_1));
   let obj2 = searchContext(stateFromStores[8]);
   const items1 = [closure_5];
@@ -78,7 +78,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
   }, items9);
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {
-    const items = [];
+    items = [];
     closure_0 = items;
     closure_1 = 0;
     if (stateFromStores.length > 0) {

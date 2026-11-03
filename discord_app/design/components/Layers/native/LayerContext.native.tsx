@@ -1,6 +1,6 @@
-// === Module 5613: LayerContext ===
+// === Module 5736: LayerContext ===
 
-// Module 5613 (LayerContext)
+// Module 5736 (LayerContext)
 import noop from "module_19" /* 19 */;
 
 class LayerContextManager {
@@ -17,7 +17,7 @@ class LayerContextManager {
 const prototype = LayerContextManager.prototype;
 prototype["add"] = function add(key, component) {
   closure_0 = key;
-  const items = this.items;
+  items = this.items;
   this.items = items.filter((key) => key.key !== closure_0);
   const items1 = this.items;
   items1.push({ key, component });
@@ -25,7 +25,7 @@ prototype["add"] = function add(key, component) {
 };
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
-  const items = this.items;
+  items = this.items;
   this.items = items.filter((key) => key.key !== closure_0);
   this.invalidate();
 };

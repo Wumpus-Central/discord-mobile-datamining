@@ -1,6 +1,6 @@
-// === Module 10140: useNavigatorConfirmChangesOnBack ===
+// === Module 10270: useNavigatorConfirmChangesOnBack ===
 
-// Module 10140 (useNavigatorConfirmChangesOnBack)
+// Module 10270 (useNavigatorConfirmChangesOnBack)
 import noop from "module_19" /* 19 */;
 
 const Keyboard = fn(17).Keyboard;
@@ -12,7 +12,7 @@ export default function useNavigatorConfirmChangesOnBack() {
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
   let obj = {
-    onGoBack: ref(10141)({
+    onGoBack: ref(10271)({
       onBeforeGoBack(navigation) {
         if (navigation.preventable) {
           let current = ref2.current;

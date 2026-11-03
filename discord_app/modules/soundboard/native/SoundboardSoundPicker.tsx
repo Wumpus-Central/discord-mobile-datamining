@@ -1,25 +1,25 @@
-// === Module 19172: SoundboardSoundPicker ===
+// === Module 19330: SoundboardSoundPicker ===
 
-// Module 19172 (SoundboardSoundPicker)
+// Module 19330 (SoundboardSoundPicker)
 import nativeDefault from "native" /* 575 */;
-import searchSounds from "searchSounds" /* 7524 */;
+import searchSounds from "searchSounds" /* 7648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import UserStore from "UserStore" /* 1383 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(19173);
+const ExpressionPickerStore = fn(19331);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(6060).SoundboardPickerType;
+const SoundboardPickerType = fn(6180).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
-let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(19174).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
+const createStyles = fn(5141);
+let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(19332).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
 let closure_14 = createStyles.createStyles(obj);
-let obj3 = { paddingHorizontal: fn(19174).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj3 = { paddingHorizontal: fn(19332).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 
@@ -35,7 +35,7 @@ export default noop.memo(function SoundboardSoundPicker(channel) {
   const tmp2 = stateFromStores(availableSounds.useState(0), 2);
   const sharedValue = channel(ref[12]).useSharedValue(0);
   let obj = channel(ref[12]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = channel(ref[13]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = channel(ref[13]);
   const items1 = [RTCConnectionStore];
@@ -86,7 +86,7 @@ export default noop.memo(function SoundboardSoundPicker(channel) {
   const obj9 = channel(ref[12]);
   let isIOSResult = channel(ref[21]).isIOS();
   if (isIOSResult) {
-    const obj12 = { animatedSheetIndex: sharedValue1, portalHostName: "soundboard-footer", followSystemKeyboard: true };
+    const obj12 = { animatedSheetIndex: sharedValue1, portalHostName: "soundboard-footer", followSystemKeyboard: true, constrainToActionSheet: true };
     isIOSResult = closure_12(tmp11(tmp7[22]), obj12);
   }
   const items4 = [isIOSResult, ];
@@ -98,7 +98,7 @@ export default noop.memo(function SoundboardSoundPicker(channel) {
   }
   obj13.footer = tmp27;
   const obj14 = { style: tmp.container, children: null };
-  const obj15 = { accessibilityRole: "header", variant: "heading-lg/bold", style: tmp.title, children: null };
+  const obj15 = { accessibilityRole: "header", variant: "heading-lg/semibold", style: tmp.title, children: null };
   const intl = tmp6(tmp7[26]).intl;
   obj15.children = intl.string(channel(ref[26]).t.ABjMWI);
   const items5 = [closure_12(channel(ref[25]).Text, obj15), , , ];

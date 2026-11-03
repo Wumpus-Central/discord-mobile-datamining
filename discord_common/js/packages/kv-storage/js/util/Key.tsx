@@ -1,14 +1,14 @@
-// === Module 4898: Key ===
+// === Module 5025: Key ===
 
-// Module 4898 (Key)
-import TableId from "TableId" /* 4899 */;
+// Module 5025 (Key)
+import TableId from "TableId" /* 5026 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export function combineKey(prefix, key) {
   if (Array.isArray(key)) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(key, HermesBuiltin.arraySpread(prefix, 0));
     let items1 = items;
   } else {

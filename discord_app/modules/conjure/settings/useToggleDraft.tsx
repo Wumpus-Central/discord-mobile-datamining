@@ -1,6 +1,6 @@
-// === Module 10896: useToggleDraft ===
+// === Module 11026: useToggleDraft ===
 
-// Module 10896 (useToggleDraft)
+// Module 11026 (useToggleDraft)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ export function useToggleDraft(stateFromStores, callback) {
     }
     changed = checked !== flag2;
   }
-  const items = [changed, checked, callback];
+  items = [changed, checked, callback];
   const save = noop.useCallback(() => {
     let tmp = !changed;
     if (changed) {

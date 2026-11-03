@@ -1,7 +1,7 @@
-// === Module 17136: QuestDockBlurredContentBackground ===
+// === Module 17279: QuestDockBlurredContentBackground ===
 
-// Module 17136 (QuestDockBlurredContentBackground)
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5599 */;
+// Module 17279 (QuestDockBlurredContentBackground)
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5722 */;
 import noop from "module_19" /* 19 */;
 
 const StyleSheet = fn(17).StyleSheet;
@@ -16,7 +16,7 @@ export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
   if (undefined !== blurTheme) {
     str = blurTheme;
   }
-  const items = [str];
+  items = [str];
   const items1 = [str];
   const memo = noop.useMemo(() => {
     str = "rgba(255, 255, 255, 0.1)";

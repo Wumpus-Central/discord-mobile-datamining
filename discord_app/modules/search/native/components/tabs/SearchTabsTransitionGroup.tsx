@@ -1,11 +1,9 @@
-// === Module 18800: SearchTabsTransitionGroup ===
+// === Module 18958: SearchTabsTransitionGroup ===
 
-// Module 18800 (SearchTabsTransitionGroup)
-import native from "native" /* 5080 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12170 */;
+// Module 18958 (SearchTabsTransitionGroup)
+import _modDef1652 from "module_1652" /* 1652 */;
+import native from "native" /* 5207 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,62 +12,96 @@ function getItemKey(items) {
   const mapped = items.map((id) => id.id);
   return mapped.join("-");
 }
-function AnimatedTabs(state) {
-  state = state.state;
-  const transitionState = state.transitionState;
-  const cleanUp = state.cleanUp;
-  let sharedValue;
-  let context;
+function AnimatedTabs(cleanUp) {
+  ({ state, transitionState } = cleanUp);
+  _require = transitionState;
+  importDefault = undefined;
   let num = 0;
-  if (transitionState === state(cleanUp[5]).TransitionStates.MOUNTED) {
+  if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = state(cleanUp[4]).useSharedValue(num);
-  let obj = state(cleanUp[4]);
-  let fn = function f() {
-    let obj = { opacity: null, position: null };
-    value = sharedValue.get();
-    const fn = function t(arg0) {
-      let tmp = arg0;
-      if (arg0) {
-        tmp = transitionState === state(cleanUp[5]).TransitionStates.YEETED;
+  const sharedValue = require("module_1652").useSharedValue(num);
+  let obj = require("module_1652");
+  items = [c7, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard, c6, transitionState, require("native").TransitionStates, require("module_1705").scheduleOnRN, cleanUp.cleanUp];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  jsx = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items;
+  class SearchTabsTransitionGroupTsx2 {
+    constructor() {
+      obj = closure_1;
+      tmp = closure_0;
+      value = closure_1.get();
+      tmp3 = closure_2;
+      items = [, , , , ];
+      items[0] = closure_3;
+      items[1] = closure_4;
+      items[2] = closure_5;
+      items[3] = closure_6;
+      items[4] = closure_7;
+      closure_0 = undefined;
+      closure_1 = undefined;
+      closure_2 = undefined;
+      closure_3 = undefined;
+      [tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+      obj1 = { opacity: null, position: null };
+      class SearchTabsTransitionGroupTsx1 {
+        constructor(arg0) {
+          tmp = cleanUp;
+          if (cleanUp) {
+            tmp2 = closure_0;
+            tmp3 = closure_1;
+            tmp = closure_0 === closure_1.YEETED;
+          }
+          if (tmp) {
+            tmp4 = closure_2;
+            tmp5 = closure_3;
+            tmp6 = closure_2(closure_3);
+          }
+          return;
+        }
       }
-      if (tmp) {
-        state(cleanUp[4]).runOnJS(closure_1_2)();
-        const obj = state(cleanUp[4]);
+      items1 = [, , , ];
+      items1[0] = tmp5;
+      items1[1] = tmp6;
+      items1[2] = tmp7;
+      items1[3] = tmp8;
+      SearchTabsTransitionGroupTsx1.__closure = items1;
+      SearchTabsTransitionGroupTsx1.__workletHash = 537193228402;
+      SearchTabsTransitionGroupTsx1.__initData = tmp4;
+      obj1.opacity = tmp(value, tmp3, "respect-motion-settings", SearchTabsTransitionGroupTsx1);
+      str = "absolute";
+      if (1 === obj.get()) {
+        str = "relative";
       }
-    };
-    const obj2 = spring;
-    fn.__closure = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    fn.__workletHash = 15209468679721;
-    fn.__initData = __initData;
-    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
-    let str = "absolute";
-    if (1 === sharedValue.get()) {
-      str = "relative";
+      obj1.position = str;
+      return obj1;
     }
-    obj.position = str;
-    return obj;
-  };
-  const tmpResult = state(cleanUp[4]);
-  fn.__closure = { withSpring: state(cleanUp[6]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[7]).springStandard, transitionState, TransitionStates: state(cleanUp[5]).TransitionStates, runOnJS: state(cleanUp[4]).runOnJS, cleanUp };
-  fn.__workletHash = 10740262883803;
-  fn.__initData = __initData;
-  const items = [sharedValue, transitionState];
-  const animatedStyle = tmpResult.useAnimatedStyle(fn);
-  const effect = sharedValue.useEffect(() => {
+  }
+  let items1 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
+  SearchTabsTransitionGroupTsx2.__closure = items1;
+  SearchTabsTransitionGroupTsx2.__workletHash = 1226548959062;
+  SearchTabsTransitionGroupTsx2.__initData = tmp4;
+  const items2 = [sharedValue, transitionState];
+  const animatedStyle = require("module_1652").useAnimatedStyle(SearchTabsTransitionGroupTsx2);
+  const effect = noop.useEffect(() => {
     let num = 1;
-    if (transitionState === native.TransitionStates.YEETED) {
+    if (c0 === native.TransitionStates.YEETED) {
       num = 0;
     }
-    const result = sharedValue.set(num);
-  }, items);
-  let obj2 = { withSpring: state(cleanUp[6]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[7]).springStandard, transitionState, TransitionStates: state(cleanUp[5]).TransitionStates, runOnJS: state(cleanUp[4]).runOnJS, cleanUp };
-  const setting = state(cleanUp[2]).SearchResultExactCountEnabled.useSetting();
+    const result = _undefined2.set(num);
+  }, items2);
+  const tmpResult = require("module_1652");
+  const setting = require("UserSettings").SearchResultExactCountEnabled.useSetting();
   closure_129_0 = setting;
-  const items1 = [setting];
-  const callback = sharedValue.useCallback((toLocaleString) => {
-    if (!state) {
+  const items3 = [setting];
+  const callback = noop.useCallback((toLocaleString) => {
+    if (!c0) {
       if (toLocaleString > 1000) {
         const _HermesInternal = HermesInternal;
         let combined = "(" + Tabs_Tabs.defaultCountFormatter(1000) + "+)";
@@ -77,71 +109,91 @@ function AnimatedTabs(state) {
       return combined;
     }
     combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
-  }, items1);
-  context = sharedValue.useContext(tmp(tmp2[8]).SwipeForMemberListContext);
-  const fn2 = function h() {
-    if (context != null) {
-      const disallowGesture = context.disallowGesture;
-      const result = disallowGesture.set(false);
-    }
-  };
-  fn2.__closure = { swipeForMemberListContext: context };
-  fn2.__workletHash = 5080152010224;
-  fn2.__initData = __initData2;
-  const items2 = [context];
-  const callback1 = sharedValue.useCallback(fn2, items2);
-  const SearchResultExactCountEnabled = state(cleanUp[2]).SearchResultExactCountEnabled;
-  class F {
+  }, items3);
+  const context = noop.useContext(tmp(14129).SwipeForMemberListContext);
+  const items4 = [closure_8, context];
+  _require = undefined;
+  [tmp19, tmp20] = items4;
+  class SearchTabsTransitionGroupTsx3 {
     constructor() {
-      scrollOffset = state.scrollOffset;
+      if (closure_0 != null) {
+        disallowGesture = closure_0.disallowGesture;
+        flag = false;
+        result = disallowGesture.set(false);
+      }
+      return;
+    }
+  }
+  const items5 = [tmp20];
+  SearchTabsTransitionGroupTsx3.__closure = items5;
+  SearchTabsTransitionGroupTsx3.__workletHash = 14662172823401;
+  SearchTabsTransitionGroupTsx3.__initData = tmp19;
+  const items6 = [context];
+  const callback1 = noop.useCallback(SearchTabsTransitionGroupTsx3, items6);
+  const SearchResultExactCountEnabled = require("UserSettings").SearchResultExactCountEnabled;
+  const items7 = [closure_9, state];
+  _require = undefined;
+  [tmp22, tmp23] = items7;
+  class SearchTabsTransitionGroupTsx4 {
+    constructor() {
+      scrollOffset = closure_0.scrollOffset;
       return scrollOffset.get() > 0;
     }
   }
-  F.__closure = { state };
-  F.__workletHash = 7791091456487;
-  F.__initData = __initData3;
-  const fn3 = function w(arg0, arg1) {
-    if (arg0 !== arg1) {
-      if (context != null) {
-        const disallowGesture = context.disallowGesture;
-        const result = disallowGesture.set(arg0);
+  const items8 = [tmp23];
+  SearchTabsTransitionGroupTsx4.__closure = items8;
+  SearchTabsTransitionGroupTsx4.__workletHash = 470062012350;
+  SearchTabsTransitionGroupTsx4.__initData = tmp22;
+  const items9 = [closure_10, context];
+  _require = undefined;
+  [tmp24, tmp25] = items9;
+  class SearchTabsTransitionGroupTsx5 {
+    constructor(arg0, arg1) {
+      if (cleanUp !== arg1) {
+        tmp = null;
+        if (closure_0 != null) {
+          disallowGesture = closure_0.disallowGesture;
+          result = disallowGesture.set(cleanUp);
+        }
       }
+      return;
     }
-  };
-  fn3.__closure = { swipeForMemberListContext: context };
-  fn3.__workletHash = 15386779064911;
-  fn3.__initData = __initData4;
-  const animatedReaction = state(cleanUp[4]).useAnimatedReaction(F, fn3);
-  const obj3 = { style: animatedStyle, children: null };
-  const obj4 = { state, grow: false, formatCount: callback, simultaneousHandlers: null, onEndDrag: null };
-  let gesture;
+  }
+  const items10 = [tmp25];
+  SearchTabsTransitionGroupTsx5.__closure = items10;
+  SearchTabsTransitionGroupTsx5.__workletHash = 15943463641590;
+  SearchTabsTransitionGroupTsx5.__initData = tmp24;
+  const animatedReaction = require("module_1652").useAnimatedReaction(SearchTabsTransitionGroupTsx4, SearchTabsTransitionGroupTsx5);
+  let obj2 = { style: animatedStyle, children: null };
+  const obj3 = { state, grow: false, formatCount: callback, simultaneousHandlers: null, onEndDrag: null };
+  gesture = undefined;
   if (context != null) {
     gesture = context.gesture;
   }
-  obj4.simultaneousHandlers = gesture;
-  let tmp13;
+  obj3.simultaneousHandlers = gesture;
+  let tmp29;
   if (null != context) {
-    tmp13 = callback1;
+    tmp29 = callback1;
   }
-  obj4.onEndDrag = tmp13;
-  obj3.children = context(state(cleanUp[3]).Tabs, obj4);
-  return context(transitionState(cleanUp[4]).View, obj3);
+  obj3.onEndDrag = tmp29;
+  obj2.children = jsx(require("Tabs/Tabs").Tabs, obj3);
+  return jsx(_modDef1652.View, obj2);
 }
 function renderItem(key, state, transitionState, cleanUp) {
   return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const jsx = fn(21).jsx;
-const __initData = { code: "function SearchTabsTransitionGroupTsx1(){const{withSpring,opacity,springStandard,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}),position:opacity.get()===1?'relative':'absolute'};}" };
-let closure_7 = { code: "function SearchTabsTransitionGroupTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
-const __initData2 = { code: "function SearchTabsTransitionGroupTsx3(){const{swipeForMemberListContext}=this.__closure;var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(false);}" };
-const __initData3 = { code: "function SearchTabsTransitionGroupTsx4(){const{state}=this.__closure;return state.scrollOffset.get()>0;}" };
-const __initData4 = { code: "function SearchTabsTransitionGroupTsx5(isOffsetFromStart,prevIsOffsetFromStart){const{swipeForMemberListContext}=this.__closure;if(isOffsetFromStart!==prevIsOffsetFromStart){var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(isOffsetFromStart);}}" };
+let jsx = fn(21).jsx;
+let closure_6 = { code: "(function SearchTabsTransitionGroupTsx1(finished){let[transitionState,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);}})" };
+let closure_7 = { code: "(function SearchTabsTransitionGroupTsx2(){let[withSpring,opacity,springStandard,_worklet_537193228402_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function SearchTabsTransitionGroupTsx1Factory([_worklet_537193228402_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp]){const SearchTabsTransitionGroupTsx1=function(finished){if(finished&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);}};SearchTabsTransitionGroupTsx1.__closure=[transitionState,TransitionStates,scheduleOnRN,cleanUp];SearchTabsTransitionGroupTsx1.__workletHash=537193228402;SearchTabsTransitionGroupTsx1.__initData=_worklet_537193228402_init_data;return SearchTabsTransitionGroupTsx1;}([_worklet_537193228402_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp])),position:opacity.get()===1?'relative':'absolute'};})" };
+let closure_8 = { code: "(function SearchTabsTransitionGroupTsx3(){let[swipeForMemberListContext]=this.__closure;var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(false);})" };
+let closure_9 = { code: "(function SearchTabsTransitionGroupTsx4(){let[state]=this.__closure;return state.scrollOffset.get()>0;})" };
+let closure_10 = { code: "(function SearchTabsTransitionGroupTsx5(isOffsetFromStart,prevIsOffsetFromStart){let[swipeForMemberListContext]=this.__closure;if(isOffsetFromStart!==prevIsOffsetFromStart){var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(isOffsetFromStart);}})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
 
 export default function SearchTabsTransitionGroup(state) {
   const obj = { items: null, getItemKey, renderItem };
-  const items = [state.state];
+  items = [state.state];
   obj.items = items;
   return jsx(native.TransitionGroup, { items: null, getItemKey, renderItem });
 };

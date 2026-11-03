@@ -1,7 +1,7 @@
-// === Module 12103: publish/useConjureStartPublish ===
+// === Module 12239: publish/useConjureStartPublish ===
 
-// Module 12103 (publish/useConjureStartPublish)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10960 */;
+// Module 12239 (publish/useConjureStartPublish)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11093 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ export default function useConjureStartPublish(arg0, arg1, arg2, arg3) {
   if (arg2 == null) {
     context = noop.useContext(require("useConjurePublishAction").ConjurePublishActionContext);
   }
-  const items = [arg0, arg1, context, arg3];
+  items = [arg0, arg1, context, arg3];
   return noop.useCallback((entryPoint) => {
     if (null != closure_0) {
       if (null != closure_1) {

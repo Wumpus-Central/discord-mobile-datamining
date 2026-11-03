@@ -1,25 +1,25 @@
-// === Module 18662: JoinRequestActionSheetContent ===
+// === Module 18820: JoinRequestActionSheetContent ===
 
-// Module 18662 (JoinRequestActionSheetContent)
+// Module 18820 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DateUtils from "DateUtils" /* 4836 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleXIcon from "CircleXIcon" /* 7092 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import HourglassIcon from "HourglassIcon" /* 12359 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18660 */;
+import DateUtils from "DateUtils" /* 4963 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleXIcon from "CircleXIcon" /* 7218 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import HourglassIcon from "HourglassIcon" /* 12495 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18818 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function OpenInterviewButton(arg0) {
   ({ joinRequest, label } = arg0);
   const interviewChannelId = joinRequest.interviewChannelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [interviewChannelId];
   const stateFromStores = interviewChannelId(504).useStateFromStores(items, () => {
     let tmp2 = null != interviewChannelId;
@@ -29,13 +29,13 @@ function OpenInterviewButton(arg0) {
     return tmp2;
   }, items1);
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(14209).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = interviewChannelId(14340).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(14209);
+  const obj2 = interviewChannelId(14340);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
-    obj4.icon = closure_8(tmp(8643).ChatIcon, obj5);
+    obj4.icon = closure_8(tmp(8767).ChatIcon, obj5);
     if (label == null) {
       const intl = tmp(1113).intl;
       label = intl.string(tmp(1113).t["2simqN"]);
@@ -43,18 +43,18 @@ function OpenInterviewButton(arg0) {
     obj4.text = label;
     obj4.onPress = handleOpenInterview;
     obj4.disabled = submitting;
-    let tmp6Result = closure_8(tmp(5634).Button, obj4);
+    let tmp6Result = closure_8(tmp(5754).Button, obj4);
   } else {
     tmp6Result = null;
   }
   return tmp6Result;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
-const paddingTop = fn(7377).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const paddingTop = fn(7497).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { responsesContainer: { paddingHorizontal: 16, paddingTop: 24, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 }, formQuestion: { marginBottom: 8 }, formResponse: null, formResponseMargin: null, termsField: null, statusContainer: null, statusRow: null, actionedInfo: null, dot: null, accountInfoLabel: null, accountInfoContainer: null, accountInfoRow: null, divider: null };
 let obj3 = { paddingHorizontal: 16, paddingTop: 24, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
 obj.formResponse = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.md, lineHeight: 20, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -76,25 +76,25 @@ let closure_11 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function JoinRequestActionSheetHeader(user) {
   user = user.user;
   ({ displayProfile, joinRequest } = user);
-  const tmp3 = joinRequest(8814)();
-  const tmp4 = joinRequest(8803)(ACTION_SHEET_MAX_WIDTH);
-  ({ primaryColor, secondaryColor, theme } = joinRequest(8800)({ user, displayProfile }));
-  const tmp5 = joinRequest(8800)({ user, displayProfile });
+  const tmp3 = joinRequest(8938)();
+  const tmp4 = joinRequest(8927)(ACTION_SHEET_MAX_WIDTH);
+  ({ primaryColor, secondaryColor, theme } = joinRequest(8924)({ user, displayProfile }));
+  const tmp5 = joinRequest(8924)({ user, displayProfile });
   const tmp6 = user;
-  const userProfileColors = user(8811).useUserProfileColors({ theme, primaryColor, secondaryColor });
-  const items = [joinRequest, user.id];
+  const userProfileColors = user(8935).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  items = [joinRequest, user.id];
   ({ gradientFallbackBackground, containerBackground, avatarBackground, statusBackground } = userProfileColors);
   let tmp9 = null;
   if (null != user) {
     const obj2 = { children: null };
     const obj3 = { user, displayProfile, bannerHeight: tmp4 };
-    const items1 = [closure_8(joinRequest(8819), obj3), ];
+    const items1 = [closure_8(joinRequest(8943), obj3), ];
     const obj4 = { children: null };
     const obj5 = { user, disableStatus: true, backgroundColor: avatarBackground, statusStyle: null, onPress: null };
     const obj6 = { backgroundColor: statusBackground };
     obj5.statusStyle = obj6;
     obj5.onPress = tmp8;
-    const items2 = [closure_8(joinRequest(8828), obj5), ];
+    const items2 = [closure_8(joinRequest(8952), obj5), ];
     const obj7 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
     const items3 = [, , ];
     ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
@@ -103,17 +103,17 @@ let closure_12 = noop.memo(function JoinRequestActionSheetHeader(user) {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(14916).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(15045).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(15012), obj11);
+    items4[1] = closure_8(joinRequest(15148), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
-    items2[1] = closure_8(joinRequest(11395), obj7);
+    items2[1] = closure_8(joinRequest(11533), obj7);
     obj4.children = items2;
     items1[1] = closure_9(View, obj4);
     obj2.children = items1;
     tmp9 = closure_9(closure_10, obj2);
-    const tmpResult = joinRequest(11395);
+    const tmpResult = joinRequest(11533);
   }
   return tmp9;
 });
@@ -126,7 +126,7 @@ let closure_14 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
       const obj2 = { style: tmp.statusContainer, children: null };
       const obj3 = { style: tmp.statusRow, children: null };
       const obj4 = { size: "lg", color: nativeDefault.colors.STATUS_WARNING };
-      const items = [React6(HourglassIcon.HourglassIcon, obj4), ];
+      items = [React6(HourglassIcon.HourglassIcon, obj4), ];
       const obj5 = { children: null };
       const obj6 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
       const intl6 = util.intl;
@@ -250,48 +250,48 @@ let closure_14 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
 });
 let closure_15 = noop.memo(function JoinRequestActionSheetApplicationActions(joinRequest) {
   joinRequest = joinRequest.joinRequest;
-  const items = [joinRequest];
+  items = [joinRequest];
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(14209).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
+  const joinRequestButtonActions = joinRequest(14340).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(14209);
-  obj2.icon = closure_8(joinRequest(6993).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
+  const obj = joinRequest(14340);
+  obj2.icon = closure_8(joinRequest(7119).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1113).intl;
   obj2.label = intl.string(joinRequest(1113).t.BzjDQJ);
   obj2.onPress = approveRequest;
   obj2.disabled = submitting;
-  const children = [closure_8(joinRequest(8028).IconButton, obj2), , ];
+  const children = [closure_8(joinRequest(8152).IconButton, obj2), , ];
   const obj4 = { variant: "destructive", icon: null, label: null, onPress: null, disabled: null };
   const obj3 = { color: nativeDefault.colors.WHITE, size: "lg" };
-  obj4.icon = closure_8(joinRequest(10768).XLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
+  obj4.icon = closure_8(joinRequest(10898).XLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl2 = joinRequest(1113).intl;
   obj4.label = intl2.string(joinRequest(1113).t.hDtbsz);
   obj4.onPress = rejectRequest;
   obj4.disabled = submitting;
-  children[1] = closure_8(joinRequest(8028).IconButton, obj4);
+  children[1] = closure_8(joinRequest(8152).IconButton, obj4);
   let tmp6Result = null == joinRequest.interviewChannelId;
   if (tmp6Result) {
     const obj6 = { variant: "secondary", icon: null, label: null, onPress: null, disabled: null };
     const obj7 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "lg" };
-    obj6.icon = closure_8(tmp2(8643).ChatIcon, obj7);
+    obj6.icon = closure_8(tmp2(8767).ChatIcon, obj7);
     const intl3 = tmp2(1113).intl;
     obj6.label = intl3.string(tmp2(1113).t.KQeYoC);
     obj6.onPress = handleOpenInterview;
     obj6.disabled = submitting;
-    tmp6Result = closure_8(tmp2(8028).IconButton, obj6);
+    tmp6Result = closure_8(tmp2(8152).IconButton, obj6);
   }
   children[2] = tmp6Result;
-  return closure_9(joinRequest(6767).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
+  return closure_9(joinRequest(6887).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
 });
 let closure_16 = noop.memo(function VerificationFormResponse(arg0) {
   ({ field, isLastField } = arg0);
   const tmp = closure_11();
   const field_type = field.field_type;
   if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS === field_type) {
-    const items = [, , ];
+    items = [, , ];
     ({ termsField: arr3[0], formResponse: arr3[1] } = tmp);
     let formResponseMargin = null;
     if (!isLastField) {
@@ -353,7 +353,7 @@ let closure_17 = noop.memo(function JoinRequestAboutView(arg0) {
   const obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.accountInfoLabel, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["ldCE/p"]);
-  const items = [React6(Text_Text.Text, obj2), ];
+  items = [React6(Text_Text.Text, obj2), ];
   const obj3 = { style: tmp.accountInfoContainer, children: null };
   const obj4 = { style: tmp.accountInfoRow, children: null };
   const obj5 = { variant: "text-sm/semibold", color: "text-strong", children: null };
@@ -395,7 +395,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   if (joinRequest != null) {
     formResponses = joinRequest.formResponses;
   }
-  const items = [formResponses];
+  items = [formResponses];
   memo = noop.useMemo(() => {
     let formResponses;
     if (joinRequest != null) {
@@ -406,9 +406,9 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
     }
     return formResponses;
   }, items);
-  const obj = { style: { paddingBottom: memo(1625)().bottom }, children: null };
+  const obj = { style: { paddingBottom: memo(1627)().bottom }, children: null };
   const items1 = [closure_8(closure_12, { joinRequest, user, displayProfile: displayProfile.displayProfile }), , , , ];
-  if (joinRequest.applicationStatus === joinRequest(5048).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+  if (joinRequest.applicationStatus === joinRequest(5175).GuildJoinRequestApplicationStatuses.SUBMITTED) {
     let tmp8Result = null != joinRequest.interviewChannelId;
     if (tmp8Result) {
       const obj2 = { joinRequest };
@@ -433,7 +433,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(18663), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(18821), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

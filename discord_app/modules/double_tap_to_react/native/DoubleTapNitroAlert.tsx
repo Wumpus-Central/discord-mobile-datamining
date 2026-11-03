@@ -1,20 +1,20 @@
-// === Module 8431: DoubleTapNitroAlert ===
+// === Module 8555: DoubleTapNitroAlert ===
 
-// Module 8431 (DoubleTapNitroAlert)
+// Module 8555 (DoubleTapNitroAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(8427).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8551).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
@@ -40,7 +40,7 @@ export default function DoubleTapNitroAlert(emojiName) {
   const obj4 = { onPress: callback, text: null };
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.LIIHRy);
-  const items = [React5(AlertModal.AlertActionButton, obj4, "confirm"), ];
+  items = [React5(AlertModal.AlertActionButton, obj4, "confirm"), ];
   const obj5 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t["Nr6v2+"]);

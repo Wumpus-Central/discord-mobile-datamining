@@ -1,7 +1,7 @@
-// === Module 17859: FeaturedFirstCardCoachmarkAnchor ===
+// === Module 18002: FeaturedFirstCardCoachmarkAnchor ===
 
-// Module 17859 (FeaturedFirstCardCoachmarkAnchor)
-import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 17860 */;
+// Module 18002 (FeaturedFirstCardCoachmarkAnchor)
+import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 18003 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedF
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = noop.useRef(null);
   const obj = { collapsable: false, children: null };
-  const items = [React4(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, React4(WishlistButtonCoachmarkDefault, { anchorRef: ref })];
+  items = [React4(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, React4(WishlistButtonCoachmarkDefault, { anchorRef: ref })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

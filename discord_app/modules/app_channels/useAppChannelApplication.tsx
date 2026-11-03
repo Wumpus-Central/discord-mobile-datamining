@@ -1,8 +1,8 @@
-// === Module 7420: useAppChannelApplication ===
+// === Module 7544: useAppChannelApplication ===
 
-// Module 7420 (useAppChannelApplication)
+// Module 7544 (useAppChannelApplication)
 import Constants from "Constants" /* 1072 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -13,7 +13,7 @@ export function useAppChannelApplication(stateFromStores) {
   if (stateFromStores != null) {
     type = stateFromStores.type;
   }
-  let application_id;
+  application_id = undefined;
   if (type === ChannelTypes.GUILD_APP) {
     application_id = stateFromStores.application_id;
   }

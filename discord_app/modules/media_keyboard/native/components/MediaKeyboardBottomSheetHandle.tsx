@@ -1,9 +1,9 @@
-// === Module 10538: MediaKeyboardBottomSheetHandle ===
+// === Module 10668: MediaKeyboardBottomSheetHandle ===
 
-// Module 10538 (MediaKeyboardBottomSheetHandle)
+// Module 10668 (MediaKeyboardBottomSheetHandle)
 import util from "util" /* 1113 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8841 */;
-import native from "native" /* 8992 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8965 */;
+import native from "native" /* 9120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

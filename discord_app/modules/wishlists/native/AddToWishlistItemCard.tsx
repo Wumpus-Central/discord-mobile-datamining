@@ -1,9 +1,9 @@
-// === Module 15009: AddToWishlistItemCard ===
+// === Module 15145: AddToWishlistItemCard ===
 
-// Module 15009 (AddToWishlistItemCard)
+// Module 15145 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import SKUPreviewDefault from "SKUPreview" /* 9466 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 9535 */;
+import SKUPreviewDefault from "SKUPreview" /* 9594 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9663 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,8 +12,8 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.heartOverlay = rect;
@@ -32,10 +32,10 @@ export default function AddToWishlistItemCard(sku) {
   _slicedToArray = tmp2;
   const wishlistAnalyticsContext = sku(analyticsLocations[8]).useWishlistAnalyticsContext();
   [first, closure_7] = wishlistAnalyticsContext.useState(false);
-  let items = [sku, tmp2.heartOverlay, merged.size];
+  items = [sku, tmp2.heartOverlay, merged.size];
   const callback = wishlistAnalyticsContext.useCallback(() => {
     const obj = { children: null };
-    const items = [React6(SKUPreviewDefault, { sku, size: merged.size }), ];
+    items = [React6(SKUPreviewDefault, { sku, size: merged.size }), ];
     const obj3 = { style: heartOverlay.heartOverlay, pointerEvents: "none", children: React6(HeartOutlineIcon.HeartOutlineIcon, { size: "sm", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }) };
     items[1] = React6(View, obj3);
     obj.children = items;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

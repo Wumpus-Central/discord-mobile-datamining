@@ -1,6 +1,6 @@
-// === Module 10965: conjureSettingValues ===
+// === Module 11098: conjureSettingValues ===
 
-// Module 10965 (conjureSettingValues)
+// Module 11098 (conjureSettingValues)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);
@@ -37,7 +37,7 @@ export function conjureSettingSubmitValue(found, num) {
       const str = String(num);
     }
     if (0 === found.length) {
-      let items = null;
+      items = null;
       if ("game" === found.type) {
         const _Array2 = Array;
         items = null;

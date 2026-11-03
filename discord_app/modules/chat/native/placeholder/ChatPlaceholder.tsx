@@ -1,16 +1,16 @@
-// === Module 14214: ChatPlaceholder ===
+// === Module 14345: ChatPlaceholder ===
 
-// Module 14214 (ChatPlaceholder)
+// Module 14345 (ChatPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14216 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14217 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14347 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14348 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-let closure_3 = fn(9895).useChatInputContainerHeight;
+let closure_3 = fn(10026).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -34,7 +34,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   let sum = rect.top + insets.bottom;
   noop = diff;
   c3 = sum;
-  let items = [tmp2, diff];
+  items = [tmp2, diff];
   const memo = noop.useMemo(() => ({ marginBottom: closure_0 + c2 }), items);
   importDefault = noop.useRef([]);
   const callback = noop.useCallback((arg0) => {
@@ -52,7 +52,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   const tmp = closure_5();
   const memo1 = noop.useMemo(() => {
     let diff;
-    const items = [];
+    items = [];
     let num = 0;
     let num2 = 0;
     do {
@@ -69,5 +69,5 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   let obj = { style: null, pointerEvents: "none", children: memo1 };
   const items2 = [tmp.placeholder, memo, require("useChatPlaceholderAnimatedStyles")({ visible: true, animated: true })];
   obj.style = items2;
-  return callback(require("ReanimatedRexport").View, obj);
+  return callback(require("module_1652").View, obj);
 });

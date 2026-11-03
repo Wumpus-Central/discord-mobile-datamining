@@ -1,15 +1,15 @@
-// === Module 9247: SecureFramesVerifiedStore ===
+// === Module 9375: SecureFramesVerifiedStore ===
 
-// Module 9247 (SecureFramesVerifiedStore)
+// Module 9375 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
-import TransientKeyStore from "TransientKeyStore" /* 9248 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9249 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
+import TransientKeyStore from "TransientKeyStore" /* 9376 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9377 */;
 
 require = fn;
 function computeCallVerification() {
@@ -46,7 +46,7 @@ function handleUserUpdate(userId) {
       if (!isKeyVerifiedResult) {
         isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
       }
-      const items = [RTCConnectionStore, StreamRTCConnectionStore];
+      items = [RTCConnectionStore, StreamRTCConnectionStore];
       if (isKeyVerifiedResult) {
         isKeyVerifiedResult = !obj.getIsSecureFramesKeyInconsistent(userId, items);
       }

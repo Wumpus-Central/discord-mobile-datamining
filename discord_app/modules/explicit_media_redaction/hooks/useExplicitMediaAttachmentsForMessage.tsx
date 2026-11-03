@@ -1,9 +1,9 @@
-// === Module 13307: useExplicitMediaAttachmentsForMessage ===
+// === Module 13443: useExplicitMediaAttachmentsForMessage ===
 
-// Module 13307 (useExplicitMediaAttachmentsForMessage)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7469 */;
-import MessageStore from "MessageStore" /* 6061 */;
+// Module 13443 (useExplicitMediaAttachmentsForMessage)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export function useRedactableMediaAttachmentsForMessage(channelId, messageId, at
   _require = channelId;
   dependencyMap = messageId;
   closure_2 = attachmentId;
-  const items = [closure_2];
+  items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
   let obj = require("useStateFromStores");
   closure_3 = require("useContentHarmTypes").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
@@ -40,7 +40,7 @@ export function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId
   _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
-  const items = [closure_2];
+  items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
   let obj = require("useStateFromStores");
   closure_3 = require("useContentHarmTypes").useEnabledHarmTypesBitmaskForMessage(stateFromStores);

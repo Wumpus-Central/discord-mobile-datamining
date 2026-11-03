@@ -1,18 +1,18 @@
-// === Module 8412: formatMessageForwards ===
+// === Module 8536: formatMessageForwards ===
 
-// Module 8412 (formatMessageForwards)
+// Module 8536 (formatMessageForwards)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import DateUtils from "DateUtils" /* 4836 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import BasicGuildStore from "BasicGuildStore" /* 8413 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import DateUtils from "DateUtils" /* 4963 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import BasicGuildStore from "BasicGuildStore" /* 8537 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 class MessageForward {
@@ -82,7 +82,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
       }
       const channel1 = obj.getChannel(channel_id);
       if (null == channel1) {
-        const guild = obj3.getGuild(channel.guild_id);
+        guild = obj3.getGuild(channel.guild_id);
         if (null == guild) {
           const obj6 = { snapshotIndex };
           let obj7 = obj6;

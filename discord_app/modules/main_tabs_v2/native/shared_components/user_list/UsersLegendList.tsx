@@ -1,11 +1,12 @@
-// === Module 14420: UsersLegendList ===
+// === Module 14551: UsersLegendList ===
 
-// Module 14420 (UsersLegendList)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7232 */;
+// Module 14551 (UsersLegendList)
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7353 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function renderBottomSheetScrollComponent(children) {
@@ -17,9 +18,9 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
-let closure_9 = { code: "function UsersLegendListTsx1(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };
+let closure_9 = { code: "(function UsersLegendListTsx1(event){let[scrollPosValue,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){scheduleOnRN(onScroll,{nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx");
 
@@ -28,6 +29,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
   if (num === undefined) {
     num = 0;
   }
+  _require = num;
   let num2 = insetStart.insetEnd;
   if (num2 === undefined) {
     num2 = 0;
@@ -35,7 +37,6 @@ export default noop.memo(function UsersLegendList(insetStart) {
   const itemSize = insetStart.itemSize;
   const keyExtractor = insetStart.keyExtractor;
   ({ listHeaderSize, onContentLengthChange } = insetStart);
-  const onScroll = insetStart.onScroll;
   const renderItem = insetStart.renderItem;
   const renderListHeader = insetStart.renderListHeader;
   const renderSectionHeader = insetStart.renderSectionHeader;
@@ -44,36 +45,50 @@ export default noop.memo(function UsersLegendList(insetStart) {
   const sections = insetStart.sections;
   let num3;
   let memo1;
-  ({ onLayout, style, ref } = insetStart);
-  let tmp = renderListHeader();
+  ({ onLayout, onScroll, style, ref } = insetStart);
+  let tmp = renderSectionHeader();
   const row = tmp;
   const ref1 = onContentLengthChange.useRef(null);
-  const sharedValue = num(itemSize[6]).useSharedValue(0);
-  let items = [sharedValue];
+  const sharedValue = require("module_1652").useSharedValue(0);
+  items = [sharedValue];
   const memo = onContentLengthChange.useMemo(() => ({ scrollOffset: sharedValue }), items);
-  let obj2 = num(itemSize[6]);
-  let tmp3 = num;
-  let tmp4 = itemSize;
-  const fn = function b(contentOffset) {
-    const result = sharedValue.set(contentOffset.contentOffset.y);
-    if (null != onScroll) {
-      const obj2 = { nativeEvent: null };
-      const obj3 = { contentOffset: null, contentSize: null, layoutMeasurement: null };
-      const point = { x: contentOffset.contentOffset.x, y: contentOffset.contentOffset.y };
-      obj3.contentOffset = point;
-      const size = { width: contentOffset.contentSize.width, height: contentOffset.contentSize.height };
-      obj3.contentSize = size;
-      const size1 = { width: contentOffset.layoutMeasurement.width, height: contentOffset.layoutMeasurement.height };
-      obj3.layoutMeasurement = size1;
-      obj2.nativeEvent = obj3;
-      ReanimatedRexport.runOnJS(tmp2)(obj2);
+  let obj2 = require("module_1652");
+  let tmp3 = _require;
+  const items1 = [sectionHeaderSize, sharedValue, onScroll, require("module_1705").scheduleOnRN];
+  _require = undefined;
+  c1 = undefined;
+  dependencyMap = undefined;
+  [tmp7, tmp8, tmp9, tmp10] = items1;
+  class UsersLegendListTsx1 {
+    constructor(arg0) {
+      result = closure_0.set(insetStart.contentOffset.y);
+      if (null != closure_1) {
+        tmp3 = closure_2;
+        obj = { nativeEvent: null };
+        obj1 = { contentOffset: null, contentSize: null, layoutMeasurement: null };
+        point = { x: null, y: null };
+        point.x = insetStart.contentOffset.x;
+        point.y = insetStart.contentOffset.y;
+        obj1.contentOffset = point;
+        size = { width: null, height: null };
+        size.width = insetStart.contentSize.width;
+        size.height = insetStart.contentSize.height;
+        obj1.contentSize = size;
+        size1 = { width: null, height: null };
+        size1.width = insetStart.layoutMeasurement.width;
+        size1.height = insetStart.layoutMeasurement.height;
+        obj1.layoutMeasurement = size1;
+        obj.nativeEvent = obj1;
+        tmp4 = closure_2(tmp2, obj);
+      }
+      return;
     }
-  };
-  let obj3 = num(itemSize[6]);
-  fn.__closure = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[6]).runOnJS };
-  fn.__workletHash = 15701235151389;
-  fn.__initData = sectionHeaderIsSticky;
-  let obj4 = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[6]).runOnJS };
+  }
+  const items2 = [tmp8, tmp9, tmp10];
+  UsersLegendListTsx1.__closure = items2;
+  UsersLegendListTsx1.__workletHash = 11972523223881;
+  UsersLegendListTsx1.__initData = tmp7;
+  let obj3 = require("module_1652");
   if (typeof listHeaderSize === "function") {
     num3 = listHeaderSize();
   } else {
@@ -82,15 +97,15 @@ export default noop.memo(function UsersLegendList(insetStart) {
       num3 = 0;
     }
   }
-  const items1 = [num, itemSize, keyExtractor, num3, sectionHeaderIsSticky, sectionHeaderSize, sections];
+  const items3 = [num, itemSize, keyExtractor, num3, sectionHeaderIsSticky, sectionHeaderSize, sections];
   memo1 = obj.useMemo(() => {
     const listData = [];
     const offsets = [];
     const sizes = [];
     const stickyHeaderIndices = [];
     const indexByLocation = new Map();
-    let sum = num + num3;
-    num = 0;
+    let sum = c0 + num3;
+    let num = 0;
     if (0 < sections.length) {
       do {
         let tmp3 = sections[num];
@@ -126,10 +141,10 @@ export default noop.memo(function UsersLegendList(insetStart) {
           if (0 < tmp3) {
             do {
               let ITEM = FastestListItemTypeDefault.ITEM;
-              let tmp24 = itemSize;
+              let tmp24 = _undefined;
               let tmp23 = num3;
-              if (typeof itemSize !== "number") {
-                tmp24 = itemSize(num, num3);
+              if (typeof _undefined !== "number") {
+                tmp24 = _undefined(num, num3);
               }
               let _HermesInternal3 = HermesInternal;
               let result1 = indexByLocation.set("" + num + ":" + num3, listData.length);
@@ -160,8 +175,8 @@ export default noop.memo(function UsersLegendList(insetStart) {
       } while (num < sections.length);
     }
     return { listData, offsets, sizes, stickyHeaderIndices, indexByLocation };
-  }, items1);
-  const items2 = [memo1, sectionHeaderIsSticky];
+  }, items3);
+  const items4 = [memo1, sectionHeaderIsSticky];
   const imperativeHandle = obj.useImperativeHandle(ref, () => ({
     scrollToTop() {
       let flag = arg0;
@@ -179,7 +194,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
       if (animated === undefined) {
         animated = false;
       }
-      num = paddingStart.paddingStart;
+      let num = paddingStart.paddingStart;
       if (num === undefined) {
         num = 0;
       }
@@ -189,7 +204,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
       if (null != value) {
         const _HermesInternal = HermesInternal;
         value2 = indexByLocation.get("" + section + ":" + -1);
-        num2 = 0;
+        let num2 = 0;
         if (sectionHeaderIsSticky) {
           num2 = 0;
           if (null != value2) {
@@ -206,8 +221,8 @@ export default noop.memo(function UsersLegendList(insetStart) {
         }
       }
     }
-  }), items2);
-  const items3 = [memo1, renderItem, renderSectionHeader, sharedValue, tmp.row];
+  }), items4);
+  const items5 = [memo1, renderItem, renderSectionHeader, sharedValue, tmp.row];
   const callback = obj.useCallback((arg0) => {
     ({ item, index } = arg0);
     if (item.type === FastestListItemTypeDefault.SECTION_HEADER) {
@@ -218,7 +233,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
       let tmp6 = <View style={null}>{null}</View>;
     } else {
       const obj = { style: null, children: null };
-      const items = [row.row, ];
+      items = [row.row, ];
       const obj4 = { height: memo1.sizes[index] };
       items[1] = obj4;
       obj.style = items;
@@ -226,13 +241,13 @@ export default noop.memo(function UsersLegendList(insetStart) {
       tmp6 = <View style={null}>{null}</View>;
     }
     return tmp6;
-  }, items3);
+  }, items5);
   const callback1 = obj.useCallback((type) => String(type.type), []);
-  const items4 = [memo1];
+  const items6 = [memo1];
   const callback2 = obj.useCallback((key) => key.key, []);
-  const items5 = [renderListHeader];
-  const callback3 = obj.useCallback((arg0, arg1) => memo1.sizes[arg1], items4);
-  const items6 = [num, num2];
+  const items7 = [renderListHeader];
+  const callback3 = obj.useCallback((arg0, arg1) => memo1.sizes[arg1], items6);
+  const items8 = [num, num2];
   const memo2 = obj.useMemo(() => {
     let tmp;
     if (renderListHeader != null) {
@@ -242,32 +257,32 @@ export default noop.memo(function UsersLegendList(insetStart) {
       tmp = null;
     }
     return tmp;
-  }, items5);
-  const items7 = [onContentLengthChange];
-  const memo3 = obj.useMemo(() => ({ paddingTop: num, paddingBottom: num2 }), items6);
+  }, items7);
+  const items9 = [onContentLengthChange];
+  const memo3 = obj.useMemo(() => ({ paddingTop, paddingBottom }), items8);
   const callback4 = obj.useCallback((arg0, arg1) => {
     let tmpResult;
     if (onContentLengthChange != null) {
       tmpResult = tmp(arg1);
     }
     return tmpResult;
-  }, items7);
-  const obj5 = { ref: ref1, accessibilityRole: "list", contentContainerStyle: memo3, data: memo1.listData, estimatedHeaderSize: num3, extraData: callback, estimatedListSize: keyExtractor(onContentLengthChange.useState(() => num(itemSize[7]).getWindowDimensions()), 1)[0], getFixedItemSize: callback3, getItemType: callback1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", keyExtractor: callback2, ListHeaderComponent: memo2, onContentSizeChange: null, onLayout: null, onScroll: null, renderItem: null, renderScrollComponent: null, sharedValues: null, stickyHeaderIndices: null, style: null };
-  let tmp18;
+  }, items9);
+  let obj4 = { ref: ref1, accessibilityRole: "list", contentContainerStyle: memo3, data: memo1.listData, estimatedHeaderSize: num3, extraData: callback, estimatedListSize: keyExtractor(onContentLengthChange.useState(() => paddingTop(_undefined[8]).getWindowDimensions()), 1)[0], getFixedItemSize: callback3, getItemType: callback1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", keyExtractor: callback2, ListHeaderComponent: memo2, onContentSizeChange: null, onLayout: null, onScroll: null, renderItem: null, renderScrollComponent: null, sharedValues: null, stickyHeaderIndices: null, style: null };
+  let tmp22;
   if (null != onContentLengthChange) {
-    tmp18 = callback4;
+    tmp22 = callback4;
   }
-  obj5.onContentSizeChange = tmp18;
-  obj5.onLayout = onLayout;
-  obj5.onScroll = obj3.useAnimatedScrollHandler(fn);
-  obj5.renderItem = callback;
-  let tmp19;
+  obj4.onContentSizeChange = tmp22;
+  obj4.onLayout = onLayout;
+  obj4.onScroll = require("module_1652").useAnimatedScrollHandler(UsersLegendListTsx1);
+  obj4.renderItem = callback;
+  let tmp23;
   if (true === insetStart.inActionSheet) {
-    tmp19 = renderSectionHeader;
+    tmp23 = sectionHeaderIsSticky;
   }
-  obj5.renderScrollComponent = tmp19;
-  obj5.sharedValues = memo;
-  obj5.stickyHeaderIndices = memo1.stickyHeaderIndices;
-  obj5.style = style;
-  return renderItem(tmp3(tmp4[9]).AnimatedLegendList, obj5);
+  obj4.renderScrollComponent = tmp23;
+  obj4.sharedValues = memo;
+  obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
+  obj4.style = style;
+  return renderListHeader(tmp3(14552).AnimatedLegendList, obj4);
 });

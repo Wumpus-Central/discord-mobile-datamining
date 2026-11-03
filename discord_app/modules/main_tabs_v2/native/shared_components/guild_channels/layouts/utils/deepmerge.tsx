@@ -1,10 +1,10 @@
-// === Module 11051: deepmerge ===
+// === Module 11179: deepmerge ===
 
-// Module 11051 (deepmerge)
+// Module 11179 (deepmerge)
 import size from "module_2" /* 2 */;
 
 function merge() {
-  let items = [...arguments];
+  items = [...arguments];
   return items.reduce((acc, item) => {
     if (Array.isArray(item)) {
       const _TypeError = TypeError;
@@ -14,7 +14,7 @@ function merge() {
       let _Object = Object;
       const keys = Object.keys(item);
       item = keys.forEach((item) => {
-        const items = ["__proto__", "constructor", "prototype"];
+        items = ["__proto__", "constructor", "prototype"];
         if (!items.includes(item)) {
           let tmp = globalThis;
           const _Array = Array;

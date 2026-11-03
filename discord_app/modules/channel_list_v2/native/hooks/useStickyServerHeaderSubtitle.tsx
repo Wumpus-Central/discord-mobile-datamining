@@ -1,7 +1,7 @@
-// === Module 18192: useStickyServerHeaderSubtitle ===
+// === Module 18336: useStickyServerHeaderSubtitle ===
 
-// Module 18192 (useStickyServerHeaderSubtitle)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+// Module 18336 (useStickyServerHeaderSubtitle)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/
 
 export default function useStickyServerHeaderSubtitle(arg0) {
   _require = arg0;
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   return require("initialize").useStateFromStores(items, () => {
     features = features.features;
     let memberCount;

@@ -1,19 +1,19 @@
-// === Module 17035: ChestLogoSpotIllustration ===
+// === Module 17178: ChestLogoSpotIllustration ===
 
-// Module 17035 (ChestLogoSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef17036 from "module_17036" /* 17036 */;
-import _modDef17037 from "module_17037" /* 17037 */;
-import _modDef17038 from "module_17038" /* 17038 */;
+// Module 17178 (ChestLogoSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef17179 from "module_17179" /* 17179 */;
+import _modDef17180 from "module_17180" /* 17180 */;
+import _modDef17181 from "module_17181" /* 17181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17036 }, 3: null };
-let obj2 = { uri: _modDef17036 };
-obj[2] = { uri: _modDef17037 };
-const obj3 = { uri: _modDef17037 };
-obj[3] = { uri: _modDef17038 };
+let obj = { 1: null, 2: { uri: _modDef17179 }, 3: null };
+let obj2 = { uri: _modDef17179 };
+obj[2] = { uri: _modDef17180 };
+const obj3 = { uri: _modDef17180 };
+obj[3] = { uri: _modDef17181 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChestLogoSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function ChestLogoSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

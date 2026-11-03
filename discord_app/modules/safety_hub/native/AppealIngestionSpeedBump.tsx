@@ -1,22 +1,22 @@
-// === Module 13320: AppealIngestionSpeedBump ===
+// === Module 13456: AppealIngestionSpeedBump ===
 
-// Module 13320 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13322 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13338 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13339 */;
+// Module 13456 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13458 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13474 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13475 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -25,7 +25,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   ({ isCoppa, isSpam, isDeveloperClassification } = arg0);
   _require = undefined;
   const tmp = closure_10();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => appealClassificationId.getAppealClassificationId());
   const obj = require("initialize");
   if (stateFromStores == null) {
@@ -119,7 +119,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj10 = { variant: "text-xs/normal", children: null };
     const intl7 = tmp2(1113).intl;
     obj10.children = intl7.format(tmp2(1113).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5624).Text, obj10);
+    isDsaEligible = closure_8(tmp2(5747).Text, obj10);
   }
   const obj11 = { children: null };
   items2[6] = isDsaEligible;

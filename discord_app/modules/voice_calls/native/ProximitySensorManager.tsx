@@ -1,14 +1,14 @@
-// === Module 19601: ProximitySensorManager ===
+// === Module 19751: ProximitySensorManager ===
 
-// Module 19601 (ProximitySensorManager)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 5785 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 19602 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import AudioRouteStore from "AudioRouteStore" /* 5784 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 19751 (ProximitySensorManager)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 5905 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 19752 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import AudioRouteStore from "AudioRouteStore" /* 5904 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function handleChange() {

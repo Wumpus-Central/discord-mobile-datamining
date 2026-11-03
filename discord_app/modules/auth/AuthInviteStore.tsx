@@ -1,9 +1,9 @@
-// === Module 5241: AuthInviteStore ===
+// === Module 5364: AuthInviteStore ===
 
-// Module 5241 (AuthInviteStore)
+// Module 5364 (AuthInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
 
 require = fn;
 let closure_2 = {};
@@ -16,7 +16,7 @@ AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
 AuthInviteStore.displayName = "AuthInviteStore";
 const authInviteStore = new AuthInviteStore(DispatcherDefault, {
   AUTH_INVITE_UPDATE: function handleAuthInviteUpdate(invite) {
-    const guild = invite.invite.guild;
+    guild = invite.invite.guild;
     if (null == guild) {
       return false;
     } else {

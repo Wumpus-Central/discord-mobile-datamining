@@ -1,14 +1,14 @@
-// === Module 11710: VideoSpeakerStore ===
+// === Module 11847: VideoSpeakerStore ===
 
-// Module 11710 (VideoSpeakerStore)
+// Module 11847 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import SpeakingStore from "SpeakingStore" /* 6756 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import SpeakingStore from "SpeakingStore" /* 6876 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -81,7 +81,7 @@ function updateSpeaker(arg0) {
     if (null == tmp21) {
       const _Date = Date;
       const id1 = AuthenticationStore.getId();
-      const items = [];
+      items = [];
       const items1 = [];
       const timestamp = Date.now();
       const videoParticipants = ChannelRTCStore.getVideoParticipants(global);
@@ -106,7 +106,7 @@ function updateSpeaker(arg0) {
         continue;
       }
       for (const item10094 of items1) {
-        let duration = item10094.duration;
+        duration = item10094.duration;
         let tmp50 = null == tmp;
         if (!tmp50) {
           tmp50 = duration < tmp;
@@ -136,7 +136,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {
@@ -144,7 +144,7 @@ class VideoSpeakerStoreClass extends Store {
 const prototype = VideoSpeakerStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelRTCStore, AuthenticationStore, SpeakingStore, ApplicationStreamingStore, MediaEngineStore);
-  const items = [ChannelRTCStore, ApplicationStreamingStore];
+  items = [ChannelRTCStore, ApplicationStreamingStore];
   this.syncWith(items, handleChannelRTCUpdate);
 };
 prototype["getSpeaker"] = function getSpeaker(isActivityViewFocused) {

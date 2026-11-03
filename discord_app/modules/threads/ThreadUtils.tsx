@@ -1,18 +1,18 @@
-// === Module 8347: ThreadUtils ===
+// === Module 8471: ThreadUtils ===
 
-// Module 8347 (ThreadUtils)
+// Module 8471 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7678 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8336 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7802 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8460 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ function getAccessibilityLabelFormatter() {
 let closure_3 = ["can_send_message", "parent_channel_type"];
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, UserNotificationSettings: c10 } = Constants);
+({ AnalyticEvents: closure_9, UserNotificationSettings: closure_10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadUtils.tsx");
 
@@ -114,7 +114,7 @@ export function trackThreadNotificationSettingsUpdated(getGuildId, flags) {
 }
 export function useLastMessageTimestamp(thread) {
   _require = thread;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(thread.id));
   let extractTimestampResult = null;
   if (null != stateFromStores) {
@@ -127,8 +127,8 @@ export function useLastMessageTimestamp(thread) {
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef2042(createTimestamp).valueOf();
-    const obj3 = _modDef2042(createTimestamp);
+    valueOfResult = _modDef2171(createTimestamp).valueOf();
+    const obj3 = _modDef2171(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

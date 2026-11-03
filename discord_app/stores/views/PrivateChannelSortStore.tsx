@@ -1,18 +1,18 @@
-// === Module 7395: PrivateChannelSortStore ===
+// === Module 7519: PrivateChannelSortStore ===
 
-// Module 7395 (PrivateChannelSortStore)
+// Module 7519 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7396 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7520 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function makeSortedChannel(channel) {
@@ -28,8 +28,8 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      const obj = _modDef2042(isMessageRequestTimestamp);
-      const valueOfResult = _modDef2042(isMessageRequestTimestamp).valueOf();
+      const obj = _modDef2171(isMessageRequestTimestamp);
+      const valueOfResult = _modDef2171(isMessageRequestTimestamp).valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
@@ -61,12 +61,12 @@ function handleCacheLoaded() {
     continue;
   }
 }
-const isPrivate = fn(4867).isPrivate;
-const ChannelFlags = fn(4870).ChannelFlags;
+const isPrivate = fn(4994).isPrivate;
+const ChannelFlags = fn(4997).ChannelFlags;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4941).SecondaryIndexMap(function indexBy(value) {
+const secondaryIndexMap = new fn(5068).SecondaryIndexMap(function indexBy(value) {
   if (value.isRequest) {
-    let items = [];
+    items = [];
   } else {
     items = [tmp ? constants.FAVORITE : constants.DEFAULT];
   }
@@ -77,7 +77,7 @@ const secondaryIndexMap = new fn(4941).SecondaryIndexMap(function indexBy(value)
 let values = [];
 let values2 = [];
 let closure_18 = [];
-const f41656 = () => {
+const f41939 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -86,11 +86,11 @@ class PrivateChannelSortStore extends Store {
 const prototype = PrivateChannelSortStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, GuildStore, MessageRequestStore, ReadStateStore, SpamMessageRequestStore, UserGuildSettingsStore, UserStore);
-  const items = [UserGuildSettingsStore, MessageRequestStore];
+  items = [UserGuildSettingsStore, MessageRequestStore];
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f41656 === "function") {
+  if (typeof f41939 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;
@@ -108,7 +108,7 @@ prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
   }
 };
 prototype["getSortedChannels"] = function getSortedChannels() {
-  const items = [secondaryIndexMap.values(constants.FAVORITE), secondaryIndexMap.values(constants.DEFAULT)];
+  items = [secondaryIndexMap.values(constants.FAVORITE), secondaryIndexMap.values(constants.DEFAULT)];
   return items;
 };
 prototype["serializeForOverlay"] = function serializeForOverlay() {

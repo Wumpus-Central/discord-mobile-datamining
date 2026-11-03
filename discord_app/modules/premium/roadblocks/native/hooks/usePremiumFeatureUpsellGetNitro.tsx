@@ -1,18 +1,18 @@
-// === Module 10030: usePremiumFeatureUpsellGetNitro ===
+// === Module 10161: usePremiumFeatureUpsellGetNitro ===
 
-// Module 10030 (usePremiumFeatureUpsellGetNitro)
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6535 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8530 */;
+// Module 10161 (usePremiumFeatureUpsellGetNitro)
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6655 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import UserOfferStore from "UserOfferStore" /* 7630 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import UserOfferStore from "UserOfferStore" /* 7754 */;
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const AnalyticsObjectTypes = fn(1072).AnalyticsObjectTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
@@ -21,7 +21,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg3;
-  let items = arg4;
+  items = arg4;
   if (arg4 === undefined) {
     items = [];
   }
@@ -61,7 +61,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
         } else {
           resolved = actions_BillingActionCreators.fetchSubscriptions();
         }
-        const items = [resolved, ];
+        items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
@@ -78,14 +78,14 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1113).intl;
-          page(5711).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
+          page(5831).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
         }).finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1113).intl;
-          page(5711).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
+          page(5831).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
         });
       }
     }

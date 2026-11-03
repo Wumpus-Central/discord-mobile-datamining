@@ -1,8 +1,8 @@
-// === Module 14871: useTrackUserProfileActivityView ===
+// === Module 15002: useTrackUserProfileActivityView ===
 
-// Module 14871 (useTrackUserProfileActivityView)
+// Module 15002 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9487 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ export default function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);
   _slicedToArray = undefined;
   closure_3 = undefined;
-  const items = [ContentInventoryOutboxStore];
+  items = [ContentInventoryOutboxStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryOutboxStore.isFetchingUserOutbox(require));
   const tmp2 = _slicedToArray(closure_4(false), 2);
   _slicedToArray = tmp2[1];

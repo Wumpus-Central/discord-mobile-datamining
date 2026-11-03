@@ -1,11 +1,11 @@
-// === Module 15801: useGuildHeaderCounts ===
+// === Module 15944: useGuildHeaderCounts ===
 
-// Module 15801 (useGuildHeaderCounts)
+// Module 15944 (useGuildHeaderCounts)
 import _mod12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 15802 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 15945 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/use
 export function useGuildHeaderCounts(id) {
   _require = id;
   closure_129_0 = id;
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let num = GuildMemberCountStore.getMemberCount(closure_0);
     if (num == null) {

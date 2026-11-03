@@ -1,11 +1,11 @@
-// === Module 9908: usePremiumPlanPrice ===
+// === Module 10039: usePremiumPlanPrice ===
 
-// Module 9908 (usePremiumPlanPrice)
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7431 */;
+// Module 10039 (usePremiumPlanPrice)
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7555 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export default function usePremiumPlanPrice(arg0) {
   let formatPrice = _require;
   let amount = priceState;
   let obj = require("initialize");
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_5.getPremiumTypeSubscription());
   const NitroACOMSubscriptionExperiment = require("ACOMExperiments").NitroACOMSubscriptionExperiment;
   let enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "usePremiumPlanPrice" }).enabled;

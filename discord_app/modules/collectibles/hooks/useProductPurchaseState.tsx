@@ -1,16 +1,16 @@
-// === Module 9537: useProductPurchaseState ===
+// === Module 9665: useProductPurchaseState ===
 
-// Module 9537 (useProductPurchaseState)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import compactDefault from "compact" /* 9538 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+// Module 9665 (useProductPurchaseState)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import compactDefault from "compact" /* 9666 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
   let tmp = null != CollectiblesPurchaseStore.getPurchase(skuId.skuId);
-  let items = skuId.items;
+  items = skuId.items;
   if (items == null) {
     items = [];
   }
@@ -61,6 +61,6 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useProduct
 export { getProductPurchaseState };
 export function useProductPurchaseState(product) {
   _require = product;
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   return require("initialize").useStateFromStoresObject(items, () => getProductPurchaseState(CollectiblesPurchaseStore, closure_0));
 }

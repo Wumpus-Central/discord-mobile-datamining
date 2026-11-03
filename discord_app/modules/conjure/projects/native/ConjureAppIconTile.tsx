@@ -1,16 +1,16 @@
-// === Module 11340: ConjureAppIconTile ===
+// === Module 11477: ConjureAppIconTile ===
 
-// Module 11340 (ConjureAppIconTile)
-import Text_Text from "Text/Text" /* 5624 */;
-import AppsIcon from "AppsIcon" /* 8678 */;
-import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11341 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11343 */;
+// Module 11477 (ConjureAppIconTile)
+import Text_Text from "Text/Text" /* 5747 */;
+import AppsIcon from "AppsIcon" /* 8802 */;
+import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11478 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11480 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((width, width2, backgroundColor, color) => {
   const obj = { tile: null, character: { color, fontSize: Math.round(width / 2), lineHeight: Math.round(0.625 * width) }, glyph: { width: width2, height: width2 } };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor };
@@ -28,8 +28,8 @@ export default function ConjureAppIconTile(size) {
   const tmp4 = closure_5(size, useConjureProjectIcon.conjureProjectIconMetrics(size).glyphSize, tmp2.backgroundColor, foregroundColor);
   const obj2 = { style: tmp4.tile, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   if (null != character) {
-    const obj3 = { variant: "heading-md/bold", color: "none", style: tmp4.character, allowFontScaling: false, children: character };
-    let tmp5Result = jsx(Text_Text.Text, { variant: "heading-md/bold", color: "none", style: tmp4.character, allowFontScaling: false, children: character });
+    const obj3 = { variant: "heading-md/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character };
+    let tmp5Result = jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character });
   } else {
     const obj4 = { size: "custom", style: tmp4.glyph, color: foregroundColor };
     tmp5Result = jsx(AppsIcon.AppsIcon, { size: "custom", style: tmp4.glyph, color: foregroundColor });

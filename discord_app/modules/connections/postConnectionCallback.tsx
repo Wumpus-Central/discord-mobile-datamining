@@ -1,6 +1,6 @@
-// === Module 6704: postConnectionCallback ===
+// === Module 6824: postConnectionCallback ===
 
-// Module 6704 (postConnectionCallback)
+// Module 6824 (postConnectionCallback)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

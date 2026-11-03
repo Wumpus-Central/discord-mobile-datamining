@@ -1,48 +1,48 @@
-// === Module 16920: QuestHome ===
+// === Module 17063: QuestHome ===
 
-// Module 16920 (QuestHome)
+// Module 17063 (QuestHome)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import QuestDataUtils from "QuestDataUtils" /* 7842 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14699 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16921 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 16923 */;
-import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 16979 */;
-import QuestHomeBountiesDefault from "QuestHomeBounties" /* 16981 */;
-import HexagonCampaignQuestHomeHeaderDefault from "HexagonCampaignQuestHomeHeader" /* 17004 */;
-import OrbsArcadeQuestHomeSectionDefault from "OrbsArcadeQuestHomeSection" /* 17022 */;
-import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 17065 */;
-import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 17144 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import QuestDataUtils from "QuestDataUtils" /* 7966 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14830 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17064 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 17066 */;
+import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 17122 */;
+import QuestHomeBountiesDefault from "QuestHomeBounties" /* 17124 */;
+import HexagonCampaignQuestHomeHeaderDefault from "HexagonCampaignQuestHomeHeader" /* 17147 */;
+import OrbsArcadeQuestHomeSectionDefault from "OrbsArcadeQuestHomeSection" /* 17165 */;
+import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 17208 */;
+import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 17287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9679 */;
-import QuestStore from "QuestStore" /* 7846 */;
-import QuestUtmStore from "QuestUtmStore" /* 7867 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9811 */;
+import QuestStore from "QuestStore" /* 7970 */;
+import QuestUtmStore from "QuestUtmStore" /* 7991 */;
 
 require = fn;
 function EmptyStateNoQuestsAvailable(hasContentAbove) {
   const navigation = useNavigation.useNavigation();
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback(() => navigation.goBack(), items);
   const obj2 = { hasContentAbove: hasContentAbove.hasContentAbove, action: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl = util.intl;
   obj3.text = intl.string(util.t["/g10LC"]);
   obj3.onPress = callback;
-  obj2.action = closure_1_14(components_Button_Button.Button, obj3);
-  return closure_1_14(QuestHomeEmptyStateDefault, obj2);
+  obj2.action = gesture(components_Button_Button.Button, obj3);
+  return gesture(QuestHomeEmptyStateDefault, obj2);
 }
 function EmptyStateFiltered(arg0) {
   ({ onClearFilters, hasContentAbove } = arg0);
@@ -51,12 +51,12 @@ function EmptyStateFiltered(arg0) {
   const intl = util.intl;
   obj2.text = intl.string(util.t.urZl31);
   obj2.onPress = onClearFilters;
-  obj.action = closure_1_14(components_Button_Button.Button, obj2);
+  obj.action = gesture(components_Button_Button.Button, obj2);
   const intl2 = util.intl;
   obj.title = intl2.string(util.t.PBfFnx);
   const intl3 = util.intl;
   obj.subtitle = intl3.string(util.t.nwdKFC);
-  return closure_1_14(QuestHomeEmptyStateDefault, obj);
+  return gesture(QuestHomeEmptyStateDefault, obj);
 }
 function HeaderPreviewButton() {
   const callback = noop.useCallback(() => {
@@ -70,34 +70,34 @@ function HeaderPreviewButton() {
     const obj3 = { grow: true, onPress: callback, variant: "primary", text: null };
     const intl = util.intl;
     obj3.text = intl.string(util.t.tx5Ax5);
-    obj2.children = closure_1_14(components_Button_Button.Button, obj3);
-    tmp5 = closure_1_14(hasOwnProperty, obj2);
+    obj2.children = gesture(components_Button_Button.Button, obj3);
+    tmp5 = gesture(hasOwnProperty, obj2);
   }
   return tmp5;
 }
 function HeaderWithBounties(arg0) {
   ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
-  return closure_1_14(QuestHomeBountiesDefault, { shopCarouselConfig, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel });
+  return gesture(QuestHomeBountiesDefault, { shopCarouselConfig, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel });
 }
 function QuestsSectionHeader(onLayout) {
   const obj = { style: null, onLayout: onLayout.onLayout, children: null };
-  const items = [, ];
+  items = [, ];
   ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = closure_16());
   obj.style = items;
   const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.JALI2K);
-  obj.children = closure_1_14(Text_Text.Text, obj2);
-  return closure_1_14(hasOwnProperty, obj);
+  obj.children = gesture(Text_Text.Text, obj2);
+  return gesture(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1 }, loadingContainer: null, sectionHeader: null, previewButton: null, sectionHeaderWithTag: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -113,22 +113,22 @@ let closure_16 = createStyles.createStyles(obj);
 let closure_22 = noop.memo(function MeasuredHeader(onLayout) {
   const obj = { onLayout: onLayout.onLayout, children: null };
   ({ shouldShowBounties, shouldShowOrbsArcade, onQuestsSectionHeaderLayout, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = onLayout);
-  const items = [closure_1_14(HeaderPreviewButton, {}), closure_1_14(HexagonCampaignQuestHomeHeaderDefault, {}), , , ];
+  items = [gesture(HeaderPreviewButton, {}), gesture(HexagonCampaignQuestHomeHeaderDefault, {}), , , ];
   let tmp3Result = null;
   if (shouldShowBounties) {
     const obj2 = { shopCarouselConfig, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel };
-    tmp3Result = closure_1_14(HeaderWithBounties, obj2);
+    tmp3Result = gesture(HeaderWithBounties, obj2);
   }
   items[2] = tmp3Result;
   let tmp3Result2 = null;
   if (shouldShowOrbsArcade) {
     const obj3 = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
-    tmp3Result2 = closure_1_14(OrbsArcadeQuestHomeSectionDefault, obj3);
+    tmp3Result2 = gesture(OrbsArcadeQuestHomeSectionDefault, obj3);
   }
   items[3] = tmp3Result2;
-  items[4] = closure_1_14(QuestsSectionHeader, { onLayout: onQuestsSectionHeaderLayout });
+  items[4] = gesture(QuestsSectionHeader, { onLayout: onQuestsSectionHeaderLayout });
   obj.children = items;
-  return __initData(hasOwnProperty, obj);
+  return closure_1_15(hasOwnProperty, obj);
 });
 let obj6 = { gap: nativeDefault.space.PX_4 };
 const size = fn(2);
@@ -150,7 +150,7 @@ export default noop.memo(function QuestHome(filters) {
   const isEligibleForQuests = scrollToQuestId(sortMethod[28]).getIsEligibleForQuests();
   let tmp4 = isLoading();
   let obj = scrollToQuestId(sortMethod[28]);
-  const items = [filters, sortMethod];
+  items = [filters, sortMethod];
   const filteredQuests = scrollToQuestId(sortMethod[23]).useFilteredQuests(scrollToQuestId(sortMethod[23]).QuestTabs.ALL, quests.useMemo(() => ({ filters, sortMethod }), items));
   quests = filteredQuests.quests;
   const excludedQuests = filteredQuests.excludedQuests;
@@ -490,12 +490,12 @@ export default noop.memo(function QuestHome(filters) {
   }), items17);
   const items18 = [enabled4, enabled3, callback6, callback7, config, products, obtainableOrbRewards, showPlaceholderCarousel];
   const items19 = [ref1];
-  const callback8 = obj3.useCallback(() => closure_2_14(closure_22, { shouldShowBounties: enabled4, shouldShowOrbsArcade: enabled3, onLayout: callback6, onQuestsSectionHeaderLayout: callback7, shopCarouselConfig: config, orbShopProducts: products, obtainableOrbRewards, showOrbShopPlaceholderCarousel: showPlaceholderCarousel }), items18);
+  const callback8 = obj3.useCallback(() => gesture(closure_22, { shouldShowBounties: enabled4, shouldShowOrbsArcade: enabled3, onLayout: callback6, onQuestsSectionHeaderLayout: callback7, shopCarouselConfig: config, orbShopProducts: products, obtainableOrbRewards, showOrbShopPlaceholderCarousel: showPlaceholderCarousel }), items18);
   const items20 = [quests, callback4];
   const callback9 = obj3.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    return closure_2_14(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
+    return gesture(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
       questOrQuests: item,
       questContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
       questContentPosition: index,

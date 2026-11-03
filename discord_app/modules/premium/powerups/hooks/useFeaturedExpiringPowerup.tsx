@@ -1,10 +1,10 @@
-// === Module 14082: useFeaturedExpiringPowerup ===
+// === Module 14213: useFeaturedExpiringPowerup ===
 
-// Module 14082 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+// Module 14213 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useFea
 
 export default function useFeaturedExpiringPowerup(arg0) {
   _require = arg0;
-  let items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let obj = require("initialize");
   const items1 = [expiringPowerupCoachmarkEnabled];
@@ -31,7 +31,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
       if (unlockedPowerups == null) {
         unlockedPowerups = {};
       }
-      const items = [];
+      items = [];
       const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
       let entitlements;
       if (stateFromStores1 != null) {

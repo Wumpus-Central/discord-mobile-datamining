@@ -1,6 +1,6 @@
-// === Module 12437: useTrackSearchItems ===
+// === Module 12573: useTrackSearchItems ===
 
-// Module 12437 (useTrackSearchItems)
+// Module 12573 (useTrackSearchItems)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export function useTrackSearchItems(callback3, memo1, current) {
   closure_4 = noop.useRef({});
   noop.useRef(current);
   let obj2 = { handleViewableItemsChanged: null };
-  const items = [entrypoint, callback3, memo1, current];
+  items = [entrypoint, callback3, memo1, current];
   obj2.handleViewableItemsChanged = noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     if (ref.current !== current) {
@@ -33,10 +33,10 @@ export function useTrackSearchItems(callback3, memo1, current) {
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
             const tmp5 = dependencyMap(isViewable.item);
             const obj2 = { type: closure_0(1260).ImpressionTypes.VIEW, name: closure_0(1260).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM, properties: null };
-            const obj3 = { location: closure_0(5683).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
+            const obj3 = { location: closure_0(5803).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
             obj2.properties = obj3;
-            closure_0(6028).trackImpression(obj2, false);
-            const obj = closure_0(6028);
+            closure_0(6148).trackImpression(obj2, false);
+            const obj = closure_0(6148);
           }
         }
       }

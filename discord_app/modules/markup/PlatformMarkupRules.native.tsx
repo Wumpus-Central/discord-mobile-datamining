@@ -1,18 +1,18 @@
-// === Module 8602: PlatformMarkupRules ===
+// === Module 8726: PlatformMarkupRules ===
 
-// Module 8602 (PlatformMarkupRules)
+// Module 8726 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import _modDef1943 from "module_1943" /* 1943 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2025 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 6043 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6044 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6055 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8597 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import useGameMentionData from "useGameMentionData" /* 8679 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import _modDef2072 from "module_2072" /* 2072 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2154 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6163 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6164 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6175 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8721 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import useGameMentionData from "useGameMentionData" /* 8803 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -51,7 +51,7 @@ let obj = {
   silentPrefix: null
 };
 let obj2 = {};
-let merged = Object.assign(_modDef1943.defaultRules.escape);
+let merged = Object.assign(_modDef2072.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
@@ -124,7 +124,7 @@ obj.channelMention = {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
-          const items = [content];
+          items = [content];
           arr2 = items;
         }
         mapped = arr2.map((type) => {
@@ -211,7 +211,7 @@ obj.channelOrMessageUrl = {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
-          const items = [content];
+          items = [content];
           arr2 = items;
         }
         mapped = arr2.map((type) => {
@@ -278,7 +278,7 @@ obj.mediaPostLink = {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
-          const items = [content];
+          items = [content];
           arr2 = items;
         }
         mapped = arr2.map((type) => {
@@ -382,7 +382,7 @@ export function decorateWithIcon(content) {
       const _Array = Array;
       let arr2 = content;
       if (!(content instanceof Array)) {
-        const items = [content];
+        items = [content];
         arr2 = items;
       }
       mapped = arr2.map((type) => {

@@ -1,15 +1,15 @@
-// === Module 19463: UploadLogsActionSheet ===
+// === Module 19621: UploadLogsActionSheet ===
 
-// Module 19463 (UploadLogsActionSheet)
+// Module 19621 (UploadLogsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import DebugUploadManager from "DebugUploadManager" /* 11091 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import DebugUploadManager from "DebugUploadManager" /* 11228 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -40,7 +40,7 @@ export default function UploadLogsActionSheet(arg0) {
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t["ZvRR/t"]);
-  const items = [closure_6(Text_Text.Text, obj4), , , ];
+  items = [closure_6(Text_Text.Text, obj4), , , ];
   const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj5.text = intl3.string(util.t.EbwFfR);

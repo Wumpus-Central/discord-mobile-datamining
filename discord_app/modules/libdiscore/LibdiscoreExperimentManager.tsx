@@ -1,12 +1,12 @@
-// === Module 20074: LibdiscoreExperimentManager ===
+// === Module 20224: LibdiscoreExperimentManager ===
 
-// Module 20074 (LibdiscoreExperimentManager)
+// Module 20224 (LibdiscoreExperimentManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import js_shim_shim from "js_shim/shim" /* 1361 */;
-import ApexExperiment from "ApexExperiment" /* 1447 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4889 */;
+import js_shim_shim from "js_shim/shim" /* 1363 */;
+import ApexExperiment from "ApexExperiment" /* 1449 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5016 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function experimentStoreUpdateHandler() {
@@ -51,7 +51,7 @@ prototype["_initialize"] = function _initialize() {
     const treatments = id.getTreatments();
     obj2.variations = Object.fromEntries(treatments.map((treatmentId) => {
       treatmentId = treatmentId.treatmentId;
-      const items = [treatmentId, { treatmentId }];
+      items = [treatmentId, { treatmentId }];
       return items;
     }));
     id.setExperiment(ApexExperiment.createApexExperiment(obj2));

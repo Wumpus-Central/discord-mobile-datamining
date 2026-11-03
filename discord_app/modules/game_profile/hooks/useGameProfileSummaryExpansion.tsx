@@ -1,7 +1,7 @@
-// === Module 9403: useGameProfileSummaryExpansion ===
+// === Module 9531: useGameProfileSummaryExpansion ===
 
-// Module 9403 (useGameProfileSummaryExpansion)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+// Module 9531 (useGameProfileSummaryExpansion)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 
 export function useGameProfileSummaryExpansion(trackAction) {
   [first, _slicedToArray] = callback1.useState("full");
-  const items = [trackAction, first];
+  items = [trackAction, first];
   const callback = callback1.useCallback((arg0) => {
     closure_0 = arg0;
     closure_2((arg0) => {

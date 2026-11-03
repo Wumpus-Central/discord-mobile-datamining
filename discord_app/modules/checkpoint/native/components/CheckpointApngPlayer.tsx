@@ -1,13 +1,13 @@
-// === Module 13644: CheckpointApngPlayer ===
+// === Module 13784: CheckpointApngPlayer ===
 
-// Module 13644 (CheckpointApngPlayer)
+// Module 13784 (CheckpointApngPlayer)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import APNGPlayer from "APNGPlayer" /* 9504 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import createStyles from "createStyles" /* 5014 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import APNGPlayer from "APNGPlayer" /* 9632 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointApngPlayer(staticUri) {
   ({ animatedUri, style } = staticUri);
   const tmp = closure_6();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const obj2 = { style: tmp.container, children: null };
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     const obj3 = { source: null, style: null, resizeMode: "cover" };

@@ -1,11 +1,11 @@
-// === Module 7295: usePromptHelpText ===
+// === Module 7415: usePromptHelpText ===
 
-// Module 7295 (usePromptHelpText)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 7415 (usePromptHelpText)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const Permissions = fn(1072).Permissions;
@@ -19,7 +19,7 @@ export default function usePromptHelpText(arg0) {
   if (guild != null) {
     id = guild.id;
   }
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = selectedRoleIds(504).useStateFromStoresArray(items, () => {
     if (null != id) {
@@ -108,7 +108,7 @@ export function useCustomizeCommunityPromptHelpText(arg0) {
   if (guild != null) {
     id = guild.id;
   }
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = selectedRoleIds(504).useStateFromStoresArray(items, () => {
     if (null != id) {

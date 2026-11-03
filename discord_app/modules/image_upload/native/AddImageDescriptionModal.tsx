@@ -1,12 +1,12 @@
-// === Module 14523: AddImageDescriptionModal ===
+// === Module 14654: AddImageDescriptionModal ===
 
-// Module 14523 (AddImageDescriptionModal)
+// Module 14654 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10143 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 require = fn;
 function AddDescription(id) {
@@ -17,7 +17,7 @@ function AddDescription(id) {
   noop = undefined;
   let navigation;
   const tmp = closure_13();
-  const items = [UploadAttachmentStore];
+  items = [UploadAttachmentStore];
   stateFromStores = channelId(stateFromStores[9]).useStateFromStores(items, () => UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage));
   ({ width, height } = source);
   let num = 1;
@@ -66,9 +66,9 @@ function AddDescription(id) {
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9778).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9778);
-          id(14522).close();
+          id(9910).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9910);
+          id(14653).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -101,11 +101,11 @@ function AddDescription(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7701).DraftType;
-const maxLength = fn(14524).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+const DraftType = fn(7825).DraftType;
+const maxLength = fn(14655).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };

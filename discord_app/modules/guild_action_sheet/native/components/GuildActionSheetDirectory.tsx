@@ -1,19 +1,19 @@
-// === Module 15797: GuildActionSheetDirectory ===
+// === Module 15940: GuildActionSheetDirectory ===
 
-// Module 15797 (GuildActionSheetDirectory)
+// Module 15940 (GuildActionSheetDirectory)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 15737 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15798 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 15880 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 15941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function GuildActionSheetDirectory(arg0) {
   const tmp = closure_6();
   const obj = { scrollable: true, startExpanded: expanded, children: null };
   const obj2 = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-  const items = [React4(GuildActionSheetHeaderDefault, { guild }), ];
+  items = [React4(GuildActionSheetHeaderDefault, { guild }), ];
   const obj3 = { style: tmp.actions, children: null };
   const items1 = [React4(GuildActionSheetActions.GuildActionSheetDirectoryActions, { guild }), React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild })];
   obj3.children = items1;

@@ -1,7 +1,7 @@
-// === Module 18908: InstantInviteSelfMeasurer ===
+// === Module 19066: InstantInviteSelfMeasurer ===
 
-// Module 18908 (InstantInviteSelfMeasurer)
-import InstantInvite from "InstantInvite" /* 10808 */;
+// Module 19066 (InstantInviteSelfMeasurer)
+import InstantInvite from "InstantInvite" /* 10938 */;
 import noop from "module_19" /* 19 */;
 
 const InstantInviteDefault = InstantInvite;
@@ -9,7 +9,7 @@ const InstantInviteDefault = InstantInvite;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
@@ -20,7 +20,7 @@ export default noop.memo(function InstantInviteSelfMeasurer(type) {
   if (str === undefined) {
     str = "height";
   }
-  const items = [onMeasured, str];
+  items = [onMeasured, str];
   const obj = {
     style: null,
     onLayout: noop.useCallback((nativeEvent) => {

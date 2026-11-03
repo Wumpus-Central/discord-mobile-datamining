@@ -1,7 +1,7 @@
-// === Module 15652: isUserSettingsOpen ===
+// === Module 15795: isUserSettingsOpen ===
 
-// Module 15652 (isUserSettingsOpen)
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+// Module 15795 (isUserSettingsOpen)
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ function isUserSettingsOpen() {
       someResult = routes.some((name) => {
         let tmp = "settings" === name.name;
         if (!tmp) {
-          const state = name.state;
+          state = name.state;
           let routes1;
           if (state != null) {
             routes1 = state.routes;
@@ -35,7 +35,7 @@ function isUserSettingsOpen() {
             someResult = routes.some((name) => {
               let tmp = "settings" === name.name;
               if (!tmp) {
-                const state = name.state;
+                state = name.state;
                 let routes1;
                 if (state != null) {
                   routes1 = state.routes;
@@ -46,7 +46,7 @@ function isUserSettingsOpen() {
                   someResult = routes.some((name) => {
                     let tmp = "settings" === name.name;
                     if (!tmp) {
-                      const state = name.state;
+                      state = name.state;
                       let routes1;
                       if (state != null) {
                         routes1 = state.routes;
@@ -57,7 +57,7 @@ function isUserSettingsOpen() {
                         someResult = routes.some((name) => {
                           let tmp = "settings" === name.name;
                           if (!tmp) {
-                            const state = name.state;
+                            state = name.state;
                             let routes1;
                             if (state != null) {
                               routes1 = state.routes;
@@ -65,7 +65,7 @@ function isUserSettingsOpen() {
                             let someResult = null != routes1;
                             if (someResult) {
                               const routes = state.routes;
-                              someResult = routes.some(/* F108792 */ function() { ... });
+                              someResult = routes.some(/* F108730 */ function() { ... });
                             }
                             tmp = someResult;
                           }
@@ -111,7 +111,7 @@ export function useIsUserSettingsOpen() {
           someResult = routes.some((name) => {
             let tmp = "settings" === name.name;
             if (!tmp) {
-              const state = name.state;
+              state = name.state;
               let routes1;
               if (state != null) {
                 routes1 = state.routes;
@@ -122,7 +122,7 @@ export function useIsUserSettingsOpen() {
                 someResult = routes.some((name) => {
                   let tmp = "settings" === name.name;
                   if (!tmp) {
-                    const state = name.state;
+                    state = name.state;
                     let routes1;
                     if (state != null) {
                       routes1 = state.routes;
@@ -130,7 +130,7 @@ export function useIsUserSettingsOpen() {
                     let someResult = null != routes1;
                     if (someResult) {
                       const routes = state.routes;
-                      someResult = routes.some(/* F108792 */ function() { ... });
+                      someResult = routes.some(/* F108730 */ function() { ... });
                     }
                     tmp = someResult;
                   }

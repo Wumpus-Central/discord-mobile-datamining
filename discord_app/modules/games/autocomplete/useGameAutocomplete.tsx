@@ -1,12 +1,12 @@
-// === Module 9141: useGameAutocomplete ===
+// === Module 9269: useGameAutocomplete ===
 
-// Module 9141 (useGameAutocomplete)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8681 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 9142 */;
-import GameSearchSession from "GameSearchSession" /* 9143 */;
+// Module 9269 (useGameAutocomplete)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8805 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 9270 */;
+import GameSearchSession from "GameSearchSession" /* 9271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8680 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8804 */;
 
 require = fn;
 const QueryIds = fn(1072).QueryIds;
@@ -68,7 +68,7 @@ export function useDebouncedGameAutocomplete(name, arg1) {
   [tmp4, c1] = query.useState(result);
   _slicedToArray = query.useRef(tmp4);
   query = query.useRef(0);
-  const items = [result];
+  items = [result];
   const effect = query.useEffect(() => {
     if (current !== ref.current) {
       if (null != tmp) {

@@ -1,8 +1,8 @@
-// === Module 9895: useChatBottomManagerUIStore ===
+// === Module 10026: useChatBottomManagerUIStore ===
 
-// Module 9895 (useChatBottomManagerUIStore)
+// Module 10026 (useChatBottomManagerUIStore)
 import Storage3 from "Storage" /* 510 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ let obj = module_560.create(() => {
   obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null, smallSuggestionBarHeight: null };
   const map = new Map();
   obj.showingAutoComplete = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   obj.showJumpToPresentButtonChannelId = new Map();
   const map2 = new Map();
   obj.isAtBottom = new Map();

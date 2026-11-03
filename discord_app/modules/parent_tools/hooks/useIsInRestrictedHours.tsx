@@ -1,15 +1,15 @@
-// === Module 19384: useIsInRestrictedHours ===
+// === Module 19542: useIsInRestrictedHours ===
 
-// Module 19384 (useIsInRestrictedHours)
+// Module 19542 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import UserStore from "UserStore" /* 1385 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
 export default function useIsInRestrictedHours() {
-  const items = [UserStore, FamilyCenterStore];
+  items = [UserStore, FamilyCenterStore];
   return initialize.useStateFromStores(items, () => currentUserInRestrictedHours.isCurrentUserInRestrictedHours());
 };

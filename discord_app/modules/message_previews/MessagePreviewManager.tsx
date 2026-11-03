@@ -1,19 +1,19 @@
-// === Module 17312: MessagePreviewManager ===
+// === Module 17455: MessagePreviewManager ===
 
-// Module 17312 (MessagePreviewManager)
+// Module 17455 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17313 */;
+import RemoteFetchData from "RemoteFetchData" /* 17456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15607 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15749 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
-const isThread = fn(4867).isThread;
+const isThread = fn(4994).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -74,7 +74,7 @@ class MessagePreviewManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -214,7 +214,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -281,7 +281,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                 guildId: closure_129_0,
                 messages: closure_128_1.map((item) => {
                             [tmp, tmp2] = item;
-                            const items = [tmp, tmp2.message];
+                            items = [tmp, tmp2.message];
                             return items;
                           })
               };
@@ -344,7 +344,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -382,7 +382,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
             tmp5(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

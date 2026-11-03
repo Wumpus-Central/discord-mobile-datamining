@@ -1,9 +1,9 @@
-// === Module 19872: ArrowLargeDownIcon ===
+// === Module 20022: ArrowLargeDownIcon ===
 
-// Module 19872 (ArrowLargeDownIcon)
+// Module 20022 (ArrowLargeDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod13826 from "module_13826" /* 13826 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod13957 from "module_13957" /* 13957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ArrowLargeDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13826, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13957, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

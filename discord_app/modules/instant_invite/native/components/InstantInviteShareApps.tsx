@@ -1,6 +1,6 @@
-// === Module 9159: InstantInviteShareApps ===
+// === Module 9287: InstantInviteShareApps ===
 
-// Module 9159 (InstantInviteShareApps)
+// Module 9287 (InstantInviteShareApps)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,10 +8,10 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(9160);
+const InstantInviteConstants = fn(9288);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { contentContainer: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
@@ -22,14 +22,14 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
   const tmp = closure_10();
-  closure_1 = onItemPressed(5642).useFontScale();
-  let obj = onItemPressed(5642);
+  closure_1 = onItemPressed(5762).useFontScale();
+  let obj = onItemPressed(5762);
   [arr, c2] = noop.useState(closure_8);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  const gesture = onItemPressed(5303).useNativeGesture({ disallowInterruption: true });
+  gesture = onItemPressed(5426).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
-      const items = [];
+      items = [];
       const item = arr.forEach((item, index) => {
         if (item) {
           items.push(closure_2_7[index]);
@@ -92,7 +92,7 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
       return <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>{null}</closure_1_5>;
     })
   };
-  let items = [tmp.contentContainer, onItemPressed.contentContainerStyle];
+  items = [tmp.contentContainer, onItemPressed.contentContainerStyle];
   obj3.contentContainerStyle = items;
   const children = <closure_6 contentContainerStyle={null} showsHorizontalScrollIndicator={false} horizontal>{arr.map((type) => {
     ({ fullIcon, getLabel, icon, IconComponent, onPress: onItemPressed } = type);
@@ -143,5 +143,5 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
     obj.children = tmpResult;
     return <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>{null}</closure_1_5>;
   })}</closure_6>;
-  return jsx(onItemPressed(5303).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(5426).GestureDetector, { gesture, children });
 });

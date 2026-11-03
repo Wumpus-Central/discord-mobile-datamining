@@ -1,12 +1,12 @@
-// === Module 9435: groupHTMLTextRuns ===
+// === Module 9563: groupHTMLTextRuns ===
 
-// Module 9435 (groupHTMLTextRuns)
+// Module 9563 (groupHTMLTextRuns)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/html_parser/groupHTMLTextRuns.tsx");
 
 export function groupHTMLTextRuns(runs) {
-  const items = [];
+  items = [];
   const iter = runs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

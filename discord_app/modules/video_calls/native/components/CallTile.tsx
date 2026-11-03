@@ -1,23 +1,24 @@
-// === Module 12037: CallTile ===
+// === Module 12174: CallTile ===
 
-// Module 12037 (CallTile)
+// Module 12174 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12038 */;
-import _modDef12043 from "module_12043" /* 12043 */;
-import _modDef12044 from "module_12044" /* 12044 */;
-import _modDef12045 from "module_12045" /* 12045 */;
-import _modDef12046 from "module_12046" /* 12046 */;
-import _modDef12047 from "module_12047" /* 12047 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 12048 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import RevealProvider from "RevealProvider" /* 11838 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12175 */;
+import _modDef12180 from "module_12180" /* 12180 */;
+import _modDef12181 from "module_12181" /* 12181 */;
+import _modDef12182 from "module_12182" /* 12182 */;
+import _modDef12183 from "module_12183" /* 12183 */;
+import _modDef12184 from "module_12184" /* 12184 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 12185 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 class StreamPreviewTile {
@@ -31,7 +32,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "dispatch", borderRadius: false },
+      style: { aspectRatio: "disabled", borderRadius: false },
       disableTransition: true,
       onPress() {
             return closure_1_8();
@@ -44,60 +45,68 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12043;
+    let tmp3 = _modDef12180;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12044;
+      tmp3 = _modDef12181;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef12045;
+      tmp3 = _modDef12182;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef12046;
+      tmp3 = _modDef12183;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef12047;
+      tmp3 = _modDef12184;
     }
   }
   let tmp14 = null;
   if (null != tmp3) {
     const obj = { source: tmp3, size: native.Icon.Sizes.REFRESH_SMALL_16, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.titleIcon };
-    tmp14 = map1(native.Icon, obj);
+    tmp14 = state(native.Icon, obj);
   }
   return tmp14;
 }
 class TileOverlay {
   constructor(arg0) {
     ({ participant, isActiveStream } = global);
-    reveal = undefined;
     ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = global);
     tmp = closure_16();
     tmp2 = closure_1;
     tmp3 = closure_2;
     tmp4 = closure_1(closure_2[11])();
     ({ bottom, left, top, right } = tmp4);
-    tmp5 = reveal;
-    reveal = closure_3.useContext(reveal(closure_2[26]).RevealContext).reveal;
-    obj = reveal(closure_2[27]);
-    class T {
+    tmp5 = closure_0;
+    obj = closure_0(closure_2[27]);
+    items = [, , , ];
+    items[0] = closure_19;
+    items[1] = closure_0(closure_2[28]).withTiming;
+    items[2] = closure_3.useContext(closure_0(closure_2[26]).RevealContext).reveal;
+    items[3] = closure_0(closure_2[25]).STANDARD_EASING;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    [tmp6, tmp7, tmp8, tmp9] = items;
+    class CallTileTsx1 {
       constructor() {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj = closure_0(closure_2[28]);
         num = 0;
-        if (reveal) {
+        tmp = closure_0;
+        if (closure_1) {
           num = 1;
         }
-        obj1 = { opacity: null };
-        obj4 = { easing: tmp(tmp2[25]).STANDARD_EASING, duration: 250 };
-        obj1.opacity = obj.withTiming(num, obj4);
-        return obj1;
+        obj = { opacity: null };
+        obj1 = { easing: closure_2, duration: 250 };
+        obj.opacity = tmp(num, obj1);
+        return obj;
       }
     }
-    obj1 = { withTiming: reveal(closure_2[28]).withTiming, reveal, STANDARD_EASING: reveal(closure_2[25]).STANDARD_EASING };
-    T.__closure = obj1;
-    T.__workletHash = 15640123774063;
-    T.__initData = closure_19;
+    items1 = [, , ];
+    items1[0] = tmp7;
+    items1[1] = tmp8;
+    items1[2] = tmp9;
+    CallTileTsx1.__closure = items1;
+    CallTileTsx1.__workletHash = 15791495111542;
+    CallTileTsx1.__initData = tmp6;
     num = 0;
-    animatedStyle = obj.useAnimatedStyle(T);
+    animatedStyle = obj.useAnimatedStyle(CallTileTsx1);
     if (hasBottomSafeArea) {
       num = bottom;
     }
@@ -117,47 +126,47 @@ class TileOverlay {
       num4 = top;
     }
     rect.top = num4;
-    tmp7 = jsxs;
-    obj8 = { pointerEvents: "none", style: null, children: null };
-    items = [, , ];
-    items[0] = StyleSheet.absoluteFill;
-    items[1] = rect;
-    items[2] = animatedStyle;
-    obj8.style = items;
+    tmp11 = jsxs;
+    obj1 = { pointerEvents: "none", style: null, children: null };
+    items2 = [, , ];
+    items2[0] = StyleSheet.absoluteFill;
+    items2[1] = rect;
+    items2[2] = animatedStyle;
+    obj1.style = items2;
     if (isActiveStream) {
-      tmp8 = jsx;
-      tmp9 = View;
-      obj9 = { style: null, children: null };
-      obj9.style = tmp.liveContainer;
-      obj9.children = jsx(tmp5(tmp3[25]).LiveTag, {});
-      isActiveStream = jsx(View, obj9);
+      tmp12 = jsx;
+      tmp13 = View;
+      obj7 = { style: null, children: null };
+      obj7.style = tmp.liveContainer;
+      obj7.children = jsx(tmp5(tmp3[25]).LiveTag, {});
+      isActiveStream = jsx(View, obj7);
     }
-    items1 = [, ];
-    items1[0] = isActiveStream;
-    obj10 = { style: tmp.usernamePosition, children: null };
-    obj11 = { style: tmp.usernameContainer, children: null };
-    items2 = [, ];
-    items2[0] = jsx(ParticipantIcon, { participant });
-    items2[1] = jsx(tmp2(tmp3[29]), { channel, participant });
-    obj11.children = items2;
-    obj10.children = tmp7(View, obj11);
-    items1[1] = jsx(View, obj10);
-    obj8.children = items1;
-    return tmp7(tmp2(tmp3[27]).View, obj8);
+    items3 = [, ];
+    items3[0] = isActiveStream;
+    obj8 = { style: tmp.usernamePosition, children: null };
+    obj9 = { style: tmp.usernameContainer, children: null };
+    items4 = [, ];
+    items4[0] = jsx(ParticipantIcon, { participant });
+    items4[1] = jsx(tmp2(tmp3[29]), { channel, participant });
+    obj9.children = items4;
+    obj8.children = tmp11(View, obj9);
+    items3[1] = jsx(View, obj8);
+    obj1.children = items3;
+    return tmp11(tmp2(tmp3[27]).View, obj1);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11000);
+const ChannelCallStore = fn(11133);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5681);
-({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
+const CallConstants = fn(5801);
+({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -168,8 +177,8 @@ let obj4 = { flex: 1, width: "100%", backgroundColor: nativeDefault.unsafe_rawCo
 obj.screenshareContainer = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: nativeDefault.colors.BLACK };
 let obj6 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj.stageStreamContainer = { backgroundColor: nativeDefault.colors.BLACK };
-const __initData2 = createStyles.createStyles(obj);
-const __initData = { code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
+const value2 = createStyles.createStyles(obj);
+let closure_19 = { code: "(function CallTileTsx1(){let[withTiming,reveal,STANDARD_EASING]=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};})" };
 let obj7 = { backgroundColor: nativeDefault.colors.BLACK };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
@@ -189,7 +198,7 @@ export default noop.memo(function CallTitle(participant) {
   let rect = channel(hasRightSafeArea[11])();
   const bottom = rect.bottom;
   const right = rect.right;
-  const items = [right];
+  items = [right];
   const stateFromStoresObject = participant(hasRightSafeArea[12]).useStateFromStoresObject(items, () => {
     let streamForUser = null;
     if (closure_2_11(participant)) {

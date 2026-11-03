@@ -1,10 +1,10 @@
-// === Module 19177: useSortedGuildIdsForSoundboard ===
+// === Module 19335: useSortedGuildIdsForSoundboard ===
 
-// Module 19177 (useSortedGuildIdsForSoundboard)
+// Module 19335 (useSortedGuildIdsForSoundboard)
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import UserStore from "UserStore" /* 1383 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/soundboard/useSortedGuildIdsF
 export function useSortedGuildIdsForSoundboard(guild_id, arg1) {
   _require = guild_id;
   closure_1 = arg1;
-  let items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => currentUser.getCurrentUser());
   guild_id = undefined;
   if (guild_id != null) {
@@ -53,7 +53,7 @@ export function useSortedGuildIdsForSoundboard(guild_id, arg1) {
         return found;
       }
     }
-    const items = [guild_id];
+    items = [guild_id];
     return items;
   }, items3);
 }

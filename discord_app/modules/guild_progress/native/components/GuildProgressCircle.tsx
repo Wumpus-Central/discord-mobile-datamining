@@ -1,16 +1,16 @@
-// === Module 14165: GuildProgressCircle ===
+// === Module 14296: GuildProgressCircle ===
 
-// Module 14165 (GuildProgressCircle)
+// Module 14296 (GuildProgressCircle)
 import nativeDefault from "native" /* 575 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12236 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14047 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12372 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: { color: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -25,7 +25,7 @@ export default function GuildProgressCircle(size) {
   const tmp = closure_6();
   size = { width: num, height: num, borderRadius: num / 2 };
   const obj = { style: null, children: null };
-  const items = [tmp.wrapper, style, size];
+  items = [tmp.wrapper, style, size];
   obj.style = items;
   const obj2 = { style: null, size: num, strokeWidth: 4, percent: 100, color: GuildProgressUtils.PROGRESS_BACKGROUND_COLOR };
   const items1 = [tmp.circle, size];

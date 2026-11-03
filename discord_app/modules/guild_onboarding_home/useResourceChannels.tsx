@@ -1,8 +1,8 @@
-// === Module 18640: useResourceChannels ===
+// === Module 18798: useResourceChannels ===
 
-// Module 18640 (useResourceChannels)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
+// Module 18798 (useResourceChannels)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding_home/useReso
 
 export default function useResourceChannels(arg0) {
   _require = arg0;
-  const items = [GuildOnboardingHomeSettingsStore, ChannelStore];
+  items = [GuildOnboardingHomeSettingsStore, ChannelStore];
   return require("useStateFromStores").useStateFromStoresArray(items, () => {
     const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0);
     return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));

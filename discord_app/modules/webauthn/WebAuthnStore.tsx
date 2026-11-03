@@ -1,9 +1,9 @@
-// === Module 16581: WebAuthnStore ===
+// === Module 16724: WebAuthnStore ===
 
-// Module 16581 (WebAuthnStore)
+// Module 16724 (WebAuthnStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Server from "Server" /* 1992 */;
+import Server from "Server" /* 2121 */;
 
 require = fn;
 let c2 = false;
@@ -53,7 +53,7 @@ const webAuthnStore = new WebAuthnStore(DispatcherDefault, {
     if (credential.type === Server.AuthenticatorType.WEBAUTHN) {
       const tmp2 = undefined === closure_3.find((id) => id.id === credential.id);
       if (tmp2) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(closure_3, 0)] = credential;
         closure_3 = items;
       }

@@ -1,7 +1,7 @@
-// === Module 12204: useFrameBySurface ===
+// === Module 12340: useFrameBySurface ===
 
-// Module 12204 (useFrameBySurface)
-import FramesStore from "FramesStore" /* 6846 */;
+// Module 12340 (useFrameBySurface)
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/frames/utils/useFrameBySurfac
 export default function useFrameBySurface(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {

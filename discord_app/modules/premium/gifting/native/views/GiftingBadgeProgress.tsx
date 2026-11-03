@@ -1,12 +1,12 @@
-// === Module 14450: GiftingBadgeProgress ===
+// === Module 14581: GiftingBadgeProgress ===
 
-// Module 14450 (GiftingBadgeProgress)
+// Module 14581 (GiftingBadgeProgress)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2634 from "module_2634" /* 2634 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10616 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10619 */;
+import _modDef2763 from "module_2763" /* 2763 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10746 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,16 +14,16 @@ function GiftingBadgeProgressBar(percent) {
   const tmp = closure_8();
   const obj = { style: tmp.progressBarTrack, children: null };
   const obj2 = { style: null };
-  const items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" }];
+  items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" }];
   obj2.style = items;
   obj.children = hasOwnProperty(View, obj2);
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(8763).getSingleRequirementThreshold;
+let closure_4 = fn(8887).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 }, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj2.content = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
@@ -63,7 +63,7 @@ export default function GiftingBadgeProgress(title) {
     const obj4 = { icon: giftingBadgeTierIconUrl, size: iconSize };
     tmp11 = hasOwnProperty(GiftingBadgeIconDefault, obj4);
   }
-  const items = [tmp11, , ];
+  items = [tmp11, , ];
   const obj5 = { style: tmp.content, children: null };
   let tmp14 = null != title;
   if (tmp14) {
@@ -77,7 +77,7 @@ export default function GiftingBadgeProgress(title) {
     const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     const obj9 = { count: progress, threshold: tmp6 };
-    obj8.children = intl.format(_modDef2634.iIpfQe, obj9);
+    obj8.children = intl.format(_modDef2763.iIpfQe, obj9);
     tmp16Result = hasOwnProperty(Text_Text.Text, obj8);
   }
   obj7.children = tmp16Result;

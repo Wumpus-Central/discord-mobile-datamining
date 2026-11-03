@@ -1,12 +1,12 @@
-// === Module 18788: LinksScreen ===
+// === Module 18946: LinksScreen ===
 
-// Module 18788 (LinksScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 18781 */;
+// Module 18946 (LinksScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 18939 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ SearchListItemTypes: closure_4, CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty, FILES_OR_LINKS_NUM_COLUMNS: metroRequire, FILES_OR_LINKS_GAP_WIDTH: closure_7 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -32,7 +32,7 @@ export default noop.memo(function LinksScreen(searchContext) {
   const obj6 = searchContext(fileOrLinkImageDimensions[6]);
   const searchMessagesLoadingState = searchContext(fileOrLinkImageDimensions[7]).useSearchMessagesLoadingState({ searchContext, tab, placeholderHeight: onPressGuildVoiceChannel, numColumns: placeholderCount });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
-  let items = [onPressMessageItem, searchContext];
+  items = [onPressMessageItem, searchContext];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const spacing = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
@@ -53,7 +53,7 @@ export default noop.memo(function LinksScreen(searchContext) {
   }, items2);
   const items3 = [callback2, callback1, spacing, fileOrLinkImageDimensions, searchMessages, placeholderCount, searchContext];
   const memo = onPressMessageItem.useMemo(() => {
-    const items = [];
+    items = [];
     searchMessages = 0;
     if (searchMessages != null) {
       let item = searchMessages.forEach((item) => {

@@ -1,101 +1,113 @@
-// === Module 11849: StageChannelCallNavigator ===
+// === Module 11986: StageChannelCallNavigator ===
 
-// Module 11849 (StageChannelCallNavigator)
+// Module 11986 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import MessageManagerDefault from "MessageManager" /* 9830 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11228 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 11874 */;
-import JoinStageViewDefault from "JoinStageView" /* 11912 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12057 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import MessageManagerDefault from "MessageManager" /* 9961 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11365 */;
+import ModeratorOverlayState from "ModeratorOverlayState" /* 11987 */;
+import ModeratorStartStageViewDefault from "ModeratorStartStageView" /* 11988 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 12011 */;
+import JoinStageViewDefault from "JoinStageView" /* 12049 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12194 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function ModeratorViewOverlay(channel) {
   channel = channel.channel;
-  first = undefined;
-  let first1;
-  _slicedToArray = undefined;
-  [first, [][0]] = first(first1[5]).useModeratorOverlayChannelState(channel.id);
-  importDefault = tmp4;
+  [first, [][0]] = ModeratorOverlayState.useModeratorOverlayChannelState(channel.id);
+  [tmp6, c2] = _slicedToArray(noop.useState(first), 2);
   const tmp5 = _slicedToArray(noop.useState(first), 2);
-  first1 = tmp5[0];
-  _slicedToArray = tmp5[1];
-  let obj = first(first1[5]);
-  const fn = function s() {
-    let num = 0;
-    if (first1) {
-      num = 1;
+  items = [closure_13, spring_spring.withSpring, tmp6, closure_11];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp7, tmp8, tmp9, tmp10] = items;
+  class StageChannelCallNavigatorTsx1 {
+    constructor() {
+      num = 0;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_2) };
+      return obj;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
-  };
-  const obj2 = first(first1[6]);
-  fn.__closure = { withSpring: first(first1[7]).withSpring, showStartStageView: first1, viewAnimationConfig };
-  fn.__workletHash = 3663814804791;
-  fn.__initData = __initData;
-  const items = [first];
-  const animatedStyle = obj2.useAnimatedStyle(fn);
+  }
+  const items1 = [tmp8, tmp9, tmp10];
+  StageChannelCallNavigatorTsx1.__closure = items1;
+  StageChannelCallNavigatorTsx1.__workletHash = 5590822981710;
+  StageChannelCallNavigatorTsx1.__initData = tmp7;
+  const items2 = [first];
+  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx1);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       if (!closure_0) {
-        closure_1_3(false);
+        _undefined2(false);
       }
     }, 500);
     return () => {
       clearTimeout(closure_0);
     };
-  }, items);
-  let tmp10 = null;
-  if (first1) {
+  }, items2);
+  let tmp14 = null;
+  if (tmp6) {
     const obj4 = { style: null, children: null };
-    const items1 = [closure_5.absoluteFill, , ];
-    const obj5 = { backgroundColor: require("native").unsafe_rawColors.PRIMARY_800 };
-    items1[1] = obj5;
-    items1[2] = animatedStyle;
-    obj4.style = items1;
-    const obj6 = { channel, onSkip: tmp9 };
-    obj4.children = closure_8(require("ModeratorStartStageView"), obj6);
-    tmp10 = closure_8(require("ReanimatedRexport").View, obj4);
+    const items3 = [hasOwnProperty.absoluteFill, , ];
+    const obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
+    items3[1] = obj5;
+    items3[2] = animatedStyle;
+    obj4.style = items3;
+    const obj6 = { channel, onSkip: tmp13 };
+    obj4.children = React6(ModeratorStartStageViewDefault, obj6);
+    tmp14 = React6(_modDef1652.View, obj4);
   }
-  return tmp10;
+  return tmp14;
 }
 function JoinStageOverlay(channel) {
-  showOverlay = undefined;
-  importDefault = undefined;
-  [showOverlay, importDefault] = noop.useState(false);
-  const fn = function s() {
-    let num = 0;
-    if (first) {
-      num = 1;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  items = [closure_15, spring_spring.withSpring, tmp[0], closure_11];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp3, tmp4, tmp5, tmp6] = items;
+  class StageChannelCallNavigatorTsx2 {
+    constructor() {
+      num = 0;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_2) };
+      return obj;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
-  };
-  let obj = showOverlay(5095);
-  fn.__closure = { withSpring: showOverlay(5637).withSpring, showOverlay, viewAnimationConfig };
-  fn.__workletHash = 1929951426580;
-  fn.__initData = __initData2;
-  const animatedStyle = obj.useAnimatedStyle(fn);
+  }
+  const items1 = [tmp4, tmp5, tmp6];
+  StageChannelCallNavigatorTsx2.__closure = items1;
+  StageChannelCallNavigatorTsx2.__workletHash = 5763143772621;
+  StageChannelCallNavigatorTsx2.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx2);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      closure_1_1(true);
+      closure_0(true);
     }, 500);
     return () => {
       clearTimeout(closure_0);
     };
   }, []);
   const obj3 = { style: null, children: null };
-  const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5637).withSpring, showOverlay, viewAnimationConfig };
-  items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
-  items[2] = animatedStyle;
-  obj3.style = items;
-  obj3.children = closure_8(JoinStageViewDefault, { channel: channel.channel });
-  return closure_8(ReanimatedRexportDefault.View, obj3);
+  const items2 = [hasOwnProperty.absoluteFill, , ];
+  items2[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
+  items2[2] = animatedStyle;
+  obj3.style = items2;
+  obj3.children = React6(JoinStageViewDefault, { channel: channel.channel });
+  return React6(_modDef1652.View, obj3);
 }
 function StagePromptWrapper(channel) {
   return React6(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, { children: React6(StagePromptInner, { channel: channel.channel }) });
@@ -108,12 +120,12 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const viewAnimationConfig = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
+let closure_11 = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: false };
 const fullScreen = { fullScreen: { flex: 1 } };
-const __initData = { code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
-const __initData2 = { code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
-const createStyles = fn(5014);
+let closure_13 = { code: "(function StageChannelCallNavigatorTsx1(){let[withSpring,showStartStageView,viewAnimationConfig]=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};})" };
+let closure_15 = { code: "(function StageChannelCallNavigatorTsx2(){let[withSpring,showOverlay,viewAnimationConfig]=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};})" };
+const createStyles = fn(5141);
 let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -144,7 +156,7 @@ export default function StageChannelCallNavigator(channel) {
   noop = tmp11;
   const tmpResult = channel(first[5]);
   [tmp13, c5] = noop.useState(false);
-  const items = [, ];
+  items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = obj2.useEffect(() => {
     const messages = MessageManagerDefault.fetchMessages({ guildId: channel.guild_id, channelId: channel.id });

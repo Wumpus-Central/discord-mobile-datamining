@@ -1,17 +1,17 @@
-// === Module 19060: AppToastContainer ===
+// === Module 19218: AppToastContainer ===
 
-// Module 19060 (AppToastContainer)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ToastContainer from "ToastContainer" /* 15866 */;
-import QuestHooks from "QuestHooks" /* 17068 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17077 */;
+// Module 19218 (AppToastContainer)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ToastContainer from "ToastContainer" /* 16009 */;
+import QuestHooks from "QuestHooks" /* 17211 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ManaToastSurface(bottomInset) {
   bottomInset = bottomInset.bottomInset;
   const top = useSafeAreaInsetsDefault().top;
-  const items = [top, bottomInset];
+  items = [top, bottomInset];
   const offset = noop.useMemo(() => {
     const rect = { top, bottom: bottomInset };
     return rect;

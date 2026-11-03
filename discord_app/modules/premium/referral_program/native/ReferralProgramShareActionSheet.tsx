@@ -1,30 +1,30 @@
-// === Module 15327: ReferralProgramShareActionSheet ===
+// === Module 15468: ReferralProgramShareActionSheet ===
 
-// Module 15327 (ReferralProgramShareActionSheet)
+// Module 15468 (ReferralProgramShareActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10730 */;
-import ReferralProgramShareActionSheetUtils from "ReferralProgramShareActionSheetUtils" /* 15330 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10860 */;
+import ReferralProgramShareActionSheetUtils from "ReferralProgramShareActionSheetUtils" /* 15471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
+import UserStore from "UserStore" /* 1385 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7756 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function mapToUser(arg0) {
-  const items = [arg0, UserStore.getUser(arg0)];
+  items = [arg0, UserStore.getUser(arg0)];
   return items;
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, searchBarRowContainer: null, header: null, subtitle: null, centeredContainer: null, errorImage: null, emptyImage: null, footer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
@@ -57,7 +57,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
   let resendUsers;
   let tmp = resendUsers();
   const ref = noop.useRef(null);
-  let items = [eligibleUsers];
+  items = [eligibleUsers];
   stateFromStores = require("initialize").useStateFromStores(items, () => eligibleUsers.getReferralsRemaining());
   let obj = noop;
   const obj2 = require("initialize");
@@ -113,7 +113,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     const id = arg0;
     closure_4((arr) => {
       const index = arr.indexOf(id.id);
-      const items = [...arr];
+      items = [...arr];
       if (-1 === index) {
         arr = items.push(id.id);
       } else {
@@ -135,7 +135,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     }
   }, items6);
   const memo4 = noop.useMemo(() => {
-    const items = [eligibleUsers.length];
+    items = [eligibleUsers.length];
     return items;
   }, items7);
   const items8 = [eligibleUsers, onSelectUser, selectedUserIds, resendUsers, stateFromStores, memo2];
@@ -200,7 +200,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     obj7.source = obj8;
     obj7.style = tmp.errorImage;
     const items12 = [tmp29(tmp9(tmp4[29]), obj7), , ];
-    const obj9 = { variant: "heading-xl/bold", style: tmp.subtitle, children: null };
+    const obj9 = { variant: "heading-xl/semibold", style: tmp.subtitle, children: null };
     const intl4 = tmp3(tmp4[16]).intl;
     obj9.children = intl4.string(tmp3(tmp4[16]).t.a9HOKg);
     items12[1] = tmp29(tmp3(tmp4[28]).Text, obj9);
@@ -220,7 +220,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
       obj12.source = obj13;
       obj12.style = tmp.emptyImage;
       const items13 = [tmp29(tmp9(tmp4[29]), obj12), , ];
-      const obj14 = { variant: "heading-xl/bold", style: tmp.subtitle, children: null };
+      const obj14 = { variant: "heading-xl/semibold", style: tmp.subtitle, children: null };
       let intl2 = tmp3(tmp4[16]).intl;
       obj14.children = intl2.string(tmp3(tmp4[16]).t["PFp+aJ"]);
       items13[1] = tmp29(tmp3(tmp4[28]).Text, obj14);

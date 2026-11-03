@@ -1,9 +1,9 @@
-// === Module 10090: EmojiPickerCategoriesBackspaceItem ===
+// === Module 10220: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 10090 (EmojiPickerCategoriesBackspaceItem)
+// Module 10220 (EmojiPickerCategoriesBackspaceItem)
 import util from "util" /* 1113 */;
-import Timers from "Timers" /* 4858 */;
-import BackspaceIcon from "BackspaceIcon" /* 10091 */;
+import Timers from "Timers" /* 4985 */;
+import BackspaceIcon from "BackspaceIcon" /* 10221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
     current2.start(50, onBackspace);
   });
   closure_2 = noop.useRef(delayedCall);
-  const items = [onBackspace];
+  items = [onBackspace];
   const items1 = [onBackspace];
   const callback = noop.useCallback(() => {
     onBackspace();

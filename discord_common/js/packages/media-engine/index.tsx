@@ -1,11 +1,11 @@
-// === Module 5789: BaseConnectionEvent ===
+// === Module 5909: BaseConnectionEvent ===
 
-// Module 5789 (BaseConnectionEvent)
-import destroy from "destroy" /* 5790 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5798 */;
-import BaseConnection from "BaseConnection" /* 5802 */;
-import MediaEngineDummy from "MediaEngineDummy" /* 5862 */;
-import Constants from "Constants" /* 5768 */;
+// Module 5909 (BaseConnectionEvent)
+import destroy from "destroy" /* 5910 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5918 */;
+import BaseConnection from "BaseConnection" /* 5922 */;
+import MediaEngineDummy from "MediaEngineDummy" /* 5982 */;
+import Constants from "Constants" /* 5888 */;
 import size from "module_2" /* 2 */;
 
 const constants = Constants.MediaEngineImplementations;
@@ -19,7 +19,7 @@ export const FilterTargetType = { INPUT_DEVICE: "input_device", STREAM: "stream"
 export const FilterSettingsGraph = { NONE: "", BACKGROUND_BLUR: "background_blur", BACKGROUND_REPLACEMENT: "background_replacement" };
 export const FilterSettingsKey = { CAMERA_BACKGROUND_PREVIEW: "cameraBackgroundPreview", CAMERA_BACKGROUND_LIVE: "cameraBackgroundLive" };
 export function determineMediaEngine() {
-  const items = [, ];
+  items = [, ];
   ({ NATIVE: arr[0], WEBRTC: arr[1] } = constants);
   let DUMMY = items.find((item) => {
     if (constants.NATIVE === item) {

@@ -1,17 +1,17 @@
-// === Module 19236: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 19394: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 19236 (useConsoleConnectedAccountForVoiceUpsell)
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
+// Module 19394 (useConsoleConnectedAccountForVoiceUpsell)
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(9737).CONSOLE_VOICE_PLATFORMS;
+const CONSOLE_VOICE_PLATFORMS = fn(9869).CONSOLE_VOICE_PLATFORMS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
-  const items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   const stateFromStores = found(504).useStateFromStores(items, () => activities.getActivities(true));
   found = stateFromStores.filter((platform) => {
     platform = platform.platform;

@@ -1,10 +1,10 @@
-// === Module 14786: MediaMessagePreviewActionSheet ===
+// === Module 14917: MediaMessagePreviewActionSheet ===
 
-// Module 14786 (MediaMessagePreviewActionSheet)
+// Module 14917 (MediaMessagePreviewActionSheet)
 import router_utils from "router_utils" /* 1099 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import ReportModals from "ReportModals" /* 8352 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import ReportModals from "ReportModals" /* 8476 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
   callback = callback.useCallback(() => {
     message(closeMediaModal[4]).hideActionSheet();
   }, []);
-  const items = [callback, closeMediaModal, , , ];
+  items = [callback, closeMediaModal, , , ];
   ({ guild_id: arr[2], id: arr[3] } = channel);
   items[4] = message.id;
   const items1 = [message.id, callback];

@@ -1,6 +1,6 @@
-// === Module 7625: useInterval ===
+// === Module 7749: useInterval ===
 
-// Module 7625 (useInterval)
+// Module 7749 (useInterval)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ export default function useInterval(current, MINUTE) {
   closure_1 = MINUTE;
   closure_2 = ref(current);
   ref = ref(null);
-  const items = [current];
+  items = [current];
   closure_2(() => {
     closure_2.current = current;
   }, items);

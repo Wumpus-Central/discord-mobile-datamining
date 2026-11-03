@@ -1,15 +1,15 @@
-// === Module 19641: NotificationSettingsModalStore ===
+// === Module 19791: NotificationSettingsModalStore ===
 
-// Module 19641 (NotificationSettingsModalStore)
+// Module 19791 (NotificationSettingsModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7281 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ const prototype = NotificationSettingsModalStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   this.waitFor(GuildCategoryStore, GuildChannelStore, GuildMemberCountStore, GuildStore, UserGuildSettingsStore);
-  const items = [UserGuildSettingsStore, GuildChannelStore, GuildStore];
+  items = [UserGuildSettingsStore, GuildChannelStore, GuildStore];
   this.syncWith(items, () => self.isOpen());
 };
 prototype["isOpen"] = function isOpen() {

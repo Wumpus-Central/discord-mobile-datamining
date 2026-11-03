@@ -1,13 +1,13 @@
-// === Module 11790: getEmbeddedActivityJoinability ===
+// === Module 11927: getEmbeddedActivityJoinability ===
 
-// Module 11790 (getEmbeddedActivityJoinability)
-import ChannelUtils from "ChannelUtils" /* 6046 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11791 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 11927 (getEmbeddedActivityJoinability)
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11928 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 require = fn;
 function getEmbeddedActivityJoinability(arg0) {
@@ -65,7 +65,7 @@ function getEmbeddedActivityJoinability(arg0) {
               if (null == guildId) {
                 return obj.NO_GUILD;
               } else {
-                const guild = GuildStore.getGuild(guildId);
+                guild = GuildStore.getGuild(guildId);
                 let afkChannelId;
                 if (guild != null) {
                   afkChannelId = guild.afkChannelId;
@@ -121,7 +121,7 @@ export function useEmbeddedActivityJoinability(userId) {
   let isChannelContentGated;
   const isActivitiesEnabledForCurrentPlatform = userId(channelId[8]).useIsActivitiesEnabledForCurrentPlatform();
   const obj = userId(channelId[8]);
-  const items = [isChannelContentGated];
+  items = [isChannelContentGated];
   const stateFromStores = userId(channelId[9]).useStateFromStores(items, () => isChannelContentGated.getCurrentUser());
   const obj2 = userId(channelId[9]);
   const items1 = [application];

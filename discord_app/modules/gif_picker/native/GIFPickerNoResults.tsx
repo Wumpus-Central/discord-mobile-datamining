@@ -1,20 +1,20 @@
-// === Module 10256: GIFPickerNoResults ===
+// === Module 10386: GIFPickerNoResults ===
 
-// Module 10256 (GIFPickerNoResults)
+// Module 10386 (GIFPickerNoResults)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import SearchEmpty from "SearchEmpty" /* 10034 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10038 */;
-import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10240 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import SearchEmpty from "SearchEmpty" /* 10165 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10169 */;
+import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10370 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 fn(1072).GIFPickerResultTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 const obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -27,7 +27,7 @@ export default noop.memo(function GIFPickerNoResults(inActionSheet) {
   inActionSheet = inActionSheet.inActionSheet;
   const tmp = closure_7();
   const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
-  const items = [safeAreaBottomKeyboardAware];
+  items = [safeAreaBottomKeyboardAware];
   const memo = noop.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
   const searchEmptySource = SearchEmpty.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {

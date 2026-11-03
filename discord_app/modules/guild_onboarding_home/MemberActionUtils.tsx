@@ -1,15 +1,15 @@
-// === Module 13836: MemberActionUtils ===
+// === Module 13967: MemberActionUtils ===
 
-// Module 13836 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7400 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8340 */;
+// Module 13967 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7524 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8464 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 
@@ -17,7 +17,7 @@ export function useMemberActionsForChannel(guild_id, channel) {
   _require = guild_id;
   importDefault = channel;
   const tmp = useIsNewMemberDefault(guild_id);
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guild_id];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(closure_0), items1);
   const obj = require("useStateFromStores");
@@ -57,7 +57,7 @@ export function useMemberActionsForChannel(guild_id, channel) {
 export function useNextMemberAction(guild_id, channelId) {
   _require = guild_id;
   closure_1 = channelId;
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(closure_0));
   const obj = require("useStateFromStores");
   const items1 = [GuildOnboardingMemberActionStore];
@@ -80,7 +80,7 @@ export function useNextMemberAction(guild_id, channelId) {
 }
 export function useAllActionsCompleted(guild_id) {
   _require = guild_id;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildMemberStore.getSelfMember(closure_0));
   const obj = require("useStateFromStores");
   let num;

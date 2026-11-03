@@ -1,7 +1,7 @@
-// === Module 18162: useIsGameCommunityServerPreview ===
+// === Module 18306: useIsGameCommunityServerPreview ===
 
-// Module 18162 (useIsGameCommunityServerPreview)
-import LurkingStore from "LurkingStore" /* 4947 */;
+// Module 18306 (useIsGameCommunityServerPreview)
+import LurkingStore from "LurkingStore" /* 5074 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/lurker_mode/native/useIsGameC
 
 export default function useIsGameCommunityServerPreview(arg0) {
   _require = arg0;
-  const items = [LurkingStore];
+  items = [LurkingStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     const lurkingSourceForGuild = LurkingStore.getLurkingSourceForGuild(closure_0);

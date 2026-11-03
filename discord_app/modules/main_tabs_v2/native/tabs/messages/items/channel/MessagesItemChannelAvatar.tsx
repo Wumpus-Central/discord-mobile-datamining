@@ -1,19 +1,19 @@
-// === Module 18092: MessagesItemChannelAvatar ===
+// === Module 18236: MessagesItemChannelAvatar ===
 
-// Module 18092 (MessagesItemChannelAvatar)
+// Module 18236 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 575 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import TypingStore from "TypingStore" /* 13729 */;
-import UserStore from "UserStore" /* 1383 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import TypingStore from "TypingStore" /* 13860 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -44,7 +44,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   const tmpResult = closure_10(muted);
   const REFRESH_MEDIUM_32 = channel(1187).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
-  const items = [TypingStore];
+  items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
     const typingUsers = TypingStore.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
@@ -105,7 +105,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "11da15fb2cefbe51d12c26d658b6db75", style: "nl.messages.11da15fb2cefbe51d12c26d658b6db75.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "4bcf2455110bd4db5a84ce5509f13de0", style: "fr.messages.4bcf2455110bd4db5a84ce5509f13de0.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -116,7 +116,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "11da15fb2cefbe51d12c26d658b6db75", style: "nl.messages.11da15fb2cefbe51d12c26d658b6db75.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
+      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "4bcf2455110bd4db5a84ce5509f13de0", style: "fr.messages.4bcf2455110bd4db5a84ce5509f13de0.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
     }
   }
   return tmp11Result;

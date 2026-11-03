@@ -1,7 +1,7 @@
-// === Module 13987: TransitionGroup ===
+// === Module 14118: TransitionGroup ===
 
-// Module 13987 (TransitionGroup)
-import TransitionChildMapping from "TransitionChildMapping" /* 13988 */;
+// Module 14118 (TransitionGroup)
+import TransitionChildMapping from "TransitionChildMapping" /* 14119 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -116,7 +116,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
   if (self.props.transitionLeave) {
     _enqueueTransitions(children, childMapping, self._keysToLeave);
   } else {
-    const items = [];
+    items = [];
     _enqueueTransitions(children, childMapping, items);
     let num4 = 0;
     const tmp3Result = TransitionChildMapping;
@@ -198,7 +198,7 @@ prototype["_handleDonePerform"] = function _handleDonePerform(key10008, componen
     }
     self.setState((children) => {
       const obj = { children: null };
-      const items = [closure_0];
+      items = [closure_0];
       obj.children = _objectWithoutProperties(children.children, items.map(_toPropertyKey));
       return obj;
     });
@@ -222,7 +222,7 @@ prototype["render"] = function render() {
   const props = this.props;
   const childFactory = props.childFactory;
   const children = this.state.children;
-  const items = [];
+  items = [];
   for (const key10011 in children) {
     let tmp9 = children[key10011];
     let isValidElementResult = null != tmp9;

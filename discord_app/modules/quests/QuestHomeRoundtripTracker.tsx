@@ -1,11 +1,11 @@
-// === Module 17144: QuestHomeRoundtripTracker ===
+// === Module 17287: QuestHomeRoundtripTracker ===
 
-// Module 17144 (QuestHomeRoundtripTracker)
+// Module 17287 (QuestHomeRoundtripTracker)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -29,7 +29,7 @@ prototype["sendMetric"] = function sendMetric(timeout, duration, arg2) {
   if (Math.random() <= 0.1) {
     const obj3 = { name: MetricEvents.MetricEvents.QUEST_HOME_ROUNDTRIP, tags: null };
     const _HermesInternal = HermesInternal;
-    const items = ["includes_bounties:" + arg2, ];
+    items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
     obj3.tags = items;

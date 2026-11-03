@@ -1,6 +1,6 @@
-// === Module 7718: FamilyCenterControlledSettingsStore ===
+// === Module 7842: FamilyCenterControlledSettingsStore ===
 
-// Module 7718 (FamilyCenterControlledSettingsStore)
+// Module 7842 (FamilyCenterControlledSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;

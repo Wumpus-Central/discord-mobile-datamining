@@ -1,7 +1,7 @@
-// === Module 18076: useGuildsRouteGuildId ===
+// === Module 18220: useGuildsRouteGuildId ===
 
-// Module 18076 (useGuildsRouteGuildId)
-import Link from "Link" /* 1498 */;
+// Module 18220 (useGuildsRouteGuildId)
+import Link from "Link" /* 1500 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
@@ -23,7 +23,7 @@ export function useGuildsRouteGuildAndChannelId() {
       guildId = params.guildId;
     }
   }
-  const items = [guildId, ];
+  items = [guildId, ];
   let channelId;
   if (route != null) {
     const params2 = route.params;

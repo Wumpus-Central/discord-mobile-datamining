@@ -1,19 +1,19 @@
-// === Module 6438: useMessageAuthor ===
+// === Module 6558: useMessageAuthor ===
 
-// Module 6438 (useMessageAuthor)
+// Module 6558 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 function useNullableMessageAuthor(message) {
   _require = message;
-  const items = [guild_id];
+  items = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let channel = null;
     if (null != closure_0) {
@@ -114,7 +114,7 @@ function useNullableUserAuthor(actor, channel) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (null != guild_id) {
@@ -176,7 +176,7 @@ function getUserAuthor(user, channel) {
     guild_id = channel.guild_id;
   }
   let member = null;
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   if (null != guild_id) {
     member = null;
     if (null != id) {

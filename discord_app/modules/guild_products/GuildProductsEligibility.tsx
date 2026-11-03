@@ -1,7 +1,7 @@
-// === Module 7432: GuildProductsEligibility ===
+// === Module 7556: GuildProductsEligibility ===
 
-// Module 7432 (GuildProductsEligibility)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 7556 (GuildProductsEligibility)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("modules/guild_products/GuildProductsE
 
 export function useGuildEligibleForGuildProducts(id) {
   _require = id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
         const features = guild.features;
@@ -37,7 +37,7 @@ export function isGuildEligibleForGuildProducts(id) {
   if (null == id) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(id);
+    guild = GuildStore.getGuild(id);
     let tmp3 = null != guild;
     if (tmp3) {
       const features = guild.features;

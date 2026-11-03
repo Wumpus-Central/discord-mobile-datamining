@@ -1,9 +1,9 @@
-// === Module 13708: getPlayInContext ===
+// === Module 13839: getPlayInContext ===
 
-// Module 13708 (getPlayInContext)
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11748 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+// Module 13839 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11885 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/applications/message_embed/ut
 
 export function usePlayInContext(arg0) {
   _require = arg0;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
   const obj = require("initialize");
   const items1 = [EmbeddedActivitiesStore];
@@ -97,7 +97,7 @@ export function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11748).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11885).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 }

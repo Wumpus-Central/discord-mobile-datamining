@@ -1,8 +1,8 @@
-// === Module 16784: useOnNewPendingRequest ===
+// === Module 16927: useOnNewPendingRequest ===
 
-// Module 16784 (useOnNewPendingRequest)
+// Module 16927 (useOnNewPendingRequest)
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export default function useOnNewPendingRequest(current) {
   _require = current;
   const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
   let obj = require("useUserLinks");
-  const items = [ref2];
+  items = [ref2];
   stateFromStores = require("initialize").useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {

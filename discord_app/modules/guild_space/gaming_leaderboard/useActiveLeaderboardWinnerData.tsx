@@ -1,8 +1,8 @@
-// === Module 10782: useActiveLeaderboardWinnerData ===
+// === Module 10912: useActiveLeaderboardWinnerData ===
 
-// Module 10782 (useActiveLeaderboardWinnerData)
+// Module 10912 (useActiveLeaderboardWinnerData)
 import DurationsDefault from "Durations" /* 1089 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 export default function useActiveLeaderboardWinnerData(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
@@ -110,7 +110,7 @@ export function getActiveLeaderboardLeaderData(prop1) {
 export function useActiveLeaderboardLeaderData(guildId, userId) {
   _require = guildId;
   dependencyMap = userId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [guildId, userId];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
@@ -149,7 +149,7 @@ export function useActiveLeaderboardLeaderData(guildId, userId) {
 export function useHasActiveLeaderboardBadge(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {

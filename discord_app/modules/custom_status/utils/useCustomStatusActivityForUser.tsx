@@ -1,8 +1,8 @@
-// === Module 11411: useCustomStatusActivityForUser ===
+// === Module 11549: useCustomStatusActivityForUser ===
 
-// Module 11411 (useCustomStatusActivityForUser)
+// Module 11549 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/custom_status/utils/useCustom
 
 export default function useCustomStatusActivityForUser(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
   const obj = require("initialize");
   const customStatusActivity = require("userSettingToActivity").useCustomStatusActivity();

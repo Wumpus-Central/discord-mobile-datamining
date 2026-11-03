@@ -1,9 +1,9 @@
-// === Module 14133: useGameServerGetExpiringEntitlements ===
+// === Module 14264: useGameServerGetExpiringEntitlements ===
 
-// Module 14133 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14069 */;
+// Module 14264 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14200 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServ
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   _require = arg0;
-  let items = [GameServerStore];
+  items = [GameServerStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GameServerStore.getStateForGuild(closure_0));
   let entitlements;
   if (stateFromStores != null) {
@@ -30,7 +30,7 @@ export default function useGameServerGetExpiringEntitlements(arg0) {
     }
     const values = Object.values(entitlements);
     if (0 === values.length) {
-      let items = [];
+      items = [];
     } else {
       items = getExpiringGuildEntitlements.getExpiringGuildEntitlements(values);
     }

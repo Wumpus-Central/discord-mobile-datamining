@@ -1,20 +1,20 @@
-// === Module 18171: ThreadChannel ===
+// === Module 18315: ThreadChannel ===
 
-// Module 18171 (ThreadChannel)
+// Module 18315 (ThreadChannel)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import inlineStyles from "inlineStyles" /* 8031 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11133 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18172 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import inlineStyles from "inlineStyles" /* 8155 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11270 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18316 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -41,7 +41,7 @@ function ThreadChannel(channel) {
   let obj = threadCount;
   fontScale = channel(threadCount[18]).useFontScale();
   const obj2 = channel(threadCount[18]);
-  const items = [parent_id, ownerId, UserStore, SortedVoiceStateStore, VoiceStateStore, user, parentChannel, fontScale];
+  items = [parent_id, ownerId, UserStore, SortedVoiceStateStore, VoiceStateStore, user, parentChannel, fontScale];
   const stateFromStoresObject = channel(threadCount[19]).useStateFromStoresObject(items, () => {
     const isMutedResult = JoinedThreadsStore.isMuted(id);
     const obj = { user: UserStore.getUser(ownerId), parentChannel: ChannelStore.getChannel(parent_id), voiceStates: SortedVoiceStateStore.getVoiceStatesForChannel(channel), hasVideo: VoiceStateStore.hasVideo(channel.id), isLocked: !PermissionStore.can(Permissions.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
@@ -187,14 +187,14 @@ function ThreadChannel(channel) {
   tmp8Result = tmp8(obj[24]);
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11046);
+const RedesignChannelListConstants = fn(11186);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1072).Permissions;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 let closure_16 = fn(1112).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: nativeDefault.radii.md, flex: 1 }, threadRow: { flex: 0, flexDirection: "row", alignSelf: "stretch" }, unreadContainer: { width: 8, alignItems: "flex-start", justifyContent: "flex-start" }, spineSpacer: { width: 28 }, unreadIcon: null, threadLineSegment: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
 obj.unreadIcon = size;
@@ -204,7 +204,7 @@ let closure_20 = createStyles.createStyles(obj);
 let closure_21 = noop.memo(function SpineCurveSvg(arg0) {
   ({ color, fontScale } = arg0);
   const size = { width: 12, height: 16, style: null, children: null };
-  const rect = { position: "absolute", left: 23, top: map1(fontScale) / 2 - 16 + 2 };
+  const rect = { position: "absolute", left: 23, top: state(fontScale) / 2 - 16 + 2 };
   size.style = rect;
   size.children = closure_1_17(inlineStyles.Path, { fill: color, d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z" });
   return closure_1_17(inlineStylesDefault, size);
@@ -215,7 +215,7 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {

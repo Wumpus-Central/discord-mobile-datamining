@@ -1,9 +1,9 @@
-// === Module 16008: Badge/Badge ===
+// === Module 16151: Badge/Badge ===
 
-// Module 16008 (Badge/Badge)
+// Module 16151 (Badge/Badge)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 let require = fn;
 class Badge {
@@ -11,155 +11,116 @@ class Badge {
     value = global.value;
     closure_0 = value;
     style = global.style;
-    ({ textStyle, accessibilityElementsHidden } = global);
-    ({ dotStyle, accessible, accessibilityLabel } = global);
-    if (accessibilityElementsHidden === undefined) {
-      accessibilityElementsHidden = false;
+    flag = global.accessibilityElementsHidden;
+    ({ dotStyle, textStyle, accessible, accessibilityLabel } = global);
+    if (flag === undefined) {
+      flag = false;
     }
     str = global.importantForAccessibility;
     if (str === undefined) {
       str = "auto";
     }
-    flag = global.hideCount;
-    if (flag === undefined) {
-      flag = false;
+    flag2 = global.hideCount;
+    if (flag2 === undefined) {
+      flag2 = false;
     }
     num = global.maxValue;
     if (num === undefined) {
       num = Infinity;
     }
-    flag2 = global.unreadIndicator;
-    if (flag2 === undefined) {
-      flag2 = false;
-    }
-    c2 = flag2;
-    flag3 = global.eventsMentionBadge;
+    flag3 = global.unreadIndicator;
     if (flag3 === undefined) {
       flag3 = false;
     }
-    c3 = flag3;
-    flag4 = global.isMentionLowImportance;
+    c2 = flag3;
+    flag4 = global.eventsMentionBadge;
     if (flag4 === undefined) {
       flag4 = false;
     }
-    c4 = flag4;
-    closure_5 = undefined;
-    items2 = closure_11();
-    closure_5 = items2;
-    tmp = closure_0;
-    tmp2 = c2;
-    obj = closure_0(c2[9]);
-    themeContext = obj.useThemeContext();
-    flag5 = undefined;
-    if (themeContext != null) {
-      enabledExperiments = themeContext.enabledExperiments;
-      if (enabledExperiments != null) {
-        str2 = "mana-type-consolidation";
-        flag5 = enabledExperiments.includes("mana-type-consolidation");
-      }
-    }
-    if (flag5 == null) {
+    c3 = flag4;
+    flag5 = global.isMentionLowImportance;
+    if (flag5 === undefined) {
       flag5 = false;
     }
-    tmpResult = tmp(tmp2[10]);
+    c4 = flag5;
+    closure_5 = undefined;
+    items2 = closure_10();
+    closure_5 = items2;
+    tmp = closure_0;
+    tmp2 = style;
+    obj = closure_0(style[7]);
     items = [];
-    items[0] = closure_5;
-    stateFromStores = tmpResult.useStateFromStores(items, () => items2.locale);
+    items[0] = c4;
     items1 = [, , , , , ];
     items1[0] = items2;
     items1[1] = style;
-    items1[2] = flag2;
+    items1[2] = flag3;
     items1[3] = value;
-    items1[4] = flag3;
-    items1[5] = flag4;
+    items1[4] = flag4;
+    items1[5] = flag5;
+    stateFromStores = obj.useStateFromStores(items, () => flag5.locale);
     if (value > 0) {
-      tmp7 = jsx;
-      tmp8 = c4;
+      tmp6 = jsx;
+      tmp7 = c3;
       obj1 = { pointerEvents: "none", style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-      obj1.style = tmp5;
+      obj1.style = tmp4;
       obj1.accessible = accessible;
       obj1.accessibilityLabel = accessibilityLabel;
-      obj1.accessibilityElementsHidden = accessibilityElementsHidden;
+      obj1.accessibilityElementsHidden = flag;
       obj1.importantForAccessibility = str;
-      if (flag2) {
-        tmp9 = null;
+      if (flag3) {
+        tmp8 = null;
         if (0 === value) {
           obj1.children = null;
-          tmp7Result = tmp7(tmp8, obj1);
+          tmp6Result = tmp6(tmp7, obj1);
         }
       }
-      if (flag) {
-        obj9 = { style: null };
+      if (flag2) {
+        obj6 = { style: null };
         items2 = [, ];
         items2[0] = items2.noCount;
         items2[1] = dotStyle;
-        obj9.style = items2;
-        tmp7Result1 = tmp7(tmp8, obj9);
-      } else if (flag5) {
-        obj10 = { variant: "experimental/body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
-        items3 = [, ];
-        items3[0] = items2.experimentalBadgeText;
-        items3[1] = textStyle;
-        obj10.style = items3;
-        tmpResult1 = tmp(tmp2[12]);
-        tmp14 = globalThis;
-        _Math2 = Math;
-        obj10.children = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp7Result1 = tmp7(tmp(tmp2[11]).Text, obj10);
+        obj6.style = items2;
+        tmp6Result1 = tmp6(tmp7, obj6);
       } else {
-        tmp10 = style;
-        obj11 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
-        items4 = [, ];
-        items4[0] = items2.badgeText;
-        items4[1] = textStyle;
-        obj11.style = items4;
-        tmp11 = style(tmp2[13]);
-        tmpResult2 = tmp(tmp2[12]);
-        tmp12 = globalThis;
+        obj7 = { variant: "body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
+        items3 = [, ];
+        items3[0] = items2.badgeText;
+        items3[1] = textStyle;
+        obj7.style = items3;
+        tmpResult = tmp(tmp2[9]);
+        tmp9 = globalThis;
         _Math = Math;
-        obj11.children = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp7Result1 = tmp7(tmp11, obj11);
+        obj7.children = tmpResult.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp6Result1 = tmp6(tmp(tmp2[8]).Text, obj7);
       }
-      tmp15 = tmp7Result1;
+      tmp11 = tmp6Result1;
     } else {
-      tmp7Result = null;
+      tmp6Result = null;
     }
-    return tmp7Result;
+    return tmp6Result;
   }
 }
 const View = fn(17).View;
 const BadgeConstants = fn(1189);
-({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
+({ BADGE_MASK_SIZE: hasOwnProperty, BADGE_MASK_UNREAD_SIZE: metroRequire, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
-let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-let PlatformUtils = fn(1375);
-PlatformUtils = PlatformUtils.isAndroid();
-const space = nativeDefault.space;
-obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
-obj4.fontFamily = fn(1072).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1375);
-let str;
-if (PlatformUtils.isAndroid()) {
-  str = "center";
-}
-obj4.textAlignVertical = str;
-obj2.badgeText = obj4;
+const createStyles = fn(5141);
+let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 let obj3 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-obj2.experimentalBadgeText = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+obj2.badgeText = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
 let size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
 obj2.noCount = size;
-const obj7 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
 obj2.unread = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-const obj8 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+const obj5 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 obj2.mention = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-const obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 obj2.lowImportanceMention = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-const obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+const obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_10 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
@@ -167,20 +128,20 @@ export default Badge;
 export function MaskedBadge(maskStyle) {
   maskStyle = maskStyle.maskStyle;
   value = maskStyle.value;
-  importDefault = value;
+  dependencyMap = value;
   let flag = maskStyle.unreadIndicator;
   ({ style, dotStyle, textStyle, maxValue, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, onLayout, hideCount } = maskStyle);
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = closure_11();
+  const tmp = closure_10();
   const badgeMask = tmp;
-  let items = [tmp, maskStyle, flag, value];
+  items = [tmp, maskStyle, flag, value];
   if (value > 0) {
     let obj = { pointerEvents: "none", style: tmp2, onLayout, children: null };
     const obj2 = { style, textStyle, dotStyle, value, maxValue, hideCount, unreadIndicator: flag, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, isMentionLowImportance: maskStyle.isMentionLowImportance };
     obj.children = <Badge style={style} textStyle={textStyle} dotStyle={dotStyle} value={value} maxValue={maxValue} hideCount={hideCount} unreadIndicator={flag} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={accessibilityElementsHidden} importantForAccessibility={importantForAccessibility} isMentionLowImportance={maskStyle.isMentionLowImportance} />;
-    let tmp3 = <View pointerEvents="none" style={tmp2} onLayout={onLayout}>{null}</View>;
+    let tmp3 = <badgeMask pointerEvents="none" style={tmp2} onLayout={onLayout}>{null}</badgeMask>;
   } else {
     tmp3 = null;
   }

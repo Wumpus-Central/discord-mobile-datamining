@@ -1,10 +1,10 @@
-// === Module 10867: ConjurePublishStatusStore ===
+// === Module 10997: ConjurePublishStatusStore ===
 
-// Module 10867 (ConjurePublishStatusStore)
+// Module 10997 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
 const map = new Map();
@@ -288,7 +288,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       if (patchNotesSent == null) {
         patchNotesSent = closure_9;
       }
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(patchNotesSent.filter((publishedRevision) => publishedRevision.publishedRevision !== sent.publishedRevision), 0)] = sent;
       obj2.patchNotesSent = items;
       const result = map.set(projectId, obj2);

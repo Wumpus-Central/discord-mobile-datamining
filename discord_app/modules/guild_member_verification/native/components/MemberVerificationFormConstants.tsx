@@ -1,7 +1,8 @@
-// === Module 6949: MemberVerificationFormConstants ===
+// === Module 7069: MemberVerificationFormConstants ===
 
-// Module 6949 (MemberVerificationFormConstants)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+// Module 7069 (MemberVerificationFormConstants)
+import nativeDefault from "native" /* 575 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 0.5625;
@@ -10,6 +11,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/nat
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
+export const SHEET_RADIUS = nativeDefault.radii.lg;
 export const SCROLL_EVENT_TIMER_MS = 16;
 export function useBannerHeight() {
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });

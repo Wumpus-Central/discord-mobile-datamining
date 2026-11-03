@@ -1,20 +1,20 @@
-// === Module 14379: ForumChannelEmptyState ===
+// === Module 14510: ForumChannelEmptyState ===
 
-// Module 14379 (ForumChannelEmptyState)
+// Module 14510 (ForumChannelEmptyState)
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import shared from "shared" /* 5021 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import _modDef14380 from "module_14380" /* 14380 */;
-import _modDef14381 from "module_14381" /* 14381 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import shared from "shared" /* 5148 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import _modDef14511 from "module_14511" /* 14511 */;
+import _modDef14512 from "module_14512" /* 14512 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
@@ -28,14 +28,14 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const tmp = closure_6();
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
+  items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   obj2.style = items;
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14380;
+    let tmp4Result = _modDef14511;
   } else {
-    tmp4Result = _modDef14381;
+    tmp4Result = _modDef14512;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

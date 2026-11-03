@@ -1,9 +1,9 @@
-// === Module 14878: UserProfileActivityTimebar ===
+// === Module 15009: UserProfileActivityTimebar ===
 
-// Module 14878 (UserProfileActivityTimebar)
+// Module 15009 (UserProfileActivityTimebar)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useActivityTimer from "useActivityTimer" /* 14879 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useActivityTimer from "useActivityTimer" /* 15010 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { bar: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 }, progress: null, textRow: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 };
 obj2.progress = { backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: nativeDefault.radii.xs, height: "100%", minWidth: 4 };
@@ -28,7 +28,7 @@ export default function UserProfileActivityTimebar(arg0) {
   const obj = { style, children: null };
   const obj2 = { style: tmp.bar, children: null };
   const obj3 = { style: null };
-  const items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
+  items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
   obj3.style = items;
   ({ elapsed, duration } = tmp2);
   obj2.children = React4(View, obj3);

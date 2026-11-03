@@ -1,6 +1,6 @@
-// === Module 7613: ContextUtils ===
+// === Module 7737: ContextUtils ===
 
-// Module 7613 (ContextUtils)
+// Module 7737 (ContextUtils)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
   context = context.createContext(undefined);
-  const items = [
+  items = [
     context,
     function useContext() {
       context = noop.useContext(context);

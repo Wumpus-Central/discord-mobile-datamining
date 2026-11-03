@@ -1,11 +1,11 @@
-// === Module 10607: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10737: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10607 (useMaybeFetchCollectiblesCategoriesShared)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7762 */;
+// Module 10737 (useMaybeFetchCollectiblesCategoriesShared)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7886 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 const require = globalThis.__r;
 
@@ -27,12 +27,12 @@ export function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
   }
   let hasLoadedExperiments;
   let lastSuccessfulFetch;
-  let items = [hasLoadedExperiments];
+  items = [hasLoadedExperiments];
   const stateFromStores = require("initialize").useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   let obj = require("initialize");
   const items1 = [lastSuccessfulFetch];
   const tmp2 = _slicedToArray(require("initialize").useStateFromStoresArray(items1, () => {
-    const items = [, , , , , , ];
+    items = [, , , , , , ];
     ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = lastSuccessfulFetch);
     if (lastErrorTimestamp == null) {
       lastErrorTimestamp = 0;

@@ -1,9 +1,9 @@
-// === Module 12515: AppLauncherMentionableListActionSheet ===
+// === Module 12651: AppLauncherMentionableListActionSheet ===
 
-// Module 12515 (AppLauncherMentionableListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
+// Module 12651 (AppLauncherMentionableListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,12 +31,12 @@ export default function AppLauncherMentionableListActionSheet(channel) {
   const first1 = tmp4[0];
   closure_8 = tmp4[1];
   const guild_id = channel.guild_id;
-  let items = [query, option, channel];
+  items = [query, option, channel];
   const effect = query.useEffect(() => {
     const applicationCommandOptionQueryOptions = ApplicationCommandUtils.getApplicationCommandOptionQueryOptions(option);
     const queryMentionResultsResult = AutocompleteUtilsDefault.queryMentionResults({ query, channel, canMentionEveryone: applicationCommandOptionQueryOptions.canMentionEveryone, canMentionHere: applicationCommandOptionQueryOptions.canMentionHere, canMentionUsers: applicationCommandOptionQueryOptions.canMentionUsers, canMentionRoles: applicationCommandOptionQueryOptions.canMentionRoles, includeAllGuildUsers: applicationCommandOptionQueryOptions.canMentionAnyGuildUser, includeNonMentionableRoles: applicationCommandOptionQueryOptions.canMentionNonMentionableRoles, canMentionOtherGlobals: applicationCommandOptionQueryOptions.canMentionOtherGlobals, request: true, limit: 10, allowSnowflake: true });
     const users = queryMentionResultsResult.users;
-    const items = [...users.map((item) => ({ type: constants.USER, result: item })), ...roles.map((item) => ({ type: constants.ROLE, result: item })), ...globals.map((item) => ({ type: constants.GLOBAL, result: item }))];
+    items = [...users.map((item) => ({ type: constants.USER, result: item })), ...roles.map((item) => ({ type: constants.ROLE, result: item })), ...globals.map((item) => ({ type: constants.GLOBAL, result: item }))];
     ({ roles, globals } = queryMentionResultsResult);
     closure_8(items);
   }, items);

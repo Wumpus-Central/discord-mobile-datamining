@@ -1,10 +1,10 @@
-// === Module 9268: SecureFramesTracking ===
+// === Module 9396: SecureFramesTracking ===
 
-// Module 9268 (SecureFramesTracking)
+// Module 9396 (SecureFramesTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

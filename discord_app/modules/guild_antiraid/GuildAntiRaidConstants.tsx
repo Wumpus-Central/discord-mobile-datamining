@@ -1,6 +1,6 @@
-// === Module 8483: GuildAntiRaidConstants ===
+// === Module 8607: GuildAntiRaidConstants ===
 
-// Module 8483 (GuildAntiRaidConstants)
+// Module 8607 (GuildAntiRaidConstants)
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
@@ -16,7 +16,7 @@ export () => {
   const obj = { id: "1", value: 1, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["GA/d4I"]);
-  const items = [obj, , , , , ];
+  items = [obj, , , , , ];
   const obj2 = { id: "2", value: 2, label: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t["+rHFej"]);

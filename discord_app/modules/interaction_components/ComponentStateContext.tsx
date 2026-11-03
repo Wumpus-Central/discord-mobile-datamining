@@ -1,22 +1,22 @@
-// === Module 8696: ComponentStateContext ===
+// === Module 8820: ComponentStateContext ===
 
-// Module 8696 (ComponentStateContext)
+// Module 8820 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Server from "Server" /* 1992 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import InteractionTypes from "InteractionTypes" /* 6070 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6071 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6073 */;
-import InteractionUtils from "InteractionUtils" /* 8700 */;
+import Server from "Server" /* 2121 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import InteractionTypes from "InteractionTypes" /* 6190 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6191 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6193 */;
+import InteractionUtils from "InteractionUtils" /* 8824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8389 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6708 */;
-import UserStore from "UserStore" /* 1383 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8697 */;
+import InteractionStore from "InteractionStore" /* 8513 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import UserStore from "UserStore" /* 1385 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8821 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -71,7 +71,7 @@ function getActionComponentState(interaction, id) {
 }
 function useShouldDisableInteractiveComponents(channel_id) {
   const channel = ChannelStore.getChannel(channel_id);
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const items1 = [channel];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guild_id;
@@ -132,11 +132,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8434);
-  const isThreadModerator = channel(7443).useIsThreadModerator(channel);
-  const tmpResult = channel(7443);
+  const obj5 = channel(8558);
+  const isThreadModerator = channel(7567).useIsThreadModerator(channel);
+  const tmpResult = channel(7567);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7443).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7567).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -170,7 +170,7 @@ function useShouldDisableInteractiveComponents(channel_id) {
 }
 function useComponentStateForMessage(channel_id, arg1, id) {
   _require = channel_id;
-  const items = [LocalInteractionComponentStateStore];
+  items = [LocalInteractionComponentStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => LocalInteractionComponentStateStore.getInteractionComponentState(channel_id.id, id.id));
   let obj = require("initialize");
   const items1 = [InteractionStore];
@@ -269,7 +269,7 @@ function useComponentStateForModal(customId, id, arg2) {
   _require = customId;
   importDefault = id;
   dependencyMap = arg2;
-  const items = [LocalInteractionComponentStateStore];
+  items = [LocalInteractionComponentStateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => LocalInteractionComponentStateStore.getInteractionComponentState(customId.customId, id.id));
   closure_129_0 = id;
   closure_129_1 = stateFromStores;
@@ -361,7 +361,7 @@ export function ComponentStateContextProvider(children) {
   if (flag === undefined) {
     flag = false;
   }
-  const items = [message, modal, applicationWidget, flag, validators, validationErrors, setValidationErrors];
+  items = [message, modal, applicationWidget, flag, validators, validationErrors, setValidationErrors];
   return <redux.Provider value={validationErrors.useMemo(() => {
     if (null != ApplicationWidget) {
       const obj5 = { useComponentState: useComponentStateForMessage.bind(null, tmp, flag), channelId: null, containerId: null, message: null, validators: null, getParents: null };

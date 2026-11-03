@@ -1,26 +1,26 @@
-// === Module 19309: VoicePanelMicButton ===
+// === Module 19467: VoicePanelMicButton ===
 
-// Module 19309 (VoicePanelMicButton)
+// Module 19467 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import useMuteStates from "useMuteStates" /* 7526 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9240 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11211 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11970 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11971 */;
-import useDeafStates from "useDeafStates" /* 12003 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import useMuteStates from "useMuteStates" /* 7650 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9368 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11348 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12107 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 12108 */;
+import useDeafStates from "useDeafStates" /* 12140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -28,10 +28,10 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
-let closure_18 = { code: "function VoicePanelMicButtonTsx1(){const{runOnJS,handlePTTEnd}=this.__closure;runOnJS(handlePTTEnd)();}" };
-let closure_19 = { code: "function VoicePanelMicButtonTsx2(event,manager){const{State,runOnJS,handleDragStart}=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();runOnJS(handleDragStart)();}" };
+let closure_18 = { code: "(function VoicePanelMicButtonTsx1(event,manager){let[State,scheduleOnRN,handleDragStart]=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();scheduleOnRN(handleDragStart);})" };
+let closure_19 = { code: "(function VoicePanelMicButtonTsx2(){let[scheduleOnRN,handlePTTEnd]=this.__closure;scheduleOnRN(handlePTTEnd);})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx");
 
@@ -51,8 +51,8 @@ export function PTTButton(arg0) {
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  const items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn];
-  const items1 = [channelId];
+  items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn];
+  let items1 = [channelId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(mute);
     if (null != channel) {
@@ -89,8 +89,8 @@ export function PTTButton(arg0) {
   closure_130_0 = channelId;
   ({ mute, onPress } = stateFromStoresObject);
   let obj2 = require("initialize");
-  const items2 = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1];
-  const items3 = [channelId];
+  let items2 = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1];
+  let items3 = [channelId];
   const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items2, () => {
     const channel = ChannelStore.getChannel(c0);
     if (null != channel) {
@@ -110,7 +110,7 @@ export function PTTButton(arg0) {
     onPress2 = tmp9;
   }
   const obj3 = require("initialize");
-  sharedValue = require("ReanimatedRexport").useSharedValue(false);
+  sharedValue = require("module_1652").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -157,34 +157,51 @@ export function PTTButton(arg0) {
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    const fn = function n(state, activate) {
-      if (state.state === c0(sharedValue[22]).State.BEGAN) {
-        activate.activate();
-        c0(sharedValue[18]).runOnJS(callback3)();
-        const tmpResult = c0(sharedValue[18]);
+    items = [closure_18, LegacyBaseButton.State, _mod1705.scheduleOnRN, callback3];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    [tmp3, tmp4, tmp5, tmp6] = items;
+    class VoicePanelMicButtonTsx1 {
+      constructor(arg0, arg1) {
+        if (arg0.state === closure_0.BEGAN) {
+          tmp = arg1;
+          activateResult = arg1.activate();
+          tmp3 = closure_1;
+          tmp4 = closure_2;
+          tmp5 = closure_1(closure_2);
+        }
+        return;
       }
-    };
+    }
+    const items1 = [tmp4, tmp5, tmp6];
+    VoicePanelMicButtonTsx1.__closure = items1;
+    VoicePanelMicButtonTsx1.__workletHash = 6924573797989;
+    VoicePanelMicButtonTsx1.__initData = tmp3;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    fn.__closure = { State: LegacyBaseButton.State, runOnJS: ReanimatedRexport.runOnJS, handleDragStart: callback3 };
-    fn.__workletHash = 13866422602014;
-    fn.__initData = __initData2;
-    const obj = { State: LegacyBaseButton.State, runOnJS: ReanimatedRexport.runOnJS, handleDragStart: callback3 };
-    const fn2 = function t() {
-      c0(sharedValue[18]).runOnJS(callback1)();
-    };
-    const onTouchesMoveResult = manualActivationResult.onTouchesMove(fn);
-    fn2.__closure = { runOnJS: ReanimatedRexport.runOnJS, handlePTTEnd: callback1 };
-    fn2.__workletHash = 12941114426646;
-    fn2.__initData = __initData;
-    return onTouchesMoveResult.onFinalize(fn2);
+    const items2 = [closure_19, _mod1705.scheduleOnRN, callback1];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp7, tmp8, tmp9] = items2;
+    class VoicePanelMicButtonTsx2 {
+      constructor() {
+        tmp = closure_0(closure_1);
+        return;
+      }
+    }
+    const items3 = [tmp8, tmp9];
+    VoicePanelMicButtonTsx2.__closure = items3;
+    VoicePanelMicButtonTsx2.__workletHash = 17008917284845;
+    VoicePanelMicButtonTsx2.__initData = tmp7;
+    return Gesture.Pan().manualActivation(true).onTouchesMove(VoicePanelMicButtonTsx1).onFinalize(VoicePanelMicButtonTsx2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  const tmp6Result = require("ReanimatedRexport");
+  const tmp6Result = require("module_1652");
   const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
   const obj4 = { gesture: memo, children: null };
   const element = { onPressIn, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };
   const tmp6Result2 = require("VoicePanelStyles");
-  const intl = tmp6(tmp3[25]).intl;
+  const intl = tmp6(tmp3[26]).intl;
   element.accessibilityLabel = intl.string(require("util").t.Q8gkVL);
   element.style = tmp5 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
   if (tmp5) {
@@ -194,12 +211,12 @@ export function PTTButton(arg0) {
   }
   const obj5 = { children: null };
   element.children = closure_13(require("MicrophoneIcon").MicrophoneIcon, { color, size: "lg" });
-  obj4.children = closure_13(onPress2(sharedValue[24]), element);
+  obj4.children = closure_13(onPress2(sharedValue[25]), element);
   const items10 = [closure_13(require("LegacyBaseButton").GestureDetector, obj4), ];
   const obj6 = { style: null, variant: "text-xxs/medium", children: null };
   const items11 = [tmp.text, voicePanelButtonStyles.iconFill];
   obj6.style = items11;
-  const intl2 = tmp6(tmp3[25]).intl;
+  const intl2 = tmp6(tmp3[26]).intl;
   obj6.children = intl2.string(require("util").t.Q8gkVL);
   items10[1] = closure_13(require("Text/Text").Text, obj6);
   obj5.children = items10;
@@ -213,7 +230,7 @@ export function MicButton(arg0) {
   const channelId = noop.useContext(dominantMuteState(voicePanelButtonStyles[17])).channelId;
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
-  const items = [ChannelStore, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore, GameConsoleStore];
+  items = [ChannelStore, AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore, GameConsoleStore];
   const items1 = [channelId];
   const stateFromStoresObject = mute(voicePanelButtonStyles[13]).useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(mute);
@@ -251,12 +268,12 @@ export function MicButton(arg0) {
   mute = stateFromStoresObject.mute;
   dominantMuteState = stateFromStoresObject.dominantMuteState;
   let obj = mute(voicePanelButtonStyles[13]);
-  voicePanelButtonStyles = mute(voicePanelButtonStyles[23]).useVoicePanelButtonStyles(wrapperSpecs);
+  voicePanelButtonStyles = mute(voicePanelButtonStyles[24]).useVoicePanelButtonStyles(wrapperSpecs);
   const items2 = [voicePanelButtonStyles, mute, dominantMuteState];
   const memo = noop.useMemo(() => {
     if (dominantMuteState === VoiceActionUtils.DominantMuteState.SERVER_MUTE) {
       const obj2 = { color: voicePanelButtonStyles.iconFillRed.color };
-      let tmp3Result = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
+      let tmp3Result = state(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
     } else {
       if (mute) {
         let color = voicePanelButtonStyles.iconFillRed.color;
@@ -264,15 +281,15 @@ export function MicButton(arg0) {
         color = voicePanelButtonStyles.iconFill.color;
       }
       const obj = { color, muted: mute };
-      tmp3Result = map1(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
+      tmp3Result = state(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
     }
     return tmp3Result;
   }, items2);
   const element = { props, onPress: stateFromStoresObject.onPress, accessibilityLabel: null, style: null, children: null };
-  let obj2 = mute(voicePanelButtonStyles[23]);
-  const intl = mute(voicePanelButtonStyles[25]).intl;
+  let obj2 = mute(voicePanelButtonStyles[24]);
+  const intl = mute(voicePanelButtonStyles[26]).intl;
   const string = intl.string;
-  const t = mute(voicePanelButtonStyles[25]).t;
+  const t = mute(voicePanelButtonStyles[26]).t;
   if (mute) {
     let stringResult = string(t.YqAjXy);
   } else {
@@ -281,5 +298,5 @@ export function MicButton(arg0) {
   element.accessibilityLabel = stringResult;
   element.style = mute ? voicePanelButtonStyles.iconBgVoiceMuted : voicePanelButtonStyles.iconBg;
   element.children = memo;
-  return closure_13(dominantMuteState(voicePanelButtonStyles[24]), element);
+  return closure_13(dominantMuteState(voicePanelButtonStyles[25]), element);
 }

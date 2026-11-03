@@ -1,18 +1,18 @@
-// === Module 19714: GuildSettingsModalAuditLogFilter ===
+// === Module 19864: GuildSettingsModalAuditLogFilter ===
 
-// Module 19714 (GuildSettingsModalAuditLogFilter)
+// Module 19864 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import FormRadio from "FormRadio" /* 7062 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10819 */;
-import AuditLogUtils from "AuditLogUtils" /* 19712 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19715 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import FormRadio from "FormRadio" /* 7188 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10949 */;
+import AuditLogUtils from "AuditLogUtils" /* 19862 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19710 */;
+import UserStore from "UserStore" /* 1385 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19860 */;
 
 const require = globalThis.__r;
 
@@ -20,8 +20,8 @@ require = fn;
 const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {
@@ -45,7 +45,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
   const navigation = data(guildId[16]).useNavigation();
   let tmp6 = _slicedToArray(navigation.useState(""), 2);
   const first = tmp6[0];
-  const items = [first, data];
+  items = [first, data];
   const memo = navigation.useMemo(() => ({
     data: data.filter((label) => {
       const formatted = first.toLowerCase();
@@ -174,7 +174,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
 };
 export function createAuditLogFilterUserData(userIdFilter) {
   _require = userIdFilter;
-  const items = [];
+  items = [];
   let obj = { label: null, value: null, selected: null, index: 0 };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.ZRFdsL);

@@ -1,10 +1,10 @@
-// === Module 18611: useComponentRenderSpan ===
+// === Module 18769: useComponentRenderSpan ===
 
-// Module 18611 (useComponentRenderSpan)
+// Module 18769 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13330 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 13333 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18612 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13466 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 13469 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18770 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -45,7 +45,7 @@ export function useNavigationTTIRegionMeasurement(exclude, name) {
   str.useRef(null);
   str.useRef(str);
   str.useRef(false);
-  const items = [name, exclude];
+  items = [name, exclude];
   const callback = str.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
     let isFiniteResult = arg2 > 0 && arg3 > 0;
     if (isFiniteResult) {

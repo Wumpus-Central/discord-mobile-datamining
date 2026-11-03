@@ -1,18 +1,18 @@
-// === Module 13641: CheckpointIntroScreen ===
+// === Module 13781: CheckpointIntroScreen ===
 
-// Module 13641 (CheckpointIntroScreen)
+// Module 13781 (CheckpointIntroScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3092 from "module_3092" /* 3092 */;
-import CheckpointStore2 from "CheckpointStore" /* 13436 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13637 */;
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13642 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13643 */;
+import _modDef3219 from "module_3219" /* 3219 */;
+import CheckpointStore2 from "CheckpointStore" /* 13571 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13783 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointStore = CheckpointStore2;
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 
 export default function CheckpointIntroScreen() {
   let tmp = closure_8();
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let tmp = CheckpointStore.fetchState !== constants.SUCCESS;
     if (!tmp) {
@@ -53,14 +53,14 @@ export default function CheckpointIntroScreen() {
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
-  const tmp6Result3 = _modDef3092;
+  const tmp6Result3 = _modDef3219;
   const tmp6Result = CheckpointTextDefault;
   const items3 = [timestampProducer(tmp6Result, { variant: "heading-lg/medium", children: intl.string(stateFromStores ? tmp6Result3["7YmUVu"] : tmp6Result3["Fyr+NW"]) }), ];
   let tmp5Result2 = !stateFromStores;
   if (!stateFromStores) {
     const obj7 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj7.children = intl2.string(_modDef3092["2GRr6H"]);
+    obj7.children = intl2.string(_modDef3219["2GRr6H"]);
     tmp5Result2 = timestampProducer(CheckpointTextDefault, obj7);
     const tmp6Result4 = CheckpointTextDefault;
   }

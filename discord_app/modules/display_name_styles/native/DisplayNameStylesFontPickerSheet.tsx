@@ -1,9 +1,9 @@
-// === Module 17332: DisplayNameStylesFontPickerSheet ===
+// === Module 17475: DisplayNameStylesFontPickerSheet ===
 
-// Module 17332 (DisplayNameStylesFontPickerSheet)
+// Module 17475 (DisplayNameStylesFontPickerSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,15 +12,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const HEXAGON_CAMPAIGN_FONTS = fn(1401).HEXAGON_CAMPAIGN_FONTS;
-const HexagonCampaignConstants = fn(5039);
+const HEXAGON_CAMPAIGN_FONTS = fn(1403).HEXAGON_CAMPAIGN_FONTS;
+const HexagonCampaignConstants = fn(5166);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
-({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_9, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: c10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
+({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_9, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let result = 3 * nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" }, gridContainer: { flexWrap: "wrap", maxWidth: 350 }, fontCard: null, fontCardSelected: null, fontText: null, campaignSection: null, campaignContent: null, campaignHeader: null, campaignCard: null, campaignCardSelected: null, campaignLogoFrame: null, campaignLogo: null, campaignName: null, campaignLegal: null, tileNewDot: null, nonLatinDisclaimer: null, disclaimerText: null };
 let size = { width: 79, height: 79, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
 obj2.fontCard = size;
@@ -39,7 +39,7 @@ let obj8 = { height: 64, flexDirection: "row", alignItems: "center", gap: native
 obj2.campaignCardSelected = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyContent: "center" };
 obj2.campaignLogo = { width: 32, height: 24 };
-obj2.campaignName = { flex: 1, fontFamily: fn(9290).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT] };
+obj2.campaignName = { flex: 1, fontFamily: fn(9418).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT] };
 obj2.campaignLegal = { paddingHorizontal: 2 };
 const size1 = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, width: nativeDefault.space.PX_8, height: nativeDefault.space.PX_8, borderRadius: nativeDefault.space.PX_8 / 2, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND, shadowColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND, shadowRadius: nativeDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
 obj2.tileNewDot = size1;
@@ -81,7 +81,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
     tmp8 = !isTryItOut;
   }
   const trackHexagonCampaignContentViewed = onSelectFont(visibleFontOrder[14]).useTrackHexagonCampaignContentViewed(onSelectFont(tmp3[15]).QuestContent.DISPLAY_NAME_STYLES_SETTINGS, onSelectFont(tmp3[14]).HexagonCampaignContentSurface.FONT_PICKER, tmp8);
-  let items = [visibleFontOrder];
+  items = [visibleFontOrder];
   const memo = noop.useMemo(() => visibleFontOrder.filter((item) => !closure_1_7.includes(item)), items);
   [first, closure_6] = noop.useState(selectedFontId);
   const tmp12 = closure_8;
@@ -105,7 +105,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
   const obj6 = { title: null, trailing: null };
   const hasNonLatinLettersResult = onSelectFont(visibleFontOrder[18]).hasNonLatinLetters(displayName);
   let intl = onSelectFont(tmp3[23]).intl;
-  obj6.title = intl.string(require("module_2932")["0JCuGm"]);
+  obj6.title = intl.string(require("module_3059")["0JCuGm"]);
   const obj7 = { text: null, onPress: null, variant: "primary", size: "sm" };
   const intl2 = onSelectFont(tmp3[23]).intl;
   obj7.text = intl2.string(onSelectFont(visibleFontOrder[23]).t.XqMe3N);
@@ -201,7 +201,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
         accessibilityState: { selected: item === first },
         children: null
       };
-      const items = [hasItem.fontCard, ];
+      items = [hasItem.fontCard, ];
       let fontCardSelected = tmp6;
       if (item === first) {
         fontCardSelected = tmp12.fontCardSelected;

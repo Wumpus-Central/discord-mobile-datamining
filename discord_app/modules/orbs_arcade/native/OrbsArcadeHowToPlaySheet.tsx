@@ -1,10 +1,10 @@
-// === Module 17042: OrbsArcadeHowToPlaySheet ===
+// === Module 17185: OrbsArcadeHowToPlaySheet ===
 
-// Module 17042 (OrbsArcadeHowToPlaySheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17043 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17044 */;
+// Module 17185 (OrbsArcadeHowToPlaySheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17186 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17187 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 
 export default function OrbsArcadeHowToPlaySheet(gameId) {
   gameId = gameId.gameId;
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [gameId];
   const stateFromStores = gameId(504).useStateFromStores(items, () => OrbsArcadeStore.getGame(gameId), items1);
   let tmp5Result2 = null;
@@ -31,9 +31,9 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
       str = "";
     }
     obj3.description = str;
-    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
-    tmp5Result2 = jsx(tmp(10837).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
+    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
+    tmp5Result2 = jsx(tmp(10967).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
   }
   return tmp5Result2;
 };

@@ -1,19 +1,19 @@
-// === Module 12056: ActiveSpeakerTooltip ===
+// === Module 12193: ActiveSpeakerTooltip ===
 
-// Module 12056 (ActiveSpeakerTooltip)
+// Module 12193 (ActiveSpeakerTooltip)
 import nativeDefault from "native" /* 575 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11602 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(12026);
+const StageChannelListStore = fn(12163);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round }, participantAvatarContainer: { alignItems: "center", justifyContent: "center" }, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
 let obj3 = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round };
 obj.participantAvatarText = { fontSize: 12, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
@@ -28,13 +28,13 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 export default noop.memo(function ActiveSpeakerTooltip(channel) {
   channel = channel.channel;
   const tmp = closure_10();
-  let items = [ChannelRTCStore];
+  items = [ChannelRTCStore];
   const items1 = [channel.id];
   const first = _slicedToArray(channel(504).useStateFromStores(items, () => {
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
-    const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
+    items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(6766).isVersionEqual), 1)[0];
+  }, items1, channel(6886).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -50,11 +50,11 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
       const intl = tmp2(1113).intl;
       const obj8 = { count: first.length };
       obj7.children = intl.format(tmp2(1113).t["+dia6l"], obj8);
-      obj6.children = closure_8(tmp2(5624).Text, obj7);
+      obj6.children = closure_8(tmp2(5747).Text, obj7);
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(6980).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(7106).PressableOpacity, obj2);
     }
   }
   return tmp5;

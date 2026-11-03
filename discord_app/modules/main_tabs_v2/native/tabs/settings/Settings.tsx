@@ -1,13 +1,13 @@
-// === Module 18991: Settings ===
+// === Module 19149: Settings ===
 
-// Module 18991 (Settings)
+// Module 19149 (Settings)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { containerOuter: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, containerOuterTablet: null, container: null, containerTablet: null };
 let obj3 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.containerOuterTablet = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
@@ -34,7 +34,7 @@ export default function Settings() {
   closure_4 = tmp6;
   const tmp7 = closure_6();
   let containerOuter = tmp7;
-  let items = [tmp7, tmp5, tmp6, top, left, right];
+  items = [tmp7, tmp5, tmp6, top, left, right];
   let obj2 = {
     style: noop.useMemo(() => {
       if (closure_3) {
@@ -44,7 +44,7 @@ export default function Settings() {
         return containerOuter;
       }
       if (closure_4) {
-        const items = [tmp3.containerOuterTablet, ];
+        items = [tmp3.containerOuterTablet, ];
         const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
         items[1] = obj2;
         containerOuter = items;

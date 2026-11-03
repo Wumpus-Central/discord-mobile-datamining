@@ -1,6 +1,6 @@
-// === Module 17205: subscriptionUtils ===
+// === Module 17348: subscriptionUtils ===
 
-// Module 17205 (subscriptionUtils)
+// Module 17348 (subscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ export function getRoleSubscriptionPlanId(items) {
   return items[0].planId;
 }
 export function getRoleSubscriptionMutationPlanId(renewalMutations) {
-  let items;
+  items = undefined;
   if (renewalMutations != null) {
     renewalMutations = renewalMutations.renewalMutations;
     if (renewalMutations != null) {

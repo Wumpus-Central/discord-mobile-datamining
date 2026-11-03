@@ -1,38 +1,60 @@
-// === Module 18720: guild_channels/ChannelSubtitle ===
+// === Module 18878: guild_channels/ChannelSubtitle ===
 
-// Module 18720 (guild_channels/ChannelSubtitle)
-import Text_Text from "Text/Text" /* 5624 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11044 */;
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 18290 */;
+// Module 18878 (guild_channels/ChannelSubtitle)
+import Text_Text from "Text/Text" /* 5747 */;
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function ChannelSubtitle(arg0) {
-  ({ muted, textProps } = arg0);
-  ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);
-  if (null == channelSubtitleData) {
-    return null;
-  } else {
-    const obj2 = {};
-    const merged = Object.assign(textProps);
-    const obj3 = { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
-    if (muted == null) {
-      muted = false;
-    }
-    obj3.muted = muted;
-    obj3.channelId = channelId;
-    obj3.guildId = guildId;
-    obj3.layout = layout;
-    obj3.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
-    obj2.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj3);
-    return jsx(Text_Text.Text, {});
+function ChannelSubtitle(muted) {
+  muted = muted.muted;
+  const channelId = muted.channelId;
+  const guildId = muted.guildId;
+  const layout = muted.layout;
+  const textProps = muted.textProps;
+  closure_5 = undefined;
+  ({ connected, subtitle } = muted);
+  const channelSubtitleData = muted(channelId[4]).getChannelSubtitleData(subtitle);
+  let subtitle1;
+  if (channelSubtitleData != null) {
+    subtitle1 = channelSubtitleData.subtitle;
   }
+  let type;
+  if (channelSubtitleData != null) {
+    type = channelSubtitleData.type;
+  }
+  closure_5 = tmp6;
+  items = [subtitle1, muted, channelId, guildId, layout, "voice" === type && connected];
+  const memo = guildId.useMemo(() => {
+    let result;
+    if (null != subtitle1) {
+      const obj2 = { content: tmp, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
+      let flag = muted;
+      if (muted == null) {
+        flag = false;
+      }
+      obj2.muted = flag;
+      obj2.channelId = channelId;
+      obj2.guildId = guildId;
+      obj2.layout = layout;
+      obj2.disableAnimatedEmoji = !closure_5;
+      result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
+    }
+    return result;
+  }, items);
+  let tmp8 = null;
+  if (null != memo) {
+    const obj3 = {};
+    const merged = Object.assign(textProps);
+    ({ mentions: obj2.mentions, content: obj2.children } = memo);
+    tmp8 = layout(muted(channelId[6]).MessagePreviewParagraph, obj3);
+  }
+  return tmp8;
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
 export function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);

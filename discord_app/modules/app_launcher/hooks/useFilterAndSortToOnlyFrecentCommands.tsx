@@ -1,8 +1,8 @@
-// === Module 12479: useFilterAndSortToOnlyFrecentCommands ===
+// === Module 12615: useFilterAndSortToOnlyFrecentCommands ===
 
-// Module 12479 (useFilterAndSortToOnlyFrecentCommands)
+// Module 12615 (useFilterAndSortToOnlyFrecentCommands)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9764 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9896 */;
 
 const require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   const commandContext = commands(length[2]).useCommandContext(commands.context);
   const obj = commands(length[2]);
   const topCommands = commands(length[3]).useTopCommands(commandContext);
-  const items = [commands];
+  items = [commands];
   const memo = commandContext.useMemo(() => commands.reduce((acc, id) => {
     acc[id.id] = id;
     return acc;

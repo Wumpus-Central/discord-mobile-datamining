@@ -1,11 +1,11 @@
-// === Module 13911: SearchPlatformActionCreators ===
+// === Module 14042: SearchPlatformActionCreators ===
 
-// Module 13911 (SearchPlatformActionCreators)
+// Module 14042 (SearchPlatformActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 13912 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 14043 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;
@@ -57,12 +57,12 @@ export default {
     const searchContextId = SearchUtils.getSearchContextId(searchContext);
     DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_UPDATE", id: searchContextId, searchContext, updater });
   },
-  deleteSearchQuery(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+  deleteSearchQuery(c0) {
+    const searchContextId = SearchUtils.getSearchContextId(c0);
     DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_DELETE", id: searchContextId });
   },
-  initializeSearchQuery(channelDetailsSearchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(channelDetailsSearchContext);
-    DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_INITIALIZE", id: searchContextId, searchContext: channelDetailsSearchContext });
+  initializeSearchQuery(c5) {
+    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+    DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_INITIALIZE", id: searchContextId, searchContext });
   }
 };

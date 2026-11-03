@@ -1,15 +1,15 @@
-// === Module 10756: PresenceActivityStatus ===
+// === Module 10886: PresenceActivityStatus ===
 
-// Module 10756 (PresenceActivityStatus)
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7883 */;
-import AppsIcon from "AppsIcon" /* 8678 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 9727 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10751 */;
-import TvIcon from "TvIcon" /* 10752 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10754 */;
-import MusicIcon from "MusicIcon" /* 10758 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10759 */;
+// Module 10886 (PresenceActivityStatus)
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8007 */;
+import AppsIcon from "AppsIcon" /* 8802 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 9859 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10881 */;
+import TvIcon from "TvIcon" /* 10882 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10884 */;
+import MusicIcon from "MusicIcon" /* 10888 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export default function PresenceActivityStatus(hideText) {
       const obj2 = { icon: GameControllerIcon, style: iconStyle };
       tmp7 = React3(ActivityStatusIconDefault, obj2);
     }
-    const items = [tmp7, ];
+    items = [tmp7, ];
     let tmp10 = !flag;
     if (!flag) {
       const obj3 = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };

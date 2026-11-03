@@ -1,16 +1,16 @@
-// === Module 11814: transformMessage ===
+// === Module 11951: transformMessage ===
 
-// Module 11814 (transformMessage)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import Server from "Server" /* 1992 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import transformUserDefault from "transformUser" /* 9331 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11815 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 11951 (transformMessage)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import Server from "Server" /* 2121 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import transformUserDefault from "transformUser" /* 9459 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11952 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function recurseReplaceContentTree(type) {
@@ -302,7 +302,7 @@ export function transformMessageRecord(id) {
       images = [];
     }
     const found = images.filter((item) => item !== images.image);
-    const items = [closure_10(images), ...found.map((image) => transformEmbed({ id: images.id, type: constants.RICH, url: images.url, image }))];
+    items = [closure_10(images), ...found.map((image) => transformEmbed({ id: images.id, type: constants.RICH, url: images.url, image }))];
     return items;
   });
   const components = id.components;

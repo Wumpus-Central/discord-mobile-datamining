@@ -1,10 +1,10 @@
-// === Module 17955: NotifyFriendsOnProfileUpdateUtils ===
+// === Module 18098: NotifyFriendsOnProfileUpdateUtils ===
 
-// Module 17955 (NotifyFriendsOnProfileUpdateUtils)
+// Module 18098 (NotifyFriendsOnProfileUpdateUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import NotificationConstants from "NotificationConstants" /* 4959 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import NotificationConstants from "NotificationConstants" /* 5086 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

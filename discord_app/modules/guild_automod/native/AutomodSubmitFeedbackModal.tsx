@@ -1,15 +1,15 @@
-// === Module 13296: AutomodSubmitFeedbackModal ===
+// === Module 13432: AutomodSubmitFeedbackModal ===
 
-// Module 13296 (AutomodSubmitFeedbackModal)
+// Module 13432 (AutomodSubmitFeedbackModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import AutomodFeedback from "AutomodFeedback" /* 7697 */;
-import _modDef8359 from "module_8359" /* 8359 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import AutomodFeedback from "AutomodFeedback" /* 7821 */;
+import _modDef8483 from "module_8483" /* 8483 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef8359;
+  obj2.source = _modDef8483;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
@@ -35,9 +35,9 @@ function SubmitFeedbackScreen(onSubmit) {
   const tmp2 = useSafeAreaInsetsDefault();
   ({ left, right } = tmp2);
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, { paddingLeft: 16 + left, paddingRight: 16 + right }];
+  items = [tmp.container, { paddingLeft: 16 + left, paddingRight: 16 + right }];
   obj2.style = items;
-  const obj4 = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp.headerTitle, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["7bdzNo"]);
   const items1 = [closure_7(Text_Text.Text, obj4), , , ];
@@ -79,7 +79,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };
 let obj3 = { flex: 1, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
 obj2.header = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -102,7 +102,7 @@ export default function AutomodSubmitFeedbackModal(onCloseModal) {
   first = undefined;
   _slicedToArray = undefined;
   [first, _slicedToArray] = noop.useState(onCloseModal(first[11]).Feedback.BUG);
-  const items = [first, onCloseModal, automodDecision];
+  items = [first, onCloseModal, automodDecision];
   const memo = noop.useMemo(() => {
     const onClose = onCloseModal;
     const feedback = first;

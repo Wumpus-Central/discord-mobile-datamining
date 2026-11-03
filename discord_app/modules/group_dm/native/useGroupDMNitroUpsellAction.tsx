@@ -1,10 +1,10 @@
-// === Module 11634: useGroupDMNitroUpsellAction ===
+// === Module 11771: useGroupDMNitroUpsellAction ===
 
-// Module 11634 (useGroupDMNitroUpsellAction)
+// Module 11771 (useGroupDMNitroUpsellAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11627 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11633 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11764 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11770 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function useGroupDMNitroUpsellAction(audience) {
   if (acquisitionStrategy === audience(acquisitionStrategy[2]).GroupDMNitroAcquisitionStrategy.CHECKOUT) {
     onCheckout = audience.onCheckout;
   }
-  const items = [acquisitionStrategy, audience, _location, onCheckout];
+  items = [acquisitionStrategy, audience, _location, onCheckout];
   return onCheckout.useCallback(() => {
     const groupDMNitroUpsellRoute = GroupDMNitroUpsellModel.getGroupDMNitroUpsellRoute(audience, acquisitionStrategy);
     if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MANAGE === groupDMNitroUpsellRoute) {

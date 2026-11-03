@@ -1,15 +1,15 @@
-// === Module 18110: MessagesEmptyState ===
+// === Module 18254: MessagesEmptyState ===
 
-// Module 18110 (MessagesEmptyState)
+// Module 18254 (MessagesEmptyState)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6028 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17077 */;
-import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 18111 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6148 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8897 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17220 */;
+import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 18255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 export default function MessagesEmptyState() {
   const tmp = closure_8();
   const navigation = useNavigation.useNavigation();
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Messages Empty State", presentation: "card" } });
   }, items);
@@ -47,7 +47,7 @@ export default function MessagesEmptyState() {
   const obj7 = { style: tmp.innerContainer, children: null };
   const items2 = [timestampProducer(React4, { style: tmp.imageContainer, children: timestampProducer(ActivitiesTogetherSpotIllustration.ActivitiesTogetherSpotIllustration, { width: 230, accessible: false }) }), ];
   const obj9 = { style: tmp.textWrapper, children: null };
-  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
+  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", style: tmp.title, children: null };
   const intl = util.intl;
   obj10.children = intl.string(util.t["8JZof8"]);
   const items3 = [timestampProducer(Text_Text.Heading, obj10), ];

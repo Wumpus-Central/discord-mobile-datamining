@@ -1,11 +1,11 @@
-// === Module 7830: SlowmodeStore ===
+// === Module 7954: SlowmodeStore ===
 
-// Module 7830 (SlowmodeStore)
+// Module 7954 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = fn;
 function setCooldown(channel, SendMessage, cooldownMs) {
@@ -23,7 +23,7 @@ function setCooldown(channel, SendMessage, cooldownMs) {
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
       const obj2 = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
-      const timeout = new tmp6(4858).Timeout();
+      const timeout = new tmp6(4985).Timeout();
       obj2.timer = timeout;
       dependencyMap[SendMessage][channel.id] = obj2;
       const timer2 = dependencyMap[SendMessage][channel.id].timer;
@@ -107,7 +107,7 @@ const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
   UPLOAD_CANCEL_REQUEST: handleUploadCancel,
   CHANNEL_UPDATES: function handleUpdateCooldown(channels) {
     channels = channels.channels;
-    const items = [, ];
+    items = [, ];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     const item = items.forEach((item) => {
       const iter = channels[Symbol.iterator]();
@@ -133,7 +133,7 @@ const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
     });
   },
   LOGOUT: function clear() {
-    const items = [, ];
+    items = [, ];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     let item = items.forEach((item) => {
       closure_0 = item;

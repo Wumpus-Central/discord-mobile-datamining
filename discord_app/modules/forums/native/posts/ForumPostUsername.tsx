@@ -1,16 +1,16 @@
-// === Module 13767: ForumPostUsername ===
+// === Module 13898: ForumPostUsername ===
 
-// Module 13767 (ForumPostUsername)
+// Module 13898 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
-import ForumLayout from "ForumLayout" /* 4873 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8419 */;
-import ForumHooks from "ForumHooks" /* 9838 */;
-import useChatWidthDefault from "useChatWidth" /* 11555 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 13768 */;
+import ForumLayout from "ForumLayout" /* 5000 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8543 */;
+import ForumHooks from "ForumHooks" /* 9969 */;
+import useChatWidthDefault from "useChatWidth" /* 11692 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 13899 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function ForumPostUsername(arg0) {
@@ -23,7 +23,7 @@ function ForumPostUsername(arg0) {
   }
   const diff = useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
   const tmp4 = useChatWidthDefault();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != authorColor) {
@@ -68,10 +68,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13763).useForumChannelStore;
+const useForumChannelStore = fn(13894).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");

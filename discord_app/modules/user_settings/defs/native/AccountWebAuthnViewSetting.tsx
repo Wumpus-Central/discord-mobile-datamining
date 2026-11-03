@@ -1,22 +1,22 @@
-// === Module 16677: AccountWebAuthnViewSetting ===
+// === Module 16820: AccountWebAuthnViewSetting ===
 
-// Module 16677 (AccountWebAuthnViewSetting)
+// Module 16820 (AccountWebAuthnViewSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6748 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6868 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 16581 */;
-import UserStore from "UserStore" /* 1383 */;
+import WebAuthnStore from "WebAuthnStore" /* 16724 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCOUNT,
+  parent: fn(8556).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
     return noop.useCallback(() => {
       currentUser = currentUser.getCurrentUser();
@@ -42,7 +42,7 @@ const route = SettingBuilders.createRoute({
     if (!WebAuthnStore.hasFetchedCredentials()) {
       const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
     }
-    const items = [WebAuthnStore];
+    items = [WebAuthnStore];
     return initialize.useStateFromStores(items, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.n8mZ0X, { count: credentials.getCredentials().length });

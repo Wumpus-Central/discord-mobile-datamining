@@ -1,6 +1,6 @@
-// === Module 7115: getAuthenticationErrorsFromAPIError ===
+// === Module 7241: getAuthenticationErrorsFromAPIError ===
 
-// Module 7115 (getAuthenticationErrorsFromAPIError)
+// Module 7241 (getAuthenticationErrorsFromAPIError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
@@ -11,7 +11,7 @@ export function getAuthenticationErrorsFromAPIError(error) {
     const _Object = Object;
     const keys = Object.keys(error.errors);
     for (const item10017 of keys) {
-      let items = [arg0.getFirstFieldErrorMessage(item10017)];
+      items = [arg0.getFirstFieldErrorMessage(item10017)];
       obj[item10017] = items;
       continue;
     }

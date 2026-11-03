@@ -1,17 +1,17 @@
-// === Module 7866: utils/QuestUtils ===
+// === Module 7990: utils/QuestUtils ===
 
-// Module 7866 (utils/QuestUtils)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6724 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7869 */;
-import QuestType2 from "QuestType" /* 7870 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+// Module 7990 (utils/QuestUtils)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6844 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7993 */;
+import QuestType2 from "QuestType" /* 7994 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import QuestUtmStore from "QuestUtmStore" /* 7867 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import QuestUtmStore from "QuestUtmStore" /* 7991 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,8 +29,8 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6781);
-({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10, TaskFilterTypes: closure_11 } = QuestConstants);
+const QuestConstants = fn(6901);
+({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: closure_10, TaskFilterTypes: closure_11 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
@@ -109,7 +109,7 @@ export function shouldShowBountiesGivenFilters(filters) {
 }
 export function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
-  const state = QuestUtmStore.getState();
+  state = QuestUtmStore.getState();
   const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: AnalyticsTypes.getQuestContentName(fromContent) };
   state.setUtmCurrentContext(obj);
 }

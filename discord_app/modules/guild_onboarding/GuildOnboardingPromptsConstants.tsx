@@ -1,9 +1,9 @@
-// === Module 7269: GuildOnboardingPromptsConstants ===
+// === Module 7389: GuildOnboardingPromptsConstants ===
 
-// Module 7269 (GuildOnboardingPromptsConstants)
+// Module 7389 (GuildOnboardingPromptsConstants)
 import util from "util" /* 1113 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import StringUtils from "StringUtils" /* 2026 */;
+import StringUtils from "StringUtils" /* 2155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -23,7 +23,7 @@ function serverPromptToClientPrompt(id) {
   return obj;
 }
 function validateOnboardingConnection(connection_type) {
-  const items = [];
+  items = [];
   connection_type = connection_type.connection_type;
   if (obj2.APPLICATION === connection_type) {
     if (obj3.isNullOrEmpty(connection_type.application_id)) {
@@ -224,7 +224,7 @@ export function parseConnectionIdentifier(str) {
 }
 export { validateOnboardingConnection };
 export function validateOnboardingConnections(arr) {
-  let items = [];
+  items = [];
   new Set();
   function _loop(arg0) {
     closure_0 = arg0;

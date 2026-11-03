@@ -1,9 +1,9 @@
-// === Module 13001: useConjureTemplatePrepare ===
+// === Module 13137: useConjureTemplatePrepare ===
 
-// Module 13001 (useConjureTemplatePrepare)
+// Module 13137 (useConjureTemplatePrepare)
 import noop from "module_19" /* 19 */;
 
-const prepareTemplate = fn(10850).prepareTemplate;
+const prepareTemplate = fn(10980).prepareTemplate;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/useConjureTemplatePrepare.tsx");
 
@@ -11,7 +11,7 @@ export default function useConjureTemplatePrepare(arg0, arg1, arg2) {
   noop = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  const items = [arg0, arg1, arg2];
+  items = [arg0, arg1, arg2];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

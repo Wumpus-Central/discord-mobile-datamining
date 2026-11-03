@@ -1,8 +1,8 @@
-// === Module 16910: nitroProgramRewardInvariants ===
+// === Module 17053: nitroProgramRewardInvariants ===
 
-// Module 16910 (nitroProgramRewardInvariants)
-import differenceInCalendarDaysDefault from "differenceInCalendarDays" /* 4456 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15618 */;
+// Module 17053 (nitroProgramRewardInvariants)
+import differenceInCalendarDaysDefault from "differenceInCalendarDays" /* 4583 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15760 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rewards/invariants/nitroProgramRewardInvariants.tsx");
@@ -28,7 +28,7 @@ export function passesNitroGeneralUIInvariant(programReward) {
         }
         return true;
       }
-      const items = [ProgramRewardsTypes.ProgramCurrentState.PAYMENT_PROCESSING, ProgramRewardsTypes.ProgramCurrentState.PAYMENT_ERROR];
+      items = [ProgramRewardsTypes.ProgramCurrentState.PAYMENT_PROCESSING, ProgramRewardsTypes.ProgramCurrentState.PAYMENT_ERROR];
       if (!items.includes(program_current_state)) {
         return false;
       }

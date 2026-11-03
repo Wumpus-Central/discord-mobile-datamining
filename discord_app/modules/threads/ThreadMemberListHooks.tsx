@@ -1,12 +1,12 @@
-// === Module 18774: ThreadMemberListHooks ===
+// === Module 18932: ThreadMemberListHooks ===
 
-// Module 18774 (ThreadMemberListHooks)
+// Module 18932 (ThreadMemberListHooks)
 import util from "util" /* 1113 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7449 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7451 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7573 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7575 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7444 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7568 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ export function useThreadMemberListSections(channelId, stateFromStores) {
       GuildSubscriptionsActionCreators.subscribeChannel(stateFromStores.id, closure_0, GuildChannelSubscriptions.DEFAULT_RANGES);
     }
   });
-  const items = [closure_4];
+  items = [closure_4];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {
       let sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);

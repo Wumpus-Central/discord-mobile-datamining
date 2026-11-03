@@ -1,23 +1,23 @@
-// === Module 13289: MemberRolesList ===
+// === Module 13425: MemberRolesList ===
 
-// Module 13289 (MemberRolesList)
-import RolePillDefault from "RolePill" /* 10824 */;
+// Module 13425 (MemberRolesList)
+import RolePillDefault from "RolePill" /* 10954 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");
 
 export default function MemberRolesList(userRoles) {
   userRoles = userRoles.userRoles;
-  const guild = userRoles.guild;
+  guild = userRoles.guild;
   const tmp = closure_6();
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = userRoles(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
   const tmp4 = <View />;
   let tmp2Result = tmp4;

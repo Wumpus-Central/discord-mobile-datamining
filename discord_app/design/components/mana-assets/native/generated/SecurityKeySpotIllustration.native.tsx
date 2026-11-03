@@ -1,19 +1,19 @@
-// === Module 16691: SecurityKeySpotIllustration ===
+// === Module 16834: SecurityKeySpotIllustration ===
 
-// Module 16691 (SecurityKeySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef16692 from "module_16692" /* 16692 */;
-import _modDef16693 from "module_16693" /* 16693 */;
-import _modDef16694 from "module_16694" /* 16694 */;
+// Module 16834 (SecurityKeySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef16835 from "module_16835" /* 16835 */;
+import _modDef16836 from "module_16836" /* 16836 */;
+import _modDef16837 from "module_16837" /* 16837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16692 }, 3: null };
-let obj2 = { uri: _modDef16692 };
-obj[2] = { uri: _modDef16693 };
-const obj3 = { uri: _modDef16693 };
-obj[3] = { uri: _modDef16694 };
+let obj = { 1: null, 2: { uri: _modDef16835 }, 3: null };
+let obj2 = { uri: _modDef16835 };
+obj[2] = { uri: _modDef16836 };
+const obj3 = { uri: _modDef16836 };
+obj[3] = { uri: _modDef16837 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SecurityKeySpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function SecurityKeySpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

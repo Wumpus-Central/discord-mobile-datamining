@@ -1,12 +1,12 @@
-// === Module 8456: NativeLottieView ===
+// === Module 8580: NativeLottieView ===
 
-// Module 8456 (NativeLottieView)
+// Module 8580 (NativeLottieView)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8457 */;
+import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8581 */;
 import noop_mod from "module_19" /* 19 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 let noop = noop_mod;
@@ -43,7 +43,7 @@ export default function NativeLottieView(accessibilityLabel) {
   LOOP(() => {
     closure_3.current = size;
   });
-  const items = [LOOP];
+  items = [LOOP];
   LOOP(() => {
     ({ asset, url, width, height, animating, accessibilityLabel } = ref.current);
     let tmp2 = "" !== url;

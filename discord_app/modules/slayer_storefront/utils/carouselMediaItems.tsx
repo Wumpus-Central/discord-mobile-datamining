@@ -1,8 +1,8 @@
-// === Module 10673: carouselMediaItems ===
+// === Module 10803: carouselMediaItems ===
 
-// Module 10673 (carouselMediaItems)
-import StoreUtils from "StoreUtils" /* 6455 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
+// Module 10803 (carouselMediaItems)
+import StoreUtils from "StoreUtils" /* 6575 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");
@@ -22,7 +22,7 @@ export function getThumbnailSrc(thumbnailSrc) {
 }
 export function convertCarouselItemsToMediaItems(carouselItems, applicationId, stateFromStores2, heroWidth) {
   heroWidth = heroWidth.heroWidth;
-  const items = [];
+  items = [];
   const items1 = [];
   if (null != carouselItems) {
     if (0 !== carouselItems.length) {

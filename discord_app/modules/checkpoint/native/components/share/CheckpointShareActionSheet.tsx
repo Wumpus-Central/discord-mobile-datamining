@@ -1,26 +1,26 @@
-// === Module 13437: CheckpointShareActionSheet ===
+// === Module 13575: CheckpointShareActionSheet ===
 
-// Module 13437 (CheckpointShareActionSheet)
+// Module 13575 (CheckpointShareActionSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef3092 from "module_3092" /* 3092 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6087 */;
-import CheckpointCardTypes from "CheckpointCardTypes" /* 6090 */;
-import CheckpointShareCardDefault from "CheckpointShareCard" /* 13438 */;
+import _modDef3219 from "module_3219" /* 3219 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6207 */;
+import CheckpointCardTypes from "CheckpointCardTypes" /* 6210 */;
+import CheckpointShareCardDefault from "CheckpointShareCard" /* 13576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(6090).CheckpointCardTypes.DEFAULT] = _modDef3092.DZQzJn;
-obj[fn(6090).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3092.tUU3fe;
-obj[fn(6090).CheckpointCardTypes.STATS_ONLY] = _modDef3092.e2UHGT;
-const createStyles = fn(5014);
+obj[fn(6210).CheckpointCardTypes.DEFAULT] = _modDef3219.DZQzJn;
+obj[fn(6210).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3219.tUU3fe;
+obj[fn(6210).CheckpointCardTypes.STATS_ONLY] = _modDef3219.e2UHGT;
+const createStyles = fn(5141);
 let obj3 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16, height: 284 }, carouselContent: { alignItems: "center", gap: 48 }, pageDots: null, pageDot: null, activePageDot: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16, height: 284 };
 obj3.pageDots = { flexDirection: "row", justifyContent: "center", gap: nativeDefault.space.PX_16 };
@@ -51,7 +51,7 @@ export default function CheckpointShareActionSheet(character) {
   ref = ref.useRef(null);
   const nativeGesture = character(onForward[10]).useNativeGesture({ disallowInterruption: true });
   [first, closure_6] = ref.useState(0);
-  const items = [stats];
+  items = [stats];
   memo = ref.useMemo(() => {
     stats = checkpoint_CheckpointMessageComponentUtils.toCheckpointMessageComponentData(CheckpointCardTypes.CheckpointCardTypes.STATS_ONLY, null, stats).stats;
     let result = null;

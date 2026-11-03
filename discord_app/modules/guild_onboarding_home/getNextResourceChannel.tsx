@@ -1,7 +1,7 @@
-// === Module 13832: getNextResourceChannel ===
+// === Module 13963: getNextResourceChannel ===
 
-// Module 13832 (getNextResourceChannel)
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
+// Module 13963 (getNextResourceChannel)
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
   const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(guildId);
   const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === closure_0);
   if (findIndexResult < 0) {
-    let items = [null, null];
+    items = [null, null];
   } else {
     items = [resourceChannels[findIndexResult], resourceChannels[(findIndexResult + 1) % resourceChannels.length]];
   }
@@ -23,7 +23,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
 export function usePreviousAndNextResourceChannel(guild_id, id) {
   _require = guild_id;
   dependencyMap = id;
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0));
   const findIndexResult = stateFromStores.findIndex((channelId) => channelId.channelId === closure_1);
   if (findIndexResult >= 0) {

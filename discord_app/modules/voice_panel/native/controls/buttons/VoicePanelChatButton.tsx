@@ -1,17 +1,17 @@
-// === Module 19318: VoicePanelChatButton ===
+// === Module 19476: VoicePanelChatButton ===
 
-// Module 19318 (VoicePanelChatButton)
+// Module 19476 (VoicePanelChatButton)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import ChatIcon from "ChatIcon" /* 8643 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19297 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 19319 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import ChatIcon from "ChatIcon" /* 8767 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19455 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 19477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }, badge: null, notificationBadge: null };
 let size = { position: "absolute", zIndex: 1, width: 10, height: 10, borderRadius: nativeDefault.radii.round, top: 0, right: 0 };
 obj2.badge = size;
@@ -33,7 +33,7 @@ export default function ChatButton(props) {
   const tmp4 = openTab(connected[6])(context.channelId);
   closure_5 = tmp4;
   const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
-  const items = [openTab, connected];
+  items = [openTab, connected];
   const callback = noop.useCallback(() => {
     value = connected.get();
     const VoicePanelTabAnalyticsSources = trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources;

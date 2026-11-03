@@ -1,9 +1,9 @@
-// === Module 7135: EyeSlashIcon ===
+// === Module 7261: EyeSlashIcon ===
 
-// Module 7135 (EyeSlashIcon)
+// Module 7261 (EyeSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod7136 from "module_7136" /* 7136 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod7262 from "module_7262" /* 7262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EyeSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7136, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7262, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

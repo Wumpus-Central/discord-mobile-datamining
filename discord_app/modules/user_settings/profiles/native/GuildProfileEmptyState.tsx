@@ -1,11 +1,11 @@
-// === Module 16570: GuildProfileEmptyState ===
+// === Module 16713: GuildProfileEmptyState ===
 
-// Module 16570 (GuildProfileEmptyState)
+// Module 16713 (GuildProfileEmptyState)
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16571 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16714 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
@@ -23,7 +23,7 @@ export default function GuildProfileEmptyState() {
   const tmp = closure_8();
   let obj = { contentContainerStyle: tmp.container, children: null };
   let obj2 = { style: tmp.image, children: timestampProducer(GuildProfileEmptyStateSvgDefault, { style: tmp.image }) };
-  const items = [timestampProducer(hasOwnProperty, obj2), , , , ];
+  items = [timestampProducer(hasOwnProperty, obj2), , , , ];
   let obj4 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.Z1OZCV);
@@ -47,7 +47,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ export default function GuildProfileEmptyState() {
         } else {
           value.default.openCreateGuildModal();
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         c0 = tmp;
@@ -100,7 +100,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ export default function GuildProfileEmptyState() {
         } else {
           const result = value.default.openGuildJoinServerScreen();
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         c0 = tmp;

@@ -1,8 +1,8 @@
-// === Module 15140: getCoverImageFromActivity ===
+// === Module 15281: getCoverImageFromActivity ===
 
-// Module 15140 (getCoverImageFromActivity)
-import Constants from "Constants" /* 2018 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8721 */;
+// Module 15281 (getCoverImageFromActivity)
+import Constants from "Constants" /* 2147 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8845 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
@@ -15,7 +15,7 @@ export default function getCoverImageFromActivity(assets, application_id) {
     if (null != assets.assets) {
       assetImage = null;
       if (null != assets.assets.large_image) {
-        const items = [closure_2, closure_2];
+        items = [closure_2, closure_2];
         assetImage = ApplicationAssetUtils.getAssetImage(application_id, assets.assets.large_image, items);
       }
     }

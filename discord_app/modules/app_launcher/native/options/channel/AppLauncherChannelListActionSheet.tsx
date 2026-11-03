@@ -1,17 +1,17 @@
-// === Module 12526: AppLauncherChannelListActionSheet ===
+// === Module 12662: AppLauncherChannelListActionSheet ===
 
-// Module 12526 (AppLauncherChannelListActionSheet)
+// Module 12662 (AppLauncherChannelListActionSheet)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
-import TableRow from "TableRow" /* 6975 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import TextIcon3 from "TextIcon" /* 8652 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12514 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
+import TableRow from "TableRow" /* 7101 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import TextIcon3 from "TextIcon" /* 8776 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -57,7 +57,7 @@ function ChannelListItem(arg0) {
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 const React7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -75,7 +75,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
   const tmp4 = option(query.useState([]), 2);
   const first1 = tmp4[0];
   closure_8 = tmp4[1];
-  const items = [query, channel, option];
+  items = [query, channel, option];
   const effect = query.useEffect(() => {
     closure_8(AutocompleteUtilsDefault.queryApplicationCommandChannelResults({ query, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true }).channels);
   }, items);

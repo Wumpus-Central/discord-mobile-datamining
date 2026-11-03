@@ -1,11 +1,11 @@
-// === Module 9471: WishlistStore ===
+// === Module 9599: WishlistStore ===
 
-// Module 9471 (WishlistStore)
+// Module 9599 (WishlistStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import WishlistRecord_mod from "WishlistRecord" /* 9472 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import WishlistRecord_mod from "WishlistRecord" /* 9600 */;
 import size from "module_2" /* 2 */;
 
 let WishlistRecord = WishlistRecord_mod;
@@ -29,7 +29,7 @@ prototype["getWishlist"] = function getWishlist(wishlistId) {
 prototype["getWishlistItems"] = function getWishlistItems(firstWishlistId) {
   const data = this.get(firstWishlistId).data;
   if (null != data) {
-    let items = React3(data);
+    items = React3(data);
   } else {
     items = [];
   }
@@ -125,7 +125,7 @@ const wishlistStore = new WishlistStore(DispatcherDefault, {
     }
     if (null != tmp2.data) {
       const obj2 = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
-      const items = tmp2.data.items;
+      items = tmp2.data.items;
       obj2.items = items.filter((skuId) => skuId.skuId !== require);
       obj2.applications = tmp2.data.applications;
       const tmp7 = new WishlistRecord(obj2);

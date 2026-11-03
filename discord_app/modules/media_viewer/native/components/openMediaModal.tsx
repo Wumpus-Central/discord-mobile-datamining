@@ -1,13 +1,13 @@
-// === Module 8833: openMediaModal ===
+// === Module 8957: openMediaModal ===
 
-// Module 8833 (openMediaModal)
+// Module 8957 (openMediaModal)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 const require = fn;
 let closure_7 = async function _openMediaModal() {
-  const items = [closure_130_0(closure_130_2[6])(closure_130_2[5], closure_130_2.paths), closure_130_0(closure_130_2[6])(closure_130_2[7], closure_130_2.paths), closure_130_0(closure_130_2[6])(closure_130_2[8], closure_130_2.paths)];
+  items = [closure_130_0(closure_130_2[6])(closure_130_2[5], closure_130_2.paths), closure_130_0(closure_130_2[6])(closure_130_2[7], closure_130_2.paths), closure_130_0(closure_130_2[6])(closure_130_2[8], closure_130_2.paths)];
   await Promise.all(items);
   closure_129_8 = value;
   closure_129_9 = closure_130_3(closure_129_8, 3);

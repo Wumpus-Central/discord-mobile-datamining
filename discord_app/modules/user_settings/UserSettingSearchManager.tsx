@@ -1,8 +1,8 @@
-// === Module 16599: UserSettingSearchManager ===
+// === Module 16742: UserSettingSearchManager ===
 
-// Module 16599 (UserSettingSearchManager)
-import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
-import StringMatchUtils from "StringMatchUtils" /* 16600 */;
+// Module 16742 (UserSettingSearchManager)
+import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
+import StringMatchUtils from "StringMatchUtils" /* 16743 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
@@ -18,7 +18,7 @@ class SettingSearchManager {
     obj.preprocessed = [];
     item = global.forEach((item) => {
       [tmp, arr] = item;
-      const items = [];
+      items = [];
       const items1 = [];
       const set = new Set();
       item = arr.forEach((toLocaleLowerCase) => {
@@ -57,7 +57,7 @@ prototype["getMatchingSettings"] = function getMatchingSettings(arg0) {
   if (null != value) {
     return value;
   } else {
-    const items = [];
+    items = [];
     const terms = self.terms;
     const item = terms.forEach((item) => {
       [tmp, tmp2] = item;
@@ -89,7 +89,7 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
     if (null != value) {
       return value;
     } else {
-      const items = [];
+      items = [];
       const preprocessed = self.preprocessed;
       let item = preprocessed.forEach((item) => {
         [tmp, ] = item;

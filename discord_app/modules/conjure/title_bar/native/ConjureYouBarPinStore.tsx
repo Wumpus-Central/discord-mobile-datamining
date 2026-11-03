@@ -1,6 +1,6 @@
-// === Module 9675: ConjureYouBarPinStore ===
+// === Module 9807: ConjureYouBarPinStore ===
 
-// Module 9675 (ConjureYouBarPinStore)
+// Module 9807 (ConjureYouBarPinStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -43,7 +43,7 @@ obj = {
       if (pinnedUserIds.includes(id) !== pinned) {
         const pinnedUserIds1 = obj.pinnedUserIds;
         if (pinned) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(pinnedUserIds1, 0)] = id;
           let found = items;
         } else {

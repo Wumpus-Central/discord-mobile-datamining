@@ -1,21 +1,21 @@
-// === Module 16344: subscriptionHelpers ===
+// === Module 16487: subscriptionHelpers ===
 
-// Module 16344 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9326 */;
-import useThermalState from "useThermalState" /* 16298 */;
-import ThermalStates from "ThermalStates" /* 16299 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16300 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16294 */;
-import QuestStore from "QuestStore" /* 7846 */;
+// Module 16487 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8897 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9454 */;
+import useThermalState from "useThermalState" /* 16441 */;
+import ThermalStates from "ThermalStates" /* 16442 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16443 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11056 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
-const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
-const FrameLayoutModes = fn(6847).FrameLayoutModes;
-const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
+const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
+const FrameLayoutModes = fn(6967).FrameLayoutModes;
+const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

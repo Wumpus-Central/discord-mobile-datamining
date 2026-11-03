@@ -1,12 +1,12 @@
-// === Module 18351: useFavoritesGuildSuggestionCandidates ===
+// === Module 18496: useFavoritesGuildSuggestionCandidates ===
 
-// Module 18351 (useFavoritesGuildSuggestionCandidates)
-import sortByMatchScore from "sortByMatchScore" /* 9135 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9147 */;
+// Module 18496 (useFavoritesGuildSuggestionCandidates)
+import sortByMatchScore from "sortByMatchScore" /* 9263 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9275 */;
 import noop from "module_19" /* 19 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18352 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18497 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(18262).NO_SUGGESTIONS;
-const isAllowedType = fn(13385).isAllowedType;
+const NO_SUGGESTIONS = fn(18406).NO_SUGGESTIONS;
+const isAllowedType = fn(13521).isAllowedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
@@ -31,7 +31,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
     const channelAffinitiesV2 = closure_0(results[6]).fetchChannelAffinitiesV2();
   }, []);
   let obj = require("useShareSearchResults");
-  let items = [memo1];
+  items = [memo1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getChannelAffinities());
   closure_129_0 = stateFromStores;
   const items1 = [stateFromStores];
@@ -58,7 +58,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   }, items3);
   const items4 = [memo, tmp, arg0, results, memo1];
   return memo.useMemo(() => {
-    let items = [];
+    items = [];
     const set = new Set();
     const obj = { affinities: memo, getChannelId: getAffineChannelId, index: 0 };
     const obj2 = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };

@@ -1,12 +1,12 @@
-// === Module 17561: UserSettingsDebugLogs ===
+// === Module 17704: UserSettingsDebugLogs ===
 
-// Module 17561 (UserSettingsDebugLogs)
+// Module 17704 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 17562 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 17705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,12 +17,12 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7098).InputHeights.MD, width: fn(7098).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(7224).InputHeights.MD, width: fn(7224).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -54,7 +54,7 @@ export default function UserSettingsDebugLogs() {
     const Storage = Storage2.Storage;
     const result = Storage.set("debug-log-sort-order", arg0);
   }, []);
-  let items = [sortOrder, tmp6];
+  items = [sortOrder, tmp6];
   const memo = obj.useMemo(() => LogAggregator.getAllForDebugPanel("newest" === first), items);
   const tmp4Result3 = sortOrder(noop.useState(() => {
     const Storage = closure_0(callback[10]).Storage;
@@ -102,7 +102,7 @@ export default function UserSettingsDebugLogs() {
     item = item.item;
     const obj = { style: closure_0.log, children: null };
     const obj2 = { style: closure_0.code, variant: "text-xs/normal", color: "text-muted", children: null };
-    const items = [new Date(item.time).toISOString(), " ", ];
+    items = [new Date(item.time).toISOString(), " ", ];
     let str = item.timing;
     if (str == null) {
       str = "";
@@ -150,7 +150,7 @@ export default function UserSettingsDebugLogs() {
   obj8.data = tmp4Result4[0];
   obj8.renderItem = callback1;
   obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_7294").FlashList, obj8);
+  items4[1] = closure_8(require("module_7414").FlashList, obj8);
   obj2.children = items4;
   return first1(memo, obj2);
 };

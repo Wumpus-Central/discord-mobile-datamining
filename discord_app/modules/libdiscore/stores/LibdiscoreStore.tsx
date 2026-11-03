@@ -1,6 +1,6 @@
-// === Module 4886: LibdiscoreStore ===
+// === Module 5013: LibdiscoreStore ===
 
-// Module 4886 (LibdiscoreStore)
+// Module 5013 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -205,7 +205,7 @@ prototype3["getManyRecords"] = function getManyRecords(guildId, selectedRoleIds)
   if (null == this.state.root[guildId]) {
     return [];
   } else {
-    const items = [];
+    items = [];
     const tmp4 = selectedRoleIds[Symbol.iterator]();
     while (tmp4 !== undefined) {
       let tmp8 = tmp.root[tmp6];
@@ -257,7 +257,7 @@ prototype3["_derivedVersion"] = function _derivedVersion(memoized) {
   return tmp2;
 };
 prototype3["mapPartitions"] = function mapPartitions(toSerializedPartition) {
-  const items = [];
+  items = [];
   const root = this.state.root;
   for (const key10008 in root) {
     let obj = { partitionKey: key10008, values: arg0(root[key10008].root, key10008) };
@@ -390,7 +390,7 @@ prototype3["removeRecord"] = function removeRecord(guildId, clusteringKey, nextV
   } else if (null == tmp6.root[clusteringKey]) {
     return tmp10;
   } else {
-    const items = [tmp9];
+    items = [tmp9];
     const result = obj.updateSecondaryIndexes(undefined, items, nextVersionResult);
     const root = tmp6.root;
     delete tmp3[tmp4];
@@ -432,7 +432,7 @@ prototype3["updateRecord"] = function updateRecord(partitionKey, clusteringKey, 
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(value);
     const tmp11 = value2(obj);
-    const items = [tmp11];
+    items = [tmp11];
     const items1 = [tmp4];
     const result = self.updateSecondaryIndexes(items, items1, nextVersionResult);
     self.touchPartition(partitionKey, nextVersionResult).root[clusteringKey] = tmp11;
@@ -469,7 +469,7 @@ prototype3["setRecord"] = function setRecord(guildId, id, arg2, nextVersionResul
     derived1.length = derived1.length + 1;
   }
   touchPartitionResult.root[id] = arg2;
-  const items = [arg2];
+  items = [arg2];
   const result = self.updateSecondaryIndexes(items, undefined, nextVersionResult);
   return true;
 };

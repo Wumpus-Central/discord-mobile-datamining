@@ -1,19 +1,19 @@
-// === Module 12776: ConjureIdeaCards ===
+// === Module 12912: ConjureIdeaCards ===
 
-// Module 12776 (ConjureIdeaCards)
+// Module 12912 (ConjureIdeaCards)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { ideaCards: { gap: fn(12634).BLOCK_GAP } };
+const createStyles = fn(5141);
+let obj2 = { ideaCards: { gap: fn(12770).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
@@ -23,8 +23,8 @@ export default function ConjureIdeaCards(arg0) {
   let obj = { style: closure_6().ideaCards, children: null };
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef3868["wx/o8Y"]);
-  let items = [
+  obj2.children = intl.string(_modDef3995["wx/o8Y"]);
+  items = [
     closure_4(Text_Text.Text, obj2),
     ideas.map((title) => {
       closure_0 = title;
@@ -42,8 +42,8 @@ export default function ConjureIdeaCards(arg0) {
       };
       let tmpResult = null;
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3868.H8G39M, { title: title.title });
-      const items = [closure_1_4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3995.H8G39M, { title: title.title });
+      items = [closure_1_4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
         tmpResult = closure_1_4(Text_Text.Text, obj4);

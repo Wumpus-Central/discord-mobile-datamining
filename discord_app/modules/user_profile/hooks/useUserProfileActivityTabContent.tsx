@@ -1,15 +1,15 @@
-// === Module 14974: useUserProfileActivityTabContent ===
+// === Module 15110: useUserProfileActivityTabContent ===
 
-// Module 14974 (useUserProfileActivityTabContent)
+// Module 15110 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8912 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 14975 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9036 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 15111 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9487 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
 const StatusTypes = fn(1072).StatusTypes;
@@ -23,7 +23,7 @@ export default function useUserProfileActivityTabContent(userId) {
   let voiceChannel;
   let voiceActivity;
   closure_4 = undefined;
-  const items = [userId];
+  items = [userId];
   ({ currentUserId, guildId } = userId);
   const effect = voiceActivity.useEffect(() => {
     const promise = maybeFetchContentInventoryOutboxDefault(userId);

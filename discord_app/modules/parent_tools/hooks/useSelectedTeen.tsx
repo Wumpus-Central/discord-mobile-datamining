@@ -1,9 +1,9 @@
-// === Module 8371: useSelectedTeen ===
+// === Module 8495: useSelectedTeen ===
 
-// Module 8371 (useSelectedTeen)
+// Module 8495 (useSelectedTeen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import UserStore from "UserStore" /* 1383 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import UserStore from "UserStore" /* 1385 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
 
 export function useSelectedTeen() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
   const obj = require("useStateFromStores");
   const items1 = [UserStore];
@@ -25,6 +25,6 @@ export function useSelectedTeen() {
   });
 }
 export function useSelectedTeenId() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 }

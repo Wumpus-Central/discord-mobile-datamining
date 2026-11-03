@@ -1,16 +1,16 @@
-// === Module 11339: GuildActionSheetMemberCount ===
+// === Module 11476: GuildActionSheetMemberCount ===
 
-// Module 11339 (GuildActionSheetMemberCount)
+// Module 11476 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -18,7 +18,7 @@ obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight
 obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1357);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -49,7 +49,7 @@ export default noop.memo(function MemberCount(arg0) {
     const obj = { count };
     const tmp12 = closure_5();
     const obj2 = { style: tmp12.wrapper, children: null };
-    const items = [tmp12.dotContainer, ];
+    items = [tmp12.dotContainer, ];
     let tmp16 = null != dotContainerWidth;
     if (tmp16) {
       const obj3 = { width: dotContainerWidth };

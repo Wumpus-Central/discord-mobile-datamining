@@ -1,10 +1,10 @@
-// === Module 9764: ApplicationCommandFrecencyStore ===
+// === Module 9896: ApplicationCommandFrecencyStore ===
 
-// Module 9764 (ApplicationCommandFrecencyStore)
+// Module 9896 (ApplicationCommandFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5780 */;
+import FrecencyDefault from "Frecency" /* 5900 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -25,7 +25,7 @@ function handleUserSettingsProtoStoreChange() {
     return obj;
   }), global.pendingUsages);
 }
-const ApplicationCommandConstants = fn(6035);
+const ApplicationCommandConstants = fn(6155);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let global = { pendingUsages: [] };
@@ -39,7 +39,7 @@ let obj = {
   afterCompute() {
 
   },
-  numFrequentlyItems: fn(1360).FREQUENCY_ITEM_LIMIT
+  numFrequentlyItems: fn(1362).FREQUENCY_ITEM_LIMIT
 };
 let closure_7 = new FrecencyDefault({
   computeBonus() {
@@ -51,7 +51,7 @@ let closure_7 = new FrecencyDefault({
   afterCompute() {
 
   },
-  numFrequentlyItems: fn(1360).FREQUENCY_ITEM_LIMIT
+  numFrequentlyItems: fn(1362).FREQUENCY_ITEM_LIMIT
 });
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {
@@ -61,7 +61,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
     global = arg0;
   }
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
@@ -106,7 +106,7 @@ const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(Disp
     if (Number(command.id) < 0) {
       let id = command.id;
     } else {
-      let guild;
+      guild = undefined;
       if (context != null) {
         guild = context.guild;
       }
@@ -150,7 +150,7 @@ export function getTopRealCommands(arg0) {
       iter.return();
       break;
     }
-    let items = [];
+    items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
     return items;
   }
@@ -162,7 +162,7 @@ export function getFilteredTopCommands(arr, arg1) {
     const hasItem = arr.includes(":");
     let tmp2 = !hasItem;
     if (hasItem) {
-      let guild;
+      guild = undefined;
       if (closure_0 != null) {
         guild = closure_0.guild;
       }

@@ -1,8 +1,8 @@
-// === Module 8332: imageConversion ===
+// === Module 8456: imageConversion ===
 
-// Module 8332 (imageConversion)
+// Module 8456 (imageConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MediaTypes from "MediaTypes" /* 6072 */;
+import MediaTypes from "MediaTypes" /* 6192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -38,7 +38,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -182,7 +182,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         } else {
           closure_131_12 = value;
           const _Blob = Blob;
-          const items = [closure_131_12];
+          items = [closure_131_12];
           const blob = new Blob(items, { type: "image/jpeg" });
           closure_131_13 = blob;
           closure_131_14 = closure_131_7();
@@ -253,7 +253,7 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -308,7 +308,7 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
           closure_132_4.log("" + closure_131_1 + " conversion worked for " + closure_131_0.name + ": " + closure_131_2.sizeBefore + " -> " + closure_131_2.sizeAfter + " bytes");
           const obj8 = { convertedFile: null, analytics: null };
           const _File = File;
-          const items = [closure_131_2.convertedBlob];
+          items = [closure_131_2.convertedBlob];
           const obj9 = { type: "image/jpeg", lastModified: closure_131_0.lastModified };
           const file = new File(items, closure_132_0(closure_132_2[3]).renameToJpegExtension(closure_131_0.name), obj9);
           obj8.convertedFile = file;
@@ -328,7 +328,7 @@ let closure_4 = new LoggerDefault("ImageConversion");
 const ImageConversionFailureReason = { NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable", PLATFORM_UNSUPPORTED: "platform_unsupported", SIZE_LIMIT_EXCEEDED: "size_limit_exceeded", CONVERSION_FAILED: "conversion_failed", UNKNOWN_ERROR: "unknown_error" };
 let obj2 = {
   label: "heic",
-  matches: fn(8239).isHeicFile,
+  matches: fn(8363).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
@@ -337,7 +337,7 @@ let obj2 = {
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(8239).isJxrFile,
+  matches: fn(8363).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -348,7 +348,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(8239).renameToJpegExtension;
+export const renameToJpegExtension = fn(8363).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export function convertFileToJpeg() {

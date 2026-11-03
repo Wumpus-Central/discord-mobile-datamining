@@ -1,7 +1,7 @@
-// === Module 12223: openConjureRemoveAppAlert ===
+// === Module 12359: openConjureRemoveAppAlert ===
 
-// Module 12223 (openConjureRemoveAppAlert)
-import useAlertStore from "useAlertStore" /* 5960 */;
+// Module 12359 (openConjureRemoveAppAlert)
+import useAlertStore from "useAlertStore" /* 6080 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ function ConjureRemoveAppAlert(action) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -42,13 +42,13 @@ function ConjureRemoveAppAlert(action) {
             let tmp37 = tmp3;
             let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              tmp37 = tmp37(10875);
+              tmp37 = tmp37(11005);
               deleteProject = tmp37.deleteProject;
               let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = tmp37(10941).unpublishProject(user.id, obj5);
-              const tmp37Result = tmp37(10941);
+              deleteProjectResult = tmp37(11079).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(11079);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -69,7 +69,7 @@ function ConjureRemoveAppAlert(action) {
           }
           if (true !== ok) {
             const intl = tmp3(1113).intl;
-            const tmp23 = tmp2(3868);
+            const tmp23 = tmp2(3995);
             if (closure_129_4) {
               let PJ2Fkn = tmp23["0XDHob"];
             } else {
@@ -83,13 +83,13 @@ function ConjureRemoveAppAlert(action) {
           } else {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
-              const obj = tmp2(5712);
-              obj7.text = tmp3(12212).conjureRemoveAppSuccess(closure_129_1);
+              const obj = tmp2(5832);
+              obj7.text = tmp3(12348).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(12212);
+              const obj3 = tmp3(12348);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } catch (tmp40) {
@@ -132,7 +132,7 @@ function ConjureRemoveAppAlert(action) {
   }
   let obj3 = { title: null, content: null, extraContent: null, actions: null };
   const tmp12 = closure_9();
-  obj3.title = tmp9(tmp8[5]).conjureTitleWithAppTag(closure_6(tmp9(tmp8[13]).Text, { variant: "heading-lg/bold", color: "none", style: tmp12.title, children: formatToPlainStringResult }));
+  obj3.title = tmp9(tmp8[5]).conjureTitleWithAppTag(closure_6(tmp9(tmp8[13]).Text, { variant: "heading-lg/semibold", color: "none", style: tmp12.title, children: formatToPlainStringResult }));
   if ("delete" === action.action) {
     let result3 = tmp9(tmp8[5]).conjureDeleteProjectBody(target);
     const tmp9Result8 = tmp9(tmp8[5]);
@@ -154,7 +154,7 @@ function ConjureRemoveAppAlert(action) {
   } else {
     tmp17Result = null;
   }
-  const items = [tmp17Result, , ];
+  items = [tmp17Result, , ];
   let tmp17Result3 = null;
   if (null != result2) {
     let obj7 = { variant: "text-sm/normal", color: "text-muted", children: result2 };
@@ -171,7 +171,7 @@ function ConjureRemoveAppAlert(action) {
   const intl3 = tmp9(tmp8[6]).intl;
   const tmp15Result2 = tmp15(tmp8[7]);
   const obj9 = { children: null };
-  let obj4 = { variant: "heading-lg/bold", color: "none", style: tmp12.title, children: formatToPlainStringResult };
+  let obj4 = { variant: "heading-lg/semibold", color: "none", style: tmp12.title, children: formatToPlainStringResult };
   const tmp9Result7 = tmp9(tmp8[5]);
   const items1 = [
     closure_6(tmp9(tmp8[12]).AlertActionButton, {
@@ -200,7 +200,7 @@ function ConjureRemoveAppAlert(action) {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureRemoveAppAlert.tsx");

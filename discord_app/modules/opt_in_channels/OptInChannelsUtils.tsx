@@ -1,21 +1,21 @@
-// === Module 11587: OptInChannelsUtils ===
+// === Module 11724: OptInChannelsUtils ===
 
-// Module 11587 (OptInChannelsUtils)
+// Module 11724 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
-import ChannelListState from "ChannelListState" /* 7707 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11588 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7399 */;
+import ChannelListState from "ChannelListState" /* 7831 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11725 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -24,11 +24,11 @@ function setIndex(arg0, index) {
   arg0.index = index;
 }
 const Constants = fn(1072);
-({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(4870);
+({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
+const ChannelConstants = fn(4997);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -36,7 +36,7 @@ export function useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromS
   _require = stateFromStores1;
   let formatted = str.toLowerCase();
   const canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(guildId);
-  const items = [canSeeOnboardingHome];
+  items = [canSeeOnboardingHome];
   const callback = canSeeOnboardingHome.useCallback((channel, arg1) => {
     let tmp = !canSeeOnboardingHome;
     if (canSeeOnboardingHome) {
@@ -140,7 +140,7 @@ export function useChannelBrowserSections(guildId, filterCategoriesByQuery, arg2
   dependencyMap = arg2;
   let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.CHANNEL_BROWSER_NUX);
   let obj = require("DismissibleContentUnsafeUtils");
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [guildId];
   closure_3 = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {};
@@ -187,7 +187,7 @@ export function useChannelBrowserSections(guildId, filterCategoriesByQuery, arg2
 }
 export function useChannelBrowserChannelCount(arg0) {
   _require = arg0;
-  const items = [GuildCategoryStore];
+  items = [GuildCategoryStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildCategoryStore.getCategories(closure_0));
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
@@ -213,7 +213,7 @@ export function useChannelBrowserChannelCount(arg0) {
 }
 export function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef2042;
+  const tmp = _modDef2171;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

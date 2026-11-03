@@ -1,16 +1,16 @@
-// === Module 19143: ActivityInviteSheetList ===
+// === Module 19301: ActivityInviteSheetList ===
 
-// Module 19143 (ActivityInviteSheetList)
+// Module 19301 (ActivityInviteSheetList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19144 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19302 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6723 */;
+import TextStyles_mod from "TextStyles" /* 6843 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -28,7 +28,7 @@ function FriendsEmptyComponent() {
   const intl2 = util.intl;
   obj3.body = intl2.string(util.t.MBQBI7);
   ({ emptyTitle: obj2.titleStyle, emptyBody: obj2.bodyStyle } = tmp);
-  const items = [React4(native.RefreshEmptyState, obj3), ];
+  items = [React4(native.RefreshEmptyState, obj3), ];
   const obj4 = {
     onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -57,7 +57,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;
@@ -83,7 +83,7 @@ export default function ActivityInviteSheetList(data) {
   const isSubmitting = data.isSubmitting;
   const onInviteSent = data.onInviteSent;
   const onPressAvatar = data.onPressAvatar;
-  const items = [error, isSubmitting, getSendState, onPressAvatar, onInviteSent, data.length];
+  items = [error, isSubmitting, getSendState, onPressAvatar, onInviteSent, data.length];
   const callback = isSubmitting.useCallback((arg0) => {
     ({ item, index } = arg0);
     const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: getSendState(item) };

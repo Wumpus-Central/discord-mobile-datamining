@@ -1,22 +1,22 @@
-// === Module 9938: PremiumUpsellTooltipActionSheet ===
+// === Module 10069: PremiumUpsellTooltipActionSheet ===
 
-// Module 9938 (PremiumUpsellTooltipActionSheet)
+// Module 10069 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
 let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
 obj2.img = size;
@@ -55,14 +55,14 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   let tmp2Result = null;
   if (null != imageSource) {
     const obj3 = { style: null, source: null };
-    const items = [tmp.img, imageStyle];
+    items = [tmp.img, imageStyle];
     obj3.style = items;
     obj3.source = imageSource;
     tmp2Result = closure_5(FastImageDefault, obj3);
   }
   const items1 = [tmp2Result, , , ];
   const obj4 = { style: tmp.header, children: null };
-  const items2 = [closure_5(native.NitroWheel, { style: tmp.nitroWheel }), closure_5(Text_Text.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
+  const items2 = [closure_5(native.NitroWheel, { style: tmp.nitroWheel }), closure_5(Text_Text.Text, { variant: "heading-xl/semibold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };

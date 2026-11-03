@@ -1,9 +1,9 @@
-// === Module 9438: GameProfileSkeleton ===
+// === Module 9566: GameProfileSkeleton ===
 
-// Module 9438 (GameProfileSkeleton)
+// Module 9566 (GameProfileSkeleton)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 9439 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 9567 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
 const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
@@ -42,9 +42,9 @@ export function GameProfileSkeletonContainer(animationDelayMs) {
   ({ children, style } = animationDelayMs);
   const skeletonPulseStyle = GameProfileSkeletonPulse.useSkeletonPulseStyle(num);
   const obj2 = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-  const items = [style, skeletonPulseStyle];
+  items = [style, skeletonPulseStyle];
   obj2.style = items;
-  return jsx(ReanimatedRexportDefault.View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
+  return jsx(_modDef1652.View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
 }
 export function GameProfileSkeletonButton(size) {
   let str = size.size;
@@ -53,7 +53,7 @@ export function GameProfileSkeletonButton(size) {
   }
   const tmp = closure_5();
   const obj = { style: null };
-  const items = [tmp.button, tmp[closure_6[str]], size.style];
+  items = [tmp.button, tmp[closure_6[str]], size.style];
   obj.style = items;
   return <GameProfileSkeletonPlaceholder style={null} />;
 }

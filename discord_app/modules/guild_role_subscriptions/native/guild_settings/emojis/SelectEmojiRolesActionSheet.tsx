@@ -1,10 +1,10 @@
-// === Module 19997: SelectEmojiRolesActionSheet ===
+// === Module 20147: SelectEmojiRolesActionSheet ===
 
-// Module 19997 (SelectEmojiRolesActionSheet)
+// Module 20147 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { list: { flex: 1 }, row: { paddingHorizontal: nativeDefault.space.PX_16 }, label: null, roleName: null, saveButtonDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.label = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -42,7 +42,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
   const tmp4 = require("useScaledRowHeight")();
   const subscriptionListingsForGuild = guildId(emoji[9]).useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
   let obj = guildId(emoji[9]);
-  let items = [subscriptionListingsForGuild];
+  items = [subscriptionListingsForGuild];
   const items1 = [guildId, subscriptionListingsForGuild];
   dependencyMap = guildId(emoji[10]).useStateFromStoresArray(items, () => subscriptionListingsForGuild.map((role_id) => subscriptionListingsForGuild.getRole(guildId, role_id.role_id)), items1);
   let obj3 = {
@@ -101,7 +101,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
         const obj6 = { style: closure_3.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: tmp.name };
         tmp7Result = dependencyMap(guildId(emoji[12]).Text, obj6);
       }
-      const items = [tmp7Result, ];
+      items = [tmp7Result, ];
       let archived = tmp.archived;
       if (archived) {
         const obj7 = { type: null, variant: "critical" };

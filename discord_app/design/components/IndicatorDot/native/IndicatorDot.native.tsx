@@ -1,11 +1,11 @@
-// === Module 9491: IndicatorDot ===
+// === Module 9619: IndicatorDot ===
 
-// Module 9491 (IndicatorDot)
+// Module 9619 (IndicatorDot)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import IndicatorDotShared from "IndicatorDotShared" /* 9492 */;
-import createStyles from "createStyles" /* 5014 */;
+import IndicatorDotShared from "IndicatorDotShared" /* 9620 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -36,7 +36,7 @@ export function IndicatorDot(variant) {
   }
   ({ cutout, aria-label: tmp5 } = variant);
   const tmp6 = closure_5();
-  const items = [tmp6.dot, tmp6[DEFAULT_INDICATOR_DOT_VARIANT], , ];
+  items = [tmp6.dot, tmp6[DEFAULT_INDICATOR_DOT_VARIANT], , ];
   if (null != cutout) {
     const size = { width: tmp10 + 4, height: tmp10 + 4, borderWidth: 2, margin: -2 };
     let size1 = size;

@@ -1,7 +1,7 @@
-// === Module 17662: DevToolsProfilingUseStateFromStores ===
+// === Module 17805: DevToolsProfilingUseStateFromStores ===
 
-// Module 17662 (DevToolsProfilingUseStateFromStores)
-import useStateFromStoresPerformanceDebugging from "useStateFromStoresPerformanceDebugging" /* 17663 */;
+// Module 17805 (DevToolsProfilingUseStateFromStores)
+import useStateFromStoresPerformanceDebugging from "useStateFromStoresPerformanceDebugging" /* 17806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ export function DevToolsProfilingUseStateFromStores() {
   [str3, closure_6] = str2.useState(value(str[3]).getUseStateFromStoresExecutionCountWarningThreshold());
   const obj4 = value(str[3]);
   [first1, closure_8] = str2.useState(value(str[3]).getUseStateFromStoresSpecificHookFilter());
-  const items = [value];
+  items = [value];
   const effect = str2.useEffect(() => {
     const result = useStateFromStoresPerformanceDebugging.setUseStateFromStoresDebuggingEnabled(first);
   }, items);

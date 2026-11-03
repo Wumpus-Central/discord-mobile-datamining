@@ -1,6 +1,6 @@
-// === Module 18012: usePasswordRegistrationStep ===
+// === Module 18156: usePasswordRegistrationStep ===
 
-// Module 18012 (usePasswordRegistrationStep)
+// Module 18156 (usePasswordRegistrationStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(17989).useRegistrationUIStore;
+const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 
@@ -24,7 +24,7 @@ export function usePasswordRegistrationStep() {
   const tmpResult = useRegistrationUIStore((errors) => errors.errors);
   const passwordScore = password(passwordValid[5]).usePasswordScore(password);
   passwordValid = passwordScore.passwordValid;
-  const items = [password, tmp5, passwordValid];
+  items = [password, tmp5, passwordValid];
   const memo = noop.useMemo(() => {
     let tmp = null == first;
     if (!tmp) {
@@ -60,7 +60,7 @@ export function usePasswordRegistrationStep() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

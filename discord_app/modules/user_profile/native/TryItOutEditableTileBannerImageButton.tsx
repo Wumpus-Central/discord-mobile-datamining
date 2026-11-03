@@ -1,26 +1,26 @@
-// === Module 16557: TryItOutEditableTileBannerImageButton ===
+// === Module 16700: TryItOutEditableTileBannerImageButton ===
 
-// Module 16557 (TryItOutEditableTileBannerImageButton)
+// Module 16700 (TryItOutEditableTileBannerImageButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8757 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16549 */;
-import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 16558 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16559 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8881 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16692 */;
+import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 16701 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16702 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
 function EditableTileBannerImageButtonBase(bannerChange) {
   bannerChange = bannerChange.bannerChange;
   ({ userId, currentProfileBanner, onPress } = bannerChange);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const GifAutoPlay = UserSettings.GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
@@ -73,7 +73,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/TryItOutE
 
 export default function TryItOutEditableTileBannerImageButton(onPress) {
   const user = onPress.user;
-  const items = [UserProfileSettingsStore, UserProfileStore];
+  items = [UserProfileSettingsStore, UserProfileStore];
   const items1 = [user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => {
     const obj = { tryItOutBanner: UserProfileSettingsStore.getTryItOutChanges().tryItOutBanner, currentProfileBanner: null };

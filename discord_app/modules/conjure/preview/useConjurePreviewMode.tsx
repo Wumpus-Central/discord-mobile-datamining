@@ -1,16 +1,16 @@
-// === Module 12080: useConjurePreviewMode ===
+// === Module 12216: useConjurePreviewMode ===
 
-// Module 12080 (useConjurePreviewMode)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10884 */;
-import leaveFrame from "leaveFrame" /* 10938 */;
+// Module 12216 (useConjurePreviewMode)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11013 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11014 */;
+import leaveFrame from "leaveFrame" /* 11076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 let closure_7 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/useConjurePreviewMode.tsx");
@@ -76,7 +76,7 @@ export function useConjurePreviewMode(applicationId) {
   const layoutEffect = obj.useLayoutEffect(() => {
     closure_6.current = onSelectionChange;
   });
-  const items = [mode, first1, first2];
+  items = [mode, first1, first2];
   const effect = obj.useEffect(() => {
     const current = ref.current;
     if (current != null) {

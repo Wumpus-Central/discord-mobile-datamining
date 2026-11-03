@@ -1,12 +1,12 @@
-// === Module 19278: useVoiceChannelGames ===
+// === Module 19436: useVoiceChannelGames ===
 
-// Module 19278 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8682 */;
+// Module 19436 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8806 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import UserStore from "UserStore" /* 1383 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoi
 export default function useVoiceChannelGames(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
+  items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
   const items1 = [arg0, arg1];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const id = AuthenticationStore.getId();
@@ -52,7 +52,7 @@ export default function useVoiceChannelGames(arg0, arg1) {
   });
   const items3 = [getGamesForAppIds, stateFromStores];
   return stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const set = new Set();
     for (const item10013 of getGamesForAppIds) {
       let obj2 = useGameProfileObscured;

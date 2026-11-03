@@ -1,13 +1,13 @@
-// === Module 17661: DevToolsProfilingScreen ===
+// === Module 17804: DevToolsProfilingScreen ===
 
-// Module 17661 (DevToolsProfilingScreen)
+// Module 17804 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import ComponentProfiler from "ComponentProfiler" /* 11096 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17662 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import ComponentProfiler from "ComponentProfiler" /* 11233 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -46,18 +46,18 @@ export default function DevToolsProfilingScreen() {
     const obj4 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj5 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: callback };
     obj4.children = closure_5(TableRow.TableRow, obj5);
-    let items = [closure_5(TableRowGroup.TableRowGroup, obj4), ];
+    items = [closure_5(TableRowGroup.TableRowGroup, obj4), ];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((item) => {
       ({ mount, update, nestedUpdate } = componentRenderStats[item]);
       let obj = { title: "Component Profiler Target: '" + item + "'", hasIcons: false, children: null };
-      let items = [{ stat: mount, label: "Mount" }, { stat: update, label: "Update" }, { stat: nestedUpdate, label: "Nested Update" }];
+      items = [{ stat: mount, label: "Mount" }, { stat: update, label: "Update" }, { stat: nestedUpdate, label: "Nested Update" }];
       obj.children = items.map((stat, index) => {
         stat = stat.stat;
         const obj = { subLabel: null, label: null };
         const obj2 = { children: null };
-        const items = [closure_2_5(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-subtle", style: closure_1_1.monospace, children: "Count - " + stat.count }), ];
+        items = [closure_2_5(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-subtle", style: closure_1_1.monospace, children: "Count - " + stat.count }), ];
         const obj3 = { variant: "text-sm/medium", color: "text-subtle", style: closure_1_1.monospace, children: "Count - " + stat.count };
         items[1] = closure_2_5(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-subtle", style: closure_1_1.monospace, children: "Mean - " + stat.mean });
         obj2.children = items;

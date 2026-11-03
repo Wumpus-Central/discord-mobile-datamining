@@ -1,14 +1,14 @@
-// === Module 9880: ConversationListItem ===
+// === Module 10011: ConversationListItem ===
 
-// Module 9880 (ConversationListItem)
+// Module 10011 (ConversationListItem)
 import nativeDefault from "native" /* 575 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9849 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9852 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9867 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 9882 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 9884 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9980 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9983 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9998 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 10013 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 10015 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7767 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -18,7 +18,7 @@ function ConversationListItemBase(conversation) {
   const navigation = conversation(stateFromStores[8]).useNavigation();
   let obj = conversation(stateFromStores[8]);
   const tmp2 = stateFromStores;
-  const items = [ChannelConversationsStore];
+  items = [ChannelConversationsStore];
   const items1 = [, ];
   ({ channelId: arr2[0], id: arr2[1] } = conversation);
   stateFromStores = conversation(stateFromStores[9]).useStateFromStores(items, () => ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id), items1);
@@ -87,13 +87,13 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(5655).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(5775).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { card: { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 }, title: { flexShrink: 1, minWidth: 0 }, timestamp: { flexShrink: 0 }, headerContainer: null, previewsMask: null, previews: null, maskColumn: null, maskOpaque: null, maskFade: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 };
 obj.headerContainer = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -115,7 +115,7 @@ let result = size.fileFinishedImporting("modules/conversations/components/native
 export default noop.memo(function ConversationListItem(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
-  const items = [ChannelConversationsStore];
+  items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelConversationsStore.getConversation(channelId, conversationId), items1);
   let tmp2 = null;

@@ -1,13 +1,13 @@
-// === Module 15649: HubLinkNoticeStore ===
+// === Module 15792: HubLinkNoticeStore ===
 
-// Module 15649 (HubLinkNoticeStore)
+// Module 15792 (HubLinkNoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HotspotStore from "hotspot/HotspotStore" /* 7382 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7502 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 function checkGuildIsHub(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let tmp2 = null != guild;
   if (tmp2) {
     const features = guild.features;
@@ -31,7 +31,7 @@ class HubLinkNoticeStore extends Store {
 const prototype = HubLinkNoticeStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildStore, HotspotStore);
-  const items = [HotspotStore];
+  items = [HotspotStore];
   this.syncWith(items, handleHotspotUpdates);
 };
 prototype["channelNoticePredicate"] = function channelNoticePredicate(features) {

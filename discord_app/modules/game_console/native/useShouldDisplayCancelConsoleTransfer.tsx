@@ -1,6 +1,6 @@
-// === Module 19300: useShouldDisplayCancelConsoleTransfer ===
+// === Module 19458: useShouldDisplayCancelConsoleTransfer ===
 
-// Module 19300 (useShouldDisplayCancelConsoleTransfer)
+// Module 19458 (useShouldDisplayCancelConsoleTransfer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ export default function useShouldDisplayCancelConsoleTransfer(arg0) {
     return tmp2;
   }), 2);
   closure_1 = tmp[1];
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     let tmp2 = null != timeout;
     if (tmp2) {

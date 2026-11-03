@@ -1,6 +1,6 @@
-// === Module 14994: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 15130: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 14994 (useVisibleUserProfileConnectionsAndAppIdentities)
+// Module 15130 (useVisibleUserProfileConnectionsAndAppIdentities)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const filteredAppIdentities = require("useConnectionFilteredAppIdentities")(arg0).filteredAppIdentities;
   const tmp = require("useUserProfileConnections")(arg0);
   importDefault = tmp;
-  const items = [filteredAppIdentities];
+  items = [filteredAppIdentities];
   memo = found.useMemo(() => {
     let mapped;
     if (filteredAppIdentities != null) {

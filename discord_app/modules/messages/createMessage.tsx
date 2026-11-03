@@ -1,16 +1,16 @@
-// === Module 10319: createMessage ===
+// === Module 10449: createMessage ===
 
-// Module 10319 (createMessage)
+// Module 10449 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 10315 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import UserStore from "UserStore" /* 1383 */;
+import createNonce from "createNonce" /* 10445 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7890 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const ReferencedMessageState = fn(7766).ReferencedMessageState;
+const ReferencedMessageState = fn(7890).ReferencedMessageState;
 const Constants = fn(1072);
-({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
+({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: closure_10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/createMessage.tsx");
 
@@ -25,7 +25,7 @@ export default function createMessage(tts) {
     DEFAULT = constants2.DEFAULT;
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
-  const items = [];
+  items = [];
   ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, mediaMention } = tts);
   if (DEFAULT === constants2.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");

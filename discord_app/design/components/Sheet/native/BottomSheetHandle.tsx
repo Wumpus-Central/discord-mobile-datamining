@@ -1,6 +1,6 @@
-// === Module 5592: Sheet/BottomSheetHandle ===
+// === Module 5715: Sheet/BottomSheetHandle ===
 
-// Module 5592 (Sheet/BottomSheetHandle)
+// Module 5715 (Sheet/BottomSheetHandle)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/Bottom
 
 export function useBottomSheetImperativeHandle(ref, ref2) {
   closure_0 = ref2;
-  const items = [ref2];
+  items = [ref2];
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     expandActionSheet() {
       const current = ref2.current;
@@ -39,10 +39,10 @@ export function useBottomSheetImperativeHandle(ref, ref2) {
         current.collapse();
       }
     },
-    snapToIndex(collapse) {
+    snapToIndex(c0) {
       const current = ref2.current;
       if (current != null) {
-        current.snapToIndex(collapse);
+        current.snapToIndex(c0);
       }
     }
   }), items);

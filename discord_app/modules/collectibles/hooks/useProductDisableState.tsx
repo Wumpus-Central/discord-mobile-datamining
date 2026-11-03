@@ -1,17 +1,17 @@
-// === Module 9574: useProductDisableState ===
+// === Module 9706: useProductDisableState ===
 
-// Module 9574 (useProductDisableState)
+// Module 9706 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import util from "util" /* 1113 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export function useProductDisableState(skuId) {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;

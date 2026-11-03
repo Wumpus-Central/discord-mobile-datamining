@@ -1,13 +1,13 @@
-// === Module 11953: UserSettingsVoiceOverlay ===
+// === Module 12090: UserSettingsVoiceOverlay ===
 
-// Module 11953 (UserSettingsVoiceOverlay)
+// Module 12090 (UserSettingsVoiceOverlay)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
-import TableSwitchRow from "TableSwitchRow" /* 7369 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 11940 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 11954 */;
+import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 12077 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 12091 */;
 import noop from "module_19" /* 19 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 11941 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 12078 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default function UserSettingsVoiceOverlay() {
-  const items = [MobileVoiceOverlayStore];
+  items = [MobileVoiceOverlayStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => enabled.getEnabled());
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 10894: ConjurePerfTraceLayout ===
+// === Module 11024: ConjurePerfTraceLayout ===
 
-// Module 10894 (ConjurePerfTraceLayout)
+// Module 11024 (ConjurePerfTraceLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 function walkNodes(findPerfTraceNodeResult, fn) {
@@ -83,7 +83,7 @@ function childrenByParent(spans) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let items = map.get(nextResult.parent);
+    items = map.get(nextResult.parent);
     if (items == null) {
       items = [];
     }
@@ -103,7 +103,7 @@ function coveredMs(items, arr, applyResult, applyResult1) {
   closure_1 = applyResult;
   closure_2 = applyResult1;
   const mapped = arr.map((start) => {
-    const items = [Math.max(start.start, closure_1), ];
+    items = [Math.max(start.start, closure_1), ];
     as_of = start.end;
     if (as_of == null) {
       as_of = as_of.as_of;
@@ -145,7 +145,7 @@ export function perfTraceRoot(spans) {
 }
 export function perfTraceExtent(trace) {
   const spans = trace.spans;
-  const items = [1];
+  items = [1];
   HermesBuiltin.arraySpread(spans.map((end) => {
     let as_of = end.end;
     if (as_of == null) {
@@ -305,7 +305,7 @@ export function perfTraceTree(spans) {
       applyResult1 = map;
       first = items2[Symbol.iterator]();
     }
-    let items = [found];
+    items = [found];
     const buildResult = build(items, 0, [], Infinity);
     closure_3 = 0.1 * (buildResult.end - buildResult.start);
     isLeaf(buildResult, (count) => {
@@ -321,7 +321,7 @@ export function perfTraceTree(spans) {
 }
 export function visiblePerfTraceRows(key, arg1) {
   let collapsed = arg1;
-  let items = [];
+  items = [];
   function walk(key) {
     collapsed = key;
     function flush() {
@@ -386,7 +386,7 @@ export function visiblePerfTraceRows(key, arg1) {
 }
 export function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f98355 = (depth) => {
+  const f98556 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -398,7 +398,7 @@ export function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f98371(children);
+      tmp = f98572(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -427,7 +427,7 @@ export function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f98371(children);
+      tmp = f98572(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -440,7 +440,7 @@ export function extendView(collapsed, memo, current) {
   closure_129_2 = walk;
   walk(memo);
   new Set();
-  const items = [...set];
+  items = [...set];
   const found = items.filter((item) => !set.has(item));
   let tmp4 = collapsed;
   if (0 !== found.length) {
@@ -462,12 +462,12 @@ export function perfTraceKeys(memo) {
 }
 export function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f98370 = () => true;
+  const f98571 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f98371(children);
+      tmp = f98572(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -483,12 +483,12 @@ export function expandedView(children) {
 }
 export function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f98371 = (depth) => depth.depth > 0;
+  const f98572 = (depth) => depth.depth > 0;
   const set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f98371(children);
+      tmp = f98572(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -556,7 +556,7 @@ export function perfSpanSelfTimes(spans) {
     if (as_of == null) {
       as_of = spans.as_of;
     }
-    const items = [end.id, ];
+    items = [end.id, ];
     const diff = as_of - end.start;
     let items1 = closure_1.get(end.id);
     if (items1 == null) {
@@ -570,7 +570,7 @@ export function perfTimelineTicks(arg0) {
   const result = arg0 / 6;
   _slicedToArray = result;
   closure_1 = 10 ** Math.floor(Math.log10(result));
-  const items = [1, 2, 5, 10];
+  items = [1, 2, 5, 10];
   const mapped = items.map((item) => item * closure_1);
   let found = mapped.find((item) => item >= result);
   if (found == null) {

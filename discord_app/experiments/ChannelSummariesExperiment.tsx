@@ -1,10 +1,10 @@
-// === Module 10124: ChannelSummariesExperiment ===
+// === Module 10254: ChannelSummariesExperiment ===
 
-// Module 10124 (ChannelSummariesExperiment)
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 10254 (ChannelSummariesExperiment)
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ function canSeeChannelSummaries(channel) {
       if (str == null) {
         str = "";
       }
-      const guild = GuildStore.getGuild(str);
+      guild = GuildStore.getGuild(str);
       const SUMMARIZEABLE = constants.SUMMARIZEABLE;
       const tmp4 = null != guild && guild.rulesChannelId === channel.id;
       const tmp6 = isGuildNSFW(guild);
@@ -133,7 +133,7 @@ export function useChannelSummariesExperiment(channel) {
 }
 export function useGuildEligibleForSummaries(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("useStateFromStores").useStateFromStores(items, () => {
     let id1;
@@ -143,7 +143,7 @@ export function useGuildEligibleForSummaries(arg0) {
     if (id1 == null) {
       id1 = React5;
     }
-    const guild = GuildStore.getGuild(id1);
+    guild = GuildStore.getGuild(id1);
     let tmp4 = null != guild;
     if (tmp4) {
       id = guild.id;

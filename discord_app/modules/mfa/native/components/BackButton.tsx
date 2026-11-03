@@ -1,9 +1,9 @@
-// === Module 17676: BackButton ===
+// === Module 17819: BackButton ===
 
-// Module 17676 (BackButton)
+// Module 17819 (BackButton)
 import jsxProd from "jsxProd" /* 21 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 17671 */;
-import buttonDefault from "button" /* 17677 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 17814 */;
+import buttonDefault from "button" /* 17820 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/mfa/native/components/BackBut
 
 export default function BackButton(props) {
   props = props.props;
-  importDefault = props(1497).useNavigation();
+  importDefault = props(1499).useNavigation();
   const obj2 = { variant: "secondary", text: null, onPress: null };
-  const obj = props(1497);
+  const obj = props(1499);
   const intl = props(1113).intl;
   obj2.text = intl.string(props(1113).t.Tot4EC);
   obj2.onPress = function onPress() {

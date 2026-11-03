@@ -1,8 +1,8 @@
-// === Module 12551: useVoteReactors ===
+// === Module 12687: useVoteReactors ===
 
-// Module 12551 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5615 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8404 */;
+// Module 12687 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5738 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8528 */;
 
 require = fn;
 let closure_4 = fn(1072).DEFAULT_NUM_REACTION_USERS;
@@ -13,11 +13,11 @@ export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
-  let items = [MessageReactionsStore];
+  items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
   const stateFromStores = channelId(reaction[2]).useStateFromStores(items, () => {
     const reactions = MessageReactionsStore.getReactions(channelId, messageId, reaction.emoji, closure_4, MessageReactionsTypes.ReactionTypes.VOTE);
-    let items;
+    items = undefined;
     if (reactions != null) {
       items = reactions.values();
     }

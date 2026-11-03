@@ -1,12 +1,12 @@
-// === Module 19502: useFileUploadComponentState ===
+// === Module 19660: useFileUploadComponentState ===
 
-// Module 19502 (useFileUploadComponentState)
-import Server from "Server" /* 1992 */;
+// Module 19660 (useFileUploadComponentState)
+import Server from "Server" /* 2121 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 require = fn;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 
@@ -18,7 +18,7 @@ export function useFileUploadComponentState(maxValues) {
   const error = componentStateContext.useComponentState(maxValues);
   state = error.state;
   executeStateUpdate = error.executeStateUpdate;
-  const items = [state];
+  items = [state];
   uploadIds = uploads.useMemo(() => {
     let type;
     if (state != null) {

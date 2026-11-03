@@ -1,8 +1,8 @@
-// === Module 11788: useCurrentEmbeddedApplication ===
+// === Module 11925: useCurrentEmbeddedApplication ===
 
-// Module 11788 (useCurrentEmbeddedApplication)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7330 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11789 */;
+// Module 11925 (useCurrentEmbeddedApplication)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7450 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11926 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function useCurrentEmbeddedApplication() {
   }
   const tmp = useCurrentEmbeddedActivityDefault();
   if (null == tmp) {
-    let items = [];
+    items = [];
   } else {
     items = [tmp.applicationId];
   }

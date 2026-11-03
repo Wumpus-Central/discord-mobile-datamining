@@ -1,6 +1,6 @@
-// === Module 7247: useSmsAutofill ===
+// === Module 7367: useSmsAutofill ===
 
-// Module 7247 (useSmsAutofill)
+// Module 7367 (useSmsAutofill)
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/verification/native/hooks/use
 
 export default function useSmsAutofill(arg0) {
   noop = arg0;
-  const items = [arg0];
+  items = [arg0];
   const callback = noop.useCallback((code) => closure_0(code.code), items);
   const items1 = [callback];
   return noop.useEffect(() => {

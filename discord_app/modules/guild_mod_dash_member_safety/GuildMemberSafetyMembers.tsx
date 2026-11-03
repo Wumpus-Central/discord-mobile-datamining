@@ -1,14 +1,14 @@
-// === Module 7675: GuildMemberSafetyMembers ===
+// === Module 7799: GuildMemberSafetyMembers ===
 
-// Module 7675 (GuildMemberSafetyMembers)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4941 */;
-import _modDef5854 from "module_5854" /* 5854 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7676 */;
-import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7677 */;
-import SortUtils from "SortUtils" /* 7679 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7680 */;
-import isSpam from "isSpam" /* 7686 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 7799 (GuildMemberSafetyMembers)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 5068 */;
+import _modDef5974 from "module_5974" /* 5974 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7800 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7801 */;
+import SortUtils from "SortUtils" /* 7803 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7804 */;
+import isSpam from "isSpam" /* 7810 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
@@ -19,7 +19,7 @@ function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
     NEW_GUILD_MEMBER = obj.NEW_GUILD_MEMBER;
     tmp2 = obj;
   }
-  const items = [NEW_GUILD_MEMBER];
+  items = [NEW_GUILD_MEMBER];
   if (isCurrentGuildMemberByTimestamp.isIncludedInSearchResults) {
     items.push(tmp2.INCLUDED_IN_SEARCH_RESULTS);
   }
@@ -173,7 +173,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef5854(tmp15, obj[tmp6])) {
+        if (_modDef5974(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

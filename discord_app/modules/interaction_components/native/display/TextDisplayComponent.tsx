@@ -1,17 +1,17 @@
-// === Module 17727: TextDisplayComponent ===
+// === Module 17870: TextDisplayComponent ===
 
-// Module 17727 (TextDisplayComponent)
-import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8582 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 10121 */;
+// Module 17870 (TextDisplayComponent)
+import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8706 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 10251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
-let closure_8 = fn(8695).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+let closure_8 = fn(8819).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
@@ -23,7 +23,7 @@ export default function TextDisplayComponent(type) {
   const componentContainerId = type(content[7]).useComponentContainerId();
   const channelId = SelectedChannelStore.getChannelId();
   id(content[8])(null != channelId, "channelId not available in TextDisplayComponent");
-  let items = [type, id, content, channelId];
+  items = [type, id, content, channelId];
   const memo = noop.useMemo(() => {
     const obj = { type, id, content: null };
     const obj2 = MarkupUtilsDefault;
@@ -34,14 +34,14 @@ export default function TextDisplayComponent(type) {
   const items1 = [AccessibilityStore];
   let obj2 = type(content[11]);
   [tmp6, tmp7] = channelId(type(content[11]).useStateFromStoresArray(items1, () => {
-    const items = [, ];
+    items = [, ];
     ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = AccessibilityStore);
     return items;
   }), 2);
   const AnimateEmoji = type(content[12]).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   const tmp5 = channelId(type(content[11]).useStateFromStoresArray(items1, () => {
-    const items = [, ];
+    items = [, ];
     ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = AccessibilityStore);
     return items;
   }), 2);

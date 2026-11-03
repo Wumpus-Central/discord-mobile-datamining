@@ -1,7 +1,7 @@
-// === Module 18315: useIsEligibleForTierTemplateUpsell ===
+// === Module 18460: useIsEligibleForTierTemplateUpsell ===
 
-// Module 18315 (useIsEligibleForTierTemplateUpsell)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 18460 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_t
 
 export default function useIsEligibleForTierTemplateUpsell(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const obj = require("initialize");
   let hasItem;

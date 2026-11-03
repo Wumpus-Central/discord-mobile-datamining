@@ -1,7 +1,7 @@
-// === Module 15079: EditCollectiblesPickerList ===
+// === Module 15220: EditCollectiblesPickerList ===
 
-// Module 15079 (EditCollectiblesPickerList)
-import Text_Text from "Text/Text" /* 5624 */;
+// Module 15220 (EditCollectiblesPickerList)
+import Text_Text from "Text/Text" /* 5747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,8 +10,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
-let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(15074).GUTTER_SIZE, paddingBottom: 5 } };
+const createStyles = fn(5141);
+let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(15215).GUTTER_SIZE, paddingBottom: 5 } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function DefaultHeader(children) {
   return timestampProducer(hasOwnProperty, { style: closure_9().header, children: timestampProducer(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header }) });
@@ -39,10 +39,10 @@ export function EditCollectiblesPickerList(sections) {
     const diff = tmp3 - 4 * sections(selectedSkuId[5]).GUTTER_SIZE;
     num = diff / sections(selectedSkuId[5]).ROW_SIZE;
   }
-  let items = [sections, flag];
+  items = [sections, flag];
   const items1 = [renderRow, num, selectedSkuId];
   const memo = obj.useMemo(() => {
-    let items = [];
+    items = [];
     if (flag) {
       return items;
     } else {
@@ -51,7 +51,7 @@ export function EditCollectiblesPickerList(sections) {
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(15074).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(15215).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

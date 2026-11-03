@@ -1,21 +1,21 @@
-// === Module 10848: ConjureRemixSheet ===
+// === Module 10978: ConjureRemixSheet ===
 
-// Module 10848 (ConjureRemixSheet)
+// Module 10978 (ConjureRemixSheet)
 import nativeDefault from "native" /* 575 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import ConjureRemix from "ConjureRemix" /* 10849 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import ConjureRemix from "ConjureRemix" /* 10979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const ConjureRemixSheet = "ConjureRemixSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = { scroll: { flex: 1, minHeight: 0 }, list: { gap: nativeDefault.space.PX_24, paddingBottom }, fields: null, footer: null, footerBody: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom };
@@ -46,19 +46,19 @@ export default function ConjureRemixSheet(project) {
   first2 = tmp5[0];
   const tmp7 = first1(first2.useState(false), 2);
   const first3 = tmp7[0];
-  let guild = tmp7[1];
+  guild = tmp7[1];
   [tmp10, c8] = first1(first2.useState(null), 2);
   let tmp11 = first1(first2.useState(0), 2);
   closure_9 = tmp11[1];
   const tmp12 = closure_12(tmp11[0]);
-  let items = [project];
+  items = [project];
   const memo = first2.useMemo(() => ConjureRemix.createConjureRemix(project), items);
   const items1 = [memo];
   const effect = first2.useEffect(() => () => memo.dismiss(), items1);
   const tmp9 = first1(first2.useState(null), 2);
   const items2 = [c8, guild];
   const stateFromStoresArray = project(value[10]).useStateFromStoresArray(items2, () => {
-    const items = [];
+    items = [];
     const flattenedGuildIds = _undefined.getFlattenedGuildIds();
     while (tmp2 !== undefined) {
       guild = guild.getGuild(tmp3);
@@ -95,7 +95,7 @@ export default function ConjureRemixSheet(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

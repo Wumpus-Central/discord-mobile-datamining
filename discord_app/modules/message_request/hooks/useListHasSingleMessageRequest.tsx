@@ -1,9 +1,9 @@
-// === Module 18972: useListHasSingleMessageRequest ===
+// === Module 19130: useListHasSingleMessageRequest ===
 
-// Module 18972 (useListHasSingleMessageRequest)
+// Module 19130 (useListHasSingleMessageRequest)
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export function useListHasSingleMessageRequest() {
   messageRequestsCount = messageRequestsCount(stateFromStores[3]).useMessageRequestsCount();
   const ref = noop.useRef(messageRequestsCount);
   const obj = messageRequestsCount(stateFromStores[3]);
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   stateFromStores = messageRequestsCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
   noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, messageRequestsCount];
@@ -34,7 +34,7 @@ export function useListHasSingleSpamMessageRequest() {
   spamMessageRequestCount = spamMessageRequestCount(stateFromStores[6]).useSpamMessageRequestCount();
   const ref = noop.useRef(spamMessageRequestCount);
   const obj = spamMessageRequestCount(stateFromStores[6]);
-  const items = [SpamMessageRequestStore];
+  items = [SpamMessageRequestStore];
   stateFromStores = spamMessageRequestCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
   noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, spamMessageRequestCount];

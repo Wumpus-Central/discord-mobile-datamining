@@ -1,27 +1,27 @@
-// === Module 10098: ReactionEmojiOptionsActionSheet ===
+// === Module 10228: ReactionEmojiOptionsActionSheet ===
 
-// Module 10098 (ReactionEmojiOptionsActionSheet)
+// Module 10228 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8405 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10057 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10061 */;
-import StarIcon from "StarIcon" /* 10063 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8529 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10187 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10191 */;
+import StarIcon from "StarIcon" /* 10193 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(6958).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7084).EmojiSourceDataTypes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 }, reactionPill: null, emoji: null, emojiText: null, reactionText: null, packDescription: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 };
 obj2.reactionPill = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.xl, borderWidth: 4, borderColor: nativeDefault.colors.BORDER_STRONG, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -57,7 +57,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   const DeveloperMode = tmp3(tmp4[11]).DeveloperMode;
   let tidaWebformEnabled = DeveloperMode.useSetting();
   let obj = messageId(stateFromStores1[12]);
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = channelId(stateFromStores1[13]).useStateFromStores(items, () => guildId.getGuildId());
   const tmp3Result = channelId(stateFromStores1[13]);
   const items1 = [EmojiStore];
@@ -146,7 +146,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   let obj3 = { children: null };
   let obj4 = { style: tmp.header, children: null };
   let obj5 = { style: tmp.reactionPill, children: null };
-  const items8 = [closure_11(messageId(stateFromStores1[26]), { src: emojiURL, name: str, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emoji }), closure_11(channelId(stateFromStores1[27]).Text, { variant: "text-lg/bold", color: "text-default", style: tmp.reactionText, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count })];
+  const items8 = [closure_11(messageId(stateFromStores1[26]), { src: emojiURL, name: str, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emoji }), closure_11(channelId(stateFromStores1[27]).Text, { variant: "text-lg/semibold", color: "text-default", style: tmp.reactionText, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count })];
   obj5.children = items8;
   const items9 = [closure_12(emojiURL, obj5), ];
   const Text = tmp3(tmp4[27]).Text;

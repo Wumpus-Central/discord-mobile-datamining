@@ -1,18 +1,18 @@
-// === Module 14744: resolveInvite ===
+// === Module 14875: resolveInvite ===
 
-// Module 14744 (resolveInvite)
+// Module 14875 (resolveInvite)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import TypeUtils from "TypeUtils" /* 4875 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7880 */;
+import TypeUtils from "TypeUtils" /* 5002 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8002 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 8004 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6747);
+const TrackedHTTPUtilsDefault = tmp4(6867);
 require = fn;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const Constants = fn(1072);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8, AbortCodes: closure_9 } = Constants);
 const map = new Map();
@@ -69,7 +69,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
           const obj2 = { resolved: ok.ok, guild_id: null, channel_id: null, channel_type: null, inviter_id: null, code: null, input_value: null, location: null, authenticated: null, size_total: null, size_online: null, destination_user_id: null, invite_type: null, user_banned: null, user_is_member: null };
           let id;
           if (body1 != null) {
-            const guild = body1.guild;
+            guild = body1.guild;
             if (guild != null) {
               id = guild.id;
             }
@@ -223,7 +223,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
         obj.invite_type = STREAM;
         let id4;
         if (body != null) {
-          const guild = body.guild;
+          guild = body.guild;
           if (guild != null) {
             id4 = guild.id;
           }

@@ -1,13 +1,13 @@
-// === Module 20025: FriendOnlineTimer ===
+// === Module 20175: FriendOnlineTimer ===
 
-// Module 20025 (FriendOnlineTimer)
+// Module 20175 (FriendOnlineTimer)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserSettings from "UserSettings" /* 4839 */;
+import UserSettings from "UserSettings" /* 4966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 20026 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 20176 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 let closure_9 = async function _reportSessionMeaningfullyOnline() {
@@ -73,7 +73,7 @@ class FriendOnlineTimerManager extends tmp2 {
         setting = null == applyArgumentsResult.timerId;
       }
       if (setting) {
-        let items = [, ];
+        items = [, ];
         ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
         setting = items.includes(SelfPresenceStore.getStatus());
       }
@@ -81,7 +81,7 @@ class FriendOnlineTimerManager extends tmp2 {
         const _setTimeout = setTimeout;
         applyArgumentsResult.timerId = setTimeout(() => {
           closure_1_0.timerId = null;
-          const items = [, ];
+          items = [, ];
           ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
           let hasItem = items.includes(status.getStatus());
           if (hasItem) {

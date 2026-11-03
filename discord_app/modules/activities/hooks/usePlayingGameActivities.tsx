@@ -1,11 +1,11 @@
-// === Module 9291: usePlayingGameActivities ===
+// === Module 9419: usePlayingGameActivities ===
 
-// Module 9291 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9292 */;
+// Module 9419 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9420 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function usePlayingGameActivities(arg0, arg1) {
   if (arg2 === undefined) {
     flag = true;
   }
-  const items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
+  items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (flag) {
       if (AuthenticationStore.getId() === closure_0) {

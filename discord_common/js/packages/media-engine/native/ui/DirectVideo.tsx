@@ -1,7 +1,7 @@
-// === Module 5794: DirectVideo ===
+// === Module 5914: DirectVideo ===
 
-// Module 5794 (DirectVideo)
-import DirectVideoStream from "DirectVideoStream" /* 5795 */;
+// Module 5914 (DirectVideo)
+import DirectVideoStream from "DirectVideoStream" /* 5915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function DirectVideo(streamId, onContainerResized) {
   const ref = onResize.useRef(null);
   closure_7 = onResize.useRef({ width: 0, height: 0 });
   closure_8 = onResize.useRef({ streamId, paused: flag, onReady, onResize, onContainerResized });
-  const items = [flag2];
+  items = [flag2];
   const layoutEffect = onResize.useLayoutEffect(() => {
     let current = ref.current;
     let defaultView;

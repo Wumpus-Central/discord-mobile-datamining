@@ -1,33 +1,33 @@
-// === Module 12530: AppLauncherViewAllScreen ===
+// === Module 12666: AppLauncherViewAllScreen ===
 
-// Module 12530 (AppLauncherViewAllScreen)
+// Module 12666 (AppLauncherViewAllScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import Pressables from "Pressables" /* 6980 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
-import AppLauncherContext from "AppLauncherContext" /* 11501 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12379 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 12461 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import Pressables from "Pressables" /* 7106 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7128 */;
+import AppLauncherContext from "AppLauncherContext" /* 11638 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12515 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 12597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 }, header: null, list: null, backButton: null };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(12461).BACK_BUTTON_SIZE, height: fn(12461).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(12597).BACK_BUTTON_SIZE, height: fn(12597).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 obj2.backButton = size;
 let closure_10 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -66,7 +66,7 @@ export default function AppLauncherViewAllScreen(route) {
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
   entrypoint = requiredAppLauncherContext.entrypoint;
-  let items = [chatInputRef, keyboardCloseReasonRef, navigation];
+  items = [chatInputRef, keyboardCloseReasonRef, navigation];
   onPress = applications.useCallback(() => {
     if (navigation.canGoBack()) {
       navigation.pop();
@@ -108,9 +108,9 @@ export default function AppLauncherViewAllScreen(route) {
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj2.onPress = onPress;
     obj2.children = React5(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT });
-    const items = [React5(Pressables.PressableOpacity, obj2), React5(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title }), ];
+    items = [React5(Pressables.PressableOpacity, obj2), React5(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: title }), ];
     const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-    const obj4 = { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title };
+    const obj4 = { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: title };
     items[2] = React5(native.Spacer, { size: AppLauncherBackButton.BACK_BUTTON_SIZE });
     obj.children = items;
     return React6(View, obj);
@@ -202,7 +202,7 @@ export default function AppLauncherViewAllScreen(route) {
   const items8 = [sectionName, sectionOverallPosition, trackAppLauncherItemImpressionOnFirstView];
   const items9 = [sectionName, sectionOverallPosition, trackAppLauncherItemImpressionOnFirstView];
   const memo2 = applications.useMemo(() => {
-    const items = [
+    items = [
       {
         viewabilityConfig,
         onViewableItemsChanged(viewableItems) {
@@ -217,7 +217,7 @@ export default function AppLauncherViewAllScreen(route) {
     return items;
   }, items8);
   const memo3 = applications.useMemo(() => {
-    const items = [
+    items = [
       {
         viewabilityConfig,
         onViewableItemsChanged(viewableItems) {

@@ -1,8 +1,8 @@
-// === Module 18693: useValidFilterTokens ===
+// === Module 18851: useValidFilterTokens ===
 
-// Module 18693 (useValidFilterTokens)
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 13899 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
+// Module 18851 (useValidFilterTokens)
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 14030 */;
+import StreamerModeStore from "StreamerModeStore" /* 5196 */;
 
 const require = globalThis.__r;
 
@@ -12,18 +12,18 @@ const result = size.fileFinishedImporting("modules/search/tokens/hooks/useValidF
 
 export function useValidOrderedFilterTokens(searchContext) {
   _require = searchContext;
-  let items = [StreamerModeStore];
+  items = [StreamerModeStore];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     return SearchTokenStreamerModeUtils.getValidOrderedFilterTokens(closure_0, items);
   });
 }
 export function useValidFilterTokens(searchContext) {
   _require = searchContext;
-  let items = [StreamerModeStore];
+  items = [StreamerModeStore];
   const items1 = [searchContext];
   return require("initialize").useStateFromStores(items, () => {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     return SearchTokenStreamerModeUtils.getValidFilterTokens(closure_0, items);
   }, items1, require("SetUtils").areSetsEqual);
 }

@@ -1,24 +1,24 @@
-// === Module 6887: RecentMentionsStore ===
+// === Module 7007: RecentMentionsStore ===
 
-// Module 6887 (RecentMentionsStore)
+// Module 7007 (RecentMentionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 5772 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import isMessageMentioned from "isMessageMentioned" /* 6443 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6888 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6889 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
+import TimeUtils from "TimeUtils" /* 5892 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import isMessageMentioned from "isMessageMentioned" /* 6563 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7008 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7009 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 
@@ -261,7 +261,7 @@ function handleRelationshipUpdate() {
 }
 function handleDeleteChannel(channel) {
   channel = channel.channel;
-  const items = [];
+  items = [];
   closure_18 = items(12).filter(closure_18, (channel_id) => {
     let flag = channel_id.channel_id !== channel.id;
     if (!flag) {
@@ -507,7 +507,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const items = [];
+    items = [];
     closure_18 = items(12).filter(closure_18, (channel_id) => {
       const channel = ChannelStore.getChannel(channel_id.channel_id);
       let flag = null != channel;
@@ -546,8 +546,8 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      const obj2 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
-      if (obj.isRawMessageMentioned(obj2)) {
+      const obj3 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
+      if (obj2.isRawMessageMentioned(obj3)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -555,10 +555,10 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           substr = substr.slice();
           substr.unshift(tmp3);
           closure_20[tmp3.id] = true;
-          const obj3 = { addedMessages: null };
-          const items = [tmp3];
-          obj3.addedMessages = items;
-          ({ addedMessages, deletedMessages } = obj3);
+          const obj = { addedMessages: null };
+          items = [tmp3];
+          obj.addedMessages = items;
+          ({ addedMessages, deletedMessages } = obj);
           if (null != addedMessages) {
             const item = addedMessages.forEach((getChannelId) => {
               if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
@@ -579,7 +579,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           }
         }
       }
-      obj = isMessageMentioned;
+      obj2 = isMessageMentioned;
     }
     return false;
   },

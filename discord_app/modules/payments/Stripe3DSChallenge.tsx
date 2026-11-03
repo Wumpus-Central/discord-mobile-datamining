@@ -1,7 +1,7 @@
-// === Module 9563: Stripe3DSChallenge ===
+// === Module 9695: Stripe3DSChallenge ===
 
-// Module 9563 (Stripe3DSChallenge)
-import StripeUtils from "StripeUtils" /* 6550 */;
+// Module 9695 (Stripe3DSChallenge)
+import StripeUtils from "StripeUtils" /* 6670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -46,7 +46,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -83,7 +83,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
           throw error;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       }
     } catch (tmp19) {

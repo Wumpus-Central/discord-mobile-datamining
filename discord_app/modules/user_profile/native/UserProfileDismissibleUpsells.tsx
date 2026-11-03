@@ -1,28 +1,28 @@
-// === Module 14990: UserProfileDismissibleUpsells ===
+// === Module 15126: UserProfileDismissibleUpsells ===
 
-// Module 14990 (UserProfileDismissibleUpsells)
+// Module 15126 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const util = ShopIcon(1113);
 const native = ShopIcon(1187);
-const Text_Text = ShopIcon(5624);
-const components_Button_Button = ShopIcon(5634);
-const Pressables = ShopIcon(6980);
-const XSmallIcon = ShopIcon(7054);
-const NitroWheelIcon = ShopIcon(9528);
-const ShopIcon2 = ShopIcon(12468);
+const Text_Text = ShopIcon(5747);
+const components_Button_Button = ShopIcon(5754);
+const Pressables = ShopIcon(7106);
+const XSmallIcon = ShopIcon(7180);
+const NitroWheelIcon = ShopIcon(9656);
+const ShopIcon2 = ShopIcon(12604);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8754).TrackUserProfileActions;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const TrackUserProfileActions = fn(8878).TrackUserProfileActions;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7617).Gradients.PREMIUM_GUILD];
+let items = [...fn(7741).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
@@ -44,7 +44,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
   let tmp = navigateToShop;
   const trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj2 = navigateToShop(hasCustomProfileTheme[10]);
-  let items = [currentUser];
+  items = [currentUser];
   const stateFromStores = navigateToShop(hasCustomProfileTheme[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = navigateToShop(hasCustomProfileTheme[11]);
   currentUser = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
@@ -88,7 +88,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         const obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", children: null };
         const intl = util.intl;
         obj5.children = intl.string(util.t.EIYbj6);
-        const items = [React6(Text_Text.Text, obj5), ];
+        items = [React6(Text_Text.Text, obj5), ];
         const obj6 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl2 = util.intl;
         obj6.accessibilityLabel = intl2.string(util.t["6Xcq+Y"]);

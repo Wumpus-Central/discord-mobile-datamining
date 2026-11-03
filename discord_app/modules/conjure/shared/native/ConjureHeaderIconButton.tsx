@@ -1,7 +1,7 @@
-// === Module 12234: ConjureHeaderIconButton ===
+// === Module 12370: ConjureHeaderIconButton ===
 
-// Module 12234 (ConjureHeaderIconButton)
-import ClipView from "ClipView" /* 9509 */;
+// Module 12370 (ConjureHeaderIconButton)
+import ClipView from "ClipView" /* 9637 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((width) => {
   const obj = { button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" }, icon: { width: 24, height: 24 }, disabledIcon: { opacity: 0.5 }, badge: null };
   const size = { position: "absolute", left: 24 - width, top: 24 - width, width, height: width, alignItems: "center", justifyContent: "center" };
@@ -28,14 +28,14 @@ export default function ConjureHeaderIconButton(ref) {
     badgeSize = 8;
   }
   const tmp = closure_7(badgeSize);
-  let items = [badgeSize];
+  items = [badgeSize];
   const memo = noop.useMemo(() => {
     const point = { shape: ClipView.CutoutShape.Circle, x: null, y: null, size: badgeSize + 4 };
     const diff = 24 - badgeSize;
     const diff1 = diff - 2;
     point.x = diff1;
     point.y = diff1;
-    const items = [point];
+    items = [point];
     return items;
   }, items);
   const obj = { ref: ref.ref, accessibilityRole: "button", accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, onPress, activeOpacity: 0.6, androidRippleConfig, style: tmp.button, children: null };
@@ -68,6 +68,6 @@ export default function ConjureHeaderIconButton(ref) {
     tmp3Result = closure_5(View, obj5);
   }
   obj.children = tmp3Result;
-  return closure_5(badgeSize(6980).PressableOpacity, obj);
+  return closure_5(badgeSize(7106).PressableOpacity, obj);
 };
 export const CONJURE_HEADER_BADGE_SIZE = 8;

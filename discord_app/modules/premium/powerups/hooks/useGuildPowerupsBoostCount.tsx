@@ -1,11 +1,11 @@
-// === Module 8468: useGuildPowerupsBoostCount ===
+// === Module 8592: useGuildPowerupsBoostCount ===
 
-// Module 8468 (useGuildPowerupsBoostCount)
-import GameServerExperiment from "GameServerExperiment" /* 5248 */;
+// Module 8592 (useGuildPowerupsBoostCount)
+import GameServerExperiment from "GameServerExperiment" /* 5371 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 
 export default function useGuildAppliedBoostCount(guildId) {
   _require = guildId;
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   num = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let prop;
     if (guild != null) {
       prop = guild.premiumSubscriberCount;
@@ -68,7 +68,7 @@ export default function useGuildAppliedBoostCount(guildId) {
   }, items3);
 };
 export function getGuildPowerupsBoostCount(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let total;
   if (guild != null) {
     total = guild.premiumSubscriberCount;

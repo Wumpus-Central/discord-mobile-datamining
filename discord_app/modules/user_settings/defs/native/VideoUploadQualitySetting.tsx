@@ -1,23 +1,23 @@
-// === Module 17457: VideoUploadQualitySetting ===
+// === Module 17600: VideoUploadQualitySetting ===
 
-// Module 17457 (VideoUploadQualitySetting)
+// Module 17600 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsText from "UserSettingsText" /* 17456 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import UserSettingsText from "UserSettingsText" /* 17599 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
 const VideoQualitySettings = fn(1194).VideoQualitySettings;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8432).MobileUserSettings.CHAT,
+  parent: fn(8556).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
-    const items = [UnsyncedUserSettingsStore];
+    items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
@@ -32,7 +32,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     obj.label = intl.string(util.t.cWGW5d);
     obj.value = VideoQualitySettings.BEST;
-    const items = [obj, , ];
+    items = [obj, , ];
     const obj2 = { label: null, value: null };
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t["5hKnyC"]);

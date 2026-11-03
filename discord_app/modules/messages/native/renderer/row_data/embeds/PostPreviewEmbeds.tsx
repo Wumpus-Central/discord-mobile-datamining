@@ -1,8 +1,8 @@
-// === Module 15148: PostPreviewEmbeds ===
+// === Module 15289: PostPreviewEmbeds ===
 
-// Module 15148 (PostPreviewEmbeds)
+// Module 15289 (PostPreviewEmbeds)
 import Constants from "Constants" /* 1072 */;
-import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 15149 */;
+import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 15290 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
@@ -15,7 +15,7 @@ export function createPostPreviewEmbeds(message, roleStyle) {
   if (useReducedMotion === undefined) {
     flag = false;
   }
-  const items = [];
+  items = [];
   const embeds = message.embeds;
   if (embeds != null) {
     const item = embeds.forEach((type) => {

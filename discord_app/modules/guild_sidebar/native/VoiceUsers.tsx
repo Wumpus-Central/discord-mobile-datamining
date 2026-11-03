@@ -1,15 +1,15 @@
-// === Module 18179: VoiceUsers ===
+// === Module 18323: VoiceUsers ===
 
-// Module 18179 (VoiceUsers)
+// Module 18323 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9822 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 14104 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9953 */;
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 14235 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 function AudienceItem(arg0) {
@@ -23,7 +23,7 @@ function AudienceItem(arg0) {
   }
   const obj2 = { style: collapsed ? tmp2.listenersCollapsed : tmp2.listeners, children: null };
   const obj3 = { style: tmp2.listenersIconWrapper, children: timestampProducer(HeadphonesIcon.HeadphonesIcon, { color: "redesign-channel-name-muted-text", size: "custom", style: tmp2.headphonesIcon }) };
-  const items = [timestampProducer(View, obj3), timestampProducer(Text_Text.Text, { style: tmp2.listenersText, variant, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
+  items = [timestampProducer(View, obj3), timestampProducer(Text_Text.Text, { style: tmp2.listenersText, variant, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
   obj2.children = items;
   return React5(View, obj2);
 }
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -60,11 +60,11 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9822)());
-  const obj = user(9235);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9235).useLocalSelfMuteDeaf());
-  const obj2 = user(9235);
-  const items = [GuildMemberStore];
+  const tmp3 = closure_11(channel(9953)());
+  const obj = user(9363);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9363).useLocalSelfMuteDeaf());
+  const obj2 = user(9363);
+  items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) }), items1);
   let userCollapsedOverlap = null;
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18180), obj7, user.id);
+  obj4.children = closure_6(tmp(18324), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);
@@ -107,7 +107,7 @@ export default function VoiceUsers(collapsed) {
   }
   const tmp3Result = channel(guild_id[15])(mapped);
   noop = tmp3Result;
-  const items = [guild_id, tmp3Result];
+  items = [guild_id, tmp3Result];
   const memo = noop.useMemo(() => {
     if (null != guild_id) {
       if (length.length > 0) {

@@ -1,9 +1,9 @@
-// === Module 9633: cta_button ===
+// === Module 9765: cta_button ===
 
-// Module 9633 (cta_button)
+// Module 9765 (cta_button)
 import _mod1197 from "module_1197" /* 1197 */;
 import wrappers from "wrappers" /* 1227 */;
-import localized_string from "localized_string" /* 9631 */;
+import localized_string from "localized_string" /* 9763 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -18,7 +18,7 @@ class CTAButton$Type extends MessageType {
       name: "button_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
+            items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -146,7 +146,7 @@ let items = [
     name: "button_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
+      items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },

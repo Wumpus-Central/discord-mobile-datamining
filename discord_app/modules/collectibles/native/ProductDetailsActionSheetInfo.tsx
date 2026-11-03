@@ -1,17 +1,17 @@
-// === Module 15039: ProductDetailsActionSheetInfo ===
+// === Module 15181: ProductDetailsActionSheetInfo ===
 
-// Module 15039 (ProductDetailsActionSheetInfo)
+// Module 15181 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9537 */;
-import useProductDescription from "useProductDescription" /* 15040 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 15041 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9665 */;
+import useProductDescription from "useProductDescription" /* 15182 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 15183 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function ProductNameAndDescription(product) {
@@ -19,7 +19,7 @@ function ProductNameAndDescription(product) {
   const tmp = closure_6();
   const obj2 = { style: tmp.description, children: null };
   const productDescription = useProductDescription.useProductDescription(product);
-  const items = [React4(Text_Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  items = [React4(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
   obj2.children = items;
   return hasOwnProperty(View, obj2);
 }
@@ -49,7 +49,7 @@ function ProductPurchaseStatus(product) {
 function BundleProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
   const obj = { style: null, children: React4(ProductPurchaseStatus, { product, onTrackPress }) };
-  const items = [, ];
+  items = [, ];
   ({ body: arr[0], bundleBody: arr[1] } = closure_6());
   obj.style = items;
   return React4(View, obj);
@@ -68,7 +68,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
   } else {
     const obj = { style: tmp.body, children: null };
     const obj3 = { product };
-    const items = [React4(ProductNameAndDescription, obj3), ];
+    items = [React4(ProductNameAndDescription, obj3), ];
     const obj4 = { product, onTrackPress };
     items[1] = React4(ProductPurchaseStatus, obj4);
     obj.children = items;

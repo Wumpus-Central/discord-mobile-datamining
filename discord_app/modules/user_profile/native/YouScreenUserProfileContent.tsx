@@ -1,41 +1,41 @@
-// === Module 18870: YouScreenUserProfileContent ===
+// === Module 19028: YouScreenUserProfileContent ===
 
-// Module 18870 (YouScreenUserProfileContent)
+// Module 19028 (YouScreenUserProfileContent)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8828 */;
-import tracking_Tracking from "tracking/Tracking" /* 9677 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11400 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11413 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11453 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11492 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13731 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 14842 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 14907 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 14921 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 14924 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 14925 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14946 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14947 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14950 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14973 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14990 */;
-import UserProfileConnections from "UserProfileConnections" /* 14993 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14998 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 15004 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17707 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 18443 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 18877 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 18879 */;
-import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 18881 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 18885 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8952 */;
+import tracking_Tracking from "tracking/Tracking" /* 9809 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11538 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11551 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11590 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11629 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13862 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 14973 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 15038 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 15050 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 15053 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 15054 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 15075 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 15076 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15079 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 15109 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 15126 */;
+import UserProfileConnections from "UserProfileConnections" /* 15129 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 15134 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 15140 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17850 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 18597 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 19035 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 19037 */;
+import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 19039 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 19043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -52,25 +52,25 @@ function YouAvatar(arg0) {
   obj2.importantForAccessibility = "no-hide-descendants";
   obj2.accessibilityElementsHidden = isAndroidResult;
   obj2.accessible = !isAndroidResult;
-  return map1(UserProfileAvatarDefault, obj2);
+  return state(UserProfileAvatarDefault, obj2);
 }
 function YouScreenWidgetsBoardContainer(arg0) {
   ({ userId, activeSection, containerBackground, containerBorderColor } = arg0);
-  const items = [UserProfileSharedStylesDefault().card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
+  items = [UserProfileSharedStylesDefault().card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
   const obj = { style: UserProfileSharedStylesDefault().profileContent, children: null };
-  const items1 = [map1(UserProfileWidgetsBoardEditNoticeDefault, {}), map1(ConjureCustomWidgetAddOptionDefault, {}), map1(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: items })];
+  const items1 = [state(UserProfileWidgetsBoardEditNoticeDefault, {}), state(ConjureCustomWidgetAddOptionDefault, {}), state(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: items })];
   obj.children = items1;
-  return closure_1_14(View, obj);
+  return gesture(View, obj);
 }
 function YouScreenActivityTabContainer(user) {
   user = user.user;
   ({ containerBackground, containerBorderColor } = user);
-  const items = [UserProfileSharedStylesDefault().card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
-  const obj = { style: null, children: map1(UserProfileActivityTabDefault, { user, currentUser: user, cardStyle: items }) };
+  items = [UserProfileSharedStylesDefault().card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
+  const obj = { style: null, children: state(UserProfileActivityTabDefault, { user, currentUser: user, cardStyle: items }) };
   const items1 = [, ];
   ({ cards: arr2[0], profileContent: arr2[1] } = UserProfileSharedStylesDefault());
   obj.style = items1;
-  return map1(View, obj);
+  return state(View, obj);
 }
 function EditSection(navigateToProfileCustomization) {
   navigateToProfileCustomization = navigateToProfileCustomization.navigateToProfileCustomization;
@@ -88,7 +88,7 @@ function EditSection(navigateToProfileCustomization) {
   noop = tmp8;
   const tmp9 = visibleContent === navigateToProfileCustomization(trackUserProfileAction[23]).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK;
   closure_5 = tmp9;
-  const items = [navigateToProfileCustomization, trackUserProfileAction, tmp7, tmp8, tmp9, markAsDismissed];
+  items = [navigateToProfileCustomization, trackUserProfileAction, tmp7, tmp8, tmp9, markAsDismissed];
   const items1 = [navigateToProfileCustomization];
   const callback = noop.useCallback(() => {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
@@ -150,7 +150,7 @@ function YouScreenPrimaryInfoSection(navigateToProfileCustomization) {
   if (isProfileLoaded) {
     tmp10 = !tmp9;
   }
-  const items = [];
+  items = [];
   if (tmp10) {
     items.push(dismissible_content.DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK);
   }
@@ -205,23 +205,23 @@ function YouScreenPrimaryInfoSection(navigateToProfileCustomization) {
   const merged = Object.assign(primaryInfoProps);
   obj5.badgeDirectoryEntryPointRef = entryPointRef;
   obj5.onOpenBadgeDirectory = badgeDirectoryNuxEntryPoint.onOpenBadgeDirectory;
-  const items2 = [map1(UserProfilePrimaryInfoDefault, obj5), , ];
+  const items2 = [state(UserProfilePrimaryInfoDefault, obj5), , ];
   let tmp26Result = null != badgeDirectoryNuxCoachmarkVariant.variantProps;
   if (tmp26Result) {
     const obj6 = { targetRef: entryPointRef, userId: id, variantProps: badgeDirectoryNuxCoachmarkVariant.variantProps, visible: tmp22, markAsDismissed: tmp21 };
-    tmp26Result = map1(BadgeDirectoryNuxCoachmarkDefault, obj6);
+    tmp26Result = state(BadgeDirectoryNuxCoachmarkDefault, obj6);
   }
   items2[1] = tmp26Result;
-  items2[2] = map1(EditSection, { navigateToProfileCustomization: navigateToProfileCustomization.navigateToProfileCustomization, isProfileLoaded, visibleContent: tmp20, markAsDismissed: tmp21 });
+  items2[2] = state(EditSection, { navigateToProfileCustomization: navigateToProfileCustomization.navigateToProfileCustomization, isProfileLoaded, visibleContent: tmp20, markAsDismissed: tmp21 });
   obj4.children = items2;
-  return closure_1_14(View, obj4);
+  return gesture(View, obj4);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4855).useIsContentShown;
-const UserProfileSections = fn(8754).UserProfileSections;
-let UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_12 = fn(16443).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4982).useIsContentShown;
+const UserProfileSections = fn(8878).UserProfileSections;
+let UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+let closure_12 = fn(16587).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const size = fn(2);
@@ -348,41 +348,41 @@ export default function YouScreenUserProfileContent(user) {
   }
   const items7 = [containerBackground, containerBorderColor, tmp3, navigateToPremium, shouldShowExpiringTrialOfferCard, navigateToShop, null != primaryColor, enabled, user, tmp6, navigateToFriends];
   callback4 = obj6.useCallback(() => {
-    const items = [closure_5.card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
+    items = [closure_5.card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
     const obj2 = { style: null, children: null };
     const items1 = [, ];
     ({ cards: arr2[0], profileContent: arr2[1] } = closure_5);
     obj2.style = items1;
-    const items2 = [map1(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , , ];
+    const items2 = [state(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , , ];
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
-      tmp3Result = map1(UserProfileDismissibleUpsellsDefault, obj4);
+      tmp3Result = state(UserProfileDismissibleUpsellsDefault, obj4);
     }
     items2[1] = tmp3Result;
-    items2[2] = map1(CheckpointProfileEntrypointDefault, {});
+    items2[2] = state(CheckpointProfileEntrypointDefault, {});
     let tmp3Result2 = enabled;
     if (enabled) {
-      tmp3Result2 = map1(BalanceWidgetMenuDefault, {});
+      tmp3Result2 = state(BalanceWidgetMenuDefault, {});
     }
     items2[3] = tmp3Result2;
-    items2[4] = map1(UserProfileActivityDefault, { user, currentUser: user, style: items });
-    items2[5] = map1(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
-    items2[6] = map1(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
-    items2[7] = map1(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-    items2[8] = map1(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
-    items2[9] = map1(UserProfileNoteDefault, { userId: user.id });
+    items2[4] = state(UserProfileActivityDefault, { user, currentUser: user, style: items });
+    items2[5] = state(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
+    items2[6] = state(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
+    items2[7] = state(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
+    items2[8] = state(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
+    items2[9] = state(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
-    return closure_2_14(View, obj2);
+    return gesture(View, obj2);
   }, items7);
   const items8 = [tmp3.profileContent, stateFromStores1, pageWidth, activeProfileTabSection === customStatusActivity.WISHLIST, user.id];
   callback5 = obj6.useCallback(() => {
     const obj = { style: closure_5.profileContent, children: null };
     if (null == stateFromStores1) {
-      let tmp4Result = map1(UserProfileWishlistGrid.WishlistEmptyState, {});
-      let tmp4 = map1;
+      let tmp4Result = state(UserProfileWishlistGrid.WishlistEmptyState, {});
+      let tmp4 = state;
     } else {
-      tmp4 = map1;
+      tmp4 = state;
       const obj2 = { wishlistId: stateFromStores1, containerWidth: null, isVisible: null };
       let tmp8;
       if (first > 0) {
@@ -392,7 +392,7 @@ export default function YouScreenUserProfileContent(user) {
       obj2.isVisible = isVisible;
       tmp4Result = tmp4(UserProfileWishlistGridDefault, obj2);
     }
-    const items = [tmp4Result, ];
+    items = [tmp4Result, ];
     const obj3 = { userId: user.id, wishlistId: stateFromStores1, containerWidth: null };
     let tmp15;
     if (first > 0) {
@@ -401,7 +401,7 @@ export default function YouScreenUserProfileContent(user) {
     obj3.containerWidth = tmp15;
     items[1] = tmp4(UserProfileWishlistSuggestionsGridDefault, obj3);
     obj.children = items;
-    return closure_2_14(View, obj);
+    return gesture(View, obj);
   }, items8);
   const items9 = [callback4, callback5, tmp20, isRecentActivityMobileEnabled, user, activeProfileTabSection, containerBackground, containerBorderColor];
   const memo = obj6.useMemo(() => {
@@ -409,13 +409,13 @@ export default function YouScreenUserProfileContent(user) {
     const intl = util.intl;
     obj.label = intl.string(util.t.LXw470);
     obj.page = callback4();
-    const items = [obj];
+    items = [obj];
     if (closure_17) {
       const obj2 = { id: "board", label: null, page: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.laViwx);
       const obj3 = { userId: user.id, activeSection: activeProfileTabSection, containerBackground, containerBorderColor };
-      obj2.page = map1(YouScreenWidgetsBoardContainer, obj3);
+      obj2.page = state(YouScreenWidgetsBoardContainer, obj3);
       items.push(obj2);
     }
     if (isRecentActivityMobileEnabled) {
@@ -423,7 +423,7 @@ export default function YouScreenUserProfileContent(user) {
       const intl3 = util.intl;
       obj4.label = intl3.string(util.t.chq59f);
       const obj5 = { user, containerBackground, containerBorderColor };
-      obj4.page = map1(YouScreenActivityTabContainer, obj5);
+      obj4.page = state(YouScreenActivityTabContainer, obj5);
       items.push(obj4);
     }
     const obj6 = { id: "wishlist", label: null, page: null };

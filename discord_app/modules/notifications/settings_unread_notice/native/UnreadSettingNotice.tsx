@@ -1,9 +1,9 @@
-// === Module 11353: UnreadSettingNotice ===
+// === Module 11490: UnreadSettingNotice ===
 
-// Module 11353 (UnreadSettingNotice)
+// Module 11490 (UnreadSettingNotice)
 import nativeDefault from "native" /* 575 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11354 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11355 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11491 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11492 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 let closure_4 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -28,7 +28,7 @@ export default function UnreadSettingNoticeConnected(channel) {
   _require = channel;
   const tmp = closure_7();
   const obj = { style: tmp.content, children: null };
-  const items = [closure_5(UnreadSettingNoticeImpressionTrackingDefault, { id: channel.channel.id }), , ];
+  items = [closure_5(UnreadSettingNoticeImpressionTrackingDefault, { id: channel.channel.id }), , ];
   const obj3 = { style: tmp.informations, children: null };
   const obj4 = { variant: "text-md/semibold", children: null };
   const intl = require("util").intl;

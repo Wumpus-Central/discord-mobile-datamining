@@ -1,8 +1,8 @@
-// === Module 15669: reactParserFor ===
+// === Module 15811: reactParserFor ===
 
-// Module 15669 (reactParserFor)
-import markup_MarkupParserDefault from "markup/MarkupParser" /* 8445 */;
-import Spoiler from "Spoiler" /* 11055 */;
+// Module 15811 (reactParserFor)
+import markup_MarkupParserDefault from "markup/MarkupParser" /* 8569 */;
+import Spoiler from "Spoiler" /* 11191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,11 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/reactParserFor.tsx");
 
 export default function reactParserFor() {
-  let items = [...arguments];
+  items = [...arguments];
   const items1 = [...items];
   closure_0 = markup_MarkupParserDefault.reactParserFor.apply(items1);
   return function parseWithSpoilers() {
-    const items = [...arguments];
+    items = [...arguments];
     const tmp = closure_0(...items);
     let tmp2 = tmp;
     if (null != tmp) {

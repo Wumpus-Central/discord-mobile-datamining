@@ -1,11 +1,11 @@
-// === Module 14203: ApplicationIconAndName ===
+// === Module 14334: ApplicationIconAndName ===
 
-// Module 14203 (ApplicationIconAndName)
+// Module 14334 (ApplicationIconAndName)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -28,7 +28,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj.source = { uri: str };
-  const items = [React3(native.Icon, obj, application.id), ];
+  items = [React3(native.Icon, obj, application.id), ];
   const obj2 = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {

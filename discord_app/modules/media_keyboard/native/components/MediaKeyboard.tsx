@@ -1,32 +1,32 @@
-// === Module 12531: MediaKeyboard ===
+// === Module 12667: MediaKeyboard ===
 
-// Module 12531 (MediaKeyboard)
+// Module 12667 (MediaKeyboard)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import Upload from "Upload" /* 8210 */;
-import ThreadIcon from "ThreadIcon" /* 8645 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import AppsIcon from "AppsIcon" /* 8678 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10530 */;
-import PollsIcon from "PollsIcon" /* 10533 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10537 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10539 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12536 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12570 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12571 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import Upload from "Upload" /* 8334 */;
+import ThreadIcon from "ThreadIcon" /* 8769 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import AppsIcon from "AppsIcon" /* 8802 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10660 */;
+import PollsIcon from "PollsIcon" /* 10663 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10667 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10669 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12672 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12706 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12707 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
 require = fn;
-const DraftType = fn(7701).DraftType;
-const MediaKeyboardConstants = fn(1621);
+const DraftType = fn(7825).DraftType;
+const MediaKeyboardConstants = fn(1623);
 ({ MediaKeyboardTarget: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(12364).KEYBOARD_ANIMATION_CONFIG;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
+const KEYBOARD_ANIMATION_CONFIG = fn(12500).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default noop.memo(function MediaKeyboard(channel) {
   channel = channel.channel;
   const chatInputRef = channel.chatInputRef;
   let sharedValue;
-  let items = [, ];
+  items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   ({ onClose, transitionState } = channel);
   const effect = sharedValue.useEffect(() => {
@@ -95,7 +95,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       } else if (keyboardContextForType.target === tmp4.COMMAND) {
         const result1 = channel(ref[18]).mediaNodeToUploadItem(item);
         if (extensions.length > 0) {
-          const items = [channel(ref[19]).getFileFromUploadItem(result1).filename];
+          items = [channel(ref[19]).getFileFromUploadItem(result1).filename];
           if (!validateFilenames(items)) {
             return showInvalidFileTypeAlert();
           }
@@ -232,7 +232,7 @@ export default noop.memo(function MediaKeyboard(channel) {
           if (fn != null) {
             tmp();
           }
-          const items = [arg0];
+          items = [arg0];
           onSelectFiles(items, Upload.UploadOrigin.IMAGE_EDITOR);
         };
         obj2.onRemove = onRemove;
@@ -276,7 +276,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       obj.text = intl.string(util.t.PHjkRE);
       obj.IconComponent = AppsIcon.AppsIcon;
       obj.onPress = memo.onAppsPress;
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       items1 = [];
@@ -318,16 +318,16 @@ export default noop.memo(function MediaKeyboard(channel) {
   ref = sharedValue.useRef(null);
   let items3 = [memo];
   let items4 = [sharedValue, sharedValue1, memo, channel.id, tmp8, memo1, token];
-  const callback = sharedValue.useCallback((animatedIndex) => closure_2_12(MediaKeyboardBottomSheetHeaderSimpleDefault, { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }), items3);
+  const callback = sharedValue.useCallback((animatedIndex) => application_id(MediaKeyboardBottomSheetHeaderSimpleDefault, { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }), items3);
   const callback1 = sharedValue.useCallback((animateOnMount) => {
     let flag = animateOnMount.animateOnMount;
     if (flag === undefined) {
       flag = false;
     }
     const obj = { animateOnMount: flag, animatedIndex: sharedValue, animatedPosition: sharedValue1, initialPosition: animateOnMount.initialPosition, children: null };
-    const items = [
-      closure_2_12(MediaKeyboardFloatingSendDefault, { ref, animatedIndex: sharedValue, channelId: channel.id, draftType: closure_8.draftType, onSend: memo.onSend }),
-      closure_2_12(MediaKeyboardBottomSheetActionsDefault, {
+    items = [
+      application_id(MediaKeyboardFloatingSendDefault, { ref, animatedIndex: sharedValue, channelId: channel.id, draftType: closure_8.draftType, onSend: memo.onSend }),
+      application_id(MediaKeyboardBottomSheetActionsDefault, {
         canPostPolls: closure_8.canPostPolls,
         onHeightChange(arg0) {
           const current = ref.current;
@@ -342,7 +342,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       })
     ];
     obj.children = items;
-    return map1(MediaKeyboardAccessoriesContainerDefault, obj);
+    return state(MediaKeyboardAccessoriesContainerDefault, obj);
   }, items4);
   const obj8 = {
     animationConfigs: showInvalidFileTypeAlert,

@@ -1,19 +1,19 @@
-// === Module 18847: CompassSpotIllustration ===
+// === Module 19005: CompassSpotIllustration ===
 
-// Module 18847 (CompassSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef18848 from "module_18848" /* 18848 */;
-import _modDef18849 from "module_18849" /* 18849 */;
-import _modDef18850 from "module_18850" /* 18850 */;
+// Module 19005 (CompassSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef19006 from "module_19006" /* 19006 */;
+import _modDef19007 from "module_19007" /* 19007 */;
+import _modDef19008 from "module_19008" /* 19008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18848 }, 3: null };
-let obj2 = { uri: _modDef18848 };
-obj[2] = { uri: _modDef18849 };
-const obj3 = { uri: _modDef18849 };
-obj[3] = { uri: _modDef18850 };
+let obj = { 1: null, 2: { uri: _modDef19006 }, 3: null };
+let obj2 = { uri: _modDef19006 };
+obj[2] = { uri: _modDef19007 };
+const obj3 = { uri: _modDef19007 };
+obj[3] = { uri: _modDef19008 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function CompassSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

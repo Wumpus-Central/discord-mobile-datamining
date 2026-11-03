@@ -1,6 +1,6 @@
-// === Module 5603: requireNativeComponentOrDefault ===
+// === Module 5726: requireNativeComponentOrDefault ===
 
-// Module 5603 (requireNativeComponentOrDefault)
+// Module 5726 (requireNativeComponentOrDefault)
 import LoggerDefault from "Logger" /* 3 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
   if (flag === undefined) {
     flag = true;
   }
-  if (framebus.hasViewManagerConfig(componentName)) {
+  if (duration.hasViewManagerConfig(componentName)) {
     if (!map.has(componentName)) {
       if (componentFoundInstance == null) {
         componentFoundInstance = React(componentName);

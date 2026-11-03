@@ -1,16 +1,16 @@
-// === Module 18592: ICYMIHeader ===
+// === Module 18750: ICYMIHeader ===
 
-// Module 18592 (ICYMIHeader)
+// Module 18750 (ICYMIHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { text: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin }, separator: null };
   const size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: nativeDefault.space.PX_16 };
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx"
 export default function ICYMIHeader() {
   const tmp = closure_7();
   const obj = { children: null };
-  const items = [React4(View, { style: tmp.separator }), ];
+  items = [React4(View, { style: tmp.separator }), ];
   const obj3 = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["jnXV/V"]);

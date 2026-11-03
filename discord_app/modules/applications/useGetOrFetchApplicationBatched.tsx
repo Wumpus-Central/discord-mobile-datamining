@@ -1,9 +1,9 @@
-// === Module 11591: useGetOrFetchApplicationBatched ===
+// === Module 11728: useGetOrFetchApplicationBatched ===
 
-// Module 11591 (useGetOrFetchApplicationBatched)
-import Timers from "Timers" /* 4858 */;
+// Module 11728 (useGetOrFetchApplicationBatched)
+import Timers from "Timers" /* 4985 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ prototype["request"] = function request(arg0) {
 };
 prototype["_flush"] = function _flush() {
   const self = this;
-  const items = [];
+  items = [];
   const _pending1 = this._pending;
   const item = _pending1.forEach((item) => {
     const _lastFetchedAttempted = self._lastFetchedAttempted;
@@ -81,14 +81,14 @@ let closure_129_0 = obj2;
 obj2._lastFetchedAttempted = new Map();
 let map = new Map();
 obj2._pending = new Set();
-let delayedCall = new fn(4858).DelayedCall(32, () => obj._flush());
+let delayedCall = new fn(4985).DelayedCall(32, () => obj._flush());
 obj2._flushHandler = delayedCall;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");
 
 export function useRequestApplication(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
@@ -102,7 +102,7 @@ export function useRequestApplication(arg0) {
 export function useGetOrFetchApplicationBatched(applicationId) {
   _require = applicationId;
   closure_129_0 = applicationId;
-  const items = [applicationId];
+  items = [applicationId];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

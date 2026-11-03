@@ -1,6 +1,6 @@
-// === Module 12198: ConjureMarkdownBlocks ===
+// === Module 12334: ConjureMarkdownBlocks ===
 
-// Module 12198 (ConjureMarkdownBlocks)
+// Module 12334 (ConjureMarkdownBlocks)
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMarkdownB
 
 export function splitMarkdownBlocks(source) {
   const parts = source.split("\n");
-  const items = [];
+  items = [];
   let items1 = [];
   let items2 = [];
   let tmp = null;

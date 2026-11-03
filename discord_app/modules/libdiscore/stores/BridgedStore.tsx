@@ -1,7 +1,7 @@
-// === Module 4890: BridgedStore ===
+// === Module 5017: BridgedStore ===
 
-// Module 4890 (BridgedStore)
-import FluxApi from "FluxApi" /* 4891 */;
+// Module 5017 (BridgedStore)
+import FluxApi from "FluxApi" /* 5018 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");

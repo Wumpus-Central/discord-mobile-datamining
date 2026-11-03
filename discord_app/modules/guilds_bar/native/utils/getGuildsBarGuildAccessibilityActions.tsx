@@ -1,11 +1,11 @@
-// === Module 18410: getGuildsBarGuildAccessibilityActions ===
+// === Module 18555: getGuildsBarGuildAccessibilityActions ===
 
-// Module 18410 (getGuildsBarGuildAccessibilityActions)
-import shared from "shared" /* 5021 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 18411 */;
-import moveGuildNode from "moveGuildNode" /* 18412 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 18555 (getGuildsBarGuildAccessibilityActions)
+import shared from "shared" /* 5148 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 18556 */;
+import moveGuildNode from "moveGuildNode" /* 18557 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 const moveGuildNodeDefault = moveGuildNode;
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuil
 
 export default function getGuildsBarGuildAccessibilityActions(arg0) {
   _require = arg0;
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let str;
   if (guild != null) {
     str = guild.name;
@@ -24,7 +24,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
   if (str == null) {
     str = "";
   }
-  let items = [];
+  items = [];
   let formatToPlainStringResult = dependencyMap;
   const tmp3 = getGuildBarNeighborsDefault(arg0);
   if (null == tmp3) {
@@ -43,7 +43,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
       const intl = ejhw4S(1113).intl;
       obj.label = intl.string(ejhw4S(1113).t.ehmVyX);
       obj.action = function action() {
-        const items = [closure_0];
+        items = [closure_0];
         const guildFolderLocal = GuildActionCreatorsDefault.createGuildFolderLocal(items, "");
         const result = moveGuildNode.persistGuildsBarOrder();
         const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;

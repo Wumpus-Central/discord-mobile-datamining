@@ -1,17 +1,17 @@
-// === Module 19837: SafetyCheckScreen ===
+// === Module 19987: SafetyCheckScreen ===
 
-// Module 19837 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+// Module 19987 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ VerificationLevels: closure_7, GuildExplicitContentFilterTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
 
@@ -21,7 +21,7 @@ export default function SafetyCheckScreen() {
   let obj2 = guild(first1[6]);
   const enableCommunitySharedStyles = guild(first1[8]).useEnableCommunitySharedStyles();
   let obj3 = guild(first1[8]);
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   guild = guild(first1[9]).useStateFromStoresObject(items, () => props.getProps()).guild;
   verificationLevel = undefined;
   let obj4 = guild(first1[9]);
@@ -50,7 +50,7 @@ export default function SafetyCheckScreen() {
     const items1 = [closure_9(tmp2(tmp3[12]).Text, obj7), , , ];
     const obj8 = { resizeMode: "contain", source: tmp7.safetyCheck };
     items1[1] = closure_9(tmp4(tmp3[14]), obj8);
-    const obj9 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj9 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(tmp3[13]).intl;
     obj9.children = intl2.string(tmp2(tmp3[13]).t.QrjLYl);
     items1[2] = closure_9(tmp2(tmp3[12]).Heading, obj9);

@@ -1,8 +1,8 @@
-// === Module 8582: renderMessageMarkup ===
+// === Module 8706: renderMessageMarkup ===
 
-// Module 8582 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
-import MarkupPostProcessors from "MarkupPostProcessors" /* 8583 */;
+// Module 8706 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 8707 */;
 import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {
@@ -138,7 +138,7 @@ export function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, gu
   return notifCenterV2MessagePreviewParser(guildId.content, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: guildId.guildId, channelId: guildId.channelId, messageId: guildId.messageId, authorId: guildId.authorId, muted: false, unknownUserMentionPlaceholder: true, disablePressableChannelMention: true, textColor: obj.textColor }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
-      const items = [arg0];
+      items = [arg0];
       tmp = items;
     }
     return tmp;
@@ -148,7 +148,7 @@ export function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
   return MarkupUtilsDefault.parseAutoModerationSystemMessage(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
-      const items = [arg0];
+      items = [arg0];
       tmp = items;
     }
     return tmp;
@@ -158,7 +158,7 @@ export function renderAutomodMessageMarkupToAST(arg0, highlightWord, channelId) 
   return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
-      const items = [arg0];
+      items = [arg0];
       tmp = items;
     }
     return tmp;

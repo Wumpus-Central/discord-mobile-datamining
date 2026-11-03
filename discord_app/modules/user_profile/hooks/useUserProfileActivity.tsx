@@ -1,12 +1,12 @@
-// === Module 14896: useUserProfileActivity ===
+// === Module 15027: useUserProfileActivity ===
 
-// Module 14896 (useUserProfileActivity)
+// Module 15027 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 5768 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14897 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9487 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import Constants from "Constants" /* 5888 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 15028 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfi
 
 export default function useUserProfileActivity(arg0) {
   _require = arg0;
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => MediaEngineStore.supports(constants.VIDEO));
   let tmp4 = null;
   if (stateFromStores) {
@@ -57,8 +57,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8908).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8908);
+                  result = userProfileLiveActivities(9032).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9032);
                 }
                 return result;
               });
@@ -69,8 +69,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8908).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8908);
+                  result = userProfileLiveActivities(9032).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9032);
                 }
                 return result;
               });

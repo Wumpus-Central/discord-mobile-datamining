@@ -1,10 +1,10 @@
-// === Module 8475: GuildDiscoverySystemMessage ===
+// === Module 8599: GuildDiscoverySystemMessage ===
 
-// Module 8475 (GuildDiscoverySystemMessage)
+// Module 8599 (GuildDiscoverySystemMessage)
 import util from "util" /* 1113 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const size = fn(2);
@@ -25,7 +25,7 @@ export function createGuildDiscoveryDisqualifiedSystemMessage(message) {
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -66,7 +66,7 @@ export function createGuildDiscoveryGracePeriodInitialWarningSystemMessage(messa
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -100,7 +100,7 @@ export function createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;

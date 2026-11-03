@@ -1,13 +1,13 @@
-// === Module 17681: BackupScreen ===
+// === Module 17824: BackupScreen ===
 
-// Module 17681 (BackupScreen)
+// Module 17824 (BackupScreen)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7111 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 17674 */;
-import buttonDefault from "button" /* 17677 */;
-import MFA from "MFA" /* 17679 */;
-import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 17680 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 17817 */;
+import buttonDefault from "button" /* 17820 */;
+import MFA from "MFA" /* 17822 */;
+import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 17823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -42,7 +42,7 @@ export default function BackupScreen(finish) {
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
   [tmp10, c5] = noop.useState(false);
   [first1, closure_7] = noop.useState(10);
-  const items = [first1];
+  items = [first1];
   const effect = noop.useEffect(() => {
     if (first1 > 0) {
       const _setTimeout = setTimeout;

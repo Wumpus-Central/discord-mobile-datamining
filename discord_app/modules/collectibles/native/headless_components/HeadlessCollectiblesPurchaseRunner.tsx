@@ -1,10 +1,10 @@
-// === Module 15064: HeadlessCollectiblesPurchaseRunner ===
+// === Module 15205: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 15064 (HeadlessCollectiblesPurchaseRunner)
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 15065 */;
+// Module 15205 (HeadlessCollectiblesPurchaseRunner)
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 15206 */;
 import noop from "module_19" /* 19 */;
 
-const useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 
@@ -26,7 +26,7 @@ export function HeadlessCollectiblesPurchaseRunner(attempt) {
   obj.stageCollectibleChangeForEditProfile = stageCollectibleChangeForEditProfile;
   handleBuyNow = useHandleBuyNowDefault(obj).handleBuyNow;
   noop.useRef(0);
-  const items = [attempt, handleBuyNow, tmp, tmp2];
+  items = [attempt, handleBuyNow, tmp, tmp2];
   const effect = noop.useEffect(() => {
     if (ref.current !== attempt) {
       let tmp3 = closure_2;

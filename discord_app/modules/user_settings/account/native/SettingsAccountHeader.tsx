@@ -1,18 +1,18 @@
-// === Module 16585: SettingsAccountHeader ===
+// === Module 16728: SettingsAccountHeader ===
 
-// Module 16585 (SettingsAccountHeader)
+// Module 16728 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import TableRow from "TableRow" /* 6975 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6995 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7167 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16586 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import TableRow from "TableRow" /* 7101 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7121 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7288 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16729 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function RestrictedAccountRedirect() {
@@ -27,10 +27,10 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7490).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7614).SafetySettingsNoticeType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export default noop.memo(function SettingsAccountHeader() {
   const tmp = closure_11();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const bannerText = UserSettingsAccountUnverifiedHeader.getBannerText(stateFromStores);
   const items1 = [RelationshipStore];

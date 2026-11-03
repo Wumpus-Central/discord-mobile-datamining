@@ -1,7 +1,7 @@
-// === Module 13954: useMentionAnchor ===
+// === Module 14085: useMentionAnchor ===
 
-// Module 13954 (useMentionAnchor)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10224 */;
+// Module 14085 (useMentionAnchor)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10354 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -132,7 +132,7 @@ export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
     tmp3(tmp13);
   }
   const obj7 = { anchor: tmp12, beginSearch: null };
-  const items = [arg2];
+  items = [arg2];
   obj7.beginSearch = noop.useCallback((anchor) => {
     if (closure_0) {
       const obj = { kind: "pending", anchor, seenText: null };

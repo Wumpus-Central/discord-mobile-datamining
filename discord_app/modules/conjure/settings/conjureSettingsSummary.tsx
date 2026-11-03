@@ -1,8 +1,8 @@
-// === Module 12658: conjureSettingsSummary ===
+// === Module 12794: conjureSettingsSummary ===
 
-// Module 12658 (conjureSettingsSummary)
+// Module 12794 (conjureSettingsSummary)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
+import _modDef3995 from "module_3995" /* 3995 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,13 +33,13 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
       const type = found.type;
       if ("secret" === type) {
         const intl6 = util.intl;
-        let stringResult = intl6.string(_modDef3868.CJq1rY);
+        let stringResult = intl6.string(_modDef3995.CJq1rY);
       } else if ("checkbox" === type) {
         const intl5 = util.intl;
         if (true === arr2) {
-          let nXtpn3 = _modDef3868.nXtpn3;
+          let nXtpn3 = _modDef3995.nXtpn3;
         } else {
-          nXtpn3 = _modDef3868["0vfaMW"];
+          nXtpn3 = _modDef3995["0vfaMW"];
         }
         stringResult = intl5.string(nXtpn3);
       } else if ("select" === type) {
@@ -67,7 +67,7 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
             let combined = "#" + tmp;
           } else {
             const intl = closure_0(1113).intl;
-            combined = intl.string(closure_1(3868).Fw9G9A);
+            combined = intl.string(closure_1(3995).Fw9G9A);
           }
           return combined;
         });
@@ -75,10 +75,10 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
       } else if ("game" === type) {
         if (0 === mapped.length) {
           const intl4 = util.intl;
-          let stringResult1 = intl4.string(_modDef3868.nEv677);
+          let stringResult1 = intl4.string(_modDef3995.nEv677);
         } else {
           const intl3 = util.intl;
-          stringResult1 = intl3.string(_modDef3868.Fw9G9A);
+          stringResult1 = intl3.string(_modDef3995.Fw9G9A);
         }
         stringResult = stringResult1;
       } else {
@@ -88,11 +88,11 @@ export function conjureSettingsSummary(settingsRequest, settings, arg2) {
           }
         }
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef3868.Fw9G9A);
+        stringResult = intl2.string(_modDef3995.Fw9G9A);
       }
       obj2.value = stringResult;
-      obj.text = intl.formatToPlainString(_modDef3868["Z+FC3j"], obj2);
-      const items = [obj];
+      obj.text = intl.formatToPlainString(_modDef3995["Z+FC3j"], obj2);
+      items = [obj];
       return items;
     }
   });
@@ -102,8 +102,8 @@ export function conjureConnectedKeysSummary(arr) {
     const intl = require("util").intl;
     const obj = { label, value: null };
     const intl2 = require("util").intl;
-    obj.value = intl2.string(_modDef3868.CJq1rY);
-    return intl.formatToPlainString(_modDef3868["Z+FC3j"], obj);
+    obj.value = intl2.string(_modDef3995.CJq1rY);
+    return intl.formatToPlainString(_modDef3995["Z+FC3j"], obj);
   });
   return mapped.join(" \u00B7 ");
 }

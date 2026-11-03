@@ -1,16 +1,16 @@
-// === Module 12370: useDeveloperActivityShelfItems ===
+// === Module 12506: useDeveloperActivityShelfItems ===
 
-// Module 12370 (useDeveloperActivityShelfItems)
+// Module 12506 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5674 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5794 */;
 
 const require = fn;
-let closure_4 = fn(2018).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+let closure_4 = fn(2147).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export function useDeveloperActivityShelfItems() {
-  const items = [DeveloperActivityShelfStore];
+  items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(items, () => ({ isEnabled: DeveloperActivityShelfStore.getIsEnabled(), lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject() }), []);
   isEnabled = stateFromStoresObject.isEnabled;
   lastUsedObject = stateFromStoresObject.lastUsedObject;

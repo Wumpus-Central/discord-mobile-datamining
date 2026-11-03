@@ -1,7 +1,7 @@
-// === Module 18512: ChannelPressableWrapper ===
+// === Module 18666: ChannelPressableWrapper ===
 
-// Module 18512 (ChannelPressableWrapper)
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
+// Module 18666 (ChannelPressableWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export function renderChannelPressableWrapper(children, panelVariant) {
     marginThread = flag ? layout2.marginPanels : layout2.margin;
   }
   const obj2 = { style: null, children };
-  const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
+  items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
   obj2.style = items;
   return <View style={null}>{children}</View>;
 }

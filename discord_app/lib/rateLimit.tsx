@@ -1,6 +1,6 @@
-// === Module 15566: rateLimit ===
+// === Module 15707: rateLimit ===
 
-// Module 15566 (rateLimit)
+// Module 15707 (rateLimit)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/rateLimit.tsx");
@@ -11,7 +11,7 @@ export default function rateLimit(arg0, arg1, arg2) {
   closure_2 = arg2;
   closure_4 = [];
   function wrapper() {
-    const items = [...arguments];
+    items = [...arguments];
     const timestamp = Date.now();
     if (null != timeout) {
       const _clearTimeout = clearTimeout;

@@ -1,20 +1,20 @@
-// === Module 13797: ChatInputActions ===
+// === Module 13928: ChatInputActions ===
 
-// Module 13797 (ChatInputActions)
+// Module 13928 (ChatInputActions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import mergeProps from "mergeProps" /* 5189 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 8222 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import AppsIcon from "AppsIcon" /* 8678 */;
-import PollsIcon from "PollsIcon" /* 10533 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import CameraIcon from "CameraIcon" /* 10550 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12560 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12805 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 13798 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13800 */;
+import mergeProps from "mergeProps" /* 5312 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 8346 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import AppsIcon from "AppsIcon" /* 8802 */;
+import PollsIcon from "PollsIcon" /* 10663 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import CameraIcon from "CameraIcon" /* 10680 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12696 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12941 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 13929 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -105,7 +105,7 @@ class ChatInputActions {
       if (result) {
         result = ImagePickerUtils.isImageCaptureIntentSupported();
       }
-      const items = [];
+      items = [];
       if (result) {
         const obj2 = { label: null, IconComponent: null, action: null };
         const intl = util.intl;
@@ -196,16 +196,18 @@ class ChatInputActions {
     arr1 = items2.push(obj1);
     closure_24 = !tmp9[0];
     tmp2Result = tmp2(tmp3[28]);
-    class X {
+    items3 = [];
+    items3[0] = closure_11;
+    [tmp13] = items3;
+    class ChatInputActionsTsx1 {
       constructor() {
         return { opacity: 1 };
       }
     }
-    X.__closure = {};
-    X.__workletHash = 13622805272332;
-    X.__initData = closure_11;
+    ChatInputActionsTsx1.__workletHash = 11222505988205;
+    ChatInputActionsTsx1.__initData = tmp13;
     obj9 = { children: null };
-    animatedStyle = tmp2Result.useAnimatedStyle(X);
+    animatedStyle = tmp2Result.useAnimatedStyle(ChatInputActionsTsx1);
     obj10 = {
       style: null,
       children: items2.map((item, index) => {
@@ -222,7 +224,7 @@ class ChatInputActions {
                         ({ ref, accessibilityActions, onAccessibilityAction } = arg0);
                         const obj = { ref: null, accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null };
                         const tmp = ChatInputActionButtonDefault;
-                        const items = [ref, closure_20, closure_2_9];
+                        items = [ref, closure_20, closure_2_9];
                         const items1 = [...items.filter(Boolean)];
                         obj.ref = mergeProps.mergeRefs.apply(items1);
                         const intl = util.intl;
@@ -305,28 +307,28 @@ class ChatInputActions {
             }
           })
     };
-    items3 = [, , ];
-    items3[0] = tmp.actions;
-    items3[1] = animatedStyle;
-    items3[2] = { gap: token };
-    obj10.style = items3;
+    items4 = [, , ];
+    items4[0] = tmp.actions;
+    items4[1] = animatedStyle;
+    items4[2] = { gap: token };
+    obj10.style = items4;
     obj9.children = onAttachPress(tmp4(tmp3[28]).View, obj10);
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12809);
+const ChatInputConstants = fn(12945);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { actions: { flexDirection: "row", alignItems: "center" }, themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG }, buttonWrapper: null, activeBrand: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5640).SMALL_BUTTON_HEIGHT + fn(5640).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5640).SMALL_BUTTON_HEIGHT + fn(5640).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
-let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
+let closure_11 = { code: "(function ChatInputActionsTsx1(){return{opacity:1};})" };
 ChatInputActions.displayName = "ChatInputActions";
 let obj5 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 const size = fn(2);

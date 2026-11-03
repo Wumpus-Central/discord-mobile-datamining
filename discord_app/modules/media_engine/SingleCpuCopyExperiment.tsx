@@ -1,7 +1,7 @@
-// === Module 5913: SingleCpuCopyExperiment ===
+// === Module 6033: SingleCpuCopyExperiment ===
 
-// Module 5913 (SingleCpuCopyExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 6033 (SingleCpuCopyExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-single-cpu-copy", kind: "user", defaultConfig: { enabled: false }, variations: null };

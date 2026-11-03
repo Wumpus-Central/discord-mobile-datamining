@@ -1,9 +1,9 @@
-// === Module 9077: GuildSettingsServerTagUtils ===
+// === Module 9205: GuildSettingsServerTagUtils ===
 
-// Module 9077 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 8736 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 9205 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 8860 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 const Permissions = fn(1072).Permissions;
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
 export function canUseMobileServerTagSettings(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
@@ -19,7 +19,7 @@ export function canUseMobileServerTagSettings(guildId) {
   return canResult;
 }
 export function canViewMobileServerTag(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let guildSupportsTagsResult = null != guild;
   if (guildSupportsTagsResult) {
     guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);

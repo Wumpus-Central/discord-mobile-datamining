@@ -1,17 +1,17 @@
-// === Module 12358: useIsOwnedConjureApplication ===
+// === Module 12494: useIsOwnedConjureApplication ===
 
-// Module 12358 (useIsOwnedConjureApplication)
+// Module 12494 (useIsOwnedConjureApplication)
 import BackoffDefault from "Backoff" /* 559 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6844).isProjectOwner;
+const isProjectOwner = fn(6964).isProjectOwner;
 let closure_6 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConj
 export default function useIsOwnedConjureApplication(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const items1 = [arg1, arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let result = closure_1;

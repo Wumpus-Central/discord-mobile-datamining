@@ -1,12 +1,12 @@
-// === Module 14236: GuildInviteIcon ===
+// === Module 14367: GuildInviteIcon ===
 
-// Module 14236 (GuildInviteIcon)
+// Module 14367 (GuildInviteIcon)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const Sizes = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 let closure_6 = [16, 16, 14, 14, 12];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj3 = { icon: { justifyContent: "center", alignItems: "center", overflow: "hidden" }, iconSmall: { width: 40, height: 40, borderRadius: 20 }, iconMedium: { width: 80, height: 80, borderRadius: 40 }, iconLarge: null, textContainer: null, acronym: null };
 let size = { width: 128, height: 128, borderRadius: nativeDefault.radii.round };
 obj3.iconLarge = size;
@@ -36,7 +36,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     ({ id: obj7.id, icon: obj7.icon } = guild);
     const guildIconSource = AvatarUtilsDefault.getGuildIconSource({ id: null, icon: null, canAnimate: true, size: 128 });
     const obj4 = { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null };
-    const items = [tmp.icon, tmp2, style];
+    items = [tmp.icon, tmp2, style];
     obj4.style = items;
     obj4.source = guildIconSource;
     return jsx(FastImageDefault, { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null });
@@ -67,7 +67,7 @@ GuildInviteIcon.prototype["render"] = function render() {
 };
 GuildInviteIcon.defaultProps = { size: Sizes.SMALL, textScale: 1 };
 GuildInviteIcon.Sizes = Sizes;
-GuildInviteIcon.contextType = fn(5080).ThemeContext;
+GuildInviteIcon.contextType = fn(5207).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild/native/GuildInviteIcon.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 13895: SearchRecentMessageStore ===
+// === Module 14026: SearchRecentMessageStore ===
 
-// Module 13895 (SearchRecentMessageStore)
+// Module 14026 (SearchRecentMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -25,7 +25,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault,
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(arg0) {
     ({ guildId, data } = arg0);
     c0 = undefined;
-    let items;
+    items = undefined;
     let set;
     if (null == guildId) {
       return false;

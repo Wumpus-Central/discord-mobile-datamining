@@ -1,16 +1,16 @@
-// === Module 18781: BaseMessagesScreen ===
+// === Module 18939: BaseMessagesScreen ===
 
-// Module 18781 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13886 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18783 */;
+// Module 18939 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18941 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 require = fn;
-const constants = fn(9826).SearchResultContentEntityTypes;
+const constants = fn(9957).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
@@ -38,7 +38,7 @@ export default function BaseMessagesScreen(tab) {
   if (keywordResultCount == null) {
     keywordResultCount = data.length;
   }
-  const items = [isHistoricalIndexing, keywordResultCount];
+  items = [isHistoricalIndexing, keywordResultCount];
   const stateFromStoresObject = searchContext(isFocused[6]).useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);

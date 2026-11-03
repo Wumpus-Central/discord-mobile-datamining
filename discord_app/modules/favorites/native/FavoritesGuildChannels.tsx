@@ -1,21 +1,21 @@
-// === Module 18348: FavoritesGuildChannels ===
+// === Module 18493: FavoritesGuildChannels ===
 
-// Module 18348 (FavoritesGuildChannels)
-import useFontScale from "useFontScale" /* 5642 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7217 */;
-import RedesignChannelList from "RedesignChannelList" /* 18161 */;
-import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 18261 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 18323 */;
-import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 18349 */;
+// Module 18493 (FavoritesGuildChannels)
+import useFontScale from "useFontScale" /* 5762 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7338 */;
+import RedesignChannelList from "RedesignChannelList" /* 18305 */;
+import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 18405 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 18468 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 18494 */;
 import noop from "module_19" /* 19 */;
 
-const ChannelListPanelBackdropDefault = tmp2(18108);
-const ChannelListStickyHeaderDefault = tmp2(18193);
-const FavoritesGuildSuggestedChannelsDefault = tmp2(18261);
-const FavoritesGuildSuggestionsLoaderDefault = tmp2(18350);
-const FavoritesGuildSidebarHeaderDefault = tmp2(18355);
+const ChannelListPanelBackdropDefault = tmp2(18252);
+const ChannelListStickyHeaderDefault = tmp2(18337);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(18405);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(18495);
+const FavoritesGuildSidebarHeaderDefault = tmp2(18500);
 require = fn;
-let closure_3 = fn(18262).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(18406).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function FavoritesGuildChannels(arg0) {
     return null;
   } else {
     let tmp2Result2 = arg0;
-    const items = [React4(FavoritesGuildSuggestionsLoaderDefault, {}), ];
+    items = [React4(FavoritesGuildSuggestionsLoaderDefault, {}), ];
     if (hasNoChannels) {
       const obj6 = { style: null, contentInset: null, children: null };
       ({ style: obj8.style, contentInset: obj8.contentInset } = tmp2Result2);

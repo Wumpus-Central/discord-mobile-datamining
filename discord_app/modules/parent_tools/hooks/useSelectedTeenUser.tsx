@@ -1,10 +1,10 @@
-// === Module 16797: useSelectedTeenUser ===
+// === Module 16940: useSelectedTeenUser ===
 
-// Module 16797 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8370 */;
-import UserStore from "UserStore" /* 1383 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7718 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+// Module 16940 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
+import UserStore from "UserStore" /* 1385 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7842 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelecte
 
 export function useSelectedTeenUser() {
   _require = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore, UserStore];
+  items = [FamilyCenterStore, UserStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
     if (true !== closure_0) {
       return UserStore.getCurrentUser();
@@ -30,7 +30,7 @@ export function useSelectedTeenUser() {
 }
 export function useTeenUserForId(gifterUserId) {
   _require = gifterUserId;
-  const items = [UserStore];
+  items = [UserStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
     const user = UserStore.getUser(closure_0);
     return null != user ? user : undefined;
@@ -38,7 +38,7 @@ export function useTeenUserForId(gifterUserId) {
 }
 export function useShouldLoadSettingsForSelectedTeenUser() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
-  const items = [FamilyCenterControlledSettingsStore];
+  items = [FamilyCenterControlledSettingsStore];
   const stateFromStoresObject = selectedTeenId(563).useStateFromStoresObject(items, () => {
     let hasSettingsForUserResult = null != selectedTeenId;
     if (hasSettingsForUserResult) {

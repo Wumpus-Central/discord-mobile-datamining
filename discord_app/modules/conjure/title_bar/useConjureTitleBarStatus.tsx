@@ -1,7 +1,7 @@
-// === Module 14712: useConjureTitleBarStatus ===
+// === Module 14843: useConjureTitleBarStatus ===
 
-// Module 14712 (useConjureTitleBarStatus)
-import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 12985 */;
+// Module 14843 (useConjureTitleBarStatus)
+import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 13121 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/conjure/title_bar/useConjureT
 export default function useConjureTitleBarStatus() {
   const tmp = useConjureHomeOwnProjectsDefault();
   _require = tmp;
-  const items = [tmp];
+  items = [tmp];
   return require("initialize").useStateFromStores(require("conjureHomeProjectState").CONJURE_HOME_PROJECT_STATE_STORES, () => (function summarize(arg0) {
     let flag = false;
     let flag2 = false;

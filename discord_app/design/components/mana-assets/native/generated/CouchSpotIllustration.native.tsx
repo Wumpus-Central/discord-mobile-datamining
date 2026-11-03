@@ -1,19 +1,19 @@
-// === Module 11761: CouchSpotIllustration ===
+// === Module 11898: CouchSpotIllustration ===
 
-// Module 11761 (CouchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef11762 from "module_11762" /* 11762 */;
-import _modDef11763 from "module_11763" /* 11763 */;
-import _modDef11764 from "module_11764" /* 11764 */;
+// Module 11898 (CouchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef11899 from "module_11899" /* 11899 */;
+import _modDef11900 from "module_11900" /* 11900 */;
+import _modDef11901 from "module_11901" /* 11901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11762 }, 3: null };
-let obj2 = { uri: _modDef11762 };
-obj[2] = { uri: _modDef11763 };
-const obj3 = { uri: _modDef11763 };
-obj[3] = { uri: _modDef11764 };
+let obj = { 1: null, 2: { uri: _modDef11899 }, 3: null };
+let obj2 = { uri: _modDef11899 };
+obj[2] = { uri: _modDef11900 };
+const obj3 = { uri: _modDef11900 };
+obj[3] = { uri: _modDef11901 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function CouchSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

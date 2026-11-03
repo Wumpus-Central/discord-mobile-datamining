@@ -1,12 +1,12 @@
-// === Module 20115: AccountLinkManager ===
+// === Module 20265: AccountLinkManager ===
 
-// Module 20115 (AccountLinkManager)
+// Module 20265 (AccountLinkManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
-import AccountLinkStore from "AccountLinkStore" /* 20116 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
+import AccountLinkStore from "AccountLinkStore" /* 20266 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 let require = fn;
 let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
@@ -20,7 +20,7 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

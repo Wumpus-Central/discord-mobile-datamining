@@ -1,11 +1,11 @@
-// === Module 9777: ThreadAutoArchive ===
+// === Module 9909: ThreadAutoArchive ===
 
-// Module 9777 (ThreadAutoArchive)
+// Module 9909 (ThreadAutoArchive)
 import memoizeDefault from "memoize" /* 594 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
 import util from "util" /* 1113 */;
-import _modDef2042 from "module_2042" /* 2042 */;
+import _modDef2171 from "module_2171" /* 2171 */;
 import size from "module_2" /* 2 */;
 
 function getAutoArchiveOptions() {
@@ -13,7 +13,7 @@ function getAutoArchiveOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t.cs8A1c);
   obj.value = DurationsDefault.Minutes.HOUR;
-  const items = [obj, , , ];
+  items = [obj, , , ];
   const obj2 = { id: "24hours", label: null, value: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.zFKbrF);
@@ -46,8 +46,8 @@ export function getAutoArchiveDurationText(arg0) {
     label = found.label;
   }
   if (label == null) {
-    label = _modDef2042.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef2042.duration(arg0, "minutes");
+    label = _modDef2171.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef2171.duration(arg0, "minutes");
   }
   return label;
 }

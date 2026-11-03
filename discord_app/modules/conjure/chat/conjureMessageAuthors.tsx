@@ -1,10 +1,10 @@
-// === Module 12636: conjureMessageAuthors ===
+// === Module 12772: conjureMessageAuthors ===
 
-// Module 12636 (conjureMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8752 */;
+// Module 12772 (conjureMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -84,7 +84,7 @@ export function requestMessageAuthor(actor_user_id) {
 }
 export function useMessageAuthorUser(userId) {
   _require = userId;
-  const items = [userId];
+  items = [userId];
   const effect = noop.useEffect(() => {
     if (null != closure_0) {
       if (null == UserStore.getUser(closure_0)) {

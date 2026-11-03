@@ -1,19 +1,19 @@
-// === Module 17216: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 17359: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 17216 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 17359 (GuildRoleSubscriptionListingEditStateUtils)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import v1 from "v1" /* 1266 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4937 */;
-import StoreUtils from "StoreUtils" /* 6455 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17203 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17218 */;
-import Contants from "Contants" /* 17219 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17221 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 5064 */;
+import StoreUtils from "StoreUtils" /* 6575 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17346 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17361 */;
+import Contants from "Contants" /* 17362 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
           } else if (arg0 !== 2) {
             if (undefined !== tierEmojiIds) {
               closure_129_12 = closure_130_18(closure_130_7.getGuildEmoji(closure_129_0), role_id);
-              let items = [];
+              items = [];
               HermesBuiltin.arraySpread(tierEmojiIds, 0);
               const items1 = [];
               HermesBuiltin.arraySpread(closure_129_12, 0);
@@ -177,10 +177,10 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                 const customEmojiById = closure_2_7.getCustomEmojiById(item);
                 if (null != customEmojiById) {
                   const obj2 = { guildId, emojiId: customEmojiById.id, roles: null };
-                  const items = [];
+                  items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(10057).updateEmoji(obj2);
+                  return guildId(10187).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -190,11 +190,11 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(10057).updateEmoji(obj3);
-                    const obj2 = guildId(10057);
+                    let updateEmojiResult = guildId(10187).updateEmoji(obj3);
+                    const obj2 = guildId(10187);
                   } else {
-                    updateEmojiResult = guildId(10057).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(10057);
+                    updateEmojiResult = guildId(10187).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(10187);
                   }
                   return updateEmojiResult;
                 }
@@ -212,7 +212,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
             return obj;
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
         let tmp25 = null != trialLimit;
@@ -251,7 +251,7 @@ let closure_21 = async function _createListingFromEditState(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -355,7 +355,7 @@ let closure_21 = async function _createListingFromEditState(arg0) {
         if (channelBenefits == null) {
           closure_2 = [];
         }
-        const items = [];
+        items = [];
         closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
         closure_3 = intangibleBenefits;
         if (intangibleBenefits == null) {
@@ -380,12 +380,12 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(17217);
-({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(17196).GuildRoleSubscriptionBenefitTypes;
+const GuildRoleSubscriptionEditStore = fn(17360);
+({ AllChannelAccessOptions: closure_9, useEditStateStore: closure_10 } = GuildRoleSubscriptionEditStore);
+let closure_11 = fn(17339).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
-const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1387).SubscriptionIntervalTypes;
 let closure_15 = [];
 let closure_16 = [];
 let set = new Set();
@@ -399,7 +399,7 @@ export function useListingEditState(arg0, arg1, arg2) {
   closure_2 = arg2;
   const tmp2 = closure_1_10((setListing) => setListing.setListing);
   closure_3 = tmp2;
-  const items = [tmp2, arg0, arg1, arg2];
+  items = [tmp2, arg0, arg1, arg2];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -434,7 +434,7 @@ export function useListingEditState(arg0, arg1, arg2) {
 }
 export function useClearEditStateOnUnmount(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => () => {
     closure_0 = closure_1_0;
     closure_0(dependencyMap[19]).batchUpdates(() => {
@@ -461,9 +461,9 @@ export function useName(listingId) {
     }
     return str;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = name(5612)(() => first);
+  const tmp2 = name(5735)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -515,9 +515,9 @@ export function usePriceTier(editStateId) {
     }
     return price;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = priceTier(5612)(() => first);
+  const tmp2 = priceTier(5735)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = editStateId;
@@ -569,9 +569,9 @@ export function useDescription(editStateId) {
     }
     return str;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = description(5612)(() => first);
+  const tmp2 = description(5735)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = editStateId;
@@ -623,10 +623,10 @@ export function useImage(editStateId, arg1) {
       return StoreUtils.getAssetURL(image_asset.application_id, image_asset.image_asset, closure_0);
     }
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
   closure_129_2 = stateFromStores;
-  const tmp2 = image(5612)(() => first);
+  const tmp2 = image(5735)(() => first);
   closure_129_3 = tmp2;
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
@@ -669,16 +669,16 @@ export function useImage(editStateId, arg1) {
 }
 export function useApplicationId(listingId) {
   _require = listingId;
-  const f111997 = (application_id) => {
+  const f111794 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
     }
     return application_id;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = f111997(5612)(() => first);
+  const tmp2 = f111794(5735)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -686,7 +686,7 @@ export function useApplicationId(listingId) {
 export function useRoleIcon(editStateId, guildId) {
   const tmp = useSubscriptionRoleDefault(guildId, editStateId);
   editStateId = tmp;
-  const items = [tmp];
+  items = [tmp];
   let memo = noop.useMemo(() => {
     let icon;
     if (editStateId != null) {
@@ -756,7 +756,7 @@ export function useRole(listingId, guildId) {
     return roleIcon;
   });
   dependencyMap = tmp3;
-  const items = [tmp, tmp3, tmp2];
+  items = [tmp, tmp3, tmp2];
   return noop.useMemo(() => {
     let DEFAULT_PREVIEW_ROLE = closure_1;
     if (closure_1 == null) {
@@ -784,16 +784,16 @@ export function useRole(listingId, guildId) {
   }, items);
 }
 export function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(17218)(guildId, editStateId);
+  const tmp = roleColor(17361)(guildId, editStateId);
   editStateId = tmp;
-  const items = [tmp];
+  items = [tmp];
   let memo = noop.useMemo(() => {
     let color;
     if (editStateId != null) {
       color = editStateId.color;
     }
     if (color == null) {
-      color = map1;
+      color = state;
     }
     return color;
   }, items);
@@ -834,8 +834,8 @@ export function useRoleColor(editStateId, guildId) {
   return items2;
 }
 export function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(17218)(guildId, editStateId);
-  const items = [tmp];
+  const tmp = channelAccessFormat(17361)(guildId, editStateId);
+  items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
       let SOME_CHANNELS_ACCESS = constants.SOME_CHANNELS_ACCESS;
@@ -892,9 +892,9 @@ export function useChannelBenefits(listingId) {
     }
     return found;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = channelBenefits(5612)(() => first);
+  const tmp2 = channelBenefits(5735)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -945,9 +945,9 @@ export function useIntangibleBenefits(listingId) {
     }
     return found;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = intangibleBenefits(5612)(() => first);
+  const tmp2 = intangibleBenefits(5735)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
   _require = listingId;
@@ -989,8 +989,8 @@ export function useIntangibleBenefits(listingId) {
 }
 export function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(17218)(guildId, listingId);
-  const items = [EmojiStore];
+  const tmp = tierEmojiIds(17361)(guildId, listingId);
+  items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
   const items2 = [stateFromStoresArray, tmp];
@@ -1062,7 +1062,7 @@ export function useTrialInterval(editStateId) {
   const trialInterval = "trialInterval";
   const tmp5 = closure_1_10((setListing) => setListing.setListing);
   closure_3 = tmp5;
-  const items = [tmp5, editStateId, "trialInterval", selectedOption];
+  items = [tmp5, editStateId, "trialInterval", selectedOption];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -1108,7 +1108,7 @@ export function useTrialLimit(editStateId) {
   const trialLimit = "trialLimit";
   const tmp3 = closure_1_10((setListing) => setListing.setListing);
   closure_3 = tmp3;
-  const items = [tmp3, editStateId, "trialLimit", prop];
+  items = [tmp3, editStateId, "trialLimit", prop];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -1167,10 +1167,10 @@ export function useSubscriptionPlan(listingId) {
     }
     return first;
   };
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
   closure_129_2 = stateFromStores;
-  let tmp2 = first(5612)(() => first);
+  let tmp2 = first(5735)(() => first);
   closure_129_3 = tmp2;
   const items1 = [stateFromStores, tmp2];
   const memo = noop.useMemo(() => closure_3(c2), items1);
@@ -1280,7 +1280,7 @@ export function useCreateOrUpdateListingFromEditState() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1361,12 +1361,12 @@ export function useCreateOrUpdateListingFromEditState() {
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(17220).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(17220).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(17363).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(17363).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }
-                              const items = [];
+                              items = [];
                               const arraySpreadResult = HermesBuiltin.arraySpread(channelBenefits, 0);
                               if (intangibleBenefits == null) {
                                 intangibleBenefits = found1;
@@ -1376,8 +1376,8 @@ export function useCreateOrUpdateListingFromEditState() {
                             }
                             if (!obj2.isEmpty(obj)) {
                               const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
-                              subscriptionListing = closure_1_2(7429).updateSubscriptionListing(obj4);
-                              const obj3 = closure_1_2(7429);
+                              subscriptionListing = closure_1_2(7553).updateSubscriptionListing(obj4);
+                              const obj3 = closure_1_2(7553);
                             }
                             return subscriptionListing;
                           })(obj5),
@@ -1416,7 +1416,7 @@ export function useCreateOrUpdateListingFromEditState() {
             c4 = 0;
             closure_0(false);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             throw closure_129_8;
           }
@@ -1538,9 +1538,9 @@ export function useEditStateIds(groupListingId, guildId, arg2) {
   const tmp4 = closure_10((setListing) => setListing.setListing);
   closure_4 = tmp4;
   const obj3 = { editStateIds: null, addNewEditStateId: null, addNewEditStateFromTemplate: null, removeEditStateId: null };
-  let items = [tmp2, subscriptionListingsForGroup];
+  items = [tmp2, subscriptionListingsForGroup];
   obj3.editStateIds = noop.useMemo(() => {
-    const items = [...subscriptionListingsForGroup.map((id) => id.id)];
+    items = [...subscriptionListingsForGroup.map((id) => id.id)];
     let items1 = closure_2;
     if (closure_2 == null) {
       items1 = [];
@@ -1552,7 +1552,7 @@ export function useEditStateIds(groupListingId, guildId, arg2) {
   obj3.addNewEditStateId = noop.useCallback(() => {
     closure_0 = v1.v4();
     dependencyMap(closure_0, (arg0) => {
-      let items = arg0;
+      items = arg0;
       if (arg0 == null) {
         items = [];
       }
@@ -1567,7 +1567,7 @@ export function useEditStateIds(groupListingId, guildId, arg2) {
     const v4Result = guildId(1266).v4();
     subscriptionListingsForGroup = v4Result;
     dependencyMap(guildId, (arg0) => {
-      let items = arg0;
+      items = arg0;
       if (arg0 == null) {
         items = [];
       }
@@ -1592,7 +1592,7 @@ export function useEditStateIds(groupListingId, guildId, arg2) {
   obj3.removeEditStateId = noop.useCallback((arg0) => {
     closure_0 = arg0;
     dependencyMap(closure_0, (arg0) => {
-      let items = arg0;
+      items = arg0;
       if (arg0 == null) {
         items = [];
       }

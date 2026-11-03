@@ -1,17 +1,17 @@
-// === Module 12035: StageGridRow ===
+// === Module 12172: StageGridRow ===
 
-// Module 12035 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
-import SpeakerTileDefault from "SpeakerTile" /* 12027 */;
-import StageTileTypes from "StageTileTypes" /* 12028 */;
-import MediaTileDefault from "MediaTile" /* 12036 */;
+// Module 12172 (StageGridRow)
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8897 */;
+import SpeakerTileDefault from "SpeakerTile" /* 12164 */;
+import StageTileTypes from "StageTileTypes" /* 12165 */;
+import MediaTileDefault from "MediaTile" /* 12173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
@@ -32,7 +32,7 @@ export default noop.memo(function StageGridRow(row) {
   } else {
     THIRD = StageTileTypes.StageTileSize.THIRD;
   }
-  const items = [tmp.container, ];
+  items = [tmp.container, ];
   if (containerLandscape) {
     containerLandscape = tmp.containerLandscape;
   }

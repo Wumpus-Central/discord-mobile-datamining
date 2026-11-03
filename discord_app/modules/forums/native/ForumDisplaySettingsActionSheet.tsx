@@ -1,13 +1,13 @@
-// === Module 14376: ForumDisplaySettingsActionSheet ===
+// === Module 14507: ForumDisplaySettingsActionSheet ===
 
-// Module 14376 (ForumDisplaySettingsActionSheet)
-import Tracking from "Tracking" /* 8204 */;
+// Module 14507 (ForumDisplaySettingsActionSheet)
+import Tracking from "Tracking" /* 8328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
-const ForumChannelStore = fn(13763);
+const ForumChannelStore = fn(13894);
 ({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -23,7 +23,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
   c8 = undefined;
   c9 = undefined;
   c10 = undefined;
-  const items = [c5];
+  items = [c5];
   const stateFromStores = channelId(sortOrder[9]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const tmp3 = c7(channelId);
   sortOrder = tmp3.sortOrder;
@@ -54,11 +54,11 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
         obj6.forumLayout = forumLayout;
         const result1 = Tracking.trackForumLayoutUpdated(obj6);
       }
-      const state = closure_4.getState();
+      state = closure_4.getState();
       state.setLayoutType(channelId, forumLayout);
       const state1 = closure_4.getState();
       state1.setSortOrder(channelId, sortOrder);
-      const state2 = closure_4.getState();
+      state2 = closure_4.getState();
       state2.setTagSetting(channelId, c9);
     }
   });

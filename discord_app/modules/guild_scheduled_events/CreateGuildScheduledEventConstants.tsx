@@ -1,6 +1,6 @@
-// === Module 8970: CreateGuildScheduledEventConstants ===
+// === Module 9098: CreateGuildScheduledEventConstants ===
 
-// Module 8970 (CreateGuildScheduledEventConstants)
+// Module 9098 (CreateGuildScheduledEventConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/CreateGuildScheduledEventConstants.tsx");

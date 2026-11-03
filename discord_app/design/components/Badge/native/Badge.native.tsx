@@ -1,16 +1,15 @@
-// === Module 7306: Badge ===
+// === Module 7426: Badge ===
 
-// Module 7306 (Badge)
+// Module 7426 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useBadgeTextVariant from "useBadgeTextVariant" /* 5081 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BadgeShared from "BadgeShared" /* 7307 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BadgeShared from "BadgeShared" /* 7427 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function getBadgeColors(variant) {
@@ -98,7 +97,6 @@ export function Badge(icon) {
   }
   icon = icon.icon;
   const tmp3 = closure_7(variant);
-  const badgeTextVariant = useBadgeTextVariant.useBadgeTextVariant();
   if ("new" === type) {
     const intl4 = util.intl;
     let text = intl4.string(util.t.y2b7CA);
@@ -114,20 +112,20 @@ export function Badge(icon) {
   } else {
     text = type.text;
   }
-  const obj2 = { style: tmp3.badge, children: null };
-  let tmp10 = null;
+  const obj = { style: tmp3.badge, children: null };
+  let tmp15 = null;
   if ("premium" === variant) {
-    const obj3 = { style: tmp9 };
-    tmp10 = React4(PremiumGradient, obj3);
+    const obj2 = { style: tmp14 };
+    tmp15 = React4(PremiumGradient, obj2);
   }
-  const items = [tmp10, , ];
-  let tmp13 = null;
+  items = [tmp15, , ];
+  let tmp18 = null;
   if (null != icon) {
-    const obj4 = { size: "xxs", color: getBadgeColors(variant).text, accessible: false };
-    tmp13 = React4(icon, obj4);
+    const obj3 = { size: "xxs", color: getBadgeColors(variant).text, accessible: false };
+    tmp18 = React4(icon, obj3);
   }
-  items[1] = tmp13;
-  items[2] = React4(Text_Text.Text, { variant: badgeTextVariant, color: "none", lineClamp: 1, style: tmp3.label, children: text });
-  obj2.children = items;
-  return hasOwnProperty(View, obj2);
+  items[1] = tmp18;
+  items[2] = React4(Text_Text.Text, { variant: "body-xs/semibold", color: "none", lineClamp: 1, style: tmp3.label, children: text });
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }

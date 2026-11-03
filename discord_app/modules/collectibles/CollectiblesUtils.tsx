@@ -1,22 +1,22 @@
-// === Module 7732: CollectiblesUtils ===
+// === Module 7856: CollectiblesUtils ===
 
-// Module 7732 (CollectiblesUtils)
+// Module 7856 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import PerksStateUtils from "PerksStateUtils" /* 1389 */;
-import user from "user" /* 1391 */;
-import NameplateRecord from "NameplateRecord" /* 1985 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import EntitlementTypes from "EntitlementTypes" /* 2046 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import PriceUtils from "PriceUtils" /* 7413 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7725 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7726 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7727 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7731 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7733 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import PerksStateUtils from "PerksStateUtils" /* 1391 */;
+import user from "user" /* 1393 */;
+import NameplateRecord from "NameplateRecord" /* 2114 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import EntitlementTypes from "EntitlementTypes" /* 2175 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import PriceUtils from "PriceUtils" /* 7537 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7849 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7850 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7851 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7855 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7857 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -108,7 +108,7 @@ const isNameplateRecord = NameplateRecord.isNameplateRecord;
 const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
 const isProfileFrameRecord = ProfileFrameRecord.isProfileFrameRecord;
 const AssetDisplayConfigRecord = ShopAssetConfigRecord.AssetDisplayConfigRecord;
-({ EXTERNAL_PRODUCT_SKU_IDS: closure_8, LIMITED_TIME_BADGE_DAYS_THRESHOLD: closure_9, SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS: c10 } = CollectiblesShopConstants);
+({ EXTERNAL_PRODUCT_SKU_IDS: closure_8, LIMITED_TIME_BADGE_DAYS_THRESHOLD: closure_9, SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS: closure_10 } = CollectiblesShopConstants);
 ({ COLLECTIBLES_APPLICATION_ID: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const CurrencyCodes = Constants2.CurrencyCodes;
 const ShopDiscountSource = { NITRO: "nitro", THIRDPARTY: "thirdparty" };
@@ -284,7 +284,7 @@ export function getBundleItemsPriceSum(bundledProducts, arg1) {
         return acc + num;
       }, 0);
     } else {
-      tmp(1375);
+      tmp(1377);
     }
     DEFAULT = constants2.DEFAULT;
     obj = require("PlatformUtils");
@@ -393,7 +393,7 @@ export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
           return acc + num;
         }, 0);
       } else {
-        tmp(1375);
+        tmp(1377);
       }
       DEFAULT = constants2.DEFAULT;
       obj = require("PlatformUtils");

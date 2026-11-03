@@ -1,19 +1,19 @@
-// === Module 19390: AgeGateManager ===
+// === Module 19548: AgeGateManager ===
 
-// Module 19390 (AgeGateManager)
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+// Module 19548 (AgeGateManager)
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 const AgeGateConstants = fn(1097);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8, AgeGateType: closure_9 } = AgeGateConstants);
 const Constants = fn(1072);
-({ ChannelTypes: c10, GuildNSFWContentLevel: closure_11 } = Constants);
+({ ChannelTypes: closure_10, GuildNSFWContentLevel: closure_11 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -44,8 +44,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6734).getAgeGateType(source);
-  let obj = source(6734);
+  importDefault = source(6854).getAgeGateType(source);
+  let obj = source(6854);
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -57,7 +57,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

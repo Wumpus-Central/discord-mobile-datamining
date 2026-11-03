@@ -1,14 +1,14 @@
-// === Module 18388: useFavoritesGuildUnreads ===
+// === Module 18533: useFavoritesGuildUnreads ===
 
-// Module 18388 (useFavoritesGuildUnreads)
+// Module 18533 (useFavoritesGuildUnreads)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6841 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6961 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesG
 
 export default function useFavoritesGuildUnreads(arg0) {
   _require = arg0;
-  const items = [ActiveJoinedThreadsStore, ChannelStore, GuildReadStateStore, JoinedThreadsStore, PermissionStore, ReadStateStore, UserGuildSettingsStore];
+  items = [ActiveJoinedThreadsStore, ChannelStore, GuildReadStateStore, JoinedThreadsStore, PermissionStore, ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const keys = SnowflakeUtilsDefault.keys(closure_0);
     const set = new Set();

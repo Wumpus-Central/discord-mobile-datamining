@@ -1,14 +1,14 @@
-// === Module 16638: useSafetyHubFetchError ===
+// === Module 16781: useSafetyHubFetchError ===
 
-// Module 16638 (useSafetyHubFetchError)
+// Module 16781 (useSafetyHubFetchError)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubFetchError.tsx");
 
 export function useSafetyHubFetchError() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => fetchError.getFetchError());
 }

@@ -1,14 +1,14 @@
-// === Module 19696: KeywordsActionSheet ===
+// === Module 19846: KeywordsActionSheet ===
 
-// Module 19696 (KeywordsActionSheet)
+// Module 19846 (KeywordsActionSheet)
 import _mod12 from "module_12" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import KeywordTextUtils from "KeywordTextUtils" /* 19680 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import KeywordTextUtils from "KeywordTextUtils" /* 19830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_5 = fn(13292).KEYWORDS_REGEX_PLACEHOLDER;
+let closure_5 = fn(13428).KEYWORDS_REGEX_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -46,7 +46,7 @@ export default function KeywordsActionSheet(description) {
   value = tmp7[0];
   closure_7 = tmp7[1];
   [tmp10, c8] = onSave(noop.useState(null), 2);
-  const items = [type, maxWordCount];
+  items = [type, maxWordCount];
   closure_9 = noop.useMemo(() => _mod12.debounce((arr) => {
     try {
       if ("regex" === closure_1_0) {

@@ -1,6 +1,6 @@
-// === Module 9039: useAppChannelApplicationOptions ===
+// === Module 9167: useAppChannelApplicationOptions ===
 
-// Module 9039 (useAppChannelApplicationOptions)
+// Module 9167 (useAppChannelApplicationOptions)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -38,9 +38,9 @@ export function useAppChannelApplicationOptions(guildId, channelId, selectedAppl
   const application = data1(data[3]).useApplication(selectedApplicationId, true);
   data = application.data;
   const obj2 = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };
-  let items = [data1, data];
+  items = [data1, data];
   obj2.options = noop.useMemo(() => {
-    let items = data1;
+    items = data1;
     if (data1 == null) {
       items = [];
     }

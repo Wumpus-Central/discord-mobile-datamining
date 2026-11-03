@@ -1,13 +1,13 @@
-// === Module 16322: getEmbeddedActivityPopoutWindowKey ===
+// === Module 16465: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 16322 (getEmbeddedActivityPopoutWindowKey)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7902 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+// Module 16465 (getEmbeddedActivityPopoutWindowKey)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8026 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const PopoutWindowKeys = fn(1072).PopoutWindowKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivityPopoutWindowKey.tsx");
@@ -37,7 +37,7 @@ export function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) 
 }
 export function usePopoutWindowForActivity(channelId) {
   channelId = channelId.channelId;
-  const items = [PopoutWindowStore, EmbeddedActivitiesStore, ApplicationStore];
+  items = [PopoutWindowStore, EmbeddedActivitiesStore, ApplicationStore];
   return channelId(504).useStateFromStores(items, () => {
     let connectedActivityChannelId = channelId;
     if (channelId == null) {

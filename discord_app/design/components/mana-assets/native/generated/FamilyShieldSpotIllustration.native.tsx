@@ -1,19 +1,19 @@
-// === Module 13372: FamilyShieldSpotIllustration ===
+// === Module 13508: FamilyShieldSpotIllustration ===
 
-// Module 13372 (FamilyShieldSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef13373 from "module_13373" /* 13373 */;
-import _modDef13374 from "module_13374" /* 13374 */;
-import _modDef13375 from "module_13375" /* 13375 */;
+// Module 13508 (FamilyShieldSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef13509 from "module_13509" /* 13509 */;
+import _modDef13510 from "module_13510" /* 13510 */;
+import _modDef13511 from "module_13511" /* 13511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13373 }, 3: null };
-let obj2 = { uri: _modDef13373 };
-obj[2] = { uri: _modDef13374 };
-const obj3 = { uri: _modDef13374 };
-obj[3] = { uri: _modDef13375 };
+let obj = { 1: null, 2: { uri: _modDef13509 }, 3: null };
+let obj2 = { uri: _modDef13509 };
+obj[2] = { uri: _modDef13510 };
+const obj3 = { uri: _modDef13510 };
+obj[3] = { uri: _modDef13511 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function FamilyShieldSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

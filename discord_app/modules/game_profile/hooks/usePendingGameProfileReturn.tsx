@@ -1,12 +1,12 @@
-// === Module 14008: usePendingGameProfileReturn ===
+// === Module 14139: usePendingGameProfileReturn ===
 
-// Module 14008 (usePendingGameProfileReturn)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9320 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+// Module 14139 (usePendingGameProfileReturn)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9448 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2014 */;
-import GameProfileStore from "GameProfileStore" /* 9322 */;
+import GameStore from "GameStore" /* 2143 */;
+import GameProfileStore from "GameProfileStore" /* 9450 */;
 
 require = fn;
 const AVATAR_SIZE = fn(1072).AVATAR_SIZE;
@@ -17,7 +17,7 @@ export default function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
   _slicedToArray = undefined;
   let stateFromStores1;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     const pendingReturn = GameProfileStore.getPendingReturn();
     let tmp2 = null;

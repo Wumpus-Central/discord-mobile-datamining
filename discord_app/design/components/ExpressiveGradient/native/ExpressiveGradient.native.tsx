@@ -1,10 +1,10 @@
-// === Module 9965: ExpressiveGradient ===
+// === Module 10096: ExpressiveGradient ===
 
-// Module 9965 (ExpressiveGradient)
+// Module 10096 (ExpressiveGradient)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ export function ExpressiveGradient(color) {
   const token2 = useToken.useToken(backgroundColor);
   const obj4 = _modDef671(token2);
   const obj5 = { style: null, children: null };
-  const items = [React4.absoluteFill, style];
+  items = [React4.absoluteFill, style];
   obj5.style = items;
   const items1 = [React4.absoluteFill, ];
   let tmp13;

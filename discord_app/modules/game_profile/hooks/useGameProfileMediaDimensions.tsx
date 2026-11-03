@@ -1,7 +1,7 @@
-// === Module 9385: useGameProfileMediaDimensions ===
+// === Module 9513: useGameProfileMediaDimensions ===
 
-// Module 9385 (useGameProfileMediaDimensions)
-import privDefault from "priv" /* 1451 */;
+// Module 9513 (useGameProfileMediaDimensions)
+import privDefault from "priv" /* 1453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export function useGameProfileMediaDimensions(width) {
   const tmp = _slicedToArray(noop.useState(getCachedDimensions), 2);
   noop = tmp[1];
   const obj = { dimensions: tmp[0], recordDimensions: null };
-  const items = [width];
+  items = [width];
   obj.recordDimensions = noop.useCallback((arg0, width) => {
     closure_0 = arg0;
     let tmp2;

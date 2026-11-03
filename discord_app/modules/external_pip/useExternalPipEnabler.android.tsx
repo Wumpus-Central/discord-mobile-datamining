@@ -1,10 +1,10 @@
-// === Module 19107: useExternalPipEnabler ===
+// === Module 19265: useExternalPipEnabler ===
 
-// Module 19107 (useExternalPipEnabler)
-import ExternalPipEnablerState from "ExternalPipEnablerState" /* 19108 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+// Module 19265 (useExternalPipEnabler)
+import ExternalPipEnablerState from "ExternalPipEnablerState" /* 19266 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 const size = fn(2);
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEn
 
 export default function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
-  const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
+  items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
   const items1 = [disabled];
   return disabled(504).useStateFromStoresObject(items, () => {
     const channelId = RTCConnectionStore.getChannelId();

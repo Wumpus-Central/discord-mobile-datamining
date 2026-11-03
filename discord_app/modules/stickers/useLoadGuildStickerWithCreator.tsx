@@ -1,11 +1,11 @@
-// === Module 19745: useLoadGuildStickerWithCreator ===
+// === Module 19895: useLoadGuildStickerWithCreator ===
 
-// Module 19745 (useLoadGuildStickerWithCreator)
+// Module 19895 (useLoadGuildStickerWithCreator)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import GuildStickersStore from "GuildStickersStore" /* 6838 */;
+import UserStore from "UserStore" /* 1385 */;
+import GuildStickersStore from "GuildStickersStore" /* 6958 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   _require = arg0;
   [tmp2, dependencyMap] = noop.useState("loading");
   const tmp = _slicedToArray(noop.useState("loading"), 2);
-  const items = [GuildStickersStore];
+  items = [GuildStickersStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStickersStore.getStickersByGuildId(closure_0));
   const items1 = [arg0];
   const effect = noop.useEffect(() => {

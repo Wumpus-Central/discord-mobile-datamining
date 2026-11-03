@@ -1,13 +1,13 @@
-// === Module 11748: getEmbeddedActivityLaunchability ===
+// === Module 11885: getEmbeddedActivityLaunchability ===
 
-// Module 11748 (getEmbeddedActivityLaunchability)
+// Module 11885 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1113 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11720 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11857 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ function getEmbeddedActivityLaunchability(arg0) {
           if (null == guildId) {
             return obj.NO_GUILD;
           } else {
-            const guild = GuildStore.getGuild(guildId);
+            guild = GuildStore.getGuild(guildId);
             let afkChannelId;
             if (guild != null) {
               afkChannelId = guild.afkChannelId;
@@ -61,7 +61,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2018).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+let closure_6 = fn(2147).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
 const Permissions = fn(1072).Permissions;
 const EmbeddedActivityLaunchability = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL", CHANNEL_CONTENT_GATED: 8, [8]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);
@@ -81,7 +81,7 @@ export function getEmbeddedActivityLaunchabilityForChannel(channelId) {
 }
 export function useEmbeddedActivityLaunchability(channelId) {
   _require = channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
   const obj = require("initialize");

@@ -1,19 +1,19 @@
-// === Module 19548: PresetAvatarSelect ===
+// === Module 19704: PresetAvatarSelect ===
 
-// Module 19548 (PresetAvatarSelect)
+// Module 19704 (PresetAvatarSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Pressables from "Pressables" /* 6980 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 19549 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 19550 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 19551 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 19552 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 19553 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 19554 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 19555 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 19556 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Pressables from "Pressables" /* 7106 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 19705 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 19706 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 19707 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 19708 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 19709 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 19710 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 19711 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 19712 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ function DefaultAvatarButton(selected) {
   selected = selected.selected;
   ({ source, onSelect, accessibilityLabel } = selected);
   const tmp = closure_7();
-  const items = [tmp.defaultAvatarContainer, ];
+  items = [tmp.defaultAvatarContainer, ];
   let prop;
   if (selected) {
     prop = tmp.defaultAvatarSelected;
@@ -154,7 +154,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   }
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj10 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
 obj10.defaultAvatarButton = size;
@@ -178,7 +178,7 @@ export default function PresetAvatarSelect(arg0) {
   let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = util.intl;
   obj2.children = intl.string(util.t.yP28YL);
-  const items = [closure_4(Text_Text.Text, obj2), , ];
+  items = [closure_4(Text_Text.Text, obj2), , ];
   const obj3 = { style: tmp.buttonsContainer, children: null };
   items1 = [0, 1, 2, 3];
   obj3.children = items1.map((item) => {

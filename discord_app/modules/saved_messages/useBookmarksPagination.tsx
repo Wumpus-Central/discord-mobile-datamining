@@ -1,10 +1,10 @@
-// === Module 11157: useBookmarksPagination ===
+// === Module 11294: useBookmarksPagination ===
 
-// Module 11157 (useBookmarksPagination)
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10192 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11156 */;
+// Module 11294 (useBookmarksPagination)
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10322 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11293 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10191 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10321 */;
 
 require = fn;
 function loadMoreBookmarks() {
@@ -21,7 +21,7 @@ export default function useBookmarksPagination(arg0) {
   }
   let hasFetched;
   let hasShownBookmarks;
-  const items = [hasShownBookmarks];
+  items = [hasShownBookmarks];
   const stateFromStoresObject = flag(hasFetched[4]).useStateFromStoresObject(items, () => {
     const obj = { fetchState: hasShownBookmarks.getBookmarksFetchState(), hasFetched: hasShownBookmarks.hasFetchedBookmarks(), isStale: hasShownBookmarks.getIsStale(), hasShownBookmarks: null };
     const messageBookmarks = hasShownBookmarks.getMessageBookmarks();

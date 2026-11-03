@@ -1,16 +1,16 @@
-// === Module 13926: SmartSearchExperiments ===
+// === Module 14057: SmartSearchExperiments ===
 
-// Module 13926 (SmartSearchExperiments)
-import ConversationExperiments from "ConversationExperiments" /* 9847 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 14057 (SmartSearchExperiments)
+import ConversationExperiments from "ConversationExperiments" /* 9978 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-let ApexExperiment = fn(1447);
+let ApexExperiment = fn(1449);
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-nlp-search-user-flag", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-09-mobile-nlp-search-guild-experiment", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchExperiments.tsx");
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/intelligence_layer/search/Sma
 export const NlpSearchUserExperiment = apexExperiment;
 export const NlpSearchGuildExperiment = apexExperiment1;
 export function isNlpSearchEnabled(guildId, suggested_searches) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let flag;
   if (guild != null) {
     const features = guild.features;
@@ -46,12 +46,12 @@ export function isNlpSearchEnabled(guildId, suggested_searches) {
 }
 export function useIsNlpSearchEnabled(guildId, fetch_answer) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let flag;
       if (guild != null) {
         const features = guild.features;

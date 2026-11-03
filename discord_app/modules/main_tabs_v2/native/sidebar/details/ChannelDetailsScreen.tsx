@@ -1,9 +1,9 @@
-// === Module 18947: ChannelDetailsScreen ===
+// === Module 19105: ChannelDetailsScreen ===
 
-// Module 18947 (ChannelDetailsScreen)
-import Link from "Link" /* 1498 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5203 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 18683 */;
+// Module 19105 (ChannelDetailsScreen)
+import Link from "Link" /* 1500 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5326 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 18841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/d
 export default noop.memo(function ChannelDetailsScreen(navigation) {
   navigation = navigation.navigation;
   const route = Link.useRoute();
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
   }, items);

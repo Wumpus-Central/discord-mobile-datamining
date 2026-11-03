@@ -1,9 +1,9 @@
-// === Module 7666: KvMessage ===
+// === Module 7790: KvMessage ===
 
-// Module 7666 (KvMessage)
+// Module 7790 (KvMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const prototype = function KvMessage() {
@@ -19,7 +19,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
   if (author != null) {
     id = author.id;
   }
-  const items = [id, ];
+  items = [id, ];
   const interaction = author.interaction;
   let id1;
   if (interaction != null) {

@@ -1,37 +1,37 @@
-// === Module 16552: UserProfileTryItOutEditForm ===
+// === Module 16695: UserProfileTryItOutEditForm ===
 
-// Module 16552 (UserProfileTryItOutEditForm)
+// Module 16695 (UserProfileTryItOutEditForm)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import native from "native" /* 5080 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8757 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8800 */;
-import useUserProfileColors from "useUserProfileColors" /* 8811 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
-import useBadgesDefault from "useBadges" /* 8815 */;
-import DiceIcon from "DiceIcon" /* 9529 */;
-import userSettingToActivity from "userSettingToActivity" /* 11394 */;
-import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 11395 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11396 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11413 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12057 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16445 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16458 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 16462 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16469 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 16519 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 16542 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 16553 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 16554 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16556 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import native from "native" /* 5207 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8864 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8881 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8924 */;
+import useUserProfileColors from "useUserProfileColors" /* 8935 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
+import useBadgesDefault from "useBadges" /* 8939 */;
+import DiceIcon from "DiceIcon" /* 9657 */;
+import userSettingToActivity from "userSettingToActivity" /* 11532 */;
+import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 11533 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11534 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11551 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12194 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16589 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16602 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 16605 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16612 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 16662 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 16685 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 16696 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 16697 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16699 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -55,7 +55,7 @@ function EditableBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-let closure_6 = fn(7377).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+let closure_6 = fn(7497).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -70,7 +70,7 @@ export default function UserProfileTryItOutEditForm(initialTarget) {
   const tmp7 = useSafeAreaInsetsDefault();
   const floatingUpsellHeight = UserProfileFloatingUpsell.useFloatingUpsellHeight();
   ({ height, onLayout } = floatingUpsellHeight);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     tryItOutChanges = tryItOutChanges.getTryItOutChanges();
     return { tryItOutAvatar: tryItOutChanges.tryItOutAvatar, tryItOutBanner: tryItOutChanges.tryItOutBanner, tryItOutThemeColors: tryItOutChanges.tryItOutThemeColors, tryItOutDisplayNameStyles: tryItOutChanges.tryItOutDisplayNameStyles };

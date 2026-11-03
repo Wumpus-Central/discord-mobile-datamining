@@ -1,15 +1,15 @@
-// === Module 7669: ReadStates ===
+// === Module 7793: ReadStates ===
 
-// Module 7669 (ReadStates)
+// Module 7793 (ReadStates)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -112,7 +112,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const iter2 = sorted.reverse();
       const result = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
       const obj2 = { id: "highest_last_message_id", versionString: str2 };
-      const items = [obj2, , ];
+      items = [obj2, , ];
       const obj4 = { id: "private_channels_version", versionString: _lastMessageId };
       items[1] = obj4;
       const obj5 = { id: "read_state_version", version: tmp.readStateVersion };

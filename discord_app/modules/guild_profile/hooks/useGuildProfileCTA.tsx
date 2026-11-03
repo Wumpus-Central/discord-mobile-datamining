@@ -1,23 +1,23 @@
-// === Module 13217: useGuildProfileCTA ===
+// === Module 13353: useGuildProfileCTA ===
 
-// Module 13217 (useGuildProfileCTA)
-import FlagUtils from "FlagUtils" /* 1396 */;
-import GuildTagUtils from "GuildTagUtils" /* 8736 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8959 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 13218 */;
+// Module 13353 (useGuildProfileCTA)
+import FlagUtils from "FlagUtils" /* 1398 */;
+import GuildTagUtils from "GuildTagUtils" /* 8860 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 9087 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 13354 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import InviteStore from "InviteStore" /* 5749 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import InviteStore from "InviteStore" /* 5869 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
 const Constants = fn(1072);
-({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
+({ InviteStates: closure_9, GuildFeatures: closure_10 } = Constants);
 const CTATypes = { IS_MEMBER: 0, [0]: "IS_MEMBER", ADOPT_TAG: 1, [1]: "ADOPT_TAG", HAS_APPLICATION: 2, [2]: "HAS_APPLICATION", APPLY_TO_JOIN: 3, [3]: "APPLY_TO_JOIN", LURK_DISCOVERABLE: 4, [4]: "LURK_DISCOVERABLE", JOIN_VIA_INVITE: 5, [5]: "JOIN_VIA_INVITE", ACCEPT_ROLES: 6, [6]: "ACCEPT_ROLES" };
 let obj2 = { INVITE: "INVITE" };
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  const items = [features];
+  items = [features];
   const stateFromStores = require("initialize").useStateFromStores(items, () => features.getId());
   let obj = require("initialize");
   const items1 = [stateFromStores1];

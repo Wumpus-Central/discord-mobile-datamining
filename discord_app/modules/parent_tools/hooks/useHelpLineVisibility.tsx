@@ -1,11 +1,11 @@
-// === Module 11298: useHelpLineVisibility ===
+// === Module 11435: useHelpLineVisibility ===
 
-// Module 11298 (useHelpLineVisibility)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8370 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10985 */;
+// Module 11435 (useHelpLineVisibility)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11118 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 require = fn;
 const set = new Set(["US"]);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLin
 
 export function useShouldShowHelplineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
   const obj = stateFromStores(563);
   const items1 = [LocaleStore];
@@ -42,7 +42,7 @@ export function useShouldShowThroughlineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   let stateFromStores;
   const tmp2 = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
   let obj = stateFromStores(563);
   const items1 = [LocaleStore];

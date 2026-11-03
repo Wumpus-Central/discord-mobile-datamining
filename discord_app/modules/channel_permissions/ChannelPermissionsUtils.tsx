@@ -1,21 +1,21 @@
-// === Module 9031: ChannelPermissionsUtils ===
+// === Module 9159: ChannelPermissionsUtils ===
 
-// Module 9031 (ChannelPermissionsUtils)
+// Module 9159 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
-import Server from "Server" /* 1992 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4924 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ChannelUtils from "ChannelUtils" /* 6046 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7947 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9032 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4921 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserStore from "UserStore" /* 1383 */;
+import Server from "Server" /* 2121 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 5051 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8071 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9160 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5048 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -107,7 +107,7 @@ export function getNoRolesRow() {
     const intl = util.intl;
     stringResult = intl.string(util.t["gnsna/"]);
   }
-  const items = [{ rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
+  items = [{ rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
   return items;
 }
 export function isEveryoneRoleId(guildId, id) {
@@ -324,7 +324,7 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
       stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
-    const items = [obj];
+    items = [obj];
     mapped = items;
   }
   return mapped;
@@ -385,7 +385,7 @@ export function getExistingRolesRowWithPermissionDisabled(guild, sortedGuildRole
       stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
-    const items = [obj];
+    items = [obj];
     mapped = items;
   }
   return mapped;
@@ -607,7 +607,7 @@ export function grantUserChannelAccess(id, accessPermissions) {
   if (null != currentUser) {
     if (null == id.permissionOverwrites[currentUser.id]) {
       const obj3 = { id: currentUser.id, type: Server.PermissionOverwriteType.MEMBER, allow: BigFlagUtilsAll.add(PermissionUtilsAll.NONE, accessPermissions), deny: PermissionUtilsAll.NONE };
-      const items = [obj3];
+      items = [obj3];
       return ChannelSettingsPermissionsActionCreators.savePermissionUpdates(id.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
@@ -691,7 +691,7 @@ export function getPrivateChannelHintText(first1) {
 }
 export function extractPermissionOverwrites(arg0, arg1) {
   closure_0 = arg1;
-  const items = [];
+  items = [];
   const values = Object.values(arg0);
   const item = values.forEach((row) => {
     row = row.row;

@@ -1,20 +1,20 @@
-// === Module 18984: RestrictedMessageRequestPreview ===
+// === Module 19142: RestrictedMessageRequestPreview ===
 
-// Module 18984 (RestrictedMessageRequestPreview)
+// Module 19142 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 14178 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 14309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, scrollContentEmpty: null, emptyChat: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -39,7 +39,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
   const tmp5 = first(noop.useState(false), 2);
   first = tmp5[0];
   noop = tmp5[1];
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [channelId];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items, () => {
     const messages = MessageStore.getMessages(channelId);
@@ -125,24 +125,24 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(18985), obj6), , ];
+      const items9 = [closure_10(tmp2(19143), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(18987), obj7);
+      items9[1] = closure_10(tmp2(19145), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(14206), obj8);
+        tmp19Result = closure_10(tmp2(14337), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
       const items10 = [closure_11(c5, obj5), ];
       const obj9 = { style: null, children: null };
       const items11 = [tmp.footer, ];
-      const obj10 = { paddingBottom: tmp2(575).space.PX_8 + ref(1625)().bottom };
+      const obj10 = { paddingBottom: tmp2(575).space.PX_8 + ref(1627)().bottom };
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(14013), obj11);
+      obj9.children = closure_10(tmp2(14144), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

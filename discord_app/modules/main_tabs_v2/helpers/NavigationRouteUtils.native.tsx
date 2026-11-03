@@ -1,19 +1,19 @@
-// === Module 5198: NavigationRouteUtils ===
+// === Module 5321: NavigationRouteUtils ===
 
-// Module 5198 (NavigationRouteUtils)
+// Module 5321 (NavigationRouteUtils)
 import v1 from "v1" /* 1266 */;
-import Link from "Link" /* 1498 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5205 */;
-import Types from "Types" /* 5206 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import Link from "Link" /* 1500 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5328 */;
+import Types from "Types" /* 5329 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function modalRoutesAboveMain(routes) {
-  const items = [];
+  items = [];
   const substr = routes.slice(1);
   const iter = substr[Symbol.iterator]();
   const nextResult = iter.next();
@@ -54,7 +54,7 @@ function coerceGuildsRoute(currentRoute) {
     return currentRoute;
   }
 }
-function isModalOpen(dependencyMap) {
+function isModalOpen(voiceChannelKey) {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -62,9 +62,9 @@ function isModalOpen(dependencyMap) {
       if (null == rootState) {
         return false;
       } else {
-        if (null == dependencyMap) {
+        if (null == voiceChannelKey) {
           let tmp5 = null != tmp2;
-        } else if (typeof dependencyMap === "string") {
+        } else if (typeof voiceChannelKey === "string") {
           let key;
           if (tmp2 != null) {
             const params2 = tmp2.params;
@@ -75,7 +75,7 @@ function isModalOpen(dependencyMap) {
               }
             }
           }
-          tmp5 = key === dependencyMap;
+          tmp5 = key === voiceChannelKey;
         } else {
           let modal1;
           if (tmp2 != null) {
@@ -87,7 +87,7 @@ function isModalOpen(dependencyMap) {
               }
             }
           }
-          tmp5 = modal1 === dependencyMap;
+          tmp5 = modal1 === voiceChannelKey;
         }
         return tmp5;
       }
@@ -141,7 +141,7 @@ function popModal(c3, onExited) {
           }
           let arr2 = routes;
           if (null != onExited) {
-            let items = [];
+            items = [];
             let arraySpreadResult = HermesBuiltin.arraySpread(routes, 0);
             let obj2 = {};
             let merged = Object.assign(tmp4);
@@ -264,7 +264,7 @@ export function navigateToChannel(openChannel) {
   return false;
 }
 export function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(5199).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(5322).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -283,21 +283,21 @@ export function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(5199).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(5322).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(5200);
+                  const tmpResult3 = tmp(5323);
                   const _HermesInternal = HermesInternal;
                   obj4.key = "tabs-" + tmp(1266).v4();
                   obj4.params = obj2;
-                  const items = [obj4];
+                  items = [obj4];
                   const items1 = [];
                   const tmpResult4 = tmp(1266);
                   HermesBuiltin.arraySpread(modalRoutesAboveMain(rootState.routes), HermesBuiltin.arraySpread(tmpResult3.wrapRouteForRootNavigator(items), 0));
-                  let CommonActions = tmp(1498).CommonActions;
+                  let CommonActions = tmp(1500).CommonActions;
                   const obj5 = {};
                   const merged = Object.assign(rootState);
                   obj5.routes = items1;
@@ -309,7 +309,7 @@ export function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(5199);
+            const tmpResult = tmp(5322);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -509,7 +509,7 @@ export function getSelectedGuildFromRoute() {
       }
     }
     if (null != tmp2) {
-      const state = tmp2.state;
+      state = tmp2.state;
       if (null != state) {
         let tmp4;
         if (null != state.routes[state.index]) {
@@ -527,7 +527,7 @@ export function getSelectedGuildFromRoute() {
             }
           }
           if (null != tmp5) {
-            const state2 = tmp5.state;
+            state2 = tmp5.state;
             if (null != state2) {
               ({ index, routes } = state2);
               if (index == null) {
@@ -632,7 +632,7 @@ export function popScreens(arg0) {
     rootNavigationRef.dispatch(() => {
       let diff;
       const rootState = rootNavigationRef.getRootState();
-      const items = [...rootState.routes];
+      items = [...rootState.routes];
       if (closure_0 > 0) {
         do {
           let arr = items.pop();
@@ -687,7 +687,7 @@ export function useIsModalOpen(SHARE_PREPARING_MODAL_KEY) {
   closure_0 = SHARE_PREPARING_MODAL_KEY;
   const tmp = _slicedToArray(closure_5(() => isModalOpen(closure_0)), 2);
   closure_1 = tmp[1];
-  const items = [SHARE_PREPARING_MODAL_KEY];
+  items = [SHARE_PREPARING_MODAL_KEY];
   closure_4(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
@@ -727,7 +727,7 @@ export function getOpenModalKey() {
 }
 export function useOpenModalKey() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5199).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5322).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -760,7 +760,7 @@ export function useOpenModalKey() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5199).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5322).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -787,7 +787,7 @@ export function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5199);
+        const obj = closure_0(5322);
       });
     }
   }, []);
@@ -808,7 +808,7 @@ export function getCurrentNavigationRouteName() {
 }
 export function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5199).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5322).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -827,7 +827,7 @@ export function useCurrentNavigationRouteName() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5199).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5322).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -840,14 +840,13 @@ export function useCurrentNavigationRouteName() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5199);
+        const obj = closure_0(5322);
       });
     }
   }, []);
   return tmp[0];
 }
 export function getCurrentRouteParents() {
-  let state2;
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -860,7 +859,7 @@ export function getCurrentRouteParents() {
         }
         state1 = routes[index].state;
       }
-      const items = [];
+      items = [];
       let tmp3 = rootState;
       let tmp4 = rootState;
       if (null != state1) {
@@ -870,7 +869,7 @@ export function getCurrentRouteParents() {
           if (index2 == null) {
             index2 = 0;
           }
-          let state = routes2[index2].state;
+          state = routes2[index2].state;
           state2 = undefined;
           if (state != null) {
             ({ index: index3, routes: routes3 } = state);
@@ -898,7 +897,7 @@ export function getTabsRouteIfActive(arg0) {
       tmp2 = tmp;
     }
   }
-  let state;
+  state = undefined;
   if (tmp2 != null) {
     state = tmp2.state;
   }
@@ -931,7 +930,7 @@ export function getICYMIRouteIfActive(index) {
       tmp3 = tmp;
     }
   }
-  let state;
+  state = undefined;
   if (tmp3 != null) {
     state = tmp3.state;
   }

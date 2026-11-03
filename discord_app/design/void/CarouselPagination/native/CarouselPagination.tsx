@@ -1,58 +1,73 @@
-// === Module 16009: CarouselPagination ===
+// === Module 16152: CarouselPagination ===
 
-// Module 16009 (CarouselPagination)
+// Module 16152 (CarouselPagination)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import Easing from "Easing" /* 15817 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import Easing_Easing from "Easing/Easing" /* 15960 */;
 import noop from "module_19" /* 19 */;
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
 obj.dot = size;
 let closure_5 = createStyles.createStyles(obj);
-const __initData = { code: "function CarouselPaginationTsx1(){const{withTiming,active,STANDARD_EASING}=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');}" };
-const __initData2 = { code: "function CarouselPaginationTsx2(){const{interpolate,progress,interpolateColor,backgroundColor,brand500}=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};}" };
+let closure_6 = { code: "(function CarouselPaginationTsx1(){let[withTiming,active,STANDARD_EASING]=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');})" };
+let closure_7 = { code: "(function CarouselPaginationTsx2(){let[interpolate,progress,interpolateColor,backgroundColor,brand500]=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};})" };
 let closure_8 = noop.memo(function Dot(active) {
-  active = active.active;
-  let BRAND_500;
   const tmp = closure_5();
-  const fn = function o() {
-    let num = 0;
-    if (active) {
-      num = 1;
+  items = [closure_6, timing_timing.withTiming, active.active, Easing_Easing.STANDARD_EASING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  class CarouselPaginationTsx1 {
+    constructor() {
+      num = 0;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 1;
+      }
+      obj = { duration: 250, easing: closure_2 };
+      return tmp(num, obj, "animate-always");
     }
-    const obj = timing;
-    return obj.withTiming(num, { duration: 250, easing: Easing.STANDARD_EASING }, "animate-always");
-  };
-  let obj = active(BRAND_500[5]);
-  fn.__closure = { withTiming: active(BRAND_500[6]).withTiming, active, STANDARD_EASING: active(BRAND_500[7]).STANDARD_EASING };
-  fn.__workletHash = 5885711729227;
-  fn.__initData = __initData;
-  const derivedValue = obj.useDerivedValue(fn);
-  BRAND_500 = derivedValue(BRAND_500[4]).unsafe_rawColors.BRAND_500;
-  const backgroundColor = tmp.dot.backgroundColor;
-  let obj2 = { withTiming: active(BRAND_500[6]).withTiming, active, STANDARD_EASING: active(BRAND_500[7]).STANDARD_EASING };
-  const fn2 = function u() {
-    const obj = { width: ReanimatedRexport.interpolate(derivedValue.get(), [0, 1], [8, 16]), backgroundColor: null, opacity: null };
-    const items = [backgroundColor, BRAND_500];
-    obj.backgroundColor = ReanimatedRexport.interpolateColor(derivedValue.get(), [0, 1], items);
-    obj.opacity = ReanimatedRexport.interpolate(derivedValue.get(), [0, 1], [0.3, 1]);
-    return obj;
-  };
-  let obj3 = active(BRAND_500[5]);
-  fn2.__closure = { interpolate: active(BRAND_500[5]).interpolate, progress: derivedValue, interpolateColor: active(BRAND_500[5]).interpolateColor, backgroundColor, brand500: BRAND_500 };
-  fn2.__workletHash = 7804335337011;
-  fn2.__initData = __initData2;
-  const animatedStyle = obj3.useAnimatedStyle(fn2);
-  const obj5 = { style: null };
-  let items = [tmp.dot, animatedStyle];
-  obj5.style = items;
-  return jsx(derivedValue(BRAND_500[5]).View, { style: null });
+  }
+  const items1 = [tmp5, tmp6, tmp7];
+  CarouselPaginationTsx1.__closure = items1;
+  CarouselPaginationTsx1.__workletHash = 5504332160978;
+  CarouselPaginationTsx1.__initData = tmp4;
+  const derivedValue = _mod1652.useDerivedValue(CarouselPaginationTsx1);
+  const items2 = [closure_7, _mod1652.interpolate, derivedValue, _mod1652.interpolateColor, tmp.dot.backgroundColor, nativeDefault.unsafe_rawColors.BRAND_500];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15] = items2;
+  class CarouselPaginationTsx2 {
+    constructor() {
+      obj = { width: closure_0(closure_1.get(), [0, 1], [8, 16]), backgroundColor: null, opacity: closure_0(closure_1.get(), [0, 1], [0.3, 1]) };
+      items = [, ];
+      items[0] = closure_3;
+      items[1] = closure_4;
+      obj.backgroundColor = closure_2(closure_1.get(), [0, 1], items);
+      return obj;
+    }
+  }
+  const items3 = [tmp11, tmp12, tmp13, tmp14, tmp15];
+  CarouselPaginationTsx2.__closure = items3;
+  CarouselPaginationTsx2.__workletHash = 9539116065290;
+  CarouselPaginationTsx2.__initData = tmp10;
+  const animatedStyle = _mod1652.useAnimatedStyle(CarouselPaginationTsx2);
+  const obj2 = { style: null };
+  const items4 = [tmp.dot, animatedStyle];
+  obj2.style = items4;
+  return jsx(_modDef1652.View, { style: null });
 });
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
@@ -61,7 +76,7 @@ export default function CarouselPagination(currentIndex) {
   currentIndex = currentIndex.currentIndex;
   ({ numberOfItems, containerStyle } = currentIndex);
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const items = [closure_5().container, containerStyle];
+  items = [closure_5().container, containerStyle];
   obj.style = items;
   obj.children = Array.from({ length: numberOfItems }, (arg0, key) => <closure_8 key={key} active={key === currentIndex} />);
   return <View style={null} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;

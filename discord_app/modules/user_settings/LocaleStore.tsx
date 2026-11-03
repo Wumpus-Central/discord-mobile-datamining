@@ -1,9 +1,9 @@
-// === Module 2062: LocaleStore ===
+// === Module 2191: LocaleStore ===
 
-// Module 2062 (LocaleStore)
+// Module 2191 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DiscordNativeDefault from "DiscordNative" /* 4825 */;
+import DiscordNativeDefault from "DiscordNative" /* 4952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
@@ -19,7 +19,7 @@ let closure_6 = async function _getSystemLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -101,7 +101,7 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2063).setAppLocale;
+const setAppLocale = fn(2192).setAppLocale;
 let locale = fn(1113).intl.currentLocale;
 let global = fn(1113).systemLocale;
 (function getSystemLocale() {

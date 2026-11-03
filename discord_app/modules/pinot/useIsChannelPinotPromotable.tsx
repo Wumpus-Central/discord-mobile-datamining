@@ -1,12 +1,12 @@
-// === Module 11321: useIsChannelPinotPromotable ===
+// === Module 11458: useIsChannelPinotPromotable ===
 
-// Module 11321 (useIsChannelPinotPromotable)
+// Module 11458 (useIsChannelPinotPromotable)
 import Constants from "Constants" /* 1072 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import PinotEligibility from "PinotEligibility" /* 9053 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import PinotEligibility from "PinotEligibility" /* 9181 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ export function usePinotPromotableChannelId(guild_id, mobile_member_coachmark) {
   }
   isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, mobile_member_coachmark);
   const obj = require("PinotExperiment");
-  const items = [GuildStore, GuildRoleStore, ChannelStore];
+  items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];
   return require("initialize").useStateFromStores(items, () => {
     if (isPinotAdminEnabled) {
@@ -56,7 +56,7 @@ export function useIsChannelPinotPromotable(guild_id, create_guild_channel) {
   }
   isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, create_guild_channel);
   let obj = require("PinotExperiment");
-  const items = [GuildStore, GuildRoleStore, ChannelStore];
+  items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];
   return null != require("initialize").useStateFromStores(items, () => {
     if (isPinotAdminEnabled) {

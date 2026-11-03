@@ -1,7 +1,7 @@
-// === Module 18513: ChannelWrapper ===
+// === Module 18667: ChannelWrapper ===
 
-// Module 18513 (ChannelWrapper)
-import ChannelListLayout from "ChannelListLayout" /* 11049 */;
+// Module 18667 (ChannelWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 11177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export function renderChannelWrapper(children, fontScale) {
   }
   const scaledChannelRowHeight = ChannelListLayout.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
-  const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
+  items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
   let isThreadResult1;
   if (channel != null) {
     isThreadResult1 = channel.isThread();

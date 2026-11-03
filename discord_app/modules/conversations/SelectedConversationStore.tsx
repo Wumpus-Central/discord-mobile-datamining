@@ -1,10 +1,10 @@
-// === Module 9850: SelectedConversationStore ===
+// === Module 9981: SelectedConversationStore ===
 
-// Module 9850 (SelectedConversationStore)
+// Module 9981 (SelectedConversationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7767 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
 
 let c2 = null;
 let closure_3 = 0;
@@ -14,7 +14,7 @@ class SelectedConversationStore extends Store {
 }
 const prototype = SelectedConversationStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [ChannelConversationsStore, ConversationPreviewStore];
+  items = [ChannelConversationsStore, ConversationPreviewStore];
   this.syncWith(items, () => null != _null);
 };
 prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0) {

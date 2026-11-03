@@ -1,11 +1,11 @@
-// === Module 11689: getFrameSurfaces ===
+// === Module 11826: getFrameSurfaces ===
 
-// Module 11689 (getFrameSurfaces)
+// Module 11826 (getFrameSurfaces)
 import Constants from "Constants" /* 1072 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2024 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9761 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7003 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9893 */;
 import size from "module_2" /* 2 */;
 
 function getFrameSurfaces(application) {
@@ -22,7 +22,7 @@ function getFrameSurfaces(application) {
       }
       if ("conjureProjectId" in application) {
         if (null != application.conjureProjectId) {
-          const items = [EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL];
+          items = [EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL];
           for (const item10039 of items) {
             let obj4 = EmbeddedSurfaceUtils;
             if (obj4.supportsEmbeddedSurface(arg0, item10039)) {

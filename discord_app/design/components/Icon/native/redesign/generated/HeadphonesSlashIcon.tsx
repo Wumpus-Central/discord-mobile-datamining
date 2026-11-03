@@ -1,9 +1,9 @@
-// === Module 9238: HeadphonesSlashIcon ===
+// === Module 9366: HeadphonesSlashIcon ===
 
-// Module 9238 (HeadphonesSlashIcon)
+// Module 9366 (HeadphonesSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod9239 from "module_9239" /* 9239 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod9367 from "module_9367" /* 9367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HeadphonesSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9239, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

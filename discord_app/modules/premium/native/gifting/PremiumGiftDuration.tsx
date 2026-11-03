@@ -1,14 +1,14 @@
-// === Module 14463: PremiumGiftDuration ===
+// === Module 14594: PremiumGiftDuration ===
 
-// Module 14463 (PremiumGiftDuration)
+// Module 14594 (PremiumGiftDuration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRow from "TableRow" /* 6975 */;
-import RowButton2 from "RowButton" /* 8179 */;
-import NativeGiftContext from "NativeGiftContext" /* 10562 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10621 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRow from "TableRow" /* 7101 */;
+import RowButton2 from "RowButton" /* 8303 */;
+import NativeGiftContext from "NativeGiftContext" /* 10692 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function PremiumGiftDurationButton(arg0) {
   let tmp11Result = null != combined;
   if (tmp11Result) {
     const obj4 = { style: tmp4.labelPromo, children: null };
-    const obj5 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
+    const obj5 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
     const intl3 = util.intl;
     const obj6 = { discount: combined };
     obj5.children = intl3.formatToPlainString(util.t.IAybsG, obj6).toUpperCase();
@@ -74,13 +74,13 @@ function PremiumGiftDurationButton(arg0) {
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, SubscriptionIntervalTypes } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [, ];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_8 }, containerSelected: null, labelContainer: null, labelPromo: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.containerSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
@@ -88,7 +88,7 @@ obj2.labelContainer = { flexDirection: "row" };
 let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
 obj2.labelPromo = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 const obj7 = { durationContainer: null, durationTitle: null };
 let obj5 = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj7.durationContainer = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -100,12 +100,12 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10562).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10692).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1113).intl;
   obj3.children = intl.string(planInterval(1113).t["8XT6Nf"]);
-  items = [closure_6(planInterval(5624).Text, obj3), ];
+  items = [closure_6(planInterval(5747).Text, obj3), ];
   items[1] = items.map((planInterval, index) => timestampProducer(PremiumGiftDurationButton, { selected: planInterval === planInterval, planInterval }, index));
   obj2.children = items;
   return closure_7(View, obj2);

@@ -1,19 +1,19 @@
-// === Module 7065: TrafficConeSpotIllustration ===
+// === Module 7191: TrafficConeSpotIllustration ===
 
-// Module 7065 (TrafficConeSpotIllustration)
-import _modDef7066 from "module_7066" /* 7066 */;
-import _modDef7067 from "module_7067" /* 7067 */;
-import _modDef7068 from "module_7068" /* 7068 */;
-import assetHelpers from "assetHelpers" /* 7069 */;
+// Module 7191 (TrafficConeSpotIllustration)
+import _modDef7192 from "module_7192" /* 7192 */;
+import _modDef7193 from "module_7193" /* 7193 */;
+import _modDef7194 from "module_7194" /* 7194 */;
+import assetHelpers from "assetHelpers" /* 7195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7066 }, 3: null };
-let obj2 = { uri: _modDef7066 };
-obj[2] = { uri: _modDef7067 };
-const obj3 = { uri: _modDef7067 };
-obj[3] = { uri: _modDef7068 };
+let obj = { 1: null, 2: { uri: _modDef7192 }, 3: null };
+let obj2 = { uri: _modDef7192 };
+obj[2] = { uri: _modDef7193 };
+const obj3 = { uri: _modDef7193 };
+obj[3] = { uri: _modDef7194 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function TrafficConeSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

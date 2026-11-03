@@ -1,13 +1,13 @@
-// === Module 19852: GuildSettingsAnalyticsUtils ===
+// === Module 20002: GuildSettingsAnalyticsUtils ===
 
-// Module 19852 (GuildSettingsAnalyticsUtils)
+// Module 20002 (GuildSettingsAnalyticsUtils)
 import util from "util" /* 1113 */;
-import NumberUtils from "NumberUtils" /* 1895 */;
-import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 19870 */;
+import NumberUtils from "NumberUtils" /* 2024 */;
+import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 20020 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 19853 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 20003 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/guild_settings/community/GuildS
 export function useGuildAnalyticsOverview(guildId) {
   _require = guildId;
   closure_129_0 = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   let obj = require("initialize");

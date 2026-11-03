@@ -1,7 +1,7 @@
-// === Module 9748: useIsSocialLayerParentApplication ===
+// === Module 9880: useIsSocialLayerParentApplication ===
 
-// Module 9748 (useIsSocialLayerParentApplication)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
+// Module 9880 (useIsSocialLayerParentApplication)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/applications/useIsSocialLayer
 
 export default function useIsSocialLayerParentApplication(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);
 };
 export function getIsSocialLayerParentApplication(application) {

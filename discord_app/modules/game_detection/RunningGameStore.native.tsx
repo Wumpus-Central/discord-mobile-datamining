@@ -1,13 +1,13 @@
-// === Module 2013: RunningGameStore ===
+// === Module 2142: RunningGameStore ===
 
-// Module 2013 (RunningGameStore)
+// Module 2142 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11532 */;
-import OverlayTypes from "OverlayTypes" /* 15877 */;
-import GameStore from "GameStore" /* 2014 */;
-import DetectableGameStore from "DetectableGameStore" /* 2032 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11669 */;
+import OverlayTypes from "OverlayTypes" /* 16020 */;
+import GameStore from "GameStore" /* 2143 */;
+import DetectableGameStore from "DetectableGameStore" /* 2161 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
 
 require = fn;
 const Store = initializeDefault.Store;
@@ -136,7 +136,7 @@ export function gameKey() {
 }
 export function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
-    const items = [DetectableGameStore, LibraryApplicationStore, GameStore];
+    items = [DetectableGameStore, LibraryApplicationStore, GameStore];
   }
   return { source: OverlayTypes.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: OverlayTypes.OverlayMethod.Disabled, reason: "Dummy implementation" };
 }

@@ -1,19 +1,19 @@
-// === Module 14942: GameDiversityTier10LargeBadge ===
+// === Module 15071: GameDiversityTier10LargeBadge ===
 
-// Module 14942 (GameDiversityTier10LargeBadge)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14943 from "module_14943" /* 14943 */;
-import _modDef14944 from "module_14944" /* 14944 */;
-import _modDef14945 from "module_14945" /* 14945 */;
+// Module 15071 (GameDiversityTier10LargeBadge)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef15072 from "module_15072" /* 15072 */;
+import _modDef15073 from "module_15073" /* 15073 */;
+import _modDef15074 from "module_15074" /* 15074 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14943 }, 3: null };
-let obj2 = { uri: _modDef14943 };
-obj[2] = { uri: _modDef14944 };
-const obj3 = { uri: _modDef14944 };
-obj[3] = { uri: _modDef14945 };
+let obj = { 1: null, 2: { uri: _modDef15072 }, 3: null };
+let obj2 = { uri: _modDef15072 };
+obj[2] = { uri: _modDef15073 };
+const obj3 = { uri: _modDef15073 };
+obj[3] = { uri: _modDef15074 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier10LargeBadge.native.tsx");
 
@@ -25,7 +25,7 @@ export function GameDiversityTier10LargeBadge(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 156, intrinsicHeight: 100 };
     return assetHelpers.getAssetSizeStyle(size);

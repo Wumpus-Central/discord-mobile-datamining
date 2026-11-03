@@ -1,8 +1,8 @@
-// === Module 6872: DiscordAppState ===
+// === Module 6992: DiscordAppState ===
 
-// Module 6872 (DiscordAppState)
+// Module 6992 (DiscordAppState)
 import initialize from "initialize" /* 504 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 const size = fn(2);
@@ -16,7 +16,7 @@ export default {
     return AppStateStore.getState();
   },
   useCanUIRequestGatewaySocket() {
-    const items = [AppStateStore];
+    items = [AppStateStore];
     return initialize.useStateFromStores(items, () => "active" === state.getState());
   }
 };

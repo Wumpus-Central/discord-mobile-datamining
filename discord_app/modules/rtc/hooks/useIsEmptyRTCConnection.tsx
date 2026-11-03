@@ -1,10 +1,10 @@
-// === Module 9289: useIsEmptyRTCConnection ===
+// === Module 9417: useIsEmptyRTCConnection ===
 
-// Module 9289 (useIsEmptyRTCConnection)
+// Module 9417 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnec
 
 export function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   _require = stateFromStores4;
-  const items = [StreamRTCConnectionStore, AuthenticationStore];
+  items = [StreamRTCConnectionStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
@@ -34,7 +34,7 @@ export function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   });
 }
 export function useIsCallRTCConnectionEmpty() {
-  const items = [RTCConnectionStore, AuthenticationStore];
+  items = [RTCConnectionStore, AuthenticationStore];
   return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;

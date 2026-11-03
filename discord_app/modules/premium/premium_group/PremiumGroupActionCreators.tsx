@@ -1,11 +1,11 @@
-// === Module 15377: PremiumGroupActionCreators ===
+// === Module 15518: PremiumGroupActionCreators ===
 
-// Module 15377 (PremiumGroupActionCreators)
+// Module 15518 (PremiumGroupActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 15378 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 15519 */;
 
 require = fn;
 let closure_7 = async function _fetchPremiumGroupMembership() {
@@ -19,7 +19,7 @@ let closure_7 = async function _fetchPremiumGroupMembership() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_8 = async function _fetchEligibleUsers(arg0) {
     const next_index = body.next_index;
     const ineligible_users = body.ineligible_users;
     closure_5 = 0;
-    const items = [];
+    items = [];
     closure_5 = HermesBuiltin.arraySpread(users.map((item) => Object.assign(new limit(item), { eligible: true })), closure_5);
     closure_6 = ineligible_users;
     if (ineligible_users == null) {
@@ -138,7 +138,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -373,7 +373,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -455,7 +455,7 @@ let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

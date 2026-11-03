@@ -1,6 +1,6 @@
-// === Module 13308: useExplicitMediaActions ===
+// === Module 13444: useExplicitMediaActions ===
 
-// Module 13308 (useExplicitMediaActions)
+// Module 13444 (useExplicitMediaActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ export function useExplicitMediaActions(onError) {
   [tmp2, c3] = noop.useState(false);
   noop = tmp2;
   let obj = { reportFalsePositive: null, isReportFalsePositiveLoading: tmp2 };
-  const items = [tmp2, onError, onSuccess, report];
+  items = [tmp2, onError, onSuccess, report];
   obj.reportFalsePositive = noop.useCallback(report(function*() {
     if (c5 === 2) {
       c5 = 3;
@@ -30,7 +30,7 @@ export function useExplicitMediaActions(onError) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

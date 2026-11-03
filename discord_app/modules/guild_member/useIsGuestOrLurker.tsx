@@ -1,8 +1,8 @@
-// === Module 12030: useIsGuestOrLurker ===
+// === Module 12167: useIsGuestOrLurker ===
 
-// Module 12030 (useIsGuestOrLurker)
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 12167 (useIsGuestOrLurker)
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurk
 export default function useIsGuestOrLurker(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildStore, GuildMemberStore];
+  items = [GuildStore, GuildMemberStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -27,7 +27,7 @@ export default function useIsGuestOrLurker(arg0, arg1) {
   }, items1);
 };
 export function isGuestOrLurkerInGuild(guild_id, id) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;

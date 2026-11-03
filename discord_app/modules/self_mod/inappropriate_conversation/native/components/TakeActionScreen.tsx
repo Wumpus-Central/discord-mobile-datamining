@@ -1,25 +1,25 @@
-// === Module 17735: TakeActionScreen ===
+// === Module 17878: TakeActionScreen ===
 
-// Module 17735 (TakeActionScreen)
+// Module 17878 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7496 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11256);
-({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
+const Constants = fn(11393);
+({ MODAL_LOCATION_CONTEXT_MOBILE: closure_10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 }, helplineGroup: null, textCenter: null };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
@@ -36,7 +36,7 @@ export default function TakeActionButtons(senderId) {
   noop = undefined;
   useState = undefined;
   const tmp = closure_16();
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [senderId];
   const stateFromStores = senderId(setReported[10]).useStateFromStores(items, () => RelationshipStore.isBlocked(senderId), items1);
   let obj = senderId(setReported[10]);
@@ -76,7 +76,7 @@ export default function TakeActionButtons(senderId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,15 +94,15 @@ export default function TakeActionButtons(senderId) {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(8352).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(8476).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1113).intl;
                         obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                        c1(5712).open(closure_2_13, obj2);
+                        c1(5832).open(closure_2_13, obj2);
                       }, () => {
                         const intl = closure_1_0(1113).intl;
-                        closure_1_0(5711).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                        closure_1_0(5831).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                       }),
               done: false
             };
@@ -115,9 +115,9 @@ export default function TakeActionButtons(senderId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(7496).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(11269).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(7496);
+          const result = v1(7620).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(11406).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(7620);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -177,7 +177,7 @@ export default function TakeActionButtons(senderId) {
     if (shouldShowThroughlineLink) {
       obj11.text = string3(t3.HQ2nKl);
       obj11.onPress = function onPress() {
-        LinkingDefault.openURL(closure_2_12);
+        LinkingDefault.openURL(application_id);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
       const items6 = [closure_14(Button, obj11), ];

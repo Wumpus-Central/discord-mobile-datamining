@@ -1,28 +1,28 @@
-// === Module 7485: ChannelActionCreators ===
+// === Module 7609: ChannelActionCreators ===
 
-// Module 7485 (ChannelActionCreators)
+// Module 7609 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5021 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import preloadChannelDefault from "preloadChannel" /* 5758 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6893 */;
+import shared from "shared" /* 5148 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import preloadChannelDefault from "preloadChannel" /* 5878 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 7013 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7486 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ChangelogStore from "ChangelogStore" /* 7610 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4867).createChannelRecordFromServer;
+let closure_6 = fn(4994).createChannelRecordFromServer;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
+({ AnalyticEvents: closure_9, AbortCodes: closure_10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelActionCreators.tsx");
 
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -175,7 +175,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -313,7 +313,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -372,7 +372,7 @@ export default {
       const _Array = Array;
       let tmp2 = _require;
       if (!Array.isArray(_require)) {
-        const items = [_require];
+        items = [_require];
         tmp2 = items;
       }
       let items1 = tmp2;
@@ -544,8 +544,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7498).checkGuildTemplateDirty(closure_128_2);
-        name(7498);
+        const result = name(7622).checkGuildTemplateDirty(closure_128_2);
+        name(7622);
       }
       return closure_128_1;
     })();
@@ -565,7 +565,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -703,7 +703,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

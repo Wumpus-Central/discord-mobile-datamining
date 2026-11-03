@@ -1,7 +1,7 @@
-// === Module 11532: SocialSdkGameResolver ===
+// === Module 11669: SocialSdkGameResolver ===
 
-// Module 11532 (SocialSdkGameResolver)
-import DetectableGameStore from "DetectableGameStore" /* 2032 */;
+// Module 11669 (SocialSdkGameResolver)
+import DetectableGameStore from "DetectableGameStore" /* 2161 */;
 
 const SdkCanonicalGameResolutionType = { UNRESOLVED: 0, [0]: "UNRESOLVED", MATCHES_DETECTED: 1, [1]: "MATCHES_DETECTED", DIFFERS: 2, [2]: "DIFFERS" };
 let closure_2 = { type: SdkCanonicalGameResolutionType.UNRESOLVED };
@@ -87,7 +87,7 @@ prototype["resolve"] = function resolve(arr) {
   let someResult = mapped.some((item, index) => item !== closure_1[index]);
   let someResult1 = map.size !== this.resolutionsByPid.size;
   if (!someResult1) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(map, 0);
     someResult1 = items.some((item) => {
       [tmp, tmp2] = item;

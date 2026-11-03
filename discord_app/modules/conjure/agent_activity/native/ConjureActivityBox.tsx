@@ -1,15 +1,15 @@
-// === Module 12670: ConjureActivityBox ===
+// === Module 12806: ConjureActivityBox ===
 
-// Module 12670 (ConjureActivityBox)
+// Module 12806 (ConjureActivityBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import WarningIcon from "WarningIcon" /* 8026 */;
-import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 12625 */;
-import ConjureSubagentMark from "ConjureSubagentMark" /* 12671 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import WarningIcon from "WarningIcon" /* 8150 */;
+import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 12761 */;
+import ConjureSubagentMark from "ConjureSubagentMark" /* 12807 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ConjureNativeStepImagesDefault = tmp5(12718);
+const ConjureNativeStepImagesDefault = tmp5(12854);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -134,7 +134,7 @@ function LaneStatusLine(arg0) {
       tmp27 = callback;
     }
     obj5.onToggle = tmp27;
-    const items = [closure_6(mark(epoch[13]), obj5), ];
+    items = [closure_6(mark(epoch[13]), obj5), ];
     let tmp21Result = null;
     if (tmp3) {
       tmp21Result = null;
@@ -179,14 +179,14 @@ function TimelineRow(inGutter) {
         const obj = {};
         const merged = Object.assign(id);
         obj.id = id.id;
-        const items = [obj];
+        items = [obj];
       }
       return [];
     }
   });
   let obj = { line: null, live: null, settled: null, failed: null, presentation: null, crestColor: null, inGutter: null, epoch: null, trailing: null };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12590).describeNode(node);
+  obj.line = node(12726).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -204,9 +204,9 @@ function TimelineRow(inGutter) {
   obj.epoch = epoch;
   let tmp4Result = null;
   if (null != node.durationMs) {
-    let obj3 = { variant: "text-xs/normal", color: "text-subtle", children: node(12101).describeDuration(node.durationMs) };
-    tmp4Result = closure_6(node(5624).Text, obj3);
-    const tmp8Result = node(12101);
+    let obj3 = { variant: "text-xs/normal", color: "text-subtle", children: node(12237).describeDuration(node.durationMs) };
+    tmp4Result = closure_6(node(5747).Text, obj3);
+    const tmp8Result = node(12237);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), , ];
@@ -227,7 +227,7 @@ function TimelineRow(inGutter) {
       let tmp8 = tmpResult;
       if (null != tmp7) {
         const obj2 = { style: closure_1.stepLine, children: null };
-        const items = [tmpResult, ];
+        items = [tmpResult, ];
         const obj3 = { accessible: true, accessibilityRole: "image", accessibilityLabel: tmp7, children: null };
         const obj4 = { size: "xs", color: nativeDefault.colors.STATUS_DANGER };
         obj3.children = timestampProducer(WarningIcon.WarningIcon, obj4);
@@ -256,11 +256,11 @@ function TimelineRow(inGutter) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { activityBox: { marginLeft: -fn(12634).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
-let obj3 = { marginLeft: -fn(12634).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12634).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12634).RAIL_INDENT };
+const createStyles = fn(5141);
+let obj2 = { activityBox: { marginLeft: -fn(12770).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
+let obj3 = { marginLeft: -fn(12770).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12770).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12770).RAIL_INDENT };
 obj2.stepDetail = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 let obj5 = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 obj2.stepLine = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -288,7 +288,7 @@ export default function ConjureActivityBox(projectId) {
   const tasks = tree.tasks;
   closure_3 = projectId(length[8]).subagentIllocons(tasks.map((taskId) => taskId.taskId));
   let obj2 = { style: tmp.activityBox, children: null };
-  const items = [closure_6(TurnStatusLine, { projectId, tree, turnActive, epoch: length, besideAvatar: flag }), ];
+  items = [closure_6(TurnStatusLine, { projectId, tree, turnActive, epoch: length, besideAvatar: flag }), ];
   const tasks1 = tree.tasks;
   items[1] = tasks1.map((task) => {
     let familiarMarkResult;

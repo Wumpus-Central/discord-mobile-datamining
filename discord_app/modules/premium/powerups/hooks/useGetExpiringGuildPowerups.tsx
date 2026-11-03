@@ -1,10 +1,10 @@
-// === Module 14132: useGetExpiringGuildPowerups ===
+// === Module 14263: useGetExpiringGuildPowerups ===
 
-// Module 14132 (useGetExpiringGuildPowerups)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14069 */;
+// Module 14263 (useGetExpiringGuildPowerups)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14200 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGet
 
 export default function useGetExpiringGuildPowerups(arg0) {
   _require = arg0;
-  const items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   const items1 = [stateFromStores];
   return noop.useMemo(() => {

@@ -1,9 +1,9 @@
-// === Module 7405: WishlistRecommendationRecord ===
+// === Module 7529: WishlistRecommendationRecord ===
 
-// Module 7405 (WishlistRecommendationRecord)
-import Record from "Record" /* 1398 */;
-import SKURecord from "SKURecord" /* 2040 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+// Module 7529 (WishlistRecommendationRecord)
+import Record from "Record" /* 1400 */;
+import SKURecord from "SKURecord" /* 2169 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 
 const prototype = function WishlistRecommendationRecord(skus) {
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp);
@@ -12,7 +12,7 @@ const prototype = function WishlistRecommendationRecord(skus) {
   const entries = Object.entries(skus.skus_to_user_and_reason);
   tmp5.skusToUserAndReason = Object.fromEntries(entries.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, tmp2];
+    items = [tmp, tmp2];
     return items;
   }));
   const applications = skus.applications;
@@ -31,7 +31,7 @@ prototype["fromServer"] = function fromServer(skus) {
     const entries = Object.entries(skus.skus_to_user_and_reason);
     tmp9.skusToUserAndReason = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, tmp2];
+      items = [tmp, tmp2];
       return items;
     }));
     const applications = skus.applications;

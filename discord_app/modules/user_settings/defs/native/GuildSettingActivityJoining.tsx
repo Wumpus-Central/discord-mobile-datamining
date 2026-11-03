@@ -1,12 +1,12 @@
-// === Module 17925: GuildSettingActivityJoining ===
+// === Module 18068: GuildSettingActivityJoining ===
 
-// Module 17925 (GuildSettingActivityJoining)
+// Module 18068 (GuildSettingActivityJoining)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 17911 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 18054 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
       sanitizedActivityJoiningRestrictedGuilds.add(tmp);
     }
     const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
-    const items = [...sanitizedActivityJoiningRestrictedGuilds];
+    items = [...sanitizedActivityJoiningRestrictedGuilds];
     ActivityJoiningRestrictedGuilds.updateSetting(items);
   }
 });

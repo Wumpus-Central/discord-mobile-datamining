@@ -1,20 +1,20 @@
-// === Module 5192: client_themes/ClientThemesUtils ===
+// === Module 5315: client_themes/ClientThemesUtils ===
 
-// Module 5192 (client_themes/ClientThemesUtils)
+// Module 5315 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import utils_ColorDefault from "utils/Color" /* 5012 */;
-import shared from "shared" /* 5021 */;
-import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5193 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5194 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
-import useThemeDefault from "useTheme" /* 5253 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import utils_ColorDefault from "utils/Color" /* 5139 */;
+import shared from "shared" /* 5148 */;
+import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5316 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5373 */;
+import useThemeDefault from "useTheme" /* 5376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 
 require = fn;
@@ -231,7 +231,7 @@ export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
         const colors1 = gradient.customThemeSettings.colors;
         const mapped1 = colors1.map((item) => _modDef671(item).luminance());
         const _Math = Math;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(mapped1, 0);
         const _Math2 = Math;
         const result = _modDef671(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(min, items, Math))]).set("hsl.s", 0.2);
@@ -287,7 +287,7 @@ export function useGradientValue(END, arg1) {
   dependencyMap = tmp;
   const tmp2 = useThemeDefault();
   closure_3 = tmp2;
-  const items = [tmp, , , , ];
+  items = [tmp, , , , ];
   let dark;
   if (arg1 != null) {
     dark = arg1.dark;

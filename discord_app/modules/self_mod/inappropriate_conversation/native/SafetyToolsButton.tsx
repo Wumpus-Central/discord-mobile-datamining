@@ -1,18 +1,18 @@
-// === Module 14587: SafetyToolsButton ===
+// === Module 14718: SafetyToolsButton ===
 
-// Module 14587 (SafetyToolsButton)
+// Module 14718 (SafetyToolsButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11270 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11296 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { safetyToolsButton: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,7 +31,7 @@ export function SafetyToolsButton(channelId) {
   let tmp4 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
   const first = tmp4[0];
   closure_7 = tmp4[1];
-  let items = [shouldShowInitialSafetyToolsButtonTooltip, safetyToolsButtonTooltipForChannel];
+  items = [shouldShowInitialSafetyToolsButtonTooltip, safetyToolsButtonTooltipForChannel];
   const callback = safetyToolsButtonTooltipForChannel.useCallback(() => {
     if (shouldShowInitialSafetyToolsButtonTooltip) {
       const intl2 = util.intl;
@@ -89,7 +89,7 @@ export function SafetyToolsButton(channelId) {
       const result = ChannelSafetyWarningsActionCreators.acknowledgeChannelSafetyWarningTooltip(channelId);
     }
     if (null != safetyToolsButtonTooltipForChannel) {
-      const items = [tmp5.id];
+      items = [tmp5.id];
       const result1 = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
     }
   }, items4);

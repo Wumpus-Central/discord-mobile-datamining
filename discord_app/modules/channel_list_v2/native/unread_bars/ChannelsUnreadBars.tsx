@@ -1,21 +1,22 @@
-// === Module 18241: ChannelsUnreadBars ===
+// === Module 18385: ChannelsUnreadBars ===
 
-// Module 18241 (ChannelsUnreadBars)
+// Module 18385 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
-import useFontScale from "useFontScale" /* 5642 */;
-import FastList from "FastList" /* 7240 */;
-import ChannelListState from "ChannelListState" /* 7707 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
+import useFontScale from "useFontScale" /* 5762 */;
+import FastList from "FastList" /* 7361 */;
+import ChannelListState from "ChannelListState" /* 7831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function shouldSkipSection(diff2) {
@@ -84,7 +85,7 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
     }
   }
 }
-function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTotalHeight) {
+function findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight) {
   if (tmp) {
     let MENTION = constants.MENTION;
   } else {
@@ -95,13 +96,13 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
   }
   if (null == MENTION) {
     return closure_18;
-  } else if (0 === fastList.containerSize) {
+  } else if (0 === c0.containerSize) {
     return closure_18;
   } else {
-    const scrollPosValue = fastList.scrollPosValue;
+    const scrollPosValue = c0.scrollPosValue;
     const result = getScaledChannelRowHeight(useFontScale.getFontScale()) / 2;
     value = scrollPosValue.get();
-    const item2 = fastList.getSectionItemFromPosition(headerHeight + value + result).item;
+    const item2 = c0.getSectionItemFromPosition(headerHeight + value + result).item;
     let layoutStart;
     if (item2 != null) {
       layoutStart = item2.layoutStart;
@@ -112,8 +113,8 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
     section = -1;
     item = -1;
     let tmp9 = null;
-    const diff = layoutStart + fastList.containerSize - headerHeight - youBarTotalHeight;
-    const items = fastList.getItems();
+    const diff = layoutStart + c0.containerSize - headerHeight - youBarTotalHeight;
+    items = c0.getItems();
     for (const item10031 of items) {
       if (item10031.layoutStart >= layoutStart) {
         if (item10031.type === FastList.FastListItemTypes.ITEM) {
@@ -197,45 +198,47 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
       continue;
     }
   }
-  tmp = GuildReadStateStore.getMentionCount(guildChannels.id) > 0;
+  tmp = GuildReadStateStore.getMentionCount(importDefault.id) > 0;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(11046).getScaledChannelRowHeight;
-const UnreadSetting = fn(6776).UnreadSetting;
+const getScaledChannelRowHeight = fn(11186).getScaledChannelRowHeight;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };
-const __initData = { code: "function ChannelsUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
-const __initData2 = { code: "function ChannelsUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
+let closure_22 = { code: "(function ChannelsUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
+let closure_23 = { code: "(function ChannelsUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx");
 
 export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   fastList = fastList.fastList;
+  _require = fastList;
   const guildChannels = fastList.guildChannels;
+  importDefault = guildChannels;
   const headerHeight = fastList.headerHeight;
   noop = undefined;
   let wrapper;
   let bannerWidth;
   let listBottom;
-  closure_15 = undefined;
+  closure_14 = undefined;
   let stateFromStores;
   const id = guildChannels.id;
   noop = noop.useRef(-1);
   closure_5 = noop.useRef(null);
-  const youBarTotalHeight = fastList(headerHeight[16]).useYouBarTotalHeight();
-  let tmp4 = id(noop.useState(() => findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
+  const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
+  let tmp4 = id(noop.useState(() => findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight)), 2);
   const first = tmp4[0];
   let beforeItem = first.beforeItem;
   let afterItem = first.afterItem;
   closure_9 = tmp4[1];
-  let items = [fastList, guildChannels, headerHeight, youBarTotalHeight];
+  items = [fastList, guildChannels, headerHeight, youBarTotalHeight];
   const memo = noop.useMemo(() => debounceDefault(() => {
-    closure_0 = findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTotalHeight);
+    closure_0 = findNearestUnreadItem(_undefined, closure_1_1, headerHeight, youBarTotalHeight);
     closure_1_9((afterItem) => {
       if (afterItem === closure_0) {
         let tmp6 = afterItem;
@@ -245,19 +248,19 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
         tmp6 = closure_0;
         if (tmp4(afterItem, afterItem2)) {
           beforeItem = afterItem.beforeItem;
-          guildChannels(headerHeight[18]);
+          closure_2_1(headerHeight[18]);
           const beforeItem2 = closure_0.beforeItem;
           tmp6 = closure_0;
         }
-        tmp4 = guildChannels(headerHeight[18]);
+        tmp4 = closure_2_1(headerHeight[18]);
       }
       return tmp6;
     });
   }, 100), items);
   const items1 = [memo, id];
   const effect = noop.useEffect(() => {
-    const items = [closure_9, memo];
-    const batchedStoreListener = new fastList(headerHeight[19]).BatchedStoreListener(items, () => {
+    items = [closure_9, memo];
+    const batchedStoreListener = new _undefined(headerHeight[19]).BatchedStoreListener(items, () => {
       const guildUnreadsSentinel = memo.getGuildUnreadsSentinel(id);
       let tmp4 = id === ref2.current;
       if (tmp4) {
@@ -274,47 +277,58 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
       batchedStoreListener.detach();
     };
   }, items1);
-  const scrollPosValue = fastList.scrollPosValue;
-  const obj2 = fastList(headerHeight[16]);
-  const tmp = fastList;
-  class L {
+  const obj2 = require("useYouBarTotalHeight");
+  const items2 = [closure_22, fastList.scrollPosValue];
+  _require = undefined;
+  [tmp8, tmp9] = items2;
+  class ChannelsUnreadBarsTsx1 {
     constructor() {
-      return scrollPosValue.get();
+      return closure_0.get();
     }
   }
-  L.__closure = { scrollPosValue };
-  L.__workletHash = 7966775243843;
-  L.__initData = __initData;
-  const fn = function y(arg0, arg1) {
-    if (arg0 !== arg1) {
-      ReanimatedRexport.runOnJS(memo)();
+  const items3 = [tmp9];
+  ChannelsUnreadBarsTsx1.__closure = items3;
+  ChannelsUnreadBarsTsx1.__workletHash = 16683573593754;
+  ChannelsUnreadBarsTsx1.__initData = tmp8;
+  const items4 = [closure_23, require("module_1705").scheduleOnRN, memo];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp10, tmp11, tmp12] = items4;
+  class ChannelsUnreadBarsTsx2 {
+    constructor(arg0, arg1) {
+      if (fastList !== arg1) {
+        tmp = closure_0;
+        tmp2 = closure_1;
+        tmp3 = closure_0(closure_1);
+      }
+      return;
     }
-  };
-  let obj3 = fastList(headerHeight[20]);
-  fn.__closure = { runOnJS: fastList(headerHeight[20]).runOnJS, debouncedUpdate: memo };
-  fn.__workletHash = 17498480935002;
-  fn.__initData = __initData2;
-  const animatedReaction = obj3.useAnimatedReaction(L, fn);
-  const tmp9 = stateFromStores();
-  wrapper = tmp9;
-  const tmp11 = guildChannels(headerHeight[21])(fastList.guild);
-  bannerWidth = tmp11.bannerWidth;
-  listBottom = tmp11.listBottom;
-  const tmp12 = guildChannels(headerHeight[22])();
-  closure_15 = tmp12;
-  const items2 = [tmp9.wrapper, bannerWidth, listBottom, tmp12];
+  }
+  const items5 = [tmp11, tmp12];
+  ChannelsUnreadBarsTsx2.__closure = items5;
+  ChannelsUnreadBarsTsx2.__workletHash = 10887635959554;
+  ChannelsUnreadBarsTsx2.__initData = tmp10;
+  const animatedReaction = require("module_1652").useAnimatedReaction(ChannelsUnreadBarsTsx1, ChannelsUnreadBarsTsx2);
+  const tmp14 = closure_16();
+  wrapper = tmp14;
+  const tmp16 = require("useChannelListSpecs")(fastList.guild);
+  bannerWidth = tmp16.bannerWidth;
+  listBottom = tmp16.listBottom;
+  const tmp17 = require("useIsWindowLarge")();
+  closure_14 = tmp17;
+  const items6 = [tmp14.wrapper, bannerWidth, listBottom, tmp17];
   let isMention;
-  const memo1 = noop.useMemo(() => {
-    const items = [wrapper.wrapper, ];
+  const memo1 = obj.useMemo(() => {
+    items = [wrapper.wrapper, ];
     const obj = { width: bannerWidth, bottom: null };
     let num = 0;
-    if (!closure_15) {
+    if (!closure_14) {
       num = listBottom;
     }
     obj.bottom = num;
     items[1] = obj;
     return items;
-  }, items2);
+  }, items6);
   if (beforeItem != null) {
     isMention = beforeItem.isMention;
   }
@@ -338,52 +352,52 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
     }
     str = str3;
   }
-  const obj4 = { runOnJS: fastList(headerHeight[20]).runOnJS, debouncedUpdate: memo };
-  const items3 = [youBarTotalHeight];
-  stateFromStores = tmp(headerHeight[19]).useStateFromStores(items3, () => youBarTotalHeight.useReducedMotion);
-  const items4 = [beforeItem, stateFromStores, fastList];
-  const items5 = [afterItem, stateFromStores, fastList];
+  let obj3 = require("module_1652");
+  const items7 = [youBarTotalHeight];
+  stateFromStores = require("initialize").useStateFromStores(items7, () => youBarTotalHeight.useReducedMotion);
+  const items8 = [beforeItem, stateFromStores, fastList];
+  const items9 = [afterItem, stateFromStores, fastList];
   const callback = obj.useCallback(() => {
     if (null != beforeItem) {
       const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       const obj3 = { section: null, item: null, animated: null, orientation: "center" };
       ({ section: obj2.section, row: obj2.item } = beforeItem);
       obj3.animated = !stateFromStores;
-      fastList.scrollToLocation(obj3);
+      _undefined.scrollToLocation(obj3);
     }
-  }, items4);
-  const obj5 = { style: memo1, pointerEvents: "box-none", children: null };
+  }, items8);
+  const obj4 = { style: memo1, pointerEvents: "box-none", children: null };
   const callback1 = obj.useCallback(() => {
     if (null != afterItem) {
       const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       const obj3 = { section: null, item: null, animated: null, orientation: "center" };
       ({ section: obj2.section, row: obj2.item } = afterItem);
       obj3.animated = !stateFromStores;
-      fastList.scrollToLocation(obj3);
+      _undefined.scrollToLocation(obj3);
     }
-  }, items5);
-  const obj6 = { position: "top", shown: "before" === str, onPress: callback, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  }, items9);
+  const obj5 = { position: "top", shown: "before" === str, onPress: callback, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
   let isMention2;
-  const tmp19 = closure_15;
-  const tmp20 = closure_5;
-  const tmpResult = tmp(headerHeight[19]);
+  const tmp24 = stateFromStores;
+  const tmp25 = closure_5;
+  const tmpResult = require("initialize");
   if (beforeItem != null) {
     isMention2 = beforeItem.isMention;
   }
-  obj6.isMention = isMention2;
-  obj6.scrollPosition = fastList.scrollPosValue;
-  obj6.headerHeight = headerHeight;
-  const items6 = [listBottom(guildChannels(headerHeight[25]), obj6), ];
-  const obj7 = { position: "bottom", shown: "after" === str, onPress: callback1, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  obj5.isMention = isMention2;
+  obj5.scrollPosition = fastList.scrollPosValue;
+  obj5.headerHeight = headerHeight;
+  const items10 = [closure_14(require("ChannelsUnreadBar"), obj5), ];
+  const obj6 = { position: "bottom", shown: "after" === str, onPress: callback1, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
   let isMention3;
-  const tmp10Result = guildChannels(headerHeight[25]);
+  const tmp15Result = require("ChannelsUnreadBar");
   if (afterItem != null) {
     isMention3 = afterItem.isMention;
   }
-  obj7.isMention = isMention3;
-  obj7.scrollPosition = fastList.scrollPosValue;
-  obj7.headerHeight = headerHeight;
-  items6[1] = listBottom(guildChannels(headerHeight[25]), obj7);
-  obj5.children = items6;
-  return tmp19(tmp20, obj5);
+  obj6.isMention = isMention3;
+  obj6.scrollPosition = fastList.scrollPosValue;
+  obj6.headerHeight = headerHeight;
+  items10[1] = closure_14(require("ChannelsUnreadBar"), obj6);
+  obj4.children = items10;
+  return tmp24(tmp25, obj4);
 });

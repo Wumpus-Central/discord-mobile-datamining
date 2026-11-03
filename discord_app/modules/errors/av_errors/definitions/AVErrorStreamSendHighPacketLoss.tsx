@@ -1,12 +1,12 @@
-// === Module 20056: AVErrorStreamSendHighPacketLoss ===
+// === Module 20206: AVErrorStreamSendHighPacketLoss ===
 
-// Module 20056 (AVErrorStreamSendHighPacketLoss)
-import AVError from "AVError" /* 5947 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import AVErrorUtils from "AVErrorUtils" /* 20054 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
+// Module 20206 (AVErrorStreamSendHighPacketLoss)
+import AVError from "AVError" /* 6067 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import AVErrorUtils from "AVErrorUtils" /* 20204 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
 
 require = fn;
 const size = fn(2);
@@ -35,7 +35,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
             const obj2 = { type: AVError.AVError.STREAM_SEND_HIGH_PACKET_LOSS };
             const tmp8Result3 = AVErrorContext;
             const merged = Object.assign(tmp8Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
-            const items = [obj2];
+            items = [obj2];
             const tmp3 = items;
             const tmp8Result4 = StreamKeyUtils;
           }

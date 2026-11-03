@@ -1,17 +1,17 @@
-// === Module 18970: useSortedMessageRequests ===
+// === Module 19128: useSortedMessageRequests ===
 
-// Module 18970 (useSortedMessageRequests)
+// Module 19128 (useSortedMessageRequests)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedMessageRequests.tsx");
 
 export default function useSortedMessageRequests() {
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStores(items, () => ChannelStore.getPrivateChannelsVersion());
   let obj = stateFromStoresArray(stateFromStoresObject[4]);
   const items1 = [ChannelStore, MessageRequestStore];

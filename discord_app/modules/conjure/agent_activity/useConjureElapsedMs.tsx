@@ -1,6 +1,6 @@
-// === Module 12793: useConjureElapsedMs ===
+// === Module 12929: useConjureElapsedMs ===
 
-// Module 12793 (useConjureElapsedMs)
+// Module 12929 (useConjureElapsedMs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ export function useConjureElapsedMs(startedAt) {
   }
   const tmp = _slicedToArray(str.useState(() => Date.now()), 2);
   closure_2 = tmp[1];
-  const items = [startedAt, str];
+  items = [startedAt, str];
   const effect = str.useEffect(() => {
     if (null != timeout) {
       closure_1 = tmp4;

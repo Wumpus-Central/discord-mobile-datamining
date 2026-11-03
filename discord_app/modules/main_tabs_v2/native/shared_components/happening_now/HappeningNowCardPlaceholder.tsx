@@ -1,19 +1,20 @@
-// === Module 18129: HappeningNowCardPlaceholder ===
+// === Module 18273: HappeningNowCardPlaceholder ===
 
-// Module 18129 (HappeningNowCardPlaceholder)
+// Module 18273 (HappeningNowCardPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import timing_timing from "timing/timing" /* 5377 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(17287).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(17430).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { placeholderContainer: { flexDirection: "row", alignItems: "center" }, placeholderIcon: null, placeholderContent: null, placeholderText: null, placeholderTextTop: null, placeholderTextBottom: null };
 let size = { height: HAPPENING_NOW_CONTENT_HEIGHT, width: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.placeholderIcon = size;
@@ -22,8 +23,8 @@ obj2.placeholderText = { height: 12, borderRadius: 5, backgroundColor: nativeDef
 obj2.placeholderTextTop = { width: "75%" };
 obj2.placeholderTextBottom = { width: "50%", marginTop: 8 };
 let closure_7 = createStyles.createStyles(obj2);
-let closure_8 = { code: "function HappeningNowCardPlaceholderTsx1(){const{opacity,withRepeat,withTiming,endOpacity,duration,Easing}=this.__closure;opacity.set(withRepeat(withTiming(endOpacity,{duration:duration,easing:Easing.ease}),-1,true));}" };
-const __initData = { code: "function HappeningNowCardPlaceholderTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let closure_8 = { code: "(function HappeningNowCardPlaceholderTsx1(){let[opacity,withRepeat,withTiming,endOpacity,duration,Easing]=this.__closure;opacity.set(withRepeat(withTiming(endOpacity,{duration:duration,easing:Easing.ease}),-1,true));})" };
+let closure_9 = { code: "(function HappeningNowCardPlaceholderTsx2(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardPlaceholder.tsx");
 
@@ -36,54 +37,70 @@ export function HappeningNowCardPlaceholder(panelVariant) {
   _require = 1000;
   importDefault = 0.6;
   let sharedValue;
-  sharedValue = require("ReanimatedRexport").useSharedValue(0.3);
-  const items = [sharedValue, 1000, 0.6];
+  sharedValue = require("module_1652").useSharedValue(0.3);
+  items = [sharedValue, 1000, 0.6];
   const effect = noop.useEffect(() => {
-    const fn = function t() {
-      const obj = duration(sharedValue[6]);
-      const obj2 = duration(sharedValue[7]);
-      const result = closure_1_2.set(obj.withRepeat(obj2.withTiming(endOpacity, { duration, easing: duration(sharedValue[6]).Easing.ease }), -1, true));
-    };
-    let obj = ReanimatedRexport;
-    fn.__closure = { opacity: sharedValue, withRepeat: ReanimatedRexport.withRepeat, withTiming: timing.withTiming, endOpacity, duration, Easing: ReanimatedRexport.Easing };
-    fn.__workletHash = 14338250108016;
-    fn.__initData = __initData;
-    obj.runOnUI(fn)();
+    items = [closure_8, sharedValue, _mod1652.withRepeat, timing_timing.withTiming, c1, c0, _mod1652.Easing];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    [tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7] = items;
+    class HappeningNowCardPlaceholderTsx1 {
+      constructor() {
+        obj = { duration: closure_4, easing: closure_5.ease };
+        result = closure_0.set(closure_1(closure_2(closure_3, obj), -1, true));
+        return;
+      }
+    }
+    const items1 = [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7];
+    HappeningNowCardPlaceholderTsx1.__closure = items1;
+    HappeningNowCardPlaceholderTsx1.__workletHash = 2445184542345;
+    HappeningNowCardPlaceholderTsx1.__initData = tmp;
+    _mod1705.scheduleOnUI(HappeningNowCardPlaceholderTsx1);
   }, items);
-  let obj = require("ReanimatedRexport");
-  const tmp2 = sharedValue;
-  let fn = function c() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 17547739379389;
-  fn.__initData = __initData;
-  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
+  const obj = require("module_1652");
+  let items1 = [closure_9, sharedValue];
+  _require = undefined;
+  [tmp5, tmp6] = items1;
+  class HappeningNowCardPlaceholderTsx2 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items2 = [tmp6];
+  HappeningNowCardPlaceholderTsx2.__closure = items2;
+  HappeningNowCardPlaceholderTsx2.__workletHash = 8479372261668;
+  HappeningNowCardPlaceholderTsx2.__initData = tmp5;
+  const animatedStyle = require("module_1652").useAnimatedStyle(HappeningNowCardPlaceholderTsx2);
   let str = "medium";
-  let obj2 = require("ReanimatedRexport");
-  const tmp7 = importDefault;
+  const obj2 = require("module_1652");
+  const tmp9 = importDefault;
   if (panelVariant.fullWidth) {
     str = "full";
   }
   const obj3 = { width: str, panelVariant: flag, children: null };
   const obj4 = { style: null, children: null };
-  const items1 = [animatedStyle, tmp.placeholderContainer];
-  obj4.style = items1;
-  const items2 = [closure_5(View, { style: tmp.placeholderIcon }), ];
+  const items3 = [animatedStyle, tmp.placeholderContainer];
+  obj4.style = items3;
+  const items4 = [ease(View, { style: tmp.placeholderIcon }), ];
   const obj6 = { style: tmp.placeholderContent, children: null };
   const obj7 = { style: null };
-  const items3 = [, ];
-  ({ placeholderText: arr4[0], placeholderTextTop: arr4[1] } = tmp);
-  obj7.style = items3;
-  const items4 = [closure_5(View, obj7), ];
-  const obj8 = { style: null };
   const items5 = [, ];
-  ({ placeholderText: arr6[0], placeholderTextBottom: arr6[1] } = tmp);
-  obj8.style = items5;
-  items4[1] = closure_5(View, obj8);
-  obj6.children = items4;
-  items2[1] = closure_6(View, obj6);
-  obj4.children = items2;
-  obj3.children = closure_6(tmp7(tmp2[6]).View, obj4);
-  return closure_5(require("HappeningNowCard"), obj3);
+  ({ placeholderText: arr6[0], placeholderTextTop: arr6[1] } = tmp);
+  obj7.style = items5;
+  const items6 = [ease(View, obj7), ];
+  const obj8 = { style: null };
+  const items7 = [, ];
+  ({ placeholderText: arr8[0], placeholderTextBottom: arr8[1] } = tmp);
+  obj8.style = items7;
+  items6[1] = ease(View, obj8);
+  obj6.children = items6;
+  items4[1] = closure_6(View, obj6);
+  obj4.children = items4;
+  obj3.children = closure_6(tmp9(sharedValue[6]).View, obj4);
+  return ease(require("HappeningNowCard"), obj3);
 }

@@ -1,23 +1,23 @@
-// === Module 14374: ThreadBrowserHooks ===
+// === Module 14505: ThreadBrowserHooks ===
 
-// Module 14374 (ThreadBrowserHooks)
+// Module 14505 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8202 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9840 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8326 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6861 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8203 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6981 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8327 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(14375).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(14506).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
@@ -29,7 +29,7 @@ export function useTrackThreadBrowserTab() {
 }
 export function useActiveThreadIds(arg0) {
   _require = arg0;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = arg0);
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
@@ -52,7 +52,7 @@ export function useActiveThreadIds(arg0) {
 }
 export function useActiveThreads(channel) {
   closure_129_0 = channel;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
   const stateFromStoresArray = memo(504).useStateFromStoresArray(items, () => {
@@ -81,7 +81,7 @@ export function useActiveThreads(channel) {
 }
 export function useActiveGuildThreads(arg0) {
   _require = arg0;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const values = _modDef12(ActiveThreadsStore.getThreadsForGuild(closure_0)).values();
@@ -111,7 +111,7 @@ export function useArchivedThreads(channel, LATEST_ACTIVITY, loadMore, MATCH_SOM
   const result = channel.isModeratorReportChannel();
   noop = result;
   showResolvedFlags = showResolvedFlags(channel.id).showResolvedFlags;
-  const items = [ArchivedThreadsStore];
+  items = [ArchivedThreadsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ loading: ArchivedThreadsStore.isLoading(user.id, closure_1, closure_2, closure_3), isInitialLoad: ArchivedThreadsStore.getIsInitialLoad(user.id, closure_1, closure_2, closure_3), canLoadMore: ArchivedThreadsStore.getCanLoadMore(user.id, closure_1, closure_2, closure_3), nextOffset: ArchivedThreadsStore.getNextOffset(user.id, closure_1, closure_2, closure_3) }));
   ({ loading, nextOffset } = stateFromStoresObject);
   const isInitialLoad = stateFromStoresObject.isInitialLoad;

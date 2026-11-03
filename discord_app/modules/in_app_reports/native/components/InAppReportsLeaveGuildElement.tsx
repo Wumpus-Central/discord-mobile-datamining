@@ -1,10 +1,10 @@
-// === Module 15172: InAppReportsLeaveGuildElement ===
+// === Module 15313: InAppReportsLeaveGuildElement ===
 
-// Module 15172 (InAppReportsLeaveGuildElement)
+// Module 15313 (InAppReportsLeaveGuildElement)
 import util from "util" /* 1113 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ export default function LeaveGuildElement(guild) {
   noop = undefined;
   [obj.disabled, _slicedToArray] = noop.useState(false);
   noop = tmp2;
-  const items = [null != guild];
+  items = [null != guild];
   const effect = noop.useEffect(() => {
     closure_3(!closure_4);
   }, items);

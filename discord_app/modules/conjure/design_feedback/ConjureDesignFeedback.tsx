@@ -1,6 +1,6 @@
-// === Module 12215: ConjureDesignFeedback ===
+// === Module 12351: ConjureDesignFeedback ===
 
-// Module 12215 (ConjureDesignFeedback)
+// Module 12351 (ConjureDesignFeedback)
 import size from "module_2" /* 2 */;
 
 function labelConjureDesignTarget(target) {
@@ -161,7 +161,7 @@ function labelConjureDesignTarget(target) {
   }
 }
 function targetLine(target) {
-  const items = ["<" + target.tag + ">"];
+  items = ["<" + target.tag + ">"];
   if ("" !== target.role) {
     const _HermesInternal = HermesInternal;
     items.push("role=" + target.role);
@@ -254,13 +254,13 @@ export function hitTestConjureDesignTargets(arg0, arg1, arg2) {
 }
 export { labelConjureDesignTarget };
 export function describeConjureDesignTarget(target) {
-  const items = [, ];
+  items = [, ];
   ({ kind: arr[0], name: arr[1] } = labelConjureDesignTarget(target));
   const found = items.filter((item) => "" !== item);
   return found.join(" ");
 }
 export function formatConjureDesignRemark(target, str) {
-  const items = [, ];
+  items = [, ];
   ({ kind: arr[0], name: arr[1] } = labelConjureDesignTarget(target));
   const found = items.filter((item) => "" !== item);
   const joined = found.join(": ");
@@ -298,7 +298,7 @@ export function parseConjureDesignRemark(content) {
 export function formatConjureDesignFeedback(arg0) {
   ({ annotations, metaComment, context } = arg0);
   const found = annotations.filter((comment) => "" !== comment.comment.trim());
-  const items = [];
+  items = [];
   let str = "1 comment";
   if (1 !== found.length) {
     let _HermesInternal = HermesInternal;
@@ -352,7 +352,7 @@ export function parseConjureDesignFeedback(raw) {
   } else {
     let tmp31 = null;
     let tmp16 = null;
-    const items = [];
+    items = [];
     let tmp9 = null;
     const substr = parts.slice(1);
     for (const item10019 of substr) {

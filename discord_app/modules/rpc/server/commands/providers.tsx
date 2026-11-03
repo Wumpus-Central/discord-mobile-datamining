@@ -1,13 +1,13 @@
-// === Module 16332: providers ===
+// === Module 16475: providers ===
 
-// Module 16332 (providers)
+// Module 16475 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11810 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7467 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
 
 require = fn;
 let closure_10 = async function _refreshProviderAccessToken() {
@@ -20,11 +20,11 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6450);
+let Constants = fn(6570);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: metroRequire, PlatformTypes: closure_7 } = Constants);
-Constants = fn(2018);
+Constants = fn(2147);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_8 } = Constants);
@@ -161,7 +161,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

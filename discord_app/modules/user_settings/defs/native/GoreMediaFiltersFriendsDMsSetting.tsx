@@ -1,14 +1,14 @@
-// === Module 16735: GoreMediaFiltersFriendsDMsSetting ===
+// === Module 16878: GoreMediaFiltersFriendsDMsSetting ===
 
-// Module 16735 (GoreMediaFiltersFriendsDMsSetting)
+// Module 16878 (GoreMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1113 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7472 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8687 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16729 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16730 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 16732 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7596 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16872 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16873 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 16875 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["N/oRI+"]), , ];
+    items = [intl.string(util.t["N/oRI+"]), , ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t.QVdYsK);
     const intl3 = util.intl;

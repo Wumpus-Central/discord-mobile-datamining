@@ -1,11 +1,11 @@
-// === Module 18119: HappeningNowAnalytics ===
+// === Module 18263: HappeningNowAnalytics ===
 
-// Module 18119 (HappeningNowAnalytics)
+// Module 18263 (HappeningNowAnalytics)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
-  const items = [];
+  items = [];
   const items1 = [];
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();

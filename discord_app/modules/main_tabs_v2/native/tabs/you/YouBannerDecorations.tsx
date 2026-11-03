@@ -1,28 +1,28 @@
-// === Module 9624: YouBannerDecorations ===
+// === Module 9756: YouBannerDecorations ===
 
-// Module 9624 (YouBannerDecorations)
+// Module 9756 (YouBannerDecorations)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import useTrialOffer from "useTrialOffer" /* 7629 */;
-import PromotionsHooks from "PromotionsHooks" /* 9625 */;
-import tracking_Tracking from "tracking/Tracking" /* 9677 */;
-import QuestUtils from "QuestUtils" /* 9678 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import useTrialOffer from "useTrialOffer" /* 7753 */;
+import PromotionsHooks from "PromotionsHooks" /* 9757 */;
+import tracking_Tracking from "tracking/Tracking" /* 9809 */;
+import QuestUtils from "QuestUtils" /* 9810 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2063).useIntlLoaderStore;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_9 = fn(1385).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const useIntlLoaderStore = fn(2192).useIntlLoaderStore;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+let closure_9 = fn(1387).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};
@@ -82,7 +82,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
     }
     return currentLocale;
   });
-  let items = [currentUser];
+  items = [currentUser];
   const stateFromStores = navigateToSettings(gradientSecondaryBackground[15]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
   let obj = navigateToSettings(gradientSecondaryBackground[15]);
@@ -225,7 +225,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const memo = obj4.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
     const obj2 = _modDef671(color);
-    const items = [_modDef671(color).alpha(0).hex(), ];
+    items = [_modDef671(color).alpha(0).hex(), ];
     const alphaResult = _modDef671(color).alpha(0);
     const obj4 = _modDef671(color);
     items[1] = _modDef671(color).alpha(1).hex();

@@ -1,9 +1,9 @@
-// === Module 10211: ForegroundServiceManager ===
+// === Module 10341: ForegroundServiceManager ===
 
-// Module 10211 (ForegroundServiceManager)
+// Module 10341 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10212 */;
-import LifecycleManager from "LifecycleManager" /* 1996 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10342 */;
+import LifecycleManager from "LifecycleManager" /* 2125 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;
@@ -19,7 +19,7 @@ class ForegroundServiceManager {
       if (obj.serviceNotifications.size > 0) {
         const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
         const serviceNotifications = tmp.serviceNotifications;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
         ForegroundServiceModule2.startService(items);
       } else {
@@ -90,7 +90,7 @@ obj.handleChange = function handleChange() {
   if (obj.serviceNotifications.size > 0) {
     const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
     const serviceNotifications = tmp.serviceNotifications;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
     ForegroundServiceModule2.startService(items);
   } else {

@@ -1,13 +1,13 @@
-// === Module 18885: UserProfileYourFriendsCard ===
+// === Module 19043: UserProfileYourFriendsCard ===
 
-// Module 18885 (UserProfileYourFriendsCard)
+// Module 19043 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
@@ -29,7 +29,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let items = [UserAffinitiesV2Store];
+  items = [UserAffinitiesV2Store];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
@@ -40,7 +40,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9151).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9279).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -59,7 +59,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
       const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(UserStore.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
       const valueResult2 = mapped2.filter(GlobalUtils.isNotNullish).value();
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(valueResult2, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
       const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
@@ -76,32 +76,32 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
       children: <View style={closure_0.avatars}>{first.map((user, index) => {
         const obj = { style: null, children: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: 4 * (first.length - 1 - index) }];
+        items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+        const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "/assets/modules/video_calls/native/images" };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null });
+        obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "/assets/modules/video_calls/native/images" });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
     return <View style={closure_0.facepile} accessibilityElementsHidden importantForAccessibility="no-hide-descendants"><View style={closure_0.avatars}>{first.map((user, index) => {
       const obj = { style: null, children: null };
       const obj2 = { transform: null };
-      const items = [{ translateX: 4 * (first.length - 1 - index) }];
+      items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+      const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "/assets/modules/video_calls/native/images" };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null });
+      obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "/assets/modules/video_calls/native/images" });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

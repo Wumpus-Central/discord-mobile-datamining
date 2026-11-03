@@ -1,20 +1,20 @@
-// === Module 17414: AnimateStickersSetting ===
+// === Module 17557: AnimateStickersSetting ===
 
-// Module 17414 (AnimateStickersSetting)
+// Module 17557 (AnimateStickersSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
+import UserSettings from "UserSettings" /* 4966 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StickerAnimationSettings = fn(4842).StickerAnimationSettings;
-const SettingBuilders = fn(11540);
+const StickerAnimationSettings = fn(4969).StickerAnimationSettings;
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
-  useValue: fn(4839).AnimateStickers.useSetting,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(4966).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
@@ -25,7 +25,7 @@ const radio = SettingBuilders.createRadio({
       const intl = util.intl;
       obj.label = intl.string(util.t["Xp+X2U"]);
       obj.value = constants.ALWAYS_ANIMATE;
-      const items = [obj, , ];
+      items = [obj, , ];
       const obj2 = { label: null, value: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.IlLT7e);

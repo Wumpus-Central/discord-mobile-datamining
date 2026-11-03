@@ -1,16 +1,16 @@
-// === Module 18373: useGuildsBarBottomRightBadge ===
+// === Module 18518: useGuildsBarBottomRightBadge ===
 
-// Module 18373 (useGuildsBarBottomRightBadge)
+// Module 18518 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1187 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18374 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 18375 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 18379 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18519 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 18520 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 18524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
@@ -39,9 +39,9 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
   const token = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_SIZE);
   let obj = mentionCount(joinRequestState[5]);
   const token1 = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-  let items = [tmp.bottomRightBadge, token1];
+  items = [tmp.bottomRightBadge, token1];
   const memo = noop.useMemo(() => {
-    const items = [bottomRightBadge.bottomRightBadge, { bottom: token1 - native.BADGE_PADDING }];
+    items = [bottomRightBadge.bottomRightBadge, { bottom: token1 - native.BADGE_PADDING }];
     return items;
   }, items);
   let items1 = [first, flag, joinRequestState, mentionCount, isMentionLowImportance, memo, token];
@@ -77,7 +77,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
           }
       });
       obj3.cutout = tmp20Result;
-      const items = [tmp20Result];
+      items = [tmp20Result];
       obj3.cutouts = items;
       return obj3;
     } else if (null != joinRequestState) {

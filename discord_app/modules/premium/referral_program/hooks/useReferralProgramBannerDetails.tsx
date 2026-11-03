@@ -1,9 +1,9 @@
-// === Module 15322: useReferralProgramBannerDetails ===
+// === Module 15463: useReferralProgramBannerDetails ===
 
-// Module 15322 (useReferralProgramBannerDetails)
+// Module 15463 (useReferralProgramBannerDetails)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
+import UserStore from "UserStore" /* 1385 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7756 */;
 
 const require = fn;
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/premium/referral_program/hook
 
 export const MAX_REFERRALS_SENT = 3;
 export function useReferralProgramBannerDetails() {
-  const items = [ReferralTrialStore];
+  items = [ReferralTrialStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => authStore.getSentUserIds());
   const obj = stateFromStoresArray(504);
   const items1 = [UserStore];

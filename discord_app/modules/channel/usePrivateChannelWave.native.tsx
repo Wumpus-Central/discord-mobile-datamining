@@ -1,6 +1,6 @@
-// === Module 18095: usePrivateChannelWave ===
+// === Module 18239: usePrivateChannelWave ===
 
-// Module 18095 (usePrivateChannelWave)
+// Module 18239 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,14 +10,14 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 
 export default function usePrivateChannelWave(id, arg1) {
   _require = id;
   [first, dependencyMap] = noop.useState(false);
-  const items = [id.id, first];
+  items = [id.id, first];
   let obj = { waveShouldShow: null, wavePressed: null };
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
@@ -30,7 +30,7 @@ export default function usePrivateChannelWave(id, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

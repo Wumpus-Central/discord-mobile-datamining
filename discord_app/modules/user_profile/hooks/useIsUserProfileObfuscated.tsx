@@ -1,7 +1,7 @@
-// === Module 14839: useIsUserProfileObfuscated ===
+// === Module 14970: useIsUserProfileObfuscated ===
 
-// Module 14839 (useIsUserProfileObfuscated)
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+// Module 14970 (useIsUserProfileObfuscated)
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useIsUserP
 
 export default function useIsUserProfileObfuscated(flags) {
   _require = flags;
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(id.id));
   let bio;
   if (stateFromStores != null) {

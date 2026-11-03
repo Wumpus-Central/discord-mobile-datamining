@@ -1,18 +1,18 @@
-// === Module 6905: QuarantineModeInfoAlert ===
+// === Module 7025: QuarantineModeInfoAlert ===
 
-// Module 6905 (QuarantineModeInfoAlert)
+// Module 7025 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1072).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -30,7 +30,7 @@ export default function QuarantineModeInfoAlert(onClose) {
   const obj2 = { style: tmp.header, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.EouHwv);
-  const items = [React3(native.LegacyText, obj2), ];
+  items = [React3(native.LegacyText, obj2), ];
   const obj3 = { style: tmp.text, variant: "text-md/medium", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.zNPBMA);

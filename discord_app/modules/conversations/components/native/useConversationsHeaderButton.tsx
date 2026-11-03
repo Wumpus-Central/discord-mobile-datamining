@@ -1,17 +1,17 @@
-// === Module 9846: useConversationsHeaderButton ===
+// === Module 9977: useConversationsHeaderButton ===
 
-// Module 9846 (useConversationsHeaderButton)
+// Module 9977 (useConversationsHeaderButton)
 import util from "util" /* 1113 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9849 */;
-import PaperIcon from "PaperIcon" /* 9853 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9980 */;
+import PaperIcon from "PaperIcon" /* 9984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7767 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5655);
+const ConversationConstants = fn(5775);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: metroRequire, MOBILE_PREVIEW_MESSAGE_COUNT: closure_7 } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
@@ -24,7 +24,7 @@ export function useConversationsHeaderButton(channel) {
   }
   fetchPage = isTopicalNavEnabled;
   let obj = require("ConversationExperiments");
-  const items = [channel.id];
+  items = [channel.id];
   const conversationBackoffRef = require("useConversationBackoffRef").useConversationBackoffRef(items);
   fetchPage = function fetchPage() {
     const self = this;
@@ -47,7 +47,7 @@ export function useConversationsHeaderButton(channel) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

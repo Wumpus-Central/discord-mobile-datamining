@@ -1,6 +1,6 @@
-// === Module 17313: RemoteFetchData ===
+// === Module 17456: RemoteFetchData ===
 
-// Module 17313 (RemoteFetchData)
+// Module 17456 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
@@ -47,7 +47,7 @@ prototype["removeWant"] = function removeWant(channel_id) {
   fetching.delete(channel_id);
 };
 prototype["nextWants"] = function nextWants(arg0) {
-  const items = [...this.pending];
+  items = [...this.pending];
   items.length = Math.min(arg0, items.length);
   return items;
 };
@@ -102,7 +102,7 @@ prototype["try"] = function try(nextWantsResult, arrayResult) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

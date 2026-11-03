@@ -1,10 +1,10 @@
-// === Module 10667: useWishlistSkuFilter ===
+// === Module 10797: useWishlistSkuFilter ===
 
-// Module 10667 (useWishlistSkuFilter)
+// Module 10797 (useWishlistSkuFilter)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(7405).WishlistRecommendationReason;
+let closure_3 = fn(7529).WishlistRecommendationReason;
 const SKUProductLines = fn(1072).SKUProductLines;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
@@ -14,7 +14,7 @@ export function useWishlistSkuFilter(wishlistAndRecommendations) {
   const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
   const userId = wishlistAndRecommendations.userId;
   const numItems = wishlistAndRecommendations.numItems;
-  const items = [wishlistAndRecommendations];
+  items = [wishlistAndRecommendations];
   const memo = userId.useMemo(() => wishlistAndRecommendations.filter((productLine) => {
     const GIFTABLE_PRODUCT_LINES = wishlistAndRecommendations(skusToUserAndReason[3]).GIFTABLE_PRODUCT_LINES;
     let hasItem = GIFTABLE_PRODUCT_LINES.has(productLine.productLine);

@@ -1,13 +1,13 @@
-// === Module 19088: useTextChannelPressEvents ===
+// === Module 19246: useTextChannelPressEvents ===
 
-// Module 19088 (useTextChannelPressEvents)
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11133 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18172 */;
+// Module 19246 (useTextChannelPressEvents)
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11270 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18316 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export function useTextChannelPressEvents(channel, flag2) {
   const user = channel;
   const navigationReplace = flag2;
   let obj = { onPress: null, onLongPress: null, unstable_pressDelay: 32 };
-  const items = [, , ];
+  items = [, , ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag2;
   obj.onPress = noop.useCallback(() => {

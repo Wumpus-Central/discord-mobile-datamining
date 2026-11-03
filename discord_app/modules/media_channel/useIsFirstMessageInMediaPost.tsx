@@ -1,8 +1,8 @@
-// === Module 8391: useIsFirstMessageInMediaPost ===
+// === Module 8515: useIsFirstMessageInMediaPost ===
 
-// Module 8391 (useIsFirstMessageInMediaPost)
+// Module 8515 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/media_channel/useIsFirstMessa
 
 export function useIsFirstMessageInMediaPost(arg0) {
   _require = arg0;
-  const items = [arg0];
+  items = [arg0];
   return require("useStateFromStores").useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

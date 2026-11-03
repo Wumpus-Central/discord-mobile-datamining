@@ -1,9 +1,9 @@
-// === Module 18529: ICYMIContext ===
+// === Module 18683: ICYMIContext ===
 
-// Module 18529 (ICYMIContext)
+// Module 18683 (ICYMIContext)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -23,6 +23,6 @@ export function ICYMIContextProvider(children) {
   const PX_16 = nativeDefault.space.PX_16;
   const sum = PX_16 + 38;
   c2 = sum;
-  const items = [bound, PX_16, sum];
+  items = [bound, PX_16, sum];
   return <context.Provider value={React2(() => ({ width: bound, margin: PX_16, inset }), items)}>{children.children}</context.Provider>;
 }

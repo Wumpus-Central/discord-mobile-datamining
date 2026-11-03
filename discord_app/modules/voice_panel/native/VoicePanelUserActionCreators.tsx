@@ -1,8 +1,8 @@
-// === Module 19249: VoicePanelUserActionCreators ===
+// === Module 19407: VoicePanelUserActionCreators ===
 
-// Module 19249 (VoicePanelUserActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 19407 (VoicePanelUserActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelUserActionSheet = "VoicePanelUserActionSheet";
@@ -12,6 +12,6 @@ export const VOICE_PANEL_USER_ACTION_SHEET_KEY = "VoicePanelUserActionSheet";
 export function closeVoicePanelUserActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelUserActionSheet);
 }
-export function openVoicePanelUserActionSheet(guildId, channelId, userId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19250, dependencyMap.paths), VoicePanelUserActionSheet, { guildId, channelId, userId });
+export function openVoicePanelUserActionSheet(c1, c2, c0) {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19408, dependencyMap.paths), VoicePanelUserActionSheet, { guildId: importDefault, channelId: dependencyMap, userId: _require });
 }

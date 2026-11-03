@@ -1,12 +1,12 @@
-// === Module 9387: GameProfileStoreLinks ===
+// === Module 9515: GameProfileStoreLinks ===
 
-// Module 9387 (GameProfileStoreLinks)
+// Module 9515 (GameProfileStoreLinks)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9323 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9366 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9451 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9494 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
@@ -30,7 +30,7 @@ function WebsiteGameStoreLinkButton(data) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default function GameProfileStoreLinks(websiteButtons) {
       } else if (2 === websiteButtons.length) {
         const obj3 = { style: tmp.container, children: null };
         const obj4 = { data: websiteButtons[0], trackAction };
-        const items = [closure_4(WebsiteGameStoreLinkButton, obj4), ];
+        items = [closure_4(WebsiteGameStoreLinkButton, obj4), ];
         const obj5 = { data: websiteButtons[1], trackAction };
         items[1] = closure_4(WebsiteGameStoreLinkButton, obj5);
         obj3.children = items;

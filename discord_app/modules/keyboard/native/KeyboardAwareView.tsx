@@ -1,11 +1,11 @@
-// === Module 6954: KeyboardAwareView ===
+// === Module 7081: KeyboardAwareView ===
 
-// Module 6954 (KeyboardAwareView)
-import useKeyboardDuration from "useKeyboardDuration" /* 5608 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5609 */;
+// Module 7081 (KeyboardAwareView)
+import useKeyboardDuration from "useKeyboardDuration" /* 5731 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1493 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -43,7 +43,7 @@ export default noop.memo(function KeyboardAwareView(style) {
   const tmp6 = num(ref.useState(ref.current), 2);
   marginBottom = tmp6[0];
   closure_5 = tmp6[1];
-  const items = [num];
+  items = [num];
   const effect = obj.useEffect(() => subscribeToKeyboardUIStore(function keyboardHeightUpdater() {
     let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
     if (0 === systemKeyboardHeight) {

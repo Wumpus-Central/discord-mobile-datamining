@@ -1,12 +1,12 @@
-// === Module 11081: useContentHarmTypes ===
+// === Module 11218: useContentHarmTypes ===
 
-// Module 11081 (useContentHarmTypes)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
+// Module 11218 (useContentHarmTypes)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
@@ -14,12 +14,12 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   dependencyMap = authorId;
   const eligibleHarmTypesConfigsForContext = require("ObscuredMediaUtils").getEligibleHarmTypesConfigsForContext();
   let obj = require("ObscuredMediaUtils");
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = require("initialize");
   const items1 = [stateFromStores1, stateFromStores2];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
-    const items = [ChannelStore, RelationshipStore];
+    items = [ChannelStore, RelationshipStore];
     return ObscuredMediaUtils.getChannelTypeById(closure_0, closure_1, items);
   });
   const obj3 = require("initialize");
@@ -58,10 +58,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7467).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7591).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7463).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7463);
+    NONE = tmp(7587).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7587);
   }
   return NONE;
 }

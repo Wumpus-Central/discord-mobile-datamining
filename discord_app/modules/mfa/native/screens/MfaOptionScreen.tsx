@@ -1,13 +1,13 @@
-// === Module 17674: MfaOptionScreen ===
+// === Module 17817: MfaOptionScreen ===
 
-// Module 17674 (MfaOptionScreen)
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7111 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7142 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import MfaScreenUtilsDefault from "MfaScreenUtils" /* 17675 */;
-import BackButtonDefault from "BackButton" /* 17676 */;
+// Module 17817 (MfaOptionScreen)
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7075 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import MfaScreenUtilsDefault from "MfaScreenUtils" /* 17818 */;
+import BackButtonDefault from "BackButton" /* 17819 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,10 +33,10 @@ export default function MFAOptionScreen(arg0) {
   if (tmp9) {
     tmp9 = headerImage;
   }
-  const items = [tmp9, React4(Text_Text.Heading, { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
+  items = [tmp9, React4(Text_Text.Heading, { variant: "heading-xl/semibold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
-    const obj4 = { variant: "heading-sm/normal", color: "text-default", children: subtitle };
+    const obj4 = { variant: "heading-sm/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;

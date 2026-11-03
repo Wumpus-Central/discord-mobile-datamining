@@ -1,7 +1,7 @@
-// === Module 5704: intlFormatDate ===
+// === Module 5824: intlFormatDate ===
 
-// Module 5704 (intlFormatDate)
-import LocaleStore from "LocaleStore" /* 2062 */;
+// Module 5824 (intlFormatDate)
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 const require = fn;
 function makeIntlFormatter(locale, arg1) {
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export function makeFormatter(arg0) {
-  locale = LocaleStore.locale;
+  const locale = LocaleStore.locale;
   let tmp = (function tryMakeNativeFormatter(locale, arg1) {
     closure_0 = locale;
     closure_1 = arg1;

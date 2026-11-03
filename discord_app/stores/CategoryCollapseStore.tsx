@@ -1,15 +1,15 @@
-// === Module 7286: CategoryCollapseStore ===
+// === Module 7406: CategoryCollapseStore ===
 
-// Module 7286 (CategoryCollapseStore)
+// Module 7406 (CategoryCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 
 require = fn;
 function incrementVersion() {
@@ -76,7 +76,7 @@ prototype["initialize"] = function initialize(arg0) {
     obj = {};
   }
   closure_7 = obj;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   self.syncWith(items, syncFavoriteCategoryCollapse);
 };
 prototype["getState"] = function getState() {

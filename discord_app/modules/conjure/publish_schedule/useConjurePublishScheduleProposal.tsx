@@ -1,23 +1,23 @@
-// === Module 12779: useConjurePublishScheduleProposal ===
+// === Module 12915: useConjurePublishScheduleProposal ===
 
-// Module 12779 (useConjurePublishScheduleProposal)
-import _modDef3868 from "module_3868" /* 3868 */;
+// Module 12915 (useConjurePublishScheduleProposal)
+import _modDef3995 from "module_3995" /* 3995 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const canPublishProject = fn(6844).canPublishProject;
+const canPublishProject = fn(6964).canPublishProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx");
 
 export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
   _require = arg0;
   importDefault = trigger;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
@@ -42,7 +42,7 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -103,9 +103,9 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
   let formatToPlainStringResult = null;
   if (trigger.next_run_at > _slicedToArray(noop.useState(() => Date.now()), 1)[0]) {
     let intl = tmp(1113).intl;
-    const obj2 = { time: tmp(12161).formatPublishScheduleTime(trigger.next_run_at) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3868.orZDqY, obj2);
-    const tmpResult = tmp(12161);
+    const obj2 = { time: tmp(12297).formatPublishScheduleTime(trigger.next_run_at) };
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3995.orZDqY, obj2);
+    const tmpResult = tmp(12297);
   }
   let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
   const tmp4 = _slicedToArray(noop.useState("idle"), 2);

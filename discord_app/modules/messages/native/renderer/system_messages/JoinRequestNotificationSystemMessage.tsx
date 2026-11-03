@@ -1,13 +1,13 @@
-// === Module 8513: JoinRequestNotificationSystemMessage ===
+// === Module 8637: JoinRequestNotificationSystemMessage ===
 
-// Module 8513 (JoinRequestNotificationSystemMessage)
+// Module 8637 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const MessageTypes = fn(1072).MessageTypes;
@@ -19,7 +19,7 @@ export function createJoinRequestNotificationSystemMessage(message) {
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
   if (null != request) {
-    let guild = GuildStore.getGuild(request.guildId);
+    guild = GuildStore.getGuild(request.guildId);
     if (guild == null) {
       guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
     }

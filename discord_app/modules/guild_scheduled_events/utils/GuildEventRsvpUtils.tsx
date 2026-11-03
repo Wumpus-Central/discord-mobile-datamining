@@ -1,15 +1,15 @@
-// === Module 8975: GuildEventRsvpUtils ===
+// === Module 9103: GuildEventRsvpUtils ===
 
-// Module 8975 (GuildEventRsvpUtils)
+// Module 9103 (GuildEventRsvpUtils)
 import util from "util" /* 1113 */;
-import ScheduleUtils from "ScheduleUtils" /* 8969 */;
-import useEventException from "useEventException" /* 8976 */;
-import useEventSchedule from "useEventSchedule" /* 8977 */;
+import ScheduleUtils from "ScheduleUtils" /* 9097 */;
+import useEventException from "useEventException" /* 9104 */;
+import useEventSchedule from "useEventSchedule" /* 9105 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4869);
+const GuildScheduledEventsConstants = fn(4996);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } = GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
 const size = fn(2);
@@ -24,7 +24,7 @@ export function getResponseOptions() {
   const intl = util.intl;
   obj.name = intl.string(util.t.uoorxi);
   obj.value = obj.SERIES;
-  const items = [obj, ];
+  items = [obj, ];
   const obj2 = { name: null, value: null };
   const intl2 = util.intl;
   obj2.name = intl2.string(util.t.lwZCFT);

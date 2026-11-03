@@ -1,13 +1,13 @@
-// === Module 18859: IgnoredUserRequestsScreen ===
+// === Module 19017: IgnoredUserRequestsScreen ===
 
-// Module 18859 (IgnoredUserRequestsScreen)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+// Module 19017 (IgnoredUserRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const tmp = stateFromStores;
   const tmp2 = stateFromStoresArray(stateFromStores[6]);
   const tmp3 = analyticsLocations;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   stateFromStoresArray = analyticsLocations(stateFromStores[8]).useStateFromStoresArray(items, () => analyticsLocations(stateFromStores[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).ignoredUserIds);
   const obj = analyticsLocations(stateFromStores[8]);
   const items1 = [UserStore];

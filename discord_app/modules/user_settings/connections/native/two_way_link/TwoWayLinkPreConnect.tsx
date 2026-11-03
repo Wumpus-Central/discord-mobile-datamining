@@ -1,10 +1,10 @@
-// === Module 9734: TwoWayLinkPreConnect ===
+// === Module 9866: TwoWayLinkPreConnect ===
 
-// Module 9734 (TwoWayLinkPreConnect)
+// Module 9866 (TwoWayLinkPreConnect)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 9735 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7467 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 9867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ let closure_12 = async function _authorizeLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
@@ -95,7 +95,7 @@ export function TwoWayLinkPreConnect(platformType) {
   let obj = platformType(onNext[12]);
   [tmp6, c3] = callback1.useState(false);
   asyncGeneratorStep = callback1.useRef(undefined);
-  const items = [onError, platformType];
+  items = [onError, platformType];
   const items1 = [platformType, onNext];
   const callback = callback1.useCallback(asyncGeneratorStep(async () => {
     v0(true);
@@ -111,7 +111,7 @@ export function TwoWayLinkPreConnect(platformType) {
     })(platformType);
     closure_128_0 = value;
     closure_129_3(false);
-    const state = platformType(tmp15[13]).getCallbackParamsFromURL(closure_128_0).state;
+    state = platformType(tmp15[13]).getCallbackParamsFromURL(closure_128_0).state;
     tmp3(tmp15[14])(null != state, "Authorize URL state query parameter must be present");
     closure_129_4.current = state;
     await "HermesInternal";
@@ -145,7 +145,7 @@ export function TwoWayLinkPreConnect(platformType) {
   }
   items3[1] = imgStyle;
   obj4.style = items3;
-  const items4 = [closure_8(onError(onNext[16]), obj4), closure_8(platformType(onNext[17]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: title }), closure_8(platformType(onNext[17]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body }), ];
+  const items4 = [closure_8(onError(onNext[16]), obj4), closure_8(platformType(onNext[17]).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: title }), closure_8(platformType(onNext[17]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body }), ];
   let tmp12Result = null != redirectDestination;
   if (tmp12Result) {
     const obj7 = { style: tmp.redirect, variant: "text-sm/medium", color: "text-default", children: null };

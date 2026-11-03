@@ -1,17 +1,17 @@
-// === Module 13342: AppealIngestionConfirmSubmission ===
+// === Module 13478: AppealIngestionConfirmSubmission ===
 
-// Module 13342 (AppealIngestionConfirmSubmission)
+// Module 13478 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7969 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13313 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 13319 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13322 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13338 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 13343 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13449 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 13455 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13458 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13474 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 13479 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 16 }, detailsAction: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = closure_8();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   let stateFromStores = initialize.useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
@@ -76,7 +76,7 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     return React5(AppealIngestionModal.AppealIngestionModalScreen, obj6);
   } else {
     const obj8 = {
-      variant: "heading-md/normal",
+      variant: "heading-md/medium",
       color: "text-link",
       style: tmp.detailsAction,
       onPress() {
@@ -85,10 +85,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(572);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5258).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5258).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             }
           });
         },

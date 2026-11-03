@@ -1,12 +1,12 @@
-// === Module 18548: GuildDiscoveryCategoryStore ===
+// === Module 18702: GuildDiscoveryCategoryStore ===
 
-// Module 18548 (GuildDiscoveryCategoryStore)
+// Module 18702 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9076 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9204 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: metroRequire } = GlobalDiscoveryServersConstants);
@@ -30,7 +30,7 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
   const found = mapped.filter(GlobalUtils.isNotNullish);
   const intl = util.intl;
   obj.name = intl.string(util.t.Ym2Ri6);
-  const items = [obj, ...found];
+  items = [obj, ...found];
   return items;
 };
 prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() {
@@ -42,7 +42,7 @@ prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() 
   const found = mapped.filter(GlobalUtils.isNotNullish);
   const intl = util.intl;
   obj.name = intl.string(util.t.QToH29);
-  const items = [obj, ...found];
+  items = [obj, ...found];
   return items;
 };
 prototype["getAllCategories"] = function getAllCategories() {
@@ -65,7 +65,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function handleCategoryFetchSuccess(categories) {
     categories = categories.categories;
     let obj;
-    const items = [];
+    items = [];
     const items1 = [];
     const sorted = categories.sort((name, name2) => {
       let num = 1;
@@ -96,7 +96,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
       items.push(obj);
       closure_10[categoryId] = name;
     }
-    locale = categories.locale;
+    const locale = categories.locale;
   }
 });
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
@@ -104,12 +104,12 @@ const result = size.fileFinishedImporting("modules/global_discovery_servers/Guil
 export default guildDiscoveryCategoryStore;
 export function areDiscoveryCategoriesEqual(arr, arr2) {
   const mapped = arr.map((item) => {
-    const items = [, ];
+    items = [, ];
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   });
   return _modDef12.isEqual(mapped, arr2.map((item) => {
-    const items = [, ];
+    items = [, ];
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   }));

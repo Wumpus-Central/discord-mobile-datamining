@@ -1,19 +1,19 @@
-// === Module 18886: ChannelDetailsNavigator ===
+// === Module 19044: ChannelDetailsNavigator ===
 
-// Module 18886 (ChannelDetailsNavigator)
+// Module 19044 (ChannelDetailsNavigator)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HeaderShared from "HeaderShared" /* 9812 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 14012 */;
-import _modDef14386 from "module_14386" /* 14386 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 18887 */;
+import HeaderShared from "HeaderShared" /* 9943 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14143 */;
+import _modDef14517 from "module_14517" /* 14517 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 19045 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp2 = null;
   if (null != stateFromStores) {
@@ -25,26 +25,26 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(7443).useCanStartThread(channel);
+  const canStartThread = channel(7567).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1113).intl;
     obj2.accessibilityLabel = intl.string(tmp(1113).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef14386;
-    tmp5 = closure_9(tmp(9812).HeaderIconButton, obj2);
+    obj2.source = _modDef14517;
+    tmp5 = closure_9(tmp(9943).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(10137).ChannelDetailsNavigatorScreens;
+const constants = fn(10267).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SearchNavigatorScreens = fn(18708).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18866).SearchNavigatorScreens;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -60,7 +60,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
     DETAILS = constants.DETAILS;
   }
   let guildId;
-  const items = [channelId, DETAILS, source];
+  items = [channelId, DETAILS, source];
   const effect = DETAILS.useEffect(() => {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
@@ -134,8 +134,8 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(9812);
-            obj2.shouldHandleSafeArea = route(1375).isAndroid();
+            const obj = route(9943);
+            obj2.shouldHandleSafeArea = route(1377).isAndroid();
             return obj.renderHeader(obj2);
           },
           headerTitle() {
@@ -172,8 +172,8 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(9812);
-          obj2.shouldHandleSafeArea = route(1375).isAndroid();
+          const obj = route(9943);
+          obj2.shouldHandleSafeArea = route(1377).isAndroid();
           return obj.renderHeader(obj2);
         },
         headerTitle() {

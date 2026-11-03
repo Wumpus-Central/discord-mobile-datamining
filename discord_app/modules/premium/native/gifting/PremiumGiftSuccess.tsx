@@ -1,20 +1,20 @@
-// === Module 14490: PremiumGiftSuccess ===
+// === Module 14621: PremiumGiftSuccess ===
 
-// Module 14490 (PremiumGiftSuccess)
+// Module 14621 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4848 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bodyContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 }, actionContainer: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
@@ -37,7 +37,7 @@ export default function PremiumGiftSuccess() {
   let obj = require("NativeGiftContext");
   const getOrFetchPurchase = require("useFetchCollectiblesCategoriesAndPurchases").useGetOrFetchPurchase(selectedGiftingPromotionReward, false);
   let obj2 = require("useFetchCollectiblesCategoriesAndPurchases");
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     giftPromotion = giftPromotion.getGiftPromotion();
     let id;

@@ -1,7 +1,7 @@
-// === Module 12731: conjurePlanCommandText ===
+// === Module 12867: conjurePlanCommandText ===
 
-// Module 12731 (conjurePlanCommandText)
-import escapeRegExpDefault from "escapeRegExp" /* 5065 */;
+// Module 12867 (conjurePlanCommandText)
+import escapeRegExpDefault from "escapeRegExp" /* 5192 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ export function conjurePlanSlashCommandNames(arr) {
   return found.map((name) => name.name);
 }
 export function useConjurePlanSlashCommandNames(commands) {
-  const items = [commands];
+  items = [commands];
   return noop.useMemo(() => {
     const found = commands.filter((item) => "/" === commands(closure_1_2[1]).conjurePlanCommandPrefix(item));
     return found.map((name) => name.name);
@@ -23,7 +23,7 @@ export function conjurePlanCommandPattern(arg0) {
   if (0 === arg0.length) {
     return null;
   } else {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arg0, 0);
     const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
     const mapped = sorted.map(escapeRegExpDefault);
@@ -45,11 +45,11 @@ export function conjurePlanTextMentionsCommand(item, arr) {
   }
 }
 export function useConjurePlanCommandPattern(commandNames) {
-  let items = [commandNames];
+  items = [commandNames];
   return noop.useMemo(() => {
     let regExp = null;
     if (0 !== length.length) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(length, 0);
       const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
       const mapped = sorted.map(escapeRegExpDefault);
@@ -64,7 +64,7 @@ export function splitConjurePlanCommandText(mapped, conjurePlanCommandPattern) {
   if (null == conjurePlanCommandPattern) {
     return null;
   } else {
-    const items = [];
+    items = [];
     let num2 = 0;
     const matchAllResult = mapped.matchAll(conjurePlanCommandPattern);
     const iter = matchAllResult[Symbol.iterator]();

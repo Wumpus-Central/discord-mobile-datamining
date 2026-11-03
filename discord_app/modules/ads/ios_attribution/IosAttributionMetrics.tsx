@@ -1,10 +1,10 @@
-// === Module 14682: IosAttributionMetrics ===
+// === Module 14813: IosAttributionMetrics ===
 
-// Module 14682 (IosAttributionMetrics)
+// Module 14813 (IosAttributionMetrics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -15,7 +15,7 @@ export const IosAttributionClickResult = { ATTRIBUTED: "attributed", NO_IMPRESSI
 export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
   let str = activeIosAttributionFramework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
-  const items = ["result:" + NO_FRAMEWORK, ];
+  items = ["result:" + NO_FRAMEWORK, ];
   let str2 = activeIosAttributionFramework;
   if (activeIosAttributionFramework == null) {
     str2 = "none";
@@ -35,7 +35,7 @@ export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttribution
 export function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
-  const items = ["result:" + ATTRIBUTED, ];
+  items = ["result:" + ATTRIBUTED, ];
   let str2 = framework;
   if (framework == null) {
     str2 = "none";

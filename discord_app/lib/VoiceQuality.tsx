@@ -1,14 +1,14 @@
-// === Module 5893: VoiceQuality ===
+// === Module 6013: VoiceQuality ===
 
-// Module 5893 (VoiceQuality)
+// Module 6013 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import Histogram from "Histogram" /* 5894 */;
-import NetworkQualityDefault from "NetworkQuality" /* 5900 */;
-import SystemResourcesDefault from "SystemResources" /* 5902 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import Histogram from "Histogram" /* 6014 */;
+import NetworkQualityDefault from "NetworkQuality" /* 6020 */;
+import SystemResourcesDefault from "SystemResources" /* 6022 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5792 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
 
 require = fn;
 function explodePlayoutMetrics(obj) {
@@ -72,7 +72,7 @@ function explodePlayoutMetrics(obj) {
 }
 function zeroCounters(arr) {
   return Object.fromEntries(arr.map((item) => {
-    const items = [item, 0];
+    items = [item, 0];
     return items;
   }));
 }
@@ -238,11 +238,11 @@ class VoiceQuality extends tmp2 {
     tmp5.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(5772).now());
+        const result = networkQuality.incrementNetworkStats(num(5892).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        let obj3 = num(5772);
+        let obj3 = num(5892);
         let item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
@@ -346,12 +346,12 @@ class VoiceQuality extends tmp2 {
                 obj = { baseline: null, lastRaw: null };
                 const _Object = Object;
                 obj.baseline = Object.fromEntries(closure_3_7.map((item) => {
-                  const items = [item, 0];
+                  items = [item, 0];
                   return items;
                 }));
                 const _Object2 = Object;
                 obj.lastRaw = Object.fromEntries(closure_3_7.map((item) => {
-                  const items = [item, 0];
+                  items = [item, 0];
                   return items;
                 }));
                 inboundBaselines[closure_0] = obj;
@@ -362,7 +362,7 @@ class VoiceQuality extends tmp2 {
               if (tmp4 == null) {
                 const _Object3 = Object;
                 const fromEntriesResult = Object.fromEntries(closure_3_10.map((item) => {
-                  const items = [item, { baseline: 0, lastRaw: 0 }];
+                  items = [item, { baseline: 0, lastRaw: 0 }];
                   return items;
                 }));
                 inboundLatencyBaselines[closure_0] = fromEntriesResult;
@@ -497,7 +497,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp66.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(5894).Histogram();
+                prop = new closure_0(6014).Histogram();
               }
               obj7.audioJitterBufferHistogram = prop;
               obj7.audioJitterTarget = type.audioJitterTarget;
@@ -506,7 +506,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp66.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(5894).Histogram();
+                prop1 = new closure_0(6014).Histogram();
               }
               obj7.audioJitterTargetHistogram = prop1;
               obj7.audioJitterDelay = type.audioJitterDelay;
@@ -515,7 +515,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp66.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(5894).Histogram();
+                prop2 = new closure_0(6014).Histogram();
               }
               obj7.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj4.relativeReceptionDelay, relativePlayoutDelay: obj4.relativePlayoutDelay } = type);
@@ -678,23 +678,23 @@ class VoiceQuality extends tmp2 {
     tmp5.outputDeviceStats = {};
     obj1 = {
       baseline: Object.fromEntries(closure_5.map((item) => {
-            const items = [item, 0];
+            items = [item, 0];
             return items;
           })),
       lastRaw: Object.fromEntries(closure_5.map((item) => {
-            const items = [item, 0];
+            items = [item, 0];
             return items;
           }))
     };
     tmp5.outboundBaseline = obj1;
     tmp5.outboundLatencyBaseline = Object.fromEntries(closure_9.map((item) => {
-      const items = [item, { baseline: 0, lastRaw: 0 }];
+      items = [item, { baseline: 0, lastRaw: 0 }];
       return items;
     }));
     items = ["decryptionFailures", "routingFailures"];
     arraySpreadResult = HermesBuiltin.arraySpread(closure_11, 2);
     tmp5.transportBaseline = Object.fromEntries(items.map((item) => {
-      const items = [item, { baseline: 0, lastRaw: 0 }];
+      items = [item, { baseline: 0, lastRaw: 0 }];
       return items;
     }));
     tmp5.inboundBaselines = {};
@@ -1082,7 +1082,7 @@ prototype["getAudioLevelStats"] = function getAudioLevelStats() {
 };
 prototype["getPeriodicStats"] = function getPeriodicStats() {
   const self = this;
-  const items = [];
+  items = [];
   const entries = Object.entries(this.periodicInboundStats);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

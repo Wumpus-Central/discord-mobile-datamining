@@ -1,40 +1,41 @@
-// === Module 19337: VoicePanelVoiceControls ===
+// === Module 19495: VoicePanelVoiceControls ===
 
-// Module 19337 (VoicePanelVoiceControls)
+// Module 19495 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11748 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11943 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11955 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15206 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19215 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19332 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19338 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11885 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12080 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12092 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15347 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19373 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19490 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19496 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import module_1652 from "module_1652" /* 1652 */;
 
+const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
 require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11221).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11358).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createStyles.createStyles(obj);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
+let closure_9 = module_1652.createAnimatedComponent(fn(17).ScrollView);
 let closure_10 = noop.memo(function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
@@ -46,7 +47,7 @@ let closure_10 = noop.memo(function ListItems(arg0) {
   let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
   const tmp6 = useSelectedActiveStreamDefault(channel);
   if (!tmp2) {
-    const items = [tmp2, , , , , , ];
+    items = [tmp2, , , , , , ];
     const obj4 = { channel, connected: tmp2 };
     items[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj4);
     if (nonContextualStreamOutputPresent) {
@@ -120,77 +121,83 @@ let closure_10 = noop.memo(function ListItems(arg0) {
   }
 });
 const scrollIndicatorInsets = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-const __initData = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
+let closure_13 = { code: "(function VoicePanelVoiceControlsTsx1({offset:offset}){let[isScrolled]=this.__closure;isScrolled.set(offset>0);})" };
 let obj4 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
 
 export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   isVisible = isVisible.isVisible;
+  _require = isVisible;
   let channelId;
-  let sharedValue;
   let gestureRef;
   let scrollerRef;
   const tmp = closure_8();
-  channelId = gestureRef.useContext(channelId(sharedValue[8])).channelId;
-  const items = [scrollerRef];
-  const stateFromStores = isVisible(sharedValue[20]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  const obj = isVisible(sharedValue[20]);
-  const tmp4 = isVisible;
-  sharedValue = isVisible(sharedValue[7]).useSharedValue(false);
-  const fn = function s(offset) {
-    const result = sharedValue.set(offset.offset > 0);
-  };
-  fn.__closure = { isScrolled: sharedValue };
-  fn.__workletHash = 16758626276795;
-  fn.__initData = __initData;
-  const items1 = [sharedValue];
-  const callback = gestureRef.useCallback(fn, items1);
-  let obj2 = isVisible(sharedValue[7]);
-  const animatedScrollLock = isVisible(sharedValue[21]).useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
+  channelId = scrollerRef.useContext(channelId(gestureRef[8])).channelId;
+  items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj2 = require("initialize");
+  const sharedValue = require("module_1652").useSharedValue(false);
+  const items1 = [closure_13, sharedValue];
+  _require = undefined;
+  [tmp7, tmp8] = items1;
+  class VoicePanelVoiceControlsTsx1 {
+    constructor(arg0) {
+      result = closure_0.set(isVisible.offset > 0);
+      return;
+    }
+  }
+  const items2 = [tmp8];
+  VoicePanelVoiceControlsTsx1.__closure = items2;
+  VoicePanelVoiceControlsTsx1.__workletHash = 4252778421250;
+  VoicePanelVoiceControlsTsx1.__initData = tmp7;
+  const items3 = [sharedValue];
+  const callback = scrollerRef.useCallback(VoicePanelVoiceControlsTsx1, items3);
+  const obj3 = require("module_1652");
+  const animatedScrollLock = require("useAnimatedScrollLock").useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
   gestureRef = animatedScrollLock.gestureRef;
   scrollerRef = animatedScrollLock.scrollerRef;
   ({ onScroll, animatedProps } = animatedScrollLock);
-  const obj3 = isVisible(sharedValue[21]);
-  const isScreenReaderEnabled = isVisible(sharedValue[22]).useIsScreenReaderEnabled();
-  const items2 = [isVisible, scrollerRef];
-  const effect = gestureRef.useEffect(() => {
-    if (isVisible) {
+  const tmp4Result = require("useAnimatedScrollLock");
+  const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
+  const items4 = [isVisible, scrollerRef];
+  const effect = obj.useEffect(() => {
+    if (c0) {
       const current = scrollerRef.current;
       if (current != null) {
         current.scrollTo({ x: 0, y: 0, animated: false });
       }
     }
-  }, items2);
-  const items3 = [gestureRef];
-  const memo = gestureRef.useMemo(() => {
+  }, items4);
+  const items5 = [gestureRef];
+  const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const NativeResult = Gesture.Native();
     return NativeResult.enabled(!MetaQuestUtils.isMetaQuest()).simultaneousWithExternalGesture(gestureRef);
-  }, items3);
-  const obj5 = { gesture: memo, children: null };
-  const obj6 = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets, children: null };
-  let tmp14Result = !isScreenReaderEnabled;
+  }, items5);
+  const obj4 = { gesture: memo, children: null };
+  const obj5 = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets, children: null };
+  let tmp16Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj7 = { style: tmp.blurRegion };
-    tmp14Result = closure_5(tmp2(tmp3[25]), obj7);
+    const obj6 = { style: tmp.blurRegion };
+    tmp16Result = closure_5(tmp2(tmp3[25]), obj6);
   }
-  const items4 = [tmp14Result, , ];
-  let tmp14Result3 = null != stateFromStores;
-  if (tmp14Result3) {
-    const obj8 = { channel: stateFromStores, openTab: isVisible.openTab };
-    tmp14Result3 = closure_5(closure_10, obj8);
+  const items6 = [tmp16Result, , ];
+  let tmp16Result3 = null != stateFromStores;
+  if (tmp16Result3) {
+    const obj7 = { channel: stateFromStores, openTab: isVisible.openTab };
+    tmp16Result3 = closure_5(closure_10, obj7);
   }
-  items4[1] = tmp14Result3;
-  items4[2] = closure_5(tmp4(sharedValue[26]).SafeAreaPaddingView, { bottom: true });
-  obj6.children = items4;
-  obj5.children = closure_6(closure_9, obj6);
-  const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj5), ];
-  let tmp14Result4 = !isScreenReaderEnabled;
+  items6[1] = tmp16Result3;
+  items6[2] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, { bottom: true });
+  obj5.children = items6;
+  obj4.children = closure_6(closure_9, obj5);
+  const children = [closure_5(require("LegacyBaseButton").GestureDetector, obj4), ];
+  let tmp16Result4 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj9 = { shown: sharedValue, style: tmp.blurRegion };
-    tmp14Result4 = closure_5(tmp2(tmp3[27]), obj9);
+    const obj8 = { shown: sharedValue, style: tmp.blurRegion };
+    tmp16Result4 = closure_5(tmp2(tmp3[27]), obj8);
   }
-  children[1] = tmp14Result4;
+  children[1] = tmp16Result4;
   return closure_6(closure_7, { children });
 });

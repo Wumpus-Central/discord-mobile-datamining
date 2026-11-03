@@ -1,19 +1,19 @@
-// === Module 8360: NodeView ===
+// === Module 8484: NodeView ===
 
-// Module 8360 (NodeView)
+// Module 8484 (NodeView)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import CustomMarkupAll from "CustomMarkup" /* 6031 */;
-import MenuTypes from "MenuTypes" /* 8353 */;
-import ArrowDefault from "Arrow" /* 8362 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import CustomMarkupAll from "CustomMarkup" /* 6151 */;
+import MenuTypes from "MenuTypes" /* 8477 */;
+import ArrowDefault from "Arrow" /* 8486 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 function HeaderView(node) {
@@ -25,16 +25,16 @@ function HeaderView(node) {
     tmp6 = "" !== header;
   }
   if (tmp6) {
-    const obj2 = { ref: node.headerRef, style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: header };
-    tmp6 = __initData2(Text_Text.Text, obj2);
+    const obj2 = { ref: node.headerRef, style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: header };
+    tmp6 = value2(Text_Text.Text, obj2);
   }
-  const items = [tmp6, , ];
+  items = [tmp6, , ];
   let tmp9 = null;
   if (null != subheader) {
     tmp9 = null;
     if (subheader.length > 0) {
       const obj3 = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: tmp3(subheader) };
-      tmp9 = __initData2(Text_Text.Text, obj3);
+      tmp9 = value2(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp9;
@@ -43,7 +43,7 @@ function HeaderView(node) {
     tmp12 = null;
     if (description.length > 0) {
       const obj4 = { style: tmp.description, variant: "text-xs/medium", color: "text-default", children: description };
-      tmp12 = __initData2(Text_Text.Text, obj4);
+      tmp12 = value2(Text_Text.Text, obj4);
     }
   }
   items[2] = tmp12;
@@ -56,16 +56,16 @@ function InfoView(node) {
   let tmp4 = null;
   if (null != info) {
     const obj = { style: null, children: null };
-    const items = [tmp.infoBox, ];
+    items = [tmp.infoBox, ];
     const obj2 = { backgroundColor: ColorUtils.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1) };
     items[1] = obj2;
     obj.style = items;
     const obj4 = { size: "md", color: tmp.infoBox.backgroundColor };
-    const items1 = [__initData2(CircleInformationIcon.CircleInformationIcon, obj4), ];
+    const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj4), ];
     const obj5 = { style: tmp.infoBoxText, children: null };
     const obj6 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
-    obj5.children = __initData2(Text_Text.Text, obj6);
-    items1[1] = __initData2(timestampProducer, obj5);
+    obj5.children = value2(Text_Text.Text, obj6);
+    items1[1] = value2(timestampProducer, obj5);
     obj.children = items1;
     tmp4 = closure_1_17(timestampProducer, obj);
   }
@@ -77,7 +77,7 @@ function ChildItem(child) {
   const tmp = closure_18();
   [tmp3, tmp4] = child;
   const tmp2 = _slicedToArray(child, 2);
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   let stateFromStores = child(504).useStateFromStores(items, () => DevSettingsStore.get("iar_show_report_sub_type_labels"));
   if (child.nodeMap[tmp4] != null) {
     const report_type = tmp8.report_type;
@@ -85,20 +85,20 @@ function ChildItem(child) {
   const obj2 = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
   const obj3 = { style: tmp.childContainer, children: null };
   const obj4 = { style: tmp.childContent, children: null };
-  const items1 = [closure_16(child(5624).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [closure_16(child(5747).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
     const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5624).Text, obj6);
+    stateFromStores = closure_16(tmp5(5747).Text, obj6);
   }
   items1[1] = stateFromStores;
   obj4.children = items1;
   const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
   obj3.children = items2;
   obj2.children = closure_17(closure_6, obj3);
-  return closure_16(child(6980).PressableHighlight, obj2);
+  return closure_16(child(7106).PressableHighlight, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -111,7 +111,7 @@ function ChildrenView(node) {
         style: tmp.childrenContainer,
         children: children.map((child) => {
               const tmp = _slicedToArray(child, 2);
-              return __initData2(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
+              return value2(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
             })
       };
       tmp2 = closure_16(closure_6, obj);
@@ -124,14 +124,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8361).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8358).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8485).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8482).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerContainer: { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, description: { lineHeight: 16, marginBottom: 8, textAlign: "center" }, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
 let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
 obj2.infoBox = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
@@ -155,7 +155,7 @@ export default function NodeView(node) {
   const isScreenReaderEnabled = external_link(ref[22]).useIsScreenReaderEnabled();
   ref = node.useRef(null);
   _slicedToArray = node.useRef(false);
-  let items = [navigation, isScreenReaderEnabled];
+  items = [navigation, isScreenReaderEnabled];
   const effect = node.useEffect(() => {
     if (isScreenReaderEnabled) {
       function focusHeader() {
@@ -274,7 +274,7 @@ export default function NodeView(node) {
     if (is_auto_submit) {
       closure_15(true);
       const obj = { nodeRef: node.id, destination: null };
-      const items = ["", node.id];
+      items = ["", node.id];
       obj.destination = items;
       onSubmit(obj);
     }
@@ -294,7 +294,7 @@ export default function NodeView(node) {
           type = button.type;
         }
         if ("next" === type) {
-          const items = ["", tmp2.button.target];
+          items = ["", tmp2.button.target];
           return callback1(items);
         }
       }
@@ -682,7 +682,7 @@ export default function NodeView(node) {
     if ("done" !== type) {
       if ("cancel" !== type) {
         if ("next" === type) {
-          const items = ["", type.target];
+          items = ["", type.target];
           callback1(items);
         } else if ("submit" === type) {
           closure_13(true);

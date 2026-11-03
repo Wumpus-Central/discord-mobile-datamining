@@ -1,13 +1,13 @@
-// === Module 13395: SearchableDestinationList ===
+// === Module 13531: SearchableDestinationList ===
 
-// Module 13395 (SearchableDestinationList)
+// Module 13531 (SearchableDestinationList)
 import nativeDefault from "native" /* 575 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7207 */;
-import UserSearchUtils from "UserSearchUtils" /* 7803 */;
-import sortByMatchScore from "sortByMatchScore" /* 9135 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
-import formatResults from "formatResults" /* 13384 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7328 */;
+import UserSearchUtils from "UserSearchUtils" /* 7927 */;
+import sortByMatchScore from "sortByMatchScore" /* 9263 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
+import formatResults from "formatResults" /* 13520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,10 +15,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, noResults: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -91,7 +91,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       current.cancel();
     }
   }, []);
-  let items = [onSearchTextChange, updateSearchText];
+  items = [onSearchTextChange, updateSearchText];
   onChange = obj.useCallback((current) => {
     let flag = arg1;
     if (arg1 === undefined) {
@@ -130,7 +130,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items1);
   const items2 = [results.length];
   const memo = obj.useMemo(() => {
-    const items = [results.length];
+    items = [results.length];
     return items;
   }, items2);
   const items3 = [disabledDestinations];
@@ -165,7 +165,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
         if (disableSelection) {
           return arr;
         } else {
-          const items = [id];
+          items = [id];
           HermesBuiltin.arraySpread(arr, 1);
           let items1 = items;
         }

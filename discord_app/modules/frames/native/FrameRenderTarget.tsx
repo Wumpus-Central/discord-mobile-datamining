@@ -1,7 +1,7 @@
-// === Module 12250: FrameRenderTarget ===
+// === Module 12386: FrameRenderTarget ===
 
-// Module 12250 (FrameRenderTarget)
-import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
+// Module 12386 (FrameRenderTarget)
+import FramePoolManagerDefault from "FramePoolManager" /* 12388 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { target: { flex: 1 }, loading: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -32,7 +32,7 @@ export default function FrameRenderTarget(frameId) {
   const portraitSafeAreasConfig = presentation.portraitSafeAreasConfig;
   let webViewKey = portraitSafeAreasConfig;
   const landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
-  const items = [layoutMode, portraitSafeAreasConfig, landscapeSafeAreasConfig];
+  items = [layoutMode, portraitSafeAreasConfig, landscapeSafeAreasConfig];
   const memo = noop.useMemo(() => ({ layoutMode, portraitSafeAreasConfig: webViewKey, landscapeSafeAreasConfig }), items);
   const tmp4 = webViewKey(landscapeSafeAreasConfig[4])(frameId, frameId.level, memo);
   webViewKey = tmp4.webViewKey;

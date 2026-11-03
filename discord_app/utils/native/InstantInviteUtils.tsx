@@ -1,16 +1,16 @@
-// === Module 9121: utils/InstantInviteUtils ===
+// === Module 9249: utils/InstantInviteUtils ===
 
-// Module 9121 (utils/InstantInviteUtils)
+// Module 9249 (utils/InstantInviteUtils)
 import util from "util" /* 1113 */;
-import canViewInviteModal from "canViewInviteModal" /* 8983 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import canViewInviteModal from "canViewInviteModal" /* 9111 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = fn(1072).Permissions;
@@ -260,7 +260,7 @@ export function shouldRenderInvite(channels, guild) {
 }
 export function useShouldShowInviteInActionBar(id) {
   _require = id;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [id.id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => GuildChannelStore.getChannels(id.id), items1);
   let vanityURLCode;

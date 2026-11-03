@@ -1,14 +1,14 @@
-// === Module 1490: utils/ImageUtils ===
+// === Module 1492: utils/ImageUtils ===
 
-// Module 1490 (utils/ImageUtils)
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1412 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1445 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1446 */;
-import _modDef1485 from "module_1485" /* 1485 */;
-import useWindowDimensions from "useWindowDimensions" /* 1491 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1893 */;
+// Module 1492 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1447 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1448 */;
+import _modDef1487 from "module_1487" /* 1487 */;
+import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], _modDef1485.parse(tmp[1])];
+  items = [tmp[0], _modDef1487.parse(tmp[1])];
   [tmp5, tmp6] = items;
   if (re7.test(tmp5)) {
     tmp6.format = "webp";
@@ -51,9 +51,10 @@ function getSrcWithWidthAndHeight(animated) {
     })("native/ImageUtils.getSrcWithWidthAndHeight");
     let size = { width: targetWidth, height: targetHeight };
     if (null != tmp9) {
-      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
+      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null, ladder: null };
       const obj2 = AttachmentImageLadder;
       obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
+      obj3.ladder = tmp9.ladder;
       size = obj2.snapAttachmentDimensions(obj3);
     }
     if (!tmp12) {
@@ -68,7 +69,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    _modDef1485;
+    _modDef1487;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

@@ -1,57 +1,65 @@
-// === Module 10519: HorizontalAutocomplete ===
+// === Module 10649: HorizontalAutocomplete ===
 
-// Module 10519 (HorizontalAutocomplete)
+// Module 10649 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import RoleIconUtils from "RoleIconUtils" /* 7356 */;
-import RoleIconDefault from "RoleIcon" /* 7374 */;
-import _modDef8708 from "module_8708" /* 8708 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import RoleIconUtils from "RoleIconUtils" /* 7476 */;
+import RoleIconDefault from "RoleIcon" /* 7494 */;
+import _modDef8832 from "module_8832" /* 8832 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
-  let sharedValue;
+  _require = undefined;
   ({ children, onPress } = arg0);
   const tmp = closure_13();
-  sharedValue = sharedValue(5095).useSharedValue(0);
+  const sharedValue = require("module_1652").useSharedValue(0);
+  _require = sharedValue;
   useMountEffectDefault(() => {
-    const result = sharedValue.set(timing.withTiming(1));
+    const result = _undefined.set(timing_timing.withTiming(1));
   });
-  const obj = sharedValue(5095);
-  const fn = function c() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 14159604656069;
-  fn.__initData = __initData;
+  const obj = require("module_1652");
+  items = [closure_14, sharedValue];
+  _require = undefined;
+  [tmp6, tmp7] = items;
+  class HorizontalAutocompleteTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items1 = [tmp7];
+  HorizontalAutocompleteTsx1.__closure = items1;
+  HorizontalAutocompleteTsx1.__workletHash = 16766132942652;
+  HorizontalAutocompleteTsx1.__initData = tmp6;
   const obj3 = { onPress, children: null };
-  const animatedStyle = sharedValue(5095).useAnimatedStyle(fn);
+  const animatedStyle = require("module_1652").useAnimatedStyle(HorizontalAutocompleteTsx1);
   const obj4 = { style: null, children };
-  const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj4.style = items;
-  obj3.children = closure_11(ReanimatedRexportDefault.View, obj4);
+  const items2 = [tmp.horizontalAutocompleteOption, animatedStyle];
+  obj4.style = items2;
+  obj3.children = closure_11(_modDef1652.View, obj4);
   return closure_11(closure_3, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ ChannelTypes: c10, Fonts } = Constants);
+({ ChannelTypes: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { emoji: { width: 32, height: 32 }, emojiImage: { resizeMode: "contain" }, emojiText: { lineHeight: 32, fontSize: 27, textAlign: "center" }, emojiName: { marginLeft: 8 }, nickname: null, status: null, horizontalAutocompleteOption: null, roleIcon: null, channelName: null };
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.nickname = {};
@@ -62,7 +70,7 @@ obj2.horizontalAutocompleteOption = { paddingHorizontal: 8, flexDirection: "row"
 obj2.roleIcon = { marginRight: 4 };
 obj2.channelName = { marginLeft: 8 };
 let closure_13 = createStyles.createStyles(obj2);
-const __initData = { code: "function HorizontalAutocompleteTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let closure_14 = { code: "(function HorizontalAutocompleteTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx");
 
@@ -71,7 +79,7 @@ export default {
     ({ user, nick } = arg0);
     ({ status, guildId, onPress } = arg0);
     const tmp = closure_13();
-    const items = [AccessibilityStore];
+    items = [AccessibilityStore];
     const obj2 = { onPress, children: null };
     const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     const items1 = [closure_1_11(native.Avatar, { status, statusStyle: tmp.status, user, size: native.AvatarSizes.SMALL, guildId, animate: !stateFromStores }), ];
@@ -86,17 +94,17 @@ export default {
     const obj3 = { status, statusStyle: tmp.status, user, size: native.AvatarSizes.SMALL, guildId, animate: !stateFromStores };
     const items3 = ["@", UserUtilsDefault.getUserTag(user, { decoration: "never" })];
     obj7.children = items3;
-    items2[1] = closure_1_12(Text_Text.Text, obj7);
+    items2[1] = application_id(Text_Text.Text, obj7);
     obj4.children = items2;
-    items1[1] = closure_1_12(React4, obj4);
+    items1[1] = application_id(React4, obj4);
     obj2.children = items1;
-    return closure_1_12(HorizontalAutocompleteOption, obj2);
+    return application_id(HorizontalAutocompleteOption, obj2);
   },
   Role(onPress) {
     ({ guildId: require, name, id: importDefault, colorString } = onPress);
     const tmp = closure_13();
-    const items = [GuildRoleStore];
-    const stateFromStores = initialize.useStateFromStores(items, () => GuildRoleStore.getRole(require, importDefault));
+    items = [GuildRoleStore];
+    const stateFromStores = initialize.useStateFromStores(items, () => GuildRoleStore.getRole(_require, importDefault));
     let roleIconData = null;
     if (null != stateFromStores) {
       roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, 30);
@@ -128,17 +136,17 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8708;
+      let channelIconWithGuild = _modDef8832;
     } else {
-      channelIconWithGuild = tmp2(8603).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(8603);
+      channelIconWithGuild = tmp2(8727).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(8727);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1187).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
-    const items = [tmp8, ];
-    const channelName = channel(5652).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5624).Text, { style: tmp.channelName, variant: "text-sm/semibold", children: channelName });
+    items = [tmp8, ];
+    const channelName = channel(5772).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5747).Text, { style: tmp.channelName, variant: "text-sm/semibold", children: channelName });
     obj.children = items;
     return closure_12(HorizontalAutocompleteOption, obj);
   },
@@ -148,7 +156,7 @@ export default {
     const tmp = closure_13();
     if ("" !== url) {
       const obj2 = { style: null, source: null };
-      const items = [, ];
+      items = [, ];
       ({ emoji: arr2[0], emojiImage: arr2[1] } = tmp);
       obj2.style = items;
       const obj3 = { uri: url };
@@ -167,6 +175,6 @@ export default {
     const obj4 = { onPress, children: null };
     const items2 = [tmp6(React4, { children: tmp5 }), tmp6(Text_Text.Text, { style: tmp.emojiName, variant: "text-sm/semibold", children: ":" + name + ":" })];
     obj4.children = items2;
-    return closure_1_12(HorizontalAutocompleteOption, obj4);
+    return application_id(HorizontalAutocompleteOption, obj4);
   }
 };

@@ -1,13 +1,16 @@
-// === Module 19076: SimpleGuildContainer ===
+// === Module 19234: SimpleGuildContainer ===
 
-// Module 19076 (SimpleGuildContainer)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9817 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18405 */;
-import CutoutImageDefault from "CutoutImage" /* 19077 */;
+// Module 19234 (SimpleGuildContainer)
+import nativeDefault from "native" /* 575 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9948 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18550 */;
+import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 19233 */;
+import CutoutImageDefault from "CutoutImage" /* 19235 */;
 import noop from "module_19" /* 19 */;
 
+const _modDef1652 = _mod1652;
 const GuildsBarActivityIndicatorDefault = GuildsBarActivityIndicator;
 
 require = fn;
@@ -15,23 +18,22 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-let c9 = 48;
-const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(5014);
-let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
-let closure_12 = noop.memo(function SimpleGuildContainerBadge(backgroundColor) {
+let closure_9 = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true };
+const createStyles = fn(5141);
+let closure_10 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
+let closure_11 = noop.memo(function SimpleGuildContainerBadge(backgroundColor) {
   ({ badge, unread } = backgroundColor);
   if (badge > 0) {
     const obj = { style: tmp.badgeWrapper, children: null };
     const obj2 = { value: badge, unread, backgroundColor: backgroundColor.backgroundColor };
     obj.children = timestampProducer(MaskedBadgeDefault, obj2);
-    let tmp2 = timestampProducer(hasOwnProperty, obj);
+    let tmp2 = timestampProducer(borderColor, obj);
   } else {
     tmp2 = null;
   }
   return tmp2;
 });
-let closure_13 = noop.memo(function SimpleGuildActivityIndicator(arg0) {
+let closure_12 = noop.memo(function SimpleGuildActivityIndicator(arg0) {
   ({ guildId, activityIndicatorState, backgroundColor } = arg0);
   let source;
   if (activityIndicatorState != null) {
@@ -54,11 +56,11 @@ let closure_13 = noop.memo(function SimpleGuildActivityIndicator(arg0) {
   }
   return tmp2;
 });
-const __initData = { code: "function SimpleGuildContainerTsx1(){const{targetRadius}=this.__closure;return targetRadius;}" };
-const __initData2 = { code: "function SimpleGuildContainerTsx2(){const{selected}=this.__closure;return selected?1:0;}" };
-const __initData3 = { code: "function SimpleGuildContainerTsx3(){const{withSpring,toRadius,springConfig,GUILD_SIZE,iconBackground}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),width:GUILD_SIZE,height:GUILD_SIZE,overflow:'hidden',backgroundColor:iconBackground.color};}" };
-const __initData4 = { code: "function SimpleGuildContainerTsx4(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,borderColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get()+2,springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,2]),springConfig),borderColor:borderColor,position:'absolute',top:-2,left:-2,width:GUILD_SIZE+4,height:GUILD_SIZE+4};}" };
-const __initData5 = { code: "function SimpleGuildContainerTsx5(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,backgroundColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,3]),springConfig),borderColor:backgroundColor,position:'absolute',top:0,left:0,width:GUILD_SIZE,height:GUILD_SIZE};}" };
+let closure_13 = { code: "(function SimpleGuildContainerTsx1(){let[targetRadius]=this.__closure;return targetRadius;})" };
+let closure_14 = { code: "(function SimpleGuildContainerTsx2(){let[selected]=this.__closure;return selected?1:0;})" };
+let closure_15 = { code: "(function SimpleGuildContainerTsx3(){let[withSpring,toRadius,springConfig,GUILD_SIZE,iconBackground]=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),width:GUILD_SIZE,height:GUILD_SIZE,overflow:'hidden',backgroundColor:iconBackground.color};})" };
+let closure_16 = { code: "(function SimpleGuildContainerTsx4(){let[withSpring,toRadius,springConfig,interpolate,toStrokeWidth,borderColor,GUILD_SIZE]=this.__closure;return{borderRadius:withSpring(toRadius.get()+2,springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,2]),springConfig),borderColor:borderColor,position:'absolute',top:-2,left:-2,width:GUILD_SIZE+4,height:GUILD_SIZE+4};})" };
+let closure_17 = { code: "(function SimpleGuildContainerTsx5(){let[withSpring,toRadius,springConfig,interpolate,toStrokeWidth,backgroundColor,GUILD_SIZE]=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,3]),springConfig),borderColor:backgroundColor,position:'absolute',top:0,left:0,width:GUILD_SIZE,height:GUILD_SIZE};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuildContainer.tsx");
 
@@ -93,7 +95,7 @@ export function SimpleGuildContainer(selected) {
   const tmp3 = num(borderRadius[7])();
   const iconStroke = tmp3.iconStroke;
   const token = selected(borderRadius[8]).useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
-  let items = [selected, flag2, , , , , , , ];
+  items = [selected, flag2, , , , , , , ];
   let source;
   if (activityIndicatorState != null) {
     source = activityIndicatorState.source;
@@ -141,11 +143,11 @@ export function SimpleGuildContainer(selected) {
       const obj3 = { style: null };
       const size = { borderRadius: borderRadius + 2, borderWidth: 2, borderColor: token, position: "absolute", top: -2, left: -2, width: 2 + 4, height: 2 + 4 };
       obj3.style = size;
-      const items = [timestampProducer(hasOwnProperty, obj3), ];
+      items = [timestampProducer(borderColor, obj3), ];
       const obj4 = { style: null };
       const size1 = { borderRadius, borderWidth: 3, borderColor: backgroundColor, position: "absolute", top: 0, left: 0, width: 2, height: 2 };
       obj4.style = size1;
-      items[1] = timestampProducer(hasOwnProperty, obj4);
+      items[1] = timestampProducer(borderColor, obj4);
       obj.children = items;
       tmp13Result = React6(React5, obj);
     }
@@ -162,7 +164,7 @@ export function SimpleGuildContainer(selected) {
       const obj = { style: null };
       const size = { position: "absolute", borderWidth: 1, borderColor: iconStroke.color, borderRadius, width: num, height: num };
       obj.style = size;
-      tmp = timestampProducer(hasOwnProperty, obj);
+      tmp = timestampProducer(borderColor, obj);
     }
     return tmp;
   }, items1);
@@ -176,113 +178,124 @@ export function SimpleGuildContainer(selected) {
   obj5.backgroundColor = str;
   obj4.style = obj5;
   obj4.children = children;
-  const items3 = [flag2(backgroundColor, obj4), memo1, memo, flag2(closure_13, { backgroundColor, guildId, activityIndicatorState }), flag2(closure_12, { backgroundColor, badge, unread })];
+  const items3 = [flag2(backgroundColor, obj4), memo1, memo, flag2(closure_12, { backgroundColor, guildId, activityIndicatorState }), flag2(closure_11, { backgroundColor, badge, unread })];
   obj3.children = items3;
   return iconStroke(backgroundColor, obj3);
 }
 export function SimpleGuildContainerAnimated(arg0) {
-  ({ style, selected } = arg0);
-  ({ size, borderRadius, backgroundColor } = arg0);
-  ({ folder, usingCutout, onPress } = arg0);
-  let iconBackground;
-  borderRadius = undefined;
-  let derivedValue;
-  let derivedValue1;
-  let BRAND_500;
+  ({ style, selected, size, borderRadius, backgroundColor, folder, usingCutout, onPress } = arg0);
   ({ guildIconRef, guildId, children, badge, unread, activityIndicatorState, accessibilityLabel, onAccessibilityAction, onLayout, onLongPress } = arg0);
-  iconBackground = backgroundColor(iconBackground[7])().iconBackground;
   if (selected) {
-    borderRadius = tmp(tmp2[6]).radii.lg;
+    borderRadius = nativeDefault.radii.lg;
   } else if (borderRadius == null) {
     borderRadius = 24;
   }
-  class V {
+  items = [closure_13, borderRadius];
+  c0 = undefined;
+  [tmp5, tmp6] = items;
+  class SimpleGuildContainerTsx1 {
     constructor() {
-      return c3;
+      return closure_0;
     }
   }
-  V.__closure = { targetRadius: borderRadius };
-  V.__workletHash = 5259600477627;
-  V.__initData = __initData;
-  derivedValue = selected(iconBackground[10]).useDerivedValue(V);
-  const obj = selected(iconBackground[10]);
-  const fn = function z() {
-    let num = 0;
-    if (selected) {
-      num = 1;
-    }
-    return num;
-  };
-  fn.__closure = { selected };
-  fn.__workletHash = 12318204664732;
-  fn.__initData = __initData2;
-  derivedValue1 = selected(iconBackground[10]).useDerivedValue(fn);
-  let obj2 = selected(iconBackground[10]);
-  class H {
+  const items1 = [tmp6];
+  SimpleGuildContainerTsx1.__closure = items1;
+  SimpleGuildContainerTsx1.__workletHash = 4420638679650;
+  SimpleGuildContainerTsx1.__initData = tmp5;
+  const derivedValue = _mod1652.useDerivedValue(SimpleGuildContainerTsx1);
+  const items2 = [closure_14, selected];
+  c0 = undefined;
+  [tmp8, tmp9] = items2;
+  class SimpleGuildContainerTsx2 {
     constructor() {
-      size = { borderRadius: null, width: null, height: null, overflow: "hidden", backgroundColor: null };
-      obj2 = closure_0(closure_2[11]);
-      size.borderRadius = obj2.withSpring(closure_4.get(), closure_10);
-      size.width = c9;
-      size.height = c9;
-      size.backgroundColor = iconBackground.color;
+      num = 0;
+      if (closure_0) {
+        num = 1;
+      }
+      return num;
+    }
+  }
+  const items3 = [tmp9];
+  SimpleGuildContainerTsx2.__closure = items3;
+  SimpleGuildContainerTsx2.__workletHash = 17443294777509;
+  SimpleGuildContainerTsx2.__initData = tmp8;
+  const derivedValue1 = _mod1652.useDerivedValue(SimpleGuildContainerTsx2);
+  const tmp4Result = _mod1652;
+  const items4 = [closure_15, spring_spring.withSpring, derivedValue, closure_9, 48, useSimpleGuildDefaultColorsDefault().iconBackground];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items4;
+  class SimpleGuildContainerTsx3 {
+    constructor() {
+      size = { borderRadius: closure_0(closure_1.get(), closure_2), width: closure_3, height: closure_3, overflow: "hidden", backgroundColor: closure_4.color };
       return size;
     }
   }
-  let obj3 = selected(iconBackground[10]);
-  H.__closure = { withSpring: selected(iconBackground[11]).withSpring, toRadius: derivedValue, springConfig, GUILD_SIZE: v48, iconBackground };
-  H.__workletHash = 11339684212259;
-  H.__initData = __initData3;
-  const animatedStyle = obj3.useAnimatedStyle(H);
-  BRAND_500 = tmp(tmp2[6]).unsafe_rawColors.BRAND_500;
-  const obj4 = { withSpring: selected(iconBackground[11]).withSpring, toRadius: derivedValue, springConfig, GUILD_SIZE: v48, iconBackground };
-  const fn2 = function j() {
-    const size = { borderRadius: spring.withSpring(derivedValue.get() + 2, closure_10), borderWidth: null, borderColor: null, position: "absolute", top: -2, left: -2, width: 52, height: 52 };
-    const obj3 = spring;
-    size.borderWidth = obj3.withSpring(ReanimatedRexport.interpolate(derivedValue1.get(), [0, 1], [0, 2]), closure_10);
-    size.borderColor = BRAND_500;
-    return size;
-  };
-  const obj5 = selected(iconBackground[10]);
-  fn2.__closure = { withSpring: selected(iconBackground[11]).withSpring, toRadius: derivedValue, springConfig, interpolate: selected(iconBackground[10]).interpolate, toStrokeWidth: derivedValue1, borderColor: BRAND_500, GUILD_SIZE: v48 };
-  fn2.__workletHash = 1481885125958;
-  fn2.__initData = __initData4;
-  const animatedStyle1 = obj5.useAnimatedStyle(fn2);
-  const obj6 = { withSpring: selected(iconBackground[11]).withSpring, toRadius: derivedValue, springConfig, interpolate: selected(iconBackground[10]).interpolate, toStrokeWidth: derivedValue1, borderColor: BRAND_500, GUILD_SIZE: v48 };
-  class M {
+  const items5 = [tmp13, tmp14, tmp15, tmp16, tmp17];
+  SimpleGuildContainerTsx3.__closure = items5;
+  SimpleGuildContainerTsx3.__workletHash = 1759111490266;
+  SimpleGuildContainerTsx3.__initData = tmp12;
+  const animatedStyle = _mod1652.useAnimatedStyle(SimpleGuildContainerTsx3);
+  const tmp4Result4 = _mod1652;
+  const items6 = [closure_16, spring_spring.withSpring, derivedValue, closure_9, _mod1652.interpolate, derivedValue1, nativeDefault.unsafe_rawColors.BRAND_500, 48];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items6;
+  class SimpleGuildContainerTsx4 {
     constructor() {
-      size = { borderRadius: null, borderWidth: null, borderColor: null, position: "absolute", top: 0, left: 0, width: null, height: null };
-      obj2 = closure_0(closure_2[11]);
-      size.borderRadius = obj2.withSpring(closure_4.get(), closure_10);
-      obj3 = closure_0(closure_2[11]);
-      obj4 = closure_0(closure_2[10]);
-      size.borderWidth = obj3.withSpring(obj4.interpolate(closure_5.get(), [0, 1], [0, 3]), closure_10);
-      size.borderColor = backgroundColor;
-      size.width = c9;
-      size.height = c9;
+      size = { borderRadius: closure_0(closure_1.get() + 2, closure_2), borderWidth: closure_0(closure_3(closure_4.get(), [0, 1], [0, 2]), closure_2), borderColor: closure_5, position: "absolute", top: -2, left: -2, width: closure_6 + 4, height: closure_6 + 4 };
       return size;
     }
   }
-  const obj7 = selected(iconBackground[10]);
-  M.__closure = { withSpring: selected(iconBackground[11]).withSpring, toRadius: derivedValue, springConfig, interpolate: selected(iconBackground[10]).interpolate, toStrokeWidth: derivedValue1, backgroundColor, GUILD_SIZE: v48 };
-  M.__workletHash = 11592745547551;
-  M.__initData = __initData5;
-  const obj9 = { children: null };
-  const animatedStyle2 = obj7.useAnimatedStyle(M);
-  const items = [BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle, children }), BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle2 }), BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle1 }), BRAND_500(closure_13, { backgroundColor, guildId, activityIndicatorState }), BRAND_500(closure_12, { backgroundColor, badge, unread })];
-  obj9.children = items;
-  const tmp10 = closure_8(closure_7, obj9);
+  const items7 = [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+  SimpleGuildContainerTsx4.__closure = items7;
+  SimpleGuildContainerTsx4.__workletHash = 3131949958271;
+  SimpleGuildContainerTsx4.__initData = tmp19;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(SimpleGuildContainerTsx4);
+  const tmp4Result5 = _mod1652;
+  const items8 = [closure_17, spring_spring.withSpring, derivedValue, closure_9, _mod1652.interpolate, derivedValue1, backgroundColor, 48];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35] = items8;
+  class SimpleGuildContainerTsx5 {
+    constructor() {
+      size = { borderRadius: closure_0(closure_1.get(), closure_2), borderWidth: closure_0(closure_3(closure_4.get(), [0, 1], [0, 3]), closure_2), borderColor: closure_5, position: "absolute", top: 0, left: 0, width: closure_6, height: closure_6 };
+      return size;
+    }
+  }
+  const items9 = [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35];
+  SimpleGuildContainerTsx5.__closure = items9;
+  SimpleGuildContainerTsx5.__workletHash = 976976510918;
+  SimpleGuildContainerTsx5.__initData = tmp28;
+  const obj2 = { children: null };
+  const animatedStyle2 = _mod1652.useAnimatedStyle(SimpleGuildContainerTsx5);
+  const items10 = [timestampProducer(_modDef1652.View, { style: animatedStyle, children }), timestampProducer(_modDef1652.View, { style: animatedStyle2 }), timestampProducer(_modDef1652.View, { style: animatedStyle1 }), timestampProducer(closure_12, { backgroundColor, guildId, activityIndicatorState }), timestampProducer(closure_11, { backgroundColor, badge, unread })];
+  obj2.children = items10;
+  const tmp38 = React6(React5, obj2);
   if (null != onPress) {
-    const obj10 = { ref: guildIconRef, style, onPress, onLongPress, accessibilityRole: "button", accessible: true, accessibilityLabel, accessibilityState: null, onAccessibilityAction: null, onLayout: null, children: null };
-    const obj11 = { selected };
-    obj10.accessibilityState = obj11;
-    obj10.onAccessibilityAction = onAccessibilityAction;
-    obj10.onLayout = onLayout;
-    obj10.children = tmp10;
-    let tmp9Result = tmp9(derivedValue, obj10);
+    const obj3 = { ref: guildIconRef, style, onPress, onLongPress, accessibilityRole: "button", accessible: true, accessibilityLabel, accessibilityState: null, onAccessibilityAction: null, onLayout: null, children: null };
+    const obj4 = { selected };
+    obj3.accessibilityState = obj4;
+    obj3.onAccessibilityAction = onAccessibilityAction;
+    obj3.onLayout = onLayout;
+    obj3.children = tmp38;
+    let tmp37Result = timestampProducer(React4, obj3);
   } else {
-    const obj12 = { style, children: tmp10 };
-    tmp9Result = tmp9(derivedValue1, obj12);
+    const obj5 = { style, children: tmp38 };
+    tmp37Result = timestampProducer(borderColor, obj5);
   }
-  return tmp9Result;
+  return tmp37Result;
 }

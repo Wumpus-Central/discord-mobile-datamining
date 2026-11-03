@@ -1,12 +1,12 @@
-// === Module 13914: SearchMemberTabStore ===
+// === Module 14045: SearchMemberTabStore ===
 
-// Module 13914 (SearchMemberTabStore)
+// Module 14045 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import GuildUtilsDefault from "GuildUtils" /* 6901 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9135 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import GuildUtilsDefault from "GuildUtils" /* 7021 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 9263 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = fn;
 const Permissions = fn(1072).Permissions;
@@ -23,7 +23,7 @@ class GuildMemberSearchManager {
     obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
       if (arg1 === obj2.searchQueryString) {
         obj2.isFetching = false;
-        let items = [];
+        items = [];
         const channel = ChannelStore.getChannel(obj2.targetChannelId);
         const item = arr.forEach((type) => {
           if (type.type === obj2(dependencyMap[2]).AutocompleterResultTypes.USER) {
@@ -140,7 +140,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
         obj2.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
           if (arg1 === obj2.searchQueryString) {
             obj2.isFetching = false;
-            let items = [];
+            items = [];
             const channel = ChannelStore.getChannel(obj2.targetChannelId);
             const item = arr.forEach((type) => {
               if (type.type === obj2(dependencyMap[2]).AutocompleterResultTypes.USER) {
@@ -161,7 +161,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
             searchGuildMemberTabStoreImpl.emitChange();
           }
         };
-        let items = [obj2(9135).AutocompleterResultTypes.USER];
+        items = [obj2(9263).AutocompleterResultTypes.USER];
         const tmp42 = new sortByMatchScoreDefault(obj2.onAutocompleterResultsChange, items, 50);
         obj2.autocompleter = tmp42;
         const autocompleter = obj2.autocompleter;

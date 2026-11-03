@@ -1,11 +1,11 @@
-// === Module 6844: ConjureProjectStore ===
+// === Module 6964: ConjureProjectStore ===
 
-// Module 6844 (ConjureProjectStore)
+// Module 6964 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6845 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function isProjectOwner(item10010) {
@@ -65,7 +65,7 @@ prototype["findProjectByApplicationId"] = function findProjectByApplicationId(ap
   return null;
 };
 prototype["getSharedProjects"] = function getSharedProjects(id) {
-  const items = [];
+  items = [];
   const values = map.values();
   for (const item10010 of values) {
     let tmp4 = isProjectOwner(item10010);
@@ -114,8 +114,8 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
 prototype["getGlobalSelectedProjectId"] = function getGlobalSelectedProjectId() {
   return c8;
 };
-prototype["getProjectLoadStatus"] = function getProjectLoadStatus(projectId) {
-  value = map3.get(projectId);
+prototype["getProjectLoadStatus"] = function getProjectLoadStatus(c1) {
+  value = map3.get(c1);
   if (value == null) {
     value = null;
   }

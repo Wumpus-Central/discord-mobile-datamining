@@ -1,15 +1,15 @@
-// === Module 20057: AVErrorStreamSendLowFPS ===
+// === Module 20207: AVErrorStreamSendLowFPS ===
 
-// Module 20057 (AVErrorStreamSendLowFPS)
+// Module 20207 (AVErrorStreamSendLowFPS)
 import DurationsDefault from "Durations" /* 1089 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5942 */;
-import AVError from "AVError" /* 5947 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import AVErrorUtils from "AVErrorUtils" /* 20054 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 6062 */;
+import AVError from "AVError" /* 6067 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import AVErrorUtils from "AVErrorUtils" /* 20204 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
 
 require = fn;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
@@ -57,7 +57,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                         const obj2 = { type: AVError.AVError.STREAM_SEND_LOW_FPS };
                         const tmp11Result10 = AVErrorContext;
                         const merged = Object.assign(tmp11Result10.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
-                        const items = [obj2];
+                        items = [obj2];
                         let tmp6 = items;
                         const tmp11Result11 = StreamKeyUtils;
                       } else {

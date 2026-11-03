@@ -1,14 +1,14 @@
-// === Module 10628: GiftingBadgeProgressBanner ===
+// === Module 10758: GiftingBadgeProgressBanner ===
 
-// Module 10628 (GiftingBadgeProgressBanner)
+// Module 10758 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import _modDef2634 from "module_2634" /* 2634 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6028 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10619 */;
+import _modDef2763 from "module_2763" /* 2763 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6148 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -30,7 +30,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   ({ giftsToNextTier, nextTierName, nextTierIcon, analyticsLocation } = arg0);
   const tmp = closure_7();
   if (null != analyticsLocation) {
-    const items = [analyticsLocation];
+    items = [analyticsLocation];
     let items1 = items;
   } else {
     items1 = [];
@@ -52,7 +52,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [React4(View, obj3), ];
   const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2634["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  obj5.children = intl.formatToPlainString(_modDef2763["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj5);
   obj2.children = items2;
   return hasOwnProperty(View, obj2);

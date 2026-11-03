@@ -1,12 +1,12 @@
-// === Module 7421: safeTransitionTo ===
+// === Module 7545: safeTransitionTo ===
 
-// Module 7421 (safeTransitionTo)
+// Module 7545 (safeTransitionTo)
 import router_utils from "router_utils" /* 1099 */;
-import LinkUtils from "LinkUtils" /* 5654 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7422 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7423 */;
+import LinkUtils from "LinkUtils" /* 5774 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7546 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7547 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -20,7 +20,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -39,7 +39,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
           closure_131_2 = undefined;
-          let guild;
+          guild = undefined;
           let channelId2;
           const tryParseDiceRollLinkResult = LinkUtils.tryParseDiceRollLink(closure_0);
           if (null != tryParseDiceRollLinkResult) {
@@ -141,7 +141,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "r" };
+        closure_2 = { guildId: "Array" };
       }
       c5 = 2;
       c6 = 1;

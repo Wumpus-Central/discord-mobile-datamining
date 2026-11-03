@@ -1,24 +1,24 @@
-// === Module 5661: ContentClassificationToAgeRestriction ===
+// === Module 5781: ContentClassificationToAgeRestriction ===
 
-// Module 5661 (ContentClassificationToAgeRestriction)
+// Module 5781 (ContentClassificationToAgeRestriction)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import AgeRestrictionSource from "AgeRestrictionSource" /* 5662 */;
-import AgeRestrictionStatus10 from "AgeRestrictionStatus" /* 5663 */;
-import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5664 */;
-import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5665 */;
-import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5666 */;
-import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5667 */;
-import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5668 */;
-import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5669 */;
-import ContentRatingRobloxRating from "ContentRatingRobloxRating" /* 5670 */;
-import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5671 */;
+import AgeRestrictionSource from "AgeRestrictionSource" /* 5782 */;
+import AgeRestrictionStatus10 from "AgeRestrictionStatus" /* 5783 */;
+import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5784 */;
+import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5785 */;
+import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5786 */;
+import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5787 */;
+import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5788 */;
+import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5789 */;
+import ContentRatingRobloxRating from "ContentRatingRobloxRating" /* 5790 */;
+import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5791 */;
 import size from "module_2" /* 2 */;
 
 function contentClassificationToAgeRestrictionConclusion(data) {
   if (null == data) {
     return obj2;
   } else {
-    const items = [];
+    items = [];
     data = data.data;
     if (data.type === obj.MINIMAL) {
       if (null != data.discord_classifications) {
@@ -114,7 +114,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj7 = { source: tmp21(5662).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj7 = { source: tmp21(5782).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj7);
               someResult = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

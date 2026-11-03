@@ -1,6 +1,6 @@
-// === Module 12616: conjureTipClock ===
+// === Module 12752: conjureTipClock ===
 
-// Module 12616 (conjureTipClock)
+// Module 12752 (conjureTipClock)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ export function nextConjureTipClockDelay(arg0, arr, arg2, arg3) {
     let diff = null;
     if (found.length > 0) {
       const _Math = Math;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found, 0);
       const _Math2 = Math;
       diff = HermesBuiltin.apply(items, Math) - arg3;
@@ -37,7 +37,7 @@ export function useConjureTipClock(entryActivityAtResult, arg1) {
   _slicedToArray = entryActivityAtResult;
   noop = arg1;
   [first, closure_3] = noop.useState(() => Date.now());
-  let items = [entryActivityAtResult, arg1, first];
+  items = [entryActivityAtResult, arg1, first];
   const effect = noop.useEffect(() => {
     if (null != timeout) {
       const _Date = Date;
@@ -57,7 +57,7 @@ export function useConjureTipClock(entryActivityAtResult, arg1) {
         let diff = null;
         if (found.length > 0) {
           const _Math = Math;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(found, 0);
           const _Math2 = Math;
           diff = HermesBuiltin.apply(items, Math) - timestamp;

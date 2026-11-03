@@ -1,17 +1,17 @@
-// === Module 7276: AuthorizedAppsStore ===
+// === Module 7396: AuthorizedAppsStore ===
 
-// Module 7276 (AuthorizedAppsStore)
+// Module 7396 (AuthorizedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 7277 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7397 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 require = fn;
 function recomputeFromAppTokens() {
-  const items = [...map.values()];
+  items = [...map.values()];
   closure_8 = items;
   closure_9 = items.filter((application) => null == application.application.parent_id);
 }
@@ -138,7 +138,7 @@ const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, {
   OAUTH2_TOKEN_CREATE: function handleOAuth2TokenCreate(application) {
     application = application.application;
     const result = map.set(application.id, { id: application.id, application, scopes: application.scopes });
-    const items = [...map.values()];
+    items = [...map.values()];
     closure_8 = items;
     closure_9 = items.filter((application) => null == application.application.parent_id);
   },
@@ -147,7 +147,7 @@ const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, {
     if (null != value) {
       if (value.id === applicationId.id) {
         map.delete(value.application.id);
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(map.values(), 0);
         closure_8 = items;
         closure_9 = items.filter((application) => null == application.application.parent_id);

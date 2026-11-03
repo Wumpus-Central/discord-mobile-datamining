@@ -1,9 +1,9 @@
-// === Module 13730: useTypingUsersIds ===
+// === Module 13861: useTypingUsersIds ===
 
-// Module 13730 (useTypingUsersIds)
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import TypingStore from "TypingStore" /* 13729 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 13861 (useTypingUsersIds)
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import TypingStore from "TypingStore" /* 13860 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export function useTypingUserIds(id, arg1) {
     const _Number = Number;
     MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
   }
-  let items = [UserStore, TypingStore, RelationshipStore];
+  items = [UserStore, TypingStore, RelationshipStore];
   const items1 = [id, MAX_SAFE_INTEGER];
   return require("initialize").useStateFromStoresArray(items, () => {
     const currentUser = UserStore.getCurrentUser();
@@ -26,7 +26,7 @@ export function useTypingUserIds(id, arg1) {
       id = currentUser.id;
     }
     const typingUsers = TypingStore.getTypingUsers(closure_0);
-    const items = [];
+    items = [];
     for (const key10013 in typingUsers) {
       if (items.length >= MAX_SAFE_INTEGER) {
         break;

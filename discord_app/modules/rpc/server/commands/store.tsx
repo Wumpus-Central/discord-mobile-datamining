@@ -1,9 +1,9 @@
-// === Module 16336: merged15 ===
+// === Module 16479: merged15 ===
 
-// Module 16336 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7582 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import validateTransportType from "validateTransportType" /* 16338 */;
+// Module 16479 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7706 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import validateTransportType from "validateTransportType" /* 16481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -217,7 +217,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
             closure_131_3 = value;
             closure_1 = 0;
             const found1 = closure_131_2.filter(closure_132_8);
-            const items = [];
+            items = [];
             const arraySpreadResult = HermesBuiltin.arraySpread(found1.map(closure_132_9), closure_1);
             closure_1 = arraySpreadResult;
             closure_1 = HermesBuiltin.arraySpread(closure_131_3, arraySpreadResult);
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6450);
+let Constants = fn(6570);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(16301);
+let CONTEXT_MENU_ICON_NAMES = fn(16444);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(16301);
+CONTEXT_MENU_ICON_NAMES = fn(16444);
 let obj7 = {
   scope: null,
   handler(arg0) {

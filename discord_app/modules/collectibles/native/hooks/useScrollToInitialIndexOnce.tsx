@@ -1,6 +1,6 @@
-// === Module 17842: useScrollToInitialIndexOnce ===
+// === Module 17985: useScrollToInitialIndexOnce ===
 
-// Module 17842 (useScrollToInitialIndexOnce)
+// Module 17985 (useScrollToInitialIndexOnce)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -18,7 +18,7 @@ export function useScrollToInitialIndexOnce(initialScrollIndex) {
   const resetKey = initialScrollIndex.resetKey;
   noop.useRef(false);
   noop.useRef(resetKey);
-  const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
+  items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
   const effect = noop.useEffect(() => {
     if (ref2.current !== resetKey) {
       ref2.current = resetKey;

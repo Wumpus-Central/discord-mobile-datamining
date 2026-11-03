@@ -1,13 +1,13 @@
-// === Module 8428: canReactToMessage ===
+// === Module 8552: canReactToMessage ===
 
-// Module 8428 (canReactToMessage)
-import FlagUtils from "FlagUtils" /* 1396 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4933 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8429 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6708 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 8552 (canReactToMessage)
+import FlagUtils from "FlagUtils" /* 1398 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5060 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8553 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -48,15 +48,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
 export function canReactToMessage(message, channel) {
-  const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
 }
 export function useCanReactToMessage(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+    items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
     return canReactToMessageInternal(closure_0, closure_1, items);
   });
 }

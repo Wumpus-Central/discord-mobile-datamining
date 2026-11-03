@@ -1,21 +1,21 @@
-// === Module 7400: useIsNewMember ===
+// === Module 7524: useIsNewMember ===
 
-// Module 7400 (useIsNewMember)
+// Module 7524 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1089 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 
 export default function useIsNewMember(arg0) {
   _require = arg0;
-  const items = [GuildMemberStore, ImpersonateStore];
+  items = [GuildMemberStore, ImpersonateStore];
   return require("initialize").useStateFromStores(items, () => {
     let flag = true;
     if (!ImpersonateStore.isFullServerPreview(closure_0)) {

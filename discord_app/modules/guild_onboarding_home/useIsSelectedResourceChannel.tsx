@@ -1,23 +1,23 @@
-// === Module 11233: useIsSelectedResourceChannel ===
+// === Module 11370: useIsSelectedResourceChannel ===
 
-// Module 11233 (useIsSelectedResourceChannel)
-import FlagUtils from "FlagUtils" /* 1396 */;
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11234 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6862 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+// Module 11370 (useIsSelectedResourceChannel)
+import FlagUtils from "FlagUtils" /* 1398 */;
+import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11371 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6982 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
 
 export default function useIsSelectedResourceChannel(arg0) {
   _require = arg0;
-  const items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
+  items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {

@@ -1,17 +1,17 @@
-// === Module 18387: GuildsBarFavorites ===
+// === Module 18532: GuildsBarFavorites ===
 
-// Module 18387 (GuildsBarFavorites)
+// Module 18532 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import StarIcon from "StarIcon" /* 10063 */;
-import FavoritesHooks from "FavoritesHooks" /* 10832 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18370 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18373 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 18388 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 18389 */;
+import StarIcon from "StarIcon" /* 10193 */;
+import FavoritesHooks from "FavoritesHooks" /* 10962 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18515 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18518 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 18533 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 18534 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -25,17 +25,17 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFa
 export default noop.memo(function GuildsBarFavorites() {
   const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
   const isFavoritesGuildSelected = FavoritesHooks.useIsFavoritesGuildSelected();
-  let items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStores = initialize.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   ({ badge, unread } = useFavoritesGuildUnreadsDefault(stateFromStores));
   const tmp4 = useFavoritesGuildUnreadsDefault(stateFromStores);
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(18385)(closure_1_5);
+      closure_1_1(18530)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(18194)();
+      closure_1_1(18338)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {
@@ -43,7 +43,7 @@ export default noop.memo(function GuildsBarFavorites() {
     const obj2 = { name, label: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t.PdRCRg);
-    const items = [obj2];
+    items = [obj2];
     obj.accessibilityActions = items;
     obj.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
       if (nativeEvent.nativeEvent.actionName === name) {

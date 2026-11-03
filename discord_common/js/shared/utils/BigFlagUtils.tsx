@@ -15,7 +15,7 @@ class HighLow {
 }
 const prototype = HighLow.prototype;
 HighLow["fromString"] = function fromString(arg0) {
-  const items = [];
+  items = [];
   for (let num = 0; num < arg0.length; num = num + 1) {
     let _Number = Number;
     let NumberResult = Number(arg0[num]);
@@ -173,7 +173,7 @@ prototype["toString"] = function toString() {
     const item = parts.forEach((item, index) => {
       let sum2;
       const str = item.toString();
-      const items = [];
+      items = [];
       let num = 0;
       let num2 = 0;
       if (0 < str.length) {
@@ -375,7 +375,7 @@ export const invert = tmp2 ? (function flagNotBigInt() {
 export const equals = tmp10;
 export function combine() {
   let length;
-  const items = [...arguments];
+  items = [...arguments];
   let first = items[0];
   let num = 1;
   let tmp2 = first;

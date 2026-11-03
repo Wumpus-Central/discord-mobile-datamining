@@ -1,25 +1,25 @@
-// === Module 19326: VoicePanelScreenshareButton ===
+// === Module 19484: VoicePanelScreenshareButton ===
 
-// Module 19326 (VoicePanelScreenshareButton)
+// Module 19484 (VoicePanelScreenshareButton)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14571 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14702 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1622);
+const MetaQuestUtils = fn(1624);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(14106).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(14237).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(19327).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19485).MobilePhoneShareIcon;
 }
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
@@ -34,7 +34,7 @@ export default function ScreenshareButton(arg0) {
   const tmp3 = closure_8();
   const voicePanelButtonStyles = channelId(isFeatureEnabled[9]).useVoicePanelButtonStyles(wrapperSpecs);
   let obj = channelId(isFeatureEnabled[9]);
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = channelId(isFeatureEnabled[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   isActive(isFeatureEnabled[11])(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
   const tmp8 = isActive(isFeatureEnabled[12])(stateFromStores);

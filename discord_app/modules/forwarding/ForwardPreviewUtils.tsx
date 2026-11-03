@@ -1,8 +1,8 @@
-// === Module 13408: ForwardPreviewUtils ===
+// === Module 13544: ForwardPreviewUtils ===
 
-// Module 13408 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 6558 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 13544 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 6678 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 const size = fn(2);
@@ -35,7 +35,7 @@ export function useForwardPreviewContent(message) {
   } else if (null != onlyEmbedIndices) {
     attachments = [];
   }
-  const items = [];
+  items = [];
   const items1 = [onlyAttachmentIds];
   if (obj.useStateFromStores(items1, () => {
     let shouldStripEmbedsResult = null != dependencyMap;

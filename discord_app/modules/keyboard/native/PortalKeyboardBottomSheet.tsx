@@ -1,25 +1,31 @@
-// === Module 12406: PortalKeyboardBottomSheet ===
+// === Module 12542: PortalKeyboardBottomSheet ===
 
-// Module 12406 (PortalKeyboardBottomSheet)
+// Module 12542 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import isChannelFocused from "isChannelFocused" /* 6873 */;
-import native from "native" /* 8992 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
+import isChannelFocused from "isChannelFocused" /* 6993 */;
+import native from "native" /* 9120 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12543 */;
+import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 12544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10204 */;
+import NativeMenuStore from "NativeMenuStore" /* 10334 */;
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const require = globalThis.__r;
+const BottomSheetModalDefault = BottomSheetModal;
 
 require = fn;
 function PortalKeyboardBottomSheetHeader(arg0) {
   ({ style, handleCollapse } = arg0);
   const tmp = closure_10();
-  const items = [tmp.headerContainer, , ];
+  items = [tmp.headerContainer, , ];
   let prop;
   if (obj.useIsScreenReaderEnabled()) {
     prop = tmp.headerContainerScreenReaderEnabled;
@@ -32,95 +38,97 @@ function PortalKeyboardBottomSheetHeader(arg0) {
 function PortalKeyboardBackground(arg0) {
   ({ pointerEvents, style, roundingStyle } = arg0);
   const obj = { pointerEvents, style: null };
-  const items = [style, closure_10().background, roundingStyle];
+  items = [style, closure_10().background, roundingStyle];
   obj.style = items;
-  return React5(ReanimatedRexportDefault.View, obj);
+  return React5(_modDef1652.View, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8992).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8992).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };
 obj3.roundingView = { overflow: "hidden", display: "flex" };
 let closure_10 = createStyles.createStyles(obj3);
-let closure_13 = { code: "function PortalKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>0.975;}" };
-let __initData = { code: "function PortalKeyboardBottomSheetTsx2(){const{isFullyExpanded}=this.__closure;return isFullyExpanded.get();}" };
-const __initData2 = { code: "function PortalKeyboardBottomSheetTsx3(isFullyExpanded,isFullExpandedPrevious){const{forceMaxHeight,runOnJS,dismissGlobalKeyboard}=this.__closure;if(isFullExpandedPrevious==null){return;}if(!isFullyExpanded&&!forceMaxHeight){runOnJS(dismissGlobalKeyboard)();}}" };
-const __initData3 = { code: "function PortalKeyboardBottomSheetTsx4(){const{interpolate,animatedIndex,cornerRadiusInputStart,cornerRadiusInputEnd,cornerRadius}=this.__closure;return{borderTopLeftRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp'),borderTopRightRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp')};}" };
-const __initData4 = { code: "function PortalKeyboardBottomSheetTsx5(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
-const __initData5 = { code: "function PortalKeyboardBottomSheetTsx6(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
+let closure_13 = { code: "(function PortalKeyboardBottomSheetTsx1(){let[animatedIndex]=this.__closure;return animatedIndex.get()>0.975;})" };
+let closure_14 = { code: "(function PortalKeyboardBottomSheetTsx2(){let[isFullyExpanded]=this.__closure;return isFullyExpanded.get();})" };
+let closure_15 = { code: "(function PortalKeyboardBottomSheetTsx3(isFullyExpanded,isFullExpandedPrevious){let[forceMaxHeight,scheduleOnRN,dismissGlobalKeyboard]=this.__closure;if(isFullExpandedPrevious==null){return;}if(!isFullyExpanded&&!forceMaxHeight){scheduleOnRN(dismissGlobalKeyboard);}})" };
+let closure_16 = { code: "(function PortalKeyboardBottomSheetTsx4(){let[interpolate,animatedIndex,cornerRadiusInputStart,cornerRadiusInputEnd,cornerRadius]=this.__closure;return{borderTopLeftRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp'),borderTopRightRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp')};})" };
+let closure_17 = { code: "(function PortalKeyboardBottomSheetTsx5(){let[animatedIndex]=this.__closure;return Math.max(animatedIndex.get(),0)>0;})" };
+let closure_18 = { code: "(function PortalKeyboardBottomSheetTsx6(result,previous){let[scheduleOnRN,setAccessibilityViewIsModal]=this.__closure;if(result===previous)return;scheduleOnRN(setAccessibilityViewIsModal,result);})" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardBottomSheet.tsx");
 
-export default function PortalKeyboardBottomSheet(animatedIndex) {
-  animatedIndex = animatedIndex.animatedIndex;
-  const chatInputRef = animatedIndex.chatInputRef;
-  let flag = animatedIndex.isAppsKeyboard;
-  ({ animatedPosition, children } = animatedIndex);
+export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
+  ({ animatedIndex, chatInputRef } = isAppsKeyboard);
+  _require = chatInputRef;
+  let flag = isAppsKeyboard.isAppsKeyboard;
+  ({ animatedPosition, children } = isAppsKeyboard);
   if (flag === undefined) {
     flag = false;
   }
-  const onClose = animatedIndex.onClose;
-  ({ backdropComponent, headerStyle } = animatedIndex);
-  ({ disableHeaderRoundingAnimation, onAnimate } = animatedIndex);
-  ({ rendersHandle, animationConfigs, transitionState, roundingViewStyle } = animatedIndex);
+  importDefault = flag;
+  const onClose = isAppsKeyboard.onClose;
+  dependencyMap = onClose;
+  ({ backdropComponent, headerStyle } = isAppsKeyboard);
+  _slicedToArray = headerStyle;
+  ({ disableHeaderRoundingAnimation, onAnimate } = isAppsKeyboard);
+  noop = onAnimate;
+  ({ rendersHandle, animationConfigs, transitionState, roundingViewStyle } = isAppsKeyboard);
   if (rendersHandle === undefined) {
     rendersHandle = true;
   }
-  ({ width, forceMaxHeight } = animatedIndex);
+  ({ width, forceMaxHeight } = isAppsKeyboard);
   if (forceMaxHeight === undefined) {
     forceMaxHeight = false;
   }
-  let flag2 = animatedIndex.enablePanDownToClose;
+  let flag2 = isAppsKeyboard.enablePanDownToClose;
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let flag3 = animatedIndex.renderExpressionFooter;
+  let flag3 = isAppsKeyboard.renderExpressionFooter;
   if (flag3 === undefined) {
     flag3 = false;
   }
   let isScreenReaderEnabled;
   let derivedValue;
-  let token;
   let animatedStyle;
-  __initData = undefined;
-  let tmp = isScreenReaderEnabled();
-  const ref = headerStyle.useRef(null);
-  const tmp5 = chatInputRef(flag[11])({ forceMaxHeight, enablePanDownToClose: flag2 });
-  const tmp7 = transitionState === animatedIndex(flag[12]).TransitionStates.YEETED;
-  closure_9 = tmp7;
-  const bottomSheetImperativeHandle = animatedIndex(flag[13]).useBottomSheetImperativeHandle(animatedIndex.ref, ref);
-  let items = [ref, tmp7];
-  const layoutEffect = headerStyle.useLayoutEffect(() => {
-    if (closure_9) {
+  let tmp = animatedStyle();
+  const ref = noop.useRef(null);
+  const tmp5 = useCustomKeyboardBottomSheetConfigDefault({ forceMaxHeight, enablePanDownToClose: flag2 });
+  const tmp7 = transitionState === require("native").TransitionStates.YEETED;
+  closure_7 = tmp7;
+  const bottomSheetImperativeHandle = require("Sheet/BottomSheetHandle").useBottomSheetImperativeHandle(isAppsKeyboard.ref, ref);
+  items = [ref, tmp7];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    if (closure_7) {
       const current = ref.current;
       if (current != null) {
         current.forceClose();
       }
     }
   }, items);
-  chatInputRef(flag[14])({ animatedIndex, bottomSheetRef: ref, containerHeight: tmp5.containerHeight, forceMaxHeight, isYeeted: tmp7, snapPoints: tmp5.snapPoints });
-  let obj2 = animatedIndex(flag[13]);
+  useAndroidOrientationSheetResyncDefault({ animatedIndex, bottomSheetRef: ref, containerHeight: tmp5.containerHeight, forceMaxHeight, isYeeted: tmp7, snapPoints: tmp5.snapPoints });
+  let obj2 = require("Sheet/BottomSheetHandle");
   const obj3 = { animatedIndex, bottomSheetRef: ref, containerHeight: tmp5.containerHeight, forceMaxHeight, isYeeted: tmp7, snapPoints: tmp5.snapPoints };
-  let items1 = [rendersHandle];
-  const stateFromStores = animatedIndex(flag[15]).useStateFromStores(items1, () => rendersHandle.isOpen());
+  let items1 = [ref];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => ref.isOpen());
   if (flag3) {
     flag3 = !tmp7;
   }
-  const obj4 = animatedIndex(flag[15]);
-  isScreenReaderEnabled = animatedIndex(flag[9]).useIsScreenReaderEnabled();
-  const items2 = [chatInputRef, tmp7, onAnimate, onClose, flag];
+  const obj4 = require("initialize");
+  isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
+  let items2 = [chatInputRef, tmp7, onAnimate, onClose, flag];
   const callback = obj.useCallback((arg0, arg1, arg2, arg3, arg4) => {
-    if (closure_9) {
+    if (closure_7) {
       if (-1 !== arg1) {
-        if (onClose != null) {
+        if (c2 != null) {
           tmp17();
         }
       }
@@ -130,7 +138,7 @@ export default function PortalKeyboardBottomSheet(animatedIndex) {
       tmp = -1 !== arg1;
     }
     if (tmp) {
-      if (onAnimate != null) {
+      if (c4 != null) {
         tmp3(arg0, arg1, arg4);
       }
       if (0 === arg0) {
@@ -143,10 +151,10 @@ export default function PortalKeyboardBottomSheet(animatedIndex) {
           tmp6 = !isChannelFocused.isChannelFocused();
         }
         if (tmp6) {
-          tmp6 = flag;
+          tmp6 = c1;
         }
         if (tmp6) {
-          const current = chatInputRef.current;
+          const current = _undefined.current;
           if (current != null) {
             current.closeCustomKeyboard();
           }
@@ -154,62 +162,76 @@ export default function PortalKeyboardBottomSheet(animatedIndex) {
       }
     }
   }, items2);
-  const tmp6Result = animatedIndex(flag[9]);
-  class J {
+  const tmp6Result = require("useIsScreenReaderEnabled");
+  let items3 = [closure_13, animatedIndex];
+  _require = undefined;
+  [tmp14, tmp15] = items3;
+  class PortalKeyboardBottomSheetTsx1 {
     constructor() {
-      return animatedIndex.get() > 0.975;
+      return closure_0.get() > 0.975;
     }
   }
-  J.__closure = { animatedIndex };
-  J.__workletHash = 2001839633402;
-  J.__initData = animatedStyle;
-  derivedValue = animatedIndex(flag[10]).useDerivedValue(J);
-  const tmp6Result7 = animatedIndex(flag[10]);
-  const fn = function j() {
-    return derivedValue.get();
-  };
-  fn.__closure = { isFullyExpanded: derivedValue };
-  fn.__workletHash = 9531298805666;
-  fn.__initData = __initData;
-  class Y {
+  const items4 = [tmp15];
+  PortalKeyboardBottomSheetTsx1.__closure = items4;
+  PortalKeyboardBottomSheetTsx1.__workletHash = 856294233955;
+  PortalKeyboardBottomSheetTsx1.__initData = tmp14;
+  derivedValue = require("module_1652").useDerivedValue(PortalKeyboardBottomSheetTsx1);
+  const tmp6Result7 = require("module_1652");
+  const items5 = [closure_14, derivedValue];
+  _require = undefined;
+  [tmp17, tmp18] = items5;
+  class PortalKeyboardBottomSheetTsx2 {
+    constructor() {
+      return closure_0.get();
+    }
+  }
+  const items6 = [tmp18];
+  PortalKeyboardBottomSheetTsx2.__closure = items6;
+  PortalKeyboardBottomSheetTsx2.__workletHash = 6167248889275;
+  PortalKeyboardBottomSheetTsx2.__initData = tmp17;
+  const items7 = [closure_15, forceMaxHeight, require("module_1705").scheduleOnRN, require("KeyboardManagerUtils").dismissGlobalKeyboard];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp19, tmp20, tmp21, tmp22] = items7;
+  class PortalKeyboardBottomSheetTsx3 {
     constructor(arg0, arg1) {
       if (null != arg1) {
-        tmp = animatedIndex;
-        if (!animatedIndex) {
-          tmp = c7;
+        tmp = isAppsKeyboard;
+        if (!isAppsKeyboard) {
+          tmp = closure_0;
         }
         if (!tmp) {
-          tmp2 = closure_0;
+          tmp2 = closure_1;
           tmp3 = closure_2;
-          obj = closure_0(closure_2[10]);
-          tmp4 = obj.runOnJS(closure_0(closure_2[19]).dismissGlobalKeyboard)();
+          tmp4 = closure_1(closure_2);
         }
       }
       return;
     }
   }
-  const tmp6Result8 = animatedIndex(flag[10]);
-  Y.__closure = { forceMaxHeight, runOnJS: animatedIndex(flag[10]).runOnJS, dismissGlobalKeyboard: animatedIndex(flag[19]).dismissGlobalKeyboard };
-  Y.__workletHash = 14649856286006;
-  Y.__initData = __initData2;
-  const animatedReaction = tmp6Result8.useAnimatedReaction(fn, Y);
-  chatInputRef(flag[20])(() => () => {
-    if (onClose != null) {
+  const items8 = [tmp20, tmp21, tmp22];
+  PortalKeyboardBottomSheetTsx3.__closure = items8;
+  PortalKeyboardBottomSheetTsx3.__workletHash = 2281542026606;
+  PortalKeyboardBottomSheetTsx3.__initData = tmp19;
+  const animatedReaction = require("module_1652").useAnimatedReaction(PortalKeyboardBottomSheetTsx2, PortalKeyboardBottomSheetTsx3);
+  useMountEffectDefault(() => () => {
+    if (_undefined3 != null) {
       tmp();
     }
   });
-  const items3 = [headerStyle, ref, rendersHandle, derivedValue, isScreenReaderEnabled];
+  const items9 = [headerStyle, ref, rendersHandle, derivedValue, isScreenReaderEnabled];
   const callback1 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.pressBehavior = "collapse";
-    return forceMaxHeight(animatedIndex(flag[16]).BottomSheetBackdrop, obj);
+    return closure_7(_undefined(_undefined3[16]).BottomSheetBackdrop, obj);
   }, []);
   const callback2 = obj.useCallback(() => {
     let tmp = null;
     if (false !== rendersHandle) {
       const obj = {
-        style: headerStyle,
+        style,
         handleCollapse() {
             const current = ref.current;
             if (current != null) {
@@ -227,151 +249,170 @@ export default function PortalKeyboardBottomSheet(animatedIndex) {
       tmp = React5(PortalKeyboardBottomSheetHeader, obj);
     }
     return tmp;
-  }, items3);
-  const obj5 = { forceMaxHeight, runOnJS: animatedIndex(flag[10]).runOnJS, dismissGlobalKeyboard: animatedIndex(flag[19]).dismissGlobalKeyboard };
-  token = animatedIndex(flag[21]).useToken(tmp3(tmp4[7]).modules.mobile.MOBILE_KEYBOARD_TOP_BORDER_RADIUS);
-  const tmp6Result9 = animatedIndex(flag[21]);
-  class W {
+  }, items9);
+  const tmp6Result8 = require("module_1652");
+  const token = require("useToken").useToken(tmp3(575).modules.mobile.MOBILE_KEYBOARD_TOP_BORDER_RADIUS);
+  const tmp6Result9 = require("useToken");
+  const items10 = [closure_16, require("module_1652").interpolate, animatedIndex, -1, 0, token];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33] = items10;
+  class PortalKeyboardBottomSheetTsx4 {
     constructor() {
       obj = { borderTopLeftRadius: null, borderTopRightRadius: null };
-      obj2 = closure_0(closure_2[10]);
-      items = [0];
-      items[1] = closure_12;
-      obj.borderTopLeftRadius = obj2.interpolate(animatedIndex.get(), [-1, 0], items, "clamp");
-      obj3 = closure_0(closure_2[10]);
+      items = [, ];
+      items[0] = closure_2;
+      items[1] = closure_3;
       items1 = [0];
-      items1[1] = closure_12;
-      obj.borderTopRightRadius = obj3.interpolate(animatedIndex.get(), [-1, 0], items1, "clamp");
+      items1[1] = closure_4;
+      obj.borderTopLeftRadius = closure_0(closure_1.get(), items, items1, "clamp");
+      items2 = [, ];
+      items2[0] = closure_2;
+      items2[1] = closure_3;
+      items3 = [0];
+      items3[1] = closure_4;
+      obj.borderTopRightRadius = closure_0(closure_1.get(), items2, items3, "clamp");
       return obj;
     }
   }
-  const tmp6Result10 = animatedIndex(flag[10]);
-  W.__closure = { interpolate: animatedIndex(flag[10]).interpolate, animatedIndex, cornerRadiusInputStart: -1, cornerRadiusInputEnd: 0, cornerRadius: token };
-  W.__workletHash = 6979425892410;
-  W.__initData = __initData3;
-  animatedStyle = tmp6Result10.useAnimatedStyle(W);
-  let tmp21;
+  const items11 = [tmp29, tmp30, tmp31, tmp32, tmp33];
+  PortalKeyboardBottomSheetTsx4.__closure = items11;
+  PortalKeyboardBottomSheetTsx4.__workletHash = 10458527292035;
+  PortalKeyboardBottomSheetTsx4.__initData = tmp28;
+  animatedStyle = require("module_1652").useAnimatedStyle(PortalKeyboardBottomSheetTsx4);
+  let tmp35;
   if (!disableHeaderRoundingAnimation) {
-    tmp21 = animatedStyle;
+    tmp35 = animatedStyle;
   }
-  animatedStyle = tmp21;
-  const items4 = [tmp21];
+  animatedStyle = tmp35;
+  const items12 = [tmp35];
   const callback3 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.roundingStyle = animatedStyle;
     return React5(PortalKeyboardBackground, obj);
-  }, items4);
-  const obj6 = { interpolate: animatedIndex(flag[10]).interpolate, animatedIndex, cornerRadiusInputStart: -1, cornerRadiusInputEnd: 0, cornerRadius: token };
-  ({ left, right } = chatInputRef(flag[22])());
-  const tmp23 = chatInputRef(flag[22])();
-  ({ height, width: width2 } = chatInputRef(flag[23])({ ignoreKeyboard: true }));
+  }, items12);
+  const tmp6Result10 = require("module_1652");
+  ({ left, right } = useSafeAreaInsetsDefault());
+  const tmp37 = useSafeAreaInsetsDefault();
+  ({ height, width: width2 } = useWindowDimensionsDefault({ ignoreKeyboard: true }));
   const callback4 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.children = forceMaxHeight(animatedIndex(flag[24]).PortalHost, { name: "expression-footer" });
-    return forceMaxHeight(animatedIndex(flag[16]).BottomSheetFooter, obj);
+    obj.children = closure_7(_undefined(_undefined3[25]).PortalHost, { name: "expression-footer" });
+    return closure_7(_undefined(_undefined3[16]).BottomSheetFooter, obj);
   }, []);
-  const tmp26 = onClose(headerStyle.useState(false), 2);
-  __initData = tmp27;
-  const tmp24 = chatInputRef(flag[23])({ ignoreKeyboard: true });
-  const fn2 = function $() {
-    return Math.max(animatedIndex.get(), 0) > 0;
-  };
-  fn2.__closure = { animatedIndex };
-  fn2.__workletHash = 8952872079740;
-  fn2.__initData = __initData4;
-  class Z {
+  const tmp38 = useWindowDimensionsDefault({ ignoreKeyboard: true });
+  [tmp41, tmp42] = noop.useState(false);
+  const tmp40 = _slicedToArray(noop.useState(false), 2);
+  const items13 = [closure_17, animatedIndex];
+  _require = undefined;
+  [tmp43, tmp44] = items13;
+  class PortalKeyboardBottomSheetTsx5 {
+    constructor() {
+      return Math.max(closure_0.get(), 0) > 0;
+    }
+  }
+  const items14 = [tmp44];
+  PortalKeyboardBottomSheetTsx5.__closure = items14;
+  PortalKeyboardBottomSheetTsx5.__workletHash = 10562013634405;
+  PortalKeyboardBottomSheetTsx5.__initData = tmp43;
+  const items15 = [closure_18, require("module_1705").scheduleOnRN, tmp42];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp45, tmp46, tmp47] = items15;
+  class PortalKeyboardBottomSheetTsx6 {
     constructor(arg0, arg1) {
-      if (animatedIndex !== arg1) {
+      if (isAppsKeyboard !== arg1) {
         tmp = closure_0;
-        tmp2 = closure_2;
-        obj = closure_0(closure_2[10]);
-        tmp3 = closure_14;
-        tmp4 = obj.runOnJS(closure_14)(animatedIndex);
+        tmp2 = closure_1;
+        tmp3 = closure_0(closure_1, isAppsKeyboard);
       }
       return;
     }
   }
-  const tmp6Result11 = animatedIndex(flag[10]);
-  Z.__closure = { runOnJS: animatedIndex(flag[10]).runOnJS, setAccessibilityViewIsModal: tmp26[1] };
-  Z.__workletHash = 16051387075966;
-  Z.__initData = __initData5;
-  const animatedReaction1 = tmp6Result11.useAnimatedReaction(fn2, Z);
-  let tmp29 = isScreenReaderEnabled;
+  const items16 = [tmp46, tmp47];
+  PortalKeyboardBottomSheetTsx6.__closure = items16;
+  PortalKeyboardBottomSheetTsx6.__workletHash = 8913266183594;
+  PortalKeyboardBottomSheetTsx6.__initData = tmp45;
+  const animatedReaction1 = require("module_1652").useAnimatedReaction(PortalKeyboardBottomSheetTsx5, PortalKeyboardBottomSheetTsx6);
+  let tmp49 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    tmp29 = tmp7;
+    tmp49 = tmp7;
   }
-  const obj7 = { runOnJS: animatedIndex(flag[10]).runOnJS, setAccessibilityViewIsModal: tmp26[1] };
-  const obj8 = { gradient: chatInputRef(flag[25])(), children: null };
+  const tmp6Result11 = require("module_1652");
+  const obj5 = { gradient: useColorThemeBackgroundDefault(), children: null };
   let str;
   if (stateFromStores) {
     str = "no-hide-descendants";
   }
-  const obj9 = { importantForAccessibility: str, style: null, pointerEvents: "box-none", children: null };
-  const items5 = [tmp.container, { marginLeft: left, marginRight: right }, ];
+  const obj6 = { importantForAccessibility: str, style: null, pointerEvents: "box-none", children: null };
+  const items17 = [tmp.container, { marginLeft: left, marginRight: right }, ];
   if (width == null) {
     const _Number = Number;
     width = Number.MAX_SAFE_INTEGER;
   }
   const size = { width: Math.min(width, width2 - left - right), height };
-  items5[2] = size;
-  obj9.style = items5;
-  const obj10 = { ref, animatedIndex, animatedPosition, animationConfigs, onClose, onAnimate: callback, enableContentPanningGesture: !tmp29, enableHandlePanningGesture: !tmp29, handleComponent: callback2, renderFooter: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, activeOffsetY: null, handleHeight: null };
-  const tmp30 = chatInputRef(flag[25])();
-  const tmp32 = ref;
-  const tmp3Result = chatInputRef(flag[16]);
-  let tmp34;
+  items17[2] = size;
+  obj6.style = items17;
+  const obj7 = { ref, animatedIndex, animatedPosition, animationConfigs, onClose, onAnimate: callback, enableContentPanningGesture: !tmp49, enableHandlePanningGesture: !tmp49, handleComponent: callback2, renderFooter: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, activeOffsetY: null, handleHeight: null };
+  const tmp50 = useColorThemeBackgroundDefault();
+  const tmp52 = isScreenReaderEnabled;
+  const tmp3Result = BottomSheetModalDefault;
+  let tmp54;
   if (tmp6Result12.isAndroid()) {
     if (flag3) {
-      tmp34 = callback4;
+      tmp54 = callback4;
     }
   }
-  obj10.renderFooter = tmp34;
-  obj10.backgroundComponent = callback3;
-  obj10.backgroundStyle = tmp.background;
+  obj7.renderFooter = tmp54;
+  obj7.backgroundComponent = callback3;
+  obj7.backgroundStyle = tmp.background;
   if (backdropComponent == null) {
     backdropComponent = callback1;
   }
-  obj10.backdropComponent = backdropComponent;
-  obj10.activeOffsetY = [-10, 10];
+  obj7.backdropComponent = backdropComponent;
+  obj7.activeOffsetY = [-10, 10];
   let num = 0;
   if (rendersHandle) {
-    num = tmp6(tmp4[8]).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
-  obj10.handleHeight = num;
+  obj7.handleHeight = num;
   let merged = Object.assign(tmp5);
-  const items6 = [tmp.roundingView, , ];
-  let tmp36 = !disableHeaderRoundingAnimation;
+  const items18 = [tmp.roundingView, , ];
+  let tmp56 = !disableHeaderRoundingAnimation;
   if (!disableHeaderRoundingAnimation) {
-    tmp36 = animatedStyle;
+    tmp56 = animatedStyle;
   }
-  items6[1] = tmp36;
-  items6[2] = roundingViewStyle;
-  obj10.children = forceMaxHeight(animatedIndex(flag[26]).AccessibilityViewAnimated, {
+  items18[1] = tmp56;
+  items18[2] = roundingViewStyle;
+  obj7.children = closure_7(require("AccessibilityView").AccessibilityViewAnimated, {
     nativeID: "portal-keyboard-sheet",
-    style: items6,
+    style: items18,
     onAccessibilityEscape: function handleClose() {
       const current = ref.current;
       if (current != null) {
         current.collapse();
       }
     },
-    accessibilityViewIsModal: tmp26[0],
+    accessibilityViewIsModal: tmp41,
     children
   });
-  const items7 = [forceMaxHeight(tmp3Result, obj10), , ];
-  let tmp31Result = closure_9;
-  if (closure_9) {
-    tmp31Result = flag3;
+  const items19 = [closure_7(tmp3Result, obj7), , ];
+  let tmp51Result = derivedValue;
+  if (derivedValue) {
+    tmp51Result = flag3;
   }
-  if (tmp31Result) {
-    const obj12 = { animatedSheetIndex: animatedIndex };
-    tmp31Result = tmp31(tmp3(tmp4[27]), obj12);
+  if (tmp51Result) {
+    const obj9 = { animatedSheetIndex: animatedIndex };
+    tmp51Result = tmp51(tmp3(10097), obj9);
   }
-  items7[1] = tmp31Result;
-  items7[2] = forceMaxHeight(animatedIndex(flag[28]).NavScrim, {});
-  obj9.children = items7;
-  obj8.children = tmp32(chatInputRef(flag[10]).View, obj9);
-  return forceMaxHeight(animatedIndex(flag[12]).ThemeContextProvider, obj8);
+  items19[1] = tmp51Result;
+  items19[2] = closure_7(require("NavScrim").NavScrim, {});
+  obj6.children = items19;
+  obj5.children = tmp52(_modDef1652.View, obj6);
+  return closure_7(require("native").ThemeContextProvider, obj5);
 };

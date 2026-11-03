@@ -1,10 +1,10 @@
-// === Module 14558: useConjureDevicePermissions ===
+// === Module 14689: useConjureDevicePermissions ===
 
-// Module 14558 (useConjureDevicePermissions)
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10953 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10952 */;
+// Module 14689 (useConjureDevicePermissions)
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11059 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 11061 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/conjure/device_permissions/useC
 
 export default function useConjureDevicePermissions(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore, ConjurePublishStatusStore, ConjureDevicePermissionStore];
+  items = [ConjureProjectStore, ConjurePublishStatusStore, ConjureDevicePermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (null == prop) {

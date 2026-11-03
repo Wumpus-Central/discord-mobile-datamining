@@ -1,13 +1,13 @@
-// === Module 15718: GuildSettingsPickerFeatures ===
+// === Module 15861: GuildSettingsPickerFeatures ===
 
-// Module 15718 (GuildSettingsPickerFeatures)
+// Module 15861 (GuildSettingsPickerFeatures)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15719 */;
-import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15720 */;
+import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15862 */;
+import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15863 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 let obj = { "server-subscriptions-onboarding": RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault, "server-subscriptions-create-tier-from-template": RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault };
@@ -34,7 +34,7 @@ let closure_6 = {
   },
   canCreateGuild: true,
   useIsGuildSupported() {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     return initialize.useStateFromStores(items, () => (guild) => closure_1_4.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
   }
 };

@@ -1,7 +1,7 @@
-// === Module 11943: MobileAudioOutputExperiment ===
+// === Module 12080: MobileAudioOutputExperiment ===
 
-// Module 11943 (MobileAudioOutputExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 12080 (MobileAudioOutputExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-mobile-volume-output-slider-removal", kind: "user", defaultConfig: { audioOutputPresent: true, nonContextualStreamOutputPresent: true, showTileVolumeIndicator: false }, variations: null };

@@ -1,10 +1,10 @@
-// === Module 18219: useGuildThemeNuxTrigger ===
+// === Module 18363: useGuildThemeNuxTrigger ===
 
-// Module 18219 (useGuildThemeNuxTrigger)
+// Module 18363 (useGuildThemeNuxTrigger)
 import initialize from "initialize" /* 504 */;
-import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 18225 */;
+import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 18369 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(arg0) {
-  const items = [ActionSheetStore];
+  items = [ActionSheetStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     key = key.getKey();
     return key === require("GuildThemeNuxActionSheet").GUILD_THEME_NUX_ACTION_SHEET_KEY;

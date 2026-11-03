@@ -1,14 +1,14 @@
-// === Module 10724: SelectedUserField ===
+// === Module 10854: SelectedUserField ===
 
-// Module 10724 (SelectedUserField)
+// Module 10854 (SelectedUserField)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleXIcon from "CircleXIcon" /* 7092 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7219 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleXIcon from "CircleXIcon" /* 7218 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7340 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" }, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.opener = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: 6 };
@@ -39,7 +39,7 @@ export default function SelectedUserField(onPress) {
   const tmp = closure_7();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.content, children: null };
-  const items = [tmp.opener, ];
+  items = [tmp.opener, ];
   let openerWithClearButton = null != selectedUser;
   if (openerWithClearButton) {
     openerWithClearButton = tmp.openerWithClearButton;

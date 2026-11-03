@@ -1,9 +1,9 @@
-// === Module 16544: useOpenChangeAvatarActionSheet ===
+// === Module 16687: useOpenChangeAvatarActionSheet ===
 
-// Module 16544 (useOpenChangeAvatarActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8737 */;
+// Module 16687 (useOpenChangeAvatarActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8861 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function useOpenChangeAvatarActionSheet(user) {
   }
   const tmp6 = analyticsLocations(isTryItOut[3])({ isTryItOut, analyticsLocations });
   handleUploadAvatarSelect = tmp6;
-  const items = [user, analyticsLocations, pendingAvatar, setPendingAvatar, tmp6, tmp4, pendingAvatarDecoration, isTryItOut];
+  items = [user, analyticsLocations, pendingAvatar, setPendingAvatar, tmp6, tmp4, pendingAvatarDecoration, isTryItOut];
   return noop.useCallback(() => {
     let obj2 = {
       showAnimatedAvatarUpsell,
@@ -63,7 +63,7 @@ export default function useOpenChangeAvatarActionSheet(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(16546, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16689, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;

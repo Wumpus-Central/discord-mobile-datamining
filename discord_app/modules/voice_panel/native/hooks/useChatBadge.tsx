@@ -1,7 +1,7 @@
-// === Module 19245: useChatBadge ===
+// === Module 19403: useChatBadge ===
 
-// Module 19245 (useChatBadge)
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+// Module 19403 (useChatBadge)
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export default function useChatBadge(arg0) {
   _require = arg0;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStores(items, () => {
     let str = "mention";
     if (ReadStateStore.getMentionCount(closure_0) <= 0) {

@@ -1,20 +1,20 @@
-// === Module 14413: useAppChannelRunningApp ===
+// === Module 14544: useAppChannelRunningApp ===
 
-// Module 14413 (useAppChannelRunningApp)
-import FramesStore from "FramesStore" /* 6846 */;
+// Module 14544 (useAppChannelRunningApp)
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: hasOwnProperty, getFrameSurfaceForChannel: metroRequire } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");
 
 export default function useAppChannelRunningApp(arg0) {
   _require = arg0;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
@@ -36,7 +36,7 @@ export default function useAppChannelRunningApp(arg0) {
     return tmp4;
   }, items1);
   let obj = require("initialize");
-  let tmp4 = stateFromStores(14414)(stateFromStores);
+  let tmp4 = stateFromStores(14545)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {

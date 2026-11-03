@@ -1,16 +1,16 @@
-// === Module 18736: SearchListCard ===
+// === Module 18894: SearchListCard ===
 
-// Module 18736 (SearchListCard)
+// Module 18894 (SearchListCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import Card from "Card" /* 6977 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import ForumIcon from "ForumIcon" /* 8660 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import Card from "Card" /* 7103 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import ForumIcon from "ForumIcon" /* 8784 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function SearchListPrivateChannel(channel) {
     const obj2 = { style: tmp.gdmIcon, children: null };
     const obj3 = { channel, size: native.AvatarSizes.SIZE_16 };
     obj2.children = hasOwnProperty(GroupDMAvatarDefault, obj3);
-    const items = [hasOwnProperty(View, obj2), ];
+    items = [hasOwnProperty(View, obj2), ];
     const obj4 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp4 };
     items[1] = hasOwnProperty(Text_Text.Text, obj4);
     obj.children = items;
@@ -78,7 +78,7 @@ class SearchListGuildChannel {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -98,7 +98,7 @@ export { SearchListGuildChannel };
 export function SearchListCardContainer(arg0) {
   ({ children, onPress, containerStyle } = arg0);
   const obj = { shadow: "low", border: "subtle", onPress, style: null, children };
-  const items = [closure_7().container, containerStyle];
+  items = [closure_7().container, containerStyle];
   obj.style = items;
   return hasOwnProperty(Card.Card, obj);
 }
@@ -113,7 +113,7 @@ export function SearchListCardContent(arg0) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
     tmp3 = hasOwnProperty(Text_Text.Text, obj2);
   }
-  const items = [tmp3, ];
+  items = [tmp3, ];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
     const obj3 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
@@ -126,7 +126,7 @@ export function SearchListCardContent(arg0) {
 export function SearchListCardFooter(channel) {
   channel = channel.channel;
   ({ author, avatarSource } = channel);
-  const items = [channel];
+  items = [channel];
   const obj = { style: closure_7().footer, children: null };
   const memo = noop.useMemo(() => {
     if (null == channel) {

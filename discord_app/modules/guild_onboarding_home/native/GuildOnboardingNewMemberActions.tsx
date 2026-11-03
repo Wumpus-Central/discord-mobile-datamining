@@ -1,17 +1,17 @@
-// === Module 18643: GuildOnboardingNewMemberActions ===
+// === Module 18801: GuildOnboardingNewMemberActions ===
 
-// Module 18643 (GuildOnboardingNewMemberActions)
+// Module 18801 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 575 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13833 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13964 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8340 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8464 */;
 
 require = fn;
 function MemberActionRow(channelId) {
@@ -26,7 +26,7 @@ function MemberActionRow(channelId) {
   }
   id = emoji.id;
   const name = emoji.name;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[15]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(stateFromStores[15]);
   const tmp6 = id(stateFromStores[16])(stateFromStores, true);
@@ -71,7 +71,7 @@ function MemberActionRow(channelId) {
         if (null != name) {
           const tmp5Result5 = tmp5(tmp3[20]);
           if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
-            const obj10 = { style: tmp.textEmoji, variant: "heading-xxl/normal", children: name };
+            const obj10 = { style: tmp.textEmoji, variant: "heading-xxl/medium", children: name };
             tmp14 = closure_15(tmp2(tmp3[21]).Text, obj10);
             tmp15 = closure_15;
           }
@@ -106,11 +106,11 @@ function MemberActionRow(channelId) {
 }
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" }, channelNameContainer: { flex: 1, marginHorizontal: 8 }, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;
@@ -126,7 +126,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
   guildId = guildId.guildId;
   let stateFromStores2;
   const tmp = closure_17();
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guildId];
   const stateFromStores = guildId(stateFromStores2[15]).useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(guildId), items1);
   let obj = guildId(stateFromStores2[15]);
@@ -173,7 +173,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
       if (0 !== stateFromStores.length) {
         const obj5 = { style: tmp.actionsContainer, children: null };
         const obj6 = { style: tmp.actionsHeader, children: null };
-        const obj7 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+        const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
         const intl2 = tmp2(tmp3[25]).intl;
         obj7.children = intl2.string(tmp2(tmp3[25]).t.LhlgY9);
         obj6.children = closure_15(tmp2(tmp3[21]).Text, obj7);
@@ -189,7 +189,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
                     flag = false;
                   }
                   obj.completed = flag;
-                  return __initData(MemberActionRow, obj, "member-action-" + channelId.channelId);
+                  return closure_2_15(MemberActionRow, obj, "member-action-" + channelId.channelId);
                 }),
 
         ];

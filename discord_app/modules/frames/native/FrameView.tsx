@@ -1,18 +1,18 @@
-// === Module 19099: FrameView ===
+// === Module 19257: FrameView ===
 
-// Module 19099 (FrameView)
+// Module 19257 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import leaveFrame from "leaveFrame" /* 10938 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19100 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import leaveFrame from "leaveFrame" /* 11076 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12388 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
-const FrameLayoutModes = fn(6847).FrameLayoutModes;
+const FrameLayoutModes = fn(6967).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx");
@@ -26,7 +26,7 @@ export default function FrameView(frame) {
   const data = frame(layoutMode[5]).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
   let obj = frame(layoutMode[5]);
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   let stateFromStores = frame(layoutMode[6]).useStateFromStores(items, () => ConjureProjectStore.isConjureProjectApplication(frame.applicationId));
   if (!stateFromStores) {
     let conjureProjectId;

@@ -1,6 +1,6 @@
-// === Module 15071: CollectiblesRecommendationUtils ===
+// === Module 15212: CollectiblesRecommendationUtils ===
 
-// Module 15071 (CollectiblesRecommendationUtils)
+// Module 15212 (CollectiblesRecommendationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesRecommendationUtils.tsx");
@@ -10,7 +10,7 @@ export function reorderCollectiblesByRecommendation(items, length) {
     if (0 !== length.length) {
       const _Map = Map;
       const map = new Map(items.map((skuId) => {
-        const items = [skuId.skuId, skuId];
+        items = [skuId.skuId, skuId];
         return items;
       }));
       items = [];

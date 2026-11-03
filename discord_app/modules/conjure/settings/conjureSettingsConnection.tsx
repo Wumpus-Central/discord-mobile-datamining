@@ -1,12 +1,12 @@
-// === Module 10964: conjureSettingsConnection ===
+// === Module 11097: conjureSettingsConnection ===
 
-// Module 10964 (conjureSettingsConnection)
+// Module 11097 (conjureSettingsConnection)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10900 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10948 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11030 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10869 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10999 */;
 
 require = fn;
 function noteSettingsWrite(arg0) {
@@ -37,7 +37,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -223,7 +223,7 @@ let closure_11 = async function _fetchWithRetry(arg0) {
         const backoff = closure_130_1.backoff;
         backoff.succeed();
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp29) {
       if (tmp4 === c4) {

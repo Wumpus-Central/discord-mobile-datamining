@@ -1,9 +1,9 @@
-// === Module 12482: ArrowsUpDownIcon ===
+// === Module 12618: ArrowsUpDownIcon ===
 
-// Module 12482 (ArrowsUpDownIcon)
+// Module 12618 (ArrowsUpDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod12483 from "module_12483" /* 12483 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod12619 from "module_12619" /* 12619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ArrowsUpDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12483, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12619, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

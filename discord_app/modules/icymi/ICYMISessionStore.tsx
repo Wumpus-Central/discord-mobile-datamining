@@ -1,15 +1,15 @@
-// === Module 16231: ICYMISessionStore ===
+// === Module 16374: ICYMISessionStore ===
 
-// Module 16231 (ICYMISessionStore)
+// Module 16374 (ICYMISessionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import v1 from "v1" /* 1266 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16232 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16375 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import LabFeatureStore from "LabFeatureStore" /* 8562 */;
+import LabFeatureStore from "LabFeatureStore" /* 8686 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 require = fn;
 let c7 = 300000;
@@ -153,7 +153,7 @@ prototype["startItemsDwell"] = function startItemsDwell(arr) {
     }
   }
   self._dwelledItemsChangedCount = self._dwelledItemsChangedCount + 1;
-  const items = [];
+  items = [];
   const _activeItems = self._activeItems;
   const set = new Set(_activeItems.map((itemId) => itemId.itemId));
   const iter = arr[Symbol.iterator]();
@@ -330,7 +330,7 @@ prototype["incrementFeedFetchCount"] = function incrementFeedFetchCount() {
 };
 prototype["endAllImpressions"] = function endAllImpressions() {
   const self = this;
-  const items = [...this._activeItems];
+  items = [...this._activeItems];
   const item = items.forEach((itemId) => self._endImpression(itemId.itemId));
 };
 prototype["endSession"] = function endSession() {

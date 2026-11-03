@@ -1,13 +1,13 @@
-// === Module 13788: ForumPostListFooter ===
+// === Module 13919: ForumPostListFooter ===
 
-// Module 13788 (ForumPostListFooter)
+// Module 13919 (ForumPostListFooter)
 import nativeDefault from "native" /* 575 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7453 */;
-import ForumPostReactions from "ForumPostReactions" /* 11350 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 13730 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13781 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13782 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 13789 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7577 */;
+import ForumPostReactions from "ForumPostReactions" /* 11487 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13861 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13912 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13913 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 13920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 obj2.dot = size;
@@ -30,7 +30,7 @@ export default function ForumPostListFooter(parentChannel) {
   let tmp6Result = typingUserIds.length > 0;
   let isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
   const obj3 = { style: tmp.footer, children: null };
-  const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , , ];
+  items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , , ];
   if (isGameInvitesPost) {
     const obj4 = { channel: thread };
     isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj4);

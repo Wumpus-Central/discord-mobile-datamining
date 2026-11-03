@@ -1,18 +1,18 @@
-// === Module 16486: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
+// === Module 16629: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
 
-// Module 16486 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
+// Module 16629 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
 import nativeDefault from "native" /* 575 */;
-import _modDef2932 from "module_2932" /* 2932 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6439 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
-import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 16481 */;
+import _modDef3059 from "module_3059" /* 3059 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6559 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10902 */;
+import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 16624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -20,14 +20,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10, HorizontalGradient: closure_11 } = Constants);
-const HexagonCampaignConstants = fn(5039);
+({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10, HorizontalGradient: closure_11 } = Constants);
+const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: closure_12, HexagonCampaignPerk: map1, HexagonCampaignPerkAvailability: closure_14 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" }, row: null, name: null, nameMask: null, nameMaskOpaque: null, nameMaskFade: null, nameMeasure: null, nameMeasureText: null, labelBadge: null };
 let obj3 = { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_16 };
@@ -65,7 +65,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   _require = tmp2;
   const displayNameStylesPendingName = require("useDisplayNameStylesPendingName").useDisplayNameStylesPendingName(user);
   let intl = require("util").intl;
-  const stringResult = intl.string(_modDef2932["86GtGH"]);
+  const stringResult = intl.string(_modDef3059["86GtGH"]);
   let obj = require("useDisplayNameStylesPendingName");
   const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(require("QuestTypes").QuestContent.DISPLAY_NAME_STYLES_SETTINGS, require("HexagonCampaignAnalytics").HexagonCampaignContentSurface.NON_NITRO_CARD, true);
   let obj2 = require("HexagonCampaignAnalytics");
@@ -73,8 +73,8 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   const tmp9 = useDisplayNameStylesDefault({ userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true });
   let result = null != tmp9;
   if (result) {
-    result = tmp3(5041).isHexagonCampaignDisplayNameStyle(tmp9);
-    const tmp3Result = tmp3(5041);
+    result = tmp3(5168).isHexagonCampaignDisplayNameStyle(tmp9);
+    const tmp3Result = tmp3(5168);
   }
   importDefault = result;
   let obj4 = { userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true };
@@ -111,7 +111,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -212,8 +212,8 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
     return applyArgumentsResult;
   }, []);
   const tmp3Result2 = require("useMountEffect");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7351).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
-  const items = [analyticsLocations];
+  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7471).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+  items = [analyticsLocations];
   callback3 = obj6.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_DISPLAY_NAME_STYLES, object: constants.PREMIUM_UPSELL_BUTTON }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
@@ -231,7 +231,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   if (availability.availability !== constants5.LOCKED) {
     let obj8 = { style: tmp.labelBadge, children: null };
     const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-    obj8.children = closure_15(tmp6(16488), obj9);
+    obj8.children = closure_15(tmp6(16631), obj9);
     tmp17Result = closure_15(closure_6, obj8);
   }
   obj7.labelTrailing = tmp17Result;
@@ -257,16 +257,16 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
       let obj14 = { maskElement: null, children: null };
       const obj15 = { style: tmp.nameMask, children: null };
       const obj16 = { colors, style: tmp.nameMaskOpaque };
-      const items2 = [closure_15(tmp6(5587), obj16), ];
+      const items2 = [closure_15(tmp6(5710), obj16), ];
       const obj17 = { colors: colors2, start: null, end: null, style: null };
       ({ START: obj23.start, END: obj23.end } = closure_11);
       obj17.style = tmp.nameMaskFade;
-      items2[1] = closure_15(tmp6(5587), obj17);
+      items2[1] = closure_15(tmp6(5710), obj17);
       obj15.children = items2;
       obj14.maskElement = closure_16(tmp31, obj15);
       obj14.children = tmp19;
-      tmp17Result3 = closure_15(tmp6(7038), obj14);
-      const tmp6Result2 = tmp6(7038);
+      tmp17Result3 = closure_15(tmp6(7164), obj14);
+      const tmp6Result2 = tmp6(7164);
     }
   }
   const items3 = [tmp17Result3, ];
@@ -277,10 +277,10 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   obj13.children = items3;
   const items4 = [closure_16(closure_6, obj13), ];
   if (availability.availability === constants5.LOCKED) {
-    let tmp17Result4 = closure_15(tmp3(6984).TableRowArrow, {});
+    let tmp17Result4 = closure_15(tmp3(7110).TableRowArrow, {});
   } else {
     const obj21 = { "aria-hidden": true, value: result, onValueChange: callback2, disabled };
-    tmp17Result4 = closure_15(tmp3(7370).FormSwitch, obj21);
+    tmp17Result4 = closure_15(tmp3(7490).FormSwitch, obj21);
   }
   items4[1] = tmp17Result4;
   obj11.children = items4;

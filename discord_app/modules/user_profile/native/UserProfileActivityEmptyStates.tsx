@@ -1,14 +1,14 @@
-// === Module 14977: UserProfileActivityEmptyStates ===
+// === Module 15113: UserProfileActivityEmptyStates ===
 
-// Module 14977 (UserProfileActivityEmptyStates)
+// Module 15113 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function EmptyState(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.text, children: null };
-  items = [React5(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.centeredText, children: heading }), React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.centeredText, children: bodyText })];
+  items = [React5(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.centeredText, children: heading }), React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.centeredText, children: bodyText })];
   obj2.children = items;
   const items1 = [React6(View, obj2), children];
   obj.children = items1;
@@ -94,7 +94,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -108,9 +108,9 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6041).getName(guildId, channelId, user);
+  name = name(6161).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6041);
+  let obj = name(6161);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
@@ -133,7 +133,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5634).Button, obj4);
+  obj3.children = closure_7(user(5754).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

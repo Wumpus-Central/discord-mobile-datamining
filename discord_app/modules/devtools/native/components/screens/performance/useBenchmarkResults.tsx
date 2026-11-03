@@ -1,6 +1,6 @@
-// === Module 17749: useBenchmarkResults ===
+// === Module 17892: useBenchmarkResults ===
 
-// Module 17749 (useBenchmarkResults)
+// Module 17892 (useBenchmarkResults)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ export default function useBenchmarkResults() {
       label((arg0) => {
         const obj = { kind: "mount", id: +elapsedMs.current, label, elapsedMs };
         elapsedMs.current = +elapsedMs.current + 1;
-        const items = [obj, ...arg0];
+        items = [obj, ...arg0];
         return items;
       });
     }, []),
@@ -27,7 +27,7 @@ export default function useBenchmarkResults() {
         const obj = { kind: "scroll", id: +ref.current };
         ref.current = +ref.current + 1;
         const merged = Object.assign(closure_0);
-        const items = [obj, ...arg0];
+        items = [obj, ...arg0];
         return items;
       });
     }, []),

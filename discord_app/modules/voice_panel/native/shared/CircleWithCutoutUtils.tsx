@@ -1,7 +1,7 @@
-// === Module 11717: CircleWithCutoutUtils ===
+// === Module 11854: CircleWithCutoutUtils ===
 
-// Module 11717 (CircleWithCutoutUtils)
-import inlineStyles from "inlineStyles" /* 8031 */;
+// Module 11854 (CircleWithCutoutUtils)
+import inlineStyles from "inlineStyles" /* 8155 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -22,7 +22,7 @@ export default function CircleWithCutout(arg0) {
   const size = { height: result, width: result, children: null };
   const obj = { children: null };
   const obj2 = { id: "mask", children: null };
-  const items = [React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }), React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
+  items = [React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }), React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
   obj2.children = items;
   obj.children = React4(inlineStyles.Mask, obj2);
   const items1 = [React3(inlineStyles.Defs, obj), ];

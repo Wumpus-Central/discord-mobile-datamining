@@ -1,13 +1,13 @@
-// === Module 7633: ReferralTrialActionCreators ===
+// === Module 7757: ReferralTrialActionCreators ===
 
-// Module 7633 (ReferralTrialActionCreators)
+// Module 7757 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7634 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7758 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -72,7 +72,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
           closure_129_0 = user_ids;
           closure_129_1 = undefined;
           const _Date2 = Date;
-          if (Date.now() >= map1) {
+          if (Date.now() >= state) {
             const obj5 = { type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_START", recipientIds: user_ids };
             DispatcherDefault.dispatch(obj5);
             c3 = 1;
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

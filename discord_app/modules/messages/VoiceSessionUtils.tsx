@@ -1,13 +1,13 @@
-// === Module 8538: VoiceSessionUtils ===
+// === Module 8662: VoiceSessionUtils ===
 
-// Module 8538 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8437 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8539 */;
+// Module 8662 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8561 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8663 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ export function getSortedVoiceSessionParticipants(message) {
       if (null != user) {
         tmp2 = acc;
         if (user.id !== author.author.id) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }
@@ -43,7 +43,7 @@ export function getSortedVoiceSessionParticipants(message) {
 }
 export function useSortedVoiceSessionParticipants(author) {
   closure_129_0 = author;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [author.author.id, author.call];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     const call = stateFromStoresArray.call;
@@ -82,7 +82,7 @@ export function getVoiceSessionMessageContent(channel_id) {
       if (null != user) {
         tmp2 = acc;
         if (user.id !== author.author.id) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }

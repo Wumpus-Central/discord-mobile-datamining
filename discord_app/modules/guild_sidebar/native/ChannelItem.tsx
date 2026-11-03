@@ -1,19 +1,19 @@
-// === Module 18174: ChannelItem ===
+// === Module 18318: ChannelItem ===
 
-// Module 18174 (ChannelItem)
+// Module 18318 (ChannelItem)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 8647 */;
-import BaseChannelItem from "BaseChannelItem" /* 13937 */;
-import _modDef18175 from "module_18175" /* 18175 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 8771 */;
+import BaseChannelItem from "BaseChannelItem" /* 14068 */;
+import _modDef18319 from "module_18319" /* 18319 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -52,7 +52,7 @@ function ChannelIcon(arg0) {
       selected = false;
     }
     obj4.selected = selected;
-    return map1(DMChannelIcon, obj4);
+    return state(DMChannelIcon, obj4);
   } else {
     if (channel.type === tmp4.GROUP_DM) {
       const obj6 = { id: null, icon: null, applicationId: null, size: 20 };
@@ -61,11 +61,11 @@ function ChannelIcon(arg0) {
       const channelIconSource = AvatarUtilsDefault.getChannelIconSource(obj6);
       if (null != channelIconSource) {
         const obj7 = { style: tmp.groupDmAvatar, source: channelIconSource };
-        return map1(FastImageDefault, obj7);
+        return state(FastImageDefault, obj7);
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18175;
+      let tmp12 = _modDef18319;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -89,14 +89,14 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return map1(tmp9(13937).BaseChannelIcon, obj10);
+    return state(tmp9(14068).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
   userId = userId.userId;
   let avatarStatusSelected = userId.selected;
   const tmp = closure_16();
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userId];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const obj = userId(504);
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: null };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "hash" };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;
@@ -118,23 +118,23 @@ const View = fn(17).View;
 const Constants = fn(1072);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
-const UnreadSetting = fn(6776).UnreadSetting;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [, ];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
 const set = new Set(items);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { channelIconLive: { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 }, dmAvatar: { marginRight: 8 }, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
 let obj3 = { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(6778).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { backgroundColor: fn(6778).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 
@@ -148,7 +148,7 @@ export default noop.memo(function ChannelItem(channel) {
   const tmp6 = getChannelMode(channel);
   if (null != channelInfo) {
     let obj = { style: tmp.channelInfoContainer, children: null };
-    const items = [channelInfo, ];
+    items = [channelInfo, ];
     let tmp10 = null;
     if (isSubscriptionGated) {
       const obj2 = { locked: needSubscriptionToAccess };

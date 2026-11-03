@@ -1,14 +1,14 @@
-// === Module 13281: BanConfirm ===
+// === Module 13417: BanConfirm ===
 
-// Module 13281 (BanConfirm)
+// Module 13417 (BanConfirm)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let items = [
   {
     value: 0,
@@ -115,7 +115,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   }
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,
@@ -170,7 +170,7 @@ export default noop.memo(function BanConfirm(arg0) {
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_13282"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_13418"), resizeMode: "contain" };
       const items4 = [closure_9(require("FastImage"), obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;
@@ -180,11 +180,11 @@ export default noop.memo(function BanConfirm(arg0) {
       obj9.username = require("UserUtils").getName(stateFromStores1);
       obj8.children = intl.format(require("util").t.Qd6w7T, obj9);
       items4[1] = closure_9(require("Text/Text").Text, obj8);
-      const obj10 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
+      const obj10 = { variant: "text-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
       items4[2] = closure_9(require("Text/Text").Text, obj10);
       obj6.children = items4;
       const items5 = [closure_10(ref, obj6), , , , , ];
-      const obj11 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
+      const obj11 = { style: tmp.blurb, variant: "heading-md/medium", color: "text-feedback-warning", children: null };
       const intl2 = require("util").intl;
       const obj12 = { user: null };
       const tmp4Result4 = require("UserUtils");

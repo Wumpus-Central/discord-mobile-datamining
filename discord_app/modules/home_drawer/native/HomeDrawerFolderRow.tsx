@@ -1,15 +1,15 @@
-// === Module 18381: HomeDrawerFolderRow ===
+// === Module 18526: HomeDrawerFolderRow ===
 
-// Module 18381 (HomeDrawerFolderRow)
+// Module 18526 (HomeDrawerFolderRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10992 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 11125 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -20,7 +20,7 @@ function Wrapper(folder) {
   const tmp = closure_13();
   closure_1 = tmp;
   const memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
-  let items = [stateFromStoresArray2, UserGuildSettingsStore];
+  items = [stateFromStoresArray2, UserGuildSettingsStore];
   stateFromStoresArray = folder(memo[10]).useStateFromStoresArray(items, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((item) => {
@@ -39,7 +39,7 @@ function Wrapper(folder) {
     const first = stateFromStoresArray[0];
     let tmp2;
     if (null != first) {
-      const guild = GuildStore.getGuild(first);
+      guild = GuildStore.getGuild(first);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -67,7 +67,7 @@ function Wrapper(folder) {
     const first = stateFromStoresArray1[0];
     let tmp2;
     if (null != first) {
-      const guild = GuildStore.getGuild(first);
+      guild = GuildStore.getGuild(first);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -103,7 +103,7 @@ function Wrapper(folder) {
           }
           continue;
         }
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(set, 0);
         return items.some((item) => {
           const isCategoryMutedResult = closure_2_8.isCategoryMuted(closure_0, item);
@@ -122,7 +122,7 @@ function Wrapper(folder) {
     const first = stateFromStoresArray2[0];
     let tmp2;
     if (null != first) {
-      const guild = GuildStore.getGuild(first);
+      guild = GuildStore.getGuild(first);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -140,7 +140,7 @@ function Wrapper(folder) {
       BellSlashIcon = NOOP;
     }
     const obj = { style: closure_1.title, children: null };
-    const items = [closure_2_11(BellSlashIcon, { size: "xs" }), ];
+    items = [closure_2_11(BellSlashIcon, { size: "xs" }), ];
     const obj2 = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
     let folderName = folder.folderName;
     if (folderName == null) {
@@ -150,7 +150,7 @@ function Wrapper(folder) {
     obj2.children = folderName;
     items[1] = closure_2_11(Text_Text.Text, obj2);
     obj.children = items;
-    return closure_2_12(View, obj);
+    return application_id(View, obj);
   }, items6);
   let intl = folder(memo[13]).intl;
   const formatResult = intl.format(folder(memo[13]).t.knOfkb, { num: folder.guildIds.length });
@@ -206,14 +206,14 @@ const View = fn(17).View;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;
-  const items = [SortedGuildStore];
+  items = [SortedGuildStore];
   const stateFromStores = folderId(504).useStateFromStores(items, () => {
     let guildFolderById = null;
     if (null != folderId) {
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5204).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5327).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

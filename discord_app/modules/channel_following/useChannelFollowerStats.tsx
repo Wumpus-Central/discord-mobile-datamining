@@ -1,11 +1,11 @@
-// === Module 14531: useChannelFollowerStats ===
+// === Module 14662: useChannelFollowerStats ===
 
-// Module 14531 (useChannelFollowerStats)
+// Module 14662 (useChannelFollowerStats)
 import DurationsDefault from "Durations" /* 1089 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11202 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 14532 */;
+import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 14663 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ export default function useChannelFollowerStats(arg0) {
   const tmp = stateFromStores(noop.useState(false), 2);
   const first = tmp[0];
   dependencyMap = tmp[1];
-  const items = [ChannelFollowerStatsStore];
+  items = [ChannelFollowerStatsStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(items, () => ChannelFollowerStatsStore.getFollowerStatsForChannel(closure_0), items1);
   const items2 = [arg0, stateFromStores, first];

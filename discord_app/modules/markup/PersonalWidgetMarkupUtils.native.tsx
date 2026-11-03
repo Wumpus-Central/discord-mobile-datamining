@@ -1,11 +1,11 @@
-// === Module 14969: PersonalWidgetMarkupUtils ===
+// === Module 15106: PersonalWidgetMarkupUtils ===
 
-// Module 14969 (PersonalWidgetMarkupUtils)
-import MarkupReactRulesDefault from "MarkupReactRules" /* 5755 */;
-import MarkupRulesDefault from "MarkupRules" /* 6034 */;
-import combineMarkupRules from "combineMarkupRules" /* 6033 */;
+// Module 15106 (PersonalWidgetMarkupUtils)
+import MarkupReactRulesDefault from "MarkupReactRules" /* 5875 */;
+import MarkupRulesDefault from "MarkupRules" /* 6154 */;
+import combineMarkupRules from "combineMarkupRules" /* 6153 */;
 import apply from "module_12" /* 12 */;
-import MarkupParser from "MarkupParser" /* 8444 */;
+import MarkupParser from "MarkupParser" /* 8568 */;
 
 const items = [apply.pick(MarkupRulesDefault.RULES, ["escape", "text", "strong", "em", "u", "url", "autolink", "emoji", "invisibleUnicode"]), MarkupReactRulesDefault()];
 const reactParserForResult = MarkupParser.reactParserFor(combineMarkupRules(items));

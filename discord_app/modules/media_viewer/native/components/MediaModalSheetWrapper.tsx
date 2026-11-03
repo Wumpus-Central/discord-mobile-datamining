@@ -1,7 +1,7 @@
-// === Module 8862: MediaModalSheetWrapper ===
+// === Module 8986: MediaModalSheetWrapper ===
 
-// Module 8862 (MediaModalSheetWrapper)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 8986 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import noop from "module_19" /* 19 */;
 
 const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
@@ -14,7 +14,7 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
   context = noop.useContext(onCloseCallback(context[3]));
-  const items = [context];
+  items = [context];
   const effect = noop.useEffect(() => {
     let transitionState;
     if (context != null) {

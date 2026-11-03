@@ -1,12 +1,12 @@
-// === Module 9442: GameProfileCommunity ===
+// === Module 9570: GameProfileCommunity ===
 
-// Module 9442 (GameProfileCommunity)
-import transitionToGuild from "transitionToGuild" /* 7522 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import GameProfileSection from "GameProfileSection" /* 9437 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9438 */;
-import GameProfileGuildCard from "GameProfileGuildCard" /* 9443 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9444 */;
+// Module 9570 (GameProfileCommunity)
+import transitionToGuild from "transitionToGuild" /* 7646 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import GameProfileSection from "GameProfileSection" /* 9565 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9566 */;
+import GameProfileGuildCard from "GameProfileGuildCard" /* 9571 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function GameProfileCommunityServer(closeModal) {
   const tmp3 = closeModal(invite[5])(game, closeModal.onInviteResolved);
   invite = tmp3.invite;
   const isMember = tmp3.isMember;
-  const items = [invite, isMember, trackAction, closeModal];
+  items = [invite, isMember, trackAction, closeModal];
   const result = trackAction(invite[5]).hasGameProfileDiscordWebsite(game);
   if (null != invite) {
     if (null != invite.guild) {

@@ -1,24 +1,24 @@
-// === Module 17617: toggleDismissibleContentDismissState ===
+// === Module 17760: toggleDismissibleContentDismissState ===
 
-// Module 17617 (toggleDismissibleContentDismissState)
+// Module 17760 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const UserSettingsProtoActionCreators = obj(4844);
-const DismissibleContentUtils = obj(4848);
-const DismissibleContentTypes = obj(4854);
-const VersionedDismissibleContentUtils = obj(4861);
-const DismissibleContentFrameworkActionCreators = obj(5690);
+const UserSettingsProtoActionCreators = obj(4971);
+const DismissibleContentUtils = obj(4975);
+const DismissibleContentTypes = obj(4981);
+const VersionedDismissibleContentUtils = obj(4988);
+const DismissibleContentFrameworkActionCreators = obj(5810);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
   let obj2 = require("DismissibleContentUnsafeUtils");

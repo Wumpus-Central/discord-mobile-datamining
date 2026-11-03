@@ -1,14 +1,14 @@
-// === Module 15617: useHasXboxMonthlyOrbsPerk ===
+// === Module 15759: useHasXboxMonthlyOrbsPerk ===
 
-// Module 15617 (useHasXboxMonthlyOrbsPerk)
+// Module 15759 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
-import PerksStateUtils from "PerksStateUtils" /* 1389 */;
-import user from "user" /* 1391 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import UserStore from "UserStore" /* 1383 */;
+import PerksStateUtils from "PerksStateUtils" /* 1391 */;
+import user from "user" /* 1393 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
@@ -31,7 +31,7 @@ export function hasCrepeMonthlyOrbsPerk(currentUser) {
   return false;
 }
 export function useHasXboxMonthlyOrbsPerk() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {

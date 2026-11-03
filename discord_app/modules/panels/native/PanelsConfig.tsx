@@ -1,16 +1,17 @@
-// === Module 18057: PanelsConfig ===
+// === Module 18201: PanelsConfig ===
 
-// Module 18057 (PanelsConfig)
+// Module 18201 (PanelsConfig)
 import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 
+const items = [{ code: "(function isTimingConfig_PanelsConfigTsx1(obj){return obj!=null&&obj.duration!=null;})" }];
+[tmp2] = items;
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;
 }
-isTimingConfig.__closure = {};
-isTimingConfig.__workletHash = 14033676769786;
-isTimingConfig.__initData = { code: "function isTimingConfig_PanelsConfigTsx1(obj){return obj!=null&&obj.duration!=null;}" };
-const obj = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+isTimingConfig.__workletHash = 10621424907195;
+isTimingConfig.__initData = tmp2;
+const obj = { mass: 1, stiffness: 250, overshootClamping: true };
 const merged = Object.assign(obj);
 const merged1 = Object.assign(obj);
 const obj4 = { duration: 250, easing: native.STANDARD_EASING };

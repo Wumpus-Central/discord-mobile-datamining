@@ -1,8 +1,8 @@
-// === Module 17151: QuestThemePicker ===
+// === Module 17294: QuestThemePicker ===
 
-// Module 17151 (QuestThemePicker)
+// Module 17294 (QuestThemePicker)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17009 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17152 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -37,7 +37,7 @@ class QuestThemePicker {
     items3 = [];
     items3[0] = allMobileThemes;
     memo = closure_3.useMemo(() => {
-      const items = [, , ];
+      items = [, , ];
       ({ LIGHT: arr[0], DARK: arr[1], ONYX: arr[2] } = ThemeTypes);
       return allMobileThemes.filter((type) => {
         let hasItem = type.type === items(allMobileThemes[13]).ClientThemeType.STANDARD_BACKGROUND_THEME;
@@ -106,7 +106,7 @@ class QuestThemePicker {
         },
         children: null
       };
-      const items = [backgroundColor.themeCircle, { backgroundColor: backgroundColor.color }, ];
+      items = [backgroundColor.themeCircle, { backgroundColor: backgroundColor.color }, ];
       let themeCircleSelected = stateFromStores === backgroundColor.theme;
       if (themeCircleSelected) {
         themeCircleSelected = tmp3.themeCircleSelected;
@@ -136,8 +136,8 @@ get_ActivityIndicator = fn(17);
 let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { themeSection: { marginBottom: nativeDefault.space.PX_8 }, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -152,7 +152,7 @@ let obj6 = { borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BO
 obj2.resetButton = { alignItems: "center", gap: nativeDefault.space.PX_4 };
 const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.round, borderWidth: 2, borderColor: "transparent", justifyContent: "center", alignItems: "center" };
 obj2.resetIcon = size1;
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestThemePicker.tsx");
 

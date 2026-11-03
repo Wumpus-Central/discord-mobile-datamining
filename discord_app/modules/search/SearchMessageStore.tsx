@@ -1,14 +1,14 @@
-// === Module 6863: SearchMessageStore ===
+// === Module 6983: SearchMessageStore ===
 
-// Module 6863 (SearchMessageStore)
+// Module 6983 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ReactionUtils from "ReactionUtils" /* 4958 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6446 */;
+import ReactionUtils from "ReactionUtils" /* 5085 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6566 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 function handleReaction(optimistic) {
@@ -82,7 +82,7 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
 };
 prototype["handleSearchSuccess"] = function handleSearchSuccess(analyticsId, arr) {
   const self = this;
-  let items;
+  items = undefined;
   let items1;
   this.analyticsId = analyticsId.analyticsId;
   this.isFetching = false;

@@ -1,9 +1,9 @@
-// === Module 19151: useIsConnectedToVoiceChannel ===
+// === Module 19309: useIsConnectedToVoiceChannel ===
 
-// Module 19151 (useIsConnectedToVoiceChannel)
+// Module 19309 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useI
 
 export default function useIsConnectedToVoiceChannel(arg0) {
   _require = arg0;
-  const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
+  items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     const channelId = RTCConnectionStore.getChannelId();
     let tmp2 = closure_0;
@@ -26,7 +26,7 @@ export default function useIsConnectedToVoiceChannel(arg0) {
     } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
       return true;
     } else {
-      const state = RTCConnectionStore.getState();
+      state = RTCConnectionStore.getState();
       if (RTCConnectionStates.DISCONNECTED !== state) {
         if (RTCConnectionStates.NO_ROUTE !== state) {
           return true;

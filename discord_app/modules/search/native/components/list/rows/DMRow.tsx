@@ -1,20 +1,20 @@
-// === Module 18716: DMRow ===
+// === Module 18874: DMRow ===
 
-// Module 18716 (DMRow)
+// Module 18874 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import _modDef9060 from "module_9060" /* 9060 */;
-import BotTagDefault from "BotTag" /* 9202 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10745 */;
-import _modDef15389 from "module_15389" /* 15389 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import _modDef9188 from "module_9188" /* 9188 */;
+import BotTagDefault from "BotTag" /* 9330 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10875 */;
+import _modDef15530 from "module_15530" /* 15530 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const UserUtilsDefault = UserUtils;
 
@@ -24,12 +24,12 @@ function FriendPresence(user) {
   ({ type, animate, guildId } = user);
   if (type === constants2.PENDING_INCOMING) {
     const obj2 = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: UserUtils.getUserTag(user) };
-    let tmp5 = map1(Text_Text.Text, obj2);
+    let tmp5 = state(Text_Text.Text, obj2);
   } else {
     const obj = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
     ({ activityStatusIcon: obj.iconStyle, activityStatusText: obj.textStyle } = tmp);
     obj.animate = animate;
-    tmp5 = map1(ActivityStatusDefault, obj);
+    tmp5 = state(ActivityStatusDefault, obj);
   }
   return tmp5;
 }
@@ -39,7 +39,7 @@ const Constants = fn(1072);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
@@ -60,7 +60,7 @@ export default noop.memo(function DMRow(user) {
   const title = tmp;
   const tmp2 = type(guildId.useState(false), 2);
   const useReducedMotion = tmp2[1];
-  let items = [isMobileOnline];
+  items = [isMobileOnline];
   const stateFromStoresObject = user(premiumSince[14]).useStateFromStoresObject(items, () => ({ isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id), status: PresenceStore.getStatus(user.id) }));
   isMobileOnline = stateFromStoresObject.isMobileOnline;
   const isVROnline = stateFromStoresObject.isVROnline;
@@ -91,7 +91,7 @@ export default noop.memo(function DMRow(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ export default noop.memo(function DMRow(user) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;
@@ -156,34 +156,34 @@ export default noop.memo(function DMRow(user) {
   const items5 = [user, status, isMobileOnline, isVROnline, guildId];
   const memo = obj.useMemo(() => {
     const obj = { style: title.title, children: null };
-    const items = [map1(Text_Text.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name }), , , ];
+    items = [state(Text_Text.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name }), , , ];
     const bot = user.bot;
     if (!bot) {
       items[1] = bot;
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9060, disableColor: true };
-        obj4.children = map1(native.Icon, obj5);
-        tmp4Result = map1(timestampProducer, obj4);
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9188, disableColor: true };
+        obj4.children = state(native.Icon, obj5);
+        tmp4Result = state(timestampProducer, obj4);
       }
       items[2] = tmp4Result;
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15389, disableColor: true };
-        obj6.children = map1(native.Icon, obj7);
-        tmp4Result3 = map1(timestampProducer, obj6);
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15530, disableColor: true };
+        obj6.children = state(native.Icon, obj7);
+        tmp4Result3 = state(timestampProducer, obj6);
       }
       items[3] = tmp4Result3;
       obj.children = items;
-      return closure_2_14(timestampProducer, obj);
+      return gesture(timestampProducer, obj);
     } else {
       const obj8 = { style: title.tag, verified: user.isVerifiedBot(), type: null };
       const tmp8 = BotTagDefault;
       const Types = BotTagDefault.Types;
       obj8.type = user.isSystemUser() ? Types.SYSTEM_DM : Types.BOT;
-      map1(tmp8, obj8);
+      state(tmp8, obj8);
       const isSystemUserResult = user.isSystemUser();
     }
     const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
@@ -200,21 +200,21 @@ export default noop.memo(function DMRow(user) {
     obj.isVROnline = isVROnline;
     obj.size = native.AvatarSizes.LARGE_48;
     obj.avatarDecoration = user.avatarDecoration;
-    return map1(native.Avatar, obj);
+    return state(native.Avatar, obj);
   }, items5);
   const memo2 = obj.useMemo(() => {
     const userTag = UserUtilsDefault.getUserTag(user);
     if (null != userTag) {
       if (!user.isProvisional) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", children: userTag };
-        let tmp6 = map1(Text_Text.Text, obj2);
+        let tmp6 = state(Text_Text.Text, obj2);
       }
       return tmp6;
     }
     let tmp8 = null;
     if (null != type) {
       const obj3 = { user, guildId, type: tmp7, animate: !stateFromStores };
-      tmp8 = map1(FriendPresence, obj3);
+      tmp8 = state(FriendPresence, obj3);
     }
     tmp6 = tmp8;
   }, items6);

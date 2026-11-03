@@ -1,7 +1,7 @@
-// === Module 11223: VoicePanelConstants ===
+// === Module 11360: VoicePanelConstants ===
 
-// Module 11223 (VoicePanelConstants)
-import PlatformUtils_mod from "PlatformUtils" /* 1375 */;
+// Module 11360 (VoicePanelConstants)
+import PlatformUtils_mod from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
@@ -24,11 +24,15 @@ PlatformUtils = PlatformUtils.isIOS();
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
 
 export { VoicePanelModes };
-export function getAnalyticsNameForVoicePanelMode(arg0) {
+export function getAnalyticsNameForVoicePanelMode(arg0, arg1) {
   if (obj.DISMISSED === arg0) {
     return "dismissed";
   } else if (obj.PIP === arg0) {
-    return "pip";
+    let str2 = "pip";
+    if (arg1) {
+      str2 = "dock";
+    }
+    return str2;
   } else if (obj.PANEL === arg0) {
     return "grid";
   }
@@ -43,7 +47,7 @@ export const MODE_CHANGE_PHYSICS = obj2;
 export const MODE_CHANGE_PHYSICS_CLAMPED = obj3;
 export const BORDER_RADIUS_PHYSICS = obj4;
 export const PANEL_CONTROLS_HEIGHT_PHYSICS = obj5;
-export const SPEAKING_PHYSICS = { mass: 0.32, damping: 10, stiffness: 300, restDisplacementThreshold: 0.001, restSpeedThreshold: 0.001, overshootClamping: true };
+export const SPEAKING_PHYSICS = { mass: 0.32, damping: 10, stiffness: 300, overshootClamping: true };
 export const PUSH_TO_TALK_PIP_PHYSICS = { damping: 20, mass: 0.1, stiffness: 100 };
 export const DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE = { mass: 0.1, damping: 20, stiffness: 500 };
 export const GridItemTypes = { USER: "USER", STREAM: "STREAM", ACTIVITY: "ACTIVIY" };

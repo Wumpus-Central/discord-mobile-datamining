@@ -1,8 +1,8 @@
-// === Module 11259: useIsMessageRequest ===
+// === Module 11396: useIsMessageRequest ===
 
-// Module 11259 (useIsMessageRequest)
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+// Module 11396 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 const require = globalThis.__r;
 
@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMe
 
 export function useIsMessageRequest(id) {
   _require = id;
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => MessageRequestStore.isMessageRequest(closure_0), items1);
 }
 export function useIsEitherTypeOfMessageRequest(id) {
   _require = id;
-  const items = [MessageRequestStore, SpamMessageRequestStore];
+  items = [MessageRequestStore, SpamMessageRequestStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

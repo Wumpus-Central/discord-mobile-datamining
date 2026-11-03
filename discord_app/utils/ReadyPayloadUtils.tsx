@@ -1,15 +1,15 @@
-// === Module 15569: ReadyPayloadUtils ===
+// === Module 15710: ReadyPayloadUtils ===
 
-// Module 15569 (ReadyPayloadUtils)
+// Module 15710 (ReadyPayloadUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4909 */;
-import ChannelReaderDefault from "ChannelReader" /* 4913 */;
-import isCacheEnabled from "isCacheEnabled" /* 7791 */;
-import GuildVersionsDefault from "GuildVersions" /* 7795 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7796 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 5036 */;
+import ChannelReaderDefault from "ChannelReader" /* 5040 */;
+import isCacheEnabled from "isCacheEnabled" /* 7915 */;
+import GuildVersionsDefault from "GuildVersions" /* 7919 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7920 */;
 import size from "module_2" /* 2 */;
 
 function hydrateGuild(guild) {
@@ -216,7 +216,7 @@ function hydratePreviouslyUnavailableGuild(data_mode) {
   return obj8;
 }
 function collectThreadMessages(threads) {
-  const items = [];
+  items = [];
   if (null != threads) {
     const iter = threads[Symbol.iterator]();
     const nextResult = iter.next();
@@ -242,7 +242,7 @@ export function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
     friends = merged_presences.friends;
   }
   closure_129_0 = closure_5;
-  let items = [];
+  items = [];
   closure_129_1 = items;
   if (friends != null) {
     let item = friends.forEach((user_id) => {
@@ -267,7 +267,7 @@ export function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
         tmp2 = merged_presences.guilds[index];
       }
       closure_0 = closure_5;
-      const items = [];
+      items = [];
       let items1 = items;
       if (tmp2 != null) {
         const item = tmp2.forEach((user_id) => {
@@ -362,7 +362,7 @@ export function preloadReadyPayloadData() {
   } else {
     okAsyncResult = Promise.resolve(false);
   }
-  const items = [committedVersions, guildIds, okAsyncResult];
+  items = [committedVersions, guildIds, okAsyncResult];
   tmp4Result = isCacheEnabled;
   return Promise.all(items).then((result) => {
     [tmp, tmp2, tmp3] = result;
@@ -404,7 +404,7 @@ export function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTi
           tmp5 = tmp3[index];
         }
         dependencyMap = closure_5;
-        const items = [];
+        items = [];
         if (tmp5 != null) {
           const item = tmp5.forEach((user_id) => {
             if (null != user_id) {

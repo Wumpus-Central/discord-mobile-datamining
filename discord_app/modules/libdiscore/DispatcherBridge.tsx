@@ -1,16 +1,16 @@
-// === Module 20147: DispatcherBridge ===
+// === Module 20326: DispatcherBridge ===
 
-// Module 20147 (DispatcherBridge)
+// Module 20326 (DispatcherBridge)
 import LoggerDefault from "Logger" /* 3 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4889 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6797 */;
-import GuildStickersStore from "GuildStickersStore" /* 6838 */;
-import NoteStore from "NoteStore" /* 14909 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5016 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6917 */;
+import GuildStickersStore from "GuildStickersStore" /* 6958 */;
+import NoteStore from "NoteStore" /* 15040 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -122,7 +122,7 @@ class DispatcherBridge {
                 const _performance3 = performance;
                 const diff = performance.now() - nowResult;
                 ({ metrics, storeResults } = iter.value);
-                const items = [];
+                items = [];
                 for (const item10056 of storeResults) {
                   if (null != item10056.error) {
                     let handleStoreErrorResult = obj.handleStoreError(item10056, arg0.type);
@@ -217,7 +217,7 @@ class DispatcherBridge {
           _Object = Object;
           tmp25 = closure_0;
           fromEntriesResult = Object.fromEntries(registeredActionTypes.map((item) => {
-            const items = [item, actionHandler];
+            items = [item, actionHandler];
             return items;
           }));
           str17 = "LibDiscoreDispatcherBridge";

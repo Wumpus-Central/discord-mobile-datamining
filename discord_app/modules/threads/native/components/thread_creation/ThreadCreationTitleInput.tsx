@@ -1,10 +1,10 @@
-// === Module 18668: ThreadCreationTitleInput ===
+// === Module 18826: ThreadCreationTitleInput ===
 
-// Module 18668 (ThreadCreationTitleInput)
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7455 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
+// Module 18826 (ThreadCreationTitleInput)
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7579 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = fn;
 const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;
@@ -20,7 +20,7 @@ export default noop.memo(function ThreadCreationTitleInput(chatInputRef) {
   let obj = chatInputRef(ref[4]);
   let obj2 = { content: threadSettingsDraft.name };
   ref1 = ref1.useRef(threadSettingsDraft.name);
-  const items = [threadSettingsDraft.parentChannelId];
+  items = [threadSettingsDraft.parentChannelId];
   const items1 = [threadSettingsDraft];
   const callback = ref1.useCallback((current) => {
     if (null != threadSettingsDraft.parentChannelId) {

@@ -1,39 +1,39 @@
-// === Module 14092: GuildPowerupsBottomSheet ===
+// === Module 14223: GuildPowerupsBottomSheet ===
 
-// Module 14092 (GuildPowerupsBottomSheet)
+// Module 14223 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import GameServerHostingRive from "GameServerHostingRive" /* 5169 */;
-import GameServerConstants from "GameServerConstants" /* 5231 */;
-import Powerups from "Powerups" /* 5233 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9077 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14072 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14076 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14087 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 14093 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 14094 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 14095 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14097 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14098 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 14100 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 14101 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 14107 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 14108 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 14109 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 14113 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 14117 */;
-import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 14119 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5230 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import GameServerHostingRive from "GameServerHostingRive" /* 5292 */;
+import GameServerConstants from "GameServerConstants" /* 5354 */;
+import Powerups from "Powerups" /* 5356 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9205 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14203 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14207 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14218 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 14224 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 14225 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 14226 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14228 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14229 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 14231 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 14232 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 14238 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 14239 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 14240 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 14244 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 14248 */;
+import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 14250 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5353 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function GuildPowerupsBottomSheetHeader(arg0) {
@@ -46,7 +46,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (str == null) {
     str = "";
   }
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let str2;
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (powerup.skuId === closure_7) {
@@ -72,7 +72,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   const obj7 = { children: null };
   const items1 = [tmp15, ];
   const obj8 = { style: tmp.headerContainer, children: null };
-  const items2 = [tmp14(Text_Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: powerup.title }), tmp14(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
+  const items2 = [tmp14(Text_Text.Text, { variant: "heading-xl/semibold", accessibilityRole: "header", children: powerup.title }), tmp14(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
   obj8.children = items2;
   items1[1] = React7(View, obj8);
   obj7.children = items1;
@@ -87,7 +87,7 @@ function GuildPowerupsBottomSheetLevelBody(powerup) {
     children: useGuildPowerupLevelPerksDefault(powerup.powerup).map((children, index) => {
       const obj2 = { style: closure_0.perkContainer, children: null };
       const iconForPerk = GuildBoostingMarketingUtils.getIconForPerk(children.perkIcon);
-      const items = [React6(Text_Text.Text, { style: closure_0.perkText, variant: "text-md/medium", children: children.description }), React6(iconForPerk, { style: closure_0.perkIcon })];
+      items = [React6(Text_Text.Text, { style: closure_0.perkText, variant: "text-md/medium", children: children.description }), React6(iconForPerk, { style: closure_0.perkIcon })];
       obj2.children = items;
       return React7(View, obj2, "perk-" + index + "-" + children.perkIcon);
     })
@@ -99,7 +99,7 @@ function GuildPowerupsBottomSheetBody(powerup) {
   const type = powerup.type;
   if (constants.PERK === type) {
     const obj2 = { style: tmp.description, variant: "text-md/medium", children: powerup.description };
-    const items = [React6(Text_Text.Text, obj2), ];
+    items = [React6(Text_Text.Text, obj2), ];
     let tmp5Result = null != powerup.deactivationCooldownPeriodDays;
     if (tmp5Result) {
       tmp5Result = powerup.deactivationCooldownPeriodDays > 0;
@@ -111,7 +111,7 @@ function GuildPowerupsBottomSheetBody(powerup) {
       const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { cooldownDays: powerup.deactivationCooldownPeriodDays };
-      obj5.children = intl.formatToPlainString(_modDef2570.GMhQcE, obj6);
+      obj5.children = intl.formatToPlainString(_modDef2699.GMhQcE, obj6);
       items1[1] = React6(Text_Text.Text, obj5);
       obj3.children = items1;
       tmp5Result = React7(View, obj3);
@@ -163,12 +163,12 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     }
     const obj = { style: tmp.footerContainer, children: null };
     if (tmp14) {
-      const obj2 = { style: tmp.description, variant: "text-md/bold", children: null };
+      const obj2 = { style: tmp.description, variant: "text-md/semibold", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef2570["jo5++h"]);
+      obj2.children = intl.string(_modDef2699["jo5++h"]);
       tmp14 = React6(Text_Text.Text, obj2);
     }
-    const items = [tmp14, , , ];
+    items = [tmp14, , , ];
     let tmp21 = disabled;
     if (disabled) {
       tmp21 = null != reason;
@@ -181,7 +181,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (showConfigureButton) {
       const obj4 = { variant: "primary", text: null, onPress: null };
       const intl2 = util.intl;
-      obj4.text = intl2.string(_modDef2570.g5Ds69);
+      obj4.text = intl2.string(_modDef2699.g5Ds69);
       obj4.onPress = tmp10;
       showConfigureButton = React6(components_Button_Button.Button, obj4);
     }
@@ -201,7 +201,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       const obj5 = { variant: str, text: null, loading: null, disabled: null, onPress: null };
       const intl3 = util.intl;
       const string = intl3.string;
-      let TZsu1U = _modDef2570;
+      let TZsu1U = _modDef2699;
       if (isPowerupActive) {
         TZsu1U = TZsu1U.TZsu1U;
         let stringResult = string(TZsu1U);
@@ -230,7 +230,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let obj = { container: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, headerContainer: null, statusContainer: null, levelContainer: null, perkContainer: null, perkIcon: null, perkText: null, footerContainer: null, image: null, description: null, cooldownInfo: null, gemContainer: null };
 let obj2 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.headerContainer = { marginTop: nativeDefault.space.PX_24, alignItems: "center" };
@@ -260,7 +260,7 @@ export default function GuildPowerupsBottomSheet(arg0) {
   const logPowerupModalOpened = GuildPowerupAnalytics.useLogPowerupModalOpened(guildId, powerup, GuildPowerupAnalytics.ModalType.DETAIL);
   const obj2 = { startExpanded: true, children: null };
   const obj3 = { style: tmp.container, children: null };
-  const items = [React6(GuildPowerupsBottomSheetHeader, { guildId, powerup }), React6(GuildPowerupsBottomSheetBody, { guildId, powerup }), React6(GuildPowerupsBottomSheetFooter, { guildId, powerup })];
+  items = [React6(GuildPowerupsBottomSheetHeader, { guildId, powerup }), React6(GuildPowerupsBottomSheetBody, { guildId, powerup }), React6(GuildPowerupsBottomSheetFooter, { guildId, powerup })];
   obj3.children = items;
   obj2.children = React7(View, obj3);
   return React6(Sheet_BottomSheet.BottomSheet, obj2);

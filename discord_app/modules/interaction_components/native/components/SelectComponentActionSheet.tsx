@@ -1,15 +1,15 @@
-// === Module 12156: SelectComponentActionSheet ===
+// === Module 12292: SelectComponentActionSheet ===
 
-// Module 12156 (SelectComponentActionSheet)
+// Module 12292 (SelectComponentActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import TableRow from "TableRow" /* 6975 */;
-import FormCheckbox from "FormCheckbox" /* 6989 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9203 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import TableRow from "TableRow" /* 7101 */;
+import FormCheckbox from "FormCheckbox" /* 7115 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9331 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function SelectionHeader(renderIcon) {
@@ -19,7 +19,7 @@ function SelectionHeader(renderIcon) {
   let tmp = closure_11();
   closure_5 = tmp;
   noop.useRef(null);
-  const items = [selectedOptions, tmp, renderIcon];
+  items = [selectedOptions, tmp, renderIcon];
   const memo = noop.useMemo(() => {
     let mapped;
     if (selectedOptions != null) {
@@ -65,10 +65,10 @@ function SelectionHeader(renderIcon) {
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1113).intl;
     obj3.text = intl3.string(tmp6(1113).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5634).Button, obj3);
+    tmp5Result = closure_8(tmp6(5754).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(7321).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(7441).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -95,15 +95,15 @@ function SelectionHeader(renderIcon) {
           tmp2(arg0, tmp);
         }
       };
-      obj4.onChangeText = function onChangeText(ref) {
+      obj4.onChangeText = function onChangeText(arg0) {
         const current = ref.current;
         if (current != null) {
           current.scrollTo({ y: 0, animated: false });
         }
-        onQueryChange(ref);
+        onQueryChange(arg0);
       };
-      tmp5Result4 = closure_8(selectedOptions(9062), obj4);
-      const tmp13 = selectedOptions(9062);
+      tmp5Result4 = closure_8(selectedOptions(9190), obj4);
+      const tmp13 = selectedOptions(9190);
     }
   }
   children[1] = tmp5Result4;
@@ -140,7 +140,7 @@ function SelectionOptionItem(item) {
   let tmp6Result = null;
   if (!skipIcon) {
     const obj3 = { style: null, children: null };
-    const items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
+    items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
     obj3.style = items;
     obj3.children = renderIcon(item);
     tmp6Result = React6(View, obj3);
@@ -179,10 +179,10 @@ function SelectionOptionItem(item) {
   return React6(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;
-let closure_7 = fn(5273).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(5396).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -222,7 +222,7 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     const obj = selectionActionComponent(selectedCount[18]);
     return renderOptionSuffix * (selectionActionComponent(selectedCount[19]).getWindowDimensions().height - selectionActionComponent(selectedCount[20]).NAV_BAR_HEIGHT_MULTILINE - safeAreaInsets.top);
   }, []);
-  const items = [renderDescription];
+  items = [renderDescription];
   const stateFromStores = selectionActionComponent(selectedCount[21]).useStateFromStores(items, () => renderDescription.getChannelId());
   const channel = skipIcon.getChannel(channelId);
   const items1 = [stateFromStores, channelId, channel];

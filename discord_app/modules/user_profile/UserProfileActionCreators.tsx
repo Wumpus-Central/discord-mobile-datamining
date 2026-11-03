@@ -1,18 +1,18 @@
-// === Module 8738: UserProfileActionCreators ===
+// === Module 8862: UserProfileActionCreators ===
 
-// Module 8738 (UserProfileActionCreators)
+// Module 8862 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5021 */;
-import InlineUploaderDefault from "InlineUploader" /* 7153 */;
-import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7157 */;
-import MessageParserDefault from "MessageParser" /* 7824 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8739 */;
+import shared from "shared" /* 5148 */;
+import InlineUploaderDefault from "InlineUploader" /* 7274 */;
+import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7278 */;
+import MessageParserDefault from "MessageParser" /* 7948 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let closure_11 = async function _saveProfileChanges(arg0) {
@@ -26,7 +26,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } else if (1 === tmp7) {
@@ -138,8 +138,8 @@ let closure_11 = async function _saveProfileChanges(arg0) {
 };
 const Constants = fn(1072);
 ({ ComponentActions: hasOwnProperty, AnalyticEvents: metroRequire, Endpoints: closure_7, ME: closure_8 } = Constants);
-const PremiumConstants = fn(1385);
-({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: c10 } = PremiumConstants);
+const PremiumConstants = fn(1387);
+({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: closure_10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 

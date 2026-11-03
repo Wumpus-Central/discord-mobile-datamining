@@ -1,10 +1,10 @@
-// === Module 16872: ConnectionsSetting ===
+// === Module 17015: ConnectionsSetting ===
 
-// Module 16872 (ConnectionsSetting)
+// Module 17015 (ConnectionsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import LinkIcon from "LinkIcon" /* 5727 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import LinkIcon from "LinkIcon" /* 5847 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const route = SettingBuilders.createRoute({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3fe7U5"]), ];
+    items = [intl.string(util.t["3fe7U5"]), ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["f6kk+r"]);
     return items;

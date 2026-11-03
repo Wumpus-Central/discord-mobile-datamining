@@ -1,8 +1,8 @@
-// === Module 12660: useConjurePublishedServerName ===
+// === Module 12796: useConjurePublishedServerName ===
 
-// Module 12660 (useConjurePublishedServerName)
-import GuildStore from "GuildStore" /* 4885 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+// Module 12796 (useConjurePublishedServerName)
+import GuildStore from "GuildStore" /* 5012 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -12,16 +12,16 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePub
 
 export default function useConjurePublishedServerName(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore, GuildStore];
+  items = [ConjureProjectStore, GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let tmp2 = null;
     if (null != project) {
       tmp2 = null;
-      if ("user" !== project.install_scope) {
+      if ("guild" === project.install_scope) {
         tmp2 = null;
         if (null != project.guild_id) {
-          let guild = GuildStore.getGuild(project.guild_id);
+          guild = GuildStore.getGuild(project.guild_id);
           if (guild == null) {
             guild = null;
           }

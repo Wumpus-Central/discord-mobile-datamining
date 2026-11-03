@@ -1,20 +1,20 @@
-// === Module 15713: ActivateDeviceSuccess ===
+// === Module 15856: ActivateDeviceSuccess ===
 
-// Module 15713 (ActivateDeviceSuccess)
+// Module 15856 (ActivateDeviceSuccess)
 import util from "util" /* 1113 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import scopes2 from "scopes" /* 9743 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15712 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import scopes2 from "scopes" /* 9875 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15855 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
@@ -40,9 +40,9 @@ export function ActivateDeviceSuccess(onComplete) {
     obj.style = tmp.image;
     tmp9 = React4(tmp13, obj);
   }
-  const items = [tmp9, , ];
+  items = [tmp9, , ];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
-  const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
+  const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
   const intl3 = util.intl;
   obj4.children = intl3.string(util.t.qDtJmD);
   const items1 = [React4(Text_Text.Text, obj4), ];

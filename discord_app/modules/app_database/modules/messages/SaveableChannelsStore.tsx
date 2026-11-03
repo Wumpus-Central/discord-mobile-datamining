@@ -1,17 +1,17 @@
-// === Module 7657: SaveableChannelsStore ===
+// === Module 7781: SaveableChannelsStore ===
 
-// Module 7657 (SaveableChannelsStore)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7659 */;
-import Lru from "Lru" /* 7660 */;
-import isPrivateChannel from "isPrivateChannel" /* 7662 */;
-import isReadableChannel from "isReadableChannel" /* 7663 */;
-import isLimitedChannel from "isLimitedChannel" /* 7664 */;
-import withFallbacks from "withFallbacks" /* 7665 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+// Module 7781 (SaveableChannelsStore)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7783 */;
+import Lru from "Lru" /* 7784 */;
+import isPrivateChannel from "isPrivateChannel" /* 7786 */;
+import isReadableChannel from "isReadableChannel" /* 7787 */;
+import isLimitedChannel from "isLimitedChannel" /* 7788 */;
+import withFallbacks from "withFallbacks" /* 7789 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import FileSystemStore from "FileSystemStore" /* 7658 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import FileSystemStore from "FileSystemStore" /* 7782 */;
 
 require = fn;
 function handleSelectedChannelStoreChanged() {
@@ -85,9 +85,9 @@ function handleCacheLoadedLazyNoCache() {
 }
 let lastChannel = null;
 const bound = Math.max(25, 25, 1);
-let extendedMemoryLru = new fn(7659).ExtendedMemoryLru(750, 500);
+let extendedMemoryLru = new fn(7783).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
-let lru = new fn(7660).Lru(15);
+let lru = new fn(7784).Lru(15);
 let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {
@@ -116,7 +116,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore);
   this.waitFor(SelectedChannelStore);
   this.waitFor(GuildMemberCountStore);
-  const items = [FileSystemStore];
+  items = [FileSystemStore];
   this.syncWith(items, () => true);
   const items1 = [SelectedChannelStore];
   this.syncWith(items1, handleSelectedChannelStoreChanged);
@@ -155,7 +155,7 @@ prototype["getSaveableChannels"] = function getSaveableChannels() {
   if (FileSystemStore.isLowDisk) {
     let tmp9 = mapped;
     if (null != obj) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(mapped, 0)] = obj;
       tmp9 = items;
     }
@@ -170,7 +170,7 @@ prototype["getSaveableChannels"] = function getSaveableChannels() {
 prototype["takeSnapshot"] = function takeSnapshot() {
   lastChannel = { version: SaveableChannelsStore.LATEST_SNAPSHOT_VERSION, data: null };
   const obj2 = { channels: null, penalized: [...lru.keys()], lastChannel };
-  const items = [...global.allValues()];
+  items = [...global.allValues()];
   obj2.channels = items.filter((fallback) => !fallback.fallback);
   lastChannel.data = obj2;
   return lastChannel;
@@ -185,7 +185,7 @@ SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
     lastChannel = snapshot.lastChannel;
   }
   obj = lastChannel;
-  const items = [snapshot.channels, obj.values()];
+  items = [snapshot.channels, obj.values()];
   for (const item10038 of items) {
     for (const item10043 of item10038) {
       if (!item10043.fallback) {
@@ -240,7 +240,7 @@ SaveableChannelsStore["deleteChannel"] = function deleteChannel(arg0) {
   global.delete(arg0);
 };
 SaveableChannelsStore["deleteGuild"] = function deleteGuild(arg0) {
-  const items = [...global.allValues()];
+  items = [...global.allValues()];
   for (const item10013 of items) {
     if (item10013.guildId === arg0) {
       let deleteResult = global.delete(tmp.channelId);
@@ -249,7 +249,7 @@ SaveableChannelsStore["deleteGuild"] = function deleteGuild(arg0) {
   }
 };
 SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChannels() {
-  const items = [...global.allKeys()];
+  items = [...global.allKeys()];
   for (const item10012 of items) {
     let basicChannel = ChannelStore.getBasicChannel(item10012);
     let obj = isReadableChannel;
@@ -260,7 +260,7 @@ SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChann
   }
 };
 SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadableGuildChannels(arg0) {
-  const items = [...global.allValues()];
+  items = [...global.allValues()];
   for (const item10013 of items) {
     let isReadableChannelIdResult = arg0 !== item10013.guildId;
     if (!isReadableChannelIdResult) {

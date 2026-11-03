@@ -1,15 +1,16 @@
-// === Module 16978: BountiesModalEndCard ===
+// === Module 17121: BountiesModalEndCard ===
 
-// Module 16978 (BountiesModalEndCard)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import timingPresets from "timingPresets" /* 5257 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 16967 */;
+// Module 17121 (BountiesModalEndCard)
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import timingPresets from "timingPresets" /* 5380 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
+
+const _modDef1652 = _mod1652;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -23,36 +24,56 @@ let closure_7 = createStyles.createStyles(() => {
   obj.backdropGradient = {};
   return obj;
 });
-const __initData = { code: "function BountiesModalEndCardTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
+let closure_8 = { code: "(function BountiesModalEndCardTsx1(){let[withTiming,visible,timingStandard]=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};})" };
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
 
 export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  visible(5095);
-  const fn = function y() {
-    let num = 0;
-    if (visible) {
-      num = 1;
+  _mod1652;
+  items = [closure_8, timing_timing.withTiming, visible, timingPresets.timingStandard];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  class BountiesModalEndCardTsx1 {
+    constructor() {
+      num = 0;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_2) };
+      return obj;
     }
-    return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
-  };
-  fn.__closure = { withTiming: visible(5254).withTiming, visible, timingStandard: visible(5257).timingStandard };
-  fn.__workletHash = 15062259404736;
-  fn.__initData = __initData;
+  }
+  const items1 = [tmp5, tmp6, tmp7];
+  BountiesModalEndCardTsx1.__closure = items1;
+  BountiesModalEndCardTsx1.__workletHash = 9535355368761;
+  BountiesModalEndCardTsx1.__initData = tmp4;
   if (visible) {
-    const obj2 = { style: null, pointerEvents: "box-none", children: null };
-    const items = [tmp.container, tmp4];
-    obj2.style = items;
-    const obj3 = { style: tmp.backdropTint };
-    const items1 = [closure_5(closure_4, obj3), , ];
-    const obj4 = { colors: ["rgba(0, 0, 0, 0.60)", "rgba(0, 0, 0, 1)"], locations: [0, 0.841], style: tmp.backdropGradient };
-    items1[1] = closure_5(LinearGradientDefault, obj4);
-    const obj5 = { bounty, sourceQuestContent };
-    items1[2] = closure_5(BountiesEndCardPressableCtaDefault, obj5);
-    obj2.children = items1;
-    visible = closure_6(ReanimatedRexportDefault.View, obj2);
+    const obj = { style: null, pointerEvents: "box-none", children: null };
+    const items2 = [tmp.container, tmp8];
+    obj.style = items2;
+    const obj2 = { style: tmp.backdropTint };
+    const items3 = [hasOwnProperty(React4, obj2), , ];
+    const obj3 = { colors: ["rgba(0, 0, 0, 0.60)", "rgba(0, 0, 0, 1)"], locations: [0, 0.841], style: tmp.backdropGradient };
+    items3[1] = hasOwnProperty(LinearGradientDefault, obj3);
+    const obj4 = { bounty, sourceQuestContent };
+    class BountiesModalEndCardTsx1 {
+      constructor() {
+        num = 0;
+        tmp = closure_0;
+        if (closure_1) {
+          num = 1;
+        }
+        obj = { opacity: tmp(num, closure_2) };
+        return obj;
+      }
+    }
+    obj.children = items3;
+    visible = timestampProducer(_modDef1652.View, obj);
   }
   return visible;
 };

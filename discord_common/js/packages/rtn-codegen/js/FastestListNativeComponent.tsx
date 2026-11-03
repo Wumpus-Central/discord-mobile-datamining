@@ -1,6 +1,6 @@
-// === Module 7224: FastestListNativeComponent ===
+// === Module 7345: FastestListNativeComponent ===
 
-// Module 7224 (FastestListNativeComponent)
+// Module 7345 (FastestListNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
@@ -15,12 +15,12 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default value;
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  scrollToLocation(arg0, arg1, arg2, arg3, arg4) {
-    const items = [arg1, arg2, arg3, arg4];
-    renderElement.dispatchCommand(arg0, "scrollToLocation", items);
+  scrollToLocation(nodeFromPublicInstance, arg1, arg2, arg3, arg4) {
+    items = [arg1, arg2, arg3, arg4];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollToLocation", items);
   },
-  scrollToTop(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "scrollToTop", items);
+  scrollToTop(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollToTop", items);
   }
 };

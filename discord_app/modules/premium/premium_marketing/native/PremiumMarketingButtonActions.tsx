@@ -1,17 +1,17 @@
-// === Module 15311: PremiumMarketingButtonActions ===
+// === Module 15452: PremiumMarketingButtonActions ===
 
-// Module 15311 (PremiumMarketingButtonActions)
-import ProductIds from "ProductIds" /* 7593 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
-import cta_button from "cta_button" /* 9633 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15312 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15313 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+// Module 15452 (PremiumMarketingButtonActions)
+import ProductIds from "ProductIds" /* 7717 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
+import cta_button from "cta_button" /* 9765 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15453 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15454 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const Constants = fn(1072);
 ({ AnalyticsSections: hasOwnProperty, AnalyticsObjects: metroRequire, AnalyticsObjectTypes: closure_7, UserSettingsSections: closure_8 } = Constants);
 const size = fn(2);

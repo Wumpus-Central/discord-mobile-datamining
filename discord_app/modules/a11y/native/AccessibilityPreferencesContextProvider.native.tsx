@@ -1,8 +1,8 @@
-// === Module 16430: AccessibilityPreferencesContextProvider ===
+// === Module 16574: AccessibilityPreferencesContextProvider ===
 
-// Module 16430 (AccessibilityPreferencesContextProvider)
+// Module 16574 (AccessibilityPreferencesContextProvider)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ export default function AccessibilityPreferencesContextProvider(children) {
   let stateFromStoresObject;
   let stateFromStores;
   let stateFromStores1;
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   stateFromStoresObject = stateFromStoresObject(stateFromStores[3]).useStateFromStoresObject(items, () => ({ enabled: stateFromStores1.useReducedMotion, rawValue: stateFromStores1.rawPrefersReducedMotion }));
   const obj = stateFromStoresObject(stateFromStores[3]);
   const items1 = [stateFromStores1];

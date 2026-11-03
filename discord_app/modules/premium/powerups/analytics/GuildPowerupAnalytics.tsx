@@ -1,6 +1,6 @@
-// === Module 14117: GuildPowerupAnalytics ===
+// === Module 14248: GuildPowerupAnalytics ===
 
-// Module 14117 (GuildPowerupAnalytics)
+// Module 14248 (GuildPowerupAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost
 export function useLogPowerupModalOpened(guildId, powerup, DEACTIVATE) {
   const guild_id = guildId;
   noop = DEACTIVATE;
-  const items = [DEACTIVATE, guildId, powerup.skuId];
+  items = [DEACTIVATE, guildId, powerup.skuId];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: powerup.skuId, guild_id });
   }, items);

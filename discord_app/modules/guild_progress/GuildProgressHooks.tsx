@@ -1,22 +1,22 @@
-// === Module 14045: GuildProgressHooks ===
+// === Module 14176: GuildProgressHooks ===
 
-// Module 14045 (GuildProgressHooks)
+// Module 14176 (GuildProgressHooks)
 import _modDef12 from "module_12" /* 12 */;
-import canViewInviteModal from "canViewInviteModal" /* 8983 */;
+import canViewInviteModal from "canViewInviteModal" /* 9111 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4944 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import LayerStore from "LayerStore" /* 14046 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import LayerStore from "LayerStore" /* 14177 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressH
 export function usePermissions(channel, guild) {
   _require = channel;
   closure_1 = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild, channel];
   return require("initialize").useStateFromStoresObject(items, () => {
     const obj = { canInvite: canViewInviteModal.canViewInviteModal(PermissionStore, closure_1, closure_0), canManageGuild: null, canMessage: null, canCreateChannel: null };
@@ -51,7 +51,7 @@ export function usePermissions(channel, guild) {
 }
 export function useGuildChannelCreated(arg0) {
   _require = arg0;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     id = undefined;
@@ -74,7 +74,7 @@ export function useGuildChannelCreated(arg0) {
 }
 export function useGuildPopulated(guild) {
   _require = guild;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   closure_1 = require("initialize").useStateFromStores(items, () => {
     let systemChannelId;
     if (guild != null) {
@@ -110,7 +110,7 @@ export function useGuildPopulated(guild) {
 }
 export function useGuildPersonalized(guild) {
   _require = guild;
-  const items = [LayerStore];
+  items = [LayerStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => LayerStore.hasLayers());
   const obj = require("initialize");
   const items1 = [GuildStore];
@@ -129,7 +129,7 @@ export function useGuildPersonalized(guild) {
 }
 export function useChannelsMessaged(items3) {
   _require = items3;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   closure_1 = require("initialize").useStateFromStores(items, () => id.getId());
   const obj = require("initialize");
   const items1 = [MessageStore];
@@ -147,7 +147,7 @@ export function useChannelsMessaged(items3) {
 }
 export function useGuildMessaged(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let mutableBasicGuildChannelsForGuild = null;
     if (null != closure_0) {
@@ -158,7 +158,7 @@ export function useGuildMessaged(arg0) {
   const items1 = [stateFromStores];
   closure_129_0 = noop.useMemo(() => {
     if (null == closure_1) {
-      let items = [];
+      items = [];
     } else {
       items = _modDef12.values(tmp);
     }
@@ -184,7 +184,7 @@ export function useGuildMessaged(arg0) {
 export function useCompletedStates(guild) {
   let obj = { guildPopulated: null, guildMessaged: null, guildPersonalized: null, guildChannelCreated: null };
   _require = guild;
-  let items = [ChannelStore];
+  items = [ChannelStore];
   closure_1 = require("initialize").useStateFromStores(items, () => {
     let systemChannelId;
     if (guild != null) {
@@ -233,7 +233,7 @@ export function useCompletedStates(guild) {
   const items5 = [stateFromStores];
   closure_130_0 = noop.useMemo(() => {
     if (null == closure_1) {
-      let items = [];
+      items = [];
     } else {
       items = _modDef12.values(tmp);
     }

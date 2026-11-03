@@ -1,15 +1,15 @@
-// === Module 18814: PinotChannelDetailsLabel ===
+// === Module 18972: PinotChannelDetailsLabel ===
 
-// Module 18814 (PinotChannelDetailsLabel)
+// Module 18972 (PinotChannelDetailsLabel)
 import nativeDefault from "native" /* 575 */;
-import _modDef3160 from "module_3160" /* 3160 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
+import _modDef3287 from "module_3287" /* 3287 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 4, right: 8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { label: { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", minHeight: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT }, text: null };
 let obj3 = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", minHeight: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 obj2.text = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
@@ -22,9 +22,9 @@ export function PinotChannelDetailsLabel(channel) {
   const tmp = closure_5();
   if (obj.useIsPinotChannelLabelVisible(channel.channel, "mobile_channel_details_label")) {
     const intl = tmp2(1113).intl;
-    const stringResult = intl.string(_modDef3160.uneDIi);
+    const stringResult = intl.string(_modDef3287.uneDIi);
     const intl2 = tmp2(1113).intl;
-    stringResult1 = intl2.string(_modDef3160["01KOls"]);
+    stringResult1 = intl2.string(_modDef3287["01KOls"]);
     const obj2 = {
       onPress: function handlePress() {
           ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
@@ -37,8 +37,8 @@ export function PinotChannelDetailsLabel(channel) {
       children: null
     };
     const obj3 = { variant: "text-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5624).Text, { variant: "text-xs/medium", color: "none", style: tmp.text, children: stringResult });
-    return jsx(tmp2(6980).PressableOpacity, {
+    obj2.children = jsx(tmp2(5747).Text, { variant: "text-xs/medium", color: "none", style: tmp.text, children: stringResult });
+    return jsx(tmp2(7106).PressableOpacity, {
       onPress: function handlePress() {
           ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
         },
@@ -52,5 +52,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(11320);
+  obj = stringResult1(11457);
 }

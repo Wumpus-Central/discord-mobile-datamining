@@ -1,21 +1,21 @@
-// === Module 18599: NotificationNudgeBottomSheet ===
+// === Module 18757: NotificationNudgeBottomSheet ===
 
-// Module 18599 (NotificationNudgeBottomSheet)
+// Module 18757 (NotificationNudgeBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13975 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NotificationPermissionConstants = fn(13974);
+const NotificationPermissionConstants = fn(14105);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" }, illustration: null, title: null, body: null, buttonsContainer: null };
 const obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.illustration = { marginVertical: nativeDefault.space.PX_24 };
@@ -35,7 +35,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   const onHide = actionLocation.onHide;
   ({ title, body } = actionLocation);
   const tmp = closure_11();
-  const items = [surface];
+  items = [surface];
   const effect = onHide.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, { action: constants2.IMPRESSION, prompt_type: surface });
   }, items);
@@ -61,7 +61,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   }, items3);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items4 = [closure_9(callback, { style: tmp.illustration, children: closure_9(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: title }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body }), ];
+  const items4 = [closure_9(callback, { style: tmp.illustration, children: closure_9(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: title }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body }), ];
   const obj6 = { style: tmp.buttonsContainer, children: null };
   const obj7 = { children: null };
   const obj8 = { text: null, onPress: null };

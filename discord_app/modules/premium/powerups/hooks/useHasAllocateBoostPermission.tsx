@@ -1,8 +1,8 @@
-// === Module 14087: useHasAllocateBoostPermission ===
+// === Module 14218: useHasAllocateBoostPermission ===
 
-// Module 14087 (useHasAllocateBoostPermission)
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 14218 (useHasAllocateBoostPermission)
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHas
 
 export default function useHasAllocateBoostPermission(arg0) {
   _require = arg0;
-  const items = [PermissionStore, GuildStore];
+  items = [PermissionStore, GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {
       canResult = null;

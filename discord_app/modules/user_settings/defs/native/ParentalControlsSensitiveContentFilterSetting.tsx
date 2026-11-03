@@ -1,11 +1,11 @@
-// === Module 17934: ParentalControlsSensitiveContentFilterSetting ===
+// === Module 18077: ParentalControlsSensitiveContentFilterSetting ===
 
-// Module 17934 (ParentalControlsSensitiveContentFilterSetting)
+// Module 18077 (ParentalControlsSensitiveContentFilterSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

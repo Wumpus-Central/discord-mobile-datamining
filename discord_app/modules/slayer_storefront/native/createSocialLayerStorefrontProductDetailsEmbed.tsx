@@ -1,21 +1,21 @@
-// === Module 11560: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11697: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11560 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11697 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import _modDef3738 from "module_3738" /* 3738 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
-import StorefrontUtils from "StorefrontUtils" /* 7409 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11561 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
+import StorefrontUtils from "StorefrontUtils" /* 7533 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8518 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11698 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import SKUStore from "SKUStore" /* 7016 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -76,7 +76,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3738.BKf0MM);
+              stringResult = string(_modDef3865.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -104,7 +104,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
 }
 export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(stateFromStores) {
   _require = stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   const memo = noop.useMemo(() => stateFromStores.reduce((arr, item) => {
     const iter = item.codedLinks[Symbol.iterator]();
     while (iter !== undefined) {
@@ -130,8 +130,8 @@ export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(sta
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
     const mapped = memo.map((item) => closure_1_5.get(item));
     const found = mapped.filter(GlobalUtils.isNotNullish);
-    const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
+    items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(7330)(stateFromStoresArray);
+  memo(7450)(stateFromStoresArray);
 }

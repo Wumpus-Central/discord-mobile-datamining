@@ -1,23 +1,23 @@
-// === Module 18580: useReplyActions ===
+// === Module 18736: useReplyActions ===
 
-// Module 18580 (useReplyActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5615 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8714 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
+// Module 18736 (useReplyActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5738 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8838 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7701).DraftType;
-const EmojiIntention = fn(1386).EmojiIntention;
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const DraftType = fn(7825).DraftType;
+const EmojiIntention = fn(1388).EmojiIntention;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -29,7 +29,7 @@ export function useReplyActions(content) {
   noop = undefined;
   let sendMessage;
   let callback1;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(user.author_id));
   let str = "unknown";
   hotwheels_gaming_activity = "unknown";
@@ -74,7 +74,7 @@ export function useReplyActions(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -229,7 +229,7 @@ export function useReplyActions(content) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18581, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18737, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

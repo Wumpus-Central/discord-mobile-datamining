@@ -1,9 +1,9 @@
-// === Module 17311: useLatestChannelMessage ===
+// === Module 17454: useLatestChannelMessage ===
 
-// Module 17311 (useLatestChannelMessage)
-import MessagePreviewManagerDefault from "MessagePreviewManager" /* 17312 */;
+// Module 17454 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 17455 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15607 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15749 */;
 
 const require = fn;
 const useEffect = fn(19).useEffect;
@@ -19,10 +19,10 @@ export default function useLatestChannelMessage(arg0) {
   id = undefined;
   _slicedToArray = undefined;
   ({ guild_id: c1, id } = arg0);
-  let items = [MessagePreviewStore];
+  items = [MessagePreviewStore];
   const tmp = _slicedToArray(flag(id[3]).useStateFromStoresArray(items, () => {
     if (flag) {
-      const items = [null, true];
+      items = [null, true];
       let items1 = items;
     } else {
       items1 = [MessagePreviewStore.message(c1, id), MessagePreviewStore.isLatest(c1, id)];

@@ -1,8 +1,8 @@
-// === Module 11348: useCanSearchForumPostsByChannelId ===
+// === Module 11485: useCanSearchForumPostsByChannelId ===
 
-// Module 11348 (useCanSearchForumPostsByChannelId)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 11485 (useCanSearchForumPostsByChannelId)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSea
 
 export function useCanSearchForumPostsByChannelId(channelId) {
   _require = channelId;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let canResult = null != channel;

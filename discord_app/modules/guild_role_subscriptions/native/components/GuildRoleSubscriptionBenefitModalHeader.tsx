@@ -1,13 +1,13 @@
-// === Module 19974: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 20124: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 19974 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 20124 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, titleContainer: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   const tmp = closure_8();
   const obj2 = { top: true, style: tmp.headerContainer, children: null };
   const obj3 = { style: null, accessibilityRole: "button", onPress: onClose, children: null };
-  const items = [, ];
+  items = [, ];
   ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
   obj3.style = items;
   const obj = GuildRoleSubscriptionListingEditStateUtilsAll;

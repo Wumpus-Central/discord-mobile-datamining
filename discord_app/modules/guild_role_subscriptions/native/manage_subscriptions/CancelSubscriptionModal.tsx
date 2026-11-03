@@ -1,7 +1,7 @@
-// === Module 18631: CancelSubscriptionModal ===
+// === Module 18789: CancelSubscriptionModal ===
 
-// Module 18631 (CancelSubscriptionModal)
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+// Module 18789 (CancelSubscriptionModal)
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ export default function CancelSubscriptionModal(onClose) {
     };
     obj[constants.CANCEL_SUBSCRIPTION] = obj2;
     const obj4 = { screens: obj, initialStack: null };
-    const items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
+    items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
     obj4.initialStack = items;
     return obj4;
   }));

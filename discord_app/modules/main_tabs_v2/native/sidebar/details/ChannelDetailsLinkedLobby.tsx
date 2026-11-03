@@ -1,19 +1,19 @@
-// === Module 18815: ChannelDetailsLinkedLobby ===
+// === Module 18973: ChannelDetailsLinkedLobby ===
 
-// Module 18815 (ChannelDetailsLinkedLobby)
+// Module 18973 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7330 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
 import noop from "module_19" /* 19 */;
 
 const util = BPDKoA(1113);
-const Text_Text = BPDKoA(5624);
+const Text_Text = BPDKoA(5747);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -27,7 +27,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
   const linkedLobby = channel.linkedLobby;
-  let application_id;
+  application_id = undefined;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
@@ -36,7 +36,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     return null;
   } else {
     const obj2 = { style: null, children: null };
-    const items = [divider.container, channel.containerStyle];
+    items = [divider.container, channel.containerStyle];
     obj2.style = items;
     let Text = Text_Text.Text;
     if (null != intl) {

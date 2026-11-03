@@ -1,18 +1,18 @@
-// === Module 18154: MessagesItemEmptyState ===
+// === Module 18298: MessagesItemEmptyState ===
 
-// Module 18154 (MessagesItemEmptyState)
+// Module 18298 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -35,10 +35,10 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  let obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
+  let obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["8JZof8"]);
-  const items = [React4(Text_Text.Heading, obj2), , ];
+  items = [React4(Text_Text.Heading, obj2), , ];
   const obj3 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t["qm+H7x"]);

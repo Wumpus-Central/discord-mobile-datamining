@@ -1,7 +1,7 @@
-// === Module 16723: ParentalControlledUserSettingsDefinitions ===
+// === Module 16866: ParentalControlledUserSettingsDefinitions ===
 
-// Module 16723 (ParentalControlledUserSettingsDefinitions)
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7718 */;
+// Module 16866 (ParentalControlledUserSettingsDefinitions)
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7842 */;
 
 const require = fn;
 const size = fn(2);
@@ -58,7 +58,7 @@ export function defineParentalControlledSetting(privacy, defaultGuildsRestricted
     },
     useControlledSetting(arg0) {
       privacy = arg0;
-      const items = [settings];
+      items = [settings];
       const items1 = [arg0];
       return privacy(explicitContentFromProto[2]).useStateFromStores(items, () => {
         settings = settings.getSettings(closure_0);

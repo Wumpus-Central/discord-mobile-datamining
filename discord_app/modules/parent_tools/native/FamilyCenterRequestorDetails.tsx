@@ -1,18 +1,18 @@
-// === Module 16826: FamilyCenterRequestorDetails ===
+// === Module 16969: FamilyCenterRequestorDetails ===
 
-// Module 16826 (FamilyCenterRequestorDetails)
+// Module 16969 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useUserLinks from "useUserLinks" /* 8369 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16796 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useUserLinks from "useUserLinks" /* 8493 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16939 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
 let obj3 = { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
@@ -26,7 +26,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
   const obj2 = { style: tmp.container, children: null };
   const linkTimestampText = useUserLinks.useLinkTimestampText(otherUser.id, otherUser.status);
   const obj3 = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: otherUser.avatarDecoration };
-  const items = [React4(native.Avatar, obj3), ];
+  items = [React4(native.Avatar, obj3), ];
   const obj4 = { style: tmp.detailsContainer, children: null };
   const items1 = [React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }), React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
   obj4.children = items1;

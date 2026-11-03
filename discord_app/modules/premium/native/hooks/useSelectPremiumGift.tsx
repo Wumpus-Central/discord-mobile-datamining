@@ -1,6 +1,6 @@
-// === Module 10612: useSelectPremiumGift ===
+// === Module 10742: useSelectPremiumGift ===
 
-// Module 10612 (useSelectPremiumGift)
+// Module 10742 (useSelectPremiumGift)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ export function useSelectPremiumGift(PremiumGiftPlanSelect) {
       { planId: planIdForPremiumType, recipientUserId, productId: navigation(recipientUserId[6]).getProductIdForGift(planIdForPremiumType) };
     })();
   });
-  const items = [setPremiumType, planInterval, createOrReuseGiftOrder, recipientUserId, setOrder, navigation];
+  items = [setPremiumType, planInterval, createOrReuseGiftOrder, recipientUserId, setOrder, navigation];
   return setOrder.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

@@ -1,9 +1,9 @@
-// === Module 9047: useGuildProfile ===
+// === Module 9175: useGuildProfile ===
 
-// Module 9047 (useGuildProfile)
+// Module 9175 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9046 */;
+import GuildProfileStore from "GuildProfileStore" /* 9174 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildP
 
 export function useGuildProfile(guildId) {
   _require = guildId;
-  const items = [GuildProfileStore];
+  items = [GuildProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildProfileStore.getProfile(closure_0));
   let obj = require("initialize");
   const items1 = [GuildProfileStore];
@@ -31,7 +31,7 @@ export function useGuildProfile(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

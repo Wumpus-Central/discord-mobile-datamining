@@ -1,15 +1,15 @@
-// === Module 10844: FavoritesCleanup ===
+// === Module 10974: FavoritesCleanup ===
 
-// Module 10844 (FavoritesCleanup)
+// Module 10974 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1089 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6894 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7484 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 7014 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7608 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 require = fn;
 function getFavoriteThreadIdsForCleanup(categoryId) {
@@ -49,7 +49,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -85,7 +85,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
@@ -107,7 +107,7 @@ export function getFavoritesCleanupCandidates(days) {
     if (days >= 1) {
       const _Date = Date;
       const timestamp = Date.now();
-      const items = [];
+      items = [];
       const diff = timestamp - days * DurationsDefault.Millis.DAY;
       const tmp28 = getFavoriteThreadIdsForCleanup(days.categoryId);
       const iter = tmp28[Symbol.iterator]();

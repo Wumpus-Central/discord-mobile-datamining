@@ -1,8 +1,8 @@
-// === Module 9279: SecureFramesCode ===
+// === Module 9407: SecureFramesCode ===
 
-// Module 9279 (SecureFramesCode)
+// Module 9407 (SecureFramesCode)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,9 +10,9 @@ function SecureFramesCodeGrid(chunks) {
   chunks = chunks.chunks;
   const columns = chunks.columns;
   noop = closure_8();
-  let items = [chunks, columns];
+  items = [chunks, columns];
   const memo = noop.useMemo(() => {
-    const items = [];
+    items = [];
     const rounded = Math.ceil(chunks.length / columns);
     for (let num = 0; num < rounded; num = num + 1) {
       let items1 = [];
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { codeText: { fontFamily: fn(1083).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
 let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
@@ -56,7 +56,7 @@ export default function SecureFramesCode(chunks) {
   ({ title, trailing, columns } = chunks);
   const tmp = closure_8();
   const obj = { style: tmp.codeHeader, children: null };
-  const items = [hasOwnProperty(Text_Text.Text, { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title }), trailing];
+  items = [hasOwnProperty(Text_Text.Text, { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title }), trailing];
   obj.children = items;
   const items1 = [timestampProducer(React4, obj), ];
   const obj2 = { style: tmp.code, children: null };

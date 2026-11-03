@@ -1,10 +1,10 @@
-// === Module 15864: ToastEntity ===
+// === Module 16007: ToastEntity ===
 
-// Module 15864 (ToastEntity)
+// Module 16007 (ToastEntity)
 import nativeDefault from "native" /* 575 */;
-import utils_StringUtils from "utils/StringUtils" /* 2027 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import utils_StringUtils from "utils/StringUtils" /* 2156 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ function ToastEntityContent(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" }, image: { width: 24, height: 24 }, glyph: { textAlign: "center" }, avatar: { borderRadius: nativeDefault.radii.round }, guild: null, guildAcronym: null };
 let obj3 = { borderRadius: nativeDefault.radii.round };
 obj2.guild = { borderRadius: nativeDefault.radii.sm };
@@ -73,7 +73,7 @@ export function ToastEntity(entity) {
   entity = entity.entity;
   const tmp = closure_5();
   if ("avatar" === entity.type) {
-    let guild = tmp.avatar;
+    guild = tmp.avatar;
   } else if ("guild" === entity.type) {
     guild = tmp.guild;
   }
@@ -84,7 +84,7 @@ export function ToastEntity(entity) {
     }
   }
   const obj = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: <ToastEntityContent entity={entity} styles={tmp} /> };
-  const items = [tmp.entity, guild, guildAcronym, entity.style];
+  items = [tmp.entity, guild, guildAcronym, entity.style];
   obj.style = items;
   return <View style={null} accessibilityElementsHidden importantForAccessibility="no-hide-descendants"><ToastEntityContent entity={entity} styles={tmp} /></View>;
 }

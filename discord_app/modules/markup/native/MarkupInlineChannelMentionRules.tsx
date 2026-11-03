@@ -1,6 +1,6 @@
-// === Module 11056: MarkupInlineChannelMentionRules ===
+// === Module 11192: MarkupInlineChannelMentionRules ===
 
-// Module 11056 (MarkupInlineChannelMentionRules)
+// Module 11192 (MarkupInlineChannelMentionRules)
 import noop from "module_19" /* 19 */;
 
 const jsxs = fn(21).jsxs;
@@ -10,14 +10,14 @@ const result = size.fileFinishedImporting("modules/markup/native/MarkupInlineCha
 
 export function inlineChannelMentionReact(inContent, fn, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(8571).smartOutput(inContent, fn, key);
-    const obj3 = u1F4AC(8571);
+    let smartOutputResult = u1F4AC(8695).smartOutput(inContent, fn, key);
+    const obj3 = u1F4AC(8695);
   } else {
     const obj = { children: null };
-    const items = [fn(inContent.inContent, key), " \u203A ", u1F4AC(8571).smartOutput(inContent, fn, key)];
+    items = [fn(inContent.inContent, key), " \u203A ", u1F4AC(8695).smartOutput(inContent, fn, key)];
     obj.children = items;
     smartOutputResult = jsxs(u1F4AC(1187).LegacyText, { children: null }, key.key);
-    const obj2 = u1F4AC(8571);
+    const obj2 = u1F4AC(8695);
   }
   return smartOutputResult;
 }
@@ -33,8 +33,8 @@ export function createInlineChannelReact(arg0) {
         str = undefined;
         let tmp9 = str(1187);
         let obj2 = { children: null };
-        let items = [str2, , ];
-        let obj3 = str(8571);
+        items = [str2, , ];
+        let obj3 = str(8695);
         let smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -47,7 +47,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -60,7 +60,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -73,7 +73,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -86,7 +86,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -99,7 +99,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -112,7 +112,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -125,7 +125,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -138,7 +138,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -151,7 +151,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -164,7 +164,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -177,7 +177,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -190,7 +190,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -203,7 +203,7 @@ export function createInlineChannelReact(arg0) {
         tmp9 = str(1187);
         obj2 = { children: null };
         items = [str2, , ];
-        obj3 = str(8571);
+        obj3 = str(8695);
         smartOutputResult = obj3.smartOutput(iconType, output, key);
         items[1] = smartOutputResult;
         items[2] = str;
@@ -246,8 +246,8 @@ export function createInlineChannelReact(arg0) {
       case "linked-roles":
       break;
       default:
-        str(1379).assertNever(iconType);
-        const obj = str(1379);
+        str(1380).assertNever(iconType);
+        const obj = str(1380);
     }
   };
 }
@@ -259,8 +259,8 @@ export function inlineChannelReact(iconType, output, key) {
       str = undefined;
       let tmp9 = str(1187);
       let obj2 = { children: null };
-      let items = [str2, , ];
-      let obj3 = str(8571);
+      items = [str2, , ];
+      let obj3 = str(8695);
       let smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -273,7 +273,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -286,7 +286,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -299,7 +299,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -312,7 +312,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -325,7 +325,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -338,7 +338,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -351,7 +351,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -364,7 +364,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -377,7 +377,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -390,7 +390,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -403,7 +403,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -416,7 +416,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -429,7 +429,7 @@ export function inlineChannelReact(iconType, output, key) {
       tmp9 = str(1187);
       obj2 = { children: null };
       items = [str2, , ];
-      obj3 = str(8571);
+      obj3 = str(8695);
       smartOutputResult = obj3.smartOutput(iconType, output, key);
       items[1] = smartOutputResult;
       items[2] = str;
@@ -472,7 +472,7 @@ export function inlineChannelReact(iconType, output, key) {
     case "linked-roles":
     break;
     default:
-      str(1379).assertNever(iconType);
-      const obj = str(1379);
+      str(1380).assertNever(iconType);
+      const obj = str(1380);
   }
 }

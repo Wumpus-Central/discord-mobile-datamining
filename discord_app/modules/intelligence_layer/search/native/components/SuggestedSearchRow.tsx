@@ -1,20 +1,20 @@
-// === Module 18701: SuggestedSearchRow ===
+// === Module 18859: SuggestedSearchRow ===
 
-// Module 18701 (SuggestedSearchRow)
+// Module 18859 (SuggestedSearchRow)
 import nativeDefault from "native" /* 575 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13886 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13908 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13910 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
-import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 13927 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14039 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14041 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
+import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 14058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(13888);
+const SmartSearchConstants = fn(14019);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { iconCircle: null, text: null, compactLabel: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center" };
 obj.iconCircle = size;
@@ -35,7 +35,7 @@ export default noop.memo(function SuggestedSearchRow(suggestedSearch) {
     str = "default";
   }
   const tmp = closure_7();
-  const items = [smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches];
+  items = [smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches];
   const callback = index.useCallback(() => {
     const result = SmartSearchAnalyticsManagerDefault.trackSuggestedSearchStarted({ smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches }, SearchSessionAnalyticsManagerDefault);
     const obj2 = { smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches };

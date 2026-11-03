@@ -1,15 +1,15 @@
-// === Module 9823: useActiveTheme ===
+// === Module 9954: useActiveTheme ===
 
-// Module 9823 (useActiveTheme)
+// Module 9954 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5197 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5320 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 
 require = fn;
 function useActiveThemeType() {
-  const items = [CustomThemeMobileStore];
+  items = [CustomThemeMobileStore];
   const stateFromStores = initialize.useStateFromStores(items, () => CustomThemeMobileStore.hasCustomTheme());
   const items1 = [ClientThemesBackgroundStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);

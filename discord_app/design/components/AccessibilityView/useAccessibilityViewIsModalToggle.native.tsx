@@ -1,7 +1,7 @@
-// === Module 6019: useAccessibilityViewIsModalToggle ===
+// === Module 6139: useAccessibilityViewIsModalToggle ===
 
-// Module 6019 (useAccessibilityViewIsModalToggle)
-import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 6020 */;
+// Module 6139 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 6140 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -15,7 +15,7 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
   const nativeID = accessibilityViewIsModal.nativeID;
   noop = undefined;
   noop = noop.useRef(undefined);
-  let items = [flag, nativeID];
+  items = [flag, nativeID];
   const callback = noop.useCallback(() => {
     let tmp = arg0;
     if (arg0 === undefined) {
@@ -28,7 +28,7 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
         throw error;
       } else if (ref.current !== nativeID) {
         ref.current = nativeID;
-        const items = [nativeID];
+        items = [nativeID];
         const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
       }
     } else {

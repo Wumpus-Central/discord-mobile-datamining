@@ -1,12 +1,12 @@
-// === Module 9506: AvatarDecorationSampleV2 ===
+// === Module 9634: AvatarDecorationSampleV2 ===
 
-// Module 9506 (AvatarDecorationSampleV2)
+// Module 9634 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import _modDef9507 from "module_9507" /* 9507 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9508 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import _modDef9635 from "module_9635" /* 9635 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 0.8333333333333334;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = { position: "absolute", height: arg0 * c7, width: arg0 * c7, borderRadius: arg0 * c7 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -31,7 +31,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   ({ animate, threeTierBundle } = arg0);
   const tmp = closure_8(size);
   _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
-  const items = [tmp.avatar, ];
+  items = [tmp.avatar, ];
   let solidAvatar = null != avatarSource;
   if (!solidAvatar) {
     solidAvatar = true === threeTierBundle;
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9507;
+    avatarSource = _modDef9635;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

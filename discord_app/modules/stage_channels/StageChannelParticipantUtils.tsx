@@ -1,9 +1,9 @@
-// === Module 11895: StageChannelParticipantUtils ===
+// === Module 12032: StageChannelParticipantUtils ===
 
-// Module 11895 (StageChannelParticipantUtils)
+// Module 12032 (StageChannelParticipantUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import UserUtils from "UserUtils" /* 5068 */;
+import UserUtils from "UserUtils" /* 5195 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;

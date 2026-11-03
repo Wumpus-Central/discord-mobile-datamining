@@ -1,12 +1,12 @@
-// === Module 5930: LastUsedVideoBackgroundOption ===
+// === Module 6050: LastUsedVideoBackgroundOption ===
 
-// Module 5930 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 5931 */;
+// Module 6050 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6051 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
@@ -29,7 +29,7 @@ export function getLastUsedVideoBackgroundOption(currentUser) {
   return tmp5;
 }
 export function useLastUsedVideoBackgroundOption() {
-  const items = [UnsyncedUserSettingsStore];
+  items = [UnsyncedUserSettingsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => videoBackground.videoBackground);
   let obj = stateFromStores(504);
   const items1 = [UserSettingsProtoStore];

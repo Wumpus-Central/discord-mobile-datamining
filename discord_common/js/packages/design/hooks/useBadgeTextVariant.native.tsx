@@ -1,7 +1,7 @@
-// === Module 5081: useBadgeTextVariant ===
+// === Module 5208: useBadgeTextVariant ===
 
-// Module 5081 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 5031 */;
+// Module 5208 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 5158 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");
@@ -18,7 +18,7 @@ export function useBadgeTextVariant() {
   }
   let str2 = "eyebrow";
   if (true === hasItem) {
-    str2 = "experimental/body-xs/semibold";
+    str2 = "body-xs/semibold";
   }
   return str2;
 }

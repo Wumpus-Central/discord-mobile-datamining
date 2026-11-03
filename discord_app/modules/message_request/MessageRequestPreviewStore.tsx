@@ -1,12 +1,12 @@
-// === Module 14170: MessageRequestPreviewStore ===
+// === Module 14301: MessageRequestPreviewStore ===
 
-// Module 14170 (MessageRequestPreviewStore)
+// Module 14301 (MessageRequestPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import UserStore from "UserStore" /* 1383 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import UserStore from "UserStore" /* 1385 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 require = fn;
 function isMessagePreviewEnabledForChannel(id) {
@@ -145,7 +145,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
     supplementalData = supplementalData.supplementalData;
-    const items = [...supplementalData.requestedChannelIds];
+    items = [...supplementalData.requestedChannelIds];
     set = new Set(items);
     const item = supplementalData.forEach((channel_id) => {
       ({ channel_id, message_preview } = channel_id);

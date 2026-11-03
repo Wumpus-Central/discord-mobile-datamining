@@ -1,16 +1,16 @@
-// === Module 7766: ReferencedMessageStore ===
+// === Module 7890: ReferencedMessageStore ===
 
-// Module 7766 (ReferencedMessageStore)
+// Module 7890 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1451 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7771 */;
+import privDefault from "priv" /* 1453 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7895 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7767 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 require = fn;
 function processMessage(message) {
@@ -232,7 +232,7 @@ prototype2["deleteChannelCache"] = function deleteChannelCache(id) {
 };
 prototype2["retainWhere"] = function retainWhere(fn) {
   const self = this;
-  const items = [];
+  items = [];
   while (tmp !== undefined) {
     let first = _slicedToArray(tmp2, 1)[0];
     let tmp5 = first;

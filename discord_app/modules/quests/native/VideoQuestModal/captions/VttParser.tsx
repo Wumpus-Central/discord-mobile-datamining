@@ -1,6 +1,6 @@
-// === Module 17124: VttParser ===
+// === Module 17267: VttParser ===
 
-// Module 17124 (VttParser)
+// Module 17267 (VttParser)
 import size from "module_2" /* 2 */;
 
 const prototype = function VttParserError(arg0, error) {
@@ -68,7 +68,7 @@ export function parseVtt(text) {
       }
     }
     obj3 = tmp5;
-    const items = [];
+    items = [];
     const mapped = parts.map((item, index) => {
       try {
         return (function parseCue(item, index, arg2) {

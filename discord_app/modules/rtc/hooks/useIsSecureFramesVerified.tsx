@@ -1,12 +1,12 @@
-// === Module 9246: useIsSecureFramesVerified ===
+// === Module 9374: useIsSecureFramesVerified ===
 
-// Module 9246 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
+// Module 9374 (useIsSecureFramesVerified)
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9247 */;
-import TransientKeyStore from "TransientKeyStore" /* 9248 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9249 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9375 */;
+import TransientKeyStore from "TransientKeyStore" /* 9376 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9377 */;
 
 require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export function useIsUserSecureFramesVerified(channelId) {
   const userKey = channelId.userKey;
   const isSecureFramesUIEnabled = userId(userKey[5]).useIsSecureFramesUIEnabled({ channelId: channelId.channelId });
   const obj = userId(userKey[5]);
-  const items = [SecureFramesVerifiedStore, isSecureFramesUIEnabled, RTCConnectionStore, VerifiedKeyStore, TransientKeyStore];
+  items = [SecureFramesVerifiedStore, isSecureFramesUIEnabled, RTCConnectionStore, VerifiedKeyStore, TransientKeyStore];
   const items1 = [isSecureFramesUIEnabled, userId, userKey];
   return userId(userKey[6]).useStateFromStores(items, () => {
     if (null != userId) {
@@ -51,7 +51,7 @@ export function useIsStreamSecureFramesVerified(channelId) {
   const obj = streamKey(isSecureFramesUIEnabled[5]);
   const isStreamRTCConnectionEmpty = streamKey(isSecureFramesUIEnabled[7]).useIsStreamRTCConnectionEmpty(streamKey);
   const obj2 = streamKey(isSecureFramesUIEnabled[7]);
-  const items = [SecureFramesVerifiedStore, isStreamRTCConnectionEmpty];
+  items = [SecureFramesVerifiedStore, isStreamRTCConnectionEmpty];
   const items1 = [isStreamRTCConnectionEmpty, isSecureFramesUIEnabled, streamKey];
   return streamKey(isSecureFramesUIEnabled[6]).useStateFromStores(items, () => {
     if (isSecureFramesUIEnabled) {
@@ -78,7 +78,7 @@ export function useIsCallSecureFramesVerified(channelId) {
   const obj = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[5]);
   isCallRTCConnectionEmpty = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]).useIsCallRTCConnectionEmpty();
   const obj2 = isSecureFramesUIEnabled(isCallRTCConnectionEmpty[7]);
-  const items = [SecureFramesVerifiedStore];
+  items = [SecureFramesVerifiedStore];
   const items1 = [isCallRTCConnectionEmpty, isSecureFramesUIEnabled];
   return isSecureFramesUIEnabled(isCallRTCConnectionEmpty[6]).useStateFromStores(items, () => {
     let tmp = !isSecureFramesUIEnabled;

@@ -1,19 +1,19 @@
-// === Module 17180: useIsQuestDockContentVisible ===
+// === Module 17323: useIsQuestDockContentVisible ===
 
-// Module 17180 (useIsQuestDockContentVisible)
+// Module 17323 (useIsQuestDockContentVisible)
 import initialize from "initialize" /* 504 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17154 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17297 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 17070 */;
+import QuestDockStore from "QuestDockStore" /* 17213 */;
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockContentVisible.tsx");
 
 export default function useIsQuestDockContentVisible() {
   let isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
-  const items = [QuestDockStore];
+  items = [QuestDockStore];
   const stateFromStores = initialize.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
   if (isVisibleToUser) {
     isVisibleToUser = stateFromStores !== QuestDockMode.CLOSED;

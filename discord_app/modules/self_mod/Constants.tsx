@@ -1,6 +1,6 @@
-// === Module 11256: Constants ===
+// === Module 11393: Constants ===
 
-// Module 11256 (Constants)
+// Module 11393 (Constants)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ export function getSafetyToolsActionSheetKey(arg0) {
 }
 export function getStrangerDangerSafetyTips() {
   const intl = util.intl;
-  const items = [intl.string(util.t["26fDv4"]), , ];
+  items = [intl.string(util.t["26fDv4"]), , ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.togDfk);
   const intl3 = util.intl;
@@ -40,7 +40,7 @@ export function getStrangerDangerSafetyTips() {
 }
 export function getInappropriateConversationsSafetyTips() {
   const intl = util.intl;
-  const items = [intl.string(util.t.bCWw8l), , ];
+  items = [intl.string(util.t.bCWw8l), , ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.mzSucz);
   const intl3 = util.intl;

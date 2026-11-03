@@ -1,30 +1,30 @@
-// === Module 7516: StickerSendability ===
+// === Module 7640: StickerSendability ===
 
-// Module 7516 (StickerSendability)
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import StickersUtils from "StickersUtils" /* 6560 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import StickersPackStore from "StickersPackStore" /* 6839 */;
+// Module 7640 (StickerSendability)
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import StickersUtils from "StickersUtils" /* 6680 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import StickersPackStore from "StickersPackStore" /* 6959 */;
 
 require = fn;
-function getStickerSendability(item10030, currentUser, channel) {
+function getStickerSendability(item10025, currentUser, channel) {
   if (null == currentUser) {
     return obj.NONSENDABLE;
   } else {
     const result = PremiumUtilsDefault.canUseCustomStickersEverywhere(currentUser);
-    if (obj5.isStandardSticker(item10030)) {
-      if (null == StickersPackStore.getStickerPack(item10030.pack_id)) {
+    if (obj5.isStandardSticker(item10025)) {
+      if (null == StickersPackStore.getStickerPack(item10025.pack_id)) {
         let SENDABLE2 = obj.NONSENDABLE;
       } else {
         SENDABLE2 = obj.SENDABLE;
       }
     } else {
-      if (tmp22Result.isGuildSticker(item10030)) {
+      if (tmp22Result.isGuildSticker(item10025)) {
         if (null != channel) {
-          if (null == GuildMemberStore.getSelfMember(item10030.guild_id)) {
+          if (null == GuildMemberStore.getSelfMember(item10025.guild_id)) {
             let SENDABLE_WITH_BOOSTED_GUILD = obj.NONSENDABLE;
-          } else if (item10030.available) {
+          } else if (item10025.available) {
             if (null != channel.guild_id) {
               if ("" !== channel.guild_id) {
                 const SENDABLE = obj.SENDABLE;

@@ -1,7 +1,7 @@
-// === Module 17839: MobileNitroUpsellInShopFeedExperiment ===
+// === Module 17982: MobileNitroUpsellInShopFeedExperiment ===
 
-// Module 17839 (MobileNitroUpsellInShopFeedExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1448 */;
+// Module 17982 (MobileNitroUpsellInShopFeedExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1450 */;
 
 const obj = { GET_NITRO: "getNitro", LEARN_MORE: "learnMore" };
 const obj2 = { kind: "user", name: "2026-09-mobile-nitro-upsell-in-shop-feed", defaultConfig: { enabled: false, buttonVariant: obj.GET_NITRO }, variations: { 0: { enabled: false, buttonVariant: obj.GET_NITRO }, 1: { enabled: true, buttonVariant: obj.GET_NITRO }, 2: { enabled: true, buttonVariant: obj.LEARN_MORE } } };

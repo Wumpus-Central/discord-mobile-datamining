@@ -1,27 +1,27 @@
-// === Module 11949: VolumeSlider ===
+// === Module 12086: VolumeSlider ===
 
-// Module 11949 (VolumeSlider)
+// Module 12086 (VolumeSlider)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils2 from "PlatformUtils" /* 1375 */;
-import useToken from "useToken" /* 5596 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5923 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8673 */;
-import _modDef8852 from "module_8852" /* 8852 */;
-import VoiceXIcon from "VoiceXIcon" /* 11950 */;
+import PlatformUtils2 from "PlatformUtils" /* 1377 */;
+import useToken from "useToken" /* 5719 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6043 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8797 */;
+import _modDef8976 from "module_8976" /* 8976 */;
+import VoiceXIcon from "VoiceXIcon" /* 12087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5768).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(5888).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
@@ -43,13 +43,13 @@ export default function VolumeSlider(maxTrackTintColor) {
     minTrackColor = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
   const obj2 = { style: null, children: null };
-  const items = [tmp4.volumerSlider, maxTrackTintColor.style];
+  items = [tmp4.volumerSlider, maxTrackTintColor.style];
   obj2.style = items;
   const items1 = [closure_5(VoiceXIcon.VoiceXIcon, { style: tmp4.leftIcon }), , ];
   const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8852;
+  const tmp7Result = _modDef8976;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

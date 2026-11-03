@@ -1,11 +1,11 @@
-// === Module 9956: AnimatedTooltip ===
+// === Module 10087: AnimatedTooltip ===
 
-// Module 9956 (AnimatedTooltip)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5028 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import Tooltip from "Tooltip" /* 9957 */;
-import TooltipConstants from "TooltipConstants" /* 9959 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9960 */;
+// Module 10087 (AnimatedTooltip)
+import _modDef1652 from "module_1652" /* 1652 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
+import Tooltip from "Tooltip" /* 10088 */;
+import TooltipConstants from "TooltipConstants" /* 10090 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 function renderTooltipItem(arg0, arg1) {
   const obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [arg1, StyleSheet.absoluteFill];
+  items = [arg1, StyleSheet.absoluteFill];
   obj.style = items;
   let tmpResult = null;
   if (null != arg0) {
@@ -23,7 +23,7 @@ function renderTooltipItem(arg0, arg1) {
     tmpResult = jsx(Tooltip.Tooltip, {});
   }
   obj.children = tmpResult;
-  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
@@ -34,7 +34,7 @@ export function AnimatedTooltip(visible) {
   const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);
   const tmp3 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp3[1];
-  const items = [visible];
+  items = [visible];
   const effect = noop.useEffect(() => {
     closure_1(visible);
   }, items);

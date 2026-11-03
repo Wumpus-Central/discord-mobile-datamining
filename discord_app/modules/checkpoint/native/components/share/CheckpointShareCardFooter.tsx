@@ -1,12 +1,12 @@
-// === Module 13447: CheckpointShareCardFooter ===
+// === Module 13585: CheckpointShareCardFooter ===
 
-// Module 13447 (CheckpointShareCardFooter)
+// Module 13585 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import inlineStyles from "inlineStyles" /* 8031 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13444 */;
-import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13448 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import inlineStyles from "inlineStyles" /* 8155 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13582 */;
+import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13586 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = { width: 145, height: 28 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { footer: null, portraitFooter: null, characterAndStatsFooter: null, footerTitle: null, footerButton: null, portraitFooterButton: null, characterAndStatsFooterButton: null };
 let obj3 = {};
 const merged = Object.assign(size);
@@ -46,7 +46,7 @@ export default function CheckpointShareCardFooter(isCharacterAndStats) {
   const context = noop.useContext(CheckpointShareCardContext.CheckpointShareCardColorsContext);
   ({ primaryBackgroundColor, tertiaryBackgroundColor } = context);
   ({ width, height } = size);
-  const items = [tmp.footer, ];
+  items = [tmp.footer, ];
   const obj2 = { style: items, children: null };
   items[1] = isCharacterAndStats ? tmp.characterAndStatsFooter : tmp.portraitFooter;
   const token = useToken.useToken(nativeDefault.colors.BLACK);

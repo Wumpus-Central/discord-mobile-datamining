@@ -1,25 +1,25 @@
-// === Module 16507: EditProfileFrameSection ===
+// === Module 16650: EditProfileFrameSection ===
 
-// Module 16507 (EditProfileFrameSection)
+// Module 16650 (EditProfileFrameSection)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9518 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15074 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15075 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 16506 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9646 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15215 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15216 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 16649 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
-let closure_6 = fn(8794).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
+let closure_6 = fn(8918).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5014);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15074).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15074).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15074).GUTTER_SIZE };
+const createStyles = fn(5141);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15215).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15215).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15215).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -60,7 +60,7 @@ const memoResult1 = noop.memo((isSelected) => {
   const profileFrame = isSelected.profileFrame;
   const setSelectedProfileFrame = isSelected.setSelectedProfileFrame;
   const size = isSelected.size;
-  const items = [setSelectedProfileFrame, profileFrame];
+  items = [setSelectedProfileFrame, profileFrame];
   const callback = noop.useCallback(() => {
     setSelectedProfileFrame({ skuId: profileFrame.skuId, type: profileFrame.type });
   }, items);

@@ -1,7 +1,7 @@
-// === Module 18275: useSubmittedGuildJoinRequestTotal ===
+// === Module 18419: useSubmittedGuildJoinRequestTotal ===
 
-// Module 18275 (useSubmittedGuildJoinRequestTotal)
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
+// Module 18419 (useSubmittedGuildJoinRequestTotal)
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
 
 const require = fn;
 const size = fn(2);
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export function useSubmittedGuildJoinRequestTotal(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const items1 = [guildId];
   return guildId(504).useStateFromStores(items, () => {
     let submittedGuildJoinRequestTotal;

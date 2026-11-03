@@ -1,13 +1,13 @@
-// === Module 10113: MessageViewTrackingManager ===
+// === Module 10243: MessageViewTrackingManager ===
 
-// Module 10113 (MessageViewTrackingManager)
+// Module 10243 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import privDefault from "priv" /* 1451 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import privDefault from "priv" /* 1453 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 import size from "module_2" /* 2 */;
 
 function getAnalyticsConfig(type) {
@@ -33,7 +33,7 @@ function getAnalyticsConfig(type) {
     ({ inviteCode: obj3.invite_code, inviteGuildId: obj3.invite_guild_id, inviteChannelId: obj3.invite_channel_id, inviteInstanceId: obj3.invite_instance_id, hasActiveStream: obj3.has_active_stream, treatmentRendered } = type);
     const INVITE_EMBED = AnalyticsLocationDefault.INVITE_EMBED;
     if (treatmentRendered) {
-      const items = [INVITE_EMBED, AnalyticsLocationDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
+      items = [INVITE_EMBED, AnalyticsLocationDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
       let items1 = items;
     } else {
       items1 = [INVITE_EMBED];

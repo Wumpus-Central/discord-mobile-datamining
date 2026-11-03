@@ -1,9 +1,9 @@
-// === Module 15595: GlobalDiscoveryServersSearchCountsStore ===
+// === Module 15737: GlobalDiscoveryServersSearchCountsStore ===
 
-// Module 15595 (GlobalDiscoveryServersSearchCountsStore)
+// Module 15737 (GlobalDiscoveryServersSearchCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6446 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6566 */;
 
 require = fn;
 const map = new Map();

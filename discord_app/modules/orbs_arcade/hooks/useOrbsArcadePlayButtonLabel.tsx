@@ -1,7 +1,7 @@
-// === Module 17049: useOrbsArcadePlayButtonLabel ===
+// === Module 17192: useOrbsArcadePlayButtonLabel ===
 
-// Module 17049 (useOrbsArcadePlayButtonLabel)
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
+// Module 17192 (useOrbsArcadePlayButtonLabel)
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/hooks/useOrbsArca
 
 export default function useOrbsArcadePlayButtonLabel(orbCost) {
   _require = orbCost;
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [, ];
   ({ id: arr2[0], numFreePlays: arr2[1] } = orbCost);
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

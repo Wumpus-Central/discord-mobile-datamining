@@ -1,6 +1,6 @@
-// === Module 11827: getIFrameSandboxAttributes ===
+// === Module 11964: getIFrameSandboxAttributes ===
 
-// Module 11827 (getIFrameSandboxAttributes)
+// Module 11964 (getIFrameSandboxAttributes)
 import size from "module_2" /* 2 */;
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/getIFrameSan
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;
   if (allowPopups.allowPopups) {
-    const items = [, ];
+    items = [, ];
     const arraySpreadResult = HermesBuiltin.arraySpread(closure_0, 0);
     items[arraySpreadResult] = "allow-popups";
     items[arraySpreadResult + 1] = "allow-popups-to-escape-sandbox";

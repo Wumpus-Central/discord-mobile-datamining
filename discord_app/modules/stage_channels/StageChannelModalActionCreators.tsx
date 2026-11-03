@@ -1,14 +1,14 @@
-// === Module 7950: StageChannelModalActionCreators ===
+// === Module 8074: StageChannelModalActionCreators ===
 
-// Module 7950 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7941 */;
+// Module 8074 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8065 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = fn;
 let closure_10 = async function _connectOrLurkStage(arg0) {
@@ -22,7 +22,7 @@ let closure_10 = async function _connectOrLurkStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_10 = async function _connectOrLurkStage(arg0) {
             const obj5 = { value: channel, done: true };
             return obj5;
           } else {
-            const items = [closure_131_0];
+            items = [closure_131_0];
             c5 = 2;
             c6 = 1;
             const obj7 = { value: closure_132_0(closure_132_3[8]).stopLurkingAll(items), done: false };
@@ -199,15 +199,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(7941).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8065).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(7941);
+    const obj2 = flag2(8065);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(7941).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(7941);
+      flag2(8065).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8065);
     }
   }
 }

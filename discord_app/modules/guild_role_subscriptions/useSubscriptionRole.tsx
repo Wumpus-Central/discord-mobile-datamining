@@ -1,7 +1,7 @@
-// === Module 17218: useSubscriptionRole ===
+// === Module 17361: useSubscriptionRole ===
 
-// Module 17218 (useSubscriptionRole)
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+// Module 17361 (useSubscriptionRole)
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ export default function useSubscriptionRole(arg0, editStateId) {
   _require = arg0;
   dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(editStateId);
   const obj = require("GuildRoleSubscriptionsHooks");
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   return require("initialize").useStateFromStores(items, () => {
     let role;
     if (null != closure_0) {

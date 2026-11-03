@@ -1,8 +1,8 @@
-// === Module 8872: MediaModalWebVideoFile ===
+// === Module 8996: MediaModalWebVideoFile ===
 
-// Module 8872 (MediaModalWebVideoFile)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8835 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8871 */;
+// Module 8996 (MediaModalWebVideoFile)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8959 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ export default noop.memo(function MediaModalWebVideoFile(visible) {
   if (controls != null) {
     props1 = controls.props;
   }
-  const items = [props1];
+  items = [props1];
   const callback = obj.useCallback((value) => {
     const iter = (function safeParse(value) {
       try {

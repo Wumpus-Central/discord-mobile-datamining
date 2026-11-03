@@ -1,14 +1,14 @@
-// === Module 7453: GameInvitesChannelUtils ===
+// === Module 7577: GameInvitesChannelUtils ===
 
-// Module 7453 (GameInvitesChannelUtils)
+// Module 7577 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6894 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7455 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7475 */;
-import hasFlagDefault from "hasFlag" /* 7483 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 7014 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7579 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7599 */;
+import hasFlagDefault from "hasFlag" /* 7607 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1072);
 ({ ActivityFlags: closure_7, MAX_CHANNEL_NAME_LENGTH: closure_8 } = Constants);
-const ChannelFlags = fn(4870).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7454).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(4997).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7578).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -35,7 +35,7 @@ export function deriveThreadName(parentChannel) {
 }
 export function useIsGameInvitesPost(channel) {
   _require = channel;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null != forumPost;
     if (tmp) {
@@ -65,7 +65,7 @@ export function useIsGameInvitePostVoiceEnabled(channel) {
   const appliedTags = require("ForumTagHooks").useAppliedTags(channel);
   _require = channel;
   const obj = require("ForumTagHooks");
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const obj3 = require("initialize");
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null != forumPost;
@@ -97,7 +97,7 @@ export function useFirstMessage(stateFromStores, enabled) {
 }
 export function useGameInvitesChannelOfficialApplication(id) {
   _require = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let isGameInvitesChannelResult = null == stateFromStores;
   const obj = require("initialize");
@@ -127,13 +127,13 @@ export function useSubscribeToGameInvitePostAuthors(isGameInvitesChannel, arg1) 
   _require = isGameInvitesChannel;
   const isGameInvitesChannelResult = isGameInvitesChannel.isGameInvitesChannel();
   dependencyMap = isGameInvitesChannelResult;
-  let items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [isGameInvitesChannelResult, arg1];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     if (isGameInvitesChannelResult) {
       const _Set = Set;
       const set = new Set();
-      const items = [];
+      items = [];
       const tmp7 = dependencyMap[Symbol.iterator]();
       while (tmp7 !== undefined) {
         let channel = ChannelStore.getChannel(tmp10);
@@ -182,7 +182,7 @@ export function maxedAppliedForumPostTags(size) {
   return size.size >= MAX_FORUM_POST_TAGS;
 }
 export function useGameInviteVoiceChatState(availableTags, appliedTagIds) {
-  const items = [availableTags];
+  items = [availableTags];
   const tmp = useMemo(() => {
     let found;
     if (availableTags != null) {
@@ -204,11 +204,11 @@ export function useGameInvitesActiveAndArchivedThreads(channel, forumActiveThrea
   const archivedThreadIds = threadIds;
   const isGameInvitesChannelResult = channel.isGameInvitesChannel();
   dependencyMap = isGameInvitesChannelResult;
-  let items = [isGameInvitesChannelResult, forumActiveThreadIds, threadIds];
+  items = [isGameInvitesChannelResult, forumActiveThreadIds, threadIds];
   return useMemo(() => {
     if (isGameInvitesChannelResult) {
       const _Date = Date;
-      const items = [];
+      items = [];
       const items1 = [];
       const timestamp = Date.now();
       const iter = activeThreadIds[Symbol.iterator]();

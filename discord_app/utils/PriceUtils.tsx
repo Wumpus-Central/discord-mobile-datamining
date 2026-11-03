@@ -1,10 +1,10 @@
-// === Module 7413: PriceUtils ===
+// === Module 7537: PriceUtils ===
 
-// Module 7413 (PriceUtils)
+// Module 7537 (PriceUtils)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7414 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7538 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
@@ -43,7 +43,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj2);
 }
-const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1387).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1083).CurrencyCodes;
 let closure_5 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 17132: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 17275: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 17132 (useVideoQuestClickCtaAndMaybeCloseModal)
-import parseURLDefault from "parseURL" /* 5745 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
+// Module 17275 (useVideoQuestClickCtaAndMaybeCloseModal)
+import parseURLDefault from "parseURL" /* 5865 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9837 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;
   const getQuestImpressionId = quest(sourceQuestContent[2]).useGetQuestImpressionId();
-  const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
+  items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
     const tmp2 = parseURLDefault;
     if (tmp2(obj.getCtaLink(quest.config)).payload.type !== LinkingTypes.NONE) {

@@ -1,10 +1,10 @@
-// === Module 9831: AttachmentUrlUtils ===
+// === Module 9962: AttachmentUrlUtils ===
 
-// Module 9831 (AttachmentUrlUtils)
+// Module 9962 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2030 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2159 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -213,7 +213,7 @@ let closure_13 = async function _refreshAttachmentUrl() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants.ATTACHMENTS_REFRESH_URLS, body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   const obj4 = { attachment_urls: null };
-  const items = [closure_0];
+  items = [closure_0];
   obj4.attachment_urls = items;
   request.body = obj4;
   await HTTP.post(request);
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6056).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(6176).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1072).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
@@ -363,7 +363,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2031).getHostWithoutPort);
+const mapped = items.map(fn(2160).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {
@@ -384,7 +384,7 @@ export function removeSignedUrlParameters(toURLSafeResult) {
   if (null == toURLSafeResult) {
     return toURLSafeResult;
   } else {
-    const items = ["ex", "is", "hm"];
+    items = ["ex", "is", "hm"];
     for (const item10012 of items) {
       let searchParams = toURLSafeResult.searchParams;
       let deleteResult = searchParams.delete(item10012);

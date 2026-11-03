@@ -1,9 +1,9 @@
-// === Module 9202: BotTag ===
+// === Module 9330: BotTag ===
 
-// Module 9202 (BotTag)
+// Module 9330 (BotTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9203 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9331 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -124,10 +124,10 @@ class BotTag {
   }
 }
 const View = fn(17).View;
-const BotTagTypes = fn(1360).BotTagTypes;
+const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { tag: { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 }, verifiedTagLeftPadding: { paddingLeft: 1 }, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 const obj3 = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 obj2.tagNormal = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };

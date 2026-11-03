@@ -1,19 +1,19 @@
-// === Module 18521: MailboxSpotIllustration ===
+// === Module 18675: MailboxSpotIllustration ===
 
-// Module 18521 (MailboxSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef18522 from "module_18522" /* 18522 */;
-import _modDef18523 from "module_18523" /* 18523 */;
-import _modDef18524 from "module_18524" /* 18524 */;
+// Module 18675 (MailboxSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef18676 from "module_18676" /* 18676 */;
+import _modDef18677 from "module_18677" /* 18677 */;
+import _modDef18678 from "module_18678" /* 18678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18522 }, 3: null };
-let obj2 = { uri: _modDef18522 };
-obj[2] = { uri: _modDef18523 };
-const obj3 = { uri: _modDef18523 };
-obj[3] = { uri: _modDef18524 };
+let obj = { 1: null, 2: { uri: _modDef18676 }, 3: null };
+let obj2 = { uri: _modDef18676 };
+obj[2] = { uri: _modDef18677 };
+const obj3 = { uri: _modDef18677 };
+obj[3] = { uri: _modDef18678 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function MailboxSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

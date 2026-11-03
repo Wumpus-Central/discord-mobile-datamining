@@ -1,18 +1,18 @@
-// === Module 16227: ShareStore ===
+// === Module 16370: ShareStore ===
 
-// Module 16227 (ShareStore)
+// Module 16370 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8932 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 9060 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function handleTokenUpdated(token) {
@@ -50,7 +50,7 @@ const shareStore = new ShareStore(DispatcherDefault, {
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        const guild = GuildStore.getGuild(c3);
+        guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;

@@ -1,21 +1,21 @@
-// === Module 11178: ForLaterIntro ===
+// === Module 11315: ForLaterIntro ===
 
-// Module 11178 (ForLaterIntro)
+// Module 11315 (ForLaterIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 5273 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ClockIcon from "ClockIcon" /* 5740 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10192 */;
-import BookmarkIcon from "BookmarkIcon" /* 11161 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11179 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11183 */;
-import _modDef11187 from "module_11187" /* 11187 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 5396 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ClockIcon from "ClockIcon" /* 5860 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10322 */;
+import BookmarkIcon from "BookmarkIcon" /* 11298 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11316 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11320 */;
+import _modDef11324 from "module_11324" /* 11324 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
 
 function IntroDemo(isReminder) {
@@ -24,10 +24,10 @@ function IntroDemo(isReminder) {
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11187 };
+  const obj4 = { uri: _modDef11324 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
-  const items = [hasOwnProperty(FastImageDefault, obj3), ];
+  items = [hasOwnProperty(FastImageDefault, obj3), ];
   const obj5 = { style: tmp.messageLines, children: null };
   const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
@@ -73,7 +73,7 @@ function SheetRow(hasArrow) {
     flag = false;
   }
   const tmp = closure_7();
-  const items = [tmp.sheetRow, ];
+  items = [tmp.sheetRow, ];
   let sheetRowHighlighted = null;
   if (highlighted) {
     sheetRowHighlighted = tmp.sheetRowHighlighted;
@@ -130,9 +130,9 @@ export default function ForLaterIntro(type) {
   }
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [hasOwnProperty(React4, { style: tmp.upsellImage, children: hasOwnProperty(BookmarksSpotIllustration, { width: 180, height: 120, accessible: false }) }), , ];
+  items = [hasOwnProperty(React4, { style: tmp.upsellImage, children: hasOwnProperty(BookmarksSpotIllustration, { width: 180, height: 120, accessible: false }) }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
-  const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
   const t = util.t;
   obj5.children = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);

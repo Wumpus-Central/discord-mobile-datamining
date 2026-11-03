@@ -1,9 +1,9 @@
-// === Module 19707: ExemptionActionSheet ===
+// === Module 19857: ExemptionActionSheet ===
 
-// Module 19707 (ExemptionActionSheet)
+// Module 19857 (ExemptionActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { search: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, list: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.list = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptionActionSheet.tsx");
 
 export default function ExemptionActionSheet(getSearchText) {
-  let items = getSearchText.items;
+  items = getSearchText.items;
   ({ initialSelected: importDefault, getId } = getSearchText);
   getSearchText = getSearchText.getSearchText;
   const renderLabel = getSearchText.renderLabel;

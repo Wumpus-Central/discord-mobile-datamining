@@ -1,7 +1,7 @@
-// === Module 9560: OrbRedemptionOrdersExperiment ===
+// === Module 9692: OrbRedemptionOrdersExperiment ===
 
-// Module 9560 (OrbRedemptionOrdersExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 9692 (OrbRedemptionOrdersExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-orb-redemption-thru-orders", kind: "user", defaultConfig: { enabled: false }, variations: null };

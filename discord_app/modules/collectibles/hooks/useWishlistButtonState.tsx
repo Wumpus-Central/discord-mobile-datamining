@@ -1,10 +1,10 @@
-// === Module 9525: useWishlistButtonState ===
+// === Module 9653: useWishlistButtonState ===
 
-// Module 9525 (useWishlistButtonState)
+// Module 9653 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export function useWishlistButtonState(onRemoveSuccess) {
   let isSkuInWishlist;
   const tmp2 = skuId(onAddSuccess[4]);
   if (obj.isNullOrEmpty(_location)) {
-    let items = [];
+    items = [];
   } else {
     items = [_location];
   }
@@ -65,7 +65,7 @@ export function useWishlistButtonState(onRemoveSuccess) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

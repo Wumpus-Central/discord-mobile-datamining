@@ -1,22 +1,22 @@
-// === Module 11071: MuteSettingsUtils ===
+// === Module 11208: MuteSettingsUtils ===
 
-// Module 11071 (MuteSettingsUtils)
+// Module 11208 (MuteSettingsUtils)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8202 */;
-import ChannelMuteUtilsAll from "ChannelMuteUtils" /* 11072 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8326 */;
+import ChannelMuteUtilsAll from "ChannelMuteUtils" /* 11209 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: c10, UserNotificationSettings: closure_11 } = Constants);
+({ ChannelTypes: closure_10, UserNotificationSettings: closure_11 } = Constants);
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx");
@@ -79,7 +79,7 @@ export function handleMuteSettingPress(arg0) {
   ({ channelId, muteDurationSeconds } = arg0);
   const muteSettings = ChannelMuteUtilsAll.getMuteSettings(muteDurationSeconds);
   const channel = ChannelStore.getChannel(channelId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != onOptionPress) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
@@ -134,7 +134,7 @@ export function getMuteOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
   obj.duration = MuteUntilSeconds.MINUTES_15;
-  const items = [obj, , , , , ];
+  items = [obj, , , , , ];
   const obj2 = { label: null, duration: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.UMWBZr);

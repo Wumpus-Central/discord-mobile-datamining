@@ -1,10 +1,10 @@
-// === Module 5064: RouteParam ===
+// === Module 5191: RouteParam ===
 
-// Module 5064 (RouteParam)
+// Module 5191 (RouteParam)
 import RouteConstants from "RouteConstants" /* 1073 */;
 import utils_PathUtils from "utils/PathUtils" /* 1081 */;
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import escapeRegExpDefault from "escapeRegExp" /* 5065 */;
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import escapeRegExpDefault from "escapeRegExp" /* 5192 */;
 import size from "module_2" /* 2 */;
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
@@ -51,7 +51,7 @@ export const RouteParam = {
     if (flag === undefined) {
       flag = false;
     }
-    const items = [...StaticChannelRoutes];
+    items = [...StaticChannelRoutes];
     const mapped = items.map(escapeRegExpDefault);
     const combined = "" + mapped.join("|") + "|\\d+";
     let flag2 = { optional: flag }.optional;

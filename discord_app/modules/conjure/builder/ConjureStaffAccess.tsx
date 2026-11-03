@@ -1,11 +1,11 @@
-// === Module 13004: ConjureStaffAccess ===
+// === Module 13140: ConjureStaffAccess ===
 
-// Module 13004 (ConjureStaffAccess)
+// Module 13140 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/conjure/builder/ConjureStaffA
 export const CONJURE_STAFF_ACCESS_CHANNEL_NAME = "conjuring-help";
 export const CONJURE_STAFF_ACCESS_URL = "https://i.dis.gd/conjuring-access";
 export function useConjureStaffAccessTarget() {
-  const items = [UserStore, GuildStore, GuildChannelStore, RelationshipStore];
+  items = [UserStore, GuildStore, GuildChannelStore, RelationshipStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

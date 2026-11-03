@@ -1,6 +1,6 @@
-// === Module 10195: usePollMessageContextItemTypes ===
+// === Module 10325: usePollMessageContextItemTypes ===
 
-// Module 10195 (usePollMessageContextItemTypes)
+// Module 10325 (usePollMessageContextItemTypes)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageCont
 
 export default function usePollMessageContextItemTypes(poll) {
   const obj = initialize;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   if (poll.isPoll()) {

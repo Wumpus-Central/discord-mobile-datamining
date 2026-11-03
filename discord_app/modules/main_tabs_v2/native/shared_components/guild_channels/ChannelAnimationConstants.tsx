@@ -1,48 +1,65 @@
-// === Module 14885: ChannelAnimationConstants ===
+// === Module 15016: ChannelAnimationConstants ===
 
-// Module 14885 (ChannelAnimationConstants)
-import spring from "spring" /* 5637 */;
+// Module 15016 (ChannelAnimationConstants)
+import spring_spring from "spring/spring" /* 5757 */;
 import size from "module_2" /* 2 */;
 
-const CHANNEL_SPRING_CONFIG = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
-const fn = function n() {
-  const obj = { initialValues: null, animations: null };
-  const obj2 = { transform: null, opacity: 0 };
-  const items = [{ scale: 0 }];
-  obj2.transform = items;
-  obj.initialValues = obj2;
-  const obj3 = { transform: null, opacity: null };
-  const obj4 = { scale: spring.withSpring(1, obj) };
-  const items1 = [obj4];
-  obj3.transform = items1;
-  obj3.opacity = spring.withSpring(1, obj);
-  obj.animations = obj3;
-  return obj;
-};
-fn.__closure = { withSpring: spring.withSpring, CHANNEL_SPRING_CONFIG };
-fn.__workletHash = 5885186288311;
-fn.__initData = { code: "function ChannelAnimationConstantsTsx1(){const{withSpring,CHANNEL_SPRING_CONFIG}=this.__closure;return{initialValues:{transform:[{scale:0}],opacity:0},animations:{transform:[{scale:withSpring(1,CHANNEL_SPRING_CONFIG)}],opacity:withSpring(1,CHANNEL_SPRING_CONFIG)}};}" };
-const fn2 = function t() {
-  const obj = { initialValues: null, animations: null };
-  const obj2 = { transform: null, opacity: 1 };
-  const items = [{ scale: 1 }];
-  obj2.transform = items;
-  obj.initialValues = obj2;
-  const obj3 = { transform: null, opacity: null };
-  const obj4 = { scale: spring.withSpring(0, obj) };
-  const items1 = [obj4];
-  obj3.transform = items1;
-  obj3.opacity = spring.withSpring(0, obj);
-  obj.animations = obj3;
-  return obj;
-};
-let obj2 = { withSpring: spring.withSpring, CHANNEL_SPRING_CONFIG };
-fn2.__closure = { withSpring: spring.withSpring, CHANNEL_SPRING_CONFIG };
-fn2.__workletHash = 1746051409364;
-fn2.__initData = { code: "function ChannelAnimationConstantsTsx2(){const{withSpring,CHANNEL_SPRING_CONFIG}=this.__closure;return{initialValues:{transform:[{scale:1}],opacity:1},animations:{transform:[{scale:withSpring(0,CHANNEL_SPRING_CONFIG)}],opacity:withSpring(0,CHANNEL_SPRING_CONFIG)}};}" };
+let obj = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true };
+let items = [{ code: "(function ChannelAnimationConstantsTsx1(){let[withSpring,CHANNEL_SPRING_CONFIG]=this.__closure;return{initialValues:{transform:[{scale:0}],opacity:0},animations:{transform:[{scale:withSpring(1,CHANNEL_SPRING_CONFIG)}],opacity:withSpring(1,CHANNEL_SPRING_CONFIG)}};})" }, spring_spring.withSpring, obj];
+let c0;
+let c1;
+[tmp2, tmp3, tmp4] = items;
+class ChannelAnimationConstantsTsx1 {
+  constructor() {
+    obj = { initialValues: null, animations: null };
+    obj1 = { transform: null, opacity: 0 };
+    items = [];
+    items[0] = { scale: 0 };
+    obj1.transform = items;
+    obj.initialValues = obj1;
+    obj5 = { transform: null, opacity: null };
+    obj6 = { scale: closure_0(1, closure_1) };
+    items1 = [];
+    items1[0] = obj6;
+    obj5.transform = items1;
+    obj5.opacity = closure_0(1, closure_1);
+    obj.animations = obj5;
+    return obj;
+  }
+}
+let items1 = [tmp3, tmp4];
+ChannelAnimationConstantsTsx1.__closure = items1;
+ChannelAnimationConstantsTsx1.__workletHash = 14128288517870;
+ChannelAnimationConstantsTsx1.__initData = tmp2;
+const items2 = [{ code: "(function ChannelAnimationConstantsTsx2(){let[withSpring,CHANNEL_SPRING_CONFIG]=this.__closure;return{initialValues:{transform:[{scale:1}],opacity:1},animations:{transform:[{scale:withSpring(0,CHANNEL_SPRING_CONFIG)}],opacity:withSpring(0,CHANNEL_SPRING_CONFIG)}};})" }, spring_spring.withSpring, obj];
+let closure_129_0;
+let closure_129_1;
+[tmp5, tmp6, tmp7] = items2;
+class ChannelAnimationConstantsTsx2 {
+  constructor() {
+    obj = { initialValues: null, animations: null };
+    obj1 = { transform: null, opacity: 1 };
+    items = [];
+    items[0] = { scale: 1 };
+    obj1.transform = items;
+    obj.initialValues = obj1;
+    obj5 = { transform: null, opacity: null };
+    obj6 = { scale: closure_0(0, closure_1) };
+    items1 = [];
+    items1[0] = obj6;
+    obj5.transform = items1;
+    obj5.opacity = closure_0(0, closure_1);
+    obj.animations = obj5;
+    return obj;
+  }
+}
+const items3 = [tmp6, tmp7];
+ChannelAnimationConstantsTsx2.__closure = items3;
+ChannelAnimationConstantsTsx2.__workletHash = 6413362691117;
+ChannelAnimationConstantsTsx2.__initData = tmp5;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx");
 
 export const MESSAGE_PREVIEW_DELAY = 350;
-export { CHANNEL_SPRING_CONFIG };
-export const TYPING_ENTERING = fn;
-export const TYPING_EXITING = fn2;
+export const CHANNEL_SPRING_CONFIG = obj;
+export const TYPING_ENTERING = ChannelAnimationConstantsTsx1;
+export const TYPING_EXITING = ChannelAnimationConstantsTsx2;

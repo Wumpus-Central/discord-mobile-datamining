@@ -1,10 +1,10 @@
-// === Module 14149: useGameServerPowerupStatus ===
+// === Module 14280: useGameServerPowerupStatus ===
 
-// Module 14149 (useGameServerPowerupStatus)
+// Module 14280 (useGameServerPowerupStatus)
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
+import _modDef2699 from "module_2699" /* 2699 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServ
 
 export default function useGameServerPowerupStatus(arg0) {
   _require = arg0;
-  const items = [GameServerStore];
+  items = [GameServerStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const stateForGuild = GameServerStore.getStateForGuild(closure_0);
@@ -24,7 +24,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(14133)(arg0);
+  const tmp2 = stateFromStores(14264)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {
@@ -39,7 +39,7 @@ export default function useGameServerPowerupStatus(arg0) {
       } else {
         obj3 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj3.statusText = intl.string(_modDef2570.FFLkmx);
+        obj3.statusText = intl.string(_modDef2699.FFLkmx);
       }
       return obj3;
     }

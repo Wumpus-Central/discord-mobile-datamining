@@ -1,10 +1,10 @@
-// === Module 15449: OutboundPromotionClaimAlert ===
+// === Module 15590: OutboundPromotionClaimAlert ===
 
-// Module 15449 (OutboundPromotionClaimAlert)
+// Module 15590 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import PromotionUtils from "PromotionUtils" /* 9667 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import PromotionUtils from "PromotionUtils" /* 9799 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { loading: { marginVertical: 80 }, body: { alignItems: "center" }, title: { marginBottom: 8 }, errorTitle: { lineHeight: 24, marginBottom: 8 }, bodyText: { textAlign: "center", lineHeight: 20 }, copyInputContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, copyInputLabel: { lineHeight: 20, marginBottom: 8 }, copyInput: null, copyInputCopied: null, copyButton: null, promotionArt: null, errorArt: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm };
 obj2.copyInput = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
@@ -40,7 +40,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
   closure_6 = tmp8;
   const tmp6 = outboundPromotion(onClaim(code[6])(false, 2000), 2);
   const analyticsLocations = onClaim(code[7])(onClaim(code[8]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
-  const items = [null != code, , , , , ];
+  items = [null != code, , , , , ];
   ({ id: arr[1], outboundTitle: arr[2], partnerId: arr[3] } = outboundPromotion);
   items[4] = onClaim;
   items[5] = analyticsLocations;
@@ -59,7 +59,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     let obj3 = { source: tmp4(tmp5[11]), style: tmp.promotionArt };
     const items1 = [closure_8(tmp4(tmp5[10]), obj3), , , ];
     let Text = onCancel;
-    const obj4 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { style: tmp.title, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = onCancel(tmp5[13]).intl;
     obj4.children = intl.string(onCancel(tmp5[13]).t["23BfZh"]);
     items1[1] = closure_8(onCancel(tmp5[12]).Heading, obj4);
@@ -129,7 +129,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const obj15 = { style: tmp.body, children: null };
     const obj16 = { source: tmp4(tmp5[16]), style: tmp.errorArt };
     const items4 = [closure_8(tmp4(tmp5[10]), obj16), , ];
-    const obj17 = { style: tmp.errorTitle, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+    const obj17 = { style: tmp.errorTitle, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
     const intl4 = onCancel(tmp5[13]).intl;
     obj17.children = intl4.string(onCancel(tmp5[13]).t.iufib1);
     items4[1] = closure_8(onCancel(tmp5[12]).Text, obj17);

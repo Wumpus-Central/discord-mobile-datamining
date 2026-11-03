@@ -1,11 +1,11 @@
-// === Module 9513: NameplateDummyUserPreview ===
+// === Module 9641: NameplateDummyUserPreview ===
 
-// Module 9513 (NameplateDummyUserPreview)
+// Module 9641 (NameplateDummyUserPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import themes from "themes" /* 5036 */;
-import NameplateDefault from "Nameplate" /* 9514 */;
+import themes from "themes" /* 5163 */;
+import NameplateDefault from "Nameplate" /* 9642 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -18,7 +18,7 @@ NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.XSMALL_20] = { padding:
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.NORMAL] = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = { container: { padding: obj[arg0].padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm }, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
   const obj3 = { borderRadius: nativeDefault.radii.round, marginRight: obj[arg0].avatarMarginRight, backgroundColor: null };
@@ -57,7 +57,7 @@ export function NameplateDummyUserPreview(hideAvatar) {
     animate = false;
   }
   const tmp3 = closure_8(NORMAL, flag);
-  const items = [ThemeStore];
+  items = [ThemeStore];
   const obj2 = { style: null, children: null };
   const items1 = [tmp3.container, style];
   obj2.style = items1;
@@ -65,7 +65,7 @@ export function NameplateDummyUserPreview(hideAvatar) {
   const items2 = [hasOwnProperty(NameplateDefault, { nameplate, fullOpacity: true, style: tmp3.nameplate, animate }), , ];
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 9516 : 9517), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
+  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 9644 : 9645), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
   items2[1] = hasOwnProperty(View, obj4);
   const obj6 = { style: null };
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];

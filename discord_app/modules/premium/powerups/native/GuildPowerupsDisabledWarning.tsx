@@ -1,12 +1,12 @@
-// === Module 14119: GuildPowerupsDisabledWarning ===
+// === Module 14250: GuildPowerupsDisabledWarning ===
 
-// Module 14119 (GuildPowerupsDisabledWarning)
+// Module 14250 (GuildPowerupsDisabledWarning)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import WarningIcon from "WarningIcon" /* 8026 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import WarningIcon from "WarningIcon" /* 8150 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsDisabledWarning(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }), React4(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text })];
+  items = [React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }), React4(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

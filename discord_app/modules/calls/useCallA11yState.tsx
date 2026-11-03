@@ -1,8 +1,8 @@
-// === Module 18090: useCallA11yState ===
+// === Module 18234: useCallA11yState ===
 
-// Module 18090 (useCallA11yState)
+// Module 18234 (useCallA11yState)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6569 */;
+import CallStore from "CallStore" /* 6689 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/calls/useCallA11yState.tsx");
 
 export default function useCallA11yState(arg0) {
   _require = arg0;
-  const items = [CallStore, AuthenticationStore];
+  items = [CallStore, AuthenticationStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const call = CallStore.getCall(closure_0);
     const id = AuthenticationStore.getId();

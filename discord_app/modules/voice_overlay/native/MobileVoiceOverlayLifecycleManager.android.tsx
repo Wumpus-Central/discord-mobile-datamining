@@ -1,38 +1,38 @@
-// === Module 16383: MobileVoiceOverlayLifecycleManager ===
+// === Module 16526: MobileVoiceOverlayLifecycleManager ===
 
-// Module 16383 (MobileVoiceOverlayLifecycleManager)
+// Module 16526 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10211 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 11954 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16390 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SpeakingStore from "SpeakingStore" /* 6756 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 11941 */;
-import LifecycleManager from "LifecycleManager" /* 1996 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10341 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 12091 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16533 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SpeakingStore from "SpeakingStore" /* 6876 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 12078 */;
+import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(16384);
-fn(16385);
-fn(16386);
-fn(16387);
-fn(8359);
-fn(15200);
-fn(16388);
-fn(16389);
-const registerAsset = fn(8197);
+fn(16527);
+fn(16528);
+fn(16529);
+fn(16530);
+fn(8483);
+fn(15341);
+fn(16531);
+fn(16532);
+const registerAsset = fn(8321);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
 let obj = { useSpeaker: null, mute: null, disconnectFromVoice: null, getInvite: null, switchChannels: null, openDiscord: null, inviteLinkCopied: null, channelSelect: null, closeWindow: null, searchChannels: null, noResults: null };
@@ -247,7 +247,7 @@ class MobileVoiceOverlayManager {
                         let obj5 = { users: items, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
                         let obj6 = useChannelName;
                         obj5.channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
-                        let guild = GuildStore.getGuild(currentGuildId);
+                        guild = GuildStore.getGuild(currentGuildId);
                         let str2;
                         if (guild != null) {
                           str2 = guild.name;

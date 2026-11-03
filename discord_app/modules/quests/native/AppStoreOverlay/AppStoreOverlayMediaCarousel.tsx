@@ -1,14 +1,14 @@
-// === Module 14671: AppStoreOverlayMediaCarousel ===
+// === Module 14802: AppStoreOverlayMediaCarousel ===
 
-// Module 14671 (AppStoreOverlayMediaCarousel)
+// Module 14802 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14672 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14673 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14803 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14804 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function getMeasurableUrl(type) {
@@ -31,7 +31,7 @@ function AppStoreOverlayScreenshotItem(media) {
   const onGetGamePress = media.onGetGamePress;
   const tmp = closure_14();
   const ref = onGetGamePress.useRef(null);
-  const items = [media.url];
+  items = [media.url];
   const items1 = [media.url, recordMediaSize];
   const memo = onGetGamePress.useMemo(() => AppStoreOverlayMediaSize.getAppStoreOverlayCarouselImageUrl(media.url), items);
   const items2 = [index, mediaViewerSources, onGetGamePress];
@@ -66,7 +66,7 @@ function AppStoreOverlayTrailerItem(media) {
   const tmp = closure_14();
   ref = ref.useRef(null);
   ref = ref.useRef(0);
-  const items = [media.posterUrl];
+  items = [media.posterUrl];
   const memo = ref.useMemo(() => {
     let appStoreOverlayCarouselImageUrl;
     if (null != media.posterUrl) {
@@ -119,9 +119,9 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
@@ -142,7 +142,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
   media = media.media;
   ({ onGetGamePress: importDefault, onCarouselScroll } = media);
   let recordMediaSize;
-  const items = [media];
+  items = [media];
   const memo = recordMediaSize.useMemo(() => {
     const mapped = media.map(getMeasurableUrl);
     return mapped.filter((item) => null != item);

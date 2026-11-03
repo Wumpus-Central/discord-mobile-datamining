@@ -1,11 +1,11 @@
-// === Module 8790: StorefrontProductActionCreators ===
+// === Module 8914: StorefrontProductActionCreators ===
 
-// Module 8790 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8792 */;
+// Module 8914 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8916 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8791 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7739 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8915 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7863 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -19,7 +19,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

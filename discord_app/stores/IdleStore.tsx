@@ -1,14 +1,14 @@
-// === Module 6705: IdleStore ===
+// === Module 6825: IdleStore ===
 
-// Module 6705 (IdleStore)
+// Module 6825 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import DiscordNativeDefault from "DiscordNative" /* 4825 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import DiscordNativeDefault from "DiscordNative" /* 4952 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -64,14 +64,14 @@ function checkIdleAFK() {
 }
 const Constants = fn(1072);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(5768).SpeakingFlags;
+const SpeakingFlags = fn(5888).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;
 let c11 = false;
 let c12 = false;
 let closure_13 = false;
-if (fn(1375).isPlatformEmbedded) {
+if (fn(1377).isPlatformEmbedded) {
   const importDefaultResult = DiscordNativeDefault;
   let powerMonitor1;
   if (importDefaultResult != null) {

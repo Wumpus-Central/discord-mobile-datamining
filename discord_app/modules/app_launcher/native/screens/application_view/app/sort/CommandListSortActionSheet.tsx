@@ -1,19 +1,19 @@
-// === Module 12481: CommandListSortActionSheet ===
+// === Module 12617: CommandListSortActionSheet ===
 
-// Module 12481 (CommandListSortActionSheet)
+// Module 12617 (CommandListSortActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12482 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12618 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CommandListSortOrder = fn(12465).CommandListSortOrder;
+const CommandListSortOrder = fn(12601).CommandListSortOrder;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
@@ -38,7 +38,7 @@ export default function CommandListSortActionSheet(sortOrder) {
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.SzxiqK);
   obj5.value = CommandListSortOrder.POPULAR;
-  const items = [obj5, ];
+  items = [obj5, ];
   const obj6 = { label: null, value: null };
   const intl3 = util.intl;
   obj6.label = intl3.string(util.t.m8xsti);

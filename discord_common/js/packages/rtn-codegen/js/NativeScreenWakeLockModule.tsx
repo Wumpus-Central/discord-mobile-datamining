@@ -1,6 +1,6 @@
-// === Module 11839: NativeScreenWakeLockModule ===
+// === Module 11976: NativeScreenWakeLockModule ===
 
-// Module 11839 (NativeScreenWakeLockModule)
+// Module 11976 (NativeScreenWakeLockModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

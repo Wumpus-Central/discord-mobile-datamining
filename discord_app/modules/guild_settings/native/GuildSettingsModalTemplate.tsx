@@ -1,29 +1,29 @@
-// === Module 19819: GuildSettingsModalTemplate ===
+// === Module 19969: GuildSettingsModalTemplate ===
 
-// Module 19819 (GuildSettingsModalTemplate)
+// Module 19969 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import CopyIcon2 from "CopyIcon" /* 5731 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
-import Input from "Input" /* 7083 */;
-import CircleXIcon2 from "CircleXIcon" /* 7092 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import native from "native" /* 8992 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13219 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19820 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import CopyIcon2 from "CopyIcon" /* 5851 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
+import Input from "Input" /* 7209 */;
+import CircleXIcon2 from "CircleXIcon" /* 7218 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import native from "native" /* 9120 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13355 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const SceneLoadingIndicator = Text(7208);
-const Form = Text(8177);
+const SceneLoadingIndicator = Text(7329);
+const Form = Text(8301);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -106,7 +106,7 @@ function TemplateForm(guildId) {
     _undefined(null);
     _undefined2(null);
   }, []);
-  const items = [tmp19];
+  items = [tmp19];
   callback1 = obj2.useCallback(() => {
     if (closure_13) {
       let _Promise1 = new _Promise((arg0) => {
@@ -126,7 +126,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5964).showConfirmModal(obj2);
+        guildId(6084).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -169,7 +169,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(13219);
+                const obj2 = guildTemplate(13355);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -202,7 +202,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6446).APIError(closure_128_0);
+              const aPIError = new handleSave(6566).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -356,14 +356,14 @@ function CopyRow(children) {
     tmp10 = importDefault;
   }
   const tmp = closure_10();
-  const items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), React5(tmp4(5624).Text, { variant: "text-sm/normal", children: children.label })];
+  items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), React5(tmp4(5747).Text, { variant: "text-sm/normal", children: children.label })];
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1 }, containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, copyRow: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -375,7 +375,7 @@ let closure_12 = noop.memo(function DescriptionBox() {
   const obj4 = { variant: "eyebrow", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["f8u+VO"]);
-  const items = [React5(Text_Text.Heading, obj4), , , ];
+  items = [React5(Text_Text.Heading, obj4), , , ];
   const obj5 = { copies: true, label: null };
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.K2tn16);
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19821)(guildTemplate.code);
+  const tmp3 = guildTemplate(19971)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };
@@ -490,7 +490,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   let intl3 = util.intl;
   obj3.accessibilityHint = intl3.string(util.t.WqhZss);
   obj2.children = handleDelete(native.InputButton, obj3);
-  const items = [handleDelete(Input.Input, obj2), , , , ];
+  items = [handleDelete(Input.Input, obj2), , , , ];
   let isDirty = guildTemplate.isDirty;
   if (isDirty) {
     const obj4 = { children: null };
@@ -559,7 +559,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 
 export default function GuildSettingsModalTemplate(arg0) {
   ({ guildId, contentContainerStyle } = arg0);
-  let items = closure_10();
+  items = closure_10();
   let Text = require;
   let tmp = dependencyMap;
   const canViewAllChannels = GuildTemplateSettingsUtils.useCanViewAllChannels(guildId);

@@ -1,17 +1,17 @@
-// === Module 13969: ChatInputAppCommandManager ===
+// === Module 14100: ChatInputAppCommandManager ===
 
-// Module 13969 (ChatInputAppCommandManager)
+// Module 14100 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 575 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8682 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13755 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 13970 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8806 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13886 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 14101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8345 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8346 */;
-import GameStore from "GameStore" /* 2014 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8680 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8469 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8470 */;
+import GameStore from "GameStore" /* 2143 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8804 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function areResolvedGamesEqual(size, size2) {
@@ -268,7 +268,7 @@ class ChatInputAppCommandManager {
             const mapped = closure_2_11(chatInputStateRef.current.text).map((item) => stateFromStores2.get(item));
             const found = mapped.filter((item) => null != item);
             if (0 !== found.length) {
-              const replaced = str.replace(closure_2_12, (arg0, arg1) => {
+              const replaced = str.replace(application_id, (arg0, arg1) => {
                 let combined = arg0;
                 value = stateFromStores2.get(arg1);
                 if (null != value) {
@@ -303,9 +303,9 @@ class ChatInputAppCommandManager {
     return null;
   }
 }
-const ChannelAutocompleteConstants = fn(6036);
+const ChannelAutocompleteConstants = fn(6156);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { commandOption: { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 }, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
 let obj3 = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
 obj.commandErrorOption = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
@@ -315,7 +315,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: na
 obj.timestampMention = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 let obj6 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 obj.autocomplete = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
-let value = createStyles.createStyles(obj);
+const gesture = createStyles.createStyles(obj);
 ChatInputAppCommandManager.displayName = "ChatInputAppCommandManager";
 let obj7 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const size = fn(2);

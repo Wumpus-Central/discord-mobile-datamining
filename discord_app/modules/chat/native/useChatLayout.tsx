@@ -1,7 +1,7 @@
-// === Module 5201: useChatLayout ===
+// === Module 5324: useChatLayout ===
 
-// Module 5201 (useChatLayout)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5202 */;
+// Module 5324 (useChatLayout)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5325 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx
 export default function useChatLayout() {
   const tmp = useWindowSizeClassifierDefault();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => ({ isChatBesideChannelList: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE, isChatLockedOpen: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE }), items);
 };
 export function getChatLayout() {

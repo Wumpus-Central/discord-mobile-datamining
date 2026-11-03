@@ -1,6 +1,6 @@
-// === Module 18453: FocusModeOptionsActionSheet ===
+// === Module 18607: FocusModeOptionsActionSheet ===
 
-// Module 18453 (FocusModeOptionsActionSheet)
+// Module 18607 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
@@ -91,7 +91,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  const focusModeEnabled = onSelect(11018).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(11151).useFocusModeEnabled();
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1113).intl;
   obj2.title = intl.string(onSelect(1113).t["sNX1E+"]);
@@ -107,7 +107,7 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     };
     const intl4 = tmp(1113).intl;
     obj3.label = intl4.string(tmp(1113).t.rk35Gm);
-    tmp4Result = closure_2(tmp(6975).TableRow, obj3);
+    tmp4Result = closure_2(tmp(7101).TableRow, obj3);
   }
   const obj4 = { children: null };
   items = [tmp4Result, ];
@@ -125,6 +125,6 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     }, "" + duration);
   });
   obj2.children = items;
-  obj4.children = closure_3(onSelect(7060).TableRowGroup, obj2);
-  return closure_2(onSelect(7366).ActionSheet, obj4);
+  obj4.children = closure_3(onSelect(7186).TableRowGroup, obj2);
+  return closure_2(onSelect(7486).ActionSheet, obj4);
 };

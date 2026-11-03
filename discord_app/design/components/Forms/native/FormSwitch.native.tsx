@@ -1,24 +1,24 @@
-// === Module 7370: FormSwitch ===
+// === Module 7490: FormSwitch ===
 
-// Module 7370 (FormSwitch)
+// Module 7490 (FormSwitch)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
-import IconDefault from "Icon" /* 5636 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
+import IconDefault from "Icon" /* 5756 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import springPresets from "springPresets" /* 5758 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const ReanimatedRexport_mod = ReanimatedRexport2;
+const module_1652_mod = _mod1652;
 
 require = fn;
-const jsx = fn(21).jsx;
-let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5014);
+let jsx = fn(21).jsx;
+let module_1652 = module_1652_mod;
+let closure_6 = module_1652.createAnimatedComponent(fn(17).Pressable);
+const createStyles = fn(5141);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -28,11 +28,11 @@ obj.selectedIcon = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
 const size1 = { height: nativeDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: nativeDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.SWITCH_THUMB_BACKGROUND_DEFAULT };
 obj.knob = size1;
 let closure_7 = createStyles.createStyles(obj);
-let ReanimatedRexport = ReanimatedRexport_mod;
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
-let closure_9 = { code: "function FormSwitchNativeTsx1(){const{progress,interpolateColor,trackColor,trackSelectedColor,trackBorderColor,trackBorderSelectedColor}=this.__closure;const t=progress.get();return{backgroundColor:interpolateColor(t,[0,1],[trackColor,trackSelectedColor]),borderColor:interpolateColor(t,[0,1],[trackBorderColor,trackBorderSelectedColor])};}" };
-let closure_10 = { code: "function FormSwitchNativeTsx2(){const{progress,interpolate,knobCheckedLeft,interpolateColor,knobBackgroundColor,knobSelectedBackgroundColor}=this.__closure;const t=progress.get();return{left:interpolate(t,[0,1],[0,knobCheckedLeft]),backgroundColor:interpolateColor(t,[0,1],[knobBackgroundColor,knobSelectedBackgroundColor])};}" };
-let closure_11 = { code: "function FormSwitchNativeTsx3(){const{progress,interpolate,off,on,useReducedMotion}=this.__closure;const t=progress.get();const opacity=interpolate(t,[0,1],[off,on]);const scale=useReducedMotion?1:interpolate(t,[0,1],[off,on]);return{opacity:opacity,transform:[{scale:scale}]};}" };
+let module_1652 = module_1652_mod;
+const Icon = module_1652.createAnimatedComponent(IconDefault);
+let closure_9 = { code: "(function FormSwitchNativeTsx1(){let[progress,interpolateColor,trackColor,trackSelectedColor,trackBorderColor,trackBorderSelectedColor]=this.__closure;const t=progress.get();return{backgroundColor:interpolateColor(t,[0,1],[trackColor,trackSelectedColor]),borderColor:interpolateColor(t,[0,1],[trackBorderColor,trackBorderSelectedColor])};})" };
+let closure_10 = { code: "(function FormSwitchNativeTsx2(){let[progress,interpolate,knobCheckedLeft,interpolateColor,knobBackgroundColor,knobSelectedBackgroundColor]=this.__closure;const t=progress.get();return{left:interpolate(t,[0,1],[0,knobCheckedLeft]),backgroundColor:interpolateColor(t,[0,1],[knobBackgroundColor,knobSelectedBackgroundColor])};})" };
+let closure_11 = { code: "(function FormSwitchNativeTsx3(){let[progress,interpolate,off,on,useReducedMotion]=this.__closure;const t=progress.get();const opacity=interpolate(t,[0,1],[off,on]);const scale=useReducedMotion?1:interpolate(t,[0,1],[off,on]);return{opacity:opacity,transform:[{scale:scale}]};})" };
 size = fn(2);
 let result = size.fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
 
@@ -41,129 +41,144 @@ export function FormSwitch(onValueChange) {
   _require = value;
   importDefault = onValueChange.onValueChange;
   ({ accessibilityLabel, accessibilityHint, aria-hidden: tmp } = onValueChange);
-  const context = sharedValue.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext);
-  enabled = context.reducedMotion.enabled;
-  [tmp6, _slicedToArray] = sharedValue.useState(value);
-  let obj = sharedValue;
-  const tmp5 = _slicedToArray(sharedValue.useState(value), 2);
+  const context = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext);
+  dependencyMap = context.reducedMotion.enabled;
+  [tmp6, c3] = noop.useState(value);
+  let obj = noop;
+  const tmp5 = _slicedToArray(noop.useState(value), 2);
   let num = 0;
   if (value) {
     num = 1;
   }
-  sharedValue = require("ReanimatedRexport").useSharedValue(num);
-  let items = [value, sharedValue];
+  const sharedValue = require("module_1652").useSharedValue(num);
+  items = [value, sharedValue];
   const effect = obj.useEffect(() => {
-    _slicedToArray(c0);
+    _undefined3(c0);
     let num = 0;
     if (c0) {
       num = 1;
     }
-    const result = sharedValue.set(spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
+    const result = _undefined4.set(spring_spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
   }, items);
-  const tmp9 = token2();
-  let obj2 = require("ReanimatedRexport");
-  const token = require("useToken").useToken(require("native").colors.SWITCH_BACKGROUND_DEFAULT);
-  let tmp2Result = require("useToken");
-  const token1 = require("useToken").useToken(require("native").colors.SWITCH_BACKGROUND_SELECTED_DEFAULT);
+  const tmp9 = closure_7();
+  const obj2 = require("module_1652");
+  const token = require("useToken").useToken(nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT);
+  const tmp2Result = require("useToken");
+  const token1 = require("useToken").useToken(nativeDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT);
+  const tmp2Result9 = require("useToken");
+  const token2 = require("useToken").useToken(nativeDefault.colors.SWITCH_BORDER_DEFAULT);
+  const tmp2Result10 = require("useToken");
+  const token3 = require("useToken").useToken(nativeDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT);
   const tmp2Result11 = require("useToken");
-  token2 = require("useToken").useToken(require("native").colors.SWITCH_BORDER_DEFAULT);
+  const token4 = require("useToken").useToken(nativeDefault.modules.mobile.CONTROL_SWITCH_KNOB_CHECKED_OFFSET);
   const tmp2Result12 = require("useToken");
-  const token3 = require("useToken").useToken(require("native").colors.SWITCH_BORDER_SELECTED_DEFAULT);
+  const token5 = require("useToken").useToken(nativeDefault.colors.SWITCH_THUMB_BACKGROUND_DEFAULT);
   const tmp2Result13 = require("useToken");
-  const token4 = require("useToken").useToken(require("native").modules.mobile.CONTROL_SWITCH_KNOB_CHECKED_OFFSET);
+  const token6 = require("useToken").useToken(nativeDefault.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT);
   const tmp2Result14 = require("useToken");
-  const token5 = require("useToken").useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_DEFAULT);
-  const tmp2Result15 = require("useToken");
-  const token6 = require("useToken").useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT);
-  const tmp2Result16 = require("useToken");
-  const fn = function y() {
-    value = sharedValue.get();
-    const obj = { backgroundColor: null, borderColor: null };
-    const items = [token, token1];
-    obj.backgroundColor = ReanimatedRexport2.interpolateColor(value, [0, 1], items);
-    const items1 = [token2, token3];
-    obj.borderColor = ReanimatedRexport2.interpolateColor(value, [0, 1], items1);
-    return obj;
-  };
-  const tmp2Result17 = require("ReanimatedRexport");
-  fn.__closure = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
-  fn.__workletHash = 11488728296308;
-  fn.__initData = token4;
-  const animatedStyle = tmp2Result17.useAnimatedStyle(fn);
-  const obj3 = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
-  class D {
+  let items1 = [closure_9, sharedValue, require("module_1652").interpolateColor, token, token1, token2, token3];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  jsx = undefined;
+  [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items1;
+  class FormSwitchNativeTsx1 {
     constructor() {
-      value = closure_4.get();
-      obj = { left: null, backgroundColor: null };
-      obj2 = closure_0(closure_2[4]);
-      items = [0];
-      items[1] = closure_9;
-      obj.left = obj2.interpolate(value, [0, 1], items);
-      obj3 = closure_0(closure_2[4]);
+      value = closure_0.get();
+      obj = { backgroundColor: null, borderColor: null };
+      items = [, ];
+      items[0] = closure_2;
+      items[1] = closure_3;
+      obj.backgroundColor = closure_1(value, [0, 1], items);
       items1 = [, ];
-      items1[0] = closure_10;
-      items1[1] = closure_11;
-      obj.backgroundColor = obj3.interpolateColor(value, [0, 1], items1);
+      items1[0] = closure_4;
+      items1[1] = closure_5;
+      obj.borderColor = closure_1(value, [0, 1], items1);
       return obj;
     }
   }
-  const tmp2Result18 = require("ReanimatedRexport");
-  D.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
-  D.__workletHash = 7732502313271;
-  D.__initData = token5;
-  _require = 1;
-  const animatedStyle1 = tmp2Result18.useAnimatedStyle(D);
-  const obj4 = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
-  const fn2 = function n() {
-    value = noop.get();
-    const obj = { opacity: null, transform: null };
-    const items = [c1, c0];
-    obj.opacity = v0(enabled[4]).interpolate(value, [0, 1], items);
-    let num = 1;
-    if (!dependencyMap) {
-      const items1 = [c1, c0];
-      num = v0(enabled[4]).interpolate(value, [0, 1], items1);
-      const tmp2Result = v0(enabled[4]);
+  let items2 = [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24];
+  FormSwitchNativeTsx1.__closure = items2;
+  FormSwitchNativeTsx1.__workletHash = 962173607693;
+  FormSwitchNativeTsx1.__initData = tmp18;
+  const animatedStyle = require("module_1652").useAnimatedStyle(FormSwitchNativeTsx1);
+  const tmp2Result15 = require("module_1652");
+  const items3 = [closure_10, sharedValue, require("module_1652").interpolate, token4, require("module_1652").interpolateColor, token5, token6];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  jsx = undefined;
+  [tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32] = items3;
+  function useIconAnimation(arg0, arg1) {
+    items = [closure_11, c4, _mod1652.interpolate, arg1, arg0, c2];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    [tmp, tmp2, tmp3, tmp4, tmp5, tmp6] = items;
+    class FormSwitchNativeTsx3 {
+      constructor() {
+        value = closure_0.get();
+        obj = { opacity: null, transform: null };
+        items = [, ];
+        items[0] = closure_2;
+        items[1] = closure_3;
+        tmp2 = closure_1;
+        tmp3 = closure_2;
+        tmp4 = closure_3;
+        obj.opacity = closure_1(value, [0, 1], items);
+        num = 1;
+        if (!closure_4) {
+          items1 = [, ];
+          items1[0] = tmp3;
+          items1[1] = tmp4;
+          num = tmp2(value, [0, 1], items1);
+        }
+        items2 = [];
+        items2[0] = { scale: num };
+        obj.transform = items2;
+        return obj;
+      }
     }
-    const items2 = [{ scale: num }];
-    obj.transform = items2;
-    return obj;
-  };
-  const tmp2Result19 = require("ReanimatedRexport");
-  fn2.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 0, on: 1, useReducedMotion: enabled };
-  fn2.__workletHash = 12190941017160;
-  fn2.__initData = token6;
-  _require = 0;
-  importDefault = 1;
-  const animatedStyle2 = tmp2Result19.useAnimatedStyle(fn2);
-  require("ReanimatedRexport");
-  const fn3 = function n() {
-    value = noop.get();
-    const obj = { opacity: null, transform: null };
-    const items = [c1, c0];
-    obj.opacity = v0(enabled[4]).interpolate(value, [0, 1], items);
-    let num = 1;
-    if (!dependencyMap) {
-      const items1 = [c1, c0];
-      num = v0(enabled[4]).interpolate(value, [0, 1], items1);
-      const tmp2Result = v0(enabled[4]);
+    let items1 = [tmp2, tmp3, tmp4, tmp5, tmp6];
+    FormSwitchNativeTsx3.__closure = items1;
+    FormSwitchNativeTsx3.__workletHash = 4913489422961;
+    FormSwitchNativeTsx3.__initData = tmp;
+    return _mod1652.useAnimatedStyle(FormSwitchNativeTsx3);
+  }
+  class FormSwitchNativeTsx2 {
+    constructor() {
+      value = closure_0.get();
+      obj = { left: null, backgroundColor: null };
+      items = [0];
+      items[1] = closure_2;
+      obj.left = closure_1(value, [0, 1], items);
+      items1 = [, ];
+      items1[0] = closure_4;
+      items1[1] = closure_5;
+      obj.backgroundColor = closure_3(value, [0, 1], items1);
+      return obj;
     }
-    const items2 = [{ scale: num }];
-    obj.transform = items2;
-    return obj;
-  };
-  const obj5 = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 0, on: 1, useReducedMotion: enabled };
-  fn3.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 1, on: 0, useReducedMotion: enabled };
-  fn3.__workletHash = 12190941017160;
-  fn3.__initData = token6;
+  }
+  const items4 = [tmp27, tmp28, tmp29, tmp30, tmp31, tmp32];
+  FormSwitchNativeTsx2.__closure = items4;
+  FormSwitchNativeTsx2.__workletHash = 13709465542766;
+  FormSwitchNativeTsx2.__initData = tmp26;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(FormSwitchNativeTsx2);
+  const iconAnimation = useIconAnimation(1, 0);
   if (!context.switchIconsEnabled) {
     if (tmp) {
-      let obj7 = { "aria-hidden": true, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+      let obj3 = { "aria-hidden": true, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     } else {
-      obj7 = { accessible: true, accessibilityRole: "switch", accessibilityLabel, accessibilityHint, accessibilityState: null, onAccessibilityTap: null };
-      const obj8 = { disabled, checked: tmp6 };
-      obj7.accessibilityState = obj8;
-      obj7.onAccessibilityTap = function handleAccessibilityTap() {
+      obj3 = { accessible: true, accessibilityRole: "switch", accessibilityLabel, accessibilityHint, accessibilityState: null, onAccessibilityTap: null };
+      const obj4 = { disabled, checked: tmp6 };
+      obj3.accessibilityState = obj4;
+      obj3.onAccessibilityTap = function handleAccessibilityTap() {
         const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
         const tmp3 = haptics_HapticFeedbackTypesDefault;
         if (c0) {
@@ -171,23 +186,23 @@ export function FormSwitch(onValueChange) {
         } else {
           const result1 = triggerHapticFeedback(tmp3.TOGGLE_ON);
         }
-        _slicedToArray(!c0);
+        _undefined3(!c0);
         let num = 1;
         if (c0) {
           num = 0;
         }
-        const result2 = sharedValue.set(spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
+        const result2 = _undefined4.set(spring_spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
         const timerId = setTimeout(() => {
-          if (closure_1_1 != null) {
-            tmp(!v0);
+          if (_undefined2 != null) {
+            tmp(!_undefined);
           }
         });
       };
     }
-    const obj9 = { style: null, onPress: null, disabled: null };
-    let items1 = [tmp9.switch, animatedStyle];
-    obj9.style = items1;
-    obj9.onPress = function onPress() {
+    const obj5 = { style: null, onPress: null, disabled: null };
+    const items5 = [tmp9.switch, animatedStyle];
+    obj5.style = items5;
+    obj5.onPress = function onPress() {
       const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
       const tmp3 = haptics_HapticFeedbackTypesDefault;
       if (c0) {
@@ -199,29 +214,30 @@ export function FormSwitch(onValueChange) {
         tmp6(!c0);
       }
     };
-    obj9.disabled = disabled;
-    const merged = Object.assign(obj7);
-    const obj10 = { style: null, children: null };
-    let items2 = [tmp9.knob, animatedStyle1];
-    obj10.style = items2;
-    obj10.children = null;
-    obj9.children = token(tmp10(tmp3[4]).View, obj10);
-    return token(token1, obj9);
+    obj5.disabled = disabled;
+    const merged = Object.assign(obj3);
+    const obj6 = { style: null, children: null };
+    const items6 = [tmp9.knob, animatedStyle1];
+    obj6.style = items6;
+    obj6.children = null;
+    obj5.children = jsx(tmp10(1652).View, { style: null, children: null });
+    return <closure_6 style={null} onPress={null} disabled={null} />;
   } else {
-    const obj11 = { source: null, size: null, style: null };
+    const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
-      obj11.source = tmp10(tmp3[12]);
-      obj11.size = tmp10(tmp3[7]).Sizes.SMALL_20;
-      const items3 = [tmp9.selectedIcon, animatedStyle2];
-      obj11.style = items3;
-      let tmp25 = obj11;
+      obj7.source = tmp10(7116);
+      obj7.size = tmp10(5756).Sizes.SMALL_20;
+      const items7 = [tmp9.selectedIcon, iconAnimation];
+      obj7.style = items7;
+      let tmp38 = obj7;
     } else {
-      obj11.source = tmp10(tmp3[13]);
-      obj11.size = tmp10(tmp3[7]).Sizes.SMALL;
-      const items4 = [tmp9.unselectedIcon, tmp22];
-      obj11.style = items4;
-      tmp25 = obj11;
+      obj7.source = tmp10(7491);
+      obj7.size = tmp10(5756).Sizes.SMALL;
+      const items8 = [tmp9.unselectedIcon, tmp35];
+      obj7.style = items8;
+      tmp38 = obj7;
     }
-    token(token3, tmp25);
+    <Icon {...tmp38} />;
   }
+  const tmp2Result16 = require("module_1652");
 }

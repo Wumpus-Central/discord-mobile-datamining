@@ -1,32 +1,32 @@
-// === Module 14311: CreationIntent ===
+// === Module 14442: CreationIntent ===
 
-// Module 14311 (CreationIntent)
+// Module 14442 (CreationIntent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6021 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14254 */;
-import ChairIllocon from "ChairIllocon" /* 14312 */;
-import WorldIllocon from "WorldIllocon" /* 14316 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6141 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14385 */;
+import ChairIllocon from "ChairIllocon" /* 14443 */;
+import WorldIllocon from "WorldIllocon" /* 14447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7147);
+const CreateGuildConstants = fn(7270);
 ({ CreateGuildModalStates: metroRequire, GuildTemplateTriggers: closure_7, NUXGuildTemplatesAnalytics: closure_8 } = CreateGuildConstants);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
+({ AnalyticEvents: closure_9, AnalyticsLocations: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { contentContainer: { flex: 1, marginTop: fn(5586).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
-let obj3 = { flex: 1, marginTop: fn(5586).NAV_BAR_HEIGHT };
+const createStyles = fn(5141);
+let obj2 = { contentContainer: { flex: 1, marginTop: fn(5709).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+let obj3 = { flex: 1, marginTop: fn(5709).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
@@ -78,7 +78,7 @@ export default function CreationIntent(arg0) {
   dependencyMap = useNavigation.useNavigation();
   const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   const ref = isScreenReaderEnabled.useRef(null);
-  const items = [isScreenReaderEnabled];
+  items = [isScreenReaderEnabled];
   const effect = isScreenReaderEnabled.useEffect(() => {
     let tmp = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {
@@ -100,7 +100,7 @@ export default function CreationIntent(arg0) {
   const rect = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
   let obj3 = { style: tmp.scrollContainer, children: null };
   let obj4 = { style: tmp.headerContainer, children: null };
-  let obj5 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj5 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.f3MvGS);
   const items2 = [closure_11(Text_Text.Text, obj5), ];
@@ -112,7 +112,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(13872);
+  const tmp13 = trigger(14003);
   const obj9 = { Icon: null, message: null, onPress: null };
   if (closure_14) {
     obj9.Icon = ChairIllocon.ChairIllocon;
@@ -128,10 +128,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(13872), obj10);
+    items4[1] = closure_11(trigger(14003), obj10);
     obj8.children = items4;
     let tmp15 = obj8;
-    const tmp12Result = trigger(13872);
+    const tmp12Result = trigger(14003);
   } else {
     obj9.Icon = WorldIllocon.WorldIllocon;
     const intl3 = util.intl;
@@ -146,10 +146,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(13872), obj11);
+    items5[1] = closure_11(trigger(14003), obj11);
     obj8.children = items5;
     tmp15 = obj8;
-    const tmp12Result2 = trigger(13872);
+    const tmp12Result2 = trigger(14003);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
   items3[1] = closure_11(ref, obj7);

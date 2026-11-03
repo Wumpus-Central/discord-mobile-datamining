@@ -1,9 +1,9 @@
-// === Module 16862: UserSettingsAuthedAppPermissions ===
+// === Module 17005: UserSettingsAuthedAppPermissions ===
 
-// Module 16862 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 5624 */;
-import disclosures from "disclosures" /* 9745 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16856 */;
+// Module 17005 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 5747 */;
+import disclosures from "disclosures" /* 9877 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -26,7 +26,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
   return closure_5(c3, {
     contentContainerStyle: tmp.container,
     children: (function renderPermissions() {
-      let items = [];
+      items = [];
       const iter = _undefined2[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -49,8 +49,8 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(7340).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(5624).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(7460).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(5747).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

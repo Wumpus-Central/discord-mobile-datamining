@@ -1,9 +1,9 @@
-// === Module 19656: ModerationIcon ===
+// === Module 19806: ModerationIcon ===
 
-// Module 19656 (ModerationIcon)
+// Module 19806 (ModerationIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod19657 from "module_19657" /* 19657 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod19807 from "module_19807" /* 19807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ModerationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19657, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19807, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

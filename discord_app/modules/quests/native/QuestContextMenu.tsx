@@ -1,35 +1,35 @@
-// === Module 17129: QuestContextMenu ===
+// === Module 17272: QuestContextMenu ===
 
-// Module 17129 (QuestContextMenu)
+// Module 17272 (QuestContextMenu)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import CopyIcon from "CopyIcon" /* 5731 */;
-import parseURLDefault from "parseURL" /* 5745 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 6993 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import IconButton from "IconButton" /* 8028 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8161 */;
-import _modDef9207 from "module_9207" /* 9207 */;
-import QuestUtils from "QuestUtils" /* 9678 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import captureAdUserAction from "captureAdUserAction" /* 9684 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
-import _modDef17063 from "module_17063" /* 17063 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17088 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import CopyIcon from "CopyIcon" /* 5851 */;
+import parseURLDefault from "parseURL" /* 5865 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 7119 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import IconButton from "IconButton" /* 8152 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8285 */;
+import _modDef9335 from "module_9335" /* 9335 */;
+import QuestUtils from "QuestUtils" /* 9810 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import captureAdUserAction from "captureAdUserAction" /* 9816 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9837 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
+import _modDef17206 from "module_17206" /* 17206 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17231 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef9207;
+  obj.icon = _modDef9335;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -77,7 +77,7 @@ export default noop.memo(function QuestContextMenu(children) {
   const handleOverridePreviewClick = questPreviewActions.handleOverridePreviewClick;
   const handleResetHasBeenSeenClick = questPreviewActions.handleResetHasBeenSeenClick;
   let obj = quest(sourceQuestContent[8]);
-  let items = [handleResetStatusClick];
+  items = [handleResetStatusClick];
   stateFromStores = quest(sourceQuestContent[9]).useStateFromStores(items, () => handleResetStatusClick.getQuestPreviewOverride(quest(sourceQuestContent[10]).QuestContent.QUEST_BAR_MOBILE), []);
   let obj2 = quest(sourceQuestContent[9]);
   const getQuestImpressionId = quest(sourceQuestContent[11]).useGetQuestImpressionId();
@@ -128,12 +128,12 @@ export default noop.memo(function QuestContextMenu(children) {
   callback4 = handleResetDismissibilityClick.useCallback(() => QuestActionCreators.manualStopConsoleQuest(quest.id), items5);
   const items6 = [externalCtaLabel, action, callback2, flag, callback1];
   memo = handleResetDismissibilityClick.useMemo(() => {
-    const items = [{ label: externalCtaLabel, IconComponent: LinkExternalSmallIcon.LinkExternalSmallIcon, action, accessibilityRole: "link" }, ];
+    items = [{ label: externalCtaLabel, IconComponent: LinkExternalSmallIcon.LinkExternalSmallIcon, action, accessibilityRole: "link" }, ];
     const obj2 = { label: null, action: null, iconSource: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef17063;
+    obj2.iconSource = _modDef17206;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };
@@ -153,7 +153,7 @@ export default noop.memo(function QuestContextMenu(children) {
   memo1 = handleResetDismissibilityClick.useMemo(() => {
     if (obj.isConsoleQuest(quest)) {
       const obj2 = { label: "Start Console Heartbeat", action: callback3 };
-      const items = [obj2, ];
+      items = [obj2, ];
       const obj3 = { label: "Stop Console Heartbeat", action: callback4 };
       items[1] = obj3;
       let items1 = items;
@@ -164,7 +164,7 @@ export default noop.memo(function QuestContextMenu(children) {
   }, items7);
   const items8 = [memo1, handleComplete, handleResetDismissibilityClick, handleProgress, handleResetStatusClick, handleResetHasBeenSeenClick, quest.id];
   memo2 = handleResetDismissibilityClick.useMemo(() => {
-    const items = [
+    items = [
       {
         label: "Set Random Quest Progress",
         action() {
@@ -216,7 +216,7 @@ export default noop.memo(function QuestContextMenu(children) {
   const items11 = [quest.id, getQuestImpressionId, sourceQuestContent];
   const items12 = obj6.useMemo(() => {
     if (null != additionalItems) {
-      const items = [memo, tmp];
+      items = [memo, tmp];
       let items1 = items;
     } else {
       items1 = [memo];

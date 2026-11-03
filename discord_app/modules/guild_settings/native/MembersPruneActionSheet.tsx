@@ -1,15 +1,15 @@
-// === Module 18656: MembersPruneActionSheet ===
+// === Module 18814: MembersPruneActionSheet ===
 
-// Module 18656 (MembersPruneActionSheet)
+// Module 18814 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7439 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18658 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7563 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18816 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function MembersPruneActionSheetContent(guild) {
@@ -21,7 +21,7 @@ function MembersPruneActionSheetContent(guild) {
   [days, _slicedToArray] = num.useState(7);
   const tmp3 = closure_5(guild.id, days, []);
   num = tmp3.count;
-  const items = [guild.id, days];
+  items = [guild.id, days];
   const effect = num.useEffect(() => {
     function handlePruneUpdate(guildId) {
       if (guildId.guildId === handlePruneUpdate.id) {
@@ -97,7 +97,7 @@ function MembersPruneActionSheetContent(guild) {
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(18657);
+const PrunePreviewStore = fn(18815);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/Members
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
-  const items = [GuildStore, PermissionStore, UserStore];
+  items = [GuildStore, PermissionStore, UserStore];
   const items1 = [guild];
   const stateFromStores = guild(504).useStateFromStores(items, () => {
     guild = GuildStore.getGuild(guild.id);

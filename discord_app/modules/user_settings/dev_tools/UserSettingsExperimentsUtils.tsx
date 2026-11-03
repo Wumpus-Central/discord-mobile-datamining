@@ -1,7 +1,7 @@
-// === Module 13240: UserSettingsExperimentsUtils ===
+// === Module 13376: UserSettingsExperimentsUtils ===
 
-// Module 13240 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 5844 */;
+// Module 13376 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 5964 */;
 import size from "module_2" /* 2 */;
 
 function matchesDeep(item10014, item10021) {
@@ -112,7 +112,7 @@ export function getBestMatches(arg0, str) {
   if (0 === found.length) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

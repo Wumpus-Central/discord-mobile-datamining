@@ -1,17 +1,17 @@
-// === Module 18670: ThreadParentMessage ===
+// === Module 18828: ThreadParentMessage ===
 
-// Module 18670 (ThreadParentMessage)
+// Module 18828 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1099 */;
-import Pressables from "Pressables" /* 6980 */;
-import RowGeneratorDefault from "RowGenerator" /* 8377 */;
-import ChatItemDefault from "ChatItem" /* 9885 */;
+import Pressables from "Pressables" /* 7106 */;
+import RowGeneratorDefault from "RowGenerator" /* 8501 */;
+import ChatItemDefault from "ChatItem" /* 10016 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7890 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 require = fn;
-const ReferencedMessageState = fn(7766).ReferencedMessageState;
+const ReferencedMessageState = fn(7890).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
@@ -21,9 +21,9 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 export function ThreadChannelStarterMessage(arg0) {
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
   rowGenerator = initialize;
-  const items = [ReferencedMessageStore];
+  items = [ReferencedMessageStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () => ReferencedMessageStore.getMessage(dependencyMap, importDefault));
-  let state;
+  state = undefined;
   if (stateFromStores != null) {
     state = stateFromStores.state;
   }
@@ -51,7 +51,7 @@ export function ThreadChannelStarterMessage(arg0) {
 export function ThreadCreationStarterMessage(arg0) {
   ({ messageId: require, channelId: importDefault } = arg0);
   rowGenerator = initialize;
-  const items = [MessageStore];
+  items = [MessageStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () => MessageStore.getMessage(importDefault, require));
   let tmp3 = null;
   if (null != stateFromStores) {

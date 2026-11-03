@@ -1,18 +1,18 @@
-// === Module 10131: NsfwServerInviteWarningVariant ===
+// === Module 10261: NsfwServerInviteWarningVariant ===
 
-// Module 10131 (NsfwServerInviteWarningVariant)
+// Module 10261 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 6736 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10132 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import getAgeNoticeWarningDescriptions from "getAgeNoticeWarningDescriptions" /* 6856 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10262 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/age_gate/NsfwServerInviteWarningVariant.tsx");
 
 export function getNsfwServerInviteWarningVariant(arg0) {
-  const tmp3 = getTinyBroncoWarningDescriptions.getTinyBroncoServerDescriptions()[arg0];
+  const tmp3 = getAgeNoticeWarningDescriptions.getTinyBroncoServerDescriptions()[arg0];
   const obj2 = { text: null, joins: false };
   const intl = util.intl;
   obj2.text = intl.string(util.t.FDSSia);

@@ -1,18 +1,18 @@
-// === Module 18769: PeopleScreen ===
+// === Module 18927: PeopleScreen ===
 
-// Module 18769 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
+// Module 18927 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13915 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14046 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-let closure_9 = fn(9826).SearchResultContentEntityTypes;
+let closure_9 = fn(9957).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -26,7 +26,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
   let callback1;
   importDefault = require("SearchUtils").getSearchContextId(searchContext);
   let obj = require("SearchUtils");
-  let items = [onPressGroupDMItem];
+  items = [onPressGroupDMItem];
   stateFromStores = require("initialize").useStateFromStores(items, () => SearchPeopleTabStore.getResults(closure_1));
   let obj2 = require("initialize");
   const items1 = [onPressDMItem];
@@ -53,7 +53,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
             const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;
@@ -117,7 +117,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
   }, items3);
   const items4 = [callback, callback1, stateFromStores1, fullscreenPlaceholderCount, stateFromStores];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
-    let items = [];
+    items = [];
     let item = stateFromStores.forEach((title) => {
       title = title.title;
       items = title.items;

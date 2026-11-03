@@ -1,18 +1,18 @@
-// === Module 18403: useGuildsBarBadges ===
+// === Module 18548: useGuildsBarBadges ===
 
-// Module 18403 (useGuildsBarBadges)
+// Module 18548 (useGuildsBarBadges)
 import native from "native" /* 1187 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5047 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18374 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18405 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5174 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18519 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18550 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11010 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11143 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
@@ -30,9 +30,9 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   _require = arg0;
   const tmp = closure_15();
   importDefault = tmp;
-  let items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
@@ -69,7 +69,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const items3 = [PermissionStore, GuildStore, memo];
   const items4 = [arg0];
   const stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     if (null != guild) {
       if (PermissionStore.can(constants2.MANAGE_GUILD, guild)) {
         const guildIncident = GuildIncidentsStore.getGuildIncident(closure_0);
@@ -109,7 +109,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const token1 = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const items5 = [tmp.topRightBadge, token1];
   memo = token1.useMemo(() => {
-    const items = [topRightBadge.topRightBadge, { top: token1 - native.BADGE_PADDING }];
+    items = [topRightBadge.topRightBadge, { top: token1 - native.BADGE_PADDING }];
     return items;
   }, items5);
   const items6 = [tmp5, memo, token];
@@ -152,7 +152,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const obj7 = { badgeTopRight: memo1.badgeTopRight, badgeBottomRight: tmp10.badge, cutouts: null, mediaState: tmp5 };
   const items7 = [cutoutTopRight, cutout];
   obj7.cutouts = token1.useMemo(() => {
-    const items = [];
+    items = [];
     if (null != cutoutTopRight) {
       items.push(tmp);
     }

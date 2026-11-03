@@ -1,12 +1,12 @@
-// === Module 12651: ConjureProjectEventLine ===
+// === Module 12787: ConjureProjectEventLine ===
 
-// Module 12651 (ConjureProjectEventLine)
-import Text_Text from "Text/Text" /* 5624 */;
-import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12617 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12640 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12644 */;
-import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12654 */;
-import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12656 */;
+// Module 12787 (ConjureProjectEventLine)
+import Text_Text from "Text/Text" /* 5747 */;
+import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12753 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12776 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12780 */;
+import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12790 */;
+import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function ConjureProjectEventLine(arg0) {
     let tmp8Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
   } else {
     const obj3 = { variant: "text-md/normal", color: "text-default", children: tmp3 };
-    const items = [React3(Text_Text.Text, obj3), ];
+    items = [React3(Text_Text.Text, obj3), ];
     let tmp10Result = null;
     if (null != tmp4) {
       const obj = { projectId, request: tmp4, notifyAgent: false };

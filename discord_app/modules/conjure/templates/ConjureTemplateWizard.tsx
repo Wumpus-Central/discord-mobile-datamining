@@ -1,16 +1,16 @@
-// === Module 12999: ConjureTemplateWizard ===
+// === Module 13135: ConjureTemplateWizard ===
 
-// Module 12999 (ConjureTemplateWizard)
+// Module 13135 (ConjureTemplateWizard)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 13000 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 13136 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3868["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef3995["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -28,7 +28,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10850);
+const ConjureConnectionStore = fn(10980);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
@@ -102,7 +102,7 @@ export function conjureTemplateWizardSteps(result1, first1) {
     obj.length = Math.max(1, result1.length);
     const arr = Array.from(obj, (arg0, index) => ({ kind: "question", index }));
     if ("pick" === first1) {
-      const items = ["about", "server"];
+      items = ["about", "server"];
       HermesBuiltin.arraySpread(arr, 2);
       let items1 = items;
     } else {
@@ -196,9 +196,9 @@ export function conjureWizardServerCopy(stateFromStores1) {
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3868.vcxYIA);
+    obj.title = intl.string(_modDef3995.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3868.auUHPZ);
+    obj.hint = intl2.string(_modDef3995.auUHPZ);
     server = obj;
   }
   return server;
@@ -229,7 +229,7 @@ export function isConjureWizardComplete(result1, first3) {
 }
 export function formatConjureWizardAnswers(arr, arg1) {
   closure_0 = arg1;
-  const items = [];
+  items = [];
   const item = arr.forEach((optional, index) => {
     let str = closure_0[index];
     if (str == null) {

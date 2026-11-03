@@ -1,6 +1,6 @@
-// === Module 5708: LinkingSchemas ===
+// === Module 5828: LinkingSchemas ===
 
-// Module 5708 (LinkingSchemas)
+// Module 5828 (LinkingSchemas)
 import size from "module_2" /* 2 */;
 
 const obj = { bestbuy: { regex: /(?:^https?:\/\/)(?:www\.)?bestbuy\.com(?:\/(.*))?$/i, protocol: "bestbuy://" } };

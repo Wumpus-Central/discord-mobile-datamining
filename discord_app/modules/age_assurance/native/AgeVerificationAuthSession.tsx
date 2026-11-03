@@ -1,9 +1,9 @@
-// === Module 7989: AgeVerificationAuthSession ===
+// === Module 8113: AgeVerificationAuthSession ===
 
-// Module 7989 (AgeVerificationAuthSession)
+// Module 8113 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5744 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -33,7 +33,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

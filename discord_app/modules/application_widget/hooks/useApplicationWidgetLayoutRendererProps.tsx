@@ -1,19 +1,19 @@
-// === Module 12355: useApplicationWidgetLayoutRendererProps ===
+// === Module 12491: useApplicationWidgetLayoutRendererProps ===
 
-// Module 12355 (useApplicationWidgetLayoutRendererProps)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12261 */;
-import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12357 */;
+// Module 12491 (useApplicationWidgetLayoutRendererProps)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12356 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10946 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12492 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 11084 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(10946).FetchState;
+const FetchState = fn(11084).FetchState;
 const localizedStrings = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");
@@ -23,14 +23,14 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   importDefault = arg1;
   const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
   let obj = require("UserApplicationIdentityActionCreators");
-  let items = [UserApplicationIdentityStore];
+  items = [UserApplicationIdentityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserApplicationIdentityStore.getUserIdentityByApplication(closure_0, closure_1));
   const obj2 = require("initialize");
   const items1 = [LocaleStore];
   const items2 = [arg1];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
   const memo = noop.useMemo(() => {
-    const items = [closure_1];
+    items = [closure_1];
     return items;
   }, items2);
   const first = stateFromStores3(require("useApplicationWidgetConfigs")(memo), 1)[0];

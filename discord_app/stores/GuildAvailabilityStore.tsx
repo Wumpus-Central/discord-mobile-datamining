@@ -1,10 +1,10 @@
-// === Module 6774: GuildAvailabilityStore ===
+// === Module 6894: GuildAvailabilityStore ===
 
-// Module 6774 (GuildAvailabilityStore)
+// Module 6894 (GuildAvailabilityStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 function handleConnectionOpen(unavailableGuilds) {
   new Set(unavailableGuilds.unavailableGuilds);
@@ -31,10 +31,10 @@ const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildStore);
 };
-prototype["isUnavailable"] = function isUnavailable(guildId) {
-  let hasItem = null != guildId;
+prototype["isUnavailable"] = function isUnavailable(id) {
+  let hasItem = null != id;
   if (hasItem) {
-    hasItem = set.has(guildId);
+    hasItem = set.has(id);
   }
   return hasItem;
 };
@@ -64,7 +64,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
     if (set.has(guildId.guildId)) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(guildId.guildId);
+      guild = GuildStore.getGuild(guildId.guildId);
       let str = "???";
       if (tmp4) {
         str = guild.name;

@@ -1,14 +1,14 @@
-// === Module 10228: ForumComposerHeader ===
+// === Module 10358: ForumComposerHeader ===
 
-// Module 10228 (ForumComposerHeader)
+// Module 10358 (ForumComposerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import Pressables from "Pressables" /* 6980 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import BookCheckIcon from "BookCheckIcon" /* 8647 */;
-import ForumIcon from "ForumIcon" /* 8660 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import Pressables from "Pressables" /* 7106 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import BookCheckIcon from "BookCheckIcon" /* 8771 */;
+import ForumIcon from "ForumIcon" /* 8784 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { headerBar: { height, flexDirection: "row", alignItems: "center" }, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: { marginHorizontal: nativeDefault.space.PX_16 }, headerBarSeparator: null, button: null };
   const obj4 = {};
@@ -48,7 +48,7 @@ export default function ForumComposerHeader(height) {
     return require(false);
   };
   obj2.children = hasOwnProperty(XSmallIcon.XSmallIcon, {});
-  const items = [hasOwnProperty(Pressables.PressableOpacity, obj2), , , ];
+  items = [hasOwnProperty(Pressables.PressableOpacity, obj2), , , ];
   const obj3 = { style: tmp.headerBarContent, children: null };
   const items1 = [hasOwnProperty(ForumIcon.ForumIcon, { size: "sm" }), ];
   const obj4 = { style: tmp.headerBarText, children: null };

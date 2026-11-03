@@ -1,12 +1,12 @@
-// === Module 14453: CollectiblesWishlistItemCard ===
+// === Module 14584: CollectiblesWishlistItemCard ===
 
-// Module 14453 (CollectiblesWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 9466 */;
+// Module 14584 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 9594 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 14454 */;
+import SentGiftsStore from "SentGiftsStore" /* 14585 */;
 
 require = fn;
-let closure_4 = fn(7724).transformSKUToCollectiblesItem;
+let closure_4 = fn(7848).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
@@ -21,7 +21,7 @@ export default function CollectiblesWishlistItemCard(sku) {
   const size = sku.size;
   const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let memo;
-  const items = [SentGiftsStore];
+  items = [SentGiftsStore];
   const items1 = [sku.id, wishlistOwnerId];
   const stateFromStores = sku(size[4]).useStateFromStores(items, () => {
     let hasSentGiftResult = null != wishlistOwnerId;

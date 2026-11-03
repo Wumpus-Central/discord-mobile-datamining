@@ -1,34 +1,34 @@
-// === Module 16773: UserSettingsFamilyCenter ===
+// === Module 16916: UserSettingsFamilyCenter ===
 
-// Module 16773 (UserSettingsFamilyCenter)
+// Module 16916 (UserSettingsFamilyCenter)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6739 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7717 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6859 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
-import UserStore from "UserStore" /* 1383 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function FamilyCenterLoading() {
   const tmp = closure_19();
-  return closure_1_14(Stack_Stack.Stack, { justify: "center", align: "center", style: closure_19().loadingContainer, children: closure_1_14(timestampProducer, {}) });
+  return gesture(Stack_Stack.Stack, { justify: "center", align: "center", style: closure_19().loadingContainer, children: gesture(timestampProducer, {}) });
 }
 function FamilyCenterLoadError() {
   const tmp = closure_19();
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2538.nGX8Co);
+  const stringResult = intl.string(_modDef2667.nGX8Co);
   require = stringResult;
   items = [stringResult];
   const effect = noop.useEffect(() => {
@@ -117,7 +117,7 @@ function FamilyCenter() {
     if (familyCenterInitialized) {
       if (closure_3) {
         ({ ageGroup, numOfAcceptedRequests, selectedTab, selectedTeenId } = closure_7.current);
-        const obj2 = { is_considered_adult: "adult" === ageGroup, num_of_accepted_links: numOfAcceptedRequests, selected_teen_id: selectedTeenId, initial_page: closure_2_12[selectedTab], source: constants.SETTINGS };
+        const obj2 = { is_considered_adult: "adult" === ageGroup, num_of_accepted_links: numOfAcceptedRequests, selected_teen_id: selectedTeenId, initial_page: application_id[selectedTab], source: constants.SETTINGS };
         AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_VIEWED, obj2);
         const obj4 = { name: MetricEvents.MetricEvents.FAMILY_CENTER_VIEW };
         MonitoringAgentDefault.increment(obj4);
@@ -194,13 +194,13 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const AgeGateSource = fn(1097).AgeGateSource;
-const FamilyCenterConstants = fn(7716);
+const FamilyCenterConstants = fn(7840);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_11, FamilyCenterSubPageAnalyticsIds: closure_12, FamilyCenterSubPages } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [, ];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, loadingContainer: { minHeight: "100%" }, loadErrorContainer: null, loadErrorText: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.loadErrorContainer = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -210,5 +210,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx");
 
 export default function FamilyCenterContainer() {
-  return closure_1_14(FamilyCenter, {});
+  return gesture(FamilyCenter, {});
 };

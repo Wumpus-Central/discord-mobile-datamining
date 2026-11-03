@@ -1,22 +1,22 @@
-// === Module 14858: Badges ===
+// === Module 14989: Badges ===
 
-// Module 14858 (Badges)
+// Module 14989 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import utils from "utils" /* 8718 */;
-import TrophyIcon from "TrophyIcon" /* 9378 */;
-import GameControllerIcon from "GameControllerIcon" /* 9727 */;
-import RetryIcon from "RetryIcon" /* 11083 */;
-import TimerIcon from "TimerIcon" /* 11641 */;
-import FireIcon from "FireIcon" /* 14725 */;
-import NewUserIcon from "NewUserIcon" /* 14859 */;
-import FlashIcon from "FlashIcon" /* 14861 */;
-import TrendingType from "TrendingType" /* 14863 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import utils from "utils" /* 8842 */;
+import TrophyIcon from "TrophyIcon" /* 9506 */;
+import GameControllerIcon from "GameControllerIcon" /* 9859 */;
+import RetryIcon from "RetryIcon" /* 11220 */;
+import TimerIcon from "TimerIcon" /* 11778 */;
+import FireIcon from "FireIcon" /* 14856 */;
+import NewUserIcon from "NewUserIcon" /* 14990 */;
+import FlashIcon from "FlashIcon" /* 14992 */;
+import TrendingType from "TrendingType" /* 14994 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 class ActiveTimestamp {
@@ -52,7 +52,7 @@ function BaseBadge(accessibilityLabel) {
   ({ Icon, iconColor, text } = accessibilityLabel);
   const tmp = closure_10(noop.useContext(closure_11));
   obj = { style: tmp.badgeContainer, accessible: null != accessibilityLabel, accessibilityLabel, children: null };
-  const items = [timestampProducer(Icon, { style: tmp.icon, color: iconColor }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: text })];
+  items = [timestampProducer(Icon, { style: tmp.icon, color: iconColor }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: text })];
   obj.children = items;
   return React5(View, obj);
 }
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -93,7 +93,7 @@ export function GameTimestampBadge(entry) {
     icon = obj[noop.useContext(noop, closure_11)].icon;
   }
   const obj2 = { style: tmp.badgeContainer, children: null };
-  const items = [timestampProducer(GameControllerIcon.GameControllerIcon, { style: tmp.icon, color: icon }), timestampProducer(ContentTimestamp, { entry })];
+  items = [timestampProducer(GameControllerIcon.GameControllerIcon, { style: tmp.icon, color: icon }), timestampProducer(ContentTimestamp, { entry })];
   obj2.children = items;
   return React5(View, obj2);
 }
@@ -187,7 +187,7 @@ export function TopGameBadge(entry) {
     const obj2 = { Icon: TrophyIcon.TrophyIcon, text: null, iconColor: null };
     const obj3 = { children: null };
     const intl = util.intl;
-    const items = [intl.string(util.t["/50eHi"]), ": ", ];
+    items = [intl.string(util.t["/50eHi"]), ": ", ];
     const intl2 = util.intl;
     const obj4 = { hours: null };
     const _Math = Math;
@@ -202,7 +202,7 @@ export function TopGameBadge(entry) {
 export function CustomStatusTimestampBadge(entry) {
   const tmp = closure_10(noop.useContext(closure_11));
   obj = { style: tmp.badgeContainer, children: null };
-  const items = [timestampProducer(TimerIcon.TimerIcon, { style: tmp.icon, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), timestampProducer(ContentTimestamp, { entry: entry.entry })];
+  items = [timestampProducer(TimerIcon.TimerIcon, { style: tmp.icon, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), timestampProducer(ContentTimestamp, { entry: entry.entry })];
   obj.children = items;
   return React5(View, obj);
 }

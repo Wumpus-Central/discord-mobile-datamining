@@ -1,22 +1,22 @@
-// === Module 14076: usePowerupActiveStatus ===
+// === Module 14207: usePowerupActiveStatus ===
 
-// Module 14076 (usePowerupActiveStatus)
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+// Module 14207 (usePowerupActiveStatus)
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4, PowerupActiveStatusType: hasOwnProperty, POWERUPS_INCLUDED_IN_LEVEL: metroRequire, BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_7 } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
-let closure_9 = fn(5231).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(5354).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
 export default function usePowerupActiveStatus(arg0, arg1) {
   if (null == arg1) {
-    let items = [];
+    items = [];
   } else {
     items = [arg1];
   }
@@ -57,7 +57,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "channel_id" };
             } else {
               let tmp4;
               if (null != React5[tmp22]) {
@@ -110,7 +110,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "channel_id" };
     }
   });
   if (mapped.length <= 0) {
@@ -126,7 +126,7 @@ export function isPowerupActiveStatusActive(type) {
 }
 export function usePowerupsActiveStatuses(guildId, powerups) {
   _require = guildId;
-  const items = [closure_2];
+  items = [closure_2];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const obj = require("initialize");
   const items1 = [flag];
@@ -162,7 +162,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "channel_id" };
             } else {
               let tmp4;
               if (null != React5[tmp22]) {
@@ -215,7 +215,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "channel_id" };
     }
   });
 }

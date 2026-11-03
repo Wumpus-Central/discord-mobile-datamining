@@ -1,11 +1,11 @@
-// === Module 17929: AllowGameFriendDMsSetting ===
+// === Module 18072: AllowGameFriendDMsSetting ===
 
-// Module 17929 (AllowGameFriendDMsSetting)
+// Module 18072 (AllowGameFriendDMsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 17930 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 18073 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: UserSettings.AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.XpBObB)];
+    items = [intl.string(util.t.XpBObB)];
     return items;
   },
   usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible

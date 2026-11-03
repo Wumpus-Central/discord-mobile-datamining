@@ -1,20 +1,20 @@
-// === Module 13197: openGameOrganizationJoinModal ===
+// === Module 13333: openGameOrganizationJoinModal ===
 
-// Module 13197 (openGameOrganizationJoinModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import useGameOrganizationCharacterEligibilityFetch2 from "useGameOrganizationCharacterEligibilityFetch" /* 13198 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11363 */;
+// Module 13333 (openGameOrganizationJoinModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import useGameOrganizationCharacterEligibilityFetch2 from "useGameOrganizationCharacterEligibilityFetch" /* 13334 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11500 */;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11364);
+const GameOrganizationInviteConstants = fn(11501);
 ({ GameOrganizationCharacterMode: closure_4, GameOrganizationInviteStates: hasOwnProperty } = GameOrganizationInviteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 
 export default function openGameOrganizationJoinModal(code) {
   const invite = GameOrganizationInviteStore.getInvite(code);
-  let state;
+  state = undefined;
   if (invite != null) {
     state = invite.state;
   }
@@ -24,9 +24,9 @@ export default function openGameOrganizationJoinModal(code) {
   }
   if (tmp3) {
     const useGameOrganizationCharacterEligibilityFetch = useGameOrganizationCharacterEligibilityFetch2.useGameOrganizationCharacterEligibilityFetch;
-    const items = [code];
+    items = [code];
     const many = useGameOrganizationCharacterEligibilityFetch.fetchMany(items);
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13200, dependencyMap.paths), { code });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13336, dependencyMap.paths), { code });
   const obj2 = { code };
 };

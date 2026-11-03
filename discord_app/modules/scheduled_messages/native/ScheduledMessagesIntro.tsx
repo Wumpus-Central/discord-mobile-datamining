@@ -1,22 +1,22 @@
-// === Module 14595: ScheduledMessagesIntro ===
+// === Module 14726: ScheduledMessagesIntro ===
 
-// Module 14595 (ScheduledMessagesIntro)
+// Module 14726 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10828 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12560 */;
-import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14002 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10958 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12696 */;
+import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14133 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
 
 function MenuRow(arg0) {
   ({ icon, label, highlighted } = arg0);
   const tmp = closure_7();
-  const items = [tmp.menuRow, ];
+  items = [tmp.menuRow, ];
   let menuRowHighlighted = null;
   if (highlighted) {
     menuRowHighlighted = tmp.menuRowHighlighted;
@@ -57,9 +57,9 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_7();
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [hasOwnProperty(React4, { style: tmp.upsellImage, children: hasOwnProperty(ScheduleMessageSpotIllustration.ScheduleMessageSpotIllustration, { width: 180, height: 120, accessible: false }) }), , ];
+  items = [hasOwnProperty(React4, { style: tmp.upsellImage, children: hasOwnProperty(ScheduleMessageSpotIllustration.ScheduleMessageSpotIllustration, { width: 180, height: 120, accessible: false }) }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
-  const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t["C/j9NE"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj5), ];

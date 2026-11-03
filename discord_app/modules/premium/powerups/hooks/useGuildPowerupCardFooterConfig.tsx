@@ -1,14 +1,14 @@
-// === Module 14107: useGuildPowerupCardFooterConfig ===
+// === Module 14238: useGuildPowerupCardFooterConfig ===
 
-// Module 14107 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14072 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14076 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 14238 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14203 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14207 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
@@ -17,10 +17,10 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

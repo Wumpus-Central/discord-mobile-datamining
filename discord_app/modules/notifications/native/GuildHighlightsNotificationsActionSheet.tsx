@@ -1,17 +1,17 @@
-// === Module 10157: GuildHighlightsNotificationsActionSheet ===
+// === Module 10287: GuildHighlightsNotificationsActionSheet ===
 
-// Module 10157 (GuildHighlightsNotificationsActionSheet)
+// Module 10287 (GuildHighlightsNotificationsActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
-import PushFeedbackActions from "PushFeedbackActions" /* 10159 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
+import PushFeedbackActions from "PushFeedbackActions" /* 10289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -21,7 +21,7 @@ function GuildPill(guild) {
   const tmp = closure_14();
   const obj = { style: tmp.guildPill, children: null };
   const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32, animate: true };
-  const items = [closure_1_11(GuildIconDefault, obj2), ];
+  items = [closure_1_11(GuildIconDefault, obj2), ];
   const obj3 = { style: tmp.guildName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   let name;
   if (guild != null) {
@@ -30,18 +30,18 @@ function GuildPill(guild) {
   obj3.children = name;
   items[1] = closure_1_11(Text_Text.Text, obj3);
   obj.children = items;
-  return closure_1_12(View, obj);
+  return application_id(View, obj);
 }
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_8, HighlightSettings: closure_9 } = Constants);
-const FeedbackRating = fn(10158).FeedbackRating;
+const FeedbackRating = fn(10288).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginBottom: 4 }, centerText: { textAlign: "center" }, feedback: { marginTop: 16, alignItems: "stretch", alignSelf: "stretch", paddingBottom: 16 }, thanks: { height: 40, textAlign: "center", textAlignVertical: "center" }, settings: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 } };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj5 = { guildPill: null, guildName: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -66,7 +66,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
   closure_6 = tmp4[1];
   const tmp6 = first(noop.useState(false), 2);
   closure_7 = tmp6[1];
-  const items = [first1, feedbackSettings];
+  items = [first1, feedbackSettings];
   const callback = noop.useCallback((rating) => {
     let tmp = first1;
     if (!first1) {

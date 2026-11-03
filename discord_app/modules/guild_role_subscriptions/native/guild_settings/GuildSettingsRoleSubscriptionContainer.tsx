@@ -1,19 +1,19 @@
-// === Module 19953: GuildSettingsRoleSubscriptionContainer ===
+// === Module 20103: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 19953 (GuildSettingsRoleSubscriptionContainer)
-import ErrorBlockDefault from "ErrorBlock" /* 12562 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17204 */;
-import WarningNoticeDefault from "WarningNotice" /* 19878 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 19928 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19945 */;
+// Module 20103 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 12698 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17347 */;
+import WarningNoticeDefault from "WarningNotice" /* 20028 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 20078 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20095 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_9();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (stateFromStores != null) {
     const features = stateFromStores.features;
@@ -75,7 +75,7 @@ function GuildSettingsRoleSubscription(arg0) {
   if (obj.useGroupListingsFetchContext()) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { guildId };
-    const items = [React5(ApplicationRejectedNotice, obj3), children];
+    items = [React5(ApplicationRejectedNotice, obj3), children];
     obj2.children = items;
     let tmp5 = React6(React4, obj2);
   } else {
@@ -89,7 +89,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");

@@ -1,9 +1,9 @@
-// === Module 6717: StreamKeyUtils ===
+// === Module 6837: StreamKeyUtils ===
 
-// Module 6717 (StreamKeyUtils)
+// Module 6837 (StreamKeyUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/StreamKeyUtils.tsx");
 
@@ -35,7 +35,7 @@ export function decodeStreamKey(streamKey) {
 export function encodeStreamKey(currentUserActiveStream) {
   ({ streamType, channelId, ownerId } = currentUserActiveStream);
   if (StreamTypes.GUILD === streamType) {
-    const items = [streamType, tmp, channelId, ownerId];
+    items = [streamType, tmp, channelId, ownerId];
     return items.join(":");
   } else if (tmp2.CALL === streamType) {
     const items1 = [streamType, channelId, ownerId];

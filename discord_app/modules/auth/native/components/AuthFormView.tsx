@@ -1,12 +1,12 @@
-// === Module 7139: AuthFormView ===
+// === Module 7265: AuthFormView ===
 
-// Module 7139 (AuthFormView)
+// Module 7265 (AuthFormView)
 import nativeDefault from "native" /* 575 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7111 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 7140 */;
-import AuthHeaderDefault from "AuthHeader" /* 7141 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7142 */;
-import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7145 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7075 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 7266 */;
+import AuthHeaderDefault from "AuthHeader" /* 7267 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, flex: { flex: 1 }, content: null, subHeader: null };
   let num = 0;
@@ -50,7 +50,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
 export default function AuthFormView(arg0) {
-  ({ children, headerText, subHeader, contentStyle } = arg0);
+  ({ children, headerText, subHeader, contentStyle, background } = arg0);
   ({ backgroundImageSource, backgroundImageCover } = arg0);
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = closure_8(tmp3);
@@ -69,20 +69,20 @@ export default function AuthFormView(arg0) {
       contentContainerStyle: null,
       children: null
     };
-    const items = [tmp4.content, contentStyle];
+    items = [tmp4.content, contentStyle];
     obj2.contentContainerStyle = items;
-    let tmp15 = null;
+    let tmp16 = null;
     if (null != headerText) {
       const obj3 = { children: headerText };
-      tmp15 = timestampProducer(AuthHeaderDefault, obj3);
+      tmp16 = timestampProducer(AuthHeaderDefault, obj3);
     }
-    const items1 = [tmp15, , ];
-    let tmp17 = null;
+    const items1 = [tmp16, , ];
+    let tmp18 = null;
     if (null != subHeader) {
       const obj4 = { style: tmp4.subHeader, children: subHeader };
-      tmp17 = timestampProducer(React4, obj4);
+      tmp18 = timestampProducer(React4, obj4);
     }
-    items1[1] = tmp17;
+    items1[1] = tmp18;
     items1[2] = children;
     obj2.children = items1;
     let tmp5Result = React5(hasOwnProperty, obj2);
@@ -91,25 +91,28 @@ export default function AuthFormView(arg0) {
     const items2 = [, ];
     ({ container: arr[0], flex: arr[1] } = tmp4);
     obj.style = items2;
-    const obj5 = { backgroundImageSource, backgroundImageCover };
-    const items3 = [timestampProducer(BackgroundImageDefault, obj5), timestampProducer(AuthNavbarPlaceholderDefault, {}), ];
+    if (background == null) {
+      const obj5 = { backgroundImageSource, backgroundImageCover };
+      background = timestampProducer(BackgroundImageDefault, obj5);
+    }
+    const items3 = [background, timestampProducer(AuthNavbarPlaceholderDefault, {}), ];
     const obj6 = { contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: tmp4.flex, contentContainerStyle: null, children: null };
     const items4 = [, , ];
     ({ content: arr3[0], flex: arr3[1] } = tmp4);
     items4[2] = contentStyle;
     obj6.contentContainerStyle = items4;
-    let tmp7Result = null;
+    let tmp9Result = null;
     if (null != headerText) {
       const obj7 = { children: headerText };
-      tmp7Result = timestampProducer(AuthHeaderDefault, obj7);
+      tmp9Result = timestampProducer(AuthHeaderDefault, obj7);
     }
-    const items5 = [tmp7Result, , ];
-    let tmp7Result2 = null;
+    const items5 = [tmp9Result, , ];
+    let tmp9Result2 = null;
     if (null != subHeader) {
       const obj8 = { style: tmp4.subHeader, children: subHeader };
-      tmp7Result2 = timestampProducer(React4, obj8);
+      tmp9Result2 = timestampProducer(React4, obj8);
     }
-    items5[1] = tmp7Result2;
+    items5[1] = tmp9Result2;
     items5[2] = children;
     obj6.children = items5;
     items3[2] = React5(hasOwnProperty, obj6);

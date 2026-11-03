@@ -1,7 +1,7 @@
-// === Module 11248: useIsChannelFullyOpen ===
+// === Module 11385: useIsChannelFullyOpen ===
 
-// Module 11248 (useIsChannelFullyOpen)
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11243 */;
+// Module 11385 (useIsChannelFullyOpen)
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11380 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

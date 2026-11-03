@@ -1,9 +1,9 @@
-// === Module 11467: useShowBadgePersonalizationNotice ===
+// === Module 11604: useShowBadgePersonalizationNotice ===
 
-// Module 11467 (useShowBadgePersonalizationNotice)
+// Module 11604 (useShowBadgePersonalizationNotice)
 import initialize from "initialize" /* 504 */;
-import BadgeUtils from "BadgeUtils" /* 11460 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import BadgeUtils from "BadgeUtils" /* 11597 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonaliz
 
 export default function useShowBadgePersonalizationNotice(arg0) {
   ({ badge, isViewingOtherUser } = arg0);
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   return BadgeUtils.isPersonalizationGatedBadge(badge.badge_id) && !isViewingOtherUser && !stateFromStores;
 };

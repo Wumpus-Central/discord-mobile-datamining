@@ -1,24 +1,24 @@
-// === Module 15402: BoostingUnavailablePill ===
+// === Module 15543: BoostingUnavailablePill ===
 
-// Module 15402 (BoostingUnavailablePill)
+// Module 15543 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 2060 */;
-import _modDef3288 from "module_3288" /* 3288 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 2189 */;
+import _modDef3415 from "module_3415" /* 3415 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(15403, dependencyMap.paths);
-  obj2.aboutText = intl.formatToPlainString(_modDef3288["5xN/C1"], { premiumGroupProductName: closure_5() });
+  const tmp = asyncRequireImpl(15544, dependencyMap.paths);
+  obj2.aboutText = intl.formatToPlainString(_modDef3415["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
@@ -32,7 +32,7 @@ export default function BoostingUnavailablePill(style) {
   const tmp = closure_7();
   const obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
   const obj2 = { style: null, children: null };
-  const items = [tmp.premiumGroupBanner, style.style];
+  items = [tmp.premiumGroupBanner, style.style];
   obj2.style = items;
   const obj3 = { style: tmp.pgUnavailable, children: null };
   const obj4 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };

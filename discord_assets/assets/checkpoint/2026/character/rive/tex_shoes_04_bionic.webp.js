@@ -1,6 +1,6 @@
-// === Module 13599: ? ===
+// === Module 13739: ? ===
 
-// Module 13599
+// Module 13739
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_shoes_04_bionic.webp.js");

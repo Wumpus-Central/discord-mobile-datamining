@@ -1,17 +1,17 @@
-// === Module 14081: useCanPurchaseBoosts ===
+// === Module 14212: useCanPurchaseBoosts ===
 
-// Module 14081 (useCanPurchaseBoosts)
+// Module 14212 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7578 */;
-import UserStore from "UserStore" /* 1383 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7702 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const FractionalPremiumStates = fn(1385).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 
 export default function useCanPurchaseBoosts() {
-  const items = [UserStore];
+  items = [UserStore];
   return useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let isPremiumGroupMemberResult;

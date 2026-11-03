@@ -1,10 +1,10 @@
-// === Module 11008: common/Notifications ===
+// === Module 11141: common/Notifications ===
 
-// Module 11008 (common/Notifications)
+// Module 11141 (common/Notifications)
 import initialize from "initialize" /* 504 */;
-import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 11035 */;
+import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 11168 */;
 import noop from "module_19" /* 19 */;
-import InAppNotificationStore from "InAppNotificationStore" /* 11009 */;
+import InAppNotificationStore from "InAppNotificationStore" /* 11142 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
-  const items = [InAppNotificationStore];
+  items = [InAppNotificationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentNotification.getCurrentNotification());
   let tmp3 = null;
   if (null != stateFromStores) {

@@ -1,8 +1,8 @@
-// === Module 5155: CheckpointCardRive ===
+// === Module 5278: CheckpointCardRive ===
 
-// Module 5155 (CheckpointCardRive)
-import BaseRive from "BaseRive" /* 5089 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5146 */;
+// Module 5278 (CheckpointCardRive)
+import BaseRive from "BaseRive" /* 5216 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5269 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function CheckpointCardRiveInner(defaultViewModelInstance) {
   }
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
-  const items = [str, dataBinding, onDataBindingChange];
+  items = [str, dataBinding, onDataBindingChange];
   const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (null != closure_9[str]) {

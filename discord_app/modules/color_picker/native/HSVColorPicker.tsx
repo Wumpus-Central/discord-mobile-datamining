@@ -1,16 +1,16 @@
-// === Module 16453: HSVColorPicker ===
+// === Module 16597: HSVColorPicker ===
 
-// Module 16453 (HSVColorPicker)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16454 */;
-import HuePickerDefault from "HuePicker" /* 16455 */;
+// Module 16597 (HSVColorPicker)
+import _mod1652 from "module_1652" /* 1652 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16598 */;
+import HuePickerDefault from "HuePicker" /* 16599 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
@@ -19,10 +19,10 @@ export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
   const tmp = closure_6();
-  const sharedValue = ReanimatedRexport.useSharedValue(0);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(1);
+  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue1 = _mod1652.useSharedValue(1);
   const obj4 = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = ReanimatedRexport.useSharedValue(1);
+  const sharedValue2 = _mod1652.useSharedValue(1);
   let tmp11 = hue;
   if (hue == null) {
     tmp11 = sharedValue;
@@ -42,7 +42,7 @@ export default function HSVColorPicker(arg0) {
   obj5.selectorStyle = saturationValueSelectorStyle;
   obj5.onPanUpdate = onPanUpdate;
   obj5.onPanFinalize = onPanFinalize;
-  const items = [React4(SaturationValueColorPickerDefault, obj5), ];
+  items = [React4(SaturationValueColorPickerDefault, obj5), ];
   if (hue == null) {
     hue = sharedValue;
   }

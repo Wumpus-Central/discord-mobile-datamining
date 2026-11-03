@@ -1,20 +1,20 @@
-// === Module 14645: PlayStationLinkSuccess ===
+// === Module 14776: PlayStationLinkSuccess ===
 
-// Module 14645 (PlayStationLinkSuccess)
+// Module 14776 (PlayStationLinkSuccess)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9730 */;
-import _modDef14630 from "module_14630" /* 14630 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9862 */;
+import _modDef14761 from "module_14761" /* 14761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
@@ -24,9 +24,9 @@ export function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14630 }), []);
-  const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
-  const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
+  const memo = noop.useMemo(() => ({ uri: _modDef14761 }), []);
+  items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
+  const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);
   items[1] = hasOwnProperty(Text_Text.Text, obj5);

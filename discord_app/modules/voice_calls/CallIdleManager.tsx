@@ -1,16 +1,16 @@
-// === Module 19413: CallIdleManager ===
+// === Module 19571: CallIdleManager ===
 
-// Module 19413 (CallIdleManager)
+// Module 19571 (CallIdleManager)
 import util from "util" /* 1113 */;
-import Timers from "Timers" /* 4858 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import CampInDmExperiment from "CampInDmExperiment" /* 19414 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import Timers from "Timers" /* 4985 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import CampInDmExperiment from "CampInDmExperiment" /* 19572 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function disconnect() {
@@ -41,7 +41,7 @@ function disconnect() {
     const currentClientVoiceChannelId1 = VoiceStateStore.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
       const intl = util.intl;
-      MessageActionCreatorsDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(util.t.XYof5G, { number: 3 }));
+      MessageActionCreatorsDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(util.t.XYof5G, { number: 3 }), "call_idle_disconnect");
       const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(null);
     }
   }

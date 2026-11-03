@@ -1,25 +1,12 @@
-// === Module 6879: ConjureGuildExperiment ===
+// === Module 6999: ConjureGuildExperiment ===
 
-// Module 6879 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 6880 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 6999 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 7000 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function isEnabledForUser(config, location) {
-  ({ enabled, requiresUserExperiment } = config);
-  if (enabled) {
-    let isConjureUserEnabledResult = !requiresUserExperiment;
-    if (requiresUserExperiment) {
-      const obj2 = { location };
-      const obj3 = { autoTrackExposure: false };
-      isConjureUserEnabledResult = ConjureUserExperiment.isConjureUserEnabled(obj2, obj3);
-    }
-    enabled = isConjureUserEnabledResult;
-  }
-  return enabled;
-}
 function isConjureGuildEnabled(arg0) {
   ({ guildId, location: _location } = arg0);
   let tmp = null != guildId;
@@ -52,12 +39,24 @@ function hasConjureGuild(arg0, DMAppChannel) {
   }
   return false;
 }
+function isConjureGuildEnabledWithoutExposure(id, location) {
+  const config = closure_4.getConfig({ guildId: id, location }, { autoTrackExposure: false });
+  ({ enabled, requiresUserExperiment } = config);
+  if (enabled) {
+    let isConjureUserEnabledResult = !requiresUserExperiment;
+    if (requiresUserExperiment) {
+      const obj3 = { location };
+      const obj4 = { autoTrackExposure: false };
+      isConjureUserEnabledResult = ConjureUserExperiment.isConjureUserEnabled(obj3, obj4);
+    }
+    enabled = isConjureUserEnabledResult;
+  }
+  return enabled;
+}
 function hasConjureGuildWithoutExposure(conjure_resume) {
   const values = Object.values(GuildStore.getGuilds());
-  const obj = values[Symbol.iterator]();
-  while (obj !== undefined) {
-    let obj2 = { guildId: tmp2.id, location: conjure_resume };
-    if (isEnabledForUser(closure_4.getConfig(obj2, { autoTrackExposure: false }), conjure_resume, false)) {
+  for (const item10012 of values) {
+    if (isConjureGuildEnabledWithoutExposure(item10012.id, arg0)) {
       obj.return();
       let flag = true;
       return true;
@@ -66,7 +65,7 @@ function hasConjureGuildWithoutExposure(conjure_resume) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false, requiresUserExperiment: false }, variations: { 0: { enabled: false, requiresUserExperiment: false }, 1: { enabled: true, requiresUserExperiment: false }, 2: { enabled: true, requiresUserExperiment: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/experiments/ConjureGuildExperiment.tsx");
@@ -81,7 +80,7 @@ export function useIsConjureGuildEnabled(arg0) {
   const config = closure_4.useConfig({ guildId, location: _location });
   enabled = config.enabled;
   requiresUserExperiment = config.requiresUserExperiment;
-  const items = [_location(enabled[2]).ApexExperimentStore];
+  items = [_location(enabled[2]).ApexExperimentStore];
   const items1 = [enabled, requiresUserExperiment, _location];
   return _location(enabled[4]).useStateFromStores(items, () => {
     let tmp = enabled;
@@ -99,6 +98,7 @@ export function useIsConjureGuildEnabled(arg0) {
 }
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
+export { isConjureGuildEnabledWithoutExposure };
 export { hasConjureGuildWithoutExposure };
 export function useHasConjureGuild(DMAppChannel, arg1) {
   _require = DMAppChannel;
@@ -110,7 +110,7 @@ export function useHasConjureGuild(DMAppChannel, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
+  items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
   const items1 = [DMAppChannel, flag];
   return require("initialize").useStateFromStores(items, () => {
     if (flag) {

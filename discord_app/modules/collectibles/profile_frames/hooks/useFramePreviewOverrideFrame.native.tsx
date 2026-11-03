@@ -1,19 +1,19 @@
-// === Module 8775: useFramePreviewOverrideFrame ===
+// === Module 8899: useFramePreviewOverrideFrame ===
 
-// Module 8775 (useFramePreviewOverrideFrame)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
+// Module 8899 (useFramePreviewOverrideFrame)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
 import noop from "module_19" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7727 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7851 */;
 
 require = fn;
-let closure_4 = fn(8776).useFramePreviewOverrideStore;
+let closure_4 = fn(8900).useFramePreviewOverrideStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
 
 export default function useFramePreviewOverrideFrame() {
   const tmp = closure_4((override) => override.override);
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {

@@ -1,8 +1,8 @@
-// === Module 11495: useFriendsSinceDate ===
+// === Module 11632: useFriendsSinceDate ===
 
-// Module 11495 (useFriendsSinceDate)
-import LocaleStore from "LocaleStore" /* 2062 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+// Module 11632 (useFriendsSinceDate)
+import LocaleStore from "LocaleStore" /* 2191 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriends
 
 export function useFriendsSinceDate(userId) {
   _require = userId;
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
   const obj = require("useStateFromStores");
   const items1 = [RelationshipStore];

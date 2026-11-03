@@ -1,68 +1,66 @@
-// === Module 19283: VoicePanelSystemUIManager ===
+// === Module 19441: VoicePanelSystemUIManager ===
 
-// Module 19283 (VoicePanelSystemUIManager)
+// Module 19441 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+
+const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11223).VoicePanelModes;
-const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const VoicePanelModes = fn(11360).VoicePanelModes;
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const __initData = { code: "function VoicePanelSystemUIManagerTsx1(){const{focused,mode,controlsSpecs,windowDimensions}=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};}" };
-const __initData2 = { code: "function VoicePanelSystemUIManagerTsx2(props,previous){const{cheapWorkletShallowEqual,runOnJS,handleStateChange}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(handleStateChange)(props);}" };
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+let closure_12 = { code: "(function VoicePanelSystemUIManagerTsx1(){let[focused,mode,controlsSpecs,windowDimensions]=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};})" };
+let closure_13 = { code: "(function VoicePanelSystemUIManagerTsx2(props,previous){let[cheapWorkletShallowEqual,scheduleOnRN,handleStateChange]=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;scheduleOnRN(handleStateChange,props);})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelSystemUIManager.tsx");
 
 export default noop.memo(function VoicePanelSystemUIManager() {
-  const context = windowDimensions.useContext(channelId(mode[7]));
-  const focused = context.focused;
-  channelId = context.channelId;
-  mode = context.mode;
-  const controlsSpecs = context.controlsSpecs;
-  windowDimensions = context.windowDimensions;
-  [tmp5, ChannelRTCStore] = controlsSpecs(windowDimensions.useState(true), 2);
-  const tmp6 = controlsSpecs(windowDimensions.useState(true), 2);
-  closure_6 = tmp6[1];
-  let tmp4 = controlsSpecs(windowDimensions.useState(true), 2);
-  [tmp8, VoicePanelControlsModes] = controlsSpecs(windowDimensions.useState(false), 2);
-  const tmp9 = controlsSpecs(windowDimensions.useState(false), 2);
-  closure_8 = tmp9[1];
-  const items = [channelId];
-  const memo = windowDimensions.useMemo(() => {
-    closure_0 = channelId(mode[10])(function updateState(arg0) {
+  const context = noop.useContext(VoicePanelStateContextDefault);
+  const channelId = context.channelId;
+  ({ focused, mode, controlsSpecs, windowDimensions } = context);
+  [tmp5, c1] = noop.useState(true);
+  const tmp6 = _slicedToArray(noop.useState(true), 2);
+  let tmp4 = _slicedToArray(noop.useState(true), 2);
+  [tmp8, c3] = noop.useState(false);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  noop = tmp9[1];
+  items = [channelId];
+  const memo = noop.useMemo(() => {
+    closure_0 = _undefined2(_undefined3[10])(function updateState(arg0) {
       ({ focusedId: closure_0, mode: focusedId, controlsMode: closure_2, landscape: closure_3 } = arg0);
-      closure_0(mode[8]).batchUpdates(() => {
-        closure_2_6(c1 !== constants.PIP);
-        let tmp4 = null == c0;
+      closure_0(1259).batchUpdates(() => {
+        dependencyMap(c1 !== constants.PIP);
+        let tmp4 = null == _undefined;
         if (tmp4) {
           tmp4 = !c3;
         }
         if (!tmp4) {
-          tmp4 = c2 !== constants.HIDDEN;
+          tmp4 = _undefined2 !== constants2.HIDDEN;
         }
-        closure_2_5(tmp4);
-        participant = undefined;
-        if (null != c0) {
-          participant = participant.getParticipant(focusedId, c0);
+        focusedId(tmp4);
+        let participant;
+        if (null != _undefined) {
+          participant = cancelPendingDebounce.getParticipant(closure_0, _undefined);
         }
         let type;
         if (participant != null) {
           type = participant.type;
         }
-        const tmp11 = focused(mode[9]).isIOS() && type === constants2.ACTIVITY;
-        closure_2_8(tmp11);
+        const tmp11 = _undefined(_undefined2[9]).isIOS() && type === constants3.ACTIVITY;
+        closure_2_4(tmp11);
         let tmp14 = !tmp4;
         if (!tmp4) {
           tmp14 = !tmp11;
         }
-        closure_2_7(tmp14);
-        const obj = focused(mode[9]);
+        _undefined4(tmp14);
+        const obj = _undefined(_undefined2[9]);
       });
     }, 500, { maxWait: 2000 });
     let focusedId;
@@ -73,81 +71,99 @@ export default noop.memo(function VoicePanelSystemUIManager() {
       handleStateChange(focusedId) {
         if (focusedId !== focusedId.focusedId) {
           focusedId = focusedId.focusedId;
-          closure_0(focusedId);
+          _undefined(focusedId);
         } else {
-          closure_0.cancel();
+          _undefined.cancel();
           c0 = undefined;
           c1 = undefined;
           c2 = undefined;
           c3 = undefined;
           ({ focusedId: c0, mode: c1, controlsMode: c2, landscape: c3 } = focusedId);
           ReactBatchUpdates.batchUpdates(() => {
-            closure_2_6(c1 !== constants.PIP);
-            let tmp4 = null == c0;
+            dependencyMap(c1 !== constants.PIP);
+            let tmp4 = null == _undefined;
             if (tmp4) {
               tmp4 = !c3;
             }
             if (!tmp4) {
-              tmp4 = c2 !== constants.HIDDEN;
+              tmp4 = _undefined2 !== constants2.HIDDEN;
             }
-            closure_2_5(tmp4);
-            participant = undefined;
-            if (null != c0) {
-              participant = participant.getParticipant(focusedId, c0);
+            focusedId(tmp4);
+            let participant;
+            if (null != _undefined) {
+              participant = cancelPendingDebounce.getParticipant(closure_0, _undefined);
             }
             let type;
             if (participant != null) {
               type = participant.type;
             }
-            const tmp11 = focused(mode[9]).isIOS() && type === constants2.ACTIVITY;
-            closure_2_8(tmp11);
+            const tmp11 = _undefined(_undefined2[9]).isIOS() && type === constants3.ACTIVITY;
+            closure_2_4(tmp11);
             let tmp14 = !tmp4;
             if (!tmp4) {
               tmp14 = !tmp11;
             }
-            closure_2_7(tmp14);
-            const obj = focused(mode[9]);
+            _undefined4(tmp14);
+            const obj = _undefined(_undefined2[9]);
           });
         }
       }
     };
   }, items);
   const cancelPendingDebounce = memo.cancelPendingDebounce;
-  const handleStateChange = memo.handleStateChange;
   const items1 = [cancelPendingDebounce];
-  const effect = windowDimensions.useEffect(() => () => cancelPendingDebounce(), items1);
-  const tmp7 = controlsSpecs(windowDimensions.useState(false), 2);
-  const fn = function v() {
-    value = focused.get();
-    let id;
-    if (value != null) {
-      id = value.id;
+  const effect = noop.useEffect(() => () => cancelPendingDebounce(), items1);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  const items2 = [closure_12, focused, mode, controlsSpecs, windowDimensions];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  [tmp13, tmp14, tmp15, tmp16, tmp17] = items2;
+  class VoicePanelSystemUIManagerTsx1 {
+    constructor() {
+      value = closure_0.get();
+      id = undefined;
+      if (value != null) {
+        id = value.id;
+      }
+      obj = { focusedId: id, mode: closure_1.get(), controlsMode: closure_2.get().mode, landscape: closure_3.get().landscape };
+      return obj;
     }
-    return { focusedId: id, mode: mode.get(), controlsMode: controlsSpecs.get().mode, landscape: windowDimensions.get().landscape };
-  };
-  fn.__closure = { focused, mode, controlsSpecs, windowDimensions };
-  fn.__workletHash = 2478376475717;
-  fn.__initData = __initData;
-  const fn2 = function u(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
-      ReanimatedRexport.runOnJS(handleStateChange)(safeAreaState);
-      const tmp2Result = ReanimatedRexport;
-    }
-    obj = cheapWorkletShallowEqual;
-    tmp = current;
-  };
-  let obj = focused(mode[11]);
-  fn2.__closure = { cheapWorkletShallowEqual: focused(mode[12]).cheapWorkletShallowEqual, runOnJS: focused(mode[11]).runOnJS, handleStateChange };
-  fn2.__workletHash = 3592680244658;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  let tmp15 = null;
-  if (tmp6[0]) {
-    const obj3 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp15 = cancelPendingDebounce(tmp(tmp2[13]), obj3);
   }
-  const obj4 = { children: null };
-  const items2 = [tmp15, cancelPendingDebounce(channelId(mode[14]), { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] })];
-  obj4.children = items2;
-  return closure_11(handleStateChange, obj4);
+  const items3 = [tmp14, tmp15, tmp16, tmp17];
+  VoicePanelSystemUIManagerTsx1.__closure = items3;
+  VoicePanelSystemUIManagerTsx1.__workletHash = 5587147718300;
+  VoicePanelSystemUIManagerTsx1.__initData = tmp13;
+  const items4 = [closure_13, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1705").scheduleOnRN, memo.handleStateChange];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp18, tmp19, tmp20, tmp21] = items4;
+  class VoicePanelSystemUIManagerTsx2 {
+    constructor(arg0, arg1) {
+      tmp = arg1;
+      tmp2 = closure_0;
+      if (!tmp2(arg0, tmp)) {
+        tmp3 = closure_1;
+        tmp4 = closure_2;
+        tmp5 = closure_1(closure_2, arg0);
+      }
+      return;
+    }
+  }
+  const items5 = [tmp19, tmp20, tmp21];
+  VoicePanelSystemUIManagerTsx2.__closure = items5;
+  VoicePanelSystemUIManagerTsx2.__workletHash = 4961093697158;
+  VoicePanelSystemUIManagerTsx2.__initData = tmp18;
+  const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelSystemUIManagerTsx1, VoicePanelSystemUIManagerTsx2);
+  let tmp25 = null;
+  if (tmp6[0]) {
+    const obj2 = { hidden: !tmp5, barStyle: "light-content" };
+    tmp25 = closure_9(tmp(11349), obj2);
+  }
+  const obj3 = { children: null };
+  const items6 = [tmp25, closure_9(HomeIndicatorDefault, { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] })];
+  obj3.children = items6;
+  return closure_11(closure_10, obj3);
 });

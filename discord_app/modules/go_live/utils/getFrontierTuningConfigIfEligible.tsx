@@ -1,9 +1,9 @@
-// === Module 5909: getFrontierTuningConfigIfEligible ===
+// === Module 6029: getFrontierTuningConfigIfEligible ===
 
-// Module 5909 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5910 */;
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 6029 (getFrontierTuningConfigIfEligible)
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 6030 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/go_live/utils/getFrontierTuni
 
 export default function getFrontierTuningConfigIfEligible(location, currentUser, guildId) {
   if (null != guildId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;

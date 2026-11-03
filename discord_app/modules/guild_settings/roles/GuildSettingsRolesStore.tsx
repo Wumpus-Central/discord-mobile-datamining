@@ -1,23 +1,23 @@
-// === Module 19778: GuildSettingsRolesStore ===
+// === Module 19928: GuildSettingsRolesStore ===
 
-// Module 19778 (GuildSettingsRolesStore)
+// Module 19928 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import PlainRecord from "PlainRecord" /* 4878 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4921 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6040 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13980 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 19773 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19779 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import PlainRecord from "PlainRecord" /* 5005 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5048 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5050 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6160 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14111 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 19923 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19929 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 import Constants from "Constants" /* 1072 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19780 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19930 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -34,7 +34,7 @@ function handleInit() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   c23 = false;
   c24 = false;
   c6 = undefined;
@@ -106,7 +106,7 @@ function syncGuildChanges(guildId) {
   guildId = guildId.guildId;
   items = undefined;
   map = undefined;
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   if (null != guild) {
     if (guildId === guild.id) {
       if (OPEN !== FormStates.SUBMITTING) {

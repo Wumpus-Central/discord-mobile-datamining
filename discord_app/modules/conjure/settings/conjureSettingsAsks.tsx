@@ -1,14 +1,14 @@
-// === Module 12657: conjureSettingsAsks ===
+// === Module 12793: conjureSettingsAsks ===
 
-// Module 12657 (conjureSettingsAsks)
-import conjureChatTurns from "conjureChatTurns" /* 10852 */;
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12618 */;
-import conjureSettingsSummary from "conjureSettingsSummary" /* 12658 */;
+// Module 12793 (conjureSettingsAsks)
+import conjureChatTurns from "conjureChatTurns" /* 10982 */;
+import conjureSettingsRequest from "conjureSettingsRequest" /* 12754 */;
+import conjureSettingsSummary from "conjureSettingsSummary" /* 12794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10869 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10999 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ function subscribe(arg0) {
 function markSettingsRequestSaved(arg0) {
   if (!set.has(arg0)) {
     const _Set = Set;
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(set, 0)] = arg0;
     set = new Set(items);
     for (const item10021 of set1) {
@@ -175,7 +175,7 @@ export function useConjureSettingsAsk(projectId, request, askId) {
   if (null != askId) {
     let hasItem = syncExternalStore.has(askId);
   }
-  let items = [askId];
+  items = [askId];
   let obj2 = { done: null, superseded: null, summary: null, markSaved: null };
   const callback = noop.useCallback(() => {
     if (null != closure_2) {
@@ -222,7 +222,7 @@ export function useConjureSettingsAsk(projectId, request, askId) {
   obj2.summary = require("initialize").useStateFromStoresArray(items5, () => {
     const settings = ConjureSettingsStore.getSettings(closure_0);
     if (null == settings) {
-      let items = [];
+      items = [];
     } else {
       const result = conjureSettingsSummary.conjureSettingsSummary(closure_1, settings, (arg0) => {
         channel = channel.getChannel(arg0);

@@ -1,16 +1,16 @@
-// === Module 11862: useMyCurrentStageChannel ===
+// === Module 11999: useMyCurrentStageChannel ===
 
-// Module 11862 (useMyCurrentStageChannel)
+// Module 11999 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 504 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default function useMyCurrentStageChannel() {
-  const items = [SelectedChannelStore, ChannelStore];
+  items = [SelectedChannelStore, ChannelStore];
   return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {

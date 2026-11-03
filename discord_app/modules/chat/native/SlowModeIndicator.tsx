@@ -1,17 +1,17 @@
-// === Module 13749: SlowModeIndicator ===
+// === Module 13880: SlowModeIndicator ===
 
-// Module 13749 (SlowModeIndicator)
+// Module 13880 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7831 */;
-import TimerIcon from "TimerIcon" /* 11641 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7955 */;
+import TimerIcon from "TimerIcon" /* 11778 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7830 */;
+import SlowmodeStore from "SlowmodeStore" /* 7954 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: nativeDefault.space.PX_4 };
@@ -24,7 +24,7 @@ export default noop.memo(function SlowModeIndicator(channel) {
   const slowmodeType = channel.slowmodeType;
   let canBypassSlowmode;
   const tmp = closure_7();
-  const items = [canBypassSlowmode];
+  items = [canBypassSlowmode];
   const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () => SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType));
   let obj = channel(slowmodeType[5]);
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);

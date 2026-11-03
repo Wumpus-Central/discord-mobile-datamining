@@ -1,21 +1,21 @@
-// === Module 19659: GuildSettingsRoleSubscriptionsSection ===
+// === Module 19809: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 19659 (GuildSettingsRoleSubscriptionsSection)
+// Module 19809 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import TagsIcon from "TagsIcon" /* 11137 */;
-import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17374 */;
-import WalletIcon from "WalletIcon" /* 19660 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TagsIcon from "TagsIcon" /* 11274 */;
+import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17517 */;
+import WalletIcon from "WalletIcon" /* 19810 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function HasCreatedListingsSection(arg0) {
   ({ guild: require, pushScreen: dependencyMap } = arg0);
-  const items = [UserStore];
+  items = [UserStore];
   let stateFromStores = initialize.useStateFromStores(items, () => isGuildOwner(id, UserStore.getCurrentUser()));
   const obj2 = { title: null, hasIcons: true, children: null };
   const intl = util.intl;
@@ -61,7 +61,7 @@ function HasCreatedListingsSection(arg0) {
   obj2.children = items1;
   return closure_7(TableRowGroup.TableRowGroup, obj2);
 }
-const isGuildOwner = fn(4881).isGuildOwner;
+const isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

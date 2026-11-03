@@ -1,9 +1,9 @@
-// === Module 9143: GameSearchSession ===
+// === Module 9271: GameSearchSession ===
 
-// Module 9143 (GameSearchSession)
+// Module 9271 (GameSearchSession)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtils from "AnalyticsUtils" /* 1252 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8681 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8805 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsUtilsDefault = AnalyticsUtils;
@@ -33,7 +33,7 @@ class GameSearchSession {
         if (tmp3) {
           obj4.endAt(obj4.state.lastActivityAt);
         }
-        let state = obj4.state;
+        state = obj4.state;
         if (state == null) {
           obj2 = { id: AnalyticsUtils.getNewAnalyticsLoadId(), startedAt: timestamp, lastActivityAt: timestamp, query: null, lastQuery: result, maxQueryLength: 0, displayed: null, sawAnyResults: false, numResultSets: 0, numSelections: 0 };
           obj4.state = obj2;
@@ -48,7 +48,7 @@ class GameSearchSession {
       }
     };
     obj.onResults = function onResults(query, found) {
-      const state = obj2.state;
+      state = obj2.state;
       let tmp2 = null != state;
       if (tmp2) {
         tmp2 = null != state.query;
@@ -80,7 +80,7 @@ class GameSearchSession {
     };
     obj.select = function select(game_id) {
       closure_0 = game_id;
-      const state = obj2.state;
+      state = obj2.state;
       if (null != state) {
         if (null != state.query) {
           const _Date = Date;
@@ -155,7 +155,7 @@ class GameSearchSession {
   }
 }
 GameSearchSession.prototype["endAt"] = function endAt(lastActivityAt) {
-  const state = this.state;
+  state = this.state;
   this.state = null;
   this.selectedQuery = null;
   if (null != state) {
@@ -226,7 +226,7 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
           if (tmp3) {
             obj4.endAt(obj4.state.lastActivityAt);
           }
-          let state = obj4.state;
+          state = obj4.state;
           if (state == null) {
             obj2 = { id: AnalyticsUtils.getNewAnalyticsLoadId(), startedAt: timestamp, lastActivityAt: timestamp, query: null, lastQuery: result, maxQueryLength: 0, displayed: null, sawAnyResults: false, numResultSets: 0, numSelections: 0 };
             obj4.state = obj2;
@@ -241,7 +241,7 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
         }
       };
       obj2.onResults = function onResults(query, found) {
-        const state = obj2.state;
+        state = obj2.state;
         let tmp2 = null != state;
         if (tmp2) {
           tmp2 = null != state.query;
@@ -273,7 +273,7 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
       };
       obj2.select = function select(game_id) {
         closure_0 = game_id;
-        const state = obj2.state;
+        state = obj2.state;
         if (null != state) {
           if (null != state.query) {
             const _Date = Date;

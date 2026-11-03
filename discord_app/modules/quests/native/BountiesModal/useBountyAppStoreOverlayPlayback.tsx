@@ -1,9 +1,9 @@
-// === Module 16934: useBountyAppStoreOverlayPlayback ===
+// === Module 17077: useBountyAppStoreOverlayPlayback ===
 
-// Module 16934 (useBountyAppStoreOverlayPlayback)
-import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 16935 */;
-import useBountiesModalTiming from "useBountiesModalTiming" /* 16937 */;
-import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 16938 */;
+// Module 17077 (useBountyAppStoreOverlayPlayback)
+import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 17078 */;
+import useBountiesModalTiming from "useBountiesModalTiming" /* 17080 */;
+import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 17081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
     flag = false;
   }
   handleVideoPausedForAppStore = useBountyPauseAppStoreSheet.useBountyPauseAppStoreSheet({ bounty, sourceQuestContent, isActive, playerRef }).handleVideoPausedForAppStore;
-  const items = [handleVideoPaused, handleVideoPausedForAppStore, onPaused];
+  items = [handleVideoPaused, handleVideoPausedForAppStore, onPaused];
   const items1 = [handleVideoResumed];
   const callback = noop.useCallback((arg0) => {
     handleVideoPaused(arg0);

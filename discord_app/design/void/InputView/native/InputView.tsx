@@ -1,14 +1,14 @@
-// === Module 16010: InputView ===
+// === Module 16153: InputView ===
 
-// Module 16010 (InputView)
+// Module 16153 (InputView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import shared from "shared" /* 5021 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleXIcon from "CircleXIcon" /* 7092 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12505 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import shared from "shared" /* 5148 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleXIcon from "CircleXIcon" /* 7218 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12641 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,21 +18,21 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableWithoutFeedback: closure_7, Platform } = get_ActivityIndicator);
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6778).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6778).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6778).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6778).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -154,7 +154,7 @@ prototype["renderBorder"] = function renderBorder() {
     if (backgroundColor == null) {
       backgroundColor = tmp.inputBorder.backgroundColor;
     }
-    const items = [tmp.inputViewBorder, , ];
+    items = [tmp.inputViewBorder, , ];
     const obj = { backgroundColor };
     items[1] = obj;
     let inputViewBorderActive = this.state.active;
@@ -182,7 +182,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   if (tmp2) {
     const obj = {};
     const merged = Object.assign(errorProps);
-    const items = [tmp.inputViewError, errorStyles];
+    items = [tmp.inputViewError, errorStyles];
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
@@ -278,7 +278,7 @@ prototype["renderTextView"] = function renderTextView() {
   ({ numberOfLines, inputTextColor, placeholder, placeholderTextColor, large, maxLength, trailingButton, clearButtonVisibility, style, onChangeText, onFocus, value } = props);
   ({ disableConstantNumberOfLines, editable, accessibilityHint, inActionSheet, disabled, inputTextStyle } = props);
   const tmp2 = _objectWithoutProperties(props, closure_3);
-  const items = [closure_11(this.context).inputView, , , , ];
+  items = [closure_11(this.context).inputView, , , , ];
   if (disableConstantNumberOfLines) {
     let num2 = 21;
     if (large) {
@@ -350,7 +350,7 @@ prototype["render"] = function render() {
   const props = this.props;
   const disabled = props.disabled;
   const obj = { accessible: false, onPress: this.focus, children: null };
-  const items = [props.style, ];
+  items = [props.style, ];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
@@ -382,7 +382,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj2);
   return React7(React5, obj);
 };
-InputView.contextType = fn(5080).ThemeContext;
+InputView.contextType = fn(5207).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

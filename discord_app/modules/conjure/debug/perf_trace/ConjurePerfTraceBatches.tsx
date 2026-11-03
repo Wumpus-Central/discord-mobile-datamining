@@ -1,6 +1,6 @@
-// === Module 10858: ConjurePerfTraceBatches ===
+// === Module 10988: ConjurePerfTraceBatches ===
 
-// Module 10858 (ConjurePerfTraceBatches)
+// Module 10988 (ConjurePerfTraceBatches)
 import size from "module_2" /* 2 */;
 
 function foldRecord(map, nextResult) {
@@ -87,7 +87,7 @@ export function applyTimingTraceBatch(found, batch, live) {
     spans = [];
   }
   const map = new Map(spans.map((id) => {
-    const items = [id.id, id];
+    items = [id.id, id];
     return items;
   }));
   const iter = batch.spans[Symbol.iterator]();
@@ -99,7 +99,7 @@ export function applyTimingTraceBatch(found, batch, live) {
   const tmp5 = null == found || batch.at >= found.as_of ? batch.name : found.name;
   closure_0 = tmp5;
   let obj = { id: batch.trace_id, name: tmp5, started_at: batch.started_at, as_of: null == found || batch.at >= found.as_of ? batch.at : found.as_of, started_by: batch.started_by, spans: null, dropped: null, live: null };
-  let items = [...map.values()];
+  items = [...map.values()];
   const sorted = items.sort((id, id2) => id.id - id2.id);
   obj.spans = sorted.map((parent) => {
     let tmp = parent;

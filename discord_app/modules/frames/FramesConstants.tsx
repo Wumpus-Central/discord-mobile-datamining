@@ -1,9 +1,9 @@
-// === Module 6847: FramesConstants ===
+// === Module 6967: FramesConstants ===
 
-// Module 6847 (FramesConstants)
+// Module 6967 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1072 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -65,7 +65,7 @@ export function getFrameSurfaceForChannel(type) {
   }
 }
 export function isLaunched(conjureBuilderPreviewFrame) {
-  let state;
+  state = undefined;
   if (conjureBuilderPreviewFrame != null) {
     state = conjureBuilderPreviewFrame.state;
   }
@@ -107,7 +107,7 @@ export function getFrameLaunchChannelId(surface) {
   return channelId;
 }
 export function asLaunched(frame) {
-  let state;
+  state = undefined;
   if (frame != null) {
     state = frame.state;
   }

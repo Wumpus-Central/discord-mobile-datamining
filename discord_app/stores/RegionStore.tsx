@@ -1,10 +1,10 @@
-// === Module 18889: RegionStore ===
+// === Module 19047: RegionStore ===
 
-// Module 18889 (RegionStore)
+// Module 19047 (RegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 let c3 = null;
 let closure_4 = {};

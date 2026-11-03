@@ -1,27 +1,27 @@
-// === Module 7687: AutomodMessageUtils ===
+// === Module 7811: AutomodMessageUtils ===
 
-// Module 7687 (AutomodMessageUtils)
+// Module 7811 (AutomodMessageUtils)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import AutomodMessageEmbedKeys from "AutomodMessageEmbedKeys" /* 7688 */;
-import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 7689 */;
-import AutomodBlockProfileUpdateMessageEmbedKeys from "AutomodBlockProfileUpdateMessageEmbedKeys" /* 7690 */;
-import AutomodQuarantineEventMessageEmbedKeys from "AutomodQuarantineEventMessageEmbedKeys" /* 7691 */;
-import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 7694 */;
-import AutomodNotificationEmbedKeys from "AutomodNotificationEmbedKeys" /* 7695 */;
-import AutomodAlert from "AutomodAlert" /* 7696 */;
-import AutomodFeedback from "AutomodFeedback" /* 7697 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import AutomodMessageEmbedKeys from "AutomodMessageEmbedKeys" /* 7812 */;
+import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 7813 */;
+import AutomodBlockProfileUpdateMessageEmbedKeys from "AutomodBlockProfileUpdateMessageEmbedKeys" /* 7814 */;
+import AutomodQuarantineEventMessageEmbedKeys from "AutomodQuarantineEventMessageEmbedKeys" /* 7815 */;
+import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 7818 */;
+import AutomodNotificationEmbedKeys from "AutomodNotificationEmbedKeys" /* 7819 */;
+import AutomodAlert from "AutomodAlert" /* 7820 */;
+import AutomodFeedback from "AutomodFeedback" /* 7821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
-const AutomodInteractionCallbackTypeEmbedKeys = prop(7692);
-const AutomodDecisionOutcomeEmbedKeys = prop(7693);
+const AutomodInteractionCallbackTypeEmbedKeys = prop(7816);
+const AutomodDecisionOutcomeEmbedKeys = prop(7817);
 require = fn;
 function getDecisionOutcomeFromMessage(embeds) {
   const DECISION_OUTCOME = AutomodMessageEmbedKeys.AutomodMessageEmbedKeys.DECISION_OUTCOME;
@@ -538,13 +538,13 @@ function extractAutomodMessageFields(message) {
   return obj;
 }
 const Constants = fn(1072);
-({ MessageEmbedTypes: closure_8, MessageTypes: closure_9, NOOP_NULL: c10, Permissions: closure_11 } = Constants);
+({ MessageEmbedTypes: closure_8, MessageTypes: closure_9, NOOP_NULL: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/AutomodMessageUtils.tsx");
 
 export default function useAutomodMessageFields(arg0) {
   _require = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => extractAutomodMessageFields(closure_0), items);
   const items1 = [ChannelStore];
   const items2 = [memo.embedChannelId];
@@ -688,7 +688,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
   const tmp10 = getQuarantineActionFromMessage(embeds);
   const tmp11 = getQuarantineEventFromMessage(embeds);
   const tmp13 = getDecisionOutcomeFromMessage(embeds);
-  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7688).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
+  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7812).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
   embeds = embeds.embeds;
   if (embeds == null) {
     embeds = [];
@@ -710,7 +710,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
     }
     const tmp16 = tmp18;
   }
-  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7688).AutomodMessageEmbedKeys.APPLICATION_NAME;
+  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7812).AutomodMessageEmbedKeys.APPLICATION_NAME;
   let embeds1 = embeds.embeds;
   if (embeds1 == null) {
     embeds1 = [];
@@ -744,7 +744,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
       fn = closure_1_10;
     }
   }
-  GUILD_ROOM_NOTE_OUTCOME = format(7688).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
+  GUILD_ROOM_NOTE_OUTCOME = format(7812).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
   let embeds2 = embeds.embeds;
   if (embeds2 == null) {
     embeds2 = [];
@@ -771,7 +771,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
     if (null != null) {
       return null;
     } else {
-      GUILD_ROOM_NOTE_OUTCOME = format(7688).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
+      GUILD_ROOM_NOTE_OUTCOME = format(7812).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
       let embeds3 = embeds.embeds;
       if (embeds3 == null) {
         embeds3 = [];
@@ -799,7 +799,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
           return null;
         } else {
           if (null == tmp22) {
-            if (tmp13 !== v4xL9Sk(7693).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+            if (tmp13 !== v4xL9Sk(7817).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               intl = v4xL9Sk(1113).intl;
               const obj2 = { channelName, channelHook: fn };
               let formatResult = intl.format(v4xL9Sk(1113).t.IZg0VQ, obj2);
@@ -809,8 +809,8 @@ export function getActionHeaderText(embeds, channel, arg2) {
               formatResult = intl5.format(v4xL9Sk(1113).t.lOIOSK, obj4);
             }
           }
-          if (tmp16 !== v4xL9Sk(7692).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
-            if (tmp13 !== v4xL9Sk(7693).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp16 !== v4xL9Sk(7816).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
+            if (tmp13 !== v4xL9Sk(7817).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               const intl7 = v4xL9Sk(1113).intl;
               const obj5 = { applicationName: tmp22, channelName, channelHook: fn, integrationOwnerHook };
               let formatResult1 = intl7.format(v4xL9Sk(1113).t.AXQufN, obj5);
@@ -822,7 +822,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
           } else {
             intl = arg4;
           }
-          if (tmp13 !== v4xL9Sk(7693).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp13 !== v4xL9Sk(7817).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
             const intl9 = v4xL9Sk(1113).intl;
             v4xL9Sk = v4xL9Sk(1113).t["4xL9Sk"];
             obj7 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };

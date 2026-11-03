@@ -1,76 +1,83 @@
-// === Module 9439: GameProfileSkeletonPulse ===
+// === Module 9567: GameProfileSkeletonPulse ===
 
-// Module 9439 (GameProfileSkeletonPulse)
+// Module 9567 (GameProfileSkeletonPulse)
+import initialize from "initialize" /* 504 */;
+import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
-const require = fn;
+require = fn;
 let c4 = 1300;
-const Easing = fn(5095).Easing;
-const inOutResult = Easing.inOut(fn(5095).Easing.quad);
-const hasOwnProperty = inOutResult;
-const ReanimatedRexport = fn(5095);
-const pulsePhase = ReanimatedRexport.makeMutable(0);
-let c7 = 0;
-let c8 = false;
+const Easing = fn(1652).Easing;
+const module_1652 = fn(1652);
+let closure_5 = module_1652.makeMutable(0);
+let c6 = 0;
+let c7 = false;
+let items = [{ code: "(function getPulseOpacity_GameProfileSkeletonPulseTsx1(phase,phaseOffset){let[MIN_OPACITY,MAX_OPACITY,DEFAULT_TIMING_EASING]=this.__closure;const shiftedPhase=(phase+phaseOffset)%1;const cyclePhase=shiftedPhase<0?shiftedPhase+1:shiftedPhase;const pulseProgress=cyclePhase<0.5?cyclePhase*2:(1-cyclePhase)*2;return MIN_OPACITY+(MAX_OPACITY-MIN_OPACITY)*DEFAULT_TIMING_EASING(pulseProgress);})" }, 0.05, 0.1, Easing.inOut(fn(1652).Easing.quad)];
+let closure_129_0;
+let closure_129_1;
+let closure_129_2;
+[tmp3, tmp4, tmp5, tmp6] = items;
 function getPulseOpacity(arg0, arg1) {
   const result = (arg0 + arg1) % 1;
   let sum = result;
   if (result < 0) {
     sum = result + 1;
   }
+  const diff = dependencyMap - require;
   if (sum < 0.5) {
     let result1 = 2 * sum;
   } else {
     result1 = 2 * (1 - sum);
   }
-  return 0.05 + 0.05 * inOutResult(result1);
+  return require + diff * noop(result1);
 }
-getPulseOpacity.__closure = { MIN_OPACITY: 0.05, MAX_OPACITY: 0.1, DEFAULT_TIMING_EASING: inOutResult };
-getPulseOpacity.__workletHash = 2217576423672;
-getPulseOpacity.__initData = { code: "function getPulseOpacity_GameProfileSkeletonPulseTsx1(phase,phaseOffset){const{MIN_OPACITY,MAX_OPACITY,DEFAULT_TIMING_EASING}=this.__closure;const shiftedPhase=(phase+phaseOffset)%1;const cyclePhase=shiftedPhase<0?shiftedPhase+1:shiftedPhase;const pulseProgress=cyclePhase<0.5?cyclePhase*2:(1-cyclePhase)*2;return MIN_OPACITY+(MAX_OPACITY-MIN_OPACITY)*DEFAULT_TIMING_EASING(pulseProgress);}" };
-const __initData = { code: "function GameProfileSkeletonPulseTsx2(){const{shouldReduceMotion,MAX_OPACITY,getPulseOpacity,pulsePhase,phaseOffset}=this.__closure;if(shouldReduceMotion){return{opacity:MAX_OPACITY};}return{opacity:getPulseOpacity(pulsePhase.get(),phaseOffset)};}" };
+let items1 = [tmp4, tmp5, tmp6];
+getPulseOpacity.__closure = items1;
+getPulseOpacity.__workletHash = 14613140904833;
+getPulseOpacity.__initData = tmp3;
+let closure_9 = { code: "(function GameProfileSkeletonPulseTsx2(){let[shouldReduceMotion,MAX_OPACITY,getPulseOpacity,pulsePhase,phaseOffset]=this.__closure;if(shouldReduceMotion){return{opacity:MAX_OPACITY};}return{opacity:getPulseOpacity(pulsePhase.get(),phaseOffset)};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeletonPulse.tsx");
 
 export function useSkeletonPulseStyle(animationDelayMs) {
-  const items = [AccessibilityStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
+  items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => _undefined3.useReducedMotion);
   const effect = noop.useEffect(() => {
     sum = sum + 1;
     let tmp2 = sum > 0;
-    if (tmp2) {
-      tmp2 = !AccessibilityStore.useReducedMotion;
+    if (0 < sum) {
+      tmp2 = !_undefined3.useReducedMotion;
     }
-    if (tmp2 !== closure_8) {
-      closure_8 = tmp2;
-      stateFromStores(result[2]).cancelAnimation(pulsePhase);
-      result = pulsePhase.set(0);
+    if (tmp2 !== closure_7) {
+      closure_7 = tmp2;
+      _undefined(opacity[2]).cancelAnimation(closure_1_5);
+      let result = closure_1_5.set(0);
       if (tmp2) {
-        let tmp6Result = stateFromStores(tmp7[2]);
-        let obj = { duration, easing: stateFromStores(tmp7[2]).Easing.linear };
-        let result1 = pulsePhase.set(tmp6Result.withRepeat(stateFromStores(tmp7[3]).withTiming(1, obj), -1, false));
-        let tmp6Result2 = stateFromStores(tmp7[3]);
+        let tmp6Result = _undefined(opacity[2]);
+        let obj = { duration, easing: _undefined(opacity[2]).Easing.linear };
+        let result1 = closure_1_5.set(tmp6Result.withRepeat(_undefined(opacity[3]).withTiming(1, obj), -1, false));
+        let tmp6Result2 = _undefined(opacity[3]);
       }
-      let obj4 = stateFromStores(result[2]);
+      let obj4 = _undefined(opacity[2]);
     }
     return () => {
       diff = diff - 1;
       let tmp2 = diff > 0;
-      if (tmp2) {
+      if (0 < diff) {
         tmp2 = !useReducedMotion.useReducedMotion;
       }
-      if (tmp2 !== closure_8) {
-        closure_8 = tmp2;
-        stateFromStores(dependencyMap[2]).cancelAnimation(closure_1_6);
-        result = closure_1_6.set(0);
+      if (tmp2 !== closure_7) {
+        closure_7 = tmp2;
+        _undefined(opacity[2]).cancelAnimation(closure_1_5);
+        const result = closure_1_5.set(0);
         if (tmp2) {
-          const tmp6Result = stateFromStores(dependencyMap[2]);
-          const obj = { duration, easing: stateFromStores(dependencyMap[2]).Easing.linear };
-          const result1 = closure_1_6.set(tmp6Result.withRepeat(stateFromStores(dependencyMap[3]).withTiming(1, obj), -1, false));
-          const tmp6Result2 = stateFromStores(dependencyMap[3]);
+          const tmp6Result = _undefined(opacity[2]);
+          const obj = { duration, easing: _undefined(opacity[2]).Easing.linear };
+          const result1 = closure_1_5.set(tmp6Result.withRepeat(_undefined(opacity[3]).withTiming(1, obj), -1, false));
+          const tmp6Result2 = _undefined(opacity[3]);
         }
-        const obj4 = stateFromStores(dependencyMap[2]);
+        const obj4 = _undefined(opacity[2]);
       }
     };
   }, []);
@@ -78,61 +85,48 @@ export function useSkeletonPulseStyle(animationDelayMs) {
   const effect1 = noop.useEffect(() => {
     let tmp = sum > 0;
     if (tmp) {
-      tmp = !AccessibilityStore.useReducedMotion;
+      tmp = !_undefined3.useReducedMotion;
     }
-    if (tmp !== closure_8) {
-      closure_8 = tmp;
-      stateFromStores(result[2]).cancelAnimation(pulsePhase);
-      result = pulsePhase.set(0);
+    if (tmp !== closure_7) {
+      closure_7 = tmp;
+      _undefined(opacity[2]).cancelAnimation(closure_1_5);
+      const result = closure_1_5.set(0);
       if (tmp) {
-        const tmp5Result = stateFromStores(tmp6[2]);
-        const obj = { duration, easing: stateFromStores(tmp6[2]).Easing.linear };
-        const result1 = pulsePhase.set(tmp5Result.withRepeat(stateFromStores(tmp6[3]).withTiming(1, obj), -1, false));
-        const tmp5Result2 = stateFromStores(tmp6[3]);
+        const tmp5Result = _undefined(opacity[2]);
+        const obj = { duration, easing: _undefined(opacity[2]).Easing.linear };
+        const result1 = closure_1_5.set(tmp5Result.withRepeat(_undefined(opacity[3]).withTiming(1, obj), -1, false));
+        const tmp5Result2 = _undefined(opacity[3]);
       }
-      const obj4 = stateFromStores(result[2]);
+      const obj4 = _undefined(opacity[2]);
     }
   }, items1);
-  let result = -animationDelayMs % c4 / c4;
-  dependencyMap = result;
-  let obj = stateFromStores(504);
-  class P {
+  const items2 = [closure_9, stateFromStores, 0.1, getPulseOpacity, closure_5, -animationDelayMs % c4 / c4];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items2;
+  class GameProfileSkeletonPulseTsx2 {
     constructor() {
+      obj = { opacity: null };
       if (closure_0) {
-        obj = { opacity: 0.1 };
+        tmp5 = closure_1;
+        obj.opacity = closure_1;
+        tmp4 = obj;
       } else {
-        tmp = getPulseOpacity;
-        tmp2 = closure_6;
-        if (typeof getPulseOpacity === "function") {
-          num = 1;
-          result = (closure_6.get() + closure_1) % 1;
-          num2 = 0;
-          sum = result;
-          if (result < 0) {
-            sum = result + 1;
-          }
-          num3 = 0.5;
-          tmp5 = closure_5;
-          if (sum < 0.5) {
-            num5 = 2;
-            result1 = 2 * sum;
-          } else {
-            num4 = 2;
-            result1 = 2 * (1 - sum);
-          }
-          obj = { opacity: null };
-          num6 = 0.05;
-          obj.opacity = 0.05 + 0.05 * tmp5(result1);
-        } else {
-          str = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
-        }
+        tmp = closure_2;
+        tmp2 = closure_3;
+        tmp3 = closure_4;
+        obj.opacity = closure_2(closure_3.get(), closure_4);
+        tmp4 = obj;
       }
-      return obj;
+      return tmp4;
     }
   }
-  P.__closure = { shouldReduceMotion: stateFromStores, MAX_OPACITY: 0.1, getPulseOpacity, pulsePhase, phaseOffset: result };
-  P.__workletHash = 3992024948852;
-  P.__initData = __initData;
-  return stateFromStores(5095).useAnimatedStyle(P);
+  const items3 = [tmp5, tmp6, tmp7, tmp8, tmp9];
+  GameProfileSkeletonPulseTsx2.__closure = items3;
+  GameProfileSkeletonPulseTsx2.__workletHash = 9470986050093;
+  GameProfileSkeletonPulseTsx2.__initData = tmp4;
+  return _mod1652.useAnimatedStyle(GameProfileSkeletonPulseTsx2);
 }

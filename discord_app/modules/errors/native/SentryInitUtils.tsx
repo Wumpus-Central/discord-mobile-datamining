@@ -7,15 +7,15 @@ import router_utils from "router_utils" /* 1099 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1244 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DesignIds from "DesignIds" /* 1355 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1374 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
-import DeviceUtils from "DeviceUtils" /* 4971 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6541 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15965 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 15966 */;
+import DesignIds from "DesignIds" /* 1356 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
+import DeviceUtils from "DeviceUtils" /* 5098 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6661 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 16108 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 16109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6540).increment(obj6, true);
-  const tmp26Result = tmp26(6540);
+  tmp26(6660).increment(obj6, true);
+  const tmp26Result = tmp26(6660);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -573,7 +573,7 @@ let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1368);
+const CommonSentryInitUtils = fn(1370);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -634,7 +634,7 @@ export function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35420000000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@354.0.0-2+354200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35420100000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@354.1.0-2+354201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod674;
-          _mod674.setTag("buildNumber", "35420000000000");
+          _mod674.setTag("buildNumber", "35420100000000");
           const tmp15Result17 = _mod674;
           _mod674.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod674;

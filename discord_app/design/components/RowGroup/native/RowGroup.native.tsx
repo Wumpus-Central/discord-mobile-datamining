@@ -1,16 +1,16 @@
-// === Module 15809: RowGroup ===
+// === Module 15952: RowGroup ===
 
-// Module 15809 (RowGroup)
+// Module 15952 (RowGroup)
 import nativeDefault from "native" /* 575 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { overflow: "hidden" }, content: { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,7 +28,7 @@ export function RowGroup(children) {
       tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj2);
     }
     const obj3 = { direction: "horizontal", spacing: 4, children: null };
-    const items = [tmp7, trailing];
+    items = [tmp7, trailing];
     obj3.children = items;
     tmp2Result = React4(Stack_Stack.Stack, obj3);
   }

@@ -1,18 +1,18 @@
-// === Module 19257: VoicePanelCTACardCallerDisconnected ===
+// === Module 19415: VoicePanelCTACardCallerDisconnected ===
 
-// Module 19257 (VoicePanelCTACardCallerDisconnected)
+// Module 19415 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 575 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;
@@ -40,7 +40,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
   }
   first = _slicedToArray(recipients, 1)[0];
   id = AuthenticationStore.getId();
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [channelId, id, first];
   const obj = channelId(id[9]);
   [tmp9, tmp10, tmp11] = channelId(id[9]).useStateFromStoresArray(items, () => {
@@ -50,7 +50,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
     if (user != null) {
       avatarURL = user.getAvatarURL(undefined, 80);
     }
-    const items = [avatarURL, , ];
+    items = [avatarURL, , ];
     let avatarURL1;
     if (user1 != null) {
       avatarURL1 = user1.getAvatarURL(undefined, 80);
@@ -67,7 +67,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
     if (user != null) {
       avatarURL = user.getAvatarURL(undefined, 80);
     }
-    const items = [avatarURL, , ];
+    items = [avatarURL, , ];
     let avatarURL1;
     if (user1 != null) {
       avatarURL1 = user1.getAvatarURL(undefined, 80);

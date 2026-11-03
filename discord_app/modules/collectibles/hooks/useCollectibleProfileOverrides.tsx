@@ -1,20 +1,20 @@
-// === Module 15027: useCollectibleProfileOverrides ===
+// === Module 15165: useCollectibleProfileOverrides ===
 
-// Module 15027 (useCollectibleProfileOverrides)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import useShopProductItems from "useShopProductItems" /* 8742 */;
+// Module 15165 (useCollectibleProfileOverrides)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import useShopProductItems from "useShopProductItems" /* 8866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const isAvatarDecorationRecord = fn(7725).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7849).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 
 export function useCollectibleProfileOverrides(selectedProduct, arg1) {
   closure_1 = arg1;
-  const items = [selectedProduct, arg1];
+  items = [selectedProduct, arg1];
   return noop.useMemo(() => {
     const productItems = useShopProductItems.getProductItems(selectedProduct);
     ({ firstAvatarDecoration, firstProfileEffect, firstProfileFrame } = productItems);

@@ -1,15 +1,15 @@
-// === Module 13191: useCanFulfillStreamRequest ===
+// === Module 13327: useCanFulfillStreamRequest ===
 
-// Module 13191 (useCanFulfillStreamRequest)
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+// Module 13327 (useCanFulfillStreamRequest)
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 const require = globalThis.__r;
 
@@ -38,25 +38,25 @@ function canFulfillStreamRequest(channel_id) {
   dependencyMap = undefined;
   const channel = obj2.getChannel(channel_id.channel_id);
   if (null == channel) {
-    const items = [false, obj.NOT_IN_VOICE_CHANNEL];
+    items = [false, obj.NOT_IN_VOICE_CHANNEL];
     return items;
   } else {
     const channelId = obj4.getChannelId();
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(11915).getVideoPermission(channel);
+    const videoPermission = flag(12052).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    tmp19(9738).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(11915);
-    const tmp19Result = flag(1375);
-    const ActivityGamePlatforms = tmp19(9738).ActivityGamePlatforms;
-    dependencyMap = flag(1375).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
-    const isAndroidResult = flag(1375).isAndroid();
+    tmp19(9870).ActivityGamePlatforms.DESKTOP;
+    const obj8 = flag(12052);
+    const tmp19Result = flag(1377);
+    const ActivityGamePlatforms = tmp19(9870).ActivityGamePlatforms;
+    dependencyMap = flag(1377).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
+    const isAndroidResult = flag(1377).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11681).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11818).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];
@@ -94,7 +94,7 @@ export default function useCanFulfillStreamRequest(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [ApplicationStreamingStore, ChannelStore, PresenceStore, RunningGameStore, RTCConnectionStore, GuildStore, PermissionStore];
+  items = [ApplicationStreamingStore, ChannelStore, PresenceStore, RunningGameStore, RTCConnectionStore, GuildStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => canFulfillStreamRequest(closure_0, flag, ApplicationStreamingStore, ChannelStore, PresenceStore, RunningGameStore, RTCConnectionStore, GuildStore, PermissionStore));
 };
 export { StreamRequestUnfulfillableReason };

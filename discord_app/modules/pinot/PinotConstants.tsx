@@ -1,6 +1,6 @@
-// === Module 9036: PinotConstants ===
+// === Module 9164: PinotConstants ===
 
-// Module 9036 (PinotConstants)
+// Module 9164 (PinotConstants)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ SWP_CHANNEL_SUMMARIES_DISABLED: "SWP_CHANNEL_SUMMARIES_DISABLED", SWP_CHANNEL_MESSAGES_DISABLED: "SWP_CHANNEL_MESSAGES_DISABLED" });

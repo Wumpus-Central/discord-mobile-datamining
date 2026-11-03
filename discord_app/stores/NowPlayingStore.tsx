@@ -1,12 +1,12 @@
-// === Module 15638: NowPlayingStore ===
+// === Module 15781: NowPlayingStore ===
 
-// Module 15638 (NowPlayingStore)
+// Module 15781 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15639 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import UserStore from "UserStore" /* 1383 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15782 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 function _handlePresenceUpdate(user) {
@@ -139,7 +139,7 @@ class NowPlayingStore extends Store {
 const prototype = NowPlayingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(PresenceStore, UserAffinitiesV2Store, UserStore);
-  const items = [UserAffinitiesV2Store];
+  items = [UserAffinitiesV2Store];
   this.syncWith(items, handleUserAffinitiesV2StoreUpdate);
 };
 Object.defineProperty(prototype, "games", {

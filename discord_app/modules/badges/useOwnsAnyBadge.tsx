@@ -1,16 +1,16 @@
-// === Module 18877: useOwnsAnyBadge ===
+// === Module 19035: useOwnsAnyBadge ===
 
-// Module 18877 (useOwnsAnyBadge)
-import useBadgesDefault from "useBadges" /* 8815 */;
-import UserStore from "UserStore" /* 1383 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
+// Module 19035 (useOwnsAnyBadge)
+import useBadgesDefault from "useBadges" /* 8939 */;
+import UserStore from "UserStore" /* 1385 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
 
 export default function useOwnsAnyBadge() {
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

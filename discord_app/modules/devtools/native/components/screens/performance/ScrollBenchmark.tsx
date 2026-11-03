@@ -1,8 +1,8 @@
-// === Module 17751: ScrollBenchmark ===
+// === Module 17894: ScrollBenchmark ===
 
-// Module 17751 (ScrollBenchmark)
-import TableRow from "TableRow" /* 6975 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 17748 */;
+// Module 17894 (ScrollBenchmark)
+import TableRow from "TableRow" /* 7101 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 17891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

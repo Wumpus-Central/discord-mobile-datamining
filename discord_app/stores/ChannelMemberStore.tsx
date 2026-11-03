@@ -1,23 +1,23 @@
-// === Module 7446: ChannelMemberStore ===
+// === Module 7570: ChannelMemberStore ===
 
-// Module 7446 (ChannelMemberStore)
+// Module 7570 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import UserStore from "UserStore" /* 1385 */;
 
 let require = fn;
 function getMemberListId(arg0) {
@@ -87,7 +87,7 @@ class MemberList {
 const prototype = MemberList.prototype;
 prototype["updateOwnerId"] = function updateOwnerId() {
   const self = this;
-  const guild = GuildStore.getGuild(this.guildId);
+  guild = GuildStore.getGuild(this.guildId);
   if (null == guild) {
     return false;
   } else {
@@ -114,7 +114,7 @@ prototype["setGroups"] = function setGroups(groups) {
     if (constants.ONLINE !== id) {
       if (constants.OFFLINE !== id) {
         if (constants.UNKNOWN !== id) {
-          const guild = GuildStore.getGuild(tmp3);
+          guild = GuildStore.getGuild(tmp3);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
@@ -190,12 +190,12 @@ prototype["insert"] = function insert(arg0, arg1) {
     if (constants.ONLINE !== id) {
       if (constants.OFFLINE !== id) {
         if (constants.UNKNOWN !== id) {
-          const guild = GuildStore.getGuild(tmp16);
+          guild = GuildStore.getGuild(tmp16);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "ao" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -285,12 +285,12 @@ prototype["update"] = function update(arg0, arg1) {
     if (constants.ONLINE !== id2) {
       if (constants.OFFLINE !== id2) {
         if (constants.UNKNOWN !== id2) {
-          const guild = GuildStore.getGuild(tmp20);
+          guild = GuildStore.getGuild(tmp20);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "ao" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -435,7 +435,7 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     if (constants.ONLINE !== str) {
       if (constants.OFFLINE !== str) {
         if (constants.UNKNOWN !== str) {
-          const guild = GuildStore.getGuild(tmp11);
+          guild = GuildStore.getGuild(tmp11);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, str);
@@ -504,7 +504,7 @@ prototype2["get"] = function get(guildId, listId) {
       merged.listId = listId;
       merged.updateOwnerId();
       const obj2 = { id: constants.UNKNOWN, count: 0 };
-      const items = [obj2];
+      items = [obj2];
       merged.setGroups(items);
       tmp[listId] = merged;
       tmp2 = merged;
@@ -540,7 +540,7 @@ class ChannelMemberStore extends Store {
 const prototype3 = ChannelMemberStore.prototype;
 prototype3["initialize"] = function initialize() {
   this.waitFor(UserStore, GuildStore, GuildRoleStore, ChannelStore, GuildMemberStore, PresenceStore, SelfPresenceStore, AuthenticationStore, GuildMemberCountStore, ApplicationStreamingStore, ExperimentStore);
-  const items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   this.syncWith(items, handleLocalPresenceUpdate);
   const items1 = [ApplicationStreamingStore];
   this.syncWith(items1, handleApplicationStreamUpdate);

@@ -1,9 +1,9 @@
-// === Module 14201: UserProfileConfirmThreadRemove ===
+// === Module 14332: UserProfileConfirmThreadRemove ===
 
-// Module 14201 (UserProfileConfirmThreadRemove)
+// Module 14332 (UserProfileConfirmThreadRemove)
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.N86XcP);
   obj4.onPress = onConfirm;
-  const items = [React3(AlertModal.AlertActionButton, obj4, "remove-user-from-thread"), ];
+  items = [React3(AlertModal.AlertActionButton, obj4, "remove-user-from-thread"), ];
   const obj5 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t.yNbnce);

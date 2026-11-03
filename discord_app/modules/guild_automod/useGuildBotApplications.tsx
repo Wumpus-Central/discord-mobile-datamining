@@ -1,10 +1,10 @@
-// === Module 19698: useGuildBotApplications ===
+// === Module 19848: useGuildBotApplications ===
 
-// Module 19698 (useGuildBotApplications)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9080 */;
+// Module 19848 (useGuildBotApplications)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9208 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/useGuildBotAppl
 
 export function useGuildBotApplications(guildId) {
   _require = guildId;
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => props.getProps().integrations);
   const items1 = [guildId, stateFromStores];
   const effect = noop.useEffect(() => {

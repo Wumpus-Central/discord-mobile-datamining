@@ -1,20 +1,20 @@
-// === Module 16730: ExplicitMediaRedactionNativeUtils ===
+// === Module 16873: ExplicitMediaRedactionNativeUtils ===
 
-// Module 16730 (ExplicitMediaRedactionNativeUtils)
+// Module 16873 (ExplicitMediaRedactionNativeUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7469 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8687 */;
-import UserStore from "UserStore" /* 1383 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_4 = fn(7466).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(9827).SearchMediaTypes;
+let closure_4 = fn(7590).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(9958).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
 
@@ -33,7 +33,7 @@ export function handleSensitiveMediaFilterPress(arg0) {
   if (!hasItem) {
     tmp5 = nsfwAllowed;
   }
-  const items = [];
+  items = [];
   if (tmp5) {
     let obj = { value: preloaded_user_settings.ExplicitContentRedaction.SHOW, label: null, onPress: null };
     const intl = util.intl;
@@ -75,7 +75,7 @@ export function handleSensitiveMediaFilterPress(arg0) {
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16731, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16874, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 }
 export function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {

@@ -1,16 +1,16 @@
-// === Module 9478: WishlistActionCreators ===
+// === Module 9606: WishlistActionCreators ===
 
-// Module 9478 (WishlistActionCreators)
+// Module 9606 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import StorefrontUtils from "StorefrontUtils" /* 7409 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import StorefrontUtils from "StorefrontUtils" /* 7533 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import UserStore from "UserStore" /* 1383 */;
-import BillingInfoStore from "BillingInfoStore" /* 2048 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7405 */;
-import WishlistRecord from "WishlistRecord" /* 9472 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserStore from "UserStore" /* 1385 */;
+import BillingInfoStore from "BillingInfoStore" /* 2177 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7529 */;
+import WishlistRecord from "WishlistRecord" /* 9600 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,9 +44,9 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9472).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9600).getWishlistSkuIds;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
+({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");
 
@@ -114,7 +114,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

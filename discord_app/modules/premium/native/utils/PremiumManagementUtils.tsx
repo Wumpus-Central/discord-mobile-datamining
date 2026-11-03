@@ -1,13 +1,13 @@
-// === Module 7587: PremiumManagementUtils ===
+// === Module 7711: PremiumManagementUtils ===
 
-// Module 7587 (PremiumManagementUtils)
+// Module 7711 (PremiumManagementUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1072 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 7588 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 7712 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -63,7 +63,7 @@ export function getExternalManagementMessage(subscription, arg1) {
             str = "Meta Quest";
           }
           str2 = str;
-          tmp13Result = tmp13(1622);
+          tmp13Result = tmp13(1624);
         }
         if (null === tmp12.IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY) {
           if (null != subscription) {
@@ -78,7 +78,7 @@ export function getExternalManagementMessage(subscription, arg1) {
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13(1622);
+                tmp13(1624);
               }
               let status;
               if (subscription != null) {
@@ -102,7 +102,7 @@ export function getExternalManagementMessage(subscription, arg1) {
                 const intl3 = tmp13(1113).intl;
                 const t = tmp13(1113).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7591).LinkButton, {
+                jsx(tmp13(7715).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                                   if (null != _null) {

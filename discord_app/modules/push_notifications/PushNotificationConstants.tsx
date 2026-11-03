@@ -1,9 +1,9 @@
-// === Module 6743: PushNotificationConstants ===
+// === Module 6863: PushNotificationConstants ===
 
-// Module 6743 (PushNotificationConstants)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import ClientInfoUtils_mod from "ClientInfoUtils" /* 1374 */;
-import MetaQuestUtils_mod from "MetaQuestUtils" /* 1622 */;
+// Module 6863 (PushNotificationConstants)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import ClientInfoUtils_mod from "ClientInfoUtils" /* 1376 */;
+import MetaQuestUtils_mod from "MetaQuestUtils" /* 1624 */;
 import size from "module_2" /* 2 */;
 
 let ClientInfoUtils = ClientInfoUtils_mod;

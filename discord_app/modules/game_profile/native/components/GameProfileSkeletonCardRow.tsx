@@ -1,12 +1,12 @@
-// === Module 9446: GameProfileSkeletonCardRow ===
+// === Module 9574: GameProfileSkeletonCardRow ===
 
-// Module 9446 (GameProfileSkeletonCardRow)
+// Module 9574 (GameProfileSkeletonCardRow)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles((gap) => {
   const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;
@@ -22,7 +22,7 @@ export default function GameProfileSkeletonCardRow(gap) {
   }
   const tmp3 = closure_4(PX_12);
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const items = [tmp3.viewport, gap.style];
+  items = [tmp3.viewport, gap.style];
   obj.style = items;
   const obj2 = { style: null, children };
   const items1 = [tmp3.row, contentContainerStyle];

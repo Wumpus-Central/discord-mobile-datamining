@@ -1,9 +1,9 @@
-// === Module 9949: useEmojiPickerSearchState ===
+// === Module 10080: useEmojiPickerSearchState ===
 
-// Module 9949 (useEmojiPickerSearchState)
+// Module 10080 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 const require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_5 = tmp2[1];
   let obj = { handleTextChange: null, searchQueryRef: ref, searchResults: tmp2[0] };
-  const items = [arg1, channel, intention, bypassPremiumEmojiEntitlement];
+  items = [arg1, channel, intention, bypassPremiumEmojiEntitlement];
   obj.handleTextChange = noop.useCallback((arr) => {
     channel = arr;
     if ("" !== arr) {
@@ -25,7 +25,7 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(4844).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(4971).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);

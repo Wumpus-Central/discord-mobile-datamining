@@ -1,21 +1,21 @@
-// === Module 17251: AdvancedVoiceActivitySetting ===
+// === Module 17394: AdvancedVoiceActivitySetting ===
 
-// Module 17251 (AdvancedVoiceActivitySetting)
+// Module 17394 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
@@ -27,7 +27,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.LoOB1F);
   },
   usePredicate: function useHasAdvancedVoiceActivitySetting() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
   }
 });

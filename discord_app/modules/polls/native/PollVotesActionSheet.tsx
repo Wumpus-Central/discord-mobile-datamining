@@ -1,35 +1,35 @@
-// === Module 12544: PollVotesActionSheet ===
+// === Module 12680: PollVotesActionSheet ===
 
-// Module 12544 (PollVotesActionSheet)
+// Module 12680 (PollVotesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import timing from "timing" /* 5254 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Pressables from "Pressables" /* 6980 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import PollsUtils from "PollsUtils" /* 8403 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 12545 */;
-import _modDef12552 from "module_12552" /* 12552 */;
-import _modDef12553 from "module_12553" /* 12553 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Pressables from "Pressables" /* 7106 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import PollsUtils from "PollsUtils" /* 8527 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 12681 */;
+import _modDef12688 from "module_12688" /* 12688 */;
+import _modDef12689 from "module_12689" /* 12689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import UserStore from "UserStore" /* 1383 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function PollEmoji(emoji) {
   emoji = emoji.emoji;
   const tmp = closure_15();
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = emoji(504).useStateFromStores(items, () => {
     if (null != emoji.id) {
       let animated = emoji.animated;
@@ -64,7 +64,7 @@ function PollAnswerButton(answer) {
   if (num == null) {
     num = 0;
   }
-  const items = [setSelectedAnswerId, answer.answer_id];
+  items = [setSelectedAnswerId, answer.answer_id];
   let str = "text-default";
   const callback = noop.useCallback(() => {
     setSelectedAnswerId(String(answer.answer_id));
@@ -86,21 +86,21 @@ function PollAnswerButton(answer) {
   let tmp8 = null;
   if (null != answer.poll_media.emoji) {
     const obj3 = { style: tmp.answerEmoji, emoji: answer.poll_media.emoji };
-    tmp8 = map1(PollEmoji, obj3);
+    tmp8 = state(PollEmoji, obj3);
   }
   const items2 = [tmp8, , ];
   let tmp11 = null;
   if (null != answer.poll_media.text) {
     const obj4 = { style: tmp.answerText, variant: "text-sm/semibold", color: str, lineClamp: 1, children: answer.poll_media.text };
-    tmp11 = map1(Text_Text.Text, obj4);
+    tmp11 = state(Text_Text.Text, obj4);
   }
   items2[1] = tmp11;
   const obj5 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj5.children = items3;
-  items2[2] = closure_1_14(Text_Text.Text, obj5);
+  items2[2] = gesture(Text_Text.Text, obj5);
   obj2.children = items2;
-  return closure_1_14(Pressables.PressableHighlight, obj2);
+  return gesture(Pressables.PressableHighlight, obj2);
 }
 function PollVotesHeader(message) {
   message = message.message;
@@ -108,7 +108,7 @@ function PollVotesHeader(message) {
   const setSelectedAnswerId = message.setSelectedAnswerId;
   noop = undefined;
   let tmp = closure_15();
-  let items = [message.reactions];
+  items = [message.reactions];
   const memo = noop.useMemo(() => PollsUtils.getTotalVotes(message.reactions), items);
   const ref = noop.useRef(null);
   closure_4 = noop.useRef(null);
@@ -126,7 +126,7 @@ function PollVotesHeader(message) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -172,7 +172,7 @@ function PollVotesHeader(message) {
                     closure_0 = arg0;
                     closure_1_1.measureLayout(closure_1_0, (x) => closure_0({ x }));
                   });
-                  const items = [promise, promise3, promise4];
+                  items = [promise, promise3, promise4];
                   c2 = 1;
                   v3 = 1;
                   const obj3 = { value: Promise.all(items), done: false };
@@ -217,7 +217,7 @@ function PollVotesHeader(message) {
               }
               closure_129_5.current = true;
               v3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
           const current2 = closure_129_3.current;
@@ -236,7 +236,7 @@ function PollVotesHeader(message) {
   let tmp9 = null;
   if (null != message.poll) {
     let obj = { children: null };
-    let obj2 = { style: tmp.headerText, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: message.poll.question.text };
+    let obj2 = { style: tmp.headerText, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: message.poll.question.text };
     const items2 = [closure_13(tmp5(tmp6[17]).Text, obj2), , ];
     let obj3 = { style: tmp.subheaderText, variant: "text-md/medium", color: "text-default", children: null };
     const intl = tmp5(tmp6[15]).intl;
@@ -256,7 +256,7 @@ function PollVotesHeader(message) {
         tmp4 = closure_4;
       }
       const obj = { ref: tmp4, answer, selected: tmp, reaction: formatPollMessageChatData.reactionForId(message.reactions, String(answer.answer_id)), setSelectedAnswerId };
-      return map1(PollAnswerButton, obj, answer.answer_id);
+      return state(PollAnswerButton, obj, answer.answer_id);
     });
     obj5.children = closure_13(closure_7, obj11);
     items2[2] = closure_13(tmp5(tmp6[19]).GestureDetector, obj5);
@@ -267,6 +267,7 @@ function PollVotesHeader(message) {
 }
 function VotersList(channelId) {
   channelId = channelId.channelId;
+  _require = channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   let analyticsLocations;
@@ -276,11 +277,11 @@ function VotersList(channelId) {
   const reactors = tmp4.reactors;
   const tmp = closure_15();
   const tmp2 = messageId;
-  let obj = channelId(analyticsLocations[23]);
-  const reactorsOnScrollNative = obj.useReactorsOnScrollNative({ channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE });
-  let obj2 = { channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE };
-  const items = [ChannelStore];
-  const stateFromStores = channelId(analyticsLocations[12]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj = require("MessageReactionsContent");
+  const reactorsOnScrollNative = obj.useReactorsOnScrollNative({ channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: require("MessageReactionsTypes").ReactionTypes.VOTE });
+  let obj2 = { channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: require("MessageReactionsTypes").ReactionTypes.VOTE };
+  items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(c0));
   const items1 = [stateFromStores, reactors.length, channelId, messageId, analyticsLocations];
   const callback = sharedValue.useCallback((item) => {
     item = item.item;
@@ -311,8 +312,8 @@ function VotersList(channelId) {
       user = item;
     }
     obj3.user = user;
-    obj3.size = channelId(analyticsLocations[28]).AvatarSizes.SMALL;
-    obj2.icon = closure_1_13(channelId(analyticsLocations[28]).Avatar, obj3);
+    obj3.size = _undefined(analyticsLocations[28]).AvatarSizes.SMALL;
+    obj2.icon = closure_1_13(_undefined(analyticsLocations[28]).Avatar, obj3);
     let tmp9Result = nickname;
     if (nickname == null) {
       const obj4 = { user: item };
@@ -327,35 +328,39 @@ function VotersList(channelId) {
     obj2.onPress = function onPress() {
       return showUserProfileActionSheetDefault({ userId: item.id, localUser: item, sourceAnalyticsLocations: analyticsLocations, channelId, messageId });
     };
-    return closure_1_13(channelId(analyticsLocations[27]).TableRow, obj2);
+    return closure_1_13(_undefined(analyticsLocations[27]).TableRow, obj2);
   }, items1);
-  let obj3 = channelId(analyticsLocations[12]);
+  let obj3 = require("initialize");
   let obj4 = sharedValue;
   let num = 1;
   if (0 === reactors.length) {
     num = 0;
   }
-  sharedValue = channelId(analyticsLocations[31]).useSharedValue(num);
+  sharedValue = require("module_1652").useSharedValue(num);
   const items2 = [sharedValue, reactors.length];
   const effect = obj4.useEffect(() => {
     if (0 !== reactors.length) {
-      const result = sharedValue.set(timing.withTiming(1, { duration: 200 }));
+      const result = sharedValue.set(timing_timing.withTiming(1, { duration: 200 }));
     } else {
       const result1 = sharedValue.set(0);
     }
   }, items2);
-  const obj5 = channelId(analyticsLocations[31]);
-  class I {
+  const obj5 = require("module_1652");
+  const items3 = [closure_19, sharedValue];
+  _require = undefined;
+  [tmp11, tmp12] = items3;
+  class PollVotesActionSheetTsx1 {
     constructor() {
-      obj = { flex: 1, opacity: closure_5.get(), marginBottom: 32 };
+      obj = { flex: 1, opacity: closure_0.get(), marginBottom: 32 };
       return obj;
     }
   }
-  I.__closure = { opacity: sharedValue };
-  I.__workletHash = 8593850252158;
-  I.__initData = __initData;
-  const animatedStyle = channelId(analyticsLocations[31]).useAnimatedStyle(I);
-  const obj6 = { style: animatedStyle, children: closure_13(channelId(analyticsLocations[33]).BottomSheetFlashList, { contentContainerStyle: tmp.list, data: reactors, renderItem: callback, onScroll: reactorsOnScrollNative }) };
+  const items4 = [tmp12];
+  PollVotesActionSheetTsx1.__closure = items4;
+  PollVotesActionSheetTsx1.__workletHash = 11579760846087;
+  PollVotesActionSheetTsx1.__initData = tmp11;
+  const animatedStyle = require("module_1652").useAnimatedStyle(PollVotesActionSheetTsx1);
+  const obj6 = { style: animatedStyle, children: closure_13(require("module_7414").BottomSheetFlashList, { contentContainerStyle: tmp.list, data: reactors, renderItem: callback, onScroll: reactorsOnScrollNative }) };
   return closure_13(tmp2(analyticsLocations[31]).View, obj6);
 }
 function NoResults() {
@@ -365,28 +370,28 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12552;
+    let tmp2Result = _modDef12688;
   } else {
-    tmp2Result = _modDef12553;
+    tmp2Result = _modDef12689;
   }
   obj2.source = tmp2Result;
-  const items = [map1(tmp8, obj2), , ];
-  const obj4 = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+  items = [state(tmp8, obj2), , ];
+  const obj4 = { style: tmp.noResultsTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.vhQK3o);
-  items[1] = map1(Text_Text.Text, obj4);
+  items[1] = state(Text_Text.Text, obj4);
   const obj5 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.bwytdh);
-  items[2] = map1(Text_Text.Text, obj5);
+  items[2] = state(Text_Text.Text, obj5);
   obj.children = items;
-  return closure_1_14(timestampProducer, obj);
+  return gesture(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 }, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
 let obj3 = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 };
 obj2.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -399,7 +404,7 @@ obj2.noResultsImage = { marginTop: 32, width: 138 };
 obj2.noResultsTitle = { marginTop: 16, textAlign: "center" };
 obj2.noResultsSubtitle = { marginTop: 4, textAlign: "center" };
 let closure_15 = createStyles.createStyles(obj2);
-const __initData = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
+let closure_19 = { code: "(function PollVotesActionSheetTsx1(){let[opacity]=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");
 
@@ -411,7 +416,7 @@ export default function PollVotesActionSheet(channelId) {
   const tmp4 = stateFromStores(noop.useState(channelId.initialAnswerId), 2);
   const selectedAnswerId = tmp4[0];
   const tmp3 = messageId(selectedAnswerId[21]);
-  const items = [MessageStore];
+  items = [MessageStore];
   stateFromStores = channelId(selectedAnswerId[12]).useStateFromStores(items, () => MessageStore.getMessage(channelId, messageId));
   closure_4 = tmp8;
   const items1 = [null != stateFromStores && null != stateFromStores.poll];

@@ -1,17 +1,17 @@
-// === Module 17912: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 18055: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 17912 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 18055 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17911);
+const UserSettingsSafetySelectedGuildStore = fn(18054);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { iconContainer: { marginRight: nativeDefault.space.PX_12 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   const selectedGuildId = closure_9().selectedGuildId;
   closure_129_0 = selectedGuildId;
   const tmp = closure_11();
-  let items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = first(callback[11]).useStateFromStores(items, () => GuildStore.getGuild(first));
   if (selectedGuildId !== value) {
     if (null != stateFromStores) {
@@ -45,13 +45,13 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
       const intl2 = first(callback[10]).intl;
       obj.label = intl2.string(first(callback[10]).t["32u1Dx"]);
       obj.value = value;
-      const items = [obj];
+      items = [obj];
       if (0 === query.length) {
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
         let reduced = flattenedGuildIds.reduce((arr, item) => {
           guild = guild.getGuild(item);
           if (null != guild) {
-            const obj = { type: first(6073).SelectOptionType.GUILD, value: null, label: null, guild: null };
+            const obj = { type: first(6193).SelectOptionType.GUILD, value: null, label: null, guild: null };
             ({ id: obj.value, name: obj.label } = guild);
             obj.guild = guild;
             arr = arr.push(obj);
@@ -63,7 +63,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         const obj5 = { query };
         reduced = obj4.queryGuilds(obj5).map((record) => {
           record = record.record;
-          return { type: first(6073).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+          return { type: first(6193).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
         });
         const queryGuildsResult = obj4.queryGuilds(obj5);
       }

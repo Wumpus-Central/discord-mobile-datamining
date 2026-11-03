@@ -1,8 +1,8 @@
-// === Module 16419: useRequestGatewaySocket ===
+// === Module 16562: useRequestGatewaySocket ===
 
-// Module 16419 (useRequestGatewaySocket)
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10212 */;
+// Module 16562 (useRequestGatewaySocket)
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10342 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySock
 export function useRequestGatewaySocket(arg0) {
   importDefault = arg0;
   const canUIRequestGatewaySocket = DiscordAppStateDefault.useCanUIRequestGatewaySocket();
-  const items = [arg0, canUIRequestGatewaySocket];
+  items = [arg0, canUIRequestGatewaySocket];
   const effect = noop.useEffect(() => {
     if (canUIRequestGatewaySocket) {
       RequestGatewaySocketAll.setRequestedBy(closure_0);

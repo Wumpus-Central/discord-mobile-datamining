@@ -1,12 +1,12 @@
-// === Module 8836: useVideoControls ===
+// === Module 8960: useVideoControls ===
 
-// Module 8836 (useVideoControls)
+// Module 8960 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8834 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8837 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8958 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8961 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj4 = module_560.create(() => ({ controls: "flexDirection", paused: true }));
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
@@ -24,7 +24,7 @@ export default function useVideoControls(index, portal, controls) {
   importDefault = controls;
   const tmp = closure_8();
   const tmp2 = _require;
-  const items = [useReducedMotion];
+  items = [useReducedMotion];
   stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp5 = _slicedToArray(mediaItemHasSpoiler.useState(false), 2);
   _slicedToArray = tmp6;

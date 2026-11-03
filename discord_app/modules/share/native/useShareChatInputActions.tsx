@@ -1,12 +1,12 @@
-// === Module 13405: useShareChatInputActions ===
+// === Module 13541: useShareChatInputActions ===
 
-// Module 13405 (useShareChatInputActions)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
+// Module 13541 (useShareChatInputActions)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 
@@ -23,7 +23,7 @@ export function useShareChatInputActions(setText, selectedDestinationChannel, ap
   const callback1 = ref.useCallback(() => {
     closure_1_5(true);
   }, []);
-  const items = [setText];
+  items = [setText];
   const callback2 = ref.useCallback(() => {
     closure_1_5(false);
   }, []);

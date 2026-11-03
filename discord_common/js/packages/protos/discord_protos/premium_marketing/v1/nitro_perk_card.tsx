@@ -1,10 +1,10 @@
-// === Module 9664: nitro_perk_card ===
+// === Module 9796: nitro_perk_card ===
 
-// Module 9664 (nitro_perk_card)
+// Module 9796 (nitro_perk_card)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import cta_button from "cta_button" /* 9633 */;
-import theme_aware_asset from "theme_aware_asset" /* 9641 */;
+import localized_string from "localized_string" /* 9763 */;
+import cta_button from "cta_button" /* 9765 */;
+import theme_aware_asset from "theme_aware_asset" /* 9773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -70,7 +70,7 @@ class NitroPerkCard$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.premium_marketing.v1.NitroPerkCardPlacement", NitroPerkCardPlacement, "NITRO_PERK_CARD_PLACEMENT_"];
+            items = ["discord_protos.premium_marketing.v1.NitroPerkCardPlacement", NitroPerkCardPlacement, "NITRO_PERK_CARD_PLACEMENT_"];
             return items;
           }
     };
@@ -292,7 +292,7 @@ items[8] = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = ["discord_protos.premium_marketing.v1.NitroPerkCardPlacement", NitroPerkCardPlacement, "NITRO_PERK_CARD_PLACEMENT_"];
+    items = ["discord_protos.premium_marketing.v1.NitroPerkCardPlacement", NitroPerkCardPlacement, "NITRO_PERK_CARD_PLACEMENT_"];
     return items;
   }
 };

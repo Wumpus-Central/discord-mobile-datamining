@@ -1,16 +1,16 @@
-// === Module 16979: QuestHomeEmptyState ===
+// === Module 17122: QuestHomeEmptyState ===
 
-// Module 16979 (QuestHomeEmptyState)
+// Module 17122 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import useChatLayoutDefault from "useChatLayout" /* 5201 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import _modDef16980 from "module_16980" /* 16980 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useChatLayoutDefault from "useChatLayout" /* 5324 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import _modDef17123 from "module_17123" /* 17123 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContainerBelowContent: { justifyContent: "flex-start", paddingTop: nativeDefault.space.PX_16 }, emptyStateContentContainer: null, emptyStateContentContainerScreenCentered: null, emptyStateContentTitle: null, emptyStateContentDescription: null, emptyImage: null, backgroundImage: null, gradient: null, actionWrapper: null };
 const obj3 = { justifyContent: "flex-start", paddingTop: nativeDefault.space.PX_16 };
 obj2.emptyStateContentContainer = { paddingHorizontal: nativeDefault.space.PX_32 };
@@ -59,7 +59,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   obj2.bottom = PlatformUtils.isAndroid();
   obj2.style = tmp5.container;
   const obj4 = { style: tmp5.container, children: null };
-  const items = [tmp5.emptyStateContainer, ];
+  items = [tmp5.emptyStateContainer, ];
   let emptyStateContainerBelowContent = flag;
   if (flag) {
     emptyStateContainerBelowContent = tmp5.emptyStateContainerBelowContent;
@@ -73,7 +73,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   }
   const obj6 = { style: items1, children: null };
   items1[1] = emptyStateContentContainerScreenCentered;
-  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
+  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
   let tmp10Result = null != action;
   if (tmp10Result) {
     const obj9 = { style: tmp5.actionWrapper, children: action };
@@ -86,7 +86,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef16980, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef17123, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items4 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

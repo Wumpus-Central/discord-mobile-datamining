@@ -1,10 +1,10 @@
-// === Module 5069: StreamerModeStore ===
+// === Module 5196: StreamerModeStore ===
 
-// Module 5069 (StreamerModeStore)
+// Module 5196 (StreamerModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import OverlayV3Experiment from "OverlayV3Experiment" /* 5070 */;
+import OverlayV3Experiment from "OverlayV3Experiment" /* 5197 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class StreamerModeStore extends PersistedStore {
 const prototype = StreamerModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let merged = Object.assign(closure_6, arg0);
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   this.syncWith(items, () => {
     id = id.getId();
     if (null != id) {

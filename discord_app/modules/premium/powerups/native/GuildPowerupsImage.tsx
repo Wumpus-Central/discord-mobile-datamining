@@ -1,15 +1,15 @@
-// === Module 14097: GuildPowerupsImage ===
+// === Module 14228: GuildPowerupsImage ===
 
-// Module 14097 (GuildPowerupsImage)
+// Module 14228 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9505 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9633 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
@@ -21,7 +21,7 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = closure_5();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
     if (isAnimated) {

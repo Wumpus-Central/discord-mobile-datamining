@@ -1,23 +1,23 @@
-// === Module 13304: ExplicitMediaLearnMoreActionSheet ===
+// === Module 13440: ExplicitMediaLearnMoreActionSheet ===
 
-// Module 13304 (ExplicitMediaLearnMoreActionSheet)
+// Module 13440 (ExplicitMediaLearnMoreActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8687 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7466).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1072);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" }, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" };
 obj2.art = { alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -46,7 +46,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const shouldAgeVerifyForExplicitMedia = channelId(attachmentId[9]).useShouldAgeVerifyForExplicitMedia();
   let intl = channelId(attachmentId[10]).intl;
   let stringResult = intl.string(channelId(attachmentId[10]).t["5e0geG"]);
-  const items = [isVerifiedTeen, shouldAgeVerifyForExplicitMedia];
+  items = [isVerifiedTeen, shouldAgeVerifyForExplicitMedia];
   const memo = embedId.useMemo(() => {
     let tmp = isVerifiedTeen;
     if (isVerifiedTeen) {
@@ -84,7 +84,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   let obj2 = channelId(attachmentId[9]);
   const items4 = [closure_8(isVerifiedTeen, { style: tmp.art, children: closure_8(channelId(attachmentId[19]).ShieldSpotIllustration, { height: 120, width: 120 }) }), , ];
   const obj5 = { style: tmp.info, children: null };
-  const obj6 = { style: tmp.infoHeader, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj6 = { style: tmp.infoHeader, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = channelId(attachmentId[10]).intl;
   obj6.children = intl2.string(channelId(attachmentId[10]).t.sGW77l);
   const items5 = [closure_8(channelId(attachmentId[20]).Text, obj6), ];

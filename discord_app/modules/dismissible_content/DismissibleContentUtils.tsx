@@ -1,21 +1,21 @@
-// === Module 4848: DismissibleContentUtils ===
+// === Module 4975: DismissibleContentUtils ===
 
-// Module 4848 (DismissibleContentUtils)
+// Module 4975 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4844 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4851 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4854 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4861 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5066 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5690 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5691 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4978 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4981 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4988 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5193 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5810 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4850 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4977 */;
 
 const require = globalThis.__r;
 
@@ -71,7 +71,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -147,7 +147,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       } else {
         closure_132_20(closure_131_0, closure_131_1);
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -205,7 +205,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -242,7 +242,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         } else {
           closure_132_20(closure_131_0, closure_131_1);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         c6 = tmp;
@@ -262,7 +262,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -296,7 +296,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       } else {
         closure_131_20(closure_130_0, closure_130_1);
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp19) {
       c5 = tmp;
@@ -439,13 +439,13 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4849).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4855);
-({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const DCFEventTypes = fn(4976).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4982);
+({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: closure_10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4847).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
+let items = [fn(4974).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -660,7 +660,7 @@ export function UNSAFE_isSingleUseGuildDismissibleContentDismissed(GDM_INVITE_RE
 export function useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, guildId) {
   _require = dismissibleContent;
   closure_1 = guildId;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

@@ -1,18 +1,18 @@
-// === Module 18422: GuildsBarItemUnavailableGuilds ===
+// === Module 18567: GuildsBarItemUnavailableGuilds ===
 
-// Module 18422 (GuildsBarItemUnavailableGuilds)
+// Module 18567 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import _modDef18413 from "module_18413" /* 18413 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import _modDef18558 from "module_18558" /* 18558 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarIt
 
 export default noop.memo(function GuildsBarItemUnavailableGuilds() {
   const tmp = closure_6();
-  const items = [GuildAvailabilityStore];
+  items = [GuildAvailabilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18413 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18413 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18558 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18558 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

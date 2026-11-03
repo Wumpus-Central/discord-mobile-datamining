@@ -1,9 +1,9 @@
-// === Module 16445: useOpenChangeBannerActionSheet ===
+// === Module 16589: useOpenChangeBannerActionSheet ===
 
-// Module 16445 (useOpenChangeBannerActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8738 */;
+// Module 16589 (useOpenChangeBannerActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8862 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,10 +21,10 @@ export default function useOpenChangeBannerActionSheet(user) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let items = [user, analyticsLocations, flag, flag2];
+  items = [user, analyticsLocations, flag, flag2];
   return flag2.useCallback(() => {
     let obj2 = { user, analyticsLocations: null, onBannerChange: null, showRemoveBanner: null, isTryItOut: null, onGifBannerSelect: null };
-    let items = analyticsLocations;
+    items = analyticsLocations;
     let obj = ActionSheetActionCreatorsDefault;
     if (analyticsLocations == null) {
       items = [];
@@ -48,7 +48,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       obj3.selectionContext = closure_1_2 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
       obj2.openLazy(user(flag[3])(flag[6], flag.paths), "Select GIF Banner", obj3);
     };
-    obj.openLazy(asyncRequireImpl(16446, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(16446, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(16590, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(16590, dependencyMap.paths);
   }, items);
 };

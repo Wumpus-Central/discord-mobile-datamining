@@ -1,12 +1,12 @@
-// === Module 13938: StaticChannelIndicator ===
+// === Module 14069: StaticChannelIndicator ===
 
-// Module 13938 (StaticChannelIndicator)
+// Module 14069 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import ReadStateConstants from "ReadStateConstants" /* 6776 */;
+import useToken from "useToken" /* 5719 */;
+import ReadStateConstants from "ReadStateConstants" /* 6896 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
@@ -38,7 +38,7 @@ export default function ChannelIndicator(arg0) {
   if (unread) {
     const obj = { style: tmp.indicatorContainer, children: null };
     const obj2 = { style: null };
-    const items = [tmp.indicator, , ];
+    items = [tmp.indicator, , ];
     const obj3 = { backgroundColor: tmp6 };
     items[1] = obj3;
     items[2] = style;

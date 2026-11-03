@@ -1,14 +1,14 @@
-// === Module 18973: useMessageRequestsCount ===
+// === Module 19131: useMessageRequestsCount ===
 
-// Module 18973 (useMessageRequestsCount)
+// Module 19131 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
 
 export function useMessageRequestsCount() {
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 }

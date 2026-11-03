@@ -1,11 +1,11 @@
-// === Module 19582: useConnectGuardianGate ===
+// === Module 19732: useConnectGuardianGate ===
 
-// Module 19582 (useConnectGuardianGate)
+// Module 19732 (useConnectGuardianGate)
 import initialize from "initialize" /* 504 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export function useConnectGuardianGate() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ linkCode: FamilyCenterStore.getLinkCode(), expiresAt: FamilyCenterStore.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);
   [tmp3, require] = noop.useState(false);

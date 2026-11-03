@@ -1,14 +1,14 @@
-// === Module 18963: MessageRequestsScreenWithTabs ===
+// === Module 19121: MessageRequestsScreenWithTabs ===
 
-// Module 18963 (MessageRequestsScreenWithTabs)
+// Module 19121 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import SegmentedControlState from "SegmentedControlState" /* 8980 */;
-import SegmentedControl from "SegmentedControl" /* 9214 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13335 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 14192 */;
-import MessageRequestListDefault from "MessageRequestList" /* 18964 */;
-import SpamMessageListDefault from "SpamMessageList" /* 18980 */;
+import SegmentedControlState from "SegmentedControlState" /* 9108 */;
+import SegmentedControl from "SegmentedControl" /* 9342 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13471 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 14323 */;
+import MessageRequestListDefault from "MessageRequestList" /* 19122 */;
+import SpamMessageListDefault from "SpamMessageList" /* 19138 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -31,7 +31,7 @@ export default noop.memo(function MessageRequestsScreenWithTabs(navigation) {
   closure_1 = undefined;
   const tmp = closure_9();
   [obj2.pageWidth, closure_1] = noop.useState(0);
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
   const callback1 = noop.useCallback((nativeEvent) => {
     closure_1(nativeEvent.nativeEvent.layout.width);

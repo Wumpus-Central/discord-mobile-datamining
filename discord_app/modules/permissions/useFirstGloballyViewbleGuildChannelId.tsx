@@ -1,8 +1,8 @@
-// === Module 18122: useFirstGloballyViewbleGuildChannelId ===
+// === Module 18266: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 18122 (useFirstGloballyViewbleGuildChannelId)
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+// Module 18266 (useFirstGloballyViewbleGuildChannelId)
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyV
 
 export function useFirstGloballyViewbleGuildChannelId(guildId) {
   _require = guildId;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {

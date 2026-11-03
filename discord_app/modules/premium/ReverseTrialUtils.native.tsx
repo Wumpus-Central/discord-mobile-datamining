@@ -1,15 +1,15 @@
-// === Module 8533: ReverseTrialUtils ===
+// === Module 8657: ReverseTrialUtils ===
 
-// Module 8533 (ReverseTrialUtils)
+// Module 8657 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export function useIsInReverseTrial() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

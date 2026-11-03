@@ -1,10 +1,10 @@
-// === Module 11326: useIsPinotMemberCoachmarkEligible ===
+// === Module 11463: useIsPinotMemberCoachmarkEligible ===
 
-// Module 11326 (useIsPinotMemberCoachmarkEligible)
-import PinotExperiment from "PinotExperiment" /* 9055 */;
-import useIsChannelPinotPromotable from "useIsChannelPinotPromotable" /* 11321 */;
-import useCanMessageInPinotChannel from "useCanMessageInPinotChannel" /* 11324 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 11327 */;
+// Module 11463 (useIsPinotMemberCoachmarkEligible)
+import PinotExperiment from "PinotExperiment" /* 9183 */;
+import useIsChannelPinotPromotable from "useIsChannelPinotPromotable" /* 11458 */;
+import useCanMessageInPinotChannel from "useCanMessageInPinotChannel" /* 11461 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 11464 */;
 import size from "module_2" /* 2 */;
 
 let c2 = true;

@@ -1,10 +1,10 @@
-// === Module 17905: DisableStreamPreviewsSetting ===
+// === Module 18048: DisableStreamPreviewsSetting ===
 
-// Module 17905 (DisableStreamPreviewsSetting)
+// Module 18048 (DisableStreamPreviewsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

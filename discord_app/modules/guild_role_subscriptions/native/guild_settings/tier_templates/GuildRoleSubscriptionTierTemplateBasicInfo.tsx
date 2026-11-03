@@ -1,19 +1,19 @@
-// === Module 20001: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 20151: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 20001 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 20151 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17220 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17363 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingBottom: nativeDefault.space.PX_24 }, header: null, headerText: null, image: null };
 const obj3 = { paddingBottom: nativeDefault.space.PX_24 };
 obj2.header = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  const items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image }), ];
+  items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image }), ];
   const obj4 = { style: tmp.headerText, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), ];
   const obj5 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier) };

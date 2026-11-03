@@ -1,11 +1,11 @@
-// === Module 17310: useMessagePreviews ===
+// === Module 17453: useMessagePreviews ===
 
-// Module 17310 (useMessagePreviews)
-import UserSettings from "UserSettings" /* 4839 */;
-import useIsNsfwGatedDefault from "useIsNsfwGated" /* 9837 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 17311 */;
+// Module 17453 (useMessagePreviews)
+import UserSettings from "UserSettings" /* 4966 */;
+import useIsNsfwGatedDefault from "useIsNsfwGated" /* 9968 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 17454 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export default function useMessagePreview(guild_id, arg1) {
   _require = guild_id;
   ({ unread, disabled } = arg1);
   guild_id = guild_id.guild_id;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const guilds = UserSettingsProtoStore.settings.guilds;
     let tmp2 = null;
@@ -56,10 +56,10 @@ export default function useMessagePreview(guild_id, arg1) {
     disabled = useIsNsfwGatedDefault(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(5692).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(5812).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(5692).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(5812).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;
@@ -72,7 +72,7 @@ export default function useMessagePreview(guild_id, arg1) {
 };
 export function useMessagePreviewSetting(arg0) {
   _require = arg0;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {
     const guilds = UserSettingsProtoStore.settings.guilds;
     let tmp2 = null;

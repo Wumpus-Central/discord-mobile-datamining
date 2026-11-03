@@ -1,7 +1,7 @@
-// === Module 14167: useIsRelationshipTypeSpamReportable ===
+// === Module 14298: useIsRelationshipTypeSpamReportable ===
 
-// Module 14167 (useIsRelationshipTypeSpamReportable)
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+// Module 14298 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTyp
 
 export function useIsRelationshipTypeSpamReportable(id) {
   _require = id;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.getRelationshipType(closure_0), items1);
   return stateFromStores === RelationshipTypes.NONE || stateFromStores === RelationshipTypes.BLOCKED || stateFromStores === RelationshipTypes.PENDING_INCOMING;

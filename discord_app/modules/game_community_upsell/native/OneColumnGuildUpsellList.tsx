@@ -1,16 +1,16 @@
-// === Module 18341: OneColumnGuildUpsellList ===
+// === Module 18486: OneColumnGuildUpsellList ===
 
-// Module 18341 (OneColumnGuildUpsellList)
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18342 */;
+// Module 18486 (OneColumnGuildUpsellList)
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18487 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17621 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17764 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
 let c8 = 0;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ hidden: { opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
@@ -24,7 +24,7 @@ export function OneColumnGuildUpsellList(onDismiss) {
   const callback = stateFromStoresObject.useCallback((id) => id.id, []);
   const ref = stateFromStoresObject.useRef(null);
   [first, _slicedToArray] = stateFromStoresObject.useState(() => closure_8 > 0);
-  const items = [first];
+  items = [first];
   const callback1 = stateFromStoresObject.useCallback((nativeEvent) => {
     const y = nativeEvent.nativeEvent.contentOffset.y;
   }, []);

@@ -1,12 +1,12 @@
-// === Module 16457: ProfileGIFSelectActionSheet ===
+// === Module 16601: ProfileGIFSelectActionSheet ===
 
-// Module 16457 (ProfileGIFSelectActionSheet)
+// Module 16601 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import GIFPickerDefault from "GIFPicker" /* 10242 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import GIFPickerDefault from "GIFPicker" /* 10372 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: { flex: 1, marginTop: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 let obj4 = { AVATAR: 0, [0]: "AVATAR", BANNER: 1, [1]: "BANNER" };
@@ -36,7 +36,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
               };
               const asDataURL = fileReader.readAsDataURL(closure_1_0);
             });
-            const items = [promise, ];
+            items = [promise, ];
             const obj22 = src(tmp2[7]);
             items[1] = src(tmp2[7]).fromBlob(closure_130_2).catch(() => null);
             c4 = 3;
@@ -183,7 +183,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   obj3.title = intl.string(util.t["xsC+/y"]);
   obj3.trailing = closure_7(NitroWheelIcon.NitroWheelIcon, {});
   ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
-  let items = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3), ];
+  items = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3), ];
   obj4 = {
     style: tmp.gifPicker,
     children: closure_7(GIFPickerDefault, {

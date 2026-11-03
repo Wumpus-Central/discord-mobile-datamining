@@ -1,14 +1,14 @@
-// === Module 12440: search/EmptyState ===
+// === Module 12576: search/EmptyState ===
 
-// Module 12440 (search/EmptyState)
+// Module 12576 (search/EmptyState)
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
@@ -19,8 +19,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(12379).useLogAppLauncherEmptyStateView(flag(11502).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
-  const items = [flag];
+  const logAppLauncherEmptyStateView = flag(12515).useLogAppLauncherEmptyStateView(flag(11639).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;
     const string = intl.string;
@@ -45,7 +45,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5624).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj3.children = jsx(flag(5747).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj2.children = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.container}>{null}</View>;
 };

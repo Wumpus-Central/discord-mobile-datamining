@@ -1,29 +1,29 @@
-// === Module 13753: useChatInputRefs ===
+// === Module 13884: useChatInputRefs ===
 
-// Module 13753 (useChatInputRefs)
+// Module 13884 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import StickersUtils from "StickersUtils" /* 6560 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10199 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10201 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12798 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 13759 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import StickersUtils from "StickersUtils" /* 6680 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10329 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10331 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12934 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 13890 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8346 */;
-import StickersStore from "StickersStore" /* 6837 */;
-import DraftStore from "DraftStore" /* 7701 */;
-import EditMessageStore from "EditMessageStore" /* 7823 */;
-import SlowmodeStore from "SlowmodeStore" /* 7830 */;
-import UserStore from "UserStore" /* 1383 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8470 */;
+import StickersStore from "StickersStore" /* 6957 */;
+import DraftStore from "DraftStore" /* 7825 */;
+import EditMessageStore from "EditMessageStore" /* 7947 */;
+import SlowmodeStore from "SlowmodeStore" /* 7954 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const DraftType = fn(7701).DraftType;
-let closure_11 = fn(9895).updateChatInputContainerHeight;
+const DraftType = fn(7825).DraftType;
+let closure_11 = fn(10026).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const COMMAND_SENTINEL = fn(6036).COMMAND_SENTINEL;
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const COMMAND_SENTINEL = fn(6156).COMMAND_SENTINEL;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
 
@@ -41,11 +41,11 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5612)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5735)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_12 = tmp2;
   const propsPrev = noop.useRef(chatInputProps);
   const props = noop.useRef(chatInputProps);
-  let items = [chatInputProps];
+  items = [chatInputProps];
   const effect = noop.useEffect(() => {
     if (props.current.channel.id !== chatInputProps.channel.id) {
       const current = chatInput.current;
@@ -67,7 +67,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_1_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  const state = noop.useRef(chatInputTextFieldHeight(5612)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  state = noop.useRef(chatInputTextFieldHeight(5735)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   noop.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = noop.useMemo(() => {
@@ -361,7 +361,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(13759).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(13890).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -382,15 +382,15 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(13759).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(13759);
+                  const result = chatInputProps(13890).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(13890);
                 }
-                const keyboardType = chatInputProps(5209).getKeyboardType();
-                if (keyboardType === chatInputProps(1623).KeyboardTypes.SYSTEM) {
+                const keyboardType = chatInputProps(5332).getKeyboardType();
+                if (keyboardType === chatInputProps(1625).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
                 }
-                obj4 = chatInputProps(5209);
+                obj4 = chatInputProps(5332);
               });
               let obj = chatInputTextFieldHeight(ref[14]);
             }
@@ -454,7 +454,7 @@ export default function useChatInputRefs(chatInputProps) {
               if (null != result) {
                 closure_1.cancel();
                 if (null != threadCreationCallback) {
-                  const items = [current2.id];
+                  items = [current2.id];
                   const result1 = threadCreationCallback(sum, items);
                 } else {
                   const obj8 = MessageActionCreatorsDefault;

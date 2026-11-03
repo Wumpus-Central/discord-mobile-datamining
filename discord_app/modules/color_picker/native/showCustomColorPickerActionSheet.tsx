@@ -1,14 +1,14 @@
-// === Module 16449: showCustomColorPickerActionSheet ===
+// === Module 16593: showCustomColorPickerActionSheet ===
 
-// Module 16449 (showCustomColorPickerActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 16593 (showCustomColorPickerActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import size from "module_2" /* 2 */;
 
 const CustomColorPicker = "CustomColorPicker";
 const result = size.fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
 
 export default function showCustomColorPickerActionSheet(arg0, stack) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16450, dependencyMap.paths), CustomColorPicker, arg0, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16594, dependencyMap.paths), CustomColorPicker, arg0, stack);
 };
 export const CUSTOM_COLOR_PICKER_KEY = "CustomColorPicker";

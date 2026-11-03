@@ -25,7 +25,7 @@ export function getThreadNotificationOptions() {
   obj = { setting: obj.ALL_MESSAGES, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["n/bTaY"]);
-  const items = [obj, , ];
+  items = [obj, , ];
   const obj2 = { setting: obj.ONLY_MENTIONS, label: null };
   const intl2 = util.intl;
   obj2.label = intl2.format(util.t.L2hmYy, {});

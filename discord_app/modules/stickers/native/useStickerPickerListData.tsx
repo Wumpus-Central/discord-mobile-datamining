@@ -1,18 +1,18 @@
-// === Module 10300: useStickerPickerListData ===
+// === Module 10430: useStickerPickerListData ===
 
-// Module 10300 (useStickerPickerListData)
+// Module 10430 (useStickerPickerListData)
 import _modDef12 from "module_12" /* 12 */;
-import StickersTypes from "StickersTypes" /* 6561 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9972 */;
+import StickersTypes from "StickersTypes" /* 6681 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10103 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let useStickerPickerStore = fn(10269).useStickerPickerStore;
-const StickerPickerConstants = fn(10236);
+let useStickerPickerStore = fn(10399).useStickerPickerStore;
+const StickerPickerConstants = fn(10366);
 ({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: metroRequire, STICKER_SIZE: closure_7, LABEL_HEIGHT } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1228).PADDING_VERTICAL;
-let closure_10 = fn(10021).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10021).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(10152).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10152).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -24,9 +24,7 @@ export default function useStickerPickerListData(containerWidth) {
   const stickerCategories = containerWidth(stickerFormats[5]).useStickerCategories(containerWidth.channel);
   const tmp2 = useStickerPickerStore((packToScrollTo) => packToScrollTo.packToScrollTo);
   useStickerPickerStore = tmp2;
-  let obj = containerWidth(stickerFormats[5]);
-  const mobileStickerPickerUpsellRestyleEnabled = containerWidth(stickerFormats[6]).useMobileStickerPickerUpsellRestyleEnabled("native.useStickerPickerListData");
-  let items = [containerWidth, stickerCategories, stickerFormats, searchResults, tmp2, mobileStickerPickerUpsellRestyleEnabled];
+  items = [containerWidth, stickerCategories, stickerFormats, searchResults, tmp2];
   return stickerCategories.useMemo(() => {
     function pushCategory(nitroLocked) {
       let str = intl;
@@ -53,26 +51,21 @@ export default function useStickerPickerListData(containerWidth) {
       items1.push(str);
       items2.push(flag);
     }
-    const rounded = Math.floor((mapped2 - mobileStickerPickerUpsellRestyleEnabled) / (closure_1_7 + mobileStickerPickerUpsellRestyleEnabled));
+    const rounded = Math.floor((mapped2 - closure_1_5) / (closure_1_7 + closure_1_5));
     mapped2 = rounded;
-    const items = [];
+    items = [];
     let num2 = items;
     const items1 = [];
     const items2 = [];
     const items3 = [];
     packToScrollToIndex = undefined;
     if (null != num2) {
-      let str = "";
-      if (!packToScrollToIndex) {
-        const intl = containerWidth(stickerFormats[8]).intl;
-        str = intl.string(containerWidth(stickerFormats[8]).t["zkoeq/"]);
-      }
       if (tmp2.rest.length > 0) {
-        pushCategory(tmp2.rest, str);
+        pushCategory(tmp2.rest, "");
       }
       if (tmp2.nitroLocked.length > 0) {
-        const intl2 = containerWidth(stickerFormats[8]).intl;
-        pushCategory(tmp2.nitroLocked, intl2.string(containerWidth(stickerFormats[8]).t.pAF6xE));
+        const intl = containerWidth(stickerFormats[7]).intl;
+        pushCategory(tmp2.nitroLocked, intl.string(containerWidth(stickerFormats[7]).t.pAF6xE));
       }
     } else {
       const mapped = items2.map((id, index) => {

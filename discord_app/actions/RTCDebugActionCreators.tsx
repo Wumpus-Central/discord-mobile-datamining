@@ -1,8 +1,8 @@
-// === Module 5788: RTCDebugActionCreators ===
+// === Module 5908: RTCDebugActionCreators ===
 
-// Module 5788 (RTCDebugActionCreators)
+// Module 5908 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DiscordNativeDefault from "DiscordNative" /* 4825 */;
+import DiscordNativeDefault from "DiscordNative" /* 4952 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
@@ -27,7 +27,7 @@ export function setSimulcastDebugOverride(userId, context, quality) {
 export function chooseReplayPath() {
   const fileManager = DiscordNativeDefault.fileManager;
   const obj = { filters: null };
-  const items = [{ name: "All Files", extensions: ["*"] }];
+  items = [{ name: "All Files", extensions: ["*"] }];
   obj.filters = items;
   fileManager.showOpenDialog(obj).then((result) => {
     let str = "";

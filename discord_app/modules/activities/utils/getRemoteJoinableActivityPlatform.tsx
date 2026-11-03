@@ -1,12 +1,12 @@
-// === Module 11687: getRemoteJoinableActivityPlatform ===
+// === Module 11824: getRemoteJoinableActivityPlatform ===
 
-// Module 11687 (getRemoteJoinableActivityPlatform)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9738 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11534 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 7277 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+// Module 11824 (getRemoteJoinableActivityPlatform)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9870 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11671 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7397 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 require = fn;
 const ActivityFlags = fn(1072).ActivityFlags;
@@ -17,7 +17,7 @@ export function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {
     return null;
   } else {
-    const application_id = presenceActivity.application_id;
+    application_id = presenceActivity.application_id;
     if (null != application_id) {
       let num = presenceActivity.flags;
       if (num == null) {

@@ -1,8 +1,8 @@
-// === Module 18451: SortableListView ===
+// === Module 18605: SortableListView ===
 
-// Module 18451 (SortableListView)
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5609 */;
-import _mod7294 from "module_7294" /* 7294 */;
+// Module 18605 (SortableListView)
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
+import _mod7414 from "module_7414" /* 7414 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -70,7 +70,7 @@ let closure_11 = noop.memo(function Row(initialHeight) {
   if (hovering) {
     hovering = renderActiveDivider();
   }
-  const items = [hovering, ];
+  items = [hovering, ];
   let obj4 = null;
   if (hideContent) {
     obj4 = { height: 0.01, opacity: 0 };
@@ -83,7 +83,7 @@ let closure_12 = noop.memo(function SortRow(listPageY) {
   ({ rowData, pan, frameHeight } = listPageY);
   listPageY = listPageY.listPageY;
   const wrapperPageY = listPageY.wrapperPageY;
-  const items = [frameHeight, listPageY, wrapperPageY];
+  items = [frameHeight, listPageY, wrapperPageY];
   ({ sortRowStyle, renderRow } = listPageY);
   const obj = { style: null, children: null };
   const items1 = [
@@ -295,7 +295,7 @@ class SortableListView extends Component {
     };
     tmp21.scrollTo = function scrollTo() {
       const scrollResponder = closure_0.scrollResponder;
-      const items = [...HermesBuiltin.copyRestArgs()];
+      items = [...HermesBuiltin.copyRestArgs()];
       scrollResponder.scrollTo.apply(items);
     };
     tmp21.scrollAnimation = function scrollAnimation() {
@@ -508,7 +508,7 @@ prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   const obj = { ref: this._wrapperRef, style: null, children: null };
-  const items = [props.wrapperStyles, { flex: 1 }];
+  items = [props.wrapperStyles, { flex: 1 }];
   obj.style = items;
   ({ contentContainerStyle, header, footer, data, keyExtractor, scrollEnabled, keyboardShouldPersistTaps, scrollEventThrottle } = props);
   const obj3 = {};
@@ -534,7 +534,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7294.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7414.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return React5(React3, obj);
 };

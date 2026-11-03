@@ -1,16 +1,16 @@
-// === Module 6028: useTrackImpression ===
+// === Module 6148: useTrackImpression ===
 
-// Module 6028 (useTrackImpression)
+// Module 6148 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import uniqueIdDefault from "uniqueId" /* 6029 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import uniqueIdDefault from "uniqueId" /* 6149 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 function trackImpression(type) {
@@ -66,7 +66,7 @@ function trackImpression(type) {
   const tmpResult5 = AppAnalyticsUtils;
 }
 const ImpressionStore = fn(1253);
-({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
+({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: closure_10, getImpressionStack: closure_11 } = ImpressionStore);
 const AnalyticsUtils = fn(1260);
 let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1252).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const size = fn(2);
@@ -81,7 +81,7 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5593)(() => {
+  obj(5716)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1342(ref.current, current);
       if (!tmp6) {

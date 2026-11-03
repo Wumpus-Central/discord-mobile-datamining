@@ -1,16 +1,16 @@
-// === Module 18143: typing_indicators/TypingIndicator ===
+// === Module 18287: typing_indicators/TypingIndicator ===
 
-// Module 18143 (typing_indicators/TypingIndicator)
+// Module 18287 (typing_indicators/TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5021 */;
-import useThemeDefault from "useTheme" /* 5253 */;
+import shared from "shared" /* 5148 */;
+import useThemeDefault from "useTheme" /* 5376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { ellipsisWrapper: { zIndex: 10, borderRadius: 17, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, ellipsis: null, ellipsisDot: null };
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
@@ -26,7 +26,7 @@ export function TypingIndicator(style) {
   const tmp = useThemeDefault();
   const tmp2 = closure_5(shared.isThemeLight(tmp));
   const obj2 = { style: null, children: jsx(native.Ellipsis, { style: tmp2.ellipsis, dotStyle: tmp2.ellipsisDot, disableScale: true }) };
-  const items = [tmp2.ellipsisWrapper, style.style];
+  items = [tmp2.ellipsisWrapper, style.style];
   obj2.style = items;
   return <View style={null}>{jsx(native.Ellipsis, { style: tmp2.ellipsis, dotStyle: tmp2.ellipsisDot, disableScale: true })}</View>;
 }

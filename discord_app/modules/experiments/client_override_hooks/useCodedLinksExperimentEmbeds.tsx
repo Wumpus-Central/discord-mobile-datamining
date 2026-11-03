@@ -1,13 +1,13 @@
-// === Module 11549: useCodedLinksExperimentEmbeds ===
+// === Module 11686: useCodedLinksExperimentEmbeds ===
 
-// Module 11549 (useCodedLinksExperimentEmbeds)
+// Module 11686 (useCodedLinksExperimentEmbeds)
 import initialize from "initialize" /* 504 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11550 */;
-import useApexExperiments from "useApexExperiments" /* 11551 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11687 */;
+import useApexExperiments from "useApexExperiments" /* 11688 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import UserStore from "UserStore" /* 1385 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 export function canSeeExperimentEmbeds() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [UserStore];
+    items = [UserStore];
     tmp = items;
   }
   const first = _slicedToArray(tmp, 1)[0];
@@ -43,9 +43,9 @@ export function canSeeExperimentEmbeds() {
   return isStaffResult;
 }
 export function useCanSeeExperimentEmbeds() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [stateFromStores2];
+    items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();
     let isStaffResult;
@@ -64,9 +64,9 @@ export function useCanSeeExperimentEmbeds() {
   });
 }
 export function useCodedLinksExperimentEmbeds() {
-  let items = [stateFromStores2];
+  items = [stateFromStores2];
   stateFromStores = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items, () => {
-    const items = [stateFromStores2];
+    items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();
     let isStaffResult;

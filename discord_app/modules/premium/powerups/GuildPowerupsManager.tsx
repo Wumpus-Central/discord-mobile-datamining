@@ -1,21 +1,21 @@
-// === Module 19480: GuildPowerupsManager ===
+// === Module 19638: GuildPowerupsManager ===
 
-// Module 19480 (GuildPowerupsManager)
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5234 */;
-import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5235 */;
-import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5247 */;
-import GameServerExperiment2 from "GameServerExperiment" /* 5248 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5952 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8465 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14064 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 14087 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 18226 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 19638 (GuildPowerupsManager)
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5357 */;
+import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5358 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5370 */;
+import GameServerExperiment2 from "GameServerExperiment" /* 5371 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 6072 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8589 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14195 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 14218 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 18370 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 class GuildPowerupsManager extends tmp2 {
@@ -39,7 +39,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     if (!obj10.isFavoritesGuildId(guildId)) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const GameServerExperiment = GameServerExperiment2.GameServerExperiment;
         const obj = { guildId: guild.id, location: "GuildPowerupsManager" };

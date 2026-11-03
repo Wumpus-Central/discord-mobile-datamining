@@ -1,19 +1,19 @@
-// === Module 14552: useConjureAppChannelSoundButton ===
+// === Module 14683: useConjureAppChannelSoundButton ===
 
-// Module 14552 (useConjureAppChannelSoundButton)
+// Module 14683 (useConjureAppChannelSoundButton)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
-import VoiceXIcon from "VoiceXIcon" /* 11950 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
+import VoiceXIcon from "VoiceXIcon" /* 12087 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx");
 
@@ -24,7 +24,7 @@ export default function useConjureAppChannelSoundButton(application_id, arg1) {
     tmp3 = application_id;
   }
   const isConjureChannelCandidate = require("ConjureUtils").useIsConjureChannelCandidate(tmp3, "useConjureAppChannelSoundButton");
-  const items = [, ];
+  items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = application_id);
   const memo = userMuted.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: application_id.id, guildId: application_id.guild_id }), items);
   let tmp8 = null;
@@ -62,7 +62,7 @@ export default function useConjureAppChannelSoundButton(application_id, arg1) {
           if (stateFromStores) {
             const obj = { text: null, icon: null };
             const intl = util.intl;
-            obj.text = intl.string(_modDef3868.W8Q9fy);
+            obj.text = intl.string(_modDef3995.W8Q9fy);
             obj.icon = VoiceXIcon.VoiceXIcon;
             ToastActionCreatorsDefault.open("CONJURE_APP_CHANNEL_DEVICE_SILENCED", obj);
             const tmpResult = ToastActionCreatorsDefault;

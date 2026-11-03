@@ -1,11 +1,11 @@
-// === Module 20059: AVErrorStreamSoundshareFailed ===
+// === Module 20209: AVErrorStreamSoundshareFailed ===
 
-// Module 20059 (AVErrorStreamSoundshareFailed)
-import AVError from "AVError" /* 5947 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import HookErrorStore from "HookErrorStore" /* 7887 */;
+// Module 20209 (AVErrorStreamSoundshareFailed)
+import AVError from "AVError" /* 6067 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import HookErrorStore from "HookErrorStore" /* 8011 */;
 
 require = fn;
 const MediaEngineHookTypes = fn(1072).MediaEngineHookTypes;
@@ -21,7 +21,7 @@ export const AVErrorStreamSoundshareFailedDefinition = {
         const obj = { type: AVError.AVError.STREAM_SOUNDSHARE_FAILED };
         const obj2 = AVErrorContext;
         const merged = Object.assign(obj2.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
-        const items = [obj];
+        items = [obj];
         tmp2 = items;
       }
     }

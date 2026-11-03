@@ -1,11 +1,11 @@
-// === Module 11175: ForLaterCardStatusHeader ===
+// === Module 11312: ForLaterCardStatusHeader ===
 
-// Module 11175 (ForLaterCardStatusHeader)
+// Module 11312 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -35,7 +35,7 @@ export function ForLaterCardStatusHeader(isCritical) {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
   }
   obj2.children = React4(IconComponent, { size: "xxs", color: INTERACTIVE_TEXT_DEFAULT });
-  const items = [React4(View, obj2), , ];
+  items = [React4(View, obj2), , ];
   let str = "mobile-text-heading-primary";
   if (flag) {
     str = "text-feedback-critical";

@@ -1,10 +1,10 @@
-// === Module 18930: WebhooksStore ===
+// === Module 19088: WebhooksStore ===
 
-// Module 18930 (WebhooksStore)
+// Module 19088 (WebhooksStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 18931 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19089 */;
 
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);
@@ -55,7 +55,7 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
     let obj2;
     if (null != webhooks) {
       c2 = null;
-      let items = [];
+      items = [];
       if (null != channelId) {
         if (null == dependencyMap[guildId]) {
           dependencyMap[guildId] = {};

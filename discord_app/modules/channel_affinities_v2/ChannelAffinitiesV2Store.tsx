@@ -1,9 +1,9 @@
-// === Module 18352: ChannelAffinitiesV2Store ===
+// === Module 18497: ChannelAffinitiesV2Store ===
 
-// Module 18352 (ChannelAffinitiesV2Store)
+// Module 18497 (ChannelAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18353 */;
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18498 */;
 import size from "module_2" /* 2 */;
 
 const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;
@@ -23,7 +23,7 @@ prototype["initialize"] = function initialize(channelAffinities) {
     const _Map = Map;
     channelAffinities = obj.channelAffinities;
     map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
+      items = [channelId.channelId, channelId];
       return items;
     }));
   }
@@ -80,7 +80,7 @@ const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault,
     obj.channelAffinities = affineChannels.affineChannels;
     const channelAffinities = obj.channelAffinities;
     map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
+      items = [channelId.channelId, channelId];
       return items;
     }));
   },

@@ -1,10 +1,10 @@
-// === Module 9643: gift_customization_banner ===
+// === Module 9775: gift_customization_banner ===
 
-// Module 9643 (gift_customization_banner)
+// Module 9775 (gift_customization_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import gradient from "gradient" /* 9639 */;
-import theme_aware_asset from "theme_aware_asset" /* 9641 */;
+import localized_string from "localized_string" /* 9763 */;
+import gradient from "gradient" /* 9771 */;
+import theme_aware_asset from "theme_aware_asset" /* 9773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -54,7 +54,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", GiftCustomizationBanner_AssetVariant, "ASSET_VARIANT_"];
+            items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", GiftCustomizationBanner_AssetVariant, "ASSET_VARIANT_"];
             return items;
           }
     };
@@ -210,7 +210,7 @@ let items = [
     name: "asset_variant",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", GiftCustomizationBanner_AssetVariant, "ASSET_VARIANT_"];
+      items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", GiftCustomizationBanner_AssetVariant, "ASSET_VARIANT_"];
       return items;
     }
   },

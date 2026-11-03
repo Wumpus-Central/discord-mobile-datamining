@@ -1,21 +1,21 @@
-// === Module 17186: QuestDockBountyBody ===
+// === Module 17329: QuestDockBountyBody ===
 
-// Module 17186 (QuestDockBountyBody)
+// Module 17329 (QuestDockBountyBody)
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import captureAdUserAction from "captureAdUserAction" /* 9684 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14685 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16921 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 16923 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import captureAdUserAction from "captureAdUserAction" /* 9816 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14816 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17064 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 17066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
@@ -28,7 +28,7 @@ export default noop.memo(function QuestDockBountyBody() {
   setRestingQuestDockMode = noop.useContext(questDockBounty(getQuestImpressionId[6]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
   let obj2 = questDockBounty(getQuestImpressionId[5]);
   getQuestImpressionId = questDockBounty(getQuestImpressionId[7]).useGetQuestImpressionId();
-  const items = [questDockBounty.videoDurationSeconds];
+  items = [questDockBounty.videoDurationSeconds];
   const items1 = [questDockBounty, getQuestImpressionId, setRestingQuestDockMode];
   const memo = noop.useMemo(() => {
     let num = questDockBounty.videoDurationSeconds;

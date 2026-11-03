@@ -1,10 +1,10 @@
-// === Module 11956: UserSettingsVoiceUtils ===
+// === Module 12093: UserSettingsVoiceUtils ===
 
-// Module 11956 (UserSettingsVoiceUtils)
+// Module 12093 (UserSettingsVoiceUtils)
 import initialize from "initialize" /* 504 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11957 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12094 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -40,7 +40,7 @@ export function getSelectedNoiseSuppressionOption() {
   }
 }
 export function useSelectedNoiseSuppressionOption() {
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     const noiseSuppression = MediaEngineStore.getNoiseSuppression();
     const noiseCancellation = MediaEngineStore.getNoiseCancellation();

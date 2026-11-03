@@ -1,6 +1,6 @@
-// === Module 6559: EmbedConstants ===
+// === Module 6679: EmbedConstants ===
 
-// Module 6559 (EmbedConstants)
+// Module 6679 (EmbedConstants)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

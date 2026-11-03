@@ -1,18 +1,18 @@
-// === Module 18655: MembersFilterActionSheet ===
+// === Module 18813: MembersFilterActionSheet ===
 
-// Module 18655 (MembersFilterActionSheet)
+// Module 18813 (MembersFilterActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { listView: { marginVertical: 8, borderRadius: nativeDefault.radii.lg, overflow: "hidden" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   onFilterRoleId = onFilterRoleId.onFilterRoleId;
   let callback;
   const tmp2 = closure_7();
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleStore.getSortedRoles(require.id));
   const mapped = stateFromStores.map((id) => {
     const merged = Object.assign(id);
@@ -71,7 +71,7 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   const intl = require("util").intl;
   obj3.title = intl.string(require("util").t.pEasFX);
   obj2.header = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null });
-  obj2.children = jsx(require("module_7294").BottomSheetFlashList, {
+  obj2.children = jsx(require("module_7414").BottomSheetFlashList, {
     data: mapped,
     keyExtractor(id) {
       return id.id;

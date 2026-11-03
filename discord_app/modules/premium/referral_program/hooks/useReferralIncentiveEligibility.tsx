@@ -1,10 +1,10 @@
-// === Module 15326: useReferralIncentiveEligibility ===
+// === Module 15467: useReferralIncentiveEligibility ===
 
-// Module 15326 (useReferralIncentiveEligibility)
+// Module 15467 (useReferralIncentiveEligibility)
 import initialize from "initialize" /* 504 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8524 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15323 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8648 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15464 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 require = fn;
 const size = fn(2);
@@ -18,7 +18,7 @@ export function useReferralIncentiveEligibility(preventFetch) {
   const isEligibleSenderForReferralProgram = useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(flag);
   const premiumReferralIncentivesVariant = PremiumReferralIncentivesExperiment.usePremiumReferralIncentivesVariant(preventFetch.location);
   ({ referralRewardType, useAltReferralCardArt } = premiumReferralIncentivesVariant);
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let tmp8 = true === isEligibleSenderForReferralProgram;
   let isEligibleForIncentive = tmp8;

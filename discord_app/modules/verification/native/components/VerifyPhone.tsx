@@ -1,6 +1,6 @@
-// === Module 7246: VerifyPhone ===
+// === Module 7366: VerifyPhone ===
 
-// Module 7246 (VerifyPhone)
+// Module 7366 (VerifyPhone)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ export default function VerifyPhone(phone) {
           } else if (value) {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           c4 = 0;
           c6 = 3;
@@ -114,7 +114,7 @@ export default function VerifyPhone(phone) {
       }
     }
   });
-  const items = [onCodeEnteredIntercept, onVerified, phone];
+  items = [onCodeEnteredIntercept, onVerified, phone];
   onCodeEntered = onCodeEntered.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -136,7 +136,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ export default function VerifyPhone(phone) {
         } else {
           closure_1_4(false);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;

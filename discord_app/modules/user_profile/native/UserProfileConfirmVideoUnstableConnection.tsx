@@ -1,8 +1,8 @@
-// === Module 14199: UserProfileConfirmVideoUnstableConnection ===
+// === Module 14330: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 14199 (UserProfileConfirmVideoUnstableConnection)
+// Module 14330 (UserProfileConfirmVideoUnstableConnection)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.ND1my3);
   obj3.onPress = onConfirm.onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t.jEqEhy);

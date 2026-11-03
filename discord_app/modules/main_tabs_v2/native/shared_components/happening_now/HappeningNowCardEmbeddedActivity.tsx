@@ -1,36 +1,39 @@
-// === Module 18145: HappeningNowCardEmbeddedActivity ===
+// === Module 18289: HappeningNowCardEmbeddedActivity ===
 
-// Module 18145 (HappeningNowCardEmbeddedActivity)
+// Module 18289 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17287);
+const HappeningNowConstants = fn(17430);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
 let size = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.activityBackground = size;
 obj2.cardTitle = { marginTop: 2 };
 let closure_11 = createStyles.createStyles(obj2);
-const __initData = { code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;}" };
-const __initData2 = { code: "function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){const{runOnJS,setHasViewed}=this.__closure;if(!isViewable||isViewable===previous)return;runOnJS(setHasViewed)(true);}" };
+let closure_12 = { code: "(function HappeningNowCardEmbeddedActivityTsx1(){let[viewableCardKeys,cardKey]=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;})" };
+let closure_13 = { code: "(function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){let[scheduleOnRN,setHasViewed]=this.__closure;if(!isViewable||isViewable===previous)return;scheduleOnRN(setHasViewed,true);})" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx");
 
 export default function HappeningNowCardEmbeddedActivity(guildId) {
   guildId = guildId.guildId;
+  _require = guildId;
   const index = guildId.index;
+  importDefault = index;
   const activity = guildId.activity;
   const userId = guildId.userId;
   const cardKey = guildId.cardKey;
@@ -44,10 +47,10 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   closure_9 = undefined;
   let ref2;
   let tmp = closure_11();
-  let items = [first];
+  items = [first];
   let items1 = [activity];
-  const stateFromStoresArray = guildId(activity[9]).useStateFromStoresArray(items, () => {
-    const items = [];
+  const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => {
+    items = [];
     if (null != activity) {
       const userIds = activity.userIds;
       const item = userIds.forEach((item) => {
@@ -59,16 +62,16 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
     return items;
   }, items1);
-  let obj = guildId(activity[9]);
+  let obj = require("useStateFromStores");
   const channelId = voiceState.channelId;
-  const result = guildId(activity[10]).formatVoiceActivityTitle(stateFromStoresArray, guildId);
+  const result = require("HappeningNowCardVoice").formatVoiceActivityTitle(stateFromStoresArray, guildId);
   let applicationId;
-  let obj2 = guildId(activity[10]);
+  let obj2 = require("HappeningNowCardVoice");
   if (activity != null) {
     applicationId = activity.applicationId;
   }
   const items2 = [applicationId];
-  first = userId(index(activity[11])(items2), 1)[0];
+  first = userId(require("useGetOrFetchApplications")(items2), 1)[0];
   if (first != null) {
     const iconURL = first.getIconURL(64);
   }
@@ -83,8 +86,8 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   items3[4] = index;
   items3[5] = userId;
   const callback = cardKey.useCallback(() => {
-    const obj2 = { order: index, guild_id: guildId, type: constants.EMBEDDED_ACTIVITY_CARD, location_stack: null, application_id: null, activity_session_id: null, destination_channel_id: null, highlighted_user_ids: null };
-    const items = [AnalyticsLocationDefault.HAPPENING_NOW_EMBEDDED_ACTIVITY];
+    const obj2 = { order, guild_id, type: constants.EMBEDDED_ACTIVITY_CARD, location_stack: null, application_id: null, activity_session_id: null, destination_channel_id: null, highlighted_user_ids: null };
+    items = [AnalyticsLocationDefault.HAPPENING_NOW_EMBEDDED_ACTIVITY];
     obj2.location_stack = items;
     let id;
     if (first != null) {
@@ -100,12 +103,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(13184, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(13320, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(13184, dependencyMap.paths);
+    const promise = asyncRequireImpl(13320, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);
@@ -125,15 +128,26 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
       closure_9(null != value.find((item) => item === cardKey));
     }
   }, items4);
-  const tmp6 = index(activity[11]);
-  const fn = function b() {
-    value = context.get();
-    return null != value.find((item) => item === cardKey);
-  };
-  fn.__closure = { viewableCardKeys: context, cardKey };
-  fn.__workletHash = 3043999664691;
-  fn.__initData = __initData;
-  class T {
+  const tmp6 = require("useGetOrFetchApplications");
+  const items5 = [closure_12, context, cardKey];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp16, tmp17, tmp18] = items5;
+  class HappeningNowCardEmbeddedActivityTsx1 {
+    constructor() {
+      value = closure_0.get();
+      return null != value.find((item) => item === order);
+    }
+  }
+  const items6 = [tmp17, tmp18];
+  HappeningNowCardEmbeddedActivityTsx1.__closure = items6;
+  HappeningNowCardEmbeddedActivityTsx1.__workletHash = 14378880099274;
+  HappeningNowCardEmbeddedActivityTsx1.__initData = tmp16;
+  const items7 = [closure_13, require("module_1705").scheduleOnRN, tmp8Result[1]];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp19, tmp20, tmp21] = items7;
+  class HappeningNowCardEmbeddedActivityTsx2 {
     constructor(arg0, arg1) {
       tmp = guildId;
       if (guildId) {
@@ -142,79 +156,77 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
       }
       if (tmp) {
         tmp3 = closure_0;
-        tmp4 = closure_2;
-        obj = closure_0(closure_2[17]);
-        tmp5 = closure_9;
+        tmp4 = closure_1;
         flag = true;
-        tmp6 = obj.runOnJS(closure_9)(true);
+        tmp5 = closure_0(closure_1, true);
       }
       return;
     }
   }
-  const tmp2Result = guildId(activity[17]);
-  T.__closure = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
-  T.__workletHash = 17292462926115;
-  T.__initData = __initData2;
-  const animatedReaction = tmp2Result.useAnimatedReaction(fn, T);
-  const obj3 = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
+  const items8 = [tmp20, tmp21];
+  HappeningNowCardEmbeddedActivityTsx2.__closure = items8;
+  HappeningNowCardEmbeddedActivityTsx2.__workletHash = 1153066654263;
+  HappeningNowCardEmbeddedActivityTsx2.__initData = tmp19;
+  const animatedReaction = require("module_1652").useAnimatedReaction(HappeningNowCardEmbeddedActivityTsx1, HappeningNowCardEmbeddedActivityTsx2);
+  const tmp2Result = require("module_1652");
   if (tmp8Result[0]) {
-    const obj5 = { type: tmp2(tmp3[19]).ImpressionTypes.VIEW, name: tmp2(tmp3[19]).ImpressionNames.EMBEDDED_ACTIVITY_HAPPENING_NOW, properties: null };
-    const obj6 = { user_id: userId, guild_id: guildId, application_id: null, activity_session_id: null };
+    const obj3 = { type: tmp2(tmp3[20]).ImpressionTypes.VIEW, name: tmp2(tmp3[20]).ImpressionNames.EMBEDDED_ACTIVITY_HAPPENING_NOW, properties: null };
+    const obj5 = { user_id: userId, guild_id: guildId, application_id: null, activity_session_id: null };
     let id1;
     if (first != null) {
       id1 = first.id;
     }
-    obj6.application_id = id1;
+    obj5.application_id = id1;
     let compositeInstanceId;
     if (activity != null) {
       compositeInstanceId = activity.compositeInstanceId;
     }
-    obj6.activity_session_id = compositeInstanceId;
-    obj5.properties = obj6;
-    let obj7 = obj5;
+    obj5.activity_session_id = compositeInstanceId;
+    obj3.properties = obj5;
+    let obj6 = obj3;
   } else {
-    obj7 = {};
+    obj6 = {};
   }
-  index(activity[18])(obj7);
+  require("useTrackImpression")(obj6);
   if (0 === stateFromStoresArray.length) {
-    const obj8 = { panelVariant: flag };
-    let tmp29Result = closure_9(tmp2(tmp3[20]).HappeningNowCardPlaceholder, obj8);
+    const obj7 = { panelVariant: flag };
+    let tmp35Result = closure_9(tmp2(tmp3[21]).HappeningNowCardPlaceholder, obj7);
   } else {
-    const obj9 = { onPress: callback, width: null, IconComponent: null, panelVariant: null, children: null };
+    const obj8 = { onPress: callback, width: null, IconComponent: null, panelVariant: null, children: null };
     let str = "medium";
     if (fullwidth) {
       str = "full";
     }
-    obj9.width = str;
-    obj9.IconComponent = tmp2(tmp3[22]).AppsIcon;
-    obj9.panelVariant = flag;
-    let tmp21 = null != iconURL;
-    if (tmp21) {
-      const obj10 = { style: tmp.cardImage, children: null };
-      const obj11 = { source: null, style: null };
-      const obj12 = { uri: iconURL };
-      obj11.source = obj12;
-      obj11.style = tmp.activityBackground;
-      obj10.children = closure_9(tmp5(tmp3[23]), obj11);
-      tmp21 = closure_9(channelId, obj10);
+    obj8.width = str;
+    obj8.IconComponent = tmp2(tmp3[23]).AppsIcon;
+    obj8.panelVariant = flag;
+    let tmp27 = null != iconURL;
+    if (tmp27) {
+      const obj9 = { style: tmp.cardImage, children: null };
+      const obj10 = { source: null, style: null };
+      const obj11 = { uri: iconURL };
+      obj10.source = obj11;
+      obj10.style = tmp.activityBackground;
+      obj9.children = closure_9(tmp5(tmp3[24]), obj10);
+      tmp27 = closure_9(channelId, obj9);
     }
-    const items5 = [tmp21, ];
-    const obj13 = { style: tmp.content, children: null };
-    const obj14 = { users: stateFromStoresArray, userLimit: 3, guildId };
-    const items6 = [closure_9(tmp2(tmp3[24]).HappeningNowAvatarStack, obj14), , ];
-    const obj15 = { lineClamp: 1, style: tmp.cardTitle, children: result };
-    items6[1] = closure_9(tmp2(tmp3[21]).HappeningNowCardHeader, obj15);
+    const items9 = [tmp27, ];
+    const obj12 = { style: tmp.content, children: null };
+    const obj13 = { users: stateFromStoresArray, userLimit: 3, guildId };
+    const items10 = [closure_9(tmp2(tmp3[25]).HappeningNowAvatarStack, obj13), , ];
+    const obj14 = { lineClamp: 1, style: tmp.cardTitle, children: result };
+    items10[1] = closure_9(tmp2(tmp3[22]).HappeningNowCardHeader, obj14);
     let name;
     if (first != null) {
       name = first.name;
     }
-    const obj16 = { children: name };
-    items6[2] = closure_9(tmp2(tmp3[21]).HappeningNowCardSubtitle, obj16);
-    obj13.children = items6;
-    items5[1] = ref2(channelId, obj13);
-    obj9.children = items5;
-    tmp29Result = tmp29(tmp5(tmp3[21]), obj9);
-    const tmp5Result2 = tmp5(tmp3[21]);
+    const obj15 = { children: name };
+    items10[2] = closure_9(tmp2(tmp3[22]).HappeningNowCardSubtitle, obj15);
+    obj12.children = items10;
+    items9[1] = ref2(channelId, obj12);
+    obj8.children = items9;
+    tmp35Result = tmp35(tmp5(tmp3[22]), obj8);
+    const tmp5Result2 = tmp5(tmp3[22]);
   }
-  return tmp29Result;
+  return tmp35Result;
 };

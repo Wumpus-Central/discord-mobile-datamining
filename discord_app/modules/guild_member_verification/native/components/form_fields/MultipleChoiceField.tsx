@@ -1,9 +1,9 @@
-// === Module 7256: MultipleChoiceField ===
+// === Module 7376: MultipleChoiceField ===
 
-// Module 7256 (MultipleChoiceField)
+// Module 7376 (MultipleChoiceField)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1083).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
@@ -26,7 +26,7 @@ export default function MultipleChoiceField(hasIcons) {
   const tmp = closure_6();
   const choices = field.choices;
   let num = field.response;
-  const items = [choices];
+  items = [choices];
   const memo = noop.useMemo(() => choices.map((name, value) => ({ name, value })), items);
   const obj = { style: tmp.container, children: null };
   const items1 = [closure_4(require("Text/Text").Text, { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), ];

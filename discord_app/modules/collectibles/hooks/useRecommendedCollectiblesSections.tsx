@@ -1,9 +1,9 @@
-// === Module 15068: useRecommendedCollectiblesSections ===
+// === Module 15209: useRecommendedCollectiblesSections ===
 
-// Module 15068 (useRecommendedCollectiblesSections)
+// Module 15209 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5612 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15069 */;
+import useInitialValueDefault from "useInitialValue" /* 5735 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15210 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ export default function useRecommendedCollectiblesSections(arg0, arg1) {
     return tmp;
   });
   useMemo = tmp;
-  const items = [arg1, tmp, arg0];
+  items = [arg1, tmp, arg0];
   return useMemo(() => {
     if (0 === length.length) {
       let mapped = closure_0;

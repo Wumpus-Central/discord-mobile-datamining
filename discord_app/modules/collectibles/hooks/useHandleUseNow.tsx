@@ -1,6 +1,6 @@
-// === Module 11515: hooks/useHandleUseNow ===
+// === Module 11652: hooks/useHandleUseNow ===
 
-// Module 11515 (hooks/useHandleUseNow)
+// Module 11652 (hooks/useHandleUseNow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export function useHandleUseNow(product) {
     const intl = tmp2(tmp3[5]).intl;
     stringResult = intl.string(tmp2(tmp3[5]).t.tf1ZZ4);
   }
-  let items = [product];
+  items = [product];
   memo = obj.useMemo(() => (function computeCanUseNow(product) {
     if (firstProfileEffect(product.skuId)) {
       return false;
@@ -52,7 +52,7 @@ export function useHandleUseNow(product) {
     } else {
       const _Set = Set;
       const set = new Set();
-      const items = product.items;
+      items = product.items;
       for (const item10023 of items) {
         if (set.has(item10023.type)) {
           obj2.return();
@@ -79,7 +79,7 @@ export function useHandleUseNow(product) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -97,7 +97,7 @@ export function useHandleUseNow(product) {
             closure_130_0 = undefined;
             if (!memo) {
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               tmp4(true);
               const obj5 = {};

@@ -1,11 +1,11 @@
-// === Module 13697: useTraitPickerOptions ===
+// === Module 13827: useTraitPickerOptions ===
 
-// Module 13697 (useTraitPickerOptions)
+// Module 13827 (useTraitPickerOptions)
 import util from "util" /* 1113 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import UserStore from "UserStore" /* 1385 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 
 require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export function useTraitPickerOptions(customizationOption) {
   const rarityOrder = customizationOption.rarityOrder;
   const optionIds = customizationOption.optionIds;
   let stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = customizationOption(savedOptionId[3]).useStateFromStores(items, () => stateFromStores.stats);
   let obj = customizationOption(savedOptionId[3]);
   const items1 = [optionIds];
@@ -34,7 +34,7 @@ export function useTraitPickerOptions(customizationOption) {
       CHECKPOINT_OUTFIT_TO_COLOR_NAME = customizationOption(savedOptionId[6]).CHECKPOINT_TRAIT_TO_OPTION_NAMES[tmp3];
     }
     customizationOption(savedOptionId[7]).getVisibleTraitRarities(tmp3, totalCount);
-    const items = [];
+    items = [];
     totalCount = 0;
     earnedCount = 0;
     let tmp4 = items;

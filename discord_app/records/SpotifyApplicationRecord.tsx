@@ -1,12 +1,12 @@
-// === Module 15134: SpotifyApplicationRecord ===
+// === Module 15275: SpotifyApplicationRecord ===
 
-// Module 15134 (SpotifyApplicationRecord)
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
-import Platforms from "Platforms" /* 6574 */;
+// Module 15275 (SpotifyApplicationRecord)
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import Platforms from "Platforms" /* 6694 */;
 
 const spotify = "spotify";
 const value = Platforms.get("spotify");
-let closure_1 = value;
+const duration = value;
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
     tmp1 = new tmp({}, new.target, tmp);

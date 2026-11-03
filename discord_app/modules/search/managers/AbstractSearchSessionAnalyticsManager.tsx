@@ -1,8 +1,8 @@
-// === Module 13909: AbstractSearchSessionAnalyticsManager ===
+// === Module 14040: AbstractSearchSessionAnalyticsManager ===
 
-// Module 13909 (AbstractSearchSessionAnalyticsManager)
+// Module 14040 (AbstractSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1266 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
@@ -69,7 +69,7 @@ prototype["refreshQueryId"] = function refreshQueryId(searchContext) {
   this.setSession(searchContext, obj);
 };
 prototype["initialize"] = function initialize(arg0) {
-  const items = [arg0, ...HermesBuiltin.copyRestArgs()];
+  items = [arg0, ...HermesBuiltin.copyRestArgs()];
   this._initialize.apply(items);
   const obj = { sessionId: v1.v4(), searchQueryId: null };
   this.setSession(arg0, obj);

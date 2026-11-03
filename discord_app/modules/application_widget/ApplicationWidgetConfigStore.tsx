@@ -1,6 +1,6 @@
-// === Module 10943: ApplicationWidgetConfigStore ===
+// === Module 11081: ApplicationWidgetConfigStore ===
 
-// Module 10943 (ApplicationWidgetConfigStore)
+// Module 11081 (ApplicationWidgetConfigStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -17,7 +17,7 @@ function updateApplicationConfigs(configs) {
       if (found == null) {
         found = [];
       }
-      const items = [...tmp];
+      items = [...tmp];
       closure_3[_slicedToArray] = items;
     }
     const entries = Object.entries(configs);
@@ -36,7 +36,7 @@ function updateApplicationConfigs(configs) {
     const _Object2 = Object;
     const keys = Object.keys(configs);
     const merged2 = Object.assign(Object.fromEntries(keys.map((item) => {
-      const items = [item, obj.SUCCESS];
+      items = [item, obj.SUCCESS];
       return items;
     })));
   }

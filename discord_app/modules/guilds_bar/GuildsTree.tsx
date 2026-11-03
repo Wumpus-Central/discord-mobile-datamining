@@ -1,6 +1,6 @@
-// === Module 6777: GuildsTree ===
+// === Module 6897: GuildsTree ===
 
-// Module 6777 (GuildsTree)
+// Module 6897 (GuildsTree)
 import _mod12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
@@ -79,7 +79,7 @@ prototype["moveNextTo"] = function moveNextTo(node, node1) {
   if (flag) {
     num = 1;
   }
-  const items = [...root.children];
+  items = [...root.children];
   root.children = items;
   const children1 = root.children;
   children1.splice(index + num, 0, node);
@@ -97,7 +97,7 @@ prototype["moveInto"] = function moveInto(node, c0) {
   if (flag) {
     num = _require.children.length;
   }
-  const items = [...c0.children];
+  items = [...c0.children];
   _require.children = items;
   children = _require.children;
   children.splice(num, 0, node);
@@ -142,7 +142,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   children = root.children;
   const index = children.indexOf(node);
   _modDef38(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
-  const items = [...root.children];
+  items = [...root.children];
   root.children = items;
   const children1 = root.children;
   children1.splice(index, 1, cloneNodeResult);
@@ -193,7 +193,7 @@ Object.defineProperty(prototype, "size", {
 prototype["sortedGuildNodes"] = function sortedGuildNodes() {
   const root = this.root;
   if (root.type === obj.GUILD) {
-    const items = [root];
+    items = [root];
     let items1 = items;
   } else if (null == root.children) {
     items1 = [];
@@ -231,7 +231,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F123432 */ function() { ... });
+                    let mapped = children.map(/* F123271 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

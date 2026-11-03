@@ -1,24 +1,24 @@
-// === Module 19941: useRoleSubscriptionFormat ===
+// === Module 20091: useRoleSubscriptionFormat ===
 
-// Module 19941 (useRoleSubscriptionFormat)
+// Module 20091 (useRoleSubscriptionFormat)
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const hasPermission = fn(4921).hasPermission;
-const constants = fn(17196).GuildRoleSubscriptionFormat;
+const hasPermission = fn(5048).hasPermission;
+const constants = fn(17339).GuildRoleSubscriptionFormat;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   _require = arg0;
-  const items = [GuildStore, GuildRoleStore];
+  items = [GuildStore, GuildRoleStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let everyoneRole;
     if (null != guild) {
       everyoneRole = GuildRoleStore.getEveryoneRole(guild);

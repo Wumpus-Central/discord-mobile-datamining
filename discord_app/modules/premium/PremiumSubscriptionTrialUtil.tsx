@@ -1,19 +1,19 @@
-// === Module 8527: PremiumSubscriptionTrialUtil ===
+// === Module 8651: PremiumSubscriptionTrialUtil ===
 
-// Module 8527 (PremiumSubscriptionTrialUtil)
+// Module 8651 (PremiumSubscriptionTrialUtil)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import UserOfferStore from "UserOfferStore" /* 7630 */;
+import UserStore from "UserStore" /* 1385 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import UserOfferStore from "UserOfferStore" /* 7754 */;
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: closure_7, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8, PREMIUM_TRIAL_IDS_ALL: closure_9 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export function useHasActiveTrial() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let hasActiveTrial;
   if (stateFromStores != null) {
@@ -51,7 +51,7 @@ export function isEligibleTrialSub(trialId) {
   return tmp2;
 }
 export function useCurrentPremiumTrialTier() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());

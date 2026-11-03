@@ -1,19 +1,19 @@
-// === Module 18014: useUsernameRegistrationStep ===
+// === Module 18158: useUsernameRegistrationStep ===
 
-// Module 18014 (useUsernameRegistrationStep)
+// Module 18158 (useUsernameRegistrationStep)
 import util from "util" /* 1113 */;
-import Link from "Link" /* 1498 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16606 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17988 */;
+import Link from "Link" /* 1500 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16749 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16609 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16752 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(17989).useRegistrationUIStore;
-const RegistrationConstants = fn(17990);
+const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
+const RegistrationConstants = fn(18133);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
@@ -41,7 +41,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
     obj3 = { type: tmp(tmp2[9]).NameValidationState.ERROR, message: tmp10 };
     tmp12 = obj3;
   }
-  let items = [tmp12, navigation, context, REGISTER_ACCOUNT_INFORMATION];
+  items = [tmp12, navigation, context, REGISTER_ACCOUNT_INFORMATION];
   const items1 = [username, tmp12];
   const callback = obj.useCallback((arg0) => {
     let type;
@@ -50,7 +50,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
     }
     if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
       const obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
-      const items = [obj3.message];
+      items = [obj3.message];
       obj.details = items;
       context(obj);
     }

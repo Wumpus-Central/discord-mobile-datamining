@@ -1,14 +1,14 @@
-// === Module 18126: useActiveChannels ===
+// === Module 18270: useActiveChannels ===
 
-// Module 18126 (useActiveChannels)
+// Module 18270 (useActiveChannels)
 import Constants from "Constants" /* 1072 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 15598 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 15740 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.
 export function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
+    items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;

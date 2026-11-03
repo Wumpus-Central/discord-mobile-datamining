@@ -1,14 +1,14 @@
-// === Module 8938: MediaModalOverlayHeaderWrapper ===
+// === Module 9066: MediaModalOverlayHeaderWrapper ===
 
-// Module 8938 (MediaModalOverlayHeaderWrapper)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import NavigatorConstants from "NavigatorConstants" /* 5586 */;
+// Module 9066 (MediaModalOverlayHeaderWrapper)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import NavigatorConstants from "NavigatorConstants" /* 5709 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
   const obj = { bar: { flexDirection: "row", alignItems: "center", height: NavigatorConstants.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 } };
   return obj;
@@ -20,7 +20,7 @@ export function MediaModalOverlayHeaderWrapper(arg0) {
   ({ children, style } = arg0);
   const rect = useSafeAreaInsetsDefault();
   const obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [closure_5(rect.top, rect.left, rect.right).bar, style];
+  items = [closure_5(rect.top, rect.left, rect.right).bar, style];
   obj.style = items;
   obj.children = children;
   return <View style={null} pointerEvents="box-none">{null}</View>;

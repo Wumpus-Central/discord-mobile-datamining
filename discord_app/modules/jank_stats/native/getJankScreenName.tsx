@@ -1,9 +1,9 @@
-// === Module 18062: getJankScreenName ===
+// === Module 18206: getJankScreenName ===
 
-// Module 18062 (getJankScreenName)
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18064 */;
-import JankScreenConstants from "JankScreenConstants" /* 18063 */;
+// Module 18206 (getJankScreenName)
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18208 */;
+import JankScreenConstants from "JankScreenConstants" /* 18207 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {
@@ -103,7 +103,7 @@ export default function getJankScreenName() {
       rootState = rootNavigationRef.getRootState();
     }
   }
-  const items = [];
+  items = [];
   if (null != rootState) {
     while (true) {
       let index = rootState.index;
@@ -212,7 +212,7 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "article" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "h:mm:ssa" };
           let obj10 = obj9;
         } else {
           obj10 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null, chatScreens: null };
@@ -276,7 +276,7 @@ export function getPanelListScreenName() {
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;
@@ -335,7 +335,7 @@ export function getBaseScreenName() {
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;
@@ -384,7 +384,7 @@ export function getWideViewScreenName(baseScreenName) {
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;

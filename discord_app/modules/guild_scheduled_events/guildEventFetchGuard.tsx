@@ -1,6 +1,6 @@
-// === Module 8973: guildEventFetchGuard ===
+// === Module 9101: guildEventFetchGuard ===
 
-// Module 8973 (guildEventFetchGuard)
+// Module 9101 (guildEventFetchGuard)
 import DurationsDefault from "Durations" /* 1089 */;
 
 let map4 = fn;
@@ -335,7 +335,7 @@ const navigation = {
     };
   },
   forgetTransientFailures() {
-    const items = [...map5.keys()];
+    items = [...map5.keys()];
     const values = map5.values();
     for (const item10013 of values) {
       let cancelResult = item10013.cancel();
@@ -671,7 +671,7 @@ let obj = {
     };
   },
   forgetTransientFailures() {
-    const items = [...map5.keys()];
+    items = [...map5.keys()];
     const values = map5.values();
     for (const item10013 of values) {
       let cancelResult = item10013.cancel();

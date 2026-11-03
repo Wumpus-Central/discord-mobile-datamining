@@ -1,8 +1,8 @@
-// === Module 12760: useConjureOwnImages ===
+// === Module 12896: useConjureOwnImages ===
 
-// Module 12760 (useConjureOwnImages)
-import _modDef3868 from "module_3868" /* 3868 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12147 */;
+// Module 12896 (useConjureOwnImages)
+import _modDef3995 from "module_3995" /* 3995 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,8 +72,8 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
   let intl = require("util").intl;
-  const stringResult = intl.string(_modDef3868.wTsP5l);
-  let items = [first];
+  const stringResult = intl.string(_modDef3995.wTsP5l);
+  items = [first];
   const items1 = [arg1, first, first2];
   const callback = first1.useCallback((arg0) => {
     let tmp = first[arg0];
@@ -95,6 +95,14 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
         kind = tmp4.kind;
       }
       tmp6 = "image" === kind;
+      if (!tmp6) {
+        let kind1;
+        if (tmp4 != null) {
+          kind1 = tmp4.kind;
+        }
+        tmp6 = "multi" === kind1 && null != tmp4.attachment;
+        const tmp8 = "multi" === kind1 && null != tmp4.attachment;
+      }
     }
   }, items1);
   const items2 = [stringResult, first, first2];
@@ -197,16 +205,26 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               return obj;
             });
             _null((dependencyMap) => {
-              let kind;
-              if (dependencyMap[id] != null) {
-                kind = tmp2.kind;
+              if (!closure_1_1) {
+                let kind;
+                if (dependencyMap[id] != null) {
+                  kind = tmp2.kind;
+                }
+                let tmp5 = "image" === kind;
+                if (!tmp5) {
+                  let kind1;
+                  if (tmp2 != null) {
+                    kind1 = tmp2.kind;
+                  }
+                  tmp5 = "multi" === kind1 && null != tmp2.attachment;
+                  const tmp7 = "multi" === kind1 && null != tmp2.attachment;
+                }
+                if (tmp5) {
+                  items = [id];
+                  return first(dependencyMap, items.map(closure_6));
+                }
               }
-              if ("image" !== kind) {
-                return dependencyMap;
-              } else {
-                const items = [id];
-                return first(dependencyMap, items.map(closure_6));
-              }
+              return dependencyMap;
             });
           }
         };
@@ -236,7 +254,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F139497 */ function() { ... });
+                  result.catch(/* F140702 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -276,7 +294,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
             const obj = { busy: null, error: null };
             const obj2 = { source: "upload", text: null };
             const intl = id(1113).intl;
-            obj2.text = intl.string(closure_1(3868)["kUw/b1"]);
+            obj2.text = intl.string(closure_1(3995)["kUw/b1"]);
             obj.error = obj2;
             return closure_1_6((arg0) => {
               obj = {};
@@ -300,7 +318,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F139497 */ function() { ... });
+                result.catch(/* F140702 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);
@@ -351,7 +369,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               return false;
             }
             const intl = id(1113).intl;
-            message = intl.string(closure_1(3868).l79PMc);
+            message = intl.string(closure_1(3995).l79PMc);
           });
         };
         return obj;

@@ -1,16 +1,16 @@
-// === Module 9201: DiscordTag ===
+// === Module 9329: DiscordTag ===
 
-// Module 9201 (DiscordTag)
+// Module 9329 (DiscordTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import BotTagDefault from "BotTag" /* 9202 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import BotTagDefault from "BotTag" /* 9330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function DiscordTag(arg0) {
     tmp2Result2 = null;
     if (null != user) {
       const obj3 = { variant: "text-md/semibold", style: usernameStyle, lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
-      const items = [user.toString(), ];
+      items = [user.toString(), ];
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       let tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {

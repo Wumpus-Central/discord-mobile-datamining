@@ -1,8 +1,8 @@
-// === Module 18782: SearchFetchPendingManager ===
+// === Module 18940: SearchFetchPendingManager ===
 
-// Module 18782 (SearchFetchPendingManager)
-import useInitialValueDefault from "useInitialValue" /* 5612 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13886 */;
+// Module 18940 (SearchFetchPendingManager)
+import useInitialValueDefault from "useInitialValue" /* 5735 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
 import noop from "module_19" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {
@@ -73,7 +73,7 @@ export function useSearchFetchPendingManager(searchContext) {
     }
   });
   dependencyMap = tmp;
-  const items = [searchContext, tmp];
+  items = [searchContext, tmp];
   const effect = noop.useEffect(() => SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, (arg0, arg1) => {
     if (arg1 !== arg0) {
       navigation.reset();

@@ -1,15 +1,15 @@
-// === Module 15215: ClipsExperiment ===
+// === Module 15356: ClipsExperiment ===
 
-// Module 15215 (ClipsExperiment)
+// Module 15356 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
-import PlatformUtilsAll from "PlatformUtils" /* 1375 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import UserStore from "UserStore" /* 1383 */;
+import PlatformUtilsAll from "PlatformUtils" /* 1377 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
-const Features = fn(5768).Features;
+const PremiumTypes = fn(1387).PremiumTypes;
+const Features = fn(5888).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -42,7 +42,7 @@ export function useIsClipsAvailable() {
   if (isDesktopResult) {
     isDesktopResult = mediaEngine.hasClipsV3Support();
   }
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;

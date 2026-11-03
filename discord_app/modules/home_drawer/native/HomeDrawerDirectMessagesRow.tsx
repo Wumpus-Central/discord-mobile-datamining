@@ -1,20 +1,20 @@
-// === Module 18386: HomeDrawerDirectMessagesRow ===
+// === Module 18531: HomeDrawerDirectMessagesRow ===
 
-// Module 18386 (HomeDrawerDirectMessagesRow)
+// Module 18531 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5204 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18382 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5327 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18527 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 function HomeDrawerDMsRow() {
   const tmp = closure_9();
-  const items = [RelationshipStore, PresenceStore];
+  items = [RelationshipStore, PresenceStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
     return friendIDs.filter((item) => status.getStatus(item) !== constants.OFFLINE).length;
@@ -44,7 +44,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj2.onlineDot = size;

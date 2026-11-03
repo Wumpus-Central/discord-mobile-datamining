@@ -1,7 +1,7 @@
-// === Module 13684: useSidekickLeave ===
+// === Module 13814: useSidekickLeave ===
 
-// Module 13684 (useSidekickLeave)
-import CheckpointNavigation from "CheckpointNavigation" /* 6435 */;
+// Module 13814 (useSidekickLeave)
+import CheckpointNavigation from "CheckpointNavigation" /* 6555 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ export function useSidekickLeave(route, stateFromStores3, onNextStep, onPrevious
   closure_1 = stateFromStores3;
   noop = onNextStep;
   noop.useRef(true);
-  const items = [onNextStep, onPreviousStep, stateFromStores3, route];
+  items = [onNextStep, onPreviousStep, stateFromStores3, route];
   const effect = noop.useEffect(() => {
     if (timeout === CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE) {
       if (ref.current) {

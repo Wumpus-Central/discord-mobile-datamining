@@ -1,11 +1,11 @@
-// === Module 9020: useManageResourcePermissions ===
+// === Module 9148: useManageResourcePermissions ===
 
-// Module 9020 (useManageResourcePermissions)
+// Module 9148 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(9019);
+const PermissionsConstants = fn(9147);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1083).Permissions;
 let closure_11 = {
@@ -80,7 +80,7 @@ const result = size.fileFinishedImporting("modules/permissions/useManageResource
 
 export function attachChannelPermissions(channel) {
   if (null == channel) {
-    const items = [, ];
+    items = [, ];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     return items;
   } else {
@@ -98,7 +98,7 @@ export function attachChannelPermissions(channel) {
 export function useManageResourcePermissions(channel) {
   _require = channel;
   if (obj.isGuildRecord(channel)) {
-    let items = [, ];
+    items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
     let items2 = items;
   } else if (null == channel) {
@@ -120,7 +120,7 @@ export function useManageResourcePermissions(channel) {
   const tmp9 = canCreateExpressions(items2, 2);
   const items3 = [closure_5];
   const tmp10 = canCreateExpressions(require("initialize").useStateFromStoresArray(items3, () => {
-    const items = [PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(importAll, closure_0), PermissionStore.can(dependencyMap, closure_0)];
+    items = [PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(importAll, closure_0), PermissionStore.can(dependencyMap, closure_0)];
     return items;
   }), 4);
   canCreateExpressions = tmp10[0];
@@ -155,7 +155,7 @@ export function getManageResourcePermissions(guild) {
   let canResult3;
   let currentUser;
   if (obj3.isGuildRecord(guild)) {
-    const items = [, ];
+    items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
     let tmp5 = Permissions;
     let items2 = items;

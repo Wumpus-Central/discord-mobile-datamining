@@ -1,24 +1,24 @@
-// === Module 16291: ConjureVoiceSessionCoordinator ===
+// === Module 16435: ConjureVoiceSessionCoordinator ===
 
-// Module 16291 (ConjureVoiceSessionCoordinator)
+// Module 16435 (ConjureVoiceSessionCoordinator)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5918 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6849 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16293 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6038 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6969 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16437 */;
+import FramesStore from "FramesStore" /* 6966 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1072).RPCErrors;
-const Constants = fn(5768);
-({ Features: c10, MediaEngineContextTypes: closure_11 } = Constants);
+const Constants = fn(5888);
+({ Features: closure_10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
 class ConjureVoiceSessionCoordinator {
@@ -33,7 +33,7 @@ class ConjureVoiceSessionCoordinator {
     obj.unsubscribeFrameLifecycle = null;
     obj.handleFrameLifecycleChange = function handleFrameLifecycleChange() {
       const sessions = obj.sessions;
-      const items = [...sessions.values()];
+      items = [...sessions.values()];
       for (const item10014 of items) {
         if (!item10014.pooled) {
           item10014.pooled = FramesStore.isFramePooled(item10014.frameId);
@@ -101,7 +101,7 @@ prototype["getParticipants"] = function getParticipants(arg0) {
   return values.flatMap((userId) => {
     user = user.getUser(userId.userId);
     if (null == user) {
-      let items = [];
+      items = [];
     } else {
       const obj = { user_id: userId.userId, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null, self_video: null };
       ({ username: obj.username, globalName } = user);
@@ -137,15 +137,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp41Result2 = tmp41(16292);
+            tmp41Result2 = tmp41(16436);
           }
-          tmp41Result = tmp41(16292);
+          tmp41Result = tmp41(16436);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(16292);
+        obj13 = handleFrameLifecycleChange(16436);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -216,16 +216,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(16295);
+    obj2 = obj2(16438);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(16295).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(16438).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(16295);
+      const tmp11Result = tmp11(16438);
     }
     tmp11 = obj2;
   } else {
@@ -291,7 +291,7 @@ prototype["handOverSpatialHolder"] = function handOverSpatialHolder(validateSess
 prototype["syncSpatialAudioOverrides"] = function syncSpatialAudioOverrides() {
   const self = this;
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   if (items.some((spatialEnabled) => spatialEnabled.spatialEnabled)) {
     const spatialHolder = self.spatialHolder;
     let acoustics;
@@ -352,7 +352,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(16296).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(16439).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }
@@ -389,7 +389,7 @@ prototype["getActiveSessionIdsForChannel"] = function getActiveSessionIdsForChan
   closure_0 = channelId;
   const rTCConnection = RTCConnectionStore.getRTCConnection();
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   const found = items.filter((channelId) => {
     let tmp = channelId.channelId === closure_0;
     if (tmp) {
@@ -411,7 +411,7 @@ prototype["getActiveSessionIdsForChannel"] = function getActiveSessionIdsForChan
 prototype["releaseSocket"] = function releaseSocket(id) {
   const self = this;
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   for (const item10014 of items) {
     if (item10014.socketId === arg0) {
       let releaseSessionResult = self.releaseSession(tmp);
@@ -422,7 +422,7 @@ prototype["releaseSocket"] = function releaseSocket(id) {
 prototype["releaseUnlessChannel"] = function releaseUnlessChannel(channelId) {
   const self = this;
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   for (const item10014 of items) {
     if (item10014.channelId !== arg0) {
       let releaseSessionResult = self.releaseSession(tmp);
@@ -433,7 +433,7 @@ prototype["releaseUnlessChannel"] = function releaseUnlessChannel(channelId) {
 prototype["release"] = function release() {
   const self = this;
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   for (const item10012 of items) {
     let releaseSessionResult = self.releaseSession(item10012);
     continue;
@@ -460,7 +460,7 @@ prototype["releaseSession"] = function releaseSession(value) {
 prototype["reconcileParticipants"] = function reconcileParticipants() {
   const self = this;
   const sessions = this.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   for (const item10012 of items) {
     let reconcileSessionResult = self.reconcileSession(item10012);
     continue;
@@ -483,7 +483,7 @@ prototype["reconcileSession"] = function reconcileSession(item10012) {
           self.getParticipantIds(item10012.channelId);
           const sources = item10012.sources;
           item10012.sources = sources.filter((userId) => set.has(userId.userId));
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(item10012.appliedUserIds, 0);
           const found = items.filter((item) => !set.has(item));
           if (0 !== found.length) {
@@ -550,7 +550,7 @@ prototype["applySources"] = function applySources(sources) {
   closure_0 = sources;
   sources = sources.sources;
   const set = new Set(sources.map((userId) => userId.userId));
-  const items = [...sources.appliedUserIds];
+  items = [...sources.appliedUserIds];
   closure_2 = items.filter((item) => !set.has(item));
   const result = this.withMediaEngineConnection(sources, (setUserPosition) => {
     for (const item10006 of closure_2) {
@@ -663,7 +663,7 @@ obj2.focusSequence = 0;
 obj2.unsubscribeFrameLifecycle = null;
 obj2.handleFrameLifecycleChange = function handleFrameLifecycleChange() {
   const sessions = obj.sessions;
-  const items = [...sessions.values()];
+  items = [...sessions.values()];
   for (const item10014 of items) {
     if (!item10014.pooled) {
       item10014.pooled = FramesStore.isFramePooled(item10014.frameId);

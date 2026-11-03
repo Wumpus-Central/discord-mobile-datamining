@@ -1,8 +1,8 @@
-// === Module 9206: getGuildEventImage ===
+// === Module 9334: getGuildEventImage ===
 
-// Module 9206 (getGuildEventImage)
+// Module 9334 (getGuildEventImage)
 import Constants from "Constants" /* 1072 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

@@ -1,12 +1,12 @@
-// === Module 13685: useCanDM ===
+// === Module 13815: useCanDM ===
 
-// Module 13685 (useCanDM)
-import UserSettings from "UserSettings" /* 4839 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
+// Module 13815 (useCanDM)
+import UserSettings from "UserSettings" /* 4966 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useCanDM.t
 export default function useCanDM(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_4];
+  items = [closure_4];
   closure_2 = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
   const obj = require("initialize");
   const items1 = [closure_3];

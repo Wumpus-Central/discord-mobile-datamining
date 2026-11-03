@@ -1,19 +1,19 @@
-// === Module 16898: QuestHomeSetting ===
+// === Module 17041: QuestHomeSetting ===
 
-// Module 16898 (QuestHomeSetting)
+// Module 17041 (QuestHomeSetting)
 import nativeDefault from "native" /* 575 */;
-import _mod4929 from "module_4929" /* 4929 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 16899 */;
-import QuestHomeDefault from "QuestHome" /* 16920 */;
+import _mod5056 from "module_5056" /* 5056 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 17042 */;
+import QuestHomeDefault from "QuestHome" /* 17063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9679 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9811 */;
 
 require = fn;
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = [];
@@ -80,7 +80,7 @@ export default function QuestHomeSetting() {
       }
       closure_1_1(found);
     }
-  }, { equalityFn: _mod4929.shallow, fireImmediately: true }), []);
+  }, { equalityFn: _mod5056.shallow, fireImmediately: true }), []);
   let navigation;
   const tmp5 = _slicedToArray(noop.useState(() => {
     const str = QuestHomeNavigationStore.getField("filter");
@@ -96,10 +96,10 @@ export default function QuestHomeSetting() {
     }
     return found;
   }), 2);
-  navigation = navigation(1497).useNavigation();
+  navigation = navigation(1499).useNavigation();
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp10[1];
-  const items = [navigation];
+  items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", () => closure_1_1(true)), items);
   const callback = noop.useCallback(() => {
     closure_1(closure_10);

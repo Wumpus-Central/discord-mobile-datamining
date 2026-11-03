@@ -1,8 +1,8 @@
-// === Module 13704: useMaybeFetchCheckpointData ===
+// === Module 13835: useMaybeFetchCheckpointData ===
 
-// Module 13704 (useMaybeFetchCheckpointData)
-import GameActionCreators from "GameActionCreators" /* 7481 */;
-import CheckpointStore2 from "CheckpointStore" /* 13436 */;
+// Module 13835 (useMaybeFetchCheckpointData)
+import GameActionCreators from "GameActionCreators" /* 7605 */;
+import CheckpointStore2 from "CheckpointStore" /* 13571 */;
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const CheckpointFetchStates = CheckpointStore2.CheckpointFetchStates;
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
 
 export function useMaybeFetchCheckpointData() {
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => CheckpointStore.fetchState);
   let obj = stateFromStores1(504);
   const items1 = [CheckpointStore];

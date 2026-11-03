@@ -1,9 +1,9 @@
-// === Module 18412: moveGuildNode ===
+// === Module 18557: moveGuildNode ===
 
-// Module 18412 (moveGuildNode)
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5932 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+// Module 18557 (moveGuildNode)
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6052 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
 
 require = fn;
 const size = fn(2);

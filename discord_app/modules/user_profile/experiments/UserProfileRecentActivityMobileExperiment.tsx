@@ -1,7 +1,7 @@
-// === Module 14986: UserProfileRecentActivityMobileExperiment ===
+// === Module 15122: UserProfileRecentActivityMobileExperiment ===
 
-// Module 14986 (UserProfileRecentActivityMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 15122 (UserProfileRecentActivityMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-recent-activity-mobile", kind: "user", defaultConfig: { enabled: false }, variations: null };

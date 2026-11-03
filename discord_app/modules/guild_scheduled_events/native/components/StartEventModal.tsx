@@ -1,19 +1,19 @@
-// === Module 9101: StartEventModal ===
+// === Module 9229: StartEventModal ===
 
-// Module 9101 (StartEventModal)
+// Module 9229 (StartEventModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import Pressables from "Pressables" /* 6980 */;
-import _modDef7257 from "module_7257" /* 7257 */;
-import GuildEventCardDefault from "GuildEventCard" /* 9095 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef7377 from "module_7377" /* 7377 */;
+import GuildEventCardDefault from "GuildEventCard" /* 9223 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function NavigationBar(onClose) {
@@ -25,19 +25,19 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7257 });
-  obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
-  return closure_1_12(View, obj);
+  obj2.children = application_id(native.Icon, { source: _modDef7377 });
+  obj.children = application_id(Pressables.PressableOpacity, obj2);
+  return application_id(View, obj);
 }
 function StartEventHeader(children) {
   const tmp = closure_14();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.headerPrivacyLevel, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["q+fFJv"]);
-  const items = [closure_1_12(Text_Text.Text, obj2), closure_1_12(Text_Text.Text, { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name })];
+  items = [application_id(Text_Text.Text, obj2), application_id(Text_Text.Text, { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name })];
   obj.children = items;
-  return map1(View, obj);
+  return state(View, obj);
 }
 class PreviewEventCard {
   constructor(arg0) {
@@ -47,12 +47,12 @@ class PreviewEventCard {
   }
 }
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(4869);
-({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8963).START_EVENT_MODAL_KEY;
+const GuildScheduledEventsConstants = fn(4996);
+({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } = GuildScheduledEventsConstants);
+const START_EVENT_MODAL_KEY = fn(9091).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { mainContainer: { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" }, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_24 };
@@ -65,7 +65,7 @@ obj2.buttonContainer = { display: "flex", flexDirection: "column", gap: nativeDe
 let obj6 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16 };
 obj2.previewCard = { borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
 obj2.headerPrivacyLevel = { textAlign: "center", lineHeight: 18 };
-const value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
 
@@ -97,7 +97,7 @@ export default function StartEventModal(event) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function StartEventModal(event) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c0 = tmp;
         throw tmp11;
@@ -144,7 +144,7 @@ export default function StartEventModal(event) {
   };
   const tmp = closure_14();
   const guild_id = event.guild_id;
-  const items = [closure_8];
+  items = [closure_8];
   const stateFromStores = event(guild_id[18]).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   let obj = event(guild_id[18]);
   const items1 = [onCloseModal];

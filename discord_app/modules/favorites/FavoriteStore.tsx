@@ -1,6 +1,6 @@
-// === Module 4866: FavoriteStore ===
+// === Module 4993: FavoriteStore ===
 
-// Module 4866 (FavoriteStore)
+// Module 4993 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -89,8 +89,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(4867).createChannelRecord;
-let closure_4 = fn(4876).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(4994).createChannelRecord;
+let closure_4 = fn(5003).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1072);
 ({ ChannelTypes: hasOwnProperty, FAVORITES: metroRequire } = Constants);
 let value2 = false;
@@ -101,7 +101,7 @@ const prototype = FavoriteStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserSettingsProtoStore);
   initializeFromUserSettings();
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, initializeFromUserSettings);
 };
 prototype["getFavoriteChannels"] = function getFavoriteChannels() {

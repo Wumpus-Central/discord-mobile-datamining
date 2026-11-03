@@ -1,9 +1,9 @@
-// === Module 12079: conjureBuilderOpened ===
+// === Module 12215: conjureBuilderOpened ===
 
-// Module 12079 (conjureBuilderOpened)
-import ConjureAnalytics from "ConjureAnalytics" /* 10873 */;
+// Module 12215 (conjureBuilderOpened)
+import ConjureAnalytics from "ConjureAnalytics" /* 11003 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export function useTrackConjureBuilderOpened(projectId) {
     str = "unknown";
   }
   let ref;
-  const items = [ref];
+  items = [ref];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
@@ -39,4 +39,5 @@ export function useTrackConjureBuilderOpened(projectId) {
       const result = ConjureAnalytics.trackConjureBuilderOpened(current, str);
     }
   }, items2);
+  return stateFromStores.useCallback((arg0) => ref.current === arg0, []);
 }

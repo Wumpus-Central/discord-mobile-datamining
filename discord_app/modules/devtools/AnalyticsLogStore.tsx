@@ -1,12 +1,12 @@
-// === Module 16230: AnalyticsLogStore ===
+// === Module 16373: AnalyticsLogStore ===
 
-// Module 16230 (AnalyticsLogStore)
+// Module 16373 (AnalyticsLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FingerprintUtils from "FingerprintUtils" /* 1265 */;
 import v1 from "v1" /* 1266 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7864 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7988 */;
 
 require = fn;
 let closure_4 = 0;
@@ -79,7 +79,7 @@ const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
       isDeveloper = enabled;
     }
     if (isDeveloper) {
-      const items = [];
+      items = [];
       const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
       const arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
       obj.key = v1.v4();

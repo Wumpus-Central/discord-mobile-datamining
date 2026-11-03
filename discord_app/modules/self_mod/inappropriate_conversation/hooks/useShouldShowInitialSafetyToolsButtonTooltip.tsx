@@ -1,7 +1,7 @@
-// === Module 11301: useShouldShowInitialSafetyToolsButtonTooltip ===
+// === Module 11438: useShouldShowInitialSafetyToolsButtonTooltip ===
 
-// Module 11301 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10804 */;
+// Module 11438 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10934 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ export function useShouldShowInitialSafetyToolsButtonTooltip(channelId) {
   _require = channelId;
   const inappropriateConversationSafetyToolsWarningForChannel = require("useInappropriateConversationSafetyToolsWarningForChannel").useInappropriateConversationSafetyToolsWarningForChannel(channelId);
   const obj = require("useInappropriateConversationSafetyToolsWarningForChannel");
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const obj2 = require("initialize");
   return null != inappropriateConversationSafetyToolsWarningForChannel && !require("initialize").useStateFromStores(items, () => ChannelSafetyWarningsStore.hasShownInitialTooltipForChannel(closure_0));
 }

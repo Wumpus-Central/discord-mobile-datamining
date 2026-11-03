@@ -1,17 +1,17 @@
-// === Module 18770: useSearchScreenError ===
+// === Module 18928: useSearchScreenError ===
 
-// Module 18770 (useSearchScreenError)
+// Module 18928 (useSearchScreenError)
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(9827).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9958).SEARCH_MESSAGE_TAB_SENTINEL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
 
@@ -19,7 +19,7 @@ export function useMessageSearchErrorScreen(arg0) {
   ({ searchContext: require, tab: importDefault, hasListItems } = arg0);
   let stateFromStores;
   let ref;
-  const items = [SearchQueryStore, ref];
+  items = [SearchQueryStore, ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
     return SearchMessageStore.getError(SearchUtils.getSearchTabFetchId(closure_1_0, importDefault, searchResultsQuery));
@@ -53,7 +53,7 @@ export function useMessageSearchErrorScreen(arg0) {
 }
 export function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [SearchQueryStore, SearchMessageStore];
+  items = [SearchQueryStore, SearchMessageStore];
   return searchContext(504).useStateFromStores(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);

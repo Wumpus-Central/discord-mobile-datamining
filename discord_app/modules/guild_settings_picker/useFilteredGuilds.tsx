@@ -1,10 +1,10 @@
-// === Module 15723: useFilteredGuilds ===
+// === Module 15866: useFilteredGuilds ===
 
-// Module 15723 (useFilteredGuilds)
+// Module 15866 (useFilteredGuilds)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
   let stateFromStores1;
-  let items = [SortedGuildStore];
+  items = [SortedGuildStore];
   const stateFromStores = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
   const obj = isGuildIncluded(stateFromStores1[4]);
   const items1 = [GuildStore];
@@ -26,7 +26,7 @@ export default function useFilteredGuilds(isGuildIncluded) {
   const items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
   obj4.options = stateFromStores2.useMemo(() => {
     if (null == stateFromStores2) {
-      let items = [];
+      items = [];
     } else {
       if (null == isGuildIncluded) {
         let found = stateFromStores;

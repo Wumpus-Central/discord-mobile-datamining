@@ -1,18 +1,18 @@
-// === Module 19158: FramePanelFocusedView ===
+// === Module 19316: FramePanelFocusedView ===
 
-// Module 19158 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 12250 */;
-import FrameStackLevel from "FrameStackLevel" /* 12254 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19138 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19155 */;
+// Module 19316 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 12386 */;
+import FrameStackLevel from "FrameStackLevel" /* 12390 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19296 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19313 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");
@@ -22,7 +22,7 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
   let landscapeSafeAreasConfig;
-  const items = [landscapeSafeAreasConfig];
+  items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => {
     const tmp = memo(landscapeSafeAreasConfig.getMainFrame());
     let id;

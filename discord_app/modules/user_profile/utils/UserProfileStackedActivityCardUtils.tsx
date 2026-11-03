@@ -1,8 +1,8 @@
-// === Module 14897: UserProfileStackedActivityCardUtils ===
+// === Module 15028: UserProfileStackedActivityCardUtils ===
 
-// Module 14897 (UserProfileStackedActivityCardUtils)
+// Module 15028 (UserProfileStackedActivityCardUtils)
 import _mod12 from "module_12" /* 12 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
@@ -29,7 +29,7 @@ export function getUserProfileStackedActivityCards(arg0) {
   if (isPrivate === undefined) {
     isPrivate = false;
   }
-  const items = [];
+  items = [];
   if (null != stream) {
     const obj = { type: "stream", stream };
     items.push(obj);

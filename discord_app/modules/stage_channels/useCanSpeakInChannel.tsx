@@ -1,8 +1,8 @@
-// === Module 11192: useCanSpeakInChannel ===
+// === Module 11329: useCanSpeakInChannel ===
 
-// Module 11192 (useCanSpeakInChannel)
+// Module 11329 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
 export default function useCanCurrentUserSpeakInChannel(id) {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   return useAudienceRequestToSpeakStateDefault(stateFromStores, id) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
 };

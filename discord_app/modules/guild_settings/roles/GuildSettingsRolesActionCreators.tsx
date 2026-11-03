@@ -1,6 +1,6 @@
-// === Module 19792: GuildSettingsRolesActionCreators ===
+// === Module 19942: GuildSettingsRolesActionCreators ===
 
-// Module 19792 (GuildSettingsRolesActionCreators)
+// Module 19942 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -109,7 +109,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -173,7 +173,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 return obj6;
               } else {
                 if (null != closure_145_1) {
-                  const items = [];
+                  items = [];
                   HermesBuiltin.arraySpread(closure_145_1, 0);
                   let sorted = items.sort((name, name2) => Number("" !== name.name.trim()) - Number("" !== name2.name.trim()));
                 } else {
@@ -210,7 +210,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
               c21 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               throw closure_145_15;
             }

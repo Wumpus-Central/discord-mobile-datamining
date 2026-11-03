@@ -1,13 +1,13 @@
-// === Module 18180: VoiceUser ===
+// === Module 18324: VoiceUser ===
 
-// Module 18180 (VoiceUser)
+// Module 18324 (VoiceUser)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -22,7 +22,7 @@ export default function VoiceUserConnected(channel) {
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = AuthenticationStore.getId() === user.id;
   closure_3 = tmp;
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStoresObject = channel(sessionId[8]).useStateFromStoresObject(items, () => {
     if (closure_3) {
       const obj2 = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };

@@ -1,17 +1,17 @@
-// === Module 17190: QuestDockPlayableBody ===
+// === Module 17333: QuestDockPlayableBody ===
 
-// Module 17190 (QuestDockPlayableBody)
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import captureAdUserAction from "captureAdUserAction" /* 9684 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11693 */;
+// Module 17333 (QuestDockPlayableBody)
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import captureAdUserAction from "captureAdUserAction" /* 9816 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -25,7 +25,7 @@ export default noop.memo(function QuestDockPlayableBody() {
   let obj2 = questDockPlayable(getQuestImpressionId[5]);
   getQuestImpressionId = questDockPlayable(getQuestImpressionId[7]).useGetQuestImpressionId();
   analyticsLocations = setRestingQuestDockMode(getQuestImpressionId[8])().analyticsLocations;
-  const items = [, , , , ];
+  items = [, , , , ];
   ({ id: arr[0], applicationId: arr[1] } = questDockPlayable);
   items[2] = analyticsLocations;
   items[3] = getQuestImpressionId;

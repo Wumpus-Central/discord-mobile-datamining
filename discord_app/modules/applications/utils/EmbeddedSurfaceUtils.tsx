@@ -1,13 +1,13 @@
-// === Module 2024: EmbeddedSurfaceUtils ===
+// === Module 2153: EmbeddedSurfaceUtils ===
 
-// Module 2024 (EmbeddedSurfaceUtils)
+// Module 2153 (EmbeddedSurfaceUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/utils/EmbeddedSurfaceUtils.tsx");
 
 export function isEmbeddedApplication(application) {
   if (null == application) {
-    let items = [];
+    items = [];
   } else if ("embeddedSurfaces" in application) {
     let embeddedSurfaces = application.embeddedSurfaces;
     if (embeddedSurfaces == null) {
@@ -27,7 +27,7 @@ export function isEmbeddedApplication(application) {
 }
 export function supportsEmbeddedSurface(embeddedSurfaces, MAIN) {
   if (null == embeddedSurfaces) {
-    let items = [];
+    items = [];
   } else if ("embeddedSurfaces" in embeddedSurfaces) {
     embeddedSurfaces = embeddedSurfaces.embeddedSurfaces;
     if (embeddedSurfaces == null) {

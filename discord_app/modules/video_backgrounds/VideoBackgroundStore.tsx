@@ -1,14 +1,14 @@
-// === Module 5926: VideoBackgroundStore ===
+// === Module 6046: VideoBackgroundStore ===
 
-// Module 5926 (VideoBackgroundStore)
+// Module 6046 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function handleSyncedStoresUpdate() {
@@ -46,7 +46,7 @@ class VideoBackgroundStore extends Store {
 const prototype = VideoBackgroundStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(MediaEngineStore, SelectedChannelStore, UnsyncedUserSettingsStore, UserSettingsProtoStore, UserStore);
-  const items = [SelectedChannelStore, MediaEngineStore];
+  items = [SelectedChannelStore, MediaEngineStore];
   this.syncWith(items, handleSyncedStoresUpdate);
 };
 Object.defineProperty(prototype, "videoFilterAssets", {

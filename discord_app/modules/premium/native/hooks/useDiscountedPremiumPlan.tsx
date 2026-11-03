@@ -1,8 +1,8 @@
-// === Module 9925: useDiscountedPremiumPlan ===
+// === Module 10056: useDiscountedPremiumPlan ===
 
-// Module 9925 (useDiscountedPremiumPlan)
+// Module 10056 (useDiscountedPremiumPlan)
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/premium/native/hooks/useDisco
 export function useDiscountedPremiumPlan(premiumDiscountOffer, items3) {
   _require = premiumDiscountOffer;
   dependencyMap = items3;
-  const items = [premiumDiscountOffer, items3];
+  items = [premiumDiscountOffer, items3];
   memo = memo.useMemo(() => {
     if (null == closure_0) {
       return null;

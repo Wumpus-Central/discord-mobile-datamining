@@ -1,19 +1,19 @@
-// === Module 7628: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
+// === Module 7752: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
 
-// Module 7628 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
+// Module 7752 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ProductIds from "ProductIds" /* 7593 */;
-import useTrialOffer from "useTrialOffer" /* 7629 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import ProductIds from "ProductIds" /* 7717 */;
+import useTrialOffer from "useTrialOffer" /* 7753 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: hasOwnProperty, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: metroRequire, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_7, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: closure_8 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useAndroidAndLegacyIOSPremiumTrialOfferCandidates.native.tsx");
 
 export function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
-  const items = [IAPStore];
+  items = [IAPStore];
   const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({ isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() })).offerIds;
   const trialOffer = useTrialOffer.useTrialOffer(timestampProducer);
   const values = Object.values(ProductIds.TrialIdToProductOfferId[timestampProducer]);

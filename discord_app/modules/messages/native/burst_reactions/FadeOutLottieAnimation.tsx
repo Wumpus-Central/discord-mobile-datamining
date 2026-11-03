@@ -1,103 +1,116 @@
-// === Module 5617: FadeOutLottieAnimation ===
+// === Module 5740: FadeOutLottieAnimation ===
 
-// Module 5617 (FadeOutLottieAnimation)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
+// Module 5740 (FadeOutLottieAnimation)
+import _modDef1652 from "module_1652" /* 1652 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5741 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
-const __initData = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
-const __initData2 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
+let closure_8 = { code: "(function FadeOutLottieAnimationTsx1(finished){let[scheduleOnRN,setIsFadeOut]=this.__closure;if(finished)scheduleOnRN(setIsFadeOut,false);})" };
+let closure_9 = { code: "(function FadeOutLottieAnimationTsx2(){let[isAnimationComplete,isFadeOut,withTiming,_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function FadeOutLottieAnimationTsx1Factory([_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]){const FadeOutLottieAnimationTsx1=function(finished){if(finished)scheduleOnRN(setIsFadeOut,false);};FadeOutLottieAnimationTsx1.__closure=[scheduleOnRN,setIsFadeOut];FadeOutLottieAnimationTsx1.__workletHash=16247045492721;FadeOutLottieAnimationTsx1.__initData=_worklet_16247045492721_init_data;return FadeOutLottieAnimationTsx1;}([_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]))};}return{opacity:0};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
 
 export default function FadeOutLottieAnimation(onComplete) {
-  onComplete = onComplete.onComplete;
+  _require = onComplete.onComplete;
   const merged = Object.assign(onComplete, Object.assign({ onComplete: 0 }));
-  let first1;
-  setIsFadeOut = undefined;
-  const tmp3 = first1(setIsFadeOut.useState(false), 2);
-  const isAnimationComplete = tmp3[0];
-  dependencyMap = tmp3[1];
-  const tmp5 = first1(setIsFadeOut.useState(true), 2);
-  first1 = tmp5[0];
-  setIsFadeOut = tmp7;
   const tmp2 = closure_7();
-  const items = [AccessibilityStore];
-  const stateFromStores = onComplete(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const effect = setIsFadeOut.useEffect(() => {
-    closure_2(false);
+  [tmp4, c1] = noop.useState(false);
+  const tmp5 = _slicedToArray(noop.useState(true), 2);
+  const first = tmp5[0];
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  items = [c5];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined4.useReducedMotion);
+  const effect = noop.useEffect(() => {
+    _undefined2(false);
   }, []);
-  onComplete(5095);
-  class T {
+  require("module_1652");
+  let items1 = [closure_9, tmp4, first, require("timing/timing").withTiming, closure_8, require("module_1705").scheduleOnRN, tmp5[1]];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items1;
+  class FadeOutLottieAnimationTsx2 {
     constructor() {
-      if (closure_1) {
-        tmp = closure_3;
-        if (closure_3) {
+      if (closure_0) {
+        tmp = closure_1;
+        if (closure_1) {
+          tmp2 = closure_3;
+          items = [, , ];
+          items[0] = closure_3;
+          tmp3 = closure_4;
+          items[1] = closure_4;
+          tmp4 = closure_5;
+          items[2] = closure_5;
+          tmp5 = items;
+          [tmp6, tmp7, tmp8] = items;
           obj1 = { opacity: null };
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          obj3 = closure_0(closure_2[7]);
-          fn = function t(arg0) {
-            if (arg0) {
-              onComplete(dependencyMap[6]).runOnJS(setIsFadeOut)(false);
-              const obj = onComplete(dependencyMap[6]);
+          class FadeOutLottieAnimationTsx1 {
+            constructor(arg0) {
+              if (onComplete) {
+                tmp = closure_0;
+                tmp2 = closure_1;
+                flag = false;
+                tmp3 = closure_0(closure_1, false);
+              }
+              return;
             }
-          };
-          obj5 = { runOnJS: null, setIsFadeOut: null };
-          obj5.runOnJS = closure_0(closure_2[6]).runOnJS;
-          tmp4 = closure_4;
-          obj5.setIsFadeOut = closure_4;
-          fn.__closure = obj5;
-          num = 14133863353798;
-          fn.__workletHash = 14133863353798;
-          tmp5 = closure_9;
-          fn.__initData = closure_9;
+          }
+          items1 = [, ];
+          items1[0] = tmp7;
+          items1[1] = tmp8;
+          FadeOutLottieAnimationTsx1.__closure = items1;
+          num = 16247045492721;
+          FadeOutLottieAnimationTsx1.__workletHash = 16247045492721;
+          FadeOutLottieAnimationTsx1.__initData = tmp6;
           str = "respect-motion-settings";
           num2 = 0;
-          tmp6 = obj3;
-          tmp7 = fn;
-          obj1.opacity = obj3.withTiming(0, { duration: 300 }, "respect-motion-settings", fn);
+          tmp9 = FadeOutLottieAnimationTsx1;
+          obj1.opacity = closure_2(0, { duration: 300 }, "respect-motion-settings", FadeOutLottieAnimationTsx1);
           obj = obj1;
         } else {
           obj = { opacity: 0 };
         }
-        tmp8 = obj;
+        tmp10 = obj;
       } else {
         return { opacity: 1 };
       }
       return;
     }
   }
-  let obj = onComplete(504);
-  T.__closure = { isAnimationComplete, isFadeOut: first1, withTiming: onComplete(5254).withTiming, runOnJS: onComplete(5095).runOnJS, setIsFadeOut: tmp5[1] };
-  T.__workletHash = 1137618554665;
-  T.__initData = __initData;
-  if (!isAnimationComplete) {
-    let obj3 = { style: tmp12, children: null };
-    let obj4 = { style: tmp2.content, speed: null, onAnimationFinish: null };
+  const items2 = [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  FadeOutLottieAnimationTsx2.__closure = items2;
+  FadeOutLottieAnimationTsx2.__workletHash = 15919475449507;
+  FadeOutLottieAnimationTsx2.__initData = tmp11;
+  if (!tmp4) {
+    let obj2 = { style: tmp18, children: null };
+    const obj3 = { style: tmp2.content, speed: null, onAnimationFinish: null };
     let num = 1;
     if (stateFromStores) {
       num = 0.5;
     }
-    obj4.speed = num;
-    obj4.onAnimationFinish = function onAnimationFinish(isCancelled) {
-      if (onComplete != null) {
+    obj3.speed = num;
+    obj3.onAnimationFinish = function onAnimationFinish(isCancelled) {
+      if (c0 != null) {
         tmp(isCancelled);
       }
-      closure_2(true);
+      _undefined2(true);
     };
     const merged1 = Object.assign(merged);
-    obj3.children = jsx(isAnimationComplete(5618), { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp14Result = jsx(isAnimationComplete(5095).View, { style: tmp12, children: null });
-    const tmp16 = isAnimationComplete(5618);
+    obj2.children = jsx(LottieAnimationViewDefault, { style: tmp2.content, speed: null, onAnimationFinish: null });
+    let tmp20Result = jsx(_modDef1652.View, { style: tmp18, children: null });
   } else {
-    tmp14Result = null;
+    tmp20Result = null;
   }
-  return tmp14Result;
+  return tmp20Result;
 };

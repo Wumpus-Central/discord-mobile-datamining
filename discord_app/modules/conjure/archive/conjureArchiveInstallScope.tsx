@@ -1,6 +1,6 @@
-// === Module 12991: conjureArchiveInstallScope ===
+// === Module 13127: conjureArchiveInstallScope ===
 
-// Module 12991 (conjureArchiveInstallScope)
+// Module 13127 (conjureArchiveInstallScope)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _readConjureArchiveInstallScope(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -43,8 +43,8 @@ let closure_4 = async function _readConjureArchiveInstallScope(arg0) {
           const obj4 = {
             value: (function readBytes(arg0) {
                       closure_0 = arg0;
-                      return new Promise((response, arg1) => {
-                        closure_0 = response;
+                      return new Promise((arg0, arg1) => {
+                        closure_0 = arg0;
                         closure_1 = arg1;
                         const fileReader = new FileReader();
                         fileReader.onload = () => {

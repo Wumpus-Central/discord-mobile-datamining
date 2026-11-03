@@ -1,6 +1,6 @@
-// === Module 10668: WishlistBannerUtils ===
+// === Module 10798: WishlistBannerUtils ===
 
-// Module 10668 (WishlistBannerUtils)
+// Module 10798 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
@@ -73,7 +73,7 @@ export function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
   const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
   const displayItems = totalUnownedWishlistItemCount.displayItems;
   const recipientName = totalUnownedWishlistItemCount.recipientName;
-  const items = [totalUnownedWishlistItemCount, wishlistInDmLength, displayItems];
+  items = [totalUnownedWishlistItemCount, wishlistInDmLength, displayItems];
   const tmp = displayItems(() => {
     if (totalUnownedWishlistItemCount >= wishlistInDmLength) {
       let SHOP_ONLY = obj.FULL_WISHLIST;

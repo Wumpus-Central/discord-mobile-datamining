@@ -1,9 +1,9 @@
-// === Module 17691: CaptchaTestModal ===
+// === Module 17834: CaptchaTestModal ===
 
-// Module 17691 (CaptchaTestModal)
+// Module 17834 (CaptchaTestModal)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 17693 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 17836 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ function CaptchaTestScreen(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ function CaptchaTestScreen(arg0) {
     let obj2 = { style: tmp4.container, children: null };
     let obj3 = { style: tmp4.content, children: null };
     let obj4 = { children: null };
-    const items = [closure_7(value(first1[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Decider" }), ];
+    items = [closure_7(value(first1[10]).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: "Decider" }), ];
     const obj5 = {
       withSpacing: true,
       value,
@@ -115,7 +115,7 @@ function CaptchaTestScreen(arg0) {
     let tmp11Result = value === value(first1[8]).CaptchaDeciderType.HCAPTCHA_RQDATA;
     if (tmp11Result) {
       let obj = { children: null };
-      const items2 = [closure_7(tmp14(tmp15[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
+      const items2 = [closure_7(tmp14(tmp15[10]).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
       let obj6 = {
         withSpacing: true,
         value: first1,
@@ -161,7 +161,7 @@ function CaptchaTestScreen(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, separator: null, footerContainer: null, footerButton: null, content: null };
 let obj3 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: nativeDefault.space.PX_24 };
@@ -172,15 +172,15 @@ obj2.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(obj2);
-const prop = fn(17692).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(17835).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(17693).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(17693).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(17836).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(17836).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(17692).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(17835).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj9 = { headerStyle: null };
 let obj7 = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj9.headerStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -191,7 +191,7 @@ const result = size.fileFinishedImporting("modules/captcha/tooling/native/Captch
 export default function CaptchaTestModal() {
   const tmp = closure_15();
   _require = tmp;
-  const items = [tmp];
+  items = [tmp];
   const memo = noop.useMemo(() => {
     const obj = {};
     const obj2 = {

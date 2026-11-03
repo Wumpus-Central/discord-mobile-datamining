@@ -1,8 +1,8 @@
-// === Module 8450: GuildRoleSubscriptionSystemMessageConstants ===
+// === Module 8574: GuildRoleSubscriptionSystemMessageConstants ===
 
-// Module 8450 (GuildRoleSubscriptionSystemMessageConstants)
+// Module 8574 (GuildRoleSubscriptionSystemMessageConstants)
 import util from "util" /* 1113 */;
-import StickersTypes from "StickersTypes" /* 6561 */;
+import StickersTypes from "StickersTypes" /* 6681 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ id: "781323471249604648", format_type: StickersTypes.StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" }, , , , ];
@@ -18,14 +18,14 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/Guil
 
 export function getJoinButtonLabels() {
   const intl = util.intl;
-  const items = [intl.string(util.t.b6wEe6), ];
+  items = [intl.string(util.t.b6wEe6), ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.i8o9hX);
   return items;
 }
 export function getRenewButtonLabels() {
   const intl = util.intl;
-  const items = [intl.string(util.t.vqnToc), ];
+  items = [intl.string(util.t.vqnToc), ];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["9yh+dM"]);
   return items;

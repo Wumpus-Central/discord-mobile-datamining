@@ -1,19 +1,19 @@
-// === Module 17059: GameTrophySpotIllustration ===
+// === Module 17202: GameTrophySpotIllustration ===
 
-// Module 17059 (GameTrophySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef17060 from "module_17060" /* 17060 */;
-import _modDef17061 from "module_17061" /* 17061 */;
-import _modDef17062 from "module_17062" /* 17062 */;
+// Module 17202 (GameTrophySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef17203 from "module_17203" /* 17203 */;
+import _modDef17204 from "module_17204" /* 17204 */;
+import _modDef17205 from "module_17205" /* 17205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17060 }, 3: null };
-let obj2 = { uri: _modDef17060 };
-obj[2] = { uri: _modDef17061 };
-const obj3 = { uri: _modDef17061 };
-obj[3] = { uri: _modDef17062 };
+let obj = { 1: null, 2: { uri: _modDef17203 }, 3: null };
+let obj2 = { uri: _modDef17203 };
+obj[2] = { uri: _modDef17204 };
+const obj3 = { uri: _modDef17204 };
+obj[3] = { uri: _modDef17205 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameTrophySpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function GameTrophySpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

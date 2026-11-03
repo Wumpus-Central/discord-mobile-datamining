@@ -1,6 +1,6 @@
-// === Module 5251: SavedCustomThemeStore ===
+// === Module 5374: SavedCustomThemeStore ===
 
-// Module 5251 (SavedCustomThemeStore)
+// Module 5374 (SavedCustomThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;

@@ -1,29 +1,29 @@
-// === Module 9075: GuildSettingsStore ===
+// === Module 9203: GuildSettingsStore ===
 
-// Module 9075 (GuildSettingsStore)
+// Module 9203 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
-import PlainRecord from "PlainRecord" /* 4878 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9076 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9077 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9078 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9079 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9080 */;
-import GuildProfileStore from "GuildProfileStore" /* 9046 */;
-import InviteRecord from "InviteRecord" /* 8201 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
+import PlainRecord from "PlainRecord" /* 5005 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9204 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9205 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9206 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9207 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9208 */;
+import GuildProfileStore from "GuildProfileStore" /* 9174 */;
+import InviteRecord from "InviteRecord" /* 8325 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8503 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8627 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(type) {
@@ -73,7 +73,7 @@ function handleFormInit(type) {
     }
     if (null != section) {
       const obj3 = { key: "landing", name: constants.LANDING };
-      const items = [obj3];
+      items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {
         ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push({ key: null, name: null });
@@ -101,7 +101,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef2042(created_at);
+  obj.createdAt = _modDef2171(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -247,7 +247,7 @@ prototype["getGuildId"] = function getGuildId() {
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
   const Storage = Storage2.Storage;
-  return !Storage.get(__initData6);
+  return !Storage.get(closure_1_28);
 };
 prototype["getGuild"] = function getGuild() {
   return closure_7;
@@ -290,7 +290,7 @@ prototype["getSlug"] = function getSlug() {
   return c12;
 };
 prototype["getBans"] = function getBans() {
-  const items = [c55, closure_56];
+  items = [c55, closure_56];
   return items;
 };
 prototype["getProps"] = function getProps() {
@@ -475,7 +475,7 @@ obj2 = {
         }
       }
       const HTTP = HTTPUtils.HTTP;
-      const obj4 = { url: __initData4.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
+      const obj4 = { url: closure_1_25.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj4);
       value.then((body) => {
         DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body });
@@ -553,7 +553,7 @@ obj2 = {
     if (null != guild) {
       if (tmp === guild.id) {
         const _Set = Set;
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(guild.features, 0)] = constants3.PIN_PERMISSION_MIGRATION_COMPLETE;
         set = new Set(items);
         guild = set(guild, "features", set);
@@ -565,7 +565,7 @@ obj2 = {
     if (null != guild) {
       if (tmp === guild.id) {
         const _Set = Set;
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(guild.features, 0)] = constants3.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE;
         set = new Set(items);
         guild = set(guild, "features", set);
@@ -707,7 +707,7 @@ obj2 = {
                   tmp = "publicUpdatesChannelId" !== item;
                 }
                 if (!tmp) {
-                  tmp = obj2[item] !== __initData7;
+                  tmp = obj2[item] !== closure_2_29;
                 }
                 if (tmp) {
                   tmp = "features" !== item;
@@ -941,7 +941,7 @@ obj2 = {
     if (tmp2) {
       obj = {};
       const merged = Object.assign(obj);
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0)] = categoryId;
       obj.secondaryCategoryIds = items;
       obj2 = {};
@@ -958,7 +958,7 @@ obj2 = {
         const secondaryCategoryIds = obj.secondaryCategoryIds;
         const index = secondaryCategoryIds.indexOf(categoryId);
         if (-1 !== index) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0);
           items.splice(index, 1);
           obj = {};

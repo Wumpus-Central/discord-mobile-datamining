@@ -1,18 +1,18 @@
-// === Module 14607: BetaTag ===
+// === Module 14738: BetaTag ===
 
-// Module 14607 (BetaTag)
+// Module 14738 (BetaTag)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { SMALL: "small", MEDIUM: "medium" };
@@ -29,15 +29,15 @@ export default function BetaTag(gradient) {
     flag = false;
   }
   const tmp2 = closure_6();
-  let str = "text-xs/bold";
+  let str = "text-xs/semibold";
   if (obj4.SMALL !== size) {
     if (obj4.MEDIUM === size) {
-      str = "text-sm/bold";
+      str = "text-sm/semibold";
     }
   }
   if (flag) {
     const obj2 = { style: null, start: null, end: null, colors: null, children: null };
-    const items = [tmp2.container, style];
+    items = [tmp2.container, style];
     obj2.style = items;
     obj2.start = ConstantsIOS.HorizontalGradient.START;
     obj2.end = ConstantsIOS.HorizontalGradient.END;

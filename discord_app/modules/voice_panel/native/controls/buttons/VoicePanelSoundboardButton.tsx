@@ -1,14 +1,14 @@
-// === Module 19324: VoicePanelSoundboardButton ===
+// === Module 19482: VoicePanelSoundboardButton ===
 
-// Module 19324 (VoicePanelSoundboardButton)
+// Module 19482 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import SoundboardIcon from "SoundboardIcon" /* 14102 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19310 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19311 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 19325 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import SoundboardIcon from "SoundboardIcon" /* 14233 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19468 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19469 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 19483 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -16,7 +16,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -42,7 +42,7 @@ export default function SoundboardButton(arg0) {
     element.accessibilityLabel = intl.string(util.t["6EJvHt"]);
     element.accessibilityHint = disabledAccessibilityHint;
     const obj2 = { style: null };
-    const items = [tmp3.circle, ];
+    items = [tmp3.circle, ];
     const obj3 = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
     items[1] = obj3;
     obj2.style = items;

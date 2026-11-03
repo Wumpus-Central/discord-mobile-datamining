@@ -1,17 +1,17 @@
-// === Module 8817: UserProfileOverscrollBanner ===
+// === Module 8941: UserProfileOverscrollBanner ===
 
-// Module 8817 (UserProfileOverscrollBanner)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8818 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8819 */;
+// Module 8941 (UserProfileOverscrollBanner)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8942 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8943 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import module_1652 from "module_1652" /* 1652 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const VisualEffectViewThemed = ReanimatedRexport.createAnimatedComponent(VisualEffectViewThemedDefault);
+const VisualEffectViewThemed = module_1652.createAnimatedComponent(VisualEffectViewThemedDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
@@ -21,7 +21,7 @@ export default function UserProfileOverscrollBanner(arg0) {
   const obj = { style: bannerAnimatedStyle, children: null };
   const obj2 = { style: bannerImageAnimatedStyle, children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(UserProfileBannerDefault, {}), ];
+  items = [React4(UserProfileBannerDefault, {}), ];
   const obj3 = {};
   let tmp2Result = PlatformUtils.isIOS() && showBlur;
   if (tmp2Result) {
@@ -30,6 +30,6 @@ export default function UserProfileOverscrollBanner(arg0) {
   }
   items[1] = tmp2Result;
   obj2.children = items;
-  obj.children = hasOwnProperty(ReanimatedRexport.View, obj2);
-  return React4(ReanimatedRexport.View, obj);
+  obj.children = hasOwnProperty(module_1652.View, obj2);
+  return React4(module_1652.View, obj);
 };

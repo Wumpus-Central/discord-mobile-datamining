@@ -1,6 +1,6 @@
-// === Module 11092: uploadRtcLogFiles ===
+// === Module 11229: uploadRtcLogFiles ===
 
-// Module 11092 (uploadRtcLogFiles)
+// Module 11229 (uploadRtcLogFiles)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -36,7 +36,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
           closure_131_0 = closure_0;
           closure_131_1 = undefined;
           closure_131_2 = undefined;
-          let items = ["discord-webrtc_0", "discord-webrtc_1", "discord-last-webrtc_0", "discord-last-webrtc_1"];
+          items = ["discord-webrtc_0", "discord-webrtc_1", "discord-last-webrtc_0", "discord-last-webrtc_1"];
           dependencyMap = items[Symbol.iterator]();
         }
       } else if (1 === tmp4) {
@@ -112,7 +112,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       }
       if (dependencyMap === undefined) {
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else {
         closure_131_1 = tmp57;
         closure_131_2 = "";

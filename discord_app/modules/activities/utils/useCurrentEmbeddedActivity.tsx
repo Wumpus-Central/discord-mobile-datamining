@@ -1,14 +1,14 @@
-// === Module 11789: useCurrentEmbeddedActivity ===
+// === Module 11926: useCurrentEmbeddedActivity ===
 
-// Module 11789 (useCurrentEmbeddedActivity)
+// Module 11926 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
 
 export default function useCurrentEmbeddedActivity() {
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
 };

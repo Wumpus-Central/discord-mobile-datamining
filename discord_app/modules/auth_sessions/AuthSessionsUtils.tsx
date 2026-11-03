@@ -1,18 +1,18 @@
-// === Module 16685: AuthSessionsUtils ===
+// === Module 16828: AuthSessionsUtils ===
 
-// Module 16685 (AuthSessionsUtils)
+// Module 16828 (AuthSessionsUtils)
 import util from "util" /* 1113 */;
-import _modDef2042 from "module_2042" /* 2042 */;
+import _modDef2171 from "module_2171" /* 2171 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AuthSessionsStore from "AuthSessionsStore" /* 16686 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 16829 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export function useAuthSessions() {
-  const items = [AuthSessionsStore];
+  items = [AuthSessionsStore];
   stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
   return noop.useMemo(() => {
@@ -40,8 +40,8 @@ export function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef2042(arg0).fromNow();
-    const obj = _modDef2042(arg0);
+    stringResult = _modDef2171(arg0).fromNow();
+    const obj = _modDef2171(arg0);
   }
   return stringResult;
 }

@@ -1,20 +1,20 @@
-// === Module 11070: MuteSettingsActionSheet ===
+// === Module 11207: MuteSettingsActionSheet ===
 
-// Module 11070 (MuteSettingsActionSheet)
+// Module 11207 (MuteSettingsActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 11071 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 11208 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const UserNotificationSettings = fn(1072).UserNotificationSettings;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx");
 
@@ -24,9 +24,9 @@ export default function MuteSettings(guildId) {
   const onOptionPress = guildId.onOptionPress;
   let channel;
   GuildStore = undefined;
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   channel = channel.getChannel(channelId);
-  const items = [channelId];
+  items = [channelId];
   const memo = guild.useMemo(() => MuteSettingsUtils.getMuteSettings(channelId), items);
   const items1 = [channelId, guildId, onOptionPress];
   ({ muteConfig, muted } = memo);

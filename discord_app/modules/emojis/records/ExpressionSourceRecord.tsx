@@ -1,12 +1,12 @@
-// === Module 6958: ExpressionSourceRecord ===
+// === Module 7084: ExpressionSourceRecord ===
 
-// Module 6958 (ExpressionSourceRecord)
+// Module 7084 (ExpressionSourceRecord)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
-import SetUtils from "SetUtils" /* 4880 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
+import SetUtils from "SetUtils" /* 5007 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Record from "Record" /* 1398 */;
+import Record from "Record" /* 1400 */;
 
 require = fn;
 function getEmojiSourceData() {
@@ -94,7 +94,7 @@ prototype["getIconSource"] = function getIconSource(size) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1409).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1411).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;
@@ -110,7 +110,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
     closure_0 = tmp2;
     await closure_1_7(closure_0);
     closure_128_0 = value;
-    let guild = null;
+    guild = null;
     if (null != closure_128_0) {
       let type;
       if (closure_128_0 != null) {

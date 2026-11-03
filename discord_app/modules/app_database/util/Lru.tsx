@@ -1,6 +1,6 @@
-// === Module 7660: Lru ===
+// === Module 7784: Lru ===
 
-// Module 7660 (Lru)
+// Module 7784 (Lru)
 import size from "module_2" /* 2 */;
 
 class Lru {
@@ -26,41 +26,41 @@ Object.defineProperty(prototype, "capacity", {
   set: undefined
 });
 prototype[Symbol.iterator] = function() {
-  const items = this.items;
+  items = this.items;
   return items.entries();
 };
 prototype["entries"] = function entries() {
-  const items = this.items;
+  items = this.items;
   return items.entries();
 };
 prototype["keys"] = function keys() {
-  const items = this.items;
+  items = this.items;
   return items.keys();
 };
 prototype["values"] = function values() {
-  const items = this.items;
+  items = this.items;
   return items.values();
 };
 prototype["ordered"] = function ordered() {
-  const items = this.items;
+  items = this.items;
   const items1 = [...items.values()];
   return items1.reverse();
 };
 prototype["clear"] = function clear() {
-  const items = this.items;
+  items = this.items;
   items.clear();
 };
 prototype["has"] = function has(arg0) {
-  const items = this.items;
+  items = this.items;
   return items.has(arg0);
 };
 prototype["get"] = function get(arg0) {
-  const items = this.items;
+  items = this.items;
   return items.get(arg0);
 };
 prototype["put"] = function put(arg0, arg1) {
   const self = this;
-  const items = this.items;
+  items = this.items;
   items.delete(arg0);
   const items2 = this.items;
   const result = items2.set(arg0, arg1);
@@ -74,7 +74,7 @@ prototype["put"] = function put(arg0, arg1) {
   }
 };
 prototype["putOldest"] = function putOldest(arg0, arg1) {
-  const items = this.items;
+  items = this.items;
   items.delete(arg0);
   const items1 = [arg0, arg1];
   const items2 = [items1, ...this.items];
@@ -82,7 +82,7 @@ prototype["putOldest"] = function putOldest(arg0, arg1) {
 };
 prototype["newest"] = function newest() {
   let tmp;
-  const items = this.items;
+  items = this.items;
   const entries = items.entries();
   for (const item10009 of entries) {
     tmp = item10009;
@@ -91,11 +91,11 @@ prototype["newest"] = function newest() {
   return tmp;
 };
 prototype["delete"] = function delete(arg0) {
-  const items = this.items;
+  items = this.items;
   return items.delete(arg0);
 };
 prototype["oldestKey"] = function oldestKey() {
-  const items = this.items;
+  items = this.items;
   return items.keys().next().value;
 };
 let result = size.fileFinishedImporting("modules/app_database/util/Lru.tsx");

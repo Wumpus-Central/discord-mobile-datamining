@@ -1,13 +1,13 @@
-// === Module 18921: guild_automod/PermissionUtils ===
+// === Module 19079: guild_automod/PermissionUtils ===
 
-// Module 18921 (guild_automod/PermissionUtils)
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 19079 (guild_automod/PermissionUtils)
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(13292).AutomodTriggerType;
+const AutomodTriggerType = fn(13428).AutomodTriggerType;
 const Constants = fn(1072);
 ({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/PermissionUtils
 export function canCurrentUserManageMessageFilters(guild_id) {
   let tmp = null != guild_id;
   if (tmp) {
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     let canResult = null != guild;
     if (canResult) {
       canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -26,7 +26,7 @@ export function canCurrentUserManageMessageFilters(guild_id) {
   return tmp;
 }
 export function canCurrentUserManageAutomod(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -35,12 +35,12 @@ export function canCurrentUserManageAutomod(arg0) {
 }
 export function useCanCurrentUserManageAutomod(arg0) {
   _require = arg0;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     if (GuildStore !== undefined) {
       if (PermissionStore !== undefined) {
-        const guild = GuildStore.getGuild(tmp);
+        guild = GuildStore.getGuild(tmp);
         let canResult = null != guild;
         if (canResult) {
           canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -55,7 +55,7 @@ export function hasMentionRaidLimitAccess(guildId) {
   if (arg1 === undefined) {
     obj = GuildStore;
   }
-  const guild = obj.getGuild(guildId);
+  guild = obj.getGuild(guildId);
   let flag;
   if (guild != null) {
     const features = guild.features;
@@ -68,11 +68,11 @@ export function hasMentionRaidLimitAccess(guildId) {
 }
 export function useHasMentionRaidLimitAccess(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
     if (GuildStore !== undefined) {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let flag;
       if (guild != null) {
         const features = guild.features;
@@ -88,13 +88,13 @@ export function useHasMentionRaidLimitAccess(guildId) {
 export function useIsUndeletableMentionSpamRule(guildId, triggerType) {
   _require = guildId;
   dependencyMap = triggerType;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId, triggerType];
   return require("initialize").useStateFromStores(items, () => {
     if (closure_1 !== AutomodTriggerType.MENTION_SPAM) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let hasItem = null != guild;
       if (hasItem) {
         const features = guild.features;
@@ -106,10 +106,10 @@ export function useIsUndeletableMentionSpamRule(guildId, triggerType) {
 }
 export function useIsUserProfileRuleEnabled(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;

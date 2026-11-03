@@ -1,17 +1,17 @@
-// === Module 6929: AppWindowContext ===
+// === Module 7049: AppWindowContext ===
 
-// Module 6929 (AppWindowContext)
-import WindowIdUtils2 from "WindowIdUtils" /* 6868 */;
-import WindowInteractingUtils from "WindowInteractingUtils" /* 6930 */;
+// Module 7049 (AppWindowContext)
+import WindowIdUtils2 from "WindowIdUtils" /* 6988 */;
+import WindowInteractingUtils from "WindowInteractingUtils" /* 7050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WindowStore from "WindowStore" /* 6867 */;
+import WindowStore from "WindowStore" /* 6987 */;
 
 require = fn;
 let jsx = fn(21).jsx;
 let componentDispatcher = new fn(1108).ComponentDispatcher();
 let obj = { appContext: fn(1072).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
-const WindowIdUtils = fn(6868);
+const WindowIdUtils = fn(6988);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();
@@ -113,7 +113,7 @@ export function AppWindowContextProvider(children) {
     const componentDispatcher = new appContext(renderWindow[5]).ComponentDispatcher();
     return componentDispatcher;
   }, []);
-  const items = [appContext, renderWindow, memo, windowId];
+  items = [appContext, renderWindow, memo, windowId];
   value = noop.useMemo(() => ({ appContext, renderWindow, windowDispatch: memo, windowId }), items);
   jsx = value;
   const items1 = [renderWindow, windowId];

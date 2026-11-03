@@ -1,13 +1,13 @@
-// === Module 10891: conjureAppInServer ===
+// === Module 11021: conjureAppInServer ===
 
-// Module 10891 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7419 */;
+// Module 11021 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 function conjureProductionBotUserId(project) {
@@ -46,7 +46,7 @@ function conjurePreviewBotUserId(project) {
 let closure_12 = async function _fetchConjureAppInGuild() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
-  const items = [conjureProductionBotUserId(closure_0), conjurePreviewBotUserId(closure_0)];
+  items = [conjureProductionBotUserId(closure_0), conjurePreviewBotUserId(closure_0)];
   await Promise.all(items.map((() => {
     closure_0 = closure_1_2(function*(arg0) {
       if (c5 === 2) {
@@ -59,7 +59,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
   }
   return hasItem;
 };
-let closure_6 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_6 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -200,13 +200,13 @@ export function findConjureAppChannels(id, application_id) {
   return mapped.filter((item) => ConjureUtils.conjureChannelAppId(item) === application_id);
 }
 export function readConjureAppServerPresence(install_scope) {
-  if ("user" !== install_scope.install_scope) {
+  if ("guild" === install_scope.install_scope) {
     if (null != install_scope.guild_id) {
       if (null == GuildStore.getGuild(install_scope.guild_id)) {
         return null;
       } else {
         const guild_id = install_scope.guild_id;
-        let application_id = guild_id;
+        application_id = guild_id;
         let tmp6 = null;
         if (null != guild_id) {
           const application = ApplicationStore.getApplication(install_scope.application_id);
@@ -248,7 +248,7 @@ export function readConjureAppServerPresence(install_scope) {
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6845);
+              obj2 = application_id(6965);
             }
             str2 = tmp7;
           }

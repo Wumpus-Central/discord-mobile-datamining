@@ -1,10 +1,10 @@
-// === Module 11264: useSafetyAlertsSettingOrDefault ===
+// === Module 11401: useSafetyAlertsSettingOrDefault ===
 
-// Module 11264 (useSafetyAlertsSettingOrDefault)
+// Module 11401 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 8368 */;
+import useUserIsTeen from "useUserIsTeen" /* 8492 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conver
 
 export function useSafetyAlertsSettingOrDefault() {
   const currentUser = UserStore.getCurrentUser();
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;

@@ -1,15 +1,15 @@
-// === Module 14154: useMaybeGetSortedBoosts ===
+// === Module 14285: useMaybeGetSortedBoosts ===
 
-// Module 14154 (useMaybeGetSortedBoosts)
+// Module 14285 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8465 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14136 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6760 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14267 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6880 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMay
 export default function useMaybeGetSortedBoosts(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   const items1 = [arg0];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     let appliedGuildBoostsForGuild = AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(closure_0);
@@ -69,7 +69,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const obj2 = require("initialize");
   const items6 = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items6, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let prop;
     if (guild != null) {
       prop = guild.premiumSubscriberCount;
@@ -94,7 +94,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
 export function useGetBoostUserConfig(boost) {
   _require = boost;
   const date = new Date(SnowflakeUtilsDefault.extractTimestamp(boost.id));
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [boost];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const member = GuildMemberStore.getMember(boost.guildId, boost.userId);

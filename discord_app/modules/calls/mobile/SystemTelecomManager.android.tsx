@@ -1,7 +1,7 @@
-// === Module 16273: SystemTelecomManager ===
+// === Module 16416: SystemTelecomManager ===
 
-// Module 16273 (SystemTelecomManager)
-import LifecycleManager from "LifecycleManager" /* 1996 */;
+// Module 16416 (SystemTelecomManager)
+import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 class SystemTelecomLifecycleManager extends tmp2 {
 }

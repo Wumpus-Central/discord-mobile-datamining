@@ -1,6 +1,6 @@
-// === Module 11440: ? ===
+// === Module 11578: ? ===
 
-// Module 11440
+// Module 11578
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_ruby_badge_large.png.js");

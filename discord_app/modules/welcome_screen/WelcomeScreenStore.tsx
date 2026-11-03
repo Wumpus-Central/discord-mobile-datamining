@@ -1,11 +1,11 @@
-// === Module 14231: WelcomeScreenStore ===
+// === Module 14362: WelcomeScreenStore ===
 
-// Module 14231 (WelcomeScreenStore)
+// Module 14362 (WelcomeScreenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleInviteData(invite) {
-  const guild = invite.invite.guild;
+  guild = invite.invite.guild;
   let welcome_screen;
   if (guild != null) {
     welcome_screen = guild.welcome_screen;

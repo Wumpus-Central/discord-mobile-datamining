@@ -1,7 +1,7 @@
-// === Module 16429: PlainTextExperiment ===
+// === Module 16573: PlainTextExperiment ===
 
-// Module 16429 (PlainTextExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 16573 (PlainTextExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: null };

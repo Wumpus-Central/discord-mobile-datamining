@@ -1,8 +1,8 @@
-// === Module 17119: MobileMuxWrapper ===
+// === Module 17262: MobileMuxWrapper ===
 
-// Module 17119 (MobileMuxWrapper)
+// Module 17262 (MobileMuxWrapper)
 import logger_Logger from "logger/Logger" /* 4 */;
-import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 17120 */;
+import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 17263 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("MobileMuxWrapper");
@@ -161,9 +161,9 @@ prototype["onProgress"] = function onProgress(arg0) {
     muxIntegration.emitTimeUpdate();
   }
 };
-prototype["onBuffer"] = function onBuffer(flag2) {
+prototype["onBuffer"] = function onBuffer(c2) {
   const self = this;
-  if (flag2) {
+  if (c2) {
     const seeking = self.seeking;
     let tmp6 = !seeking;
     if (!seeking) {

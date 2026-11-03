@@ -1,17 +1,17 @@
-// === Module 17731: ShopSkipCategoriesFilter ===
+// === Module 17874: ShopSkipCategoriesFilter ===
 
-// Module 17731 (ShopSkipCategoriesFilter)
+// Module 17874 (ShopSkipCategoriesFilter)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, label: null, stepperContainer: null, stepperButton: null, stepperButtonDisabled: null, valueText: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.label = { marginBottom: nativeDefault.space.PX_8 };
@@ -27,10 +27,10 @@ const result = size.fileFinishedImporting("modules/collectibles/native/tooling/S
 
 export function ShopSkipCategoriesFilter() {
   const tmp = closure_7();
-  const items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => skipNumCategories.skipNumCategories);
   const obj2 = { style: tmp.container, children: null };
-  const items1 = [closure_5(stateFromStores(5624).Text, { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" }), ];
+  const items1 = [closure_5(stateFromStores(5747).Text, { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" }), ];
   const obj4 = { style: tmp.stepperContainer, children: null };
   const items2 = [tmp.stepperButton, ];
   let stepperButtonDisabled = tmp5;
@@ -49,9 +49,9 @@ export function ShopSkipCategoriesFilter() {
         }
       },
       disabled: stateFromStores <= 0,
-      children: closure_5(stateFromStores(5624).Text, { variant: "text-lg/semibold", children: "\u2212" })
+      children: closure_5(stateFromStores(5747).Text, { variant: "text-lg/semibold", children: "\u2212" })
     }),
-    closure_5(stateFromStores(5624).Text, { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores }),
+    closure_5(stateFromStores(5747).Text, { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores }),
 
   ];
   const items4 = [tmp.stepperButton, ];
@@ -68,7 +68,7 @@ export function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores <= 0,
-    children: closure_5(stateFromStores(5624).Text, { variant: "text-lg/semibold", children: "\u2212" })
+    children: closure_5(stateFromStores(5747).Text, { variant: "text-lg/semibold", children: "\u2212" })
   };
   const obj6 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
   items4[1] = stepperButtonDisabled2;
@@ -80,11 +80,11 @@ export function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores >= 100,
-    children: closure_5(stateFromStores(5624).Text, { variant: "text-lg/semibold", children: "+" })
+    children: closure_5(stateFromStores(5747).Text, { variant: "text-lg/semibold", children: "+" })
   });
   obj4.children = items3;
   items1[1] = closure_6(closure_2, obj4);
   obj7.children = items1;
-  obj2.children = closure_6(stateFromStores(6027).Stack, obj7);
+  obj2.children = closure_6(stateFromStores(6147).Stack, obj7);
   return closure_5(closure_2, obj2);
 }

@@ -1,8 +1,8 @@
-// === Module 18031: AgeGateUnderage ===
+// === Module 18175: AgeGateUnderage ===
 
-// Module 18031 (AgeGateUnderage)
+// Module 18175 (AgeGateUnderage)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -39,7 +39,7 @@ export default function AgeGateUnderage(onClose) {
   const tmp3 = existingUser(flag2[6])();
   const tmp4 = closure_9(tmp3);
   const navigation = onClose(flag2[7]).useNavigation();
-  const items = [onClose, existingUser, navigation, flag2];
+  items = [onClose, existingUser, navigation, flag2];
   const layoutEffect = navigation.useLayoutEffect(() => {
     if (existingUser) {
       let fn = () => null;

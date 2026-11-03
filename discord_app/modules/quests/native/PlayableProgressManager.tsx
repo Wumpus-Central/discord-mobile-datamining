@@ -1,9 +1,9 @@
-// === Module 20111: PlayableProgressManager ===
+// === Module 20261: PlayableProgressManager ===
 
-// Module 20111 (PlayableProgressManager)
+// Module 20261 (PlayableProgressManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlayableStore from "PlayableStore" /* 20112 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import PlayableStore from "PlayableStore" /* 20262 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 let closure_1 = new LoggerDefault("PlayableProgressManager");
 const prototype = function PlayableProgressManager() {
@@ -40,7 +40,7 @@ const prototype = function PlayableProgressManager() {
     }
     const obj3 = { playableId: playingPlayableId, isRunning: tmp2, hasTimeout: null != playingPlayableId.timeout };
   };
-  const items = [PlayableStore, applyArgumentsResult.handlePlayableStoreChange];
+  items = [PlayableStore, applyArgumentsResult.handlePlayableStoreChange];
   const items1 = [items];
   applyArgumentsResult.stores = new Map(items1);
   applyArgumentsResult.actions = {};

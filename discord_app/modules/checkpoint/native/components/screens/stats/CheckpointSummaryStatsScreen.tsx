@@ -1,28 +1,28 @@
-// === Module 13686: CheckpointSummaryStatsScreen ===
+// === Module 13816: CheckpointSummaryStatsScreen ===
 
-// Module 13686 (CheckpointSummaryStatsScreen)
+// Module 13816 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import _modDef3060 from "module_3060" /* 3060 */;
-import _modDef3092 from "module_3092" /* 3092 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6091 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6437 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8143 */;
-import CheckpointScreen from "CheckpointScreen" /* 13637 */;
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13642 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13687 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import _modDef3187 from "module_3187" /* 3187 */;
+import _modDef3219 from "module_3219" /* 3219 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6211 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8267 */;
+import CheckpointScreen from "CheckpointScreen" /* 13777 */;
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -32,7 +32,7 @@ require = fn;
 function NumberStat(arg0) {
   ({ label, value, color } = arg0);
   const tmp = closure_12();
-  const items = [color];
+  items = [color];
   const obj = { style: tmp.stat, accessible: true, accessibilityLabel: null, children: null };
   const memo = noop.useMemo(() => ({ color }), items);
   obj.accessibilityLabel = "" + label + ", " + value.toLocaleString(util.intl.currentLocale);
@@ -43,13 +43,13 @@ function NumberStat(arg0) {
 function ItemStat(children) {
   ({ label, name, color } = children);
   const tmp = closure_12();
-  const items = [color];
+  items = [color];
   const memo = noop.useMemo(() => ({ color }), items);
   const obj = { style: tmp.stat, accessible: true, accessibilityLabel: "" + label + ", " + name, children: null };
   const items1 = [React6(CheckpointTextDefault, { variant: "text-md/medium", style: memo, children: label }), ];
   const obj2 = { style: tmp.item, children: null };
   const items2 = [React6(View, { style: tmp.itemIcon, children: children.icon }), ];
-  const obj4 = { variant: "text-md/bold", style: null, children: name };
+  const obj4 = { variant: "text-md/semibold", style: null, children: name };
   const items3 = [tmp.itemName, memo];
   obj4.style = items3;
   items2[1] = React6(CheckpointTextDefault, obj4);
@@ -62,8 +62,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6066).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const sum = fn(6186).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, guildAcronym: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };
@@ -78,13 +78,13 @@ obj2.itemIcon = size;
 let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.guildAcronym = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1376);
+let PlatformUtils = fn(1357);
 let num = 24;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj8 = { fontSize: num, lineHeight: null, textAlign: "center" };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1357);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 
 export default function CheckpointSummaryStatsScreen() {
   const tmp = closure_12();
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ character: CheckpointStore.character, stats: CheckpointStore.stats }));
   ({ character, stats } = stateFromStoresObject);
   let voice;
@@ -201,7 +201,7 @@ export default function CheckpointSummaryStatsScreen() {
   const obj12 = { style: tmp.row, children: null };
   const obj13 = { label: null, value: null, color: null };
   const intl = util.intl;
-  obj13.label = intl.string(_modDef3092.MSrV9z);
+  obj13.label = intl.string(_modDef3219.MSrV9z);
   let num;
   if (voice != null) {
     num = voice.totalVoiceMinutes;
@@ -214,7 +214,7 @@ export default function CheckpointSummaryStatsScreen() {
   const items4 = [closure_8(NumberStat, obj13), ];
   const obj14 = { label: null, value: null, color: null };
   const intl2 = util.intl;
-  obj14.label = intl2.string(_modDef3092.hhh11L);
+  obj14.label = intl2.string(_modDef3219.hhh11L);
   let num2;
   if (messages != null) {
     num2 = messages.numMessagesSent;
@@ -230,7 +230,7 @@ export default function CheckpointSummaryStatsScreen() {
   const obj15 = { style: tmp.row, children: null };
   const obj16 = { label: null, value: null, color: null };
   const intl3 = util.intl;
-  obj16.label = intl3.string(_modDef3092["f5S+pt"]);
+  obj16.label = intl3.string(_modDef3219["f5S+pt"]);
   let num3;
   if (first != null) {
     num3 = first.numDaysInteracted;
@@ -243,12 +243,12 @@ export default function CheckpointSummaryStatsScreen() {
   const items6 = [closure_8(NumberStat, obj16), ];
   const obj17 = { label: null, name: null, color: null, icon: null };
   const intl4 = util.intl;
-  obj17.label = intl4.string(_modDef3060["8XPMJj"]);
+  obj17.label = intl4.string(_modDef3187["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl5 = util.intl;
-    name = intl5.string(_modDef3092.GultYJ);
+    name = intl5.string(_modDef3219.GultYJ);
   }
   obj17.name = name;
   obj17.color = primaryBackgroundColor;
@@ -259,7 +259,7 @@ export default function CheckpointSummaryStatsScreen() {
   const obj18 = { style: tmp.row, children: null };
   const obj19 = { label: null, value: null, color: null };
   const intl6 = util.intl;
-  obj19.label = intl6.string(_modDef3092.xVSlv3);
+  obj19.label = intl6.string(_modDef3219.xVSlv3);
   let num4;
   if (emojis != null) {
     num4 = emojis.numEmojisSent;
@@ -272,7 +272,7 @@ export default function CheckpointSummaryStatsScreen() {
   const items7 = [closure_8(NumberStat, obj19), ];
   const obj20 = { label: null, name: null, color: null, icon: null };
   const intl7 = util.intl;
-  obj20.label = intl7.string(_modDef3060["3sARW7"]);
+  obj20.label = intl7.string(_modDef3187["3sARW7"]);
   if (null == first1) {
     const intl8 = util.intl;
     let stringResult = intl8.string(util.t.PoWNfe);
@@ -303,7 +303,7 @@ export default function CheckpointSummaryStatsScreen() {
   const obj22 = { style: tmp.row, children: null };
   const obj24 = { label: null, value: null, color: null };
   const intl9 = util.intl;
-  obj24.label = intl9.string(_modDef3092.y2Y1DD);
+  obj24.label = intl9.string(_modDef3219.y2Y1DD);
   let num5;
   if (games != null) {
     num5 = games.totalDaysPlayed;
@@ -316,7 +316,7 @@ export default function CheckpointSummaryStatsScreen() {
   const items8 = [closure_8(NumberStat, obj24), ];
   const obj25 = { label: null, name: null, color: null, icon: null };
   const intl10 = util.intl;
-  obj25.label = intl10.string(_modDef3060.RbT4Zq);
+  obj25.label = intl10.string(_modDef3187.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {

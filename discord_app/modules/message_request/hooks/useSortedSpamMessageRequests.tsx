@@ -1,17 +1,17 @@
-// === Module 18981: useSortedSpamMessageRequests ===
+// === Module 19139: useSortedSpamMessageRequests ===
 
-// Module 18981 (useSortedSpamMessageRequests)
+// Module 19139 (useSortedSpamMessageRequests)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedSpamMessageRequests.tsx");
 
 export default function useSortedSpamMessageRequests() {
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStores(items, () => ChannelStore.getPrivateChannelsVersion());
   let obj = stateFromStoresArray(stateFromStoresObject[4]);
   const items1 = [ChannelStore, SpamMessageRequestStore];

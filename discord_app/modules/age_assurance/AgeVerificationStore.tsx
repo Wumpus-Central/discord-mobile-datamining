@@ -1,10 +1,10 @@
-// === Module 6727: AgeVerificationStore ===
+// === Module 6847: AgeVerificationStore ===
 
-// Module 6727 (AgeVerificationStore)
+// Module 6847 (AgeVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function invalidateAgeVerificationMethodsV2() {

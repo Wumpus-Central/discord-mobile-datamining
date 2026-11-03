@@ -1,9 +1,9 @@
-// === Module 17621: MobileGameCommunitiesStore ===
+// === Module 17764: MobileGameCommunitiesStore ===
 
-// Module 17621 (MobileGameCommunitiesStore)
+// Module 17764 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7521 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7645 */;
 
 require = fn;
 let guildGameIds = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
@@ -44,11 +44,11 @@ prototype["getState"] = function getState() {
   obj.guilds = guilds.map((features) => {
     const obj = {};
     const merged = Object.assign(features);
-    const items = [...features.features];
+    items = [...features.features];
     obj.features = items;
     return obj;
   });
-  let items = [...obj.lastFetchedGameIds];
+  items = [...obj.lastFetchedGameIds];
   obj.lastFetchedGameIds = items;
   return obj;
 };
@@ -123,7 +123,7 @@ const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefa
   MOBILE_GAME_COMMUNITIES_DISMISS_GUILD: function handleDismissGuildAction(guildId) {
     const obj = {};
     const merged = Object.assign(obj);
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(obj.dismissedGuildIds, 0)] = guildId.guildId;
     obj.dismissedGuildIds = new Set(items);
   },

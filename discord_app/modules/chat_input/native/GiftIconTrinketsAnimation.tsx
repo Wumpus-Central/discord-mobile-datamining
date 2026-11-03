@@ -1,20 +1,20 @@
-// === Module 13809: GiftIconTrinketsAnimation ===
+// === Module 13940: GiftIconTrinketsAnimation ===
 
-// Module 13809 (GiftIconTrinketsAnimation)
+// Module 13940 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import useToken from "useToken" /* 5596 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import useToken from "useToken" /* 5719 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
-const PlatformUtils = APNGPlayer(1375);
-const APNGPlayer2 = APNGPlayer(9504);
+const PlatformUtils = APNGPlayer(1377);
+const APNGPlayer2 = APNGPlayer(9632);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width) => ({ containerRefresh: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTrinketsAnimation.tsx");
@@ -23,7 +23,7 @@ export const GiftIconTrinketsAnimation = noop.memo(function GiftIconTrinketsAnim
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
   const tmp2 = closure_6(useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const trinketsRefresh = tmp2.trinketsRefresh;
   if (obj4.isNullOrEmpty(trinketsAnimationUrl)) {

@@ -1,10 +1,10 @@
-// === Module 7331: useAuthorizedAppsToken ===
+// === Module 7451: useAuthorizedAppsToken ===
 
-// Module 7331 (useAuthorizedAppsToken)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7332 */;
+// Module 7451 (useAuthorizedAppsToken)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7452 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
 
 require = fn;
 function useAuthorizedAppsTokens(noop, arg1) {
@@ -15,7 +15,7 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }
   const disableFetch = obj.disableFetch;
   closure_1 = tmp;
-  const items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   const items1 = [noop];
   const tokens = require("initialize").useStateFromStoresArray(items, () => {
     let found;
@@ -66,18 +66,18 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items6);
   return { tokens, fetched };
 }
-const FetchState = fn(7276).FetchState;
+const FetchState = fn(7396).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export { useAuthorizedAppsTokens };
 export function useAuthorizedAppsToken(parentId, arg1) {
   closure_0 = parentId;
-  let items = [parentId];
+  items = [parentId];
   const fetched = useAuthorizedAppsTokens(noop.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [tmp];
+      items = [tmp];
       tmp2 = items;
     }
     return tmp2;

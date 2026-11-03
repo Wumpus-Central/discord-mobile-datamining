@@ -1,11 +1,11 @@
-// === Module 5595: ActionSheetHeaderBar ===
+// === Module 5718: ActionSheetHeaderBar ===
 
-// Module 5595 (ActionSheetHeaderBar)
+// Module 5718 (ActionSheetHeaderBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
-import useToken from "useToken" /* 5596 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
+import useToken from "useToken" /* 5719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, TouchableWithoutFeedback: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };
@@ -58,7 +58,7 @@ export function ActionSheetHeaderBar(accessibilityLabel) {
   const tmp3 = closure_10(variant, useWindowDimensionsDefault().height, useToken.useToken(nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
   const obj3 = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   const obj4 = { style: null, children: null };
-  const items = [tmp3.header, style];
+  items = [tmp3.header, style];
   obj4.style = items;
   const obj5 = { style: null };
   const items1 = [tmp3.indicator, tabStyle];

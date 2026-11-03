@@ -1,10 +1,10 @@
-// === Module 20148: libDiscoreSmokeTest ===
+// === Module 20327: libDiscoreSmokeTest ===
 
-// Module 20148 (libDiscoreSmokeTest)
+// Module 20327 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import initLibdiscore from "initLibdiscore" /* 1365 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 4889 */;
+import initLibdiscore from "initLibdiscore" /* 1367 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5016 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -91,7 +91,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
   }
 };
 function trackLibdiscoreSuccess() {
-  const items = [];
+  items = [];
   const prop = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((getEnabledFeatureName) => {
     const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();

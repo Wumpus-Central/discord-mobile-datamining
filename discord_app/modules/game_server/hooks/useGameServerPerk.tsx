@@ -1,17 +1,17 @@
-// === Module 14150: useGameServerPerk ===
+// === Module 14281: useGameServerPerk ===
 
-// Module 14150 (useGameServerPerk)
+// Module 14281 (useGameServerPerk)
 import util from "util" /* 1113 */;
-import _modDef2996 from "module_2996" /* 2996 */;
-import _modDef14152 from "module_14152" /* 14152 */;
+import _modDef3123 from "module_3123" /* 3123 */;
+import _modDef14283 from "module_14283" /* 14283 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8469 */;
+import GameServerStore from "GameServerStore" /* 8593 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(5231).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5230).GuildPowerupType;
+let closure_5 = fn(5354).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5353).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
@@ -19,7 +19,7 @@ export default function useGameServerPerk(guildId) {
   _require = guildId;
   const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useGameServerPerk");
   let obj = require("GameServerExperiment");
-  const items = [gameName2];
+  items = [gameName2];
   stateFromStores = require("initialize").useStateFromStores(items, () => GameServerStore.getLowestGameCostForGuild(closure_0));
   const tmp3 = gameServerEnabled(stateFromStores[6])();
   const gameName = tmp3.gameName;
@@ -32,15 +32,15 @@ export default function useGameServerPerk(guildId) {
       if (null != stateFromStores) {
         const obj = { skuId, title: null, description: null, cost: null, dependencies: null, type: null, animatedImageUrl: null, staticImageUrl: null };
         const intl = util.intl;
-        obj.title = intl.string(_modDef2996["B3OfL/"]);
+        obj.title = intl.string(_modDef3123["B3OfL/"]);
         const intl2 = util.intl;
         const obj2 = { gameName, gameName2 };
-        obj.description = intl2.format(_modDef2996["+UqyGU"], obj2);
+        obj.description = intl2.format(_modDef3123["+UqyGU"], obj2);
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef14152;
-        obj.staticImageUrl = _modDef14152;
+        obj.animatedImageUrl = _modDef14283;
+        obj.staticImageUrl = _modDef14283;
         tmp = obj;
       }
     }

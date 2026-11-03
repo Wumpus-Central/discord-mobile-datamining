@@ -1,15 +1,15 @@
-// === Module 18052: MainTabs ===
+// === Module 18196: MainTabs ===
 
-// Module 18052 (MainTabs)
+// Module 18196 (MainTabs)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import native from "native" /* 5080 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5194 */;
-import useChatLayoutDefault from "useChatLayout" /* 5201 */;
-import useToken from "useToken" /* 5596 */;
-import useActiveTheme from "useActiveTheme" /* 9823 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18053 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import native from "native" /* 5207 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
+import useChatLayoutDefault from "useChatLayout" /* 5324 */;
+import useToken from "useToken" /* 5719 */;
+import useActiveTheme from "useActiveTheme" /* 9954 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18197 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((paddingLeft, paddingRight, marginTop, top) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingLeft, paddingRight }, content: { flex: 1 }, frameContainer: null, frameContent: null, framePanels: null, frameBorderClip: null, frameBorder: null };
   const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingTop: null };
@@ -60,7 +60,7 @@ export default noop.memo(function MainTabs() {
   if (isChatLockedOpen) {
     isChatLockedOpen = right > 0;
   }
-  const items = [tmp7.container, ];
+  items = [tmp7.container, ];
   let frameContainer = isChatLockedOpen;
   if (isChatLockedOpen) {
     frameContainer = tmp7.frameContainer;

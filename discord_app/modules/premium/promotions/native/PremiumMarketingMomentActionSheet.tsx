@@ -1,20 +1,20 @@
-// === Module 19029: PremiumMarketingMomentActionSheet ===
+// === Module 19187: PremiumMarketingMomentActionSheet ===
 
-// Module 19029 (PremiumMarketingMomentActionSheet)
+// Module 19187 (PremiumMarketingMomentActionSheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import PremiumMarketingButtonActions from "PremiumMarketingButtonActions" /* 15311 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import PremiumMarketingButtonActions from "PremiumMarketingButtonActions" /* 15452 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsPages = fn(1072).AnalyticsPages;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "column", alignItems: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: nativeDefault.radii.lg }, buttonContainer: null, header: null, body: null, image: null, video: null };
 let size = { marginTop: nativeDefault.space.PX_24, width: 335, height: 48 };
 obj2.buttonContainer = size;
@@ -35,7 +35,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   const promotionId = component_id.promotionId;
   let helpArticleLinkProps;
   const tmp = closure_10();
-  const items = [helpArticleLinkProps];
+  items = [helpArticleLinkProps];
   const stateFromStores = markAsDismissed(promotionId[8]).useStateFromStores(items, () => helpArticleLinkProps.useReducedMotion);
   const analyticsLocations = bottomSheetData(promotionId[9])().analyticsLocations;
   const items1 = [markAsDismissed, promotionId];
@@ -110,7 +110,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
     obj9.style = tmp.image;
     tmp14Result = closure_8(tmp5(tmp3[19]), obj9);
   }
-  const items4 = [tmp14Result, closure_8(markAsDismissed(promotionId[20]).Text, { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/extrabold", children: bottomSheetData.header }), , ];
+  const items4 = [tmp14Result, closure_8(markAsDismissed(promotionId[20]).Text, { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/semibold", children: bottomSheetData.header }), , ];
   const obj12 = { style: tmp.body, color: "text-default", variant: "text-sm/normal", children: null };
   const items5 = [bottomSheetData.body, " ", ];
   let tmp14Result2 = null != helpArticleLinkProps;
@@ -132,7 +132,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   const obj15 = { style: tmp.buttonContainer, children: null };
   const button3 = bottomSheetData.button;
   let copy;
-  const obj11 = { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/extrabold", children: bottomSheetData.header };
+  const obj11 = { style: tmp.header, color: "mobile-text-heading-primary", variant: "heading-lg/semibold", children: bottomSheetData.header };
   obj7 = { uri: bottomSheetData.assetUrl };
   tmp2Result2 = markAsDismissed(promotionId[17]);
   if (button3 != null) {

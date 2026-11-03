@@ -1,9 +1,9 @@
-// === Module 14570: ConfirmStartCall ===
+// === Module 14701: ConfirmStartCall ===
 
-// Module 14570 (ConfirmStartCall)
+// Module 14701 (ConfirmStartCall)
 import util from "util" /* 1113 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function ConfirmStartCall(onConfirm) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.rimG2R);
   obj3.onPress = onConfirm.onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["ETE/oC"]);

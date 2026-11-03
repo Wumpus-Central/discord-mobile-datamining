@@ -1,8 +1,8 @@
-// === Module 16666: MFACodeInput ===
+// === Module 16809: MFACodeInput ===
 
-// Module 16666 (MFACodeInput)
+// Module 16809 (MFACodeInput)
 import nativeDefault from "native" /* 575 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -12,8 +12,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default function MFACodeInput(appState) {
   const tmp7 = value(noop.useState(null), 2);
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
-  const items = [first1];
+  items = [first1];
   const callback = noop.useCallback(() => {
     const string = ClipboardUtils.getString();
     string.then((result) => {

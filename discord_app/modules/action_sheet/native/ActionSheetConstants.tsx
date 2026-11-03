@@ -1,6 +1,6 @@
-// === Module 5273: ActionSheetConstants ===
+// === Module 5396: ActionSheetConstants ===
 
-// Module 5273 (ActionSheetConstants)
+// Module 5396 (ActionSheetConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
@@ -12,7 +12,7 @@ export const ACTION_SHEET_BORDER_RADIUS_REDESIGN = 24;
 export const ACTION_SHEET_INNER_BORDER_RADIUS_LEGACY = 6;
 export const ACTION_SHEET_INNER_BORDER_RADIUS_REDESIGN = 22;
 export const ACTION_SHEET_MAX_WIDTH = 500;
-export const ACTION_SHEET_SPRING_CONFIG = { damping: 17, stiffness: 240, mass: 0.5, restDisplacementThreshold: 0.4 };
+export const ACTION_SHEET_SPRING_CONFIG = { damping: 17, stiffness: 240, mass: 0.5 };
 export const ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION = { duration: 250 };
 export const ACTION_SHEET_BORDER_RADIUS = 24;
 export const ACTION_SHEET_INNER_BORDER_RADIUS = 22;

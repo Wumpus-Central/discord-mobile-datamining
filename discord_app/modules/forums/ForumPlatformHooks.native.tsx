@@ -1,9 +1,9 @@
-// === Module 14378: ForumPlatformHooks ===
+// === Module 14509: ForumPlatformHooks ===
 
-// Module 14378 (ForumPlatformHooks)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 9842 */;
+// Module 14509 (ForumPlatformHooks)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 9973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ export default {
     const channelId = guildId.channelId;
     let callback;
     const ref = callback.useRef(null);
-    const items = [channelId];
+    items = [channelId];
     callback = callback.useCallback(() => {
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {

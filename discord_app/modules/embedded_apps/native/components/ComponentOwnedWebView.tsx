@@ -1,6 +1,6 @@
-// === Module 19101: ComponentOwnedWebView ===
+// === Module 19259: ComponentOwnedWebView ===
 
-// Module 19101 (ComponentOwnedWebView)
+// Module 19259 (ComponentOwnedWebView)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ export default function ComponentOwnedWebView(applicationId) {
   const contextSource = applicationId.contextSource;
   const activityUrl = applicationId.activityUrl;
   const merged = Object.assign(applicationId, Object.assign({ iframeId: 0, onDisallowedNavigation: 0, contextSource: 0, activityUrl: 0, applicationId: 0 }));
-  const items = [activityUrl];
+  items = [activityUrl];
   const memo = activityUrl.useMemo(() => {
     try {
       const _URL = URL;

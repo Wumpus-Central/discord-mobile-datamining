@@ -1,19 +1,19 @@
-// === Module 11047: useScaledTextLineHeight ===
+// === Module 11182: useScaledTextLineHeight ===
 
-// Module 11047 (useScaledTextLineHeight)
-import Text_Text from "Text/Text" /* 5624 */;
-import useFontScale from "useFontScale" /* 5642 */;
-import NativeFontModuleDefault from "NativeFontModule" /* 11048 */;
+// Module 11182 (useScaledTextLineHeight)
+import Text_Text from "Text/Text" /* 5747 */;
+import useFontScale from "useFontScale" /* 5762 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 11183 */;
 import size from "module_2" /* 2 */;
 
 const map = new Map();
 let result = size.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 
-export function scaleLineHeight(arg0) {
-  value = map.get(arg0);
+export function scaleLineHeight(fontSize) {
+  value = map.get(fontSize);
   if (null == value) {
-    const scaledHeightForText = NativeFontModuleDefault.getScaledHeightForText(arg0);
-    const result = map.set(arg0, scaledHeightForText);
+    const scaledHeightForText = NativeFontModuleDefault.getScaledHeightForText(fontSize);
+    const result = map.set(fontSize, scaledHeightForText);
     value = scaledHeightForText;
   }
   return value;

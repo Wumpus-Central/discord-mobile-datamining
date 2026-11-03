@@ -1,20 +1,20 @@
-// === Module 19394: AgeGateVerify ===
+// === Module 19552: AgeGateVerify ===
 
-// Module 19394 (AgeGateVerify)
+// Module 19552 (AgeGateVerify)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 }, header: { textAlign: "center" }, body: { textAlign: "center" }, buttonWrapper: { width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function AgeGateVerify(source) {
   const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   const obj2 = { top: true, style: tmp.container, children: null };
-  const items = [React4(Text_Text.Heading, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
+  items = [React4(Text_Text.Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
   let tmp6Result = null != verifyAgreementButtonText;
   if (tmp6Result) {
     const obj5 = { style: tmp.buttonWrapper, children: null };

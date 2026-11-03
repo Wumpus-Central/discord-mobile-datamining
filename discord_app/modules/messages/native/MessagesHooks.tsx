@@ -1,32 +1,32 @@
-// === Module 11546: MessagesHooks ===
+// === Module 11683: MessagesHooks ===
 
-// Module 11546 (MessagesHooks)
+// Module 11683 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11547 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11548 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7001 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8002 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10025 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11684 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10116 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10246 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9895).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(10026).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
 export function useMessageAuthorActivities(arg0) {
   _require = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     const obj = {};
     const item = closure_0.forEach((author) => {
@@ -43,7 +43,7 @@ export function useMessageAuthorActivities(arg0) {
 }
 export function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     const set = new Set();
     const item = closure_0.forEach((applicationId) => {
@@ -70,7 +70,7 @@ export function useFetchMessageApplications(arg0) {
 }
 export function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
   _require = stateFromStores4;
-  const items = [GuildStore, GuildAvailabilityStore];
+  items = [GuildStore, GuildAvailabilityStore];
   const items1 = [stateFromStores4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {};
@@ -130,7 +130,7 @@ export function useMessagesLifecycle(screenIndex) {
     const obj2 = { messages, isMessagesReady, oldestUnreadMessageId, channelId, screenIndex, updateRows, scrollToMessageId };
     messages_MessagesUtils.recordTimings(channelId, messages);
   }, []);
-  const items = [channelId, screenIndex];
+  items = [channelId, screenIndex];
   const effect1 = screenIndex.useEffect(() => () => {
     closure_2_7(channelId, screenIndex, false);
   }, items);
@@ -138,7 +138,7 @@ export function useMessagesLifecycle(screenIndex) {
 export function useScrollState() {
   const tmp = _slicedToArray(noop.useState({ animated: false, hasHandledScroll: false, isAtBottom: false, isNearBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, _loaded: false }), 2);
   closure_0 = tmp[1];
-  const items = [
+  items = [
     tmp[0],
     noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -154,7 +154,7 @@ export function useScrollState() {
 export function useChatUpdatesQueue(ref5, callback) {
   closure_0 = ref5;
   closure_1 = callback;
-  const items = [ref5, callback];
+  items = [ref5, callback];
   const memo = noop.useMemo(() => new ChatUpdatesQueueDefault(() => {
     let tmp2 = null;
     if (null !== ref.current) {

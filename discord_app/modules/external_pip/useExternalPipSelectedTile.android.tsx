@@ -1,13 +1,13 @@
-// === Module 19201: useExternalPipSelectedTile ===
+// === Module 19359: useExternalPipSelectedTile ===
 
-// Module 19201 (useExternalPipSelectedTile)
+// Module 19359 (useExternalPipSelectedTile)
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15632 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15774 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 const require = fn;
-const VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
 
@@ -18,7 +18,7 @@ export default function useExternalPipSelectedTile(arg0, arg1, arg2) {
   if (arg2 === VoicePanelPIPModes.IN_APP) {
     str = "pip";
   }
-  let items = [arg0, arg1, str];
+  items = [arg0, arg1, str];
   const effect = noop.useEffect(() => {
     function update() {
       if (channelId.getChannelId() === batchedStoreListener) {
@@ -46,7 +46,7 @@ export default function useExternalPipSelectedTile(arg0, arg1, arg2) {
         const obj = batchedStoreListener(str[5]);
       }
     }
-    const items = [channelId, speakerId];
+    items = [channelId, speakerId];
     HermesBuiltin.arraySpread(batchedStoreListener(str[5]).EXTERNAL_PIP_SELECTED_PARTICIPANT_STORES, 2);
     batchedStoreListener = new batchedStoreListener(str[7]).BatchedStoreListener(items, update);
     batchedStoreListener.attach("useExternalPipSelectedTile");

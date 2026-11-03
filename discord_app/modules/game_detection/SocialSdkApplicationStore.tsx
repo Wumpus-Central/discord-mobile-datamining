@@ -1,6 +1,6 @@
-// === Module 11526: SocialSdkApplicationStore ===
+// === Module 11663: SocialSdkApplicationStore ===
 
-// Module 11526 (SocialSdkApplicationStore)
+// Module 11663 (SocialSdkApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -66,7 +66,7 @@ const socialSdkApplicationStore = new SocialSdkApplicationStore(DispatcherDefaul
         return false;
       }
     } else {
-      const items = [pid, applicationId];
+      items = [pid, applicationId];
     }
     if (null != applicationId) {
       const items1 = [pid, applicationId];

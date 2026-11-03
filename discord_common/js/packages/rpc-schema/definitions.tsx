@@ -1,22 +1,22 @@
-// === Module 16302: definitions ===
+// === Module 16445: definitions ===
 
-// Module 16302 (definitions)
+// Module 16445 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2019 */;
-import EntitlementTypes from "EntitlementTypes" /* 2046 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7880 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9738 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10760 */;
-import ActivityPlatform from "ActivityPlatform" /* 11809 */;
-import ThermalStates from "ThermalStates" /* 16299 */;
-import SKUTypes from "SKUTypes" /* 16303 */;
-import helpers from "helpers" /* 16304 */;
-import contextMenuIcons from "contextMenuIcons" /* 16305 */;
-import Constants from "Constants" /* 11694 */;
+import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2148 */;
+import EntitlementTypes from "EntitlementTypes" /* 2175 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 8004 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9870 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10890 */;
+import ActivityPlatform from "ActivityPlatform" /* 11946 */;
+import ThermalStates from "ThermalStates" /* 16442 */;
+import SKUTypes from "SKUTypes" /* 16446 */;
+import discord_common_helpers from "discord_common/helpers" /* 16447 */;
+import contextMenuIcons from "contextMenuIcons" /* 16448 */;
+import Constants from "Constants" /* 11831 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -33,7 +33,7 @@ function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
   if (found.length > 0) {
     const numberResult = number.number();
     const valid2 = numberResult.valid;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(found, 0);
     let applyResult = HermesBuiltin.apply(items, numberResult);
   } else {
@@ -971,7 +971,7 @@ function ContextMenuItem(string, arg1) {
   const maxResult1 = string.string().max(100);
   obj.subtext = string.string().max(100);
   const stringResult3 = string.string();
-  const items = [...contextMenuIcons.CONTEXT_MENU_ICON_NAMES];
+  items = [...contextMenuIcons.CONTEXT_MENU_ICON_NAMES];
   const stringResult4 = string.string();
   obj.icon = string.string().valid.apply(items).meta({ className: "ContextMenuIconName" });
   const applyResult = string.string().valid.apply(items);
@@ -1503,9 +1503,9 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-sch
 
 export { RPCEnums };
 export const RPCCommandSchemas = {
-  [helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj15,
-  [helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj16,
-  [helpers.RPCCommand.AUTHENTICATE]: {
+  [discord_common_helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj15,
+  [discord_common_helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj16,
+  [discord_common_helpers.RPCCommand.AUTHENTICATE]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { access_token: null };
@@ -1552,8 +1552,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj18,
-  [helpers.RPCCommand.RELAUNCH_FRAME]: {
+  [discord_common_helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj18,
+  [discord_common_helpers.RPCCommand.RELAUNCH_FRAME]: {
     request(string) {
       const obj = { build: null };
       const stringResult = string.string();
@@ -1565,8 +1565,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj20,
-  [helpers.RPCCommand.GET_VOICE_SESSION_PARTICIPANTS]: {
+  [discord_common_helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj20,
+  [discord_common_helpers.RPCCommand.GET_VOICE_SESSION_PARTICIPANTS]: {
     request(string) {
       const obj = { session_id: string.string().required() };
       return obj;
@@ -1598,8 +1598,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.START_VOICE_SESSION]: obj22,
-  [helpers.RPCCommand.UPDATE_VOICE_SPATIAL]: {
+  [discord_common_helpers.RPCCommand.START_VOICE_SESSION]: obj22,
+  [discord_common_helpers.RPCCommand.UPDATE_VOICE_SPATIAL]: {
     request(string) {
       const obj = { session_id: string.string().required(), listener: null, sources: null };
       const obj2 = { position: null, forward: null };
@@ -1670,7 +1670,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SET_VOICE_SPATIAL_ACOUSTICS]: {
+  [discord_common_helpers.RPCCommand.SET_VOICE_SPATIAL_ACOUSTICS]: {
     request(string) {
       const obj = { session_id: string.string().required(), acoustics: null };
       const obj2 = { binaural: null, distance_attenuation: null, air_absorption: null, reflections: null };
@@ -1860,23 +1860,23 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj11,
-  [helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj11,
-  [helpers.RPCCommand.STOP_VOICE_SESSION]: obj11,
-  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj25,
-  [helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj13,
-  [helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj11,
-  [helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj11,
-  [helpers.RPCCommand.SET_APPLICATION_STREAMING_VIEW_FIT]: obj12,
-  [helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj11,
-  [helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj11,
-  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj26,
-  [helpers.RPCCommand.START_CAMERA_VIEW]: obj13,
-  [helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj11,
-  [helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj11,
-  [helpers.RPCCommand.SET_CAMERA_VIEW_FIT]: obj12,
-  [helpers.RPCCommand.STOP_CAMERA_VIEW]: obj11,
-  [helpers.RPCCommand.SHARE_INTERACTION]: {
+  [discord_common_helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj11,
+  [discord_common_helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj11,
+  [discord_common_helpers.RPCCommand.STOP_VOICE_SESSION]: obj11,
+  [discord_common_helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj25,
+  [discord_common_helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj13,
+  [discord_common_helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.SET_APPLICATION_STREAMING_VIEW_FIT]: obj12,
+  [discord_common_helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj11,
+  [discord_common_helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj26,
+  [discord_common_helpers.RPCCommand.START_CAMERA_VIEW]: obj13,
+  [discord_common_helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.SET_CAMERA_VIEW_FIT]: obj12,
+  [discord_common_helpers.RPCCommand.STOP_CAMERA_VIEW]: obj11,
+  [discord_common_helpers.RPCCommand.SHARE_INTERACTION]: {
     request(string) {
       const obj = { command: string.string().required(), options: null, content: null, require_launch_channel: null, preview_image: null, components: null, pid: null };
       const stringResult = string.string();
@@ -1928,7 +1928,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SHARE_LINK]: {
+  [discord_common_helpers.RPCCommand.SHARE_LINK]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { custom_id: string.string().max(64), message: null, link_id: null };
@@ -1948,7 +1948,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SHARE_CONTENT]: {
+  [discord_common_helpers.RPCCommand.SHARE_CONTENT]: {
     request(string) {
       const obj = { content: null, link: null, custom_id: null, link_id: null, image_url: null, attachments: null, preview_title: null, preview_subtitle: null };
       const stringResult = string.string();
@@ -1989,7 +1989,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_CONTEXT_MENU]: {
+  [discord_common_helpers.RPCCommand.OPEN_CONTEXT_MENU]: {
     request(string) {
       const point = { type: null, id: null, channel_id: null, url: null, items: null, x: null, y: null };
       const stringResult = string.string();
@@ -2021,7 +2021,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_USER_POPOUT]: {
+  [discord_common_helpers.RPCCommand.OPEN_USER_POPOUT]: {
     request(string) {
       const point = { user_id: null, x: null, y: null };
       const stringResult = string.string();
@@ -2041,7 +2041,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_MEDIA_VIEWER]: {
+  [discord_common_helpers.RPCCommand.OPEN_MEDIA_VIEWER]: {
     request(array) {
       const obj = { items: null, starting_index: null };
       const size = { url: null, type: null, width: null, height: null, alt: null };
@@ -2072,7 +2072,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_USER_PROFILE]: {
+  [discord_common_helpers.RPCCommand.OPEN_USER_PROFILE]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { user_id: null };
@@ -2086,7 +2086,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_GAME_PROFILE]: {
+  [discord_common_helpers.RPCCommand.OPEN_GAME_PROFILE]: {
     request(string) {
       const obj = { game_id: string.string().max(64), application_id: null };
       const stringResult = string.string();
@@ -2098,7 +2098,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SHOW_TOOLTIP]: {
+  [discord_common_helpers.RPCCommand.SHOW_TOOLTIP]: {
     request(string) {
       const point = { text: null, shortcut: null, x: null, y: null, position: null, align: null };
       const stringResult = string.string();
@@ -2124,8 +2124,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.HIDE_TOOLTIP]: obj36,
-  [helpers.RPCCommand.SHOW_TOAST]: {
+  [discord_common_helpers.RPCCommand.HIDE_TOOLTIP]: obj36,
+  [discord_common_helpers.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
       const stringResult = string.string();
@@ -2140,7 +2140,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SHOW_CONFIRM_MODAL]: {
+  [discord_common_helpers.RPCCommand.SHOW_CONFIRM_MODAL]: {
     request(string) {
       const obj = { type: null, title: null, body: null, confirm_text: null, cancel_text: null };
       const stringResult = string.string();
@@ -2161,8 +2161,8 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     }
   },
-  [helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: obj39,
-  [helpers.RPCCommand.REQUEST_DEVICE_PERMISSIONS]: {
+  [discord_common_helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: obj39,
+  [discord_common_helpers.RPCCommand.REQUEST_DEVICE_PERMISSIONS]: {
     request(array) {
       const obj = { permissions: null };
       const arrayResult = array.array();
@@ -2187,7 +2187,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.CAPTURE_SCREEN]: {
+  [discord_common_helpers.RPCCommand.CAPTURE_SCREEN]: {
     request(number) {
       const obj = { max_width: null, max_height: null };
       const numberResult = number.number();
@@ -2216,8 +2216,8 @@ export const RPCCommandSchemas = {
       return size;
     }
   },
-  [helpers.RPCCommand.GET_RELATIONSHIPS]: obj42,
-  [helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
+  [discord_common_helpers.RPCCommand.GET_RELATIONSHIPS]: obj42,
+  [discord_common_helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { user_id: string.string().required(), content: null };
@@ -2226,10 +2226,10 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array"
+    response: "flexDirection"
   },
-  [helpers.RPCCommand.GET_CONTEXT]: obj44,
-  [helpers.RPCCommand.GET_USER]: {
+  [discord_common_helpers.RPCCommand.GET_CONTEXT]: obj44,
+  [discord_common_helpers.RPCCommand.GET_USER]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { id: null };
@@ -2241,8 +2241,8 @@ export const RPCCommandSchemas = {
       return User(arg0).allow(null);
     }
   },
-  [helpers.RPCCommand.GET_CURRENT_USER]: obj46,
-  [helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
+  [discord_common_helpers.RPCCommand.GET_CURRENT_USER]: obj46,
+  [discord_common_helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { quest_id: null };
@@ -2252,7 +2252,7 @@ export const RPCCommandSchemas = {
     },
     response: QuestEnrollmentStatus
   },
-  [helpers.RPCCommand.QUEST_START_TIMER]: {
+  [discord_common_helpers.RPCCommand.QUEST_START_TIMER]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { quest_id: null };
@@ -2265,9 +2265,9 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_QUEST]: obj49,
-  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj50,
-  [helpers.RPCCommand.SET_RUNS_IN_BACKGROUND]: {
+  [discord_common_helpers.RPCCommand.GET_QUEST]: obj49,
+  [discord_common_helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj50,
+  [discord_common_helpers.RPCCommand.SET_RUNS_IN_BACKGROUND]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };
       return obj;
@@ -2277,7 +2277,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SET_FRAME_RELAUNCH_DEEP_LINK]: {
+  [discord_common_helpers.RPCCommand.SET_FRAME_RELAUNCH_DEEP_LINK]: {
     request(string) {
       const obj = { hash: null };
       const stringResult = string.string();
@@ -2292,9 +2292,9 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_HANDSHAKE]: obj53,
-  [helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_OPEN]: obj54,
-  [helpers.RPCCommand.SET_AUDIO_SESSION_TYPE]: {
+  [discord_common_helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_HANDSHAKE]: obj53,
+  [discord_common_helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_OPEN]: obj54,
+  [discord_common_helpers.RPCCommand.SET_AUDIO_SESSION_TYPE]: {
     request(string) {
       const obj = { type: null };
       const stringResult = string.string();
@@ -2306,7 +2306,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.CAPTURE_LOG]: {
+  [discord_common_helpers.RPCCommand.CAPTURE_LOG]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { level: null, message: null };
@@ -2317,12 +2317,12 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "Array"
+    response: "flexDirection"
   },
-  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
-  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
-  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj59,
-  [helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
+  [discord_common_helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
+  [discord_common_helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
+  [discord_common_helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj59,
+  [discord_common_helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
     embeddedAppSDK: true,
     request(number) {
       const obj = { lock_state: joiEnum(number, "EmbeddedActivityOrientationLockState").required(), picture_in_picture_lock_state: null, grid_lock_state: null };
@@ -2332,9 +2332,9 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "EmbeddedActivityOrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "Array"
+    response: "flexDirection"
   },
-  [helpers.RPCCommand.SET_CONFIG]: {
+  [discord_common_helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
     request(boolean) {
       const obj = { use_interactive_pip: boolean.boolean().required() };
@@ -2345,8 +2345,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "construct", response: "add" },
-  [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "id", response: "" },
+  [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { url: null };
@@ -2362,10 +2362,10 @@ export const RPCCommandSchemas = {
       return boolean.object(obj).default({ opened: null });
     }
   },
-  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj63,
-  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj64,
-  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj65,
-  [helpers.RPCCommand.START_PURCHASE]: {
+  [discord_common_helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj63,
+  [discord_common_helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj64,
+  [discord_common_helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj65,
+  [discord_common_helpers.RPCCommand.START_PURCHASE]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { sku_id: null, pid: null };
@@ -2380,7 +2380,7 @@ export const RPCCommandSchemas = {
       return array.array().items(RPCEntitlement(array)).allow(null);
     }
   },
-  [helpers.RPCCommand.GET_CHANNEL]: {
+  [discord_common_helpers.RPCCommand.GET_CHANNEL]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { channel_id: null };
@@ -2392,7 +2392,7 @@ export const RPCCommandSchemas = {
       return Channel(arg0);
     }
   },
-  [helpers.RPCCommand.GET_CHANNELS]: {
+  [discord_common_helpers.RPCCommand.GET_CHANNELS]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { guild_id: null };
@@ -2417,8 +2417,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj69,
-  [helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
+  [discord_common_helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj69,
+  [discord_common_helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
     request(string) {
       const obj = { channel_id: null, expected_channel_id: null, timeout: null, force: null, navigate: null };
       const stringResult = string.string();
@@ -2441,7 +2441,7 @@ export const RPCCommandSchemas = {
       return Channel(arg0).allow(null);
     }
   },
-  [helpers.RPCCommand.SELECT_TEXT_CHANNEL]: {
+  [discord_common_helpers.RPCCommand.SELECT_TEXT_CHANNEL]: {
     request(string) {
       const obj = { channel_id: null, timeout: null };
       const stringResult = string.string();
@@ -2457,7 +2457,7 @@ export const RPCCommandSchemas = {
       return Channel(arg0).allow(null);
     }
   },
-  [helpers.RPCCommand.CREATE_CHANNEL_INVITE]: {
+  [discord_common_helpers.RPCCommand.CREATE_CHANNEL_INVITE]: {
     request(string) {
       const obj = { channel_id: null, max_age: null, max_uses: null, temporary: null, unique: null, target_type: null, target_user_id: null, target_application_id: null };
       const stringResult = string.string();
@@ -2471,7 +2471,7 @@ export const RPCCommandSchemas = {
       const booleanResult = string.boolean();
       obj.unique = string.boolean().optional();
       const booleanResult1 = string.boolean();
-      const items = [...InviteTargetTypes.InviteTargetTypesSets.USER_CREATABLE];
+      items = [...InviteTargetTypes.InviteTargetTypesSets.USER_CREATABLE];
       const numberResult2 = string.number();
       const applyResult = string.number().valid.apply(items);
       obj.target_type = string.number().valid.apply(items).allow(null).optional();
@@ -2523,7 +2523,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_GUILD]: {
+  [discord_common_helpers.RPCCommand.GET_GUILD]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { guild_id: null, timeout: null };
@@ -2550,8 +2550,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_GUILDS]: obj74,
-  [helpers.RPCCommand.GET_ROLES]: {
+  [discord_common_helpers.RPCCommand.GET_GUILDS]: obj74,
+  [discord_common_helpers.RPCCommand.GET_ROLES]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { guild_id: null };
@@ -2566,7 +2566,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_CURRENT_USER_GUILD_MEMBER]: {
+  [discord_common_helpers.RPCCommand.GET_CURRENT_USER_GUILD_MEMBER]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { guild_id: null };
@@ -2578,7 +2578,7 @@ export const RPCCommandSchemas = {
       return GuildMember(string).allow(null);
     }
   },
-  [helpers.RPCCommand.GET_GUILD_MEMBER]: {
+  [discord_common_helpers.RPCCommand.GET_GUILD_MEMBER]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { guild_id: null, user_id: null };
@@ -2593,7 +2593,7 @@ export const RPCCommandSchemas = {
       return GuildMember(string).allow(null);
     }
   },
-  [helpers.RPCCommand.AUTHORIZE]: {
+  [discord_common_helpers.RPCCommand.AUTHORIZE]: {
     embeddedAppSDK: true,
     request(string) {
       const obj = { client_id: null, scope: null, scopes: null, response_type: null, code_challenge: null, code_challenge_method: null, state: null, prompt: null, nonce: null };
@@ -2638,7 +2638,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.SET_ACTIVITY]: {
+  [discord_common_helpers.RPCCommand.SET_ACTIVITY]: {
     embeddedAppSDK: true,
     request(number) {
       const obj = { pid: number.number().min(0), activity: null };
@@ -2759,7 +2759,7 @@ export const RPCCommandSchemas = {
   }
 };
 export const RPCEventSchemas = {
-  [helpers.RPCEvent.VOICE_STATE_UPDATE]: {
+  [discord_common_helpers.RPCEvent.VOICE_STATE_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {
       const obj = { channel_id: null };
@@ -2803,11 +2803,11 @@ export const RPCEventSchemas = {
       return objectResult4.keys(obj3);
     }
   },
-  [helpers.RPCEvent.SPEAKING_START]: obj14,
-  [helpers.RPCEvent.SPEAKING_STOP]: obj14,
-  [helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: obj81,
-  [helpers.RPCEvent.CURRENT_USER_UPDATE]: obj82,
-  [helpers.RPCEvent.CURRENT_GUILD_MEMBER_UPDATE]: {
+  [discord_common_helpers.RPCEvent.SPEAKING_START]: obj14,
+  [discord_common_helpers.RPCEvent.SPEAKING_STOP]: obj14,
+  [discord_common_helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: obj81,
+  [discord_common_helpers.RPCEvent.CURRENT_USER_UPDATE]: obj82,
+  [discord_common_helpers.RPCEvent.CURRENT_GUILD_MEMBER_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {
       const obj = { guild_id: null };
@@ -2819,12 +2819,12 @@ export const RPCEventSchemas = {
       return GuildMember(string, { legacyCompat: true });
     }
   },
-  [helpers.RPCEvent.ENTITLEMENT_CREATE]: obj84,
-  [helpers.RPCEvent.THERMAL_STATE_UPDATE]: obj85,
-  [helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: obj86,
-  [helpers.RPCEvent.RELATIONSHIP_UPDATE]: obj87,
-  [helpers.RPCEvent.ACTIVITY_JOIN]: obj88,
-  [helpers.RPCEvent.QUEST_ENROLLMENT_STATUS_UPDATE]: {
+  [discord_common_helpers.RPCEvent.ENTITLEMENT_CREATE]: obj84,
+  [discord_common_helpers.RPCEvent.THERMAL_STATE_UPDATE]: obj85,
+  [discord_common_helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: obj86,
+  [discord_common_helpers.RPCEvent.RELATIONSHIP_UPDATE]: obj87,
+  [discord_common_helpers.RPCEvent.ACTIVITY_JOIN]: obj88,
+  [discord_common_helpers.RPCEvent.QUEST_ENROLLMENT_STATUS_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {
       const obj = { quest_id: null };

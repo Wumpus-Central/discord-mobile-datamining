@@ -1,6 +1,6 @@
-// === Module 11657: groupInvitableGameOrganizationsByApplication ===
+// === Module 11794: groupInvitableGameOrganizationsByApplication ===
 
-// Module 11657 (groupInvitableGameOrganizationsByApplication)
+// Module 11794 (groupInvitableGameOrganizationsByApplication)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/game_organization_invites/groupInvitableGameOrganizationsByApplication.tsx");
@@ -17,7 +17,7 @@ export default function groupInvitableGameOrganizationsByApplication(arg0) {
       let arr = gameOrganizations.push(tmp2);
     } else {
       let obj = { application: tmp2.application, gameOrganizations: null };
-      let items = [tmp2];
+      items = [tmp2];
       obj.gameOrganizations = items;
       let result = map.set(tmp2.application.id, obj);
     }

@@ -1,10 +1,10 @@
-// === Module 12774: conjurePublishRatings ===
+// === Module 12910: conjurePublishRatings ===
 
-// Module 12774 (conjurePublishRatings)
+// Module 12910 (conjurePublishRatings)
 import Storage4 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10873 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,8 +65,8 @@ function submitConjurePublishRating(arg0) {
   }
 }
 const conjurePublishRatings = "conjurePublishRatings";
-let obj = { 1: null, 2: _modDef3868.GhbsGA, 3: _modDef3868.cm0nwU, 4: _modDef3868.kGvlh2, 5: _modDef3868.dVBSUg };
-obj[5] = _modDef3868.DKlgF7;
+let obj = { 1: null, 2: _modDef3995.GhbsGA, 3: _modDef3995.cm0nwU, 4: _modDef3995.kGvlh2, 5: _modDef3995.dVBSUg };
+obj[5] = _modDef3995.DKlgF7;
 const set = new Set();
 let closure_8 = 0;
 const size = fn(2);
@@ -82,18 +82,18 @@ export function conjurePublishRatingOptionLabel(rating) {
   obj = { rating, label: null };
   const intl2 = util.intl;
   obj.label = intl2.string(obj[rating]);
-  return intl.formatToPlainString(_modDef3868.NU7Dex, obj);
+  return intl.formatToPlainString(_modDef3995.NU7Dex, obj);
 }
 export function conjurePublishRatingThanks(rating) {
   if (rating <= 2) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3868["nIc9/M"]);
+    let stringResult = intl3.string(_modDef3995["nIc9/M"]);
   } else if (3 === rating) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3868.ausj8U);
+    stringResult = intl2.string(_modDef3995.ausj8U);
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef3868.HilSjw);
+    stringResult = intl.string(_modDef3995.HilSjw);
   }
   return stringResult;
 }

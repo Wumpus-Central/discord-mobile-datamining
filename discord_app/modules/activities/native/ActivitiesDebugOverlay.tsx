@@ -1,21 +1,21 @@
-// === Module 19262: ActivitiesDebugOverlay ===
+// === Module 19420: ActivitiesDebugOverlay ===
 
-// Module 19262 (ActivitiesDebugOverlay)
+// Module 19420 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useThermalStateDefault from "useThermalState" /* 16298 */;
-import ThermalStates from "ThermalStates" /* 16299 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useThermalStateDefault from "useThermalState" /* 16441 */;
+import ThermalStates from "ThermalStates" /* 16442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj2.container = rect;
 obj2.row = { flexDirection: "row" };
@@ -48,7 +48,7 @@ export default function ActivitiesDebugOverlay() {
   }
   const rect = useSafeAreaInsetsDefault();
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
+  items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
   obj.style = items;
   const obj3 = { style: tmp.row, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];

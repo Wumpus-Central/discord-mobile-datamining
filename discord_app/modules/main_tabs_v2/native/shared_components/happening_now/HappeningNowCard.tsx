@@ -1,21 +1,21 @@
-// === Module 17288: HappeningNowCard ===
+// === Module 17431: HappeningNowCard ===
 
-// Module 17288 (HappeningNowCard)
-import Text_Text from "Text/Text" /* 5624 */;
-import Card from "Card" /* 6977 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
+// Module 17431 (HappeningNowCard)
+import Text_Text from "Text/Text" /* 5747 */;
+import Card from "Card" /* 7103 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17287);
+const HappeningNowConstants = fn(17430);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({ HAPPENING_NOW_CARD_PADDING: hasOwnProperty, HAPPENING_NOW_CARD_HEIGHT: metroRequire, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
-({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_9, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: c10, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_11, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);
+({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_9, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: closure_10, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_11, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     const obj2 = { minWidth, maxWidth };
@@ -58,7 +58,7 @@ let closure_21 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj6.cardBadge = size;
   return obj6;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj3 = { cardHeaderMargin: { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 } };
 let closure_22 = createStyles.createStyles(obj3);
 let size = fn(2);
@@ -74,7 +74,7 @@ export default function HappeningNowCard(onPress) {
   const tmp3 = useIsWindowLargeDefault();
   ({ accessibilityLabel, accessibilityHint } = onPress);
   const obj = { variant: "secondary", style: null, onPress: onPress.onPress, border: "faint", shadow: null, onLongPress: null, disabled: null, accessibilityLabel: null, accessibilityHint: null, children: null };
-  const items = [tmp4Result.card, onPress.style];
+  items = [tmp4Result.card, onPress.style];
   obj.style = items;
   let str;
   if (null == tmp6) {
@@ -95,7 +95,7 @@ export default function HappeningNowCard(onPress) {
   }
   items1[1] = tmp8;
   obj.children = items1;
-  return closure_1_19(Card.Card, obj);
+  return expandedHeight(Card.Card, obj);
 };
 export function HappeningNowCardHeader(displayNameFont) {
   displayNameFont = displayNameFont.displayNameFont;
@@ -105,7 +105,7 @@ export function HappeningNowCardHeader(displayNameFont) {
   if (!noMargin) {
     cardHeaderMargin = tmp2.cardHeaderMargin;
   }
-  const items = [cardHeaderMargin, ];
+  items = [cardHeaderMargin, ];
   let tmp5 = null;
   if (null != displayNameFont) {
     const obj = { fontFamily: displayNameFont };

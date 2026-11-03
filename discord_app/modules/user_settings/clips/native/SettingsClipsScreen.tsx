@@ -1,12 +1,12 @@
-// === Module 16876: SettingsClipsScreen ===
+// === Module 17019: SettingsClipsScreen ===
 
-// Module 16876 (SettingsClipsScreen)
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+// Module 17019 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_settings/clips/native/Se
 export default function ClipsSettingsScreen() {
   const node = noop.useMemo(() => {
     const obj = { settings: null };
-    const items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
+    items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
     obj.settings = items;
     const sections = [obj];
     return SettingBuilders.createList({ sections });

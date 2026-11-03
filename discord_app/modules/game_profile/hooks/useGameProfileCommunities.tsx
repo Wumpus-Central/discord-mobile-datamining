@@ -1,11 +1,11 @@
-// === Module 9613: useGameProfileCommunities ===
+// === Module 9745: useGameProfileCommunities ===
 
-// Module 9613 (useGameProfileCommunities)
+// Module 9745 (useGameProfileCommunities)
 import DurationsDefault from "Durations" /* 1089 */;
-import DiscoverableGuildsActionCreators from "DiscoverableGuildsActionCreators" /* 9615 */;
+import DiscoverableGuildsActionCreators from "DiscoverableGuildsActionCreators" /* 9747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameStore from "GameStore" /* 2014 */;
-import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9614 */;
+import GameStore from "GameStore" /* 2143 */;
+import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9746 */;
 
 require = fn;
 function getCommunityGuildIds(arg0) {
@@ -64,7 +64,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

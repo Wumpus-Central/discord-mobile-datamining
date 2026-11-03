@@ -1,9 +1,9 @@
-// === Module 8773: useIsScreenLandscape ===
+// === Module 8897: useIsScreenLandscape ===
 
-// Module 8773 (useIsScreenLandscape)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1494 */;
+// Module 8897 (useIsScreenLandscape)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1492 */;
+import DimensionsStore from "DimensionsStore" /* 1494 */;
 
 require = fn;
 const size = fn(2);
@@ -18,6 +18,6 @@ export function getIsScreenLandscape() {
 }
 export function useIsScreenLandscape() {
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
-  const items = [appEntryKey];
+  items = [appEntryKey];
   return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 }

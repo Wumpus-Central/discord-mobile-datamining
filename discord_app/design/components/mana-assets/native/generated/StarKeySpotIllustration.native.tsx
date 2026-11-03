@@ -1,19 +1,19 @@
-// === Module 19917: StarKeySpotIllustration ===
+// === Module 20067: StarKeySpotIllustration ===
 
-// Module 19917 (StarKeySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef19918 from "module_19918" /* 19918 */;
-import _modDef19919 from "module_19919" /* 19919 */;
-import _modDef19920 from "module_19920" /* 19920 */;
+// Module 20067 (StarKeySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef20068 from "module_20068" /* 20068 */;
+import _modDef20069 from "module_20069" /* 20069 */;
+import _modDef20070 from "module_20070" /* 20070 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19918 }, 3: null };
-let obj2 = { uri: _modDef19918 };
-obj[2] = { uri: _modDef19919 };
-const obj3 = { uri: _modDef19919 };
-obj[3] = { uri: _modDef19920 };
+let obj = { 1: null, 2: { uri: _modDef20068 }, 3: null };
+let obj2 = { uri: _modDef20068 };
+obj[2] = { uri: _modDef20069 };
+const obj3 = { uri: _modDef20069 };
+obj[3] = { uri: _modDef20070 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StarKeySpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function StarKeySpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

@@ -1,18 +1,18 @@
-// === Module 19030: PremiumDiscountOfferActionSheet ===
+// === Module 19188: PremiumDiscountOfferActionSheet ===
 
-// Module 19030 (PremiumDiscountOfferActionSheet)
+// Module 19188 (PremiumDiscountOfferActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8530 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8654 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_4, SubscriptionPlanInfo: hasOwnProperty } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = Constants);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_9 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function _default(markAsDismissed) {
   let analyticsLocations;
   let memo;
   analyticsLocations = userDiscountOffer(analyticsLocations[5])(userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET).analyticsLocations;
-  const items = [userDiscountOffer];
+  items = [userDiscountOffer];
   memo = memo.useMemo(() => {
     let first;
     if (userDiscountOffer != null) {

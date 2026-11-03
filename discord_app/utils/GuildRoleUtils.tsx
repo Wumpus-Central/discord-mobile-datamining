@@ -1,10 +1,10 @@
-// === Module 4924: GuildRoleUtils ===
+// === Module 5051: GuildRoleUtils ===
 
-// Module 4924 (GuildRoleUtils)
+// Module 5051 (GuildRoleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4922 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 5049 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5050 */;
 import size from "module_2" /* 2 */;
 
 function compareGuildRoles(guildId, id) {
@@ -87,7 +87,7 @@ export function inviteRoleToDisplayData(id, id) {
   return obj;
 }
 export function filterRoleDeletes(id, unsafeMutableRoles) {
-  let items = roles;
+  items = roles;
   if (roles === undefined) {
     items = [];
   }

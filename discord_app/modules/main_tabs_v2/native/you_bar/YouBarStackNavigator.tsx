@@ -1,10 +1,10 @@
-// === Module 18069: YouBarStackNavigator ===
+// === Module 18213: YouBarStackNavigator ===
 
-// Module 18069 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 18476 */;
+// Module 18213 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 18630 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 function getGuildsComponent() {
@@ -18,17 +18,17 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11514).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11651).YouBarNavigatorScreens;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const NativeStackNavigator = fn(9987);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
 
 export default noop.memo(function YouBarStackNavigator() {
   const ref = noop.useRef(undefined);
-  let items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = current(accessibilityNativeStackOptions[10]).useStateFromStores(items, () => guildId.getGuildId());
   if (tmp5) {
     let obj3 = { guildId: stateFromStores, channelId: null };
@@ -57,7 +57,7 @@ export default noop.memo(function YouBarStackNavigator() {
   const obj6 = { id: "tabs", screenOptions: memo, children: null };
   const items2 = [current, iCYMIEnabled, accessibilityNativeStackOptions];
   obj6.children = noop.useMemo(() => {
-    const items = [
+    items = [
       React7(Screen.Screen, {
         name: YouBarNavigatorScreens.GUILDS,
         initialParams: current,

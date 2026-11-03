@@ -1,12 +1,12 @@
-// === Module 15312: navigateToSocialLayerStorefront ===
+// === Module 15453: navigateToSocialLayerStorefront ===
 
-// Module 15312 (navigateToSocialLayerStorefront)
+// Module 15453 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10670 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10800 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7406 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7530 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {
@@ -30,7 +30,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
           } else {
             closure_129_5 = null;
             if (null != closure_129_1) {
-              const guild = closure_129_1.guild;
+              guild = closure_129_1.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -109,7 +109,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {
@@ -172,7 +172,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
 export function eagerNavigateToSocialLayerStorefront(forceFetch) {
   ({ guildId, invite } = forceFetch);
   if (null != invite) {
-    const guild = invite.guild;
+    guild = invite.guild;
     let id;
     if (guild != null) {
       id = guild.id;

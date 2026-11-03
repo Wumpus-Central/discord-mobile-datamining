@@ -1,16 +1,16 @@
-// === Module 16744: AndroidViewNsfwDmCommandsSetting ===
+// === Module 16887: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 16744 (AndroidViewNsfwDmCommandsSetting)
+// Module 16887 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7389 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 7390 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7509 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 7510 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

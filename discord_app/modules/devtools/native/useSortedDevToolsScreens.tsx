@@ -1,11 +1,11 @@
-// === Module 17758: useSortedDevToolsScreens ===
+// === Module 17901: useSortedDevToolsScreens ===
 
-// Module 17758 (useSortedDevToolsScreens)
+// Module 17901 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 17575 */;
-import DevToolsScreens from "DevToolsScreens" /* 17579 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 17718 */;
+import DevToolsScreens from "DevToolsScreens" /* 17722 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7987 */;
 
 require = fn;
 function getSortedDevToolsScreens() {
@@ -43,7 +43,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
 export default function useSortedDevToolsScreens() {
-  const items = [DevToolsSettingsStore];
+  items = [DevToolsSettingsStore];
   initialize.useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   let sortedScreenKeys;
   if (sortedScreenKeys === undefined) {
@@ -76,7 +76,7 @@ export default function useSortedDevToolsScreens() {
   });
 };
 export function updateSortOrder(_require, down) {
-  const items = [...DevToolsSettingsStore.sortedScreenKeys];
+  items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
     let first = _slicedToArray(tmp3, 1)[0];

@@ -1,6 +1,6 @@
-// === Module 11323: PinotMemberNoticeAckStore ===
+// === Module 11460: PinotMemberNoticeAckStore ===
 
-// Module 11323 (PinotMemberNoticeAckStore)
+// Module 11460 (PinotMemberNoticeAckStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -38,7 +38,7 @@ const pinotMemberNoticeAckStoreImpl = new PinotMemberNoticeAckStoreImpl(Dispatch
       return false;
     } else {
       const _Set = Set;
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(set, 0)] = channelId;
       set = new Set(items);
     }

@@ -1,16 +1,16 @@
-// === Module 12497: AppLauncherChoicesActionSheet ===
+// === Module 12633: AppLauncherChoicesActionSheet ===
 
-// Module 12497 (AppLauncherChoicesActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
-import _mod7294 from "module_7294" /* 7294 */;
+// Module 12633 (AppLauncherChoicesActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
+import _mod7414 from "module_7414" /* 7414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7294;
+  const tmp3 = _mod7414;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -22,7 +22,7 @@ function FlashListWrapper(scrollable) {
   }
   return tmp2Result;
 }
-const DEFAULT_CONTENT_PADDING = fn(1496).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1498).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default function AppLauncherChoicesActionSheet(option) {
     return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
   });
   [first1, closure_5] = first1.useState(initChoiceIndex);
-  const items = [option.choices];
+  items = [option.choices];
   const items1 = [onChoiceSelect, first1, data];
   const callback = first1.useCallback((query) => {
     const obj2 = { query, choices: null, limit: null };

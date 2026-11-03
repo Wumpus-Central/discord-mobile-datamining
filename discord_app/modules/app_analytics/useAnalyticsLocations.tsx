@@ -1,6 +1,6 @@
-// === Module 7326: useAnalyticsLocations ===
+// === Module 7446: useAnalyticsLocations ===
 
-// Module 7326 (useAnalyticsLocations)
+// Module 7446 (useAnalyticsLocations)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
 
 export default function useAnalyticsLocations() {
-  let items = [...arguments];
+  items = [...arguments];
   first = undefined;
   _slicedToArray = undefined;
   context = undefined;

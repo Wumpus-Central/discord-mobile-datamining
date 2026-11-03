@@ -1,13 +1,13 @@
-// === Module 9315: GuildProfileGames ===
+// === Module 9443: GuildProfileGames ===
 
-// Module 9315 (GuildProfileGames)
+// Module 9443 (GuildProfileGames)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9316 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import components_GameIconDefault from "components/GameIcon" /* 14723 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9444 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import components_GameIconDefault from "components/GameIcon" /* 14854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function ClickableGameIcon(game) {
   const tmp3Result = useOpenGameProfileModalDefault(obj);
   closure_2 = tmp3Result;
   closure_3 = tmp5;
-  const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
+  items = [null != tmp3Result, tmp3Result, onPressFallback, game];
   if (null != tmp3Result) {
     const onPress = noop.useCallback(() => {
       if (closure_3) {
@@ -34,14 +34,14 @@ function ClickableGameIcon(game) {
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
   const obj = { style: styles().favoriteGame, children: null };
-  const items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name })];
+  items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;
@@ -68,7 +68,7 @@ export default function GuildProfileGames(profile) {
     iconURL = lastGameToDisplay.getIconURL(24);
   }
   closure_5 = tmp5;
-  let items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
+  items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
   const memo = noop.useMemo(() => {
     let tmp = lastGameToDisplay;
     let tmp2 = null;
@@ -83,7 +83,7 @@ export default function GuildProfileGames(profile) {
       } else {
         const obj2 = { style: closure_3.lastItem, children: null };
         const obj3 = { style: closure_3.lastItemImage, game: tmp, activityLevel: gameActivity[tmp.id] };
-        const items = [hasOwnProperty(components_GameIconDefault, obj3), , ];
+        items = [hasOwnProperty(components_GameIconDefault, obj3), , ];
         const obj4 = { style: closure_3.lastItemOverlay };
         items[1] = hasOwnProperty(View, obj4);
         const obj5 = { style: closure_3.lastItemText, children: null };

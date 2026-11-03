@@ -1,18 +1,18 @@
-// === Module 18296: VoiceChannel ===
+// === Module 18441: VoiceChannel ===
 
-// Module 18296 (VoiceChannel)
+// Module 18441 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9085 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12387 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9213 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12523 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7706 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7830 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 require = fn;
 let closure_17 = async function _handleVoiceChannelPress(arg0) {
@@ -38,8 +38,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5767).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11046);
+const NO_VOICE_STATES = fn(5887).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11186);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
@@ -62,7 +62,7 @@ let closure_18 = noop.memo(function VoiceChannel(channel) {
   let obj3 = channel(ensureSyncedChannelVoiceStates[18]);
   const isConnectedToVoiceChannel = channel(ensureSyncedChannelVoiceStates[19]).useIsConnectedToVoiceChannel(channel);
   const obj4 = channel(ensureSyncedChannelVoiceStates[19]);
-  const items = [ReadStateStore, UserGuildSettingsStore];
+  items = [ReadStateStore, UserGuildSettingsStore];
   const items1 = [channel];
   const stateFromStoresObject = channel(ensureSyncedChannelVoiceStates[20]).useStateFromStoresObject(items, () => ({ hasUnread: ReadStateStore.hasUnread(channel.id), mentionCount: ReadStateStore.getMentionCount(channel.id), resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel) }), items1);
   let hasUnread = stateFromStoresObject.hasUnread;
@@ -226,7 +226,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/Vo
 export default noop.memo(function ConnectedVoiceChannel(channel) {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStates(channel.guild_id), items1);
   const arr3 = useEmbeddedAppsForChannelDefault(channel);

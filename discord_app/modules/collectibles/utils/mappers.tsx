@@ -1,6 +1,6 @@
-// === Module 1980: mappers ===
+// === Module 2109: mappers ===
 
-// Module 1980 (mappers)
+// Module 2109 (mappers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");

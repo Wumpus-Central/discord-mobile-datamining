@@ -1,16 +1,16 @@
-// === Module 18534: ICYMICustomScoresOverviewScreen ===
+// === Module 18688: ICYMICustomScoresOverviewScreen ===
 
-// Module 18534 (ICYMICustomScoresOverviewScreen)
+// Module 18688 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/IC
 export default function ICYMICustomScoresOverviewScreen(navigation) {
   navigation = navigation.navigation;
   let stateFromStores1;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = navigation(stateFromStores1[8]).useStateFromStores(items, () => guilds.getGuilds());
   let obj = navigation(stateFromStores1[8]);
   const items1 = [SortedGuildStore];

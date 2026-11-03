@@ -1,23 +1,23 @@
-// === Module 11752: PictureInPictureVideo ===
+// === Module 11889: PictureInPictureVideo ===
 
-// Module 11752 (PictureInPictureVideo)
+// Module 11889 (PictureInPictureVideo)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11698 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11708 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11711 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11712 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11835 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11845 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11848 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SpeakingStore from "SpeakingStore" /* 6756 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11705 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SpeakingStore from "SpeakingStore" /* 6876 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11842 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,12 +27,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11000);
+const ChannelCallStore = fn(11133);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
 const native = fn(1187);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -80,7 +80,7 @@ let closure_20 = noop.memo(function PictureInPictureVideo(channel) {
     const tmp6Result = tmp6(tmp2[19]);
   }
   let obj = channel(openVoice[16]);
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const items1 = [pipParticipant];
   let type1;
   const stateFromStores = channel(openVoice[20]).useStateFromStores(items, () => {
@@ -100,7 +100,7 @@ let closure_20 = noop.memo(function PictureInPictureVideo(channel) {
     if (closure_4) {
       const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
     } else {
-      map1();
+      state();
     }
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
@@ -147,7 +147,7 @@ let closure_20 = noop.memo(function PictureInPictureVideo(channel) {
                       if (closure_3) {
                         openVoice();
                       } else {
-                        map1();
+                        state();
                       }
                     }
           };
@@ -190,16 +190,16 @@ let closure_20 = noop.memo(function PictureInPictureVideo(channel) {
 let closure_22 = noop.memo(function ActivityPictureInPictureVideo(arg0) {
   ({ channel, selfParticipant } = arg0);
   const tmp = closure_19();
-  let items = [ChannelCallLifecycleStore];
+  items = [ChannelCallLifecycleStore];
   const obj = id(leadingEdgeDebounce[20]);
   id = channel.id;
   leadingEdgeDebounce = undefined;
   [tmp5, tmp6] = id(leadingEdgeDebounce[20]).useStateFromStoresArray(items, () => {
-    const items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
+    items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
     return items;
   });
   const tmp4 = _slicedToArray(id(leadingEdgeDebounce[20]).useStateFromStoresArray(items, () => {
-    const items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
+    items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
     return items;
   }), 2);
   const items1 = [ChannelCallLifecycleStore];
@@ -209,11 +209,11 @@ let closure_22 = noop.memo(function ActivityPictureInPictureVideo(arg0) {
   const items3 = [id];
   const obj3 = id(leadingEdgeDebounce[20]);
   [arr5, tmp9] = id(leadingEdgeDebounce[20]).useStateFromStores(items2, () => {
-    const items = [ChannelRTCStore.getParticipants(id), ChannelRTCStore.getVideoParticipants(id), ChannelRTCStore.getParticipantsVersion(id)];
+    items = [ChannelRTCStore.getParticipants(id), ChannelRTCStore.getVideoParticipants(id), ChannelRTCStore.getParticipantsVersion(id)];
     return items;
   }, items3, areParticipantsEqual);
   const tmp8 = _slicedToArray(id(leadingEdgeDebounce[20]).useStateFromStores(items2, () => {
-    const items = [ChannelRTCStore.getParticipants(id), ChannelRTCStore.getVideoParticipants(id), ChannelRTCStore.getParticipantsVersion(id)];
+    items = [ChannelRTCStore.getParticipants(id), ChannelRTCStore.getVideoParticipants(id), ChannelRTCStore.getParticipantsVersion(id)];
     return items;
   }, items3, areParticipantsEqual), 2);
   const items4 = [SpeakingStore];
@@ -325,7 +325,7 @@ export default noop.memo(function PipctureInPictureVideoContainer(arg0) {
   const obj4 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
   const tmp6 = usePipDimensionsDefault({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
   const obj5 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
-  const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
+  items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
   ({ width, height } = useWindowDimensionsDefault());
   const tmp7 = useWindowDimensionsDefault();
   let elevationShadow;
@@ -344,15 +344,15 @@ export default noop.memo(function PipctureInPictureVideoContainer(arg0) {
   if (isViewingActivity) {
     const obj7 = { pointerEvents: "none", style: tmp.activityPipContainer, children: null };
     const obj8 = { channel, pipParticipant, selfParticipant };
-    obj7.children = __initData2(closure_22, obj8);
-    let tmp8Result = __initData2(hasOwnProperty, obj7);
+    obj7.children = value2(closure_22, obj8);
+    let tmp8Result = value2(hasOwnProperty, obj7);
   } else {
     const obj9 = { channel, pipParticipant, selfParticipant };
-    tmp8Result = __initData2(closure_20, obj9);
+    tmp8Result = value2(closure_20, obj9);
   }
   tmp2Result = PlatformUtils;
   obj6.children = tmp8Result;
-  obj5.children = __initData2(React4, { activeOpacity: 0.7, children: __initData2(hasOwnProperty, obj6) });
-  return __initData2(hasOwnProperty, obj5);
+  obj5.children = value2(React4, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj6) });
+  return value2(hasOwnProperty, obj5);
 });
 export { areParticipantsEqual };

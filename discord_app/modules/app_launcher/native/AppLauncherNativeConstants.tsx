@@ -1,14 +1,14 @@
-// === Module 1496: AppLauncherNativeConstants ===
+// === Module 1498: AppLauncherNativeConstants ===
 
-// Module 1496 (AppLauncherNativeConstants)
+// Module 1498 (AppLauncherNativeConstants)
 import nativeDefault from "native" /* 575 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import _modDef1620 from "module_1620" /* 1620 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import _modDef1622 from "module_1622" /* 1622 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
-export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1620;
+export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1622;
 export const AppLauncherRouteName = { HOME: "home", APPLICATION_VIEW: "application_view", COMMAND_VIEW: "command_view", APP_LIST_VIEW: "app_list_view" };
 export function useAppLauncherNavigation() {
   return useNavigation.useNativeStackNavigation();

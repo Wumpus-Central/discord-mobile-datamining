@@ -1,19 +1,19 @@
-// === Module 7376: UserProfileCard ===
+// === Module 7496: UserProfileCard ===
 
-// Module 7376 (UserProfileCard)
+// Module 7496 (UserProfileCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7377);
+const Constants = fn(7497);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -36,7 +36,7 @@ export default function UserProfileCard(arg0) {
   let tmp3Result2 = null != title || null != trailingAction;
   if (tmp3Result2) {
     const obj2 = { style: null, children: null };
-    const items = [tmp2.title, titleStyle];
+    items = [tmp2.title, titleStyle];
     obj2.style = items;
     let tmp3Result = null != title;
     if (tmp3Result) {
@@ -73,7 +73,7 @@ export function UserProfileFormRow(arg0) {
   }
   const obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
   const obj2 = { style: tmp.rowLabel, children: null };
-  const items = [hasOwnProperty(icon, { size, color: str }), , , ];
+  items = [hasOwnProperty(icon, { size, color: str }), , , ];
   if (labelColor == null) {
     labelColor = str2;
   }

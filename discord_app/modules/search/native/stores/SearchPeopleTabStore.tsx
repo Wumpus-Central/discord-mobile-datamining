@@ -1,14 +1,14 @@
-// === Module 13915: SearchPeopleTabStore ===
+// === Module 14046: SearchPeopleTabStore ===
 
-// Module 13915 (SearchPeopleTabStore)
+// Module 14046 (SearchPeopleTabStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import useUserListData from "useUserListData" /* 10729 */;
-import NewMessageUserList from "NewMessageUserList" /* 13916 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import FrecencyStore from "FrecencyStore" /* 6895 */;
+import useUserListData from "useUserListData" /* 10859 */;
+import NewMessageUserList from "NewMessageUserList" /* 14047 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import FrecencyStore from "FrecencyStore" /* 7015 */;
 
 require = fn;
 let closure_5 = [];
@@ -47,12 +47,12 @@ prototype["search"] = function search(str) {
     const response = userSearch.fetch(trimmed, true);
     const trimmed1 = trimmed.toLocaleLowerCase().trim();
     if (0 === trimmed1.length) {
-      let items = [];
+      items = [];
     } else {
       const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(13916).filterGroupDMs);
+      const found = values.filter(trimmed1(14047).filterGroupDMs);
       const mapped = found.map((id) => {
-        const items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
+        items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
         return items;
       });
       const found1 = mapped.filter((item) => {
@@ -98,7 +98,7 @@ prototype["processResults"] = function processResults() {
         return title.title === intl.string(util.t.y29JXs);
       });
       if (-1 === findIndexResult) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(result, 0)] = obj3;
         arr3 = items;
       } else {

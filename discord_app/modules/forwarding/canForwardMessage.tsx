@@ -1,11 +1,11 @@
-// === Module 10193: canForwardMessage ===
+// === Module 10323: canForwardMessage ===
 
-// Module 10193 (canForwardMessage)
-import FlagUtils from "FlagUtils" /* 1396 */;
-import GatedChannelStore from "GatedChannelStore" /* 4918 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 10323 (canForwardMessage)
+import FlagUtils from "FlagUtils" /* 1398 */;
+import GatedChannelStore from "GatedChannelStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function canForwardMessage(state) {
       }
       let tmp8 = null == guild_id;
       if (!tmp8) {
-        const guild = obj4.getGuild(guild_id);
+        guild = obj4.getGuild(guild_id);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
@@ -105,6 +105,6 @@ const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.
 export { canForwardMessage };
 export function useCanForwardMessage(message) {
   _require = message;
-  const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
+  items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
   return require("initialize").useStateFromStores(items, () => canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore));
 }

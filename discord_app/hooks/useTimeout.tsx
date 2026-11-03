@@ -1,6 +1,6 @@
-// === Module 10626: useTimeout ===
+// === Module 10756: useTimeout ===
 
-// Module 10626 (useTimeout)
+// Module 10756 (useTimeout)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -9,9 +9,9 @@ const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
 
 export default function useTimeout(current, arg1) {
   closure_1 = arg1;
-  const tmp = framebus(current);
+  const tmp = duration(current);
   closure_2 = tmp;
-  const items = [current];
+  items = [current];
   React(() => {
     closure_2.current = current;
   }, items);

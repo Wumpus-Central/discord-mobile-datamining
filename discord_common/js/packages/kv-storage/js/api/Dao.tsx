@@ -1,8 +1,8 @@
-// === Module 4896: Dao ===
+// === Module 5023: Dao ===
 
-// Module 4896 (Dao)
-import Table from "Table" /* 4897 */;
-import TableId from "TableId" /* 4899 */;
+// Module 5023 (Dao)
+import Table from "Table" /* 5024 */;
+import TableId from "TableId" /* 5026 */;
 import size from "module_2" /* 2 */;
 
 let Dao;
@@ -35,7 +35,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   if (typeof Dao === "function") {
     const obj = Object.create(Dao.prototype);
     obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
+    items = [originalPrefix];
     const table = new Table.Table(items, tableId, database, false);
     obj.table = table;
     return obj;
@@ -45,7 +45,7 @@ prototype["withoutLogging"] = function withoutLogging() {
 };
 prototype["get"] = function get(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.get(items);
 };
 prototype["getMany"] = function getMany(arg0) {
@@ -54,7 +54,7 @@ prototype["getMany"] = function getMany(arg0) {
 };
 prototype["getRange"] = function getRange(arg0, arg1, arg2) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   const items1 = [arg1];
   return table.getRange(items, items1, arg2);
 };
@@ -72,7 +72,7 @@ prototype["getIds"] = function getIds() {
 };
 prototype["getParentId"] = function getParentId(arg0) {
   const table = this.table;
-  const items = [null, arg0];
+  items = [null, arg0];
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0, data) {
@@ -82,7 +82,7 @@ prototype["put"] = function put(arg0, data) {
   }
   const table = this.table;
   const obj = { key: null, data, generation: null };
-  const items = [arg0];
+  items = [arg0];
   obj.key = items;
   return table.put(obj, Replace);
 };
@@ -93,7 +93,7 @@ prototype["delete"] = function delete(arg0) {
     let deleteResult = table2.delete();
   } else {
     const table = self.table;
-    const items = [arg0];
+    items = [arg0];
     deleteResult = table.delete(items);
   }
   return deleteResult;
@@ -154,7 +154,7 @@ prototype2["put"] = function put(arg0, data) {
   }
   const transaction = this.transaction;
   const obj = { key: null, data, generation: null };
-  const items = [arg0];
+  items = [arg0];
   obj.key = items;
   transaction.put(obj, Replace);
 };
@@ -165,7 +165,7 @@ prototype2["delete"] = function delete(arg0) {
     let deleteResult = transaction2.delete();
   } else {
     const transaction = self.transaction;
-    const items = [arg0];
+    items = [arg0];
     deleteResult = transaction.delete(items);
   }
   return deleteResult;

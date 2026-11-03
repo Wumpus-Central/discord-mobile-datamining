@@ -1,16 +1,16 @@
-// === Module 17587: DevToolsLocalMessageCache ===
+// === Module 17730: DevToolsLocalMessageCache ===
 
-// Module 17587 (DevToolsLocalMessageCache)
+// Module 17730 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7667 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7791 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 function CacheLogEntry(entry) {
@@ -56,7 +56,7 @@ function CacheLogEntry(entry) {
     name = channel.name;
   }
   const obj = { label: "" + name, subLabel: null };
-  const items = [combined, combined1, str3, str7, str11];
+  items = [combined, combined1, str3, str7, str11];
   obj.subLabel = items.join("\n");
   return hasOwnProperty(TableRow.TableRow, obj);
 }
@@ -73,7 +73,7 @@ export default function DevToolsLocalMessageCache() {
   const obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const obj2 = { spacing: 8, children: null };
   const obj3 = { title: "Local Message Cache Stats", hasIcons: false, children: null };
-  const items = [hasOwnProperty(TableRow.TableRow, { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size }), , , ];
+  items = [hasOwnProperty(TableRow.TableRow, { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size }), , , ];
   const obj4 = { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size };
   items[1] = hasOwnProperty(TableRow.TableRow, { label: "Cache Hits", subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size });
   const obj5 = { label: "Cache Hits", subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size };

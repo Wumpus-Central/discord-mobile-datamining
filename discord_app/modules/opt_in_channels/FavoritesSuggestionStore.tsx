@@ -1,11 +1,11 @@
-// === Module 7709: FavoritesSuggestionStore ===
+// === Module 7833: FavoritesSuggestionStore ===
 
-// Module 7709 (FavoritesSuggestionStore)
+// Module 7833 (FavoritesSuggestionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 function handleChange() {
   const channelId = SelectedChannelStore.getChannelId();
@@ -52,7 +52,7 @@ class FavoritesSuggestionStore extends PersistedStore {
 const prototype = FavoritesSuggestionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   this.waitFor(ChannelStore, SelectedChannelStore, UserGuildSettingsStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, handleChange);
   if (null != arg0) {
     ({ suggestedChannels, dismissedSuggestions, channelOpensByChannelId } = arg0);

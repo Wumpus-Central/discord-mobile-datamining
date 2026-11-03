@@ -1,11 +1,11 @@
-// === Module 10181: showLongPressURLActionSheet ===
+// === Module 10311: showLongPressURLActionSheet ===
 
-// Module 10181 (showLongPressURLActionSheet)
-import LinkingDefault from "Linking" /* 5709 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import showShareActionSheet from "showShareActionSheet" /* 8931 */;
-import handleContentLinkingDefault from "handleContentLinking" /* 10182 */;
+// Module 10311 (showLongPressURLActionSheet)
+import LinkingDefault from "Linking" /* 5829 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import showShareActionSheet from "showShareActionSheet" /* 9059 */;
+import handleContentLinkingDefault from "handleContentLinking" /* 10312 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/links/native/showLongPressURLActionSheet.tsx");
@@ -22,7 +22,7 @@ export default function showLongPressURLActionSheet(urlString) {
     const result = str(channelId[0]).triggerHapticFeedback(str(channelId[0]).HapticFeedbackTypes.IMPACT_LIGHT);
     let obj = str(channelId[0]);
   }
-  const items = [];
+  items = [];
   match = str.match(/^(tel|sms|mailto):([^?;]+)/);
   if (null != match) {
     const intl7 = str(channelId[1]).intl;

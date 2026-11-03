@@ -1,18 +1,18 @@
-// === Module 19730: GuildSettingsModalEmoji ===
+// === Module 19880: GuildSettingsModalEmoji ===
 
-// Module 19730 (GuildSettingsModalEmoji)
+// Module 19880 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 4968 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19733 */;
-import HeaderRow from "HeaderRow" /* 19737 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 19738 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5095 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19883 */;
+import HeaderRow from "HeaderRow" /* 19887 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 19888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19731 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19881 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -86,7 +86,7 @@ class ManageEmojisModal {
       ({ item, index } = arg0);
       const type = item.type;
       if ("SECTION" === type) {
-        const obj2 = { style: closure_8.section, variant: "text-xs/bold", color: "text-default", children: item.section };
+        const obj2 = { style: closure_8.section, variant: "text-xs/semibold", color: "text-default", children: item.section };
         return React6(Text_Text.Text, obj2);
       } else if ("EMOJI" === type) {
         let type1;
@@ -180,15 +180,15 @@ class ManageEmojisModal {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(10057).fetchEmoji, 1000);
-const createStyles = fn(5014);
+let closure_11 = apply.throttle(fn(10187).fetchEmoji, 1000);
+const createStyles = fn(5141);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };
 obj.titleContainer = { paddingLeft: 16, paddingRight: 16 };
-let closure_12 = createStyles.createStyles(obj);
+const application_id = createStyles.createStyles(obj);
 let apply = apply_mod;
 const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
   _require = stateFromStores;
@@ -211,7 +211,7 @@ const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
   const stringResult1 = intl3.string(require("util").t.wWjQye);
   const formatted1 = "" + intl3.string(require("util").t.wWjQye) + " - " + intl4.formatToPlainString(require("util").t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
-    const items = [{ type: "SECTION", key: formatted, section: formatted }];
+    items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);
     let items1 = items;
   } else {
@@ -234,7 +234,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 export default function GuildSettingsModalEmoji(contentContainerStyle) {
   ({ guildId: require, isLandingScreen } = contentContainerStyle);
   let stateFromStores;
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(_require));
   let obj = require("initialize");
   const navigation = require("useNavigation").useNavigation();

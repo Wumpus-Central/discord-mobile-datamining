@@ -1,15 +1,15 @@
-// === Module 17284: SettingsAppearanceMessagesHeaderItem ===
+// === Module 17427: SettingsAppearanceMessagesHeaderItem ===
 
-// Module 17284 (SettingsAppearanceMessagesHeaderItem)
+// Module 17427 (SettingsAppearanceMessagesHeaderItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { messagesHeaderContainer: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center", marginHorizontal: nativeDefault.space.PX_24 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -17,9 +17,9 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 
 export default function MessagesHeaderItem(animatedStyles) {
   const obj = { style: closure_4().messagesHeaderContainer, children: null };
-  const obj2 = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
+  const obj2 = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.OIgYlQ);
-  obj.children = jsx(Text_Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
+  obj.children = jsx(Text_Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/semibold", children: null });
   return <View style={closure_4().messagesHeaderContainer}>{null}</View>;
 };

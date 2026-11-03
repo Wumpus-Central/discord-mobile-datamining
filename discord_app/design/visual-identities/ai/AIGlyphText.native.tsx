@@ -1,16 +1,16 @@
-// === Module 12246: AIGlyphText ===
+// === Module 12382: AIGlyphText ===
 
-// Module 12246 (AIGlyphText)
-import useToken from "useToken" /* 5596 */;
-import AIGlyphFont from "AIGlyphFont" /* 12247 */;
+// Module 12382 (AIGlyphText)
+import useToken from "useToken" /* 5719 */;
+import AIGlyphFont from "AIGlyphFont" /* 12383 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import module_1652 from "module_1652" /* 1652 */;
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
-const createStyles = fn(5014);
+let closure_4 = module_1652.createAnimatedComponent(Text);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;
@@ -33,7 +33,7 @@ export function AIGlyphText(color) {
     tmp = str;
   }
   const obj2 = { style: null, allowFontScaling: null, numberOfLines: null, ellipsizeMode: null, children: null };
-  const items = [closure_5(color.size, useToken.useToken(tmp)).glyph, style];
+  items = [closure_5(color.size, useToken.useToken(tmp)).glyph, style];
   obj2.style = items;
   obj2.allowFontScaling = allowFontScaling;
   obj2.numberOfLines = numberOfLines;

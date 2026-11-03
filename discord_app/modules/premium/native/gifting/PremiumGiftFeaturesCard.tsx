@@ -1,31 +1,31 @@
-// === Module 10620: PremiumGiftFeaturesCard ===
+// === Module 10750: PremiumGiftFeaturesCard ===
 
-// Module 10620 (PremiumGiftFeaturesCard)
+// Module 10750 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import native from "native" /* 5080 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ClockIcon from "ClockIcon" /* 5740 */;
-import TextStylesDefault from "TextStyles" /* 6723 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9527 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9915 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9927 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9929 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9936 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10608 */;
-import MarketingComponentType from "MarketingComponentType" /* 10609 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10621 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10622 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10623 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10624 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10625 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10627 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import native from "native" /* 5207 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ClockIcon from "ClockIcon" /* 5860 */;
+import TextStylesDefault from "TextStyles" /* 6843 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9655 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 10046 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 10058 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 10060 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 10067 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10738 */;
+import MarketingComponentType from "MarketingComponentType" /* 10739 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10751 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10752 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10753 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10754 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10755 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10757 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
@@ -34,7 +34,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   const tmp = closure_15(config.isLargeSize);
   const themeAndReducedMotionAwareAssetUrl = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStores = initialize.useStateFromStores(items, () => giftPromotion.getGiftPromotion());
   let endDate;
   if (stateFromStores != null) {
@@ -84,12 +84,12 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   return React7(native.ThemeContextProvider, obj4);
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const Constants = fn(1083);
 ({ Fonts: closure_7, ThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { default: { paddingVertical: nativeDefault.space.PX_8 }, compact: null, smallCompact: null };
 let obj2 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.compact = { paddingVertical: nativeDefault.space.PX_4 };
@@ -115,7 +115,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -156,7 +156,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   }
   const merged = Object.assign(variant, Object.assign({ premiumType: 0, onPress: 0, style: 0, claimableRewards: 0, isSelected: 0, variant: 0 }));
   obj = initialize;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     marketingComponentByType = marketingComponentByType.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
     let prop = null;
@@ -196,7 +196,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   const intl = util.intl;
   obj5.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
   items3[2] = React7(Text_Text.Text, obj5);
-  const obj6 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
+  const obj6 = { style: null, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
   const items5 = [tmp6.featureTitle, obj4[str]];
   obj6.style = items5;
   const intl2 = util.intl;

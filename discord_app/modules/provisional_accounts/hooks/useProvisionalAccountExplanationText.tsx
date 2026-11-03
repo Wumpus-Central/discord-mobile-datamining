@@ -1,9 +1,9 @@
-// === Module 14204: useProvisionalAccountExplanationText ===
+// === Module 14335: useProvisionalAccountExplanationText ===
 
-// Module 14204 (useProvisionalAccountExplanationText)
+// Module 14335 (useProvisionalAccountExplanationText)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 14205 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 14336 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export function useProvisionalAccountExplanationText(renderApplicationName) {
   renderApplicationName = renderApplicationName.renderApplicationName;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
   importDefault = tmp;
-  const items = [tmp, renderApplicationName];
+  items = [tmp, renderApplicationName];
   return noop.useMemo(() => {
     if (null != closure_1) {
       const intl = util.intl;

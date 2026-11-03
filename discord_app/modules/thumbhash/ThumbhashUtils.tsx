@@ -1,7 +1,7 @@
-// === Module 18574: ThumbhashUtils ===
+// === Module 18730: ThumbhashUtils ===
 
-// Module 18574 (ThumbhashUtils)
-import thumbHashToRGBA2 from "thumbHashToRGBA" /* 17166 */;
+// Module 18730 (ThumbhashUtils)
+import thumbHashToRGBA2 from "thumbHashToRGBA" /* 17309 */;
 import size from "module_2" /* 2 */;
 
 function thumbHashToRGBA(arg0) {
@@ -46,7 +46,7 @@ function thumbHashToRGBA(arg0) {
   if (tmp3) {
     num6 = 6;
   }
-  const items = [];
+  items = [];
   let num7 = 0;
   let num8 = 0;
   let num9 = 0;

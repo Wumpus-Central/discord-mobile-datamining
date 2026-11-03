@@ -1,6 +1,6 @@
-// === Module 12183: conjureDatabaseLock ===
+// === Module 12319: conjureDatabaseLock ===
 
-// Module 12183 (conjureDatabaseLock)
+// Module 12319 (conjureDatabaseLock)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ let closure_6 = async function _withConjureDatabaseLock(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,6 +109,6 @@ export function withConjureDatabaseLock() {
 }
 export function useConjureDatabaseBusy(projectId) {
   closure_0 = projectId;
-  const items = [projectId];
+  items = [projectId];
   return noop.useSyncExternalStore(subscribe, noop.useCallback(() => set.has(closure_0), items));
 }

@@ -1,6 +1,6 @@
-// === Module 5604: VisualEffectViewNativeComponent ===
+// === Module 5727: VisualEffectViewNativeComponent ===
 
-// Module 5604 (VisualEffectViewNativeComponent)
+// Module 5727 (VisualEffectViewNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 14984: useUserProfileGameFriendApplicationIds ===
+// === Module 15120: useUserProfileGameFriendApplicationIds ===
 
-// Module 14984 (useUserProfileGameFriendApplicationIds)
+// Module 15120 (useUserProfileGameFriendApplicationIds)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 let closure_5 = [];
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/game_relationships/hooks/useU
 export function useUserProfileGameFriendApplicationIds(userId) {
   userId = userId.userId;
   let stateFromStores;
-  const items = [RelationshipStore, UserStore];
+  items = [RelationshipStore, UserStore];
   stateFromStores = userId(stateFromStores[3]).useStateFromStores(items, () => {
     let isFriendResult = RelationshipStore.isFriend(userId);
     if (!isFriendResult) {

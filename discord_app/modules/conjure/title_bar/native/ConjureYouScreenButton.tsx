@@ -1,21 +1,21 @@
-// === Module 14710: ConjureYouScreenButton ===
+// === Module 14841: ConjureYouScreenButton ===
 
-// Module 14710 (ConjureYouScreenButton)
+// Module 14841 (ConjureYouScreenButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Link from "Link" /* 1498 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import MagicWandIcon from "MagicWandIcon" /* 12123 */;
-import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 13005 */;
-import useConjureWandStatusDefault from "useConjureWandStatus" /* 14711 */;
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14713 */;
-import getIconSize from "getIconSize" /* 14714 */;
-import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 14716 */;
+import Link from "Link" /* 1500 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import MagicWandIcon from "MagicWandIcon" /* 12259 */;
+import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 13141 */;
+import useConjureWandStatusDefault from "useConjureWandStatus" /* 14842 */;
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14844 */;
+import getIconSize from "getIconSize" /* 14845 */;
+import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 14847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { dot: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -38,7 +38,7 @@ export default noop.memo(function ConjureYouScreenButton() {
   obj2.icon = tmp7Result;
   obj2.accessibilityLabel = accessibilityLabel;
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3868.uk6jhJ);
+  obj2.label = intl.string(_modDef3995.uk6jhJ);
   obj2.onPress = openConjureProjectsSheetDefault;
   obj2.showRedDot = hasBadge;
   obj2.dotStyle = tmp.dot;

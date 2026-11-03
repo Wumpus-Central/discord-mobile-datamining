@@ -1,10 +1,10 @@
-// === Module 11888: useRequestToSpeakPermission ===
+// === Module 12025: useRequestToSpeakPermission ===
 
-// Module 11888 (useRequestToSpeakPermission)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7945 */;
+// Module 12025 (useRequestToSpeakPermission)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8069 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -15,12 +15,12 @@ let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpea
 
 export function useRequestToSpeakPermission(id) {
   _require = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4951).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4951);
+  const canEveryoneRoleResult = stateFromStores(5078).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(5078);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

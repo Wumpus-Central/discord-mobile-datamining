@@ -1,9 +1,9 @@
-// === Module 13855: useCanManageGuildDirectoryEntry ===
+// === Module 13986: useCanManageGuildDirectoryEntry ===
 
-// Module 13855 (useCanManageGuildDirectoryEntry)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 13986 (useCanManageGuildDirectoryEntry)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/useCanMana
 
 export default function useCanManageGuildDirectoryEntry(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   dependencyMap = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0.guildId));
   const obj = require("initialize");
   const items1 = [closure_2];
@@ -39,6 +39,6 @@ export default function useCanManageGuildDirectoryEntry(arg0) {
 };
 export function useCanCreateOrAddGuildInDirectory(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.SEND_MESSAGES, closure_0));
 }

@@ -1,19 +1,19 @@
-// === Module 18899: useVoiceChannelAppOptions ===
+// === Module 19057: useVoiceChannelAppOptions ===
 
-// Module 18899 (useVoiceChannelAppOptions)
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+// Module 19057 (useVoiceChannelAppOptions)
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function voiceChannelAppCandidates(memo5, result, arg2) {
   const map = new Map();
-  const items = [...result];
+  items = [...result];
   for (const item10020 of items) {
     let obj2 = ConjureUtils;
     if (obj2.isConjureProjectInGuild(item10020, arg2)) {
@@ -43,7 +43,7 @@ export function voiceChannelAppIdsToFetch(arr, arg1) {
 export function useVoiceChannelAppSettingOptions(guildId, application_id) {
   _require = application_id;
   closure_129_0 = guildId;
-  let items = [guildId];
+  items = [guildId];
   const effect = getOrFetchApplication.useEffect(() => {
     ConjureActionCreators.listProjects(closure_0);
   }, items);
@@ -60,7 +60,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
   closure_129_3 = memo;
   const items5 = [memo];
   const memo1 = getOrFetchApplication.useMemo(() => application_id.map((application_id) => application_id.application_id), items5);
-  const tmp9 = memo5(7330)(memo1, false);
+  const tmp9 = memo5(7450)(memo1, false);
   closure_129_4 = tmp9;
   let obj3 = require("initialize");
   const tmp8 = memo5;
@@ -92,7 +92,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
       const applications = memo5(result[10]).fetchApplications(found, true);
       const obj = memo5(result[10]);
       applications.catch(() => closure_1_8(true)).finally(() => closure_2_7((arg0) => {
-        const items = [...closure_1_0];
+        items = [...closure_1_0];
         return new Set(items);
       }));
       const catchPromise = applications.catch(() => closure_1_8(true));
@@ -134,7 +134,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
     }
     return application_id;
   }), items11);
-  const tmp21 = tmp8(7330)(memo4);
+  const tmp21 = tmp8(7450)(memo4);
   closure_129_11 = tmp21;
   const items12 = [memo3, tmp21];
   memo5 = obj.useMemo(() => closure_1_10.map((application_id, index) => {
@@ -202,7 +202,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
         }
         let obj6 = { options: null, listState: "rows" };
         obj4.iconURL = tmp4;
-        const items = [obj4];
+        items = [obj4];
         HermesBuiltin.arraySpread(memo5, 1);
         obj6.options = items;
       }

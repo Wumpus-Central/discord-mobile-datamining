@@ -1,10 +1,10 @@
-// === Module 19939: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 20089: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 19939 (GuildSettingsRoleSubscriptionsEnableMonetization)
-import UnavailableNoticeDefault from "UnavailableNotice" /* 18616 */;
-import PlaceholderDefault from "Placeholder" /* 19875 */;
+// Module 20089 (GuildSettingsRoleSubscriptionsEnableMonetization)
+import UnavailableNoticeDefault from "UnavailableNotice" /* 18774 */;
+import PlaceholderDefault from "Placeholder" /* 20025 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   if (null == obj.useStateFromStores(items, () => GuildStore.getGuild(guildId))) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {

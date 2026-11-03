@@ -1,6 +1,6 @@
-// === Module 10870: ConjureSpendLimitStore ===
+// === Module 11000: ConjureSpendLimitStore ===
 
-// Module 10870 (ConjureSpendLimitStore)
+// Module 11000 (ConjureSpendLimitStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

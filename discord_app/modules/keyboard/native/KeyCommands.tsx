@@ -1,14 +1,14 @@
-// === Module 6023: KeyCommands ===
+// === Module 6143: KeyCommands ===
 
-// Module 6023 (KeyCommands)
+// Module 6143 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 6024 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 6144 */;
 
 function toNativeKeyCommand(eventName) {
   return { eventName: eventName.eventName, input: eventName.input, modifierFlags: eventName.modifierFlags, discoverabilityTitle: eventName.discoverabilityTitle };
 }
 function registerKeyCommand(arg0) {
-  const items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(closure_3, 0)] = arg0;
   closure_3 = items;
   if (null == closure_5) {
@@ -72,7 +72,7 @@ export const KeyModifierFlags = NativeKeyCommandsModule;
 export const KeyInputs = { ESCAPE: "UIKeyInputEscape" };
 export function subscribeKeyCommand(arg0) {
   importDefault = arg0;
-  let items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(items, 0)] = arg0;
   if (null == closure_5) {
     closure_5 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
@@ -123,7 +123,7 @@ export function subscribeKeyCommand(arg0) {
   };
 }
 export function useKeyCommands(memo) {
-  const items = [memo];
+  items = [memo];
   const effect = noop.useEffect(() => {
     while (tmp2 !== undefined) {
       let tmp5 = registerKeyCommand(tmp3);

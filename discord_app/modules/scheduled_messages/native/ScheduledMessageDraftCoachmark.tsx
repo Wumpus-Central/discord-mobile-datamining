@@ -1,8 +1,8 @@
-// === Module 14001: ScheduledMessageDraftCoachmark ===
+// === Module 14132: ScheduledMessageDraftCoachmark ===
 
-// Module 14001 (ScheduledMessageDraftCoachmark)
+// Module 14132 (ScheduledMessageDraftCoachmark)
 import util from "util" /* 1113 */;
-import useCoachmark from "useCoachmark" /* 9954 */;
+import useCoachmark from "useCoachmark" /* 10085 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,14 +11,14 @@ function AttachedCoachmark(buttonRef) {
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 }
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");
 
 export default function ScheduledMessageDraftCoachmark(onDismiss) {
   onDismiss = onDismiss.onDismiss;
-  const items = [onDismiss];
+  items = [onDismiss];
   ({ buttonRef, isVisible } = onDismiss);
   const memo = noop.useMemo(() => {
     const obj = { title: null, description: null, position: "top", offsetY: 4, visible: true, onDismiss: null, renderImgComponent: null };

@@ -1,9 +1,9 @@
-// === Module 11143: useFavoritesGuildChannelActions ===
+// === Module 11280: useFavoritesGuildChannelActions ===
 
-// Module 11143 (useFavoritesGuildChannelActions)
+// Module 11280 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export default function useFavoritesGuildChannelActions(channelId) {
   _require = channelId;
   let isFavoritableChannelResult = require("FavoritesUtils").isFavoritableChannel(channelId);
   const obj = require("FavoritesUtils");
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => FavoriteStore.isFavorite(channelId.id));
   const obj2 = require("initialize");
   const isFavoritesGuildSelected = require("FavoritesHooks").useIsFavoritesGuildSelected();

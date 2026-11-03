@@ -1,9 +1,9 @@
-// === Module 10748: useUserVoiceActivity ===
+// === Module 10878: useUserVoiceActivity ===
 
-// Module 10748 (useUserVoiceActivity)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 10878 (useUserVoiceActivity)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -75,7 +75,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1083).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "raw", voiceChannel: "cix" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "flexDirection" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
@@ -83,7 +83,7 @@ export default function useUserVoiceActivity(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   const includeNonDiscoverable = userId.includeNonDiscoverable;
-  const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
+  items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
   const items1 = [guildId, userId, includeNonDiscoverable];
   return userId(guildId[4]).useStateFromStoresObject(items, () => getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore }), items1);
 };

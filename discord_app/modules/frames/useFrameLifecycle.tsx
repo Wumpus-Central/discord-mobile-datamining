@@ -1,12 +1,12 @@
-// === Module 18672: useFrameLifecycle ===
+// === Module 18830: useFrameLifecycle ===
 
-// Module 18672 (useFrameLifecycle)
+// Module 18830 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const size = fn(2);
@@ -16,10 +16,10 @@ export default function useFrameLifecycle(applicationId) {
   applicationId = applicationId.applicationId;
   const surface = applicationId.surface;
   let callback;
-  let state;
+  state = undefined;
   closure_129_0 = applicationId;
   closure_129_1 = surface;
-  const items = [applicationId, surface];
+  items = [applicationId, surface];
   const memo = noop.useMemo(() => React5(applicationId, memo1), items);
   closure_129_2 = memo;
   const items1 = [memo];
@@ -54,7 +54,7 @@ export default function useFrameLifecycle(applicationId) {
         const obj7 = { state: noop.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: noop.Loading, frame: "Array" };
+        const obj8 = { state: noop.Loading, frame: "y" };
         obj10 = obj8;
       } else {
         if (null != data) {

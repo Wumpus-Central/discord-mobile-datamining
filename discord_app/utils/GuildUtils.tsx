@@ -1,13 +1,13 @@
-// === Module 6901: GuildUtils ===
+// === Module 7021: GuildUtils ===
 
-// Module 6901 (GuildUtils)
+// Module 7021 (GuildUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import UserUtilsAll from "UserUtils" /* 5068 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
-import priv from "priv" /* 1451 */;
+import UserUtilsAll from "UserUtils" /* 5195 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
+import priv from "priv" /* 1453 */;
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {
@@ -47,7 +47,7 @@ export default {
       num = 10;
     }
     const isArray = Array.isArray(arr);
-    let items = [];
+    items = [];
     if (isArray) {
       let item = arr.forEach((item) => {
         let str = item;

@@ -1,17 +1,17 @@
-// === Module 14435: UnifiedGiftModalSuccessScreen ===
+// === Module 14566: UnifiedGiftModalSuccessScreen ===
 
-// Module 14435 (UnifiedGiftModalSuccessScreen)
+// Module 14566 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { alertContainer: { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" }, image: { position: "relative", top: -50 }, title: null, description: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
@@ -28,7 +28,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const tmp = closure_7();
   const GiftingBadgeExperiment = giftBadgeProgress(enabled[6]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
-  const items = [enabled, giftBadgeProgress, onClose];
+  items = [enabled, giftBadgeProgress, onClose];
   const callback = noop.useCallback(() => {
     onClose();
     let tmp2 = enabled;
@@ -37,7 +37,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14447, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14578, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];
@@ -49,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const tmp4 = giftBadgeProgress(enabled[5]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
   const tmp8 = onClose(enabled[11]);
   const items2 = [closure_5(onClose(enabled[12]), { source: tmp4, style: tmp.image }), , , ];
-  const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
+  const obj3 = { variant: "heading-lg/semibold", style: tmp.title, children: null };
   const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = closure_5(giftBadgeProgress(enabled[13]).Text, obj3);

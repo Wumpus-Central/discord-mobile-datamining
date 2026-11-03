@@ -1,15 +1,15 @@
-// === Module 14736: GuildProfileLoadingError ===
+// === Module 14867: GuildProfileLoadingError ===
 
-// Module 14736 (GuildProfileLoadingError)
+// Module 14867 (GuildProfileLoadingError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import WarningIcon from "WarningIcon" /* 8026 */;
-import GuildProfileView from "GuildProfileView" /* 9299 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import WarningIcon from "WarningIcon" /* 8150 */;
+import GuildProfileView from "GuildProfileView" /* 9427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function GuildProfileLoadingError(onPress) {
   obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
   obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
-  const items = [React4(tmp4, obj4), , ];
+  items = [React4(tmp4, obj4), , ];
   const obj6 = { style: styles.header, children: null };
   const obj7 = { style: styles.avatarBackground, children: null };
   const obj8 = { style: styles.avatarBackground, children: null };

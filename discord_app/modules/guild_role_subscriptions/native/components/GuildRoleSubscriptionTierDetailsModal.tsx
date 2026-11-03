@@ -1,18 +1,18 @@
-// === Module 19987: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 20137: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 19987 (GuildRoleSubscriptionTierDetailsModal)
+// Module 20137 (GuildRoleSubscriptionTierDetailsModal)
 import util from "util" /* 1113 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import TextInput from "TextInput" /* 7082 */;
-import TextArea from "TextArea" /* 7253 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17203 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19945 */;
-import FormStylesDefault from "FormStyles" /* 19950 */;
-import FormImagePicker from "FormImagePicker" /* 19951 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19952 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19960 */;
-import FormPriceTierDefault from "FormPriceTier" /* 19988 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TextInput from "TextInput" /* 7208 */;
+import TextArea from "TextArea" /* 7373 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17346 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20095 */;
+import FormStylesDefault from "FormStyles" /* 20100 */;
+import FormImagePicker from "FormImagePicker" /* 20101 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20102 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20110 */;
+import FormPriceTierDefault from "FormPriceTier" /* 20138 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ function Content() {
   const obj9 = { title: null };
   const intl = util.intl;
   obj9.title = intl.string(util.t["6XpbbR"]);
-  const items = [closure_1_10(TableRowGroup.TableRowGroupTitle, obj9), ];
+  items = [closure_1_10(TableRowGroup.TableRowGroupTitle, obj9), ];
   const obj10 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
   const tmp4Result2 = RoleSubscriptionSettingsDisabledContext;
   const intl2 = util.intl;
@@ -98,11 +98,11 @@ function Content() {
   return closure_1_11(View, obj7);
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17196);
+const GuildRoleSubscriptionsConstants = fn(17339);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_8 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const memoResult = noop.memo(function GuildRoleSubscriptionTierDetailsTab() {
   return closure_1_10(Content, {});
 });

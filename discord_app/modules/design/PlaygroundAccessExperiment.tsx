@@ -1,11 +1,11 @@
-// === Module 13401: PlaygroundAccessExperiment ===
+// === Module 13537: PlaygroundAccessExperiment ===
 
-// Module 13401 (PlaygroundAccessExperiment)
+// Module 13537 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const obj2 = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -22,7 +22,7 @@ export function getPlaygroundAccessExperiment(location) {
   return apexExperiment.getConfig({ location }).enabled;
 }
 export function useHasPlaygroundAccess(location) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;
   if (stateFromStores != null) {

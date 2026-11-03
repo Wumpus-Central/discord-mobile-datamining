@@ -1,8 +1,8 @@
-// === Module 6753: SpoilerChannelUtils ===
+// === Module 6873: SpoilerChannelUtils ===
 
-// Module 6753 (SpoilerChannelUtils)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6754 */;
+// Module 6873 (SpoilerChannelUtils)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6874 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ const result = size.fileFinishedImporting("modules/spoiler_channels/SpoilerChann
 
 export function useGetSpoilerGatingChannelId(channel) {
   _require = channel;
-  const items = [ChannelSpoilerAgreeStore, ChannelStore];
+  items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(items, () => {
     if (ChannelSpoilerAgreeStore !== undefined) {
@@ -92,13 +92,13 @@ export function useGetSpoilerGatingChannelId(channel) {
 export { isChannelSpoilerGated };
 export function useIsChannelSpoilerGated(channel) {
   _require = channel;
-  const items = [ChannelSpoilerAgreeStore, ChannelStore];
+  items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(items, () => isChannelSpoilerGated(closure_0, ChannelSpoilerAgreeStore, ChannelStore), items1);
 }
 export function useShouldShowSpoilerGateForChannelId(arg0) {
   _require = arg0;
-  const items = [ChannelStore, ChannelSpoilerAgreeStore];
+  items = [ChannelStore, ChannelSpoilerAgreeStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => isChannelSpoilerGated(ChannelStore.getChannel(closure_0), ChannelSpoilerAgreeStore, ChannelStore), items1);
 }

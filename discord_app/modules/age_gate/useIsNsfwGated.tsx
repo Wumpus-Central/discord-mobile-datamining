@@ -1,8 +1,8 @@
-// === Module 9837: useIsNsfwGated ===
+// === Module 9968: useIsNsfwGated ===
 
-// Module 9837 (useIsNsfwGated)
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6735 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 9968 (useIsNsfwGated)
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6855 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx")
 export default function useIsNsfwGated(nsfw) {
   _require = nsfw;
   nsfw = nsfw.nsfw;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

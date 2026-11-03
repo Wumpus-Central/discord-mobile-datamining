@@ -1,12 +1,12 @@
-// === Module 14010: useChangelogRenderedAnalytics ===
+// === Module 14141: useChangelogRenderedAnalytics ===
 
-// Module 14010 (useChangelogRenderedAnalytics)
+// Module 14141 (useChangelogRenderedAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8567 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8691 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import ChangelogStore from "ChangelogStore" /* 7486 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ChangelogStore from "ChangelogStore" /* 7610 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ export default function useChangelogRenderedAnalytics(arg0) {
   _require = arg0;
   const tmp2 = require("useChangelogIdFromChannel")(arg0);
   importDefault = tmp2;
-  const items = [locale];
+  items = [locale];
   stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   let obj = require("initialize");
   let tmp = stateFromStores;

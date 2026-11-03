@@ -1,26 +1,26 @@
-// === Module 16546: ChangeAvatarActionSheet ===
+// === Module 16689: ChangeAvatarActionSheet ===
 
-// Module 16546 (ChangeAvatarActionSheet)
+// Module 16689 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import Form from "Form" /* 8177 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16448 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import Form from "Form" /* 8301 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16592 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 const obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -48,7 +48,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     flag = false;
   }
   const tmp = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
   const obj4 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };

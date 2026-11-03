@@ -1,9 +1,9 @@
-// === Module 18416: useChannelUnreadBadgeState ===
+// === Module 18561: useChannelUnreadBadgeState ===
 
-// Module 18416 (useChannelUnreadBadgeState)
-import NewChannelsStore from "NewChannelsStore" /* 7711 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+// Module 18561 (useChannelUnreadBadgeState)
+import NewChannelsStore from "NewChannelsStore" /* 7835 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export function useChannelUnreadBadgeState(channel, flag) {
   _require = channel;
   closure_129_0 = channel;
   closure_129_1 = flag;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: ReadStateStore.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !dependencyMap;
@@ -48,7 +48,7 @@ export function useChannelUnreadBadgeState(channel, flag) {
 export function useBaseChannelUnreadBadgeState(channel, muted) {
   _require = channel;
   dependencyMap = muted;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: ReadStateStore.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !dependencyMap;

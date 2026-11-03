@@ -1,19 +1,28 @@
-// === Module 11707: PictureInPicture ===
+// === Module 11844: PictureInPicture ===
 
-// Module 11707 (PictureInPicture)
-import spring from "spring" /* 5637 */;
+// Module 11844 (PictureInPicture)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11845 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11848 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11849 */;
+import useDraggablePip from "useDraggablePip" /* 11850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(11000).toggleFocus;
+const toggleFocus = fn(11133).toggleFocus;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -26,13 +35,14 @@ obj.pipInnerContainer = obj4;
 const native = fn(1187);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createStyles.createStyles(obj);
+let items = [{ code: "(function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,overshootClamping:true,velocity:velocity};})" }];
+[tmp5] = items;
 function getSpringAnimationConfig(velocity) {
-  return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
+  return { mass: 0.2, damping: 7.5, stiffness: 100, overshootClamping: true, velocity };
 }
-getSpringAnimationConfig.__closure = {};
-getSpringAnimationConfig.__workletHash = 6627401186753;
-getSpringAnimationConfig.__initData = { code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}" };
-const __initData = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
+getSpringAnimationConfig.__workletHash = 9813770049776;
+getSpringAnimationConfig.__initData = tmp5;
+let closure_11 = { code: "(function PictureInPictureTsx2(){let[insets,withSpring,getSpringAnimationConfig]=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
 
@@ -42,52 +52,46 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
   }
   const channel = preferredPosition.channel;
-  let insets;
-  importDefault = undefined;
-  let ref;
   const tmp2 = closure_9();
-  const shouldForcePipOrientation = insets(ref[8]).useShouldForcePipOrientation({ channel });
-  let obj = insets(ref[8]);
-  ({ width, height } = require("useWindowDimensions")());
-  insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
-  let size = require("usePipDimensions")({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
-  let obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  const tmp7 = require("useWindowDimensions")();
-  [size2, c1] = noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 });
+  const shouldForcePipOrientation = useShouldForcePipOrientation.useShouldForcePipOrientation({ channel });
+  ({ width, height } = useWindowDimensionsDefault());
+  let size = usePipDimensionsDefault({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
+  const obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
+  const tmp7 = useWindowDimensionsDefault();
+  [size2, c0] = noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 });
   const tmp8 = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  const fn = function w() {
-    const obj = { marginTop: insets.top, marginBottom: null };
-    spring;
-    if (typeof getSpringAnimationConfig === "function") {
-      const obj2 = { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined };
-      obj.marginBottom = tmp2(tmp3, obj2);
+  items = [closure_11, useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets, spring_spring.withSpring, getSpringAnimationConfig];
+  c0 = undefined;
+  let ref;
+  c2 = undefined;
+  [tmp9, tmp10, tmp11, tmp12] = items;
+  class PictureInPictureTsx2 {
+    constructor() {
+      obj = { marginTop: closure_0.top, marginBottom: closure_1(closure_0.bottom, closure_2()) };
       return obj;
-    } else {
-      throw new TypeError("Trying to call a non-function");
     }
-  };
-  const obj4 = insets(ref[12]);
-  fn.__closure = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
-  fn.__workletHash = 16677290574613;
-  fn.__initData = __initData;
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  const obj5 = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
-  const isViewingActivity = insets(ref[14]).useIsViewingActivity({ channelId: channel.id });
-  const obj6 = insets(ref[14]);
-  const obj7 = { channelId: channel.id };
-  const size1 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
-  let tmp11;
-  if (isViewingActivity) {
-    tmp11 = toggleFocus;
   }
-  size1.onPress = tmp11;
-  const draggablePip = insets(ref[15]).useDraggablePip(size1);
+  const items1 = [tmp10, tmp11, tmp12];
+  PictureInPictureTsx2.__closure = items1;
+  PictureInPictureTsx2.__workletHash = 16667877031596;
+  PictureInPictureTsx2.__initData = tmp9;
+  const animatedStyle = _mod1652.useAnimatedStyle(PictureInPictureTsx2);
+  const isViewingActivity = useIsViewingActivity.useIsViewingActivity({ channelId: channel.id });
+  const obj5 = { channelId: channel.id };
+  const tmp3Result = useIsViewingActivity;
+  const size1 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  let tmp15;
+  if (isViewingActivity) {
+    tmp15 = toggleFocus;
+  }
+  size1.onPress = tmp15;
+  const draggablePip = useDraggablePip.useDraggablePip(size1);
   ({ gesture, draggableGridItemStyles } = draggablePip);
   ref = noop.useRef(null);
-  const obj9 = { style: null, pointerEvents: "box-none", children: null };
-  const items = [tmp2.pipOuterContainer, animatedStyle, style];
-  obj9.style = items;
-  const obj10 = {
+  const obj6 = { style: null, pointerEvents: "box-none", children: null };
+  const items2 = [tmp2.pipOuterContainer, animatedStyle, style];
+  obj6.style = items2;
+  const obj7 = {
     ref,
     style: tmp2.pipInnerContainer,
     pointerEvents: "box-none",
@@ -96,32 +100,32 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
         const current = ref.current;
         current.measure((x, y, width, height, pageX, pageY) => {
           const size = { x, y, width, height, pageX, pageY };
-          closure_1_1(size);
+          _undefined(size);
         });
       }
     },
     children: null
   };
-  const obj11 = { gesture, children: null };
-  const items1 = [draggableGridItemStyles, ];
-  const obj8 = insets(ref[15]);
+  const obj8 = { gesture, children: null };
+  const items3 = [draggableGridItemStyles, ];
+  const tmp3Result3 = useDraggablePip;
   let elevationShadow;
-  if (tmp3Result.isIOS()) {
+  if (tmp3Result4.isIOS()) {
     elevationShadow = tmp2.elevationShadow;
   }
-  tmp3Result = insets(ref[17]);
-  items1[1] = elevationShadow;
-  obj11.children = jsx(require("ReanimatedRexport").View, { style: items1, children: <closure_5>{children}</closure_5> });
-  obj10.children = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
-  obj9.children = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
+  tmp3Result4 = PlatformUtils;
+  items3[1] = elevationShadow;
+  obj8.children = jsx(_modDef1652.View, { style: items3, children: <hasOwnProperty>{children}</hasOwnProperty> });
+  obj7.children = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
+  obj6.children = <hasOwnProperty ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
     if (null != ref.current) {
       const current = ref.current;
       current.measure((x, y, width, height, pageX, pageY) => {
         const size = { x, y, width, height, pageX, pageY };
-        closure_1_1(size);
+        _undefined(size);
       });
     }
-  }}>{null}</closure_5>;
-  return jsx(require("ReanimatedRexport").View, { style: null, pointerEvents: "box-none", children: null });
+  }}>{null}</hasOwnProperty>;
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
 });
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

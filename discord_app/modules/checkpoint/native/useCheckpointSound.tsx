@@ -1,9 +1,9 @@
-// === Module 13455: useCheckpointSound ===
+// === Module 13593: useCheckpointSound ===
 
-// Module 13455 (useCheckpointSound)
-import SoundUtils from "SoundUtils" /* 11030 */;
+// Module 13593 (useCheckpointSound)
+import SoundUtils from "SoundUtils" /* 11163 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpoi
 
 export default function useCheckpointSound(arg0) {
   _require = arg0;
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => isMuted.isMuted);
   let obj = require("initialize");
   closure_3(() => () => {

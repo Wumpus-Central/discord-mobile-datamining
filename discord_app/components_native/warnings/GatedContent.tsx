@@ -1,14 +1,14 @@
-// === Module 11219: GatedContent ===
+// === Module 11356: GatedContent ===
 
-// Module 11219 (GatedContent)
+// Module 11356 (GatedContent)
 import nativeDefault from "native" /* 575 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, textAlign: "center" }, title: { textAlign: "center" }, description: { textAlign: "center" }, buttonGroup: { width: "100%", maxWidth: 400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default function GatedContent(onAgree) {
   const channelId = onAgree.channelId;
   const guildId = onAgree.guildId;
   const tmp = closure_5();
-  const items = [modalType, channelId, guildId];
+  items = [modalType, channelId, guildId];
   const effect = modalType.useEffect(() => {
     const result = AgeVerificationAnalyticsUtils.trackNsfwSpaceWarningModalViewed(modalType, channelId, guildId);
   }, items);
@@ -53,7 +53,7 @@ export default function GatedContent(onAgree) {
   const tmp10 = channelId(onAgree(onDisagree[5]).Button, { variant: disagreementButtonVariant, text: disagreement, onPress: callback }, "disagree");
   const obj2 = { spacing: 16, style: tmp.container, children: null };
   const obj3 = { align: "center", children: null };
-  const items3 = [channelId(onAgree(onDisagree[7]).Heading, { variant: "heading-xxl/bold", maxFontSizeMultiplier: 2, style: tmp.title, children: title }), subtitle, channelId(onAgree(onDisagree[7]).Text, { color: "text-muted", variant: "text-md/medium", style: tmp.description, maxFontSizeMultiplier: 2, children: description })];
+  const items3 = [channelId(onAgree(onDisagree[7]).Heading, { variant: "heading-xxl/semibold", maxFontSizeMultiplier: 2, style: tmp.title, children: title }), subtitle, channelId(onAgree(onDisagree[7]).Text, { color: "text-muted", variant: "text-md/medium", style: tmp.description, maxFontSizeMultiplier: 2, children: description })];
   obj3.children = items3;
   const items4 = [guildId(onAgree(onDisagree[6]).Stack, obj3), ];
   const obj6 = { style: tmp.buttonGroup, children: null };

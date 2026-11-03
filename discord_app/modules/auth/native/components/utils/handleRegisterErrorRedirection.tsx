@@ -1,12 +1,12 @@
-// === Module 18039: handleRegisterErrorRedirection ===
+// === Module 18183: handleRegisterErrorRedirection ===
 
-// Module 18039 (handleRegisterErrorRedirection)
+// Module 18183 (handleRegisterErrorRedirection)
 import Constants from "Constants" /* 1072 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import getErrorDefault from "getError" /* 7124 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17988 */;
-import RegistrationUtils from "RegistrationUtils" /* 17997 */;
-import RegistrationConstants from "RegistrationConstants" /* 17990 */;
+import getErrorDefault from "getError" /* 7250 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18131 */;
+import RegistrationUtils from "RegistrationUtils" /* 18141 */;
+import RegistrationConstants from "RegistrationConstants" /* 18133 */;
 import size from "module_2" /* 2 */;
 
 function getRedirectStepForErrorKey(item10023) {
@@ -38,7 +38,7 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
       const registrationSteps = RegistrationStepsUtils.getRegistrationSteps();
       const obj8 = registrationSteps[Symbol.iterator]();
       while (obj8 !== undefined) {
-        let items = closure_7[tmp4];
+        items = closure_7[tmp4];
         if (items == null) {
           items = [];
         }

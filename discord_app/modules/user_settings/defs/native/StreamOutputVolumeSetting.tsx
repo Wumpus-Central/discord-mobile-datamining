@@ -1,29 +1,29 @@
-// === Module 17243: StreamOutputVolumeSetting ===
+// === Module 17386: StreamOutputVolumeSetting ===
 
-// Module 17243 (StreamOutputVolumeSetting)
+// Module 17386 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11943 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12080 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
-    let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
+    items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [ApplicationStreamingStore, AuthenticationStore];
+      items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -41,7 +41,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     });
   },
   onValueChange: function onStreamValueSettingValueChange(arg0) {
-    const items = [ApplicationStreamingStore, AuthenticationStore];
+    items = [ApplicationStreamingStore, AuthenticationStore];
     [obj, obj2] = items;
     const lastActiveStream = obj.getLastActiveStream();
     let tmp2 = null;
@@ -56,9 +56,9 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
   },
   usePredicate: function useHasStreamVolumeSetting() {
     const obj = MobileAudioOutputExperimentDefault;
-    let items = [ApplicationStreamingStore, AuthenticationStore];
+    items = [ApplicationStreamingStore, AuthenticationStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [ApplicationStreamingStore, AuthenticationStore];
+      items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -73,7 +73,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3182VD"]), ];
+    items = [intl.string(util.t["3182VD"]), ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["DGq/PR"]);
     return items;

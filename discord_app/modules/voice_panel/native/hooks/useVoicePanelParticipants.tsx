@@ -1,14 +1,14 @@
-// === Module 19195: useVoicePanelParticipants ===
+// === Module 19353: useVoicePanelParticipants ===
 
-// Module 19195 (useVoicePanelParticipants)
+// Module 19353 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11223);
+const VoicePanelConstants = fn(11360);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 let closure_14 = [];
@@ -44,7 +44,7 @@ export default function useVoicePanelCards(arg0, arg1) {
   const tmp2 = require("useIsConnectedToVoiceChannel")(arg0);
   noop = tmp2;
   const first = flag(noop.useState(() => new Map()), 1)[0];
-  let items = [first];
+  items = [first];
   const effect = noop.useEffect(() => () => first.clear(), items);
   let items1 = [RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(items1, () => state.getState() === constants2.RTC_CONNECTED);
@@ -58,7 +58,7 @@ export default function useVoicePanelCards(arg0, arg1) {
     let tmp;
     if (closure_4) {
       let voiceParticipantsHidden = ChannelRTCStore.getVoiceParticipantsHidden(closure_0);
-      const items = [];
+      items = [];
       const filteredParticipants = ChannelRTCStore.getFilteredParticipants(closure_0);
       for (const item10024 of filteredParticipants) {
         let arr = items.push(item10024);
@@ -138,7 +138,7 @@ export function useChunkedParticipants(channelId, arg1) {
   const layoutManager = managerSubscription.useContext(require("VoicePanelStateContext")).layoutManager;
   managerSubscription = require("VoicePanelCardLayoutManager").useManagerSubscription(layoutManager);
   const first = layoutManager(managerSubscription.useState(() => new Map()), 1)[0];
-  let items = [first];
+  items = [first];
   const effect = managerSubscription.useEffect(() => () => first.clear(), items);
   let obj = require("VoicePanelCardLayoutManager");
   let items1 = [VoiceStateStore, first];
@@ -147,12 +147,12 @@ export function useChunkedParticipants(channelId, arg1) {
     if (managerSubscription < 0) {
       return closure_14;
     } else {
-      let items = [];
+      items = [];
       if (VoiceStateStore.isInChannel(closure_0, id)) {
         const _Set = Set;
         const set = new Set((() => {
           let end;
-          const items = [];
+          items = [];
           let start = closure_1_1.start;
           if (start <= closure_1_1.end) {
             do {

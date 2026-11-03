@@ -1,10 +1,10 @@
-// === Module 9018: useGetEventChannelsByType ===
+// === Module 9146: useGetEventChannelsByType ===
 
-// Module 9018 (useGetEventChannelsByType)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9020 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 9146 (useGetEventChannelsByType)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9148 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -51,15 +51,15 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
     return items1;
   }
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(9019);
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
+const PermissionsConstants = fn(9147);
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
 
 export function useCanCreateEventInStageChannel(isGuildStageVoice) {
   _require = isGuildStageVoice;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [isGuildStageVoice];
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(React5, closure_0), items1);
   const obj = require("initialize");
@@ -73,7 +73,7 @@ export function useCanCreateEventInStageChannel(isGuildStageVoice) {
 }
 export function useCanCreateEventInVoiceChannel(isGuildVoice) {
   _require = isGuildVoice;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [isGuildVoice];
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(timestampProducer, closure_0), items1);
   const obj = require("initialize");
@@ -83,10 +83,10 @@ export { getEventChannelsByType };
 export function useGetEventChannelsByType(id, channelType) {
   _require = id;
   dependencyMap = channelType;
-  let items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [id, channelType];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const items = [GuildChannelStore];
+    items = [GuildChannelStore];
     return getEventChannelsByType(closure_0, closure_1, items);
   }, items1);
 }

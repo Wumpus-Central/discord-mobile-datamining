@@ -1,9 +1,9 @@
-// === Module 16834: useRefetchWhenSelectedTeenMissing ===
+// === Module 16977: useRefetchWhenSelectedTeenMissing ===
 
-// Module 16834 (useRefetchWhenSelectedTeenMissing)
+// Module 16977 (useRefetchWhenSelectedTeenMissing)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = fn;
 const logger = new fn(4).Logger("useRefetchWhenSelectedTeenMissing");
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefetchWhenSelectedTeenMissing.tsx");
 
 export default function useRefetchWhenSelectedTeenMissing() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStoresObject = isInitialized(hasActiveLinks[4]).useStateFromStoresObject(items, () => ({ isInitialized: FamilyCenterStore.getIsInitialized(), isLoading: FamilyCenterStore.isLoading(), selectedTeenId: FamilyCenterStore.getSelectedTeenId() }));
   isInitialized = stateFromStoresObject.isInitialized;
   const selectedTeenId = stateFromStoresObject.selectedTeenId;

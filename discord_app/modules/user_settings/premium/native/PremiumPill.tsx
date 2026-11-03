@@ -1,6 +1,6 @@
-// === Module 7623: PremiumPill ===
+// === Module 7747: PremiumPill ===
 
-// Module 7623 (PremiumPill)
+// Module 7747 (PremiumPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0) => {
   const tmp3 = nativeDefault;
   if (arg0) {
@@ -56,7 +56,7 @@ export (discountOffer) => {
     str2 = "text-overlay-light";
   }
   const tmp6 = days(tmp5);
-  const items = [trialOffer];
+  items = [trialOffer];
   const memo = premiumType.useMemo(() => {
     let expiresAt1;
     if (trialOffer != null) {
@@ -112,7 +112,7 @@ export (discountOffer) => {
     let obj = { style: null, children: null };
     const items2 = [tmp6.pillContainer, style];
     obj.style = items2;
-    let obj2 = { variant: "text-xs/bold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
+    let obj2 = { variant: "text-xs/semibold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
     obj.children = flag3(tmp(tmp2[9]).Text, obj2);
     tmp11 = flag3(trialOffer, obj);
   }

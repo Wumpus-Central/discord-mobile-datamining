@@ -1,12 +1,12 @@
-// === Module 14620: BotPermissions ===
+// === Module 14751: BotPermissions ===
 
-// Module 14620 (BotPermissions)
+// Module 14751 (BotPermissions)
 import nativeDefault from "native" /* 575 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import permissions from "permissions" /* 9752 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import permissions from "permissions" /* 9884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { disabledPermissionIcon: null };
 let size = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj2.disabledPermissionIcon = size;
@@ -32,7 +32,7 @@ export default function BotPermissions(guild) {
   c6 = undefined;
   noop = closure_8();
   [c5, c6] = guild(noop.useState(require("PermissionUtils").NONE), 2);
-  let items = [guild.permissions, onPermissionsChange, permissions];
+  items = [guild.permissions, onPermissionsChange, permissions];
   const effect = noop.useEffect(() => {
     onPermissionsChange(true, permissions);
     _undefined(BigFlagUtilsAll.invert(guild.permissions));
@@ -59,7 +59,7 @@ export default function BotPermissions(guild) {
   const mapped1 = found2.map((item) => {
     const permissionName = permissions.getPermissionName(item);
     const obj2 = { direction: "horizontal", align: "center", children: null };
-    const items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
+    items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
     obj2.children = items;
     return React5(Stack_Stack.Stack, obj2, String(item));
   });

@@ -1,9 +1,9 @@
-// === Module 7297: useGuildRoleMemberCounts ===
+// === Module 7417: useGuildRoleMemberCounts ===
 
-// Module 7297 (useGuildRoleMemberCounts)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7299 */;
+// Module 7417 (useGuildRoleMemberCounts)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7419 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7298 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7418 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export default function useGuildRoleMemberCounts(arg0) {
   if (arg1 === undefined) {
     num = 0;
   }
-  const items = [GuildRoleMemberCountStore];
+  items = [GuildRoleMemberCountStore];
   const items1 = [arg0, num];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleMemberCountStore.getRoleMemberCount(closure_0));
   const effect = noop.useEffect(() => {

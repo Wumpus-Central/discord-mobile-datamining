@@ -1,11 +1,11 @@
-// === Module 18223: GuildThemePreviewArt ===
+// === Module 18367: GuildThemePreviewArt ===
 
-// Module 18223 (GuildThemePreviewArt)
+// Module 18367 (GuildThemePreviewArt)
 import nativeDefault from "native" /* 575 */;
-import GuildThemePresets from "GuildThemePresets" /* 5195 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 18224 */;
+import GuildThemePresets from "GuildThemePresets" /* 5318 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 18368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function PreviewOverlay() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { previewArt: { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function GuildThemePreviewArt(themeSettings) {
   themeSettings = themeSettings.themeSettings;
   const tmp4 = useThemeDefault();
   importDefault = tmp4;
-  let items = [themeSettings, tmp4];
+  items = [themeSettings, tmp4];
   const memo = noop.useMemo(() => {
     let tmp3 = null;
     if (null != themeSettings) {
@@ -33,7 +33,7 @@ export default function GuildThemePreviewArt(themeSettings) {
         const first = customUserThemeSettings.colors[0];
         if (null != first) {
           const obj3 = { colors: null, angle: null };
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(first, closure_1), 0);
           obj3.colors = items;
           let num2 = customUserThemeSettings.gradientAngle;

@@ -1,12 +1,12 @@
-// === Module 17833: useShopAllCatalogPages ===
+// === Module 17976: useShopAllCatalogPages ===
 
-// Module 17833 (useShopAllCatalogPages)
+// Module 17976 (useShopAllCatalogPages)
 import initializeDefault from "initialize" /* 504 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9583 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9581 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7721 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9713 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7845 */;
 
 require = fn;
 function getCategoryForCollection(id) {
@@ -43,7 +43,7 @@ export default function useShopAllCatalogPages(pageSize) {
   first = tmp[0];
   closure_5 = tmp[1];
   const rounded = Math.ceil(first / pageSize);
-  let items = [rounded, pageSize, includeUnpublished, noCache];
+  items = [rounded, pageSize, includeUnpublished, noCache];
   const memo = first.useMemo(() => Array.from({ length: rounded }, (arg0, arg1) => ({ applicationId: memo, offset: arg1 * limit, limit, useShopOrdering: true, includeUnpublishedProducts: includeUnpublishedCollections, includeUnpublishedCollections, ignoreCache })), items);
   let items1 = [memo];
   const memo1 = first.useMemo(() => memo.map(StorefrontCollectionActionCreators.getCollectionPageKey), items1);
@@ -122,7 +122,7 @@ export default function useShopAllCatalogPages(pageSize) {
   }, items7);
   const items8 = [memo1, stateFromStoresObject];
   memo3 = obj.useMemo(() => {
-    const items = [];
+    items = [];
     const obj = memo1[Symbol.iterator]();
     while (obj !== undefined) {
       let tmp4 = stateFromStoresObject[tmp2];

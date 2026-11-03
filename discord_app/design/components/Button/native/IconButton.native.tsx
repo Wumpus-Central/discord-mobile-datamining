@@ -1,16 +1,16 @@
-// === Module 8028: IconButton ===
+// === Module 8152: IconButton ===
 
-// Module 8028 (IconButton)
+// Module 8152 (IconButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Button_BaseButton from "Button/BaseButton" /* 5643 */;
-import BaseIconButton from "BaseIconButton" /* 8029 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Button_BaseButton from "Button/BaseButton" /* 5763 */;
+import BaseIconButton from "BaseIconButton" /* 8153 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const labelPressable = { paddingBottom: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
@@ -39,7 +39,7 @@ export function IconButton(grow) {
     obj3.accessibilityLabel = "";
     obj3.size = "lg";
     obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [React3(BaseIconButton.BaseIconButton, obj3), ];
+    items = [React3(BaseIconButton.BaseIconButton, obj3), ];
     const obj4 = { style: tmp2.label, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
     items[1] = React3(Text_Text.Text, obj4);
     obj2.children = items;

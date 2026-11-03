@@ -9,7 +9,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 require = fn;
 let closure_3 = ["_state", "_version"];
 const Store = fn(506).Store;
-let closure_6 = { _state: "raw", _version: "cix" };
+let closure_6 = { _state: "Array", _version: "flexDirection" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {
@@ -285,7 +285,7 @@ prototype["asyncPersist"] = function asyncPersist() {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
           _writeResolvers = _writeResolvers._writeResolvers;
-          const items = [arg0, requestIdleCallback(closure_0 > 0 ? (() => self.throttledCallback(closure_0)) : (() => self.callback(closure_0)), { timeout: 500 })];
+          items = [arg0, requestIdleCallback(closure_0 > 0 ? (() => self.throttledCallback(closure_0)) : (() => self.callback(closure_0)), { timeout: 500 })];
           const result = _writeResolvers.set(persistKey, items);
         });
         let result = PersistedStore._writePromises.set(persistKey, promise);
@@ -298,7 +298,7 @@ prototype["asyncPersist"] = function asyncPersist() {
   return Promise.resolve(false);
 };
 prototype["persist"] = function persist() {
-  const state = this.getState();
+  state = this.getState();
   const Storage = Storage3.Storage;
   const result = Storage.set(this.getClass().persistKey, { _state: state, _version: this._version });
 };

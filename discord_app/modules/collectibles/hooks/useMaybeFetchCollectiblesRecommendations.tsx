@@ -1,10 +1,10 @@
-// === Module 16576: useMaybeFetchCollectiblesRecommendations ===
+// === Module 16719: useMaybeFetchCollectiblesRecommendations ===
 
-// Module 16576 (useMaybeFetchCollectiblesRecommendations)
+// Module 16719 (useMaybeFetchCollectiblesRecommendations)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 16577 */;
-import UserStore from "UserStore" /* 1383 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15069 */;
+import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 16720 */;
+import UserStore from "UserStore" /* 1385 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15210 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetc
 export default function useMaybeFetchCollectiblesRecommendations() {
   isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(stateFromStores[3]).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");
   let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[3]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

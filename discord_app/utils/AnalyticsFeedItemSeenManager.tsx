@@ -1,6 +1,6 @@
-// === Module 9843: AnalyticsFeedItemSeenManager ===
+// === Module 9974: AnalyticsFeedItemSeenManager ===
 
-// Module 9843 (AnalyticsFeedItemSeenManager)
+// Module 9974 (AnalyticsFeedItemSeenManager)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -53,7 +53,7 @@ prototype["isVisible"] = function isVisible() {
 };
 prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(isForcedFlush) {
   let num = 0;
-  const items = [];
+  items = [];
   const iter = this.seenIntervals[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -253,7 +253,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -327,7 +327,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp17) {
         c2 = tmp;
         throw tmp17;

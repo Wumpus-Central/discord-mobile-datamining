@@ -1,7 +1,7 @@
-// === Module 20013: useInviteApplicationBypassInfo ===
+// === Module 20163: useInviteApplicationBypassInfo ===
 
-// Module 20013 (useInviteApplicationBypassInfo)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 20163 (useInviteApplicationBypassInfo)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/instant_invite/useInviteAppli
 
 export function useInviteApplicationBypassInfo(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   let hasItem;
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants2.KICK_MEMBERS, closure_0), items1);

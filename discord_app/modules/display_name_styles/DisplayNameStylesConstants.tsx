@@ -1,8 +1,8 @@
-// === Module 1401: DisplayNameStylesConstants ===
+// === Module 1403: DisplayNameStylesConstants ===
 
-// Module 1401 (DisplayNameStylesConstants)
-import DisplayNameEffect from "DisplayNameEffect" /* 1402 */;
-import DisplayNameFont from "DisplayNameFont" /* 1403 */;
+// Module 1403 (DisplayNameStylesConstants)
+import DisplayNameEffect from "DisplayNameEffect" /* 1404 */;
+import DisplayNameFont from "DisplayNameFont" /* 1405 */;
 import size from "module_2" /* 2 */;
 
 let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
@@ -36,7 +36,7 @@ export function getColorPresetsForEffect(arg0) {
     if (DisplayNameEffect.DisplayNameEffect.GRADIENT !== arg0) {
       if (DisplayNameEffect.DisplayNameEffect.GLOW !== arg0) {
         return items4.map((item) => {
-          const items = [item];
+          items = [item];
           return items;
         });
       }

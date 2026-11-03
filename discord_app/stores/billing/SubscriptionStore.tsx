@@ -1,9 +1,9 @@
-// === Module 2052: SubscriptionStore ===
+// === Module 2181: SubscriptionStore ===
 
-// Module 2052 (SubscriptionStore)
+// Module 2181 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1384 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function reset() {
@@ -17,8 +17,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(2044).isNoneSubscription;
-const SubscriptionRecord = fn(2053).SubscriptionRecord;
+const isNoneSubscription = fn(2173).isNoneSubscription;
+const SubscriptionRecord = fn(2182).SubscriptionRecord;
 const Constants = fn(1072);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;
@@ -227,7 +227,7 @@ obj = {
     subscriptions = subscriptions.subscriptions;
     obj = {};
     obj2 = {};
-    const items = [];
+    items = [];
     items1 = [];
     const id = items1.getId();
     const item = subscriptions.forEach((user_id) => {
@@ -276,7 +276,7 @@ obj = {
         if (tmp19) {
           const findIndexResult = _null.findIndex((id) => id.id === fromServer.id);
           if (-1 === findIndexResult) {
-            let items = [fromServer];
+            items = [fromServer];
             HermesBuiltin.arraySpread(_null, 1);
             let tmp27 = items;
           } else {

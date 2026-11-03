@@ -1,37 +1,47 @@
-// === Module 18452: FadeInOut ===
+// === Module 18606: FadeInOut ===
 
-// Module 18452 (FadeInOut)
+// Module 18606 (FadeInOut)
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const __initData = { code: "function FadeInOutTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let closure_6 = { code: "function FadeInOutTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
+let closure_5 = { code: "(function FadeInOutTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
+let closure_6 = { code: "(function FadeInOutTsx2(finished){let[scheduleOnRN,handleTransitionFinished]=this.__closure;if(finished){scheduleOnRN(handleTransitionFinished);}})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
 
 export default function FadeInOut(duration) {
-  duration = duration.duration;
+  _require = duration.duration;
   let ref1;
   noop = undefined;
   ({ children, style, ref } = duration);
-  const sharedValue = duration(ref1[2]).useSharedValue(0);
-  let obj = duration(ref1[2]);
-  let fn = function h() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 8749472415282;
-  fn.__initData = __initData;
-  const animatedStyle = duration(ref1[2]).useAnimatedStyle(fn);
+  const sharedValue = require("module_1652").useSharedValue(0);
+  let obj = require("module_1652");
+  const tmp = ref1;
+  items = [closure_5, sharedValue];
+  _require = undefined;
+  [tmp3, tmp4] = items;
+  class FadeInOutTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  let items1 = [tmp4];
+  FadeInOutTsx1.__closure = items1;
+  FadeInOutTsx1.__workletHash = 15661759270347;
+  FadeInOutTsx1.__initData = tmp3;
+  const animatedStyle = require("module_1652").useAnimatedStyle(FadeInOutTsx1);
   ref1 = noop.useRef(null);
-  const items = [ref1];
+  const items2 = [ref1];
   noop = noop.useCallback(() => {
     const current = ref1.current;
     if (current != null) {
       current();
     }
-  }, items);
+  }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
       const result = sharedValue.set(duration(ref1[3]).withTiming(1, { duration }));
@@ -41,22 +51,31 @@ export default function FadeInOut(duration) {
     },
     componentWillLeave(current) {
       closure_1_2.current = current;
-      const fn = function t(arg0) {
-        if (arg0) {
-          duration(ref1[2]).runOnJS(handleTransitionFinished)();
-          const obj = duration(ref1[2]);
+      items = [closure_2_6, duration(ref1[4]).scheduleOnRN, closure_1_3];
+      duration = undefined;
+      c1 = undefined;
+      [tmp2, tmp3, tmp4] = items;
+      class FadeInOutTsx2 {
+        constructor(arg0) {
+          if (current) {
+            tmp = closure_0;
+            tmp2 = closure_1;
+            tmp3 = closure_0(closure_1);
+          }
+          return;
         }
-      };
-      let obj = duration(ref1[3]);
+      }
+      const items1 = [tmp3, tmp4];
+      FadeInOutTsx2.__closure = items1;
+      FadeInOutTsx2.__workletHash = 4334797531387;
+      FadeInOutTsx2.__initData = tmp2;
+      const result = sharedValue.set(duration(ref1[3]).withTiming(0, { duration }, "respect-motion-settings", FadeInOutTsx2));
+      const obj = duration(ref1[3]);
       const obj2 = { duration };
-      fn.__closure = { runOnJS: duration(ref1[2]).runOnJS, handleTransitionFinished };
-      fn.__workletHash = 7644958904451;
-      fn.__initData = __initData;
-      const result = sharedValue.set(obj.withTiming(0, obj2, "respect-motion-settings", fn));
     }
   }));
   const obj3 = { style: null, children };
-  const items1 = [style, animatedStyle];
-  obj3.style = items1;
-  return jsx(sharedValue(ref1[2]).View, { style: null, children });
+  const items3 = [style, animatedStyle];
+  obj3.style = items3;
+  return jsx(sharedValue(tmp[2]).View, { style: null, children });
 };

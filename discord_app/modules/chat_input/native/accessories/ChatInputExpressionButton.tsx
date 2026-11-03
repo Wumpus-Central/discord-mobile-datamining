@@ -1,16 +1,16 @@
-// === Module 12506: ChatInputExpressionButton ===
+// === Module 12642: ChatInputExpressionButton ===
 
-// Module 12506 (ChatInputExpressionButton)
+// Module 12642 (ChatInputExpressionButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5596 */;
-import Pressables from "Pressables" /* 6980 */;
+import useToken from "useToken" /* 5719 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, alignItems: "center", justifyContent: "center" };
@@ -36,7 +36,7 @@ export default noop.memo(function ExpressionButton(active) {
   const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = closure_5(token);
   const bound = Math.max(0, (token2 - token) / 2);
-  const items = [onPress];
+  items = [onPress];
   const callback = noop.useCallback(() => {
     onPress(undefined);
   }, items);
@@ -53,6 +53,6 @@ export default noop.memo(function ExpressionButton(active) {
   obj4.accessibilityState = { expanded: flag };
   obj4.onPress = callback;
   const ref = noop.useRef(null);
-  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 12507 : 9453) });
+  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 12643 : 9581) });
   return jsx(Pressables.PressableOpacity, { ref: noop.useRef(null), style: null, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null });
 });

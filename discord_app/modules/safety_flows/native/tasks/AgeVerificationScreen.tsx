@@ -1,17 +1,17 @@
-// === Module 20095: AgeVerificationScreen ===
+// === Module 20245: AgeVerificationScreen ===
 
-// Module 20095 (AgeVerificationScreen)
-import Server from "Server" /* 1992 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import types from "types" /* 20081 */;
+// Module 20245 (AgeVerificationScreen)
+import Server from "Server" /* 2121 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import types from "types" /* 20231 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
@@ -21,7 +21,7 @@ export default function AgeVerificationScreen() {
   const tmp2 = closure_8();
   const onTaskComplete = memo(stateFromStores[7]).useOnTaskComplete();
   let obj = memo(stateFromStores[7]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = memo(stateFromStores[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = memo(stateFromStores[8]);
   const obj3 = {

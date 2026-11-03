@@ -1,20 +1,23 @@
-// === Module 10602: ShineAnimation ===
+// === Module 10732: ShineAnimation ===
 
-// Module 10602 (ShineAnimation)
+// Module 10732 (ShineAnimation)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
+import _modDef671 from "module_671" /* 671 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(5014);
+let closure_7 = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
+const createStyles = fn(5141);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};
@@ -24,80 +27,88 @@ size.transform = items;
 obj.shine = size;
 obj.shineInner = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 let closure_8 = createStyles.createStyles(obj);
-const __initData = { code: "function ShineAnimationTsx1(){const{interpolate,progress}=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+\"%\"};}" };
-const __initData2 = { code: "function ShineAnimationTsx2(){const{ShineAnimationConfig,interpolateColor,progress,flashStartColor,flashEndColor}=this.__closure;const startTime=ShineAnimationConfig.FLASH_TIME_PERCENT;const duration=ShineAnimationConfig.FLASH_DURATION_PERCENT;return{backgroundColor:interpolateColor(progress.get(),[0,startTime,startTime,startTime+duration,1],[flashStartColor,flashStartColor,flashEndColor,flashEndColor,flashStartColor])};}" };
+let closure_9 = { code: "(function ShineAnimationTsx1(){let[interpolate,progress]=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+\"%\"};})" };
+let closure_10 = { code: "(function ShineAnimationTsx2(){let[ShineAnimationConfig,interpolateColor,progress,flashStartColor,flashEndColor]=this.__closure;const startTime=ShineAnimationConfig.FLASH_TIME_PERCENT;const duration=ShineAnimationConfig.FLASH_DURATION_PERCENT;return{backgroundColor:interpolateColor(progress.get(),[0,startTime,startTime,startTime+duration,1],[flashStartColor,flashStartColor,flashEndColor,flashEndColor,flashStartColor])};})" };
 let obj3 = {};
-const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/ShineAnimation.tsx");
 
 export default noop.memo(function ShineAnimation(arg0) {
-  let sharedValue;
-  importDefault = undefined;
-  let hexResult1;
+  _require = undefined;
   ({ source, style } = arg0);
   const tmp = closure_8();
-  sharedValue = sharedValue(hexResult1[5]).useSharedValue(0);
-  let items = [sharedValue];
+  const sharedValue = require("module_1652").useSharedValue(0);
+  _require = sharedValue;
+  items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = ReanimatedRexport;
-    const obj2 = ReanimatedRexport;
-    const result = sharedValue.set(obj.withDelay(400, obj2.withRepeat(timing.withTiming(1, { duration: 1000 }), -1, false)));
+    const obj = _mod1652;
+    const obj2 = _mod1652;
+    const result = _undefined.set(obj.withDelay(400, obj2.withRepeat(timing_timing.withTiming(1, { duration: 1000 }), -1, false)));
   }, items);
-  let obj = sharedValue(hexResult1[5]);
-  const fn = function p() {
-    const obj = { width: "" + ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [20, 160]) + "%" };
-    return obj;
-  };
-  let obj2 = sharedValue(hexResult1[5]);
-  fn.__closure = { interpolate: sharedValue(hexResult1[5]).interpolate, progress: sharedValue };
-  fn.__workletHash = 4072719467417;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj3 = { interpolate: sharedValue(hexResult1[5]).interpolate, progress: sharedValue };
-  const tmp5 = require("module_671");
-  const tmp5Result = require("module_671")(require("native").unsafe_rawColors.BRAND_360);
-  const hexResult = require("module_671")(require("native").unsafe_rawColors.BRAND_360).alpha(0.2).hex();
-  importDefault = hexResult;
-  const alphaResult = require("module_671")(require("native").unsafe_rawColors.BRAND_360).alpha(0.2);
-  const tmp7 = require("module_671");
-  const tmp7Result = require("module_671")(require("native").unsafe_rawColors.BRAND_360);
-  hexResult1 = require("module_671")(require("native").unsafe_rawColors.BRAND_360).alpha(1).hex();
-  const alphaResult1 = require("module_671")(require("native").unsafe_rawColors.BRAND_360).alpha(1);
-  class A {
+  let obj = require("module_1652");
+  let items1 = [closure_9, require("module_1652").interpolate, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp6, tmp7, tmp8] = items1;
+  class ShineAnimationTsx1 {
     constructor() {
-      FLASH_TIME_PERCENT = closure_7.FLASH_TIME_PERCENT;
-      obj = { backgroundColor: null };
-      obj2 = closure_0(closure_2[5]);
-      items = [0];
-      items[1] = FLASH_TIME_PERCENT;
-      items[2] = FLASH_TIME_PERCENT;
-      items[3] = FLASH_TIME_PERCENT + closure_7.FLASH_DURATION_PERCENT;
-      items[4] = 1;
-      items1 = [, , , , ];
-      items1[0] = closure_1;
-      items1[1] = closure_1;
-      items1[2] = closure_2;
-      items1[3] = closure_2;
-      items1[4] = closure_1;
-      obj.backgroundColor = obj2.interpolateColor(closure_0.get(), items, items1);
+      obj = { width: "" + closure_0(closure_1.get(), [0, 1], [20, 160]) + "%" };
       return obj;
     }
   }
-  const obj8 = sharedValue(hexResult1[5]);
-  A.__closure = { ShineAnimationConfig, interpolateColor: sharedValue(hexResult1[5]).interpolateColor, progress: sharedValue, flashStartColor: hexResult, flashEndColor: hexResult1 };
-  A.__workletHash = 9845866779228;
-  A.__initData = __initData2;
-  const animatedStyle1 = obj8.useAnimatedStyle(A);
-  const obj5 = { style: null, children: null };
-  let items1 = [tmp.container, style, animatedStyle1];
-  obj5.style = items1;
-  const obj6 = { style: tmp.shineContainer, children: null };
-  const items2 = [closure_5(require("ReanimatedRexport").View, { style: animatedStyle }), ];
-  const obj7 = { style: tmp.shine, children: closure_5(closure_4, { style: tmp.shineInner }) };
-  items2[1] = closure_5(closure_4, obj7);
-  obj6.children = items2;
-  const items3 = [closure_6(closure_4, obj6), closure_5(require("FastImage"), { source })];
-  obj5.children = items3;
-  return closure_6(require("ReanimatedRexport").View, obj5);
+  const items2 = [tmp7, tmp8];
+  ShineAnimationTsx1.__closure = items2;
+  ShineAnimationTsx1.__workletHash = 2390175696032;
+  ShineAnimationTsx1.__initData = tmp6;
+  const animatedStyle = require("module_1652").useAnimatedStyle(ShineAnimationTsx1);
+  let obj2 = require("module_1652");
+  const tmp11Result = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360);
+  const alphaResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2);
+  const hexResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2).hex();
+  const tmp13Result = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360);
+  const alphaResult1 = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(1);
+  const hexResult1 = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(1).hex();
+  const items3 = [closure_10, closure_7, require("module_1652").interpolateColor, sharedValue, hexResult, hexResult1];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items3;
+  class ShineAnimationTsx2 {
+    constructor() {
+      FLASH_TIME_PERCENT = closure_0.FLASH_TIME_PERCENT;
+      obj = { backgroundColor: null };
+      items = [0];
+      items[1] = FLASH_TIME_PERCENT;
+      items[2] = FLASH_TIME_PERCENT;
+      items[3] = FLASH_TIME_PERCENT + closure_0.FLASH_DURATION_PERCENT;
+      items[4] = 1;
+      items1 = [, , , , ];
+      items1[0] = closure_3;
+      items1[1] = closure_3;
+      items1[2] = closure_4;
+      items1[3] = closure_4;
+      items1[4] = closure_3;
+      obj.backgroundColor = closure_1(closure_2.get(), items, items1);
+      return obj;
+    }
+  }
+  const items4 = [tmp16, tmp17, tmp18, tmp19, tmp20];
+  ShineAnimationTsx2.__closure = items4;
+  ShineAnimationTsx2.__workletHash = 15848815967493;
+  ShineAnimationTsx2.__initData = tmp15;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(ShineAnimationTsx2);
+  const obj3 = { style: null, children: null };
+  const items5 = [tmp.container, style, animatedStyle1];
+  obj3.style = items5;
+  const obj4 = { style: tmp.shineContainer, children: null };
+  const items6 = [closure_5(_modDef1652.View, { style: animatedStyle }), ];
+  const obj5 = { style: tmp.shine, children: closure_5(c4, { style: tmp.shineInner }) };
+  items6[1] = closure_5(c4, obj5);
+  obj4.children = items6;
+  const items7 = [closure_6(c4, obj4), closure_5(FastImageDefault, { source })];
+  obj3.children = items7;
+  return closure_6(_modDef1652.View, obj3);
 });

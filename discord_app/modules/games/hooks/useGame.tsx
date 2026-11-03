@@ -1,24 +1,24 @@
-// === Module 7480: useGame ===
+// === Module 7604: useGame ===
 
-// Module 7480 (useGame)
+// Module 7604 (useGame)
 import DurationsDefault from "Durations" /* 1089 */;
-import GameActionCreators from "GameActionCreators" /* 7481 */;
+import GameActionCreators from "GameActionCreators" /* 7605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2014 */;
+import GameStore from "GameStore" /* 2143 */;
 
 require = fn;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1072).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
-  get(item) {
-    if (null == item) {
+  get(nextResult) {
+    if (null == nextResult) {
       return null;
-    } else if (GameStore.hasNoData(item)) {
+    } else if (GameStore.hasNoData(nextResult)) {
       let NO_DATA = require("initialize").NO_DATA;
     } else {
-      NO_DATA = GameStore.getGame(item);
+      NO_DATA = GameStore.getGame(nextResult);
       if (NO_DATA == null) {
         NO_DATA = null;
       }
@@ -39,7 +39,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -53,7 +53,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else if (null != closure_0) {
-          const items = [tmp5];
+          items = [tmp5];
           c2 = 1;
           c1 = 1;
           const obj5 = { value: GameActionCreators.fetchGamesWithSupplementalData(items), done: false };
@@ -68,7 +68,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -92,11 +92,11 @@ obj2.getIsLoading = function getIsLoading(arg0) {
   }
   return isFetchingResult;
 };
-obj2.getError = function getError(item) {
+obj2.getError = function getError(nextResult) {
   let error = null;
-  if (null != item) {
+  if (null != nextResult) {
     error = null;
-    if (GameStore.didFetchingFail(item)) {
+    if (GameStore.didFetchingFail(nextResult)) {
       const _Error = Error;
       error = new Error("Failed to fetch game data");
     }
@@ -109,11 +109,11 @@ const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
 export function useGames(memo) {
-  let items = [memo];
+  items = [memo];
   const effect = noop.useEffect(() => {
-    let items = [
+    items = [
       ...closure_0.map((item) => {
-        const items = [item];
+        items = [item];
         return items;
       })
     ];

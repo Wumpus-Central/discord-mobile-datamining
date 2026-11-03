@@ -1,14 +1,14 @@
-// === Module 11144: ActionSheetIconHeader ===
+// === Module 11281: ActionSheetIconHeader ===
 
-// Module 11144 (ActionSheetIconHeader)
-import Text_Text from "Text/Text" /* 5624 */;
+// Module 11281 (ActionSheetIconHeader)
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
@@ -18,9 +18,9 @@ export function ActionSheetIconHeader(subtitle) {
   ({ title, icon } = subtitle);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  const items = [React3(View, { children: icon }), ];
+  items = [React3(View, { children: icon }), ];
   const obj2 = { style: tmp.titles, children: null };
-  const items1 = [React3(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
+  const items1 = [React3(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
   let tmp4Result = null;
   if (null != subtitle) {
     const obj3 = { variant: "text-xs/medium", color: "text-default", children: subtitle };

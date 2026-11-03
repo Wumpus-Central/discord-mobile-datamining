@@ -1,16 +1,16 @@
-// === Module 12743: ConjurePlanWidget ===
+// === Module 12879: ConjurePlanWidget ===
 
-// Module 12743 (ConjurePlanWidget)
+// Module 12879 (ConjurePlanWidget)
 import nativeDefault from "native" /* 575 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7777 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12258 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12394 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function ConjurePlanWidget(applicationId) {
   applicationId = applicationId.applicationId;
   const tmp = closure_6();
   const tmp2 = UserProfileSharedStylesDefault();
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [applicationId];
   const stateFromStores = applicationId(504).useStateFromStores(items, () => id.getId());
   const memo = noop.useMemo(() => {

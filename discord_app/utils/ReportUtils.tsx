@@ -1,9 +1,9 @@
-// === Module 7460: ReportUtils ===
+// === Module 7584: ReportUtils ===
 
-// Module 7460 (ReportUtils)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 7584 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const Constants = fn(1072);
 ({ ChannelTypes: c3, Permissions: closure_4, MessageTypesSets: hasOwnProperty } = Constants);

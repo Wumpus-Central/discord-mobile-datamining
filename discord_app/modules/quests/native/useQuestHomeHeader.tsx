@@ -1,21 +1,21 @@
-// === Module 16899: useQuestHomeHeader ===
+// === Module 17042: useQuestHomeHeader ===
 
-// Module 16899 (useQuestHomeHeader)
+// Module 17042 (useQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import QuestsIcon from "QuestsIcon" /* 14718 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import QuestsIcon from "QuestsIcon" /* 14849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function QuestHomeHeaderTitle() {
   const tmp = closure_11();
   const obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [React7(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" }), ];
-  const obj2 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
+  items = [React7(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" }), ];
+  const obj2 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.JALI2K);
   items[1] = React7(Text_Text.Heading, obj2);
@@ -28,15 +28,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9554).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9554);
-  const orbBalanceEntrypoint = balance(16900).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9686).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9686);
+  const orbBalanceEntrypoint = balance(17043).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
-  let items = [balance, openBalanceWidgetActionSheet];
+  items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(14501).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(14632).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -65,9 +65,9 @@ function FiltersButton(setSelectedSortMethod) {
   if (tmp) {
     str = "primary";
   }
-  const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
+  items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16919, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17062, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;
@@ -75,13 +75,13 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_9(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6781).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6901).QuestHomeSortMethods;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, AnalyticsPages: closure_7 } = Constants);
 let closure_8 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
@@ -97,7 +97,7 @@ export default function useQuestHomeHeader(setSelectedSortMethod) {
   const navigation = setSelectedSortMethod(selectedFilters[22]).useNavigation();
   const obj = setSelectedSortMethod(selectedFilters[22]);
   const enabled = setSelectedSortMethod(selectedFilters[23]).useVirtualCurrencyMobileEnabled().enabled;
-  const items = [navigation, enabled, setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
+  items = [navigation, enabled, setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const layoutEffect = selectedSortMethod.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle() {

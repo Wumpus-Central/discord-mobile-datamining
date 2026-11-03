@@ -1,20 +1,20 @@
-// === Module 11674: UserActivitySpotify ===
+// === Module 11811: UserActivitySpotify ===
 
-// Module 11674 (UserActivitySpotify)
+// Module 11811 (UserActivitySpotify)
 import native from "native" /* 1187 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1374 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import _modDef8724 from "module_8724" /* 8724 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import _modDef8848 from "module_8848" /* 8848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8911);
+const SpotifyConstants = fn(9035);
 ({ SPOTIFY_APP_PROTOCOL: metroRequire, SpotifyEndpoints: closure_7, SpotifyResourceTypes: closure_8 } = SpotifyConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PureComponent = noop.PureComponent;
 class SpotifyTrack extends PureComponent {
   constructor() {
@@ -242,7 +242,7 @@ export function openAlbum(activity, id) {
 export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5634).Button.Icon, { source: _modDef8724 }), text: null, size: "sm", onPress: null, grow: true };
+  let obj2 = { icon: closure_9(activity(5754).Button.Icon, { source: _modDef8848 }), text: null, size: "sm", onPress: null, grow: true };
   const intl = activity(1113).intl;
   obj2.text = intl.formatToPlainString(activity(1113).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {
@@ -265,7 +265,7 @@ export function SpotifyPlayButton(activity) {
 
     });
   };
-  obj.children = closure_9(activity(5634).Button, obj2);
+  obj.children = closure_9(activity(5754).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

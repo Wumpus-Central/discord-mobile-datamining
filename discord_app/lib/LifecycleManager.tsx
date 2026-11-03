@@ -1,6 +1,6 @@
-// === Module 1996: LifecycleManager ===
+// === Module 2125: LifecycleManager ===
 
-// Module 1996 (LifecycleManager)
+// Module 2125 (LifecycleManager)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/LifecycleManager.tsx");
@@ -12,7 +12,7 @@ class LifecycleManager {
 const prototype = LifecycleManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  const items = [...arguments];
+  items = [...arguments];
   if (!this.isInitialized) {
     self.isInitialized = true;
     const _initialize = self._initialize;

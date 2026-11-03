@@ -1,8 +1,8 @@
-// === Module 5163: CheckpointKnickKnacksRive ===
+// === Module 5286: CheckpointKnickKnacksRive ===
 
-// Module 5163 (CheckpointKnickKnacksRive)
-import BaseRive from "BaseRive" /* 5089 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5146 */;
+// Module 5286 (CheckpointKnickKnacksRive)
+import BaseRive from "BaseRive" /* 5216 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5269 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function CheckpointKnickKnacksRiveInner(defaultViewModelInstance) {
   }
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
-  const items = [str, dataBinding, onDataBindingChange];
+  items = [str, dataBinding, onDataBindingChange];
   const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (null != closure_9[str]) {

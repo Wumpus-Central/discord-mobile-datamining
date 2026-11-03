@@ -1,13 +1,13 @@
-// === Module 17033: OrbsArcadeRewardPreview ===
+// === Module 17176: OrbsArcadeRewardPreview ===
 
-// Module 17033 (OrbsArcadeRewardPreview)
+// Module 17176 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1981 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9506 */;
-import _modDef9507 from "module_9507" /* 9507 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9542 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17024 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2110 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9634 */;
+import _modDef9635 from "module_9635" /* 9635 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9670 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,8 +18,8 @@ function CollectibleRewardPreview(size) {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9507;
-  const items = [React4(FastImageDefault, obj4), ];
+  obj4.source = _modDef9635;
+  items = [React4(FastImageDefault, obj4), ];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {
     const obj5 = { style: tmp.decoration, source: null, accessible: false };
@@ -34,7 +34,7 @@ function CollectibleRewardPreview(size) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { container: { width, height: width, alignItems: "center", justifyContent: "center" }, avatar: null, decoration: null };
   const size = { width: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, height: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, borderRadius: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

@@ -1,12 +1,12 @@
-// === Module 4956: RelationshipStore ===
+// === Module 5083: RelationshipStore ===
 
-// Module 4956 (RelationshipStore)
+// Module 5083 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4934 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5061 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
-import UserStore from "UserStore" /* 1383 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function markAllUserIdListsStale() {
@@ -37,7 +37,7 @@ function upsertRelationship(id, type) {
       value4.add(id);
     } else {
       const _Set = Set;
-      const items = [id];
+      items = [id];
       set = new Set(items);
       const result1 = map1.set(type, set);
     }
@@ -96,7 +96,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "Array", blocked: "Path", ignored: "y", blockedOrIgnored: "HermesInternal" };
+let closure_20 = { friends: "Array", blocked: "Path", ignored: "disabled", blockedOrIgnored: "Map" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -313,7 +313,7 @@ prototype["getNote"] = function getNote(arg0) {
 };
 prototype["getFriendIDs"] = function getFriendIDs() {
   if (null == closure_20.friends) {
-    let items = map1.get(RelationshipTypes.FRIEND);
+    items = map1.get(RelationshipTypes.FRIEND);
     if (items == null) {
       items = [];
     }
@@ -323,7 +323,7 @@ prototype["getFriendIDs"] = function getFriendIDs() {
 };
 prototype["getBlockedIDs"] = function getBlockedIDs() {
   if (null == closure_20.blocked) {
-    let items = map1.get(RelationshipTypes.BLOCKED);
+    items = map1.get(RelationshipTypes.BLOCKED);
     if (items == null) {
       items = [];
     }

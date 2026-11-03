@@ -1,15 +1,15 @@
-// === Module 4868: StageInstanceStore ===
+// === Module 4995: StageInstanceStore ===
 
-// Module 4868 (StageInstanceStore)
+// Module 4995 (StageInstanceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4869 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4996 */;
 import size from "module_2" /* 2 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;
   const guild_id = instance.guild_id;
-  const items = [instance];
+  items = [instance];
   let obj2;
   let obj = dependencyMap[guild_id];
   if (obj == null) {

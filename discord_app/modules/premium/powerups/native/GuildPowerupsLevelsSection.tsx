@@ -1,10 +1,10 @@
-// === Module 14137: GuildPowerupsLevelsSection ===
+// === Module 14268: GuildPowerupsLevelsSection ===
 
-// Module 14137 (GuildPowerupsLevelsSection)
+// Module 14268 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 14138 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 14139 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 14269 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 14270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,12 +12,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1357);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -30,7 +30,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   let memo;
   const tmp = closure_9();
   dependencyMap = tmp;
-  const items = [listings];
+  items = [listings];
   memo = memo.useMemo(() => {
     const found = listings.filter((type) => "singleLevel" === type.type);
     return found.map((powerup) => powerup.powerup);
@@ -42,11 +42,11 @@ export default function GuildPowerupsLevelsSection(arg0) {
   }, []);
   const obj2 = { title: null, description: null };
   const intl = util.intl;
-  obj2.title = intl.string(listings(2570)["TXY/b0"]);
+  obj2.title = intl.string(listings(2699)["TXY/b0"]);
   const intl2 = util.intl;
-  obj2.description = intl2.string(listings(2570).aJv4PB);
-  const items1 = [closure_5(listings(14126), obj2), ];
-  const tmp3 = listings(14126);
+  obj2.description = intl2.string(listings(2699).aJv4PB);
+  const items1 = [closure_5(listings(14257), obj2), ];
+  const tmp3 = listings(14257);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

@@ -1,12 +1,12 @@
-// === Module 14085: useShowGuildPowerupRollbackSheet ===
+// === Module 14216: useShowGuildPowerupRollbackSheet ===
 
-// Module 14085 (useShowGuildPowerupRollbackSheet)
-import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 14088 */;
+// Module 14216 (useShowGuildPowerupRollbackSheet)
+import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 14219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
 
@@ -19,19 +19,19 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let first;
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  ({ shouldShow, modalConfig } = first(14086)(arg0, arg1));
+  ({ shouldShow, modalConfig } = first(14217)(arg0, arg1));
   if (shouldShow) {
     shouldShow = null != modalConfig;
   }
   if (shouldShow) {
     shouldShow = !flag;
   }
-  const items = [];
+  items = [];
   if (shouldShow) {
     items.push(modalConfig.dismissibleContent);
   }
-  const tmp2 = first(14086)(arg0, arg1);
-  const tmp5 = _slicedToArray(modalConfig(7569).useSelectedDismissibleContent(items), 2);
+  const tmp2 = first(14217)(arg0, arg1);
+  const tmp5 = _slicedToArray(modalConfig(7693).useSelectedDismissibleContent(items), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   _slicedToArray = noop.useRef(false);
@@ -54,7 +54,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       if (null != modalConfig.primaryButtonText) {
         fn = () => {
           dependencyMap(constants.TAKE_ACTION);
-          first(5258).hideActionSheet(modalConfig(14088).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+          first(5381).hideActionSheet(modalConfig(14219).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
         };
       }
       obj.onCtaPress = fn;

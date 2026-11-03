@@ -76,7 +76,7 @@ export function wrapPaths(frozen, arg1) {
       return 1;
     } else {
       obj[closure_3] = () => {
-        const items = [...arguments];
+        items = [...arguments];
         closure_0 = closure_1;
         return closure_0(...items.map((item) => {
           if (null == item) {

@@ -1,29 +1,29 @@
-// === Module 6570: SelfPresenceStore ===
+// === Module 6690: SelfPresenceStore ===
 
-// Module 6570 (SelfPresenceStore)
+// Module 6690 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7580 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10762 */;
-import SpotifyStore from "SpotifyStore" /* 6571 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7704 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10892 */;
+import SpotifyStore from "SpotifyStore" /* 6691 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DetectableGameStore from "DetectableGameStore" /* 2032 */;
-import IdleStore from "IdleStore" /* 6705 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;
-import LocalActivityStore from "LocalActivityStore" /* 11525 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+import DetectableGameStore from "DetectableGameStore" /* 2161 */;
+import IdleStore from "IdleStore" /* 6825 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
+import LocalActivityStore from "LocalActivityStore" /* 11662 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
   if (0 === arg0.length) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     const items1 = [];
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
@@ -133,7 +133,7 @@ function handleUpdate() {
     }
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
-      const items = [];
+      items = [];
       const tmp12Result = _modDef12;
       HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS), HermesBuiltin.arraySpread(found, 0));
       const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
@@ -151,7 +151,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5761).sortActivity;
+const sortActivity = fn(5881).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;
@@ -170,7 +170,7 @@ class SelfPresenceStore extends Store {
 const prototype = SelfPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(DetectableGameStore, IdleStore, LibraryApplicationStore, LocalActivityStore, PresenceStore, SessionsStore, SpotifyStore, UserSettingsProtoStore);
-  const items = [LocalActivityStore];
+  items = [LocalActivityStore];
   this.syncWith(items, handleUpdate);
 };
 prototype["getLocalPresence"] = function getLocalPresence() {

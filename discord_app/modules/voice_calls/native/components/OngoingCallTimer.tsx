@@ -1,10 +1,10 @@
-// === Module 15210: OngoingCallTimer ===
+// === Module 15351: OngoingCallTimer ===
 
-// Module 15210 (OngoingCallTimer)
+// Module 15351 (OngoingCallTimer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import TimerDefault from "Timer" /* 15211 */;
+import TimerDefault from "Timer" /* 15352 */;
 import noop from "module_19" /* 19 */;
-import CallStore from "CallStore" /* 6569 */;
+import CallStore from "CallStore" /* 6689 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/voice_calls/native/components
 
 export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
-  const items = [CallStore];
+  items = [CallStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     const call = CallStore.getCall(channelId);

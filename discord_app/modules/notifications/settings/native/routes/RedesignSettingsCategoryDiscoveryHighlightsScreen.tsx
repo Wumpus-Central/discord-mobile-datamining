@@ -1,9 +1,9 @@
-// === Module 17969: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
+// === Module 18112: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
 
-// Module 17969 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17963 */;
+// Module 18112 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default noop.memo(function RedesignSettingsCategoryDiscoveryHighlightsScr
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj = SettingBuilders;
-    const items = [MobileNotifSettingsRouteBuilders.buildCategoryDiscoveryHighlightsSettingsSection()];
+    items = [MobileNotifSettingsRouteBuilders.buildCategoryDiscoveryHighlightsSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

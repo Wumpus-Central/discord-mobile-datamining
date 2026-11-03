@@ -1,7 +1,7 @@
-// === Module 11795: doesOrientationMatchLockState ===
+// === Module 11932: doesOrientationMatchLockState ===
 
-// Module 11795 (doesOrientationMatchLockState)
-import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2019 */;
+// Module 11932 (doesOrientationMatchLockState)
+import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2148 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");

@@ -1,16 +1,16 @@
-// === Module 15038: OrbBadgePreview ===
+// === Module 15180: OrbBadgePreview ===
 
-// Module 15038 (OrbBadgePreview)
+// Module 15180 (OrbBadgePreview)
 import util from "util" /* 1113 */;
-import useCurrentUser from "useCurrentUser" /* 8749 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9551 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11393 */;
+import useCurrentUser from "useCurrentUser" /* 8873 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9679 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
@@ -20,7 +20,7 @@ export function OrbBadgePreview() {
   const obj2 = { style: tmp.container, children: null };
   const currentUser = useCurrentUser.useCurrentUser();
   const obj3 = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
-  const items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
+  items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
   obj3.additionalBadges = items;
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t.bxcI6Y);

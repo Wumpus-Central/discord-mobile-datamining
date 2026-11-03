@@ -1,19 +1,19 @@
-// === Module 12211: conjureProjectMenuItems ===
+// === Module 12347: conjureProjectMenuItems ===
 
-// Module 12211 (conjureProjectMenuItems)
+// Module 12347 (conjureProjectMenuItems)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
+import _modDef3995 from "module_3995" /* 3995 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMenuItems.tsx");
 
 export function previewMenuItems(canRefresh) {
   ({ offers, connectPending } = canRefresh);
-  const items = [];
+  items = [];
   if (canRefresh.canRefresh) {
     const obj = { id: "preview-refresh", label: null, kind: "refresh", disabled: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3868["/nOi5n"]);
+    obj.label = intl.string(_modDef3995["/nOi5n"]);
     obj.disabled = tmp;
     items.push(obj);
   }
@@ -27,7 +27,7 @@ export function previewMenuItems(canRefresh) {
       obj2.id = "preview-connect-" + connection.type;
       let intl2 = util.intl;
       let obj3 = { label: connection.label };
-      obj2.label = intl2.formatToPlainString(_modDef3868.DEwmI5, obj3);
+      obj2.label = intl2.formatToPlainString(_modDef3995.DEwmI5, obj3);
       obj2.connectionType = connection.type;
       obj2.disabled = connectPending.has(connection.type);
       let obj4 = obj2;
@@ -37,7 +37,7 @@ export function previewMenuItems(canRefresh) {
       obj4.id = "preview-connect-" + connection.type;
       let intl3 = util.intl;
       let obj5 = { label: connection.label };
-      obj4.label = intl3.formatToPlainString(_modDef3868.GnHcWc, obj5);
+      obj4.label = intl3.formatToPlainString(_modDef3995.GnHcWc, obj5);
       obj4.connectionType = connection.type;
     }
     let arr3 = items.push(obj4);

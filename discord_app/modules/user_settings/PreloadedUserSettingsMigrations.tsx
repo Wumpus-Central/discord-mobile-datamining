@@ -1,16 +1,16 @@
-// === Module 16287: PreloadedUserSettingsMigrations ===
+// === Module 16431: PreloadedUserSettingsMigrations ===
 
-// Module 16287 (PreloadedUserSettingsMigrations)
+// Module 16431 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import wrappers from "wrappers" /* 1227 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4846 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import HotspotStore2 from "HotspotStore" /* 7381 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4973 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import HotspotStore2 from "HotspotStore" /* 7501 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {
@@ -116,14 +116,14 @@ let items = [
     version: 3,
     run(textAndImages) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const items = [
+      items = [
         () => {
           const Storage = Storage4.Storage;
           const diversitySurrogate = Storage.get("EmojiDiversitySurrogate") || "";
           return { diversitySurrogate };
         }
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -572,7 +572,7 @@ let items = [
     version: 17,
     run(textAndImages) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
+      state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
       if (null == state) {
         return false;
       } else {

@@ -1,15 +1,15 @@
-// === Module 18159: MessagesFlashList ===
+// === Module 18303: MessagesFlashList ===
 
-// Module 18159 (MessagesFlashList)
-import MessagesItemChannel from "MessagesItemChannel" /* 18088 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18098 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18099 */;
-import useMessagesData from "useMessagesData" /* 18102 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18117 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18154 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18155 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18156 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18157 */;
+// Module 18303 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 18232 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18242 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18243 */;
+import useMessagesData from "useMessagesData" /* 18246 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18261 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18298 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18299 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18300 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
   const friendsHeaderIndex = tmp2.friendsHeaderIndex;
   const extraData = tmp2.friendsHeaderOffset;
   const listHeaderHeight = tmp2.listHeaderHeight;
-  let items = [listHeaderHeight];
+  items = [listHeaderHeight];
   const imperativeHandle = listRefHappeningNow.useImperativeHandle(ref, () => ({
     scrollToTop() {
       let flag = arg0;
@@ -133,7 +133,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
     let tmp;
     if (first === data2) {
       if (null != friendsHeaderIndex) {
-        const items = [tmp2];
+        items = [tmp2];
         tmp = items;
       }
     }

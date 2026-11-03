@@ -1,7 +1,7 @@
-// === Module 18653: useSubscribeToGuildMemberUpdates ===
+// === Module 18811: useSubscribeToGuildMemberUpdates ===
 
-// Module 18653 (useSubscribeToGuildMemberUpdates)
-import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 7451 */;
+// Module 18811 (useSubscribeToGuildMemberUpdates)
+import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 7575 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -9,7 +9,7 @@ let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/us
 
 export function useSubscribeToGuildMemberUpdates(guildId) {
   closure_0 = guildId;
-  const items = [guildId];
+  items = [guildId];
   const effect = noop.useEffect(() => {
     let result = GuildSubscriptionsActionCreatorsAll.subscribeToMemberUpdates(closure_0);
     return () => {

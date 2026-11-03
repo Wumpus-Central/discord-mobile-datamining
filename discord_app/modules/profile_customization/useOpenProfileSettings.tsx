@@ -1,14 +1,14 @@
-// === Module 11518: useOpenProfileSettings ===
+// === Module 11655: useOpenProfileSettings ===
 
-// Module 11518 (useOpenProfileSettings)
+// Module 11655 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1072 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11520 */;
-import UserStore from "UserStore" /* 1383 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11459 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11657 */;
+import UserStore from "UserStore" /* 1385 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11596 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -21,9 +21,9 @@ export default function useOpenProfileSettings() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const guild = obj.guild;
+  guild = obj.guild;
   const scrollPosition = obj.scrollPosition;
-  const items = [guild, scrollPosition, obj.analyticsLocations, guild(scrollPosition[6]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings")];
+  items = [guild, scrollPosition, obj.analyticsLocations, guild(scrollPosition[6]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings")];
   return useCallback(() => {
     if (null != guild) {
       const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(guild.id);

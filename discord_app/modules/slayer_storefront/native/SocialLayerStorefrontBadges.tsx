@@ -1,20 +1,20 @@
-// === Module 10684: SocialLayerStorefrontBadges ===
+// === Module 10814: SocialLayerStorefrontBadges ===
 
-// Module 10684 (SocialLayerStorefrontBadges)
+// Module 10814 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ClydeIcon from "ClydeIcon" /* 10685 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ClydeIcon from "ClydeIcon" /* 10815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { exclusiveBadge: { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, exclusiveBadgeText: null };
 const obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
@@ -26,8 +26,8 @@ const result = size.fileFinishedImporting("modules/slayer_storefront/native/Soci
 export function ExclusiveBadge() {
   const tmp = closure_6();
   const obj = { style: tmp.exclusiveBadge, children: null };
-  const items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE }), ];
-  const obj3 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
+  items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE }), ];
+  const obj3 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RiDMFz);
   items[1] = React4(Text_Text.Text, obj3);

@@ -1,12 +1,12 @@
-// === Module 18300: useStageChannelSpeakerVoiceStates ===
+// === Module 18445: useStageChannelSpeakerVoiceStates ===
 
-// Module 18300 (useStageChannelSpeakerVoiceStates)
+// Module 18445 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
 
 const require = globalThis.__r;
 
@@ -15,13 +15,13 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(5767).getComparator;
+const getComparator = fn(5887).getComparator;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
 export default function useStageChannelSpeakerVoiceStates(arg0) {
   _require = arg0;
-  let items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
+  items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
   const items1 = [arg0];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
     if (obj.isFavoritesGuildId(closure_0)) {
@@ -32,7 +32,7 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
     } else {
       found1 = StageChannelParticipantStore.getChannels(closure_0);
     }
-    const items = [
+    items = [
       found1.reduce((acc, id) => {
         const mutableParticipants = closure_1_7.getMutableParticipants(id.id, closure_1_0(closure_1_2[9]).StageChannelParticipantNamedIndex.SPEAKER);
         const found = mutableParticipants.filter((type) => type.type === closure_1_0(closure_1_2[9]).StageChannelParticipantTypes.VOICE);

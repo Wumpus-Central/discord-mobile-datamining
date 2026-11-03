@@ -1,7 +1,7 @@
-// === Module 17897: AdTopicOptOutClientExperiment ===
+// === Module 18040: AdTopicOptOutClientExperiment ===
 
-// Module 17897 (AdTopicOptOutClientExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 18040 (AdTopicOptOutClientExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-08-ad-topic-opt-out-client", defaultConfig: { enabled: false }, variations: null };

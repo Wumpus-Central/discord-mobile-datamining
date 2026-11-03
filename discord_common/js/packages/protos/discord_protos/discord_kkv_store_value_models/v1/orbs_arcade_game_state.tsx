@@ -1,6 +1,6 @@
-// === Module 17025: orbs_arcade_game_state ===
+// === Module 17168: orbs_arcade_game_state ===
 
-// Module 17025 (orbs_arcade_game_state)
+// Module 17168 (orbs_arcade_game_state)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
@@ -47,7 +47,7 @@ class OrbsArcadeRun$Type extends MessageType {
       name: "charge_status",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus", obj2, "ORBS_ARCADE_CHARGE_STATUS_"];
+            items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus", obj2, "ORBS_ARCADE_CHARGE_STATUS_"];
             return items;
           }
     };
@@ -182,7 +182,7 @@ let items = [
     name: "charge_type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeType", OrbsArcadeChargeType, "ORBS_ARCADE_CHARGE_TYPE_"];
+      items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeType", OrbsArcadeChargeType, "ORBS_ARCADE_CHARGE_TYPE_"];
       return items;
     }
   },
@@ -191,7 +191,7 @@ let items = [
     name: "charge_status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus", obj2, "ORBS_ARCADE_CHARGE_STATUS_"];
+      items = ["discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus", obj2, "ORBS_ARCADE_CHARGE_STATUS_"];
       return items;
     }
   }

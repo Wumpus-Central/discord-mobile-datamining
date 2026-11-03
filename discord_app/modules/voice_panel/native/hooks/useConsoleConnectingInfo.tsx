@@ -1,12 +1,12 @@
-// === Module 19299: useConsoleConnectingInfo ===
+// === Module 19457: useConsoleConnectingInfo ===
 
-// Module 19299 (useConsoleConnectingInfo)
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11860 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14742 */;
-import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 19300 */;
-import getConsoleColorDefault from "getConsoleColor" /* 19302 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+// Module 19457 (useConsoleConnectingInfo)
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11997 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14873 */;
+import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 19458 */;
+import getConsoleColorDefault from "getConsoleColor" /* 19460 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  const items = [GameConsoleStore];
+  items = [GameConsoleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const obj = require("useStateFromStores");
   const tmp5 = _require;
@@ -63,7 +63,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj3.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
   obj3.icon = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj3.text = tmp5(19301).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj3.text = tmp5(19459).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj3.color = getConsoleColorDefault(str);
   obj3.displayCancel = tmp9;
   return obj3;

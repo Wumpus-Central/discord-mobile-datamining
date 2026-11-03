@@ -1,9 +1,9 @@
-// === Module 8812: useUserProfileGradientColors ===
+// === Module 8936: useUserProfileGradientColors ===
 
-// Module 8812 (useUserProfileGradientColors)
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8802 */;
+// Module 8936 (useUserProfileGradientColors)
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8926 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export function useUserProfileGradientColors(primaryColor, secondaryColor, fallb
   _require = primaryColor;
   dependencyMap = secondaryColor;
   noop = fallbackBackground;
-  const items = [overlay];
+  items = [overlay];
   const stateFromStores = require("initialize").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
   let obj = require("initialize");
   let obj2 = require("native");

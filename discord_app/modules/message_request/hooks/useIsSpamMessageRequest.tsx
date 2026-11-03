@@ -1,7 +1,7 @@
-// === Module 11258: useIsSpamMessageRequest ===
+// === Module 11395: useIsSpamMessageRequest ===
 
-// Module 11258 (useIsSpamMessageRequest)
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+// Module 11395 (useIsSpamMessageRequest)
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useIsSp
 
 export function useIsSpamMessageRequest(id) {
   _require = id;
-  const items = [SpamMessageRequestStore];
+  items = [SpamMessageRequestStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => SpamMessageRequestStore.isSpam(closure_0), items1);
 }

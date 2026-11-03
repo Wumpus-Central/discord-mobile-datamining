@@ -1,8 +1,8 @@
-// === Module 15562: PrivateChannelHidingExperiment ===
+// === Module 15703: PrivateChannelHidingExperiment ===
 
-// Module 15562 (PrivateChannelHidingExperiment)
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 15563 */;
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 15703 (PrivateChannelHidingExperiment)
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 15704 */;
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-private-channel-hiding", kind: "user", defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false }, variations: null };

@@ -1,16 +1,16 @@
-// === Module 15405: NitroCreditEducationActionSheet ===
+// === Module 15546: NitroCreditEducationActionSheet ===
 
-// Module 15405 (NitroCreditEducationActionSheet)
+// Module 15546 (NitroCreditEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -25,7 +25,7 @@ export default function NitroCreditEducationActionSheet(children) {
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.aboutContainer, children: null };
-  const items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3), ];
   const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };

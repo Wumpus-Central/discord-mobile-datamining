@@ -1,14 +1,14 @@
-// === Module 11316: useUnreadSettingNotice ===
+// === Module 11453: useUnreadSettingNotice ===
 
-// Module 11316 (useUnreadSettingNotice)
-import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 11317 */;
+// Module 11453 (useUnreadSettingNotice)
+import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 11454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(4867).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+let closure_5 = fn(4994).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
 
@@ -16,7 +16,7 @@ export default function useUnreadSettingNotice(id) {
   _require = id;
   const shouldUseNewNotificationSystem = require("notifications/NotificationUtils").useShouldUseNewNotificationSystem("useShouldRenderBanner");
   [first, _slicedToArray] = noop.useState("");
-  const items = [id.id];
+  items = [id.id];
   const effect = noop.useEffect(() => {
     closure_3("");
   }, items);

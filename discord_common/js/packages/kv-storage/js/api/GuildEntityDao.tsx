@@ -1,8 +1,8 @@
-// === Module 4905: GuildEntityDao ===
+// === Module 5032: GuildEntityDao ===
 
-// Module 4905 (GuildEntityDao)
-import Table from "Table" /* 4897 */;
-import TableId from "TableId" /* 4899 */;
+// Module 5032 (GuildEntityDao)
+import Table from "Table" /* 5024 */;
+import TableId from "TableId" /* 5026 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   if (typeof GuildEntityDao === "function") {
     const obj = Object.create(GuildEntityDao.prototype);
     obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
+    items = [originalPrefix];
     const table = new Table.Table(items, tableId, database, false);
     obj.table = table;
     return obj;
@@ -47,17 +47,17 @@ prototype["withoutLogging"] = function withoutLogging() {
 };
 prototype["get"] = function get(arg0, arg1) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return table.get(items);
 };
 prototype["getMany"] = function getMany(arg0, arg1) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getMany(items, arg1);
 };
 prototype["getRange"] = function getRange(arg0, arg1, arg2, arg3) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const items1 = [arg0, arg2];
   return table.getRange(items, items1, arg3);
 };
@@ -71,7 +71,7 @@ prototype["getMapEntries"] = function getMapEntries() {
 };
 prototype["getIds"] = function getIds(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getChildIds(items);
 };
 prototype["getGuildIds"] = function getGuildIds() {
@@ -80,7 +80,7 @@ prototype["getGuildIds"] = function getGuildIds() {
 };
 prototype["getGuildId"] = function getGuildId(arg0) {
   const table = this.table;
-  const items = [null, arg0];
+  items = [null, arg0];
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0, arg1) {
@@ -140,7 +140,7 @@ prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getManySyncUnsafe(items, arg1);
 };
 prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
@@ -149,12 +149,12 @@ prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
 };
 prototype["deleteSyncUnsafe"] = function deleteSyncUnsafe(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.deleteSyncUnsafe(items);
 };
 GuildEntityDao["cell"] = function cell(arg0, data, generation) {
   const obj = { key: null, data, generation };
-  const items = [arg0, data.id];
+  items = [arg0, data.id];
   obj.key = items;
   return obj;
 };
@@ -213,7 +213,7 @@ prototype2["delete"] = function delete(arg0, arg1) {
     return transaction3.delete([]);
   } else if (1 === length) {
     const transaction2 = self.transaction;
-    const items = [arg0];
+    items = [arg0];
     return transaction2.delete(items);
   } else {
     const transaction = self.transaction;

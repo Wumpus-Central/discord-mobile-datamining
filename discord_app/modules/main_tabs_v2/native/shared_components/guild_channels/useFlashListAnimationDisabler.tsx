@@ -1,52 +1,61 @@
-// === Module 15997: useFlashListAnimationDisabler ===
+// === Module 16140: useFlashListAnimationDisabler ===
 
-// Module 15997 (useFlashListAnimationDisabler)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 16140 (useFlashListAnimationDisabler)
+import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const __initData = { code: "function useFlashListAnimationDisablerTsx1(){const{lastId}=this.__closure;return lastId.get();}" };
-const __initData2 = { code: "function useFlashListAnimationDisablerTsx2(current,prev){const{enableAnimation}=this.__closure;if(current!==prev){enableAnimation.set(false);}}" };
-const __initData3 = { code: "function useFlashListAnimationDisablerTsx3(finished){const{enableAnimation}=this.__closure;if(finished&&!enableAnimation.get()){enableAnimation.set(true);}}" };
+let closure_3 = { code: "(function useFlashListAnimationDisablerTsx1(){let[lastId]=this.__closure;return lastId.get();})" };
+let closure_4 = { code: "(function useFlashListAnimationDisablerTsx2(current,prev){let[enableAnimation]=this.__closure;if(current!==prev){enableAnimation.set(false);}})" };
+let closure_5 = { code: "(function useFlashListAnimationDisablerTsx3(finished){let[enableAnimation]=this.__closure;if(finished&&!enableAnimation.get()){enableAnimation.set(true);}})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx");
 
 export function useFlashListAnimationDisabler(userId) {
-  closure_0 = userId;
-  const sharedValue = ReanimatedRexport.useSharedValue(false);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(userId);
-  const items = [sharedValue1, userId];
+  const sharedValue = _mod1652.useSharedValue(false);
+  const sharedValue1 = _mod1652.useSharedValue(userId);
+  items = [sharedValue1, userId];
   const effect = noop.useEffect(() => {
-    const result = sharedValue1.set(closure_0);
+    const result = sharedValue1.set(c0);
   }, items);
-  const fn = function _() {
-    return sharedValue1.get();
-  };
-  fn.__closure = { lastId: sharedValue1 };
-  fn.__workletHash = 9889142626009;
-  fn.__initData = __initData;
-  const fn2 = function u(arg0, arg1) {
+  const items1 = [closure_3, sharedValue1];
+  [tmp4, tmp5] = items1;
+  function useFlashListAnimationDisablerTsx1() {
+    return _undefined.get();
+  }
+  const items2 = [tmp5];
+  useFlashListAnimationDisablerTsx1.__closure = items2;
+  useFlashListAnimationDisablerTsx1.__workletHash = 16187209688288;
+  useFlashListAnimationDisablerTsx1.__initData = tmp4;
+  const items3 = [closure_4, sharedValue];
+  [tmp6, tmp7] = items3;
+  function useFlashListAnimationDisablerTsx2(arg0, arg1) {
     if (arg0 !== arg1) {
-      const result = sharedValue.set(false);
+      const result = _undefined.set(false);
     }
-  };
-  fn2.__closure = { enableAnimation: sharedValue };
-  fn2.__workletHash = 6114249067388;
-  fn2.__initData = __initData2;
-  const animatedReaction = ReanimatedRexport.useAnimatedReaction(fn, fn2);
-  const fn3 = function b(arg0) {
+  }
+  const items4 = [tmp7];
+  useFlashListAnimationDisablerTsx2.__closure = items4;
+  useFlashListAnimationDisablerTsx2.__workletHash = 6865280416933;
+  useFlashListAnimationDisablerTsx2.__initData = tmp6;
+  const animatedReaction = _mod1652.useAnimatedReaction(useFlashListAnimationDisablerTsx1, useFlashListAnimationDisablerTsx2);
+  const items5 = [closure_5, sharedValue];
+  c0 = undefined;
+  [tmp9, tmp10] = items5;
+  function useFlashListAnimationDisablerTsx3(arg0) {
     let tmp = arg0;
     if (arg0) {
-      tmp = !sharedValue.get();
+      tmp = !_undefined.get();
     }
     if (tmp) {
-      const result = sharedValue.set(true);
+      const result = _undefined.set(true);
     }
-  };
-  fn3.__closure = { enableAnimation: sharedValue };
-  fn3.__workletHash = 5697261629076;
-  fn3.__initData = __initData3;
-  const items1 = [sharedValue];
-  const items2 = [sharedValue, noop.useCallback(fn3, items1)];
-  return items2;
+  }
+  const items6 = [tmp10];
+  useFlashListAnimationDisablerTsx3.__closure = items6;
+  useFlashListAnimationDisablerTsx3.__workletHash = 8857429510125;
+  useFlashListAnimationDisablerTsx3.__initData = tmp9;
+  const items7 = [sharedValue];
+  const items8 = [sharedValue, noop.useCallback(useFlashListAnimationDisablerTsx3, items7)];
+  return items8;
 }

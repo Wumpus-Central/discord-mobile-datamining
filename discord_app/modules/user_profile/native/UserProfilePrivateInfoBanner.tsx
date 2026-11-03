@@ -1,12 +1,12 @@
-// === Module 14989: UserProfilePrivateInfoBanner ===
+// === Module 15125: UserProfilePrivateInfoBanner ===
 
-// Module 14989 (UserProfilePrivateInfoBanner)
+// Module 15125 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import createStyles from "createStyles" /* 5014 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;
-  const items = [closure_4().banner, ];
+  items = [closure_4().banner, ];
   let tmp3 = null != containerBackground;
   if (tmp3) {
     const obj = { backgroundColor: containerBackground };

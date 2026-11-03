@@ -1,15 +1,15 @@
-// === Module 15280: PremiumBillingInfo ===
+// === Module 15421: PremiumBillingInfo ===
 
-// Module 15280 (PremiumBillingInfo)
+// Module 15421 (PremiumBillingInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7587 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15276 */;
-import BillingInformation from "BillingInformation" /* 15281 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7711 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15417 */;
+import BillingInformation from "BillingInformation" /* 15422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ const Constants = fn(1072);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 }, billingRenewalInfo: { marginTop: 4 }, billingManageGoogle: { marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -65,7 +65,7 @@ export default function PremiumBillingInfo(subscription) {
     const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     const intl = util.intl;
     obj6.children = intl.string(util.t.Sb6wI1);
-    const items = [timestampProducer(Text_Text.Text, obj6), , ];
+    items = [timestampProducer(Text_Text.Text, obj6), , ];
     const obj7 = { style: tmp.billingContainer, children: null };
     const obj8 = { variant: "text-md/semibold", children: null };
     const intl2 = util.intl;

@@ -1,10 +1,13 @@
-// === Module 10924: conjurePreviewNativeSurfaces ===
+// === Module 11054: conjurePreviewNativeSurfaces ===
 
-// Module 10924 (conjurePreviewNativeSurfaces)
-import Constants from "Constants" /* 1072 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 9338 */;
-import size from "module_2" /* 2 */;
+// Module 11054 (conjurePreviewNativeSurfaces)
+import RpcCommandInterception from "RpcCommandInterception" /* 9466 */;
+import requestConjureDevicePermissions from "requestConjureDevicePermissions" /* 11060 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
+const require = globalThis.__r;
+
+require = fn;
 function asString(str) {
   let tmp;
   if (typeof str === "string") {
@@ -46,40 +49,101 @@ function menuOptionIds(items) {
   }
 }
 function answerFor(cmd) {
-  const iframeId = cmd;
-  const found = closure_6.find((iframeId) => iframeId.iframeId === iframeId.iframeId);
-  if (null == found) {
-    return null;
-  } else if (null == obj[cmd.cmd]) {
+  _require = cmd;
+  const found = closure_8.find((iframeId) => iframeId.iframeId === iframeId.iframeId);
+  closure_129_0 = undefined;
+  if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
+    const frameByIframeId = FramesStore.getFrameByIframeId(cmd.iframeId);
+    let applicationId;
+    if (frameByIframeId != null) {
+      applicationId = frameByIframeId.applicationId;
+    }
+    closure_129_0 = applicationId;
+    let tmp8 = null;
+    if (null != applicationId) {
+      obj = _require;
+      let conjurePreviewGameCapture = dependencyMap;
+      tmp8 = null;
+      if (obj2.hasConjurePreviewGameCapture(applicationId)) {
+        if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
+          const obj3 = { result: null, answered: "returned the selected game capture" };
+          obj = obj(11055);
+          conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
+          obj3.result = conjurePreviewGameCapture;
+          let obj4 = obj3;
+        } else {
+          obj4 = { result: null, answered: "screen capture allowed for the selected game capture" };
+          const obj5 = { permissions: null };
+          const prop = obj(11059).CONJURE_DEVICE_PERMISSION_NAMES;
+          obj5.permissions = prop.map((permission) => {
+            if ("screen_capture" === permission) {
+              const obj2 = { permission, state: "granted" };
+              let conjureDevicePermissionStatus = obj2;
+            } else {
+              conjureDevicePermissionStatus = requestConjureDevicePermissions.getConjureDevicePermissionStatus(closure_0, permission);
+            }
+            return conjureDevicePermissionStatus;
+          });
+          obj4.result = obj5;
+        }
+      }
+      obj2 = require("conjurePreviewGameCapture");
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = null;
+  }
+  if (tmp3 == null) {
+    let tmp11 = null;
+    if (null != found) {
+      let tmp12Result;
+      if (obj[cmd.cmd] != null) {
+        tmp12Result = tmp12(cmd);
+      }
+      if (tmp12Result == null) {
+        tmp12Result = null;
+      }
+      tmp11 = tmp12Result;
+    }
+    tmp3 = tmp11;
+  }
+  if (null == tmp3) {
     return null;
   } else {
-    ({ options, subject } = tmp9(cmd));
-    if (found.recorded.length >= 20) {
-      const obj2 = { result: tmp11 };
-      return obj2;
+    ({ options, subject } = tmp3);
+    let tmp14 = null != found;
+    ({ result, answered } = tmp3);
+    if (tmp14) {
+      tmp14 = cmd.cmd !== RPCCommands.GET_DEVICE_PERMISSIONS;
+    }
+    if (tmp14) {
+      tmp14 = found.recorded.length < 20;
+    }
+    if (!tmp14) {
+      const obj6 = { result };
+      return obj6;
     } else {
-      let obj3 = { command: cmd.cmd, answered: tmp12 };
+      let obj7 = { command: cmd.cmd, answered };
       if (null != options) {
         if (options.length > 0) {
-          const obj4 = { options };
-          obj = obj4;
+          const obj8 = { options };
+          let obj11 = obj8;
         }
-        const merged = Object.assign(obj);
+        const merged = Object.assign(obj11);
         if (null != subject) {
-          const obj5 = { subject };
-          let obj6 = obj5;
+          const obj9 = { subject };
+          let obj10 = obj9;
         } else {
-          obj6 = {};
+          obj10 = {};
         }
-        const merged1 = Object.assign(obj6);
-        obj3 = tmp13(obj3);
+        const merged1 = Object.assign(obj10);
+        obj7 = tmp15(obj7);
       }
-      obj = {};
+      obj11 = {};
     }
-    const tmp9Result = tmp9(cmd);
   }
 }
-const RPCCommands = Constants.RPCCommands;
+const RPCCommands = fn(1072).RPCCommands;
 let obj = {
   [RPCCommands.OPEN_CONTEXT_MENU]: (args) => {
     if ("custom" !== args.args.type) {
@@ -164,10 +228,10 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "children", answered: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012611364128711548 }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "children", answered: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012611364128711548 })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: "<string:2672367698>" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel_id", answered: "<string:2672367698>" })
 };
-let closure_5 = {
+let closure_7 = {
   drain() {
     return [];
   },
@@ -176,14 +240,16 @@ let closure_5 = {
   },
   iframeId: null
 };
-let closure_6 = [];
+let closure_8 = [];
+let closure_10 = 0;
 const keys = Object.keys(obj);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewNativeSurfaces.tsx");
 
 export const ANSWERED_NATIVE_COMMANDS = keys;
 export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
   if (null == iframeId) {
-    return closure_5;
+    return closure_7;
   } else {
     const obj2 = { iframeId, recorded: [] };
     beneathBatches = undefined;
@@ -191,16 +257,18 @@ export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
       beneathBatches = beneathBatches.beneathBatches;
     }
     if (true === beneathBatches) {
-      closure_6.push(obj2);
-      let arr = closure_6;
+      closure_8.push(obj2);
+      let arr = closure_8;
     } else {
-      arr = closure_6;
-      closure_6.unshift(obj2);
+      closure_8.unshift(obj2);
+      arr = closure_8;
     }
-    if (1 === arr.length) {
-      let result = obj2(9338).setRpcCommandInterceptor(answerFor);
-      obj = obj2(9338);
+    if (arr.length > 0) {
+      let tmp9 = answerFor;
+    } else {
+      tmp9 = null;
     }
+    let result = obj2(9466).setRpcCommandInterceptor(tmp9);
     const obj3 = {
       iframeId,
       drain() {
@@ -208,15 +276,40 @@ export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
           return recorded.splice(0, obj2.recorded.length);
         },
       end() {
-          const index = closure_6.indexOf(obj2);
+          const index = closure_8.indexOf(obj2);
           if (-1 !== index) {
-            closure_6.splice(index, 1);
-            if (0 === closure_6.length) {
-              const result = RpcCommandInterception.setRpcCommandInterceptor(null);
+            closure_8.splice(index, 1);
+            if (closure_8.length > 0) {
+              let tmp6 = answerFor;
+            } else {
+              tmp6 = null;
             }
+            const result = RpcCommandInterception.setRpcCommandInterceptor(tmp6);
           }
         }
     };
     return obj3;
   }
+}
+export function holdPreviewGameCaptureAnswers() {
+  closure_10 = closure_10 + 1;
+  if (length.length > 0) {
+    let tmp2 = answerFor;
+  } else {
+    tmp2 = null;
+  }
+  let result = require("RpcCommandInterception").setRpcCommandInterceptor(tmp2);
+  _require = false;
+  return () => {
+    if (!c0) {
+      c0 = true;
+      closure_10 = closure_10 - 1;
+      if (length.length > 0) {
+        let tmp6 = answerFor;
+      } else {
+        tmp6 = null;
+      }
+      const result = RpcCommandInterception.setRpcCommandInterceptor(tmp6);
+    }
+  };
 }

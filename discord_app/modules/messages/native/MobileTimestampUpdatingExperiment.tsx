@@ -1,7 +1,7 @@
-// === Module 11571: MobileTimestampUpdatingExperiment ===
+// === Module 11708: MobileTimestampUpdatingExperiment ===
 
-// Module 11571 (MobileTimestampUpdatingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 11708 (MobileTimestampUpdatingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-10-mobile-timestamp-updating", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

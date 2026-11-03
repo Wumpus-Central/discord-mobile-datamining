@@ -1,8 +1,8 @@
-// === Module 5203: useBaseAppContainerDimensions ===
+// === Module 5326: useBaseAppContainerDimensions ===
 
-// Module 5203 (useBaseAppContainerDimensions)
-import useWindowDimensions from "useWindowDimensions" /* 1491 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1625 */;
+// Module 5326 (useBaseAppContainerDimensions)
+import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;
@@ -19,7 +19,7 @@ export default function useBaseAppContainerDimensions() {
   const rect = useSafeAreaInsetsDefault();
   const left = rect.left;
   const right = rect.right;
-  const items = [width, height, left, right];
+  items = [width, height, left, right];
   return noop.useMemo(() => {
     const size = { width: width - left - right, height };
     return size;

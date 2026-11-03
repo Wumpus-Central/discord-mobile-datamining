@@ -1,17 +1,17 @@
-// === Module 10798: GroupDMRow ===
+// === Module 10928: GroupDMRow ===
 
-// Module 10798 (GroupDMRow)
+// Module 10928 (GroupDMRow)
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
-import TableRow from "TableRow" /* 6975 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10800 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
+import TableRow from "TableRow" /* 7101 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
@@ -33,7 +33,7 @@ export default function GroupDMRow(channel) {
   const onPress = channel.onPress;
   const merged = Object.assign(channel, Object.assign({ channel: 0, mode: 0, selected: 0, disabled: 0, onPress: 0 }));
   let str = useChannelNameDefault(channel);
-  const items = [channel, onPress];
+  items = [channel, onPress];
   const callback = noop.useCallback(() => {
     if (onPress != null) {
       tmp(channel);

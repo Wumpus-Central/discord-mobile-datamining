@@ -1,10 +1,10 @@
-// === Module 17821: UserSettingsDesignSystemAILoader ===
+// === Module 17964: UserSettingsDesignSystemAILoader ===
 
-// Module 17821 (UserSettingsDesignSystemAILoader)
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
-import AILoader from "AILoader" /* 12244 */;
+// Module 17964 (UserSettingsDesignSystemAILoader)
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
+import AILoader from "AILoader" /* 12380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { padding: 16 }, row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } });
 let closure_7 = [12, 16, 24];
 let items = [{ color: "text-default", label: "text-default" }, { color: "text-subtle", label: "text-subtle" }];
@@ -32,7 +32,7 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Sizes" }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Sizes" }),
     React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16." }),
     closure_7.map((size) => {
       const obj = { label: "" + size + "px", children: closure_1_4(AILoader.AILoader, { size }) };
@@ -45,7 +45,7 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj5 = { children: null };
   const obj6 = { children: null };
   const items2 = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Colors" }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }),
     React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any semantic text token. Defaults to `text-default`." }),
     items.map((color) => {
       const label = color.label;

@@ -1,7 +1,7 @@
-// === Module 7102: useBottomSheetKeyboardHandling ===
+// === Module 7228: useBottomSheetKeyboardHandling ===
 
-// Module 7102 (useBottomSheetKeyboardHandling)
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+// Module 7228 (useBottomSheetKeyboardHandling)
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ export default function useBottomSheetKeyboardHandling(onFocus) {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
   const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
-  const items = [bottomSheetInternal, onBlur, onFocus];
+  items = [bottomSheetInternal, onBlur, onFocus];
   return noop.useMemo(() => {
     if (null == bottomSheetInternal) {
       const obj2 = { onFocus, onBlur };

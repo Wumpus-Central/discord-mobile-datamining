@@ -1,28 +1,28 @@
-// === Module 14855: UserProfileActivityBadges ===
+// === Module 14986: UserProfileActivityBadges ===
 
-// Module 14855 (UserProfileActivityBadges)
+// Module 14986 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7883 */;
-import GroupIcon from "GroupIcon" /* 8661 */;
-import AppsIcon2 from "AppsIcon" /* 8678 */;
-import utils from "utils" /* 8718 */;
-import GameControllerIcon from "GameControllerIcon" /* 9727 */;
-import TvIcon from "TvIcon" /* 10752 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10757 */;
-import MusicIcon from "MusicIcon" /* 10758 */;
-import TopicsIcon from "TopicsIcon" /* 11667 */;
-import HourglassIcon from "HourglassIcon" /* 12359 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14857 */;
-import Badges from "Badges" /* 14858 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8007 */;
+import GroupIcon from "GroupIcon" /* 8785 */;
+import AppsIcon2 from "AppsIcon" /* 8802 */;
+import utils from "utils" /* 8842 */;
+import GameControllerIcon from "GameControllerIcon" /* 9859 */;
+import TvIcon from "TvIcon" /* 10882 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10887 */;
+import MusicIcon from "MusicIcon" /* 10888 */;
+import TopicsIcon from "TopicsIcon" /* 11804 */;
+import HourglassIcon from "HourglassIcon" /* 12495 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14988 */;
+import Badges from "Badges" /* 14989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
@@ -82,7 +82,7 @@ export function TimestampBadge(activity) {
       }
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-      const items = [React4(AppsIcon, obj3), ];
+      items = [React4(AppsIcon, obj3), ];
       const obj4 = { entry: null, style: null };
       const obj5 = { start, end, isCountDown: flag };
       obj4.entry = obj5;
@@ -103,7 +103,7 @@ export function PartyBadge(activity) {
       if (null != richGameStateBadgeText) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        const items = [React4(GroupIcon.GroupIcon, obj2), ];
+        items = [React4(GroupIcon.GroupIcon, obj2), ];
         const obj3 = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
         items[1] = React4(Text_Text.Text, obj3);
         obj.children = items;
@@ -126,7 +126,7 @@ export function EpisodeBadge(activity) {
   if (null != episodeBadgeText) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items = [React4(TopicsIcon.TopicsIcon, obj3), ];
+    items = [React4(TopicsIcon.TopicsIcon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
     items[1] = React4(Text_Text.Text, obj4);
     obj2.children = items;

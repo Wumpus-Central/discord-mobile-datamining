@@ -1,8 +1,8 @@
-// === Module 4972: burst_reactions/BurstReactionEffectUtils ===
+// === Module 5099: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 4972 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 4964 */;
-import getBurstAnimation from "getBurstAnimation" /* 4973 */;
+// Module 5099 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 5091 */;
+import getBurstAnimation from "getBurstAnimation" /* 5100 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -195,7 +195,7 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -319,7 +319,7 @@ export function useBurstReactionAnimationSource(channelId) {
   _slicedToArray = undefined;
   const tmp = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = tmp[1];
-  const items = [channelId, messageId, emoji, isFullscreen];
+  items = [channelId, messageId, emoji, isFullscreen];
   const effect = noop.useEffect(() => {
     closure_0 = async function _getSource() {
       if (c3 === 2) {
@@ -332,7 +332,7 @@ export function useBurstReactionAnimationSource(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -404,7 +404,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
   let localImageSource = animationSource.localImageSource;
   const tmp = _slicedToArray(noop.useState(null), 2);
   closure_2 = tmp[1];
-  const items = [animationSource, localImageSource];
+  items = [animationSource, localImageSource];
   const effect = noop.useEffect(() => {
     closure_0 = async function _getSource2() {
       if (c3 === 2) {
@@ -417,7 +417,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

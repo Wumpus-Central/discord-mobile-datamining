@@ -1,10 +1,10 @@
-// === Module 18116: useMessagesFlatData ===
+// === Module 18260: useMessagesFlatData ===
 
-// Module 18116 (useMessagesFlatData)
-import useMessagesData from "useMessagesData" /* 18102 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 18117 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 18154 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18155 */;
+// Module 18260 (useMessagesFlatData)
+import useMessagesData from "useMessagesData" /* 18246 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 18261 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 18298 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 18299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
   const channelFavorites = channels.channelFavorites;
   const renderHeader = channels.renderHeader;
   const sections = channels.sections;
-  const items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
+  items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
   return channelFavorites.useMemo(() => {
     if (renderHeader === useMessagesData.MessagesDataHeader.HappeningNow) {
       let listHeaderHeight = MessagesItemHappeningNow.getMessagesItemHappeningNowHeight();

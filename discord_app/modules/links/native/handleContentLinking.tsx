@@ -1,6 +1,6 @@
-// === Module 10182: handleContentLinking ===
+// === Module 10312: handleContentLinking ===
 
-// Module 10182 (handleContentLinking)
+// Module 10312 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         if (safe) {
           const obj10 = { navigationReplace: closure_129_8, openChannel: true, skipMessageFetch, isAppStartupNavigation: closure_129_12 };
@@ -154,7 +154,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(6932).addPostConnectionCallback;
+fn(7052).addPostConnectionCallback;
 const Routes = fn(1072).Routes;
 let c6 = null;
 const size = fn(2);

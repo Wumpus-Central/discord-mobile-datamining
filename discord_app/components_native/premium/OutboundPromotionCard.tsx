@@ -1,14 +1,14 @@
-// === Module 15447: OutboundPromotionCard ===
+// === Module 15588: OutboundPromotionCard ===
 
-// Module 15447 (OutboundPromotionCard)
+// Module 15588 (OutboundPromotionCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,9 +28,9 @@ function TermsAndConditionsActionSheet(termsAndConditions) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { flex: 1, flexDirection: "column", paddingHorizontal: fn(1072).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 }, mainContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, textContainer: { flexDirection: "row", flexShrink: 1, alignItems: "center" }, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6778).DARK_BLACK_500_LIGHT_PRIMARY_100 };
+let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6898).DARK_BLACK_500_LIGHT_PRIMARY_100 };
 obj2.imageContainer = size;
 obj2.image = { width: 28, height: 28, resizeMode: "contain" };
 obj2.title = { lineHeight: 20 };
@@ -72,7 +72,7 @@ export default function OutboundPromotionCard(outboundPromotion) {
     stringResult = string(t2.O13yhz);
   }
   [first, _slicedToArray] = noop.useState(false);
-  const items = [first, code, outboundPromotion];
+  items = [first, code, outboundPromotion];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (first) {
       const obj2 = {

@@ -1,9 +1,9 @@
-// === Module 18218: useIsGuildThemePerkEnabled ===
+// === Module 18362: useIsGuildThemePerkEnabled ===
 
-// Module 18218 (useIsGuildThemePerkEnabled)
-import Powerups from "Powerups" /* 5233 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+// Module 18362 (useIsGuildThemePerkEnabled)
+import Powerups from "Powerups" /* 5356 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
@@ -14,12 +14,12 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsG
 
 export default function useIsGuildThemePerkEnabled(arg0) {
   _require = arg0;
-  const items = [GuildStore, GuildPowerupsStore];
+  items = [GuildStore, GuildPowerupsStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;

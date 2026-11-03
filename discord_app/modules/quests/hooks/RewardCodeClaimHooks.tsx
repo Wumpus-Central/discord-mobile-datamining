@@ -1,13 +1,13 @@
-// === Module 14695: RewardCodeClaimHooks ===
+// === Module 14826: RewardCodeClaimHooks ===
 
-// Module 14695 (RewardCodeClaimHooks)
-import openURLDefault from "openURL" /* 5705 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import captureAdUserAction from "captureAdUserAction" /* 9684 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
+// Module 14826 (RewardCodeClaimHooks)
+import openURLDefault from "openURL" /* 5825 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import captureAdUserAction from "captureAdUserAction" /* 9816 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -65,7 +65,7 @@ export function useClaimOrFetchRewardCode(isClaimingReward) {
       setHasError(true);
     }
   }, []);
-  const items = [claimCode, fetchCode, hasError, isClaimingReward, first1, isFetchingRewardCode, questContent, quest, rewardCode, preview];
+  items = [claimCode, fetchCode, hasError, isClaimingReward, first1, isFetchingRewardCode, questContent, quest, rewardCode, preview];
   const effect = preview.useEffect(() => {
     let tmp = true === preview;
     if (!tmp) {
@@ -113,7 +113,7 @@ export function useHandleRedemptionLinkClick(quest) {
   const questContentPosition = quest.questContentPosition;
   const sourceQuestContent = quest.sourceQuestContent;
   const getQuestImpressionId = quest(questContent[5]).useGetQuestImpressionId();
-  const items = [quest.id, questContent, questContentPosition, sourceQuestContent, getQuestImpressionId, redemptionLink];
+  items = [quest.id, questContent, questContentPosition, sourceQuestContent, getQuestImpressionId, redemptionLink];
   return getQuestImpressionId.useCallback(() => {
     if (null != fetchCode) {
       const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: questContent(), questContentPosition: onDismiss };
@@ -152,7 +152,7 @@ export function useClaimRewardCodePrimaryCtaClickHandler(claimCode) {
   let obj = claimCode(hasError[5]);
   const getQuestImpressionId1 = claimCode(hasError[5]).useGetQuestImpressionId();
   closure_129_5 = getQuestImpressionId1;
-  const items = [quest2.id, questContent2, questContentPosition2, sourceQuestContent2, getQuestImpressionId1, redemptionLink2];
+  items = [quest2.id, questContent2, questContentPosition2, sourceQuestContent2, getQuestImpressionId1, redemptionLink2];
   const callback = questContent.useCallback(() => {
     if (null != fetchCode) {
       const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: claimCode.id, questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD, surfaceId: hasError, sourceQuestContent: quest, impressionId: questContent(), questContentPosition: onDismiss };

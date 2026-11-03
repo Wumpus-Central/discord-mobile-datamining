@@ -1,12 +1,12 @@
-// === Module 14209: useJoinRequestButtonActions ===
+// === Module 14340: useJoinRequestButtonActions ===
 
-// Module 14209 (useJoinRequestButtonActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 14340 (useJoinRequestButtonActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const Routes = fn(1072).Routes;
@@ -31,7 +31,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cal
     obj2.text = intl.string(joinRequest(onDismiss[6]).t.R0RpRX);
     interviewChannelId(onDismiss[5]).open("JOIN_REQUEST_ERROR", obj2);
   }, []);
-  const items = [guildId, joinRequestId, interviewChannelId, onError, submitting, userId];
+  items = [guildId, joinRequestId, interviewChannelId, onError, submitting, userId];
   let obj2 = { approveRequest: null, rejectRequest: null, submitting: null, handleOpenInterview: null };
   const callback1 = joinRequestId.useCallback(guildId(function*() {
     if (c5 === 2) {
@@ -44,7 +44,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cal
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cal
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -259,8 +259,8 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cal
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(14210, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(14210, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(14341, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(14341, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

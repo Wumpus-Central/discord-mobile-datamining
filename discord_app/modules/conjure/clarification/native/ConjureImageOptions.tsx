@@ -1,22 +1,22 @@
-// === Module 12761: clarification/ConjureImageOptions ===
+// === Module 12897: clarification/ConjureImageOptions ===
 
-// Module 12761 (clarification/ConjureImageOptions)
+// Module 12897 (clarification/ConjureImageOptions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import TrashIcon from "TrashIcon" /* 5738 */;
-import Card from "Card" /* 6977 */;
-import FormCheckbox from "FormCheckbox" /* 6989 */;
-import FormRadio from "FormRadio" /* 7062 */;
-import IconButton from "IconButton" /* 8028 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import openMediaModal from "openMediaModal" /* 8833 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12149 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12759 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12762 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import TrashIcon from "TrashIcon" /* 5858 */;
+import Card from "Card" /* 7103 */;
+import FormCheckbox from "FormCheckbox" /* 7115 */;
+import FormRadio from "FormRadio" /* 7188 */;
+import IconButton from "IconButton" /* 8152 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import openMediaModal from "openMediaModal" /* 8957 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12285 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12895 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12898 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ function ImageOptionPicture(onMeasured) {
   let tmp = closure_10();
   const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(projectId, attachmentId);
   const src = conjureAttachmentImage.src;
-  const items = [tmp.frame, ];
+  items = [tmp.frame, ];
   let frameInert = null;
   ({ gone, handleError } = conjureAttachmentImage);
   if (inert) {
@@ -44,7 +44,7 @@ function ImageOptionPicture(onMeasured) {
     const items1 = [React6(ImageWarningIcon.ImageWarningIcon, obj4), ];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.brokenText, children: null };
     const intl = util.intl;
-    obj5.children = intl.string(_modDef3868.lhgD88);
+    obj5.children = intl.string(_modDef3995.lhgD88);
     items1[1] = React6(Text_Text.Text, obj5);
     obj3.children = items1;
     obj2.children = React7(React5, obj3);
@@ -94,7 +94,7 @@ function ImageOptionTile(option) {
   } else {
     rowTile = tmp.rowTile;
   }
-  const items = [rowTile, tmp.ring, ];
+  items = [rowTile, tmp.ring, ];
   let ringSelected = null;
   if (selected) {
     ringSelected = tmp.ringSelected;
@@ -109,11 +109,11 @@ function ImageOptionTile(option) {
   obj6.disabled = tmp11;
   ({ accessibilityRole: obj5.accessibilityRole, accessibilityState: obj5.accessibilityState } = radioA11yNative);
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef3868.AQbxhf, { answer: option.label });
+  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef3995.AQbxhf, { answer: option.label });
   if (null != onRemove) {
     const obj8 = { name: "remove", label: null };
     const intl3 = util.intl;
-    obj8.label = intl3.string(_modDef3868.HQEXJM);
+    obj8.label = intl3.string(_modDef3995.HQEXJM);
     const items1 = [obj8];
     let tmp12 = items1;
   } else if (null != option.image) {
@@ -179,7 +179,7 @@ function ImageOptionTile(option) {
           obj16.onPress = onRemove;
           const intl4 = util.intl;
           const obj17 = { answer: option.label };
-          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef3868.JGjZMs, obj17);
+          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef3995.JGjZMs, obj17);
           obj14.children = tmp13(IconButton.IconButton, obj16);
           tmp13Result = tmp13(React5, obj14);
         }
@@ -200,17 +200,17 @@ function ImageOptionTile(option) {
   obj18.children = tmp13Result3;
   tmp13(React5, obj18);
   const obj7 = { answer: option.label };
-  stringResult = intl.string(_modDef3868["4/eeDD"]);
+  stringResult = intl.string(_modDef3995["4/eeDD"]);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
-obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
-let obj4 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
+obj2.own = { marginTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
+let obj4 = { marginTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
 obj2.galleryContent = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.rowTile = { flex: 1, minWidth: 0 };
 let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -251,22 +251,22 @@ export default function ConjureImageOptions(projectId) {
   const options = question.options;
   let obj = projectId(disabled[17]);
   const imageOptionsLayoutResult = projectId(disabled[17]).imageOptionsLayout(options);
-  noop.useRef(new Map());
+  const ref = noop.useRef(new Map());
   const tmp7 = own(noop.useState(null), 2);
   const frameHeight = tmp7[0];
   const onFrameHeight = tmp9;
   const map = new Map();
   [num, c10] = own(noop.useState(null), 2);
-  const ref = noop.useRef(null);
+  let galleryContent = noop.useRef(null);
   const image = own.image;
   let id;
   if (image != null) {
     id = image.attachment.id;
   }
-  let items = [id];
+  items = [id];
   const effect = obj2.useEffect(() => {
     if (null != id) {
-      const current = ref.current;
+      const current = galleryContent.current;
       if (current != null) {
         current.scrollToEnd({ animated: true });
       }
@@ -277,11 +277,15 @@ export default function ConjureImageOptions(projectId) {
     num2 = 1;
   }
   const sum = options.length + num2;
-  let tmp15 = null != num;
-  if (tmp15) {
-    tmp15 = (num - require("native").space.PX_8 * (sum - 1)) / sum < 104;
+  let tmp14 = null != num;
+  if (tmp14) {
+    tmp14 = (num - require("native").space.PX_8 * (sum - 1)) / sum < 104;
   }
-  closure_13 = tmp17;
+  let tmp16 = "gallery" === imageOptionsLayoutResult || tmp14;
+  if (!tmp16) {
+    tmp16 = 1 === sum;
+  }
+  closure_13 = tmp16;
   bound = Math.max(104, Math.min(136, (num - 2 * require("native").space.PX_8) / 2.4));
   const items1 = [own.image];
   memo = obj2.useMemo(() => {
@@ -295,7 +299,7 @@ export default function ConjureImageOptions(projectId) {
   onView = obj2.useCallback((arg0) => {
     id = arg0;
     if (null == memo) {
-      let items = options;
+      items = options;
     } else {
       items = [];
       items[HermesBuiltin.arraySpread(options, 0)] = tmp;
@@ -364,11 +368,11 @@ export default function ConjureImageOptions(projectId) {
   });
   if (null != memo) {
     const obj3 = { projectId, option: memo, multi: tmp2, galleryWidth: null, selected: null, disabled: null, frameHeight: null, onFrameHeight: null, onMeasured: null, onPick: null, onView: null, onRemove: null };
-    let tmp21 = null;
-    if (tmp17) {
-      tmp21 = bound;
+    let tmp20 = null;
+    if (tmp16) {
+      tmp20 = bound;
     }
-    obj3.galleryWidth = tmp21;
+    obj3.galleryWidth = tmp20;
     obj3.selected = own.selected;
     obj3.disabled = disabled;
     obj3.frameHeight = frameHeight;
@@ -394,7 +398,7 @@ export default function ConjureImageOptions(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -413,7 +417,7 @@ export default function ConjureImageOptions(projectId) {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12764).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12900).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -427,11 +431,11 @@ export default function ConjureImageOptions(projectId) {
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12764).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12764);
+            closure_129_4.onUpload(tmp2(12900).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12900);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -445,43 +449,47 @@ export default function ConjureImageOptions(projectId) {
     },
     children: null
   };
-  if ("gallery" === imageOptionsLayoutResult || tmp15) {
-    let obj5 = { ref, horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp.galleryContent, children: mapped };
-    let tmp25Result = tmp25(options, obj5);
-    let tmp27 = tmp25;
-  } else {
-    let obj6 = { style: tmp.row, children: mapped };
-    tmp25Result = tmp25(tmp24, obj6);
-    tmp27 = tmp25;
-  }
-  const items4 = [tmp25Result, ];
-  let tmp23Result = null;
-  if (!disabled) {
-    const obj7 = { style: tmp.own, children: null };
-    const obj8 = {
-      variant: "secondary",
-      size: "sm",
-      icon: tmp27(tmp3(disabled[25]).ImagePlusIcon, { size: "xs" }),
-      text: tmp3(disabled[17]).ownImageUploadText(question),
-      loading: "upload" === own.busy,
-      onPress() {
-          closure_17().catch(() => {
+  if (0 === sum) {
+    const items4 = [null, ];
+    let tmp22Result = null;
+    if (!disabled) {
+      let obj5 = { style: tmp.own, children: null };
+      let obj6 = {
+        variant: "secondary",
+        size: "sm",
+        icon: frameHeight(tmp3(disabled[25]).ImagePlusIcon, { size: "xs" }),
+        text: tmp3(disabled[17]).ownImageUploadText(question),
+        loading: "upload" === own.busy,
+        onPress() {
+              closure_17().catch(() => {
 
-          });
-        }
-    };
-    const items5 = [tmp27(tmp3(disabled[24]).Button, obj8), ];
-    let tmp27Result = null;
-    if (null != own.error) {
-      const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", accessibilityLiveRegion: "polite", children: own.error.text };
-      tmp27Result = tmp27(tmp3(disabled[9]).Text, obj9);
+              });
+            }
+      };
+      const items5 = [frameHeight(tmp3(disabled[24]).Button, obj6), ];
+      let tmp29Result = null;
+      if (null != own.error) {
+        const obj7 = { variant: "text-xs/normal", color: "text-feedback-critical", accessibilityLiveRegion: "polite", children: own.error.text };
+        tmp29Result = tmp29(tmp3(disabled[9]).Text, obj7);
+      }
+      items5[1] = tmp29Result;
+      obj5.children = items5;
+      tmp22Result = tmp22(tmp23, obj5);
+      tmp29 = frameHeight;
+      const tmp3Result = tmp3(disabled[17]);
     }
-    items5[1] = tmp27Result;
-    obj7.children = items5;
-    tmp23Result = tmp23(tmp24, obj7);
-    const tmp3Result = tmp3(disabled[17]);
+    items4[1] = tmp22Result;
+    obj4.children = items4;
+    return tmp22(tmp23, obj4);
+  } else if (tmp16) {
+    const obj8 = { ref: galleryContent, horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: null, children: null };
+    galleryContent = tmp.galleryContent;
+    obj8.contentContainerStyle = galleryContent;
+    obj8.children = mapped;
+    let tmp24Result = tmp24(options, obj8);
+  } else {
+    const obj9 = { style: tmp.row, children: mapped };
+    tmp24Result = tmp24(tmp23, obj9);
   }
-  items4[1] = tmp23Result;
-  obj4.children = items4;
-  return onFrameHeight(ref, obj4);
+  const tmp10 = own(noop.useState(null), 2);
 };

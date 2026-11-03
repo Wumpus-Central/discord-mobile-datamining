@@ -1,12 +1,12 @@
-// === Module 12767: ConjureAppBuildRequestProjectsSheet ===
+// === Module 12903: ConjureAppBuildRequestProjectsSheet ===
 
-// Module 12767 (ConjureAppBuildRequestProjectsSheet)
+// Module 12903 (ConjureAppBuildRequestProjectsSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;
@@ -50,7 +50,7 @@ export default function ConjureAppBuildRequestProjectsSheet(arg0) {
         if (c2.includes(projectId)) {
           let found = c2.filter((item) => item !== projectId);
         } else {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(c2, 0)] = projectId;
           found = items.slice(0, require);
         }

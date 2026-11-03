@@ -1,12 +1,12 @@
-// === Module 12447: useFetchDeveloperActivityShelfItems ===
+// === Module 12583: useFetchDeveloperActivityShelfItems ===
 
-// Module 12447 (useFetchDeveloperActivityShelfItems)
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10934 */;
+// Module 12583 (useFetchDeveloperActivityShelfItems)
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 11072 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5674 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5794 */;
 
 require = fn;
-const DevShelfFetchState = fn(5674).DevShelfFetchState;
+const DevShelfFetchState = fn(5794).DevShelfFetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
@@ -15,7 +15,7 @@ export function useFetchDeveloperActivityShelfItems() {
   const DeveloperMode = isActivitiesEnabledForCurrentPlatform(setting[3]).DeveloperMode;
   setting = DeveloperMode.getSetting();
   let obj = isActivitiesEnabledForCurrentPlatform(setting[2]);
-  const items = [DeveloperActivityShelfStore];
+  items = [DeveloperActivityShelfStore];
   const stateFromStores = isActivitiesEnabledForCurrentPlatform(setting[4]).useStateFromStores(items, () => fetchState.getFetchState(), []);
   const items1 = [isActivitiesEnabledForCurrentPlatform, stateFromStores, setting];
   const effect = stateFromStores.useEffect(() => {

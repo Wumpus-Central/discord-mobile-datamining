@@ -1,16 +1,16 @@
-// === Module 14407: useChannelMoveAction ===
+// === Module 14538: useChannelMoveAction ===
 
-// Module 14407 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 14409 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 14411 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
-import getChannelListRecord from "getChannelListRecord" /* 14408 */;
+// Module 14538 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 14540 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 14542 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
+import getChannelListRecord from "getChannelListRecord" /* 14539 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/channel_sorting/useChannelMov
 
 export default function useChannelMoveAction(getGuildId) {
   _require = getGuildId;
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
   const isFavoritesGuildIdResult = require("FavoritesUtils").isFavoritesGuildId(stateFromStores);
@@ -62,8 +62,8 @@ export default function useChannelMoveAction(getGuildId) {
     let _categories = categories._categories;
     let found = _categories.filter((channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID);
   } else {
-    found = tmp(14411).getSectionSiblings(listChannel, categories);
-    const tmpResult5 = tmp(14411);
+    found = tmp(14542).getSectionSiblings(listChannel, categories);
+    const tmpResult5 = tmp(14542);
   }
   let id1 = null;
   if (found.length > 1) {

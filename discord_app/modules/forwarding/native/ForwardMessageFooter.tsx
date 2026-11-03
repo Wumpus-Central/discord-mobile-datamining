@@ -1,13 +1,13 @@
-// === Module 13404: ForwardMessageFooter ===
+// === Module 13540: ForwardMessageFooter ===
 
-// Module 13404 (ForwardMessageFooter)
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
+// Module 13540 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DraftStore from "DraftStore" /* 7701 */;
+import DraftStore from "DraftStore" /* 7825 */;
 
 const require = fn;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
@@ -23,7 +23,7 @@ export function ForwardMessageFooter(message) {
   const obj = message(trackForwardEditContextMessageOnce[4]);
   const selectedDestinationChannel = message(trackForwardEditContextMessageOnce[5]).useSelectedDestinationChannel(selectedDestinations);
   const obj2 = message(trackForwardEditContextMessageOnce[5]);
-  const items = [DraftStore];
+  items = [DraftStore];
   const tmp5 = text(noop.useState(message(trackForwardEditContextMessageOnce[6]).useStateFromStoresObject(items, () => DraftStore.getDraft(message.channel_id, DraftType.ForwardContextMessage))), 2);
   text = tmp5[0];
   noop = tmp6;

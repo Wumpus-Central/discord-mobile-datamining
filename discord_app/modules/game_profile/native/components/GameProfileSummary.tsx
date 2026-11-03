@@ -1,8 +1,8 @@
-// === Module 9402: GameProfileSummary ===
+// === Module 9530: GameProfileSummary ===
 
-// Module 9402 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import findTextStart from "findTextStart" /* 9404 */;
+// Module 9530 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import findTextStart from "findTextStart" /* 9532 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "column", overflow: "hidden" }, measurement: { position: "absolute", top: 0, left: 0, right: 0, opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
@@ -26,7 +26,7 @@ export default function GameProfileSummary(arg0) {
   if (description == null) {
     description = game.description;
   }
-  const items = [description];
+  items = [description];
   const memo = description.useMemo(() => {
     if (null != description) {
       let parseHTMLFromTextResult = findTextStart.parseHTMLFromText(tmp, { parseTextLinks: true });

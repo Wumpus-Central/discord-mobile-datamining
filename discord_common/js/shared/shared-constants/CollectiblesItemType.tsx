@@ -1,6 +1,6 @@
-// === Module 1987: CollectiblesItemType ===
+// === Module 2116: CollectiblesItemType ===
 
-// Module 1987 (CollectiblesItemType)
+// Module 2116 (CollectiblesItemType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx");

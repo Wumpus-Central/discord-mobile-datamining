@@ -1,7 +1,7 @@
-// === Module 12202: useConjureDebugAccess ===
+// === Module 12338: useConjureDebugAccess ===
 
-// Module 12202 (useConjureDebugAccess)
-import UserSettings from "UserSettings" /* 4839 */;
+// Module 12338 (useConjureDebugAccess)
+import UserSettings from "UserSettings" /* 4966 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/useConjureDebugAccess.tsx");

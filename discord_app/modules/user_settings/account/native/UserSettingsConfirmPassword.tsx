@@ -1,35 +1,35 @@
-// === Module 7163: UserSettingsConfirmPassword ===
+// === Module 7284: UserSettingsConfirmPassword ===
 
-// Module 7163 (UserSettingsConfirmPassword)
+// Module 7284 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7081 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7107 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7164 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7167 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7207 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7233 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7285 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7288 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
 obj2.button = { marginTop: 16 };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 class UserSettingsConfirmPasswordInner {
   constructor(arg0) {
     ({ onSubmit, onSuccess, onError, parentLoading } = global);
@@ -54,7 +54,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ class UserSettingsConfirmPasswordInner {
       obj11 = { style: null, children: null };
       obj11.style = tmp.container;
       tmp19 = jsx;
-      obj12 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+      obj12 = { style: null, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
       obj12.style = tmp.title;
       intl = tmp3(tmp4[14]).intl;
       obj12.children = intl.string(tmp3(tmp4[14]).t["x+d9t3"]);

@@ -1,7 +1,7 @@
-// === Module 5867: DaveJoinTimer ===
+// === Module 5987: DaveJoinTimer ===
 
-// Module 5867 (DaveJoinTimer)
-import TimeUtils from "TimeUtils" /* 5772 */;
+// Module 5987 (DaveJoinTimer)
+import TimeUtils from "TimeUtils" /* 5892 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rtc/DaveJoinTimer.tsx");

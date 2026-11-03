@@ -1,11 +1,11 @@
-// === Module 19239: useCanConnect ===
+// === Module 19397: useCanConnect ===
 
-// Module 19239 (useCanConnect)
-import ChannelUtils from "ChannelUtils" /* 6046 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 19397 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export default function useCanConnect(arg0) {
   _require = arg0;
-  const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
+  items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(closure_0);

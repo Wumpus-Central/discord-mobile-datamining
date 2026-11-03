@@ -1,8 +1,8 @@
-// === Module 19282: VoiceChannelAppSurface ===
+// === Module 19440: VoiceChannelAppSurface ===
 
-// Module 19282 (VoiceChannelAppSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12240 */;
+// Module 19440 (VoiceChannelAppSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function VoiceChannelAppSurface(guildId) {
   let rect = guildId(left[2])();
   left = rect.left;
   const right = rect.right;
-  const items = [left, right];
+  items = [left, right];
   const items1 = [channelId, guildId];
   const memo = right.useMemo(() => {
     const rect = { top: 0, bottom: 0, left, right };
@@ -31,7 +31,7 @@ export default function VoiceChannelAppSurface(guildId) {
     tmp9 = applicationId;
   }
   guildId(left[7])(tmp9);
-  const state = tmp5.state;
+  state = tmp5.state;
   if (channelId(left[5]).FrameLifecycleState.Launched === state) {
     const obj2 = { frameId: tmp5.frame.id, level: channelId(tmp2[9]).FrameStackLevel.WithinCallContent, presentation: memo };
     return jsx(tmp(tmp2[8]), { frameId: tmp5.frame.id, level: channelId(tmp2[9]).FrameStackLevel.WithinCallContent, presentation: memo });

@@ -1,10 +1,10 @@
-// === Module 9404: findTextStart ===
+// === Module 9532: findTextStart ===
 
-// Module 9404 (findTextStart)
-import _mod9406 from "module_9406" /* 9406 */;
-import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9430 */;
-import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 9431 */;
-import HTMLParserConstants from "HTMLParserConstants" /* 9405 */;
+// Module 9532 (findTextStart)
+import _mod9534 from "module_9534" /* 9534 */;
+import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9558 */;
+import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 9559 */;
+import HTMLParserConstants from "HTMLParserConstants" /* 9533 */;
 import size from "module_2" /* 2 */;
 
 function findTextStart(arr) {
@@ -332,7 +332,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(9406).Parser;
+  const Parser = obj(9534).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -377,7 +377,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
     },
     onopentag(br, attribs) {
       obj.unfinishedTag = undefined;
-      value = closure_2_12.get(br);
+      value = application_id.get(br);
       if (obj.hiddenDepth <= 0) {
         let hidden;
         if (value != null) {
@@ -511,9 +511,9 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                                       const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                                     }
                     };
-                    const parser = new _mod9406.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                    const parser = new _mod9534.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                     parser.end(markup);
-                    map1 = map;
+                    let map1 = map;
                   } else {
                     const _Map = Map;
                     map1 = new Map();
@@ -539,7 +539,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
         if (obj.hiddenDepth > 0) {
           obj.hiddenDepth = obj.hiddenDepth - 1;
         } else {
-          value = closure_2_12.get(arg0);
+          value = application_id.get(arg0);
           if (null != value) {
             let LINE = value.breaks;
             if (null != LINE) {
@@ -613,7 +613,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
           appendText(obj, substr);
         }
     };
-    let parser = new obj(9406).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(9534).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;
@@ -629,7 +629,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   }
   return runs;
 }
-({ BARE_UNKNOWN_TAG: c2, BLOCK_BREAKS: c3, BULLET: closure_4, DEFAULT_MAX_HTML_LENGTH: hasOwnProperty, HIGH_SURROGATE: metroRequire, HTML_WHITESPACE_CODES: closure_7, KNOWN_UNSUPPORTED_HTML_TAGS: closure_8, PLAIN_STYLE: closure_9, SLASH_PREFIXED_MARKER: c10, SLASH_SEPARATED_UNKNOWN_TAG: closure_11, TAG_BEHAVIORS: closure_12, TAG_NAME: map1, VOID_HTML_TAGS: closure_14 } = HTMLParserConstants);
+({ BARE_UNKNOWN_TAG: c2, BLOCK_BREAKS: c3, BULLET: closure_4, DEFAULT_MAX_HTML_LENGTH: hasOwnProperty, HIGH_SURROGATE: metroRequire, HTML_WHITESPACE_CODES: closure_7, KNOWN_UNSUPPORTED_HTML_TAGS: closure_8, PLAIN_STYLE: closure_9, SLASH_PREFIXED_MARKER: closure_10, SLASH_SEPARATED_UNKNOWN_TAG: closure_11, TAG_BEHAVIORS: closure_12, TAG_NAME: map1, VOID_HTML_TAGS: closure_14 } = HTMLParserConstants);
 let result = size.fileFinishedImporting("modules/html_parser/index.tsx");
 
 export const DEFAULT_MAX_HTML_LENGTH = HTMLParserConstants.DEFAULT_MAX_HTML_LENGTH;
@@ -676,7 +676,7 @@ export function parseHTMLFromText(arr, arg1) {
       if (tmp26 > tmp24) {
         const obj2 = { text: tmp21Result.slice(tmp24, tmp26) };
         const merged = Object.assign(React7);
-        const items = [obj2];
+        items = [obj2];
         items1 = items;
       } else {
         items1 = [];

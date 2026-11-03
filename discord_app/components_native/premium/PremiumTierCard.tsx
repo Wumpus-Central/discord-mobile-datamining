@@ -1,27 +1,27 @@
-// === Module 15455: PremiumTierCard ===
+// === Module 15596: PremiumTierCard ===
 
-// Module 15455 (PremiumTierCard)
+// Module 15596 (PremiumTierCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Card from "Card" /* 6977 */;
-import _modDef8535 from "module_8535" /* 8535 */;
-import _modDef9930 from "module_9930" /* 9930 */;
-import _modDef10585 from "module_10585" /* 10585 */;
-import _modDef10586 from "module_10586" /* 10586 */;
-import _modDef15456 from "module_15456" /* 15456 */;
-import _modDef15457 from "module_15457" /* 15457 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Card from "Card" /* 7103 */;
+import _modDef8659 from "module_8659" /* 8659 */;
+import _modDef10061 from "module_10061" /* 10061 */;
+import _modDef10715 from "module_10715" /* 10715 */;
+import _modDef10716 from "module_10716" /* 10716 */;
+import _modDef15597 from "module_15597" /* 15597 */;
+import _modDef15598 from "module_15598" /* 15598 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const getPremiumGradientColor = fn(7617).getPremiumGradientColor;
-const PremiumTypes = fn(1385).PremiumTypes;
+const getPremiumGradientColor = fn(7741).getPremiumGradientColor;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { marginTop: 24, padding: 16 }, textLogoTier0: { width: 158, height: 32 }, textLogoTier1: { width: 185, height: 32 }, textLogoTier2: { width: 80, height: 32 }, wumpusLogo: { position: "absolute", top: 0, right: 24, zIndex: 1 }, wumpusLogoTier0: { width: 83, height: 100 }, wumpusLogoTier1: { width: 86, height: 100 }, wumpusLogoTier2: { width: 133, height: 100 }, body: { padding: 16, borderBottomRightRadius: nativeDefault.radii.xs, borderBottomLeftRadius: nativeDefault.radii.xs } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,15 +45,15 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef15456;
+    let tmp5Result = _modDef15597;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef15457;
+    tmp5Result = _modDef15598;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef8535;
+    tmp5Result = _modDef8659;
   }
   obj2.source = tmp5Result;
   obj.children = timestampProducer(tmp9, obj2);
-  const items = [timestampProducer(tmp7, obj), , ];
+  items = [timestampProducer(tmp7, obj), , ];
   const items1 = [tmp.wumpusLogo, ];
   if (PremiumTypes.TIER_0 === premiumType) {
     let wumpusLogoTier2 = tmp.wumpusLogoTier0;
@@ -65,11 +65,11 @@ export default function _default(premiumType) {
   const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result4 = _modDef9930;
+    let tmp5Result4 = _modDef10061;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result4 = _modDef10585;
+    tmp5Result4 = _modDef10715;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result4 = _modDef10586;
+    tmp5Result4 = _modDef10716;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result4;

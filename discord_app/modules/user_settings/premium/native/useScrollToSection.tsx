@@ -1,6 +1,6 @@
-// === Module 15308: useScrollToSection ===
+// === Module 15449: useScrollToSection ===
 
-// Module 15308 (useScrollToSection)
+// Module 15449 (useScrollToSection)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -11,7 +11,7 @@ export default function useScrollToSection(arg0, arg1) {
   closure_1 = arg1;
   closure_2 = noop.useRef(false);
   let obj = { createSectionLayoutHandler: null };
-  const items = [arg1, arg0];
+  items = [arg1, arg0];
   obj.createSectionLayoutHandler = noop.useCallback((arg0) => (nativeEvent) => {
     let current = ref !== closure_1;
     if (!current) {

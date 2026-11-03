@@ -1,16 +1,16 @@
-// === Module 11602: UserSummaryItem ===
+// === Module 11739: UserSummaryItem ===
 
-// Module 11602 (UserSummaryItem)
+// Module 11739 (UserSummaryItem)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE }, plusCountContainer: null, cutout: null };
 let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
 obj2.plusCountContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
@@ -45,7 +45,7 @@ export default function UserSummaryItem(users) {
   let tmp5 = renderedUsers.length > 0 ? renderedUsers.length : users.length;
   const bound = Math.min(tmp5, max);
   let obj = {};
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => closure_0.forEach((id) => {
     let tmp2 = null != closure_1_1;
     if (tmp2) {

@@ -1,9 +1,9 @@
-// === Module 10031: PremiumExpressionPickerSearchUpsell ===
+// === Module 10162: PremiumExpressionPickerSearchUpsell ===
 
-// Module 10031 (PremiumExpressionPickerSearchUpsell)
+// Module 10162 (PremiumExpressionPickerSearchUpsell)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const sum = 56 + nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8 }, upsell: null, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.upsell = { height: 56, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", alignItems: "center", alignContent: "center" };
@@ -26,7 +26,7 @@ export default function PremiumExpressionPickerSearchUpsell(arg0) {
   const obj = { style: tmp.container, collapsable: false, children: null };
   const obj2 = { style: tmp.upsell, accessibilityRole: "button", disabled: loading, onPress, children: null };
   const obj3 = { style: tmp.content, children: null };
-  const items = [icon, React3(Text_Text.Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: body })];
+  items = [icon, React3(Text_Text.Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: body })];
   obj3.children = items;
   const items1 = [React4(View, obj3), React3(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", children: ctaText })];
   obj2.children = items1;

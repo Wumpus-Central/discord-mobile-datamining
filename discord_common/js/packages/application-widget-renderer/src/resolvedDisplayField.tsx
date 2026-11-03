@@ -1,8 +1,8 @@
-// === Module 12263: resolvedDisplayField ===
+// === Module 12399: resolvedDisplayField ===
 
-// Module 12263 (resolvedDisplayField)
-import resolvedValues from "resolvedValues" /* 12264 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12265 */;
+// Module 12399 (resolvedDisplayField)
+import resolvedValues from "resolvedValues" /* 12400 */;
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12401 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
@@ -19,7 +19,7 @@ export function resolveTextComponentValues(subtitle_1, resolveFieldValue, number
   if (null == subtitle_1) {
     return flag ? { status: "skeleton" } : { status: "hidden" };
   } else {
-    const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
+    items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
@@ -86,7 +86,7 @@ export function resolveStatComponentValues(fields, fn, format, formatDurationNar
     }
     return tmp4;
   } else {
-    const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
+    items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
     const iter = fn(fields.fields.value, items);
     const items1 = [resolvedValues.ResolvedValueType.STRING];
     const iter2 = fn(fields.fields.label, items1);
@@ -129,7 +129,7 @@ export function resolveSingleStringOrSkeleton(componentConfig, description, reso
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
   }
-  const items = [resolvedValues.ResolvedValueType.STRING];
+  items = [resolvedValues.ResolvedValueType.STRING];
   const iter = resolveFieldValue(tmp, items);
   if (null == iter) {
     let obj = { status: "skeleton" };

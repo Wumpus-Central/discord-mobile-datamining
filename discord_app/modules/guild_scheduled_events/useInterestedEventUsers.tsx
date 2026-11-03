@@ -1,9 +1,9 @@
-// === Module 8978: useInterestedEventUsers ===
+// === Module 9106: useInterestedEventUsers ===
 
-// Module 8978 (useInterestedEventUsers)
+// Module 9106 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4869 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4996 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/useInt
 export default function useInterestedEventUsers(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => Object.values(GuildScheduledEventStore.getUsersForGuildEvent(closure_0, null)), items1);
   const obj = require("initialize");
@@ -43,7 +43,7 @@ export default function useInterestedEventUsers(arg0, arg1) {
     });
     const found1 = stateFromStoresArray1.filter((response) => response.response === constants.INTERESTED);
     const set = new Set();
-    const items = [];
+    items = [];
     const item = found.forEach(addUserToAllInterested);
     const item1 = found1.forEach(addUserToAllInterested);
     return items;

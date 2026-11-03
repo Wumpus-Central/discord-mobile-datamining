@@ -1,23 +1,23 @@
-// === Module 18806: AutocompleteScreen ===
+// === Module 18964: AutocompleteScreen ===
 
-// Module 18806 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13886 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18808 */;
+// Module 18964 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18966 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18807 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18965 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 require = fn;
-const SearchConstants = fn(9827);
-({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
+const SearchConstants = fn(9958);
+({ SearchListItemTypes: closure_10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1072);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
 const jsx = fn(21).jsx;
@@ -31,7 +31,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   _slicedToArray = undefined;
   let fullscreenPlaceholderCount;
   let callback3;
-  let items = [callback3];
+  items = [callback3];
   const items1 = [searchContext];
   const stateFromStores = searchContext(first[10]).useStateFromStores(items, () => SearchAutocompleteStore.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
   [first, _slicedToArray] = fullscreenPlaceholderCount.useState(false);
@@ -140,7 +140,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   }, items9);
   const items10 = [first, searchContext, fullscreenPlaceholderCount, stateFromStores, callback2, callback3, callback1];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
-    const items = [];
+    items = [];
     if (set1) {
       for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
         let obj2 = { type: constants.MESSAGE_PLACEHOLDER, key: null };

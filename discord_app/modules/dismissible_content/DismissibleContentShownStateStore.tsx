@@ -1,14 +1,14 @@
-// === Module 4855: DismissibleContentShownStateStore ===
+// === Module 4982: DismissibleContentShownStateStore ===
 
-// Module 4855 (DismissibleContentShownStateStore)
+// Module 4982 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import isActionRequiredDefault from "isActionRequired" /* 4859 */;
+import isActionRequiredDefault from "isActionRequired" /* 4986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4856 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4850 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4983 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4977 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -66,7 +66,7 @@ let closure_15 = async function _arbitrateCandidates(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -154,7 +154,7 @@ let closure_15 = async function _arbitrateCandidates(arg0) {
           })(closure_130_1, candidates);
           closure_130_4 = candidates;
           const obj13 = { context: closure_130_0, candidates: null, outcome: "server-success" };
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(closure_130_4, HermesBuiltin.arraySpread(closure_130_2, 0));
           obj13.candidates = items;
           c4 = 0;
@@ -196,7 +196,7 @@ function withUpdateWinner(candidates, content) {
           obj.state = candidates;
           if (null != content) {
             const obj3 = { type: "request", candidates: null };
-            const items = [content];
+            items = [content];
             obj3.candidates = items;
             let obj4 = obj3;
           } else {
@@ -327,7 +327,7 @@ function invalidateArbitration() {
   batchInvocationManager.reset();
 }
 function isInCooldown() {
-  const state = closure_12.getState();
+  state = closure_12.getState();
   let flag = false;
   if (!DismissibleContentFrameworkStore.upsellBackoffOverridden) {
     const _Date = Date;
@@ -366,7 +366,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -448,7 +448,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
                 } else {
                   closure_9.fail(() => {
                     const candidates = state.getState().candidates;
-                    const items = [...candidates.keys()];
+                    items = [...candidates.keys()];
                     let epoch = outcome.context.epoch;
                     if (epoch === undefined) {
                       epoch = closure_2_10;
@@ -525,7 +525,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
                   closure_1 = null != tmp5;
                   let content = tmp5;
                   candidates = obj.candidates;
-                  const items = [];
+                  items = [];
                   HermesBuiltin.arraySpread(candidates.keys(), 0);
                   const shownFatigableCandidate = obj.shownFatigableCandidate;
                   let found = items.filter((item) => {
@@ -573,7 +573,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4858).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4985).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -590,7 +590,7 @@ const prototype = DismissibleContentShownStateStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   this.waitFor(DismissibleContentFrameworkStore, LoginRequiredActionStore, UserRequiredActionStore);
-  const items = [LoginRequiredActionStore, UserRequiredActionStore];
+  items = [LoginRequiredActionStore, UserRequiredActionStore];
   this.syncWith(items, () => self.setHasRequiredAction());
 };
 prototype["setHasRequiredAction"] = function setHasRequiredAction() {
@@ -654,9 +654,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4851).bypassesFatigue(content.content);
+  closure_1 = closure_0(4978).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4851);
+  let obj = closure_0(4978);
   closure_0(1259).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
@@ -816,7 +816,7 @@ export function isAnyContentShown(arr) {
   return arr.find((item) => currentlyShown.has(item));
 }
 export function getCurrentlyShownCounts() {
-  const items = [...closure_12.getState().currentlyShown];
+  items = [...closure_12.getState().currentlyShown];
   const items1 = [closure_12.getState().currentlyShown.size, items.filter((item) => !closure_1_0(dependencyMap[7]).bypassesFatigue(item)).length];
   return items1;
 }

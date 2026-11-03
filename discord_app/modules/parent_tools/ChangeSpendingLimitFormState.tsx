@@ -1,11 +1,11 @@
-// === Module 16812: ChangeSpendingLimitFormState ===
+// === Module 16955: ChangeSpendingLimitFormState ===
 
-// Module 16812 (ChangeSpendingLimitFormState)
-import SpendingLimitUtils from "SpendingLimitUtils" /* 16724 */;
+// Module 16955 (ChangeSpendingLimitFormState)
+import SpendingLimitUtils from "SpendingLimitUtils" /* 16867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export function useChangeSpendingLimitFormState(teenId) {
   _require = teenId;
   let ParentalControlledSpendingLimit = require("ParentalControlledUserSettings").ParentalControlledSpendingLimit;
   controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(teenId);
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = require("initialize").useStateFromStores(items, () => closure_5.getSpendingLimit());
   let obj = require("initialize");
   const items1 = [closure_5];
@@ -103,7 +103,7 @@ export function useChangeSpendingLimitFormState(teenId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -121,13 +121,13 @@ export function useChangeSpendingLimitFormState(teenId) {
               closure_8(true);
               c3 = 1;
               if (closure_5) {
-                const ParentalControlledSpendingLimit2 = tmp3(16722).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit2 = tmp3(16865).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
                 const obj4 = { value: ParentalControlledSpendingLimit2.updateControlledSetting(tmp3, null), done: false };
                 return obj4;
               } else if (null != rounded) {
-                const ParentalControlledSpendingLimit = tmp3(16722).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit = tmp3(16865).ParentalControlledSpendingLimit;
                 const obj5 = { amount: tmp16, currency: formatted };
                 dependencyMap = 3;
                 c4 = 1;
@@ -136,7 +136,7 @@ export function useChangeSpendingLimitFormState(teenId) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c3 = 0;

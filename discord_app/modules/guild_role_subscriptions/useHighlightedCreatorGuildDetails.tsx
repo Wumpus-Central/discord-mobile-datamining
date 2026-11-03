@@ -1,8 +1,8 @@
-// === Module 19926: useHighlightedCreatorGuildDetails ===
+// === Module 20076: useHighlightedCreatorGuildDetails ===
 
-// Module 19926 (useHighlightedCreatorGuildDetails)
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 19927 */;
+// Module 20076 (useHighlightedCreatorGuildDetails)
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 20077 */;
 import noop from "module_19" /* 19 */;
 
 const MarketingURLs = fn(1072).MarketingURLs;
@@ -21,7 +21,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   if (store_page != null) {
     role_subscription1 = store_page.role_subscription;
   }
-  const items = [role_subscription1];
+  items = [role_subscription1];
   const memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
@@ -88,7 +88,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     const result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
   }
   if (store_page != null) {
-    const guild = store_page.guild;
+    guild = store_page.guild;
     if (guild != null) {
       const name = guild.name;
     }

@@ -1,7 +1,7 @@
-// === Module 17100: QuestDockCreativeContext ===
+// === Module 17243: QuestDockCreativeContext ===
 
-// Module 17100 (QuestDockCreativeContext)
-import AdCreativeType from "AdCreativeType" /* 6788 */;
+// Module 17243 (QuestDockCreativeContext)
+import AdCreativeType from "AdCreativeType" /* 6908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,17 +12,17 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export function QuestDockQuestProvider(children) {
   const quest = children.quest;
-  const items = [quest];
+  items = [quest];
   return <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items)}>{children.children}</redux.Provider>;
 }
 export function QuestDockBountyProvider(bounty) {
   bounty = bounty.bounty;
-  const items = [bounty];
+  items = [bounty];
   return <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items)}>{bounty.children}</redux.Provider>;
 }
 export function QuestDockPlayableProvider(children) {
   const playable = children.playable;
-  const items = [playable];
+  items = [playable];
   return <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.PLAYABLE, playable }), items)}>{children.children}</redux.Provider>;
 }
 export function useQuestDockQuest() {
@@ -41,7 +41,7 @@ export function useQuestDockQuest() {
 }
 export function useQuestCreative(quest) {
   closure_0 = quest;
-  const items = [quest];
+  items = [quest];
   return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items);
 }
 export function useQuestDockBounty() {
@@ -60,7 +60,7 @@ export function useQuestDockBounty() {
 }
 export function useBountyCreative(questDockBounty) {
   closure_0 = questDockBounty;
-  const items = [questDockBounty];
+  items = [questDockBounty];
   return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items);
 }
 export function useQuestDockPlayable() {
@@ -79,7 +79,7 @@ export function useQuestDockPlayable() {
 }
 export function usePlayableCreative(questDockPlayable) {
   closure_0 = questDockPlayable;
-  const items = [questDockPlayable];
+  items = [questDockPlayable];
   return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.PLAYABLE, playable }), items);
 }
 export function useQuestDockCreative() {

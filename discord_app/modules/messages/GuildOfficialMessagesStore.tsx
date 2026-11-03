@@ -1,15 +1,15 @@
-// === Module 15609: GuildOfficialMessagesStore ===
+// === Module 15751: GuildOfficialMessagesStore ===
 
-// Module 15609 (GuildOfficialMessagesStore)
+// Module 15751 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function updateGuildState(guildId, fn) {
@@ -24,7 +24,7 @@ function updateGuildState(guildId, fn) {
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
-  let items;
+  items = undefined;
   let messages;
   const guild_id = channel.guild_id;
   if (null == guild_id) {
@@ -133,7 +133,7 @@ prototype["getMessage"] = function getMessage(arg0, arg1) {
 prototype["getMessages"] = function getMessages(arg0) {
   const messages = tmp;
   if (null == obj[arg0]) {
-    let items = [];
+    items = [];
   } else {
     const ids = tmp.ids;
     const mapped = ids.map((item) => messages.messages[item]);
@@ -212,7 +212,7 @@ obj = {
       const fn = (arg0) => {
         let tmp = arg0;
         if (null != ChannelStore) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(tmp.ids, 0);
         } else {
           const items1 = [];
@@ -283,7 +283,7 @@ obj = {
                   const obj2 = {};
                   const merged1 = Object.assign(tmp9);
                   const obj3 = { ids: null, messages: null };
-                  const items = [messageRecord.id];
+                  items = [messageRecord.id];
                   HermesBuiltin.arraySpread(tmp9.ids, 1);
                   obj3.ids = items;
                   const obj4 = {};
@@ -322,23 +322,23 @@ obj = {
       } else if (null == obj[guildId]) {
         return false;
       } else if (null == message.author) {
-        if (null != tmp42) {
-          const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(tmp42, message);
+        if (null != tmp45) {
+          const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(tmp45, message);
           if (null != obj[guildId]) {
             obj = {};
             const merged = Object.assign(obj);
             const obj2 = {};
-            const merged1 = Object.assign(tmp27);
+            const merged1 = Object.assign(tmp30);
             const obj3 = { messages: null };
             const obj4 = {};
-            const merged2 = Object.assign(tmp27.messages);
+            const merged2 = Object.assign(tmp30.messages);
             obj4[updateMessageRecordResult.id] = updateMessageRecordResult;
             obj3.messages = obj4;
             const merged3 = Object.assign(obj3);
             obj[guildId] = obj2;
           }
         }
-        return null != tmp42;
+        return null != tmp45;
       } else {
         let num = message.flags;
         if (num == null) {
@@ -346,43 +346,43 @@ obj = {
         }
         const hasFlagResult = FlagUtils.hasFlag(num, MessageFlags.IS_GUILD_OFFICIAL);
         if (hasFlagResult) {
-          if (null == tmp42) {
+          if (null == tmp45) {
             const messageRecord = MessageRecordUtils.createMessageRecord(message);
             if (null != obj[guildId]) {
               const obj5 = {};
               const merged4 = Object.assign(obj);
-              const obj7 = {};
-              const merged5 = Object.assign(tmp8);
+              const obj6 = {};
+              const merged5 = Object.assign(tmp11);
               const obj8 = { ids: null, messages: null };
-              const items = [messageRecord.id];
-              HermesBuiltin.arraySpread(tmp8.ids, 1);
+              items = [messageRecord.id];
+              HermesBuiltin.arraySpread(tmp11.ids, 1);
               obj8.ids = items;
               const obj9 = {};
-              const merged6 = Object.assign(tmp8.messages);
+              const merged6 = Object.assign(tmp11.messages);
               obj9[messageRecord.id] = messageRecord;
               obj8.messages = obj9;
               const merged7 = Object.assign(obj8);
-              obj5[guildId] = obj7;
+              obj5[guildId] = obj6;
               obj = obj5;
             }
-            const tmp43Result = MessageRecordUtils;
+            const tmp46Result = MessageRecordUtils;
           }
         }
         if (!hasFlagResult) {
-          if (null != tmp42) {
+          if (null != tmp45) {
             id = message.id;
             if (null != obj[guildId]) {
               const obj10 = {};
               const merged8 = Object.assign(obj);
               const obj11 = {};
-              const merged9 = Object.assign(tmp46);
-              const obj13 = {};
-              const merged10 = Object.assign(tmp46.messages);
+              const merged9 = Object.assign(tmp49);
+              const obj12 = {};
+              const merged10 = Object.assign(tmp49.messages);
               delete tmp2[tmp];
               const obj14 = { ids: null, messages: null };
-              const ids = tmp46.ids;
+              const ids = tmp49.ids;
               obj14.ids = ids.filter((item) => item !== id);
-              obj14.messages = obj13;
+              obj14.messages = obj12;
               const merged11 = Object.assign(obj14);
               obj10[guildId] = obj11;
               obj = obj10;
@@ -390,23 +390,23 @@ obj = {
           }
         }
         if (hasFlagResult) {
-          if (null != tmp42) {
-            const updateMessageRecordResult1 = MessageRecordUtils.updateMessageRecord(tmp42, message);
+          if (null != tmp45) {
+            const updateMessageRecordResult1 = MessageRecordUtils.updateMessageRecord(tmp45, message);
             if (null != obj[guildId]) {
               const obj15 = {};
               const merged12 = Object.assign(obj);
               const obj16 = {};
-              const merged13 = Object.assign(tmp60);
+              const merged13 = Object.assign(tmp8);
               const obj17 = { messages: null };
               const obj18 = {};
-              const merged14 = Object.assign(tmp60.messages);
+              const merged14 = Object.assign(tmp8.messages);
               obj18[updateMessageRecordResult1.id] = updateMessageRecordResult1;
               obj17.messages = obj18;
               const merged15 = Object.assign(obj17);
               obj15[guildId] = obj16;
               obj = obj15;
             }
-            const tmp43Result2 = MessageRecordUtils;
+            const tmp46Result2 = MessageRecordUtils;
           }
         }
         return false;

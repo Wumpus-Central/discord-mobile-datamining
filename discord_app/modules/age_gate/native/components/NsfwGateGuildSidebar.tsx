@@ -1,22 +1,22 @@
-// === Module 18356: NsfwGateGuildSidebar ===
+// === Module 18501: NsfwGateGuildSidebar ===
 
-// Module 18356 (NsfwGateGuildSidebar)
+// Module 18501 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7389 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7509 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7388).NsfwGateSource;
+const NsfwGateSource = fn(7508).NsfwGateSource;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, HelpdeskArticles: closure_10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default function NsfwGateGuildSidebar(guildId) {
   guildId = guildId.guildId;
   let currentUser;
   const tmp = closure_14();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(currentUser[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   currentUser = UserStore.getCurrentUser();
   const items1 = [guildId, stateFromStores, currentUser];

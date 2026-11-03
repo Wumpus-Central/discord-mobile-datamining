@@ -1,23 +1,23 @@
-// === Module 17825: ProfileCustomizationTryItOutSettingScreen ===
+// === Module 17968: ProfileCustomizationTryItOutSettingScreen ===
 
-// Module 17825 (ProfileCustomizationTryItOutSettingScreen)
+// Module 17968 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1400 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8738 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8862 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -32,7 +32,7 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const tmp4 = stateFromStores(categories[8]);
   ({ analyticsLocations, sourceAnalyticsLocations } = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM));
   const tmp4Result = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM);
-  const items = [visibleEffectOrder];
+  items = [visibleEffectOrder];
   stateFromStores = sourceAnalyticsLocations(categories[10]).useStateFromStores(items, () => visibleEffectOrder.getCurrentUser());
   const tmp8 = stateFromStores(categories[11])();
   categories = tmp8.categories;

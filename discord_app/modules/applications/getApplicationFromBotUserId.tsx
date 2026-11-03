@@ -1,7 +1,7 @@
-// === Module 14168: getApplicationFromBotUserId ===
+// === Module 14299: getApplicationFromBotUserId ===
 
-// Module 14168 (getApplicationFromBotUserId)
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+// Module 14299 (getApplicationFromBotUserId)
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/applications/getApplicationFr
 
 export default function useGetApplicationFromBotUserId(id) {
   _require = id;
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp = closure_0;
     let tmp2;

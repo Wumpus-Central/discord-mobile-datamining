@@ -1,7 +1,7 @@
-// === Module 17225: FastAssetImage ===
+// === Module 17368: FastAssetImage ===
 
-// Module 17225 (FastAssetImage)
-import StoreUtils from "StoreUtils" /* 6455 */;
+// Module 17368 (FastAssetImage)
+import StoreUtils from "StoreUtils" /* 6575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,13 +17,13 @@ export default function FastAssetImage(style) {
   const tmp = _slicedToArray(noop.useState(), 2);
   const first = tmp[0];
   _slicedToArray = tmp3;
-  const items = [tmp[1]];
+  items = [tmp[1]];
   const items1 = [applicationId, asset, first];
   const onLayout = noop.useCallback((nativeEvent) => {
     closure_3(nativeEvent.nativeEvent.layout.width);
   }, items);
   const source = noop.useMemo(() => {
-    let application_id;
+    application_id = undefined;
     if (asset != null) {
       application_id = asset.application_id;
     }

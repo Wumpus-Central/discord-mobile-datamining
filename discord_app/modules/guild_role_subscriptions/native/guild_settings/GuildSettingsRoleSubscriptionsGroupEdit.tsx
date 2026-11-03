@@ -1,9 +1,9 @@
-// === Module 19940: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 20090: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 19940 (GuildSettingsRoleSubscriptionsGroupEdit)
+// Module 20090 (GuildSettingsRoleSubscriptionsGroupEdit)
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 19953 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20103 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -76,7 +76,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     }
     tmp18 = source;
   }
-  const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
+  items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
   callback = obj3.useCallback(first(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -88,7 +88,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -198,9 +198,9 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx");
 

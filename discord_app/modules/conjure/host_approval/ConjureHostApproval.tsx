@@ -1,9 +1,9 @@
-// === Module 10895: ConjureHostApproval ===
+// === Module 11025: ConjureHostApproval ===
 
-// Module 10895 (ConjureHostApproval)
+// Module 11025 (ConjureHostApproval)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f98380 = (id) => id.id;
+    const f98581 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -98,13 +98,13 @@ export function removeAllowedHost(projectId, remove_host) {
 }
 export function useConjureHostApprovals(projectId) {
   _require = projectId;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => hostAccessStore.getApprovals(closure_0), items1);
 }
 export function useConjureAllowedHosts(projectId) {
   _require = projectId;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => {
     const access = hostAccessStore.getAccess(closure_0);
@@ -121,7 +121,7 @@ export function useConjureAllowedHosts(projectId) {
 }
 export function useConjureRequireHostApprovalSetting(arg0) {
   _require = arg0;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [arg0];
   const items2 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

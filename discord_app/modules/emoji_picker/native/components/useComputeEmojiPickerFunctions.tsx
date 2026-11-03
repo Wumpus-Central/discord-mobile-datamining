@@ -1,18 +1,18 @@
-// === Module 9971: useComputeEmojiPickerFunctions ===
+// === Module 10102: useComputeEmojiPickerFunctions ===
 
-// Module 9971 (useComputeEmojiPickerFunctions)
+// Module 10102 (useComputeEmojiPickerFunctions)
 import _modDef12 from "module_12" /* 12 */;
-import FunctionUtils from "FunctionUtils" /* 2034 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9943 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9972 */;
+import FunctionUtils from "FunctionUtils" /* 2163 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10074 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function _computeCategories(arg0) {
   ({ categories, rowSize, isNativeEmojiPickerEnabled } = arg0);
-  const items = [];
+  items = [];
   const iter = categories[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -140,7 +140,7 @@ function _computeSearchResults(emojis) {
     const _Number = Number;
     limit = Number.MAX_SAFE_INTEGER;
   }
-  const items = [];
+  items = [];
   const obj = { emojiSections: items, renderingData: null, rowSize: null };
   const obj2 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: "", footer: null };
   let substr = unlocked;
@@ -191,9 +191,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6799);
+const EmojiPickerConstants = fn(6919);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(9942).EmojiPickerRenderingDataType;
+const constants3 = fn(10073).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

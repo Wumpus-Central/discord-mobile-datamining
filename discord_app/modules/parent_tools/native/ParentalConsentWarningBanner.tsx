@@ -1,12 +1,12 @@
-// === Module 19095: ParentalConsentWarningBanner ===
+// === Module 19253: ParentalConsentWarningBanner ===
 
-// Module 19095 (ParentalConsentWarningBanner)
+// Module 19253 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import openUserSettings from "openUserSettings" /* 7563 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7717 */;
-import tinycolorDefault from "tinycolor" /* 7730 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import openUserSettings from "openUserSettings" /* 7687 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
+import tinycolorDefault from "tinycolor" /* 7854 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,14 +15,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7716).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7840).FamilyCenterSubPages;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
+({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.strip = rect;
@@ -57,10 +57,10 @@ export default function ParentalConsentWarningBanner(children) {
   const obj4 = require("useIsOnMainSurface");
   const obj5 = require("useGlobalStatusIndicatorState");
   token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
-  let items = [token];
+  items = [token];
   daysRemaining = undefined;
   const memo = noop.useMemo(() => {
-    const items = [token, ];
+    items = [token, ];
     const obj = tinycolorDefault(token);
     items[1] = tinycolorDefault(token).setAlpha(0).toRgbString();
     return items;

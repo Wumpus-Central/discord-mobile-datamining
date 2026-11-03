@@ -1,6 +1,6 @@
-// === Module 15599: GuildProductsStore ===
+// === Module 15741: GuildProductsStore ===
 
-// Module 15599 (GuildProductsStore)
+// Module 15741 (GuildProductsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -11,8 +11,8 @@ let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 let closure_6 = 10 * DurationsDefault.Millis.MINUTE;
-const secondaryIndexMap = new fn(4941).SecondaryIndexMap((guild_id) => {
-  const items = ["guild:" + guild_id.guild_id];
+const secondaryIndexMap = new fn(5068).SecondaryIndexMap((guild_id) => {
+  items = ["guild:" + guild_id.guild_id];
   if (guild_id.published) {
     const _HermesInternal = HermesInternal;
     items.push("guild:" + guild_id.guild_id + ":published");
@@ -82,7 +82,7 @@ const guildProductsStore = new GuildProductsStore(DispatcherDefault, {
   GUILD_PRODUCTS_FETCH: function handleFetchGuildProducts(guildId) {
     guildId = guildId.guildId;
     closure_3[guildId] = obj.FETCHING;
-    const items = [...secondaryIndexMap.values("guild:" + guildId)];
+    items = [...secondaryIndexMap.values("guild:" + guildId)];
     const item = items.forEach((id) => {
       set.delete(id.id);
     });

@@ -1,14 +1,14 @@
-// === Module 12121: EditIcon ===
+// === Module 12257: EditIcon ===
 
-// Module 12121 (EditIcon)
+// Module 12257 (EditIcon)
 import nativeDefault from "native" /* 575 */;
-import PencilIcon from "PencilIcon" /* 10232 */;
+import PencilIcon from "PencilIcon" /* 10362 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { editIcon: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, xs: null, sm: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
 obj2.xs = size;
@@ -26,7 +26,7 @@ export default function EditIcon(style) {
   }
   const tmp = closure_5();
   const editIcon = tmp;
-  const items = [tmp, style, str];
+  items = [tmp, style, str];
   return <View style={noop.useMemo(() => {
     const iconContainerStyle = [editIcon.editIcon, "sm" === str ? editIcon.sm : editIcon.xs, style];
     return { iconContainerStyle };

@@ -1,15 +1,15 @@
-// === Module 17586: DevToolsLoggingFlagsScreen ===
+// === Module 17729: DevToolsLoggingFlagsScreen ===
 
-// Module 17586 (DevToolsLoggingFlagsScreen)
+// Module 17729 (DevToolsLoggingFlagsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1358 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import TableSwitchRow from "TableSwitchRow" /* 7369 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1360 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const ScrollView = _mod17.ScrollView;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 
 export default function DevToolsLoggingFlagsScreen() {
   const tmp = closure_6();
-  const items = [DeveloperOptionsStore];
+  items = [DeveloperOptionsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents, isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents, isLoggingInteractionTTIAnalytics: DeveloperOptionsStore.isLoggingInteractionTTIAnalytics, isTracingRequests: DeveloperOptionsStore.isTracingRequests }));
   const obj2 = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isLoggingInteractionTTIAnalytics, isTracingRequests } = stateFromStoresObject);

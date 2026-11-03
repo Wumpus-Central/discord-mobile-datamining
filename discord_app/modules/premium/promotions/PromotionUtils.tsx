@@ -1,16 +1,16 @@
-// === Module 9667: PromotionUtils ===
+// === Module 9799: PromotionUtils ===
 
-// Module 9667 (PromotionUtils)
+// Module 9799 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4848 */;
-import constants from "constants" /* 9665 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
+import constants from "constants" /* 9797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9627 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import PromotionRecord from "PromotionRecord" /* 9759 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -27,7 +27,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -110,9 +110,9 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1385).PromotionFlags;
+const PromotionFlags = fn(1387).PromotionFlags;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
+({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: closure_10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 

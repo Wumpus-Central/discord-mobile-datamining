@@ -1,14 +1,14 @@
-// === Module 14417: useConjureAppProject ===
+// === Module 14548: useConjureAppProject ===
 
-// Module 14417 (useConjureAppProject)
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+// Module 14548 (useConjureAppProject)
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const canRemixProject = fn(6844).canRemixProject;
+const canRemixProject = fn(6964).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_hover_card/useConjureAppProject.tsx");
 
@@ -17,14 +17,14 @@ export default function useConjureAppProject(arg0, guildId, arg2) {
   dependencyMap = arg2;
   const tmp4 = require("ConjureGuildExperiment").useIsConjureGuildEnabled({ guildId, location: "ConjureAppHoverCard" }) && null != guildId;
   noop = tmp4;
-  let items = [arg2, arg0];
+  items = [arg2, arg0];
   const effect = noop.useEffect(() => {
     let tmp = closure_1;
     if (closure_1) {
       tmp = null != closure_0;
     }
     if (tmp) {
-      const items = [closure_0];
+      items = [closure_0];
       const missingConjureProjects = ConjureActionCreators.loadMissingConjureProjects(items);
     }
   }, items);

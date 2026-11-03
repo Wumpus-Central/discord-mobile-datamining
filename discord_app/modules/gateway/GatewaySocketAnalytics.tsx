@@ -1,11 +1,11 @@
-// === Module 15537: GatewaySocketAnalytics ===
+// === Module 15678: GatewaySocketAnalytics ===
 
-// Module 15537 (GatewaySocketAnalytics)
+// Module 15678 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 function prettyPrintTrace_(calls, arg1) {
   let length;
@@ -232,7 +232,7 @@ export function getReadyPayloadByteSizeAnalytics(data) {
     const timestamp = Date.now();
     ({ read_state, private_channels, user_guild_settings, relationships, users } = data);
     let obj2 = items5(data, items2);
-    const items = [];
+    items = [];
     const items1 = [];
     items2 = [];
     const items3 = [];

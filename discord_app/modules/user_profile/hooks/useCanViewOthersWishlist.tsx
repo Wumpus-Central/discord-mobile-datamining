@@ -1,11 +1,11 @@
-// === Module 14981: useCanViewOthersWishlist ===
+// === Module 15117: useCanViewOthersWishlist ===
 
-// Module 14981 (useCanViewOthersWishlist)
-import useCanDMDefault from "useCanDM" /* 13685 */;
-import WishlistVisibility from "WishlistVisibility" /* 14982 */;
-import WishlistStore from "WishlistStore" /* 9471 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+// Module 15117 (useCanViewOthersWishlist)
+import useCanDMDefault from "useCanDM" /* 13815 */;
+import WishlistVisibility from "WishlistVisibility" /* 15118 */;
+import WishlistStore from "WishlistStore" /* 9599 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export default function useCanViewOthersWishlist(id) {
   _require = id;
   const tmp = useCanDMDefault(id.id);
   importDefault = tmp;
-  const items = [UserProfileStore, WishlistStore, RelationshipStore];
+  items = [UserProfileStore, WishlistStore, RelationshipStore];
   const items1 = [id, tmp];
   return require("initialize").useStateFromStores(items, () => {
     const firstWishlistId = UserProfileStore.getFirstWishlistId(id.id);

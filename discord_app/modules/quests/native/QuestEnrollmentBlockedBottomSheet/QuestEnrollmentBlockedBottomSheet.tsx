@@ -1,13 +1,13 @@
-// === Module 17143: QuestEnrollmentBlockedBottomSheet ===
+// === Module 17286: QuestEnrollmentBlockedBottomSheet ===
 
-// Module 17143 (QuestEnrollmentBlockedBottomSheet)
+// Module 17286 (QuestEnrollmentBlockedBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useCountdownDefault from "useCountdown" /* 7624 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useCountdownDefault from "useCountdown" /* 7748 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7846 */;
+import QuestStore from "QuestStore" /* 7970 */;
 
 const require = globalThis.__r;
 
@@ -31,10 +31,10 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   if (null != questEnrollmentBlockedUntil) {
     const obj = { header: null, footer: null, startExpanded: true, children: null };
     const obj2 = { style: tmp.heading, children: null };
-    const obj3 = { variant: "heading-xl/bold", children: null };
+    const obj3 = { variant: "heading-xl/semibold", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["XEHDT/"]);
-    obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/bold", children: null });
+    obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/semibold", children: null });
     obj.header = <View style={tmp.heading}>{null}</View>;
     const obj4 = { style: tmp.container, children: null };
     const obj5 = { variant: "text-md/normal", children: null };
@@ -51,7 +51,7 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { heading: { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, container: null };
 let obj3 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.container = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
@@ -61,7 +61,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestEnrollment
 
 export default function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
   ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(questId));
   let tmp4 = null;
   if (null != stateFromStores) {

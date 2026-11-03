@@ -1,16 +1,16 @@
-// === Module 18088: MessagesItemChannel ===
+// === Module 18232: MessagesItemChannel ===
 
-// Module 18088 (MessagesItemChannel)
+// Module 18232 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod7294 from "module_7294" /* 7294 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
-import _mod14422 from "module_14422" /* 14422 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18089 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18098 */;
+import _mod7414 from "module_7414" /* 7414 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import _mod14553 from "module_14553" /* 14553 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18233 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const MessagesItemChannelBaseDefault = MessagesItemChannelBase;
 
@@ -19,7 +19,7 @@ const jsx = fn(21).jsx;
 let closure_7 = noop.memo(function MessagesItemChannel(arg0) {
   ({ channelId: require, placeholderHeight } = arg0);
   ({ row, isPressed, setIsPressed } = arg0);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(require));
   let isPrivateResult;
   if (stateFromStores != null) {
@@ -43,8 +43,8 @@ const memoResult = noop.memo(function MessagesItemChannelFast(arg0) {
   return <closure_7 />;
 });
 const memoResult1 = noop.memo(function MessagesItemChannelFlash(channelId) {
-  const items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod7294.useRecyclingState(false, items), 2);
+  items = [channelId.channelId];
+  const tmp = _slicedToArray(_mod7414.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -74,7 +74,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod14422.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14553.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

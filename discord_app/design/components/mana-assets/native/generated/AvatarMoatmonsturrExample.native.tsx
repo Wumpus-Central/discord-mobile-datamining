@@ -1,19 +1,19 @@
-// === Module 19913: AvatarMoatmonsturrExample ===
+// === Module 20063: AvatarMoatmonsturrExample ===
 
-// Module 19913 (AvatarMoatmonsturrExample)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef19914 from "module_19914" /* 19914 */;
-import _modDef19915 from "module_19915" /* 19915 */;
-import _modDef19916 from "module_19916" /* 19916 */;
+// Module 20063 (AvatarMoatmonsturrExample)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef20064 from "module_20064" /* 20064 */;
+import _modDef20065 from "module_20065" /* 20065 */;
+import _modDef20066 from "module_20066" /* 20066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19914 }, 3: null };
-let obj2 = { uri: _modDef19914 };
-obj[2] = { uri: _modDef19915 };
-const obj3 = { uri: _modDef19915 };
-obj[3] = { uri: _modDef19916 };
+let obj = { 1: null, 2: { uri: _modDef20064 }, 3: null };
+let obj2 = { uri: _modDef20064 };
+obj[2] = { uri: _modDef20065 };
+const obj3 = { uri: _modDef20065 };
+obj[3] = { uri: _modDef20066 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");
 
@@ -25,7 +25,7 @@ export function AvatarMoatmonsturrExample(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 100, intrinsicHeight: 100 };
     return assetHelpers.getAssetSizeStyle(size);

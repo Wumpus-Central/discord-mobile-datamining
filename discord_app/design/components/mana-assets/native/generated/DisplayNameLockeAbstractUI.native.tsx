@@ -1,19 +1,19 @@
-// === Module 18872: DisplayNameLockeAbstractUI ===
+// === Module 19030: DisplayNameLockeAbstractUI ===
 
-// Module 18872 (DisplayNameLockeAbstractUI)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef18873 from "module_18873" /* 18873 */;
-import _modDef18874 from "module_18874" /* 18874 */;
-import _modDef18875 from "module_18875" /* 18875 */;
+// Module 19030 (DisplayNameLockeAbstractUI)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef19031 from "module_19031" /* 19031 */;
+import _modDef19032 from "module_19032" /* 19032 */;
+import _modDef19033 from "module_19033" /* 19033 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18873 }, 3: null };
-let obj2 = { uri: _modDef18873 };
-obj[2] = { uri: _modDef18874 };
-const obj3 = { uri: _modDef18874 };
-obj[3] = { uri: _modDef18875 };
+let obj = { 1: null, 2: { uri: _modDef19031 }, 3: null };
+let obj2 = { uri: _modDef19031 };
+obj[2] = { uri: _modDef19032 };
+const obj3 = { uri: _modDef19032 };
+obj[3] = { uri: _modDef19033 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx");
 
@@ -25,7 +25,7 @@ export function DisplayNameLockeAbstractUI(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 123 };
     return assetHelpers.getAssetSizeStyle(size);

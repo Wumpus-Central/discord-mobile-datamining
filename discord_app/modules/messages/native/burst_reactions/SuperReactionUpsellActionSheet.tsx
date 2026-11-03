@@ -1,16 +1,16 @@
-// === Module 9897: SuperReactionUpsellActionSheet ===
+// === Module 10028: SuperReactionUpsellActionSheet ===
 
-// Module 9897 (SuperReactionUpsellActionSheet)
+// Module 10028 (SuperReactionUpsellActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import _mod4983 from "module_4983" /* 4983 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 9937 */;
+import _mod5110 from "module_5110" /* 5110 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
+import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 10068 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -19,9 +19,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1072).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(4847).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(9898), fn(9899), fn(9900), fn(9901), fn(9899), fn(9902), fn(9903), fn(9904)];
-const createStyles = fn(5014);
+const dismissibleContent = fn(4974).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(10029), fn(10030), fn(10031), fn(10032), fn(10030), fn(10033), fn(10034), fn(10035)];
+const createStyles = fn(5141);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

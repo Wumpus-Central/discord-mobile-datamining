@@ -1,13 +1,13 @@
-// === Module 16498: UserProfileThemePicker ===
+// === Module 16641: UserProfileThemePicker ===
 
-// Module 16498 (UserProfileThemePicker)
+// Module 16641 (UserProfileThemePicker)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7373 */;
-import PencilIcon from "PencilIcon" /* 10232 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7493 */;
+import PencilIcon from "PencilIcon" /* 10362 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function ColorButton(arg0) {
   const tmp = closure_8();
   const int2hexResult = utils_ColorUtils.int2hex(color);
   const obj3 = { backgroundColor: int2hexResult, colors: null };
-  const items = [WHITE, PRIMARY_530];
+  items = [WHITE, PRIMARY_530];
   obj3.colors = items;
   const obj4 = { style: tmp.colorContainer, children: null };
   const higherContrastColor = getHigherContrastColor.getHigherContrastColor(obj3);
@@ -36,7 +36,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_530 = nativeDefault.unsafe_rawColors.PRIMARY_530;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { colorRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, justifyContent: "center", alignItems: "flex-start" }, colorContainer: null, colorButton: null, editIcon: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, justifyContent: "center", alignItems: "flex-start" };
 obj2.colorContainer = { position: "relative", flex: 1, flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -68,7 +68,7 @@ export default function UserProfileThemePicker(arg0) {
   obj4.colorHex = utils_ColorUtils.int2hex(primaryColor);
   obj3.accessibilityLabel = intl2.formatToPlainString(util.t.v4X2kc, obj4);
   obj3.onPress = onPressPrimary;
-  const items = [React3(ColorButton, obj3), ];
+  items = [React3(ColorButton, obj3), ];
   const obj5 = { color: secondaryColor, label: null, accessibilityLabel: null, onPress: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t["8elvy6"]);

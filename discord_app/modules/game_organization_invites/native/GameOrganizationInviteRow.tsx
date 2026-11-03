@@ -1,15 +1,15 @@
-// === Module 15792: GameOrganizationInviteRow ===
+// === Module 15935: GameOrganizationInviteRow ===
 
-// Module 15792 (GameOrganizationInviteRow)
+// Module 15935 (GameOrganizationInviteRow)
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import TableRow from "TableRow" /* 6975 */;
-import DiscordTagDefault from "DiscordTag" /* 9201 */;
-import InviteButtonDefault from "InviteButton" /* 9204 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import TableRow from "TableRow" /* 7101 */;
+import DiscordTagDefault from "DiscordTag" /* 9329 */;
+import InviteButtonDefault from "InviteButton" /* 9332 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InviteSendStates = fn(7879).InviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 export default noop.memo(function GameOrganizationInviteRow(user) {
   user = user.user;
   ({ sendState, onInvite } = user);
-  const items = [onInvite, user];
+  items = [onInvite, user];
   ({ start, end } = user);
   const callback = noop.useCallback(() => onInvite(user), items);
   const obj = { start, end, icon: jsx(native.Avatar, { source: user.getAvatarSource(undefined), size: native.AvatarSizes.REFRESH_MEDIUM_32 }), label: null, trailing: null, onPress: null, disabled: null };

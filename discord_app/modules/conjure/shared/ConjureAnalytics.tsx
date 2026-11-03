@@ -1,11 +1,11 @@
-// === Module 10873: ConjureAnalytics ===
+// === Module 11003: ConjureAnalytics ===
 
-// Module 10873 (ConjureAnalytics)
+// Module 11003 (ConjureAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -23,7 +23,7 @@ function projectFields(projectId) {
     }
   }
   obj.project_name = substr;
-  let application_id;
+  application_id = undefined;
   if (project != null) {
     application_id = project.application_id;
   }
@@ -68,7 +68,7 @@ function conjureLocation(projectId, isPreview) {
     if (!tmp5) {
       prop = project.preview_application_id;
     }
-    let application_id = prop;
+    application_id = prop;
   } else if (!tmp5) {
     application_id = project.application_id;
   }
@@ -86,7 +86,7 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const isProjectOwner = fn(6844).isProjectOwner;
+const isProjectOwner = fn(6964).isProjectOwner;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
@@ -184,7 +184,7 @@ export function trackConjurePublishActionClicked(project_id, arg1) {
   ({ entryPoint, surface, action } = arg1);
   const project = ConjureProjectStore.getProject(project_id);
   const obj2 = { project_id, application_id: null };
-  let application_id;
+  application_id = undefined;
   if (project != null) {
     application_id = project.application_id;
   }

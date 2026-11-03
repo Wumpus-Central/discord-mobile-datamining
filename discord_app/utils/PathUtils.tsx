@@ -1,12 +1,12 @@
-// === Module 15879: PathUtils ===
+// === Module 16022: PathUtils ===
 
-// Module 15879 (PathUtils)
+// Module 16022 (PathUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PathUtils.tsx");
 
 export function pathJoin() {
-  const items = [...arguments];
+  items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {
     str = "\\";

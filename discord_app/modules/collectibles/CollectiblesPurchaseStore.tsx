@@ -1,6 +1,6 @@
-// === Module 7735: CollectiblesPurchaseStore ===
+// === Module 7859: CollectiblesPurchaseStore ===
 
-// Module 7735 (CollectiblesPurchaseStore)
+// Module 7859 (CollectiblesPurchaseStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -74,13 +74,13 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
     if (0 === purchases.purchases.length) {
       closure_3 = map;
     } else {
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_3.values(), 0);
       if (!obj.isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
         map = new Map(purchases.map((skuId) => {
-          const items = [skuId.skuId, skuId];
+          items = [skuId.skuId, skuId];
           return items;
         }));
         closure_3 = map;
@@ -104,13 +104,13 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
   COLLECTIBLES_CLAIM_SUCCESS: function handleClaimSuccess(purchases) {
     if (null != purchases.purchases) {
       if (0 !== purchases.purchases.length) {
-        let items = [];
+        items = [];
         HermesBuiltin.arraySpread(closure_3.values(), 0);
         if (!obj.isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
           map = new Map(purchases.map((skuId) => {
-            const items = [skuId.skuId, skuId];
+            items = [skuId.skuId, skuId];
             return items;
           }));
           closure_3 = map;

@@ -1,11 +1,11 @@
-// === Module 14787: MediaModalYoutube ===
+// === Module 14918: MediaModalYoutube ===
 
-// Module 14787 (MediaModalYoutube)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8835 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8871 */;
+// Module 14918 (MediaModalYoutube)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8959 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -23,19 +23,19 @@ export default noop.memo(function MediaModalYoutube(visible) {
   _slicedToArray = undefined;
   noop = undefined;
   ({ style, onError, onLoad, onLoadStart, onToggleOverlay } = visible);
-  [playerState, dependencyMap] = noop.useState(visible(8871).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(8995).PlayerState.UNREADY);
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp5[1];
-  let tmp7 = playerState(6732)(playerState);
+  let tmp7 = playerState(6852)(playerState);
   noop = tmp7;
-  const tmp8 = playerState(6732)(visible);
+  const tmp8 = playerState(6852)(visible);
   closure_5 = tmp8;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8835).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8959).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
-  const items = [ref, visible, tmp8, tmp7, playerState];
+  items = [ref, visible, tmp8, tmp7, playerState];
   const callback = noop.useCallback((arg0) => {
     const parsed = JSON.parse(arg0);
     ({ type, value } = parsed);
@@ -152,25 +152,25 @@ export default noop.memo(function MediaModalYoutube(visible) {
       ref.current = null;
     }
   }, items1);
-  let youtubeVideoIdFromURI = visible(8839).getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(8963).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp(8839).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmpResult = tmp(8839);
+    youtubeVideoIdFromURI = tmp(8963).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmpResult = tmp(8963);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp(8871).PlayerState.ERRORED) {
+    if (playerState === tmp(8995).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return jsx(tmp6(14788), { videoId: youtubeVideoIdFromURI.videoId });
+        return jsx(tmp6(14919), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
-    const isAndroidResult = tmp(1375).isAndroid();
+    const isAndroidResult = tmp(1377).isAndroid();
     const obj3 = { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null };
     let str2 = "";
     let str3 = "";
-    const tmpResult2 = tmp(1375);
+    const tmpResult2 = tmp(1377);
     if (null != youtubeVideoIdFromURI.start) {
       const _HermesInternal = HermesInternal;
       str3 = "'start': " + youtubeVideoIdFromURI.start + ",";
@@ -209,7 +209,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
       str20 = "never";
     }
     obj3.overScrollMode = str20;
-    return jsx(tmp6(8871), { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null }, youtubeVideoIdFromURI.videoId);
+    return jsx(tmp6(8995), { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null }, youtubeVideoIdFromURI.videoId);
   }
-  let obj = visible(8839);
+  let obj = visible(8963);
 });

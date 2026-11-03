@@ -1,9 +1,9 @@
-// === Module 9521: SlayerStorefrontItemCard ===
+// === Module 9649: SlayerStorefrontItemCard ===
 
-// Module 9521 (SlayerStorefrontItemCard)
+// Module 9649 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 575 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
-import tinycolorDefault from "tinycolor" /* 7730 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
+import tinycolorDefault from "tinycolor" /* 7854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { cardContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 }, cardImageBackground: { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, backgroundImage: null, cardImage: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -38,7 +38,7 @@ export default function SlayerStorefrontItemCard(sku) {
     size = size1;
   }
   bound = Math.max(size.width, size.height);
-  let items = [sku, bound];
+  items = [sku, bound];
   const str = noop.useMemo(() => SlayerStorefrontUtils.getCardImageURL(sku, { size: bound }), items);
   let items1 = [sku, bound];
   const str2 = noop.useMemo(() => SlayerStorefrontUtils.getCardBackgroundImageURL(sku, { size: bound }), items1);

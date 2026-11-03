@@ -1,21 +1,21 @@
-// === Module 14359: ChannelPrompt ===
+// === Module 14490: ChannelPrompt ===
 
-// Module 14359 (ChannelPrompt)
+// Module 14490 (ChannelPrompt)
 import util from "util" /* 1113 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5586).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
+let obj2 = { flex: { flex: 1 }, safePadding: { marginTop: fn(5709).NAV_BAR_HEIGHT, flex: 1 }, contentContainer: { paddingHorizontal: 16 }, guildIcon: { alignSelf: "center" }, guildName: { marginTop: 8, textAlign: "center" }, title: { marginTop: 16, textAlign: "center" }, subTitle: { marginTop: 8, textAlign: "center" }, topicInput: { marginTop: 24 }, buttonWrapper: { marginTop: 8 }, error: { marginTop: 4 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
@@ -30,7 +30,7 @@ export default function ChannelPrompt(guildId) {
   c6 = undefined;
   c7 = undefined;
   const tmp = closure_12();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(hasSkip[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp5 = onSuccess(value.useState(""), 2);
   value = tmp5[0];
@@ -99,7 +99,7 @@ export default function ChannelPrompt(guildId) {
     const items3 = [closure_10(hasBack(tmp3[16]), obj6), , , , , , ];
     const obj9 = { style: tmp.guildName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
     items3[1] = closure_10(tmp2(tmp3[18]).Text, obj9);
-    const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     let intl = tmp2(tmp3[12]).intl;
     obj10.children = intl.string(tmp2(tmp3[12]).t["8VRa7d"]);
     items3[2] = closure_10(tmp2(tmp3[18]).Text, obj10);

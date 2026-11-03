@@ -1,13 +1,13 @@
-// === Module 7906: GuildRoomStore ===
+// === Module 8030: GuildRoomStore ===
 
-// Module 7906 (GuildRoomStore)
+// Module 8030 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7907 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8031 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function resolveCreatingNotes(roomId, objects) {
@@ -76,7 +76,7 @@ class GuildRoomStore extends PersistedStore {
 const prototype = GuildRoomStore.prototype;
 prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   this.waitFor(AuthenticationStore, RTCConnectionStore, SelectedChannelStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, handleSelectedChannelStoreChange);
   let flag;
   if (rememberVideoOverlayVisibility != null) {
@@ -347,7 +347,7 @@ const guildRoomStore = new GuildRoomStore(DispatcherDefault, {
   },
   GUILD_ROOM_NOTE_CREATE_START: function handleNoteCreateStart(roomId) {
     roomId = roomId.roomId;
-    let items = dependencyMap5[roomId];
+    items = dependencyMap5[roomId];
     ({ localId, position } = roomId);
     if (items == null) {
       items = [];

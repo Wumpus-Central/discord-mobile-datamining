@@ -1,6 +1,6 @@
-// === Module 9946: TopEmojisActionCreators ===
+// === Module 10077: TopEmojisActionCreators ===
 
-// Module 9946 (TopEmojisActionCreators)
+// Module 10077 (TopEmojisActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -20,7 +20,7 @@ export function fetchTopEmojis(guildId) {
     value = HTTP.get(obj4);
     value.then((body) => {
       const obj2 = { type: "TOP_EMOJIS_FETCH_SUCCESS", guildId, topEmojisMetadata: null };
-      const items = body.body.items;
+      items = body.body.items;
       const mapped = items.map((emojiId) => ({ emojiId: emojiId.emoji_id, rank: emojiId.emoji_rank }));
       obj2.topEmojisMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
       return DispatcherDefault.dispatch(obj2);

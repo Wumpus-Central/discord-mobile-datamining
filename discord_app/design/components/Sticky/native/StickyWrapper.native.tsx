@@ -1,7 +1,7 @@
-// === Module 11253: StickyWrapper ===
+// === Module 11390: StickyWrapper ===
 
-// Module 11253 (StickyWrapper)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
+// Module 11390 (StickyWrapper)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("design/components/Sticky/native/Stick
 export function StickyWrapper(header) {
   header = header.header;
   const obj = { style: null, pointerEvents: header.pointerEvents, children: null };
-  const items = [header.style, wrapper.wrapper];
+  items = [header.style, wrapper.wrapper];
   obj.style = items;
   let tmp5Result = null;
   if (null != header) {

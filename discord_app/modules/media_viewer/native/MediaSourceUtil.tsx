@@ -1,30 +1,30 @@
-// === Module 8839: MediaSourceUtil ===
+// === Module 8963: MediaSourceUtil ===
 
-// Module 8839 (MediaSourceUtil)
+// Module 8963 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1439 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1490 */;
-import Server from "Server" /* 1992 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6065 */;
-import EmbedUtils from "EmbedUtils" /* 6558 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6753 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7469 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8582 */;
-import transformMessageComponents from "transformMessageComponents" /* 8694 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8835 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8840 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8841 */;
-import MediaModalPortal from "MediaModalPortal" /* 8842 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1441 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
+import Server from "Server" /* 2121 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6185 */;
+import EmbedUtils from "EmbedUtils" /* 6678 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6873 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8520 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8706 */;
+import transformMessageComponents from "transformMessageComponents" /* 8818 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8959 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8964 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8965 */;
+import MediaModalPortal from "MediaModalPortal" /* 8966 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -142,7 +142,7 @@ function extractMediaFromAttachment(found, message2, mediaIndex, guildIdFromSear
                   const searchParams3 = str10.searchParams;
                   searchParams3.append("format", "webp");
                 }
-                const items = [size1, ];
+                items = [size1, ];
                 const obj5 = {};
                 const merged1 = Object.assign(obj4);
                 obj5.uri = str10.toString();
@@ -292,7 +292,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
         const obj7 = { embed: image, media: thumbnail, message: id, embedIndex: mediaIndex, guildId: guildIdFromSearchContext, spoiler: hasSpoilerEmbeds, obscure: result, noCarousel: !isEmbedInlineResult };
         return getEmbedImageMediaSources(obj7);
       }
-      const items = [];
+      items = [];
       if (null == image.thumbnail) {
         if (isWebviewVideoResult) {
           isWebviewVideoResult = null != image.video;
@@ -514,7 +514,7 @@ function getEmbedImageMediaSources(arg0) {
   obj2.uri = str1;
   let tmp8 = obj2;
   if (str1 !== mobileOptimizedSrc) {
-    const items = [size, obj2];
+    items = [size, obj2];
     tmp8 = items;
   }
   return tmp8;
@@ -577,7 +577,7 @@ function toMediaSourceFromUnfurledMedia(id, guildId, media, description, spoiler
       if (media.proxyUrl !== mobileOptimizedSrc) {
         const obj4 = {};
         const merged1 = Object.assign(size);
-        const items = [obj4, obj3];
+        items = [obj4, obj3];
         tmp21 = items;
       }
       return tmp21;
@@ -714,7 +714,7 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let tmp4 = nextResult;
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
-        let items = tmp4.items;
+        items = tmp4.items;
         for (const item10035 of items) {
           let tmp18 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10035.media, item10035.description, item10035.spoiler);
           if (null != tmp18) {
@@ -746,7 +746,7 @@ export function extractMediaSourcesFromEmbed(message2, message1, images, index, 
   const hasSpoilerEmbeds = renderMessageMarkupDefault(message2, { contentMessage: message1 }).hasSpoilerEmbeds;
   images = images.images;
   if (images == null) {
-    let items = [images.image];
+    items = [images.image];
     images = items;
   }
   return images.map((width) => {
@@ -792,7 +792,7 @@ export function extractMediaSourcesFromEmbed(message2, message1, images, index, 
     const obj3 = ObscuredMediaUtils;
     const tmp10 = obj3.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: images }, enabledHarmTypesForMessage).length > 0;
     const size = { uri: mobileOptimizedSrc, messageId: message2.id, guildId, channelId: message2.channel_id, mediaIndex, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, flags: images.flags, obscure: tmp10, contentScanVersion: content_scan_version, contentType: width.contentType, shareURI: width.url };
-    const items = [size, { uri: str1, messageId: message2.id, guildId, channelId: message2.channel_id, mediaIndex, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, contentType: width.contentType, flags: images.flags, obscure: tmp10, contentScanVersion: content_scan_version, shareURI: width.url }];
+    items = [size, { uri: str1, messageId: message2.id, guildId, channelId: message2.channel_id, mediaIndex, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, contentType: width.contentType, flags: images.flags, obscure: tmp10, contentScanVersion: content_scan_version, shareURI: width.url }];
     return items;
   });
 }
@@ -805,7 +805,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(1992).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2121).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -814,7 +814,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
       }
       dependencyMap = num2;
-      const items = value.items;
+      items = value.items;
       const mapped = items.map((media, index) => {
         let tmp = toMediaSourceFromUnfurledMedia(closure_0, closure_1, media.media, media.description, media.spoiler);
         if (null == tmp) {
@@ -826,9 +826,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1379).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
       return obj2;
-    } else if (tmp(1992).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2121).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
@@ -845,7 +845,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
   const flattenComponentsResult = require("InteractionComponentUtils").flattenComponents(components);
 }
 export function extractMediaSourcesFromMessage(message, message2, guild_id, GRAVITY_VALID_EMBED_TYPES) {
-  const items = [];
+  items = [];
   let num = 0;
   let num2 = 0;
   if (0 < message2.attachments.length) {
@@ -937,7 +937,7 @@ export function getSelectedMediaSource(mediaViewerSyncer) {
 export function useSelectedMediaSource(syncer) {
   const tmp = useStateFromSharedValueDefault(syncer.index);
   closure_1 = tmp;
-  const items = [syncer.sources, tmp];
+  items = [syncer.sources, tmp];
   const items1 = [
     tmp,
     noop.useMemo(() => {

@@ -1,6 +1,6 @@
-// === Module 12619: conjureTipDismissals ===
+// === Module 12755: conjureTipDismissals ===
 
-// Module 12619 (conjureTipDismissals)
+// Module 12755 (conjureTipDismissals)
 import Storage5 from "Storage" /* 510 */;
 import noop from "module_19" /* 19 */;
 
@@ -165,7 +165,7 @@ export function dismissConjureTip(tip, tip2) {
           const Storage4 = set(510).Storage;
           const obj4 = {};
           const merged3 = Object.assign(id);
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(id.forever, 0)] = forEach.id;
           obj4.forever = items;
           const result1 = Storage4.set(conjureTipDismissals, obj4);

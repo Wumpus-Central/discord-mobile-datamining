@@ -1,15 +1,15 @@
-// === Module 17222: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 17365: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 17222 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 17365 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7434 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15721 */;
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7558 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17223 */;
-import allSettled_mod from "allSettled" /* 6456 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17366 */;
+import allSettled_mod from "allSettled" /* 6576 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
       }
     });
   }
-  const items = [];
+  items = [];
   const tmp2 = new Set();
   while (tmp4 !== undefined) {
     let channel = GuildRoleSubscriptionTierTemplatesStore.getChannel(tmp5);
@@ -56,7 +56,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           closure_2 = tmp2;
           closure_130_0 = closure_0;
           closure_130_1 = importDefault;
-          const items = [];
+          items = [];
           closure_130_2 = items;
           closure_130_3 = [];
           let item = importDefault.forEach((ref_id) => {
@@ -138,9 +138,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17217).useEditStateStore;
+const useEditStateStore = fn(17360).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
@@ -149,7 +149,7 @@ let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_t
 
 export function useChannelWithTemplateFallback(ref_id) {
   _require = ref_id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   const obj = require("useStateFromStores");
   const items1 = [GuildRoleSubscriptionTierTemplatesStore];
@@ -186,7 +186,7 @@ export function useChannelWithTemplateFallback(ref_id) {
 }
 export function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   _require = guildId;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_1 = useEditStateStore((listings) => listings.listings);

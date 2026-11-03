@@ -1,19 +1,19 @@
-// === Module 14343: InkQuillSpotIllustration ===
+// === Module 14474: InkQuillSpotIllustration ===
 
-// Module 14343 (InkQuillSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14344 from "module_14344" /* 14344 */;
-import _modDef14345 from "module_14345" /* 14345 */;
-import _modDef14346 from "module_14346" /* 14346 */;
+// Module 14474 (InkQuillSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef14475 from "module_14475" /* 14475 */;
+import _modDef14476 from "module_14476" /* 14476 */;
+import _modDef14477 from "module_14477" /* 14477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14344 }, 3: null };
-let obj2 = { uri: _modDef14344 };
-obj[2] = { uri: _modDef14345 };
-const obj3 = { uri: _modDef14345 };
-obj[3] = { uri: _modDef14346 };
+let obj = { 1: null, 2: { uri: _modDef14475 }, 3: null };
+let obj2 = { uri: _modDef14475 };
+obj[2] = { uri: _modDef14476 };
+const obj3 = { uri: _modDef14476 };
+obj[3] = { uri: _modDef14477 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function InkQuillSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

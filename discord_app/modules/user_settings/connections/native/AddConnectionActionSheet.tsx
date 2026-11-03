@@ -1,14 +1,14 @@
-// === Module 16857: AddConnectionActionSheet ===
+// === Module 17000: AddConnectionActionSheet ===
 
-// Module 16857 (AddConnectionActionSheet)
+// Module 17000 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1072 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2022 */;
-import shared from "shared" /* 5021 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import TableRow from "TableRow" /* 6975 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2151 */;
+import shared from "shared" /* 5148 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import TableRow from "TableRow" /* 7101 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 
@@ -19,10 +19,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7327)(application));
-  const tmp2 = analyticsLocations(7327)(application);
-  analyticsLocations = analyticsLocations(7326)(analyticsLocations(7351).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7326);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7447)(application));
+  const tmp2 = analyticsLocations(7447)(application);
+  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7446);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {
@@ -71,7 +71,7 @@ export default function AddConnectionActionSheet() {
   obj3.title = intl.string(require("util").t.Zhcj9X);
   obj2.header = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
   const obj4 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
-  const items = [
+  items = [
     found1.map((application, index) => {
       const obj = { application, start: 0 === index, end: null };
       let tmp3 = index === found1.length - 1;

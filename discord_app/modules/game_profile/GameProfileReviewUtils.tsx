@@ -1,11 +1,11 @@
-// === Module 9392: GameProfileReviewUtils ===
+// === Module 9520: GameProfileReviewUtils ===
 
-// Module 9392 (GameProfileReviewUtils)
+// Module 9520 (GameProfileReviewUtils)
 import util from "util" /* 1113 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2035 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9345 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9393 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2164 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9473 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9521 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -72,7 +72,7 @@ export function getMobileStoreReviews(game) {
           const str2 = intl2.format(util.t.u1m2hs, obj4);
           obj2.accessibilityLabel = intl3.format(util.t["63jSRx"], obj5).toString();
           obj2.action = obj.action;
-          const items = [obj2];
+          items = [obj2];
           let items1 = items;
           const str3 = intl3.format(util.t["63jSRx"], obj5);
         } else {

@@ -1,12 +1,12 @@
-// === Module 15603: LocalAppDetectionStore ===
+// === Module 15745: LocalAppDetectionStore ===
 
-// Module 15603 (LocalAppDetectionStore)
+// Module 15745 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15604 */;
-import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 15605 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15746 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 15747 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
@@ -58,7 +58,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
-  const items = [];
+  items = [];
   const iter = LocalAppDetectionTypes.ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

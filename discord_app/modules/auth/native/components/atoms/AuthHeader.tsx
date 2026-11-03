@@ -1,14 +1,14 @@
-// === Module 7141: AuthHeader ===
+// === Module 7267: AuthHeader ===
 
-// Module 7141 (AuthHeader)
+// Module 7267 (AuthHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6723 */;
+import TextStyles from "TextStyles" /* 6843 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1072).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/auth/native/components/atoms/
 export default function AuthHeader(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, accessibilityRole: "header", children };
-  const items = [closure_3().header, style];
+  items = [closure_3().header, style];
   obj.style = items;
   return jsx(native.LegacyText, { style: null, accessibilityRole: "header", children });
 };

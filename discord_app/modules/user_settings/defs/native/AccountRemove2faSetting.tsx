@@ -1,10 +1,10 @@
-// === Module 16669: AccountRemove2faSetting ===
+// === Module 16812: AccountRemove2faSetting ===
 
-// Module 16669 (AccountRemove2faSetting)
+// Module 16812 (AccountRemove2faSetting)
 import util from "util" /* 1113 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import account_MFAUtils from "account/MFAUtils" /* 16670 */;
-import MfaFactorUtils from "MfaFactorUtils" /* 16671 */;
+import account_MFAUtils from "account/MFAUtils" /* 16813 */;
+import MfaFactorUtils from "MfaFactorUtils" /* 16814 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_7 = async function _remove2FA() {
       obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_7 = async function _remove2FA() {
               obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -130,7 +130,7 @@ let closure_7 = async function _remove2FA() {
                 c3 = 0;
                 tmp3(tmp30[6]).batchUpdates(() => closure_1_6.setState({ isCheckingLastFactor: false }));
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp30) {
               tmp32 = c3;
@@ -172,13 +172,13 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj3 = module_560.create(() => ({ isCheckingLastFactor: false }));
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["D+aE7g"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCOUNT,
+  parent: fn(8556).MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     const self = this;
     const apply = closure_7.apply;
@@ -200,8 +200,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16670).use2FARemoveDisableReason,
-  usePredicate: fn(16583).useIsTOTPEnabled
+  useDescription: fn(16813).use2FARemoveDisableReason,
+  usePredicate: fn(16726).useIsTOTPEnabled
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

@@ -1,21 +1,21 @@
-// === Module 17240: AutoVoiceSensitivitySetting ===
+// === Module 17383: AutoVoiceSensitivitySetting ===
 
-// Module 17240 (AutoVoiceSensitivitySetting)
+// Module 17383 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   useValue: function useAutoVoiceSensitivitySettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
@@ -24,7 +24,7 @@ const toggle = SettingBuilders.createToggle({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 });

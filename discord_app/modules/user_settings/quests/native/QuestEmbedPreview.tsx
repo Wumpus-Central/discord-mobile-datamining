@@ -1,11 +1,11 @@
-// === Module 17149: QuestEmbedPreview ===
+// === Module 17292: QuestEmbedPreview ===
 
-// Module 17149 (QuestEmbedPreview)
-import CodedLink from "CodedLink" /* 5752 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
+// Module 17292 (QuestEmbedPreview)
+import CodedLink from "CodedLink" /* 5872 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9837 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
-import UserStore from "UserStore" /* 1383 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const MessageTypes = fn(1072).MessageTypes;
@@ -20,7 +20,7 @@ export function QuestEmbedPreview(questId) {
     obj.setOptions({ renderCodedLinks: true, renderEmbeds: true, renderComponents: true, shouldDisableInteractiveComponents: true });
     return obj;
   }, []);
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = questId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [questId, stateFromStores];
   const memo1 = noop.useMemo(() => {
@@ -38,7 +38,7 @@ export function QuestEmbedPreview(questId) {
         obj.embeds = [];
         obj.reactions = [];
         const obj2 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: questId, url: QuestCopyUtils.getQuestUrl(questId) };
-        const items = [obj2];
+        items = [obj2];
         obj.codedLinks = items;
         tmp2 = new MessageRecord(obj);
       }
@@ -51,9 +51,9 @@ export function QuestEmbedPreview(questId) {
     const intl = tmp2(1113).intl;
     obj2.title = intl.string(tmp2(1113).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9885), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(17148), { title: null, children: null });
-    const tmp9 = stateFromStores(17148);
+    obj2.children = jsx(stateFromStores(10016), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(17291), { title: null, children: null });
+    const tmp9 = stateFromStores(17291);
   }
   return tmp6;
 }

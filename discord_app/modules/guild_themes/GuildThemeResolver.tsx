@@ -1,16 +1,16 @@
-// === Module 5225: GuildThemeResolver ===
+// === Module 5348: GuildThemeResolver ===
 
-// Module 5225 (GuildThemeResolver)
+// Module 5348 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
-import GuildThemePresets from "GuildThemePresets" /* 5195 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5234 */;
-import Client from "Client" /* 5249 */;
+import GuildThemePresets from "GuildThemePresets" /* 5318 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5357 */;
+import Client from "Client" /* 5372 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5226 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5228 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5349 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5351 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function useActiveGuildThemeForGuildId(context) {
   let stateFromStores2;
   serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(str);
   let obj = require("ServerThemeUserExperiment");
-  const items = [GuildThemePreviewStore];
+  items = [GuildThemePreviewStore];
   const items1 = [context, serverThemeUserEnabled];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
 
@@ -80,7 +80,7 @@ function useActiveGuildThemeForGuildId(context) {
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     if (null != closure_0) {
       if (serverThemeUserEnabled) {
-        const guild = GuildStore.getGuild(closure_0);
+        guild = GuildStore.getGuild(closure_0);
         if (null != guild) {
           const features = guild.features;
           if (features.has(GuildFeatures.GUILD_THEME)) {
@@ -234,12 +234,12 @@ export function useEnabledGuildThemeForGuildId(guildId) {
   serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(str);
   _require = guildId;
   const obj = require("ServerThemeUserExperiment");
-  const items = [GuildStore, GuildThemeRuntimeStore];
+  items = [GuildStore, GuildThemeRuntimeStore];
   const items1 = [guildId, serverThemeUserEnabled];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (serverThemeUserEnabled) {
-        const guild = GuildStore.getGuild(closure_0);
+        guild = GuildStore.getGuild(closure_0);
         if (null != guild) {
           const features = guild.features;
           if (features.has(GuildFeatures.GUILD_THEME)) {
@@ -265,7 +265,7 @@ export function getActiveGuildThemeForGuildId(guildId) {
   }
   if (null != guildId) {
     if (obj.getServerThemeUserEnabled(str)) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
@@ -293,7 +293,7 @@ export function getActiveGuildTheme() {
   if (null != guildId) {
     tmp11Result = null;
     if (obj.getServerThemeUserEnabled("getActiveGuildTheme")) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       tmp11Result = null;
       if (null != guild) {
         const features = guild.features;
@@ -317,10 +317,10 @@ export function getActiveGuildTheme() {
 }
 export { useActiveGuildThemeForGuildId };
 export function useActiveGuildTheme() {
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   return useActiveGuildThemeForGuildId(initialize.useStateFromStores(items, () => guildId.getGuildId()), "useActiveGuildTheme");
 }
 export function useIsGuildThemePreviewActive() {
-  const items = [GuildThemePreviewStore];
+  items = [GuildThemePreviewStore];
   return initialize.useStateFromStores(items, () => false);
 }

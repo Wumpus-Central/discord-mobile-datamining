@@ -1,16 +1,16 @@
-// === Module 14059: OwnedGameServersStore ===
+// === Module 14190: OwnedGameServersStore ===
 
-// Module 14059 (OwnedGameServersStore)
+// Module 14190 (OwnedGameServersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameServerConstants from "GameServerConstants" /* 5231 */;
+import GameServerConstants from "GameServerConstants" /* 5354 */;
 import size from "module_2" /* 2 */;
 
 function handleGameServerUpsert(gameServer) {
   gameServer = undefined;
   if (null == gameServer.guildId) {
     if (-1 === closure_1.findIndex((id) => id.id === gameServer.id)) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_1, 0)] = gameServer;
       let mapped = items;
     } else {

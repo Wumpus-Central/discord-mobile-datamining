@@ -1,7 +1,7 @@
-// === Module 18061: JankChatPanelReporter ===
+// === Module 18205: JankChatPanelReporter ===
 
-// Module 18061 (JankChatPanelReporter)
-import getJankScreenName from "getJankScreenName" /* 18062 */;
+// Module 18205 (JankChatPanelReporter)
+import getJankScreenName from "getJankScreenName" /* 18206 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ export default function JankChatPanelReporter(channelId) {
   const showCreateThread = channelId.showCreateThread;
   ({ translateX, maxWidth } = channelId);
   dependencyMap = noop.useRef({ channelId, showCreateThread });
-  const items = [channelId, showCreateThread];
+  items = [channelId, showCreateThread];
   const effect = noop.useEffect(() => {
     closure_2.current = { channelId, showCreateThread };
   }, items);
@@ -22,6 +22,6 @@ export default function JankChatPanelReporter(channelId) {
     ({ channelId, showCreateThread } = ref.current);
     return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
   }, []);
-  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(18062).getPanelListScreenName };
-  return jsx(showCreateThread(18065), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(18062).getPanelListScreenName });
+  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(18206).getPanelListScreenName };
+  return jsx(showCreateThread(18209), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(18206).getPanelListScreenName });
 };

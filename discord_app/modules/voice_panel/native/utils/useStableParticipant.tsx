@@ -1,14 +1,14 @@
-// === Module 19218: useStableParticipant ===
+// === Module 19376: useStableParticipant ===
 
-// Module 19218 (useStableParticipant)
+// Module 19376 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import NicknameUtils from "NicknameUtils" /* 6041 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6853 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11228 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import NicknameUtils from "NicknameUtils" /* 6161 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6973 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11365 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import UserStore from "UserStore" /* 1383 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -24,23 +24,23 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
-export default function useStableParticipant(id, arg1, arg2) {
+export default function useStableParticipant(id, channelId, guildId) {
   _require = id;
-  closure_1 = arg1;
-  dependencyMap = arg2;
-  const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
-  const items1 = [id, arg1, arg2];
+  closure_1 = channelId;
+  dependencyMap = guildId;
+  items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
+  const items1 = [id, channelId, guildId];
   return require("initialize").useStateFromStores(items, () => {
     if (null != id) {
       const participant = ChannelRTCStore.getParticipant(closure_1, id);
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: 95.221, isSelf: 193.223 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: 181.956, isSelf: 181.956 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -86,7 +86,7 @@ export default function useStableParticipant(id, arg1, arg2) {
           ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
           const id2 = AuthenticationStore.getId();
           obj9.streamId = streamId2;
-          const guildId = participant.stream.guildId;
+          guildId = participant.stream.guildId;
           obj9.streamGuildId = guildId;
           obj9.hasVideo = tmp15;
           obj9.isSelf = participant.user.id === id2;
@@ -96,16 +96,16 @@ export default function useStableParticipant(id, arg1, arg2) {
     }
   }, items1, areStableParticipantsEqual);
 };
-export function isStableStreamParticipant(participant) {
+export function isStableStreamParticipant(c0) {
   let type;
-  if (participant != null) {
-    type = participant.type;
+  if (_require != null) {
+    type = _require.type;
   }
   let tmp3 = type === ParticipantTypes.STREAM;
   if (!tmp3) {
     let type1;
-    if (participant != null) {
-      type1 = participant.type;
+    if (_require != null) {
+      type1 = _require.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }

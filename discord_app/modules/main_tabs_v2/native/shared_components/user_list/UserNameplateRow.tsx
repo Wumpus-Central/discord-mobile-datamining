@@ -1,20 +1,20 @@
-// === Module 10797: UserNameplateRow ===
+// === Module 10927: UserNameplateRow ===
 
-// Module 10797 (UserNameplateRow)
+// Module 10927 (UserNameplateRow)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import TableRowDivider from "TableRowDivider" /* 6972 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6976 */;
-import Card from "Card" /* 6977 */;
-import NameplateDefault from "Nameplate" /* 9514 */;
+import useToken from "useToken" /* 5719 */;
+import TableRowDivider from "TableRowDivider" /* 7098 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7102 */;
+import Card from "Card" /* 7103 */;
+import NameplateDefault from "Nameplate" /* 9642 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,7 +45,7 @@ export function UserNameplateRow(onPressOut) {
   }
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp7[1];
-  const items = [onPressIn];
+  items = [onPressIn];
   const items1 = [onPressOut];
   const callback = noop.useCallback((arg0) => {
     closure_2(true);

@@ -1,22 +1,22 @@
-// === Module 19322: VoicePanelVideoButton ===
+// === Module 19480: VoicePanelVideoButton ===
 
-// Module 19322 (VoicePanelVideoButton)
+// Module 19480 (VoicePanelVideoButton)
 import util from "util" /* 1113 */;
-import CameraRive from "CameraRive" /* 5153 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6724 */;
-import CallsUtils from "CallsUtils" /* 9221 */;
-import VideoIcon from "VideoIcon" /* 11040 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11724 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14571 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14902 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19323 */;
+import CameraRive from "CameraRive" /* 5276 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6844 */;
+import CallsUtils from "CallsUtils" /* 9349 */;
+import VideoIcon from "VideoIcon" /* 11173 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11861 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14702 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 15033 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19481 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11705 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11842 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 function VideoButtonRive(arg0) {
@@ -38,7 +38,7 @@ function VideoButtonRive(arg0) {
   return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
-const Features = fn(5768).Features;
+const Features = fn(5888).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
@@ -54,7 +54,7 @@ export default function VideoButton(arg0) {
   let obj = stateFromStores2;
   let obj2 = channelId(stateFromStores1[10]);
   let tmp = stateFromStores;
-  const items = [GuildStore, PermissionStore, ChannelStore];
+  items = [GuildStore, PermissionStore, ChannelStore];
   stateFromStores = channelId(stateFromStores1[11]).useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId);
     let tmp = null != channel;

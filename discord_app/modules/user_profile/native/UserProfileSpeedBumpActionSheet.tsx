@@ -1,28 +1,28 @@
-// === Module 8753: UserProfileSpeedBumpActionSheet ===
+// === Module 8877: UserProfileSpeedBumpActionSheet ===
 
-// Module 8753 (UserProfileSpeedBumpActionSheet)
+// Module 8877 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import TableRow from "TableRow" /* 6975 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import UserActionCreators from "UserActionCreators" /* 8752 */;
-import _modDef8756 from "module_8756" /* 8756 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import TableRow from "TableRow" /* 7101 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import UserActionCreators from "UserActionCreators" /* 8876 */;
+import _modDef8880 from "module_8880" /* 8880 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function InformationTable(speedBumpType) {
-  let items;
-  let obj = { icon: _modDef8756, text: null };
+  items = undefined;
+  let obj = { icon: _modDef8880, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj, ];
-  const obj2 = { icon: _modDef8756, text: null };
+  const obj2 = { icon: _modDef8880, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -32,21 +32,21 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7060).TableRowGroup, {
+  return closure_12(items(7186).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
-      const obj = { start: 0 === index, end: items.length === index, icon: closure_2_12(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
-      return closure_2_12(TableRow.TableRow, obj, index);
+      const obj = { start: 0 === index, end: items.length === index, icon: application_id(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
+      return application_id(TableRow.TableRow, obj, index);
     })
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8754).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8878).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 }, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.tableContainer = { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -88,7 +88,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
   let tmp = closure_14();
   let obj = userId(onClose[16]);
   const isThemeLightResult = userId(onClose[16]).isThemeLight(channelId(onClose[17])());
-  const items = [stateFromStores2];
+  items = [stateFromStores2];
   const stateFromStores = userId(onClose[18]).useStateFromStores(items, () => UserStore.getUser(userId));
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -210,7 +210,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     items8[1] = analyticsLocations(stateFromStores, obj8);
     obj6.children = items8;
     const items9 = [createUserProfileAnalyticsContext(stateFromStores, obj6), , ];
-    const obj10 = { style: tmp.headerText, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    const obj10 = { style: tmp.headerText, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     const intl = tmp2(onClose[12]).intl;
     obj10.children = intl.string(tmp2(onClose[12]).t.b33pLD);
     items9[1] = analyticsLocations(tmp2(onClose[31]).Text, obj10);

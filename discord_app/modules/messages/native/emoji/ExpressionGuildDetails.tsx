@@ -1,20 +1,20 @@
-// === Module 10067: ExpressionGuildDetails ===
+// === Module 10197: ExpressionGuildDetails ===
 
-// Module 10067 (ExpressionGuildDetails)
+// Module 10197 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import GuildIconDefault from "GuildIcon" /* 6957 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10066 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import GuildIconDefault from "GuildIcon" /* 7083 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10196 */;
 import noop from "module_19" /* 19 */;
 
-const GuildBadgeDefault = tmp10(6961);
+const GuildBadgeDefault = tmp10(7087);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(6958).ExpressionSourceGuildRecord;
+const React4 = fn(7084).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, marginRight: 12 };
 obj2.guildIcon = size;
@@ -77,7 +77,7 @@ class ExpressionGuildDetails {
       obj28.size = guild(tmp11[14]).Icon.Sizes.REFRESH_SMALL_16;
       items2 = [, ];
       items2[0] = tmp12(tmp10Result, obj28);
-      obj29 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+      obj29 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj29.children = guild.name;
       items2[1] = tmp12(guild(tmp11[9]).Text, obj29);
       obj27.children = items2;

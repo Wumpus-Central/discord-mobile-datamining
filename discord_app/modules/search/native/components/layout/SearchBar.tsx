@@ -1,29 +1,29 @@
-// === Module 18687: layout/SearchBar ===
+// === Module 18845: layout/SearchBar ===
 
-// Module 18687 (layout/SearchBar)
+// Module 18845 (layout/SearchBar)
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9827);
-({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
+const SearchConstants = fn(9958);
+({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
+const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = { searchBar: { minHeight: minHeight + 2 }, icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 } };
   return obj;
@@ -39,7 +39,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
   let obj = searchContext(stateFromStores[15]);
   let tmp = closure_15(closure_10 * Math.min(2, searchContext(stateFromStores[16]).useFontScale()));
   let obj2 = searchContext(stateFromStores[16]);
-  const items = [SearchQueryStore];
+  items = [SearchQueryStore];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[14]).useStateFromStores(items, () => SearchQueryStore.getTags(searchContext), items1);
   const items2 = [stateFromStores];
@@ -87,7 +87,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
       }
     }
     if (0 === channelIds.size) {
-      const guild = GuildStore.getGuild(searchContext.guildId);
+      guild = GuildStore.getGuild(searchContext.guildId);
       let name;
       if (guild != null) {
         name = guild.name;

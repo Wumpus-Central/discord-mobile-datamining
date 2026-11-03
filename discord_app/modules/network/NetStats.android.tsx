@@ -1,16 +1,16 @@
-// === Module 7639: NetStats ===
+// === Module 7763: NetStats ===
 
-// Module 7639 (NetStats)
+// Module 7763 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import configure from "configure" /* 1477 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5205 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5948 */;
+import configure from "configure" /* 1479 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5328 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7640 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import NetworkUtils_mod from "utils/NetworkUtils" /* 1476 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7764 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1478 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1477).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1479).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;
@@ -158,7 +158,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -183,7 +183,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
                 return obj4;
               }
             }
-            let items = [];
+            items = [];
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -226,7 +226,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -261,7 +261,7 @@ prototype["track"] = function track() {
           c3 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const items = [value];
+          items = [value];
           closure_128_0 = items;
           let result = AnalyticsTrackingStore.submitEventsImmediately(closure_128_0);
           result.then(() => {

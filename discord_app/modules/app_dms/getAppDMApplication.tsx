@@ -1,9 +1,9 @@
-// === Module 12533: getAppDMApplication ===
+// === Module 12669: getAppDMApplication ===
 
-// Module 12533 (getAppDMApplication)
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 12669 (getAppDMApplication)
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");

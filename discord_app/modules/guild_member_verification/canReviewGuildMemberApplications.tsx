@@ -1,8 +1,8 @@
-// === Module 7438: canReviewGuildMemberApplications ===
+// === Module 7562: canReviewGuildMemberApplications ===
 
-// Module 7438 (canReviewGuildMemberApplications)
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 7562 (canReviewGuildMemberApplications)
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/canReviewGuildMemberApplications.tsx");
 
 export function canReviewGuildMemberApplications(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let tmp2 = null != guild;
   if (tmp2) {
     const features = guild.features;
@@ -27,7 +27,7 @@ export function canReviewGuildMemberApplications(arg0) {
 }
 export function useCanReviewGuildMemberApplications(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {

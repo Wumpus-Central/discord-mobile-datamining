@@ -1,13 +1,13 @@
-// === Module 20068: AVErrorCameraSendLowFPS ===
+// === Module 20218: AVErrorCameraSendLowFPS ===
 
-// Module 20068 (AVErrorCameraSendLowFPS)
+// Module 20218 (AVErrorCameraSendLowFPS)
 import DurationsDefault from "Durations" /* 1089 */;
-import AVError from "AVError" /* 5947 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import AVErrorUtils from "AVErrorUtils" /* 20054 */;
+import AVError from "AVError" /* 6067 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import AVErrorUtils from "AVErrorUtils" /* 20204 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 let closure_5 = 20 * DurationsDefault.Millis.SECOND;
@@ -38,7 +38,7 @@ export const AVErrorCameraSendLowFPSDefinition = {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               const obj2 = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
               const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-              const items = [obj2];
+              items = [obj2];
               const tmp4Result = AVErrorContext;
               const tmp8 = items;
             }

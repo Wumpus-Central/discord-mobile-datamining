@@ -1,13 +1,13 @@
-// === Module 5240: GuildFilters ===
+// === Module 5363: GuildFilters ===
 
-// Module 5240 (GuildFilters)
+// Module 5363 (GuildFilters)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AuthInviteStore from "AuthInviteStore" /* 5241 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import AuthInviteStore from "AuthInviteStore" /* 5364 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import MurmurHashV3_mod from "MurmurHashV3" /* 1251 */;
 
 const require = globalThis.__r;
@@ -99,7 +99,7 @@ let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_has_feature")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = GuildStore.getGuild(arg0);
+    guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }
@@ -117,7 +117,7 @@ let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_hub_types")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = GuildStore.getGuild(arg0);
+    guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }
@@ -132,7 +132,7 @@ let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = GuildStore.getGuild(arg0);
+    guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }

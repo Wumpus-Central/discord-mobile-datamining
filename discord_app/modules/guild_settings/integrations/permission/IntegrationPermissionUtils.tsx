@@ -1,8 +1,8 @@
-// === Module 7703: IntegrationPermissionUtils ===
+// === Module 7827: IntegrationPermissionUtils ===
 
-// Module 7703 (IntegrationPermissionUtils)
-import Server from "Server" /* 1992 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
+// Module 7827 (IntegrationPermissionUtils)
+import Server from "Server" /* 2121 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -30,11 +30,11 @@ export function commandName(arg0, arg1) {
   return text;
 }
 export function commandPermissionChannels(arg0) {
-  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
+  items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 }
 export function commandPermissionMembersRoles(arg0) {
-  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.ROLE, ApplicationCommandTypes.ApplicationCommandPermissionType.USER];
+  items = [ApplicationCommandTypes.ApplicationCommandPermissionType.ROLE, ApplicationCommandTypes.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 }
 export function toPermissionKey(allChannelsSentinelResult, CHANNEL) {
@@ -42,7 +42,7 @@ export function toPermissionKey(allChannelsSentinelResult, CHANNEL) {
 }
 export function keyPermissions(permissions) {
   return Object.fromEntries(permissions.map((id) => {
-    const items = ["" + id.id + ":" + id.type, id];
+    items = ["" + id.id + ":" + id.type, id];
     return items;
   }));
 }

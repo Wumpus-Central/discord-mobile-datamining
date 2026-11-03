@@ -1,21 +1,21 @@
-// === Module 11140: AvailableForumTag ===
+// === Module 11277: AvailableForumTag ===
 
-// Module 11140 (AvailableForumTag)
+// Module 11277 (AvailableForumTag)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import native from "native" /* 8992 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import native from "native" /* 9120 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { pill: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 }, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
 const obj3 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
 obj2.pillSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
@@ -43,7 +43,7 @@ export default function AvailableForumTag(tag) {
   const tmp = closure_8();
   const pill = tmp;
   ({ name: c5, emojiId: c6, emojiName: c7 } = tag);
-  let items = [pill];
+  items = [pill];
   closure_8 = tag(disabled[6]).useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != c6) {
@@ -53,7 +53,7 @@ export default function AvailableForumTag(tag) {
   });
   const items1 = [disabled, selected, tmp];
   const style = selected.useMemo(() => {
-    const items = [];
+    items = [];
     items.push(pill.pill);
     if (selected) {
       items.push(pill.pillSelected);
@@ -93,7 +93,7 @@ export default function AvailableForumTag(tag) {
         obj4.name = str;
         tmp9Result = timestampProducer(EmojiDefault, obj4);
       }
-      const items = [tmp9Result, timestampProducer(Text_Text.Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children })];
+      items = [tmp9Result, timestampProducer(Text_Text.Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children })];
       obj.children = items;
       return React5(native.PressableScale, obj);
     }

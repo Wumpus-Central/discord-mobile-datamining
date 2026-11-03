@@ -1,16 +1,16 @@
-// === Module 19683: BaseActionInfo ===
+// === Module 19833: BaseActionInfo ===
 
-// Module 19683 (BaseActionInfo)
+// Module 19833 (BaseActionInfo)
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const Constants = fn(13292);
+const Constants = fn(13428);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: metroRequire } = Constants);
-const getFriendlyDurationString = fn(4928).getFriendlyDurationString;
+const getFriendlyDurationString = fn(5055).getFriendlyDurationString;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/BaseActionInfo.tsx");
 

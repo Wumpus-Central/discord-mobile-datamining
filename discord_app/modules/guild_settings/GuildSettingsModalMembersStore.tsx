@@ -1,9 +1,9 @@
-// === Module 13264: GuildSettingsModalMembersStore ===
+// === Module 13400: GuildSettingsModalMembersStore ===
 
-// Module 13264 (GuildSettingsModalMembersStore)
+// Module 13400 (GuildSettingsModalMembersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 function handleStopEditingRoles() {
   SUBMITTING = null;
@@ -78,7 +78,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(Dispat
     if (null == found) {
       return false;
     } else if (tmp) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {

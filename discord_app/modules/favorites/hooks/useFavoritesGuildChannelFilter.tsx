@@ -1,13 +1,13 @@
-// === Module 14404: useFavoritesGuildChannelFilter ===
+// === Module 14535: useFavoritesGuildChannelFilter ===
 
-// Module 14404 (useFavoritesGuildChannelFilter)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import sortByMatchScore from "sortByMatchScore" /* 9135 */;
+// Module 14535 (useFavoritesGuildChannelFilter)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import sortByMatchScore from "sortByMatchScore" /* 9263 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 require = fn;
 const Permissions = fn(1072).Permissions;
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
   return noop.useCallback((type, arg1) => {

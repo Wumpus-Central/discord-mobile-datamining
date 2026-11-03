@@ -1,9 +1,9 @@
-// === Module 14267: useBackHandlerSkipPhoneScreens ===
+// === Module 14398: useBackHandlerSkipPhoneScreens ===
 
-// Module 14267 (useBackHandlerSkipPhoneScreens)
+// Module 14398 (useBackHandlerSkipPhoneScreens)
 import _mod17 from "module_17" /* 17 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7004 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 14249 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7130 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 14380 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
     if (null != closure_1) {
       tmp();
     } else {
-      const items = [, , ];
+      items = [, , ];
       ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = ContactSyncScenes);
       const routes = state.getState().routes;
       if (routes.length <= 2) {

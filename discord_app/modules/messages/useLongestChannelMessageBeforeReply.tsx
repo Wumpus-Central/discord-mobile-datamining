@@ -1,7 +1,7 @@
-// === Module 14023: useLongestChannelMessageBeforeReply ===
+// === Module 14154: useLongestChannelMessageBeforeReply ===
 
-// Module 14023 (useLongestChannelMessageBeforeReply)
-import MessageStore from "MessageStore" /* 6061 */;
+// Module 14154 (useLongestChannelMessageBeforeReply)
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/messages/useLongestChannelMes
 export function useLongestChannelMessageBeforeReply(id, recipientId) {
   _require = id;
   dependencyMap = recipientId;
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [id, recipientId];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {

@@ -1,14 +1,14 @@
-// === Module 17704: PaymentFlowTest ===
+// === Module 17847: PaymentFlowTest ===
 
-// Module 17704 (PaymentFlowTest)
+// Module 17847 (PaymentFlowTest)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
-import NativePaymentContext from "NativePaymentContext" /* 10689 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import NativePaymentContext from "NativePaymentContext" /* 10819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function TestView() {
@@ -16,7 +16,7 @@ function TestView() {
   const tmp3 = first2(noop.useState("1341506443580276736"), 2);
   value = tmp3[0];
   closure_1 = tmp3[1];
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = value(first1[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores != null) {
@@ -27,9 +27,9 @@ function TestView() {
   const tmp2Result2 = first2(noop.useState(undefined), 2);
   first2 = tmp2Result2[0];
   let obj3 = { spacing: 16, style: tmp.container, children: null };
-  const items1 = [closure_7(value(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }), ];
+  const items1 = [closure_7(value(first1[9]).Text, { variant: "text-lg/semibold", children: "Android Payment Flow Test" }), ];
   const items2 = [
-    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" }),
+    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/semibold", children: "Gift Purchase SKU" }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
@@ -60,7 +60,7 @@ function TestView() {
       if (tmp2) {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17705, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17848, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
       }
     }
   });
@@ -72,7 +72,7 @@ function TestView() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, textInput: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };

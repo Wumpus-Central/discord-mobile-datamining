@@ -1,10 +1,10 @@
-// === Module 18272: HubUnreadUtils ===
+// === Module 18416: HubUnreadUtils ===
 
-// Module 18272 (HubUnreadUtils)
+// Module 18416 (HubUnreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 13852 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13860 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 13983 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13991 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export function useHubUnreadCount(arg0) {
   _require = arg0;
-  const items = [GuildDirectoryStore, ReadStateStore];
+  items = [GuildDirectoryStore, ReadStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {

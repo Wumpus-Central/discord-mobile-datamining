@@ -1,6 +1,6 @@
-// === Module 19147: UnenrolledActivityQuestStore ===
+// === Module 19305: UnenrolledActivityQuestStore ===
 
-// Module 19147 (UnenrolledActivityQuestStore)
+// Module 19305 (UnenrolledActivityQuestStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -32,7 +32,7 @@ prototype["initialize"] = function initialize(dismissedQuestIds) {
 };
 prototype["getState"] = function getState() {
   const obj = { dismissedQuestIds: null, autoEnroll };
-  const items = [...set];
+  items = [...set];
   obj.dismissedQuestIds = items;
   return obj;
 };

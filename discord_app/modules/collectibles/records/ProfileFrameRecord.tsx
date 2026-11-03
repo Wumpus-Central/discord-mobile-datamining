@@ -1,8 +1,8 @@
-// === Module 7727: ProfileFrameRecord ===
+// === Module 7851: ProfileFrameRecord ===
 
-// Module 7727 (ProfileFrameRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1986 */;
+// Module 7851 (ProfileFrameRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2115 */;
 
 require = fn;
 const prototype = function ProfileFrameRecord(arg0) {

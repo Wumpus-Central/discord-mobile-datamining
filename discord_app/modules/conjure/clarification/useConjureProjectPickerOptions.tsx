@@ -1,7 +1,7 @@
-// === Module 12598: useConjureProjectPickerOptions ===
+// === Module 12734: useConjureProjectPickerOptions ===
 
-// Module 12598 (useConjureProjectPickerOptions)
-import useConjureProjects from "useConjureProjects" /* 12599 */;
+// Module 12734 (useConjureProjectPickerOptions)
+import useConjureProjects from "useConjureProjects" /* 12735 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/clarification/useConj
 export default function useConjureProjectPickerOptions(arg0) {
   closure_0 = arg0;
   const conjureProjects = useConjureProjects.useConjureProjects("ConjureClarificationProjectPicker");
-  const items = [conjureProjects, arg0];
+  items = [conjureProjects, arg0];
   return noop.useMemo(() => {
     const found = conjureProjects.filter((projectId) => projectId.projectId !== closure_1_0);
     return found.map((projectId) => ({ projectId: projectId.projectId, name: projectId.name, serverName: projectId.guildName }));

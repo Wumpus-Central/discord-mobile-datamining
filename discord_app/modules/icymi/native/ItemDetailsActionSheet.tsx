@@ -1,22 +1,22 @@
-// === Module 18536: ItemDetailsActionSheet ===
+// === Module 18690: ItemDetailsActionSheet ===
 
-// Module 18536 (ItemDetailsActionSheet)
+// Module 18690 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useChannelNameDefault from "useChannelName" /* 5652 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import TableRow from "TableRow" /* 6975 */;
-import useDesignToggleDefault from "useDesignToggle" /* 7000 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import ICYMIUtils from "ICYMIUtils" /* 8923 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11144 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18537 */;
+import useChannelNameDefault from "useChannelName" /* 5772 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import TableRow from "TableRow" /* 7101 */;
+import useDesignToggleDefault from "useDesignToggle" /* 7126 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import ICYMIUtils from "ICYMIUtils" /* 9047 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11281 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18691 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionS
 
 export default function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
   const items1 = [GuildStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => GuildStore.getGuild(require));

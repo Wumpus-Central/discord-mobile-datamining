@@ -1,8 +1,8 @@
-// === Module 7617: ColorConstants ===
+// === Module 7741: ColorConstants ===
 
-// Module 7617 (ColorConstants)
+// Module 7741 (ColorConstants)
 import nativeDefault from "native" /* 575 */;
-import PremiumConstants from "PremiumConstants" /* 1385 */;
+import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

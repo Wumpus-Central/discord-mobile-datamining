@@ -1,15 +1,15 @@
-// === Module 7441: GuildOfficialMessageUtils ===
+// === Module 7565: GuildOfficialMessageUtils ===
 
-// Module 7441 (GuildOfficialMessageUtils)
+// Module 7565 (GuildOfficialMessageUtils)
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import shared from "shared" /* 5021 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6888 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7442 */;
-import ThreadHooks from "ThreadHooks" /* 7443 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import shared from "shared" /* 5148 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7008 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7566 */;
+import ThreadHooks from "ThreadHooks" /* 7567 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -17,10 +17,10 @@ require = fn;
 function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   _require = channel;
   closure_129_0 = guild_id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -45,7 +45,7 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(5019).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5146).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1072);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -100,10 +100,10 @@ export function isGuildOfficialMessagesEnabled(guild, GuildSettingsModalLanding)
 }
 export function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   _require = id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }

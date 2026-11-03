@@ -1,11 +1,11 @@
-// === Module 12982: ConjureHomeTargetPicker ===
+// === Module 13118: ConjureHomeTargetPicker ===
 
-// Module 12982 (ConjureHomeTargetPicker)
+// Module 13118 (ConjureHomeTargetPicker)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11414 */;
-import UserIcon from "UserIcon" /* 12125 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11552 */;
+import UserIcon from "UserIcon" /* 12261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,9 +36,9 @@ export default function ConjureHomeTargetPicker(target) {
   if (name == null) {
     name = stringResult;
   }
-  let items = [guilds, onChange, stringResult];
+  items = [guilds, onChange, stringResult];
   const memo = noop.useMemo(() => {
-    const items = [
+    items = [
       {
         label,
         IconComponent: UserIcon.UserIcon,
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(9758).ServerIcon,
+        IconComponent: target(9890).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }
@@ -63,7 +63,7 @@ export default function ConjureHomeTargetPicker(target) {
     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
     const obj = { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef3868.Lyx6pW, { name });
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef3995.Lyx6pW, { name });
     obj.accessibilityActions = accessibilityActions;
     obj.onAccessibilityAction = onAccessibilityAction;
     return jsx(components_Button_Button.Button, { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null });

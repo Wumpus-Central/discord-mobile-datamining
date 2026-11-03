@@ -1,13 +1,13 @@
-// === Module 13772: ForumPostMedia ===
+// === Module 13903: ForumPostMedia ===
 
-// Module 13772 (ForumPostMedia)
+// Module 13903 (ForumPostMedia)
 import nativeDefault from "native" /* 575 */;
-import utils_ImageUtils from "utils/ImageUtils" /* 1490 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 13773 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13775 */;
+import utils_ImageUtils from "utils/ImageUtils" /* 1492 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 13904 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -27,7 +27,7 @@ function ForumPostMediaAndroid(arg0) {
   const obj = { style: androidStyle, children: null };
   ({ width, height } = flattenResult);
   const obj2 = { style: null, source, blurRadius: num, resizeMode: "cover" };
-  const items = [timestampProducer.absoluteFill, { width, height }];
+  items = [timestampProducer.absoluteFill, { width, height }];
   obj2.style = items;
   const items1 = [React7(FastImageDefault, obj2), React7(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj.children = items1;
@@ -36,7 +36,7 @@ function ForumPostMediaAndroid(arg0) {
 function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
   ({ shouldSpoiler, blurTheme, source, iosStyle } = arg0);
-  const items = [React7(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" }), React7(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
+  items = [React7(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" }), React7(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj.children = items;
   return closure_1_10(closure_1_11, obj);
 }
@@ -79,9 +79,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(13774), obj2);
+    let tmp6Result = closure_9(ref(13905), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(13774);
+    const tmp19 = ref(13905);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -94,26 +94,26 @@ function ForumPostMedia(obscureReason) {
       tmp6Result = closure_9(ForumPostMediaIOS, obj4);
       tmp12 = closure_9;
     }
-    tmp3Result = tmp3(1375);
+    tmp3Result = tmp3(1377);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7468).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7592).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
-        const items = [tmp.mediaContainer, obscureReason.containerStyle];
+        items = [tmp.mediaContainer, obscureReason.containerStyle];
         obj5.style = items;
         obj5.ref = ref;
         const obj6 = {
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7955);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6729).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(8079);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6849).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(6980).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(7106).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -137,7 +137,7 @@ function ForumPostMedia(obscureReason) {
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(6980).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(7106).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };
@@ -153,15 +153,15 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, PixelRatio } = get_ActivityIndicator);
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };
 obj2.gridMediaContainer = { borderRadius: 2, overflow: "hidden" };
-const value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMedia.tsx");
 
@@ -192,10 +192,10 @@ export function ForumPostMediaThumbnail(firstMessageId) {
   ({ embedLeftBorderColor, containerStyle } = firstMessageId);
   const tmp = closure_14();
   const onTapMedia = firstMessageId(media[21])({ threadId: channel.id }).onTapMedia;
-  let items = [firstMessageId, media, onTapMedia];
+  items = [firstMessageId, media, onTapMedia];
   const callback = noop.useCallback((containerRef) => {
     const obj = { messageId: firstMessageId, mediaItems: null, containerRef };
-    const items = [media];
+    items = [media];
     obj.mediaItems = items;
     onTapMedia(obj);
   }, items);
@@ -276,7 +276,7 @@ export function ForumPostGridMedia(targetWidth) {
   _slicedToArray = tmp6;
   const isMediaPostResult = channel.isMediaPost();
   noop = isMediaPostResult;
-  const items = [, , , , , , ];
+  items = [, , , , , , ];
   ({ src: arr[0], width: arr[1], height: arr[2] } = media);
   items[3] = targetWidth;
   items[4] = targetHeight;

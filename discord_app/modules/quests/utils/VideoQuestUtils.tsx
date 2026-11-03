@@ -1,15 +1,15 @@
-// === Module 14684: VideoQuestUtils ===
+// === Module 14815: VideoQuestUtils ===
 
-// Module 14684 (VideoQuestUtils)
+// Module 14815 (VideoQuestUtils)
 import util from "util" /* 1113 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7852 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
-import QuestActionCreators from "QuestActionCreators" /* 9682 */;
-import NetworkStore from "NetworkStore" /* 5901 */;
-import QuestStore from "QuestStore" /* 7846 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7848 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7976 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
+import QuestActionCreators from "QuestActionCreators" /* 9814 */;
+import NetworkStore from "NetworkStore" /* 6021 */;
+import QuestStore from "QuestStore" /* 7970 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7972 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -17,7 +17,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(14685).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(14816).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -118,30 +118,28 @@ export function getVideoQuestEndCardCtaText(ctaConfig) {
 }
 export function handleVideoQuestModalClose(arg0) {
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
-  const state = VideoQuestUIStore.getState();
-  state.setTranscriptEnabled(false);
-  const state1 = VideoQuestUIStore.getState();
-  const videoProgress = state1.getVideoProgress(questId);
+  state = VideoQuestUIStore.getState();
+  const videoProgress = state.getVideoProgress(questId);
   if (null != videoProgress) {
     const quest = QuestStore.getQuest(questId);
-    let tmp4 = null != quest;
-    if (tmp4) {
+    let tmp3 = null != quest;
+    if (tmp3) {
       const userStatus = quest.userStatus;
       let enrolledAt;
       if (userStatus != null) {
         enrolledAt = userStatus.enrolledAt;
       }
-      tmp4 = null != enrolledAt;
+      tmp3 = null != enrolledAt;
     }
-    if (tmp4) {
+    if (tmp3) {
       const userStatus2 = quest.userStatus;
       let completedAt;
       if (userStatus2 != null) {
         completedAt = userStatus2.completedAt;
       }
-      tmp4 = null == completedAt;
+      tmp3 = null == completedAt;
     }
-    if (tmp4) {
+    if (tmp3) {
       let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
       if (!isQuestExpiredResult) {
         const userStatus3 = quest.userStatus;
@@ -161,7 +159,7 @@ export function handleVideoQuestModalClose(arg0) {
       }
       if (!isQuestExpiredResult) {
         QuestActionCreators.updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = QuestActionCreators;
+        const tmp5Result = QuestActionCreators;
       }
     }
     ({ maxTimestampSec, duration } = videoProgress);
@@ -179,15 +177,15 @@ export function handleVideoQuestModalClose(arg0) {
       }
     }
     const obj = { questId, event: AnalyticEvents.QUEST_VIDEO_PROGRESSED, properties: null, sourceQuestContent: null };
-    const obj2 = { progress: num2, video_timestamp_seconds: videoProgress.maxTimestampSec, video_session_id: videoSessionId };
-    obj.properties = obj2;
+    const obj3 = { progress: num2, video_timestamp_seconds: videoProgress.maxTimestampSec, video_session_id: videoSessionId };
+    obj.properties = obj3;
     obj.sourceQuestContent = sourceQuestContent;
     AnalyticsActions.trackQuestEvent(obj);
-    const obj4 = { questId, event: AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
+    const obj5 = { questId, event: AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
     const obj6 = { video_progress: num2, video_session_id: videoSessionId, network_connection_speed: NetworkStore.getEffectiveConnectionSpeed() };
-    obj4.properties = obj6;
-    obj4.sourceQuestContent = sourceQuestContent;
-    AnalyticsActions.trackQuestEvent(obj4);
+    obj5.properties = obj6;
+    obj5.sourceQuestContent = sourceQuestContent;
+    AnalyticsActions.trackQuestEvent(obj5);
   }
 }
 export function getVideoQuestModalKey(questId) {

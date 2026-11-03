@@ -1,13 +1,13 @@
-// === Module 10877: conjureUnread ===
+// === Module 11007: conjureUnread ===
 
-// Module 10877 (conjureUnread)
+// Module 11007 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectMute from "conjureProjectMute" /* 10878 */;
+import conjureProjectMute from "conjureProjectMute" /* 11008 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
@@ -73,7 +73,7 @@ export function getConjureProjectMentionCount(id) {
 }
 export function useConjureProjectBadge(id) {
   _require = id;
-  const items = [ReadStateStore, UserSettingsProtoStore];
+  items = [ReadStateStore, UserSettingsProtoStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
@@ -103,7 +103,7 @@ export function useConjureProjectBadge(id) {
 }
 export function useConjureUnreadSummary(arg0) {
   _require = arg0;
-  const items = [ReadStateStore, UserSettingsProtoStore, ConjureProjectStore];
+  items = [ReadStateStore, UserSettingsProtoStore, ConjureProjectStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     let num = 0;
@@ -130,7 +130,7 @@ export function useConjureUnreadSummary(arg0) {
 }
 export function useAckConjureProjectOnLeave(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const layoutEffect = noop.useLayoutEffect(() => () => {
     DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_ACK", projectId });
   }, items);
@@ -138,7 +138,7 @@ export function useAckConjureProjectOnLeave(arg0) {
 export function useAckConjureProjectWhileViewing(projectId, stateFromStores) {
   _require = projectId;
   closure_1 = stateFromStores;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const items1 = [projectId];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;

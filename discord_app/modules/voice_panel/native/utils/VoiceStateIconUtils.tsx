@@ -1,10 +1,10 @@
-// === Module 9234: VoiceStateIconUtils ===
+// === Module 9362: VoiceStateIconUtils ===
 
-// Module 9234 (VoiceStateIconUtils)
+// Module 9362 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 9235 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 9363 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ export const VideoIconState = obj2;
 export function useStableVoiceParticipant(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [VoiceStateStore, MediaEngineStore];
+  items = [VoiceStateStore, MediaEngineStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
@@ -51,7 +51,7 @@ export function useMuteDeafenIconState(id, guildId) {
   _require = id;
   closure_1 = guildId;
   let obj = require("initialize");
-  const items = [VoiceStateStore, MediaEngineStore];
+  items = [VoiceStateStore, MediaEngineStore];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != closure_0) {
@@ -87,7 +87,7 @@ export function useMuteDeafenIconState(id, guildId) {
 export function useStableVideoState(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [MediaEngineStore, VoiceStateStore];
+  items = [MediaEngineStore, VoiceStateStore];
   const items1 = [arg1, arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (null != closure_0) {
@@ -114,7 +114,7 @@ export function useStableVideoState(arg0, arg1) {
 export function useVideoIconState(id, guildId) {
   _require = id;
   closure_1 = guildId;
-  const items = [MediaEngineStore, VoiceStateStore];
+  items = [MediaEngineStore, VoiceStateStore];
   const items1 = [guildId, id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (null != closure_0) {

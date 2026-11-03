@@ -1,14 +1,14 @@
-// === Module 12243: useConjureControlBar ===
+// === Module 12379: useConjureControlBar ===
 
-// Module 12243 (useConjureControlBar)
+// Module 12379 (useConjureControlBar)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(10850).interruptTurn;
+const interruptTurn = fn(10980).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/useConjureControlBar.tsx");
 
@@ -22,7 +22,7 @@ export function useConjureControlPhase(active) {
     tmp3(active);
     tmp6(!active);
   }
-  const items = [first];
+  items = [first];
   const effect = noop.useEffect(() => {
     if (timeout) {
       const _setTimeout = setTimeout;
@@ -42,7 +42,7 @@ export function useConjureControlPhase(active) {
 }
 export function useConjureControlStop(projectId) {
   _require = projectId;
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let isThinkingResult = null != closure_0;
     if (isThinkingResult) {

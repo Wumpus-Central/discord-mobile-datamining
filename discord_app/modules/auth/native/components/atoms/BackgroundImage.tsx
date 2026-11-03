@@ -1,8 +1,8 @@
-// === Module 7142: BackgroundImage ===
+// === Module 7075: BackgroundImage ===
 
-// Module 7142 (BackgroundImage)
-import shared from "shared" /* 5021 */;
-import _modDef7144 from "module_7144" /* 7144 */;
+// Module 7075 (BackgroundImage)
+import shared from "shared" /* 5148 */;
+import _modDef7077 from "module_7077" /* 7077 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,12 +18,12 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(5253)();
+  const tmp = flag(5376)();
   dependencyMap = tmp;
-  let items = [backgroundImageSource, flag, tmp];
+  items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
   const memo = noop.useMemo(() => {
-    const items = [hasOwnProperty.absoluteFill, ];
+    items = [hasOwnProperty.absoluteFill, ];
     const obj = { style: items, source: null };
     items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
     if (null != backgroundImageSource) {
@@ -32,15 +32,15 @@ export default function BackgroundImage(backgroundImageSource) {
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7143;
+        tmp2 = 7076;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7144;
+        tmp4Result = _modDef7077;
       }
       obj2 = shared;
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(5717), {});
+  obj.children = jsx(flag(5837), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 };

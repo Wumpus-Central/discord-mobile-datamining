@@ -1,6 +1,6 @@
-// === Module 7225: useFastestListComputedStyles ===
+// === Module 7346: useFastestListComputedStyles ===
 
-// Module 7225 (useFastestListComputedStyles)
+// Module 7346 (useFastestListComputedStyles)
 import noop from "module_19" /* 19 */;
 
 const StyleSheet = fn(17).StyleSheet;
@@ -9,14 +9,14 @@ const result = size.fileFinishedImporting("modules/fastest_list/useFastestListCo
 
 export default function useFastestListComputedStyles(style) {
   style = style.style;
-  let items = [style];
+  items = [style];
   return style.useMemo(() => {
     let obj = style;
     if (null != style) {
       if (obj == null) {
         obj = { flex: 1 };
       }
-      const items = [obj];
+      items = [obj];
       let obj2 = items;
     } else {
       obj2 = { flex: 1 };

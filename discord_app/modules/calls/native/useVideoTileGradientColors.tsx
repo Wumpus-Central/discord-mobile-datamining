@@ -1,8 +1,8 @@
-// === Module 8826: useVideoTileGradientColors ===
+// === Module 8950: useVideoTileGradientColors ===
 
-// Module 8826 (useVideoTileGradientColors)
+// Module 8950 (useVideoTileGradientColors)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8802 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
       const int2rgbArrayResult1 = utils_ColorUtils.int2rgbArray(modalV2BackgroundColor);
       const tmp9Result8 = utils_ColorUtils;
       const int2rgbArrayResult2 = utils_ColorUtils.int2rgbArray(modalV2BackgroundColor);
-      const items = [, , ];
+      items = [, , ];
       [arr[0], arr[1], arr[2]] = int2rgbArrayResult;
       const items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult1;
@@ -56,6 +56,6 @@ export { computeVideoTileGradientStops };
 export function useVideoTileGradientColors(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => computeVideoTileGradientStops(closure_0, closure_1), items);
 }

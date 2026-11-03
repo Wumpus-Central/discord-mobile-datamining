@@ -1,15 +1,15 @@
-// === Module 16466: HexagonCampaignAnalytics ===
+// === Module 16609: HexagonCampaignAnalytics ===
 
-// Module 16466 (HexagonCampaignAnalytics)
+// Module 16609 (HexagonCampaignAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7819 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7943 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const HexagonCampaignConstants = fn(5039);
+const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4, HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty, HEXAGON_SPECIAL_EVENT_ID: metroRequire } = HexagonCampaignConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -35,7 +35,7 @@ export function useTrackHexagonCampaignContentViewed(DISPLAY_NAME_STYLES_SETTING
   const content = DISPLAY_NAME_STYLES_SETTINGS;
   const contentSurface = APP_ICON_PICKER;
   closure_2 = isThumbstickScrollDevice;
-  const items = [DISPLAY_NAME_STYLES_SETTINGS, APP_ICON_PICKER, isThumbstickScrollDevice];
+  items = [DISPLAY_NAME_STYLES_SETTINGS, APP_ICON_PICKER, isThumbstickScrollDevice];
   const effect = noop.useEffect(() => {
     if (closure_2) {
       const obj = { content, contentSurface };

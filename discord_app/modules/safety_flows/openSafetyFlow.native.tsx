@@ -1,8 +1,8 @@
-// === Module 20080: openSafetyFlow ===
+// === Module 20230: openSafetyFlow ===
 
-// Module 20080 (openSafetyFlow)
+// Module 20230 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
 
 const require = fn;
 let closure_6 = async function _openSafetyFlow() {
@@ -16,7 +16,7 @@ let closure_6 = async function _openSafetyFlow() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == closure_130_1) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               }
             } else if (4 === tmp10) {
@@ -125,7 +125,7 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == value) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else if (closure_130_1.task_type === closure_131_0(closure_131_2[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
                   if (obj25.getIsAppStoreConsentReinstateEndpointEnabled("openSafetyFlow")) {
                     if (obj4.isAppStoreAgeSignalColdLaunch()) {
@@ -144,7 +144,7 @@ let closure_6 = async function _openSafetyFlow() {
                                                   const obj3 = { value, done: true };
                                                   return obj3;
                                                 } else {
-                                                  return { value: "HermesInternal", done: "HermesInternal" };
+                                                  return { value: "HermesInternal", done: null };
                                                 }
                                               } else {
                                                 try {
@@ -163,13 +163,13 @@ let closure_6 = async function _openSafetyFlow() {
                                                       if (obj10.isAppStoreAgeSignalColdLaunch()) {
                                                         dependencyMap = 1;
                                                         c3 = 1;
-                                                        const obj5 = { value: tmp2(8147).getAppStoreConsentReinstatementProof(), done: false };
+                                                        const obj5 = { value: tmp2(8271).getAppStoreConsentReinstatementProof(), done: false };
                                                         return obj5;
                                                       } else {
                                                         c3 = 3;
-                                                        return { value: "HermesInternal", done: "HermesInternal" };
+                                                        return { value: "HermesInternal", done: null };
                                                       }
-                                                      obj10 = tmp2(8155);
+                                                      obj10 = tmp2(8279);
                                                     }
                                                   } else {
                                                     if (1 === tmp5) {
@@ -185,7 +185,7 @@ let closure_6 = async function _openSafetyFlow() {
                                                         if (null != closure_128_0) {
                                                           dependencyMap = 2;
                                                           c3 = 1;
-                                                          const obj8 = { value: tmp2(8148).reinstateAppStoreConsent(closure_128_0), done: false };
+                                                          const obj8 = { value: tmp2(8272).reinstateAppStoreConsent(closure_128_0), done: false };
                                                           return obj8;
                                                         }
                                                       }
@@ -249,7 +249,7 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == closure_130_2) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   closure_130_1 = closure_130_2;
                   c5 = 1;

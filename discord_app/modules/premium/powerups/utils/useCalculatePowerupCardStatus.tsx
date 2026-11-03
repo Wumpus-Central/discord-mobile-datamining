@@ -1,19 +1,19 @@
-// === Module 14093: useCalculatePowerupCardStatus ===
+// === Module 14224: useCalculatePowerupCardStatus ===
 
-// Module 14093 (useCalculatePowerupCardStatus)
+// Module 14224 (useCalculatePowerupCardStatus)
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
+import _modDef2699 from "module_2699" /* 2699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(5230).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5353).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
 export function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
   let sourceEntitlement = arg1;
   closure_2 = arg2;
-  const items = [arg1, arg2, powerup];
+  items = [arg1, arg2, powerup];
   return noop.useMemo(() => {
     sourceEntitlement = sourceEntitlement.sourceEntitlement;
     let ends_at;
@@ -43,12 +43,12 @@ export function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
         }
         const obj4 = { type: "active", statusText: null };
         const obj5 = { perkName: title };
-        obj4.statusText = intl2.formatToPlainString(_modDef2570.WRRYUT, obj5);
+        obj4.statusText = intl2.formatToPlainString(_modDef2699.WRRYUT, obj5);
         tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
         const obj = { type: "active", statusText: null };
         const intl = util.intl;
-        obj.statusText = intl.string(_modDef2570.FFLkmx);
+        obj.statusText = intl.string(_modDef2699.FFLkmx);
         tmp5 = obj;
       }
     }

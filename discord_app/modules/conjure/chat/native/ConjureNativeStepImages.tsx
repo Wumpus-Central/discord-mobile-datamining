@@ -1,10 +1,10 @@
-// === Module 12718: ConjureNativeStepImages ===
+// === Module 12854: ConjureNativeStepImages ===
 
-// Module 12718 (ConjureNativeStepImages)
+// Module 12854 (ConjureNativeStepImages)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12149 */;
-import openConjureNativeImages from "openConjureNativeImages" /* 12150 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12285 */;
+import openConjureNativeImages from "openConjureNativeImages" /* 12286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function StepImage(image) {
   let tmp = closure_9();
   const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(image.projectId, image.id);
   const src = conjureAttachmentImage.src;
-  const items = [image, onOpen];
+  items = [image, onOpen];
   ({ gone, handleError } = conjureAttachmentImage);
   if (gone) {
     return null;
@@ -40,7 +40,7 @@ function StepImage(image) {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
 obj2.thumb = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -53,7 +53,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNati
 export default function ConjureNativeStepImages(projectId) {
   projectId = projectId.projectId;
   const images = projectId.images;
-  const items = [images, projectId];
+  items = [images, projectId];
   const onOpen = noop.useCallback((arg0) => {
     const id = arg0;
     const mapped = images.map((id) => ({ id: id.id, alt: id.name }));

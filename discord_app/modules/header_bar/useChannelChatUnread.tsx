@@ -1,7 +1,7 @@
-// === Module 9828: useChannelChatUnread ===
+// === Module 9959: useChannelChatUnread ===
 
-// Module 9828 (useChannelChatUnread)
-import ReadStateStore from "ReadStateStore" /* 6842 */;
+// Module 9959 (useChannelChatUnread)
+import ReadStateStore from "ReadStateStore" /* 6962 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/header_bar/useChannelChatUnre
 
 export function useChannelChatUnread(channelId) {
   _require = channelId;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const items1 = [channelId];
   return require("initialize").useStateFromStoresObject(items, () => {
     let hasUnreadResult = null != closure_0;

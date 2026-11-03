@@ -1,22 +1,22 @@
-// === Module 15424: PremiumSubscriptionPricingUpsell ===
+// === Module 15565: PremiumSubscriptionPricingUpsell ===
 
-// Module 15424 (PremiumSubscriptionPricingUpsell)
+// Module 15565 (PremiumSubscriptionPricingUpsell)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 15287 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 15428 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import UserStore from "UserStore" /* 1383 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2051 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import UserStore from "UserStore" /* 1385 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 require = fn;
 function PricingSubheadingCopy() {
   let tmp = closure_21();
   _require = tmp;
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const hasBoostDiscountResult = require("PremiumUtils").hasBoostDiscount(stateFromStores);
@@ -47,7 +47,7 @@ function PricingSubheadingCopy() {
   const items4 = [IAPStore];
   const obj7 = require("initialize");
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(require("initialize").useStateFromStoresArray(items4, () => {
-    const items = [IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_YEARLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
+    items = [IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_YEARLY), IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
     return items;
   }), 5);
   if (stateFromStores2 == null) {
@@ -192,11 +192,11 @@ function PricingSubheadingCopy() {
 }
 const View = fn(17).View;
 const CurrencyCodes = fn(1072).CurrencyCodes;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
@@ -208,7 +208,7 @@ export default function PremiumSubscriptionPricingUpsell() {
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3x1PFE"]);
-  const items = [collapsedCategories(Text_Text.Text, obj3), ];
+  items = [collapsedCategories(Text_Text.Text, obj3), ];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = collapsedCategories(PricingSubheadingCopy, {});

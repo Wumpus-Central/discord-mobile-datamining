@@ -1,8 +1,8 @@
-// === Module 7796: KvCacheVersion ===
+// === Module 7920: KvCacheVersion ===
 
-// Module 7796 (KvCacheVersion)
+// Module 7920 (KvCacheVersion)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const KvCacheVersionConstants = fn(499);
@@ -62,7 +62,7 @@ prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionM
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

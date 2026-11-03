@@ -1,6 +1,6 @@
-// === Module 10222: ExpressionPickerHandlers ===
+// === Module 10352: ExpressionPickerHandlers ===
 
-// Module 10222 (ExpressionPickerHandlers)
+// Module 10352 (ExpressionPickerHandlers)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -53,7 +53,7 @@ export function usePressGIFHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  const items = [draftContent, focusTextInput, handleTextChange, , , ];
+  items = [draftContent, focusTextInput, handleTextChange, , , ];
   ({ end: arr[3], start: arr[4] } = selection);
   items[5] = setSelection;
   return noop.useCallback((url) => {

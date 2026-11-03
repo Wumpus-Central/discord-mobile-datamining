@@ -1,14 +1,14 @@
-// === Module 8763: BadgeDirectoryStore ===
+// === Module 8887: BadgeDirectoryStore ===
 
-// Module 8763 (BadgeDirectoryStore)
+// Module 8887 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import privDefault from "priv" /* 1451 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8764 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import UserStore from "UserStore" /* 1383 */;
+import privDefault from "priv" /* 1453 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8888 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const HOUR = DurationsDefault.Millis.HOUR;
@@ -37,15 +37,15 @@ prototype["getBadges"] = function getBadges(arg0) {
     if (null != value) {
       const _Array = Array;
       const badges = value.badges;
-      let items = Array.from(badges.values());
+      items = Array.from(badges.values());
     } else {
       items = [];
     }
     return items;
   }
 };
-prototype["hasCatalogFor"] = function hasCatalogFor(stateFromStores) {
-  const peekResult = closure_5.peek(stateFromStores);
+prototype["hasCatalogFor"] = function hasCatalogFor(id) {
+  const peekResult = closure_5.peek(id);
   let flag;
   if (peekResult != null) {
     flag = peekResult.catalogFetched;
@@ -68,9 +68,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
   }
   return tmp3;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(displayedUserId) {
-  let tmp = displayedUserId;
-  if (displayedUserId == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(c1) {
+  let tmp = c1;
+  if (c1 == null) {
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -200,15 +200,15 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
       peekResult = obj2;
     }
     peekResult.badges = new Map(badges.map((badge_id) => {
-      const items = [badge_id.badge_id, badge_id];
+      items = [badge_id.badge_id, badge_id];
       return items;
     }));
     peekResult.catalogFetched = true;
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
     const result = closure_5.set(userId, peekResult);
-    map1 = new Map(badges.map((badge_id) => {
-      const items = [badge_id.badge_id, badge_id];
+    const map1 = new Map(badges.map((badge_id) => {
+      items = [badge_id.badge_id, badge_id];
       return items;
     }));
   },

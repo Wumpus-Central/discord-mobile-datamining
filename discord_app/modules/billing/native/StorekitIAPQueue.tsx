@@ -1,12 +1,12 @@
-// === Module 14486: StorekitIAPQueue ===
+// === Module 14617: StorekitIAPQueue ===
 
-// Module 14486 (StorekitIAPQueue)
-import utils_PriceUtils from "utils/PriceUtils" /* 7414 */;
+// Module 14617 (StorekitIAPQueue)
+import utils_PriceUtils from "utils/PriceUtils" /* 7538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function productSK2ToIAPProduct(subscription) {
-  let items = [];
+  items = [];
   if (null != subscription.subscription.promotionalOffers) {
     const promotionalOffers = subscription.subscription.promotionalOffers;
     items = promotionalOffers.map((identifier) => {
@@ -58,7 +58,7 @@ function productSK2ToIAPProduct(subscription) {
     str2 = "PAYASYOUGO";
   }
 }
-const convertToAlpha2 = fn(5695).convertToAlpha2;
+const convertToAlpha2 = fn(5815).convertToAlpha2;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 class StorekitIAPQueueClass {
   constructor() {
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

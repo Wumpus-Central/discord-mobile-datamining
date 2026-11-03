@@ -1,17 +1,17 @@
-// === Module 9582: CollectiblesShopManager ===
+// === Module 9714: CollectiblesShopManager ===
 
-// Module 9582 (CollectiblesShopManager)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8790 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9583 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9581 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8791 */;
+// Module 9714 (CollectiblesShopManager)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8914 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9715 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9713 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8915 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
 function chunk(arr) {
   let length;
   let sum;
-  const items = [];
+  items = [];
   let num = 0;
   if (0 < arr.length) {
     do {
@@ -25,7 +25,7 @@ function chunk(arr) {
 }
 function flushProducts() {
   c6 = null;
-  const items = [...set];
+  items = [...set];
   set.clear();
   for (const item10016 of tmp2) {
     let obj = StorefrontProductActionCreators;
@@ -37,7 +37,7 @@ function flushProducts() {
 }
 function flushCollections() {
   c7 = null;
-  const items = [...set1];
+  items = [...set1];
   set1.clear();
   c8 = false;
   c9 = false;

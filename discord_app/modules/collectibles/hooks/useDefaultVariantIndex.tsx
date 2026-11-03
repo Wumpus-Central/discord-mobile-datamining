@@ -1,7 +1,7 @@
-// === Module 9460: useDefaultVariantIndex ===
+// === Module 9588: useDefaultVariantIndex ===
 
-// Module 9460 (useDefaultVariantIndex)
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+// Module 9588 (useDefaultVariantIndex)
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
 export function useDefaultVariantIndex(product) {
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   _require = require("initialize").useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != product) {

@@ -1,8 +1,8 @@
-// === Module 13820: ChatInputAccessibilityDivider ===
+// === Module 13951: ChatInputAccessibilityDivider ===
 
-// Module 13820 (ChatInputAccessibilityDivider)
+// Module 13951 (ChatInputAccessibilityDivider)
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export const ChatInputAccessibilityDivider = noop.memo(function ChatInputAccessi
       const obj2 = { nativeID: "chat-input-accessibility-divider", accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null };
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t["uKZtC/"]);
-      const items = [absoluteFill.absoluteFill, { height: 1 }];
+      items = [absoluteFill.absoluteFill, { height: 1 }];
       obj2.style = items;
       tmp3 = <React3 nativeID="chat-input-accessibility-divider" accessible accessibilityLabel={null} accessibilityRole="header" style={null} />;
     }

@@ -1,17 +1,14 @@
-// === Module 5014: createStyles ===
+// === Module 5141: createStyles ===
 
-// Module 5014 (createStyles)
+// Module 5141 (createStyles)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import native from "native" /* 5080 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import SemanticColorContext from "SemanticColorContext" /* 5186 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
-import timing from "timing" /* 5254 */;
-import timingPresets from "timingPresets" /* 5257 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import native from "native" /* 5207 */;
+import SemanticColorContext from "SemanticColorContext" /* 5309 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5373 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 
 require = fn;
 function createCacheKey() {
@@ -106,7 +103,7 @@ const processColor = fn(17).processColor;
 new Set(["backgroundColor", "borderBottomColor", "borderColor", "borderEndColor", "borderLeftColor", "borderRightColor", "borderStartColor", "borderTopColor", "color", "outlineColor", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "elevation", "textDecorationColor", "textShadowColor", "tintColor"]);
 let closure_8 = Symbol.for("dynamicToken");
 let items = [nativeDefault.themes.LIGHT, nativeDefault.themes.DARK, nativeDefault.themes.ONYX];
-let closure_11 = { code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}" };
+let closure_11 = { code: "(function createStylesTsx1(){let[resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard]=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
 
@@ -321,7 +318,7 @@ export function createAnimatedThemedStyles(obj) {
   if (items === undefined) {
     arr = items;
   }
-  let stops;
+  closure_3 = undefined;
   items = [];
   obj = {};
   for (const key10007 in arg0) {
@@ -337,20 +334,20 @@ export function createAnimatedThemedStyles(obj) {
     }
     continue;
   }
-  stops = arr.map((item, index) => index);
+  closure_3 = arr.map((item, index) => index);
   new Map();
-  return function useStyleProperties(themeIndex) {
+  return function useStyleProperties(arg0) {
     obj = arr(obj[4]);
     const themeContext = obj.useThemeContext();
-    value = obj3.get(themeContext.key);
-    items = value;
+    value = map.get(themeContext.key);
+    let obj3 = value;
     let tmp3 = value;
     if (null == value) {
       let enabledExperiments = themeContext.enabledExperiments;
       if (enabledExperiments == null) {
         enabledExperiments = [];
       }
-      let obj2 = { enabledExperiments, saturation: null, contrast: null };
+      const obj2 = { enabledExperiments, saturation: null, contrast: null };
       let num2 = 1;
       if (null == themeContext.primaryColor) {
         let num3 = themeContext.saturation;
@@ -370,69 +367,34 @@ export function createAnimatedThemedStyles(obj) {
       }
       obj2.contrast = num4;
       obj3 = {};
-      const merged = Object.assign(obj2);
-      class T {
-        constructor() {
-          obj = {};
-          for (const key10005 in closure_4) {
-            tmp6 = key10005;
-            tmp7 = closure_4;
-            tmp8 = closure_4[key10005];
-            _Array = Array;
-            if (Array.isArray(tmp8)) {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj2 = closure_0(closure_2[9]);
-              obj3 = closure_0(closure_2[8]);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              interpolateColorResult = obj3.interpolateColor(closure_0.get(), closure_3, tmp8);
-              obj[key10005] = obj2.withTiming(interpolateColorResult, closure_0(closure_2[10]).timingStandard);
-              continue;
-            } else {
-              obj[key10005] = tmp8;
-              continue;
-            }
-            continue;
-          }
-          return obj;
-        }
-      }
+      const merged = Object.assign(closure_2);
       function _loop(arg0) {
-        themeIndex = arg0;
-        closure_1[closure_3] = themeIndex.map((item) => {
+        closure_0 = arg0;
+        closure_0[closure_2] = obj3.map((item) => {
           const internal = nativeDefault.internal;
           return internal.resolveSemanticColor(item, closure_0, obj2);
         });
       }
-      const tmp9 = items[Symbol.iterator]();
+      const tmp9 = obj2[Symbol.iterator]();
       while (tmp9 !== undefined) {
-        let tmp14 = stops(tmp11, 2);
-        stops = tmp14[0];
+        let tmp14 = closure_3(tmp11, 2);
+        closure_2 = tmp14[0];
         let _loopResult = _loop(tmp14[1]);
         continue;
       }
-      const result = obj3.set(themeContext.key, obj3);
+      const result = map.set(themeContext.key, obj3);
       tmp3 = obj3;
     }
-    obj3 = tmp3;
-    class T {
-      constructor() {
+    items = [closure_1_11, tmp3, arr(obj[9]).withTiming, arr(obj[8]).interpolateColor, arg0, closure_3, arr(obj[10]).timingStandard];
+    return arr(obj[8]).useAnimatedStyle((function createStylesTsx1Factory(items) {
+      [tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7] = items;
+      function createStylesTsx1() {
         obj = {};
-        for (const key10005 in closure_4) {
-          tmp6 = key10005;
-          tmp7 = closure_4;
-          tmp8 = closure_4[key10005];
-          _Array = Array;
+        for (const key10005 in closure_1_0) {
+          let tmp8 = obj3[key10005];
+          let _Array = Array;
           if (Array.isArray(tmp8)) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj2 = closure_0(closure_2[9]);
-            obj3 = closure_0(closure_2[8]);
-            tmp3 = closure_0;
-            tmp4 = closure_3;
-            interpolateColorResult = obj3.interpolateColor(closure_0.get(), closure_3, tmp8);
-            obj[key10005] = obj2.withTiming(interpolateColorResult, closure_0(closure_2[10]).timingStandard);
+            obj[key10005] = obj2(closure_1_2(closure_1_3.get(), closure_1_4, tmp8), closure_1_5);
             continue;
           } else {
             obj[key10005] = tmp8;
@@ -442,11 +404,11 @@ export function createAnimatedThemedStyles(obj) {
         }
         return obj;
       }
-    }
-    const obj4 = arr(obj[8]);
-    T.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops, timingStandard: arr(obj[10]).timingStandard };
-    T.__workletHash = 6815805628278;
-    T.__initData = __initData;
-    return obj4.useAnimatedStyle(T);
+      items = [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7];
+      createStylesTsx1.__closure = items;
+      createStylesTsx1.__workletHash = 11733925239503;
+      createStylesTsx1.__initData = tmp;
+      return createStylesTsx1;
+    })(items));
   };
 }

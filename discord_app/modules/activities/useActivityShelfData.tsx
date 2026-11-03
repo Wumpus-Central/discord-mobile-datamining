@@ -1,12 +1,12 @@
-// === Module 12368: useActivityShelfData ===
+// === Module 12504: useActivityShelfData ===
 
-// Module 12368 (useActivityShelfData)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+// Module 12504 (useActivityShelfData)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import TestModeStore from "TestModeStore" /* 5673 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import UserStore from "UserStore" /* 1385 */;
+import TestModeStore from "TestModeStore" /* 5793 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/activities/useActivityShelfDa
 
 export function useActivityShelfData(guildId) {
   _require = guildId;
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, UserStore.getCurrentUser);
   let obj = require("initialize");
   let tmp = stateFromStoresArray;
@@ -45,7 +45,7 @@ export function useActivityShelfData(guildId) {
           if (first.supportsEmbeddedSurface(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN)) {
             if (null != memo[0].embeddedActivityConfig) {
               const obj = { activity: memo[0].embeddedActivityConfig, application: memo[0] };
-              const items = [obj];
+              items = [obj];
             }
             return [];
           }
@@ -72,14 +72,14 @@ export function useActivityShelfData(guildId) {
   }
   const items7 = [nsfwAllowed, memo2, memo1];
   return stateFromStores1.useMemo(() => {
-    const items = [...memo2];
+    items = [...memo2];
     const found = items.filter((activity) => {
       let supported_platforms = activity.activity.supported_platforms;
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(5682);
-      return supported_platforms.includes(tmp(guildId(1375).getOS()));
+      const tmp = stateFromStores(5802);
+      return supported_platforms.includes(tmp(guildId(1377).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

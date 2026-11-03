@@ -1,16 +1,16 @@
-// === Module 20109: RestrictedHoursManager ===
+// === Module 20259: RestrictedHoursManager ===
 
-// Module 20109 (RestrictedHoursManager)
+// Module 20259 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1407 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 11013 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19380 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 11011 */;
-import UserStore from "UserStore" /* 1383 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1409 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 11146 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19538 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 11144 */;
+import UserStore from "UserStore" /* 1385 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 function scheduleUpcomingWarning() {
@@ -52,8 +52,8 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2538["0JlDg0"]);
-        const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
+        const stringResult = intl.string(_modDef2667["0JlDg0"]);
+        items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;
         const trimmed = "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(tmp5.rule).trim();

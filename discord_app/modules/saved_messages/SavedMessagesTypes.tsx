@@ -1,7 +1,7 @@
-// === Module 10192: SavedMessagesTypes ===
+// === Module 10322: SavedMessagesTypes ===
 
-// Module 10192 (SavedMessagesTypes)
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
+// Module 10322 (SavedMessagesTypes)
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
@@ -58,6 +58,18 @@ export function savedMessageCreateObjectToClient(body) {
   obj5.dueAt = date1;
   obj2.saveData = obj5;
   return obj2;
+}
+export function getSavedMessagesRawMessages(items) {
+  return items.flatMap((message) => {
+    message = message.message;
+    if (null != message) {
+      items = [message];
+      let items1 = items;
+    } else {
+      items1 = [];
+    }
+    return items1;
+  });
 }
 export function savedMessageDeleteObjectToClient(channelId) {
   return { channelId: channelId.channel_id, messageId: channelId.message_id };

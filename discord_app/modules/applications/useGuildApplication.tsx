@@ -1,10 +1,10 @@
-// === Module 19874: useGuildApplication ===
+// === Module 20024: useGuildApplication ===
 
-// Module 19874 (useGuildApplication)
+// Module 20024 (useGuildApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/applications/useGuildApplicat
 export default function useGuildApplication(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [closure_6];
+  items = [closure_6];
   application = require("initialize").useStateFromStores(items, () => ApplicationStore.getGuildApplication(closure_0, closure_1));
   let obj = require("initialize");
   [tmp3, asyncGeneratorStep] = first.useState(null == application);
@@ -34,7 +34,7 @@ export default function useGuildApplication(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

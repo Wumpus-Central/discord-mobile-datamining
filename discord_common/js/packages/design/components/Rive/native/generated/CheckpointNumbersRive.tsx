@@ -1,8 +1,8 @@
-// === Module 5165: CheckpointNumbersRive ===
+// === Module 5288: CheckpointNumbersRive ===
 
-// Module 5165 (CheckpointNumbersRive)
-import BaseRive from "BaseRive" /* 5089 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5146 */;
+// Module 5288 (CheckpointNumbersRive)
+import BaseRive from "BaseRive" /* 5216 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5269 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function CheckpointNumbersRiveInner(defaultViewModelInstance) {
   }
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
-  const items = [str, dataBinding, onDataBindingChange];
+  items = [str, dataBinding, onDataBindingChange];
   const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (null != closure_9[str]) {

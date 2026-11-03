@@ -1,52 +1,53 @@
-// === Module 18775: GroupDMNitroUpsellBanner ===
+// === Module 18933: GroupDMNitroUpsellBanner ===
 
-// Module 18775 (GroupDMNitroUpsellBanner)
+// Module 18933 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import spring from "spring" /* 5637 */;
-import _modDef8519 from "module_8519" /* 8519 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11627 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11630 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11634 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18776 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import _modDef8643 from "module_8643" /* 8643 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11764 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11767 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11771 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18934 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function FloatingBanner(children) {
   const visible = children.visible;
+  _require = visible;
   ({ hideGradient, onListInsetChange } = children);
-  let bottom;
-  absoluteFillObject = undefined;
+  importDefault = onListInsetChange;
+  let token;
+  _slicedToArray = undefined;
   let sharedValue;
   let sharedValue1;
   let bound1;
   let tmp = closure_17();
-  bottom = onListInsetChange(bottom[8])().bottom;
-  const tmp4 = onListInsetChange(bottom[9])();
-  _slicedToArray = tmp4;
-  const token = visible(bottom[10]).useToken(onListInsetChange(bottom[6]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const bottom = require("useSafeAreaInsets")().bottom;
+  const tmp4 = require("useAnimatedKeyboardHeight")();
+  token = require("useToken").useToken(require("native").colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let num = 0;
-  let obj = visible(bottom[10]);
-  [tmp8, c5] = token.useState(0);
-  const tmp7 = _slicedToArray(token.useState(0), 2);
+  let obj = require("useToken");
+  [tmp8, c3] = sharedValue.useState(0);
+  const tmp7 = _slicedToArray(sharedValue.useState(0), 2);
   if (visible) {
     num = 0.4;
   }
-  sharedValue = visible(bottom[11]).useSharedValue(num);
-  let obj3 = visible(bottom[11]);
-  sharedValue1 = visible(bottom[11]).useSharedValue(PX_16);
+  sharedValue = require("module_1652").useSharedValue(num);
+  let obj3 = require("module_1652");
+  sharedValue1 = require("module_1652").useSharedValue(PX_16);
   const bound = Math.max(125, tmp8 + PX_40);
-  bound1 = Math.max(onListInsetChange(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
-  let items = [bound1, onListInsetChange, visible];
+  bound1 = Math.max(tmp2(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
+  items = [bound1, onListInsetChange, visible];
   const effect = obj2.useEffect(() => {
-    if (onListInsetChange != null) {
-      if (visible) {
+    if (c1 != null) {
+      if (c0) {
         let PX_12 = bound1;
       } else {
         PX_12 = nativeDefault.space.PX_12;
@@ -57,7 +58,7 @@ function FloatingBanner(children) {
   const items1 = [token];
   const callback = obj2.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    _undefined((arg0) => {
+    _undefined3((arg0) => {
       let tmp = height;
       if (arg0 === height) {
         tmp = arg0;
@@ -68,7 +69,7 @@ function FloatingBanner(children) {
   const items2 = [visible, sharedValue, sharedValue1];
   const memo = obj2.useMemo(() => {
     const obj = _modDef671(token);
-    const items = [_modDef671(token).alpha(0).hex(), , ];
+    items = [_modDef671(token).alpha(0).hex(), , ];
     const alphaResult = _modDef671(token).alpha(0);
     const obj3 = _modDef671(token);
     items[1] = _modDef671(token).alpha(1).hex();
@@ -78,51 +79,61 @@ function FloatingBanner(children) {
     return items;
   }, items1);
   const effect1 = obj2.useEffect(() => {
-    if (visible) {
+    if (c0) {
       const result = sharedValue.set(0.4);
       const result1 = sharedValue1.set(PX_16);
     }
     let num2 = 0;
-    if (visible) {
+    if (c0) {
       num2 = 1;
     }
-    const result2 = sharedValue.set(spring.withSpring(num2, closure_16));
+    const result2 = sharedValue.set(spring_spring.withSpring(num2, closure_16));
     let num3 = 0;
-    if (!visible) {
+    if (!c0) {
       num3 = PX_16;
     }
-    const result3 = sharedValue1.set(spring.withSpring(num3, closure_16));
-    const tmp8Result = spring;
+    const result3 = sharedValue1.set(spring_spring.withSpring(num3, closure_16));
+    const tmp8Result = spring_spring;
   }, items2);
-  const tmp5Result = visible(bottom[11]);
-  class L {
+  const tmp5Result = require("module_1652");
+  const items3 = [closure_18, sharedValue, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp17, tmp18, tmp19] = items3;
+  class GroupDMNitroUpsellBannerTsx1 {
     constructor() {
-      obj = { opacity: closure_6.get(), transform: null };
-      obj1 = { translateY: closure_7.get() };
+      obj = { opacity: closure_0.get(), transform: null };
+      obj1 = { translateY: closure_1.get() };
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  L.__closure = { opacity: sharedValue, translateY: sharedValue1 };
-  L.__workletHash = 9160619443528;
-  L.__initData = __initData;
-  const animatedStyle = visible(bottom[11]).useAnimatedStyle(L);
-  const tmp5Result3 = visible(bottom[11]);
-  class U {
+  const items4 = [tmp18, tmp19];
+  GroupDMNitroUpsellBannerTsx1.__closure = items4;
+  GroupDMNitroUpsellBannerTsx1.__workletHash = 13790129208113;
+  GroupDMNitroUpsellBannerTsx1.__initData = tmp17;
+  const animatedStyle = require("module_1652").useAnimatedStyle(GroupDMNitroUpsellBannerTsx1);
+  const tmp5Result3 = require("module_1652");
+  const items5 = [closure_19, tmp4, bottom];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp21, tmp22, tmp23] = items5;
+  class GroupDMNitroUpsellBannerTsx2 {
     constructor() {
-      obj = { bottom: Math.max(closure_3.get() - bottom, 0) };
+      obj = { bottom: Math.max(closure_0.get() - closure_1, 0) };
       return obj;
     }
   }
-  U.__closure = { keyboardHeight: tmp4, safeAreaBottom: bottom };
-  U.__workletHash = 9321236677185;
-  U.__initData = __initData2;
-  const animatedStyle1 = visible(bottom[11]).useAnimatedStyle(U);
+  const items6 = [tmp22, tmp23];
+  GroupDMNitroUpsellBannerTsx2.__closure = items6;
+  GroupDMNitroUpsellBannerTsx2.__workletHash = 11189258336600;
+  GroupDMNitroUpsellBannerTsx2.__initData = tmp21;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(GroupDMNitroUpsellBannerTsx2);
   const obj4 = { style: null, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-  const items3 = [tmp.floatingOverlay, { height: bound + bottom }, animatedStyle1];
-  obj4.style = items3;
+  const items7 = [tmp.floatingOverlay, { height: bound + bottom }, animatedStyle1];
+  obj4.style = items7;
   let str = "none";
   if (visible) {
     str = "box-none";
@@ -135,34 +146,34 @@ function FloatingBanner(children) {
   }
   obj4.importantForAccessibility = str2;
   let obj5 = { style: null, children: null };
-  const items4 = [absoluteFillObject.absoluteFillObject, tmp.floatingContent, { paddingBottom: bottom }, animatedStyle];
-  obj5.style = items4;
-  let tmp19Result = !hideGradient;
+  const items8 = [sharedValue1.absoluteFillObject, tmp.floatingContent, { paddingBottom: bottom }, animatedStyle];
+  obj5.style = items8;
+  let tmp25Result = !hideGradient;
   if (!hideGradient) {
-    const obj6 = { style: tmp21.absoluteFill, colors: memo, locations, start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
-    tmp19Result = closure_9(onListInsetChange(tmp3[14]), obj6);
+    const obj6 = { style: tmp27.absoluteFill, colors: memo, locations, start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
+    tmp25Result = closure_9(tmp2(tmp3[14]), obj6);
   }
-  const items5 = [tmp19Result, closure_9(sharedValue, { onLayout: callback, children: children.children })];
-  obj5.children = items5;
-  obj4.children = closure_10(onListInsetChange(bottom[11]).View, obj5);
-  return closure_9(onListInsetChange(bottom[11]).View, obj4);
+  const items9 = [tmp25Result, closure_9(bound1, { onLayout: callback, children: children.children })];
+  obj5.children = items9;
+  obj4.children = closure_10(require("module_1652").View, obj5);
+  return closure_9(require("module_1652").View, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11629).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11766).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_16 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_17 = createStyles.createStyles(obj2);
-const __initData = { code: "function GroupDMNitroUpsellBannerTsx1(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
-const __initData2 = { code: "function GroupDMNitroUpsellBannerTsx2(){const{keyboardHeight,safeAreaBottom}=this.__closure;return{bottom:Math.max(keyboardHeight.get()-safeAreaBottom,0)};}" };
+let closure_18 = { code: "(function GroupDMNitroUpsellBannerTsx1(){let[opacity,translateY]=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};})" };
+let closure_19 = { code: "(function GroupDMNitroUpsellBannerTsx2(){let[keyboardHeight,safeAreaBottom]=this.__closure;return{bottom:Math.max(keyboardHeight.get()-safeAreaBottom,0)};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellBanner.tsx");
 
@@ -175,7 +186,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
   wrapperStyle = wrapperStyle.wrapperStyle;
   ({ hideFloatingGradient, onFloatingListInsetChange } = wrapperStyle);
   const tmp = closure_17();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = GroupDMNitroCapExperimentDefault;
   const groupDMNitroAudience = GroupDMNitroUpsellModel.useGroupDMNitroAudience();
@@ -203,7 +214,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8519;
+  obj7.icon = _modDef8643;
   obj7.onPress = tmp7Result;
   obj6.trailing = React7(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

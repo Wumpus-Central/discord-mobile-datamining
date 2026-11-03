@@ -1,16 +1,16 @@
-// === Module 10532: MediaKeyboardActionSheet ===
+// === Module 10662: MediaKeyboardActionSheet ===
 
-// Module 10532 (MediaKeyboardActionSheet)
+// Module 10662 (MediaKeyboardActionSheet)
 import util from "util" /* 1113 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import PollsIcon from "PollsIcon" /* 10533 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10537 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10539 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import PollsIcon from "PollsIcon" /* 10663 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10667 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(1621).MediaPickerActionSheetEngagedActions;
+let closure_4 = fn(1623).MediaPickerActionSheetEngagedActions;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
   const onBack = onAttachPress.onBack;
   ({ channel, draftType, uploadLimit, disableWhenReachedLimit, includedUploadIds, extensions, allowCamera, onPressCamera, onPressItem, onLongPressItem, onManageLimited } = onAttachPress);
   const sharedValue = onAttachPress(onClose[4]).useSharedValue(-1);
-  let items = [onAttachPress];
+  items = [onAttachPress];
   const memo = onBack.useMemo(() => {
     const obj = { text: null, IconComponent: null, onPress: null, disabled: true };
     const intl = util.intl;
@@ -32,7 +32,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj.onPress = function onPress() {
 
     };
-    const items = [obj, ];
+    items = [obj, ];
     const obj2 = { text: null, IconComponent: null, onPress: null, disabled: false };
     const intl2 = util.intl;
     obj2.text = intl2.string(util.t["8Hvr3+"]);
@@ -76,7 +76,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj2.text = intl.string(util.t.Zmm6dN);
     obj2.IconComponent = ImageIcon.ImageIcon;
     obj2.onPress = onViewAll;
-    const items = [obj2, ...memo];
+    items = [obj2, ...memo];
     obj.overflowButtons = items;
     return jsx(MediaKeyboardBottomSheetActionsDefault, {
       canPostPolls: false,

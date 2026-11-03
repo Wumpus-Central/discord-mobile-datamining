@@ -1,11 +1,11 @@
-// === Module 12384: EntityBorderAppIcon ===
+// === Module 12520: EntityBorderAppIcon ===
 
-// Module 12384 (EntityBorderAppIcon)
+// Module 12520 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import createStyles from "createStyles" /* 5014 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -29,7 +29,7 @@ export default function EntityBorderAppIcon(iconSize) {
   }
   const tmp = closure_5(num, iconBorderRadius);
   const obj = { style: null, children: null };
-  const items = [tmp.entityWrapper, wrapperStyle];
+  items = [tmp.entityWrapper, wrapperStyle];
   obj.style = items;
   const obj2 = { style: null, source: iconSource };
   const items1 = [tmp.appIcon, iconStyle];

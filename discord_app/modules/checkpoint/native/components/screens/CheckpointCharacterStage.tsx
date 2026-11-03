@@ -1,98 +1,62 @@
-// === Module 13460: CheckpointCharacterStage ===
+// === Module 13599: CheckpointCharacterStage ===
 
-// Module 13460 (CheckpointCharacterStage)
-import CheckpointCharacterReferencedAssets from "CheckpointCharacterReferencedAssets" /* 13461 */;
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13627 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13630 */;
+// Module 13599 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13601 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13767 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};
 let closure_8 = createStyles.createStyles(obj2);
-let size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointCharacterStage.tsx");
 
 export default function CheckpointCharacterStage(stage) {
   stage = stage.stage;
+  const layout = stage.layout;
   const characterBottomInset = stage.characterBottomInset;
-  let width;
-  let str;
-  let textureScale;
+  _slicedToArray = undefined;
+  height = undefined;
   let stateFromStores;
-  let checkpointCharacterLoadedTextureNames;
   const tmp = closure_8();
-  const context = str.useContext(characterBottomInset(width[7]));
-  const size = characterBottomInset(width[8])();
-  width = size.width;
-  const height = size.height;
-  str = "MobilePortrait";
-  if (width > height) {
-    str = "MobileLandscape";
+  const context = height.useContext(layout(characterBottomInset[6]));
+  ({ width: c3, height } = layout(characterBottomInset[7])());
+  const tmp5 = layout(characterBottomInset[8])(() => CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c3, height));
+  const textureScale = tmp5;
+  const tmp4 = layout(characterBottomInset[7])();
+  items = [stateFromStores];
+  stateFromStores = stage(characterBottomInset[10]).useStateFromStores(items, () => stateFromStores.selectedCharacterTraits);
+  const items1 = [stage, stateFromStores, layout, characterBottomInset, height, tmp5];
+  const memo = height.useMemo(() => CheckpointCharacterDataBinding.getCheckpointCharacterDataBinding({ stage, traits: stateFromStores, layout, characterBottomInset, stageHeight: height, textureScale }), items1);
+  const obj = stage(characterBottomInset[10]);
+  [tmp10, tmp11] = height.useState(memo);
+  const tmp9 = _slicedToArray(height.useState(memo), 2);
+  const checkpointCharacterReferencedAssets = stage(characterBottomInset[12]).useCheckpointCharacterReferencedAssets({ visibleDataBinding: tmp10, requestedDataBinding: memo, textureScale: tmp5 });
+  const tmp13 = layout(characterBottomInset[8])(checkpointCharacterReferencedAssets);
+  const obj2 = stage(characterBottomInset[12]);
+  [tmp15, tmp16] = height.useState(null);
+  const tmp14 = _slicedToArray(height.useState(null), 2);
+  const checkpointCharacterTextureManager = stage(characterBottomInset[13]).useCheckpointCharacterTextureManager(tmp15);
+  const obj3 = stage(characterBottomInset[13]);
+  const obj4 = stage(characterBottomInset[14]);
+  if (tmp18) {
+    tmp11(memo);
   }
-  const tmp5 = characterBottomInset(width[9])(() => CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(width, height));
-  textureScale = tmp5;
-  const items = [stateFromStores];
-  stateFromStores = stage(width[11]).useStateFromStores(items, () => stateFromStores.selectedCharacterTraits);
-  const items1 = [stage, stateFromStores, str, characterBottomInset, height, tmp5];
-  const memo = obj.useMemo(() => CheckpointCharacterDataBinding.getCheckpointCharacterDataBinding({ stage, traits: stateFromStores, layout: str, characterBottomInset, stageHeight: height, textureScale }), items1);
-  const tmp9 = height(str.useState(memo), 2);
-  const first = tmp9[0];
-  const faceID = memo.faceID;
-  closure_129_0 = faceID;
-  const headwearID = memo.headwearID;
-  closure_129_1 = headwearID;
-  const shoesID = memo.shoesID;
-  closure_129_2 = shoesID;
-  const wearableID = memo.wearableID;
-  closure_129_3 = wearableID;
-  const chapterID = memo.chapterID;
-  closure_129_4 = chapterID;
-  const device = memo.device;
-  closure_129_5 = device;
-  const items2 = [faceID, headwearID, shoesID, wearableID, chapterID, device];
-  const faceID2 = first.faceID;
-  closure_130_0 = faceID2;
-  const headwearID2 = first.headwearID;
-  closure_130_1 = headwearID2;
-  const shoesID2 = first.shoesID;
-  closure_130_2 = shoesID2;
-  const wearableID2 = first.wearableID;
-  closure_130_3 = wearableID2;
-  const chapterID2 = first.chapterID;
-  closure_130_4 = chapterID2;
-  const device2 = first.device;
-  closure_130_5 = device2;
-  const items3 = [faceID2, headwearID2, shoesID2, wearableID2, chapterID2, device2];
-  const memo1 = obj.useMemo(() => CheckpointCharacterReferencedAssets.getCheckpointCharacterVisibleTextureNames({ faceID: stage, headwearID: characterBottomInset, shoesID: width, wearableID: height }, str, closure_5), items2);
-  const memo2 = obj.useMemo(() => CheckpointCharacterReferencedAssets.getCheckpointCharacterVisibleTextureNames({ faceID: stage, headwearID: characterBottomInset, shoesID: width, wearableID: height }, str, closure_5), items3);
-  const obj2 = stage(width[11]);
-  checkpointCharacterLoadedTextureNames = stage(width[13]).useCheckpointCharacterLoadedTextureNames({ visibleTextureNames: memo2, requestedTextureNames: memo1 });
-  const items4 = [checkpointCharacterLoadedTextureNames, tmp5];
-  const memo3 = obj.useMemo(() => CheckpointCharacterReferencedAssets.getCheckpointCharacterReferencedAssets(checkpointCharacterLoadedTextureNames, closure_5), items4);
-  const tmp15 = characterBottomInset(width[9])(memo3);
-  const obj3 = stage(width[13]);
-  [tmp17, tmp18] = height(str.useState(null), 2);
-  const tmp16 = height(str.useState(null), 2);
-  const obj4 = stage(width[14]);
-  if (tmp19) {
-    tmp9[1](memo);
-  }
-  let tmp23;
+  let tmp22;
   if (stage.isActive) {
-    tmp23 = context;
+    tmp22 = context;
   }
-  const obj5 = { ref: tmp23, style: tmp.container, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
-  tmp19 = stage(width[14]).useCheckpointCharacterTextureSwaps({ file: tmp17, referencedAssets: memo3, initialReferencedAssets: tmp15 }) && first !== memo;
-  const tmp22 = textureScale;
-  obj5.accessibilityLabel = stage(width[15]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
-  obj5.children = checkpointCharacterLoadedTextureNames(stage(width[16]).CheckpointCharacterRive, { artboard: "AB_Master", stateMachine: "SM_Master", fit: "layout", alignment: "center", referencedAssets: tmp15, onRiveFileChange: tmp18, dataBinding: first, style: tmp.rive });
-  return checkpointCharacterLoadedTextureNames(tmp22, obj5);
+  const obj5 = { ref: tmp22, style: tmp.container, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
+  tmp18 = stage(characterBottomInset[14]).useCheckpointCharacterTextureSwaps({ textureManager: checkpointCharacterTextureManager, referencedAssets: checkpointCharacterReferencedAssets, initialReferencedAssets: tmp13 }) && tmp10 !== memo;
+  obj5.accessibilityLabel = stage(characterBottomInset[15]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
+  obj5.children = jsx(stage(characterBottomInset[16]).CheckpointCharacterRive, { artboard: "AB_Master", stateMachine: "SM_Master", fit: "layout", alignment: "center", referencedAssets: tmp13, onRiveFileChange: tmp16, dataBinding: tmp10, style: tmp.rive });
+  return <tmp21 ref={tmp22} style={tmp.container} accessible accessibilityRole="image" accessibilityLabel={null}>{null}</tmp21>;
 };

@@ -1,13 +1,13 @@
-// === Module 9097: useGuildEventRecurrences ===
+// === Module 9225: useGuildEventRecurrences ===
 
-// Module 9097 (useGuildEventRecurrences)
+// Module 9225 (useGuildEventRecurrences)
 import _modDef12 from "module_12" /* 12 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8966 */;
-import ScheduleUtils from "ScheduleUtils" /* 8969 */;
-import usePrevValueDefault from "usePrevValue" /* 9098 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9094 */;
+import ScheduleUtils from "ScheduleUtils" /* 9097 */;
+import usePrevValueDefault from "usePrevValue" /* 9226 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
 
 const require = globalThis.__r;
 
@@ -19,18 +19,18 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = byWeekday;
-  let items = [recurrenceStartTimes];
+  items = [recurrenceStartTimes];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(closure_0));
   const tmp4 = usePrevValueDefault(byWeekday);
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(8969);
+      const tmpResult = tmp(9097);
       let _Date = Date;
-      let rRule = tmp(8969).getRRule(byWeekday);
+      let rRule = tmp(9097).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(8969);
+      const tmpResult2 = tmp(9097);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -94,7 +94,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
           if (null != closure_2) {
             if (null != stateFromStores) {
               const rRule = ScheduleUtils.getRRule(tmp);
-              const items = [];
+              items = [];
               const arraySpreadResult = HermesBuiltin.arraySpread(first, 0);
               const obj2 = ScheduleUtils;
               HermesBuiltin.arraySpread(obj2.generateNextRecurrences(4, rRule, first[first.length - 1], true), arraySpreadResult);

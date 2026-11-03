@@ -1,10 +1,10 @@
-// === Module 19505: CheckboxActionComponent ===
+// === Module 19663: CheckboxActionComponent ===
 
-// Module 19505 (CheckboxActionComponent)
+// Module 19663 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
-import Server from "Server" /* 1992 */;
-import ComponentStateContext from "ComponentStateContext" /* 8696 */;
-import Checkbox from "Checkbox" /* 14621 */;
+import Server from "Server" /* 2121 */;
+import ComponentStateContext from "ComponentStateContext" /* 8820 */;
+import Checkbox from "Checkbox" /* 14752 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,9 +22,9 @@ export default noop.memo(function CheckboxActionComponent(type) {
     tmp5 = obj2;
   }
   const componentState = componentStateContext.useComponentState(type, tmp5);
-  const state = componentState.state;
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
-  const items = [state, type];
+  items = [state, type];
   const memo = noop.useMemo(() => {
     type = undefined;
     if (state != null) {

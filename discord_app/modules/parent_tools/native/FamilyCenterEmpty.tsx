@@ -1,13 +1,13 @@
-// === Module 16823: FamilyCenterEmpty ===
+// === Module 16966: FamilyCenterEmpty ===
 
-// Module 16823 (FamilyCenterEmpty)
-import Text_Text from "Text/Text" /* 5624 */;
+// Module 16966 (FamilyCenterEmpty)
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ empty: { display: "flex", alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");

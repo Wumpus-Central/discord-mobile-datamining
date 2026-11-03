@@ -1,8 +1,8 @@
-// === Module 8402: useIsAccessibilityServiceEnabled ===
+// === Module 8526: useIsAccessibilityServiceEnabled ===
 
-// Module 8402 (useIsAccessibilityServiceEnabled)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5962 */;
+// Module 8526 (useIsAccessibilityServiceEnabled)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 6082 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

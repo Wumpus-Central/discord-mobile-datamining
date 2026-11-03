@@ -1,9 +1,9 @@
-// === Module 9454: useGameAnnouncements ===
+// === Module 9582: useGameAnnouncements ===
 
-// Module 9454 (useGameAnnouncements)
+// Module 9582 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9455 */;
-import GameProfileStore from "GameProfileStore" /* 9322 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9583 */;
+import GameProfileStore from "GameProfileStore" /* 9450 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnou
 export default function useGameAnnouncements(arg0, limit) {
   _require = arg0;
   dependencyMap = limit;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {

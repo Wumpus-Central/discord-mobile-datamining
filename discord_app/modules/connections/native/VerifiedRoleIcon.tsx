@@ -1,11 +1,11 @@
-// === Module 7372: VerifiedRoleIcon ===
+// === Module 7492: VerifiedRoleIcon ===
 
-// Module 7372 (VerifiedRoleIcon)
+// Module 7492 (VerifiedRoleIcon)
 import nativeDefault from "native" /* 575 */;
-import LinkIcon from "LinkIcon" /* 5727 */;
-import useRoleIconProps from "useRoleIconProps" /* 7355 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7373 */;
-import RoleIconDefault from "RoleIcon" /* 7374 */;
+import LinkIcon from "LinkIcon" /* 5847 */;
+import useRoleIconProps from "useRoleIconProps" /* 7475 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7493 */;
+import RoleIconDefault from "RoleIcon" /* 7494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const Constants = fn(1072);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default function VerifiedRoleIcon(arg0) {
   }
   const tmp = closure_9();
   const obj2 = { backgroundColor: roleColor, colors: null };
-  const items = [WHITE, PRIMARY_630];
+  items = [WHITE, PRIMARY_630];
   obj2.colors = items;
   const diff = size - size / 8 * 2;
   const higherContrastColor = getHigherContrastColor.getHigherContrastColor(obj2);

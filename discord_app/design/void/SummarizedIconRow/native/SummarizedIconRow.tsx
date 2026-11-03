@@ -1,8 +1,8 @@
-// === Module 15981: SummarizedIconRow ===
+// === Module 16124: SummarizedIconRow ===
 
-// Module 15981 (SummarizedIconRow)
+// Module 16124 (SummarizedIconRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ function OverflowSquircle(arg0) {
   ({ overflow, style } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };
-  const items = [tmp.overflowSquircleWrap, style];
+  items = [tmp.overflowSquircleWrap, style];
   obj.style = items;
   const obj2 = { style: tmp.overflowSquircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
   obj.children = <View style={tmp.overflowSquircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;
@@ -18,7 +18,7 @@ function OverflowSquircle(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
 obj2.overflowSquircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/SummarizedIconRow/native/SummarizedIconRow.tsx");
 
 export default function SummarizedIconRow(max) {
-  let items = max.items;
+  items = max.items;
   let num = max.max;
   if (num === undefined) {
     num = 8;
@@ -119,7 +119,7 @@ export default function SummarizedIconRow(max) {
 export function OverflowText(arg0) {
   ({ overflow, style } = arg0);
   const obj = { style: null, children: null };
-  const items = [closure_4().overflowTextOnly, style];
+  items = [closure_4().overflowTextOnly, style];
   obj.style = items;
   obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
@@ -127,7 +127,7 @@ export function OverflowText(arg0) {
 export function OverflowTextSmall(arg0) {
   ({ overflow, style } = arg0);
   const obj = { style: null, children: null };
-  const items = [closure_4().overflowTextOnly, style];
+  items = [closure_4().overflowTextOnly, style];
   obj.style = items;
   obj.children = jsx(Text_Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
@@ -136,7 +136,7 @@ export function OverflowCircle(arg0) {
   ({ overflow, style } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };
-  const items = [tmp.overflowCircleWrap, style];
+  items = [tmp.overflowCircleWrap, style];
   obj.style = items;
   const obj2 = { style: tmp.overflowCircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
   obj.children = <View style={tmp.overflowCircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;

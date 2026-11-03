@@ -1,8 +1,8 @@
-// === Module 10214: shouldCheckUploadSizeOnlyAfterCompression ===
+// === Module 10344: shouldCheckUploadSizeOnlyAfterCompression ===
 
-// Module 10214 (shouldCheckUploadSizeOnlyAfterCompression)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 10344 (shouldCheckUploadSizeOnlyAfterCompression)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);

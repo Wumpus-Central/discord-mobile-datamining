@@ -1,16 +1,16 @@
-// === Module 16837: FamilyCenterParentalControlsContentAndSocial ===
+// === Module 16980: FamilyCenterParentalControlsContentAndSocial ===
 
-// Module 16837 (FamilyCenterParentalControlsContentAndSocial)
+// Module 16980 (FamilyCenterParentalControlsContentAndSocial)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterParentalControlsContentAndSocial() {
   const obj2 = { sections: null };
   const obj3 = { settings: null, subLabel: null };
-  const items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
+  items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
   obj3.settings = items;
   const intl = util.intl;
   const obj4 = { learnMoreLink: null };

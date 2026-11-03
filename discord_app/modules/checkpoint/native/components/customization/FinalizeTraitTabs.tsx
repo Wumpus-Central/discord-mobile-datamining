@@ -1,14 +1,14 @@
-// === Module 13689: FinalizeTraitTabs ===
+// === Module 13829: FinalizeTraitTabs ===
 
-// Module 13689 (FinalizeTraitTabs)
+// Module 13829 (FinalizeTraitTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CheckpointPressable from "CheckpointPressable" /* 13677 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13691 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CheckpointPressable from "CheckpointPressable" /* 13807 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13831 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -80,14 +80,14 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6066);
+const CheckpointConstants = fn(6186);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [fn(6434).CheckpointCustomizationOption.BASE, fn(6434).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(6554).CheckpointCustomizationOption.BASE, fn(6554).CheckpointCustomizationOption.OUTFIT_COLOR];
 let closure_10 = items.length + 1;
-const createStyles = fn(5014);
-let obj2 = { scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 }, row: null, tabContainerActive: null, tab: null, tabActive: null, tabDisabled: null, tabLabel: null, tabLabelActive: null, tabLabelDisabled: null };
+const createStyles = fn(5141);
+let obj2 = { scroll: { flexGrow: 0 }, scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 }, row: null, tabContainerActive: null, tab: null, tabActive: null, tabDisabled: null, tabLabel: null, tabLabelActive: null, tabLabelDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.tabContainerActive = { paddingRight: 0, paddingBottom: 0 };
@@ -147,7 +147,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
   if (tmp2Result6.isIOS()) {
     str = "tabbar";
   }
-  let obj = { horizontal: true, accessibilityRole: str, alwaysBounceHorizontal: false, contentContainerStyle: tmp.scrollContent, children: null };
+  let obj = { horizontal: true, accessibilityRole: str, alwaysBounceHorizontal: false, style: tmp.scroll, contentContainerStyle: tmp.scrollContent, children: null };
   let obj2 = { style: tmp.row, accessibilityRole: null, children: null };
   const tmp15 = closure_4;
   tmp2Result6 = activeCustomizationOption(disableSwitching[10]);
@@ -182,7 +182,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
   const obj3 = { position, label: null, isActive: null, disabled: null, accessibilityHint: null, onPress: null, trailing: null };
   if (hasItem) {
     const intl = tmp2(tmp3[11]).intl;
-    let stringResult = intl.string(require("module_3092")["iXpQc+"]);
+    let stringResult = intl.string(require("module_3219")["iXpQc+"]);
   } else {
     stringResult = tmp2(tmp3[4]).getCustomizationOptionName(activeCustomizationOption);
     const tmp2Result8 = tmp2(tmp3[4]);
@@ -195,7 +195,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
   obj3.disabled = disableSwitching;
   if (nitroLockedMessage == null) {
     const intl2 = tmp2(tmp3[11]).intl;
-    nitroLockedMessage = intl2.string(require("module_3092")["8cGmXF"]);
+    nitroLockedMessage = intl2.string(require("module_3219")["8cGmXF"]);
   }
   obj3.accessibilityHint = nitroLockedMessage;
   obj3.onPress = function handleMorePress() {
@@ -204,7 +204,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         showNitroLockedToastDefault(closure_4);
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13690, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13830, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
       }
     }
   };

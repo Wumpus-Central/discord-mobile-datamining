@@ -1,6 +1,6 @@
-// === Module 6565: SortedArrayUtils ===
+// === Module 6687: SortedArrayUtils ===
 
-// Module 6565 (SortedArrayUtils)
+// Module 6687 (SortedArrayUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SortedArrayUtils.tsx");
@@ -27,7 +27,7 @@ export function insertionIndex(arg0, key, fn) {
   }
   return num2;
 }
-export function insert(arr, messageRecord1, fn) {
+export function insert(arr, item, fn) {
   let sum;
   let tmp4;
   let length = arr.length;
@@ -38,7 +38,7 @@ export function insert(arr, messageRecord1, fn) {
       let tmp = num + length >>> 1;
       sum = num;
       tmp4 = tmp;
-      if (fn(arr[tmp], messageRecord1) < 0) {
+      if (fn(arr[tmp], item) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -47,7 +47,7 @@ export function insert(arr, messageRecord1, fn) {
       num2 = sum;
     } while (sum < tmp4);
   }
-  arr.splice(num2, 0, messageRecord1);
+  arr.splice(num2, 0, item);
 }
 export function remove(arr, key, fn) {
   let sum;

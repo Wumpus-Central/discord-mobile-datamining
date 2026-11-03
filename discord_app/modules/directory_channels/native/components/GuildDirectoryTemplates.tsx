@@ -1,8 +1,8 @@
-// === Module 13871: GuildDirectoryTemplates ===
+// === Module 14002: GuildDirectoryTemplates ===
 
-// Module 13871 (GuildDirectoryTemplates)
+// Module 14002 (GuildDirectoryTemplates)
 import native from "native" /* 1187 */;
-import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 13873 */;
+import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 14004 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,12 +26,12 @@ class GuildTemplatesItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13853);
+const GuildDirectoryConstants = fn(13984);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(13858).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13989).GuildDirectoryCreate;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ label: { marginTop: 16, marginLeft: 16, marginBottom: 8 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, templateGroup: { marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryTemplates.tsx");
@@ -45,7 +45,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const effect = noop.useEffect(() => {
     closure_1.current = current;
   });
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback((guildTemplate) => {
     navigation.push(GuildDirectoryCreate.CREATE, { onHubGuildInfoSet: ref.current.onHubGuildInfoSet, guildTemplate });
   }, items);
@@ -54,7 +54,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const obj = require("useNavigation");
   obj3.contentContainerStyle = { paddingBottom: require("useSafeAreaInsets")().bottom + 16 };
   const obj5 = { style: tmp.header, children: null };
-  const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require("util").intl;
   obj6.children = intl.format(require("util").t.T7aLYT, { guildName: directoryGuildName.directoryGuildName });
   const items1 = [closure_9(require("Text/Text").Text, obj6), ];

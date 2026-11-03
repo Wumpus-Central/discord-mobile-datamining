@@ -1,6 +1,6 @@
-// === Module 12799: ChatInputNativeComponent ===
+// === Module 12935: ChatInputNativeComponent ===
 
-// Module 12799 (ChatInputNativeComponent)
+// Module 12935 (ChatInputNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
@@ -16,42 +16,42 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default value;
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  backspace(arg0) {
-    renderElement.dispatchCommand(arg0, "backspace", []);
+  backspace(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "backspace", []);
   },
-  blur(arg0) {
-    renderElement.dispatchCommand(arg0, "blur", []);
+  blur(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "blur", []);
   },
-  focus(arg0) {
-    renderElement.dispatchCommand(arg0, "focus", []);
+  focus(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "focus", []);
   },
-  openCustomKeyboard(arg0) {
-    renderElement.dispatchCommand(arg0, "openCustomKeyboard", []);
+  openCustomKeyboard(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "openCustomKeyboard", []);
   },
-  closeCustomKeyboard(arg0) {
-    renderElement.dispatchCommand(arg0, "closeCustomKeyboard", []);
+  closeCustomKeyboard(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "closeCustomKeyboard", []);
   },
-  openSystemKeyboard(arg0) {
-    renderElement.dispatchCommand(arg0, "openSystemKeyboard", []);
+  openSystemKeyboard(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "openSystemKeyboard", []);
   },
-  replaceRange(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
-    const items = [arg1, arg2, arg3, arg4, arg5, arg6];
-    renderElement.dispatchCommand(arg0, "replaceRange", items);
+  replaceRange(nodeFromPublicInstance, arg1, arg2, arg3, arg4, arg5, arg6) {
+    items = [arg1, arg2, arg3, arg4, arg5, arg6];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "replaceRange", items);
   },
-  setSelectedRange(arg0, arg1, arg2) {
-    const items = [arg1, arg2];
-    renderElement.dispatchCommand(arg0, "setSelectedRange", items);
+  setSelectedRange(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "setSelectedRange", items);
   },
-  setText(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "setText", items);
+  setText(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "setText", items);
   },
-  flushText(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "flushText", items);
+  flushText(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "flushText", items);
   },
-  updateTextBlocks(arg0, arg1, arg2) {
-    const items = [arg1, arg2];
-    renderElement.dispatchCommand(arg0, "updateTextBlocks", items);
+  updateTextBlocks(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "updateTextBlocks", items);
   }
 };

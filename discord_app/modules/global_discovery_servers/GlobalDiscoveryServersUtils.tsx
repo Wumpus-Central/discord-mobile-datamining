@@ -1,11 +1,11 @@
-// === Module 20045: GlobalDiscoveryServersUtils ===
+// === Module 20195: GlobalDiscoveryServersUtils ===
 
-// Module 20045 (GlobalDiscoveryServersUtils)
+// Module 20195 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 let closure_13 = async function _navigateToGuild() {
@@ -20,8 +20,8 @@ let closure_13 = async function _navigateToGuild() {
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9076);
-({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: c10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
+const GlobalDiscoveryServersConstants = fn(9204);
+({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: closure_10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
@@ -164,7 +164,7 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "isArray", discoverySplash: "onPress", emojis: "Array" };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "id", discoverySplash: "loadingTextPlaceholderSmall", emojis: "_l" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;
@@ -172,12 +172,12 @@ export function fromDiscoverableGuildSearchResult(id) {
 export function getLanguageCodeFallback() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [LocaleStore];
+    items = [LocaleStore];
     tmp = items;
   }
   [tmp3] = tmp;
   const arr2 = closure_1_10();
-  locale = tmp3.locale;
+  const locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {
     found = arr2[0];

@@ -1,21 +1,21 @@
-// === Module 20112: PlayableStore ===
+// === Module 20262: PlayableStore ===
 
-// Module 20112 (PlayableStore)
+// Module 20262 (PlayableStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7844 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7843 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7968 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7967 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 function pauseOrResumeTimer(c3) {
   const startedAt = _null.startedAt;
   const tmp3 = asLaunched(FramesStore.getFrame(_null.frameId));
-  const state = DiscordAppStateDefault.getState();
+  state = DiscordAppStateDefault.getState();
   let tmp8 = state === ConstantsIOS.AppStates.ACTIVE;
   if (tmp8) {
     let activityPanelMode;
@@ -70,8 +70,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
-const asLaunched = fn(6847).asLaunched;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const asLaunched = fn(6967).asLaunched;
 let c3 = null;
 const Store = initializeDefault.Store;
 class PlayableStore extends Store {

@@ -1,6 +1,6 @@
-// === Module 12491: useLatch ===
+// === Module 12627: useLatch ===
 
-// Module 12491 (useLatch)
+// Module 12627 (useLatch)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -16,7 +16,7 @@ export default function useLatch(arg0) {
     }, []),
     tryCallback: null
   };
-  const items = [arg0];
+  items = [arg0];
   obj.tryCallback = noop.useCallback(() => {
     if (ref.current) {
       tmp.current = false;

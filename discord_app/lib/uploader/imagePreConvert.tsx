@@ -1,9 +1,9 @@
-// === Module 9779: imagePreConvert ===
+// === Module 9911: imagePreConvert ===
 
-// Module 9779 (imagePreConvert)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import UploadPlatform from "UploadPlatform" /* 8211 */;
-import imageFilename from "imageFilename" /* 8239 */;
+// Module 9911 (imagePreConvert)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import UploadPlatform from "UploadPlatform" /* 8335 */;
+import imageFilename from "imageFilename" /* 8363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -46,7 +46,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
             if (null != tmp76) {
               if (value.platform === UploadPlatform.UploadPlatform.WEB) {
                 c5 = 1;
-                const items = [asyncRequireImpl(dependencyMap[4], dependencyMap.paths), asyncRequireImpl(dependencyMap[6], dependencyMap.paths)];
+                items = [asyncRequireImpl(dependencyMap[4], dependencyMap.paths), asyncRequireImpl(dependencyMap[6], dependencyMap.paths)];
                 c6 = 2;
                 c7 = 1;
                 const obj4 = { value: Promise.all(items), done: false };

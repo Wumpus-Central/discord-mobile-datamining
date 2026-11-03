@@ -1,11 +1,11 @@
-// === Module 8441: ChannelPinnedMessageSystemMessage ===
+// === Module 8565: ChannelPinnedMessageSystemMessage ===
 
-// Module 8441 (ChannelPinnedMessageSystemMessage)
+// Module 8565 (ChannelPinnedMessageSystemMessage)
 import util from "util" /* 1113 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8418 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8420 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8425 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8542 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8544 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8549 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
@@ -32,7 +32,7 @@ export function createChannelPinnedMessageSystemMessage(roleStyle) {
   if (accessibilityActions == null) {
     accessibilityActions = [];
   }
-  const items = [...accessibilityActions];
+  items = [...accessibilityActions];
   const obj6 = { label: null, name: null };
   const intl3 = util.intl;
   obj6.label = intl3.string(util.t["mp1N/2"]);

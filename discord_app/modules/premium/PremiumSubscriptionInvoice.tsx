@@ -1,10 +1,10 @@
-// === Module 15276: PremiumSubscriptionInvoice ===
+// === Module 15417: PremiumSubscriptionInvoice ===
 
-// Module 15276 (PremiumSubscriptionInvoice)
+// Module 15417 (PremiumSubscriptionInvoice)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InvoiceRecord from "InvoiceRecord" /* 2055 */;
+import InvoiceRecord from "InvoiceRecord" /* 2184 */;
 
 const require = fn;
 function createSubscriptionInvoicePreview() {
@@ -28,7 +28,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -305,7 +305,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -417,7 +417,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -481,7 +481,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
 };
 let closure_3 = ["subscriptionId"];
 const noop = fn(19);
-({ useCallback: closure_7, useEffect: closure_8, useState: closure_9, useRef: c10 } = noop);
+({ useCallback: closure_7, useEffect: closure_8, useState: closure_9, useRef: closure_10 } = noop);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");
@@ -501,7 +501,7 @@ export function useFetchGenericInvoicePreview(preventFetch, arg1, arg2) {
   const tmp3 = _slicedToArray(closure_9(null), 2);
   closure_3 = tmp3[1];
   closure_4 = closure_10(null);
-  const items = [flag, arg1, arg2];
+  items = [flag, arg1, arg2];
   closure_8(() => {
     closure_1 = async function _loadPreview() {
       let v0 = 1;
@@ -557,7 +557,7 @@ export function useFetchSubscriptionGiftInvoicePreview(preventFetch, arg1) {
   closure_8(() => {
     closure_1.current = current;
   });
-  const items = [JSON.stringify(preventFetch)];
+  items = [JSON.stringify(preventFetch)];
   const tmp4 = closure_7(() => {
     current = ref.current;
     let tmp2 = current;
@@ -649,7 +649,7 @@ export function useFetchSubscriptionInvoicePreview(subscriptionId, arg1) {
   closure_10(false);
   const tmp7 = closure_10(null);
   closure_129_0 = tmp7;
-  const items = [arg1];
+  items = [arg1];
   closure_8(() => {
     closure_0.current = null;
   }, items);
@@ -798,7 +798,7 @@ export function useGetSubscriptionInvoice(preventFetch, arg1) {
   closure_8(() => {
     closure_1.current = current;
   });
-  const items = [JSON.stringify(preventFetch)];
+  items = [JSON.stringify(preventFetch)];
   const tmp4 = closure_7(() => getSubscriptionInvoice(ref.current), items);
   closure_129_0 = undefined;
   closure_129_1 = undefined;

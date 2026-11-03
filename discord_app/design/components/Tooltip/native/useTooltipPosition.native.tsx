@@ -1,6 +1,6 @@
-// === Module 9958: useTooltipPosition ===
+// === Module 10089: useTooltipPosition ===
 
-// Module 9958 (useTooltipPosition)
+// Module 10089 (useTooltipPosition)
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);
@@ -15,7 +15,7 @@ export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
   if (arg4 === undefined) {
     num = 0;
   }
-  const items = [arg3, arg0, arg2, arg1, num];
+  items = [arg3, arg0, arg2, arg1, num];
   return noop.useMemo(() => {
     const size = closure_0;
     if (null != closure_0) {

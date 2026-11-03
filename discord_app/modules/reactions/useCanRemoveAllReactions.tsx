@@ -1,7 +1,7 @@
-// === Module 10097: useCanRemoveAllReactions ===
+// === Module 10227: useCanRemoveAllReactions ===
 
-// Module 10097 (useCanRemoveAllReactions)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 10227 (useCanRemoveAllReactions)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ export default function useCanRemoveAllReactions(channel) {
   _require = channel;
   isActiveChannelOrUnarchivableThread = require("ThreadHooks").useIsActiveChannelOrUnarchivableThread(channel);
   const obj = require("ThreadHooks");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel, isActiveChannelOrUnarchivableThread];
   const obj2 = require("initialize");
   return null != channel && require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.MANAGE_MESSAGES, closure_0) && isActiveChannelOrUnarchivableThread, items1);

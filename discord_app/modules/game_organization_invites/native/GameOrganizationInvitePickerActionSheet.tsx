@@ -1,19 +1,19 @@
-// === Module 11649: GameOrganizationInvitePickerActionSheet ===
+// === Module 11786: GameOrganizationInvitePickerActionSheet ===
 
-// Module 11649 (GameOrganizationInvitePickerActionSheet)
+// Module 11786 (GameOrganizationInvitePickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import _modDef7338 from "module_7338" /* 7338 */;
-import GameOrganizationInvitePickerRowDefault from "GameOrganizationInvitePickerRow" /* 11650 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11651 */;
-import groupInvitableGameOrganizationsByApplicationDefault from "groupInvitableGameOrganizationsByApplication" /* 11657 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11658 */;
-import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11661 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import _modDef7458 from "module_7458" /* 7458 */;
+import GameOrganizationInvitePickerRowDefault from "GameOrganizationInvitePickerRow" /* 11787 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11788 */;
+import groupInvitableGameOrganizationsByApplicationDefault from "groupInvitableGameOrganizationsByApplication" /* 11794 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11795 */;
+import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11798 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
@@ -28,9 +28,9 @@ function GameSection(arg0) {
     const obj3 = { uri: application.iconUrl };
     let tmp5Result = obj3;
   } else {
-    tmp5Result = _modDef7338;
+    tmp5Result = _modDef7458;
   }
-  const items = [closure_7(FastImageDefault, { source: tmp5Result, style: tmp.gameIcon }), closure_7(Text_Text.Text, { accessibilityRole: "header", variant: "text-sm/medium", color: "text-muted", children: application.name })];
+  items = [closure_7(FastImageDefault, { source: tmp5Result, style: tmp.gameIcon }), closure_7(Text_Text.Text, { accessibilityRole: "header", variant: "text-sm/medium", color: "text-muted", children: application.name })];
   obj2.children = items;
   const items1 = [closure_8(Stack_Stack.Stack, obj2), ];
   const obj6 = { hasIcons: true, children: null };
@@ -44,10 +44,10 @@ function GameSection(arg0) {
   return closure_8(Stack_Stack.Stack, obj);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const days = fn(11364).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
+const days = fn(11501).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_8 }, centeredText: { textAlign: "center" }, gameIcon: null, sections: null, status: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs };
 obj2.gameIcon = size;
@@ -64,7 +64,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
   let data;
   noop = undefined;
   const tmp = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(data[13]).useStateFromStores(items, () => UserStore.getUser(userId));
   const tmp6 = stateFromStores(data[14])("game_organization_invite_picker");
   data = tmp6.data;
@@ -116,7 +116,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
     const intl3 = tmp2(tmp3[19]).intl;
     obj6.dismissAccessibilityLabel = intl3.string(tmp2(tmp3[19]).t.cpT0Cq);
     const obj7 = { spacing: tmp5(tmp3[6]).space.PX_4, style: tmp.header, children: null };
-    const obj8 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
+    const obj8 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
     const intl4 = tmp2(tmp3[19]).intl;
     obj8.children = intl4.string(tmp5(tmp3[20])["v5/qxX"]);
     const items5 = [tmp7(tmp2(tmp3[10]).Heading, obj8), ];

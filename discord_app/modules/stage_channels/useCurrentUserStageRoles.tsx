@@ -1,8 +1,8 @@
-// === Module 11852: useCurrentUserStageRoles ===
+// === Module 11989: useCurrentUserStageRoles ===
 
-// Module 11852 (useCurrentUserStageRoles)
+// Module 11989 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6757 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6877 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ export default function useCurrentUserStageRoles(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [StageChannelRoleStore, AuthenticationStore];
+  items = [StageChannelRoleStore, AuthenticationStore];
   const items1 = [arg0, flag];
   return require("initialize").useStateFromStoresObject(items, () => StageChannelRoleStore.getPermissionsForUser(AuthenticationStore.getId(), closure_0, flag), items1);
 };

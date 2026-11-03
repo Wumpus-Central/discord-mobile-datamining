@@ -1,9 +1,9 @@
-// === Module 14738: useGetJoinRequestGuild ===
+// === Module 14869: useGetJoinRequestGuild ===
 
-// Module 14738 (useGetJoinRequestGuild)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6916 */;
+// Module 14869 (useGetJoinRequestGuild)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7036 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export default function useGetGuildJoinRequest(arg0) {
   _require = arg0;
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {

@@ -1,26 +1,30 @@
-// === Module 19503: RadioGroupActionComponent ===
+// === Module 19661: RadioGroupActionComponent ===
 
-// Module 19503 (RadioGroupActionComponent)
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
+// Module 19661 (RadioGroupActionComponent)
+import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let __initData = { code: "function RadioGroupActionComponentTsx1(){const{withSpring,hasValue,SUBTLE_SPRING}=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};}" };
+let closure_7 = { code: "(function RadioGroupActionComponentTsx1(){let[withSpring,hasValue,SUBTLE_SPRING]=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
 
 export default noop.memo(function RadioGroupActionComponent(type) {
   type = type.type;
+  _require = type;
   const options = type.options;
+  importDefault = options;
   const required = type.required;
+  dependencyMap = required;
   ref = ref.useRef(null);
-  const items = [options];
+  items = [options];
   const memo = ref.useMemo(() => {
     value = undefined;
-    const iter = options.find((item) => item.default);
+    const iter = _undefined.find((item) => item.default);
     if (iter != null) {
       value = iter.value;
     }
@@ -31,8 +35,8 @@ export default noop.memo(function RadioGroupActionComponent(type) {
     const obj3 = { type, value: memo };
     tmp5 = obj3;
   }
-  const componentState = type(required[2]).useComponentState(type, tmp5);
-  const state = componentState.state;
+  const componentState = require("ComponentStateContext").useComponentState(type, tmp5);
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
   const memo1 = ref.useMemo(() => {
@@ -41,46 +45,54 @@ export default noop.memo(function RadioGroupActionComponent(type) {
       type = state.type;
     }
     value = null;
-    if (type === type) {
+    if (type === c0) {
       value = state.value;
     }
     return value;
   }, items1);
-  __initData = tmp8;
-  let obj2 = type(required[2]);
-  const fn = function p() {
-    let num = 0;
-    if (closure_7) {
-      num = 60;
+  let obj2 = require("ComponentStateContext");
+  const items2 = [closure_7, require("spring/spring").withSpring, null != memo1, require("springPresets").SUBTLE_SPRING];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp9, tmp10, tmp11, tmp12] = items2;
+  class RadioGroupActionComponentTsx1 {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_1;
+      num = 0;
+      if (closure_1) {
+        num = 60;
+      }
+      obj = { maxHeight: tmp(num, closure_2), marginTop: null, opacity: null };
+      tmp3 = closure_2;
+      num2 = 0;
+      if (tmp2) {
+        num2 = 8;
+      }
+      obj.marginTop = tmp(num2, tmp3);
+      num3 = 0;
+      if (tmp2) {
+        num3 = 1;
+      }
+      obj.opacity = tmp(num3, tmp3);
+      return obj;
     }
-    const obj2 = { maxHeight: spring.withSpring(num, springPresets.SUBTLE_SPRING), marginTop: null, opacity: null };
-    let num2 = 0;
-    if (closure_7) {
-      num2 = 8;
-    }
-    obj2.marginTop = spring.withSpring(num2, springPresets.SUBTLE_SPRING);
-    const tmpResult = spring;
-    let num3 = 0;
-    if (closure_7) {
-      num3 = 1;
-    }
-    obj2.opacity = spring.withSpring(num3, springPresets.SUBTLE_SPRING);
-    return obj2;
-  };
-  const tmp3Result = type(required[3]);
-  fn.__closure = { withSpring: type(required[4]).withSpring, hasValue: null != memo1, SUBTLE_SPRING: type(required[5]).SUBTLE_SPRING };
-  fn.__workletHash = 1287549755250;
-  fn.__initData = __initData;
-  const animatedStyle = tmp3Result.useAnimatedStyle(fn);
+  }
+  const items3 = [tmp10, tmp11, tmp12];
+  RadioGroupActionComponentTsx1.__closure = items3;
+  RadioGroupActionComponentTsx1.__workletHash = 382181795595;
+  RadioGroupActionComponentTsx1.__initData = tmp9;
+  const animatedStyle = require("module_1652").useAnimatedStyle(RadioGroupActionComponentTsx1);
   let str = memo1;
   if (memo1 == null) {
     str = "";
   }
-  const obj4 = { withSpring: type(required[4]).withSpring, hasValue: null != memo1, SUBTLE_SPRING: type(required[5]).SUBTLE_SPRING };
-  const tmp10 = memo1;
-  const tmp11 = executeStateUpdate;
+  const tmp14 = memo1;
+  const tmp15 = executeStateUpdate;
+  const tmp3Result = require("module_1652");
   const children = [
-    state(type(required[6]).TableRadioGroup, {
+    state(require("TableRadioGroup").TableRadioGroup, {
       hasIcons: false,
       defaultValue: str,
       onChange(value) {
@@ -99,33 +111,33 @@ export default noop.memo(function RadioGroupActionComponent(type) {
         }
       },
       groupRef: ref,
-      children: options.map((label) => state(type(required[7]).TableRadioRow, { label: label.label, subLabel: label.description, value: label.value }, label.value))
+      children: options.map((label) => state(type(_undefined2[7]).TableRadioRow, { label: label.label, subLabel: label.description, value: label.value }, label.value))
     }),
 
   ];
-  let tmp12Result = !required;
+  let tmp16Result = !required;
   if (!required) {
-    const obj6 = { style: animatedStyle, accessibilityElementsHidden: !tmp8, importantForAccessibility: null, children: null };
+    const obj5 = { style: animatedStyle, accessibilityElementsHidden: !tmp8, importantForAccessibility: null, children: null };
     let str2 = "no-hide-descendants";
     if (tmp8) {
       str2 = "auto";
     }
-    obj6.importantForAccessibility = str2;
-    const obj7 = { icon: null, label: null, onPress: null, start: true, end: true };
-    const obj8 = { IconComponent: tmp3(tmp4[9]).XSmallIcon };
-    obj7.icon = tmp12(tmp3(tmp4[8]).TableRow.Icon, obj8);
-    const intl = tmp3(tmp4[10]).intl;
-    obj7.label = intl.string(tmp3(tmp4[10]).t["5uAtZN"]);
-    obj7.onPress = function onPress() {
+    obj5.importantForAccessibility = str2;
+    const obj6 = { icon: null, label: null, onPress: null, start: true, end: true };
+    const obj7 = { IconComponent: tmp3(7180).XSmallIcon };
+    obj6.icon = tmp16(tmp3(7101).TableRow.Icon, obj7);
+    const intl = tmp3(1113).intl;
+    obj6.label = intl.string(tmp3(1113).t["5uAtZN"]);
+    obj6.onPress = function onPress() {
       executeStateUpdate({ type, value: null });
       const current = ref.current;
       if (current != null) {
         current.setValue("");
       }
     };
-    obj6.children = tmp12(tmp3(tmp4[8]).TableRow, obj7);
-    tmp12Result = tmp12(options(tmp4[3]).View, obj6);
+    obj5.children = tmp16(tmp3(7101).TableRow, obj6);
+    tmp16Result = tmp16(_modDef1652.View, obj5);
   }
-  children[1] = tmp12Result;
-  return tmp10(tmp11, { children });
+  children[1] = tmp16Result;
+  return tmp14(tmp15, { children });
 });

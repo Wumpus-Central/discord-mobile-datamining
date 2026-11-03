@@ -1,9 +1,9 @@
-// === Module 17589: GeneratedTestUsersStore ===
+// === Module 17732: GeneratedTestUsersStore ===
 
-// Module 17589 (GeneratedTestUsersStore)
+// Module 17732 (GeneratedTestUsersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import UserRecord from "UserRecord" /* 1399 */;
 
 function handleAddUser(id) {
   if (null == closure_1.users) {
@@ -31,7 +31,7 @@ prototype["initialize"] = function initialize(pools) {
     if (null != pools.users) {
       const _Map2 = Map;
       const _Object2 = Object;
-      map1 = new Map(Object.entries(pools.users));
+      const map1 = new Map(Object.entries(pools.users));
       closure_1.users = map1;
     }
   }
@@ -54,7 +54,7 @@ prototype["getState"] = function getState() {
 prototype["getUsersForPool"] = function getUsersForPool(id) {
   closure_0 = id;
   const users = pools.users;
-  let items;
+  items = undefined;
   if (users != null) {
     items = users.values();
   }

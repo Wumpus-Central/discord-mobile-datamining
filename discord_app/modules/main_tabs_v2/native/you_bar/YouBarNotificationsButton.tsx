@@ -1,23 +1,22 @@
-// === Module 18468: YouBarNotificationsButton ===
+// === Module 18622: YouBarNotificationsButton ===
 
-// Module 18468 (YouBarNotificationsButton)
+// Module 18622 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 575 */;
-import spring from "spring" /* 5637 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 18623 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10191 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10321 */;
 
-const require = globalThis.__r;
-
-require = fn;
+const _modDef1652 = tmp2(1652);
+const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17075);
+const YouBarConstants = fn(17218);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, overdueReminderDot: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION } };
 let closure_10 = createStyles.createStyles(obj);
-const __initData = { code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}" };
+let closure_11 = { code: "(function YouBarNotificationsButtonTsx1(){let[withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens]=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};})" };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNotificationsButton.tsx");
@@ -26,74 +25,84 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
   let onLongPress;
   const tmp = closure_10();
-  value = onLongPress(18469)().value;
-  _require = value;
-  const fn = function u() {
-    let num = 0;
-    if (c0 > 0) {
-      num = 1;
+  value = useNotificationsTabBadgeDefault().value;
+  items = [closure_11, onLongPress(5757).withSpring, value, closure_6, nativeDefault];
+  onLongPress = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9] = items;
+  class YouBarNotificationsButtonTsx1 {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_1;
+      num = 0;
+      if (closure_1 > 0) {
+        num = 1;
+      }
+      obj = { transform: null, marginLeft: null, opacity: null };
+      obj1 = { scaleX: tmp(num, closure_2) };
+      tmp3 = closure_2;
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      num2 = 0;
+      if (tmp2 > 0) {
+        tmp4 = closure_3;
+        num2 = closure_3.space.PX_4;
+      }
+      obj.marginLeft = tmp(num2, tmp3);
+      num3 = 0;
+      if (tmp2 > 0) {
+        num3 = 1;
+      }
+      obj.opacity = tmp(num3, tmp3);
+      return obj;
     }
-    const obj2 = { transform: null, marginLeft: null, opacity: null };
-    const items = [{ scaleX: spring.withSpring(num, YOU_BAR_SPRING_CONFIG) }];
-    obj2.transform = items;
-    const obj3 = { scaleX: spring.withSpring(num, YOU_BAR_SPRING_CONFIG) };
-    let num2 = 0;
-    if (c0 > 0) {
-      num2 = nativeDefault.space.PX_4;
-    }
-    obj2.marginLeft = spring.withSpring(num2, YOU_BAR_SPRING_CONFIG);
-    const tmpResult = spring;
-    let num3 = 0;
-    if (c0 > 0) {
-      num3 = 1;
-    }
-    obj2.opacity = spring.withSpring(num3, YOU_BAR_SPRING_CONFIG);
-    return obj2;
-  };
-  let obj = require("ReanimatedRexport");
-  const tmp2 = onLongPress;
-  fn.__closure = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: onLongPress(575) };
-  fn.__workletHash = 11181198364048;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: onLongPress(575) };
-  let items = [SavedMessagesStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
+  }
+  const items1 = [tmp6, tmp7, tmp8, tmp9];
+  YouBarNotificationsButtonTsx1.__closure = items1;
+  YouBarNotificationsButtonTsx1.__workletHash = 35233906729;
+  YouBarNotificationsButtonTsx1.__initData = tmp5;
+  const animatedStyle = onLongPress(1652).useAnimatedStyle(YouBarNotificationsButtonTsx1);
+  let obj = onLongPress(1652);
+  const items2 = [SavedMessagesStore];
+  const stateFromStores = onLongPress(504).useStateFromStores(items2, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
   onLongPress = noop.useCallback(() => {
-    const result = _undefined(5260).triggerHapticFeedback(_undefined(5260).HapticFeedbackTypes.SOFT);
-    const obj = _undefined(5260);
-    _undefined(11150).showForLaterModal(_undefined(10192).SavedMessageSortTypes.BOOKMARK);
+    const result = callback(_undefined[11]).triggerHapticFeedback(callback(_undefined[11]).HapticFeedbackTypes.SOFT);
+    const obj = callback(_undefined[11]);
+    callback(_undefined[12]).showForLaterModal(callback(_undefined[13]).SavedMessageSortTypes.BOOKMARK);
   }, []);
-  const items1 = [onLongPress];
+  const items3 = [onLongPress];
   const memo = noop.useMemo(() => {
     const obj = { name: "open-bookmarks", label: null };
-    const intl = _undefined(1113).intl;
-    obj.label = intl.string(_undefined(1113).t["2pAkDA"]);
-    const items = [obj];
+    const intl = callback(_undefined[14]).intl;
+    obj.label = intl.string(callback(_undefined[14]).t["2pAkDA"]);
+    items = [obj];
     return items;
   }, []);
   const callback1 = noop.useCallback((nativeEvent) => {
     if ("open-bookmarks" === nativeEvent.nativeEvent.actionName) {
       callback();
     }
-  }, items1);
-  const obj4 = { size: "custom", style: tmp.icon, color: null };
+  }, items3);
+  const obj2 = { size: "custom", style: tmp.icon, color: null };
   let str;
   if (hasNameplate) {
     str = "white";
   }
-  obj4.color = str;
-  let obj3 = require("initialize");
+  obj2.color = str;
+  const tmp4Result = onLongPress(504);
   let intl = tmp4(1113).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(require("util").t.kedGua, { count: value });
+  const formatToPlainStringResult = intl.formatToPlainString(onLongPress(1113).t.kedGua, { count: value });
   let combined = formatToPlainStringResult;
   if (stateFromStores > 0 && 0 === value) {
     const intl2 = tmp4(1113).intl;
-    const obj5 = { count: stateFromStores };
+    const obj3 = { count: stateFromStores };
     const _HermesInternal = HermesInternal;
-    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(1113).t.yBmFPA, obj5);
+    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(1113).t.yBmFPA, obj3);
   }
-  const obj6 = { accessibilityLabel: combined, accessibilityActions: memo, onAccessibilityAction: callback1, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
+  const obj4 = { accessibilityLabel: combined, accessibilityActions: memo, onAccessibilityAction: callback1, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str4 = "secondary-overlay";
   if (!hasNameplate) {
     let str5 = "tertiary";
@@ -102,23 +111,23 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
     }
     str4 = str5;
   }
-  const obj7 = { children: null };
-  obj6.variant = str4;
-  const obj8 = { style: tmp.iconContainer, children: null };
-  const tmp11Result = closure_8(require("BellIcon").BellIcon, obj4);
-  const items2 = [closure_8(require("YouBarButton").YouBarButtonIcon, { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
-  const obj9 = { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
-  items2[1] = closure_8(tmp2(5095).View, { style: animatedStyle, children: closure_8(require("native").Badge, { value }) });
-  obj8.children = items2;
-  obj6.icon = closure_9(View, obj8);
-  obj6.onPress = function onPress() {
-    const rootNavigationRef = _undefined(5199).getRootNavigationRef();
+  const obj5 = { children: null };
+  obj4.variant = str4;
+  const obj6 = { style: tmp.iconContainer, children: null };
+  const tmp16Result = closure_8(onLongPress(9336).BellIcon, obj2);
+  const items4 = [closure_8(onLongPress(18619).YouBarButtonIcon, { icon: closure_8(onLongPress(9336).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
+  const obj7 = { icon: closure_8(onLongPress(9336).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
+  items4[1] = closure_8(_modDef1652.View, { style: animatedStyle, children: closure_8(onLongPress(1187).Badge, { value }) });
+  obj6.children = items4;
+  obj4.icon = closure_9(View, obj6);
+  obj4.onPress = function onPress() {
+    const rootNavigationRef = callback(_undefined[19]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
     }
   };
-  obj6.onLongPress = onLongPress;
-  obj6.hitSlop = hitSlop;
-  obj7.children = closure_8(require("IconButton").IconButton, obj6);
-  return closure_8(require("YouBarButton").YouBarButtonContainer, obj7);
+  obj4.onLongPress = onLongPress;
+  obj4.hitSlop = hitSlop;
+  obj5.children = closure_8(onLongPress(8152).IconButton, obj4);
+  return closure_8(onLongPress(18619).YouBarButtonContainer, obj5);
 });

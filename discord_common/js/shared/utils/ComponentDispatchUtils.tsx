@@ -33,7 +33,7 @@ prototype["safeDispatch"] = function safeDispatch(MODAL_CLOSE) {
   const substr = [...arguments].slice();
   if (this.hasSubscribers(MODAL_CLOSE)) {
     const dispatch = self.dispatch;
-    const items = [MODAL_CLOSE];
+    items = [MODAL_CLOSE];
     HermesBuiltin.arraySpread(substr, 1);
     return HermesBuiltin.apply(items, self);
   } else {
@@ -164,16 +164,16 @@ prototype["reset"] = function reset() {
   emitter.removeAllListeners();
   return this;
 };
-prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, channelId) {
+prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, c0) {
   const substr = [...arguments].slice();
-  const items = ["" + VOICE_MESSAGE_SEND + "_" + channelId, ...substr];
+  items = ["" + VOICE_MESSAGE_SEND + "_" + c0, ...substr];
   return this.dispatch.apply(items);
 };
-prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
-  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
+prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, c1, callback) {
+  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + c1, callback);
 };
-prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
-  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
+prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, _undefined2, callback) {
+  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + _undefined2, callback);
 };
 
 export { ComponentDispatcher };

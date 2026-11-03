@@ -1,14 +1,14 @@
-// === Module 11577: ChannelsAndRolesModal ===
+// === Module 11714: ChannelsAndRolesModal ===
 
-// Module 11577 (ChannelsAndRolesModal)
+// Module 11714 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7514 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10143 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7638 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function ChannelsAndRolesScreen(guildId) {
@@ -19,7 +19,7 @@ function ChannelsAndRolesScreen(guildId) {
   _slicedToArray = undefined;
   let segmentedControlState;
   let tmp = closure_10();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(defaultIndex[8]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp6 = require("useGuildOnboardingAvailable")(stateFromStores);
   importDefault = tmp6;
@@ -69,10 +69,10 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7269).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7389).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };
@@ -82,7 +82,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/native/Chann
 
 export default function ChannelsAndRolesModal(arg0) {
   ({ guildId: require, defaultTab: importDefault } = arg0);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp2 = useGuildOnboardingAvailableDefault(stateFromStores);
   const intl = util.intl;

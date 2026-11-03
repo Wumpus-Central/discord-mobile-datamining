@@ -1,21 +1,22 @@
-// === Module 14496: ProductPurchaseSuccessModal ===
+// === Module 14627: ProductPurchaseSuccessModal ===
 
-// Module 14496 (ProductPurchaseSuccessModal)
+// Module 14627 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import HapticUtils from "HapticUtils" /* 5260 */;
-import spring from "spring" /* 5637 */;
-import _mod7005 from "module_7005" /* 7005 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import tinycolorDefault from "tinycolor" /* 7730 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14495 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import HapticUtils from "HapticUtils" /* 5383 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import _mod7131 from "module_7131" /* 7131 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import tinycolorDefault from "tinycolor" /* 7854 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14626 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +24,7 @@ require = fn;
 function CancelButton(arg0) {
   ({ tintColor: require, onCancel } = arg0);
   dependencyMap = closure_14();
-  let items = [onCancel];
+  items = [onCancel];
   const callback = noop.useCallback(() => {
     if (onCancel != null) {
       tmp();
@@ -34,7 +35,7 @@ function CancelButton(arg0) {
     onPress: callback,
     backImage() {
       const obj = { size: "lg", style: null };
-      const items = [closeButtonIcon.closeButtonIcon, { tintColor }];
+      items = [closeButtonIcon.closeButtonIcon, { tintColor }];
       obj.style = items;
       return closure_2_11(XSmallIcon.XSmallIcon, obj);
     },
@@ -43,7 +44,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_11(_mod7005.HeaderBackButton, obj);
+  return closure_11(_mod7131.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -60,10 +61,10 @@ function ProductPurchaseGradientBackground(product) {
   token = backgroundColors(token[20]).useToken(tmp2(tmp3[8]).colors.BACKGROUND_BASE_LOW);
   const obj = backgroundColors(token[20]);
   token1 = backgroundColors(token[20]).useToken(tmp2(tmp3[8]).colors.BACKGROUND_SURFACE_HIGH);
-  let items = [backgroundColors, token, token1, null != tertiary];
+  items = [backgroundColors, token, token1, null != tertiary];
   const memo = noop.useMemo(() => {
     if (null == backgroundColors) {
-      const items = [token, token, token1, closure_21, closure_21];
+      items = [token, token, token1, closure_21, closure_21];
       let items2 = items;
     } else {
       const primary2 = backgroundColors.primary;
@@ -92,13 +93,13 @@ function ProductPurchaseGradientBackground(product) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ Orientation: closure_9, VerticalGradient: c10 } = Constants);
+({ Orientation: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -156,9 +157,9 @@ let closure_15 = createStyles.createStyles((arg0) => {
   obj10 = {};
   const obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 });
-const __initData = { code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}" };
-const __initData2 = { code: "function ProductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}" };
-const __initData3 = { code: "function ProductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}" };
+let closure_17 = { code: "(function ProductPurchaseSuccessModalTsx1(){let[interpolate,springInput,isProfilePreview]=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};})" };
+let closure_18 = { code: "(function ProductPurchaseSuccessModalTsx2(){let[interpolate,springInput]=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};})" };
+let closure_19 = { code: "(function ProductPurchaseSuccessModalTsx3(){let[interpolate,linearInput]=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};})" };
 let closure_20 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_21 = tinycolorDefault("black").toHexString();
@@ -179,10 +180,10 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     prop = null;
   }
   _require = undefined;
-  let callback;
+  importDefault = undefined;
   dependencyMap = undefined;
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const backgroundColors = callback(14497)(product.styles).backgroundColors;
+  const backgroundColors = useCollectiblesShopStylesDefault(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -191,8 +192,8 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   let obj = require("useCurrentUser");
   const token = require("useToken").useToken(tmp4(575).colors.INTERACTIVE_TEXT_ACTIVE);
   _require = noop.useRef(length);
-  callback = noop.useCallback(() => {
-    const arr = _toArray(ref.current);
+  const callback = noop.useCallback(() => {
+    const arr = _toArray(_undefined.current);
     const first = arr[0];
     const substr = arr.slice(1);
     if (null != first) {
@@ -201,9 +202,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       if (null != first) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(callback, first);
+        const timerId = setTimeout(c1, first);
       }
-      ref.current = substr;
+      _undefined.current = substr;
     }
     if (substr.length >= length.length / 2) {
       const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
@@ -211,11 +212,12 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     }
   }, []);
-  let items = [callback];
+  importDefault = callback;
+  items = [callback];
   const effect = noop.useEffect(() => {
-    callback();
+    _undefined2();
     return () => {
-      ref.current = [];
+      _undefined.current = [];
     };
   }, items);
   const tmp2Result = require("useToken");
@@ -224,78 +226,103 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   const tmp2Result13 = require("useAvatarDecorationPreviewSizes");
   let items1 = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let tmp12 = product.type === tmp2(1987).CollectiblesItemType.PROFILE_EFFECT;
+  let tmp12 = product.type === tmp2(2116).CollectiblesItemType.PROFILE_EFFECT;
   if (!tmp12) {
-    tmp12 = product.type === tmp2(1987).CollectiblesItemType.PROFILE_FRAME;
+    tmp12 = product.type === tmp2(2116).CollectiblesItemType.PROFILE_FRAME;
   }
   closure_129_0 = stateFromStores;
-  closure_129_1 = tmp12;
   const tmp2Result14 = require("initialize");
-  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
-  closure_129_2 = sharedValue;
-  const tmp2Result15 = require("ReanimatedRexport");
-  const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
-  closure_129_3 = sharedValue1;
+  const sharedValue = require("module_1652").useSharedValue(0);
+  closure_129_1 = sharedValue;
+  const tmp2Result15 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(0);
+  closure_129_2 = sharedValue1;
   const items2 = [sharedValue, stateFromStores, sharedValue1];
   const effect1 = noop.useEffect(() => {
     let num = 1;
-    if (!closure_0) {
-      const obj = ReanimatedRexport;
-      num = obj.withDelay(200, spring.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
+    if (!c0) {
+      const obj = _mod1652;
+      const obj3 = { duration: null, dampingRatio: 0.7 };
+      const _Math = Math;
+      obj3.duration = Math.round(333.3333333333333);
+      num = obj.withDelay(200, spring_spring.withSpring(1, obj3));
     }
-    const result = _undefined.set(num);
-    let num3 = 1;
-    if (!closure_0) {
-      const obj3 = ReanimatedRexport;
-      num3 = obj3.withDelay(200, timing.withTiming(1, { duration: 200 }));
+    const result = _undefined2.set(num);
+    let num4 = 1;
+    if (!c0) {
+      const obj4 = _mod1652;
+      num4 = obj4.withDelay(200, timing_timing.withTiming(1, { duration: 200 }));
     }
-    const result1 = _slicedToArray.set(num3);
+    const result1 = _undefined3.set(num4);
   }, items2);
-  const tmp2Result16 = require("ReanimatedRexport");
-  const fn = function l() {
-    const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0.1, 1]), transform: null };
-    let num = 0;
-    value = _undefined.get();
-    if (callback) {
-      num = 0.6;
+  const tmp2Result16 = require("module_1652");
+  const items3 = [closure_17, require("module_1652").interpolate, sharedValue, tmp12];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp16, tmp17, tmp18, tmp19] = items3;
+  class ProductPurchaseSuccessModalTsx1 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0.1, 1]), transform: null };
+      tmp = closure_0;
+      num = 0;
+      value = closure_1.get();
+      if (closure_2) {
+        num = 0.6;
+      }
+      obj1 = { scale: null };
+      items = [, ];
+      items[0] = num;
+      items[1] = 1;
+      obj1.scale = tmp(value, [0, 1], items);
+      items1 = [];
+      items1[0] = obj1;
+      obj.transform = items1;
+      return obj;
     }
-    const obj4 = { scale: null };
-    const items = [num, 1];
-    obj4.scale = ReanimatedRexport.interpolate(value, [0, 1], items);
-    const items1 = [obj4];
-    obj.transform = items1;
-    return obj;
-  };
-  const tmp2Result17 = require("ReanimatedRexport");
-  fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
-  fn.__workletHash = 15385317790278;
-  fn.__initData = __initData;
-  const animatedStyle = tmp2Result17.useAnimatedStyle(fn);
-  let obj2 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
-  const fn2 = function n() {
-    const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0, 1]), transform: null };
-    const obj3 = { scale: null };
-    obj3.scale = ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0.75, 1]);
-    const items = [obj3];
-    obj.transform = items;
-    return obj;
-  };
-  const tmp2Result18 = require("ReanimatedRexport");
-  fn2.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
-  fn2.__workletHash = 4517716462039;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = tmp2Result18.useAnimatedStyle(fn2);
-  let obj3 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
-  const fn3 = function s() {
-    const obj = { opacity: ReanimatedRexport.interpolate(_slicedToArray.get(), [0, 1], [0.5, 0]) };
-    return obj;
-  };
-  const tmp2Result19 = require("ReanimatedRexport");
-  fn3.__closure = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
-  fn3.__workletHash = 6018737312;
-  fn3.__initData = __initData3;
-  const animatedStyle2 = tmp2Result19.useAnimatedStyle(fn3);
-  const obj5 = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
+  }
+  const items4 = [tmp17, tmp18, tmp19];
+  ProductPurchaseSuccessModalTsx1.__closure = items4;
+  ProductPurchaseSuccessModalTsx1.__workletHash = 9824734884799;
+  ProductPurchaseSuccessModalTsx1.__initData = tmp16;
+  const animatedStyle = require("module_1652").useAnimatedStyle(ProductPurchaseSuccessModalTsx1);
+  const tmp2Result17 = require("module_1652");
+  const items5 = [closure_18, require("module_1652").interpolate, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp21, tmp22, tmp23] = items5;
+  class ProductPurchaseSuccessModalTsx2 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0, 1]), transform: null };
+      obj1 = { scale: closure_0(closure_1.get(), [0, 1], [0.75, 1]) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items6 = [tmp22, tmp23];
+  ProductPurchaseSuccessModalTsx2.__closure = items6;
+  ProductPurchaseSuccessModalTsx2.__workletHash = 4962255800686;
+  ProductPurchaseSuccessModalTsx2.__initData = tmp21;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(ProductPurchaseSuccessModalTsx2);
+  const tmp2Result18 = require("module_1652");
+  const items7 = [closure_19, require("module_1652").interpolate, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp25, tmp26, tmp27] = items7;
+  class ProductPurchaseSuccessModalTsx3 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0.5, 0]) };
+      return obj;
+    }
+  }
+  const items8 = [tmp26, tmp27];
+  ProductPurchaseSuccessModalTsx3.__closure = items8;
+  ProductPurchaseSuccessModalTsx3.__workletHash = 11513940629753;
+  ProductPurchaseSuccessModalTsx3.__initData = tmp25;
+  const animatedStyle2 = require("module_1652").useAnimatedStyle(ProductPurchaseSuccessModalTsx3);
+  const tmp2Result19 = require("module_1652");
   const category = require("useFetchCollectiblesProductCategory").useFetchCollectiblesProductCategory(product.skuId).category;
   if (category != null) {
     const mobileBgUrl = category.mobileBgUrl;
@@ -307,44 +334,43 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
   const tmp2Result21 = require("useHandleUseNow");
   const effect2 = noop.useEffect(() => {
-    ref(_undefined[28]).lockOrientation(constants.PORTRAIT);
+    _undefined(_undefined3[28]).lockOrientation(constants.PORTRAIT);
     return () => {
-      const result = ref(_undefined[28]).restoreDefaultOrientation();
+      const result = _undefined(_undefined3[28]).restoreDefaultOrientation();
     };
   }, []);
   const tmp2Result22 = require("useFetchVirtualCurrencyBalance");
   const shopProductItems = require("useShopProductItems").useShopProductItems(product);
   const tmp2Result23 = require("useShopProductItems");
-  [tmp24, c2] = noop.useState();
-  const obj6 = { style: tmp6.root, id: product.skuId, children: null };
+  [tmp34, c2] = noop.useState();
   if (useCategoryImage) {
     if (null != mobileBgUrl) {
-      const obj7 = { source: null, style: null };
-      const obj8 = { uri: mobileBgUrl };
-      obj7.source = obj8;
-      obj7.style = tmp6.imageBackground;
-      let tmp28 = closure_11(tmp4(5717), obj7);
-      let tmp29 = closure_11;
-      let tmp30 = closure_11;
+      let obj3 = { source: null, style: null };
+      let obj5 = { uri: mobileBgUrl };
+      obj3.source = obj5;
+      obj3.style = tmp6.imageBackground;
+      let tmp38 = closure_11(tmp4(5837), obj3);
+      let tmp39 = closure_11;
+      let tmp40 = closure_11;
     }
-    const items3 = [tmp28, , ];
-    const items4 = [tmp6.main, ];
+    const items9 = [tmp38, , ];
+    const items10 = [tmp6.main, ];
     let str;
     if (useCategoryImage) {
       str = "rgba(0, 0, 0, 0.3)";
     }
     const rect = { style: null, top: true, bottom: true, left: true, right: true, children: null };
-    const obj9 = { backgroundColor: str };
-    items4[1] = obj9;
-    rect.style = items4;
-    const obj10 = { style: tmp6.header, children: null };
-    const obj11 = { style: tmp6.headerLeading, children: null };
+    const obj6 = { backgroundColor: str };
+    items10[1] = obj6;
+    rect.style = items10;
+    const obj7 = { style: tmp6.header, children: null };
+    const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
-      const obj12 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp30(tmp2(14501).BalanceWidgetPill, obj12);
+      const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
+      showOrbBalancePill = tmp40(tmp2(14632).BalanceWidgetPill, obj9);
     }
-    obj11.children = showOrbBalancePill;
-    const items5 = [tmp30(closure_7, obj11), ];
+    obj8.children = showOrbBalancePill;
+    const items11 = [tmp40(closure_7, obj8), ];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -353,105 +379,125 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     if (toHexStringResult == null) {
       toHexStringResult = token;
     }
-    const obj13 = { tintColor: toHexStringResult, onCancel };
-    items5[1] = tmp30(CancelButton, obj13);
-    obj10.children = items5;
-    const items6 = [closure_12(closure_7, obj10), , ];
-    const obj14 = { style: { flex: 1 }, contentContainerStyle: tmp6.body, alwaysBounceVertical: false, children: null };
-    const obj15 = { style: null, children: null };
-    const items7 = [tmp6.preview, animatedStyle];
-    obj15.style = items7;
+    const obj10 = { tintColor: toHexStringResult, onCancel };
+    items11[1] = tmp40(CancelButton, obj10);
+    obj7.children = items11;
+    const items12 = [closure_12(closure_7, obj7), , ];
+    const obj11 = { style: { flex: 1 }, contentContainerStyle: tmp6.body, alwaysBounceVertical: false, children: null };
+    const obj12 = { style: null, children: null };
+    const items13 = [tmp6.preview, animatedStyle];
+    obj12.style = items13;
     const type = product.type;
-    if (tmp2(1987).CollectiblesItemType.BUNDLE === type) {
-      const obj16 = { style: tmp6.previewBundle, onLayout: tmp25, children: null };
-      let tmp29Result = null != tmp24;
-      if (tmp29Result) {
-        const obj17 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
-        ({ firstAvatarDecoration: obj34.deco, firstProfileEffect: obj34.pfx, firstNameplate: obj34.nameplate } = shopProductItems);
-        obj17.previewAssets = product.previewAssets;
-        obj17.targetSize = tmp24;
-        tmp29Result = tmp29(tmp4(9493), obj17);
+    if (tmp2(2116).CollectiblesItemType.BUNDLE === type) {
+      const obj13 = { style: tmp6.previewBundle, onLayout: tmp35, children: null };
+      let tmp39Result = null != tmp34;
+      if (tmp39Result) {
+        const obj14 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
+        ({ firstAvatarDecoration: obj31.deco, firstProfileEffect: obj31.pfx, firstNameplate: obj31.nameplate } = shopProductItems);
+        obj14.previewAssets = product.previewAssets;
+        obj14.targetSize = tmp34;
+        tmp39Result = tmp39(tmp4(9621), obj14);
       }
-      obj16.children = tmp29Result;
-      let tmp29Result2 = tmp29(closure_7, obj16);
-    } else if (tmp2(1987).CollectiblesItemType.AVATAR_DECORATION === type) {
-      const obj18 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp29Result2 = tmp29(tmp4(9506), obj18);
-    } else if (tmp2(1987).CollectiblesItemType.PROFILE_EFFECT === type) {
-      const obj19 = { user: currentUser, profileEffect: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11392), obj19);
-    } else if (tmp2(1987).CollectiblesItemType.PROFILE_FRAME === type) {
-      const obj20 = { user: currentUser, profileFrame: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11506), obj20);
+      obj13.children = tmp39Result;
+      let tmp39Result2 = tmp39(closure_7, obj13);
+    } else if (tmp2(2116).CollectiblesItemType.AVATAR_DECORATION === type) {
+      const obj15 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
+      tmp39Result2 = tmp39(tmp4(9634), obj15);
+    } else if (tmp2(2116).CollectiblesItemType.PROFILE_EFFECT === type) {
+      const obj16 = { user: currentUser, profileEffect: product.items[0] };
+      tmp39Result2 = tmp39(tmp4(11530), obj16);
+    } else if (tmp2(2116).CollectiblesItemType.PROFILE_FRAME === type) {
+      const obj17 = { user: currentUser, profileFrame: product.items[0] };
+      tmp39Result2 = tmp39(tmp4(11643), obj17);
     } else {
-      tmp29Result2 = null;
-      if (tmp2(1987).CollectiblesItemType.NAMEPLATE === type) {
-        const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp29Result2 = tmp29(tmp2(11507).NameplatePreview, obj21);
+      tmp39Result2 = null;
+      if (tmp2(2116).CollectiblesItemType.NAMEPLATE === type) {
+        const obj18 = { user: currentUser, nameplate: product.items[0], animate: true };
+        tmp39Result2 = tmp39(tmp2(11644).NameplatePreview, obj18);
       }
     }
-    obj15.children = tmp29Result2;
-    const items8 = [tmp30(tmp4(5095).View, obj15), ];
-    const obj22 = { style: null, children: null };
-    const items9 = [tmp6.messages, animatedStyle1];
-    obj22.style = items9;
+    obj12.children = tmp39Result2;
+    const items14 = [tmp40(tmp4(1652).View, obj12), ];
+    const obj19 = { style: null, children: null };
+    const items15 = [tmp6.messages, animatedStyle1];
+    obj19.style = items15;
     if (null != renderMessages) {
       let renderMessagesResult = renderMessages();
     } else {
-      const obj23 = { variant: "heading-xl/bold", color: "text-overlay-light", style: tmp6.title, children: null };
+      const obj20 = { variant: "heading-xl/semibold", color: "text-overlay-light", style: tmp6.title, children: null };
       const intl3 = tmp2(1113).intl;
-      const obj24 = { itemName: product.name };
-      obj23.children = intl3.format(tmp2(1113).t.YNaxMp, obj24);
-      const items10 = [tmp30(tmp2(5624).Text, obj23), ];
-      const obj25 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7732).isPremiumCollectiblesProduct(product);
+      const obj21 = { itemName: product.name };
+      obj20.children = intl3.format(tmp2(1113).t.YNaxMp, obj21);
+      const items16 = [tmp40(tmp2(5747).Text, obj20), ];
+      const obj22 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
+      let result = tmp2(7856).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1113).intl;
       const format = intl4.format;
       const t = tmp2(1113).t;
       if (result) {
-        const obj26 = { itemName: product.name };
-        let formatResult = format(t.nW6E3m, obj26);
+        const obj23 = { itemName: product.name };
+        let formatResult = format(t.nW6E3m, obj23);
       } else {
-        const obj27 = { itemName: product.name };
-        formatResult = format(t["4kp0AB"], obj27);
+        const obj24 = { itemName: product.name };
+        formatResult = format(t["4kp0AB"], obj24);
       }
-      const obj28 = { children: null };
-      obj25.children = formatResult;
-      items10[1] = tmp30(tmp2(5624).Text, obj25);
-      obj28.children = items10;
-      renderMessagesResult = closure_12(closure_13, obj28);
-      const tmp2Result24 = tmp2(7732);
+      const obj25 = { children: null };
+      obj22.children = formatResult;
+      items16[1] = tmp40(tmp2(5747).Text, obj22);
+      obj25.children = items16;
+      renderMessagesResult = closure_12(closure_13, obj25);
+      const tmp2Result24 = tmp2(7856);
     }
-    obj22.children = renderMessagesResult;
-    items8[1] = tmp30(tmp4(5095).View, obj22);
-    obj14.children = items8;
-    items6[1] = closure_12(closure_6, obj14);
-    const obj29 = { style: tmp6.footer, children: null };
-    const obj30 = { style: tmp6.cta, children: null };
+    obj19.children = renderMessagesResult;
+    items14[1] = tmp40(tmp4(1652).View, obj19);
+    obj11.children = items14;
+    items12[1] = closure_12(closure_6, obj11);
+    const obj26 = { style: tmp6.footer, children: null };
+    const obj27 = { style: tmp6.cta, children: null };
     if (canUseNow) {
-      const obj31 = { loading: isApplying, disabled: isApplying, onPress: handleUseNow, text: null, size: "lg", grow: true };
+      const obj28 = { loading: isApplying, disabled: isApplying, onPress: handleUseNow, text: null, size: "lg", grow: true };
       const intl2 = tmp2(1113).intl;
-      obj31.text = intl2.string(tmp2(1113).t.MAS7uK);
-      let obj32 = obj31;
+      obj28.text = intl2.string(tmp2(1113).t.MAS7uK);
+      let obj29 = obj28;
     } else {
-      obj32 = { onPress: handleEditProfile, text: null, size: "lg", grow: true };
+      obj29 = { onPress: handleEditProfile, text: null, size: "lg", grow: true };
       const intl = tmp2(1113).intl;
-      obj32.text = intl.string(tmp2(1113).t["2p2aYz"]);
+      obj29.text = intl.string(tmp2(1113).t["2p2aYz"]);
     }
-    obj30.children = tmp30(tmp2(5634).Button, obj32);
-    obj29.children = tmp30(closure_7, obj30);
-    items6[2] = tmp30(closure_7, obj29);
-    rect.children = items6;
-    items3[1] = closure_12(tmp2(7292).SafeAreaPaddingView, rect);
-    const obj33 = { style: null, pointerEvents: "none" };
-    const items11 = [tmp6.curtain, animatedStyle2];
-    obj33.style = items11;
-    items3[2] = tmp30(tmp4(5095).View, obj33);
-    obj6.children = items3;
-    return closure_12(closure_7, obj6);
+    obj27.children = tmp40(tmp2(5754).Button, obj29);
+    obj26.children = tmp40(closure_7, obj27);
+    items12[2] = tmp40(closure_7, obj26);
+    rect.children = items12;
+    items9[1] = closure_12(tmp2(7412).SafeAreaPaddingView, rect);
+    const obj30 = { style: null, pointerEvents: "none" };
+    const items17 = [tmp6.curtain, animatedStyle2];
+    obj30.style = items17;
+    items9[2] = tmp40(tmp4(1652).View, obj30);
+    obj2.children = items9;
+    class ProductPurchaseSuccessModalTsx1 {
+      constructor() {
+        obj = { opacity: closure_0(closure_1.get(), [0, 1], [0.1, 1]), transform: null };
+        tmp = closure_0;
+        num = 0;
+        value = closure_1.get();
+        if (closure_2) {
+          num = 0.6;
+        }
+        obj1 = { scale: null };
+        items = [, ];
+        items[0] = num;
+        items[1] = 1;
+        obj1.scale = tmp(value, [0, 1], items);
+        items1 = [];
+        items1[0] = obj1;
+        obj.transform = items1;
+        return obj;
+      }
+    }
   }
-  tmp28 = closure_11(ProductPurchaseGradientBackground, { product });
-  tmp29 = closure_11;
-  tmp30 = closure_11;
-  const tmp23 = _slicedToArray(noop.useState(), 2);
+  tmp38 = closure_11(ProductPurchaseGradientBackground, { product });
+  tmp39 = closure_11;
+  tmp40 = closure_11;
+  obj2 = { style: tmp6.root, id: product.skuId, children: null };
+  const tmp33 = _slicedToArray(noop.useState(), 2);
 };

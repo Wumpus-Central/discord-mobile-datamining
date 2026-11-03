@@ -1,7 +1,7 @@
-// === Module 12057: ThemeContextProvider/RootThemeContextProvider ===
+// === Module 12194: ThemeContextProvider/RootThemeContextProvider ===
 
-// Module 12057 (ThemeContextProvider/RootThemeContextProvider)
-import native from "native" /* 5080 */;
+// Module 12194 (ThemeContextProvider/RootThemeContextProvider)
+import native from "native" /* 5207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,13 +52,13 @@ export function RootThemeContextProvider(children) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
+  items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
   value = secondaryColor.useMemo(() => native.createThemedContext({ theme: DARK, primaryColor, secondaryColor, gradient, flags: num, contrast: num2, saturation: num3, enabledExperiments, density: str, disableAdaptiveTheme: flag, reduceAdaptiveTheme: flag2 }), items);
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 }
 export function DisableCustomTheme(children) {
-  themeContext = themeContext(5080).useThemeContext();
-  const items = [themeContext];
+  themeContext = themeContext(5207).useThemeContext();
+  items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
     const merged = Object.assign(themeContext);
@@ -67,5 +67,5 @@ export function DisableCustomTheme(children) {
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(5080).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(5207).ThemeContext.Provider, { value: memo, children: children.children });
 }

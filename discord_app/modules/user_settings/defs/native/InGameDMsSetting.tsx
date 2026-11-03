@@ -1,25 +1,25 @@
-// === Module 17931: InGameDMsSetting ===
+// === Module 18074: InGameDMsSetting ===
 
-// Module 17931 (InGameDMsSetting)
+// Module 18074 (InGameDMsSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4839 */;
+import UserSettings from "UserSettings" /* 4966 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(8432).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(8556).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.JIFnN9);
-      const items = [obj, , ];
+      items = [obj, , ];
       const obj2 = { value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME, label: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.rRdsk1);
@@ -45,7 +45,7 @@ const radio = SettingBuilders.createRadio({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.XpBObB)];
+    items = [intl.string(util.t.XpBObB)];
     return items;
   }
 });

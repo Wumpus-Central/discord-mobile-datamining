@@ -1,6 +1,6 @@
-// === Module 19194: VoicePanelStreamOutputSinkStack ===
+// === Module 19352: VoicePanelStreamOutputSinkStack ===
 
-// Module 19194 (VoicePanelStreamOutputSinkStack)
+// Module 19352 (VoicePanelStreamOutputSinkStack)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ prototype["cleanUp"] = function cleanUp() {
   clearInterval(this.timer);
 };
 prototype["logSinks"] = function logSinks() {
-  const items = [];
+  items = [];
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     let first = tmp4[0];
@@ -104,7 +104,7 @@ prototype["sourceId"] = function sourceId(dependencyMap) {
 export default VoicePanelStreamOutputSinkStack;
 export function useSetHasActiveVideoOutputSink(streamOutputSinkStack) {
   const id = noop.useId();
-  const items = [id, streamOutputSinkStack];
+  items = [id, streamOutputSinkStack];
   const callback = noop.useCallback((arg0, arg1) => {
     const result = streamOutputSinkStack.setHasActiveVideoOutputSink(id, arg0, arg1);
   }, items);

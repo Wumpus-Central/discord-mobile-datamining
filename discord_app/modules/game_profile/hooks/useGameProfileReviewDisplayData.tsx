@@ -1,11 +1,11 @@
-// === Module 9401: useGameProfileReviewDisplayData ===
+// === Module 9529: useGameProfileReviewDisplayData ===
 
-// Module 9401 (useGameProfileReviewDisplayData)
+// Module 9529 (useGameProfileReviewDisplayData)
 import util from "util" /* 1113 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2035 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9345 */;
-import calculateSteamReviewScoreDescription from "calculateSteamReviewScoreDescription" /* 9391 */;
-import GameProfileReviewUtils from "GameProfileReviewUtils" /* 9392 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2164 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9473 */;
+import calculateSteamReviewScoreDescription from "calculateSteamReviewScoreDescription" /* 9519 */;
+import GameProfileReviewUtils from "GameProfileReviewUtils" /* 9520 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 
 export function useGameProfileReviewDisplayData(game, steamWebsiteUrl) {
   closure_1 = steamWebsiteUrl;
-  const items = [game, steamWebsiteUrl];
+  items = [game, steamWebsiteUrl];
   return noop.useMemo(() => {
     const reviews = game.reviews;
     let steam;

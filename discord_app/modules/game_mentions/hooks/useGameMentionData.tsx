@@ -1,11 +1,11 @@
-// === Module 8679: useGameMentionData ===
+// === Module 8803: useGameMentionData ===
 
-// Module 8679 (useGameMentionData)
+// Module 8803 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8682 */;
-import GameStore from "GameStore" /* 2014 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8680 */;
-import UserStore from "UserStore" /* 1383 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8806 */;
+import GameStore from "GameStore" /* 2143 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8804 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ export function getGameMentionData(gameId) {
 }
 export function useGameMentionData(gameId) {
   _require = gameId;
-  const items = [GameStore, GameAutocompleteStore, UserStore];
+  items = [GameStore, GameAutocompleteStore, UserStore];
   const items1 = [gameId];
   return require("initialize").useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();

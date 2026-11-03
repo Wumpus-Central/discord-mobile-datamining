@@ -1,9 +1,9 @@
-// === Module 9508: CutoutableAvatarDecoration ===
+// === Module 9636: CutoutableAvatarDecoration ===
 
-// Module 9508 (CutoutableAvatarDecoration)
-import AvatarUtils from "AvatarUtils" /* 1409 */;
+// Module 9636 (CutoutableAvatarDecoration)
+import AvatarUtils from "AvatarUtils" /* 1411 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ export default function CutoutableAvatarDecoration(size) {
   const animate = size.animate;
   let nativeCutouts = size.cutout;
   let tmp2 = decorationStyle;
-  let items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = size(decorationStyle[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [animate, size, avatarDecoration, decorationStyle, stateFromStores];
   const memo = animate.useMemo(() => {
@@ -35,7 +35,7 @@ export default function CutoutableAvatarDecoration(size) {
     const avatarDecorationURL = AvatarUtils.getAvatarDecorationURL({ avatarDecoration, canAnimate: tmp2, size });
     const obj3 = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: { width: size, height: size }, style: null, shouldAnimate: tmp2, source: null };
     size = { width: size, height: size };
-    const items = [size, decorationStyle];
+    items = [size, decorationStyle];
     obj3.style = items;
     let str2 = avatarDecorationURL;
     if (avatarDecorationURL == null) {

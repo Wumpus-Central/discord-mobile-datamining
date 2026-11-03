@@ -1,14 +1,14 @@
-// === Module 12153: conjureGuildPickerSources ===
+// === Module 12289: conjureGuildPickerSources ===
 
-// Module 12153 (conjureGuildPickerSources)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import GuildUtilsDefault from "GuildUtils" /* 6901 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
+// Module 12289 (conjureGuildPickerSources)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import GuildUtilsDefault from "GuildUtils" /* 7021 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/conjure/guild_pickers/conjure
 
 export function useConjureGuildRoles(arg0) {
   _require = arg0;
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (null != closure_0) {
@@ -31,7 +31,7 @@ export function useConjureGuildRoles(arg0) {
 }
 export function useConjureGuildMemberUsers(arg0) {
   _require = arg0;
-  const items = [GuildMemberStore, UserStore];
+  items = [GuildMemberStore, UserStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (null != closure_0) {
@@ -53,7 +53,7 @@ export function conjureMemberUsername(id, stateFromStores1) {
 }
 export function useConjureMemberRequests(conjureSettingsGuildId) {
   closure_0 = conjureSettingsGuildId;
-  let items = result;
+  items = result;
   if (result === undefined) {
     items = [];
   }

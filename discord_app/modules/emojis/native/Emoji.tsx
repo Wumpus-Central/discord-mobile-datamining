@@ -1,13 +1,13 @@
-// === Module 7300: Emoji ===
+// === Module 7420: Emoji ===
 
-// Module 7300 (Emoji)
+// Module 7420 (Emoji)
 import native from "native" /* 1187 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
-import shared from "shared" /* 5021 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import _modDef7301 from "module_7301" /* 7301 */;
-import _modDef7302 from "module_7302" /* 7302 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
+import shared from "shared" /* 5148 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import _modDef7421 from "module_7421" /* 7421 */;
+import _modDef7422 from "module_7422" /* 7422 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -33,9 +33,9 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef7301;
+          let tmp9Result = _modDef7421;
         } else {
-          tmp9Result = _modDef7302;
+          tmp9Result = _modDef7422;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

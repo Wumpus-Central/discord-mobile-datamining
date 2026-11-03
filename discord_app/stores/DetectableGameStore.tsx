@@ -1,18 +1,18 @@
-// === Module 2032: DetectableGameStore ===
+// === Module 2161: DetectableGameStore ===
 
-// Module 2032 (DetectableGameStore)
+// Module 2161 (DetectableGameStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ApplicationConstants from "ApplicationConstants" /* 1360 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 2033 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2035 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+import ApplicationConstants from "ApplicationConstants" /* 1362 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 2162 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2164 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -67,7 +67,7 @@ function addGameIdToNameCache(id, arg1) {
     if (Array.isArray(value)) {
       value.push(id);
     } else {
-      const items = [value, id];
+      items = [value, id];
       const result1 = map.set(arg1, items);
     }
   }
@@ -179,7 +179,7 @@ prototype["searchGamesByName"] = function searchGamesByName(name) {
   } else {
     value = map.get(name.trim().toLowerCase());
     if (undefined === value) {
-      let items = [];
+      items = [];
     } else {
       const _Array = Array;
       items = value;

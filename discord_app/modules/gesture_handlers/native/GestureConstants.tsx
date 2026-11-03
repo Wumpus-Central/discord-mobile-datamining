@@ -1,15 +1,15 @@
-// === Module 11242: GestureConstants ===
+// === Module 11379: GestureConstants ===
 
-// Module 11242 (GestureConstants)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 11379 (GestureConstants)
+import _mod1652 from "module_1652" /* 1652 */;
 import size from "module_2" /* 2 */;
 
 const obj = { duration: 200, easing: null };
-const Easing = ReanimatedRexport.Easing;
-const Easing2 = ReanimatedRexport.Easing;
+const Easing = _mod1652.Easing;
+const Easing2 = _mod1652.Easing;
 obj.easing = Easing.out(Easing2.poly(4));
 const obj2 = { duration: 200, easing: null };
-const Easing3 = ReanimatedRexport.Easing;
+const Easing3 = _mod1652.Easing;
 obj2.easing = Easing3.bezier(0, 0, 0.2, 1);
 const result = size.fileFinishedImporting("modules/gesture_handlers/native/GestureConstants.tsx");
 

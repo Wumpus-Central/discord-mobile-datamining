@@ -1,8 +1,8 @@
-// === Module 11251: useCreateThreadViewProps ===
+// === Module 11388: useCreateThreadViewProps ===
 
-// Module 11251 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10205 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+// Module 11388 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10335 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/threads/native/useCreateThrea
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   _require = tmp;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [tmp];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     parentChannelId = undefined;

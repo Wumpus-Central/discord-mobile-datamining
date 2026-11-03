@@ -1,9 +1,9 @@
-// === Module 12158: conjureLinkedApps ===
+// === Module 12294: conjureLinkedApps ===
 
-// Module 12158 (conjureLinkedApps)
+// Module 12294 (conjureLinkedApps)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10948 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_5 = async function _linkConjureApp(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_5 = async function _linkConjureApp(arg0) {
           closure_131_0 = value;
           if (closure_131_0.ok) {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -100,7 +100,7 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -150,11 +150,11 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
     }
   })();
 };
-let obj = { auto: { label: _modDef3868["2TTprm"], description: _modDef3868["1ck6o0"] }, preview: null, published: null };
-let obj2 = { label: _modDef3868["2TTprm"], description: _modDef3868["1ck6o0"] };
-obj.preview = { label: _modDef3868.bUZ6jT, description: _modDef3868.DP2NVW };
-let obj3 = { label: _modDef3868.bUZ6jT, description: _modDef3868.DP2NVW };
-obj.published = { label: _modDef3868.yXd0cc, description: _modDef3868["YY+UD8"] };
+let obj = { auto: { label: _modDef3995["2TTprm"], description: _modDef3995["1ck6o0"] }, preview: null, published: null };
+let obj2 = { label: _modDef3995["2TTprm"], description: _modDef3995["1ck6o0"] };
+obj.preview = { label: _modDef3995.bUZ6jT, description: _modDef3995.DP2NVW };
+let obj3 = { label: _modDef3995.bUZ6jT, description: _modDef3995.DP2NVW };
+obj.published = { label: _modDef3995.yXd0cc, description: _modDef3995["YY+UD8"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedApps.tsx");
 

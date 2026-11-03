@@ -1,14 +1,14 @@
-// === Module 9298: RestrictedGuildProfileView ===
+// === Module 9426: RestrictedGuildProfileView ===
 
-// Module 9298 (RestrictedGuildProfileView)
+// Module 9426 (RestrictedGuildProfileView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import GuildProfileView from "GuildProfileView" /* 9299 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import GuildProfileView from "GuildProfileView" /* 9427 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -30,7 +30,7 @@ export default function RestrictedGuildProfileView() {
   obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
   obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
-  const items = [React4(tmp4, obj4), , ];
+  items = [React4(tmp4, obj4), , ];
   const obj6 = { style: styles.header, children: null };
   const obj7 = { style: styles.avatarBackground, children: null };
   const obj8 = { size: null, value: "?", selected: false, textStyle: null };

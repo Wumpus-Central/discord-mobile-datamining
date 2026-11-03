@@ -1,10 +1,10 @@
-// === Module 6952: usePreviewDisabledGuild ===
+// === Module 7072: usePreviewDisabledGuild ===
 
-// Module 6952 (usePreviewDisabledGuild)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6922 */;
+// Module 7072 (usePreviewDisabledGuild)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 7042 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6948 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7068 */;
 
 const require = globalThis.__r;
 
@@ -14,14 +14,14 @@ let result = size.fileFinishedImporting("modules/guild_member_verification/hooks
 
 export default function usePreviewDisabledGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let obj = require("initialize");
   const tmp = _require;
   const items1 = [MemberVerificationFormStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     value = MemberVerificationFormStore.get(closure_0);
-    let guild;
+    guild = undefined;
     if (value != null) {
       guild = value.guild;
     }
@@ -36,8 +36,8 @@ export default function usePreviewDisabledGuild(arg0) {
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(4877).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult = tmp(4877);
+      result = tmp(5004).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult = tmp(5004);
     }
     stateFromStores = result;
   }

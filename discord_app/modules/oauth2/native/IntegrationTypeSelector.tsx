@@ -1,12 +1,12 @@
-// === Module 9757: IntegrationTypeSelector ===
+// === Module 9889: IntegrationTypeSelector ===
 
-// Module 9757 (IntegrationTypeSelector)
+// Module 9889 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5651 */;
-import UserPlusIcon from "UserPlusIcon" /* 5721 */;
-import ServerIcon from "ServerIcon" /* 9758 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5771 */;
+import UserPlusIcon from "UserPlusIcon" /* 5841 */;
+import ServerIcon from "ServerIcon" /* 9890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", flexDirection: "column" }, header: { justifyContent: "center", alignItems: "center", gap: 16, marginTop: 24, marginBottom: 32, width: "100%" }, rows: { alignSelf: "stretch", borderRadius: nativeDefault.radii.sm }, divider: null, learnMore: null, descriptionContainer: null, descriptionMainContainer: null, appIcon: null, appIconMask: null, loadingIcon: null };
 let obj3 = { alignSelf: "stretch", borderRadius: nativeDefault.radii.sm };
 obj2.divider = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth };
@@ -36,7 +36,7 @@ export default function IntegrationTypeSelector(application) {
   application = application.application;
   const onSelect = application.onSelect;
   const tmp = styles();
-  let items = [, ];
+  items = [, ];
   ({ icon: arr[0], id: arr[1] } = application);
   const memo = noop.useMemo(() => AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon }), items);
   const items1 = [application.integrationTypesConfig];
@@ -46,7 +46,7 @@ export default function IntegrationTypeSelector(application) {
     obj.label = intl.string(util.t.aCg60P);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.YeiIUZ);
-    const items = [obj, ];
+    items = [obj, ];
     const obj2 = { type: ApplicationIntegrationType.ApplicationIntegrationType.GUILD_INSTALL, icon: ServerIcon.ServerIcon, label: null, subLabel: null, beta: false };
     const intl3 = util.intl;
     obj2.label = intl3.string(util.t.E64YCz);
@@ -78,7 +78,7 @@ export default function IntegrationTypeSelector(application) {
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.header, children: null };
-  const items3 = [tmp6(closure_4, { style: tmp.appIconMask, children: tmp5 }), tmp6(application(memo1[11]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items3 = [tmp6(closure_4, { style: tmp.appIconMask, children: tmp5 }), tmp6(application(memo1[11]).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: application.name }), ];
   let tmp6Result = null != application.description;
   if (tmp6Result) {
     const obj8 = { hideName: true, application, viewContainerStyle: null, mainContainerStyle: null };

@@ -1,19 +1,19 @@
-// === Module 13812: ChatInputSendButton ===
+// === Module 13943: ChatInputSendButton ===
 
-// Module 13812 (ChatInputSendButton)
+// Module 13943 (ChatInputSendButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import useToken from "useToken" /* 5596 */;
-import SendMessageIcon from "SendMessageIcon" /* 5729 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12805 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12808 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13813 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13817 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import useToken from "useToken" /* 5719 */;
+import SendMessageIcon from "SendMessageIcon" /* 5849 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12941 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12944 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 13944 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 13948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import SlowmodeStore from "SlowmodeStore" /* 7830 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import SlowmodeStore from "SlowmodeStore" /* 7954 */;
 
 require = fn;
 function renderChatInputSendButton(type, arg1, state, cleanup) {
@@ -87,7 +87,7 @@ class ChatInputSendButton {
     items3[3] = tmp12;
     items3[4] = canSendVoiceMessage;
     memo = obj5.useMemo(() => {
-      const items = [{ channelId: channel.id, isOnCooldown: stateFromStores1, onSendMessage, sendEnabled, sendVoiceMessageEnabled: canSendVoiceMessage, withBounce: true }];
+      items = [{ channelId: channel.id, isOnCooldown: stateFromStores1, onSendMessage, sendEnabled, sendVoiceMessageEnabled: canSendVoiceMessage, withBounce: true }];
       return items;
     }, items3);
     imperativeHandle = obj5.useImperativeHandle(global.ref, () => ({ setHasText }));
@@ -140,15 +140,15 @@ function FloatingSlot(arg0) {
   ({ buttonHeight, buttonMargin } = arg0);
   ({ buttonWidth, sendVoiceMessageEnabled, children } = arg0);
   const obj2 = { style: null, children };
-  const items = [{ height: buttonHeight }, useChatInputFloatingWidthDefault({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
+  items = [{ height: buttonHeight }, useChatInputFloatingWidthDefault({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
   obj2.style = items;
-  return jsx(ReanimatedRexportDefault.View, { style: null, children });
+  return jsx(_modDef1652.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12809).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12945).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = { button: null, buttonActive: { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND }, iconActive: null };
   const size = { width, height };

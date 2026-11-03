@@ -1,12 +1,12 @@
-// === Module 11327: PinotMemberSettingState ===
+// === Module 11464: PinotMemberSettingState ===
 
-// Module 11327 (PinotMemberSettingState)
+// Module 11464 (PinotMemberSettingState)
 import initialize from "initialize" /* 504 */;
 import wrappers from "wrappers" /* 1227 */;
-import PinotMemberSettingStore from "PinotMemberSettingStore" /* 11328 */;
+import PinotMemberSettingStore from "PinotMemberSettingStore" /* 11465 */;
 
 require = fn;
-const UserSettingDefinitions = fn(4843);
+const UserSettingDefinitions = fn(4970);
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting("privacy", "swpMessagePromotionOptedOut", (value) => {
   value = undefined;
   if (value != null) {
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/pinot/PinotMemberSettingState
 export const PinotMemberOptedOut = defineProtoSettingResult;
 export function usePinotMemberSettingState() {
   let setting = defineProtoSettingResult.useSetting();
-  const items = [PinotMemberSettingStore];
+  items = [PinotMemberSettingStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ locked: PinotMemberSettingStore.isLocked(), defaultOptedOut: PinotMemberSettingStore.defaultsToOptedOut() }));
   let locked = stateFromStoresObject.locked;
   const obj2 = { locked, optedOut: null };

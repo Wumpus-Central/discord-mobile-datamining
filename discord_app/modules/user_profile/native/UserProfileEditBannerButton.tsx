@@ -1,16 +1,16 @@
-// === Module 16458: UserProfileEditBannerButton ===
+// === Module 16602: UserProfileEditBannerButton ===
 
-// Module 16458 (UserProfileEditBannerButton)
+// Module 16602 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
-import Pressables from "Pressables" /* 6980 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8803 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8819 */;
-import PencilIcon from "PencilIcon" /* 10232 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 16459 */;
+import Pressables from "Pressables" /* 7106 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8927 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8943 */;
+import PencilIcon from "PencilIcon" /* 10362 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 13598 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(16460);
+const EditButtonDefault = tmp(16603);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -19,7 +19,7 @@ function ProfilePreviewButton(userId) {
   analyticsLocations = analyticsLocations(context[5])().analyticsLocations;
   const tmp = closure_7();
   context = userId(context[6]).useUserProfileAnalyticsContext().context;
-  const items = [userId, context, analyticsLocations];
+  items = [userId, context, analyticsLocations];
   let tmp5 = null;
   if (null != userId) {
     const obj2 = { style: tmp.previewButton, onPress: tmp4, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -47,7 +47,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;
@@ -74,7 +74,7 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   ({ ref, onLayout, width } = useMeasuredLayoutDefault());
   const obj2 = { ref, style: refreshEditButtonContainer.container, onLayout, children: null };
   const tmp2 = useMeasuredLayoutDefault();
-  const items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(width), bannerSafeArea }), , ];
+  items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(width), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     const obj3 = { userId: user.id };
     showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj3);

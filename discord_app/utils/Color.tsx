@@ -1,6 +1,6 @@
-// === Module 5012: utils/Color ===
+// === Module 5139: utils/Color ===
 
-// Module 5012 (utils/Color)
+// Module 5139 (utils/Color)
 import _slicedToArray from "module_32" /* 32 */;
 
 function hslToRgb(alpha) {
@@ -11,7 +11,7 @@ function hslToRgb(alpha) {
   const result3 = result2 * (1 - Math.abs(hue / 60 % 2 - 1));
   closure_0 = result - result2 / 2;
   if (hue < 60) {
-    const items = [result2, result3, 0];
+    items = [result2, result3, 0];
     let items5 = items;
   } else if (hue < 120) {
     const items1 = [result3, result2, 0];
@@ -98,7 +98,7 @@ Color["parseRgbString"] = function parseRgbString(arg0) {
 };
 Color["parseHexString"] = function parseHexString(str) {
   if (null != str.match(re2)) {
-    const items = [6, 8];
+    items = [6, 8];
     if (!items.includes(str.length)) {
       const replaced = str.replace("#", "");
       let str3 = replaced;

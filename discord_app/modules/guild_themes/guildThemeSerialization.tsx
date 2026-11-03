@@ -1,6 +1,6 @@
-// === Module 4884: guildThemeSerialization ===
+// === Module 5011: guildThemeSerialization ===
 
-// Module 4884 (guildThemeSerialization)
+// Module 5011 (guildThemeSerialization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
@@ -13,7 +13,7 @@ export function cloneGuildThemeSettings(themeSettings) {
     let tmp2;
     if (null != customUserThemeSettings) {
       const obj3 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(customUserThemeSettings.colors, 0);
       obj3.colors = items;
       let gradientColorStops = customUserThemeSettings.gradientColorStops;
@@ -43,7 +43,7 @@ export function cloneGuildTheme(guildTheme) {
       let tmp3;
       if (null != customUserThemeSettings) {
         const obj6 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(customUserThemeSettings.colors, 0);
         obj6.colors = items;
         let gradientColorStops = customUserThemeSettings.gradientColorStops;
@@ -77,7 +77,7 @@ export function toServerGuildThemeSettings(themeSettings) {
     let tmp2 = null;
     if (null != customUserThemeSettings) {
       const obj2 = { colors: null, gradient_color_stops: null, gradient_angle: null, base_mix: null };
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(customUserThemeSettings.colors, 0);
       obj2.colors = items;
       if (null != customUserThemeSettings.gradientColorStops) {

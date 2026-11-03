@@ -1,16 +1,16 @@
-// === Module 9580: useCollectiblesShopProducts ===
+// === Module 9712: useCollectiblesShopProducts ===
 
-// Module 9580 (useCollectiblesShopProducts)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8790 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9582 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9583 */;
+// Module 9712 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8914 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9714 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9581 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8791 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7721 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7722 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9713 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8915 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7845 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7846 */;
 
 const require = globalThis.__r;
 
@@ -70,7 +70,7 @@ function useAbsentIds(arg0) {
   let set = first;
   if (someResult) {
     const _Set = Set;
-    let items = [];
+    items = [];
     HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(first, 0));
     set = new Set(items);
   }
@@ -97,7 +97,7 @@ function useAbsentIds(arg0) {
   const items1 = [joined];
   return noop.useMemo(() => {
     if ("" === joined) {
-      let items = [];
+      items = [];
     } else {
       items = joined.split(",");
     }
@@ -165,11 +165,11 @@ export function useCollectiblesShopProduct(skuId, arg1) {
   let memo1;
   closure_13 = undefined;
   closure_14 = undefined;
-  let items = [skuId, flag3];
+  items = [skuId, flag3];
   const effect = flag3.useEffect(() => {
     if (flag3) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
-      const items = [closure_0];
+      items = [closure_0];
       const products = CollectiblesShopManager.requestProducts(items);
     }
   }, items);
@@ -200,7 +200,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     }
     if (tmp) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
-      const items = [str];
+      items = [str];
       const obj = { includeUnpublished: flag4 };
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
@@ -330,7 +330,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     state: memo2,
     retry: flag3.useCallback(() => {
       const obj2 = { skuIds: null, ignoreCache: true };
-      const items = [closure_0];
+      items = [closure_0];
       obj2.skuIds = items;
       const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
       let tmp4 = flag;
@@ -365,7 +365,7 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
   }
   let memo;
   let stateFromStoresObject1;
-  let items = [resolvedSkuIds];
+  items = [resolvedSkuIds];
   memo = memo.useMemo(() => closure_0.filter((item) => "" !== item), items);
   const items1 = [memo.join(",")];
   const effect = memo.useEffect(() => {
@@ -428,7 +428,7 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
   const items7 = [memo1];
   const memo2 = memo.useMemo(() => {
     const values = Object.values(memo1);
-    const items = [...new Set(values.filter((item) => "" !== item))];
+    items = [...new Set(values.filter((item) => "" !== item))];
     return items;
   }, items7);
   const items8 = [flag, memo2.join(",")];

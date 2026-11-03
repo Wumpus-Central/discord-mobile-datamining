@@ -1,24 +1,24 @@
-// === Module 17755: InternalBuildUpdateSetting ===
+// === Module 17898: InternalBuildUpdateSetting ===
 
-// Module 17755 (InternalBuildUpdateSetting)
+// Module 17898 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import DownloadIcon from "DownloadIcon" /* 5733 */;
-import RefreshIcon2 from "RefreshIcon" /* 12219 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15733 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16746 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 16225 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import DownloadIcon from "DownloadIcon" /* 5853 */;
+import RefreshIcon2 from "RefreshIcon" /* 12355 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15876 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16889 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 16368 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";
   },
   parent: null,
   IconComponent: function InstallNativeUpdateIcon() {
-    const items = [MobileNativeUpdateStore];
+    items = [MobileNativeUpdateStore];
     if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
       let RefreshIcon = DownloadIcon.DownloadIcon;
     } else {
@@ -27,7 +27,7 @@ const pressable = SettingBuilders.createPressable({
     return <RefreshIcon />;
   },
   useDescription: function useInternalBuildUpdateDescription() {
-    const items = [MobileNativeUpdateStore];
+    items = [MobileNativeUpdateStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
       const newBuild = MobileNativeUpdateStore.latestFetchedBuild().newBuild;
       let build;
@@ -45,8 +45,8 @@ const pressable = SettingBuilders.createPressable({
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + _modDef2042(stateFromStores1).fromNow();
-        const obj3 = _modDef2042(stateFromStores1);
+        str = "Last refreshed " + _modDef2171(stateFromStores1).fromNow();
+        const obj3 = _modDef2171(stateFromStores1);
       }
     }
     return str;

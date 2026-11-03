@@ -1,7 +1,7 @@
-// === Module 17678: TotpScreen ===
+// === Module 17821: TotpScreen ===
 
-// Module 17678 (TotpScreen)
-import MFA from "MFA" /* 17679 */;
+// Module 17821 (TotpScreen)
+import MFA from "MFA" /* 17822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ export default function TotpScreen(finish) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -119,7 +119,7 @@ export default function TotpScreen(finish) {
       }
     })();
   });
-  const items = [finish];
+  items = [finish];
   const onChangeCode = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;

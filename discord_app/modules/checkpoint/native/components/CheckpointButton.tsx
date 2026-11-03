@@ -1,23 +1,23 @@
-// === Module 13702: CheckpointButton ===
+// === Module 13833: CheckpointButton ===
 
-// Module 13702 (CheckpointButton)
+// Module 13833 (CheckpointButton)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
-import CheckpointPressable from "CheckpointPressable" /* 13677 */;
+import useToken from "useToken" /* 5719 */;
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import CheckpointPressable from "CheckpointPressable" /* 13807 */;
 import noop from "module_19" /* 19 */;
 
 const CheckpointPressableDefault = CheckpointPressable;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const CheckpointConstants = fn(6066);
+const CheckpointConstants = fn(6186);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY: metroRequire } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { container: { justifyContent: "center", marginRight: -fn(13677).SHADOW_OFFSET, marginBottom: -fn(13677).SHADOW_OFFSET }, button: null, label: null };
-let obj3 = { justifyContent: "center", marginRight: -fn(13677).SHADOW_OFFSET, marginBottom: -fn(13677).SHADOW_OFFSET };
+const createStyles = fn(5141);
+let obj2 = { container: { justifyContent: "center", marginRight: -fn(13807).SHADOW_OFFSET, marginBottom: -fn(13807).SHADOW_OFFSET }, button: null, label: null };
+let obj3 = { justifyContent: "center", marginRight: -fn(13807).SHADOW_OFFSET, marginBottom: -fn(13807).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
 let closure_9 = createStyles.createStyles(obj2);
@@ -58,7 +58,7 @@ export default function CheckpointButton(loading) {
   if (disabled) {
     color = token;
   }
-  const items = [disabled, token1, borderColor];
+  items = [disabled, token1, borderColor];
   const items1 = [color];
   const memo = noop.useMemo(() => ({ borderColor: disabled ? token1 : borderColor }), items);
   const memo1 = noop.useMemo(() => ({ color }), items1);

@@ -1,17 +1,17 @@
-// === Module 18912: AddModeratorsActionSheet ===
+// === Module 19070: AddModeratorsActionSheet ===
 
-// Module 18912 (AddModeratorsActionSheet)
+// Module 19070 (AddModeratorsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(7947).RowType;
+const RowType = fn(8071).RowType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,12 +31,12 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(6710).createModeratorOverwrite(row.id, channel(1992).PermissionOverwriteType.ROLE, closure_0);
-          const obj2 = channel(6710);
+          let moderatorOverwrite = channel(6830).createModeratorOverwrite(row.id, channel(2121).PermissionOverwriteType.ROLE, closure_0);
+          const obj2 = channel(6830);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(6710).createModeratorOverwrite(row.id, channel(1992).PermissionOverwriteType.MEMBER, closure_0);
-          const obj = channel(6710);
+          moderatorOverwrite = channel(6830).createModeratorOverwrite(row.id, channel(2121).PermissionOverwriteType.MEMBER, closure_0);
+          const obj = channel(6830);
         }
         return moderatorOverwrite;
       });
@@ -68,7 +68,7 @@ export default function AddModeratorsActionSheet(channel) {
   const tmp2 = _slicedToArray(noop.useState({}), 2);
   const pendingAdditions = tmp2[0];
   let tmp = closure_10();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guildId;
     if (channel != null) {
@@ -76,7 +76,7 @@ export default function AddModeratorsActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5652)(channel, true);
+  let str = pendingAdditions(5772)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -101,12 +101,12 @@ export default function AddModeratorsActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = <tmp13 {...obj7} />;
-      obj4.header = jsx(tmp4(7321).BottomSheetTitleHeader, obj2);
+      obj4.header = jsx(tmp4(7441).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
-      const obj6 = { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(4871).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] };
-      obj5.children = jsx(tmp7(9071), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(4871).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
+      const obj6 = { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(4998).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] };
+      obj5.children = jsx(tmp7(9199), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(4998).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
       obj4.children = <View style={tmp.container}>{null}</View>;
-      return jsx(tmp4(5272).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      return jsx(tmp4(5395).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
     const intl = tmp4(1113).intl;

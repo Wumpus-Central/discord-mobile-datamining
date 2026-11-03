@@ -1,9 +1,9 @@
-// === Module 7585: GuildBoostSlotStore ===
+// === Module 7709: GuildBoostSlotStore ===
 
-// Module 7585 (GuildBoostSlotStore)
+// Module 7709 (GuildBoostSlotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;
@@ -30,7 +30,7 @@ class GuildBoostSlotStore extends Store {
 }
 const prototype = GuildBoostSlotStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   this.syncWith(items, handleSubscriptionStoreUpdate);
 };
 Object.defineProperty(prototype, "hasFetched", {

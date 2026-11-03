@@ -1,11 +1,11 @@
-// === Module 7380: GuildCapUpsellHooks ===
+// === Module 7500: GuildCapUpsellHooks ===
 
-// Module 7380 (GuildCapUpsellHooks)
+// Module 7500 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import HotspotStore2 from "HotspotStore" /* 7381 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import HotspotStore2 from "HotspotStore" /* 7501 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const MAX_USER_GUILDS = fn(1072).MAX_USER_GUILDS;
@@ -13,7 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 
 export function useShouldShowInlineGuildCapUpsell() {
-  const items = [GuildStore];
+  items = [GuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
   const items1 = [HotspotStore2.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {

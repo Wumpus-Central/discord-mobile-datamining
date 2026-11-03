@@ -1,16 +1,16 @@
-// === Module 12791: ConjureQueuedSheet ===
+// === Module 12927: ConjureQueuedSheet ===
 
-// Module 12791 (ConjureQueuedSheet)
+// Module 12927 (ConjureQueuedSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 12580 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 12716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
 
 require = fn;
 function ConjureQueuedRow(content) {
@@ -24,7 +24,7 @@ function ConjureQueuedRow(content) {
   const item = tmp.item;
   const callback = noop.useCallback((nativeEvent) => _undefined2(nativeEvent.nativeEvent.lines.length > 3), []);
   if (content.divided) {
-    const items = [item, tmp.divider];
+    items = [item, tmp.divider];
     let tmp7 = items;
   } else {
     tmp7 = item;
@@ -33,7 +33,7 @@ function ConjureQueuedRow(content) {
     const obj2 = { style: tmp7, children: null };
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3868["07XimM"]);
+    obj3.children = intl2.string(_modDef3995["07XimM"]);
     obj2.children = React6(Text_Text.Text, obj3);
     let tmp18Result = React6(timestampProducer, obj2);
   } else {
@@ -67,7 +67,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureQueuedSheet = "ConjureQueuedSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { scroller: { maxHeight: 360 }, item: { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 }, divider: null, content: null, measure: null };
 let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 };
 obj2.divider = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -80,7 +80,7 @@ const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureQu
 export default function ConjureQueuedSheet(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_11();
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureChatStore.getMessages(projectId), items1);
   const items2 = [stateFromStores];
@@ -97,11 +97,11 @@ export default function ConjureQueuedSheet(projectId) {
     const obj2 = { header: null, children: null };
     const obj3 = { title: null };
     const intl = tmp2(1113).intl;
-    obj3.title = intl.string(stateFromStores(3868).hzgPbZ);
-    obj2.header = closure_8(tmp2(7321).BottomSheetTitleHeader, obj3);
+    obj3.title = intl.string(stateFromStores(3995).hzgPbZ);
+    obj2.header = closure_8(tmp2(7441).BottomSheetTitleHeader, obj3);
     const obj4 = { style: tmp.scroller, nestedScrollEnabled: true, children: memo.map((content, index) => closure_1_8(ConjureQueuedRow, { content: content.content, divided: index > 0 }, content.render_id)) };
     obj2.children = closure_8(closure_5, obj4);
-    tmp7 = closure_8(tmp2(7366).ActionSheet, obj2);
+    tmp7 = closure_8(tmp2(7486).ActionSheet, obj2);
   }
   return tmp7;
 };

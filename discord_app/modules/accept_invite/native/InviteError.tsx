@@ -1,19 +1,19 @@
-// === Module 14331: InviteError ===
+// === Module 14462: InviteError ===
 
-// Module 14331 (InviteError)
+// Module 14462 (InviteError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import shared from "shared" /* 5021 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 14334 */;
-import _modDef14335 from "module_14335" /* 14335 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import shared from "shared" /* 5148 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 14465 */;
+import _modDef14466 from "module_14466" /* 14466 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -22,7 +22,7 @@ require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14332 : 14333);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14463 : 14464);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -41,8 +41,8 @@ function InviteErrorBase(invite) {
       stringResult = intl.string(util.t.FWkU6P);
     }
   }
-  const items = [React5(FastImageDefault, { style: tmp.expiredImage, source: tmp4Result }), , , ];
-  const obj3 = { style: tmp.expiredTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  items = [React5(FastImageDefault, { style: tmp.expiredImage, source: tmp4Result }), , , ];
+  const obj3 = { style: tmp.expiredTitle, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let title;
   if (descriptiveInviteError != null) {
     title = descriptiveInviteError.title;
@@ -69,7 +69,7 @@ function InviteErrorBase(invite) {
 function InviteDisabledError(onPressClose) {
   onPressClose = onPressClose.onPressClose;
   const tmp = closure_10();
-  const guild = onPressClose.invite.guild;
+  guild = onPressClose.invite.guild;
   if (null == guild) {
     return null;
   } else {
@@ -80,8 +80,8 @@ function InviteDisabledError(onPressClose) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14335 };
-    const items = [React5(native.Icon, obj6), ];
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14466 };
+    items = [React5(native.Icon, obj6), ];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };
     obj7.size = GuildIcon.GuildIconSizes.XLARGE;
@@ -112,7 +112,7 @@ const Constants = fn(1072);
 ({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, InviteStates: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { expiredImage: { marginTop: 32, marginBottom: 32 }, expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" }, expiredBody: { backgroundColor: "transparent", marginBottom: 24 }, disabledView: { justifyContent: "center", alignItems: "center" }, disabledPauseIcon: null, guildIcon: null, disabledTitle: null, disabledBody: null };
 let size = { position: "absolute", alignSelf: "center", tintColor: nativeDefault.colors.WHITE, width: 42, height: 42 };
 obj2.disabledPauseIcon = size;

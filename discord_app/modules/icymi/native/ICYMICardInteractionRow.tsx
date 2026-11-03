@@ -1,32 +1,32 @@
-// === Module 18575: ICYMICardInteractionRow ===
+// === Module 18731: ICYMICardInteractionRow ===
 
-// Module 18575 (ICYMICardInteractionRow)
+// Module 18731 (ICYMICardInteractionRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import ReactionUtils from "ReactionUtils" /* 4958 */;
-import ColorUtils from "ColorUtils" /* 5011 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5615 */;
-import Pressables from "Pressables" /* 6980 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8405 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8429 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10201 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12748 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13379 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 13391 */;
-import ICYMIShared from "ICYMIShared" /* 18567 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import ReactionUtils from "ReactionUtils" /* 5085 */;
+import ColorUtils from "ColorUtils" /* 5138 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5738 */;
+import Pressables from "Pressables" /* 7106 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8529 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8553 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10025 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10331 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12884 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13515 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 13527 */;
+import ICYMIShared from "ICYMIShared" /* 18723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7477 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6708 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7601 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ function AddEmojiButton(channel) {
   const onPressEmoji = channel.onPressEmoji;
   ({ showText, disabled, handleItemInteracted } = channel);
   const tmp = closure_19();
-  const items = [channel, onPressEmoji, handleItemInteracted];
+  items = [channel, onPressEmoji, handleItemInteracted];
   const callback = noop.useCallback(() => {
     handleItemInteracted("press_reaction_picker", { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null });
     const obj2 = { pickerIntention: EmojiIntention.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, guildId: null };
@@ -126,7 +126,7 @@ function EmojiReaction(count) {
     selected = tmp.selected;
   }
   let obj = messageId(reaction[24]);
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const stateFromStores = messageId(reaction[16]).useStateFromStores(items, () => {
     let canChatInGuildResult = null != channel.guild_id;
     if (canChatInGuildResult) {
@@ -216,7 +216,7 @@ function ForwardButton(disabled) {
   disabled = disabled.disabled;
   const tmp = closure_19();
   const obj = { onPress: disabled.onPress, style: null, accessible: true, disabled: null, accessibilityLabel: null, children: null };
-  const items = [, , ];
+  items = [, , ];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
   let disabled1 = null;
   if (disabled) {
@@ -227,14 +227,14 @@ function ForwardButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.xIUfJS);
-  obj.children = __initData(ForwardingIconDefault, { size: "sm" });
-  return __initData(Pressables.PressableOpacity, obj);
+  obj.children = closure_1_15(ForwardingIconDefault, { size: "sm" });
+  return closure_1_15(Pressables.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
   const tmp = closure_19();
   const obj = { onPress: disabled.onPress, style: null, accessible: true, disabled: null, accessibilityLabel: null, children: null };
-  const items = [, , ];
+  items = [, , ];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
   let disabled1 = null;
   if (disabled) {
@@ -245,15 +245,15 @@ function ReplyButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
-  obj.children = __initData(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
-  return __initData(Pressables.PressableOpacity, obj);
+  obj.children = closure_1_15(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+  return closure_1_15(Pressables.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   parentMessage = parentMessage.parentMessage;
   const threadData = parentMessage.threadData;
   ({ style, handleItemInteracted } = parentMessage);
   const tmp = closure_19();
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [parentMessage, threadData.thread, handleItemInteracted];
   const stateFromStores = parentMessage(handleItemInteracted[16]).useStateFromStores(items, () => PermissionStore.canWithPartialContext(constants2.VIEW_CHANNEL, { channelId: parentMessage.id }));
   const callback = noop.useCallback(() => {
@@ -305,11 +305,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ MessageFlags: closure_11, Permissions: closure_12, HorizontalGradient: map1 } = Constants);
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_19 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: { flexDirection: "row", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 }, innerEmojiContainer: { paddingVertical: 5 }, selectedInnerEmojiContainer: { paddingVertical: 4 }, addEmojiContainer: { minHeight: 30, alignItems: "center" }, disabled: { opacity: 0.4 }, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
   const size = { width: v20, height: v20 };
@@ -370,7 +370,7 @@ export default function ICYMICardInteractionRow(message) {
   closure_129_0 = guild;
   closure_129_1 = message;
   closure_129_2 = flag2;
-  let items = [memo, obj3];
+  items = [memo, obj3];
   const stateFromStoresObject = message(hideAdditionalButtons[16]).useStateFromStoresObject(items, () => {
     if (null != channel) {
       if (null != message) {
@@ -417,7 +417,7 @@ export default function ICYMICardInteractionRow(message) {
   obj3 = { thread, messageCount, mostRecentMessage };
   const items2 = [message.reactions];
   memo = obj2.useMemo(() => {
-    const items = [];
+    items = [];
     const reactions = message.reactions;
     const item = reactions.forEach((me_vote) => {
       if (null == me_vote.me_vote) {
@@ -565,8 +565,8 @@ export default function ICYMICardInteractionRow(message) {
         tmp25Result,
         memo.map((reaction, index) => {
               const obj = { messageId: message.id, channel, reaction, count: reaction.type === MessageReactionsTypes.ReactionTypes.BURST ? reaction.burst_count : reaction.count, isBurstReaction: reaction.type === MessageReactionsTypes.ReactionTypes.BURST, handleItemInteracted };
-              const obj2 = { children: __initData(EmojiReaction, obj) };
-              return __initData(hasOwnProperty, obj2, "reaction-" + index);
+              const obj2 = { children: closure_2_15(EmojiReaction, obj) };
+              return closure_2_15(hasOwnProperty, obj2, "reaction-" + index);
             }),
 
       ];
@@ -627,7 +627,7 @@ export function useThread(id, arg1, arg2) {
   _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const items = [ChannelStore, ThreadMessageStore];
+  items = [ChannelStore, ThreadMessageStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (null != channel) {
       if (null != message) {

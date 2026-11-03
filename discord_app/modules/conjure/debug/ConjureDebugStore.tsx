@@ -1,10 +1,10 @@
-// === Module 10857: ConjureDebugStore ===
+// === Module 10987: ConjureDebugStore ===
 
-// Module 10857 (ConjureDebugStore)
+// Module 10987 (ConjureDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 10858 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 10859 */;
+import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 10988 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 10989 */;
 
 require = fn;
 let closure_2 = { pending: false, info: null, error: null, observedAt: null };
@@ -354,7 +354,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
   CONJURE_DEBUG_TIMING_TRACE: function handleTimingTrace(live) {
     ({ projectId, batch } = live);
     let found;
-    let items = map10.get(projectId);
+    items = map10.get(projectId);
     if (items == null) {
       items = [];
     }

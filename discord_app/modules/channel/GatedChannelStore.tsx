@@ -1,17 +1,17 @@
-// === Module 4918: GatedChannelStore ===
+// === Module 5045: GatedChannelStore ===
 
-// Module 4918 (GatedChannelStore)
+// Module 5045 (GatedChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4936 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4937 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4938 */;
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 5063 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 5064 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 5065 */;
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function isSubscriptionGated(role) {
@@ -99,7 +99,7 @@ function computeForChannel(guild_id, id) {
     if (null == channel) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(channel.getGuildId());
+      guild = GuildStore.getGuild(channel.getGuildId());
       if (null == guild) {
         return false;
       } else {
@@ -140,7 +140,7 @@ function handleChannelUpdate(channel) {
       const channel1 = ChannelStore.getChannel(id);
       flag = false;
       if (null != channel1) {
-        const guild = GuildStore.getGuild(channel1.getGuildId());
+        guild = GuildStore.getGuild(channel1.getGuildId());
         flag = false;
         if (null != guild) {
           const hasItem = obj.has(id);
@@ -161,10 +161,10 @@ function handleChannelUpdate(channel) {
   }
   return tmp;
 }
-const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
-const hasPermission = fn(4921).hasPermission;
+const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
+const hasPermission = fn(5048).hasPermission;
 const Constants = fn(1072);
-({ Permissions: c10, GuildFeatures: closure_11 } = Constants);
+({ Permissions: closure_10, GuildFeatures: closure_11 } = Constants);
 const dependencyMap = {};
 let set = new Set();
 const Store = initializeDefault.Store;
@@ -180,7 +180,7 @@ prototype["isChannelGated"] = function isChannelGated(guildId, channelId) {
   } else {
     let obj = dependencyMap[guildId];
     if (null == obj) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const _Set = Set;
         set = new Set();

@@ -1,121 +1,145 @@
-// === Module 14895: GroupAvatar ===
+// === Module 15026: GroupAvatar ===
 
-// Module 14895 (GroupAvatar)
+// Module 15026 (GroupAvatar)
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5254 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import spring from "spring" /* 5637 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7149 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function AnimatedContainer(children) {
   const scale = children.scale;
+  _require = scale;
   const translateX = children.translateX;
+  importDefault = translateX;
   const translateY = children.translateY;
+  dependencyMap = translateY;
   const animateOnMount = children.animateOnMount;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
   const tmp = closure_12();
-  let items = [sharedValue1];
-  const stateFromStores = scale(translateY[8]).useStateFromStores(items, () => sharedValue1.useReducedMotion);
-  let obj = scale(translateY[8]);
+  items = [c5];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => _undefined5.useReducedMotion);
+  let obj = require("useStateFromStores");
   let num = 1;
   if (animateOnMount) {
     num = 0;
   }
-  sharedValue = scale(translateY[9]).useSharedValue(num);
-  const obj2 = scale(translateY[9]);
+  const sharedValue = require("module_1652").useSharedValue(num);
+  noop = sharedValue;
+  const obj2 = require("module_1652");
   let num2 = 0;
   if (!animateOnMount) {
     num2 = translateY;
   }
-  sharedValue1 = scale(translateY[9]).useSharedValue(num2);
-  const tmp2Result = scale(translateY[9]);
+  const sharedValue1 = require("module_1652").useSharedValue(num2);
+  c4 = sharedValue1;
+  const tmp2Result = require("module_1652");
   let num3 = 0;
   if (!animateOnMount) {
     num3 = translateX;
   }
-  sharedValue2 = scale(translateY[9]).useSharedValue(num3);
-  const tmp2Result4 = scale(translateY[9]);
+  const sharedValue2 = require("module_1652").useSharedValue(num3);
+  c5 = sharedValue2;
+  const tmp2Result4 = require("module_1652");
   let result = scale;
   if (animateOnMount) {
     result = scale / 2;
   }
-  sharedValue3 = scale(translateY[9]).useSharedValue(result);
+  const sharedValue3 = require("module_1652").useSharedValue(result);
   items1 = [sharedValue, sharedValue3, sharedValue1, sharedValue2, scale, translateY, translateX];
-  const effect = stateFromStores.useEffect(() => {
-    const result = sharedValue.set(1);
-    const result1 = sharedValue3.set(scale);
-    const result2 = sharedValue1.set(translateY);
-    const result3 = sharedValue2.set(translateX);
+  const effect = noop.useEffect(() => {
+    const result = _undefined3.set(1);
+    const result1 = _undefined6.set(c0);
+    const result2 = _undefined4.set(c2);
+    const result3 = _undefined5.set(c1);
   }, items1);
-  const tmp2Result5 = scale(translateY[9]);
-  const fn = function y() {
-    const obj = { opacity: timing.withTiming(sharedValue.get()), transform: null };
-    if (stateFromStores) {
-      let withSpringResult = sharedValue2.get();
-    } else {
-      withSpringResult = spring.withSpring(sharedValue2.get(), closure_11);
-      const tmpResult = spring;
+  const tmp2Result5 = require("module_1652");
+  const items2 = [closure_14, require("timing/timing").withTiming, sharedValue, stateFromStores, sharedValue2, require("spring/spring").withSpring, closure_11, sharedValue1, sharedValue3, closure_10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items2;
+  class GroupAvatarTsx1 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get()), transform: null };
+      tmp = closure_2;
+      if (closure_2) {
+        tmp6 = closure_3;
+        value = closure_3.get();
+      } else {
+        tmp2 = closure_4;
+        tmp3 = closure_3;
+        tmp4 = closure_5;
+        value = closure_4(closure_3.get(), closure_5);
+      }
+      items = [, , ];
+      items[0] = { translateX: value };
+      if (tmp) {
+        tmp11 = closure_6;
+        value1 = closure_6.get();
+      } else {
+        tmp7 = closure_4;
+        tmp8 = closure_6;
+        tmp9 = closure_5;
+        value1 = closure_4(closure_6.get(), closure_5);
+      }
+      items[1] = { translateY: value1 };
+      if (tmp) {
+        tmp16 = closure_7;
+        value2 = closure_7.get();
+      } else {
+        tmp12 = closure_4;
+        tmp13 = closure_7;
+        tmp14 = closure_8;
+        value2 = closure_4(closure_7.get(), closure_8);
+      }
+      items[2] = { scale: value2 };
+      obj.transform = items;
+      return obj;
     }
-    const items = [{ translateX: withSpringResult }, , ];
-    if (stateFromStores) {
-      let value3 = sharedValue1.get();
-    } else {
-      value3 = spring.withSpring(sharedValue1.get(), closure_11);
-      const tmpResult3 = spring;
-    }
-    items[1] = { translateY: value3 };
-    if (stateFromStores) {
-      let value4 = sharedValue3.get();
-    } else {
-      value4 = spring.withSpring(sharedValue3.get(), closure_10);
-      const tmpResult4 = spring;
-    }
-    items[2] = { scale: value4 };
-    obj.transform = items;
-    return obj;
-  };
-  const tmp2Result6 = scale(translateY[9]);
-  fn.__closure = { withTiming: scale(translateY[10]).withTiming, opacityAnimation: sharedValue, useReducedMotion: stateFromStores, translateXAnimation: sharedValue2, withSpring: scale(translateY[11]).withSpring, SPRING_OPTIONS_POSITION, translateYAnimation: sharedValue1, scaleAnimation: sharedValue3, SPRING_OPTIONS_SCALE };
-  fn.__workletHash = 8800301056148;
-  fn.__initData = __initData;
-  const animatedStyle = tmp2Result6.useAnimatedStyle(fn);
-  const obj4 = { style: null, children: children.children };
-  const items2 = [tmp.avatarContainer, animatedStyle];
-  obj4.style = items2;
-  return sharedValue2(translateX(translateY[9]).View, obj4);
+  }
+  const items3 = [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20];
+  GroupAvatarTsx1.__closure = items3;
+  GroupAvatarTsx1.__workletHash = 10803845888973;
+  GroupAvatarTsx1.__initData = tmp11;
+  const animatedStyle = require("module_1652").useAnimatedStyle(GroupAvatarTsx1);
+  const obj3 = { style: null, children: children.children };
+  const items4 = [tmp.avatarContainer, animatedStyle];
+  obj3.style = items4;
+  return c6(_modDef1652.View, obj3);
 }
 function GroupMemberCount(count) {
   count = count.count;
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GroupAvatar");
-  const tmp2 = closure_12();
-  const obj2 = { style: tmp2.avatarWrapper, children: null };
-  const obj3 = { style: tmp2.overflowCount, children: null };
+  const tmp = closure_12();
+  const obj = { style: tmp.avatarWrapper, children: null };
+  const obj2 = { style: tmp.overflowCount, children: null };
   let str = "text-sm/semibold";
-  if (manaTypeConsolidationExperiment) {
-    str = "text-sm/semibold";
-    if (count < 100) {
-      str = "experimental/body-md/semibold";
-    }
+  if (count < 100) {
+    str = "body-md/semibold";
   }
-  const obj4 = { variant: str, children: null };
-  const items = ["+", count];
-  obj4.children = items;
-  obj3.children = React5(Text_Text.Text, obj4);
-  obj2.children = timestampProducer(View, obj3);
-  return timestampProducer(View, obj2);
+  const obj3 = { variant: str, children: null };
+  items = ["+", count];
+  obj3.children = items;
+  obj2.children = React5(Text_Text.Text, obj3);
+  obj.children = timestampProducer(View, obj2);
+  return timestampProducer(View, obj);
 }
 function GroupMemberAvatar(guildId) {
   guildId = guildId.guildId;
   const user = guildId.user;
   const tmp = closure_12();
-  const items = [guildId, user];
+  items = [guildId, user];
   const memo = noop.useMemo(() => {
     let avatarSource;
     if (user != null) {
@@ -137,9 +161,9 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createElement = fn(19).createElement;
 let c9 = 38;
-const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
-const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
-const createStyles = fn(5014);
+let closure_10 = { damping: 30, stiffness: 400 };
+let closure_11 = { damping: 30, stiffness: 400 };
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };
@@ -159,11 +183,11 @@ let items = [{ translateY: 0, translateX: 0, scale: 1 }, { translateY: 0, transl
 let items1 = [items, , , ];
 let items2 = [{ translateY: -14, translateX: -14, scale: 0.75 }, { translateY: 12, translateX: 12, scale: 0.875 }, { translateY: 0, translateX: 0, scale: 0 }, { translateY: 0, translateX: 0, scale: 0 }];
 items1[1] = items2;
-const items3 = [{ translateY: -4, translateX: 16, scale: 0.75 }, { translateY: 14, translateX: -14, scale: 0.875 }, { translateY: -18, translateX: -12, scale: 0.625 }, { translateY: 0, translateX: 0, scale: 0 }];
+let items3 = [{ translateY: -4, translateX: 16, scale: 0.75 }, { translateY: 14, translateX: -14, scale: 0.875 }, { translateY: -18, translateX: -12, scale: 0.625 }, { translateY: 0, translateX: 0, scale: 0 }];
 items1[2] = items3;
-const items4 = [{ translateY: -14, translateX: -14, scale: 0.875 }, { translateY: 14, translateX: 14, scale: 0.875 }, { translateY: -18, translateX: 18, scale: 0.625 }, { translateY: 18, translateX: -18, scale: 0.625 }];
+let items4 = [{ translateY: -14, translateX: -14, scale: 0.875 }, { translateY: 14, translateX: 14, scale: 0.875 }, { translateY: -18, translateX: 18, scale: 0.625 }, { translateY: 18, translateX: -18, scale: 0.625 }];
 items1[3] = items4;
-const __initData = { code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
+let closure_14 = { code: "(function GroupAvatarTsx1(){let[withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE]=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
 
@@ -188,7 +212,7 @@ export default function GroupAvatar(users) {
   c4 = diff;
   const animateOnMount = guildId(tmp2[7])(ref);
   let obj3 = { style: tmp.groupContainer, children: null };
-  const items = [tmp.shadowContainer, ];
+  items = [tmp.shadowContainer, ];
   const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((item, index) => {
     if (null == users[index]) {
       return null;

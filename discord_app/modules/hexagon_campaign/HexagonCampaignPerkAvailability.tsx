@@ -1,10 +1,10 @@
-// === Module 5042: HexagonCampaignPerkAvailability ===
+// === Module 5169: HexagonCampaignPerkAvailability ===
 
-// Module 5042 (HexagonCampaignPerkAvailability)
+// Module 5169 (HexagonCampaignPerkAvailability)
 import initialize from "initialize" /* 504 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5041 */;
-import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5043 */;
-import UserStore from "UserStore" /* 1383 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5168 */;
+import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5170 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampa
 
 export function useHexagonCampaignPerkAvailability(DISPLAY_NAME_STYLE, HexagonCampaignSheet) {
   const isHexagonCampaignEnabled = HexagonCampaignExperiment.useIsHexagonCampaignEnabled(HexagonCampaignSheet);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;

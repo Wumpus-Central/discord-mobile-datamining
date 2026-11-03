@@ -1,11 +1,11 @@
-// === Module 15054: OrbCheckoutHooks ===
+// === Module 15195: OrbCheckoutHooks ===
 
-// Module 15054 (OrbCheckoutHooks)
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7731 */;
-import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 9559 */;
+// Module 15195 (OrbCheckoutHooks)
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7855 */;
+import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 9691 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import SKUStore from "SKUStore" /* 6896 */;
+import UserStore from "UserStore" /* 1385 */;
+import SKUStore from "SKUStore" /* 7016 */;
 import size from "module_2" /* 2 */;
 
 ({ useCallback: c3, useMemo: closure_4 } = noop);
@@ -16,7 +16,7 @@ export function useOrbProductContext(skuId) {
   let shouldCaptureExceptions = skuId.shouldCaptureExceptions;
   let sKUOrbPrice;
   c3 = undefined;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = skuId(sKUOrbPrice[3]).useStateFromStores(items, () => stateFromStores(sKUOrbPrice[4]).canUseShopDiscounts(currentUser.getCurrentUser()));
   const obj = skuId(sKUOrbPrice[3]);
   const items1 = [SKUStore];
@@ -82,7 +82,7 @@ export function useOrbCheckoutRedemption(skuId) {
   const redeemVirtualCurrency1 = useRedeemVirtualCurrency.useRedeemVirtualCurrency({ skuId, loadId, order, onSignFailure, onSetIsSubmitting });
   const redeemVirtualCurrency = redeemVirtualCurrency1.redeemVirtualCurrency;
   const obj2 = { onRedeemVirtualCurrency: null, isRedeeming: isSubmitting, orbRedemptionError: error };
-  const items = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
+  items = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
   ({ isSubmitting, error } = redeemVirtualCurrency1);
   obj2.onRedeemVirtualCurrency = React3((arg0) => {
     closure_0 = arg0;

@@ -1,9 +1,9 @@
-// === Module 15016: HideFriendRequestNotesUtils ===
+// === Module 15152: HideFriendRequestNotesUtils ===
 
-// Module 15016 (HideFriendRequestNotesUtils)
-import UserSettings from "UserSettings" /* 4839 */;
-import useUserIsTeen from "useUserIsTeen" /* 8368 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+// Module 15152 (HideFriendRequestNotesUtils)
+import UserSettings from "UserSettings" /* 4966 */;
+import useUserIsTeen from "useUserIsTeen" /* 8492 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ export function useFriendRequestNote(arg0) {
     userIsTeen = setting;
   }
   const obj = require("useUserIsTeen");
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.getNote(closure_0));
   let tmp6 = null;
   if (!userIsTeen) {

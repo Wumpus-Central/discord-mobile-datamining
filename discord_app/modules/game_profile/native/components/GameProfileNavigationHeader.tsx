@@ -1,17 +1,19 @@
-// === Module 9622: GameProfileNavigationHeader ===
+// === Module 9754: GameProfileNavigationHeader ===
 
-// Module 9622 (GameProfileNavigationHeader)
+// Module 9754 (GameProfileNavigationHeader)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import timing from "timing" /* 5254 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import timing_timing from "timing/timing" /* 5377 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerContainer: { height: 56, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" }, headerRow: null, icon: null, titleContainer: null, headerRight: null, rankPillContainer: null };
 let obj3 = { height: 56, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -22,58 +24,74 @@ obj2.titleContainer = { flex: 1, flexDirection: "row", alignItems: "center", gap
 obj2.headerRight = { flexDirection: "row", alignItems: "center" };
 obj2.rankPillContainer = { flex: 1, flexDirection: "row", alignItems: "center" };
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = { code: "function GameProfileNavigationHeaderTsx1(){const{headerRightProgress}=this.__closure;return{opacity:headerRightProgress.get()};}" };
-const __initData2 = { code: "function GameProfileNavigationHeaderTsx2(){const{headerRightProgress}=this.__closure;return{opacity:1-headerRightProgress.get()};}" };
+let closure_9 = { code: "(function GameProfileNavigationHeaderTsx1(){let[headerRightProgress]=this.__closure;return{opacity:headerRightProgress.get()};})" };
+let closure_10 = { code: "(function GameProfileNavigationHeaderTsx2(){let[headerRightProgress]=this.__closure;return{opacity:1-headerRightProgress.get()};})" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
 
 export default function GameProfileNavigationHeader(game) {
   game = game.game;
+  _require = game;
   const application = game.application;
   const headerRight = game.headerRight;
   let sharedValue;
   const tmp = closure_8();
   dependencyMap = tmp6;
-  const token = game(5596).useToken(application(575).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
-  let obj = game(5596);
+  const token = require("useToken").useToken(application(575).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
+  let obj = require("useToken");
   let num = 0;
   if (null != headerRight) {
     num = 1;
   }
-  sharedValue = game(5095).useSharedValue(num);
-  const items = [null != headerRight, sharedValue];
+  sharedValue = require("module_1652").useSharedValue(num);
+  items = [null != headerRight, sharedValue];
   const effect = sharedValue.useEffect(() => {
     let num = 0;
     if (closure_2) {
       num = 1;
     }
-    const result = sharedValue.set(timing.withTiming(num, { duration: 200 }));
+    const result = sharedValue.set(timing_timing.withTiming(num, { duration: 200 }));
   }, items);
-  const obj2 = game(5095);
-  const fn = function x() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { headerRightProgress: sharedValue };
-  fn.__workletHash = 16001524280109;
-  fn.__initData = __initData;
-  const animatedStyle = game(5095).useAnimatedStyle(fn);
-  const tmp2Result = game(5095);
-  const fn2 = function b() {
-    return { opacity: 1 - sharedValue.get() };
-  };
-  fn2.__closure = { headerRightProgress: sharedValue };
-  fn2.__workletHash = 5182160908530;
-  fn2.__initData = __initData2;
-  const items1 = [game, application];
-  const animatedStyle1 = game(5095).useAnimatedStyle(fn2);
-  const memo = sharedValue.useMemo(() => {
-    let iconURL;
-    if (game != null) {
+  const obj2 = require("module_1652");
+  const obj3 = sharedValue;
+  const items1 = [closure_9, sharedValue];
+  _require = undefined;
+  [tmp9, tmp10] = items1;
+  class GameProfileNavigationHeaderTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items2 = [tmp10];
+  GameProfileNavigationHeaderTsx1.__closure = items2;
+  GameProfileNavigationHeaderTsx1.__workletHash = 12841236094068;
+  GameProfileNavigationHeaderTsx1.__initData = tmp9;
+  const animatedStyle = require("module_1652").useAnimatedStyle(GameProfileNavigationHeaderTsx1);
+  const tmp2Result = require("module_1652");
+  const items3 = [closure_10, sharedValue];
+  _require = undefined;
+  [tmp12, tmp13] = items3;
+  class GameProfileNavigationHeaderTsx2 {
+    constructor() {
+      obj = { opacity: 1 - closure_0.get() };
+      return obj;
+    }
+  }
+  const items4 = [tmp13];
+  GameProfileNavigationHeaderTsx2.__closure = items4;
+  GameProfileNavigationHeaderTsx2.__workletHash = 15239718995275;
+  GameProfileNavigationHeaderTsx2.__initData = tmp12;
+  const items5 = [game, application];
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(GameProfileNavigationHeaderTsx2);
+  const memo = obj3.useMemo(() => {
+    iconURL = undefined;
+    if (iconURL != null) {
       let str = "png";
       if (AvatarUtils.SUPPORTS_WEBP) {
         str = "webp";
       }
-      iconURL = game.getIconURL(32, str);
+      iconURL = iconURL.getIconURL(32, str);
     }
     if (iconURL == null) {
       let iconURL1;
@@ -90,7 +108,7 @@ export default function GameProfileNavigationHeader(game) {
       iconURL = null;
     }
     return iconURL;
-  }, items1);
+  }, items5);
   let name;
   if (game != null) {
     name = game.name;
@@ -102,58 +120,58 @@ export default function GameProfileNavigationHeader(game) {
     }
     name = name1;
   }
-  let tmp15Result2 = null;
+  let tmp19Result2 = null;
   if (null != name) {
-    const obj3 = { style: tmp.headerContainer, children: null };
-    const obj4 = { android_fallbackColor: token };
-    const items2 = [closure_6(tmp2(8992).BackgroundBlurFill, obj4), ];
-    const obj5 = { style: tmp.headerRow, children: null };
-    let tmp17Result = null != memo;
-    if (tmp17Result) {
-      const obj6 = { source: null, style: null };
-      const obj7 = { uri: memo };
-      obj6.source = obj7;
-      obj6.style = tmp.icon;
-      tmp17Result = closure_6(tmp4(5717), obj6);
+    const obj4 = { style: tmp.headerContainer, children: null };
+    const obj5 = { android_fallbackColor: token };
+    const items6 = [closure_6(tmp2(9120).BackgroundBlurFill, obj5), ];
+    const obj6 = { style: tmp.headerRow, children: null };
+    let tmp21Result = null != memo;
+    if (tmp21Result) {
+      const obj7 = { source: null, style: null };
+      const obj8 = { uri: memo };
+      obj7.source = obj8;
+      obj7.style = tmp.icon;
+      tmp21Result = closure_6(tmp4(5837), obj7);
     }
-    const items3 = [tmp17Result, , ];
-    const obj8 = { style: tmp.titleContainer, children: null };
-    const obj9 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, children: name };
-    const items4 = [closure_6(tmp2(5624).Heading, obj9), ];
+    const items7 = [tmp21Result, , ];
+    const obj9 = { style: tmp.titleContainer, children: null };
+    const obj10 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: name };
+    const items8 = [closure_6(tmp2(5747).Heading, obj10), ];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
     }
-    let tmp15Result = null != l30Rank;
-    if (tmp15Result) {
-      const obj10 = { style: tmp.rankPillContainer, children: null };
-      const obj11 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_6(tmp4(9377), obj11), ];
-      const obj12 = { style: null, children: null };
-      const items6 = [StyleSheet.absoluteFill, animatedStyle1];
-      obj12.style = items6;
-      const obj13 = { rank: game.l30Rank };
-      obj12.children = closure_6(tmp4(9377), obj13);
-      items5[1] = closure_6(tmp4(5095).View, obj12);
-      obj10.children = items5;
-      tmp15Result = closure_7(closure_4, obj10);
+    let tmp19Result = null != l30Rank;
+    if (tmp19Result) {
+      const obj11 = { style: tmp.rankPillContainer, children: null };
+      const obj12 = { rank: game.l30Rank, compact: true };
+      const items9 = [closure_6(tmp4(9505), obj12), ];
+      const obj13 = { style: null, children: null };
+      const items10 = [StyleSheet.absoluteFill, animatedStyle1];
+      obj13.style = items10;
+      const obj14 = { rank: game.l30Rank };
+      obj13.children = closure_6(tmp4(9505), obj14);
+      items9[1] = closure_6(tmp4(1652).View, obj13);
+      obj11.children = items9;
+      tmp19Result = closure_7(closure_4, obj11);
     }
-    items4[1] = tmp15Result;
-    obj8.children = items4;
-    items3[1] = closure_7(closure_4, obj8);
-    let tmp17Result2 = null != headerRight;
-    if (tmp17Result2) {
-      const obj14 = { style: null, children: null };
-      const items7 = [tmp.headerRight, animatedStyle];
-      obj14.style = items7;
-      obj14.children = headerRight();
-      tmp17Result2 = closure_6(tmp4(5095).View, obj14);
+    items8[1] = tmp19Result;
+    obj9.children = items8;
+    items7[1] = closure_7(closure_4, obj9);
+    let tmp21Result2 = null != headerRight;
+    if (tmp21Result2) {
+      const obj15 = { style: null, children: null };
+      const items11 = [tmp.headerRight, animatedStyle];
+      obj15.style = items11;
+      obj15.children = headerRight();
+      tmp21Result2 = closure_6(tmp4(1652).View, obj15);
     }
-    items3[2] = tmp17Result2;
-    obj5.children = items3;
-    items2[1] = closure_7(closure_4, obj5);
-    obj3.children = items2;
-    tmp15Result2 = closure_7(closure_4, obj3);
+    items7[2] = tmp21Result2;
+    obj6.children = items7;
+    items6[1] = closure_7(closure_4, obj6);
+    obj4.children = items6;
+    tmp19Result2 = closure_7(closure_4, obj4);
   }
-  return tmp15Result2;
+  return tmp19Result2;
 };

@@ -1,12 +1,12 @@
-// === Module 5189: mergeProps ===
+// === Module 5312: mergeProps ===
 
-// Module 5189 (mergeProps)
+// Module 5312 (mergeProps)
 import size from "module_2" /* 2 */;
 
 function chainCallbacks() {
   closure_0 = [...arguments];
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     for (const item10008 of closure_0) {
       if (typeof item10008 === "function") {
         let items1 = [];
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("design/utils/native/mergeProps.native
 
 export { chainCallbacks };
 export function mergeRefs() {
-  const items = [...arguments];
+  items = [...arguments];
   return 1 === items.length ? items[0] : ((current) => {
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
@@ -37,7 +37,7 @@ export function mergeRefs() {
   });
 }
 export function mergeProps() {
-  const items = [...arguments];
+  items = [...arguments];
   const obj = {};
   const merged = Object.assign(items[0]);
   for (let num = 1; num < items.length; num = num + 1) {

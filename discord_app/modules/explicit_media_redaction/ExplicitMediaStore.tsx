@@ -1,6 +1,6 @@
-// === Module 7464: ExplicitMediaStore ===
+// === Module 7588: ExplicitMediaStore ===
 
-// Module 7464 (ExplicitMediaStore)
+// Module 7588 (ExplicitMediaStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -76,7 +76,7 @@ const explicitMediaStore = new ExplicitMediaStore(DispatcherDefault, {
     if (tmp == null) {
       tmp = closure_4;
     }
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(tmp, 0)] = obj;
     dependencyMap2[channelId] = items;
     closure_6[messageId] = obj;

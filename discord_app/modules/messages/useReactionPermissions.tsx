@@ -1,11 +1,11 @@
-// === Module 11145: useReactionPermissions ===
+// === Module 11282: useReactionPermissions ===
 
-// Module 11145 (useReactionPermissions)
+// Module 11282 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6708 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export default function useReactionPermissions(guild_id) {
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const items1 = [guild_id];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canChatInGuildResult = null == guild_id;

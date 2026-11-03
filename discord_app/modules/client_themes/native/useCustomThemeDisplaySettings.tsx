@@ -1,6 +1,6 @@
-// === Module 5252: useCustomThemeDisplaySettings ===
+// === Module 5375: useCustomThemeDisplaySettings ===
 
-// Module 5252 (useCustomThemeDisplaySettings)
+// Module 5375 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,9 +11,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
 export function useCustomThemeDisplaySettings(stateFromStores) {
-  let items = [CustomThemeMobileStore];
+  items = [CustomThemeMobileStore];
   [tmp4, tmp5, tmp6] = initialize.useStateFromStoresArray(items, () => {
-    const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
+    items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
     return items;
   });
   if (undefined !== tmp6) {
@@ -34,7 +34,7 @@ export function useCustomThemeDisplaySettings(stateFromStores) {
     }
   }
   const tmp3 = _slicedToArray(initialize.useStateFromStoresArray(items, () => {
-    const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
+    items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
     return items;
   }), 3);
 }

@@ -1,8 +1,8 @@
-// === Module 7508: frameDeepLinks ===
+// === Module 7632: frameDeepLinks ===
 
-// Module 7508 (frameDeepLinks)
+// Module 7632 (frameDeepLinks)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

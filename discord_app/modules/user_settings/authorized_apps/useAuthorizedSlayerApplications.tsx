@@ -1,21 +1,21 @@
-// === Module 17916: useAuthorizedSlayerApplications ===
+// === Module 18059: useAuthorizedSlayerApplications ===
 
-// Module 17916 (useAuthorizedSlayerApplications)
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7332 */;
+// Module 18059 (useAuthorizedSlayerApplications)
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7452 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(7276).FetchState;
+const FetchState = fn(7396).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 
 export default function useAuthorizedSlayerApplications(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => fetchState.getFetchState());
   let obj = require("initialize");
   const items1 = [AuthorizedAppsStore];
@@ -31,7 +31,7 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const items3 = [arg1];
   const slayerSdkApplications = noop.useMemo(() => {
     if (null == stateFromStores1) {
-      let items = [];
+      items = [];
     } else {
       const found = stateFromStores1.filter((application) => closure_1_0(stateFromStores1[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
       items = found.map((application) => application.application);

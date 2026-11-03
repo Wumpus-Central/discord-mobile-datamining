@@ -1,12 +1,12 @@
-// === Module 18323: useShouldRenderChannelList ===
+// === Module 18468: useShouldRenderChannelList ===
 
-// Module 18323 (useShouldRenderChannelList)
+// Module 18468 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7655 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import CacheStore from "CacheStore" /* 7779 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/guild_sidebar/native/useShouldR
 
 export function useShouldRenderChannelList() {
   [first, dependencyMap] = noop.useState(c7);
-  const items = [first];
+  items = [first];
   const effect = noop.useEffect(() => {
     function allowRender() {
       c7 = true;
@@ -35,8 +35,8 @@ export function useShouldRenderChannelList() {
       }
     }
     function checkNavigationState() {
-      const obj = first(5198);
-      const rootNavigationRef = first(5199).getRootNavigationRef();
+      const obj = first(5321);
+      const rootNavigationRef = first(5322).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -45,14 +45,14 @@ export function useShouldRenderChannelList() {
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5199);
+      const obj2 = first(5322);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1108).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5199).getRootNavigationRef();
+      let rootNavigationRef = first(5322).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

@@ -1,10 +1,10 @@
-// === Module 18212: FavoritesGuildAddActionSheet ===
+// === Module 18356: FavoritesGuildAddActionSheet ===
 
-// Module 18212 (FavoritesGuildAddActionSheet)
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10834 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14402 */;
-import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 18213 */;
+// Module 18356 (FavoritesGuildAddActionSheet)
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10964 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14533 */;
+import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 18357 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -19,7 +19,7 @@ function FavoritesGuildAddActionSheet() {
   shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
   const isAtLimit = favoritesLimitUpsell.isAtLimit;
   favoriteLimit = favoritesLimitUpsell.favoriteLimit;
-  const items = [shouldShowUpsell, isAtLimit, favoriteLimit];
+  items = [shouldShowUpsell, isAtLimit, favoriteLimit];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddActionSheet);
     if (shouldShowUpsell) {

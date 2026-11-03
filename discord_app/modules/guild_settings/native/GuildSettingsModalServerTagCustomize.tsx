@@ -1,24 +1,24 @@
-// === Module 19756: GuildSettingsModalServerTagCustomize ===
+// === Module 19906: GuildSettingsModalServerTagCustomize ===
 
-// Module 19756 (GuildSettingsModalServerTagCustomize)
+// Module 19906 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9048 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9176 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9046).GuildProfileFetchStatus;
-const BADGES = fn(8393).BADGES;
+let GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
+const BADGES = fn(8517).BADGES;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start", marginTop: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, warningText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,7 +39,7 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
   let guildProfile = guildId(stateFromStores[11]).useGuildProfile(guildId);
   fetchStatus = guildProfile.fetchStatus;
   let obj2 = guildId(stateFromStores[11]);
-  const items = [callback2];
+  items = [callback2];
   stateFromStores = guildId(stateFromStores[12]).useStateFromStores(items, () => callback2.getGuildProfile());
   const obj3 = guildId(stateFromStores[12]);
   const tmp8 = callback2;

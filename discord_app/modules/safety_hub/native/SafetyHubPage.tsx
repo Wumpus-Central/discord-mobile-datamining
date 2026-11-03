@@ -1,25 +1,25 @@
-// === Module 16641: SafetyHubPage ===
+// === Module 16784: SafetyHubPage ===
 
-// Module 16641 (SafetyHubPage)
+// Module 16784 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import _modDef3192 from "module_3192" /* 3192 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
-import InlineNotice from "InlineNotice" /* 8025 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8172 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13314 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13316 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 16642 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 16643 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import _modDef3319 from "module_3319" /* 3319 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
+import InlineNotice from "InlineNotice" /* 8149 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8296 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13450 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13452 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 16785 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 16786 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 const require = globalThis.__r;
 
@@ -42,22 +42,22 @@ function RetryBanner() {
   obj2.text = intl2.string(util.t.IcA9iD);
   obj2.onPress = handleRetryClick;
   obj.action = obj2;
-  return closure_1_12(InlineNotice.InlineNotice, obj);
+  return application_id(InlineNotice.InlineNotice, obj);
 }
 function AgeCheckLoadingBanner() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled());
   const intl = util.intl;
   const t = util.t;
-  return closure_1_12(InlineNotice.InlineNotice, { type: "info", message: intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]), role: "status" });
+  return application_id(InlineNotice.InlineNotice, { type: "info", message: intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]), role: "status" });
 }
 function ManualOrAutomatedReviewBanner() {
   _require = closure_22();
   const obj = { type: "critical", message: null, role: "alert", action: null };
   const intl = require("util").intl;
-  obj.message = intl.format(_modDef3192.vPoM8y, {
+  obj.message = intl.format(_modDef3319.vPoM8y, {
     manualReviewHook(children, arg1) {
-      return closure_2_12(Text_Text.Text, { onPress: handleManualReviewClick, style: link.link, variant: "text-sm/normal", color: "text-default", children }, arg1);
+      return application_id(Text_Text.Text, { onPress: handleManualReviewClick, style: link.link, variant: "text-sm/normal", color: "text-default", children }, arg1);
     }
   });
   const obj3 = { text: null, onPress: null };
@@ -71,14 +71,14 @@ function ManualReviewBanner() {
   const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
   const methods = availableAgeVerificationMethods.methods;
   if (availableAgeVerificationMethods.loading) {
-    let tmp5Result = closure_1_12(AgeCheckLoadingBanner, {});
+    let tmp5Result = application_id(AgeCheckLoadingBanner, {});
   } else {
     if (null != methods) {
       if (0 !== methods.length) {
         if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
-          tmp5Result = closure_1_12(ManualOrAutomatedReviewBanner, {});
+          tmp5Result = application_id(ManualOrAutomatedReviewBanner, {});
         } else {
-          tmp5Result = closure_1_12(RetryBanner, {});
+          tmp5Result = application_id(RetryBanner, {});
         }
       }
     }
@@ -90,18 +90,18 @@ function ManualReviewBanner() {
     obj3.text = intl2.string(util.t.NkTGsC);
     obj3.onPress = handleManualReviewClick;
     obj2.action = obj3;
-    tmp5Result = closure_1_12(InlineNotice.InlineNotice, obj2);
+    tmp5Result = application_id(InlineNotice.InlineNotice, obj2);
   }
   return tmp5Result;
 }
 function AutomatedUnderageAppealStatus() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   useShouldShowInitialGoogleWalletBanner;
   if (stateFromStores === AgeCheckStatus.NONE) {
     let tmp20 = null;
     if (tmp5) {
-      tmp20 = closure_1_12(ManualOrAutomatedReviewBanner, {});
+      tmp20 = application_id(ManualOrAutomatedReviewBanner, {});
     }
     let tmp9 = tmp20;
   } else if (stateFromStores === AgeCheckStatus.SUCCESS) {
@@ -120,7 +120,7 @@ function AutomatedUnderageAppealStatus() {
         }
     };
     obj2.message = intl6.format(util.t.hyh4ls, obj3);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj2);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj2);
   } else if (stateFromStores === AgeCheckStatus.VERIFIED) {
     const obj4 = { type: "success", message: null, role: "status", action: null };
     const intl4 = util.intl;
@@ -130,39 +130,39 @@ function AutomatedUnderageAppealStatus() {
     obj5.text = intl5.string(util.t["2jvQ6K"]);
     obj5.onPress = handleLogInClick;
     obj4.action = obj5;
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj4);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj4);
   } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
     const obj6 = { type: "success", message: null, role: "status" };
     const intl3 = util.intl;
     obj6.message = intl3.string(util.t.Ie7p1Q);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj6);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj6);
   } else if (stateFromStores === AgeCheckStatus.ERROR) {
     const obj7 = { type: "critical", message: null, role: "alert" };
     const intl2 = util.intl;
     obj7.message = intl2.string(util.t["4sILBU"]);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj7);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj7);
   } else if (stateFromStores === AgeCheckStatus.FAILURE) {
     const obj8 = { type: "critical", message: null, role: "alert" };
     const intl = util.intl;
     obj8.message = intl.string(util.t["40R63o"]);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj8);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj8);
   } else if (stateFromStores === AgeCheckStatus.UNDERAGE) {
-    tmp9 = closure_1_12(RetryBanner, {});
+    tmp9 = application_id(RetryBanner, {});
   } else if (stateFromStores === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW) {
-    tmp9 = closure_1_12(ManualReviewBanner, {});
+    tmp9 = application_id(ManualReviewBanner, {});
   } else {
-    tmp9 = closure_1_12(AgeCheckLoadingBanner, {});
+    tmp9 = application_id(AgeCheckLoadingBanner, {});
   }
   return tmp9;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7970).AgeCheckStatus;
+const AgeCheckStatus = fn(8094).AgeCheckStatus;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null, link: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_8 };
@@ -181,7 +181,7 @@ export default function SafetyHubPage(visible) {
   const tmp5 = visible;
   importDefault = visible(safetyHubFetchError[20]).useSafetyHubInitialized();
   let obj = visible(safetyHubFetchError[20]);
-  const state = visible(safetyHubFetchError[21]).useSafetyHubAccountStanding();
+  state = visible(safetyHubFetchError[21]).useSafetyHubAccountStanding();
   let obj2 = visible(safetyHubFetchError[21]);
   safetyHubFetchError = visible(safetyHubFetchError[22]).useSafetyHubFetchError();
   require("useMountEffect")(() => {
@@ -193,11 +193,11 @@ export default function SafetyHubPage(visible) {
       MonitoringAgentDefault.increment(obj5);
     }
   });
-  const items = [safetyHubFetchError, visible];
+  items = [safetyHubFetchError, visible];
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16645, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16788, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

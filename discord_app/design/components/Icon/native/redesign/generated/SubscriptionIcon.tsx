@@ -1,9 +1,9 @@
-// === Module 16891: SubscriptionIcon ===
+// === Module 17034: SubscriptionIcon ===
 
-// Module 16891 (SubscriptionIcon)
+// Module 17034 (SubscriptionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod16892 from "module_16892" /* 16892 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod17035 from "module_17035" /* 17035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SubscriptionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16892, color: ICON_STRONG, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17035, color: ICON_STRONG, style: color.style });
 }

@@ -1,13 +1,13 @@
-// === Module 6536: BillingSharedActionCreators ===
+// === Module 6656: BillingSharedActionCreators ===
 
-// Module 6536 (BillingSharedActionCreators)
+// Module 6656 (BillingSharedActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6446 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6566 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 2050 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 2179 */;
 
 require = fn;
 let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_9 = async function _popupBridgeState() {
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
-  const state = value.body.state;
+  state = value.body.state;
   closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state, paymentSourceType: closure_129_0 });
   return state;
 };
@@ -104,7 +104,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -236,7 +236,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
     }
   }
 };
-const StripeErrorTypes = fn(6537).StripeErrorTypes;
+const StripeErrorTypes = fn(6657).StripeErrorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -282,12 +282,13 @@ export function dispatchConfirmationError(type, captureException) {
     }
     const obj2 = { failure_message: combined, error_type: null, failure_code: null, failure_sub_code: null, payment_source_type: null };
     ({ type: obj4.error_type, code: obj4.failure_code, decline_code: obj4.failure_sub_code, payment_method } = message);
-    type = undefined;
+    let type1;
     if (payment_method != null) {
-      type = payment_method.type;
+      type1 = payment_method.type;
     }
-    obj2.payment_source_type = type;
-    if ("card_error" === message.type) {
+    obj2.payment_source_type = type1;
+    type = message.type;
+    if ("card_error" === type) {
       const obj6 = {};
       const merged = Object.assign(obj2);
       const _Error = Error;
@@ -334,8 +335,8 @@ export function dispatchConfirmationError(type, captureException) {
     const merged2 = Object.assign(tmp10);
     const merged3 = Object.assign(prop.extra);
     obj9.extra = obj10;
-    const result = tmp13(4827).captureBillingException(error1, obj9);
-    const tmp13Result = tmp13(4827);
+    const result = tmp13(4954).captureBillingException(error1, obj9);
+    const tmp13Result = tmp13(4954);
   }
   return error1;
 }

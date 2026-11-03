@@ -1,22 +1,22 @@
-// === Module 10128: handleNSFWGuildInvite ===
+// === Module 10258: handleNSFWGuildInvite ===
 
-// Module 10128 (handleNSFWGuildInvite)
+// Module 10258 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1072 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 6737 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6738 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10129 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10130 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
+import AgeNoticeConstants from "AgeNoticeConstants" /* 6857 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6858 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10259 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10260 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = TinyBroncoConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_5 = AgeNoticeConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -39,7 +39,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }
@@ -96,7 +96,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
         } else {
           return false;
         }
-        tmp6Result5 = TinyBroncoExperiment;
+        tmp6Result5 = AgeNoticeExperiment;
       } else {
         return false;
       }

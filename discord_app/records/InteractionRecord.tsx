@@ -1,8 +1,8 @@
-// === Module 6064: InteractionRecord ===
+// === Module 6184: InteractionRecord ===
 
-// Module 6064 (InteractionRecord)
-import Record from "Record" /* 1398 */;
-import UserRecord from "UserRecord" /* 1397 */;
+// Module 6184 (InteractionRecord)
+import Record from "Record" /* 1400 */;
+import UserRecord from "UserRecord" /* 1399 */;
 
 const prototype = function InteractionRecord(name) {
   const tmp = new prototype(new.target, name, new.target);

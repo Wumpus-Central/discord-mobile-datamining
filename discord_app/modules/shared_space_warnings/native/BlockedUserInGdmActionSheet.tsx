@@ -1,23 +1,23 @@
-// === Module 19619: BlockedUserInGdmActionSheet ===
+// === Module 19769: BlockedUserInGdmActionSheet ===
 
-// Module 19619 (BlockedUserInGdmActionSheet)
+// Module 19769 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import TableRow from "TableRow" /* 6975 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19620 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import TableRow from "TableRow" /* 7101 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19770 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function getUserCalloutRowText(arg0) {
   ({ calledOutUserIds, totalUsers, guildId: require, channelId: importDefault } = arg0);
-  const items = [...calledOutUserIds];
+  items = [...calledOutUserIds];
   dependencyMap = items.map((item) => user.getUser(item));
   if (totalUsers >= 4) {
     const intl4 = util.intl;
@@ -74,10 +74,10 @@ function getUserCalloutRowText(arg0) {
 function UserCalloutAvatars(userIds) {
   userIds = userIds.userIds;
   let REFRESH_MEDIUM_32 = dependencyMap;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userIds];
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(items, () => userIds.map((item) => user.getUser(item)), items1);
-  let found = stateFromStoresArray.filter(userIds(1379).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1380).isNotNullish);
   if (1 === userIds.length) {
     if (null != UserStore.getUser(userIds[0])) {
       const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
@@ -88,11 +88,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12125).UserIcon, {});
+      tmp6 = closure_10(tmp(12261).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10799).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10929).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -102,11 +102,11 @@ function BlockedUserInGDMDescription(arg0) {
     if (tmp2) {
       const obj2 = { children: null };
       const intl5 = util.intl;
-      const items = [intl5.string(util.t.xbRNI3), "\n", ];
+      items = [intl5.string(util.t.xbRNI3), "\n", ];
       const intl6 = util.intl;
       items[2] = intl6.string(util.t["Bp2/ni"]);
       obj2.children = items;
-      let tmp3 = closure_1_12(closure_1_11, obj2);
+      let tmp3 = application_id(closure_1_11, obj2);
     }
     return tmp3;
   }
@@ -118,7 +118,7 @@ function BlockedUserInGDMDescription(arg0) {
     const intl4 = util.intl;
     items1[2] = intl4.string(util.t.SN1hrl);
     obj3.children = items1;
-    tmp3 = closure_1_12(closure_1_11, obj3);
+    tmp3 = application_id(closure_1_11, obj3);
   } else {
     tmp3 = null;
     if (tmp2) {
@@ -129,17 +129,17 @@ function BlockedUserInGDMDescription(arg0) {
       const intl2 = util.intl;
       items2[2] = intl2.string(util.t["6AKLRt"]);
       obj.children = items2;
-      tmp3 = closure_1_12(closure_1_11, obj);
+      tmp3 = application_id(closure_1_11, obj);
     }
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15625);
+const SharedSpaceWarningConstants = fn(15767);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
@@ -155,7 +155,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
   const ignoredUserIds = channelId.ignoredUserIds;
   const tmp = closure_13();
   noop = tmp;
-  const items = [channelId, blockedUserIds, ignoredUserIds];
+  items = [channelId, blockedUserIds, ignoredUserIds];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.GDM_BLOCKED_USER_WARNING_VIEWED, { channel_id: channelId, warning_medium: constants2.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds });
   }, items);
@@ -195,7 +195,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     const obj8 = { source: blockedUserIds(tmp8[22]), style: tmp.headerImage };
     const items3 = [closure_10(blockedUserIds(tmp8[21]), obj8), , , ];
     const obj9 = { children: null };
-    const obj10 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+    const obj10 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     const intl3 = tmp7(tmp8[11]).intl;
     obj10.children = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
     const items4 = [closure_10(tmp7(tmp8[9]).Text, obj10), ];

@@ -1,7 +1,7 @@
-// === Module 13021: useConjurePerfTraceTree ===
+// === Module 13157: useConjurePerfTraceTree ===
 
-// Module 13021 (useConjurePerfTraceTree)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10894 */;
+// Module 13157 (useConjurePerfTraceTree)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/useC
 
 export default function useConjurePerfTraceTree(arg0) {
   _require = arg0;
-  let items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     let perfTraceTreeResult = null;
     if (null != closure_0) {
@@ -57,7 +57,7 @@ export default function useConjurePerfTraceTree(arg0) {
   const items2 = [memo, first];
   const memo1 = obj.useMemo(() => {
     if (null == memo) {
-      let items = [];
+      items = [];
     } else {
       items = ConjurePerfTraceLayout.visiblePerfTraceRows(tmp, first);
     }

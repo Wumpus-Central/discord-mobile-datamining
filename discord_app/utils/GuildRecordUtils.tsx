@@ -1,13 +1,13 @@
-// === Module 4877: GuildRecordUtils ===
+// === Module 5004: GuildRecordUtils ===
 
-// Module 4877 (GuildRecordUtils)
+// Module 5004 (GuildRecordUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1072 */;
-import SetUtils from "SetUtils" /* 4880 */;
-import guildIncidentsSerialization from "guildIncidentsSerialization" /* 4883 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 4884 */;
-import PlainRecord from "PlainRecord" /* 4878 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
+import SetUtils from "SetUtils" /* 5007 */;
+import guildIncidentsSerialization from "guildIncidentsSerialization" /* 5010 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 5011 */;
+import PlainRecord from "PlainRecord" /* 5005 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
 import size from "module_2" /* 2 */;
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
@@ -670,7 +670,7 @@ export function toGuildProperties(id) {
   }
   obj.premium_features = tmp3;
   ({ systemChannelFlags: obj.system_channel_flags, discoverySplash: obj.discovery_splash, rulesChannelId: obj.rules_channel_id, safetyAlertsChannelId: obj.safety_alerts_channel_id, publicUpdatesChannelId: obj.public_updates_channel_id, maxStageVideoChannelUsers: obj.max_stage_video_channel_users, maxVideoChannelUsers: obj.max_video_channel_users, maxMembers: obj.max_members, nsfwLevel: obj.nsfw_level } = id);
-  const items = [, ];
+  items = [, ];
   ({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
   obj.nsfw = items.includes(id.nsfwLevel);
   ({ ownerConfiguredContentLevel: obj.owner_configured_content_level, hubType: obj.hub_type, latestOnboardingQuestionId: obj.latest_onboarding_question_id, profile: obj.profile } = id);

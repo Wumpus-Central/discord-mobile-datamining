@@ -1,6 +1,6 @@
-// === Module 16475: DisplayNameStylesSeenStore ===
+// === Module 16618: DisplayNameStylesSeenStore ===
 
-// Module 16475 (DisplayNameStylesSeenStore)
+// Module 16618 (DisplayNameStylesSeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -84,7 +84,7 @@ const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefa
       obj = {};
       const merged = Object.assign(obj);
       const _Set = Set;
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(obj.seenFontIds, 0)] = fontId;
       const set = new Set(items);
       obj.seenFontIds = set;
@@ -99,7 +99,7 @@ const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefa
       obj = {};
       const merged = Object.assign(obj);
       const _Set = Set;
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(obj.seenEffectIds, 0)] = effectId;
       const set = new Set(items);
       obj.seenEffectIds = set;

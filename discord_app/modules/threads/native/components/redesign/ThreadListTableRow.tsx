@@ -1,17 +1,17 @@
-// === Module 18791: ThreadListTableRow ===
+// === Module 18949: ThreadListTableRow ===
 
-// Module 18791 (ThreadListTableRow)
-import TableRow from "TableRow" /* 6975 */;
-import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 18792 */;
+// Module 18949 (ThreadListTableRow)
+import TableRow from "TableRow" /* 7101 */;
+import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 18950 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function ThreadListTableRow(thread) {
   thread = thread.thread;
   const onPress = thread.onPress;
   ({ start, end } = thread);
-  const items = [onPress, thread.id];
+  items = [onPress, thread.id];
   const memo = noop.useMemo(() => null != onPress ? (() => onPress(id.id)) : undefined, items);
   const obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
   const tmp = closure_6();
@@ -23,7 +23,7 @@ function ThreadListTableRow(thread) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/red
 export default noop.memo(function ConnectedThreadListTableRow(threadId) {
   threadId = threadId.threadId;
   ({ onPress, start, end } = threadId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {

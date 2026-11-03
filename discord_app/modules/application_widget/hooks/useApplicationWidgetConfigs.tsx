@@ -1,15 +1,15 @@
-// === Module 12082: useApplicationWidgetConfigs ===
+// === Module 12218: useApplicationWidgetConfigs ===
 
-// Module 12082 (useApplicationWidgetConfigs)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10942 */;
+// Module 12218 (useApplicationWidgetConfigs)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11080 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 10943 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11081 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(10943).FetchState;
+const FetchState = fn(11081).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
@@ -17,7 +17,7 @@ export default function useApplicationWidgetConfigs(items1) {
   _require = items1;
   const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores1.getFeaturedFetchState());
   let obj = require("initialize");
   items1 = [stateFromStores1];

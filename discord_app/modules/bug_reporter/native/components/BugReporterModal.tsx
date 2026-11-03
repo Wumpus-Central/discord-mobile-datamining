@@ -1,24 +1,24 @@
-// === Module 11088: BugReporterModal ===
+// === Module 11225: BugReporterModal ===
 
-// Module 11088 (BugReporterModal)
+// Module 11225 (BugReporterModal)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import TableRadioRow from "TableRadioRow" /* 7061 */;
-import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import UploadDefault from "Upload" /* 8210 */;
-import UploadPlatform from "UploadPlatform" /* 8211 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import TableRadioRow from "TableRadioRow" /* 7187 */;
+import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import UploadDefault from "Upload" /* 8334 */;
+import UploadPlatform from "UploadPlatform" /* 8335 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import BugReportStore from "BugReportStore" /* 11087 */;
+import UserStore from "UserStore" /* 1385 */;
+import BugReportStore from "BugReportStore" /* 11224 */;
 import n from "module_671" /* 671 */;
 
 require = fn;
@@ -64,7 +64,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -236,13 +236,13 @@ class BugCreateScreen {
               closure_128_1 = tmp13;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
-                const items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_1;
                 return items;
               });
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c3 = tmp;
@@ -343,7 +343,7 @@ class BugCreateScreen {
         const tmp11 = new UploadDefault(obj);
         closure_0 = tmp11;
         currentUser((arg0) => {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
           return items;
         });
@@ -383,7 +383,7 @@ class BugCreateScreen {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -415,7 +415,7 @@ class BugCreateScreen {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -449,14 +449,14 @@ class BugCreateScreen {
                                 const intl2 = closure_2_0(1113).intl;
                                 obj5.text = intl2.string(closure_2_0(1113).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(5712).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(5712);
+                                closure_2_1(5832).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(5832);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
                                 const intl = closure_2_0(1113).intl;
                                 obj7.text = intl.string(closure_2_0(1113).t["4t1o0u"]);
-                                closure_2_1(5712).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(5712);
+                                closure_2_1(5832).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(5832);
                               }
                               c6 = 3;
                             }
@@ -501,7 +501,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(11090).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(11227).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -524,10 +524,10 @@ class BugCreateScreen {
                     let intl2 = handleSubmit(1113).intl;
                     obj5.text = intl2.string(handleSubmit(1113).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(5712).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(5832).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(5712);
+                    let obj9 = screenshot(5832);
                   }
                   priority = 3;
                 } else {
@@ -536,7 +536,7 @@ class BugCreateScreen {
                     let obj7 = { text: null, variant: "critical" };
                     let intl = handleSubmit(1113).intl;
                     obj7.text = intl.string(handleSubmit(1113).t["4t1o0u"]);
-                    screenshot(5712).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    screenshot(5832).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -544,7 +544,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(11089).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(11226).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -679,7 +679,7 @@ class BugCreateScreen {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -712,7 +712,7 @@ class BugCreateScreen {
               closure_128_0 = value;
               closure_1_18(closure_128_0);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -762,7 +762,7 @@ class BugCreateScreen {
       children: first3.map((uri) => {
             const obj = { style: closure_2.attachmentContainer, children: null };
             const size = { uri: uri.item.uri, isImage: uri.isImage, isVideo: uri.isVideo, height: 280, width: 134 };
-            const items = [first4(screenshot(closure_2[34]), size), ];
+            items = [first4(screenshot(closure_2[34]), size), ];
             const obj2 = {
               onPress: () => {
                 closure_8((arr) => arr.filter((item) => item !== closure_1_0));
@@ -873,7 +873,7 @@ class BugCreateScreen {
         tmp33Result = tmp33(function Submitting() {
           const tmp = closure_14();
           const obj = { style: tmp.submittingOverlay, children: null };
-          const items = [first4(screenshot(closure_2[49]), { sticker: first5, animated: true, size: 148 }), ];
+          items = [first4(screenshot(closure_2[49]), { sticker: first5, animated: true, size: 148 }), ];
           const obj3 = { style: tmp.submittingText, variant: "heading-md/medium", children: null };
           const intl = screenshotUri(closure_2[14]).intl;
           obj3.children = intl.string(screenshotUri(closure_2[14]).t.Uuqbcm);
@@ -893,7 +893,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11126, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11263, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -912,9 +912,9 @@ class BugCreateScreen {
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
 let size = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
@@ -925,7 +925,7 @@ obj2.offButton = { marginBottom: 24 };
 const rect = { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, bottom: 0, flex: 1, justifyContent: "center", position: "absolute", top: 0, width: "100%" };
 obj2.submittingOverlay = rect;
 obj2.submittingText = { marginTop: 8 };
-let value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 let closure_15 = 5 * DurationsDefault.Millis.SECOND;
 let closure_16 = 10 * DurationsDefault.Millis.SECOND;
 let closure_17 = 5 * DurationsDefault.Millis.SECOND;
@@ -936,7 +936,7 @@ let result = size.fileFinishedImporting("modules/bug_reporter/native/components/
 export default function BugReportModal(screenshotUri) {
   screenshotUri = screenshotUri.screenshotUri;
   const screenshot = screenshotUri.screenshot;
-  const items = [screenshotUri, screenshot];
+  items = [screenshotUri, screenshot];
   const screens = noop.useMemo(() => {
     const obj2 = { BUG_REPORT_CREATE: null };
     const obj3 = { title: null, initialParams: null, ignoreKeyboard: true, render: null };
@@ -950,6 +950,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(7169).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7290).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 };
 export { BugCreateScreen };

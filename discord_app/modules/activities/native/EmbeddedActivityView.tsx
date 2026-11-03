@@ -1,15 +1,15 @@
-// === Module 11794: EmbeddedActivityView ===
+// === Module 11931: EmbeddedActivityView ===
 
-// Module 11794 (EmbeddedActivityView)
+// Module 11931 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10931 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11795 */;
-import activityWebViewController from "activityWebViewController" /* 11798 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11069 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11932 */;
+import activityWebViewController from "activityWebViewController" /* 11935 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
 function useBaseActivityView(orientationLockState) {
@@ -35,7 +35,7 @@ function useBaseActivityView(orientationLockState) {
   closure_8 = tmpResult[1];
   const size = showLoadingIndicator(setShowLoadingStateForLockingOrientation[11])();
   isLandscape = size.width > size.height;
-  const items = [isLandscape];
+  items = [isLandscape];
   const layoutEffect = obj.useLayoutEffect(() => {
     DispatcherDefault.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: isLandscape ? ActivityScreenOrientation.LANDSCAPE : ActivityScreenOrientation.PORTRAIT });
     const tmp2 = isLandscape ? ActivityScreenOrientation.LANDSCAPE : ActivityScreenOrientation.PORTRAIT;
@@ -102,18 +102,18 @@ function EmbeddedActivityWebView(applicationId) {
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(11821).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_13(applicationId(11958).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 }
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
-const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
-fn(1360).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
+const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
+fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
+const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
-const __initData = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
+const createStyles = fn(5141);
+const value = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   channel = channel.channel;
   const layoutMode = channel.layoutMode;
@@ -123,7 +123,7 @@ const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   const tmp4 = layoutMode(currentEmbeddedActivity[17])();
   let id = tmp4;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const items1 = [tmp4];
   const stateFromStores = channel(currentEmbeddedActivity[18]).useStateFromStores(items, () => {
     let orientationLockStateForApp;

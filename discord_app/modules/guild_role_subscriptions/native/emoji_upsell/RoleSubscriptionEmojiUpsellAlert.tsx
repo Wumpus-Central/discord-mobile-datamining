@@ -1,17 +1,17 @@
-// === Module 9974: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 10106: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9974 (RoleSubscriptionEmojiUpsellAlert)
+// Module 10106 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1113 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import _modDef9786 from "module_9786" /* 9786 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9975 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import _modDef9918 from "module_9918" /* 9918 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10107 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx");
@@ -27,9 +27,9 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
   }
   const size = onClose(stateFromStores[6])();
   const diff = Math.min(0.9 * Math.min(size.width, size.height), 500) - 32;
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != require) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -45,7 +45,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9786, title: null, description: null };
+    const obj = { image: _modDef9918, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

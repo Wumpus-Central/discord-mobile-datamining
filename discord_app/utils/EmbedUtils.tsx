@@ -1,12 +1,12 @@
-// === Module 6558: EmbedUtils ===
+// === Module 6678: EmbedUtils ===
 
-// Module 6558 (EmbedUtils)
+// Module 6678 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6065 */;
-import EmbedConstants from "EmbedConstants" /* 6559 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6185 */;
+import EmbedConstants from "EmbedConstants" /* 6679 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -65,8 +65,8 @@ export function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef2042(date);
-    const tmpResult = _modDef2042;
+    obj.timestamp = _modDef2171(date);
+    const tmpResult = _modDef2171;
   }
   if (null != footer.color) {
     obj.color = footer.color;
@@ -241,7 +241,7 @@ export function sanitizeEmbed(channel_id, id, footer) {
 }
 export function mergeEmbedsOnURL(mapped) {
   const map = new Map();
-  const items = [];
+  items = [];
   const item = mapped.forEach((url) => {
     if (null != url.url) {
       value = map.get(url.url);

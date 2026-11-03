@@ -1,9 +1,9 @@
-// === Module 9663: shop_coachmark ===
+// === Module 9795: shop_coachmark ===
 
-// Module 9663 (shop_coachmark)
+// Module 9795 (shop_coachmark)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import theme_aware_asset from "theme_aware_asset" /* 9641 */;
+import localized_string from "localized_string" /* 9763 */;
+import theme_aware_asset from "theme_aware_asset" /* 9773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -50,7 +50,7 @@ class ShopCoachmark$Type extends MessageType {
       name: "display_type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ShopCoachmarkDisplayType", ShopCoachmarkDisplayType, "SHOP_COACHMARK_DISPLAY_TYPE_"];
+            items = ["discord_protos.premium_marketing.v1.ShopCoachmarkDisplayType", ShopCoachmarkDisplayType, "SHOP_COACHMARK_DISPLAY_TYPE_"];
             return items;
           }
     };

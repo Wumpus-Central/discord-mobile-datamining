@@ -1,7 +1,7 @@
-// === Module 15969: StylesheetUtils ===
+// === Module 16112: StylesheetUtils ===
 
-// Module 15969 (StylesheetUtils)
-import StringUtils from "StringUtils" /* 2026 */;
+// Module 16112 (StylesheetUtils)
+import StringUtils from "StringUtils" /* 2155 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/StylesheetUtils.tsx");

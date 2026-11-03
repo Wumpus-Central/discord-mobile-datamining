@@ -1,30 +1,30 @@
-// === Module 10545: MediaKeyboardItem ===
+// === Module 10675: MediaKeyboardItem ===
 
-// Module 10545 (MediaKeyboardItem)
+// Module 10675 (MediaKeyboardItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ImageIcon from "ImageIcon" /* 8659 */;
-import _modDef10277 from "module_10277" /* 10277 */;
-import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import CameraIcon from "CameraIcon" /* 10550 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ImageIcon from "ImageIcon" /* 8783 */;
+import _modDef10407 from "module_10407" /* 10407 */;
+import AttachmentIcon from "AttachmentIcon" /* 10665 */;
+import CameraIcon from "CameraIcon" /* 10680 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
 
-const ReanimatedRexport = ReanimatedRexport2;
+const module_1652 = _mod1652;
 
 require = fn;
 function NewCaption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_12();
   const obj = { style: null, children: null };
-  const items = [tmp.labelContainer, style];
+  items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React7(native.Icon, { source: _modDef10277, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [React7(native.Icon, { source: _modDef10407, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/semibold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
 }
@@ -43,7 +43,7 @@ function MediaKeyboardImage(draftType) {
   const node = item.node;
   const image = node.image;
   const type = node.type;
-  const items = [image];
+  items = [image];
   const items1 = [channelId, draftType, image, includedUploadIds];
   const stateFromStoresObject = index(totalNumItems[12]).useStateFromStoresObject(items, () => {
     const obj = {
@@ -212,7 +212,7 @@ function MediaKeyboardImage(draftType) {
 function MediaKeyboardDummy(arg0) {
   ({ size, isFirstInRow } = arg0);
   const tmp = closure_12();
-  const items = [tmp.imageContainer, ];
+  items = [tmp.imageContainer, ];
   let obj = !isFirstInRow;
   if (!isFirstInRow) {
     obj = { marginLeft: 4 };
@@ -227,35 +227,39 @@ function MediaKeyboardDummy(arg0) {
 }
 function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
-  index = undefined;
-  totalNumItems = undefined;
   ({ onPress, accessibilityLabel, children } = arg0);
   const tmp = closure_12();
-  const sharedValue = index(totalNumItems[5]).useSharedValue(0);
-  index = sharedValue;
+  const sharedValue = _mod1652.useSharedValue(0);
+  ({ backgroundColor, pressedBackgroundColor } = closure_16());
   const tmp3 = closure_16();
-  const backgroundColor = tmp3.backgroundColor;
-  numItemsPerRow = backgroundColor;
-  const pressedBackgroundColor = tmp3.pressedBackgroundColor;
-  totalNumItems = pressedBackgroundColor;
-  let obj = index(totalNumItems[5]);
-  const fn = function h() {
-    const obj = { backgroundColor: null };
-    const obj2 = timing;
-    const items = [numItemsPerRow, totalNumItems];
-    const obj4 = { duration: 200, easing: null };
-    const Easing = ReanimatedRexport2.Easing;
-    obj4.easing = Easing.out(ReanimatedRexport2.Easing.quad);
-    obj.backgroundColor = obj2.withTiming(ReanimatedRexport2.interpolateColor(index.get(), [0, 1], items), obj4);
-    return obj;
-  };
-  let obj2 = index(totalNumItems[5]);
-  fn.__closure = { withTiming: index(totalNumItems[20]).withTiming, interpolateColor: index(totalNumItems[5]).interpolateColor, pressed: sharedValue, backgroundColor, pressedBackgroundColor, Easing: index(totalNumItems[5]).Easing };
-  fn.__workletHash = 15924448581794;
-  fn.__initData = __initData;
-  let items = [index, numItemsPerRow, totalNumItems];
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = {
+  items = [closure_17, timing_timing.withTiming, _mod1652.interpolateColor, sharedValue, backgroundColor, pressedBackgroundColor, _mod1652.Easing];
+  index = undefined;
+  numItemsPerRow = undefined;
+  totalNumItems = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items;
+  class MediaKeyboardItemTsx1 {
+    constructor() {
+      obj = { backgroundColor: null };
+      items = [, ];
+      items[0] = closure_3;
+      items[1] = closure_4;
+      obj1 = { duration: 200, easing: null };
+      tmp = numItemsPerRow(totalNumItems.get(), [0, 1], items);
+      obj1.easing = closure_5.out(closure_5.quad);
+      obj.backgroundColor = index(tmp, obj1);
+      return obj;
+    }
+  }
+  const items1 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10];
+  MediaKeyboardItemTsx1.__closure = items1;
+  MediaKeyboardItemTsx1.__workletHash = 14962449975931;
+  MediaKeyboardItemTsx1.__initData = tmp4;
+  const items2 = [index, numItemsPerRow, totalNumItems];
+  const animatedStyle = _mod1652.useAnimatedStyle(MediaKeyboardItemTsx1);
+  const obj3 = {
     disabled,
     accessibilityRole: "button",
     accessibilityLabel,
@@ -269,10 +273,10 @@ function MediaKeyboardSpecialButton(arg0) {
     style: null,
     children: null
   };
-  const items1 = [animatedStyle, , , , , ];
-  ({ imageContainer: arr2[1], specialButton: arr2[2] } = tmp);
-  items1[3] = { width: size, height: size };
-  items1[4] = noop.useMemo(() => {
+  const items3 = [animatedStyle, , , , , ];
+  ({ imageContainer: arr4[1], specialButton: arr4[2] } = tmp);
+  items3[3] = { width: size, height: size };
+  items3[4] = noop.useMemo(() => {
     let num = 0;
     if (0 !== totalNumItems) {
       const _Math = Math;
@@ -317,29 +321,29 @@ function MediaKeyboardSpecialButton(arg0) {
     }
     obj.marginLeft = num3;
     return obj;
-  }, items);
+  }, items2);
   let disabled1;
   if (disabled) {
     disabled1 = tmp.disabled;
   }
-  items1[5] = disabled1;
-  obj4.style = items1;
-  obj4.children = children;
-  return closure_9(closure_11, obj4);
+  items3[5] = disabled1;
+  obj3.style = items3;
+  obj3.children = children;
+  return React7(closure_11, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10546);
+const DeviceConstants = fn(10676);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+let closure_11 = module_1652.createAnimatedComponent(Pressable);
+let createStyles = fn(5141);
 let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
 let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.imageContainer = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 const rect = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
-let ColorUtils = fn(5011);
+let ColorUtils = fn(5138);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -349,23 +353,23 @@ obj.icon = size;
 let size1 = { width: 14, height: 14, color: nativeDefault.colors.BACKGROUND_BRAND };
 obj.checkIcon = size1;
 let size2 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.WHITE, borderWidth: 1, borderColor: null };
-ColorUtils = fn(5011);
+ColorUtils = fn(5138);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(5011);
+ColorUtils = fn(5138);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
 obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_16 = createStyles.createStyleProperties({ backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE });
-const __initData = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
+let closure_17 = { code: "(function MediaKeyboardItemTsx1(){let[withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing]=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};})" };
 let obj6 = { backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
@@ -392,7 +396,7 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
-          const items = ["allphotos", "attach", "camera"];
+          items = ["allphotos", "attach", "camera"];
           hasItem = items.includes(type.type);
         }
         if (hasItem) {
@@ -440,7 +444,7 @@ export function isViewAllPhotosNode(type) {
 export function isSpecialMediaGridNode(type) {
   let hasItem = "type" in type;
   if (hasItem) {
-    const items = ["allphotos", "attach", "camera"];
+    items = ["allphotos", "attach", "camera"];
     hasItem = items.includes(type.type);
   }
   return hasItem;

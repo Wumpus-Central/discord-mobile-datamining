@@ -1,12 +1,12 @@
-// === Module 7959: NativePermissionBaseUtils ===
+// === Module 8083: NativePermissionBaseUtils ===
 
-// Module 7959 (NativePermissionBaseUtils)
+// Module 8083 (NativePermissionBaseUtils)
 import util from "util" /* 1113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NativePermissionStore from "NativePermissionStore" /* 7960 */;
+import NativePermissionStore from "NativePermissionStore" /* 8084 */;
 
 require = fn;
-const NativePermissionConstants = fn(7940);
+const NativePermissionConstants = fn(8064);
 ({ NativePermissionTypes: hasOwnProperty, NativePermissionStates: metroRequire, NativePermissionStatus: closure_7 } = NativePermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let NativePermissionBaseUtils;
@@ -19,9 +19,9 @@ class NativePermissionBaseUtils {
   }
 }
 const prototype = NativePermissionBaseUtils.prototype;
-prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermissionLookup, arg2) {
+prototype["requestAuthorization"] = function requestAuthorization(arg0, arg1, arg2) {
   closure_0 = arg0;
-  closure_1 = hasPermissionLookup;
+  closure_1 = arg1;
   closure_2 = arg2;
   const self = this;
   return self(function*() {
@@ -46,7 +46,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       DENIED = constants.DENIED;
     }
     closure_128_2 = DENIED;
-    tmp5(7961).setPermission(closure_129_0, closure_128_2);
+    tmp5(8085).setPermission(closure_129_0, closure_128_2);
     let showAuthorizationError = !closure_128_1;
     if (!closure_128_1) {
       showAuthorizationError = closure_129_2.showAuthorizationError;

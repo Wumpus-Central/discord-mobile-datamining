@@ -1,7 +1,7 @@
-// === Module 12239: useEdgeOnlySwipeExit ===
+// === Module 12375: useEdgeOnlySwipeExit ===
 
-// Module 12239 (useEdgeOnlySwipeExit)
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11243 */;
+// Module 12375 (useEdgeOnlySwipeExit)
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11380 */;
 import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;
@@ -21,7 +21,7 @@ export default function useEdgeOnlySwipeExit(arg0) {
   if (edgeSwipeOnly1 == null) {
     edgeSwipeOnly1 = null;
   }
-  const items = [arg0, edgeSwipeOnly, edgeSwipeOnly1];
+  items = [arg0, edgeSwipeOnly, edgeSwipeOnly1];
   const effect = noop.useEffect(() => {
     if (closure_0) {
       let result = edgeSwipeOnly.set(true);

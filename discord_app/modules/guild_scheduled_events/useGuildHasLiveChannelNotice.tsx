@@ -1,18 +1,18 @@
-// === Module 18244: useGuildHasLiveChannelNotice ===
+// === Module 18388: useGuildHasLiveChannelNotice ===
 
-// Module 18244 (useGuildHasLiveChannelNotice)
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
+// Module 18388 (useGuildHasLiveChannelNotice)
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 18245 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 18389 */;
 
 require = fn;
-let closure_11 = fn(4869).GuildScheduledEventEntityTypes;
+let closure_11 = fn(4996).GuildScheduledEventEntityTypes;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
@@ -24,7 +24,7 @@ export function useGuildHasLiveChannelNotice(id) {
     id = first.id;
   }
   const channel = ChannelStore.getChannel(id);
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [channel];
   stateFromStores = channel(guildActiveEvent[11]).useStateFromStores(items, () => {
     let id;
@@ -60,7 +60,7 @@ export function useGuildHasLiveChannelNotice(id) {
 export function useGuildLiveChannelNoticeInfo(id) {
   activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(stateFromStores2[13]).useActiveEventOrStageInstanceChannel(id);
   const obj = activeEventOrStageInstanceChannel(stateFromStores2[13]);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = activeEventOrStageInstanceChannel(stateFromStores2[11]).useStateFromStores(items, () => {
     let canResult = null != activeEventOrStageInstanceChannel;
     if (canResult) {

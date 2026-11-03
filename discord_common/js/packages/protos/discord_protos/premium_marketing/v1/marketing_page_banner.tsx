@@ -1,10 +1,10 @@
-// === Module 9635: marketing_page_banner ===
+// === Module 9767: marketing_page_banner ===
 
-// Module 9635 (marketing_page_banner)
+// Module 9767 (marketing_page_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import help_article from "help_article" /* 9632 */;
-import cta_button from "cta_button" /* 9633 */;
+import localized_string from "localized_string" /* 9763 */;
+import help_article from "help_article" /* 9764 */;
+import cta_button from "cta_button" /* 9765 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -54,7 +54,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", MarketingPageBannerButtonVariant, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
+            items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", MarketingPageBannerButtonVariant, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
             return items;
           }
     };
@@ -233,7 +233,7 @@ items[8] = {
   name: "button_variant",
   kind: "enum",
   T() {
-    const items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", MarketingPageBannerButtonVariant, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
+    items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", MarketingPageBannerButtonVariant, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
     return items;
   }
 };

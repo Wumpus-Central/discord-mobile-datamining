@@ -1,10 +1,10 @@
-// === Module 6881: ApplicationActionCreators ===
+// === Module 7001: ApplicationActionCreators ===
 
-// Module 6881 (ApplicationActionCreators)
+// Module 7001 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6882 */;
-import ApplicationRecord from "ApplicationRecord" /* 2016 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7002 */;
+import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -213,7 +213,7 @@ export default {
       const HTTP = tmp5(channel_id[6]).HTTP;
       const request = { url: closure_1_7.GUILD_EMBEDDED_APPLICATIONS(tmp5), query: { channel_id, surface }, rejectWithError: tmp5(channel_id[6]).rejectWithMigratedError() };
       await HTTP.get(request);
-      const items = value.body.items;
+      items = value.body.items;
       surface(channel_id[5]).dispatch({ type: "GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS", guildId: closure_129_0, surface: closure_129_1, items });
       return items;
     })();
@@ -246,7 +246,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -292,7 +292,7 @@ export default {
                 const request = { url: constants.APPLICATIONS_PUBLIC, query: null, oldFormErrors: true, rejectWithError: null };
                 const _URLSearchParams = URLSearchParams;
                 const str = new URLSearchParams(arr.map((item) => {
-                  const items = ["application_ids", item];
+                  items = ["application_ids", item];
                   return items;
                 }));
                 request.query = str.toString();
@@ -355,7 +355,7 @@ export function useApplicationWithLoggedOutContext(arg0) {
   const data = tmp.data;
   const error = tmp.error;
   const obj = { app: null, isLoading: tmp.isLoading, error };
-  const items = [ApplicationDirectoryApplicationsStore];
+  items = [ApplicationDirectoryApplicationsStore];
   const items1 = [arg0, data];
   obj.app = require("initialize").useStateFromStores(items, () => {
     if (null == data) {

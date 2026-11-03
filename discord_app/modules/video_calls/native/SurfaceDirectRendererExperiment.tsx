@@ -1,12 +1,12 @@
-// === Module 5888: SurfaceDirectRendererExperiment ===
+// === Module 6008: SurfaceDirectRendererExperiment ===
 
-// Module 5888 (SurfaceDirectRendererExperiment)
+// Module 6008 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const obj2 = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enableSurfaceDirectRenderer: true };
@@ -21,7 +21,7 @@ export function isSurfaceDirectRendererExperimentEnabled() {
 }
 export function useSurfaceDirectRendererExperiment(userId, location) {
   _require = userId;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [userId];
   const obj = require("initialize");
   return null != userId && !require("initialize").useStateFromStores(items, () => closure_0 === AuthenticationStore.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;

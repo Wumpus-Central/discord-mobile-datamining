@@ -1,15 +1,15 @@
-// === Module 18115: MessagesLegendList ===
+// === Module 18259: MessagesLegendList ===
 
-// Module 18115 (MessagesLegendList)
-import MessagesItemChannel from "MessagesItemChannel" /* 18088 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18098 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18099 */;
-import useMessagesData from "useMessagesData" /* 18102 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18117 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18154 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18155 */;
-import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 18156 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18157 */;
+// Module 18259 (MessagesLegendList)
+import MessagesItemChannel from "MessagesItemChannel" /* 18232 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18242 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18243 */;
+import useMessagesData from "useMessagesData" /* 18246 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18261 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18298 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 18299 */;
+import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 18300 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18301 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
@@ -39,7 +39,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
   const friendsHeaderIndex = data2.friendsHeaderIndex;
   const friendsHeaderOffset = data2.friendsHeaderOffset;
   const estimatedHeaderSize = data2.listHeaderHeight;
-  let items = [estimatedHeaderSize];
+  items = [estimatedHeaderSize];
   const imperativeHandle = listLeft.useImperativeHandle(ref, () => ({
     scrollToTop() {
       let flag = arg0;
@@ -146,7 +146,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
   const stickyHeaderIndices = listLeft.useMemo(() => {
     let tmp2;
     if (null != friendsHeaderIndex) {
-      const items = [tmp];
+      items = [tmp];
       tmp2 = items;
     }
     return tmp2;

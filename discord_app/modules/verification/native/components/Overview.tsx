@@ -1,11 +1,11 @@
-// === Module 19648: Overview ===
+// === Module 19798: Overview ===
 
-// Module 19648 (Overview)
+// Module 19798 (Overview)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
-import UserStore from "UserStore" /* 1383 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2061 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
+import UserStore from "UserStore" /* 1385 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2190 */;
 
 const require = globalThis.__r;
 
@@ -14,8 +14,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ Endpoints: closure_7, VerificationModalScenes: closure_8, VerificationTypes: closure_9, HelpdeskArticles } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" }, title: null, body: null, blocks: null, verificationType: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.title = { marginTop: 20, fontSize: 17, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function Overview() {
   const tmp = closure_13();
   _require = tmp;
-  const items = [UserRequiredActionStore];
+  items = [UserRequiredActionStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     action = action.getAction();
     return stateFromStores(navigation[10]).getVerificationTypes(action);

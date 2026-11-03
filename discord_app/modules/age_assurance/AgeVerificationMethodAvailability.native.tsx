@@ -1,9 +1,9 @@
-// === Module 8002: AgeVerificationMethodAvailability ===
+// === Module 8126: AgeVerificationMethodAvailability ===
 
-// Module 8002 (AgeVerificationMethodAvailability)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8003 */;
-import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 8004 */;
+// Module 8126 (AgeVerificationMethodAvailability)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8127 */;
+import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 8128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -67,7 +67,7 @@ export function useAvailableMethodsV2(methods) {
     }
     return isIOSResult;
   }, []);
-  const items = [methods, first, memo];
+  items = [methods, first, memo];
   return noop.useMemo(() => {
     methods = first;
     closure_1 = memo;

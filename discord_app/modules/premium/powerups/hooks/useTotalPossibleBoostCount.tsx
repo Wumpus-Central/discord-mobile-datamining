@@ -1,8 +1,8 @@
-// === Module 18284: useTotalPossibleBoostCount ===
+// === Module 18427: useTotalPossibleBoostCount ===
 
-// Module 18284 (useTotalPossibleBoostCount)
+// Module 18427 (useTotalPossibleBoostCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5230 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5353 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTot
 
 export default function useTotalPossibleBoostCount(arg0) {
   useMemo = arg0;
-  const items = [arg0];
+  items = [arg0];
   return useMemo(() => {
     if (null == id) {
       return 0;

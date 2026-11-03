@@ -1,27 +1,27 @@
-// === Module 16573: GuildProfileEditForm ===
+// === Module 16716: GuildProfileEditForm ===
 
-// Module 16573 (GuildProfileEditForm)
+// Module 16716 (GuildProfileEditForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8735 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8737 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16458 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16469 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16493 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16553 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8859 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8861 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16602 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16612 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16636 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16696 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -41,7 +41,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16446, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16590, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -77,7 +77,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(7326).AnalyticsLocationProvider, obj2);
+  return closure_16(user(7446).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -90,11 +90,11 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     obj2.buttonText = intl4.string(util.t.pj0XBN);
     obj2.onButtonPress = onButtonPress;
     obj2.onLayout = onButtonPress.onLayout;
-    let tmp6Result = __initData2(UserProfileFloatingUpsellDefault, obj2);
+    let tmp6Result = value2(UserProfileFloatingUpsellDefault, obj2);
     const tmp3Result = UserProfileFloatingUpsellDefault;
   } else {
     const obj3 = { style: null, ctaText: null, onPress: null, children: null };
-    const items = [tmp4.floatingUpsell, ];
+    items = [tmp4.floatingUpsell, ];
     const obj4 = { bottom: nativeDefault.space.PX_16 + tmp5.bottom };
     items[1] = obj4;
     obj3.style = items;
@@ -104,8 +104,8 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     const obj5 = { variant: "text-sm/normal", children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t.YIZS5B);
-    obj3.children = __initData2(Text_Text.Text, obj5);
-    tmp6Result = __initData2(UserProfileUpsellCardDefault, obj3);
+    obj3.children = value2(Text_Text.Text, obj5);
+    tmp6Result = value2(UserProfileUpsellCardDefault, obj3);
     const tmp3Result2 = UserProfileUpsellCardDefault;
   }
   return tmp6Result;
@@ -114,9 +114,9 @@ let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticsObjects: c10, AnalyticsSections } = Constants);
+({ AnalyticsObjects: closure_10, AnalyticsSections } = Constants);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_12, PRONOUNS_MAX_LENGTH: map1, UpsellTypes: closure_14, AnalyticsPages } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };
@@ -127,7 +127,7 @@ export default function GuildProfileEditForm(currentUser) {
   currentUser = currentUser.currentUser;
   const stickyHeader = currentUser.stickyHeader;
   let guildScrollY;
-  let guild;
+  guild = undefined;
   let analyticsLocations;
   const tmp2 = guild;
   const tmp3 = guildScrollY(guild[28])();
@@ -140,7 +140,7 @@ export default function GuildProfileEditForm(currentUser) {
   if (context != null) {
     guildScrollY = context.guildScrollY;
   }
-  const items = [guildScrollY];
+  items = [guildScrollY];
   const items1 = [guildScrollY];
   const callback = noop.useCallback((nativeEvent) => {
     if (guildScrollY != null) {
@@ -413,7 +413,7 @@ export default function GuildProfileEditForm(currentUser) {
             tmp65Result5 = null;
             if ("" !== first3) {
               const obj26 = { style: tmp4.errorContainer, children: null };
-              const obj28 = { variant: "text-sm/bold", color: "text-feedback-critical", children: first3 };
+              const obj28 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: first3 };
               obj26.children = closure_16(tmp5(tmp2[27]).Text, obj28);
               tmp65Result5 = closure_16(closure_7, obj26);
             }

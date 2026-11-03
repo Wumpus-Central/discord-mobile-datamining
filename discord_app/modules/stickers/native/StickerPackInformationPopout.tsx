@@ -1,9 +1,9 @@
-// === Module 10280: StickerPackInformationPopout ===
+// === Module 10410: StickerPackInformationPopout ===
 
-// Module 10280 (StickerPackInformationPopout)
+// Module 10410 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { informationContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }, informationHeader: { lineHeight: 20 }, informationContentContainer: { flexDirection: "row" }, informationContent: { lineHeight: 20 }, informationContentDescription: { flex: 1, marginLeft: 5 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   ({ onClose, style } = stickerPack);
   const tmp = closure_5();
   _require = tmp;
-  let items = [];
+  items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
     const intl = tmp2(1113).intl;
@@ -41,7 +41,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1113).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
-  const obj8 = { variant: "text-md/bold", color: "text-brand", children: null };
+  const obj8 = { variant: "text-md/semibold", color: "text-brand", children: null };
   const intl4 = tmp2(1113).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_3(require("Text/Text").Text, obj8);
@@ -51,7 +51,7 @@ export default function StickerPackInformationPopout(stickerPack) {
     closure_4(View, obj4),
     items.map(function renderItem(children) {
       const obj = { style: closure_0.informationContentContainer, children: null };
-      const items = [React3(Text_Text.Text, { style: closure_0.informationContent, variant: "text-md/medium", color: "text-default", children: "\u2022" }), ];
+      items = [React3(Text_Text.Text, { style: closure_0.informationContent, variant: "text-md/medium", color: "text-default", children: "\u2022" }), ];
       const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: children.description };
       const items1 = [, ];
       ({ informationContent: arr2[0], informationContentDescription: arr2[1] } = closure_0);
@@ -65,7 +65,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   return closure_4(View, obj3);
 };
 export function doesStickerPackHavePopoutInformation(stickerPack) {
-  const items = [];
+  items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
     const intl = util.intl;

@@ -1,8 +1,8 @@
-// === Module 9282: SecureFramesCopyIcon ===
+// === Module 9410: SecureFramesCopyIcon ===
 
-// Module 9282 (SecureFramesCopyIcon)
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+// Module 9410 (SecureFramesCopyIcon)
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon
 
 export default function SecureFramesCopyIcon(chunks) {
   chunks = chunks.chunks;
-  const items = [chunks];
+  items = [chunks];
   const memo = noop.useMemo(() => chunks.join(" "), items);
   const items1 = [memo];
   const callback = noop.useCallback(() => {

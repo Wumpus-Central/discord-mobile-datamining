@@ -1,14 +1,14 @@
-// === Module 11924: GoLiveAutoQualityExperiment ===
+// === Module 12061: GoLiveAutoQualityExperiment ===
 
-// Module 11924 (GoLiveAutoQualityExperiment)
+// Module 12061 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import StreamActionCreators from "StreamActionCreators" /* 7901 */;
+import StreamActionCreators from "StreamActionCreators" /* 8025 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5943 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1448 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6063 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1450 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(5864).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5984).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -33,7 +33,7 @@ export function getGoLiveAutoQualityExperimentConfig(location) {
 }
 export function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));
 }
 export function maybeMigrateToAutoQuality() {
@@ -44,7 +44,7 @@ export function maybeMigrateToAutoQuality() {
   }
   if (closure_6.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality) {
     if (tmp4 < 1) {
-      const state = ApplicationStreamingSettingsStore.getState();
+      state = ApplicationStreamingSettingsStore.getState();
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
         const obj = { preset: tmp9.PRESET_AUTO, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);

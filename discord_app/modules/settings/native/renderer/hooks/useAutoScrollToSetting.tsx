@@ -1,13 +1,13 @@
-// === Module 16597: useAutoScrollToSetting ===
+// === Module 16740: useAutoScrollToSetting ===
 
-// Module 16597 (useAutoScrollToSetting)
+// Module 16740 (useAutoScrollToSetting)
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16590 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const NodeType = fn(11541).NodeType;
+const NodeType = fn(11678).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -23,17 +23,17 @@ export function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(16438).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(16592).getInitialScrollIndex(current, memo);
+    if (tmp(16582).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(16735).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(16592);
+      const tmpResult = tmp(16735);
     }
   }
-  const items = [memo, flag, ref, navigation, current];
+  items = [memo, flag, ref, navigation, current];
   const effect = navigation.useEffect(() => {
     navigation.addListener("transitionEnd", () => {
       if (flag) {

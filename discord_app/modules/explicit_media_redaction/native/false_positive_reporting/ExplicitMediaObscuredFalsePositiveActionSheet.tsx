@@ -1,11 +1,11 @@
-// === Module 13306: ExplicitMediaObscuredFalsePositiveActionSheet ===
+// === Module 13442: ExplicitMediaObscuredFalsePositiveActionSheet ===
 
-// Module 13306 (ExplicitMediaObscuredFalsePositiveActionSheet)
-import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 13310 */;
+// Module 13442 (ExplicitMediaObscuredFalsePositiveActionSheet)
+import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 13446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(7466).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_4 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
@@ -64,7 +64,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     messageId(tmp2[7]).hideActionSheet();
     const obj5 = messageId(tmp2[7]);
   }
-  const items = [reportFalsePositive];
+  items = [reportFalsePositive];
   const callback = redactableMediaEmbedsForMessage.useCallback(() => {
     reportFalsePositive();
   }, items);

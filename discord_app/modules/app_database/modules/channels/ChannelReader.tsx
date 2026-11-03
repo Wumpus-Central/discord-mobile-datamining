@@ -1,8 +1,8 @@
-// === Module 4913: ChannelReader ===
+// === Module 5040: ChannelReader ===
 
-// Module 4913 (ChannelReader)
+// Module 5040 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const logger = new LoggerDefault("ChannelReader");
@@ -16,7 +16,7 @@ prototype["getSync"] = function getSync(databaseResult, arg1) {
   const manySyncUnsafe = DatabaseDaosDefault.channels(databaseResult).getManySyncUnsafe(arg1);
   const diff = performance.now() - nowResult;
   logger.log("synchronously loaded in " + diff + "ms (guild: " + arg1 + ", channels: " + manySyncUnsafe.length + ")");
-  const items = [manySyncUnsafe, diff];
+  items = [manySyncUnsafe, diff];
   return items;
 };
 prototype["getAsync"] = function getAsync(arg0, arg1) {
@@ -47,7 +47,7 @@ prototype["getGuildIds"] = function getGuildIds() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

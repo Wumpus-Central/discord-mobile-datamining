@@ -1,19 +1,19 @@
-// === Module 19709: GuildSettingsModalAuditLog ===
+// === Module 19859: GuildSettingsModalAuditLog ===
 
-// Module 19709 (GuildSettingsModalAuditLog)
+// Module 19859 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7363 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 19712 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19715 */;
-import AuditLogDefault from "AuditLog" /* 19724 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7483 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 19862 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19865 */;
+import AuditLogDefault from "AuditLog" /* 19874 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19710 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19860 */;
 
 require = fn;
 const View = fn(17).View;
@@ -21,7 +21,7 @@ const Constants = fn(1072);
 ({ GuildSettingsSections: closure_12, AuditLogFilterTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT }, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 obj2.filtersWrapper = { paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -45,7 +45,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   closure_1 = tmp;
   const navigation = guildId(stateFromStores[12]).useNavigation();
   let obj = guildId(stateFromStores[12]);
-  let items = [stateFromStores1, extraData];
+  items = [stateFromStores1, extraData];
   stateFromStores = guildId(stateFromStores[13]).useStateFromStores(items, () => stateFromStores1.getChannel(first.getChannelId()));
   let obj2 = guildId(stateFromStores[13]);
   const items1 = [onPress, user];
@@ -104,7 +104,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       navigation.push(constants.AUDIT_LOG_FILTER, obj);
       const obj2 = guildId(stateFromStores[18]);
     };
-    const items = [obj3, ];
+    items = [obj3, ];
     const obj4 = { label: null, onPress: null };
     const intl2 = util.intl;
     obj4.label = intl2.string(util.t.rautds);
@@ -126,12 +126,12 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       firstAuditRow = closure_1.firstAuditRow;
     }
     let lastAuditRow = index === diff;
-    const items = [firstAuditRow, ];
+    items = [firstAuditRow, ];
     if (lastAuditRow) {
       lastAuditRow = closure_1.lastAuditRow;
     }
     items[1] = lastAuditRow;
-    return closure_2_14(AuditLogDefault, {
+    return gesture(AuditLogDefault, {
       containerStyle: items,
       onHeaderClick(id) {
         if (ref.current !== id.id) {

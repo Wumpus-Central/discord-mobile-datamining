@@ -1,6 +1,6 @@
-// === Module 18322: useForwardedRef ===
+// === Module 18467: useForwardedRef ===
 
-// Module 18322 (useForwardedRef)
+// Module 18467 (useForwardedRef)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("hooks/useForwardedRef.tsx");
 export default function useForwardedRef(arg0) {
   closure_0 = arg0;
   const ref = noop.useRef(null);
-  const items = [arg0];
+  items = [arg0];
   const items1 = [
     ref,
     noop.useCallback((current) => {

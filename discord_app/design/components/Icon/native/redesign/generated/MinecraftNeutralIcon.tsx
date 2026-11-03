@@ -1,11 +1,11 @@
-// === Module 9358: MinecraftNeutralIcon ===
+// === Module 9486: MinecraftNeutralIcon ===
 
-// Module 9358 (MinecraftNeutralIcon)
+// Module 9486 (MinecraftNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod9359 from "module_9359" /* 9359 */;
-import _mod9360 from "module_9360" /* 9360 */;
-import _mod9361 from "module_9361" /* 9361 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod9487 from "module_9487" /* 9487 */;
+import _mod9488 from "module_9488" /* 9488 */;
+import _mod9489 from "module_9489" /* 9489 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,15 +31,15 @@ export function MinecraftNeutralIcon(secondaryColor) {
   const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0, tertiaryColor: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod9359, color, style }), , ];
-  const obj3 = { source: _mod9360, color: str, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod9487, color, style }), , ];
+  const obj3 = { source: _mod9488, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
   obj3.style = items2;
   const merged2 = Object.assign(merged);
   items[1] = React4(BaseIconImage.BaseIconImage, obj3);
-  const obj4 = { source: _mod9361, color: str2, style: null };
+  const obj4 = { source: _mod9489, color: str2, style: null };
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };

@@ -1,9 +1,9 @@
-// === Module 16331: networking ===
+// === Module 16474: networking ===
 
-// Module 16331 (networking)
+// Module 16474 (networking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Constants2 from "Constants" /* 6450 */;
+import Constants2 from "Constants" /* 6570 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export default {
     handler() {
       const HTTP = HTTPUtils.HTTP;
       value = HTTP.get({ url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT, retries: 3, rejectWithError: false });
-      const items = [value.then((body) => body.body.address), ];
+      items = [value.then((body) => body.body.address), ];
       const HTTP2 = HTTPUtils.HTTP;
       items[1] = HTTP2.post({ url: constants.NETWORKING_TOKEN, retries: 3, oldFormErrors: true, rejectWithError: false }).then((body) => body.body.token);
       const obj = { url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT, retries: 3, rejectWithError: false };

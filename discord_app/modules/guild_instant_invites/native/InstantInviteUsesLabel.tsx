@@ -1,7 +1,7 @@
-// === Module 10825: InstantInviteUsesLabel ===
+// === Module 10955: InstantInviteUsesLabel ===
 
-// Module 10825 (InstantInviteUsesLabel)
-import Text_Text from "Text/Text" /* 5624 */;
+// Module 10955 (InstantInviteUsesLabel)
+import Text_Text from "Text/Text" /* 5747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export default function InstantInviteUsesLabel(style) {
     combined = "" + uses + "/" + maxUses;
   }
   const obj = { variant: "text-md/semibold", color: "text-default", style: style.style, children: null };
-  const items = ["Uses: ", combined];
+  items = ["Uses: ", combined];
   obj.children = items;
   return jsxs(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children: null });
 };

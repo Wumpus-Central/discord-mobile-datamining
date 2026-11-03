@@ -1,12 +1,12 @@
-// === Module 19600: PromotionsManager ===
+// === Module 19750: PromotionsManager ===
 
-// Module 19600 (PromotionsManager)
-import EntitlementTypes from "EntitlementTypes" /* 2046 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 9668 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 19750 (PromotionsManager)
+import EntitlementTypes from "EntitlementTypes" /* 2175 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 9800 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 const SubscriptionTypes = fn(1083).SubscriptionTypes;
@@ -68,7 +68,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
     const values = Object.values(subscriptions);
     const found = values.filter((type) => type.type === constants.PREMIUM);
     let mapped = found.map((id) => {
-      const items = id.items;
+      items = id.items;
       const mapped = items.map((planId) => planId.planId);
       const sorted = mapped.sort();
       return "" + id.id + ":" + id.type + ":" + id.status + ":" + sorted.join("|");

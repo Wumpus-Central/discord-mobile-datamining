@@ -1,16 +1,16 @@
-// === Module 11305: SafetyToolsActionSheetHeader ===
+// === Module 11442: SafetyToolsActionSheetHeader ===
 
-// Module 11305 (SafetyToolsActionSheetHeader)
+// Module 11442 (SafetyToolsActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11296 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function SafetyToolsActionSheetHeader(channelId) {
   ({ title, hasBackButton } = channelId);
   const tmp = closure_6();
   const navbarLeft = tmp;
-  const items = [channelId, recipientId, warningId, warningType];
+  items = [channelId, recipientId, warningId, warningType];
   const callback = warningId.useCallback(() => {
     const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
   }, items);
@@ -34,7 +34,7 @@ export default function SafetyToolsActionSheetHeader(channelId) {
   if (memo) {
     memo = warningId.useMemo(() => React4(NavigatorHeader.getHeaderBackButton(callback), { style: navbarLeft.navbarLeft }), items1);
   }
-  const items2 = [memo, navbarLeft(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
+  const items2 = [memo, navbarLeft(channelId(recipientId[7]).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: title })];
   obj.children = items2;
   return callback(warningType, obj);
 };

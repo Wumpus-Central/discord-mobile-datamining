@@ -1,16 +1,16 @@
-// === Module 16707: BlockedUserRowV2 ===
+// === Module 16850: BlockedUserRowV2 ===
 
-// Module 16707 (BlockedUserRowV2)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+// Module 16850 (BlockedUserRowV2)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
   const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -36,9 +36,9 @@ function BlockedUserRow(userRecord) {
       }
     }
   };
-  const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
+  items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16708).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16851).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -59,8 +59,8 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5634).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6975).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5754).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(7101).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting("modules/user_settings/content_and_soc
 
 export default function ConnectedBlockedUserRow(userId) {
   userId = userId.userId;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
   let tmp2 = null;
   if (null != stateFromStores) {

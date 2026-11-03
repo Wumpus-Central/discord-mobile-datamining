@@ -1,12 +1,12 @@
-// === Module 18713: GridItemPlaceholder ===
+// === Module 18871: GridItemPlaceholder ===
 
-// Module 18713 (GridItemPlaceholder)
+// Module 18871 (GridItemPlaceholder)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { imageContainer: { flex: 1, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_2 = createStyles.createStyles(obj);
 const obj3 = { flex: 1, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 export default noop.memo(function GridItemPlaceholder(arg0) {
   ({ width, height, style } = arg0);
   const obj = { style: null };
-  const items = [{ width, height }, closure_2().imageContainer, style];
+  items = [{ width, height }, closure_2().imageContainer, style];
   obj.style = items;
   return <View style={null} />;
 });

@@ -1,20 +1,20 @@
-// === Module 17843: ShopNitroUpsellBanner ===
+// === Module 17986: ShopNitroUpsellBanner ===
 
-// Module 17843 (ShopNitroUpsellBanner)
+// Module 17986 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
-import XSmallIcon from "XSmallIcon" /* 7054 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10290 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 17839 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
+import XSmallIcon from "XSmallIcon" /* 7180 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10420 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 17982 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ class ShopNitroUpsellBanner {
     callback = closure_3.useCallback(() => {
       const obj2 = { analyticsLocations: null, title: null, description: null };
       const obj = require("ActionSheetActionCreators");
-      const items = [require("AnalyticsLocation").COLLECTIBLES_SHOP_INDEX_PAGE];
+      items = [require("AnalyticsLocation").COLLECTIBLES_SHOP_INDEX_PAGE];
       obj2.analyticsLocations = items;
       const intl = require("util").intl;
       obj2.title = intl.string(require("util").t.GZWBoL);
@@ -98,7 +98,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 }, borderDark: null, borderLight: null, gradientBackground: null, text: null, closeButton: null };
 let obj3 = { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 };
 obj2.borderDark = { borderColor: nativeDefault.unsafe_rawColors.PRIMARY_660 };

@@ -1,9 +1,9 @@
-// === Module 11360: XSmallBoldIcon ===
+// === Module 11497: XSmallBoldIcon ===
 
-// Module 11360 (XSmallBoldIcon)
+// Module 11497 (XSmallBoldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod7371 from "module_7371" /* 7371 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod7491 from "module_7491" /* 7491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function XSmallBoldIcon(WHITE) {
   }
   const merged = Object.assign(WHITE, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7371, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7491, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
 }

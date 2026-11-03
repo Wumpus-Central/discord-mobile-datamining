@@ -1,12 +1,12 @@
-// === Module 12464: useSortedSectionCommands ===
+// === Module 12600: useSortedSectionCommands ===
 
-// Module 12464 (useSortedSectionCommands)
+// Module 12600 (useSortedSectionCommands)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12398 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12534 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const CommandListSortOrder = fn(12465).CommandListSortOrder;
+const CommandListSortOrder = fn(12601).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
@@ -16,7 +16,7 @@ export default function useSortedSectionCommands(sectionId) {
   let setSortOrder;
   canSort = undefined;
   [tmp3, tmp4] = canSort(noop.useState(CommandListSortOrder.ALPHABETICAL), 2);
-  const items = [commandsByActiveSection, sectionId];
+  items = [commandsByActiveSection, sectionId];
   const memo = noop.useMemo(() => {
     const found = commandsByActiveSection.find((section) => section.section.id === memo);
     let data;

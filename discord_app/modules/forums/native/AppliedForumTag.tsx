@@ -1,15 +1,15 @@
-// === Module 10522: AppliedForumTag ===
+// === Module 10652: AppliedForumTag ===
 
-// Module 10522 (AppliedForumTag)
+// Module 10652 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10523 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10653 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 require = fn;
 class AppliedForumTag {
@@ -44,7 +44,7 @@ class AppliedForumTag {
       children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
             const obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
-            const items = [container.container, closure_1_0];
+            items = [container.container, closure_1_0];
             obj.style = items;
             const intl = util.intl;
             obj.accessibilityLabel = intl.formatToPlainString(util.t.tXXD6v, { tagName });
@@ -82,10 +82,10 @@ class AppliedForumTag {
   }
 }
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -95,7 +95,7 @@ export function AppliedForumTagPill(arg0) {
   ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
   const tmp = closure_8();
   const obj = { tag, hasUnreads, containerStyle: null };
-  const items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
+  items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
   obj.containerStyle = items;
   return timestampProducer(AppliedForumTag, obj);
 }

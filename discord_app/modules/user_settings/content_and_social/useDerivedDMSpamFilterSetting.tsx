@@ -1,15 +1,15 @@
-// === Module 16743: useDerivedDMSpamFilterSetting ===
+// === Module 16886: useDerivedDMSpamFilterSetting ===
 
-// Module 16743 (useDerivedDMSpamFilterSetting)
+// Module 16886 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5700 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5820 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_3 = fn(4841).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(4968).ExplicitContentFilterToDmSpamFilterV2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
@@ -19,7 +19,7 @@ export function useDerivedDmSpamFilterSettingValue() {
   const setting = DmSpamFilterV22.useSetting();
   const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isSettingTeenByDefault = RegionalFeatureConfigUtils.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
   if (setting !== preloaded_user_settings.DmSpamFilterV2.DEFAULT_UNSET) {

@@ -1,10 +1,10 @@
-// === Module 11386: useFetchCollectiblesProduct ===
+// === Module 11524: useFetchCollectiblesProduct ===
 
-// Module 11386 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
+// Module 11524 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 6896 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import SKUStore from "SKUStore" /* 7016 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCo
 export function useFetchCollectiblesProduct(skuId, includeBundles) {
   _require = skuId;
   dependencyMap = includeBundles;
-  let items = [state];
+  items = [state];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     value = null;
     if (null != closure_0) {
@@ -33,7 +33,7 @@ export function useFetchCollectiblesProduct(skuId, includeBundles) {
   let obj = require("useStateFromStores");
   const items1 = [stateFromStores1];
   const tmp6 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items1, () => {
-    const items = [CollectiblesCategoryStore.getProduct(closure_0), CollectiblesCategoryStore.getProductFetch(closure_0)];
+    items = [CollectiblesCategoryStore.getProduct(closure_0), CollectiblesCategoryStore.getProductFetch(closure_0)];
     return items;
   }), 2);
   const product = tmp6[0];
@@ -47,7 +47,7 @@ export function useFetchCollectiblesProduct(skuId, includeBundles) {
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(1987).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(2116).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

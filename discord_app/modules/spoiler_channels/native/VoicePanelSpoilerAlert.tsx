@@ -1,10 +1,10 @@
-// === Module 14746: VoicePanelSpoilerAlert ===
+// === Module 14877: VoicePanelSpoilerAlert ===
 
-// Module 14746 (VoicePanelSpoilerAlert)
+// Module 14877 (VoicePanelSpoilerAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export default function VoicePanelSpoilerAlert(arg0) {
   };
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.p89ACt);
-  const items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm"), ];
+  items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm"), ];
   const obj5 = {
     variant: "secondary",
     onPress: function handleDisagree() {

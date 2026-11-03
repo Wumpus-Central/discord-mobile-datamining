@@ -1,12 +1,12 @@
-// === Module 9773: LeaveGroupDMConfirmationAlert ===
+// === Module 9905: LeaveGroupDMConfirmationAlert ===
 
-// Module 9773 (LeaveGroupDMConfirmationAlert)
+// Module 9905 (LeaveGroupDMConfirmationAlert)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ function LeaveGroupDMConfirmationAlert(onConfirm) {
   checked = undefined;
   ({ title, body, confirmText, cancelText } = onConfirm);
   [checked, obj3.onPress] = noop.useState(false);
-  const items = [onConfirm, checked];
+  items = [onConfirm, checked];
   const callback = noop.useCallback(() => onConfirm(first), items);
   const obj = { title, content: body, extraContent: null, actions: null };
   const obj2 = { hasIcons: false, children: null };

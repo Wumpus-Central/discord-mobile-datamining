@@ -1,7 +1,7 @@
-// === Module 16689: useAnnounceError ===
+// === Module 16832: useAnnounceError ===
 
-// Module 16689 (useAnnounceError)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+// Module 16832 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceEr
 
 export function useAnnounceError(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

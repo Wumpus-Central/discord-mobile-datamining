@@ -1,9 +1,9 @@
-// === Module 10810: useShowUnlinkChannelAlert ===
+// === Module 10940: useShowUnlinkChannelAlert ===
 
-// Module 10810 (useShowUnlinkChannelAlert)
+// Module 10940 (useShowUnlinkChannelAlert)
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/integration_settings/native/u
 export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
   closure_0 = arg0;
   closure_2 = arg2;
-  const items = [arg0, arg2];
+  items = [arg0, arg2];
   onConfirm = noop.useCallback(onConfirm(function*() {
     yield v2(tmp23[2]).removeLinkedLobby(tmp3);
     if (1 === tmp7) {

@@ -1,15 +1,15 @@
-// === Module 14415: useConjureAppChannelSheet ===
+// === Module 14546: useConjureAppChannelSheet ===
 
-// Module 14415 (useConjureAppChannelSheet)
+// Module 14546 (useConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11340 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11477 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
 function ConjureAppSheetIcon(application) {
@@ -33,7 +33,7 @@ function ConjureAppSheetIcon(application) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
@@ -64,7 +64,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
   }
   appChannelApplication = tmp6;
   let obj = guild_id(creator[9]);
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [guild_id];
   const stateFromStores = guild_id(creator[10]).useStateFromStores(items, () => {
     let guildProjectsFetchState = null;
@@ -97,7 +97,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp5) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3868["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3995["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

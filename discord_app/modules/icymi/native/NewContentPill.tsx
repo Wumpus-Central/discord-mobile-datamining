@@ -1,15 +1,16 @@
-// === Module 18595: NewContentPill ===
+// === Module 18753: NewContentPill ===
 
-// Module 18595 (NewContentPill)
+// Module 18753 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
-import spring from "spring" /* 5637 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import ClipView from "ClipView" /* 9509 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import ClipView from "ClipView" /* 9637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
+const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
 
@@ -21,7 +22,7 @@ function CutoutGuildIcon(guild) {
   const tmp = closure_11();
   size.shape = ClipView.CutoutShape.RoundedRect;
   size.cornerRadius = nativeDefault.radii.md;
-  const items = [size];
+  items = [size];
   obj2.cutouts = items;
   const obj3 = { guild: guild.guild, size: null, style: null };
   const tmp2 = ClipViewDefault;
@@ -34,108 +35,124 @@ function CutoutGuildIcon(guild) {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.refreshMorePillContainer = { position: "absolute", top: 0, left: 0, height: 32, width: "100%", zIndex: 100 };
 let closure_11 = createStyles.createStyles(obj2);
-const springConfig = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const __initData = { code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};}" };
-const __initData2 = { code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};}" };
+let closure_12 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
+let closure_14 = { code: "(function NewContentPillTsx1(){let[withSpring,showingPill,springConfig]=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};})" };
+let closure_15 = { code: "(function NewContentPillTsx2(){let[showingPill]=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
 export default function NewContentPill(onPress) {
   onPress = onPress.onPress;
+  _require = onPress;
   const isRefreshing = onPress.isRefreshing;
-  let stateFromStoresArray;
+  importDefault = isRefreshing;
   let first;
   closure_7 = undefined;
-  let first1;
   let isFocused;
   let first2;
-  closure_11 = undefined;
+  closure_10 = undefined;
   let tmp = closure_11();
-  let items = [first1];
-  stateFromStoresArray = onPress(stateFromStoresArray[10]).useStateFromStoresArray(items, () => first1.getNewUnreadDehydratedItems());
-  let obj = onPress(stateFromStoresArray[10]);
-  const items1 = [first1];
-  const stateFromStores = onPress(stateFromStoresArray[10]).useStateFromStores(items1, () => first1.hasNewContent(), []);
+  items = [isFocused];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => isFocused.getNewUnreadDehydratedItems());
+  dependencyMap = stateFromStoresArray;
+  let obj = require("initialize");
+  const items1 = [isFocused];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => isFocused.hasNewContent(), []);
   const tmp7 = stateFromStores(first.useState(stateFromStoresArray), 2);
   first = tmp7[0];
   closure_5 = tmp7[1];
   const items2 = [first];
-  let obj2 = onPress(stateFromStoresArray[10]);
+  const obj2 = require("initialize");
   const tmp6 = stateFromStores;
   closure_6 = first.useMemo(() => {
-    const items = [];
+    items = [];
     const item = first.forEach((data) => {
-      if (items.length < onPress(stateFromStoresArray[12]).MIN_ITEMS_FOR_NEW_PILL) {
-        const tmpResult = onPress(stateFromStoresArray[13]);
+      if (items.length < items(dependencyMap[12]).MIN_ITEMS_FOR_NEW_PILL) {
+        const tmpResult = items(dependencyMap[13]);
         if (tmp4) {
           items.push(data.data.guild_id);
         }
-        tmp4 = onPress(stateFromStoresArray[13]).isGuildItem(data) && !items.includes(data.data.guild_id);
+        tmp4 = items(dependencyMap[13]).isGuildItem(data) && !items.includes(data.data.guild_id);
       }
     });
     return items;
   }, items2);
-  const tmp10 = isRefreshing(stateFromStoresArray[11])();
+  const tmp10 = useThemeDefault();
   const items3 = [closure_7];
-  const stateFromStoresArray1 = onPress(stateFromStoresArray[10]).useStateFromStoresArray(items3, () => {
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => {
     const mapped = closure_6.map((item) => guild.getGuild(item));
     return mapped.filter(Boolean);
   });
   const tmp11 = stateFromStores(first.useState(false), 2);
   closure_7 = tmp11[1];
-  first1 = stateFromStores;
+  let first1 = stateFromStores;
   if (stateFromStores) {
     first1 = tmp11[0];
   }
-  const obj4 = onPress(stateFromStoresArray[10]);
-  const fn = function y() {
-    let num = 0;
-    if (first1) {
-      num = 12;
+  const obj4 = require("initialize");
+  const items4 = [closure_14, require("spring/spring").withSpring, first1, closure_12];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp13, tmp14, tmp15, tmp16] = items4;
+  class NewContentPillTsx1 {
+    constructor() {
+      tmp = closure_0;
+      num = 0;
+      tmp2 = closure_1;
+      if (closure_1) {
+        num = 12;
+      }
+      obj = { transform: null, opacity: null };
+      obj1 = { translateY: tmp(num, closure_2) };
+      tmp3 = closure_2;
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      num2 = 0;
+      if (tmp2) {
+        num2 = 1;
+      }
+      obj.opacity = tmp(num2, tmp3, "respect-motion-settings");
+      return obj;
     }
-    const obj2 = { transform: null, opacity: null };
-    const items = [{ translateY: spring.withSpring(num, closure_12) }];
-    obj2.transform = items;
-    const obj3 = { translateY: spring.withSpring(num, closure_12) };
-    let num2 = 0;
-    if (first1) {
-      num2 = 1;
-    }
-    obj2.opacity = spring.withSpring(num2, closure_12, "respect-motion-settings");
-    return obj2;
-  };
-  const tmp2Result = onPress(stateFromStoresArray[14]);
-  fn.__closure = { withSpring: onPress(stateFromStoresArray[15]).withSpring, showingPill: first1, springConfig };
-  fn.__workletHash = 13655660855782;
-  fn.__initData = __initData;
-  const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  const obj5 = { withSpring: onPress(stateFromStoresArray[15]).withSpring, showingPill: first1, springConfig };
-  class C {
+  }
+  const items5 = [tmp14, tmp15, tmp16];
+  NewContentPillTsx1.__closure = items5;
+  NewContentPillTsx1.__workletHash = 15743373779199;
+  NewContentPillTsx1.__initData = tmp13;
+  const animatedStyle = require("module_1652").useAnimatedStyle(NewContentPillTsx1);
+  const tmp2Result = require("module_1652");
+  const items6 = [closure_15, first1];
+  _require = undefined;
+  [tmp18, tmp19] = items6;
+  class NewContentPillTsx2 {
     constructor() {
       pointerEvents = "none";
-      if (closure_8) {
+      if (closure_0) {
         pointerEvents = "box-none";
       }
       return { pointerEvents };
     }
   }
-  C.__closure = { showingPill: first1 };
-  C.__workletHash = 876312391659;
-  C.__initData = __initData2;
-  const animatedProps = onPress(stateFromStoresArray[14]).useAnimatedProps(C);
-  const tmp2Result4 = onPress(stateFromStoresArray[14]);
-  isFocused = onPress(stateFromStoresArray[16]).useIsFocused();
+  const items7 = [tmp19];
+  NewContentPillTsx2.__closure = items7;
+  NewContentPillTsx2.__workletHash = 15727177943954;
+  NewContentPillTsx2.__initData = tmp18;
+  const animatedProps = require("module_1652").useAnimatedProps(NewContentPillTsx2);
+  const tmp2Result4 = require("module_1652");
+  isFocused = require("BaseNavigationContainer").useIsFocused();
   const tmp6Result = tmp6(first.useState(false), 2);
   first2 = tmp6Result[0];
-  closure_11 = tmp6Result[1];
-  const items4 = [stateFromStores, isFocused, first2];
+  closure_10 = tmp6Result[1];
+  const items8 = [stateFromStores, isFocused, first2];
   const layoutEffect = obj3.useLayoutEffect(() => {
     let tmp = first2;
     if (!first2) {
@@ -143,7 +160,7 @@ export default function NewContentPill(onPress) {
         if (stateFromStores) {
           closure_7(false);
         }
-        closure_11(isFocused);
+        closure_10(isFocused);
       }
     }
     if (tmp) {
@@ -155,73 +172,73 @@ export default function NewContentPill(onPress) {
     if (tmp) {
       closure_7(true);
     }
-  }, items4);
-  const items5 = [isRefreshing, stateFromStoresArray, stateFromStores];
+  }, items8);
+  const items9 = [isRefreshing, stateFromStoresArray, stateFromStores];
   const effect = obj3.useEffect(() => {
-    if (!isRefreshing) {
-      closure_5(stateFromStoresArray);
+    if (!c1) {
+      closure_5(c2);
     }
-  }, items5);
-  const items6 = [onPress];
+  }, items9);
+  const items10 = [onPress];
   const callback = obj3.useCallback(() => {
-    onPress();
-  }, items6);
+    _undefined();
+  }, items10);
   if (0 === stateFromStoresArray1.length) {
-    const obj6 = { style: null, animatedProps: null, children: null };
-    const items7 = [tmp.refreshMorePillContainer, animatedStyle];
-    obj6.style = items7;
-    obj6.animatedProps = animatedProps;
-    const obj7 = { onPress: callback, style: tmp.container, children: null };
-    const items8 = [isFocused(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
-    const obj8 = { style: { marginLeft: 4 }, variant: "heading-md/bold", color: "interactive-text-active", children: null };
-    const intl = tmp2(tmp3[20]).intl;
-    obj8.children = intl.string(tmp2(tmp3[20]).t["4Nl0Rl"]);
-    items8[1] = isFocused(tmp2(tmp3[19]).Text, obj8);
-    obj7.children = items8;
-    obj6.children = first2(tmp2(tmp3[17]).PressableOpacity, obj7);
-    let tmp30Result2 = isFocused(tmp9(tmp3[14]).View, obj6);
+    const obj5 = { style: null, animatedProps: null, children: null };
+    const items11 = [tmp.refreshMorePillContainer, animatedStyle];
+    obj5.style = items11;
+    obj5.animatedProps = animatedProps;
+    const obj6 = { onPress: callback, style: tmp.container, children: null };
+    const items12 = [first2(tmp2(13180).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
+    const obj7 = { style: { marginLeft: 4 }, variant: "heading-md/semibold", color: "interactive-text-active", children: null };
+    const intl = tmp2(1113).intl;
+    obj7.children = intl.string(tmp2(1113).t["4Nl0Rl"]);
+    items12[1] = first2(tmp2(5747).Text, obj7);
+    obj6.children = items12;
+    obj5.children = closure_10(tmp2(7106).PressableOpacity, obj6);
+    let tmp36Result2 = first2(tmp9(1652).View, obj5);
   } else {
-    const obj9 = { style: null, animatedProps: null, children: null };
-    const items9 = [tmp.refreshMorePillContainer, animatedStyle];
-    obj9.style = items9;
-    obj9.animatedProps = animatedProps;
-    const obj10 = { onPress: callback, style: tmp.container, children: null };
+    const obj8 = { style: null, animatedProps: null, children: null };
+    const items13 = [tmp.refreshMorePillContainer, animatedStyle];
+    obj8.style = items13;
+    obj8.animatedProps = animatedProps;
+    const obj9 = { onPress: callback, style: tmp.container, children: null };
     if (isRefreshing) {
-      const tmp21 = closure_5;
-      const tmp2Result6 = tmp2(tmp3[21]);
-      tmp9(tmp3[7]).unsafe_rawColors;
-      const isThemeDarkResult = tmp2(tmp3[21]).isThemeDark(tmp10);
+      const tmp27 = closure_5;
+      const tmp2Result6 = tmp2(5148);
+      tmp9(575).unsafe_rawColors;
+      const isThemeDarkResult = tmp2(5148).isThemeDark(tmp10);
       const unsafe_rawColors = { color: null };
-      unsafe_rawColors.color = tmp2(tmp3[21]).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
-      tmp30(tmp21, unsafe_rawColors);
-      const tmp23 = tmp2(tmp3[21]).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      unsafe_rawColors.color = tmp2(5148).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      tmp36(tmp27, unsafe_rawColors);
+      const tmp29 = tmp2(5148).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items10 = [tmp30(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
+      const items14 = [tmp36(tmp2(13180).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
-      items10[1] = substr.map((guild, index) => {
+      items14[1] = substr.map((guild, index) => {
         let num = 4;
         if (index > 0) {
           num = -2;
         }
-        const obj = { style: { marginLeft: num }, children: isFocused(CutoutGuildIcon, { guild }) };
-        return isFocused(closure_6, obj, guild.id);
+        const obj = { style: { marginLeft: num }, children: first2(CutoutGuildIcon, { guild }) };
+        return first2(closure_6, obj, guild.id);
       });
       let num2 = 4;
       if (stateFromStoresArray1.length > 1) {
         num2 = -2;
       }
-      const obj11 = { style: null, children: null };
-      const obj12 = { marginLeft: num2 };
-      obj11.style = obj12;
-      const obj13 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(tmp3[9]).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
-      obj11.children = tmp30(tmp9(tmp3[9]), obj13);
-      items10[2] = tmp30(closure_6, obj11);
-      obj10.children = items10;
-      obj9.children = tmp31(tmp32, obj10);
-      tmp30Result2 = tmp30(tmp9(tmp3[14]).View, obj9);
-      const tmp9Result = tmp9(tmp3[9]);
+      const obj10 = { style: null, children: null };
+      const obj11 = { marginLeft: num2 };
+      obj10.style = obj11;
+      const obj12 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(7083).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
+      obj10.children = tmp36(tmp9(7083), obj12);
+      items14[2] = tmp36(closure_6, obj10);
+      obj9.children = items14;
+      obj8.children = tmp37(tmp38, obj9);
+      tmp36Result2 = tmp36(tmp9(1652).View, obj8);
+      const tmp9Result = tmp9(7083);
     }
-    tmp31 = first2;
+    tmp37 = closure_10;
   }
-  return tmp30Result2;
+  return tmp36Result2;
 };

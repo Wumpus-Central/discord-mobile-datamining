@@ -1,8 +1,8 @@
-// === Module 18467: useICYMITabBadge ===
+// === Module 18621: useICYMITabBadge ===
 
-// Module 18467 (useICYMITabBadge)
+// Module 18621 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
-import ICYMIStore from "ICYMIStore" /* 8906 */;
+import ICYMIStore from "ICYMIStore" /* 9030 */;
 
 require = fn;
 const size = fn(2);
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default function useICYMITabBadge() {
   const obj = { value: 0, showDot: null };
-  const items = [ICYMIStore];
+  items = [ICYMIStore];
   obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
   return obj;
 };

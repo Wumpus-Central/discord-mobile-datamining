@@ -1,8 +1,8 @@
-// === Module 8175: useStageBlockedUsersCount ===
+// === Module 8299: useStageBlockedUsersCount ===
 
-// Module 8175 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
+// Module 8299 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageBlocke
 
 export function useStageBlockedUsersCount(id1) {
   _require = id1;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id1];
   return require("initialize").useStateFromStores(items, () => {
     let num = 0;
@@ -24,7 +24,7 @@ export function useStageBlockedUsersCount(id1) {
 }
 export function useStageIgnoredUsersCount(id2) {
   _require = id2;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id2];
   return require("initialize").useStateFromStores(items, () => {
     let num = 0;
@@ -50,13 +50,13 @@ export function getStageIgnoredUsersCount(id) {
 }
 export function useStageBlockedUsers(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED), items1);
 }
 export function useStageIgnoredUsers(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED), items1);
 }

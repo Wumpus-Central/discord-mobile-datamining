@@ -1,12 +1,12 @@
-// === Module 8433: canReplyToMessage ===
+// === Module 8557: canReplyToMessage ===
 
-// Module 8433 (canReplyToMessage)
+// Module 8557 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1088 */;
-import ThreadHooks from "ThreadHooks" /* 7443 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8434 */;
+import ThreadHooks from "ThreadHooks" /* 7567 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8558 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import UserStore from "UserStore" /* 1383 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ export function useCanReplyToMessage(channel, message) {
     guildId = channel.getGuildId();
   }
   const obj2 = require("useUserCommunicationDisabled");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = tmp(504).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {

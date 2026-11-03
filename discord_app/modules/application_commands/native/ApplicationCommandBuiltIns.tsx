@@ -1,13 +1,13 @@
-// === Module 9772: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9904: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9772 (application_commands/ApplicationCommandBuiltIns)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+// Module 9904 (application_commands/ApplicationCommandBuiltIns)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1992).ApplicationCommandType.CHAT, inputType: fn(5683).ApplicationCommandInputType.BUILT_IN, applicationId: fn(6035).BuiltInSectionId.BUILT_IN };
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(2121).ApplicationCommandType.CHAT, inputType: fn(5803).ApplicationCommandInputType.BUILT_IN, applicationId: fn(6155).BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -29,10 +29,10 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(5652).computeChannelName(channel, UserStore, RelationshipStore);
+    const channelName = channel(5772).computeChannelName(channel, UserStore, RelationshipStore);
     const intl5 = channel(1113).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(5652);
+    const obj5 = channel(5772);
     const intl6 = channel(1113).intl;
     const obj3 = { name: channelName };
     const formatToPlainStringResult = intl5.formatToPlainString(channel(1113).t.hJ5Ap4, obj2);
@@ -60,8 +60,8 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    const result = channel(9773).openLeaveGroupDMConfirmationAlert(obj6);
-    const tmp4Result = channel(9773);
+    const result = channel(9905).openLeaveGroupDMConfirmationAlert(obj6);
+    const tmp4Result = channel(9905);
   }
 };
 const items = [obj];

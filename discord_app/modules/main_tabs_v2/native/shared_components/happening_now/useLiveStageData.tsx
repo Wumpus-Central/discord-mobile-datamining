@@ -1,11 +1,11 @@
-// === Module 18131: useLiveStageData ===
+// === Module 18275: useLiveStageData ===
 
-// Module 18131 (useLiveStageData)
+// Module 18275 (useLiveStageData)
 import _modDef12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export function useLiveStageData(stage) {
   _require = stage;
-  let items = [memo1];
+  items = [memo1];
   const items1 = [stage.channel_id];
   const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => {
     const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stage.channel_id, StageChannelParticipants.StageChannelParticipantNamedIndex.FRIEND);
@@ -41,7 +41,7 @@ export function useLiveStageData(stage) {
   const items6 = [stateFromStoresArray, stateFromStoresArray1];
   const items7 = [stateFromStoresArray, stateFromStoresArray1];
   const memo = stateFromStoresArray2.useMemo(() => {
-    const items = [...stateFromStoresArray1];
+    items = [...stateFromStoresArray1];
     return _modDef12.uniqBy(items, (id) => id.id);
   }, items6);
   memo1 = stateFromStoresArray2.useMemo(() => _modDef12.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"), items7);
@@ -49,7 +49,7 @@ export function useLiveStageData(stage) {
   const memo2 = stateFromStoresArray2.useMemo(() => _modDef12.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"), items8);
   const items9 = [memo1, memo2];
   const memo3 = stateFromStoresArray2.useMemo(() => {
-    const items = [...memo2];
+    items = [...memo2];
     return items;
   }, items9);
   const obj3 = require("useStateFromStores");

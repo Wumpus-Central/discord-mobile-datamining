@@ -1,17 +1,17 @@
-// === Module 9377: GameProfileRankPill ===
+// === Module 9505: GameProfileRankPill ===
 
-// Module 9377 (GameProfileRankPill)
+// Module 9505 (GameProfileRankPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TrophyIcon from "TrophyIcon" /* 9378 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TrophyIcon from "TrophyIcon" /* 9506 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.gameRankPill = { flexDirection: "row", backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -27,7 +27,7 @@ export default function GameProfileRankPill(arg0) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.gameRankPill, children: null };
-  const items = [React4(TrophyIcon.TrophyIcon, { size: "xxs", color: nativeDefault.colors.BLACK }), ];
+  items = [React4(TrophyIcon.TrophyIcon, { size: "xxs", color: nativeDefault.colors.BLACK }), ];
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = util.t;
@@ -39,7 +39,7 @@ export default function GameProfileRankPill(arg0) {
     str = formatToPlainString(t.ehZXlZ, obj5);
   }
   const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
-  items[1] = React4(Text_Text.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
+  items[1] = React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-dark", children: str.toUpperCase() });
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);
   return React4(View, obj);

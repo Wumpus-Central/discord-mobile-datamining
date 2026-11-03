@@ -1,18 +1,18 @@
-// === Module 17102: QuestBottomSheetHooks ===
+// === Module 17245: QuestBottomSheetHooks ===
 
-// Module 17102 (QuestBottomSheetHooks)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import QuestTypes from "QuestTypes" /* 6784 */;
-import AdCreativeType from "AdCreativeType" /* 6788 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import captureAdUserAction from "captureAdUserAction" /* 9684 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 17103 */;
+// Module 17245 (QuestBottomSheetHooks)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import QuestTypes from "QuestTypes" /* 6904 */;
+import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import captureAdUserAction from "captureAdUserAction" /* 9816 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 17246 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -23,7 +23,7 @@ export function useWatchTaskPressHandler(questId) {
   closure_129_0 = setRestingQuestDockMode;
   const isInQuestBottomSheet = noop.useContext(questId(callback[4]).QuestBottomSheetContext).isInQuestBottomSheet;
   closure_129_1 = isInQuestBottomSheet;
-  const items = [isInQuestBottomSheet, setRestingQuestDockMode];
+  items = [isInQuestBottomSheet, setRestingQuestDockMode];
   callback = noop.useCallback(() => {
     if (sourceQuestContent) {
       ActionSheetActionCreatorsDefault.hideActionSheet("QuestBottomSheet");
@@ -65,7 +65,7 @@ export function useMobileActivityPressHandler(questId) {
   closure_129_0 = setRestingQuestDockMode;
   const isInQuestBottomSheet = questImpression.useContext(questId(launchMobileActivity[4]).QuestBottomSheetContext).isInQuestBottomSheet;
   closure_129_1 = isInQuestBottomSheet;
-  const items = [isInQuestBottomSheet, setRestingQuestDockMode];
+  items = [isInQuestBottomSheet, setRestingQuestDockMode];
   const callback = questImpression.useCallback(() => {
     if (sourceQuestContent) {
       ActionSheetActionCreatorsDefault.hideActionSheet("QuestBottomSheet");
@@ -86,7 +86,7 @@ export function useMobileActivityPressHandler(questId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj7 = { type: tmp4(9687).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6788).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7871).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6784).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
+          const obj7 = { type: tmp4(9819).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(6908).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7995).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(6904).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
           let id;
           if (closure_128_4 != null) {
             id = closure_128_4.getId();
@@ -125,9 +125,9 @@ export function useMobileActivityPressHandler(questId) {
             questContentPosition = closure_128_4.getQuestContentPosition();
           }
           obj7.questContentPosition = questContentPosition;
-          tmp4(9684).captureAdUserAction(obj7);
+          tmp4(9816).captureAdUserAction(obj7);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         dependencyMap = tmp;

@@ -1,9 +1,9 @@
-// === Module 7435: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 7559: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 7435 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 7559 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1383 */;
-import BillingInfoStore from "BillingInfoStore" /* 2048 */;
+import UserStore from "UserStore" /* 1385 */;
+import BillingInfoStore from "BillingInfoStore" /* 2177 */;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
 
 export function useIsUserInCreatorMonetizationEligibleCountry() {
-  const items = [UserStore, BillingInfoStore];
+  items = [UserStore, BillingInfoStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;

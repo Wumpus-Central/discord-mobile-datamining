@@ -1,6 +1,6 @@
-// === Module 10315: createNonce ===
+// === Module 10445: createNonce ===
 
-// Module 10315 (createNonce)
+// Module 10445 (createNonce)
 import SnowflakeUtils from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

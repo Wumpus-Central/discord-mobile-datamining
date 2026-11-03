@@ -1,6 +1,6 @@
-// === Module 14968: PersonalWidgetExpandCollapseContext ===
+// === Module 15105: PersonalWidgetExpandCollapseContext ===
 
-// Module 14968 (PersonalWidgetExpandCollapseContext)
+// Module 15105 (PersonalWidgetExpandCollapseContext)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export function PersonalWidgetExpandCollapseProvider(children) {
   [isExpanded, setIsExpanded] = noop.useState(false);
   [first1, redux] = noop.useState(false);
   const first2 = _slicedToArray(noop.useState(() => new Set()), 1)[0];
-  const items = [first2];
+  items = [first2];
   const setAnyFieldClipped = noop.useCallback((arg0, arg1) => {
     if (arg1) {
       first2.add(arg0);
@@ -50,7 +50,7 @@ export function usePersonalWidgetFieldClamp(maxLines, children) {
   const setAnyFieldClipped = context.setAnyFieldClipped;
   const id = noop.useId();
   [first, closure_5] = noop.useState(null);
-  const items = [first, children, id, maxLines, setAnyFieldClipped];
+  items = [first, children, id, maxLines, setAnyFieldClipped];
   const items1 = [id, setAnyFieldClipped];
   const callback = noop.useCallback((nativeEvent) => {
     if (first !== closure_1) {

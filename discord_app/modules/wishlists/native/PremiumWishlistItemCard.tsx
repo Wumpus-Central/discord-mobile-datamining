@@ -1,8 +1,8 @@
-// === Module 14455: PremiumWishlistItemCard ===
+// === Module 14586: PremiumWishlistItemCard ===
 
-// Module 14455 (PremiumWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 9466 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9467 */;
+// Module 14586 (PremiumWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 9594 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9595 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ export default function PremiumWishlistItemCard(size) {
   size = size.size;
   ({ sku, source } = size);
   const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));
-  const items = [size];
+  items = [size];
   const callback = noop.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
   return jsx(WishlistItemCardBaseDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });

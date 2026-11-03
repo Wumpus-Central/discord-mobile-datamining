@@ -1,10 +1,10 @@
-// === Module 6712: StageMediaHooks ===
+// === Module 6832: StageMediaHooks ===
 
-// Module 6712 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
+// Module 6832 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHook
 export function useStageHasMedia(id) {
   _require = id;
   closure_129_0 = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
@@ -29,7 +29,7 @@ export function useStageHasMedia(id) {
 }
 export function useStageHasStream(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
@@ -50,7 +50,7 @@ export function getStageHasStream(id) {
 }
 export function useIsStageVideoEnabled(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let tmp2 = null != stateFromStores;
   if (tmp2) {
@@ -66,7 +66,7 @@ export function useIsStageVideoEnabled(arg0) {
   return tmp2;
 }
 export function isStageVideoEnabled(guild_id) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let tmp2 = null != guild;
   if (tmp2) {
     let num;

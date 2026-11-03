@@ -1,9 +1,9 @@
-// === Module 12002: useMuteAwareLocalVolume ===
+// === Module 12139: useMuteAwareLocalVolume ===
 
-// Module 12002 (useMuteAwareLocalVolume)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
+// Module 12139 (useMuteAwareLocalVolume)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export default function useMuteAwareLocalVolume(ownerId, STREAM) {
   _require = ownerId;
   closure_1 = STREAM;
   let obj = { effectiveVolume: null, handleVolumeChange: null };
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   obj.effectiveVolume = require("initialize").useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {

@@ -1,11 +1,11 @@
-// === Module 13721: MessagesUtils ===
+// === Module 13852: MessagesUtils ===
 
-// Module 13721 (MessagesUtils)
-import CodedLink from "CodedLink" /* 5752 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6049 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7501 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8585 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11364 */;
+// Module 13852 (MessagesUtils)
+import CodedLink from "CodedLink" /* 5872 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6169 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7625 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8709 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11501 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -97,7 +97,7 @@ export default {
                 value = invites3.get(code);
                 const invites4 = merged.invites;
                 const value7 = invites4.get(code);
-                let state;
+                state = undefined;
                 if (value != null) {
                   state = value.state;
                 }
@@ -107,7 +107,7 @@ export default {
                 }
                 let tmp52 = state !== state1;
                 if (tmp52) {
-                  let state2;
+                  state2 = undefined;
                   if (value7 != null) {
                     state2 = value7.state;
                   }

@@ -1,18 +1,18 @@
-// === Module 12664: useConjurePatchNotesComposer ===
+// === Module 12800: useConjurePatchNotesComposer ===
 
-// Module 12664 (useConjurePatchNotesComposer)
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12665 */;
+// Module 12800 (useConjurePatchNotesComposer)
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5019).MessageSendLocation;
+let closure_7 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesComposer.tsx");
 
@@ -27,7 +27,7 @@ export default function useConjurePatchNotesComposer(projectId) {
   c14 = undefined;
   let ref;
   c18 = undefined;
-  const items = [ref];
+  items = [ref];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     found = GuildChannelStore.getChannels(guildId)[closure_7].filter((channel) => {
@@ -106,7 +106,7 @@ export default function useConjurePatchNotesComposer(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export default function useConjurePatchNotesComposer(projectId) {
             c2 = 0;
             if (closure_129_0.cancelled) {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               closure_1_10(false);
               closure_1_11(true);
@@ -230,7 +230,7 @@ export default function useConjurePatchNotesComposer(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

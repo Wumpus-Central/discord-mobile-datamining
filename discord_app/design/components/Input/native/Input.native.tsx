@@ -1,18 +1,18 @@
-// === Module 7083: Input ===
+// === Module 7209: Input ===
 
-// Module 7083 (Input)
+// Module 7209 (Input)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7084 */;
-import ErrorText from "ErrorText" /* 7085 */;
+import native from "native" /* 5310 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7210 */;
+import ErrorText from "ErrorText" /* 7211 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { inputRow: { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 }, labelWrapper: null, label: null, description: null, error: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 };
 obj2.labelWrapper = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
@@ -34,7 +34,7 @@ export function Input(arg0) {
   const requiredFieldA11yName = obj.getRequiredFieldA11yName(native.getNodeText(label), required);
   const obj3 = { style: containerStyle, children: null };
   if (null == label) {
-    const items = [null, , , ];
+    items = [null, , , ];
     const obj4 = { style: tmp.inputRow, children };
     items[1] = React3(View, obj4);
     let tmp11Result = null;
@@ -62,7 +62,7 @@ export function Input(arg0) {
     const items2 = [label, ];
     let tmp5Result2 = null;
     if (required) {
-      const obj10 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: [" ", "*"] };
+      const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", "aria-hidden": true, children: [" ", "*"] };
       tmp5Result2 = React4(Text_Text.Text, obj10);
     }
     items2[1] = tmp5Result2;

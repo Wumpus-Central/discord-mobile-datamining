@@ -1,33 +1,33 @@
-// === Module 17907: DataAndPrivacyScreen ===
+// === Module 18050: DataAndPrivacyScreen ===
 
-// Module 17907 (DataAndPrivacyScreen)
+// Module 18050 (DataAndPrivacyScreen)
 import util from "util" /* 1113 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const Constants = fn(1072);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
 
 export default function DataAndPrivacySettings() {
-  stackNavigation = stackNavigation(1497).useStackNavigation();
+  stackNavigation = stackNavigation(1499).useStackNavigation();
   closure_129_0 = stackNavigation;
-  let obj = stackNavigation(1497);
-  const pinotDataPrivacySections = stackNavigation(17899).usePinotDataPrivacySections();
+  let obj = stackNavigation(1499);
+  const pinotDataPrivacySections = stackNavigation(18042).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
-  let items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
+  items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(17899);
-  obj4.helpdeskArticle = items1(2061).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
+  let obj2 = stackNavigation(18042);
+  obj4.helpdeskArticle = items1(2190).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , , ];
   let obj6 = { settings: null, subLabel: null };
@@ -35,8 +35,8 @@ export default function DataAndPrivacySettings() {
   obj6.settings = items2;
   let intl2 = stackNavigation(1113).intl;
   const obj7 = { helpdeskArticle: null };
-  const obj5 = items1(2061);
-  obj7.helpdeskArticle = items1(2061).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
+  const obj5 = items1(2190);
+  obj7.helpdeskArticle = items1(2190).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
   obj6.subLabel = intl2.format(stackNavigation(1113).t["eQL/Mr"], obj7);
   items1[1] = obj6;
   const obj9 = { settings: null, subLabel: null };
@@ -44,8 +44,8 @@ export default function DataAndPrivacySettings() {
   obj9.settings = items3;
   let intl3 = stackNavigation(1113).intl;
   const obj10 = { helpdeskArticle: null };
-  const obj8 = items1(2061);
-  obj10.helpdeskArticle = items1(2061).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj8 = items1(2190);
+  obj10.helpdeskArticle = items1(2190).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj9.subLabel = intl3.format(stackNavigation(1113).t.cf9mvV, obj10);
   items1[2] = obj9;
   const obj12 = { settings: null, subLabel: null };
@@ -53,8 +53,8 @@ export default function DataAndPrivacySettings() {
   obj12.settings = items4;
   let intl4 = stackNavigation(1113).intl;
   const obj13 = { helpdeskArticle: null };
-  const obj11 = items1(2061);
-  obj13.helpdeskArticle = items1(2061).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj11 = items1(2190);
+  obj13.helpdeskArticle = items1(2190).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj12.subLabel = intl4.format(stackNavigation(1113).t["2QFDU/"], obj13);
   items1[3] = obj12;
   HermesBuiltin.arraySpread(pinotDataPrivacySections, 4);
@@ -65,8 +65,8 @@ export default function DataAndPrivacySettings() {
   obj15.settings = items5;
   const intl6 = stackNavigation(1113).intl;
   const obj16 = { helpdeskArticle: null };
-  const obj14 = items1(2061);
-  obj16.helpdeskArticle = items1(2061).getArticleURL(constants.GDPR_REQUEST_DATA);
+  const obj14 = items1(2190);
+  obj16.helpdeskArticle = items1(2190).getArticleURL(constants.GDPR_REQUEST_DATA);
   obj15.subLabel = intl6.format(stackNavigation(1113).t.P3kNfr, obj16);
   items1.push(obj15);
   const obj18 = { settings: null, subLabel: null };
@@ -85,17 +85,17 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(16759).fetchConsents();
-      const obj = stackNavigation(16759);
+      const consents = stackNavigation(16902).fetchConsents();
+      const obj = stackNavigation(16902);
     }
-    const harvestStatus = stackNavigation(16762).fetchHarvestStatus();
-    const obj2 = stackNavigation(16762);
+    const harvestStatus = stackNavigation(16905).fetchHarvestStatus();
+    const obj2 = stackNavigation(16905);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
   const memo = noop.useMemo(() => {
     const obj2 = { sections: null };
-    const items = [...items1];
+    items = [...items1];
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.Me5lVK);
@@ -127,14 +127,14 @@ export default function DataAndPrivacySettings() {
     return obj.createList(obj2);
   }, items8);
   const obj22 = { screen: null };
-  const obj17 = items1(2061);
+  const obj17 = items1(2190);
   const obj19 = {
     onClick() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj22.screen = stackNavigation(16717).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(16717), obj22), closure_8(items1(16588), { node: memo })];
+  obj22.screen = stackNavigation(16860).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(16860), obj22), closure_8(items1(16731), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 };

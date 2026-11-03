@@ -1,39 +1,41 @@
-// === Module 19287: VoicePanelPIP ===
+// === Module 19445: VoicePanelPIP ===
 
-// Module 19287 (VoicePanelPIP)
+// Module 19445 (VoicePanelPIP)
 import util from "util" /* 1113 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
-import native from "native" /* 5080 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import spring from "spring" /* 5637 */;
-import ExternalPipDefault from "ExternalPip" /* 5874 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11726 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19114 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19198 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19204 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19207 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
+import native from "native" /* 5207 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import ExternalPipDefault from "ExternalPip" /* 5994 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11364 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11863 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19272 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19356 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19362 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19365 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import VoicePanelStore from "VoicePanelStore" /* 6875 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import VoicePanelStore from "VoicePanelStore" /* 6995 */;
 
 require = fn;
 function VoicePanelPIP() {
   let tmp = closure_17();
-  const context = callback2.useContext(pIPState(stateFromStores2[12]));
+  const context = noop.useContext(VoicePanelStateContextDefault);
   const setMode = context.setMode;
-  pIPState = setMode(stateFromStores2[13]).usePIPState();
-  const pipHandoff = callback2.useContext(pIPState(stateFromStores2[12])).pipHandoff;
-  let obj2 = setMode(stateFromStores2[13]);
-  const mode = setMode(stateFromStores2[13]).usePIPState().mode;
-  let obj3 = setMode(stateFromStores2[13]);
-  const pIPCardsSettled = setMode(stateFromStores2[14]).usePIPCardsSettled(pipHandoff);
-  let obj4 = setMode(stateFromStores2[14]);
+  _require = setMode;
+  const pIPState = require("VoicePanelPIPStateContext").usePIPState();
+  const pipHandoff = noop.useContext(VoicePanelStateContextDefault).pipHandoff;
+  let obj2 = require("VoicePanelPIPStateContext");
+  const mode = require("VoicePanelPIPStateContext").usePIPState().mode;
+  const obj3 = require("VoicePanelPIPStateContext");
+  const pIPCardsSettled = require("VoicePanelPIPHandoff").usePIPCardsSettled(pipHandoff);
+  const obj4 = require("VoicePanelPIPHandoff");
   let tmp11 = mode !== VoicePanelPIPModes.IN_APP;
-  const pIPPanelLayoutCommitted = setMode(stateFromStores2[14]).usePIPPanelLayoutCommitted(pipHandoff);
+  const pIPPanelLayoutCommitted = require("VoicePanelPIPHandoff").usePIPPanelLayoutCommitted(pipHandoff);
   if (!tmp11) {
     tmp11 = pIPCardsSettled;
   }
@@ -51,606 +53,773 @@ function VoicePanelPIP() {
   }
   const mode2 = pIPState.mode;
   closure_129_0 = mode2;
-  closure_129_1 = tmp12;
-  closure_129_2 = tmp13;
-  closure_129_13 = undefined;
+  closure_129_11 = undefined;
+  closure_129_16 = undefined;
+  closure_129_17 = undefined;
   closure_129_18 = undefined;
   closure_129_19 = undefined;
-  closure_129_20 = undefined;
-  closure_129_21 = undefined;
-  const context1 = obj.useContext(tmp2(tmp3[12]));
+  const context1 = obj.useContext(tmp2(11359));
   const controlsSpecs = context1.controlsSpecs;
-  closure_129_3 = controlsSpecs;
+  closure_129_1 = controlsSpecs;
   const hideControls = context1.hideControls;
-  closure_129_4 = hideControls;
+  closure_129_2 = hideControls;
   const pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
-  closure_129_5 = pipAvoidanceSpecs;
+  closure_129_3 = pipAvoidanceSpecs;
   const safeArea = context1.safeArea;
-  closure_129_6 = safeArea;
+  closure_129_4 = safeArea;
   const setFocused = context1.setFocused;
-  closure_129_7 = setFocused;
+  closure_129_5 = setFocused;
   const setMode2 = context1.setMode;
-  closure_129_8 = setMode2;
+  closure_129_6 = setMode2;
   const showControls = context1.showControls;
-  closure_129_9 = showControls;
+  closure_129_7 = showControls;
   const windowDimensions = context1.windowDimensions;
-  closure_129_10 = windowDimensions;
+  closure_129_8 = windowDimensions;
   const wrapperDimensions = context1.wrapperDimensions;
-  closure_129_11 = wrapperDimensions;
+  closure_129_9 = wrapperDimensions;
   const wrapperOffset = context1.wrapperOffset;
-  closure_129_12 = wrapperOffset;
-  ({ channelId: closure_129_13, isDockEnabled } = context1);
-  closure_129_14 = isDockEnabled;
-  let obj5 = setMode(stateFromStores2[14]);
-  const pIPState1 = setMode(stateFromStores2[13]).usePIPState();
-  closure_129_15 = pIPState1;
-  const tmp5Result = setMode(stateFromStores2[13]);
-  const sharedValue = setMode(stateFromStores2[15]).useSharedValue(INACTIVE_GESTURE_STATE);
-  closure_129_16 = sharedValue;
-  const tmp5Result11 = setMode(stateFromStores2[15]);
-  const sharedValue1 = setMode(stateFromStores2[15]).useSharedValue(0);
-  closure_129_17 = sharedValue1;
-  let items = [sharedValue1];
+  closure_129_10 = wrapperOffset;
+  ({ channelId: closure_129_11, isDockEnabled } = context1);
+  closure_129_12 = isDockEnabled;
+  let obj5 = require("VoicePanelPIPHandoff");
+  const tmp10 = VoicePanelPIPModes;
+  const pIPState1 = require("VoicePanelPIPStateContext").usePIPState();
+  closure_129_13 = pIPState1;
+  const tmp5Result = require("VoicePanelPIPStateContext");
+  const sharedValue = require("module_1652").useSharedValue(closure_20);
+  closure_129_14 = sharedValue;
+  const tmp5Result11 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(0);
+  closure_129_15 = sharedValue1;
+  items = [sharedValue1];
   const effect = obj.useEffect(() => {
     const timeout = setTimeout(() => {
-      const result = closure_1_17.set(1);
+      const result = closure_1_15.set(1);
     }, 200);
     return () => {
       clearTimeout(closure_0);
     };
   }, items);
-  class K {
+  let items1 = [closure_21, pIPState1, require("VoicePanelPIPUtils").getScaledPIPContainerHeight, require("VoicePanelPIPUtils").calculatePIPPositionFromVelocity, windowDimensions, safeArea, updateSharedValueIfChangedDefault, wrapperDimensions];
+  _require = undefined;
+  importDefault = undefined;
+  c2 = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  StyleSheet = undefined;
+  c6 = undefined;
+  [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27] = items1;
+  class VoicePanelPIPTsx3 {
     constructor(arg0, arg1, arg2) {
-      scale = closure_1_15.scale;
+      scale = closure_0.scale;
       value = scale.get();
-      result = closure_1_15.width * value;
-      obj = closure_0(closure_3[16]);
-      obj1 = { height: closure_1_15.height, containerHeight: closure_1_15.containerHeight, showSecondaryPIP: closure_1_15.showSecondaryPIP, scale: value };
-      scaledPIPContainerHeight = obj.getScaledPIPContainerHeight(obj1);
-      obj3 = closure_0(closure_3[16]);
-      obj5 = { velocityX: arg1, velocityY: arg2, absoluteX: arg0.baseX + arg0.offsetX + result / 2, absoluteY: arg0.baseY + arg0.offsetY + scaledPIPContainerHeight / 2, windowDimensions: closure_1_10.get(), safeArea: closure_1_6.get() };
-      result1 = obj3.calculatePIPPositionFromVelocity(obj5);
-      ({ pipX, pipY } = result1);
-      tmp5 = closure_1(closure_3[17])(closure_1_11, { pipX, pipY });
+      obj = { height: closure_0.height, containerHeight: closure_0.containerHeight, showSecondaryPIP: closure_0.showSecondaryPIP, scale: value };
+      result = closure_0.width * value;
+      obj1 = { velocityX: arg1, velocityY: arg2, absoluteX: arg0.baseX + arg0.offsetX + result / 2, absoluteY: arg0.baseY + arg0.offsetY + closure_1(obj) / 2, windowDimensions: closure_3.get(), safeArea: closure_4.get() };
+      tmp3 = closure_2(obj1);
+      obj4 = { pipX: tmp3.pipX, pipY: tmp3.pipY };
+      tmp4 = closure_5(closure_6, obj4);
       return;
     }
   }
-  const tmp5Result12 = setMode(stateFromStores2[15]);
-  K.__closure = { pipState: pIPState1, getScaledPIPContainerHeight: setMode(stateFromStores2[16]).getScaledPIPContainerHeight, calculatePIPPositionFromVelocity: setMode(stateFromStores2[16]).calculatePIPPositionFromVelocity, windowDimensions, safeArea, updateSharedValueIfChanged: pIPState(stateFromStores2[17]), wrapperDimensions };
-  K.__workletHash = 3320226117584;
-  K.__initData = __initData;
-  const items1 = [, , , , , , , ];
-  ({ containerHeight: arr2[0], height: arr2[1], scale: arr2[2], showSecondaryPIP: arr2[3], width: arr2[4] } = pIPState1);
-  items1[5] = safeArea;
-  items1[6] = windowDimensions;
-  items1[7] = wrapperDimensions;
-  const callback = obj.useCallback(K, items1);
-  closure_129_18 = callback;
-  let obj6 = { pipState: pIPState1, getScaledPIPContainerHeight: setMode(stateFromStores2[16]).getScaledPIPContainerHeight, calculatePIPPositionFromVelocity: setMode(stateFromStores2[16]).calculatePIPPositionFromVelocity, windowDimensions, safeArea, updateSharedValueIfChanged: pIPState(stateFromStores2[17]), wrapperDimensions };
-  class Q {
+  let items2 = [tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27];
+  VoicePanelPIPTsx3.__closure = items2;
+  VoicePanelPIPTsx3.__workletHash = 5650627550281;
+  VoicePanelPIPTsx3.__initData = tmp20;
+  let items3 = [, , , , , , , ];
+  ({ containerHeight: arr4[0], height: arr4[1], scale: arr4[2], showSecondaryPIP: arr4[3], width: arr4[4] } = pIPState1);
+  items3[5] = safeArea;
+  items3[6] = windowDimensions;
+  items3[7] = wrapperDimensions;
+  const callback = obj.useCallback(VoicePanelPIPTsx3, items3);
+  closure_129_16 = callback;
+  const tmp5Result12 = require("module_1652");
+  let items4 = [closure_22, pIPState1, require("VoicePanelPIPUtils").getScaledPIPContainerHeight, tmp12, sharedValue, require("VoicePanelPIPUtils").getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, c9, require("VoicePanelPIPUtils").PIP_LAYOUT_PHYSICS, sharedValue1, require("spring/spring").withSpring, require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius];
+  _require = undefined;
+  importDefault = undefined;
+  c2 = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  StyleSheet = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
+  VoicePanelPIPModes = undefined;
+  c13 = undefined;
+  [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43] = items4;
+  class VoicePanelPIPTsx4 {
     constructor() {
-      scale = closure_1_15.scale;
-      tmp = closure_1_15;
-      result = closure_1_15.width * scale.get();
-      tmp3 = closure_0;
-      tmp4 = closure_3;
-      obj = closure_0(closure_3[16]);
-      obj1 = { height: closure_1_15.height, containerHeight: closure_1_15.containerHeight, showSecondaryPIP: null, scale: null };
-      showSecondaryPIP = closure_1_15.showSecondaryPIP;
+      scale = closure_0.scale;
+      tmp = closure_0;
+      result = closure_0.width * scale.get();
+      obj = { height: closure_0.height, containerHeight: closure_0.containerHeight, showSecondaryPIP: null, scale: null };
+      showSecondaryPIP = closure_0.showSecondaryPIP;
+      tmp3 = closure_1;
       if (showSecondaryPIP) {
-        showSecondaryPIP = closure_1;
+        showSecondaryPIP = closure_2;
       }
-      obj1.showSecondaryPIP = showSecondaryPIP;
+      obj.showSecondaryPIP = showSecondaryPIP;
       scale2 = tmp.scale;
-      obj1.scale = scale2.get();
-      scaledPIPContainerHeight = obj.getScaledPIPContainerHeight(obj1);
-      value = closure_1_16.get();
+      obj.scale = scale2.get();
+      tmp3Result = tmp3(obj);
+      value = closure_3.get();
       if (value.active) {
         x = value.baseX + value.offsetX;
         y = value.baseY + value.offsetY;
       } else {
-        tmp3Result = tmp3(tmp4[16]);
+        tmp6 = closure_4;
         size = { pipX: null, pipY: null, width: null, height: null, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null };
-        tmp7 = closure_1_11;
-        size.pipX = closure_1_11.get().pipX;
-        size.pipY = closure_1_11.get().pipY;
+        tmp7 = closure_5;
+        size.pipX = closure_5.get().pipX;
+        size.pipY = closure_5.get().pipY;
         size.width = result;
-        size.height = scaledPIPContainerHeight;
-        tmp8 = closure_1_10;
-        size.windowDimensions = closure_1_10.get();
-        tmp9 = closure_1_6;
-        size.safeArea = closure_1_6.get();
-        tmp10 = closure_1_5;
-        size.bottomAvoidanceRegion = closure_1_5.get().bottom;
-        size.topAvoidanceRegion = closure_1_5.get().top;
-        clampedPIPPosition = tmp3Result.getClampedPIPPosition(size);
-        ({ x, y } = clampedPIPPosition);
+        size.height = tmp3Result;
+        tmp8 = closure_6;
+        size.windowDimensions = closure_6.get();
+        tmp9 = closure_7;
+        size.safeArea = closure_7.get();
+        tmp10 = closure_8;
+        size.bottomAvoidanceRegion = closure_8.get().bottom;
+        size.topAvoidanceRegion = closure_8.get().top;
+        tmp11 = closure_4(size);
+        ({ x, y } = tmp11);
       }
-      if (value.active) {
-        PIP_LAYOUT_PHYSICS = DRAWER_SPRING_PHYSICS;
-      } else {
-        PIP_LAYOUT_PHYSICS = tmp3(tmp4[16]).PIP_LAYOUT_PHYSICS;
-      }
-      size1 = { width: result, height: scaledPIPContainerHeight, opacity: closure_1_17.get(), transform: null, borderRadius: null };
-      obj11 = { translateX: null };
-      tmp3Result1 = tmp3(tmp4[18]);
-      obj11.translateX = tmp3Result1.withSpring(x, PIP_LAYOUT_PHYSICS);
+      tmp12 = value.active ? closure_9 : closure_10;
+      size1 = { width: result, height: tmp3Result, opacity: closure_11.get(), transform: null, borderRadius: null };
+      obj1 = { translateX: closure_12(x, tmp12) };
       items = [, ];
-      items[0] = obj11;
-      obj12 = { translateY: null };
-      tmp3Result2 = tmp3(tmp4[18]);
-      obj12.translateY = tmp3Result2.withSpring(y, PIP_LAYOUT_PHYSICS);
-      items[1] = obj12;
+      items[0] = obj1;
+      obj6 = { translateY: closure_12(y, tmp12) };
+      items[1] = obj6;
       size1.transform = items;
-      tmp3Result3 = tmp3(tmp4[16]);
-      size1.borderRadius = tmp3Result3.getVoicePanelPIPBorderRadius(result, scaledPIPContainerHeight);
+      size1.borderRadius = closure_13(result, tmp3Result);
       return size1;
     }
   }
-  const tmp5Result13 = setMode(stateFromStores2[15]);
-  Q.__closure = { pipState: pIPState1, getScaledPIPContainerHeight: setMode(stateFromStores2[16]).getScaledPIPContainerHeight, mainTileInLayout: tmp12, gestureState: sharedValue, getClampedPIPPosition: setMode(stateFromStores2[16]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, DRAWER_SPRING_PHYSICS, PIP_LAYOUT_PHYSICS: setMode(stateFromStores2[16]).PIP_LAYOUT_PHYSICS, opacity: sharedValue1, withSpring: setMode(stateFromStores2[18]).withSpring, getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius };
-  Q.__workletHash = 8053970012929;
-  Q.__initData = __initData2;
-  const animatedStyle = tmp5Result13.useAnimatedStyle(Q);
-  let obj7 = { pipState: pIPState1, getScaledPIPContainerHeight: setMode(stateFromStores2[16]).getScaledPIPContainerHeight, mainTileInLayout: tmp12, gestureState: sharedValue, getClampedPIPPosition: setMode(stateFromStores2[16]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, DRAWER_SPRING_PHYSICS, PIP_LAYOUT_PHYSICS: setMode(stateFromStores2[16]).PIP_LAYOUT_PHYSICS, opacity: sharedValue1, withSpring: setMode(stateFromStores2[18]).withSpring, getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius };
-  class Z {
+  let items5 = [tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43];
+  VoicePanelPIPTsx4.__closure = items5;
+  VoicePanelPIPTsx4.__workletHash = 1405151030616;
+  VoicePanelPIPTsx4.__initData = tmp29;
+  const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelPIPTsx4);
+  const tmp5Result13 = require("module_1652");
+  let items6 = [closure_23, pIPState1, require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp45, tmp46, tmp47] = items6;
+  class VoicePanelPIPTsx5 {
     constructor() {
-      ({ width, height, scale } = closure_1_15);
-      size = { width: width * scale.get(), height: height * scale.get(), borderRadius: null };
-      obj2 = closure_0(closure_3[16]);
-      size.borderRadius = obj2.getVoicePanelPIPBorderRadius(width, height);
+      ({ width, height, scale } = closure_0);
+      size = { width: width * scale.get(), height: height * scale.get(), borderRadius: closure_1(width, height) };
       return size;
     }
   }
-  const tmp5Result14 = setMode(stateFromStores2[15]);
-  Z.__closure = { pipState: pIPState1, getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius };
-  Z.__workletHash = 16127624969315;
-  Z.__initData = __initData3;
-  const animatedStyle1 = tmp5Result14.useAnimatedStyle(Z);
-  const obj8 = { pipState: pIPState1, getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius };
-  let fn = function $() {
-    let opacity = 0;
-    if (sharedValue) {
-      opacity = 1;
+  let items7 = [tmp46, tmp47];
+  VoicePanelPIPTsx5.__closure = items7;
+  VoicePanelPIPTsx5.__workletHash = 13253829300730;
+  VoicePanelPIPTsx5.__initData = tmp45;
+  const animatedStyle1 = require("module_1652").useAnimatedStyle(VoicePanelPIPTsx5);
+  const tmp5Result14 = require("module_1652");
+  let items8 = [closure_24, tmp13];
+  _require = undefined;
+  [tmp49, tmp50] = items8;
+  class VoicePanelPIPTsx6 {
+    constructor() {
+      opacity = 0;
+      if (closure_0) {
+        opacity = 1;
+      }
+      return { opacity };
     }
-    return { opacity };
-  };
-  fn.__closure = { mainTileVisible: tmp13 };
-  fn.__workletHash = 10222959683662;
-  fn.__initData = __initData4;
-  const items2 = [isDockEnabled, sharedValue, pipAvoidanceSpecs, , , , , , , , , , ];
-  ({ containerHeight: arr3[3], height: arr3[4], scale: arr3[5], showSecondaryPIP: arr3[6], width: arr3[7] } = pIPState1);
-  items2[8] = safeArea;
-  items2[9] = callback;
-  items2[10] = windowDimensions;
-  items2[11] = wrapperDimensions;
-  items2[12] = wrapperOffset;
-  const animatedStyle2 = setMode(stateFromStores2[15]).useAnimatedStyle(fn);
-  const items3 = [controlsSpecs, hideControls, setFocused, showControls, mode2, setMode2];
+  }
+  let items9 = [tmp50];
+  VoicePanelPIPTsx6.__closure = items9;
+  VoicePanelPIPTsx6.__workletHash = 14702367813687;
+  VoicePanelPIPTsx6.__initData = tmp49;
+  const items10 = [isDockEnabled, sharedValue, pipAvoidanceSpecs, , , , , , , , , , ];
+  ({ containerHeight: arr11[3], height: arr11[4], scale: arr11[5], showSecondaryPIP: arr11[6], width: arr11[7] } = pIPState1);
+  items10[8] = safeArea;
+  items10[9] = callback;
+  items10[10] = windowDimensions;
+  items10[11] = wrapperDimensions;
+  items10[12] = wrapperOffset;
+  const animatedStyle2 = require("module_1652").useAnimatedStyle(VoicePanelPIPTsx6);
+  const items11 = [controlsSpecs, hideControls, setFocused, showControls, mode2, setMode2];
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
     let result = Gesture.Pan().manualActivation(true).shouldCancelWhenOutside(false);
-    const fn = function c(allTouches) {
-      const tmp = settlePIPPosition(allTouches.allTouches);
-      const tmp2 = getTouchesSpread(allTouches.allTouches, tmp);
-      if (gestureState.get().pressed) {
-        const obj5 = { originX: null, originY: null, spread: null };
-        ({ x: obj3.originX, y: obj3.originY } = tmp);
-        obj5.spread = tmp2;
-        pIPState(stateFromStores2[17])(gestureState, obj5);
-      } else {
-        const obj6 = {};
-        const merged = Object.assign(INACTIVE_GESTURE_STATE);
-        obj6.pressed = true;
-        ({ x: obj2.originX, y: obj2.originY } = tmp);
-        obj6.spread = tmp2;
-        const result = gestureState.set(obj6);
+    items = [closure_25, getTouchesCentroid, getTouchesSpread, isLaunched, closure_20, updateSharedValueIfChangedDefault];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items;
+    class VoicePanelPIPTsx7 {
+      constructor(arg0) {
+        tmp = closure_0(arg0.allTouches);
+        tmp2 = closure_1(arg0.allTouches, tmp);
+        obj = closure_2;
+        if (closure_2.get().pressed) {
+          tmp7 = closure_4;
+          obj1 = { originX: null, originY: null, spread: null };
+          ({ x: obj3.originX, y: obj3.originY } = tmp);
+          obj1.spread = tmp2;
+          tmp8 = closure_4(obj, obj1);
+        } else {
+          obj4 = {};
+          tmp3 = closure_3;
+          tmp4 = obj4;
+          merged = Object.assign(closure_3);
+          flag = true;
+          obj4.pressed = true;
+          ({ x: obj2.originX, y: obj2.originY } = tmp);
+          obj4.spread = tmp2;
+          result = obj.set(obj4);
+        }
+        return;
       }
-    };
+    }
+    const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13];
+    VoicePanelPIPTsx7.__closure = items1;
+    VoicePanelPIPTsx7.__workletHash = 15159195562233;
+    VoicePanelPIPTsx7.__initData = tmp8;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    fn.__closure = { getTouchesCentroid, getTouchesSpread, gestureState, INACTIVE_GESTURE_STATE, updateSharedValueIfChanged: updateSharedValueIfChangedDefault };
-    fn.__workletHash = 8382885098999;
-    fn.__initData = __initData5;
-    let obj = { getTouchesCentroid, getTouchesSpread, gestureState, INACTIVE_GESTURE_STATE, updateSharedValueIfChanged: updateSharedValueIfChangedDefault };
-    const fn2 = function s(allTouches) {
-      allTouches = allTouches.allTouches;
-      const found = allTouches.filter((item) => {
-        allTouches = item;
-        const changedTouches = allTouches.changedTouches;
-        return !changedTouches.some((id) => id.id === item.id);
-      });
-      if (0 !== found.length) {
-        const tmp6 = settlePIPPosition(found);
-        const obj = { originX: null, originY: null, spread: null };
-        ({ x: obj.originX, y: obj.originY } = tmp6);
-        obj.spread = getTouchesSpread(found, tmp6);
-        pIPState(stateFromStores2[17])(gestureState, obj);
-        const tmp9 = pIPState(stateFromStores2[17]);
-      } else {
-        pIPState(stateFromStores2[17])(gestureState, { pressed: false });
+    const items2 = [closure_26, updateSharedValueIfChangedDefault, isLaunched, getTouchesCentroid, getTouchesSpread];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp14, tmp15, tmp16, tmp17, tmp18] = items2;
+    class VoicePanelPIPTsx8 {
+      constructor(arg0) {
+        closure_0 = arg0;
+        allTouches = arg0.allTouches;
+        found = allTouches.filter(/* F141636 */ function() { ... });
+        if (0 !== found.length) {
+          tmp4 = closure_2;
+          tmp5 = closure_2(found);
+          tmp6 = closure_0;
+          tmp7 = closure_1;
+          obj = { originX: null, originY: null, spread: null };
+          ({ x: obj.originX, y: obj.originY } = tmp5);
+          tmp8 = closure_3;
+          obj.spread = closure_3(found, tmp5);
+          tmp9 = closure_0(closure_1, obj);
+        } else {
+          tmp = closure_0;
+          tmp2 = closure_1;
+          tmp3 = closure_0(closure_1, { pressed: false });
+        }
+        return;
       }
-    };
-    const onTouchesDownResult = result.onTouchesDown(fn);
-    fn2.__closure = { updateSharedValueIfChanged: updateSharedValueIfChangedDefault, gestureState, getTouchesCentroid, getTouchesSpread };
-    fn2.__workletHash = 2310608882572;
-    fn2.__initData = __initData4;
-    let obj2 = { updateSharedValueIfChanged: updateSharedValueIfChangedDefault, gestureState, getTouchesCentroid, getTouchesSpread };
-    const fn3 = function o(allTouches, activate) {
-      const point = settlePIPPosition(allTouches.allTouches);
-      const tmp = getTouchesSpread(allTouches.allTouches, point);
-      value = gestureState.get();
-      if (value.active) {
-        const diff = value.offsetX + point.x - value.originX;
-        const diff1 = value.offsetY + point.y - value.originY;
-        let sum1 = diff1;
-        let sum = diff;
-        if (value.spread > 8) {
+    }
+    const items3 = [tmp15, tmp16, tmp17, tmp18];
+    VoicePanelPIPTsx8.__closure = items3;
+    VoicePanelPIPTsx8.__workletHash = 6786919878348;
+    VoicePanelPIPTsx8.__initData = tmp14;
+    const onTouchesDownResult = result.onTouchesDown(VoicePanelPIPTsx7);
+    const items4 = [closure_27, getTouchesCentroid, getTouchesSpread, isLaunched, 8, c13, VoicePanelPIPUtils.clampPIPScale, c8, c4, c3, LegacyBaseButton.State, 10, VoicePanelPIPUtils.getClampedPIPPosition, c9, VoicePanelPIPUtils.getScaledPIPContainerHeight, c12, updateSharedValueIfChangedDefault, c10, _mod1705.scheduleOnRN, utils_triggerIOSHapticDefault];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    c9 = undefined;
+    c10 = undefined;
+    c11 = undefined;
+    c12 = undefined;
+    c13 = undefined;
+    c14 = undefined;
+    c15 = undefined;
+    c16 = undefined;
+    c17 = undefined;
+    c18 = undefined;
+    [tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41] = items4;
+    class VoicePanelPIPTsx9 {
+      constructor(arg0, arg1) {
+        point = closure_0(arg0.allTouches);
+        tmp = closure_1(arg0.allTouches, point);
+        obj = closure_2;
+        value = closure_2.get();
+        if (value.active) {
+          diff = value.offsetX + point.x - value.originX;
+          diff1 = value.offsetY + point.y - value.originY;
           sum1 = diff1;
           sum = diff;
-          if (8 < tmp) {
-            const scale3 = styles.scale;
-            const value3 = scale3.get();
-            const obj2 = { scale: value3 * (tmp / value.spread), width: null, containerHeight: null, showSecondaryPIP: null, windowDimensions: null, safeArea: null, pipAvoidanceSpecs: null };
-            ({ width: obj10.width, containerHeight: obj10.containerHeight, showSecondaryPIP: obj10.showSecondaryPIP } = styles);
-            obj2.windowDimensions = windowDimensions.get();
-            obj2.safeArea = safeArea.get();
-            obj2.pipAvoidanceSpecs = pipAvoidanceSpecs.get();
-            const clampPIPScaleResult = setMode(stateFromStores2[16]).clampPIPScale(obj2);
+          if (value.spread > closure_3) {
             sum1 = diff1;
             sum = diff;
-            if (clampPIPScaleResult !== value3) {
-              const scale2 = styles.scale;
-              const result = scale2.set(clampPIPScaleResult);
-              const result1 = clampPIPScaleResult / value3;
-              sum = diff + (point.x - (value.baseX + diff)) * (1 - result1);
-              sum1 = diff1 + (point.y - (value.baseY + diff1)) * (1 - result1);
+            if (tmp > tmp25) {
+              scale3 = closure_4.scale;
+              tmp33 = closure_4;
+              value1 = scale3.get();
+              tmp35 = closure_5;
+              obj1 = { scale: null, width: null, containerHeight: null, showSecondaryPIP: null, windowDimensions: null, safeArea: null, pipAvoidanceSpecs: null };
+              obj1.scale = value1 * (tmp / value.spread);
+              ({ width: obj6.width, containerHeight: obj6.containerHeight, showSecondaryPIP: obj6.showSecondaryPIP } = closure_4);
+              tmp36 = closure_6;
+              obj1.windowDimensions = closure_6.get();
+              tmp37 = closure_7;
+              obj1.safeArea = closure_7.get();
+              tmp38 = closure_8;
+              obj1.pipAvoidanceSpecs = closure_8.get();
+              tmp39 = closure_5(obj1);
+              sum1 = diff1;
+              sum = diff;
+              if (tmp39 !== value1) {
+                scale2 = tmp33.scale;
+                result = scale2.set(tmp39);
+                result1 = tmp39 / value1;
+                num = 1;
+                sum = diff + (point.x - (value.baseX + diff)) * (1 - result1);
+                sum1 = diff1 + (point.y - (value.baseY + diff1)) * (1 - result1);
+              }
             }
-            const obj9 = setMode(stateFromStores2[16]);
+          }
+          obj7 = { pressed: null, active: true, baseX: null, baseY: null, offsetX: null, offsetY: null, originX: null, originY: null, spread: null };
+          ({ pressed: obj5.pressed, baseX: obj5.baseX, baseY: obj5.baseY } = value);
+          obj7.offsetX = sum;
+          obj7.offsetY = sum1;
+          ({ x: obj5.originX, y: obj5.originY } = point);
+          obj7.spread = tmp;
+          result2 = obj.set(obj7);
+        } else {
+          tmp3 = closure_9;
+          if (arg0.state === closure_9.BEGAN) {
+            tmp31 = globalThis;
+            _Math3 = Math;
+            tmp32 = closure_10;
+            if (Math.abs(value.originX - point.x) <= closure_10) {
+              _Math = Math;
+              if (Math.abs(value.originY - point.y) <= tmp32) {
+                _Math2 = Math;
+              }
+            }
+            tmp4 = closure_4;
+            scale = closure_4.scale;
+            value2 = scale.get();
+            tmp6 = closure_11;
+            size = { pipX: null, pipY: null, width: null, height: null, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null };
+            tmp7 = closure_12;
+            size.pipX = closure_12.get().pipX;
+            size.pipY = closure_12.get().pipY;
+            size.width = closure_4.width * value2;
+            tmp8 = closure_13;
+            obj8 = { height: null, containerHeight: null, showSecondaryPIP: null, scale: null };
+            ({ height: obj3.height, containerHeight: obj3.containerHeight, showSecondaryPIP: obj3.showSecondaryPIP } = closure_4);
+            obj8.scale = value2;
+            size.height = closure_13(obj8);
+            tmp9 = closure_6;
+            size.windowDimensions = closure_6.get();
+            tmp10 = closure_7;
+            size.safeArea = closure_7.get();
+            tmp11 = closure_8;
+            size.bottomAvoidanceRegion = closure_8.get().bottom;
+            size.topAvoidanceRegion = closure_8.get().top;
+            tmp12 = closure_11(size);
+            obj9 = { pressed: true, active: true, baseX: null, baseY: null, offsetX: 0, offsetY: 0, originX: null, originY: null, spread: null };
+            ({ x: obj4.baseX, y: obj4.baseY } = tmp12);
+            ({ x: obj4.originX, y: obj4.originY } = point);
+            obj9.spread = tmp;
+            result3 = obj.set(obj9);
+            tmp14 = closure_14;
+            if (!closure_14) {
+              tmp15 = closure_15;
+              tmp16 = closure_16;
+              tmp17 = closure_15(closure_16, { gestureActive: true, x: 0, y: 0 });
+            }
+            tmp18 = arg1;
+            activateResult = arg1.activate();
+            tmp20 = closure_17;
+            tmp21 = closure_18;
+            tmp22 = closure_17(closure_18);
           }
         }
-        const obj3 = { pressed: null, active: true, baseX: null, baseY: null, offsetX: null, offsetY: null, originX: null, originY: null, spread: null };
-        ({ pressed: obj8.pressed, baseX: obj8.baseX, baseY: obj8.baseY } = value);
-        obj3.offsetX = sum;
-        obj3.offsetY = sum1;
-        ({ x: obj8.originX, y: obj8.originY } = point);
-        obj3.spread = tmp;
-        const result2 = gestureState.set(obj3);
-      } else if (allTouches.state === setMode(stateFromStores2[19]).State.BEGAN) {
-        const _Math3 = Math;
-        if (Math.abs(value.originX - point.x) <= 10) {
-          const _Math = Math;
-          if (Math.abs(value.originY - point.y) <= 10) {
-            const _Math2 = Math;
-          }
+        return;
+      }
+    }
+    const items5 = [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41];
+    VoicePanelPIPTsx9.__closure = items5;
+    VoicePanelPIPTsx9.__workletHash = 17307276361367;
+    VoicePanelPIPTsx9.__initData = tmp22;
+    const onTouchesUpResult = result.onTouchesDown(VoicePanelPIPTsx7).onTouchesUp(VoicePanelPIPTsx8);
+    const tmp19 = c13;
+    const items6 = [closure_28, isLaunched, closure_1_16, c12, updateSharedValueIfChangedDefault, c10, closure_20, _mod1705.scheduleOnRN, ExternalPipDefault.updateSourceTrackingView, VoicePanelPIPScaleCache.setVoicePanelPIPScaleCached, tmp19];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    c9 = undefined;
+    [tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52] = items6;
+    class VoicePanelPIPTsx10 {
+      constructor(arg0) {
+        obj = closure_0;
+        ({ velocityX, velocityY } = arg0);
+        tmp = closure_1(closure_0.get(), velocityX, velocityY);
+        if (!closure_2) {
+          tmp2 = closure_3;
+          tmp3 = closure_4;
+          tmp4 = closure_3(closure_4, { gestureActive: false });
         }
-        const scale = styles.scale;
-        const value4 = scale.get();
-        const size = { pipX: wrapperDimensions.get().pipX, pipY: wrapperDimensions.get().pipY, width: styles.width * value4, height: null, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null };
-        const tmp3Result = setMode(stateFromStores2[16]);
-        const obj4 = { height: null, containerHeight: null, showSecondaryPIP: null, scale: null };
-        ({ height: obj5.height, containerHeight: obj5.containerHeight, showSecondaryPIP: obj5.showSecondaryPIP } = styles);
-        obj4.scale = value4;
-        size.height = setMode(stateFromStores2[16]).getScaledPIPContainerHeight(obj4);
-        size.windowDimensions = windowDimensions.get();
-        size.safeArea = safeArea.get();
-        size.bottomAvoidanceRegion = pipAvoidanceSpecs.get().bottom;
-        size.topAvoidanceRegion = pipAvoidanceSpecs.get().top;
-        const clampedPIPPosition = tmp3Result.getClampedPIPPosition(size);
-        const obj7 = { pressed: true, active: true, baseX: null, baseY: null, offsetX: 0, offsetY: 0, originX: null, originY: null, spread: null };
-        ({ x: obj6.baseX, y: obj6.baseY } = clampedPIPPosition);
-        ({ x: obj6.originX, y: obj6.originY } = point);
-        obj7.spread = tmp;
-        const result3 = gestureState.set(obj7);
-        if (!isDockEnabled) {
-          pIPState(stateFromStores2[17])(wrapperOffset, { gestureActive: true, x: 0, y: 0 });
+        result = obj.set(closure_5);
+        tmp6 = closure_6(closure_7);
+        scale = closure_9.scale;
+        tmp7 = closure_6(closure_8, scale.get());
+        return;
+      }
+    }
+    const items7 = [tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52];
+    VoicePanelPIPTsx10.__closure = items7;
+    VoicePanelPIPTsx10.__workletHash = 9350074406559;
+    VoicePanelPIPTsx10.__initData = tmp42;
+    const onTouchesMoveResult = result.onTouchesDown(VoicePanelPIPTsx7).onTouchesUp(VoicePanelPIPTsx8).onTouchesMove(VoicePanelPIPTsx9);
+    const items8 = [closure_29, c12, updateSharedValueIfChangedDefault, c10, isLaunched, closure_20];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    [tmp53, tmp54, tmp55, tmp56, tmp57, tmp58] = items8;
+    class VoicePanelPIPTsx11 {
+      constructor() {
+        if (!closure_0) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          tmp3 = closure_1(closure_2, { gestureActive: false });
         }
-        activate.activate();
-        const tmp3Result3 = setMode(stateFromStores2[16]);
-        setMode(stateFromStores2[15]).runOnJS(pIPState(stateFromStores2[20]))();
-        const tmp3Result4 = setMode(stateFromStores2[15]);
+        result = closure_3.set(closure_4);
+        return;
       }
-    };
-    const onTouchesUpResult = onTouchesDownResult.onTouchesUp(fn2);
-    fn3.__closure = { getTouchesCentroid, getTouchesSpread, gestureState, MIN_PINCH_SPAN: 8, pipState, clampPIPScale: VoicePanelPIPUtils.clampPIPScale, windowDimensions, safeArea, pipAvoidanceSpecs, State: LegacyBaseButton.State, MIN_GESTURE_START: 10, getClampedPIPPosition: VoicePanelPIPUtils.getClampedPIPPosition, wrapperDimensions, getScaledPIPContainerHeight: VoicePanelPIPUtils.getScaledPIPContainerHeight, isDockEnabled, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperOffset, runOnJS: ReanimatedRexport.runOnJS, triggerIOSHaptic: utils_triggerIOSHapticDefault };
-    fn3.__workletHash = 12100381069327;
-    fn3.__initData = __initData3;
-    let obj3 = { getTouchesCentroid, getTouchesSpread, gestureState, MIN_PINCH_SPAN: 8, pipState, clampPIPScale: VoicePanelPIPUtils.clampPIPScale, windowDimensions, safeArea, pipAvoidanceSpecs, State: LegacyBaseButton.State, MIN_GESTURE_START: 10, getClampedPIPPosition: VoicePanelPIPUtils.getClampedPIPPosition, wrapperDimensions, getScaledPIPContainerHeight: VoicePanelPIPUtils.getScaledPIPContainerHeight, isDockEnabled, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperOffset, runOnJS: ReanimatedRexport.runOnJS, triggerIOSHaptic: utils_triggerIOSHapticDefault };
-    const fn4 = function n(arg0) {
-      ({ velocityX, velocityY } = arg0);
-      settlePIPPosition(gestureState.get(), velocityX, velocityY);
-      if (!isDockEnabled) {
-        pIPState(stateFromStores2[17])(wrapperOffset, { gestureActive: false });
-      }
-      const result = gestureState.set(INACTIVE_GESTURE_STATE);
-      setMode(stateFromStores2[15]).runOnJS(pIPState(stateFromStores2[21]).updateSourceTrackingView)();
-      const obj2 = setMode(stateFromStores2[15]);
-      const scale = styles.scale;
-      const obj3 = setMode(stateFromStores2[15]);
-      setMode(stateFromStores2[15]).runOnJS(setMode(stateFromStores2[22]).setVoicePanelPIPScaleCached)(scale.get());
-      const runOnJSResult = setMode(stateFromStores2[15]).runOnJS(setMode(stateFromStores2[22]).setVoicePanelPIPScaleCached);
-    };
-    const onTouchesMoveResult = onTouchesUpResult.onTouchesMove(fn3);
-    fn4.__closure = { gestureState, settlePIPPosition, isDockEnabled, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperOffset, INACTIVE_GESTURE_STATE, runOnJS: ReanimatedRexport.runOnJS, updateSourceTrackingView: ExternalPipDefault.updateSourceTrackingView, setVoicePanelPIPScaleCached: VoicePanelPIPScaleCache.setVoicePanelPIPScaleCached, pipState };
-    fn4.__workletHash = 2399485827386;
-    fn4.__initData = __initData2;
-    let obj4 = { gestureState, settlePIPPosition, isDockEnabled, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperOffset, INACTIVE_GESTURE_STATE, runOnJS: ReanimatedRexport.runOnJS, updateSourceTrackingView: ExternalPipDefault.updateSourceTrackingView, setVoicePanelPIPScaleCached: VoicePanelPIPScaleCache.setVoicePanelPIPScaleCached, pipState };
-    const fn5 = function t() {
-      if (!isDockEnabled) {
-        pIPState(stateFromStores2[17])(wrapperOffset, { gestureActive: false });
-      }
-      const result = gestureState.set(INACTIVE_GESTURE_STATE);
-    };
-    const onEndResult = onTouchesMoveResult.onEnd(fn4);
-    fn5.__closure = { isDockEnabled, updateSharedValueIfChanged: updateSharedValueIfChangedDefault, wrapperOffset, gestureState, INACTIVE_GESTURE_STATE };
-    fn5.__workletHash = 9338861894780;
-    fn5.__initData = __initData;
-    return onEndResult.onFinalize(fn5);
-  }, items2);
+    }
+    const items9 = [tmp54, tmp55, tmp56, tmp57, tmp58];
+    VoicePanelPIPTsx11.__closure = items9;
+    VoicePanelPIPTsx11.__workletHash = 9688406235986;
+    VoicePanelPIPTsx11.__initData = tmp53;
+    return result.onTouchesDown(VoicePanelPIPTsx7).onTouchesUp(VoicePanelPIPTsx8).onTouchesMove(VoicePanelPIPTsx9).onEnd(VoicePanelPIPTsx10).onFinalize(VoicePanelPIPTsx11);
+  }, items10);
   const memo1 = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
     const TapResult = Gesture2.Tap();
-    const enabledResult = Gesture2.Tap().enabled(setMode !== VoicePanelPIPModes.IN_APP);
-    const fn = function o() {
-      setMode(stateFromStores2[15]).runOnJS(setFocused)(null);
-    };
-    const maxDistanceResult = Gesture2.Tap().enabled(setMode !== VoicePanelPIPModes.IN_APP).maxDistance(30);
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setFocused };
-    fn.__workletHash = 12274741816775;
-    fn.__initData = __initData6;
-    let obj = { runOnJS: ReanimatedRexport.runOnJS, setFocused };
-    const onStartResult = maxDistanceResult.onStart(fn);
+    const tmp3 = c0;
+    const enabledResult = Gesture2.Tap().enabled(c0 !== VoicePanelPIPModes.IN_APP);
+    items = [closure_30, _mod1705.scheduleOnRN, c5];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp5, tmp6, tmp7] = items;
+    class VoicePanelPIPTsx12 {
+      constructor() {
+        tmp = closure_0(closure_1, null);
+        return;
+      }
+    }
+    const items1 = [tmp6, tmp7];
+    VoicePanelPIPTsx12.__closure = items1;
+    VoicePanelPIPTsx12.__workletHash = 292478158131;
+    VoicePanelPIPTsx12.__initData = tmp5;
+    const maxDistanceResult = Gesture2.Tap().enabled(c0 !== VoicePanelPIPModes.IN_APP).maxDistance(30);
+    const onStartResult = Gesture2.Tap().enabled(c0 !== VoicePanelPIPModes.IN_APP).maxDistance(30).onStart(VoicePanelPIPTsx12);
     const Gesture3 = LegacyBaseButton.Gesture;
-    const numberOfTapsResult = maxDistanceResult.onStart(fn).numberOfTaps(2);
+    const numberOfTapsResult = Gesture2.Tap().enabled(c0 !== VoicePanelPIPModes.IN_APP).maxDistance(30).onStart(VoicePanelPIPTsx12).numberOfTaps(2);
     const TapResult1 = Gesture3.Tap();
     const enabledResult1 = Gesture3.Tap().enabled(true);
-    const fn2 = function t() {
-      if (closure_1_0 === wrapperOffset.IN_APP) {
-        setMode(stateFromStores2[15]).runOnJS(closure_1_8)(windowDimensions.PANEL);
-        const obj3 = setMode(stateFromStores2[15]);
-      } else if (closure_1_3.get().mode === wrapperDimensions.HIDDEN) {
-        setMode(stateFromStores2[15]).runOnJS(showControls)();
-        const obj2 = setMode(stateFromStores2[15]);
-      } else {
-        setMode(stateFromStores2[15]).runOnJS(callback2)();
-        const obj = setMode(stateFromStores2[15]);
+    const items2 = [closure_31, tmp3, VoicePanelPIPModes, _mod1705.scheduleOnRN, c6, constants, c1, VoicePanelControlsModes, c7, c2];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18] = items2;
+    class VoicePanelPIPTsx13 {
+      constructor() {
+        if (closure_0 === closure_1.IN_APP) {
+          tmp9 = closure_2;
+          tmp10 = closure_3;
+          tmp11 = closure_4;
+          tmp12 = closure_2(closure_3, closure_4.PANEL);
+        } else {
+          tmp = closure_5;
+          tmp2 = closure_6;
+          if (closure_5.get().mode === closure_6.HIDDEN) {
+            tmp6 = closure_2;
+            tmp7 = closure_7;
+            tmp8 = closure_2(closure_7);
+          } else {
+            tmp3 = closure_2;
+            tmp4 = closure_8;
+            tmp5 = closure_2(closure_8);
+          }
+        }
+        return;
       }
-    };
-    const maxDistanceResult1 = Gesture3.Tap().enabled(true).maxDistance(30);
-    fn2.__closure = { pipMode: setMode, VoicePanelPIPModes, runOnJS: ReanimatedRexport.runOnJS, setMode, VoicePanelModes, controlsSpecs: stateFromStores2, VoicePanelControlsModes, showControls, hideControls: callback2 };
-    fn2.__workletHash = 2882749351054;
-    fn2.__initData = __initData7;
-    return Gesture.Exclusive(numberOfTapsResult, maxDistanceResult1.onStart(fn2));
-  }, items3);
-  const tmp5Result15 = setMode(stateFromStores2[15]);
-  const items4 = [EmbeddedActivitiesStore];
-  const stateFromStores = setMode(stateFromStores2[23]).useStateFromStores(items4, () => {
+    }
+    const items3 = [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18];
+    VoicePanelPIPTsx13.__closure = items3;
+    VoicePanelPIPTsx13.__workletHash = 2348764874490;
+    VoicePanelPIPTsx13.__initData = tmp9;
+    return Gesture.Exclusive(numberOfTapsResult, Gesture3.Tap().enabled(true).maxDistance(30).onStart(VoicePanelPIPTsx13));
+  }, items11);
+  const tmp5Result15 = require("module_1652");
+  const items12 = [c6];
+  const stateFromStores = require("initialize").useStateFromStores(items12, () => {
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     let _location;
     if (currentEmbeddedActivity != null) {
       _location = currentEmbeddedActivity.location;
     }
-    return embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location) !== ActivityPanelModes;
+    return embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location) !== c11;
   });
-  closure_129_19 = stateFromStores;
-  const tmp5Result16 = setMode(stateFromStores2[23]);
-  const items5 = [FramesStore];
-  const stateFromStores1 = setMode(stateFromStores2[23]).useStateFromStores(items5, () => {
-    const mainFrame = setFocused.getMainFrame();
+  closure_129_17 = stateFromStores;
+  const tmp5Result16 = require("initialize");
+  const items13 = [c7];
+  const stateFromStores1 = require("initialize").useStateFromStores(items13, () => {
+    const mainFrame = _undefined7.getMainFrame();
     let id = null;
-    if (isDockEnabled(mainFrame)) {
+    if (isLaunched(mainFrame)) {
       id = mainFrame.id;
     }
     return id;
   });
-  closure_129_20 = stateFromStores1;
-  const items6 = [stateFromStores, stateFromStores1, setMode2, setFocused];
+  closure_129_18 = stateFromStores1;
+  const items14 = [stateFromStores, stateFromStores1, setMode2, setFocused];
   const callback1 = obj.useCallback(() => {
-    if (getTouchesSpread) {
-      setMode(VoicePanelModes.PIP);
-      setFocused(null);
+    if (closure_1_17) {
+      _undefined6(constants.PIP);
+      _undefined5(null);
     }
-    if (null != INACTIVE_GESTURE_STATE) {
+    if (null != getTouchesCentroid) {
       FramesActionCreatorsDefault.updateFramePanelMode(tmp7, ActivityPanelModes.PANEL);
     } else {
       const result = EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode(ActivityPanelModes.PANEL);
     }
-  }, items6);
-  closure_129_21 = callback1;
-  const items7 = [callback1];
+  }, items14);
+  closure_129_19 = callback1;
+  const items15 = [callback1];
   const memo2 = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const TapResult = Gesture.Tap();
-    const fn = function t() {
-      setMode(stateFromStores2[15]).runOnJS(handleSecondaryPIPTap)();
-    };
-    const maxDistanceResult = Gesture.Tap().maxDistance(30);
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, handleSecondaryPIPTap };
-    fn.__workletHash = 16816842509722;
-    fn.__initData = __initData8;
-    return maxDistanceResult.onStart(fn);
-  }, items7);
-  let pushToTalk = tmp2(tmp3[27])(context.controlsSpecs).pushToTalk;
-  const tmp5Result17 = setMode(stateFromStores2[23]);
-  let fn2 = function n() {
-    const obj = { borderRadius: VoicePanelPIPUtils.getVoicePanelPIPBorderRadius(pIPState.width, pIPState.height) };
-    return obj;
-  };
-  const tmp5Result18 = setMode(stateFromStores2[15]);
-  fn2.__closure = { getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius, pipState: pIPState };
-  fn2.__workletHash = 8247781658227;
-  fn2.__initData = __initData5;
-  const animatedStyle3 = tmp5Result18.useAnimatedStyle(fn2);
-  const items8 = [setMode];
+    items = [closure_32, _mod1705.scheduleOnRN, getTouchesSpread];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp, tmp2, tmp3] = items;
+    class VoicePanelPIPTsx14 {
+      constructor() {
+        tmp = closure_0(closure_1);
+        return;
+      }
+    }
+    const items1 = [tmp2, tmp3];
+    VoicePanelPIPTsx14.__closure = items1;
+    VoicePanelPIPTsx14.__workletHash = 11426545283298;
+    VoicePanelPIPTsx14.__initData = tmp;
+    return Gesture.Tap().maxDistance(30).onStart(VoicePanelPIPTsx14);
+  }, items15);
+  let pushToTalk = tmp2(8965)(context.controlsSpecs).pushToTalk;
+  const tmp55 = c7;
+  const tmp5Result17 = require("initialize");
+  const items16 = [closure_33, require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius, pIPState];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp59, tmp60, tmp61] = items16;
+  class VoicePanelPIPTsx15 {
+    constructor() {
+      obj = { borderRadius: closure_0(closure_1.width, closure_1.height) };
+      return obj;
+    }
+  }
+  const items17 = [tmp60, tmp61];
+  VoicePanelPIPTsx15.__closure = items17;
+  VoicePanelPIPTsx15.__workletHash = 13048454285642;
+  VoicePanelPIPTsx15.__initData = tmp59;
+  const animatedStyle3 = require("module_1652").useAnimatedStyle(VoicePanelPIPTsx15);
+  const items18 = [setMode];
   const memo3 = obj.useMemo(() => {
     const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t.oN8bqe);
-    const items = [{ name: "activate" }];
+    items = [{ name: "activate" }];
     obj.accessibilityActions = items;
     obj.onAccessibilityAction = function onAccessibilityAction() {
-      setMode(windowDimensions.PANEL);
+      _undefined(constants.PANEL);
     };
     return obj;
-  }, items8);
-  let obj9 = { getVoicePanelPIPBorderRadius: setMode(stateFromStores2[16]).getVoicePanelPIPBorderRadius, pipState: pIPState };
-  const items9 = [FramesStore];
-  stateFromStores2 = setMode(stateFromStores2[23]).useStateFromStores(items9, () => {
-    const mainFrame = setFocused.getMainFrame();
+  }, items18);
+  const tmp5Result18 = require("module_1652");
+  const items19 = [tmp55];
+  const stateFromStores2 = require("initialize").useStateFromStores(items19, () => {
+    const mainFrame = _undefined7.getMainFrame();
     let id = null;
-    if (isDockEnabled(mainFrame)) {
+    if (isLaunched(mainFrame)) {
       id = mainFrame.id;
     }
     return id;
   });
-  const items10 = [stateFromStores2];
-  callback2 = obj.useCallback(() => {
-    if (null != stateFromStores2) {
+  importDefault = stateFromStores2;
+  const items20 = [stateFromStores2];
+  const callback2 = obj.useCallback(() => {
+    if (null != c1) {
       FramesActionCreatorsDefault.updateFramePanelMode(tmp, ActivityPanelModes.PANEL);
     } else {
       const result = EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode(ActivityPanelModes.PANEL);
     }
-  }, items10);
-  const items11 = [callback2];
+  }, items20);
+  c2 = callback2;
+  const items21 = [callback2];
   const memo4 = obj.useMemo(() => {
     const obj = { accessible: true, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["3ejJer"]);
-    const items = [{ name: "activate" }];
+    items = [{ name: "activate" }];
     obj.accessibilityActions = items;
-    obj.onAccessibilityAction = callback2;
+    obj.onAccessibilityAction = onAccessibilityAction;
     return obj;
-  }, items11);
+  }, items21);
   if (pushToTalk) {
-    pushToTalk = pIPState.mode !== VoicePanelPIPModes.IN_PANEL || tmp35;
-    const tmp36 = pIPState.mode !== VoicePanelPIPModes.IN_PANEL || tmp35;
+    pushToTalk = pIPState.mode !== tmp10.IN_PANEL || tmp67;
+    const tmp68 = pIPState.mode !== tmp10.IN_PANEL || tmp67;
   }
-  const tmp5Result19 = setMode(stateFromStores2[23]);
-  let fn3 = function u() {
-    ({ scale, height } = pIPState);
-    return { height: height * scale.get() };
-  };
-  fn3.__closure = { pipState: pIPState };
-  fn3.__workletHash = 10050652227575;
-  fn3.__initData = __initData6;
-  let fn4 = function h(originX) {
-    const active = sharedValue.get().active;
-    const size = { originX: spring.withSpring(originX.targetOriginX, VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS), originY: null, width: null, height: null };
-    size.originY = spring.withSpring(originX.targetOriginY, VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS);
-    if (active) {
-      let targetWidth = originX.targetWidth;
-    } else {
-      targetWidth = spring.withSpring(originX.targetWidth, VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS);
-      const tmpResult = spring;
+  const tmp5Result19 = require("initialize");
+  const items22 = [closure_34, pIPState];
+  _require = undefined;
+  [tmp69, tmp70] = items22;
+  class VoicePanelPIPTsx16 {
+    constructor() {
+      obj = { height: height * scale.get() };
+      ({ scale, height } = closure_0);
+      return obj;
     }
-    size.width = targetWidth;
-    if (active) {
-      let targetHeight = originX.targetHeight;
-    } else {
-      targetHeight = spring.withSpring(originX.targetHeight, VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS);
-      const tmpResult2 = spring;
+  }
+  const items23 = [tmp70];
+  VoicePanelPIPTsx16.__closure = items23;
+  VoicePanelPIPTsx16.__workletHash = 12876553277678;
+  VoicePanelPIPTsx16.__initData = tmp69;
+  const items24 = [closure_35, sharedValue, , ];
+  const animatedStyle4 = require("module_1652").useAnimatedStyle(VoicePanelPIPTsx16);
+  items24[2] = require("spring/spring").withSpring;
+  items24[3] = require("VoicePanelPIPUtils").PIP_LAYOUT_PHYSICS;
+  _require = undefined;
+  importDefault = undefined;
+  c2 = undefined;
+  [tmp72, tmp73, tmp74, tmp75] = items24;
+  class VoicePanelPIPTsx17 {
+    constructor(arg0) {
+      active = closure_0.get().active;
+      size = { originX: closure_1(arg0.targetOriginX, closure_2), originY: closure_1(arg0.targetOriginY, closure_2), width: null, height: null };
+      tmp = closure_1;
+      tmp2 = closure_2;
+      targetWidth = arg0.targetWidth;
+      size.width = active ? targetWidth : tmp(targetWidth, tmp2);
+      targetHeight = arg0.targetHeight;
+      obj1 = { animations: null, initialValues: null };
+      size.height = active ? targetHeight : tmp(targetHeight, tmp2);
+      obj1.animations = size;
+      obj1.initialValues = { originX: arg0.currentOriginX, originY: arg0.currentOriginY, width: arg0.currentWidth, height: arg0.currentHeight };
+      return obj1;
     }
-    size.height = targetHeight;
-    return { animations: size, initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight } };
-  };
-  const obj10 = { gestureState: sharedValue, withSpring: null, PIP_LAYOUT_PHYSICS: null };
-  const animatedStyle4 = setMode(stateFromStores2[15]).useAnimatedStyle(fn3);
-  obj10.withSpring = setMode(stateFromStores2[18]).withSpring;
-  obj10.PIP_LAYOUT_PHYSICS = setMode(stateFromStores2[16]).PIP_LAYOUT_PHYSICS;
-  fn4.__closure = obj10;
-  fn4.__workletHash = 3242653617608;
-  fn4.__initData = __initData7;
-  const items12 = [sharedValue];
-  const callback3 = obj.useCallback(fn4, items12);
-  const obj11 = { pointerEvents: "box-none", style: null, layout: callback3, children: null };
-  const items13 = [tmp.container, animatedStyle];
-  obj11.style = items13;
-  const tmp5Result20 = setMode(stateFromStores2[15]);
-  const obj12 = { gesture: memo, children: null };
-  const obj13 = { pointerEvents: "box-none", style: tmp.multiPipContainer, layout: callback3, children: null };
-  let tmp41Result = null;
-  const tmp2Result = pIPState(stateFromStores2[29]);
+  }
+  const items25 = [tmp73, tmp74, tmp75];
+  VoicePanelPIPTsx17.__closure = items25;
+  VoicePanelPIPTsx17.__workletHash = 244303183633;
+  VoicePanelPIPTsx17.__initData = tmp72;
+  const items26 = [sharedValue];
+  const callback3 = obj.useCallback(VoicePanelPIPTsx17, items26);
+  let obj6 = { pointerEvents: "box-none", style: null, layout: callback3, children: null };
+  const items27 = [tmp.container, animatedStyle];
+  obj6.style = items27;
+  const obj7 = { gesture: memo, children: null };
+  const obj8 = { pointerEvents: "box-none", style: tmp.multiPipContainer, layout: callback3, children: null };
+  let tmp78Result = null;
   if (tmp12) {
-    const obj14 = { style: null, pointerEvents: "box-none", layout: null };
-    const items14 = [, , , ];
-    ({ pipContentWrapper: arr15[0], inAppElevationShadow: arr15[1] } = tmp);
-    items14[2] = animatedStyle1;
-    items14[3] = animatedStyle2;
-    obj14.style = items14;
-    obj14.layout = callback3;
+    const obj9 = { style: null, pointerEvents: "box-none", layout: null };
+    const items28 = [, , , ];
+    ({ pipContentWrapper: arr29[0], inAppElevationShadow: arr29[1] } = tmp);
+    items28[2] = animatedStyle1;
+    items28[3] = animatedStyle2;
+    obj9.style = items28;
+    obj9.layout = callback3;
     let merged = Object.assign(memo3);
-    const obj15 = { gesture: memo1, children: null };
-    const obj16 = { style: null, layout: null, children: null };
-    const items15 = [tmp.pipMask, animatedStyle3];
-    obj16.style = items15;
-    obj16.layout = callback3;
-    const tmp2Result9 = tmp2(tmp3[29]);
-    const obj17 = { layoutTransition: callback3 };
-    obj16.children = pipState(tmp2(tmp3[30]), obj17);
-    obj15.children = pipState(tmp2(tmp3[29]), obj16);
-    obj14.children = pipState(tmp5(tmp3[19]).GestureDetector, obj15);
-    tmp41Result = pipState(tmp2Result9, obj14);
-    const tmp2Result10 = tmp2(tmp3[29]);
+    let obj10 = { gesture: memo1, children: null };
+    let obj11 = { style: null, layout: null, children: null };
+    const items29 = [tmp.pipMask, animatedStyle3];
+    obj11.style = items29;
+    obj11.layout = callback3;
+    let obj12 = { layoutTransition: callback3 };
+    obj11.children = closure_15(tmp2(19446), obj12);
+    obj10.children = closure_15(tmp2(1652).View, obj11);
+    obj9.children = closure_15(tmp5(5426).GestureDetector, obj10);
+    tmp78Result = closure_15(tmp2(1652).View, obj9);
   }
-  const items16 = [tmp41Result, ];
-  let tmp41Result3 = null;
+  const items30 = [tmp78Result, ];
+  let tmp78Result3 = null;
   if (pIPState.showSecondaryPIP) {
-    const obj18 = { style: null };
-    const items17 = [, , ];
-    ({ pipContentWrapper: arr18[0], inAppElevationShadow: arr18[1] } = tmp);
-    items17[2] = animatedStyle1;
-    obj18.style = items17;
+    const obj13 = { style: null };
+    const items31 = [, , ];
+    ({ pipContentWrapper: arr32[0], inAppElevationShadow: arr32[1] } = tmp);
+    items31[2] = animatedStyle1;
+    obj13.style = items31;
     const merged1 = Object.assign(memo4);
-    const obj19 = { style: null, children: null };
-    const items18 = [tmp.pipMask, animatedStyle3];
-    obj19.style = items18;
-    const tmp2Result11 = tmp2(tmp3[29]);
-    const obj20 = { gesture: memo2, children: null };
-    const obj21 = { style: StyleSheet.absoluteFill, children: null };
-    const tmp2Result12 = tmp2(tmp3[29]);
-    obj21.children = pipState(tmp2(tmp3[32]), {});
-    obj20.children = pipState(tmp2(tmp3[31]), obj21);
-    obj19.children = pipState(tmp5(tmp3[19]).GestureDetector, obj20);
-    obj18.children = pipState(tmp2Result12, obj19);
-    tmp41Result3 = pipState(tmp2Result11, obj18);
-    const tmp2Result13 = tmp2(tmp3[31]);
+    const obj14 = { style: null, children: null };
+    const items32 = [tmp.pipMask, animatedStyle3];
+    obj14.style = items32;
+    const obj15 = { gesture: memo2, children: null };
+    const obj16 = { style: StyleSheet.absoluteFill, children: closure_15(tmp2(19450), {}) };
+    obj15.children = closure_15(tmp2(7086), obj16);
+    obj14.children = closure_15(tmp5(5426).GestureDetector, obj15);
+    obj13.children = closure_15(tmp2(1652).View, obj14);
+    tmp78Result3 = closure_15(tmp2(1652).View, obj13);
+    const tmp2Result = tmp2(7086);
   }
-  items16[1] = tmp41Result3;
-  obj13.children = items16;
-  obj12.children = gestureState(pIPState(stateFromStores2[29]), obj13);
-  const items19 = [pipState(setMode(stateFromStores2[19]).GestureDetector, obj12), ];
-  let tmp41Result4 = null;
+  items30[1] = tmp78Result3;
+  obj8.children = items30;
+  obj7.children = closure_16(_modDef1652.View, obj8);
+  const items33 = [closure_15(require("LegacyBaseButton").GestureDetector, obj7), ];
+  let tmp78Result4 = null;
   if (tmp13) {
-    tmp41Result4 = null;
+    tmp78Result4 = null;
     if (pushToTalk) {
-      const obj22 = { pointerEvents: "box-none", style: null, layout: null, children: null };
-      const items20 = [tmp.pushToTalkContainer, animatedStyle4];
-      obj22.style = items20;
-      obj22.layout = callback3;
-      obj22.children = pipState(tmp2(tmp3[33]), {});
-      tmp41Result4 = pipState(tmp2(tmp3[29]), obj22);
-      const tmp2Result14 = tmp2(tmp3[29]);
+      const obj17 = { pointerEvents: "box-none", style: null, layout: null, children: null };
+      const items34 = [tmp.pushToTalkContainer, animatedStyle4];
+      obj17.style = items34;
+      obj17.layout = callback3;
+      obj17.children = closure_15(tmp2(19451), {});
+      tmp78Result4 = closure_15(tmp2(1652).View, obj17);
     }
   }
-  items19[1] = tmp41Result4;
-  obj11.children = items19;
-  return gestureState(tmp2Result, obj11);
+  items33[1] = tmp78Result4;
+  obj6.children = items33;
+  return closure_16(_modDef1652.View, obj6);
 }
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
-  return __initData(closure_37, { transitionState, transitionCleanUp }, arg0);
+  return closure_1_15(closure_37, { transitionState, transitionCleanUp }, arg0);
 }
 get_ActivityIndicator = fn(17);
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11223);
-({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
-const isLaunched = fn(6847).isLaunched;
+let StyleSheet = get_ActivityIndicator.StyleSheet;
+const VoicePanelConstants = fn(11360);
+({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const isLaunched = fn(6967).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -664,6 +833,8 @@ obj4.gap = SECONDARY_PIP_TOP_MARGIN;
 obj.multiPipContainer = obj4;
 obj.pushToTalkContainer = { position: "absolute", top: 0, left: 0, right: 0 };
 let closure_17 = createStyles.createStyles(obj);
+let items = [{ code: "(function getTouchesCentroid_VoicePanelPIPTsx1(touches){let x=0;let y=0;for(const touch of touches){x+=touch.absoluteX;y+=touch.absoluteY;}return{x:x/touches.length,y:y/touches.length};})" }];
+[tmp7] = items;
 function getTouchesCentroid(arg0) {
   let num = 0;
   let num2 = 0;
@@ -677,55 +848,55 @@ function getTouchesCentroid(arg0) {
   const point = { x: num / arg0.length, y: num2 / arg0.length };
   return point;
 }
-getTouchesCentroid.__closure = {};
-getTouchesCentroid.__workletHash = 15663926518076;
-getTouchesCentroid.__initData = { code: "function getTouchesCentroid_VoicePanelPIPTsx1(touches){let x=0;let y=0;for(const touch of touches){x+=touch.absoluteX;y+=touch.absoluteY;}return{x:x/touches.length,y:y/touches.length};}" };
-function getTouchesSpread(allTouches, point) {
-  if (allTouches.length < 2) {
+getTouchesCentroid.__workletHash = 1561842626525;
+getTouchesCentroid.__initData = tmp7;
+let items1 = [{ code: "(function getTouchesSpread_VoicePanelPIPTsx2(touches,centroid){if(touches.length<2)return 0;let total=0;for(const touch of touches){const dx=touch.absoluteX-centroid.x;const dy=touch.absoluteY-centroid.y;total+=Math.sqrt(dx*dx+dy*dy);}return total/touches.length;})" }];
+[tmp8] = items1;
+function getTouchesSpread(arg0, arg1) {
+  if (arg0.length < 2) {
     return 0;
   } else {
     let num = 0;
-    const iter = allTouches[Symbol.iterator]();
+    const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let diff = nextResult.absoluteX - point.x;
-      let diff1 = nextResult.absoluteY - point.y;
+      let diff = nextResult.absoluteX - arg1.x;
+      let diff1 = nextResult.absoluteY - arg1.y;
       let _Math = Math;
       num = num + Math.sqrt(diff * diff + diff1 * diff1);
       continue;
     }
-    return num / allTouches.length;
+    return num / arg0.length;
   }
 }
-getTouchesSpread.__closure = {};
-getTouchesSpread.__workletHash = 14242071118706;
-getTouchesSpread.__initData = { code: "function getTouchesSpread_VoicePanelPIPTsx2(touches,centroid){if(touches.length<2)return 0;let total=0;for(const touch of touches){const dx=touch.absoluteX-centroid.x;const dy=touch.absoluteY-centroid.y;total+=Math.sqrt(dx*dx+dy*dy);}return total/touches.length;}" };
+getTouchesSpread.__workletHash = 12650185432595;
+getTouchesSpread.__initData = tmp8;
 let closure_20 = { pressed: false, active: false, baseX: 0, baseY: 0, offsetX: 0, offsetY: 0, originX: 0, originY: 0, spread: 0 };
-const __initData = { code: "function VoicePanelPIPTsx3(state,velocityX,velocityY){const{pipState,getScaledPIPContainerHeight,calculatePIPPositionFromVelocity,windowDimensions,safeArea,updateSharedValueIfChanged,wrapperDimensions}=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,scale:scale});const{pipX:pipX,pipY:pipY}=calculatePIPPositionFromVelocity({velocityX:velocityX,velocityY:velocityY,absoluteX:state.baseX+state.offsetX+width/2,absoluteY:state.baseY+state.offsetY+height/2,windowDimensions:windowDimensions.get(),safeArea:safeArea.get()});updateSharedValueIfChanged(wrapperDimensions,{pipX:pipX,pipY:pipY});}" };
-const __initData2 = { code: "function VoicePanelPIPTsx4(){const{pipState,getScaledPIPContainerHeight,mainTileInLayout,gestureState,getClampedPIPPosition,wrapperDimensions,windowDimensions,safeArea,pipAvoidanceSpecs,DRAWER_SPRING_PHYSICS,PIP_LAYOUT_PHYSICS,opacity,withSpring,getVoicePanelPIPBorderRadius}=this.__closure;const width=pipState.width*pipState.scale.get();const height=getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP&&mainTileInLayout,scale:pipState.scale.get()});const state=gestureState.get();let x;let y;if(state.active){x=state.baseX+state.offsetX;y=state.baseY+state.offsetY;}else{const clamped=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:width,height:height,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});x=clamped.x;y=clamped.y;}const physics=state.active?DRAWER_SPRING_PHYSICS:PIP_LAYOUT_PHYSICS;return{width:width,height:height,opacity:opacity.get(),transform:[{translateX:withSpring(x,physics)},{translateY:withSpring(y,physics)}],borderRadius:getVoicePanelPIPBorderRadius(width,height)};}" };
-const __initData3 = { code: "function VoicePanelPIPTsx5(){const{pipState,getVoicePanelPIPBorderRadius}=this.__closure;const{width:width,height:height,scale:scale}=pipState;return{width:width*scale.get(),height:height*scale.get(),borderRadius:getVoicePanelPIPBorderRadius(width,height)};}" };
-const __initData4 = { code: "function VoicePanelPIPTsx6(){const{mainTileVisible}=this.__closure;return{opacity:mainTileVisible?1:0};}" };
-let closure_25 = { code: "function VoicePanelPIPTsx7(){const{isDockEnabled,updateSharedValueIfChanged,wrapperOffset,gestureState,INACTIVE_GESTURE_STATE}=this.__closure;if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:false});}gestureState.set(INACTIVE_GESTURE_STATE);}" };
-let closure_26 = { code: "function VoicePanelPIPTsx8({velocityX:velocityX,velocityY:velocityY}){const{gestureState,settlePIPPosition,isDockEnabled,updateSharedValueIfChanged,wrapperOffset,INACTIVE_GESTURE_STATE,runOnJS,updateSourceTrackingView,setVoicePanelPIPScaleCached,pipState}=this.__closure;const state=gestureState.get();settlePIPPosition(state,velocityX,velocityY);if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:false});}gestureState.set(INACTIVE_GESTURE_STATE);runOnJS(updateSourceTrackingView)();runOnJS(setVoicePanelPIPScaleCached)(pipState.scale.get());}" };
-let closure_27 = { code: "function VoicePanelPIPTsx9(event,manager){const{getTouchesCentroid,getTouchesSpread,gestureState,MIN_PINCH_SPAN,pipState,clampPIPScale,windowDimensions,safeArea,pipAvoidanceSpecs,State,MIN_GESTURE_START,getClampedPIPPosition,wrapperDimensions,getScaledPIPContainerHeight,isDockEnabled,updateSharedValueIfChanged,wrapperOffset,runOnJS,triggerIOSHaptic}=this.__closure;const centroid=getTouchesCentroid(event.allTouches);const spread=getTouchesSpread(event.allTouches,centroid);const state=gestureState.get();if(state.active){let offsetX=state.offsetX+centroid.x-state.originX;let offsetY=state.offsetY+centroid.y-state.originY;if(state.spread>MIN_PINCH_SPAN&&spread>MIN_PINCH_SPAN){const previousScale=pipState.scale.get();const scale=clampPIPScale({scale:previousScale*(spread/state.spread),width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get()});if(scale!==previousScale){pipState.scale.set(scale);const scaleChange=scale/previousScale;offsetX+=(centroid.x-(state.baseX+offsetX))*(1-scaleChange);offsetY+=(centroid.y-(state.baseY+offsetY))*(1-scaleChange);}}gestureState.set({pressed:state.pressed,active:true,baseX:state.baseX,baseY:state.baseY,offsetX:offsetX,offsetY:offsetY,originX:centroid.x,originY:centroid.y,spread:spread});return;}if(event.state!==State.BEGAN)return;if(Math.abs(state.originX-centroid.x)>MIN_GESTURE_START||Math.abs(state.originY-centroid.y)>MIN_GESTURE_START||Math.abs(state.spread-spread)>MIN_GESTURE_START){const scale=pipState.scale.get();const{x:x,y:y}=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:pipState.width*scale,height:getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,scale:scale}),windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});gestureState.set({pressed:true,active:true,baseX:x,baseY:y,offsetX:0,offsetY:0,originX:centroid.x,originY:centroid.y,spread:spread});if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:true,x:0,y:0});}manager.activate();runOnJS(triggerIOSHaptic)();}}" };
-let closure_28 = { code: "function VoicePanelPIPTsx10(event){const{updateSharedValueIfChanged,gestureState,getTouchesCentroid,getTouchesSpread}=this.__closure;const remainingTouches=event.allTouches.filter(function(touch){return!event.changedTouches.some(function(changedTouch){return changedTouch.id===touch.id;});});if(remainingTouches.length===0){updateSharedValueIfChanged(gestureState,{pressed:false});return;}const centroid=getTouchesCentroid(remainingTouches);updateSharedValueIfChanged(gestureState,{originX:centroid.x,originY:centroid.y,spread:getTouchesSpread(remainingTouches,centroid)});}" };
-let closure_29 = { code: "function VoicePanelPIPTsx11(event){const{getTouchesCentroid,getTouchesSpread,gestureState,INACTIVE_GESTURE_STATE,updateSharedValueIfChanged}=this.__closure;const centroid=getTouchesCentroid(event.allTouches);const spread=getTouchesSpread(event.allTouches,centroid);const state=gestureState.get();if(!state.pressed){gestureState.set({...INACTIVE_GESTURE_STATE,pressed:true,originX:centroid.x,originY:centroid.y,spread:spread});return;}updateSharedValueIfChanged(gestureState,{originX:centroid.x,originY:centroid.y,spread:spread});}" };
-let closure_30 = { code: "function VoicePanelPIPTsx12(){const{runOnJS,setFocused}=this.__closure;runOnJS(setFocused)(null);}" };
-let closure_31 = { code: "function VoicePanelPIPTsx13(){const{pipMode,VoicePanelPIPModes,runOnJS,setMode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,showControls,hideControls}=this.__closure;if(pipMode===VoicePanelPIPModes.IN_APP){runOnJS(setMode)(VoicePanelModes.PANEL);}else{if(controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN){runOnJS(showControls)();}else{runOnJS(hideControls)();}}}" };
-let closure_32 = { code: "function VoicePanelPIPTsx14(){const{runOnJS,handleSecondaryPIPTap}=this.__closure;runOnJS(handleSecondaryPIPTap)();}" };
-const __initData5 = { code: "function VoicePanelPIPTsx15(){const{getVoicePanelPIPBorderRadius,pipState}=this.__closure;return{borderRadius:getVoicePanelPIPBorderRadius(pipState.width,pipState.height)};}" };
-const __initData6 = { code: "function VoicePanelPIPTsx16(){const{pipState}=this.__closure;return{height:pipState.height*pipState.scale.get()};}" };
-const __initData7 = { code: "function VoicePanelPIPTsx17(values){const{gestureState,withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;const active=gestureState.get().active;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:active?values.targetWidth:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:active?values.targetHeight:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
+let closure_21 = { code: "(function VoicePanelPIPTsx3(state,velocityX,velocityY){let[pipState,getScaledPIPContainerHeight,calculatePIPPositionFromVelocity,windowDimensions,safeArea,updateSharedValueIfChanged,wrapperDimensions]=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,scale:scale});const{pipX:pipX,pipY:pipY}=calculatePIPPositionFromVelocity({velocityX:velocityX,velocityY:velocityY,absoluteX:state.baseX+state.offsetX+width/2,absoluteY:state.baseY+state.offsetY+height/2,windowDimensions:windowDimensions.get(),safeArea:safeArea.get()});updateSharedValueIfChanged(wrapperDimensions,{pipX:pipX,pipY:pipY});})" };
+let closure_22 = { code: "(function VoicePanelPIPTsx4(){let[pipState,getScaledPIPContainerHeight,mainTileInLayout,gestureState,getClampedPIPPosition,wrapperDimensions,windowDimensions,safeArea,pipAvoidanceSpecs,DRAWER_SPRING_PHYSICS,PIP_LAYOUT_PHYSICS,opacity,withSpring,getVoicePanelPIPBorderRadius]=this.__closure;const width=pipState.width*pipState.scale.get();const height=getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP&&mainTileInLayout,scale:pipState.scale.get()});const state=gestureState.get();let x;let y;if(state.active){x=state.baseX+state.offsetX;y=state.baseY+state.offsetY;}else{const clamped=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:width,height:height,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});x=clamped.x;y=clamped.y;}const physics=state.active?DRAWER_SPRING_PHYSICS:PIP_LAYOUT_PHYSICS;return{width:width,height:height,opacity:opacity.get(),transform:[{translateX:withSpring(x,physics)},{translateY:withSpring(y,physics)}],borderRadius:getVoicePanelPIPBorderRadius(width,height)};})" };
+let closure_23 = { code: "(function VoicePanelPIPTsx5(){let[pipState,getVoicePanelPIPBorderRadius]=this.__closure;const{width:width,height:height,scale:scale}=pipState;return{width:width*scale.get(),height:height*scale.get(),borderRadius:getVoicePanelPIPBorderRadius(width,height)};})" };
+let closure_24 = { code: "(function VoicePanelPIPTsx6(){let[mainTileVisible]=this.__closure;return{opacity:mainTileVisible?1:0};})" };
+let closure_25 = { code: "(function VoicePanelPIPTsx7(event){let[getTouchesCentroid,getTouchesSpread,gestureState,INACTIVE_GESTURE_STATE,updateSharedValueIfChanged]=this.__closure;const centroid=getTouchesCentroid(event.allTouches);const spread=getTouchesSpread(event.allTouches,centroid);const state=gestureState.get();if(!state.pressed){gestureState.set({...INACTIVE_GESTURE_STATE,pressed:true,originX:centroid.x,originY:centroid.y,spread:spread});return;}updateSharedValueIfChanged(gestureState,{originX:centroid.x,originY:centroid.y,spread:spread});})" };
+let closure_26 = { code: "(function VoicePanelPIPTsx8(event){let[updateSharedValueIfChanged,gestureState,getTouchesCentroid,getTouchesSpread]=this.__closure;const remainingTouches=event.allTouches.filter(function(touch){return!event.changedTouches.some(function(changedTouch){return changedTouch.id===touch.id;});});if(remainingTouches.length===0){updateSharedValueIfChanged(gestureState,{pressed:false});return;}const centroid=getTouchesCentroid(remainingTouches);updateSharedValueIfChanged(gestureState,{originX:centroid.x,originY:centroid.y,spread:getTouchesSpread(remainingTouches,centroid)});})" };
+let closure_27 = { code: "(function VoicePanelPIPTsx9(event,manager){let[getTouchesCentroid,getTouchesSpread,gestureState,MIN_PINCH_SPAN,pipState,clampPIPScale,windowDimensions,safeArea,pipAvoidanceSpecs,State,MIN_GESTURE_START,getClampedPIPPosition,wrapperDimensions,getScaledPIPContainerHeight,isDockEnabled,updateSharedValueIfChanged,wrapperOffset,scheduleOnRN,triggerIOSHaptic]=this.__closure;const centroid=getTouchesCentroid(event.allTouches);const spread=getTouchesSpread(event.allTouches,centroid);const state=gestureState.get();if(state.active){let offsetX=state.offsetX+centroid.x-state.originX;let offsetY=state.offsetY+centroid.y-state.originY;if(state.spread>MIN_PINCH_SPAN&&spread>MIN_PINCH_SPAN){const previousScale=pipState.scale.get();const scale=clampPIPScale({scale:previousScale*(spread/state.spread),width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get()});if(scale!==previousScale){pipState.scale.set(scale);const scaleChange=scale/previousScale;offsetX+=(centroid.x-(state.baseX+offsetX))*(1-scaleChange);offsetY+=(centroid.y-(state.baseY+offsetY))*(1-scaleChange);}}gestureState.set({pressed:state.pressed,active:true,baseX:state.baseX,baseY:state.baseY,offsetX:offsetX,offsetY:offsetY,originX:centroid.x,originY:centroid.y,spread:spread});return;}if(event.state!==State.BEGAN)return;if(Math.abs(state.originX-centroid.x)>MIN_GESTURE_START||Math.abs(state.originY-centroid.y)>MIN_GESTURE_START||Math.abs(state.spread-spread)>MIN_GESTURE_START){const scale=pipState.scale.get();const{x:x,y:y}=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:pipState.width*scale,height:getScaledPIPContainerHeight({height:pipState.height,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,scale:scale}),windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});gestureState.set({pressed:true,active:true,baseX:x,baseY:y,offsetX:0,offsetY:0,originX:centroid.x,originY:centroid.y,spread:spread});if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:true,x:0,y:0});}manager.activate();scheduleOnRN(triggerIOSHaptic);}})" };
+let closure_28 = { code: "(function VoicePanelPIPTsx10({velocityX:velocityX,velocityY:velocityY}){let[gestureState,settlePIPPosition,isDockEnabled,updateSharedValueIfChanged,wrapperOffset,INACTIVE_GESTURE_STATE,scheduleOnRN,updateSourceTrackingView,setVoicePanelPIPScaleCached,pipState]=this.__closure;const state=gestureState.get();settlePIPPosition(state,velocityX,velocityY);if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:false});}gestureState.set(INACTIVE_GESTURE_STATE);scheduleOnRN(updateSourceTrackingView);scheduleOnRN(setVoicePanelPIPScaleCached,pipState.scale.get());})" };
+let closure_29 = { code: "(function VoicePanelPIPTsx11(){let[isDockEnabled,updateSharedValueIfChanged,wrapperOffset,gestureState,INACTIVE_GESTURE_STATE]=this.__closure;if(!isDockEnabled){updateSharedValueIfChanged(wrapperOffset,{gestureActive:false});}gestureState.set(INACTIVE_GESTURE_STATE);})" };
+let closure_30 = { code: "(function VoicePanelPIPTsx12(){let[scheduleOnRN,setFocused]=this.__closure;scheduleOnRN(setFocused,null);})" };
+let closure_31 = { code: "(function VoicePanelPIPTsx13(){let[pipMode,VoicePanelPIPModes,scheduleOnRN,setMode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,showControls,hideControls]=this.__closure;if(pipMode===VoicePanelPIPModes.IN_APP){scheduleOnRN(setMode,VoicePanelModes.PANEL);}else{if(controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN){scheduleOnRN(showControls);}else{scheduleOnRN(hideControls);}}})" };
+let closure_32 = { code: "(function VoicePanelPIPTsx14(){let[scheduleOnRN,handleSecondaryPIPTap]=this.__closure;scheduleOnRN(handleSecondaryPIPTap);})" };
+let closure_33 = { code: "(function VoicePanelPIPTsx15(){let[getVoicePanelPIPBorderRadius,pipState]=this.__closure;return{borderRadius:getVoicePanelPIPBorderRadius(pipState.width,pipState.height)};})" };
+let closure_34 = { code: "(function VoicePanelPIPTsx16(){let[pipState]=this.__closure;return{height:pipState.height*pipState.scale.get()};})" };
+let closure_35 = { code: "(function VoicePanelPIPTsx17(values){let[gestureState,withSpring,PIP_LAYOUT_PHYSICS]=this.__closure;const active=gestureState.get().active;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:active?values.targetWidth:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:active?values.targetHeight:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" };
 let closure_37 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(11222)).pipHandoff;
-  const mode = transitionState(19204).usePIPState().mode;
-  const obj = transitionState(19204);
-  const pIPCardsSettled = transitionState(11231).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(11231);
-  const pIPPanelLayoutCommitted = transitionState(11231).usePIPPanelLayoutCommitted(pipHandoff);
-  const items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
+  const pipHandoff = noop.useContext(transitionCleanUp(11359)).pipHandoff;
+  const mode = transitionState(19362).usePIPState().mode;
+  const obj = transitionState(19362);
+  const pIPCardsSettled = transitionState(11368).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(11368);
+  const pIPPanelLayoutCommitted = transitionState(11368).usePIPPanelLayoutCommitted(pipHandoff);
+  items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {
       transitionCleanUp();
@@ -744,5 +915,5 @@ export default noop.memo(function VoicePanelPIPWrapper() {
     const obj2 = { pipMode: mode };
     const tmp3 = obj2;
   }
-  return __initData(native.TransitionItem, { item: tmp3, renderItem: renderPIPWrapper });
+  return closure_1_15(native.TransitionItem, { item: tmp3, renderItem: renderPIPWrapper });
 });

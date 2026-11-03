@@ -1,9 +1,9 @@
-// === Module 10099: TabBar ===
+// === Module 10229: TabBar ===
 
-// Module 10099 (TabBar)
+// Module 10229 (TabBar)
 import nativeDefault from "native" /* 575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import _mod7294 from "module_7294" /* 7294 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import _mod7414 from "module_7414" /* 7414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,8 +13,8 @@ function Tab(index) {
   ({ isSelected, onSelect } = index);
   ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_8();
-  const items = [tabKey];
-  [tmp3, tmp4] = _mod7294.useRecyclingState(false, items);
+  items = [tabKey];
+  [tmp3, tmp4] = _mod7414.useRecyclingState(false, items);
   c2 = tmp4;
   const items1 = [tmp4];
   const items2 = [tmp4];
@@ -59,7 +59,7 @@ function TabBarScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { tab: { flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 }, container: { flex: 0 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -82,7 +82,7 @@ export default function TabBar(tabIndexSelected) {
   }
   const ref = tabStyleSelected.useRef(null);
   jsx = tabStyleSelected.useRef(tabIndexSelected);
-  const items = [tabIndexSelected];
+  items = [tabIndexSelected];
   const effect = tabStyleSelected.useEffect(() => {
     closure_7.current = tabIndexSelected;
   }, items);

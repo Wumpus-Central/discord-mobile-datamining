@@ -1,11 +1,11 @@
-// === Module 12490: FileTypeFiltering ===
+// === Module 12626: FileTypeFiltering ===
 
-// Module 12490 (FileTypeFiltering)
+// Module 12626 (FileTypeFiltering)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ function fileTypesFormattedStringHelper(arr, locale) {
     if (0 !== arr.length) {
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(locale, { type: "disjunction" });
-      const items = [];
+      items = [];
       if (arr.includes("image")) {
         const intl = util.intl;
         arr = items.push(intl.string(util.t["0r2WwT"]));
@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting("modules/interactions/FileTypeFilterin
 
 export function useFileTypesFormattedString(fileTypes) {
   _require = fileTypes;
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   const items1 = [fileTypes, stateFromStores];
   return noop.useMemo(() => fileTypesFormattedStringHelper(closure_0, memo), items1);
@@ -64,7 +64,7 @@ export function getFileTypeFiltering(fileTypes) {
       const mapped = found.map((arr) => arr.slice(1));
       if (fileTypes.includes("image")) {
         const push = mapped.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(closure_6, 0);
         HermesBuiltin.apply(items, mapped);
       }
@@ -125,7 +125,7 @@ export function getFileTypeFiltering(fileTypes) {
 }
 export function useFileTypeFiltering(fileTypes) {
   _require = fileTypes;
-  let items = [fileTypes];
+  items = [fileTypes];
   const memo = noop.useMemo(() => {
     if (null != closure_0) {
       if (0 !== closure_0.length) {
@@ -133,7 +133,7 @@ export function useFileTypeFiltering(fileTypes) {
         const mapped = found.map((arr) => arr.slice(1));
         if (closure_0.includes("image")) {
           const push = mapped.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(closure_6, 0);
           HermesBuiltin.apply(items, mapped);
         }

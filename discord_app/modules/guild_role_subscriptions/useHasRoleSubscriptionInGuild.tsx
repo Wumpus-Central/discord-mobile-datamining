@@ -1,10 +1,10 @@
-// === Module 7426: useHasRoleSubscriptionInGuild ===
+// === Module 7550: useHasRoleSubscriptionInGuild ===
 
-// Module 7426 (useHasRoleSubscriptionInGuild)
+// Module 7550 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
     tmp5 = items;
   }
   [obj] = tmp5;
-  const guild = obj.getGuild(id1);
+  guild = obj.getGuild(id1);
   if (null != guild) {
     if (null != tmp) {
       const features = guild.features;
@@ -60,7 +60,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useH
 
 export default function useHasRoleSubscriptionInGuild(arg0) {
   _require = arg0;
-  let items = [AuthenticationStore, GuildMemberStore];
+  items = [AuthenticationStore, GuildMemberStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (null != closure_0) {
@@ -76,7 +76,7 @@ export default function useHasRoleSubscriptionInGuild(arg0) {
     if (null != closure_0) {
       rolesSnapshot = GuildRoleStore.getRolesSnapshot(closure_0);
     }
-    const items = [GuildStore];
+    items = [GuildStore];
     return computeHasRoleSubscriptionsInGuild(closure_0, rolesSnapshot, stateFromStores, items);
   }, items2);
 };

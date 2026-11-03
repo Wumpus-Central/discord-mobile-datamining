@@ -1,10 +1,10 @@
-// === Module 16556: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 16699: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 16556 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16553 */;
+// Module 16699 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,15 +16,15 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7626).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const items = [analyticsLocations];
+  items = [analyticsLocations];
   const callback = noop.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: constants.BUTTON_CTA }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   }, items);
   const obj2 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null };
-  let obj = analyticsLocations(7626);
+  let obj = analyticsLocations(7750);
   const intl = analyticsLocations(1113).intl;
   obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

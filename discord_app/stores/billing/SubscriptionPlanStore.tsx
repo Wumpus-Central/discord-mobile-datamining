@@ -1,11 +1,11 @@
-// === Module 2051: SubscriptionPlanStore ===
+// === Module 2180: SubscriptionPlanStore ===
 
-// Module 2051 (SubscriptionPlanStore)
+// Module 2180 (SubscriptionPlanStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FunctionUtils from "FunctionUtils" /* 2034 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2044 */;
+import FunctionUtils from "FunctionUtils" /* 2163 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2173 */;
 
 require = fn;
 function addSubscriptionPlan(fromServer) {
@@ -22,7 +22,7 @@ function addSubscriptionPlan(fromServer) {
       set1 = new Set();
     }
     const _Set2 = Set;
-    const items = [];
+    items = [];
     const _Array = Array;
     HermesBuiltin.arraySpread(Array.from(set), HermesBuiltin.arraySpread(Array.from(set1), 0));
     const set2 = new Set(items);
@@ -48,14 +48,14 @@ function reset() {
   set1.clear();
   FunctionUtils.clearObject(closure_14);
   FunctionUtils.clearObject(closure_15);
-  const items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
+  items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
   const item = items.forEach((id) => {
     addSubscriptionPlan(SubscriptionPlanRecord.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
   });
 }
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);
@@ -102,7 +102,7 @@ prototype["getFetchedSKUIDs"] = function getFetchedSKUIDs() {
   return SnowflakeUtilsDefault.keys(closure_11);
 };
 prototype["getForSKU"] = function getForSKU(arg0) {
-  let items = dependencyMap[arg0];
+  items = dependencyMap[arg0];
   if (items == null) {
     items = [];
   }

@@ -1,7 +1,7 @@
-// === Module 13376: jumpToReferencedMessage ===
+// === Module 13512: jumpToReferencedMessage ===
 
-// Module 13376 (jumpToReferencedMessage)
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
+// Module 13512 (jumpToReferencedMessage)
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");

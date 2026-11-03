@@ -1,14 +1,14 @@
-// === Module 16763: HarvesterUtils ===
+// === Module 16906: HarvesterUtils ===
 
-// Module 16763 (HarvesterUtils)
+// Module 16906 (HarvesterUtils)
 import initialize from "initialize" /* 504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import DataHarvestStore from "DataHarvestStore" /* 15602 */;
+import UserStore from "UserStore" /* 1385 */;
+import DataHarvestStore from "DataHarvestStore" /* 15744 */;
 
 require = fn;
-const REQUEST_DATA_LIMIT_MS = fn(16764).REQUEST_DATA_LIMIT_MS;
+const REQUEST_DATA_LIMIT_MS = fn(16907).REQUEST_DATA_LIMIT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
@@ -33,7 +33,7 @@ export function harvestDisabled(created_at, stateFromStores) {
   return tmp;
 }
 export function useRequestHarvestStatus() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [DataHarvestStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);

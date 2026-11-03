@@ -1,6 +1,6 @@
-// === Module 7582: EntitlementActionCreators ===
+// === Module 7706: EntitlementActionCreators ===
 
-// Module 7582 (EntitlementActionCreators)
+// Module 7706 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -23,7 +23,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

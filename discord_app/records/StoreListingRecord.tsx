@@ -1,9 +1,9 @@
-// === Module 16341: StoreListingRecord ===
+// === Module 16484: StoreListingRecord ===
 
-// Module 16341 (StoreListingRecord)
-import GameStoreAsset from "GameStoreAsset" /* 16342 */;
-import Record from "Record" /* 1398 */;
-import UserRecord from "UserRecord" /* 1397 */;
+// Module 16484 (StoreListingRecord)
+import GameStoreAsset from "GameStoreAsset" /* 16485 */;
+import Record from "Record" /* 1400 */;
+import UserRecord from "UserRecord" /* 1399 */;
 
 require = fn;
 let StoreListingRecord;

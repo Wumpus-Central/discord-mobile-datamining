@@ -1,18 +1,18 @@
-// === Module 7630: UserOfferStore ===
+// === Module 7754: UserOfferStore ===
 
-// Module 7630 (UserOfferStore)
+// Module 7754 (UserOfferStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumUtils from "PremiumUtils" /* 2047 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 15223 */;
-import DiscountRecord from "DiscountRecord" /* 7631 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8531 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7634 */;
-import UserStore from "UserStore" /* 1383 */;
-import EntitlementStore from "EntitlementStore" /* 7579 */;
-import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import PremiumUtils from "PremiumUtils" /* 2176 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 15364 */;
+import DiscountRecord from "DiscountRecord" /* 7755 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7756 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8655 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7758 */;
+import UserStore from "UserStore" /* 1385 */;
+import EntitlementStore from "EntitlementStore" /* 7703 */;
+import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 require = fn;
 function emitChanges() {
@@ -70,11 +70,11 @@ function handleSubscriptionStoreUpdate() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1385);
-({ ANNUAL_DISCOUNT_IDS: c10, CHURN_DISCOUNT_IDS: closure_11, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
+const PremiumConstants = fn(1387);
+({ ANNUAL_DISCOUNT_IDS: closure_10, CHURN_DISCOUNT_IDS: closure_11, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
 const OfferTriggerTypes = fn(1083).OfferTriggerTypes;
 let closure_17 = performance.now();
-let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F473}\u{1F3FF}\u200D\u2642\uFE0F", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
+let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F468}\u{1F3FF}\u200D\u{1F3A4}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
 let closure_19 = cooldownExpirationTimestamps;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {
@@ -91,7 +91,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
     const entries = Object.entries(userTrialOffers);
     obj.userTrialOffers = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, ];
+      items = [tmp, ];
       if (tmp2 instanceof UserTrialOfferRecord) {
         items[1] = tmp2;
         return items;
@@ -122,7 +122,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
     const entries1 = Object.entries(userDiscountOffers);
     obj.userDiscountOffers = Object.fromEntries(entries1.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, rehydrateDiscountOffer(tmp2)];
+      items = [tmp, rehydrateDiscountOffer(tmp2)];
       return items;
     }));
     let tmp = obj;
@@ -131,7 +131,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
   }
   closure_19 = tmp;
   this.waitFor(EntitlementStore, ReferralTrialStore, SubscriptionStore, UserStore);
-  let items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, emitChanges);
   const items1 = [SubscriptionStore];
   this.syncWith(items1, handleSubscriptionStoreUpdate);
@@ -195,7 +195,7 @@ prototype["shouldFetchReferralOffer"] = function shouldFetchReferralOffer(tmp9Re
   }
 };
 prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminder(trialId) {
-  const hasItem = __initData.includes(trialId.trialId);
+  const hasItem = closure_1_15.includes(trialId.trialId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -239,7 +239,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_1_12.includes(discountId.discountId);
+  const hasItem = application_id.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -252,7 +252,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
   const currentUser = UserStore.getCurrentUser();
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -282,7 +282,7 @@ prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -300,7 +300,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -324,7 +324,7 @@ prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -436,7 +436,7 @@ let items = [
       const entries = Object.entries(userDiscountOffers.userDiscountOffers);
       obj.userDiscountOffers = Object.fromEntries(entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp, rehydrateDiscountOffer(tmp2)];
+        items = [tmp, rehydrateDiscountOffer(tmp2)];
         return items;
       }));
       return obj;

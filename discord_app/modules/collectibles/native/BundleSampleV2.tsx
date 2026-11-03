@@ -1,15 +1,15 @@
-// === Module 9493: BundleSampleV2 ===
+// === Module 9621: BundleSampleV2 ===
 
-// Module 9493 (BundleSampleV2)
+// Module 9621 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import utils from "utils" /* 1984 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9495 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9506 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9513 */;
+import utils from "utils" /* 2113 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9623 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9634 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9641 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj4.children = tmp21Result;
     tmp21Result2 = timestampProducer(React4, obj4);
   }
-  const items = [tmp21Result2, ];
+  items = [tmp21Result2, ];
   let tmp24Result = null != fgStatic;
   if (tmp24Result) {
     const obj6 = { style: closure_9.fgClip, pointerEvents: "none", children: null };
@@ -109,7 +109,7 @@ function BundleSampleV2Composed(arg0) {
     obj3.children = timestampProducer(ProfileEffectSampleV2Default, obj4);
     tmp12 = timestampProducer(React4, obj3);
   }
-  const items = [tmp12, , ];
+  items = [tmp12, , ];
   if (null == deco) {
     items[1] = tmp16;
     if (null == nameplateData) {
@@ -142,7 +142,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9494).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9622).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
@@ -170,13 +170,13 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };
   obj.bundle = size;
   const size1 = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, transform: null, zIndex: 0, overflow: "hidden", borderRadius: nativeDefault.radii.xs };
-  const items = [{ rotate: "-8deg" }];
+  items = [{ rotate: "-8deg" }];
   size1.transform = items;
   obj.pfx = size1;
   const rect = { position: "absolute", top: tmp.avatarTop, right: tmp.avatarRight, transform: null, zIndex: 1, alignItems: "center", justifyContent: "center" };

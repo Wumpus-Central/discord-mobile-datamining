@@ -1,10 +1,10 @@
-// === Module 10238: ExpressionPicker ===
+// === Module 10368: ExpressionPicker ===
 
-// Module 10238 (ExpressionPicker)
+// Module 10368 (ExpressionPicker)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9945 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9970 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10076 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10101 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,10 +14,10 @@ const View = fn(17).View;
 const ExpressionPickerConstants = fn(1228);
 ({ ExpressionPickerViewType: hasOwnProperty, ExpressionPickerOrder: metroRequire, PADDING_HORIZONTAL } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { expressionPickerContainer: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL }, expressionPickerContent: { flex: 1 }, segmentedControl: { paddingTop: 2 * PADDING_HORIZONTAL, paddingHorizontal: 0 }, segmentedControlUnpadded: { paddingHorizontal: 0 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL };
@@ -44,7 +44,7 @@ export default noop.memo(function ExpressionPicker(expressionType) {
   const tmp4 = require("useExpressionPickerTabData")({ expressionType: expressionType.expressionType, expressionPickerTabs: visibleTabs });
   expressionPickerViewType = tmp4.expressionPickerViewType;
   const prop = tmp4.expressionPickerTabStrings;
-  const items = [channel];
+  items = [channel];
   memo = memo.useMemo(() => channel.getGuildId(), items);
   const items1 = [memo];
   const effect = memo.useEffect(() => {

@@ -1,27 +1,18 @@
-// === Module 17226: GuildRoleSubscriptionCard ===
+// === Module 17369: GuildRoleSubscriptionCard ===
 
-// Module 17226 (GuildRoleSubscriptionCard)
+// Module 17369 (GuildRoleSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 17229 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 17232 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 17372 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 17375 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 class SectionTitle {
   constructor(arg0) {
-    tmp = closure_9();
-    obj = closure_0(closure_3[6]);
-    typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("GuildRoleSubscriptionCard", "text-xs/bold");
-    obj1 = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: global.children };
-    items = [, ];
-    items[0] = tmp.sectionTitle;
-    items[1] = typeConsolidationEyebrow.style;
-    obj1.style = items;
-    return jsx(closure_0(closure_3[7]).Text, obj1);
+    return jsx(closure_0(closure_3[6]).Text, { variant: "body-sm/medium", color: "text-default", children: global.children });
   }
 }
 class Separator {
@@ -33,8 +24,8 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { sectionTitle: { textTransform: "uppercase" }, section: { gap: 14 }, separator: null };
+const createStyles = fn(5141);
+let obj2 = { section: { gap: 14 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: nativeDefault.space.PX_24 };
 obj2.separator = size;
 const React7 = createStyles.createStyles(obj2);
@@ -55,7 +46,7 @@ export function Content(arg0) {
   const obj7 = { children: null };
   const intl = guildId(1113).intl;
   obj7.children = intl.string(guildId(1113).t["DJ+bGu"]);
-  const items = [closure_6(SectionTitle, obj7), closure_6(guildId(1187).Spacer, { size: 8 }), closure_6(guildId(17228).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  items = [closure_6(SectionTitle, obj7), closure_6(guildId(1187).Spacer, { size: 8 }), closure_6(guildId(17371).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp5Result = null;
@@ -101,5 +92,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(17227).SeparatedList, obj5);
+  return closure_8(guildId(17370).SeparatedList, obj5);
 }

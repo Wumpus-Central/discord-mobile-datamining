@@ -1,6 +1,6 @@
-// === Module 10975: MediaChannelActionCreators ===
+// === Module 11108: MediaChannelActionCreators ===
 
-// Module 10975 (MediaChannelActionCreators)
+// Module 11108 (MediaChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -48,7 +48,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,11 +93,11 @@ let closure_6 = async function _unfurlEmbedUrl() {
           const obj = { value: value.body, done: true };
           return obj;
         }
-      } catch (tmp19) {
-        closure_3 = tmp19;
+      } catch (tmp23) {
+        closure_3 = tmp23;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp19;
+          throw tmp23;
         } else {
           c5 = tmp;
         }

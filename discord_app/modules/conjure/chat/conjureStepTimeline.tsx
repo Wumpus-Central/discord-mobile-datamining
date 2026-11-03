@@ -1,6 +1,6 @@
-// === Module 10853: conjureStepTimeline ===
+// === Module 10983: conjureStepTimeline ===
 
-// Module 10853 (conjureStepTimeline)
+// Module 10983 (conjureStepTimeline)
 import _slicedToArray from "module_32" /* 32 */;
 
 function pushStep(items, todosAt, turn_seq) {
@@ -101,7 +101,7 @@ export function recordStep(steps, step) {
   return substr;
 }
 export function replayTimeline(steps) {
-  const items = [];
+  items = [];
   const obj = { seenSeq: new Set(), todosAt: -1 };
   set = new Set();
   while (tmp2 !== undefined) {

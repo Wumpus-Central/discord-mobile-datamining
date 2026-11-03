@@ -1,7 +1,7 @@
-// === Module 9913: useStoreFrontPrice ===
+// === Module 10044: useStoreFrontPrice ===
 
-// Module 9913 (useStoreFrontPrice)
-import PremiumUtils from "PremiumUtils" /* 2047 */;
+// Module 10044 (useStoreFrontPrice)
+import PremiumUtils from "PremiumUtils" /* 2176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/billing/native/subscription/u
 export default function useStoreFrontPrice(arg0, arg1) {
   const user = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     if (null == user) {
       let priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;

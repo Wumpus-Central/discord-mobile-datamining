@@ -1,12 +1,12 @@
-// === Module 17286: SettingsAppearanceActivityCardItem ===
+// === Module 17429: SettingsAppearanceActivityCardItem ===
 
-// Module 17286 (SettingsAppearanceActivityCardItem)
+// Module 17429 (SettingsAppearanceActivityCardItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ClipView from "ClipView" /* 9509 */;
+import ClipView from "ClipView" /* 9637 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import module_1652 from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
@@ -14,12 +14,12 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17287);
+const HappeningNowConstants = fn(17430);
 ({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1187).Icon);
-const createStyles = fn(5014);
+let closure_7 = module_1652.createAnimatedComponent(fn(1187).Icon);
+const createStyles = fn(5141);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" }, cardBadgeWrapper: { position: "absolute", top: 0, right: 0 }, cardImage: null, cardBadge: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageAsset: null, shiftedAvatar: null, userCounter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj.cardImage = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, position: "relative" };
@@ -43,7 +43,7 @@ export default function ActivityCardItem(arg0) {
   _require = undefined;
   let num3;
   ({ kind, title, subtitle, image } = arg0);
-  let items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -71,7 +71,7 @@ export default function ActivityCardItem(arg0) {
       if (index !== diff) {
         const obj3 = { cutouts: null, children: null };
         const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] - 4 - 2, y: -2, size: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] + 4 };
-        const items = [point];
+        items = [point];
         obj3.cutouts = items;
         obj3.children = tmp5;
         let tmp2Result = hasOwnProperty(ClipViewDefault, obj3);

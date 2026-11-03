@@ -1,8 +1,8 @@
-// === Module 12206: useApplicationWidgetRefresh ===
+// === Module 12342: useApplicationWidgetRefresh ===
 
-// Module 12206 (useApplicationWidgetRefresh)
-import refreshApplicationWidget from "refreshApplicationWidget" /* 12207 */;
-import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 12208 */;
+// Module 12342 (useApplicationWidgetRefresh)
+import refreshApplicationWidget from "refreshApplicationWidget" /* 12343 */;
+import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 12344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ export default function useApplicationWidgetRefresh(arg0) {
       closure_1_3.current = false;
     };
   }, []);
-  const items = [arg0, pending];
+  items = [arg0, pending];
   return {
     pending,
     refresh: noop.useCallback(() => {

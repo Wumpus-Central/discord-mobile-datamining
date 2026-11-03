@@ -1,8 +1,8 @@
-// === Module 14672: AppStoreOverlayMediaSize ===
+// === Module 14803: AppStoreOverlayMediaSize ===
 
-// Module 14672 (AppStoreOverlayMediaSize)
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2030 */;
+// Module 14803 (AppStoreOverlayMediaSize)
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2159 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,7 +58,7 @@ export function getMediaSizeFromLoadEvent(nativeEvent) {
 export function useAppStoreOverlayMediaSizes(memo) {
   const first = _slicedToArray(noop.useState(memo), 1)[0];
   [tmp3, dependencyMap] = noop.useState(map);
-  const items = [first];
+  items = [first];
   const recordMediaSize = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;

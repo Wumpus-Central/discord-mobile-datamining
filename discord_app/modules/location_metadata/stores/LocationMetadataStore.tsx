@@ -1,9 +1,9 @@
-// === Module 10933: LocationMetadataStore ===
+// === Module 11071: LocationMetadataStore ===
 
-// Module 10933 (LocationMetadataStore)
+// Module 11071 (LocationMetadataStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CountryCodeUtils from "CountryCodeUtils" /* 5695 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 5815 */;
 import size from "module_2" /* 2 */;
 
 ({ getDefaultCountryCode: closure_0, getCountryCodeByAlpha2: closure_1 } = CountryCodeUtils);
@@ -25,7 +25,7 @@ const locationMetadataStore = new LocationMetadataStore(DispatcherDefault, {
     countryCode = countryCode.countryCode;
     let flag = null != countryCode;
     if (flag) {
-      let tmp2 = framebus(countryCode);
+      let tmp2 = duration(countryCode);
       if (tmp2 == null) {
         tmp2 = React();
       }
@@ -38,7 +38,7 @@ const locationMetadataStore = new LocationMetadataStore(DispatcherDefault, {
     ({ countryCode, minimumAge } = arg0);
     let flag = null != countryCode;
     if (flag) {
-      let tmp2 = framebus(countryCode);
+      let tmp2 = duration(countryCode);
       if (tmp2 == null) {
         tmp2 = React();
       }

@@ -1,12 +1,12 @@
-// === Module 14118: useGuildPowerupConfigureCallback ===
+// === Module 14249: useGuildPowerupConfigureCallback ===
 
-// Module 14118 (useGuildPowerupConfigureCallback)
+// Module 14249 (useGuildPowerupConfigureCallback)
 import _modDef38 from "module_38" /* 38 */;
-import Powerups from "Powerups" /* 5233 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9077 */;
-import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 14091 */;
+import Powerups from "Powerups" /* 5356 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9205 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 14222 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks
 
 export default function useGuildPowerupConfigureCallback(arg0, skuId) {
   closure_0 = arg0;
-  const items = [arg0, skuId.skuId];
+  items = [arg0, skuId.skuId];
   return noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY);
     skuId = skuId.skuId;

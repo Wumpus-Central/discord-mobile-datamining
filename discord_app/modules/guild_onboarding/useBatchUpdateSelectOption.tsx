@@ -1,14 +1,14 @@
-// === Module 11582: useBatchUpdateSelectOption ===
+// === Module 11719: useBatchUpdateSelectOption ===
 
-// Module 11582 (useBatchUpdateSelectOption)
+// Module 11719 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7273 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11583 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7393 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11720 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdate
 
 export default function useBatchUpdateSelectOption(guildId) {
   _require = guildId;
-  let items = [GuildOnboardingPromptsStore];
+  items = [GuildOnboardingPromptsStore];
   let items1 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(closure_0);
@@ -117,7 +117,7 @@ export default function useBatchUpdateSelectOption(guildId) {
         }
         if (obj12.hasNotSetUpChannelOptIn(tmp)) {
           const push = items1.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(GuildOnboardingPromptsStore.getDefaultChannelIds(tmp), 0);
           HermesBuiltin.apply(items, items1);
         }
@@ -125,14 +125,14 @@ export default function useBatchUpdateSelectOption(guildId) {
         const merged = Object.assign(items1.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1396).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
           acc[item] = obj;
           return acc;
         }, {}));
         const merged1 = Object.assign(differenceResult3.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1396).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
           acc[item] = obj;
           return acc;
         }, {}));

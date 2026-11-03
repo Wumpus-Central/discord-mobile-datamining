@@ -1,15 +1,15 @@
-// === Module 18469: useNotificationsTabBadge ===
+// === Module 18623: useNotificationsTabBadge ===
 
-// Module 18469 (useNotificationsTabBadge)
+// Module 18623 (useNotificationsTabBadge)
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6858 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6978 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
 
 export default function useNotificationsTabBadge() {
-  const items = [NotificationCenterItemsStore];
+  items = [NotificationCenterItemsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];
   const memo = noop.useMemo(() => stateFromStores.filter((type) => {

@@ -1,11 +1,11 @@
-// === Module 18246: useLiveStageChannels ===
+// === Module 18390: useLiveStageChannels ===
 
-// Module 18246 (useLiveStageChannels)
+// Module 18390 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageCh
 
 export default function useLiveStageChannels(arg0) {
   _require = arg0;
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0)), items1);
   closure_129_0 = stateFromStoresArray;
@@ -47,7 +47,7 @@ export function getAllLiveStageChannels() {
   }, []);
 }
 export function useAllLiveStageChannels() {
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     allStageInstances = allStageInstances.getAllStageInstances();
     return allStageInstances.map((channel_id) => channel_id.channel_id);

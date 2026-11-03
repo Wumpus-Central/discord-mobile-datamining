@@ -1,7 +1,7 @@
-// === Module 6857: SpamMessageRequestStore ===
+// === Module 6977: SpamMessageRequestStore ===
 
-// Module 6857 (SpamMessageRequestStore)
-import ChannelStore from "ChannelStore" /* 4863 */;
+// Module 6977 (SpamMessageRequestStore)
+import ChannelStore from "ChannelStore" /* 4990 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 
 function processChannel(isSpam) {

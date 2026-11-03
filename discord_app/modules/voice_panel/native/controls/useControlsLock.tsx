@@ -1,7 +1,7 @@
-// === Module 19206: useControlsLock ===
+// === Module 19364: useControlsLock ===
 
-// Module 19206 (useControlsLock)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
+// Module 19364 (useControlsLock)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -11,7 +11,7 @@ export default function useControlsLock(arg0) {
   closure_0 = arg0;
   const generateStateLocker = noop.useContext(VoicePanelStateContextDefault).generateStateLocker;
   const first = noop.useState(() => generateStateLocker(closure_0))[0];
-  const items = [first];
+  items = [first];
   const layoutEffect = noop.useLayoutEffect(() => () => first.unlock(), items);
   return first;
 };

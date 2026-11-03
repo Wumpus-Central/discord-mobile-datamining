@@ -1,30 +1,30 @@
-// === Module 18301: DMChannel ===
+// === Module 18446: DMChannel ===
 
-// Module 18301 (DMChannel)
+// Module 18446 (DMChannel)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9085 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 18090 */;
-import ChannelItemDefault from "ChannelItem" /* 18174 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9213 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 18234 */;
+import ChannelItemDefault from "ChannelItem" /* 18318 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 require = fn;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj = { container: { marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5141);
+let obj = { container: { marginVertical: fn(11186).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
-let obj3 = { marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11186).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 
 export default noop.memo(function DMChannel(channel) {
   channel = channel.channel;
   const selected = channel.selected;
-  const items = [channel.id];
+  items = [channel.id];
   const items1 = [channel.id];
   const callback = noop.useCallback(() => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);

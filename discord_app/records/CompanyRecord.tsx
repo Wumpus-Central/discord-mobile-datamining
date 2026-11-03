@@ -1,7 +1,7 @@
-// === Module 2017: CompanyRecord ===
+// === Module 2146: CompanyRecord ===
 
-// Module 2017 (CompanyRecord)
-import Record from "Record" /* 1398 */;
+// Module 2146 (CompanyRecord)
+import Record from "Record" /* 1400 */;
 
 const prototype = function CompanyRecord(arg0) {
   const tmp = new prototype(new.target, new.target);

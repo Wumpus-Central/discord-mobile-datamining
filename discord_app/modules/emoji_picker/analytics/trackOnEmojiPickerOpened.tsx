@@ -1,14 +1,14 @@
-// === Module 9970: trackOnEmojiPickerOpened ===
+// === Module 10101: trackOnEmojiPickerOpened ===
 
-// Module 9970 (trackOnEmojiPickerOpened)
-import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9947 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9948 */;
+// Module 10101 (trackOnEmojiPickerOpened)
+import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10078 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 10079 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function trackOnEmojiPickerOpened(current) {
@@ -141,7 +141,7 @@ function trackOnEmojiPickerOpened(current) {
   };
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");

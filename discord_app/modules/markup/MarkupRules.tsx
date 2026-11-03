@@ -1,32 +1,32 @@
-// === Module 6034: MarkupRules ===
+// === Module 6154: MarkupRules ===
 
-// Module 6034 (MarkupRules)
+// Module 6154 (MarkupRules)
 import util from "util" /* 1113 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 6037 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6040 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 6042 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 6043 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6044 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6055 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6057 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8571 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 8574 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8575 */;
-import TimestampUtils from "TimestampUtils" /* 8600 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8602 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15658 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5050 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 6157 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6160 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 6162 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6163 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6164 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6175 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6177 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8695 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 8698 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8699 */;
+import TimestampUtils from "TimestampUtils" /* 8724 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8726 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15801 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
-import t_mod from "module_1943" /* 1943 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 6033 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
+import t_mod from "module_2072" /* 2072 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 6153 */;
 import "module_12";
 import apply_mod from "module_12" /* 12 */;
 
@@ -40,9 +40,9 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "children" };
+    obj3 = { type: "link", content: null, target: null, title: "channel_id" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
-    const items = [obj4];
+    items = [obj4];
     obj3.content = items;
     obj3.target = punycodeLinkResult.target;
   }
@@ -50,7 +50,7 @@ function parseLink(arg0) {
 }
 function hydrateRoleMention(roleId, guildId) {
   if (null != guildId.guildId) {
-    let guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
   } else {
     guild = null;
     if (null != guildId.channelId) {
@@ -119,7 +119,7 @@ function hydrateRoleMention(roleId, guildId) {
     const obj5 = { type: "text", content: null };
     const _HermesInternal2 = HermesInternal;
     obj5.content = "@" + role.name;
-    const items = [obj5];
+    items = [obj5];
     obj2.content = items;
     return obj2;
   }
@@ -172,7 +172,7 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     const _HermesInternal2 = HermesInternal;
     combined = "@" + tmp2;
   }
-  const items = [{ type: "text", content: combined }];
+  items = [{ type: "text", content: combined }];
   obj.content = items;
   return obj;
 }
@@ -194,7 +194,7 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
     str = " \u203A " + result1;
   }
   const obj = { type: "staticRouteLink", content: null, mainContent: null, itemContent: null, itemId: null, id: null, guildId: null, channelId: null };
-  const items = [{ type: "text", content: result + str }];
+  items = [{ type: "text", content: result + str }];
   obj.content = items;
   let tmp6 = null;
   if (null != result) {
@@ -217,9 +217,9 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
   return obj;
 }
 const Constants = fn(1072);
-({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6035).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(6036).GAME_MENTION_RAW_RE;
+({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: closure_10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
+const SUB_COMMAND_KEY_SEPARATOR = fn(6155).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(6156).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
@@ -296,7 +296,7 @@ obj5.parse = function parse(content) {
     text = `mailto:${obj}`;
   }
   const obj2 = { type: "link", content: null, target: text };
-  const items = [{ type: "text", content: content[1] }];
+  items = [{ type: "text", content: content[1] }];
   obj2.content = items;
   return obj2;
 };
@@ -317,7 +317,7 @@ obj6.parse = function parse(content) {
     text = `tel:${obj2}`;
   }
   const obj3 = { type: "link", content: null, target: text };
-  const items = [{ type: "text", content: content[1] }];
+  items = [{ type: "text", content: content[1] }];
   obj3.content = items;
   return obj3;
 };
@@ -580,7 +580,7 @@ obj.commandMention = {
       const obj = { type: "commandMention", id: arg0[2] };
       let obj2 = obj;
     } else {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(_toArray(arg0[1].split(" ")).slice(1), 0);
       const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
       const _HermesInternal = HermesInternal;
@@ -606,7 +606,7 @@ const obj14 = {
       const obj = { type: "commandMention", id: arg0[2] };
       let obj2 = obj;
     } else {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(_toArray(arg0[1].split(" ")).slice(1), 0);
       const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
       const _HermesInternal = HermesInternal;
@@ -1003,7 +1003,7 @@ let items2 = [
                 return null;
               } else {
                 const substr = arr.substring(0, tmp7);
-                const items = [arr, parseDepth.highlightWord, substr, arr.substring(tmp7 + parseDepth.highlightWord.length)];
+                items = [arr, parseDepth.highlightWord, substr, arr.substring(tmp7 + parseDepth.highlightWord.length)];
                 return items;
               }
             }
@@ -1021,7 +1021,7 @@ let items2 = [
         obj.parseDepth = num + 1;
         const _module = require("ChannelStore");
         const _module1 = require("GuildRoleStore");
-        const items = [..._module, obj2, ..._module1];
+        items = [..._module, obj2, ..._module1];
         return items;
       }
     }
@@ -1105,7 +1105,7 @@ const obj25 = {
               return null;
             } else {
               const substr = arr.substring(0, tmp7);
-              const items = [arr, parseDepth.highlightWord, substr, arr.substring(tmp7 + parseDepth.highlightWord.length)];
+              items = [arr, parseDepth.highlightWord, substr, arr.substring(tmp7 + parseDepth.highlightWord.length)];
               return items;
             }
           }
@@ -1123,7 +1123,7 @@ const obj25 = {
       obj.parseDepth = num + 1;
       const _module = require("ChannelStore");
       const _module1 = require("GuildRoleStore");
-      const items = [..._module, obj2, ..._module1];
+      items = [..._module, obj2, ..._module1];
       return items;
     }
   }
@@ -1136,7 +1136,7 @@ export default { RULES: importDefaultResult3Result, CHANNEL_TOPIC_RULES: omitRes
 export { hydrateRoleMention };
 export { hydrateUserMention };
 export function hydrateCommandMention(name, commandId, channelId) {
-  const items = [..._toArray(name.split(" ")).slice(1)];
+  items = [..._toArray(name.split(" ")).slice(1)];
   const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
   const obj = { type: "commandMention", channelId: channelId.channelId, commandId, commandName: name, commandKey: "" + commandId + mapped.join(""), content: null };
   const arr = _toArray(name.split(" "));

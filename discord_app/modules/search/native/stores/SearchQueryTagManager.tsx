@@ -1,8 +1,8 @@
-// === Module 13901: SearchQueryTagManager ===
+// === Module 14032: SearchQueryTagManager ===
 
-// Module 13901 (SearchQueryTagManager)
-import TrackingConstants from "TrackingConstants" /* 9826 */;
-import SearchConstants from "SearchConstants" /* 9827 */;
+// Module 14032 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 9957 */;
+import SearchConstants from "SearchConstants" /* 9958 */;
 import size from "module_2" /* 2 */;
 
 function isComplete(type) {
@@ -45,7 +45,7 @@ prototype["mergeTag"] = function mergeTag(location, channelId) {
   closure_0 = location;
   closure_1 = channelId;
   const tags = this.tags;
-  const items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(tags.filter((item) => {
     let tmp = item !== closure_0;
     if (tmp) {
@@ -155,7 +155,7 @@ prototype["add"] = function add(type) {
       }
     }
     if (tmp5) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(self.tags, 0)] = type;
       self.tags = items;
     }

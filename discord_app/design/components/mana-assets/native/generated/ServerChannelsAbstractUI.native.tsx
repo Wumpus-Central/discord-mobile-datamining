@@ -1,19 +1,19 @@
-// === Module 15185: ServerChannelsAbstractUI ===
+// === Module 15326: ServerChannelsAbstractUI ===
 
-// Module 15185 (ServerChannelsAbstractUI)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef15186 from "module_15186" /* 15186 */;
-import _modDef15187 from "module_15187" /* 15187 */;
-import _modDef15188 from "module_15188" /* 15188 */;
+// Module 15326 (ServerChannelsAbstractUI)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef15327 from "module_15327" /* 15327 */;
+import _modDef15328 from "module_15328" /* 15328 */;
+import _modDef15329 from "module_15329" /* 15329 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15186 }, 3: null };
-let obj2 = { uri: _modDef15186 };
-obj[2] = { uri: _modDef15187 };
-const obj3 = { uri: _modDef15187 };
-obj[3] = { uri: _modDef15188 };
+let obj = { 1: null, 2: { uri: _modDef15327 }, 3: null };
+let obj2 = { uri: _modDef15327 };
+obj[2] = { uri: _modDef15328 };
+const obj3 = { uri: _modDef15328 };
+obj[3] = { uri: _modDef15329 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ServerChannelsAbstractUI.native.tsx");
 
@@ -25,7 +25,7 @@ export function ServerChannelsAbstractUI(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

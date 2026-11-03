@@ -1,15 +1,15 @@
-// === Module 7606: PremiumPlanPurchasedStore ===
+// === Module 7730: PremiumPlanPurchasedStore ===
 
-// Module 7606 (PremiumPlanPurchasedStore)
+// Module 7730 (PremiumPlanPurchasedStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7607 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7731 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
@@ -29,7 +29,7 @@ export function setInitiatedPurchaseFromNewFlow(productId) {
 }
 export function setPaymentSuccess() {
   if (obj3.getState().initiatedPurchaseFromNewFlow) {
-    const state = obj3.getState();
+    state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
@@ -44,12 +44,12 @@ export function setMobileWebRedirectCheckoutStatus(mobileWebRedirectCheckoutStat
 export function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
   if ("succeeded" === mobileWebRedirectCheckoutStatus) {
-    const state = obj3.getState();
+    state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     if ("dismissed" !== state.mobileWebRedirectCheckoutStatus) {
       if (ActionSheetStore.getKey() !== closure_4) {
         const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-        const items = [AnalyticsLocationDefault.DEEPLINK];
+        items = [AnalyticsLocationDefault.DEEPLINK];
         obj.analyticsLocations = items;
         obj.analyticsLocation = {};
         openPremiumPlanSelectionActionSheetDefault(obj);
@@ -70,7 +70,7 @@ export function showOldPaymentFlowSuccess(fn) {
   }
 }
 export function reset() {
-  const state = obj3.getState();
+  state = obj3.getState();
   ({ onPaymentDismiss, mobileWebRedirectCheckoutStatus: require } = state);
   if (onPaymentDismiss != null) {
     const obj = { productId: tmp2, isSuccess: tmp3 };
@@ -84,6 +84,6 @@ export function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "dispatch", onPaymentDismiss: "Map" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "alignItems" });
   });
 }

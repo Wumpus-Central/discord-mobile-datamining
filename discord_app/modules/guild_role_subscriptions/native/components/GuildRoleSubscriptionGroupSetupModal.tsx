@@ -1,10 +1,10 @@
-// === Module 19990: GuildRoleSubscriptionGroupSetupModal ===
+// === Module 20140: GuildRoleSubscriptionGroupSetupModal ===
 
-// Module 19990 (GuildRoleSubscriptionGroupSetupModal)
+// Module 20140 (GuildRoleSubscriptionGroupSetupModal)
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17216 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
         return obj;
       }
       c6 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp13) {
       c6 = tmp;
       throw tmp13;
@@ -119,7 +119,7 @@ class GuildRoleSubscriptionGroupSetupModal {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -168,8 +168,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1113).intl;
                       closure_1 = intl.string(merged(1113).t.ZUEGFn);
                     }
-                    merged(5711).presentError(closure_1);
-                    const obj8 = merged(5711);
+                    merged(5831).presentError(closure_1);
+                    const obj8 = merged(5831);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -251,7 +251,7 @@ class GuildRoleSubscriptionGroupSetupModal {
       }
     }, items);
     memo = obj.useMemo(() => {
-      const items = [, , , , , , ];
+      items = [, , , , , , ];
       ({ GATING: arr[0], GROUP: arr[1], DETAILS: arr[2], CHANNEL_BENEFITS: arr[3], INTANGIBLE_BENEFITS: arr[4], DESIGN: arr[5] } = constants);
       items[6] = { scene: constants.CONFIRMATION, extraProps: { isForGroupSetupModal: true } };
       return items;
@@ -295,8 +295,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(19949).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(17196);
+const useRoleTierEditStore = fn(20099).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(17339);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 8795: useProfileFrameLayerAsset ===
+// === Module 8919: useProfileFrameLayerAsset ===
 
-// Module 8795 (useProfileFrameLayerAsset)
+// Module 8919 (useProfileFrameLayerAsset)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -74,7 +74,7 @@ let closure_15 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -103,7 +103,7 @@ export default function useProfileFrameLayerAsset(width) {
       ratio = tmp3.ratio;
     }
   }
-  const items = [collectiblesItemAssetUrl, ratio];
+  items = [collectiblesItemAssetUrl, ratio];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       if ("" !== tmp) {
@@ -198,10 +198,10 @@ export function usePreloadLayerImages(frame) {
   closure_7 = undefined;
   c8 = undefined;
   const isProfileFrameLayerPreloadEnabled = frame(filterLayer[7]).useIsProfileFrameLayerPreloadEnabled("usePreloadLayerImages");
-  let items = [frame, profileThemeType, filterLayer];
+  items = [frame, profileThemeType, filterLayer];
   const memo = num.useMemo(() => {
     if (null == frame) {
-      let items = [];
+      items = [];
     } else {
       const layers = tmp.layers;
       const found = layers.filter((anchor) => {

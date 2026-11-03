@@ -1,19 +1,19 @@
-// === Module 7072: EnvelopeOpenSpotIllustration ===
+// === Module 7198: EnvelopeOpenSpotIllustration ===
 
-// Module 7072 (EnvelopeOpenSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef7073 from "module_7073" /* 7073 */;
-import _modDef7074 from "module_7074" /* 7074 */;
-import _modDef7075 from "module_7075" /* 7075 */;
+// Module 7198 (EnvelopeOpenSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef7199 from "module_7199" /* 7199 */;
+import _modDef7200 from "module_7200" /* 7200 */;
+import _modDef7201 from "module_7201" /* 7201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7073 }, 3: null };
-let obj2 = { uri: _modDef7073 };
-obj[2] = { uri: _modDef7074 };
-const obj3 = { uri: _modDef7074 };
-obj[3] = { uri: _modDef7075 };
+let obj = { 1: null, 2: { uri: _modDef7199 }, 3: null };
+let obj2 = { uri: _modDef7199 };
+obj[2] = { uri: _modDef7200 };
+const obj3 = { uri: _modDef7200 };
+obj[3] = { uri: _modDef7201 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeOpenSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function EnvelopeOpenSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

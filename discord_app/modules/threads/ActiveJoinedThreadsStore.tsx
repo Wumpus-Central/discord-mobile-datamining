@@ -1,20 +1,20 @@
-// === Module 6841: ActiveJoinedThreadsStore ===
+// === Module 6961: ActiveJoinedThreadsStore ===
 
-// Module 6841 (ActiveJoinedThreadsStore)
+// Module 6961 (ActiveJoinedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import AgeGateUtils from "AgeGateUtils" /* 6734 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6894 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6861 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import AgeGateUtils from "AgeGateUtils" /* 6854 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 7014 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6981 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 import size from "module_2" /* 2 */;
 
 function rebuild() {
@@ -136,7 +136,7 @@ function recountParent(guild_id, id) {
       dependencyMap6[guild_id][id] = 0;
       if (null != dependencyMap3[guild_id]) {
         if (null != dependencyMap3[guild_id][id]) {
-          const guild = GuildStore.getGuild(guild_id);
+          guild = GuildStore.getGuild(guild_id);
           if (null != guild) {
             let trackedAckMessageId = ReadStateStore.getTrackedAckMessageId(id);
             if (null == trackedAckMessageId) {
@@ -737,7 +737,7 @@ class ActiveJoinedThreadsStore extends Store {
 const prototype = ActiveJoinedThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ActiveThreadsStore, ChannelStore, GuildStore, JoinedThreadsStore, ReadStateStore, SelectedChannelStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, updateSelectedChannel);
 };
 prototype["hasActiveJoinedUnreadThreads"] = function hasActiveJoinedUnreadThreads(arg0, arg1) {
@@ -781,8 +781,8 @@ prototype["getActiveJoinedThreadsForGuild"] = function getActiveJoinedThreadsFor
   }
   return tmp;
 };
-prototype["getActiveJoinedUnreadThreadsForGuild"] = function getActiveJoinedUnreadThreadsForGuild(guildId) {
-  let tmp = dependencyMap2[guildId];
+prototype["getActiveJoinedUnreadThreadsForGuild"] = function getActiveJoinedUnreadThreadsForGuild(c2) {
+  let tmp = dependencyMap2[c2];
   if (tmp == null) {
     tmp = obj;
   }
@@ -838,7 +838,7 @@ prototype["getNewThreadCountsForGuild"] = function getNewThreadCountsForGuild(ar
   return tmp;
 };
 prototype["computeAllActiveJoinedThreads"] = function computeAllActiveJoinedThreads(guildId) {
-  const items = [];
+  items = [];
   for (const key10005 in closure_12) {
     if (key10005 === arg0) {
       let keys = Object.keys();

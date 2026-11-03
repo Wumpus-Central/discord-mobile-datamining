@@ -1,10 +1,10 @@
-// === Module 15209: OngoingCallStatusLabel ===
+// === Module 15350: OngoingCallStatusLabel ===
 
-// Module 15209 (OngoingCallStatusLabel)
+// Module 15350 (OngoingCallStatusLabel)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6569 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import CallStore from "CallStore" /* 6689 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -20,7 +20,7 @@ export default function OngoingCallStatusLabel(style) {
     useAllAloneText = true;
   }
   const id = AuthenticationStore.getId();
-  const items = [VoiceStateStore, CallStore];
+  items = [VoiceStateStore, CallStore];
   const items1 = [id, channel];
   const stateFromStores = channel(id[5]).useStateFromStores(items, () => {
     if (null == channel) {

@@ -1,6 +1,6 @@
-// === Module 5962: NativeDeviceAccessibilityModule ===
+// === Module 6082: NativeDeviceAccessibilityModule ===
 
-// Module 5962 (NativeDeviceAccessibilityModule)
+// Module 6082 (NativeDeviceAccessibilityModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

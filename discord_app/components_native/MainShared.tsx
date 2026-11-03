@@ -1,25 +1,25 @@
-// === Module 19003: MainShared ===
+// === Module 19161: MainShared ===
 
-// Module 19003 (MainShared)
+// Module 19161 (MainShared)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import KeyCommands from "KeyCommands" /* 6023 */;
-import usePipVideoOrStream from "usePipVideoOrStream" /* 11709 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 11861 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 16267 */;
-import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 19004 */;
-import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 19007 */;
-import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 19008 */;
-import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 19009 */;
-import AlertsDefault from "Alerts" /* 19010 */;
-import SoundPlayerDefault from "SoundPlayer" /* 19018 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 19022 */;
-import AppToastContainerDefault from "AppToastContainer" /* 19060 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import KeyCommands from "KeyCommands" /* 6143 */;
+import usePipVideoOrStream from "usePipVideoOrStream" /* 11846 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 11998 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 16410 */;
+import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 19162 */;
+import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 19165 */;
+import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 19166 */;
+import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 19167 */;
+import AlertsDefault from "Alerts" /* 19168 */;
+import SoundPlayerDefault from "SoundPlayer" /* 19176 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 19180 */;
+import AppToastContainerDefault from "AppToastContainer" /* 19218 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -34,7 +34,7 @@ export const SoundPlayer = SoundPlayerDefault;
 export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Default;
 export const ToastContainer = AppToastContainerDefault;
 export function PictureInPictureGlobalContainer() {
-  const items = [ChannelStore, RTCConnectionStore];
+  items = [ChannelStore, RTCConnectionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();
@@ -65,7 +65,7 @@ export function useAppKeyCommands() {
       closure_1_1(dependencyMap[12])();
       return true;
     };
-    const items = [obj2];
+    items = [obj2];
     return items;
   }, []);
   const keyCommands = KeyCommands.useKeyCommands(memo);

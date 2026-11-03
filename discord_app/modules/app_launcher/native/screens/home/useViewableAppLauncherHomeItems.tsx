@@ -1,8 +1,8 @@
-// === Module 12415: useViewableAppLauncherHomeItems ===
+// === Module 12551: useViewableAppLauncherHomeItems ===
 
-// Module 12415 (useViewableAppLauncherHomeItems)
+// Module 12551 (useViewableAppLauncherHomeItems)
 import noop from "module_19" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 12416 */;
+import AppLauncherStore from "AppLauncherStore" /* 12552 */;
 
 const require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export function useViewableAppLauncherHomeItems() {
   sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(false);
   ref = ref.useRef({});
   const obj3 = { handleViewableItemsChanged: null, hasViewedActivityItem: sharedValue, hasViewedLearnMoreItem: sharedValue1 };
-  const items = [sharedValue, sharedValue1, ref];
+  items = [sharedValue, sharedValue1, ref];
   obj3.handleViewableItemsChanged = ref.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {

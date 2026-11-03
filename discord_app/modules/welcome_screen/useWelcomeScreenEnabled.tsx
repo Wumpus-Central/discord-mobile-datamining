@@ -1,11 +1,11 @@
-// === Module 14232: useWelcomeScreenEnabled ===
+// === Module 14363: useWelcomeScreenEnabled ===
 
-// Module 14232 (useWelcomeScreenEnabled)
+// Module 14363 (useWelcomeScreenEnabled)
 import Constants from "Constants" /* 1072 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,9 +17,9 @@ const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScre
 export default function useWelcomeScreenEnabled(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [ChannelStore, GuildStore, SelectedChannelStore];
+  items = [ChannelStore, GuildStore, SelectedChannelStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_1);
+    guild = GuildStore.getGuild(closure_1);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

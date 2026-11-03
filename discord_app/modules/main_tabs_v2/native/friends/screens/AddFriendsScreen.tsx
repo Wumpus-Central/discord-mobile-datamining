@@ -1,21 +1,21 @@
-// === Module 18840: AddFriendsScreen ===
+// === Module 18998: AddFriendsScreen ===
 
-// Module 18840 (AddFriendsScreen)
+// Module 18998 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14247 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 18843 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 18845 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14378 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 19001 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 19003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -59,14 +59,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(14271).Sections;
+const Sections = fn(14402).Sections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(14249).ContactPermissions;
+const ContactPermissions = fn(14380).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -117,13 +117,13 @@ export default function AddFriendsScreen(navigation) {
   closure_14 = userRowWithSubLabelHeight1.useCallback((userId, applicationId) => {
     if (null != applicationId) {
       closure_13((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
         return items;
       });
     } else {
       _undefined4((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
         return items;
       });
@@ -132,13 +132,13 @@ export default function AddFriendsScreen(navigation) {
   constants = userRowWithSubLabelHeight1.useCallback((userId, applicationId) => {
     if (null != applicationId) {
       closure_11((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
         return items;
       });
     } else {
       _undefined2((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
         return items;
       });
@@ -147,7 +147,7 @@ export default function AddFriendsScreen(navigation) {
   require("useMountEffect")(() => {
     AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_FRIENDS_MODAL, source_page });
   });
-  let items = [navigation];
+  items = [navigation];
   const onPress = userRowWithSubLabelHeight1.useCallback(() => {
     navigation.navigate("username-search");
   }, items);
@@ -158,7 +158,7 @@ export default function AddFriendsScreen(navigation) {
   const tmp10 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
   const items2 = [c9, first];
   const stateFromStoresArray = navigation(analyticsLocations[27]).useStateFromStoresArray(items2, () => {
-    const items = [];
+    items = [];
     const mutableRelationships = RelationshipStore.getMutableRelationships();
     const keys = mutableRelationships.keys();
     const iter = keys[Symbol.iterator]();
@@ -186,9 +186,9 @@ export default function AddFriendsScreen(navigation) {
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = source_page(5068).getName(arg0);
-      const obj = source_page(5068);
-      return name.localeCompare(source_page(5068).getName(arg1));
+      const name = source_page(5195).getName(arg0);
+      const obj = source_page(5195);
+      return name.localeCompare(source_page(5195).getName(arg1));
     });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -196,7 +196,7 @@ export default function AddFriendsScreen(navigation) {
   const items4 = [first1, first];
   const stateFromStores = navigation(analyticsLocations[27]).useStateFromStores(items3, () => {
     const gameRelationshipsByType = _undefined3.getGameRelationshipsByType(constants.PENDING_INCOMING);
-    const items = [];
+    items = [];
     const item = gameRelationshipsByType.forEach((id) => {
       id = id.id;
       const applicationId = id.applicationId;
@@ -223,9 +223,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = source_page(analyticsLocations[28]);
     return source_page(analyticsLocations[28]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(5068).getName(user.user);
-      const obj = items1(5068);
-      return name.localeCompare(items1(5068).getName(user2.user));
+      const name = items1(5195).getName(user.user);
+      const obj = items1(5195);
+      return name.localeCompare(items1(5195).getName(user2.user));
     });
   }, items4, closure_24);
   let obj6 = navigation(analyticsLocations[27]);
@@ -248,7 +248,7 @@ export default function AddFriendsScreen(navigation) {
     } else {
       length = stateFromStores.length;
     }
-    const items = [];
+    items = [];
     for (let num2 = 0; num2 < length; num2 = num2 + 1) {
       let tmp5 = stateFromStores[num2];
       if (null != tmp5) {
@@ -303,7 +303,7 @@ export default function AddFriendsScreen(navigation) {
     if (c25) {
       num = 2;
     }
-    const items = [num, , , ];
+    items = [num, , , ];
     let num2 = 4;
     let num3 = 4;
     if (!closure_23) {
@@ -562,7 +562,7 @@ export default function AddFriendsScreen(navigation) {
                     location: constants3.ADD_FRIENDS_MODAL,
                     onAddSuggestion() {
                       return onPress3((arg0) => {
-                        const items = [];
+                        items = [];
                         items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_5;
                         return items;
                       });

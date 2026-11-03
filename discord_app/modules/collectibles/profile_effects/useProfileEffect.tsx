@@ -1,21 +1,21 @@
-// === Module 8799: useProfileEffect ===
+// === Module 8923: useProfileEffect ===
 
-// Module 8799 (useProfileEffect)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
+// Module 8923 (useProfileEffect)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 
 export default function useProfileEffect(arg0) {
   _require = arg0;
-  const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
+  items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = CollectiblesCategoryStore.getProduct(closure_0);

@@ -1,7 +1,7 @@
-// === Module 14762: SharedStateUtils ===
+// === Module 14893: SharedStateUtils ===
 
-// Module 14762 (SharedStateUtils)
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8943 */;
+// Module 14893 (SharedStateUtils)
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 9071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/masked_link/SharedStateUtils.
 
 export function useUrlParts(url) {
   closure_0 = url;
-  const items = [url];
+  items = [url];
   const memo = noop.useMemo(() => {
     const url = { protocol: MaskedLinkStoreMethodsAdditional.getProtocol(str), hostname: null };
     url.hostname = MaskedLinkStoreMethodsAdditional.getHostname(str);
@@ -33,7 +33,7 @@ export function useModalState(url) {
   const onClose = url.onClose;
   const tmp = onConfirm(onCancel.useState(false), 2);
   const shouldTrustUrl = tmp[0];
-  const items = [str];
+  items = [str];
   const memo = onCancel.useMemo(() => {
     const url = { protocol: MaskedLinkStoreMethodsAdditional.getProtocol(str), hostname: null };
     url.hostname = MaskedLinkStoreMethodsAdditional.getHostname(str);

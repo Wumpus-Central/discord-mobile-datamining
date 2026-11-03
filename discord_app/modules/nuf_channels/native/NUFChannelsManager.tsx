@@ -1,22 +1,22 @@
-// === Module 15182: NUFChannelsManager ===
+// === Module 15323: NUFChannelsManager ===
 
-// Module 15182 (NUFChannelsManager)
+// Module 15323 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1383 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import UserStore from "UserStore" /* 1385 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
 class NUFChannelsManager extends tmp2 {
@@ -31,7 +31,7 @@ class NUFChannelsManager extends tmp2 {
     applyArgumentsResult.handleNavigationStateChanged = function handleNavigationStateChanged() {
       if ("guilds" === obj.getCurrentNavigationRouteName()) {
         const guildId = SelectedGuildStore.getGuildId();
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         let tmp5 = null != guildId;
         if (tmp5) {
           let hasItem;
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15183, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15324, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }
@@ -98,8 +98,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5068).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5068);
+        isNewUserResult = applyArgumentsResult(5195).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5195);
       }
       return isNewUserResult;
     };

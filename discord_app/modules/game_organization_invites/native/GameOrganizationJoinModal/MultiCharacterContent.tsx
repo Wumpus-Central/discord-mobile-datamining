@@ -1,15 +1,15 @@
-// === Module 13206: MultiCharacterContent ===
+// === Module 13342: MultiCharacterContent ===
 
-// Module 13206 (MultiCharacterContent)
+// Module 13342 (MultiCharacterContent)
 import util from "util" /* 1113 */;
-import _modDef2404 from "module_2404" /* 2404 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 13207 */;
+import _modDef2533 from "module_2533" /* 2533 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 13343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ statusText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/MultiCharacterContent.tsx");
@@ -25,18 +25,18 @@ export default function MultiCharacterContent(arg0) {
       const obj2 = { variant: "text-md/normal", color: "text-muted", style: string.statusText, children: null };
       intl2 = intl2(1113).intl;
       string = intl2.string;
-      stringResult = string(_modDef2404.Rx9AlK);
+      stringResult = string(_modDef2533.Rx9AlK);
       obj2.children = stringResult;
-      let tmp9Result = jsx(intl2(5624).Text, { variant: "text-md/normal", color: "text-muted", style: string.statusText, children: null });
+      let tmp9Result = jsx(intl2(5747).Text, { variant: "text-md/normal", color: "text-muted", style: string.statusText, children: null });
     } else {
-      tmp9Result = jsx(intl2(6953).ActivityIndicator, {});
+      tmp9Result = jsx(intl2(7080).ActivityIndicator, {});
     }
   } else {
     if (0 === characters.length) {
       const obj3 = { variant: "text-md/normal", color: "text-muted", style: string.statusText, children: null };
       const intl = util.intl;
       const obj4 = { noun };
-      obj3.children = intl.formatToPlainString(_modDef2404.cIerRX, obj4);
+      obj3.children = intl.formatToPlainString(_modDef2533.cIerRX, obj4);
       let tmp4 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", style: string.statusText, children: null });
     } else {
       const obj = { characters, selectedCharacterId, onSelect, noun };

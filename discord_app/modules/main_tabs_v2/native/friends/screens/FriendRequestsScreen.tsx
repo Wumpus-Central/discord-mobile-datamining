@@ -1,17 +1,17 @@
-// === Module 18855: FriendRequestsScreen ===
+// === Module 19013: FriendRequestsScreen ===
 
-// Module 18855 (FriendRequestsScreen)
+// Module 19013 (FriendRequestsScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import useAlertStore from "useAlertStore" /* 5960 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18488 */;
-import getPendingRelationshipIds from "getPendingRelationshipIds" /* 18857 */;
+import useAlertStore from "useAlertStore" /* 6080 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18642 */;
+import getPendingRelationshipIds from "getPendingRelationshipIds" /* 19015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6858 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6978 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function compareUserItems(user, user2) {
@@ -23,14 +23,14 @@ function compareUserItems(user, user2) {
   return compareResult;
 }
 const View = fn(17).View;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, AnalyticsSections: closure_11, RelationshipTypes: closure_12 } = Constants);
-let closure_13 = fn(10743).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+({ AnalyticEvents: closure_10, AnalyticsSections: closure_11, RelationshipTypes: closure_12 } = Constants);
+let closure_13 = fn(10873).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let Outgoing = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, noResultsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, clearAllContainer: null, clearAll: null, tabs: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.clearAllContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
@@ -45,9 +45,9 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/scr
 export default function FriendRequestsScreen() {
   let tmp = onPress();
   let WumpusCouchSpotIllustration = dependencyMap;
-  const analyticsLocations = first(7326)(first(7351).FRIEND_REQUESTS).analyticsLocations;
-  let tmp3 = first(7326);
-  let items = [pendingOutgoingIds];
+  const analyticsLocations = first(7446)(first(7471).FRIEND_REQUESTS).analyticsLocations;
+  let tmp3 = first(7446);
+  items = [pendingOutgoingIds];
   const stateFromStoresArray = analyticsLocations(563).useStateFromStoresArray(items, () => {
     const localItems = pendingOutgoingIds.localItems;
     return localItems.filter((type) => {
@@ -59,7 +59,7 @@ export default function FriendRequestsScreen() {
     });
   });
   closure_129_0 = stateFromStoresArray;
-  const NotificationCenterAckedBeforeId = analyticsLocations(4839).NotificationCenterAckedBeforeId;
+  const NotificationCenterAckedBeforeId = analyticsLocations(4966).NotificationCenterAckedBeforeId;
   const setting = NotificationCenterAckedBeforeId.useSetting();
   closure_129_1 = setting;
   let items1 = [stateFromStoresArray, setting];
@@ -78,15 +78,15 @@ export default function FriendRequestsScreen() {
   let obj = analyticsLocations(563);
   const items2 = [spamIds];
   const tmp9 = gameRelationshipsByType(analyticsLocations(563).useStateFromStoresArray(items2, () => {
-    const items = [spamIds.getMutableRelationships(), spamIds.getVersion()];
+    items = [spamIds.getMutableRelationships(), spamIds.getVersion()];
     return items;
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(14920).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(14920);
-  gameRelationshipsByType1 = analyticsLocations(14920).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(15049).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(15049);
+  gameRelationshipsByType1 = analyticsLocations(15049).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -98,14 +98,14 @@ export default function FriendRequestsScreen() {
     });
     return Array.from(set);
   }, items3);
-  first(7330)(memo);
+  first(7450)(memo);
   const items4 = [first, tmp9[1]];
   const memo1 = gameRelationshipsByType1.useMemo(() => getPendingRelationshipIds.getPendingRelationshipIds(first, closure_2), items4);
   const pendingIncomingIds = memo1.pendingIncomingIds;
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(14920);
+  let obj4 = analyticsLocations(15049);
   const items5 = [ignoredUserIds];
   const items6 = [ignoredUserIds, gameRelationshipsByType, gameRelationshipsByType1, pendingIncomingIds, pendingOutgoingIds, spamIds];
   const stateFromStores = analyticsLocations(563).useStateFromStores(items5, () => {
@@ -118,7 +118,7 @@ export default function FriendRequestsScreen() {
     const mapped3 = gameRelationshipsByType1.map((applicationId) => ({ user: authStore.getUser(applicationId.id), isGameRelationship: true, applicationId: applicationId.applicationId }));
     const found3 = mapped3.filter((user) => null != user.user);
     const obj = { incoming: null, outgoing: null, spam: null, ignoredUsers: null };
-    const items = [...found1];
+    items = [...found1];
     obj.incoming = items.sort(compareUserItems);
     const items1 = [...found3];
     obj.outgoing = items1.sort(compareUserItems);
@@ -135,7 +135,7 @@ export default function FriendRequestsScreen() {
   const items7 = [ignoredUsers, incoming, outgoing, spam];
   const memo2 = gameRelationshipsByType1.useMemo(() => {
     const obj = { incomingData: { items: incoming, relationship: constants.PENDING_INCOMING }, incomingSection: null, outgoingData: null, outgoingSection: null };
-    const items = [incoming.length, ];
+    items = [incoming.length, ];
     let num = 0;
     if (spam.length + ignoredUsers.length > 0) {
       num = 1;
@@ -176,7 +176,7 @@ export default function FriendRequestsScreen() {
     }
   }, []);
   const obj5 = analyticsLocations(563);
-  const navigation = analyticsLocations(1497).useNavigation();
+  const navigation = analyticsLocations(1499).useNavigation();
   const items9 = [first1, incomingData, outgoingData, onPress, spam.length, ignoredUsers.length, navigation];
   let tmp26 = first1 === Outgoing.Outgoing;
   const callback2 = gameRelationshipsByType1.useCallback((arg0, arg1) => {
@@ -226,7 +226,7 @@ export default function FriendRequestsScreen() {
       return obj;
     } else {
       const tmp = first1 === closure_16.Incoming ? incomingData : outgoingData;
-      const items = tmp.items;
+      items = tmp.items;
       const element = { type: "user", props: null };
       let obj2 = { type: tmp.relationship, user: items[arg1].user, onPress, mode: UserRowModes.ACTIONS, start: 0 === arg1, end: arg1 === items.length - 1, applicationId: items[arg1].applicationId, isGameRelationship: items[arg1].isGameRelationship };
       element.props = obj2;
@@ -253,7 +253,7 @@ export default function FriendRequestsScreen() {
   if (tmp28) {
     tmp28 = incoming.length >= incomingData;
   }
-  const obj6 = analyticsLocations(1497);
+  const obj6 = analyticsLocations(1499);
   const obj7 = {
     pageWidth: 0,
     defaultIndex: first1,
@@ -276,12 +276,12 @@ export default function FriendRequestsScreen() {
   obj9.label = intl2.string(analyticsLocations(1113).t.tWqcIF);
   items10[1] = obj9;
   obj7.items = items10;
-  const segmentedControlState = analyticsLocations(8980).useSegmentedControlState(obj7);
+  const segmentedControlState = analyticsLocations(9108).useSegmentedControlState(obj7);
   const obj10 = { value: analyticsLocations, children: null };
-  const items11 = [outgoingData(first(10736), { absolute: true }), ];
+  const items11 = [outgoingData(first(10866), { absolute: true }), ];
   const obj11 = { style: tmp.container, children: null };
-  const tmp4Result = analyticsLocations(8980);
-  const items12 = [outgoingData(pendingIncomingIds, { style: tmp.tabs, children: outgoingData(analyticsLocations(9214).SegmentedControl, { state: segmentedControlState }) }), , ];
+  const tmp4Result = analyticsLocations(9108);
+  const items12 = [outgoingData(pendingIncomingIds, { style: tmp.tabs, children: outgoingData(analyticsLocations(9342).SegmentedControl, { state: segmentedControlState }) }), , ];
   let tmp32Result = null;
   if (tmp28) {
     const obj13 = { style: tmp.clearAllContainer, children: null };
@@ -289,15 +289,15 @@ export default function FriendRequestsScreen() {
       style: tmp.clearAll,
       onPress() {
           const lazyResult = noop.lazy(() => analyticsLocations(paths[13])(paths[12], paths.paths));
-          useAlertStore.openAlert("clear-all-incoming-requests", closure_2_14(lazyResult, { incomingRequestCount: incoming.length }));
+          useAlertStore.openAlert("clear-all-incoming-requests", gesture(lazyResult, { incomingRequestCount: incoming.length }));
         },
       children: null
     };
     const obj15 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1113).intl;
     obj15.children = intl3.string(tmp4(1113).t.O8k7O4);
-    obj14.children = tmp32(tmp4(5624).Text, obj15);
-    obj13.children = tmp32(tmp4(6980).PressableOpacity, obj14);
+    obj14.children = tmp32(tmp4(5747).Text, obj15);
+    obj13.children = tmp32(tmp4(7106).PressableOpacity, obj14);
     tmp32Result = tmp32(tmp33, obj13);
   }
   items12[1] = tmp32Result;
@@ -311,20 +311,20 @@ export default function FriendRequestsScreen() {
       stringResult = intl4.string(tmp4(1113).t["yvzX/Z"]);
     }
     const obj17 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-    WumpusCouchSpotIllustration = tmp4(17091).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(17234).WumpusCouchSpotIllustration;
     obj17.illustration = WumpusCouchSpotIllustration;
-    obj16.children = tmp32(tmp2(13403), obj17);
+    obj16.children = tmp32(tmp2(13539), obj17);
     tmp32(tmp33, obj16);
-    const tmp2Result = tmp2(13403);
+    const tmp2Result = tmp2(13539);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
     }
     const obj18 = { sections: outgoingSection, getItemProps: callback2, getSectionProps: callback1 };
-    items12[2] = tmp32(tmp4(10733).UsersFastList, obj18);
+    items12[2] = tmp32(tmp4(10863).UsersFastList, obj18);
     obj11.children = items12;
     items11[1] = tmp31(tmp33, obj11);
     obj10.children = items11;
-    return tmp31(tmp4(7326).AnalyticsLocationProvider, obj10);
+    return tmp31(tmp4(7446).AnalyticsLocationProvider, obj10);
   }
 };

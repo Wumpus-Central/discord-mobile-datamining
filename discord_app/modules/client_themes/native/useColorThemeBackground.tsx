@@ -1,12 +1,12 @@
-// === Module 5194: useColorThemeBackground ===
+// === Module 5317: useColorThemeBackground ===
 
-// Module 5194 (useColorThemeBackground)
+// Module 5317 (useColorThemeBackground)
 import util from "util" /* 1113 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import GuildThemePresets from "GuildThemePresets" /* 5195 */;
+import GuildThemePresets from "GuildThemePresets" /* 5318 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 
 const require = globalThis.__r;
 
@@ -19,9 +19,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(5197)();
+  const tmp = stateFromStores(5320)();
   _require = tmp;
-  let items = [ThemeStore];
+  items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);
   let obj = require("useStateFromStores");
   const items1 = [ClientThemesBackgroundStore];
@@ -36,7 +36,7 @@ export default function useColorThemeBackground() {
         const customUserThemeSettings = closure_0.customUserThemeSettings;
         const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getGuildThemeName, theme: stateFromStores, customThemeSettings: null };
         const obj2 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], stateFromStores), 0);
         obj2.colors = items;
         obj2.gradientColorStops = [];

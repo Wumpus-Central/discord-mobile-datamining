@@ -1,6 +1,6 @@
-// === Module 7001: DesignTogglesStore ===
+// === Module 7127: DesignTogglesStore ===
 
-// Module 7001 (DesignTogglesStore)
+// Module 7127 (DesignTogglesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -47,7 +47,7 @@ prototype["allWithDescriptions"] = function allWithDescriptions() {
   const entries = Object.entries(closure_1);
   return entries.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, tmp2, toggles[tmp]];
+    items = [tmp, tmp2, toggles[tmp]];
     return items;
   });
 };

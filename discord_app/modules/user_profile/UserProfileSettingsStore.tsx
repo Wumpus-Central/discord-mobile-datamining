@@ -1,12 +1,12 @@
-// === Module 8731: UserProfileSettingsStore ===
+// === Module 8855: UserProfileSettingsStore ===
 
-// Module 8731 (UserProfileSettingsStore)
+// Module 8855 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RouteConstants from "RouteConstants" /* 1073 */;
-import FavoritesConstants from "FavoritesConstants" /* 4876 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8732 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8733 */;
+import FavoritesConstants from "FavoritesConstants" /* 5003 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8856 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8857 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -94,7 +94,7 @@ prototype["showNotice"] = function showNotice() {
 prototype["canSubmit"] = function canSubmit() {
   const self = this;
   BioMaxLengthExperiment;
-  const items = [React3, guildId];
+  items = [React3, guildId];
   for (const item10016 of items) {
     let pendingChanges = self.getPendingChanges(item10016);
     if (undefined !== pendingChanges.pendingBio) {
@@ -253,7 +253,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     const entries = Object.entries(closure_9);
     closure_9 = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, ];
+      items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
       obj.pendingGlobalName = undefined;
@@ -271,7 +271,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     const entries = Object.entries(closure_9);
     closure_9 = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, ];
+      items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
       obj.pendingPronouns = undefined;

@@ -1,6 +1,6 @@
-// === Module 8846: MediaSlider ===
+// === Module 8970: MediaSlider ===
 
-// Module 8846 (MediaSlider)
+// Module 8970 (MediaSlider)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,15 +9,15 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 12;
 }
 obj2.centerText = { lineHeight: num };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2 = 16;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;
@@ -56,7 +56,7 @@ export default function MediaSlider(controls) {
     closure_1_5(arg0);
   }, num));
   closure_11 = tmp12;
-  const items = [tmp12];
+  items = [tmp12];
   obj2 = controls(setPaused[6]);
   const effect = obj.useEffect(() => () => {
     closure_1_11.cancel();

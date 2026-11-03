@@ -1,15 +1,15 @@
-// === Module 6895: FrecencyStore ===
+// === Module 7015: FrecencyStore ===
 
-// Module 6895 (FrecencyStore)
+// Module 7015 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5780 */;
+import FrecencyDefault from "Frecency" /* 5900 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -108,7 +108,7 @@ let closure_9 = new FrecencyDefault({
     return num;
   },
   lookupKey(id) {
-    let guild = GuildStore.getGuild(id);
+    guild = GuildStore.getGuild(id);
     if (guild == null) {
       guild = ChannelStore.getChannel(id);
     }
@@ -144,7 +144,7 @@ prototype["initialize"] = function initialize(pendingUsages) {
     });
     global = pendingUsages;
   }
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   self.syncWith(items, initFrecency);
 };
 prototype["getState"] = function getState() {

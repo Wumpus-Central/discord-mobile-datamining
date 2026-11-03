@@ -1,9 +1,9 @@
-// === Module 19349: MediaPlaybackPanelContainer ===
+// === Module 19507: MediaPlaybackPanelContainer ===
 
-// Module 19349 (MediaPlaybackPanelContainer)
-import MediaPlayerManager from "MediaPlayerManager" /* 16397 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 19350 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 19352 */;
+// Module 19507 (MediaPlaybackPanelContainer)
+import MediaPlayerManager from "MediaPlayerManager" /* 16540 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 19508 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 19510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

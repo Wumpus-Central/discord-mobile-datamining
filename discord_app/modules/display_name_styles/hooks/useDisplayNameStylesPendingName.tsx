@@ -1,9 +1,9 @@
-// === Module 16487: useDisplayNameStylesPendingName ===
+// === Module 16630: useDisplayNameStylesPendingName ===
 
-// Module 16487 (useDisplayNameStylesPendingName)
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+// Module 16630 (useDisplayNameStylesPendingName)
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ export function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   _require = stateFromStores;
   importDefault = guildId;
   const name = UserUtilsDefault.useName(stateFromStores);
-  const items = [UserProfileSettingsStore, GuildMemberStore];
+  items = [UserProfileSettingsStore, GuildMemberStore];
   const items1 = [guildId, stateFromStores];
   let str = require("initialize").useStateFromStores(items, () => {
     const pendingChanges = UserProfileSettingsStore.getPendingChanges(closure_1);

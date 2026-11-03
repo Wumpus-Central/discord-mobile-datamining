@@ -1,13 +1,13 @@
-// === Module 14555: IconActionButton ===
+// === Module 14686: IconActionButton ===
 
-// Module 14555 (IconActionButton)
+// Module 14686 (IconActionButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useFontScale from "useFontScale" /* 5642 */;
-import Pressables from "Pressables" /* 6980 */;
-import shared_components_Badge from "shared_components/Badge" /* 9818 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useFontScale from "useFontScale" /* 5762 */;
+import Pressables from "Pressables" /* 7106 */;
+import shared_components_Badge from "shared_components/Badge" /* 9949 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ class ButtonBadge {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const timestampProducer = createStyles.createStyles(() => {
   const obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -56,7 +56,7 @@ let closure_7 = noop.memo(function IconComponent(color) {
   color = color.color;
   const tmp = closure_6();
   dependencyMap = tmp;
-  const items = [tmp, color, source];
+  items = [tmp, color, source];
   if (null != IconComponent) {
     let obj = { size: "sm", color: color(575).colors.ICON_SUBTLE };
     let tmp2Result = closure_4(IconComponent, obj);
@@ -90,7 +90,7 @@ export default function IconActionButton(variant) {
     tmp10Result = tmp5 <= 1.2;
   }
   const obj = { ref, hitSlop, onPress, onLongPress, disabled, accessibilityRole: "button", accessibilityLabel, accessibilityActions, onAccessibilityAction, style: null, children: null };
-  const items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , , ];
+  items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , , ];
   let roundButton;
   if (!tmp10Result) {
     roundButton = tmp.roundButton;
@@ -105,7 +105,7 @@ export default function IconActionButton(variant) {
   obj.style = items;
   const items1 = [React4(closure_7, { IconComponent, color, source }), , , ];
   if (tmp10Result) {
-    const obj2 = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
+    const obj2 = { variant: "text-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
     tmp10Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp10Result;

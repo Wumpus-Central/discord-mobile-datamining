@@ -1,14 +1,14 @@
-// === Module 18436: useYouBarCoachmark ===
+// === Module 18590: useYouBarCoachmark ===
 
-// Module 18436 (useYouBarCoachmark)
+// Module 18590 (useYouBarCoachmark)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 let closure_6 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
@@ -22,7 +22,7 @@ export function useYouBarCoachmark(isCondensed) {
   let obj2 = isCondensed(isTinyBroncoEligible[7]);
   const isFocused = isCondensed(isTinyBroncoEligible[8]).useIsFocused();
   const obj3 = isCondensed(isTinyBroncoEligible[8]);
-  let items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = isCondensed(isTinyBroncoEligible[9]).useStateFromStores(items, () => {
     const obj = isCondensed(isTinyBroncoEligible[10]);
     const obj2 = { from: "authed", unit: isCondensed(isTinyBroncoEligible[11]).TimeUnits.DAYS };
@@ -33,7 +33,7 @@ export function useYouBarCoachmark(isCondensed) {
   const memo = stateFromStores.useMemo(() => {
     if (!isCondensed) {
       if (isFocused) {
-        const items = [];
+        items = [];
         if (stateFromStores) {
           items.push(dismissible_content.DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK);
         }

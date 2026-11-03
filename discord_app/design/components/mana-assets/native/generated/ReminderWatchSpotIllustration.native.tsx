@@ -1,19 +1,19 @@
-// === Module 11179: ReminderWatchSpotIllustration ===
+// === Module 11316: ReminderWatchSpotIllustration ===
 
-// Module 11179 (ReminderWatchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef11180 from "module_11180" /* 11180 */;
-import _modDef11181 from "module_11181" /* 11181 */;
-import _modDef11182 from "module_11182" /* 11182 */;
+// Module 11316 (ReminderWatchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef11317 from "module_11317" /* 11317 */;
+import _modDef11318 from "module_11318" /* 11318 */;
+import _modDef11319 from "module_11319" /* 11319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11180 }, 3: null };
-let obj2 = { uri: _modDef11180 };
-obj[2] = { uri: _modDef11181 };
-const obj3 = { uri: _modDef11181 };
-obj[3] = { uri: _modDef11182 };
+let obj = { 1: null, 2: { uri: _modDef11317 }, 3: null };
+let obj2 = { uri: _modDef11317 };
+obj[2] = { uri: _modDef11318 };
+const obj3 = { uri: _modDef11318 };
+obj[3] = { uri: _modDef11319 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function ReminderWatchSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

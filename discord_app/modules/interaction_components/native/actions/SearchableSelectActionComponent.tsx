@@ -1,12 +1,12 @@
-// === Module 17726: SearchableSelectActionComponent ===
+// === Module 17869: SearchableSelectActionComponent ===
 
-// Module 17726 (SearchableSelectActionComponent)
-import Server from "Server" /* 1992 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8704 */;
+// Module 17869 (SearchableSelectActionComponent)
+import Server from "Server" /* 2121 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8828 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
   if (guild_id == null) {
     guild_id = null;
   }
-  const items = [defaultValues.defaultValues, guild_id];
+  items = [defaultValues.defaultValues, guild_id];
   let memo = obj4.useMemo(() => {
     let snowflakeSelectDefaultValues = SearchableSelectActionComponentUtils.getSnowflakeSelectDefaultValues(defaultValues.defaultValues, guild_id);
     if (snowflakeSelectDefaultValues == null) {
@@ -54,7 +54,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
     tmp13 = obj3;
   }
   const componentState = componentStateContext.useComponentState(defaultValues, tmp13);
-  const state = componentState.state;
+  state = componentState.state;
   customId = componentStateContext.modal.customId;
   let type;
   ({ visualState, executeStateUpdate } = componentState);
@@ -107,16 +107,16 @@ export default function SearchableSelectActionComponent(defaultValues) {
           const obj2 = { selectionActionComponent: defaultValues };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj4);
-          obj3.openLazy(asyncRequireImpl(13253, dependencyMap.paths), combined, obj2);
-          const tmp14 = asyncRequireImpl(13253, dependencyMap.paths);
+          obj3.openLazy(asyncRequireImpl(13389, dependencyMap.paths), combined, obj2);
+          const tmp14 = asyncRequireImpl(13389, dependencyMap.paths);
         } else {
           const _HermesInternal = HermesInternal;
           const obj = ActionSheetActionCreatorsDefault;
           obj4 = { selectionActionComponent: defaultValues };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj4);
-          obj.openLazy(asyncRequireImpl(13251, dependencyMap.paths), combined1, obj4);
-          const tmp5 = asyncRequireImpl(13251, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(13387, dependencyMap.paths), combined1, obj4);
+          const tmp5 = asyncRequireImpl(13387, dependencyMap.paths);
         }
       };
       return <tmp4Result2 model={null} onTap={null} />;

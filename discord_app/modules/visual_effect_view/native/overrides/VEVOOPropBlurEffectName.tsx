@@ -1,17 +1,17 @@
-// === Module 17981: VEVOOPropBlurEffectName ===
+// === Module 18124: VEVOOPropBlurEffectName ===
 
-// Module 17981 (VEVOOPropBlurEffectName)
+// Module 18124 (VEVOOPropBlurEffectName)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VEVOOStore = fn(5601);
+const VEVOOStore = fn(5724);
 ({ getVisualEffectViewOverrides: closure_4, setVisualEffectViewOverides: hasOwnProperty } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ radio: { fontSize: 14 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");
@@ -67,7 +67,7 @@ export default noop.memo(function VEVOOPropBlurEffectName() {
     }
   };
   const tmp6 = first(noop.useState(first1().blurEffectNameOverride), 2);
-  let items = [
+  items = [
     closure_6(require("Form").FormSwitchRow, {
       label: "Theme: " + first,
       style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal,
@@ -97,7 +97,7 @@ export default noop.memo(function VEVOOPropBlurEffectName() {
         closure_8(closure_0);
       }
     };
-    const items = [visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, { opacity: 1 }];
+    items = [visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, { opacity: 1 }];
     obj.style = items;
     return closure_1_6(closure_0(visualEffectViewOverrideSharedStyles[6]).FormRadioRow, obj, index);
   });

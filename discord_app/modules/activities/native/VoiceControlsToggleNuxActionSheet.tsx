@@ -1,20 +1,20 @@
-// === Module 19286: VoiceControlsToggleNuxActionSheet ===
+// === Module 19444: VoiceControlsToggleNuxActionSheet ===
 
-// Module 19286 (VoiceControlsToggleNuxActionSheet)
+// Module 19444 (VoiceControlsToggleNuxActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { videoContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, bottomSheetWrapper: { paddingHorizontal: 24 }, contentContainer: { flex: 1, alignItems: "center", paddingTop: 24, paddingBottom: 16 }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, marginBottom: 24, textAlign: "center" } };
 let closure_11 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -29,7 +29,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   isScreenLandscape = markAsDismissed(isScreenLandscape[8]).useIsScreenLandscape();
   const obj = markAsDismissed(isScreenLandscape[8]);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let num = 1.5;
   const stateFromStores = markAsDismissed(isScreenLandscape[9]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (isScreenLandscape) {
@@ -57,7 +57,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   };
   const size = { style: tmp.videoContainer, src, poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png", width: tmp3, height: tmp3 / num, muted: true, paused: stateFromStores };
   const items1 = [closure_8(require("common/Video"), size), , , ];
-  const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(tmp5[13]).intl;
   obj6.children = intl.string(markAsDismissed(isScreenLandscape[13]).t.pT6hue);
   items1[1] = closure_8(markAsDismissed(isScreenLandscape[12]).Text, obj6);

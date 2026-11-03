@@ -1,25 +1,32 @@
-// === Module 15816: Menu ===
+// === Module 15959: Menu ===
 
-// Module 15816 (Menu)
+// Module 15959 (Menu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import spring from "spring" /* 5637 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6021 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6141 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6142 */;
+import PassthroughTouchViewDefault from "PassthroughTouchView" /* 15962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
 const jsx = fn(21).jsx;
-let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(15817).STANDARD_EASING };
-const createStyles = fn(5014);
+let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
+let obj = { duration: 250, easing: fn(15960).STANDARD_EASING };
+const createStyles = fn(5141);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -28,20 +35,23 @@ obj2.backdrop = obj4;
 obj2.menu = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
 let closure_10 = createStyles.createStyles(obj2);
 const context = noop.createContext({ menuClose: NOOP, menuDismiss: NOOP });
+let items = [{ code: "(function measureButtonRef_MenuTsx1(ref,setDimensions){let[measure,scheduleOnRN]=this.__closure;const measurements=measure(ref);if(measurements==null)return;scheduleOnRN(setDimensions,measurements);})" }, fn(1652).measure, fn(1705).scheduleOnRN];
+let closure_129_0;
+let closure_129_1;
+[tmp5, tmp6, tmp7] = items;
 function measureButtonRef(arg0, arg1) {
-  const measureResult = ReanimatedRexport.measure(arg0);
-  if (null != measureResult) {
-    ReanimatedRexport.runOnJS(arg1)(measureResult);
-    const tmpResult = ReanimatedRexport;
+  const tmp = require(arg0);
+  if (null != tmp) {
+    importDefault(arg1, tmp);
   }
 }
-let obj5 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
-measureButtonRef.__closure = { measure: fn(5095).measure, runOnJS: fn(5095).runOnJS };
-measureButtonRef.__workletHash = 15651320687527;
-measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
-let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
-let closure_14 = { code: "function MenuTsx3(){const{runOnJS,closeMenuCallback}=this.__closure;return runOnJS(closeMenuCallback)();}" };
-let __initData = { code: "function MenuTsx4(){const{visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY}=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};}" };
+let items1 = [tmp6, tmp7];
+measureButtonRef.__closure = items1;
+measureButtonRef.__workletHash = 5907268262035;
+measureButtonRef.__initData = tmp5;
+let closure_13 = { code: "(function MenuTsx2(){let[scheduleOnRN,openMenuCallback]=this.__closure;return scheduleOnRN(openMenuCallback);})" };
+let closure_14 = { code: "(function MenuTsx3(){let[scheduleOnRN,closeMenuCallback]=this.__closure;return scheduleOnRN(closeMenuCallback);})" };
+let closure_15 = { code: "(function MenuTsx4(){let[visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY]=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Menu/native/Menu.tsx");
 
@@ -49,6 +59,7 @@ export const MENU_OFFSET = 10;
 export const MenuContext = context;
 export function Menu(toggleButtonRef) {
   toggleButtonRef = toggleButtonRef.toggleButtonRef;
+  _require = toggleButtonRef;
   ({ onClose, position } = toggleButtonRef);
   if (position === undefined) {
     position = "right";
@@ -57,68 +68,74 @@ export function Menu(toggleButtonRef) {
   if (str === undefined) {
     str = "start";
   }
-  ({ offset, offsetAnimated } = toggleButtonRef);
-  let enabled;
-  size2 = undefined;
-  closure_5 = undefined;
+  const offset = toggleButtonRef.offset;
+  _slicedToArray = undefined;
+  noop = undefined;
   onClose = undefined;
   let menuClose;
   let callback1;
-  closure_12 = undefined;
-  __initData = undefined;
-  function openMenuCallback() {
+  c6 = function openMenuCallback() {
     if (obj.isAndroid()) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.ZqK0uI));
     }
     obj = PlatformUtils;
-    const result = setAccessibilityFocus.setAccessibilityFocus({ ref });
-    const obj2 = { ref };
+    const result = setAccessibilityFocus.setAccessibilityFocus({ ref: ref2 });
+    const obj2 = { ref: ref2 };
     const tmpResult = setAccessibilityFocus;
-  }
-  ({ style, children } = toggleButtonRef);
-  const tmp = menuClose();
-  enabled = size2.useContext(toggleButtonRef(enabled[9]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const rect = offsetAnimated(enabled[10])();
-  let size = offsetAnimated(enabled[11])();
-  _slicedToArray = size2.useRef(null);
-  [size2, closure_5] = size2.useState(null);
-  const sharedValue = toggleButtonRef(enabled[8]).useSharedValue(0);
-  let obj2 = toggleButtonRef(enabled[8]);
+  };
+  ({ offsetAnimated, style, children } = toggleButtonRef);
+  const tmp = closure_10();
+  const rect = useSafeAreaInsetsDefault();
+  let size = useWindowDimensionsDefault();
+  importDefault = noop.useRef(null);
+  [size2, _slicedToArray] = noop.useState(null);
+  dependencyMap = size2;
+  const sharedValue = require("module_1652").useSharedValue(0);
+  noop = sharedValue;
+  let obj2 = require("module_1652");
   const tmp5 = _slicedToArray;
-  const sharedValue1 = toggleButtonRef(enabled[8]).useSharedValue({ width: 0, height: 0 });
-  let items = [toggleButtonRef, size2];
-  const layoutEffect = size2.useLayoutEffect(() => {
+  const sharedValue1 = require("module_1652").useSharedValue({ width: 0, height: 0 });
+  c5 = sharedValue1;
+  items = [toggleButtonRef, size2];
+  const layoutEffect = noop.useLayoutEffect(() => {
     let current;
-    if (toggleButtonRef != null) {
-      current = toggleButtonRef.current;
+    if (ref != null) {
+      current = ref.current;
     }
     let tmp3 = null != current;
     if (tmp3) {
-      tmp3 = null == size2;
+      tmp3 = null == c2;
     }
     if (tmp3) {
-      ReanimatedRexport.runOnUI(measureButtonRef)(toggleButtonRef, closure_5);
+      _mod1705.scheduleOnUI(measureButtonRef, ref, c3);
     }
   }, items);
   if (onClose == null) {
-    onClose = sharedValue;
+    onClose = c6;
   }
   let items1 = [onClose, sharedValue];
   menuClose = obj.useCallback(() => {
-    const obj = timing;
-    const fn = function t() {
-      return toggleButtonRef(enabled[8]).runOnJS(onClose)();
-    };
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
-    fn.__workletHash = 5879184549724;
-    fn.__initData = __initData2;
-    const result = sharedValue.set(obj.withTiming(0, obj, "respect-motion-settings", fn));
+    obj = timing_timing;
+    items = [closure_14, _mod1705.scheduleOnRN, onClose];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp3, tmp4, tmp5] = items;
+    class MenuTsx3 {
+      constructor() {
+        return closure_0(closure_1);
+      }
+    }
+    const items1 = [tmp4, tmp5];
+    MenuTsx3.__closure = items1;
+    MenuTsx3.__workletHash = 8034387170500;
+    MenuTsx3.__initData = tmp3;
+    const result = _undefined.set(obj.withTiming(0, obj, "respect-motion-settings", MenuTsx3));
   }, items1);
   let items2 = [menuClose, toggleButtonRef];
   callback1 = obj.useCallback(() => {
-    const result = setAccessibilityFocus.setAccessibilityFocus({ ref: toggleButtonRef });
+    const result = setAccessibilityFocus.setAccessibilityFocus({ ref });
     callback();
   }, items2);
   const items3 = [callback1];
@@ -126,11 +143,11 @@ export function Menu(toggleButtonRef) {
     callback1();
     return true;
   }, items3);
-  offsetAnimated(enabled[17])(callback2);
+  useBackPressHandlerDefault(callback2);
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
-  let obj3 = toggleButtonRef(enabled[8]);
-  const boxShadowStyle = toggleButtonRef(enabled[18]).generateBoxShadowStyle(tmp2(tmp3[18]).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const obj3 = require("module_1652");
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(15961).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {
@@ -211,116 +228,147 @@ export function Menu(toggleButtonRef) {
   obj4[str12] = sum5;
   obj4.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
   const items5 = [obj4, str9, str12];
+  const tmp2Result = require("Shadows");
+  [tmp27, tmp28, tmp29] = tmp5(items5, 3);
   const tmp5Result = tmp5(items5, 3);
-  closure_12 = tmp27;
-  __initData = tmp28;
-  const tmp2Result = toggleButtonRef(enabled[18]);
-  let fn = function z() {
-    const obj = { opacity: sharedValue.get(), transform: null };
-    if (enabled) {
-      let items = [];
-    } else {
-      let num = 1;
-      let num2 = 1;
-      value = sharedValue.get();
-      if ("left" === closure_12) {
-        num2 = -1;
-      }
-      const items1 = [num2 * sharedValue1.get().width / 4, ];
-      let x;
-      if (offsetAnimated != null) {
-        const value6 = offsetAnimated.get();
-        if (value6 != null) {
-          x = value6.x;
+  const items6 = [closure_15, sharedValue, noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled, require("module_1652").interpolate, tmp28, sharedValue1, offsetAnimated, tmp29];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37] = items6;
+  class MenuTsx4 {
+    constructor() {
+      obj = { opacity: closure_0.get(), transform: null };
+      obj2 = closure_0;
+      if (closure_1) {
+        items = [];
+      } else {
+        tmp = closure_2;
+        tmp3 = closure_3;
+        num = 1;
+        str = "left";
+        num2 = 1;
+        value = obj2.get();
+        if ("left" === closure_3) {
+          num2 = -1;
         }
-      }
-      let num4 = 0;
-      if (null != x) {
-        const value7 = offsetAnimated.get();
-        let x1;
-        if (value7 != null) {
-          x1 = value7.x;
+        obj3 = closure_4;
+        items1 = [, ];
+        num3 = 4;
+        items1[0] = num2 * closure_4.get().width / 4;
+        obj4 = closure_5;
+        tmp4 = null;
+        x = undefined;
+        if (closure_5 != null) {
+          value1 = obj4.get();
+          if (value1 != null) {
+            x = value1.x;
+          }
         }
-        num4 = x1;
-      }
-      const obj6 = { translateX: null };
-      items1[1] = num4;
-      obj6.translateX = ReanimatedRexport.interpolate(value, [0, 1], items1);
-      items = [obj6, , ];
-      const value8 = sharedValue.get();
-      if ("top" === closure_13) {
-        num = -1;
-      }
-      const items2 = [num * sharedValue1.get().height / 4, ];
-      let y;
-      if (offsetAnimated != null) {
-        const value9 = offsetAnimated.get();
-        if (value9 != null) {
-          y = value9.y;
+        num4 = 0;
+        if (null != x) {
+          value2 = obj4.get();
+          x1 = undefined;
+          if (value2 != null) {
+            x1 = value2.x;
+          }
+          num4 = x1;
         }
-      }
-      let num5 = 0;
-      if (null != y) {
-        const value10 = offsetAnimated.get();
-        let y1;
-        if (value10 != null) {
-          y1 = value10.y;
+        obj1 = { translateX: null };
+        items1[1] = num4;
+        obj1.translateX = tmp(value, [0, 1], items1);
+        items = [, , ];
+        items[0] = obj1;
+        tmp10 = closure_6;
+        str2 = "top";
+        value3 = obj2.get();
+        if ("top" === closure_6) {
+          num = -1;
         }
-        num5 = y1;
+        items2 = [, ];
+        items2[0] = num * obj3.get().height / 4;
+        y = undefined;
+        if (obj4 != null) {
+          value4 = obj4.get();
+          if (value4 != null) {
+            y = value4.y;
+          }
+        }
+        num5 = 0;
+        if (null != y) {
+          value5 = obj4.get();
+          y1 = undefined;
+          if (value5 != null) {
+            y1 = value5.y;
+          }
+          num5 = y1;
+        }
+        obj8 = { translateY: null };
+        items2[1] = num5;
+        obj8.translateY = tmp(value3, [0, 1], items2);
+        items[1] = obj8;
+        obj9 = { scale: null };
+        num6 = 2;
+        num7 = 0.5;
+        obj9.scale = obj2.get() / 2 + 0.5;
+        items[2] = obj9;
       }
-      const obj7 = { translateY: null };
-      items2[1] = num5;
-      obj7.translateY = ReanimatedRexport.interpolate(value8, [0, 1], items2);
-      items[1] = obj7;
-      const obj8 = { scale: sharedValue.get() / 2 + 0.5 };
-      items[2] = obj8;
-      const tmpResult = ReanimatedRexport;
+      obj.transform = items;
+      return obj;
     }
-    obj.transform = items;
-    return obj;
-  };
-  const tmp2Result2 = toggleButtonRef(enabled[8]);
-  fn.__closure = { visible: sharedValue, useReducedMotion: enabled, interpolate: toggleButtonRef(enabled[8]).interpolate, dirX: tmp5Result[1], size: sharedValue1, offsetAnimated, dirY: tmp5Result[2] };
-  fn.__workletHash = 7884133597410;
-  fn.__initData = __initData;
-  const animatedStyle = tmp2Result2.useAnimatedStyle(fn);
-  let obj6 = { style: tmp.backdrop, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: callback1, onAccessibilityEscape: callback1, children: null };
-  const obj5 = { visible: sharedValue, useReducedMotion: enabled, interpolate: toggleButtonRef(enabled[8]).interpolate, dirX: tmp5Result[1], size: sharedValue1, offsetAnimated, dirY: tmp5Result[2] };
-  let obj7 = {
+  }
+  const items7 = [tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37];
+  MenuTsx4.__closure = items7;
+  MenuTsx4.__workletHash = 14672287725499;
+  MenuTsx4.__initData = tmp30;
+  const animatedStyle = require("module_1652").useAnimatedStyle(MenuTsx4);
+  let obj5 = { style: tmp.backdrop, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: callback1, onAccessibilityEscape: callback1, children: null };
+  const tmp2Result2 = require("module_1652");
+  let obj6 = {
     accessibilityRole: "list",
     style: null,
     onLayout: function handleOpen(nativeEvent) {
       const size = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
-      const result = sharedValue1.set(size);
-      const fn = function n() {
-        return toggleButtonRef(enabled[8]).runOnJS(openMenuCallback)();
-      };
-      __closure = { runOnJS: ReanimatedRexport.runOnJS, openMenuCallback };
-      fn.__closure = __closure;
-      fn.__workletHash = 14966618105405;
-      fn.__initData = __initData;
-      const result1 = sharedValue.set(spring.withSpring(1, closure_8, "respect-motion-settings", fn));
+      const result = _undefined2.set(size);
+      items = [closure_13, _mod1705.scheduleOnRN, c6];
+      c0 = undefined;
+      c1 = undefined;
+      [tmp4, tmp5, tmp6] = items;
+      class MenuTsx2 {
+        constructor() {
+          return closure_0(closure_1);
+        }
+      }
+      const items1 = [tmp5, tmp6];
+      MenuTsx2.__closure = items1;
+      MenuTsx2.__workletHash = 9487274314277;
+      MenuTsx2.__initData = tmp4;
+      const result1 = _undefined.set(spring_spring.withSpring(1, closure_8, "respect-motion-settings", MenuTsx2));
     },
     children: null
   };
-  const items6 = [tmp.menu, boxShadowStyle, tmp5Result[0], animatedStyle, style];
-  obj7.style = items6;
-  let obj8 = { children: null };
-  const obj9 = { value: memo, children: null };
+  const items8 = [tmp.menu, boxShadowStyle, tmp27, animatedStyle, style];
+  obj6.style = items8;
+  let obj7 = { children: null };
+  const obj8 = { value: memo, children: null };
   const Children = obj.Children;
-  obj9.children = Children.map(children, (icon, arg1) => {
+  obj8.children = Children.map(children, (icon, arg1) => {
     let cloneElementResult = icon;
     if (0 === arg1) {
       cloneElementResult = icon;
       if (noop.isValidElement(icon)) {
-        const obj2 = { ref };
+        const obj2 = { ref: ref2 };
         cloneElementResult = noop.cloneElement(icon, obj2);
       }
     }
     return cloneElementResult;
   });
-  obj8.children = sharedValue1(callback1.Provider, obj9);
-  obj7.children = sharedValue1(closure_5, obj8);
-  obj6.children = sharedValue1(offsetAnimated(enabled[8]).View, obj7);
-  return sharedValue1(offsetAnimated(enabled[19]), obj6);
+  obj7.children = onClose(context.Provider, obj8);
+  obj6.children = onClose(c5, obj7);
+  obj5.children = onClose(_modDef1652.View, obj6);
+  return onClose(PassthroughTouchViewDefault, obj5);
 }

@@ -1,20 +1,20 @@
-// === Module 18707: useOnPressSearchItem ===
+// === Module 18865: useOnPressSearchItem ===
 
-// Module 18707 (useOnPressSearchItem)
+// Module 18865 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8940 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9068 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -54,7 +54,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -93,18 +93,18 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9827);
-({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18708).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
+const SearchConstants = fn(9958);
+({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
+const SearchNavigatorScreens = fn(18866).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
 export function useOnPressSearchLink(searchContext) {
-  const items = [searchContext];
+  items = [searchContext];
   return noop.useCallback((target, arg1) => {
     searchContext = arg1;
     const tags = SearchQueryStore.getTags(searchContext);
@@ -145,7 +145,7 @@ export function useOnPressMessageItem(searchContext) {
   let context;
   const navigation = searchContext(context[17]).useNavigation();
   context = noop.useContext(searchContext(context[18]).SwipeForMemberListContext);
-  const items = [navigation, searchContext, context];
+  items = [navigation, searchContext, context];
   return noop.useCallback((arg0, arg1) => {
     channel = channel.getChannel(arg0);
     searchContext = channel;
@@ -167,7 +167,7 @@ export function useOnPressMessageItem(searchContext) {
         const obj2 = { channelId: guildId.id, guildId: null, searchContext: null };
         guildId = guildId.getGuildId();
         if (guildId == null) {
-          guildId = __initData;
+          guildId = closure_3_15;
         }
         obj2.guildId = guildId;
         obj2.searchContext = searchContext;
@@ -206,7 +206,7 @@ export function useOnPressConversationCitation(searchContext) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -267,7 +267,7 @@ export function useOnPressConversationCitation(searchContext) {
               }
             });
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } catch (tmp12) {
@@ -276,7 +276,7 @@ export function useOnPressConversationCitation(searchContext) {
       }
     }
   });
-  const items = [navigation, searchContext, context];
+  items = [navigation, searchContext, context];
   return noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -295,7 +295,7 @@ export function useOnPressMediaItem(searchContext) {
   let onEndReachedThreshold = searchContext.onEndReachedThreshold;
   const navigation = searchContext(onEndReached[17]).useNavigation();
   const context = navigation.useContext(searchContext(onEndReached[18]).SwipeForMemberListContext);
-  let items = [searchContext, navigation, context, allMediaResults, onEndReached, onEndReachedThreshold];
+  items = [searchContext, navigation, context, allMediaResults, onEndReached, onEndReachedThreshold];
   return navigation.useCallback((channelId, originViewOrOriginLayout) => {
     searchContext = channelId;
     const tags = SearchQueryStore.getTags(searchContext);
@@ -320,7 +320,7 @@ export function useOnPressMediaItem(searchContext) {
           const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
           let guildId = channel.getGuildId();
           if (guildId == null) {
-            guildId = __initData;
+            guildId = closure_3_15;
           }
           obj2.guildId = guildId;
           obj2.searchContext = searchContext;
@@ -351,7 +351,7 @@ export function useOnPressMediaItem(searchContext) {
             const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
             let guildId = channel.getGuildId();
             if (guildId == null) {
-              guildId = __initData;
+              guildId = closure_3_15;
             }
             obj2.guildId = guildId;
             obj2.searchContext = searchContext;
@@ -376,7 +376,7 @@ export function useOnPressMediaItem(searchContext) {
       }
       onEndReached = 0;
       onEndReachedThreshold = 0;
-      const items = [];
+      items = [];
       const item = channel.forEach((type) => {
         if (!tmp2) {
           items.push(type.sources);
@@ -397,8 +397,8 @@ export function useOnPressMediaItem(searchContext) {
 }
 export function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1497).useNavigation();
-  const items = [navigation, searchContext];
+  const navigation = searchContext(1499).useNavigation();
+  items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
     closure_0 = searchContext;
     const type = searchContext.type;
@@ -412,7 +412,7 @@ export function useOnPressGroupDMItem(searchContext) {
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(__initData, channelId);
+    ChannelActionCreatorsDefault.preload(closure_2_15, channelId);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[27]).transitionToChannel(closure_0);
     });
@@ -420,8 +420,8 @@ export function useOnPressGroupDMItem(searchContext) {
 }
 export function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1497).useNavigation();
-  const items = [navigation, searchContext];
+  const navigation = searchContext(1499).useNavigation();
+  items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
     closure_0 = searchContext;
     const type = searchContext.type;
@@ -435,7 +435,7 @@ export function useOnPressDMItem(searchContext) {
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(__initData, arg1);
+    ChannelActionCreatorsDefault.preload(closure_2_15, arg1);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[27]).transitionToChannel(closure_0);
     });
@@ -444,7 +444,7 @@ export function useOnPressDMItem(searchContext) {
 }
 export function useOnPressGuildTextChannel(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [searchContext];
+  items = [searchContext];
   return noop.useCallback((arg0) => {
     const channel = ChannelStore.getChannel(arg0);
     let id = channel;
@@ -514,7 +514,7 @@ export function useOnPressGuildVoiceChannel(searchContext) {
     }
     return applyArgumentsResult;
   }, []);
-  const items = [navigation, callback, searchContext];
+  items = [navigation, callback, searchContext];
   return noop.useCallback((arg0) => {
     channel = channel.getChannel(arg0);
     searchContext = channel;
@@ -541,16 +541,16 @@ export function useOnPressGuildVoiceChannel(searchContext) {
 }
 export function useOnPressSearchHistoryText(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [searchContext];
+  items = [searchContext];
   return noop.useCallback((text, tags) => {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13886).delayUntilNavigationComplete(() => {
+      const result = searchContext(14017).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13886);
+      let obj2 = searchContext(14017);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

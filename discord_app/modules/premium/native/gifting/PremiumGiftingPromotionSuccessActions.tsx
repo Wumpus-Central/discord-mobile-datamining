@@ -1,16 +1,16 @@
-// === Module 14494: PremiumGiftingPromotionSuccessActions ===
+// === Module 14625: PremiumGiftingPromotionSuccessActions ===
 
-// Module 14494 (PremiumGiftingPromotionSuccessActions)
+// Module 14625 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 575 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10559 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14495 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10689 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.promoDetails = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -38,7 +38,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   if (tmp12Result) {
     tmp12Result = product.items.length > 0;
   }
-  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
+  items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
   onCancel = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {

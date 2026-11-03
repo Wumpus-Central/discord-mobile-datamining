@@ -1,11 +1,11 @@
-// === Module 4887: DualReadUtils ===
+// === Module 5014: DualReadUtils ===
 
-// Module 4887 (DualReadUtils)
+// Module 5014 (DualReadUtils)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SetUtils from "SetUtils" /* 4880 */;
+import SetUtils from "SetUtils" /* 5007 */;
 import size from "module_2" /* 2 */;
 
 function deepEqualImpl(getTime, getTime2, map, arg3) {
@@ -150,7 +150,7 @@ function doDualReadValidation(items, derived, derived2) {
   }
 }
 function validateRecord(key, primaryRecord, shadowRecord) {
-  const items = [];
+  items = [];
   for (const key10007 in arg1) {
     let _Object2 = Object;
     let call2 = hasOwnProperty2.call;
@@ -247,7 +247,7 @@ function logErrorsToAnalytics(store_name, items) {
         if (num2 < 3) {
           let tmp21 = (function generateErrorReport(value, items) {
             function appendMismatch() {
-              const items = [...arguments];
+              items = [...arguments];
               const iter = items[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {
@@ -430,7 +430,7 @@ let map = new Map();
 let result = size.fileFinishedImporting("modules/libdiscore/stores/DualReadUtils.tsx");
 
 export function runDualReadValidation(store_name, Kkv, fn) {
-  let items = [];
+  items = [];
   fn((derived, derived2) => {
     doDualReadValidation(items, derived, derived2);
   });

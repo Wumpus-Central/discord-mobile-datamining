@@ -1,9 +1,9 @@
-// === Module 8965: useGuildScheduledEventUserCount ===
+// === Module 9093: useGuildScheduledEventUserCount ===
 
-// Module 8965 (useGuildScheduledEventUserCount)
+// Module 9093 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8966 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9094 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export default function useGuildScheduledEventUserCount(guild_id, id, recurrence
   _require = guild_id;
   closure_1 = id;
   dependencyMap = recurrenceId;
-  let items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   let items1 = [id, guild_id, recurrenceId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getUserCount(closure_1, closure_2));
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function useGuildScheduledEventUserCount(guild_id, id, recurrence
     }
     if (tmp2) {
       if (null != closure_2) {
-        const items = [tmp7];
+        items = [tmp7];
         let items1 = items;
       } else {
         items1 = [];

@@ -1,14 +1,14 @@
-// === Module 16776: FamilyCenterActivityPage ===
+// === Module 16919: FamilyCenterActivityPage ===
 
-// Module 16776 (FamilyCenterActivityPage)
+// Module 16919 (FamilyCenterActivityPage)
 import nativeDefault from "native" /* 575 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import useUserLinks from "useUserLinks" /* 8369 */;
-import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13361 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16777 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 16779 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 16789 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 16793 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import useUserLinks from "useUserLinks" /* 8493 */;
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13497 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16920 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 16922 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 16932 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 16936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ export default function FamilyCenterActivityPage() {
   const obj2 = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = useUserLinks.useActiveLinkUserIds();
   const obj3 = { style: tmp.container, children: null };
-  const items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {}), ];
+  items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {}), ];
   if (0 === activeLinkUserIds.length) {
     const obj4 = { children: null };
     const items1 = [hasOwnProperty(FamilyCenterActivityBannerDefault, {}), hasOwnProperty(FamilyCenterFeatureRowDefault, {}), ];

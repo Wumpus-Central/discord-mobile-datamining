@@ -1,7 +1,7 @@
-// === Module 7000: useDesignToggle ===
+// === Module 7126: useDesignToggle ===
 
-// Module 7000 (useDesignToggle)
-import DesignTogglesStore from "DesignTogglesStore" /* 7001 */;
+// Module 7126 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 7127 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDe
 
 export default function useDesignToggle(arg0) {
   _require = arg0;
-  const items = [DesignTogglesStore];
+  items = [DesignTogglesStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => DesignTogglesStore.get(closure_0), items1);
 };

@@ -1,6 +1,6 @@
-// === Module 14724: ClanGameplayActivity ===
+// === Module 14855: ClanGameplayActivity ===
 
-// Module 14724 (ClanGameplayActivity)
+// Module 14855 (ClanGameplayActivity)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ClanGameplayActivity.tsx");

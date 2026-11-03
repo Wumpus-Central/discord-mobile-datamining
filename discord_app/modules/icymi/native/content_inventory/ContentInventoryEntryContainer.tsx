@@ -1,18 +1,18 @@
-// === Module 18582: ContentInventoryEntryContainer ===
+// === Module 18738: ContentInventoryEntryContainer ===
 
-// Module 18582 (ContentInventoryEntryContainer)
+// Module 18738 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
@@ -61,7 +61,7 @@ export default function ContentInventoryEntryContainer(contentId) {
   }
   const onPress = contentId.onPress;
   const tmp = iCYMIStyles(flag);
-  const items = [contentId, type, userId, onPress];
+  items = [contentId, type, userId, onPress];
   const callback = onPress.useCallback(() => {
     if (null != onPress) {
       ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "press");

@@ -1,10 +1,10 @@
-// === Module 10799: GroupDMAvatar ===
+// === Module 10929: GroupDMAvatar ===
 
-// Module 10799 (GroupDMAvatar)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import ClipView from "ClipView" /* 9509 */;
+// Module 10929 (GroupDMAvatar)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ClipView from "ClipView" /* 9637 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 class FacepileGroupDMAvatar {
@@ -50,7 +50,7 @@ class FacepileGroupDMAvatar {
       const sum1 = -sqrtResult - (sum - sqrtResult) - sqrtResult1 + (sqrtResult1 - diff);
       obj = { nativeCutouts: null };
       const point = { shape: ClipView.CutoutShape.Circle, x: closure_1 - result1 - sum1, y: closure_1 - result1 - sum1, size: result1 };
-      const items = [point];
+      items = [point];
       obj.nativeCutouts = items;
       return obj;
     }, items1);
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "text-overlay-light" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "text-xs/medium" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -98,7 +98,7 @@ obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
 obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
 obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
 obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const React6 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
@@ -106,7 +106,7 @@ let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.t
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStoresArray = channel(504).useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((item) => user.getUser(item));

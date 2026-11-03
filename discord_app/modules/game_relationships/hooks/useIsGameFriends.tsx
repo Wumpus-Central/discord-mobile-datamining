@@ -1,8 +1,8 @@
-// === Module 14983: useIsGameFriends ===
+// === Module 15119: useIsGameFriends ===
 
-// Module 14983 (useIsGameFriends)
+// Module 15119 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
 
 const require = globalThis.__r;
 
@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting("modules/game_relationships/hooks/useI
 
 export function useIsGameFriends(id) {
   _require = id;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [id];
   return _slicedToArray(require("initialize").useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, RelationshipTypes.FRIEND);
-    const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
+    items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 }

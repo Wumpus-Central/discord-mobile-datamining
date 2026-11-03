@@ -1,11 +1,11 @@
-// === Module 15817: Easing ===
+// === Module 15960: Easing/Easing ===
 
-// Module 15817 (Easing)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+// Module 15960 (Easing/Easing)
+import _mod1652 from "module_1652" /* 1652 */;
 import size from "module_2" /* 2 */;
 
-const Easing = ReanimatedRexport.Easing;
-const Easing2 = ReanimatedRexport.Easing;
+const Easing = _mod1652.Easing;
+const Easing2 = _mod1652.Easing;
 const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
 const result = size.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
 

@@ -1,37 +1,37 @@
-// === Module 8443: SystemMessageUtils ===
+// === Module 8567: SystemMessageUtils ===
 
-// Module 8443 (SystemMessageUtils)
+// Module 8567 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8407 */;
-import MarkupParser from "MarkupParser" /* 8444 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8448 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8449 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8451 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8452 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8453 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8531 */;
+import MarkupParser from "MarkupParser" /* 8568 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8572 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8573 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8575 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8576 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8577 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSystemMessageUserJoinMobile(id) {
-  const items = [util.t.Jm6e0x, util.t.MGRnRT, util.t.EXOEGh, util.t["5uCTFN"], util.t.rl45Qo, util.t.Bh9zpQ, util.t.RdEy1J, util.t.qcdp00, util.t.F7w2Ru, util.t.gSyOgK, util.t.uYgqv7, util.t["b/1SBX"], util.t.LhebZF];
+  items = [util.t.Jm6e0x, util.t.MGRnRT, util.t.EXOEGh, util.t["5uCTFN"], util.t.rl45Qo, util.t.Bh9zpQ, util.t.RdEy1J, util.t.qcdp00, util.t.F7w2Ru, util.t.gSyOgK, util.t.uYgqv7, util.t["b/1SBX"], util.t.LhebZF];
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
 const Constants = fn(1072);
-({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
+({ MessageEmbedTypes: closure_10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/SystemMessageUtils.tsx");
@@ -231,7 +231,7 @@ export default {
                   const channel = ChannelStore.getChannel(channel_id);
                   let astToStringResult7 = null;
                   if (null != channel) {
-                    const guild = GuildStore.getGuild(channel.getGuildId());
+                    guild = GuildStore.getGuild(channel.getGuildId());
                     astToStringResult7 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
@@ -326,7 +326,7 @@ export default {
     }
   },
   getSystemMessageUserJoin(id) {
-    const items = [util.t["0cuj7l"], util.t["MuW+CN"], util.t.osqpHX, util.t["5ToSh2"], util.t.JEB8ps, util.t.pkOV5T, util.t["kRb1J+"], util.t["EmKLY+"], util.t.rPtBnb, util.t["5B/ekS"], util.t.ESNC3Y, util.t.Iw6d8w, util.t["WecSZ/"]];
+    items = [util.t["0cuj7l"], util.t["MuW+CN"], util.t.osqpHX, util.t["5ToSh2"], util.t.JEB8ps, util.t.pkOV5T, util.t["kRb1J+"], util.t["EmKLY+"], util.t.rPtBnb, util.t["5B/ekS"], util.t.ESNC3Y, util.t.Iw6d8w, util.t["WecSZ/"]];
     const obj = SnowflakeUtilsDefault;
     return items[obj.extractTimestamp(obj, id) % items.length];
   },

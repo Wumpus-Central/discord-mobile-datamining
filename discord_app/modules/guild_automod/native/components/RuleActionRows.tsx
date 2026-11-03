@@ -1,15 +1,15 @@
-// === Module 19702: RuleActionRows ===
+// === Module 19852: RuleActionRows ===
 
-// Module 19702 (RuleActionRows)
+// Module 19852 (RuleActionRows)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRow from "TableRow" /* 6975 */;
-import FormCheckbox from "FormCheckbox" /* 6989 */;
-import getActionInfo from "getActionInfo" /* 19682 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRow from "TableRow" /* 7101 */;
+import FormCheckbox from "FormCheckbox" /* 7115 */;
+import getActionInfo from "getActionInfo" /* 19832 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function RuleActionRow(onPress) {
@@ -26,7 +26,7 @@ function RuleActionRow(onPress) {
     obj2.icon = timestampProducer(TableRow.TableRow.Icon, obj3);
     obj2.label = actionInfo.headerText;
     const obj4 = { spacing: nativeDefault.space.PX_4, style: tmp.subLabel, children: null };
-    const items = [actionInfo.descriptionText, ];
+    items = [actionInfo.descriptionText, ];
     let tmp9Result = null != actionInfo.helperText;
     if (tmp9Result) {
       const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
@@ -54,11 +54,11 @@ function RuleActionRow(onPress) {
     return timestampProducer(TableRow.TableRow, obj2);
   }
 }
-let closure_4 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(13292).AutomodActionType;
+let closure_4 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(13428).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(19676).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(19826).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -175,7 +175,7 @@ export default function RuleActionRows(rule) {
         }
       }, actionType);
     });
-    tmp3 = closure_6(tmp(7060).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(7186).TableRowGroup, obj2);
   }
   return tmp3;
 };

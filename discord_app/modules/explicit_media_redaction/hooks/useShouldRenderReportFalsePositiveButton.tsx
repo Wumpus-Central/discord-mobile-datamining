@@ -1,7 +1,7 @@
-// === Module 13351: useShouldRenderReportFalsePositiveButton ===
+// === Module 13487: useShouldRenderReportFalsePositiveButton ===
 
-// Module 13351 (useShouldRenderReportFalsePositiveButton)
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7464 */;
+// Module 13487 (useShouldRenderReportFalsePositiveButton)
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7588 */;
 
 const require = globalThis.__r;
 
@@ -14,6 +14,6 @@ export function shouldRenderReportFalsePositiveButton(id) {
 }
 export function useShouldRenderReportFalsePositiveButton(id) {
   _require = id;
-  const items = [ExplicitMediaStore];
+  items = [ExplicitMediaStore];
   return null != require("useStateFromStores").useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(closure_0));
 }

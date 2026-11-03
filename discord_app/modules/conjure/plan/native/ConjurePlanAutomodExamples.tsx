@@ -1,11 +1,11 @@
-// === Module 12744: ConjurePlanAutomodExamples ===
+// === Module 12880: ConjurePlanAutomodExamples ===
 
-// Module 12744 (ConjurePlanAutomodExamples)
+// Module 12880 (ConjurePlanAutomodExamples)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12745 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12881 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ function ExampleRow(showReason) {
     result = ConjurePlanAutomodOutcomes.planAutomodReasonText(example);
     const tmp2Result = ConjurePlanAutomodOutcomes;
   }
-  const items = [tmp.row, ];
+  items = [tmp.row, ];
   let blockedRow = blockedStyle;
   if (blockedStyle) {
     blockedRow = tmp.blockedRow;
@@ -73,7 +73,7 @@ function ExampleSection(arg0) {
   }
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { style: tmp.caption, accessibilityRole: "header", children: null };
-  const items = [closure_3(require("Text/Text").Text, { variant: "text-xs/semibold", color: closure_6[obj.tone], children: obj.label() }), ];
+  items = [closure_3(require("Text/Text").Text, { variant: "text-xs/semibold", color: closure_6[obj.tone], children: obj.label() }), ];
   let tmp6Result = null;
   if (null != result) {
     const obj5 = { children: null };
@@ -99,7 +99,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
 let closure_6 = { blurple: "text-brand", red: "text-feedback-critical", green: "text-feedback-positive" };
 let closure_7 = ["glazedgamer", "sprinkles", "donutking"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" }, rule: null, section: null, caption: null, dot: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 obj2.rule = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -138,7 +138,7 @@ export default function ConjurePlanAutomodExamples(automod) {
     obj3.children = closure_3(require("Text/Text").Text, obj4);
     tmp7 = closure_3(View, obj3);
   }
-  const items = [
+  items = [
     tmp7,
     result.map((group, index) => {
       const obj = { group, firstIndex: null };

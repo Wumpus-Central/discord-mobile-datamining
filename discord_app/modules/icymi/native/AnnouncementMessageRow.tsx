@@ -1,35 +1,35 @@
-// === Module 18565: AnnouncementMessageRow ===
+// === Module 18721: AnnouncementMessageRow ===
 
-// Module 18565 (AnnouncementMessageRow)
+// Module 18721 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10188 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import ICYMIShared from "ICYMIShared" /* 18567 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10318 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
+import ICYMIShared from "ICYMIShared" /* 18723 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(18566).ITEM_PADDING;
+const ITEM_PADDING = fn(18722).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;
 });
 let closure_14 = noop.memo(function ChannelRow(message) {
   message = message.message;
-  const guild = message.guild;
+  guild = message.guild;
   const channel = message.channel;
   ({ unread, visible } = message);
-  let items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   const stateFromStores = message(channel[11]).useStateFromStores(items, () => UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id));
   const tmp4 = closure_13();
   let id;
@@ -73,7 +73,7 @@ let closure_14 = noop.memo(function ChannelRow(message) {
       const obj4 = { id: message.id, timestamp: null };
       const _Date = Date;
       obj4.timestamp = Date.now();
-      const items = [obj4];
+      items = [obj4];
       ICYMIActionCreatorsDefault.ackGravityItems(items);
       const tmpResult = ICYMIActionCreatorsDefault;
       ICYMIShared.navigateToPost(channel.id, guild.id, message.id);
@@ -111,7 +111,7 @@ export default function AnnouncementMessageRowWrapper(message) {
   message = message.message;
   let author;
   ({ unread, visible } = message);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = message(author[11]).useStateFromStores(items, () => ChannelStore.getChannel(message.getChannelId()));
   const obj = message(author[11]);
   const tmp = message;

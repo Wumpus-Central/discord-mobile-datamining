@@ -1,10 +1,10 @@
-// === Module 14873: useRequestToStreamData ===
+// === Module 15004: useRequestToStreamData ===
 
-// Module 14873 (useRequestToStreamData)
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11544 */;
-import RequestToStreamActionCreators from "RequestToStreamActionCreators" /* 14876 */;
+// Module 15004 (useRequestToStreamData)
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11681 */;
+import RequestToStreamActionCreators from "RequestToStreamActionCreators" /* 15007 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export function useRequestToStreamData(id, requestToStreamChannel) {
   }
   const enabled = require("RequestToStreamNonGamesExperiment").useConfig({ guildId: str, location: "useRequestToStreamData" }).enabled;
   let obj = require("RequestToStreamNonGamesExperiment");
-  const items = [id];
+  items = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => id.getId());
   let guild_id;
   let obj2 = require("initialize");
@@ -44,7 +44,7 @@ export function useRequestToStreamData(id, requestToStreamChannel) {
     return null != ApplicationStreamingStore.getStreamForUser(closure_0, guildId);
   });
   const tmp3Result = require("initialize");
-  let application_id;
+  application_id = undefined;
   if (activity != null) {
     application_id = activity.application_id;
   }

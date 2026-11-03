@@ -1,16 +1,16 @@
-// === Module 5200: getInitialNavigationState ===
+// === Module 5323: getInitialNavigationState ===
 
-// Module 5200 (getInitialNavigationState)
+// Module 5323 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1099 */;
-import matchPathCompat from "matchPathCompat" /* 5050 */;
-import RouteUtils from "RouteUtils" /* 5063 */;
-import useChatLayout from "useChatLayout" /* 5201 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5204 */;
+import matchPathCompat from "matchPathCompat" /* 5177 */;
+import RouteUtils from "RouteUtils" /* 5190 */;
+import useChatLayout from "useChatLayout" /* 5324 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5049 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5176 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function getInitialGuildState(guildId, channelId, flag) {
@@ -26,7 +26,7 @@ function getInitialGuildState(guildId, channelId, flag) {
     if (null != channelId) {
       if (!isChatLockedOpen) {
         if (!flag) {
-          let items = [true, ];
+          items = [true, ];
           const obj2 = { index: 0, routes: null };
           const obj3 = { name: "tabs", state: null };
           const obj4 = { routes: null, index: 0 };
@@ -105,7 +105,7 @@ function computeInitialNavigationStateWithoutLogging() {
     }
     ({ channelId, guildId } = params);
     if (null == guildId) {
-      const items = [{ page: "private-channels" }, ];
+      items = [{ page: "private-channels" }, ];
       let flag2 = tmp5;
       if (tmp5 === undefined) {
         flag2 = false;
@@ -169,7 +169,7 @@ export function wrapRouteForRootNavigator(items) {
 }
 export function getInitialAuthState() {
   const obj = { routes: null, index: 0 };
-  const items = [{ name: "auth" }];
+  items = [{ name: "auth" }];
   obj.routes = items;
   return obj;
 }

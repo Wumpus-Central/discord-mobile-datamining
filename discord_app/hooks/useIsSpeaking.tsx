@@ -1,10 +1,10 @@
-// === Module 6852: useIsSpeaking ===
+// === Module 6972: useIsSpeaking ===
 
-// Module 6852 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 6058 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SpeakingStore from "SpeakingStore" /* 6756 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 6972 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 6178 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SpeakingStore from "SpeakingStore" /* 6876 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ export default function useIsSpeaking(checkIsMuted) {
   }
   const context = checkIsMuted.context;
   flag = undefined;
-  const items = [VoiceStateStore, flag];
+  items = [VoiceStateStore, flag];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     let voiceStateForChannel = null;
@@ -73,7 +73,7 @@ export function getIsSpeaking(checkIsMuted) {
   }
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [VoiceStateStore, SelectedChannelStore, SpeakingStore, SoundboardStore];
+    items = [VoiceStateStore, SelectedChannelStore, SpeakingStore, SoundboardStore];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;

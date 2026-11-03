@@ -1,9 +1,9 @@
-// === Module 8774: useMaybeFetchProfileFrame ===
+// === Module 8898: useMaybeFetchProfileFrame ===
 
-// Module 8774 (useMaybeFetchProfileFrame)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8775 */;
-import useProfileFrameDefault from "useProfileFrame" /* 8785 */;
+// Module 8898 (useMaybeFetchProfileFrame)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8899 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default function useMaybeFetchProfileFrame(arg0) {
   let tmp = useFramePreviewOverrideFrameDefault();
   const tmp2 = useProfileFrameDefault(arg0);
   importDefault = tmp3;
-  const items = [null == tmp && null != arg0 && null == tmp2, arg0];
+  items = [null == tmp && null != arg0 && null == tmp2, arg0];
   const effect = noop.useEffect(() => {
     if (closure_1) {
       const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);

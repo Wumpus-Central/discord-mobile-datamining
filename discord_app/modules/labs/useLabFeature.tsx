@@ -1,7 +1,7 @@
-// === Module 8564: useLabFeature ===
+// === Module 8688: useLabFeature ===
 
-// Module 8564 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 8562 */;
+// Module 8688 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 8686 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/labs/useLabFeature.tsx");
 
 export default function useLabFeature(ICYMI_LAB_FEATURE) {
   _require = ICYMI_LAB_FEATURE;
-  const items = [LabFeatureStore];
+  items = [LabFeatureStore];
   const items1 = [ICYMI_LAB_FEATURE];
   return require("initialize").useStateFromStores(items, () => LabFeatureStore.get(closure_0), items1);
 };

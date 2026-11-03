@@ -1,7 +1,7 @@
-// === Module 19096: useIsOnMainSurface ===
+// === Module 19254: useIsOnMainSurface ===
 
-// Module 19096 (useIsOnMainSurface)
-import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+// Module 19254 (useIsOnMainSurface)
+import RootNavigationRef from "RootNavigationRef" /* 5322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ function getIsOnMainSurface() {
       if ("main" !== name) {
         return false;
       } else {
-        const state = tmp2.state;
+        state = tmp2.state;
         let tmp4;
         if (null != state) {
           if (0 !== state.routes.length) {

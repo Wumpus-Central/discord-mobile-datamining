@@ -1,6 +1,6 @@
-// === Module 11331: PinotChannelLabelAnchor ===
+// === Module 11468: PinotChannelLabelAnchor ===
 
-// Module 11331 (PinotChannelLabelAnchor)
+// Module 11468 (PinotChannelLabelAnchor)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 export function usePinotChannelLabelAnchor(id) {
   closure_0 = id;
   noop = noop.useRef(null);
-  const items = [id];
+  items = [id];
   const callback = noop.useCallback(() => {
     state.setState((labels) => {
       labels = labels.labels;
@@ -57,7 +57,7 @@ export function usePinotChannelLabelCenter(channelId, ref) {
   [tmp3, tmp4] = noop.useReducer((arg0) => arg0 + 1, 0);
   const tmp2 = _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2);
   [tmp6, closure_3] = noop.useState(null);
-  const items = [tmp, ref, tmp3];
+  items = [tmp, ref, tmp3];
   const effect = noop.useEffect(() => {
     let current = ref.current;
     if (null != closure_2) {

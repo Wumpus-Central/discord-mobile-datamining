@@ -1,13 +1,13 @@
-// === Module 18867: CustomTypingIndicatorProfileCoachmark ===
+// === Module 19025: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 18867 (CustomTypingIndicatorProfileCoachmark)
+// Module 19025 (CustomTypingIndicatorProfileCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import user from "user" /* 1391 */;
-import _modDef3870 from "module_3870" /* 3870 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13737 */;
-import _modDef13740 from "module_13740" /* 13740 */;
-import _modDef13741 from "module_13741" /* 13741 */;
+import user from "user" /* 1393 */;
+import _modDef3997 from "module_3997" /* 3997 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13868 */;
+import _modDef13871 from "module_13871" /* 13871 */;
+import _modDef13872 from "module_13872" /* 13872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,16 +15,16 @@ function CoachmarkPreview() {
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef13740, _modDef13741, _modDef13740];
+  items = [_modDef13871, _modDef13872, _modDef13871];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 }, typingText: { maxWidth: 100 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -43,7 +43,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
   const intl2 = visible(str[7]).intl;
   const stringResult1 = intl2.string(markAsDismissed(str[8]).lSBp2M);
   const analyticsLocations = markAsDismissed(str[9])(markAsDismissed(str[10]).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK).analyticsLocations;
-  const items = [markAsDismissed];
+  items = [markAsDismissed];
   const onDismiss = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items);
@@ -60,7 +60,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
       return closure_1_7(closure_1_9, {});
     };
     const intl = util.intl;
-    obj.buttonLabel = intl.string(_modDef3870["6NP6ic"]);
+    obj.buttonLabel = intl.string(_modDef3997["6NP6ic"]);
     obj.onButtonPress = function onButtonPress() {
       const obj2 = { screen: analyticsLocations.TYPING_INDICATOR, params: { analyticsLocations } };
       visible(str[11]).openUserSettings(obj2, () => {

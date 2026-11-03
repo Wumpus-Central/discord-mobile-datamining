@@ -1,12 +1,12 @@
-// === Module 18027: PrivacyHint ===
+// === Module 18171: PrivacyHint ===
 
-// Module 18027 (PrivacyHint)
+// Module 18171 (PrivacyHint)
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FormCheckbox from "FormCheckbox" /* 6989 */;
-import Form from "Form" /* 8177 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 18028 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FormCheckbox from "FormCheckbox" /* 7115 */;
+import Form from "Form" /* 8301 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 18172 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     tmp7Result = React6(Form.FormRow.Radio, obj4);
     tmp9 = React6;
   }
-  const items = [tmp7Result, ];
+  items = [tmp7Result, ];
   const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
@@ -47,12 +47,12 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6741).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(17989).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6861).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
@@ -64,7 +64,7 @@ export default function PrivacyHint(arg0) {
   if (!consentRequired) {
     if (tmp2) {
       const obj = { style: items1.multiItem, children: null };
-      const items = [React6(PromotionalEmailCheckBoxDefault, {}), React6(PrivacyPolicyDescription, {})];
+      items = [React6(PromotionalEmailCheckBoxDefault, {}), React6(PrivacyPolicyDescription, {})];
       obj.children = items;
       return React7(React3, obj);
     }

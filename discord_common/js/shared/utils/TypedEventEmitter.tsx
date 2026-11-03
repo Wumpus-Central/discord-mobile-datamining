@@ -1,6 +1,6 @@
-// === Module 5792: TypedEventEmitter ===
+// === Module 5912: TypedEventEmitter ===
 
-// Module 5792 (TypedEventEmitter)
+// Module 5912 (TypedEventEmitter)
 import _mod568 from "module_568" /* 568 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ prototype["removeAllListeners"] = function removeAllListeners() {
 };
 prototype["emit"] = function emit(arg0) {
   const emitter = this.emitter;
-  const items = [arg0, ...HermesBuiltin.copyRestArgs()];
+  items = [arg0, ...HermesBuiltin.copyRestArgs()];
   emitter.emit.apply(items);
 };
 prototype["listenerCount"] = function listenerCount(arg0) {

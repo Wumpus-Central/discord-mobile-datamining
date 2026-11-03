@@ -1,8 +1,8 @@
-// === Module 12463: AppDetailsOverflowMenu ===
+// === Module 12599: AppDetailsOverflowMenu ===
 
-// Module 12463 (AppDetailsOverflowMenu)
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+// Module 12599 (AppDetailsOverflowMenu)
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default function AppDetailsOverflowMenu(application) {
   if (result) {
     result = null != onAddAppMenuClick;
   }
-  const items = [];
+  items = [];
   if (result) {
     const obj3 = { label: null, action: null, IconComponent: null };
     let intl = tmp(tmp2[4]).intl;

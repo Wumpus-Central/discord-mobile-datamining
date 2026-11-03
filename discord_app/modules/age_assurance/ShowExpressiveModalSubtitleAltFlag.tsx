@@ -1,12 +1,12 @@
-// === Module 8017: ShowExpressiveModalSubtitleAltFlag ===
+// === Module 8141: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 8017 (ShowExpressiveModalSubtitleAltFlag)
+// Module 8141 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7969 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveM
 
 export function useShouldShowExpressiveModalSubtitleAlt(age_verification_expressive_v2_modal) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt());
   let enabled = closure_3.useConfig({ location: age_verification_expressive_v2_modal }).enabled;
   if (isSuspendedUser) {

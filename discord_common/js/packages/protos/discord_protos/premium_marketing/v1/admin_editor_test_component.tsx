@@ -1,12 +1,12 @@
-// === Module 9653: admin_editor_test_component ===
+// === Module 9785: admin_editor_test_component ===
 
-// Module 9653 (admin_editor_test_component)
+// Module 9785 (admin_editor_test_component)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import help_article from "help_article" /* 9632 */;
-import cta_button from "cta_button" /* 9633 */;
-import gradient from "gradient" /* 9639 */;
-import theme_aware_asset from "theme_aware_asset" /* 9641 */;
+import localized_string from "localized_string" /* 9763 */;
+import help_article from "help_article" /* 9764 */;
+import cta_button from "cta_button" /* 9765 */;
+import gradient from "gradient" /* 9771 */;
+import theme_aware_asset from "theme_aware_asset" /* 9773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -84,7 +84,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.premium_marketing.v1.AdminEditorTestSelectOption", AdminEditorTestSelectOption, "ADMIN_EDITOR_TEST_SELECT_OPTION_"];
+            items = ["discord_protos.premium_marketing.v1.AdminEditorTestSelectOption", AdminEditorTestSelectOption, "ADMIN_EDITOR_TEST_SELECT_OPTION_"];
             return items;
           }
     };
@@ -269,7 +269,7 @@ items[11] = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = ["discord_protos.premium_marketing.v1.AdminEditorTestSelectOption", AdminEditorTestSelectOption, "ADMIN_EDITOR_TEST_SELECT_OPTION_"];
+    items = ["discord_protos.premium_marketing.v1.AdminEditorTestSelectOption", AdminEditorTestSelectOption, "ADMIN_EDITOR_TEST_SELECT_OPTION_"];
     return items;
   }
 };

@@ -1,9 +1,9 @@
-// === Module 11344: prefetchConjureApplication ===
+// === Module 11481: prefetchConjureApplication ===
 
-// Module 11344 (prefetchConjureApplication)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
+// Module 11481 (prefetchConjureApplication)
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7001 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 function fetchBatch() {
   const self = this;
@@ -32,7 +32,7 @@ function flush() {
   let length;
   let sum;
   closure_5 = null;
-  const items = [...set];
+  items = [...set];
   let num = 0;
   set.clear();
   if (0 < items.length) {

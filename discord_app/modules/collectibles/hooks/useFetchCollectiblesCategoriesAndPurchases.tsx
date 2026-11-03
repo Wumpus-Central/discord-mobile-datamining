@@ -1,11 +1,11 @@
-// === Module 10604: useFetchCollectiblesCategoriesAndPurchases ===
+// === Module 10734: useFetchCollectiblesCategoriesAndPurchases ===
 
-// Module 10604 (useFetchCollectiblesCategoriesAndPurchases)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10605 */;
+// Module 10734 (useFetchCollectiblesCategoriesAndPurchases)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10735 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
 
 require = fn;
 function useFetchPurchases() {
@@ -17,12 +17,12 @@ function useFetchPurchases() {
   let ref;
   let ref2;
   CollectiblesPurchaseStore = undefined;
-  let items = [ref2];
+  items = [ref2];
   const stateFromStores = flag(isFetching[4]).useStateFromStores(items, () => ref2.hasLoadedExperiments);
   let obj = flag(isFetching[4]);
   const items1 = [CollectiblesPurchaseStore];
   const isClaiming = fetchPurchasesError(flag(isFetching[4]).useStateFromStoresArray(items1, () => {
-    const items = [, , , , , ];
+    items = [, , , , , ];
     ({ isFetching: arr[0], isClaiming: arr[1], fetchError: arr[2], claimError: arr[3], purchases: arr[4], hasPreviouslyFetched: arr[5] } = closure_7);
     return items;
   }), 6);

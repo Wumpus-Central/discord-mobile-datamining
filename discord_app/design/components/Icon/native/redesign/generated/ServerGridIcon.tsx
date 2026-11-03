@@ -1,9 +1,9 @@
-// === Module 15477: ServerGridIcon ===
+// === Module 15618: ServerGridIcon ===
 
-// Module 15477 (ServerGridIcon)
+// Module 15618 (ServerGridIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod15478 from "module_15478" /* 15478 */;
+import BaseIconImage from "BaseIconImage" /* 5836 */;
+import _mod15619 from "module_15619" /* 15619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ServerGridIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15478, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15619, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

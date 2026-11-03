@@ -1,6 +1,6 @@
-// === Module 10878: conjureProjectMute ===
+// === Module 11008: conjureProjectMute ===
 
-// Module 10878 (conjureProjectMute)
+// Module 11008 (conjureProjectMute)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
@@ -22,7 +22,7 @@ export function isConjureProjectMuted(settings, id) {
 }
 export function useIsConjureProjectMuted(id) {
   _require = id;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const conjure = UserSettingsProtoStore.settings.conjure;
@@ -40,15 +40,22 @@ export function setConjureProjectMuted(id, arg1) {
   dependencyMap = arg1;
   const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("conjure", async (projects) => {
-    projects = projects.projects;
     if (closure_1) {
       const ConjureProjectSettings = preloaded_user_settings.ConjureProjectSettings;
-      projects[closure_0] = ConjureProjectSettings.create({ muted: true });
-    } else if (null == projects[closure_0]) {
+      const obj = {};
+      const merged = Object.assign(tmp4);
+      obj.muted = true;
+      projects.projects[tmp3] = ConjureProjectSettings.create(obj);
+    } else if (null == tmp4) {
       return false;
     } else {
-      const projects2 = projects.projects;
-      delete tmp[tmp2];
+      const _Number = Number;
+      if (Number(tmp4.sidebarDismissedAt) > 0) {
+        tmp4.muted = false;
+      } else {
+        projects = projects.projects;
+        delete tmp[tmp2];
+      }
     }
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 }

@@ -1,14 +1,14 @@
-// === Module 16846: ConnectedApplicationIdentity ===
+// === Module 16989: ConnectedApplicationIdentity ===
 
-// Module 16846 (ConnectedApplicationIdentity)
+// Module 16989 (ConnectedApplicationIdentity)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Icon from "Icon" /* 5636 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import common_AlertDefault from "common/Alert" /* 6030 */;
-import InfoBoxDefault from "InfoBox" /* 11391 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Icon from "Icon" /* 5756 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import common_AlertDefault from "common/Alert" /* 6150 */;
+import InfoBoxDefault from "InfoBox" /* 11529 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -55,11 +55,11 @@ export default function ConnectedApplicationIdentity(identity) {
   let intl = tmp2(tmp3[7]).intl;
   const formatResult = intl.format(require("util").t.VgqIPj, { provider: str });
   noop = formatResult;
-  let items = [str, formatResult, token];
+  items = [str, formatResult, token];
   let icon;
   const callback = obj2.useCallback(() => {
     let obj = { children: null };
-    const items = [React5(native.Spacer, { size: 8 }), , , ];
+    items = [React5(native.Spacer, { size: 8 }), , , ];
     const obj2 = { variant: "text-md/medium", children: null };
     const intl = util.intl;
     obj2.children = intl.format(util.t.VgqIPj, { provider: str });

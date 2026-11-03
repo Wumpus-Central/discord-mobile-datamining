@@ -1,6 +1,6 @@
-// === Module 19307: VoicePanelVisualEffectView ===
+// === Module 19465: VoicePanelVisualEffectView ===
 
-// Module 19307 (VoicePanelVisualEffectView)
+// Module 19465 (VoicePanelVisualEffectView)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};
@@ -39,7 +39,7 @@ export const VoicePanelVisualEffectView = noop.memo(function VoicePanelVisualEff
   }
   const tmp5 = closure_9();
   obj2 = flag(token1[6]);
-  const items = [ThemeStore];
+  items = [ThemeStore];
   stateFromStores = flag(token1[7]).useStateFromStores(items, () => flag(token1[8]).isThemeLight(theme.theme));
   const tmpResult = flag(token1[7]);
   token1 = flag(token1[6]).useToken(tmp3(tmp2[5]).colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER);

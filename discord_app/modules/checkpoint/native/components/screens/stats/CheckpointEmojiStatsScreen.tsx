@@ -1,22 +1,22 @@
-// === Module 13662: CheckpointEmojiStatsScreen ===
+// === Module 13803: CheckpointEmojiStatsScreen ===
 
-// Module 13662 (CheckpointEmojiStatsScreen)
+// Module 13803 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import CheckpointStore from "CheckpointStore" /* 13436 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import CheckpointStore from "CheckpointStore" /* 13571 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6066);
+const CheckpointConstants = fn(6186);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -31,13 +31,13 @@ let obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-betw
 obj2.emojiChip = { gap: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8, borderWidth: 1, borderColor: CHECKPOINT_DARK_CYAN, backgroundColor: nativeDefault.colors.BLACK };
 obj2.emoji = { width: 20, height: 20 };
 obj2.customEmoji = { width: 20, height: 20 };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 20;
 }
 let obj10 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 24;
@@ -53,7 +53,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointEmojiStatsScreen() {
   const tmp = closure_12();
   _require = tmp;
-  let items = [AccessibilityStore];
+  items = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = require("initialize");
   const items1 = [CheckpointStore];
@@ -110,7 +110,7 @@ export default function CheckpointEmojiStatsScreen() {
   }
   [emoji, _slicedToArray] = noop.useState(tmp11 ? closure_11 : emojis[0]);
   const tmp2Result = require("CheckpointStatsUtils");
-  noop = require("useCheckpointSound")(require("module_13456"));
+  noop = require("useCheckpointSound")(require("module_13594"));
   let intl = tmp2(tmp3[14]).intl;
   const string = intl.string;
   if (tmp11) {
@@ -145,7 +145,7 @@ export default function CheckpointEmojiStatsScreen() {
   const obj9 = { style: items5, children: null };
   items5[1] = titleSpacing;
   const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color }), ];
-  const obj11 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const obj11 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
   const obj10 = { size: "xs", color };
   const tmp14Result = require("CheckpointScreen");
   obj11.children = stringResult.toLocaleUpperCase();
@@ -234,7 +234,7 @@ export default function CheckpointEmojiStatsScreen() {
           }
           obj5.name = str2;
           obj5.src = emojiURL;
-          const items = [closure_1_9(closure_1(first[28]), obj5), closure_1_9(closure_1(first[21]), { variant: "experimental/mono-md/bold", style: closure_0.rankText, children: index + 1 })];
+          items = [closure_1_9(closure_1(first[28]), obj5), closure_1_9(closure_1(first[21]), { variant: "mono-md/bold", style: closure_0.rankText, children: index + 1 })];
           obj3.children = items;
           let name = emojiName.id;
           if (name == null) {

@@ -1,6 +1,6 @@
-// === Module 17746: startFrameMonitor ===
+// === Module 17889: startFrameMonitor ===
 
-// Module 17746 (startFrameMonitor)
+// Module 17889 (startFrameMonitor)
 import size from "module_2" /* 2 */;
 
 let c0 = 16.666666666666668;

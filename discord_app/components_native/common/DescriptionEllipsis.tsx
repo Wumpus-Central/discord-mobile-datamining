@@ -1,13 +1,13 @@
-// === Module 13968: DescriptionEllipsis ===
+// === Module 14099: DescriptionEllipsis ===
 
-// Module 13968 (DescriptionEllipsis)
+// Module 14099 (DescriptionEllipsis)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: nativeDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
 obj2.topicEllipsis = size;
@@ -21,20 +21,20 @@ export default function DescriptionEllipsis(dotStyle) {
   dotStyle = dotStyle.dotStyle;
   const tmp = closure_3();
   const obj = { style: null, children: null };
-  const items = [tmp.topicEllipsis, dotStyle.style];
+  items = [tmp.topicEllipsis, dotStyle.style];
   obj.style = items;
   const obj2 = { style: null };
   const items1 = [tmp.topicEllipsisDot, dotStyle];
   obj2.style = items1;
-  const items2 = [framebus(View, obj2), , ];
+  const items2 = [duration(View, obj2), , ];
   const obj3 = { style: null };
   const items3 = [tmp.topicEllipsisDot, dotStyle];
   obj3.style = items3;
-  items2[1] = framebus(View, obj3);
+  items2[1] = duration(View, obj3);
   const obj4 = { style: null };
   const items4 = [tmp.topicEllipsisDot, dotStyle];
   obj4.style = items4;
-  items2[2] = framebus(View, obj4);
+  items2[2] = duration(View, obj4);
   obj.children = items2;
   return React2(View, obj);
 };

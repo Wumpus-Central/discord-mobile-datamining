@@ -1,62 +1,63 @@
-// === Module 19202: usePanelOpenState ===
+// === Module 19360: usePanelOpenState ===
 
-// Module 19202 (usePanelOpenState)
+// Module 19360 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 6875 */;
+import VoicePanelStore from "VoicePanelStore" /* 6995 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11223).VoicePanelModes;
+const VoicePanelModes = fn(11360).VoicePanelModes;
 const Constants = fn(1072);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
-const __initData = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
-const __initData2 = { code: "function usePanelOpenStateTsx2(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}" };
+let closure_9 = { code: "(function usePanelOpenStateTsx1(){let[connected]=this.__closure;return{connected:connected.get()};})" };
+let closure_10 = { code: "(function usePanelOpenStateTsx2(props,previous){let[scheduleOnRN,doCloseChannel]=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){scheduleOnRN(doCloseChannel);}})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
 
-export default function usePanelOpenState(arg0, arg1, arg2, connected) {
-  _require = arg0;
-  closure_1 = arg1;
+export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
   dependencyMap = arg2;
-  _slicedToArray = connected;
-  function doCloseChannel() {
-    const state = VoicePanelStore.getState();
-    return state.closeChannel(closure_0);
+  _slicedToArray = arg3;
+  items = [closure_9, arg3];
+  _require = undefined;
+  [tmp3, tmp4] = items;
+  function usePanelOpenStateTsx1() {
+    return { connected: _undefined.get() };
   }
-  const fn = function f() {
-    return { connected: connected.get() };
-  };
-  fn.__closure = { connected };
-  fn.__workletHash = 8350408810765;
-  fn.__initData = __initData;
-  class O {
-    constructor(arg0, arg1) {
-      connected = undefined;
-      if (arg1 != null) {
-        connected = arg1.connected;
-      }
-      tmp2 = true === connected && !arg0.connected;
-      if (tmp2) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        obj = closure_0(closure_2[5]);
-        tmp5 = doCloseChannel;
-        tmp6 = obj.runOnJS(doCloseChannel)();
-      }
-      return;
+  const items1 = [tmp4];
+  usePanelOpenStateTsx1.__closure = items1;
+  usePanelOpenStateTsx1.__workletHash = 11139062009940;
+  usePanelOpenStateTsx1.__initData = tmp3;
+  const items2 = [
+    closure_10,
+    require("module_1705").scheduleOnRN,
+    function doCloseChannel() {
+      state = VoicePanelStore.getState();
+      return state.closeChannel(c0);
     }
+  ];
+  _require = undefined;
+  c1 = undefined;
+  [tmp5, tmp6, tmp7] = items2;
+  function usePanelOpenStateTsx2(connected, connected2) {
+    connected = undefined;
+    if (connected2 != null) {
+      connected = connected2.connected;
+    }
+    if (tmp2) {
+      _undefined(c1);
+    }
+    tmp2 = true === connected && !connected.connected;
   }
-  let obj = require("ReanimatedRexport");
-  O.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
-  O.__workletHash = 9166012598595;
-  O.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(fn, O);
-  const items = [arg0, arg1, arg2, connected];
-  const effect = doCloseChannel.useEffect(() => {
+  const items3 = [tmp6, tmp7];
+  usePanelOpenStateTsx2.__closure = items3;
+  usePanelOpenStateTsx2.__workletHash = 9904230510523;
+  usePanelOpenStateTsx2.__initData = tmp5;
+  const animatedReaction = require("module_1652").useAnimatedReaction(usePanelOpenStateTsx1, usePanelOpenStateTsx2);
+  const items4 = [arg0, arg1, arg2, arg3];
+  const effect = first.useEffect(() => {
     function componentActionOpen(channelId) {
       let tmp = componentActionOpen === channelId.channelId;
       if (tmp) {
@@ -67,36 +68,36 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       }
     }
     function componentActionClose() {
-      if (connected.get()) {
+      if (closure_1_3.get()) {
         if (componentActionClose.get() !== constants.PIP) {
           dependencyMap(tmp5.PIP);
         }
       } else {
-        const state = first.getState();
+        state = state.getState();
         state.closeChannel(componentActionOpen);
       }
     }
-    let ComponentDispatch = closure_0(1108).ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
-    let ComponentDispatch2 = closure_0(1108).ComponentDispatch;
-    const subscription1 = ComponentDispatch2.subscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
+    let ComponentDispatch = _undefined(1108).ComponentDispatch;
+    const subscription = ComponentDispatch.subscribe(constants2.VOICE_PANEL_OPEN, componentActionOpen);
+    let ComponentDispatch2 = _undefined(1108).ComponentDispatch;
+    const subscription1 = ComponentDispatch2.subscribe(constants2.VOICE_PANEL_CLOSE, componentActionClose);
     return () => {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.unsubscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
       const ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
-  }, items);
-  [first, closure_6] = doCloseChannel.useState(() => closure_1(12066).getHistory().location.pathname);
-  const items1 = [arg0, first];
-  const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12066).addRouteChangeListener((pathname) => {
+  }, items4);
+  [first, closure_5] = first.useState(() => _undefined2(12203).getHistory().location.pathname);
+  const items5 = [arg0, first];
+  const effect1 = first.useEffect(() => {
+    closure_0 = _undefined2(12203).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
-        closure_1_6(tmp);
+        closure_1_5(tmp);
         const obj2 = { path: null };
-        const RouteParam = closure_0(5063).RouteParam;
-        const obj = closure_0(5050);
-        const RouteParam2 = closure_0(5063).RouteParam;
+        const RouteParam = c0(5190).RouteParam;
+        const obj = c0(5177);
+        const RouteParam2 = c0(5190).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();
@@ -106,14 +107,14 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(10928)();
+            c1(11066)();
           }
         }
-        obj3 = closure_0(12059);
+        obj3 = c0(12196);
       }
     });
     return () => {
       closure_0();
     };
-  }, items1);
+  }, items5);
 };

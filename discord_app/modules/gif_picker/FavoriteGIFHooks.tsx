@@ -1,8 +1,8 @@
-// === Module 10248: FavoriteGIFHooks ===
+// === Module 10378: FavoriteGIFHooks ===
 
-// Module 10248 (FavoriteGIFHooks)
+// Module 10378 (FavoriteGIFHooks)
 import _modDef12 from "module_12" /* 12 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10249 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10379 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   if (gifs == null) {
     gifs = closure_4;
   }
-  const items = [gifs, transformFavoriteGifUrl];
+  items = [gifs, transformFavoriteGifUrl];
   return noop.useMemo(() => {
     const mapped = _modDef12(gifs).map((src, url) => {
       const obj = {};

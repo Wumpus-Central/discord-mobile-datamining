@@ -1,18 +1,18 @@
-// === Module 16710: IgnoredUsersList ===
+// === Module 16853: IgnoredUsersList ===
 
-// Module 16710 (IgnoredUsersList)
+// Module 16853 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
-import Blocked from "Blocked" /* 16703 */;
-import IgnoredUserRowDefault from "IgnoredUserRow" /* 16711 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
+import Blocked from "Blocked" /* 16846 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 16854 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -34,7 +34,7 @@ function IgnoredUsersList(userIds) {
     const intl2 = util.intl;
     const obj6 = { numberOfIgnoredUsers: userIds.length };
     obj5.children = intl2.formatToPlainString(util.t.iNKUhU, obj6);
-    const items = [hasOwnProperty(Text_Text.Text, obj5), ];
+    items = [hasOwnProperty(Text_Text.Text, obj5), ];
     const obj7 = { hasIcons: true, children: userIds.map((userId) => closure_1_5(IgnoredUserRowDefault, { userId }, userId)) };
     const intl3 = util.intl;
     items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj7, intl3.string(util.t["93ZDWE"]));
@@ -48,7 +48,7 @@ function IgnoredUsersList(userIds) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
@@ -57,6 +57,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   return hasOwnProperty(IgnoredUsersList, { userIds: initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) });
 };

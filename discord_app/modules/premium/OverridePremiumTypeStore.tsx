@@ -1,10 +1,10 @@
-// === Module 1384: OverridePremiumTypeStore ===
+// === Module 1386: OverridePremiumTypeStore ===
 
-// Module 1384 (OverridePremiumTypeStore)
+// Module 1386 (OverridePremiumTypeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PerksStateUtils from "PerksStateUtils" /* 1389 */;
-import UserStoreUtils from "UserStoreUtils" /* 1394 */;
+import PerksStateUtils from "PerksStateUtils" /* 1391 */;
+import UserStoreUtils from "UserStoreUtils" /* 1396 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function setActualFromUser(user) {
     }
   }
 }
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 const UNSELECTED_CREATED_AT_DATE = PremiumConstants.UNSELECTED_CREATED_AT_DATE;
 const UNSELECTED_PREMIUM_TYPE_OVERRIDE = PremiumConstants.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let closure_5 = { premiumTypeOverride: UNSELECTED_PREMIUM_TYPE_OVERRIDE, premiumTypeActual: UNSELECTED_PREMIUM_TYPE_OVERRIDE, createdAtOverride: UNSELECTED_CREATED_AT_DATE, perksActual: null };

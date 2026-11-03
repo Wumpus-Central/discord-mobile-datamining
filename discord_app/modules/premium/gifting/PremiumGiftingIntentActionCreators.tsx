@@ -1,18 +1,18 @@
-// === Module 10611: PremiumGiftingIntentActionCreators ===
+// === Module 10741: PremiumGiftingIntentActionCreators ===
 
-// Module 10611 (PremiumGiftingIntentActionCreators)
+// Module 10741 (PremiumGiftingIntentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 6061 */;
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1385).GiftIntentType;
+const GiftIntentType = fn(1387).GiftIntentType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

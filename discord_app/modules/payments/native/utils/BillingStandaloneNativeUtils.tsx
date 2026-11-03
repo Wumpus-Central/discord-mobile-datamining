@@ -1,11 +1,11 @@
-// === Module 7588: BillingStandaloneNativeUtils ===
+// === Module 7712: BillingStandaloneNativeUtils ===
 
-// Module 7588 (BillingStandaloneNativeUtils)
+// Module 7712 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1072 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import PaymentConstants from "PaymentConstants" /* 5747 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7589 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import PaymentConstants from "PaymentConstants" /* 5867 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7713 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selectio
     LinkingDefault.openURLExternally(searchParams.href);
     closure_2(body, searchParams);
   }, () => {
-    const items = [...arguments];
+    items = [...arguments];
     emitMWRCSentryErrorOnFailure(items, closure_0, loadId.loadId);
     closure_3(...items);
   });
@@ -81,7 +81,7 @@ export function goToStandaloneNitroManagementFromMobileApp(premium_external_mana
     LinkingDefault.openURLExternally(searchParams.href);
     closure_2(body, searchParams);
   }, () => {
-    const items = [...arguments];
+    items = [...arguments];
     emitMWRCSentryErrorOnFailure(items, closure_0, loadId);
     closure_3(...items);
   });
@@ -107,7 +107,7 @@ export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, ne
     LinkingDefault.openURLExternally(searchParams.href);
     closure_2(body, searchParams);
   }, () => {
-    const items = [...arguments];
+    items = [...arguments];
     emitMWRCSentryErrorOnFailure(items, closure_0, closure_1);
     closure_3(...items);
   });

@@ -1,16 +1,16 @@
-// === Module 18520: ForYouEmptyState ===
+// === Module 18674: ForYouEmptyState ===
 
-// Module 18520 (ForYouEmptyState)
+// Module 18674 (ForYouEmptyState)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18521 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");
@@ -18,10 +18,10 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export function ForYouEmptyState(height) {
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp.container, { height: height.height }];
+  items = [tmp.container, { height: height.height }];
   obj.style = items;
   const items1 = [React3(View, { style: tmp.image, children: React3(MailboxSpotIllustration.MailboxSpotIllustration, { scale: 0.75 }) }), , ];
-  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
+  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/semibold", style: null, children: null };
   const items2 = [, ];
   ({ text: arr3[0], headerText: arr3[1] } = tmp);
   obj3.style = items2;

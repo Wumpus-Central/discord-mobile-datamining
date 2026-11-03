@@ -1,13 +1,13 @@
-// === Module 11010: GuildIncidentsStore ===
+// === Module 11143: GuildIncidentsStore ===
 
-// Module 11010 (GuildIncidentsStore)
+// Module 11143 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8482 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8606 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 function computeAlertSettings() {
@@ -26,7 +26,7 @@ function computeAlertSettings() {
   }
 }
 function updateGuildIncident(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let incidentsData;
   if (guild != null) {
     incidentsData = guild.incidentsData;
@@ -62,7 +62,7 @@ class GuildIncidentsStore extends Store {
 const prototype = GuildIncidentsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore);
-  const items = [UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore];
+  items = [UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore];
   this.syncWith(items, computeAlertSettings);
 };
 prototype["getGuildIncident"] = function getGuildIncident(id) {

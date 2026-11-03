@@ -1,12 +1,12 @@
-// === Module 12582: useConjureHeldPrompt ===
+// === Module 12718: useConjureHeldPrompt ===
 
-// Module 12582 (useConjureHeldPrompt)
-import conjureScopeSetup from "conjureScopeSetup" /* 12583 */;
+// Module 12718 (useConjureHeldPrompt)
+import conjureScopeSetup from "conjureScopeSetup" /* 12719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10850 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10980 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/conjure/scope_setup/useConjureH
 
 export function useConjureScopeSetupPending(projectId) {
   _require = projectId;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
@@ -30,7 +30,7 @@ export function useConjureScopeSetupPending(projectId) {
 export function useConjureHeldPrompt(projectId) {
   _require = projectId;
   closure_129_0 = projectId;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);

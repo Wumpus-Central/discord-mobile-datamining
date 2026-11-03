@@ -1,10 +1,10 @@
-// === Module 9642: gift_plan_selection_card_banner ===
+// === Module 9774: gift_plan_selection_card_banner ===
 
-// Module 9642 (gift_plan_selection_card_banner)
+// Module 9774 (gift_plan_selection_card_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9631 */;
-import gradient from "gradient" /* 9639 */;
-import theme_aware_asset from "theme_aware_asset" /* 9641 */;
+import localized_string from "localized_string" /* 9763 */;
+import gradient from "gradient" /* 9771 */;
+import theme_aware_asset from "theme_aware_asset" /* 9773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -96,7 +96,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "asset_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner.AssetVariant", GiftPlanSelectionCardBanner_AssetVariant, "ASSET_VARIANT_"];
+            items = ["discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner.AssetVariant", GiftPlanSelectionCardBanner_AssetVariant, "ASSET_VARIANT_"];
             return items;
           }
     };

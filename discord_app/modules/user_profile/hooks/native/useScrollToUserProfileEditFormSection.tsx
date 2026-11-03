@@ -1,9 +1,9 @@
-// === Module 16471: useScrollToUserProfileEditFormSection ===
+// === Module 16614: useScrollToUserProfileEditFormSection ===
 
-// Module 16471 (useScrollToUserProfileEditFormSection)
+// Module 16614 (useScrollToUserProfileEditFormSection)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11459 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11596 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   dependencyMap = arg1;
   noop = noop.useRef({});
   noop.useRef(false);
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.useReducedMotion);
   const items1 = [arg0, stateFromStores];
   const callback = noop.useCallback((arg0) => {

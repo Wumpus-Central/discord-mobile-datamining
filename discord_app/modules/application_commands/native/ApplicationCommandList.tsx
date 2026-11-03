@@ -1,11 +1,11 @@
-// === Module 13965: ApplicationCommandList ===
+// === Module 14096: ApplicationCommandList ===
 
-// Module 13965 (ApplicationCommandList)
+// Module 14096 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = 3 * fn(10225).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_6 = 3 * fn(10355).AUTOCOMPLETE_ROW_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
@@ -16,7 +16,7 @@ export default function ApplicationCommandList(channel) {
   let commands;
   ({ style, query, ItemSeparatorComponent } = channel);
   const obj2 = { text: query, commandTypes: null };
-  const items = [channel(commands[4]).ApplicationCommandType.CHAT];
+  items = [channel(commands[4]).ApplicationCommandType.CHAT];
   obj2.commandTypes = items;
   let obj = onCommandsChange(commands[3]);
   const tmp = commands;

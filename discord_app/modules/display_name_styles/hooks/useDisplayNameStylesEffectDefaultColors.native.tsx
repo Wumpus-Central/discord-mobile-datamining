@@ -1,14 +1,14 @@
-// === Module 10776: useDisplayNameStylesEffectDefaultColors ===
+// === Module 10906: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 10776 (useDisplayNameStylesEffectDefaultColors)
+// Module 10906 (useDisplayNameStylesEffectDefaultColors)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1402 */;
-import useToken from "useToken" /* 5596 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1404 */;
+import useToken from "useToken" /* 5719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1401);
+const DisplayNameStylesConstants = fn(1403);
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: closure_4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: hasOwnProperty, DISPLAY_NAME_STYLES_PRISM_PRESETS: metroRequire } = DisplayNameStylesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx");
@@ -17,7 +17,7 @@ export default function useDisplayNameStylesEffectDefaultColors() {
   let obj = utils_ColorUtils;
   const hex2intResult = obj.hex2int(useToken.useToken(nativeDefault.colors.TEXT_DEFAULT));
   require = hex2intResult;
-  let items = [hex2intResult];
+  items = [hex2intResult];
   return noop.useMemo(() => {
     const obj = { [closure_2_0(closure_2_2[5]).DisplayNameEffect.SOLID]: items };
     items = [hex2intResult];

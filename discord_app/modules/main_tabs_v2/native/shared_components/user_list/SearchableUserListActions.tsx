@@ -1,8 +1,8 @@
-// === Module 10731: SearchableUserListActions ===
+// === Module 10861: SearchableUserListActions ===
 
-// Module 10731 (SearchableUserListActions)
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
+// Module 10861 (SearchableUserListActions)
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,9 +36,9 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 export function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  const tmp = style(10732)();
+  const tmp = style(10862)();
   dependencyMap = tmp;
-  const items = [actions, tmp, style];
+  items = [actions, tmp, style];
   return noop.useMemo(() => {
     let obj = style;
     if (style == null) {

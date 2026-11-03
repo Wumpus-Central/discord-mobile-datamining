@@ -1,9 +1,9 @@
-// === Module 14500: useFetchCollectiblesProductCategory ===
+// === Module 14631: useFetchCollectiblesProductCategory ===
 
-// Module 14500 (useFetchCollectiblesProductCategory)
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10605 */;
+// Module 14631 (useFetchCollectiblesProductCategory)
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10735 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
 
 const require = globalThis.__r;
 
@@ -14,9 +14,9 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCo
 export function useFetchCollectiblesProductCategory(skuId) {
   _require = skuId;
   useMaybeFetchCollectiblesCategoriesDefault();
-  let items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const tmp2 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items, () => {
-    const items = [CollectiblesCategoryStore.isFetchingCategories, CollectiblesCategoryStore.getCategoryForProduct(closure_0)];
+    items = [CollectiblesCategoryStore.isFetchingCategories, CollectiblesCategoryStore.getCategoryForProduct(closure_0)];
     return items;
   }), 2);
   return { isFetching: tmp2[0], category: tmp2[1] };

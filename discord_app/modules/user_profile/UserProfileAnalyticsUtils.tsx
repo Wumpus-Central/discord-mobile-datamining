@@ -1,21 +1,21 @@
-// === Module 8762: UserProfileAnalyticsUtils ===
+// === Module 8886: UserProfileAnalyticsUtils ===
 
-// Module 8762 (UserProfileAnalyticsUtils)
+// Module 8886 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import useDisplayProfile from "useDisplayProfile" /* 8757 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8769 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import useDisplayProfile from "useDisplayProfile" /* 8881 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8893 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -27,7 +27,7 @@ function getProfileProperties(guildMemberProfile) {
   if (guildMember != null) {
     nick = guildMember.nick;
   }
-  const items = [];
+  items = [];
   if (Boolean(nick)) {
     items.push(constants.NICKNAME);
   }
@@ -260,8 +260,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7276).FetchState;
-const constants = fn(8754).TrackUserProfileProperties;
+const FetchState = fn(7396).FetchState;
+const constants = fn(8878).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
@@ -517,7 +517,7 @@ export function trackUserProfileActivityAction(userId) {
     session_id = activity.session_id;
   }
   obj2.activity_session_id = session_id;
-  let application_id;
+  application_id = undefined;
   if (activity != null) {
     application_id = activity.application_id;
   }
@@ -723,7 +723,7 @@ export function trackUserProfileWishlistAction(dependencyMap) {
   obj3.sku_id = skuId;
   if (null != productLines) {
     const _Array = Array;
-    let items = Array.from(productLines);
+    items = Array.from(productLines);
   } else {
     items = [];
   }

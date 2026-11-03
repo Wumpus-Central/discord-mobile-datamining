@@ -101,7 +101,7 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
   }
   closure_1 = undefined;
   closure_2 = undefined;
-  let items = [];
+  items = [];
   const iter = this.logs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -133,7 +133,7 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
       sum = combined + "<" + tmp2 + ">";
     }
     closure_1 = Math.max(sum.length, closure_1);
-    const items = [sum, tmp3];
+    items = [sum, tmp3];
     return items;
   });
   const mapped1 = mapped.map((item) => {
@@ -178,7 +178,7 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
   for (const item10009 of tmp) {
     let traces = item10009.traces;
     for (const item10016 of traces) {
-      let items = [item10016.name, tmp2.name, item10016.time];
+      items = [item10016.name, tmp2.name, item10016.time];
       obj[item10016.name] = items;
       continue;
     }
@@ -194,7 +194,7 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
   const mapped = values.map((item) => {
     [arr, , tmp] = item;
     closure_0 = Math.max(arr.length, closure_0);
-    const items = [arr, tmp];
+    items = [arr, tmp];
     return items;
   });
   const mapped1 = mapped.map((item) => {

@@ -1,13 +1,13 @@
-// === Module 15305: PillText ===
+// === Module 15446: PillText ===
 
-// Module 15305 (PillText)
+// Module 15446 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15306 */;
-import createStyles from "createStyles" /* 5014 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15447 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const HorizontalGradient = Constants.HorizontalGradient;
@@ -20,7 +20,7 @@ export default function PillText(arg0) {
   ({ pillText, style } = arg0);
   const tmp = closure_5();
   const obj = { style: null, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };
-  const items = [tmp.pillTextContainer, style];
+  items = [tmp.pillTextContainer, style];
   obj.style = items;
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
   obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });

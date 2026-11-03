@@ -1,9 +1,9 @@
-// === Module 13003: ConjureStaffAccessNotice ===
+// === Module 13139: ConjureStaffAccessNotice ===
 
-// Module 13003 (ConjureStaffAccessNotice)
+// Module 13139 (ConjureStaffAccessNotice)
 import router_utils from "router_utils" /* 1099 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import LinkingDefault from "Linking" /* 5709 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import LinkingDefault from "Linking" /* 5829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,15 +13,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/builder/native/ConjureStaffAccessNotice.tsx");
 
 export default function ConjureStaffAccessNotice() {
-  conjureStaffAccessTarget = conjureStaffAccessTarget(13004).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(13140).useConjureStaffAccessTarget();
   [][0] = conjureStaffAccessTarget;
   let tmp5 = null;
   if (null != conjureStaffAccessTarget) {
     let obj2 = { type: "info", role: "none", message: null };
     const intl = tmp(1113).intl;
-    const obj3 = { channel: tmp(13004).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
-    obj2.message = intl.format(_modDef3868["6anmu1"], obj3);
-    tmp5 = jsx(tmp(8025).InlineNotice, { type: "info", role: "none", message: null });
+    const obj3 = { channel: tmp(13140).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+    obj2.message = intl.format(_modDef3995["6anmu1"], obj3);
+    tmp5 = jsx(tmp(8149).InlineNotice, { type: "info", role: "none", message: null });
   }
   return tmp5;
 };

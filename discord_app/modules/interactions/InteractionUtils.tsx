@@ -1,15 +1,15 @@
-// === Module 8700: InteractionUtils ===
+// === Module 8824: InteractionUtils ===
 
-// Module 8700 (InteractionUtils)
+// Module 8824 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Server from "Server" /* 1992 */;
-import InteractionTypes from "InteractionTypes" /* 6070 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8701 */;
-import SkemaUtils from "SkemaUtils" /* 8702 */;
+import Server from "Server" /* 2121 */;
+import InteractionTypes from "InteractionTypes" /* 6190 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8825 */;
+import SkemaUtils from "SkemaUtils" /* 8826 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 8389 */;
+import InteractionStore from "InteractionStore" /* 8513 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0) {
@@ -34,7 +34,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "HermesInternal", done: "HermesInternal" };
+    return { value: "HermesInternal", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -306,7 +306,7 @@ export function canRetryInteractionData(interactionData) {
   if (options != null) {
     length = options.length;
   }
-  let items = options;
+  items = options;
   if (1 === length) {
     let tmp4 = options;
     if (options[0].type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -350,4 +350,4 @@ export function canRetryInteractionData(interactionData) {
   }
   return true;
 }
-export const interactionCallbackErrorReason = fn(6068).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(6188).interactionCallbackErrorReason;

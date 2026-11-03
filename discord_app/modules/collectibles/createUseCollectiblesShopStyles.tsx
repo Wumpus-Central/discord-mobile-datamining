@@ -1,11 +1,11 @@
-// === Module 14498: createUseCollectiblesShopStyles ===
+// === Module 14629: createUseCollectiblesShopStyles ===
 
-// Module 14498 (createUseCollectiblesShopStyles)
+// Module 14629 (createUseCollectiblesShopStyles)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import tinycolorDefault from "tinycolor" /* 7730 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8802 */;
+import tinycolorDefault from "tinycolor" /* 7854 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/collectibles/createUseCollect
 export default function createUseCollectiblesShopStyles(arg0) {
   closure_0 = arg0;
   return (backgroundColors) => {
-    const items = [AccessibilityStore];
+    items = [AccessibilityStore];
     const stateFromStores = useStateFromStores.useStateFromStores(items, () => saturation.saturation);
     if (null == backgroundColors) {
       return {};

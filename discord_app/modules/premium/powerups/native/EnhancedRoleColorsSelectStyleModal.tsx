@@ -1,27 +1,27 @@
-// === Module 19798: EnhancedRoleColorsSelectStyleModal ===
+// === Module 19948: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 19798 (EnhancedRoleColorsSelectStyleModal)
+// Module 19948 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
-import useThemeDefault from "useTheme" /* 5253 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6040 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import RowGeneratorDefault from "RowGenerator" /* 8377 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8419 */;
-import _modDef11187 from "module_11187" /* 11187 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19777 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19778 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19780 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19799 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5050 */;
+import useThemeDefault from "useTheme" /* 5376 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6160 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import RowGeneratorDefault from "RowGenerator" /* 8501 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8543 */;
+import _modDef11324 from "module_11324" /* 11324 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19927 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19928 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19930 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19949 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -31,7 +31,7 @@ const RoleColorsStyle = GuildSettingsRolesStore.RoleColorsStyle;
 const HOLOGRAPHIC_ROLE_COLORS = EnhancedRoleColorConstants.HOLOGRAPHIC_ROLE_COLORS;
 const STYLE_CONFIGS = GuildSettingsRoleConstants.STYLE_CONFIGS;
 const ThemeTypes = Constants.ThemeTypes;
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginHorizontal: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_32 }, stylesContainer: null, button: null, message: null, text: null, upsellContainer: null, upsellText: null, selected: null, disabled: null };
   const obj2 = { marginHorizontal: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_32 };
@@ -78,7 +78,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   obj3.header = closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
   const obj5 = { style: tmp3.container, children: null };
   const tmp6 = new RowGeneratorDefault();
-  let items = [
+  items = [
     closure_9(message, {
       style: tmp3.stylesContainer,
       children: STYLE_CONFIGS.map((id) => {
@@ -86,7 +86,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
         if (!hasEnhancedRoleColorsForRole) {
           tmp = id.id !== rowGenerator.SOLID;
         }
-        const items = [button.button, , ];
+        items = [button.button, , ];
         let selected = id === id.id;
         if (selected) {
           selected = button.selected;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11187;
+              message.message.avatarURL = _modDef11324;
             }
           }),
 
@@ -143,13 +143,13 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj10.gradientColors = items1;
     const intl4 = util.intl;
-    obj10.children = intl4.string(_modDef2570["+/IHLl"]);
+    obj10.children = intl4.string(_modDef2699["+/IHLl"]);
     obj9.magical = closure_9(Text_Text.Text, obj10);
-    obj8.children = intl3.format(_modDef2570.VpEDJc, obj9);
+    obj8.children = intl3.format(_modDef2699.VpEDJc, obj9);
     const items2 = [closure_9(Text_Text.Text, obj8), ];
     const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
     const intl5 = util.intl;
-    obj11.children = intl5.string(_modDef2570.FJZeZF);
+    obj11.children = intl5.string(_modDef2699.FJZeZF);
     items2[1] = closure_9(Text_Text.Text, obj11);
     obj7.children = items2;
     tmp8Result = closure_10(tmp9, obj7);

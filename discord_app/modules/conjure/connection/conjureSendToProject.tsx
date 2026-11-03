@@ -1,7 +1,7 @@
-// === Module 12600: conjureSendToProject ===
+// === Module 12736: conjureSendToProject ===
 
-// Module 12600 (conjureSendToProject)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10880 */;
+// Module 12736 (conjureSendToProject)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11010 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
         clearTimeout(closure_131_2);
         closure_131_6.close();
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp31) {
       url = tmp31;

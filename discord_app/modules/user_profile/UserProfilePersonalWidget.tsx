@@ -1,14 +1,14 @@
-// === Module 7778: UserProfilePersonalWidget ===
+// === Module 7902: UserProfilePersonalWidget ===
 
-// Module 7778 (UserProfilePersonalWidget)
+// Module 7902 (UserProfilePersonalWidget)
 import _modDef1342 from "module_1342" /* 1342 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import WidgetType from "WidgetType" /* 7773 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7779 */;
-import UserStore from "UserStore" /* 1383 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
+import WidgetType from "WidgetType" /* 7897 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7903 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function createDefaultFieldsSection() {
@@ -17,7 +17,7 @@ function createDefaultFieldsSection() {
   const sum = tmp + 1;
   closure_5 = sum;
   obj2.key = `field-${+closure_5}`;
-  const items = [obj2, , , ];
+  items = [obj2, , , ];
   const obj3 = { key: `field-${+sum}`, title: "", description: "" };
   const sum1 = tmp3 + 1;
   items[1] = obj3;
@@ -140,7 +140,7 @@ function serializeSection(type) {
     return type;
   }
 }
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 let closure_5 = 0;
 let UserProfilePersonalWidget;
 class UserProfilePersonalWidget {
@@ -305,7 +305,7 @@ export function createDefaultField() {
 export { createDefaultFieldsSection };
 export function createDefaultPersonalWidget() {
   const obj = { header: "", sections: null };
-  const items = [{ type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" }, createDefaultFieldsSection()];
+  items = [{ type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" }, createDefaultFieldsSection()];
   obj.sections = items;
   if (typeof UserProfilePersonalWidget === "function") {
     ({ sections, id, header } = obj);
@@ -328,7 +328,7 @@ export function isPersonalWidgetNew() {
 }
 export function parsePersonalWidgetSections(sections) {
   if (null == sections) {
-    let items = [];
+    items = [];
   } else {
     const mapped = sections.map((type) => {
       type = type.type;

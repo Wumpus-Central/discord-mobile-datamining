@@ -1,6 +1,6 @@
-// === Module 15746: getTransformedBadgeColors ===
+// === Module 15889: getTransformedBadgeColors ===
 
-// Module 15746 (getTransformedBadgeColors)
+// Module 15889 (getTransformedBadgeColors)
 import _modDef671 from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransform
 export function getTransformedBadgeColors(arg0) {
   ({ primaryTintColor, primaryTintLuminances, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights } = arg0);
   if (null == primaryTintColor) {
-    let items = [];
+    items = [];
     if (tmp6) {
       if (null == secondaryTintColor) {
         items = secondaryBaseColors;

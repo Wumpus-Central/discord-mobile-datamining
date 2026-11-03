@@ -1,10 +1,10 @@
-// === Module 12129: useConjureProjectSettingsDraft ===
+// === Module 12265: useConjureProjectSettingsDraft ===
 
-// Module 12129 (useConjureProjectSettingsDraft)
+// Module 12265 (useConjureProjectSettingsDraft)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/conjure/settings/useConjureProj
 export default function useConjureProjectSettingsDraft(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  let items = [save2];
+  items = [save2];
   let items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(items, () => ConjureProjectStore.getProject(closure_0), items1);
   let obj = require("initialize");
@@ -61,7 +61,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   let flags = tmp8Result[0];
   closure_13 = tmp8Result[1];
   const tmp8Result8 = changes(commit.useState(() => {
-    const items = [...prop];
+    items = [...prop];
     return items;
   }), 2);
   const first1 = tmp8Result8[0];
@@ -89,7 +89,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   }
   let tmp32 = null != stateFromStores;
   if (tmp32) {
-    tmp32 = "user" !== stateFromStores.install_scope;
+    tmp32 = "guild" === stateFromStores.install_scope;
   }
   let result1 = tmp32;
   if (tmp32) {
@@ -210,7 +210,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -239,7 +239,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                           return { value: false, done: true };
                         } else {
                           ref2.current = true;
-                          __initData4(true);
+                          closure_2_22(true);
                           c3 = 1;
                           c4 = 2;
                           c5 = 1;
@@ -350,7 +350,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -450,7 +450,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -488,7 +488,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                     }
                     let tmp48 = closure_29;
                     if (closure_29) {
-                      const items = [];
+                      items = [];
                       HermesBuiltin.arraySpread(first1, 0);
                       obj6.collaborator_role_ids = items.sort();
                     }
@@ -510,7 +510,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                     }
                     closure_17(true);
                     dependencyMap(null);
-                    __initData3(null);
+                    guild(null);
                     c3 = 2;
                     if (changed) {
                       guild_id = 3;

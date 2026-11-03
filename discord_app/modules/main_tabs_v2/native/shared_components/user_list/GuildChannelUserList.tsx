@@ -1,28 +1,28 @@
-// === Module 11621: GuildChannelUserList ===
+// === Module 11758: GuildChannelUserList ===
 
-// Module 11621 (GuildChannelUserList)
+// Module 11758 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import GuildUtilsDefault from "GuildUtils" /* 6901 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import sortByMatchScore from "sortByMatchScore" /* 9135 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import GuildUtilsDefault from "GuildUtils" /* 7021 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import sortByMatchScore from "sortByMatchScore" /* 9263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7446 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7570 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7446);
+let ChannelMemberStore = fn(7570);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1072);
@@ -75,7 +75,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   closure_129_7 = first;
   closure_129_8 = tmp6[1];
   const first1 = onUserLongPress(flag3.useState(() => {
-    const items = [sortByMatchScore.AutocompleterResultTypes.USER];
+    items = [sortByMatchScore.AutocompleterResultTypes.USER];
     const obj = { userFilters: { guild: channelId, strict: true } };
     const obj2 = { guild: channelId, strict: true };
     return new sortByMatchScoreDefault((canMentionEveryone, str) => {
@@ -87,7 +87,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     }, items, undefined, obj);
   }), 1)[0];
   closure_129_9 = first1;
-  let items = [flag, first1];
+  items = [flag, first1];
   const effect = flag3.useEffect(() => {
     if (roleId) {
       const searchContext = closure_9.createSearchContext();
@@ -176,7 +176,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   const tmp21 = guildId(onUserPress[17])();
   const items8 = [guildId];
   const memo1 = flag3.useMemo(() => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let guildVisualOwnerId;
     if (null != guild) {
       guildVisualOwnerId = PermissionUtilsAll.getGuildVisualOwnerId(guild);

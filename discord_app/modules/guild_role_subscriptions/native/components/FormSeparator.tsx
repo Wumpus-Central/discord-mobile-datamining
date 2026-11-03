@@ -1,12 +1,12 @@
-// === Module 17208: FormSeparator ===
+// === Module 17351: FormSeparator ===
 
-// Module 17208 (FormSeparator)
+// Module 17351 (FormSeparator)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.separator = size;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default function FormSeparator(arg0) {
   ({ style, withoutMargins } = arg0);
   const tmp = closure_2();
-  const items = [tmp.container, , ];
+  items = [tmp.container, , ];
   let margins;
   if (!withoutMargins) {
     margins = tmp.margins;

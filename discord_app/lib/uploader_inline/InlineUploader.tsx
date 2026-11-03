@@ -1,8 +1,8 @@
-// === Module 7153: InlineUploader ===
+// === Module 7274: InlineUploader ===
 
-// Module 7153 (InlineUploader)
-import DiscordMd5Default from "DiscordMd5" /* 7154 */;
-import originalMd5Header from "originalMd5Header" /* 7156 */;
+// Module 7274 (InlineUploader)
+import DiscordMd5Default from "DiscordMd5" /* 7275 */;
+import originalMd5Header from "originalMd5Header" /* 7277 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
       }
       return tmp14;
     } else {
-      const items = [];
+      items = [];
       const _Object = Object;
       const keys = Object.keys(originalMd5);
       for (const item10006 of keys) {

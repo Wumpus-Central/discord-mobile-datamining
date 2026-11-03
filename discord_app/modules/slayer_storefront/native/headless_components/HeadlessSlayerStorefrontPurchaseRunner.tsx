@@ -1,14 +1,14 @@
-// === Module 10680: HeadlessSlayerStorefrontPurchaseRunner ===
+// === Module 10810: HeadlessSlayerStorefrontPurchaseRunner ===
 
-// Module 10680 (HeadlessSlayerStorefrontPurchaseRunner)
+// Module 10810 (HeadlessSlayerStorefrontPurchaseRunner)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");
@@ -29,7 +29,7 @@ export function HeadlessSlayerStorefrontPurchaseRunner(attempt) {
   const tmp4 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
   closure_6 = tmp4;
   noop.useRef(false);
-  const items = [tmp, tmp2, onPurchaseError];
+  items = [tmp, tmp2, onPurchaseError];
   onPurchaseError = noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;

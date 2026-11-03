@@ -1,6 +1,6 @@
-// === Module 5799: pollConnectionStats ===
+// === Module 5919: pollConnectionStats ===
 
-// Module 5799 (pollConnectionStats)
+// Module 5919 (pollConnectionStats)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export default function pollConnectionStats(on) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -53,14 +53,14 @@ export default function pollConnectionStats(on) {
             closure_130_2 = undefined;
             closure_130_3 = undefined;
             if (!dependencyMap) {
-              let items = [];
+              items = [];
               closure_130_0 = items;
               let eachConnectionResult = on.eachConnection((connection) => closure_1_0.push({ connection, stats: connection.emitStats() }));
               closure_130_1 = [];
               on = items[Symbol.iterator]();
             }
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp5) {
           c5 = 0;

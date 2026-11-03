@@ -1,7 +1,7 @@
-// === Module 11295: useLastChannelMessage ===
+// === Module 11432: useLastChannelMessage ===
 
-// Module 11295 (useLastChannelMessage)
-import MessageStore from "MessageStore" /* 6061 */;
+// Module 11432 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 6181 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conver
 
 export function useLastChannelMessage(channelId) {
   _require = channelId;
-  const items = [MessageStore];
+  items = [MessageStore];
   return require("initialize").useStateFromStores(items, () => {
     let lastNonCurrentUserMessage = MessageStore.getLastNonCurrentUserMessage(closure_0);
     if (lastNonCurrentUserMessage == null) {

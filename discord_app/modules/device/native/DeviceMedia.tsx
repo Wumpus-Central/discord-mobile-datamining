@@ -1,9 +1,9 @@
-// === Module 10541: DeviceMedia ===
+// === Module 10671: DeviceMedia ===
 
-// Module 10541 (DeviceMedia)
+// Module 10671 (DeviceMedia)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10542 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10672 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -52,7 +52,7 @@ export default {
                         const edges1 = edges.edges;
                         if (edges1 != null) {
                           const unshift = edges1.unshift;
-                          const items = [];
+                          items = [];
                           HermesBuiltin.arraySpread(tmp2.edges, 0);
                           HermesBuiltin.apply(items, edges1);
                         }
@@ -92,9 +92,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10542)(obj2);
+          lastAssetIndex(10672)(obj2);
         }
-        obj = assets(1375);
+        obj = assets(1377);
       }
     }
   },

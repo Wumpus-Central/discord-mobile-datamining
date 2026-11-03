@@ -1,16 +1,16 @@
-// === Module 14830: BotReportChooser ===
+// === Module 14961: BotReportChooser ===
 
-// Module 14830 (BotReportChooser)
+// Module 14961 (BotReportChooser)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
-import ActionSheet from "ActionSheet" /* 7366 */;
-import ActionSheetRow from "ActionSheetRow" /* 7368 */;
-import ReportModals from "ReportModals" /* 8352 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
+import ActionSheet from "ActionSheet" /* 7486 */;
+import ActionSheetRow from "ActionSheetRow" /* 7488 */;
+import ReportModals from "ReportModals" /* 8476 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;
 function ReportAppProfile(arg0) {
@@ -32,7 +32,7 @@ function ReportAppProfile(arg0) {
 }
 function ReportAppBehavior(arg0) {
   ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: ApplicationStore, onSubmit: closure_4, appContext: closure_5 } = arg0);
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
   const data = ApplicationActionCreators.useApplication(stateFromStores).data;
   let obj3 = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
@@ -62,13 +62,13 @@ let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReport
 
 export default function BotReportChooser(arg0) {
   const obj = { header: null, children: null };
-  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
+  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.Bd10bR);
   obj.header = React4(Text_Text.Text, obj2);
   const obj3 = { hasIcons: false, children: null };
   const merged = Object.assign(arg0);
-  const items = [React4(ReportAppProfile, {}), ];
+  items = [React4(ReportAppProfile, {}), ];
   const merged1 = Object.assign(arg0);
   items[1] = React4(ReportAppBehavior, {});
   obj3.children = items;

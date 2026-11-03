@@ -1,15 +1,15 @@
-// === Module 14412: useConjureChannelProject ===
+// === Module 14543: useConjureChannelProject ===
 
-// Module 14412 (useConjureChannelProject)
-import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+// Module 14543 (useConjureChannelProject)
+import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 require = fn;
-const isProjectOwner = fn(6844).isProjectOwner;
+const isProjectOwner = fn(6964).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChannelProject.tsx");
@@ -26,10 +26,10 @@ export default function useConjureChannelProject(guild_id) {
     guild_id = null;
   }
   let obj = require("ConjureUtils");
-  let items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const items1 = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != guild_id) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -52,7 +52,7 @@ export default function useConjureChannelProject(guild_id) {
       if (roles == null) {
         roles = [];
       }
-      let items = roles;
+      items = roles;
     } else {
       items = [];
     }

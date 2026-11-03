@@ -1,7 +1,7 @@
-// === Module 12251: useFramePoolBorrow ===
+// === Module 12387: useFramePoolBorrow ===
 
-// Module 12251 (useFramePoolBorrow)
-import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
+// Module 12387 (useFramePoolBorrow)
+import FramePoolManagerDefault from "FramePoolManager" /* 12388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ export default function useFramePoolBorrow(arg0, arg1, arg2) {
   dependencyMap = arg1;
   _slicedToArray = arg2;
   first = _slicedToArray(first.useState(() => Symbol("frame-render-target")), 1)[0];
-  const items = [arg0, first, arg1];
+  items = [arg0, first, arg1];
   const effect = first.useEffect(() => {
     FramePoolManagerDefault.registerFrameTarget(closure_0, first, closure_1, closure_2);
     return () => {

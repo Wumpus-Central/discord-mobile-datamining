@@ -1,15 +1,15 @@
-// === Module 16409: SessionAdManager ===
+// === Module 16552: SessionAdManager ===
 
-// Module 16409 (SessionAdManager)
+// Module 16552 (SessionAdManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Timers from "Timers" /* 4858 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7642 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7865 */;
+import Timers from "Timers" /* 4985 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7766 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7989 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import LifecycleManager from "LifecycleManager" /* 1996 */;
+import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 require = fn;
 const Constants = fn(1072);

@@ -1,16 +1,16 @@
-// === Module 16515: useUserAvailableGuildsWithTags ===
+// === Module 16658: useUserAvailableGuildsWithTags ===
 
-// Module 16515 (useUserAvailableGuildsWithTags)
+// Module 16658 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export function useUserAvailableGuildsWithTags() {
-  const items = [GuildStore, GuildMemberStore];
+  items = [GuildStore, GuildMemberStore];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {

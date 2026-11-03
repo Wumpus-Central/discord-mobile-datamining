@@ -1,21 +1,21 @@
-// === Module 11343: useConjureProjectIcon ===
+// === Module 11480: useConjureProjectIcon ===
 
-// Module 11343 (useConjureProjectIcon)
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11344 */;
+// Module 11480 (useConjureProjectIcon)
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11481 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectIcon.tsx");
 
 export default function useConjureProjectIcon(preview_application_id, size) {
-  let application_id = preview_application_id.preview_application_id;
+  application_id = preview_application_id.preview_application_id;
   if (application_id == null) {
     application_id = preview_application_id.application_id;
   }
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = application_id(504).useStateFromStores(items, () => {
     const application = ApplicationStore.getApplication(application_id);
     let icon;

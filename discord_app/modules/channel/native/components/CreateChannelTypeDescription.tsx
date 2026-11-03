@@ -1,15 +1,15 @@
-// === Module 9045: CreateChannelTypeDescription ===
+// === Module 9173: CreateChannelTypeDescription ===
 
-// Module 9045 (CreateChannelTypeDescription)
+// Module 9173 (CreateChannelTypeDescription)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 6926 */;
-import useGuildProfile from "useGuildProfile" /* 9047 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 7046 */;
+import useGuildProfile from "useGuildProfile" /* 9175 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9046).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function CreateChannelTypeDescription(guildId) {
   if (tmp6) {
     tmp6 = guildId.channelType === ChannelTypes.GUILD_ANNOUNCEMENT;
   }
-  const items = [guildId, fetchGuildProfile];
+  items = [guildId, fetchGuildProfile];
   const effect = noop.useEffect(() => {
     fetchGuildProfile();
   }, items);

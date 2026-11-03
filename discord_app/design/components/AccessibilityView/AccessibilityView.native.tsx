@@ -1,9 +1,9 @@
-// === Module 6018: AccessibilityView ===
+// === Module 6138: AccessibilityView ===
 
-// Module 6018 (AccessibilityView)
-import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 6019 */;
+// Module 6138 (AccessibilityView)
+import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 6139 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import module_1652 from "module_1652" /* 1652 */;
 
 class AccessibilityView {
   constructor(arg0) {
@@ -43,7 +43,7 @@ class AccessibilityView {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const animatedComponent = ReanimatedRexport.createAnimatedComponent(AccessibilityView);
+const animatedComponent = module_1652.createAnimatedComponent(AccessibilityView);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 

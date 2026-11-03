@@ -1,20 +1,20 @@
-// === Module 18394: HomeDrawerGuildVoiceState ===
+// === Module 18539: HomeDrawerGuildVoiceState ===
 
-// Module 18394 (HomeDrawerGuildVoiceState)
+// Module 18539 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12042 */;
-import AvatarPile from "AvatarPile" /* 14883 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12179 */;
+import AvatarPile from "AvatarPile" /* 15014 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
 
 const require = globalThis.__r;
 
@@ -37,18 +37,18 @@ function VoiceUsers(arg0) {
 function LiveTag() {
   const tmp = closure_15();
   const obj = { style: tmp.tag, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
-  const obj2 = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
+  const obj2 = { variant: "text-xxs/semibold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -59,7 +59,7 @@ obj2.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, 
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;
@@ -80,7 +80,7 @@ export function GuildVoiceState(arg0) {
   if (!tmp2) {
     return null;
   } else {
-    const items = [tmp.voiceContainer, ];
+    items = [tmp.voiceContainer, ];
     let num = 32;
     if (null != streamingUser) {
       num = 48;
@@ -107,7 +107,7 @@ export function GuildVoiceState(arg0) {
       items1[3] = closure_1_11(View, obj10);
       items1[4] = closure_1_11(LiveTag, {});
       obj5.children = items1;
-      obj4.children = closure_1_12(View, obj5);
+      obj4.children = application_id(View, obj5);
       tmp7Result = closure_1_11(View, obj4);
     }
     obj.children = tmp7Result;
@@ -120,7 +120,7 @@ export function useVoiceUsers(guild) {
   const id = guild.id;
   isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
   const obj = require("isHomeDrawerChannelInChannelList");
-  let items = [stateFromStores1, UserGuildSettingsStore];
+  items = [stateFromStores1, UserGuildSettingsStore];
   const items1 = [id, isHomeDrawerChannelInChannelList];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const found = GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].filter((channel) => {
@@ -149,7 +149,7 @@ export function useVoiceUsers(guild) {
     if (arg0 === guild.afkChannelId) {
       return [];
     } else {
-      let items = stateFromStores[arg0];
+      items = stateFromStores[arg0];
       if (items == null) {
         items = [];
       }
@@ -164,7 +164,7 @@ export function useVoiceUsers(guild) {
     const item = keys.forEach((item) => {
       if (item !== user.afkChannelId) {
         if (stateFromStoresArray.includes(item)) {
-          let items = stateFromStores[item];
+          items = stateFromStores[item];
           if (items == null) {
             items = [];
           }

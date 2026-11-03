@@ -1,6 +1,6 @@
-// === Module 10239: useExpressionPickerTabData ===
+// === Module 10369: useExpressionPickerTabData ===
 
-// Module 10239 (useExpressionPickerTabData)
+// Module 10369 (useExpressionPickerTabData)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ export default function useExpressionPickerTabData(arg0) {
   if (closure_3.indexOf(expressionType) >= 0) {
     num = closure_3.indexOf(expressionType);
   }
-  const items = [expressionPickerTabs];
+  items = [expressionPickerTabs];
   const memo = noop.useMemo(() => {
     const obj = { EMOJI: null, GIF: null, STICKER: null };
     const obj2 = { label: null, viewType: null, show: null, order: null };

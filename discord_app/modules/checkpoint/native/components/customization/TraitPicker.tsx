@@ -1,86 +1,183 @@
-// === Module 13694: TraitPicker ===
+// === Module 13822: TraitPicker ===
 
-// Module 13694 (TraitPicker)
+// Module 13822 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3092 from "module_3092" /* 3092 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import timing from "timing" /* 5254 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
-import CheckpointTextDefault from "CheckpointText" /* 13639 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _modDef3219 from "module_3219" /* 3219 */;
+import timing_timing from "timing/timing" /* 5377 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
+import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import TraitOptionDetails from "TraitOptionDetails" /* 13825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+
+const _modDef1652 = _mod1652;
+const TraitOptionDetailsDefault = TraitOptionDetails;
 
 require = fn;
 function EarnedCountHeader(customizationOption) {
   ({ earnedCount, totalCount } = customizationOption);
-  const tmp = closure_11();
+  const tmp = closure_13();
   const customizationOptionName = CheckpointCustomizationUtils.getCustomizationOptionName(customizationOption.customizationOption);
   const intl = util.intl;
-  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3092.Vfq58K, {
+  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3219.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(arg0) {
       return arg0;
     }
   });
-  const obj3 = { variant: "experimental/body-sm/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
+  const obj3 = { variant: "body-sm/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3092.Vfq58K, {
+  obj3.children = intl2.format(_modDef3219.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
-      return closure_1_8(CheckpointTextDefault, { variant: "experimental/mono-md/bold", children }, arg1);
+      return closure_1_9(CheckpointTextDefault, { variant: "mono-md/bold", children }, arg1);
     }
   });
-  return React6(Text_Text.Text, obj3);
+  return React7(Text_Text.Text, obj3);
 }
-const View = fn(17).View;
-const rarityOrder = fn(6066).CHECKPOINT_RARITY_ORDER_MOBILE;
+function TraitPickerDetails(arg0) {
+  ({ asset, isVisible, descriptionVisibility } = arg0);
+  const tmp = closure_13();
+  items = [closure_15, 600, _mod1652.Easing, timing_timing.withTiming, isVisible, PX_12];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+  class TraitPickerTsx1 {
+    constructor() {
+      obj = { duration: closure_0, easing: closure_1.out(closure_1.cubic) };
+      tmp = closure_2;
+      num = 0;
+      tmp2 = closure_3;
+      if (closure_3) {
+        num = 1;
+      }
+      obj1 = { opacity: tmp(num, obj), transform: null };
+      num2 = 0;
+      if (!tmp2) {
+        num2 = closure_4;
+      }
+      obj4 = { translateY: tmp(num2, obj) };
+      items = [];
+      items[0] = obj4;
+      obj1.transform = items;
+      return obj1;
+    }
+  }
+  const items1 = [tmp4, tmp5, tmp6, tmp7, tmp8];
+  TraitPickerTsx1.__closure = items1;
+  TraitPickerTsx1.__workletHash = 14501915990015;
+  TraitPickerTsx1.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(TraitPickerTsx1);
+  let obj2 = { style: null, children: React7(TraitOptionDetailsDefault, { asset, descriptionVisibility }) };
+  const items2 = [tmp.details, animatedStyle];
+  obj2.style = items2;
+  return React7(_modDef1652.View, obj2);
+}
+function TraitPickerPortrait(selectedAsset) {
+  selectedAsset = selectedAsset.selectedAsset;
+  ({ header, optionList, isDetailsVisible, isRarityVisible } = selectedAsset);
+  const obj = { style: closure_13().container, children: null };
+  items = [header, optionList, ];
+  if (null == selectedAsset) {
+    items[2] = tmp3;
+    obj.children = items;
+    return tmp(tmp2, obj);
+  } else {
+    const obj2 = { asset: selectedAsset, isVisible: isDetailsVisible, descriptionVisibility: null };
+    const DescriptionVisibility = TraitOptionDetails.DescriptionVisibility;
+    obj2.descriptionVisibility = isRarityVisible ? DescriptionVisibility.VISIBLE : DescriptionVisibility.INVISIBLE;
+    React7(TraitPickerDetails, obj2);
+  }
+}
+function TraitPickerLandscape(selectedAsset) {
+  selectedAsset = selectedAsset.selectedAsset;
+  ({ header, optionList, isDetailsVisible, isRarityVisible } = selectedAsset);
+  const tmp = closure_13();
+  const obj = { alwaysBounceVertical: false, contentContainerStyle: tmp.landscapeScrollContent, children: null };
+  items = [React7(timestampProducer, { style: tmp.landscapeGap }), header, React7(timestampProducer, { style: tmp.landscapeGap }), , , ];
+  if (null == selectedAsset) {
+    items[3] = tmp6;
+    items[4] = optionList;
+    const obj4 = { style: tmp.landscapeGap };
+    items[5] = React7(timestampProducer, obj4);
+    obj.children = items;
+    return closure_1_10(hasOwnProperty, obj);
+  } else {
+    let tmp4Result2 = TraitPickerDetails;
+    let obj5 = { asset: selectedAsset, isVisible: isDetailsVisible, descriptionVisibility: null };
+    const prop = { children: null };
+    obj5.descriptionVisibility = isRarityVisible ? prop.VISIBLE : prop.GONE;
+    obj5 = [, ];
+    obj5[0] = React7(tmp4Result2, obj5);
+    const obj6 = { style: tmp.landscapeGap };
+    tmp4Result2 = React7(timestampProducer, obj6);
+    obj5[1] = tmp4Result2;
+    prop.children = obj5;
+    closure_1_10(closure_1_11, prop);
+    const tmp11 = isRarityVisible ? prop.VISIBLE : prop.GONE;
+    const tmp4Result = React7(tmp4Result2, obj5);
+  }
+  const obj2 = { style: tmp.landscapeGap };
+  const obj3 = { style: tmp.landscapeGap };
+}
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const rarityOrder = fn(6186).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5014);
-let obj2 = { container: { gap: fn(13695).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(13695).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13695).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13695).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(13695).CONTENT_INSET };
-let closure_11 = createStyles.createStyles(obj2);
-const __initData = { code: "function TraitPickerTsx1(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}" };
+const createStyles = fn(5141);
+let obj2 = { container: { gap: fn(13823).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(13823).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13823).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13823).CONTENT_INSET };
+obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
+let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
+obj2.details = { paddingHorizontal: fn(13823).CONTENT_INSET };
+obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
+let closure_13 = createStyles.createStyles(obj2);
+let closure_15 = { code: "(function TraitPickerTsx1(){let[INTRO_DETAILS_DURATION_MS,Easing,withTiming,isVisible,INTRO_DETAILS_OFFSET_Y]=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isVisible?1:0,timing),transform:[{translateY:withTiming(isVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
 export default function TraitPicker(customizationOption) {
   customizationOption = customizationOption.customizationOption;
   let flag = customizationOption.disabled;
+  ({ isFinalizeRoute, isCurrentTraitBlocked } = customizationOption);
   if (flag === undefined) {
     flag = false;
   }
   const selectedOptionId = customizationOption.selectedOptionId;
-  ({ showEarnedCount, optionIds, savedOptionId } = customizationOption);
-  if (showEarnedCount === undefined) {
-    showEarnedCount = false;
+  ({ isLandscape, optionIds, savedOptionId } = customizationOption);
+  if (isLandscape === undefined) {
+    isLandscape = false;
   }
   const onSelectOption = customizationOption.onSelectOption;
-  earnedCount = undefined;
-  let useReducedMotion;
-  const tmp = closure_11();
-  const tmp4 = !customizationOption(6434).getIsTraitRarityVisible(customizationOption);
-  let obj = customizationOption(6434);
-  let items = [useReducedMotion];
+  const isTraitRarityVisible = customizationOption(6554).getIsTraitRarityVisible(customizationOption);
+  const obj = customizationOption(6554);
+  const tmp = selectedOptionId;
+  items = [AccessibilityStore];
   dependencyMap = customizationOption(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj2 = customizationOption(504);
-  _slicedToArray = customizationOption(5274).useIsScreenReaderEnabled();
-  let obj3 = customizationOption(5274);
-  const traitPickerOptions = customizationOption(13697).useTraitPickerOptions({ customizationOption, optionIds, savedOptionId, rarityOrder });
-  ({ availableTraitOptions, earnedCount } = traitPickerOptions);
-  closure_5 = tmp6;
-  const tmp8 = selectedOptionId(5612)(() => {
+  const obj2 = customizationOption(504);
+  _slicedToArray = customizationOption(5397).useIsScreenReaderEnabled();
+  const obj3 = customizationOption(5397);
+  const traitPickerOptions = customizationOption(13827).useTraitPickerOptions({ customizationOption, optionIds, savedOptionId, rarityOrder });
+  const availableTraitOptions = traitPickerOptions.availableTraitOptions;
+  const earnedCount = traitPickerOptions.earnedCount;
+  let tmp6 = null != selectedOptionId;
+  closure_6 = tmp6;
+  const tmp7 = selectedOptionId(5735)(() => {
     let num = 0;
-    if (!closure_5) {
+    if (!closure_6) {
       num = 0;
       if (customizationOption !== tmp2) {
         num = 0;
@@ -95,76 +192,67 @@ export default function TraitPicker(customizationOption) {
     }
     return num;
   });
-  let tmp9 = tmp6;
-  if (null == selectedOptionId) {
-    tmp9 = 0 === tmp8;
-  }
-  useReducedMotion = tmp9;
-  const obj4 = customizationOption(13697);
+  const obj4 = customizationOption(13827);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
-  const fn = function b() {
-    const obj = { duration: 600, easing: null };
-    const Easing = ReanimatedRexport.Easing;
-    obj.easing = Easing.out(ReanimatedRexport.Easing.cubic);
-    let num = 0;
-    if (closure_6) {
-      num = 1;
-    }
-    const obj3 = { opacity: timing.withTiming(num, obj), transform: null };
-    let num2 = 0;
-    if (!closure_6) {
-      num2 = PX_12;
-    }
-    const tmpResult = timing;
-    const items = [{ translateY: timing.withTiming(num2, obj) }];
-    obj3.transform = items;
-    return obj3;
-  };
-  const tmp2Result = customizationOption(5095);
-  fn.__closure = { INTRO_DETAILS_DURATION_MS: 600, Easing: customizationOption(5095).Easing, withTiming: customizationOption(5254).withTiming, isDetailsVisible: tmp9, INTRO_DETAILS_OFFSET_Y: PX_12 };
-  fn.__workletHash = 9456849062820;
-  fn.__initData = __initData;
-  const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  const obj6 = { INTRO_DETAILS_DURATION_MS: 600, Easing: customizationOption(5095).Easing, withTiming: customizationOption(5254).withTiming, isDetailsVisible: tmp9, INTRO_DETAILS_OFFSET_Y: PX_12 };
-  [tmp12, tmp13] = earnedCount.useState(tmp8);
-  const tmp11 = _slicedToArray(earnedCount.useState(tmp8), 2);
-  const obj7 = { availableTraitOptions, selectedOptionId, onSelectOption, paused: null };
-  let tmp14 = flag;
+  const obj6 = availableTraitOptions;
+  [tmp9, tmp10] = availableTraitOptions.useState(tmp7);
+  const tmp8 = _slicedToArray(availableTraitOptions.useState(tmp7), 2);
+  const obj8 = { availableTraitOptions, selectedOptionId, onSelectOption, paused: null };
+  let tmp11 = flag;
   if (!flag) {
-    let tmp15 = !tmp6;
+    let tmp12 = !tmp6;
     if (!tmp6) {
-      tmp15 = tmp12 > 0;
+      tmp12 = tmp9 > 0;
     }
-    tmp14 = tmp15;
+    tmp11 = tmp12;
   }
-  obj7.paused = tmp14;
-  const autoSelectTraitOption = customizationOption(13698).useAutoSelectTraitOption(obj7);
+  obj8.paused = tmp11;
+  const autoSelectTraitOption = customizationOption(13828).useAutoSelectTraitOption(obj8);
   let diff = earnedCount;
-  if (null == selectedOptionId) {
-    diff = earnedCount - tmp12;
+  if (!tmp6) {
+    diff = earnedCount - tmp9;
   }
-  let found = availableTraitOptions.find((optionId) => optionId.optionId === selectedOptionId);
-  if (found == null) {
-    found = availableTraitOptions[0];
+  const items1 = [availableTraitOptions, selectedOptionId];
+  let str = "md";
+  const memo = obj6.useMemo(() => {
+    let found = availableTraitOptions.find((optionId) => optionId.optionId === selectedOptionId);
+    if (found == null) {
+      found = availableTraitOptions[0];
+    }
+    return found;
+  }, items1);
+  if (isLandscape) {
+    str = "md";
+    if (selectedOptionId(1493)().height <= tmp3(5325).WINDOW_SIZE_THRESHOLD_LARGE) {
+      str = "sm";
+    }
   }
-  const obj8 = { style: null, children: null };
-  const items1 = [tmp.container, customizationOption.style];
-  obj8.style = items1;
-  if (showEarnedCount) {
-    const obj9 = { customizationOption, earnedCount: diff, totalCount: traitPickerOptions.totalCount };
-    showEarnedCount = closure_8(EarnedCountHeader, obj9);
+  if (isFinalizeRoute) {
+    const obj9 = { activeCustomizationOption: customizationOption, onSelectOption: customizationOption.onSelectFinalizeOption, disableSwitching: isCurrentTraitBlocked, disabled: flag };
+    let tmp16Result = closure_9(tmp3(13829).FinalizeTraitTabs, obj9);
+    let tmp19 = closure_9;
+  } else {
+    const obj10 = { customizationOption, earnedCount: diff, totalCount: traitPickerOptions.totalCount };
+    tmp16Result = closure_9(EarnedCountHeader, obj10);
+    tmp19 = closure_9;
   }
-  const items2 = [showEarnedCount, closure_8(selectedOptionId(13695), { customizationOption, options: availableTraitOptions, selectedOptionId, disabled: flag, hideRarity: tmp4, introStartIndex: tmp8, onIntroStep: tmp13, onSelectOption }), ];
-  let tmp23Result = null != found;
-  if (tmp23Result) {
-    const obj10 = { style: null, children: null };
-    const items3 = [tmp.details, animatedStyle];
-    obj10.style = items3;
-    const obj11 = { asset: found, hideDescriptionAndRarity: tmp4 };
-    obj10.children = closure_8(tmp7(13699), obj11);
-    tmp23Result = closure_8(tmp7(5095).View, obj10);
+  const obj11 = { header: tmp16Result, optionList: null, selectedAsset: null, isDetailsVisible: null, isRarityVisible: null };
+  const obj12 = { customizationOption, size: str, options: availableTraitOptions, selectedOptionId, disabled: flag, hideRarity: !isTraitRarityVisible, introStartIndex: null, onIntroStep: null, onSelectOption: null };
+  let num2 = 0;
+  const obj7 = customizationOption(13828);
+  if (!tmp6) {
+    num2 = tmp7;
   }
-  items2[2] = tmp23Result;
-  obj8.children = items2;
-  return closure_9(closure_5, obj8);
+  obj12.introStartIndex = num2;
+  obj12.onIntroStep = tmp10;
+  obj12.onSelectOption = onSelectOption;
+  obj11.optionList = tmp19(tmp(13823), obj12, customizationOption);
+  obj11.selectedAsset = memo;
+  if (!tmp6) {
+    tmp6 = 0 === tmp7;
+  }
+  obj11.isDetailsVisible = tmp6;
+  obj11.isRarityVisible = isTraitRarityVisible;
+  const merged = Object.assign(obj11);
+  return tmp19(isLandscape ? TraitPickerLandscape : TraitPickerPortrait, {});
 };

@@ -1,9 +1,9 @@
-// === Module 7556: canChannelUseSoundboard ===
+// === Module 7680: canChannelUseSoundboard ===
 
-// Module 7556 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+// Module 7680 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export function canSelectedVoiceChannelUseSoundboard() {
 }
 export function useCanChannelUseSoundboard(arg0) {
   _require = arg0;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     let flag = false;

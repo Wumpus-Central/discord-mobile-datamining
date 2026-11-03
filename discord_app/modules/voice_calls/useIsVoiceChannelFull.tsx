@@ -1,10 +1,10 @@
-// === Module 11909: useIsVoiceChannelFull ===
+// === Module 12046: useIsVoiceChannelFull ===
 
-// Module 11909 (useIsVoiceChannelFull)
-import ChannelUtils from "ChannelUtils" /* 6046 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+// Module 12046 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -15,12 +15,12 @@ const result = size.fileFinishedImporting("modules/voice_calls/useIsVoiceChannel
 
 export default function useIsVoiceChannelFull(arg0) {
   _require = arg0;
-  const items = [VoiceStateStore, GuildStore];
+  items = [VoiceStateStore, GuildStore];
   return require("initialize").useStateFromStores(items, () => ChannelUtils.isChannelFull(closure_0, VoiceStateStore, GuildStore));
 };
 export function useIsVoiceChannelLocked(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null == closure_0;

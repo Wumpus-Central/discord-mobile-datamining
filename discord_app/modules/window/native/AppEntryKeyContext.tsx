@@ -1,6 +1,6 @@
-// === Module 1494: AppEntryKeyContext ===
+// === Module 1496: AppEntryKeyContext ===
 
-// Module 1494 (AppEntryKeyContext)
+// Module 1496 (AppEntryKeyContext)
 import LoggerDefault from "Logger" /* 3 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export const DEFAULT_APP_ENTRY_KEY = "main";
 export const AppEntryKeyContext = context;
 export function useAppEntryKey() {
   context = context.useContext(context);
-  const items = [context];
+  items = [context];
   const effect = context.useEffect(() => {
     if (!tmp) {
       c4 = true;

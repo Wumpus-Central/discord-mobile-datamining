@@ -1,16 +1,16 @@
-// === Module 6858: NotificationCenterItemsStore ===
+// === Module 6978: NotificationCenterItemsStore ===
 
-// Module 6858 (NotificationCenterItemsStore)
+// Module 6978 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6860 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import MessageRecord from "MessageRecord" /* 4957 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6979 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6980 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import MessageRecord from "MessageRecord" /* 5084 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function _validate(id) {
@@ -74,7 +74,7 @@ function handleAddItem(type) {
       if (!notifCenterIds.has(item.id)) {
         const notifCenterIds2 = obj.notifCenterIds;
         notifCenterIds2.add(item.id);
-        const items = [item];
+        items = [item];
         HermesBuiltin.arraySpread(obj.notifCenterItems, 1);
         obj.notifCenterItems = items;
         const notifCenterItems = obj.notifCenterItems;
@@ -99,7 +99,7 @@ function handleRelationshipAddOrUpdate(relationship) {
         } else if (null != user) {
           const user1 = UserStore.getUser(user.id);
           if (null != user1) {
-            const items = [];
+            items = [];
             obj = relationship(user[8]);
             items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user1, since, tmp);
             obj.notifCenterLocalItems = items;
@@ -195,7 +195,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6855).isGuildEventEnded;
+const isGuildEventEnded = fn(6975).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -304,7 +304,7 @@ NotificationCenterItemsStore.displayName = "NotificationCenterItemsStore";
 NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
 const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
-    const items = [];
+    items = [];
     const set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((item) => {
@@ -550,8 +550,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     } else if (type === RelationshipTypes.PENDING_INCOMING) {
       const user = UserStore.getUser(id);
       if (tmp6) {
-        const items = [];
-        obj = id(6860);
+        items = [];
+        obj = id(6980);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -663,7 +663,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const prop = obj.notifCenterLocalItems;
       if (undefined === prop.find((local_id) => local_id.local_id === _undefined.local_id)) {
         const prop1 = obj.notifCenterLocalItems;
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(prop1.filter((type) => type.type !== _undefined.type), 0)] = result;
         obj.notifCenterLocalItems = items;
       }

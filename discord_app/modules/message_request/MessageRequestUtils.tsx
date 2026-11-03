@@ -1,9 +1,9 @@
-// === Module 6884: MessageRequestUtils ===
+// === Module 7004: MessageRequestUtils ===
 
-// Module 6884 (MessageRequestUtils)
+// Module 7004 (MessageRequestUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MessageRequestStore from "MessageRequestStore" /* 6856 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6857 */;
+import MessageRequestStore from "MessageRequestStore" /* 6976 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
@@ -11,14 +11,14 @@ const result = size.fileFinishedImporting("modules/message_request/MessageReques
 export function filterOutMessageRequestsAndSpam(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [MessageRequestStore, SpamMessageRequestStore];
+    items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
   [messageRequest, ] = tmp;
   messageRequest = arg0;
   const keys = SnowflakeUtilsDefault.keys(arg0);
   const mapped = keys.map((item) => {
-    const items = [item, messageRequest[item]];
+    items = [item, messageRequest[item]];
     return items;
   });
   return Array.from(mapped.filter((item) => {
@@ -62,7 +62,7 @@ export function isMessageRequestOrSpamRequest(channelId) {
 export function shouldShowMessageRequests() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [MessageRequestStore, SpamMessageRequestStore];
+    items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
   [obj, obj2] = tmp;

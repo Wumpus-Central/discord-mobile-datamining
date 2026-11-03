@@ -1,13 +1,13 @@
-// === Module 11539: ChatGestureSettings ===
+// === Module 11676: ChatGestureSettings ===
 
-// Module 11539 (ChatGestureSettings)
+// Module 11676 (ChatGestureSettings)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
 import Constants from "Constants" /* 1072 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 function useSwipeToReplySettingValue() {
@@ -26,7 +26,7 @@ const radio = SettingBuilders.createRadio({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["9BGJ1m"])];
+    items = [intl.string(util.t["9BGJ1m"])];
     return items;
   },
   parent: SettingsConstants.MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
@@ -44,7 +44,7 @@ const radio = SettingBuilders.createRadio({
     obj.label = intl.string(util.t["6eXLcJ"]);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.ohhhDK);
-    const items = [obj, ];
+    items = [obj, ];
     const obj2 = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = util.intl;
     obj2.label = intl3.string(util.t["3tYNDS"]);

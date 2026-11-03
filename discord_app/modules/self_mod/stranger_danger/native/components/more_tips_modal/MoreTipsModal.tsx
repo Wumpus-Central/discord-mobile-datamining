@@ -1,19 +1,19 @@
-// === Module 11274: MoreTipsModal ===
+// === Module 11411: MoreTipsModal ===
 
-// Module 11274 (MoreTipsModal)
+// Module 11411 (MoreTipsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import _modDef8359 from "module_8359" /* 8359 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11275 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11280 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import _modDef8483 from "module_8483" /* 8483 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11412 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11417 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10804 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10934 */;
 
 require = fn;
 function MoreTipsModalScreen(learnMore) {
@@ -23,7 +23,7 @@ function MoreTipsModalScreen(learnMore) {
   const obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   const obj2 = { style: tmp.contentContainer, children: null };
   const obj3 = { style: tmp.tipsContainer, children: null };
-  const items = [React6(SafetyTipsSectionDefault, { description, safetyTips, showHeader: true }), ];
+  items = [React6(SafetyTipsSectionDefault, { description, safetyTips, showHeader: true }), ];
   let tmp2Result = null;
   if (null != learnMore) {
     const obj4 = { style: tmp.learnMore, children: learnMore };
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -66,7 +66,7 @@ export default function MoreTipsModal(headerStyle) {
   const channelId = headerStyle.channelId;
   const warningId = headerStyle.warningId;
   const senderId = headerStyle.senderId;
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const stateFromStores = channelId(senderId[16]).useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId));
   const items1 = [channelId, warningId, senderId, stateFromStores];
   const effect = stateFromStores.useEffect(() => {
@@ -89,7 +89,7 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef8359,
+            source: _modDef8483,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

@@ -1,21 +1,21 @@
-// === Module 11314: SafetyToolsAboutActionSheet ===
+// === Module 11451: SafetyToolsAboutActionSheet ===
 
-// Module 11314 (SafetyToolsAboutActionSheet)
+// Module 11451 (SafetyToolsAboutActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11270 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11256).getSafetyToolsActionSheetKey;
+let closure_6 = fn(11393).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { aboutContainer: { marginHorizontal: nativeDefault.space.PX_32 }, description: null, reportFalsePositive: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_32 };
 obj2.description = { alignSelf: "center", textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
@@ -37,7 +37,7 @@ export default function SafetyToolsAboutScreen(channelId) {
   const tmp3 = closure_10();
   const tmp4 = null != channelId(warningId[8]).useSafetyToolsButtonTooltipForChannel(channelId);
   const isNudgeWarning = tmp4;
-  const items = [channelId, warningId, warningType, recipientId, tmp4];
+  items = [channelId, warningId, warningType, recipientId, tmp4];
   const items1 = [channelId, disabled];
   const callback = disabled.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(isNudgeWarning(channelId));

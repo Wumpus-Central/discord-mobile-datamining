@@ -1,21 +1,21 @@
-// === Module 6063: MessageRecordUtils ===
+// === Module 6183: MessageRecordUtils ===
 
-// Module 6063 (MessageRecordUtils)
+// Module 6183 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import findCodedLinksDefault from "findCodedLinks" /* 5748 */;
-import useMessageAuthor from "useMessageAuthor" /* 6438 */;
-import isMessageMentioned from "isMessageMentioned" /* 6443 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6444 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 6557 */;
-import EmbedUtils from "EmbedUtils" /* 6558 */;
-import StickersUtils from "StickersUtils" /* 6560 */;
-import InteractionRecord from "InteractionRecord" /* 6064 */;
-import MessageRecord_mod from "MessageRecord" /* 4957 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import findCodedLinksDefault from "findCodedLinks" /* 5868 */;
+import useMessageAuthor from "useMessageAuthor" /* 6558 */;
+import isMessageMentioned from "isMessageMentioned" /* 6563 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6564 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 6677 */;
+import EmbedUtils from "EmbedUtils" /* 6678 */;
+import StickersUtils from "StickersUtils" /* 6680 */;
+import InteractionRecord from "InteractionRecord" /* 6184 */;
+import MessageRecord_mod from "MessageRecord" /* 5084 */;
+import UserRecord from "UserRecord" /* 1399 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 const isMessageMentionedDefault = isMessageMentioned;
@@ -38,7 +38,7 @@ function createMinimalMessageRecord(timestamp) {
   obj.attachments = attachments;
   _require = timestamp;
   if (null == timestamp.embeds) {
-    let items = [];
+    items = [];
   } else {
     const embeds = timestamp.embeds;
     const mapped = embeds.map((item) => EmbedUtils.sanitizeEmbed(message2.channel_id, message2.id, item));
@@ -202,18 +202,18 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp47Result = _modDef2042(date);
+      tmp47Result = _modDef2171(date);
     }
     let durationResult = null;
     if (null != tmp47Result) {
-      durationResult = _modDef2042.duration(tmp47Result.diff(tmp43));
+      durationResult = _modDef2171.duration(tmp47Result.diff(tmp43));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp47Result, duration: durationResult };
     tmp44 = obj11;
   }
   obj9.call = tmp44;
   if (null == message.message_snapshots) {
-    let items = [];
+    items = [];
   } else {
     const message_snapshots = message.message_snapshots;
     items = message_snapshots.map((message) => {
@@ -304,7 +304,7 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4957);
+let MessageRecord = fn(5084);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1072);
@@ -341,11 +341,11 @@ export function updateMessageRecord(message, message2) {
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef2042(date);
+          tmp = _modDef2171(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef2042.duration(tmp.diff(tmp46));
+          durationResult = _modDef2171.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;
@@ -430,7 +430,7 @@ export function updateMessageRecord(message, message2) {
             reactions = message2.reactions;
           }
           if (null == reactions) {
-            let items = [];
+            items = [];
           } else {
             if (reactions == null) {
               reactions = [];

@@ -1,19 +1,19 @@
-// === Module 18350: FavoritesGuildSuggestionsLoader ===
+// === Module 18495: FavoritesGuildSuggestionsLoader ===
 
-// Module 18350 (FavoritesGuildSuggestionsLoader)
-import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 18351 */;
+// Module 18495 (FavoritesGuildSuggestionsLoader)
+import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 18496 */;
 import noop from "module_19" /* 19 */;
 
 function FavoritesGuildSuggestionsLoaderInner() {
   const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
   importDefault = tmp;
-  const items = [tmp];
+  items = [tmp];
   const layoutEffect = noop.useLayoutEffect(() => {
     React4(closure_0);
   }, items);
   return null;
 }
-const FavoritesGuildSuggestionsStore = fn(18262);
+const FavoritesGuildSuggestionsStore = fn(18406);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4, useFavoritesGuildSuggestionsVisibility: hasOwnProperty } = FavoritesGuildSuggestionsStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -24,7 +24,7 @@ export default noop.memo(function FavoritesGuildSuggestionsLoader() {
   const isEligible = tmp.isEligible;
   const isSelected = tmp.isSelected;
   noop = noop.useRef(false);
-  const items = [isEligible, isSelected];
+  items = [isEligible, isSelected];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (isSelected) {
       ref.current = true;

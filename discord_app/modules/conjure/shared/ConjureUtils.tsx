@@ -1,14 +1,14 @@
-// === Module 7419: ConjureUtils ===
+// === Module 7543: ConjureUtils ===
 
-// Module 7419 (ConjureUtils)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6845 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6879 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7420 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+// Module 7543 (ConjureUtils)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6999 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7544 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 function conjureChannelAppId(channel) {
@@ -18,7 +18,7 @@ function conjureChannelAppId(channel) {
   }
   let tmp2 = null;
   if (type === ChannelTypes.GUILD_APP) {
-    let application_id = channel.application_id;
+    application_id = channel.application_id;
     if (application_id == null) {
       application_id = null;
     }
@@ -26,7 +26,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -41,7 +41,7 @@ export function conjureSettingsGuildId(project, arg1) {
   let tmp = null;
   if (null != project) {
     tmp = null;
-    if ("user" !== project.install_scope) {
+    if ("guild" === project.install_scope) {
       let preview_guild_id = null;
       if (arg1) {
         preview_guild_id = project.preview_guild_id;
@@ -59,7 +59,7 @@ export function conjureSettingsGuildId(project, arg1) {
 }
 export function conjureSettingChannels(channels, channel_filter) {
   if ("voice" === channel_filter) {
-    let items = [];
+    items = [];
   } else {
     items = channels[React3];
   }
@@ -123,7 +123,7 @@ export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplicatio
 }
 export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
   const guildId = SelectedGuildStore.getGuildId();
-  let guild = null;
+  guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
@@ -177,7 +177,7 @@ export function isConjureChannelCandidate(channel, ActivitySounds) {
   }
   let tmp3 = null;
   if (type === ChannelTypes.GUILD_APP) {
-    let application_id = channel.application_id;
+    application_id = channel.application_id;
     if (application_id == null) {
       application_id = null;
     }

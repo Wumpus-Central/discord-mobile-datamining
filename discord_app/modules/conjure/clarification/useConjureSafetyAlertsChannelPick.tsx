@@ -1,15 +1,15 @@
-// === Module 12757: useConjureSafetyAlertsChannelPick ===
+// === Module 12893: useConjureSafetyAlertsChannelPick ===
 
-// Module 12757 (useConjureSafetyAlertsChannelPick)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import conjureAppInServer from "conjureAppInServer" /* 10891 */;
-import ConjureClarification from "ConjureClarification" /* 12587 */;
+// Module 12893 (useConjureSafetyAlertsChannelPick)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import conjureAppInServer from "conjureAppInServer" /* 11021 */;
+import ConjureClarification from "ConjureClarification" /* 12723 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
     tmp = "safety_alerts_channel" === question.default;
   }
   closure_129_3 = tmp;
-  let items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId, tmp];
   const stateFromStores = guildId(onChange[7]).useStateFromStores(items, () => {
     let project = null;
@@ -64,7 +64,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
       isMemberResult = GuildMemberStore.isMember(value, stateFromStores1);
     }
     if (!isMemberResult) {
-      const items = [stateFromStores1];
+      items = [stateFromStores1];
       const membersById = GuildActionCreatorsDefault.requestMembersById(value, items);
     }
   }, items2);
@@ -74,7 +74,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
   stateFromStores1 = guildId(onChange[7]).useStateFromStores(items3, () => {
     if (onChange) {
       if (null != value) {
-        const guild = GuildStore.getGuild(value);
+        guild = GuildStore.getGuild(value);
         let prop;
         if (guild != null) {
           prop = guild.safetyAlertsChannelId;

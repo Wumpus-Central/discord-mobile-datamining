@@ -1,8 +1,8 @@
-// === Module 18068: SidebarCoachmarkOverlay ===
+// === Module 18212: SidebarCoachmarkOverlay ===
 
-// Module 18068 (SidebarCoachmarkOverlay)
-import useInitialValueDefault from "useInitialValue" /* 5612 */;
-import LayerContext from "LayerContext" /* 5613 */;
+// Module 18212 (SidebarCoachmarkOverlay)
+import useInitialValueDefault from "useInitialValue" /* 5735 */;
+import LayerContext from "LayerContext" /* 5736 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
   closure_1 = _slicedToArray(noop.useState({}), 2)[1];
-  const items = [manager];
+  items = [manager];
   const effect = noop.useEffect(() => {
     closure_0 = manager;
     manager.invalidate = () => closure_1_1({});
@@ -58,7 +58,7 @@ export function SidebarCoachmarkOverlay(enabled) {
     tmp3 = tmp;
   }
   const obj = { value: tmp3, children: null };
-  const items = [enabled.children, ];
+  items = [enabled.children, ];
   let tmp4 = null;
   if (enabled) {
     const obj2 = { manager: tmp };

@@ -1,12 +1,12 @@
-// === Module 16630: AgeGroupScreenRowProps ===
+// === Module 16773: AgeGroupScreenRowProps ===
 
-// Module 16630 (AgeGroupScreenRowProps)
+// Module 16773 (AgeGroupScreenRowProps)
 import util from "util" /* 1113 */;
-import _modDef3096 from "module_3096" /* 3096 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16584 */;
+import _modDef3223 from "module_3223" /* 3223 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16727 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
@@ -14,11 +14,11 @@ let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGr
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3096.SH6Tcv);
+    return intl.string(_modDef3223.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3096.rJiO86);
+    return intl.string(_modDef3223.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -28,7 +28,7 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
 };
 export function useShowAssignedAdultAgeGroupRow() {
   let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-  TinyBroncoSettingsPredicate;
+  AgeNoticeSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === false;
   }
@@ -36,7 +36,7 @@ export function useShowAssignedAdultAgeGroupRow() {
 }
 export function useShowAccountStatusAgeGroupRow() {
   let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-  TinyBroncoSettingsPredicate;
+  AgeNoticeSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === true;
   }

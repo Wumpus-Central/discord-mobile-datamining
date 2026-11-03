@@ -1,20 +1,20 @@
-// === Module 15645: PrivateChannelRecipientsInviteStore ===
+// === Module 15788: PrivateChannelRecipientsInviteStore ===
 
-// Module 15645 (PrivateChannelRecipientsInviteStore)
+// Module 15788 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9138 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import ConsentStore from "ConsentStore" /* 6742 */;
-import FrecencyStore from "FrecencyStore" /* 6895 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9266 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import ConsentStore from "ConsentStore" /* 6862 */;
+import FrecencyStore from "FrecencyStore" /* 7015 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function performQuery() {
@@ -27,7 +27,7 @@ function performQuery() {
       closure_129_0 = channel;
       const currentUser = UserStore.getCurrentUser();
       closure_129_1 = currentUser;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(RelationshipStore.getFriendIDs(), 0);
       let isStaffResult;
       if (currentUser != null) {
@@ -150,7 +150,7 @@ function parseUserResults(results) {
   if (c15) {
     if ("" !== c16) {
       const currentUser = UserStore.getCurrentUser();
-      const items = [];
+      items = [];
       const iter = results[Symbol.iterator]();
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
@@ -182,7 +182,7 @@ function parseUserResults(results) {
   }
 }
 function handleModalActionSheetOpen(key) {
-  if (key.key !== closure_1_14) {
+  if (key.key !== gesture) {
     return false;
   } else {
     c15 = true;
@@ -199,7 +199,7 @@ function handleModalActionSheetOpen(key) {
   }
 }
 function handleActionSheetDismiss(key) {
-  if (key.key !== closure_1_14) {
+  if (key.key !== gesture) {
     return false;
   } else {
     if (null != closure_3) {
@@ -219,7 +219,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4867).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4994).PrivateChannelRecord;
 const Constants = fn(1072);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;
@@ -236,7 +236,7 @@ class PrivateChannelRecipientsInviteStoreClass extends Store {
 const prototype = PrivateChannelRecipientsInviteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, ConsentStore, ExperimentStore, FrecencyStore, GuildMemberStore, GuildStore, RelationshipStore, UserAffinitiesV2Store, UserStore);
-  const items = [UserStore, ChannelStore];
+  items = [UserStore, ChannelStore];
   this.syncWith(items, performQuery);
   const items1 = [UserAffinitiesV2Store];
   this.syncWith(items1, performQueryOnAffinityChange);

@@ -1,11 +1,11 @@
-// === Module 19242: useVoiceChannelAppSurface ===
+// === Module 19400: useVoiceChannelAppSurface ===
 
-// Module 19242 (useVoiceChannelAppSurface)
-import voiceChannelAppSession from "voiceChannelAppSession" /* 13188 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18680 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 18898 */;
-import FramesStore from "FramesStore" /* 6846 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 16368 */;
+// Module 19400 (useVoiceChannelAppSurface)
+import voiceChannelAppSession from "voiceChannelAppSession" /* 13324 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18838 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 19056 */;
+import FramesStore from "FramesStore" /* 6966 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 16511 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export function useVoiceChannelAppOpen(channel, inCall) {
   let stateFromStores = inCall;
   const voiceChannelApplicationId = require("useVoiceChannelApp").useVoiceChannelApplicationId(channel);
   let obj = require("useVoiceChannelApp");
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [channel.id, voiceChannelApplicationId];
   if (inCall) {
     stateFromStores = obj2.useStateFromStores(items, () => {
@@ -40,7 +40,7 @@ export function useVoiceChannelAppVisible(channel) {
   _require = channel;
   const voiceChannelApplicationId = require("useVoiceChannelApp").useVoiceChannelApplicationId(channel);
   const obj = require("useVoiceChannelApp");
-  const items = [VoiceChannelAppStore];
+  items = [VoiceChannelAppStore];
   const items1 = [channel.id, voiceChannelApplicationId];
   return require("initialize").useStateFromStores(items, () => VoiceChannelAppStore.isAppVisible(id.id, null != voiceChannelApplicationId), items1);
 }

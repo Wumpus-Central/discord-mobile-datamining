@@ -1,6 +1,6 @@
-// === Module 9405: HTMLParserConstants ===
+// === Module 9533: HTMLParserConstants ===
 
-// Module 9405 (HTMLParserConstants)
+// Module 9533 (HTMLParserConstants)
 import size from "module_2" /* 2 */;
 
 const rawResult = String.raw(HermesBuiltin.getTemplateObject(false, "https?:\\/\\/[^\\s<]+[^<.,:;\"'\\]\\s]", "https?://[^s<]+[^<.,:;\"']s]"));

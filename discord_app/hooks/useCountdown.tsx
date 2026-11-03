@@ -1,7 +1,7 @@
-// === Module 7624: useCountdown ===
+// === Module 7748: useCountdown ===
 
-// Module 7624 (useCountdown)
-import DateUtils from "DateUtils" /* 4836 */;
+// Module 7748 (useCountdown)
+import DateUtils from "DateUtils" /* 4963 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export default function useCountdown(expiresAt, arg1, arg2, arg3) {
   _slicedToArray = undefined;
   const tmp = _slicedToArray(closure_5(Date.now), 2);
   _slicedToArray = tmp[1];
-  const items = [expiresAt, flag, arg2];
+  items = [expiresAt, flag, arg2];
   let obj = require("DateUtils");
   const diffAsUnitsResult = require("DateUtils").diffAsUnits(tmp[0], expiresAt);
   let tmp5 = null;

@@ -1,13 +1,13 @@
-// === Module 17935: ParentalControlsSensitiveContentFiltersScreen ===
+// === Module 18078: ParentalControlsSensitiveContentFiltersScreen ===
 
-// Module 17935 (ParentalControlsSensitiveContentFiltersScreen)
+// Module 18078 (ParentalControlsSensitiveContentFiltersScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
-import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingLayoutDefault from "SettingLayout" /* 16731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
@@ -18,7 +18,7 @@ export default function UserSettingsSensitiveContentFilters() {
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.GYpoAq);
-    const items = [, ];
+    items = [, ];
     ({ PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0], PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1] } = MobileUserSettings);
     obj3.settings = items;
     const intl2 = util.intl;

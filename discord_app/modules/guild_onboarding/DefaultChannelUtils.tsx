@@ -1,10 +1,10 @@
-// === Module 7270: DefaultChannelUtils ===
+// === Module 7390: DefaultChannelUtils ===
 
-// Module 7270 (DefaultChannelUtils)
+// Module 7390 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import GatedChannelStore from "GatedChannelStore" /* 4918 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import GatedChannelStore from "GatedChannelStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChann
 export function useCanChannelBeDefault(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [GatedChannelStore, ChannelStore];
+  items = [GatedChannelStore, ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_1);
     if (null != channel) {

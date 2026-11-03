@@ -1,13 +1,13 @@
-// === Module 12053: useStageChannelGridParticipants ===
+// === Module 12190: useStageChannelGridParticipants ===
 
-// Module 12053 (useStageChannelGridParticipants)
+// Module 12190 (useStageChannelGridParticipants)
 import _mod12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6765 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
 
 const require = globalThis.__r;
 
@@ -20,10 +20,10 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
+    items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual);
   const obj = require("initialize");
@@ -32,7 +32,7 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
   stateFromStores1 = require("initialize").useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipantId(closure_0), items3);
   const items4 = [stateFromStores, arg1, stateFromStores1, arg2, arg0];
   return stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     let num = -1;
     c2 = -1;
@@ -105,7 +105,7 @@ export function useThrottleDurationForChannel(id) {
   const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(id, StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
-  const items = [stageParticipantsCount];
+  items = [stageParticipantsCount];
   const effect = noop.useEffect(() => {
     if (stageParticipantsCount > 100) {
       closure_1(true);
@@ -126,10 +126,10 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
   }
   _require = id;
   dependencyMap = memo;
-  let items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   let items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
+    items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
     return items;
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual);
   const obj = require("initialize");
@@ -138,7 +138,7 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
   stateFromStores1 = require("initialize").useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipantId(closure_0), items3);
   let items4 = [stateFromStores, memo, stateFromStores1, flag, id];
   memo = stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     let num = -1;
     c2 = -1;

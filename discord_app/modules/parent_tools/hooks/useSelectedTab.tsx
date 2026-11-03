@@ -1,13 +1,13 @@
-// === Module 16775: useSelectedTab ===
+// === Module 16918: useSelectedTab ===
 
-// Module 16775 (useSelectedTab)
+// Module 16918 (useSelectedTab)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7717 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7716);
+const FamilyCenterConstants = fn(7840);
 ({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function useSelectedMyFamilyTab() {
       AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, { action: TabChange.TabChange, tab });
     }
   };
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   obj.selectedTab = useStateFromStores.useStateFromStores(items, () => selectedTab.getSelectedTab());
   return obj;
 };

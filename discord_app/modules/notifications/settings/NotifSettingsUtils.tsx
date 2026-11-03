@@ -1,9 +1,9 @@
-// === Module 15570: settings/NotifSettingsUtils ===
+// === Module 15711: settings/NotifSettingsUtils ===
 
-// Module 15570 (settings/NotifSettingsUtils)
+// Module 15711 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 15572 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15571 */;
+import notification_settings from "notification_settings" /* 15713 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15712 */;
 
 const require = globalThis.__r;
 
@@ -16,13 +16,13 @@ export function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
 }
 export function useNotifSettingValue(arg0) {
   _require = arg0;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
 }
 export function useNotifSettingToggleValue(CALLS) {
   _require = CALLS;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [CALLS];
   const stateFromStores = require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
   let flag;
@@ -36,7 +36,7 @@ export function useNotifSettingToggleValue(CALLS) {
 }
 export function useNotifSettingRadioValue(arg0) {
   _require = arg0;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
   let num;

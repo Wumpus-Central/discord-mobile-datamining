@@ -1,15 +1,15 @@
-// === Module 14272: ContactSyncInviteFriends ===
+// === Module 14403: ContactSyncInviteFriends ===
 
-// Module 14272 (ContactSyncInviteFriends)
+// Module 14403 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import showShareActionSheet from "showShareActionSheet" /* 8931 */;
-import _modDef14273 from "module_14273" /* 14273 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import showShareActionSheet from "showShareActionSheet" /* 9059 */;
+import _modDef14404 from "module_14404" /* 14404 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,15 +27,15 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/component
 
 export default function ContactSyncInviteFriends() {
   const tmp = closure_10();
-  const items = [UserStore];
+  items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef14273;
+  obj4.source = _modDef14404;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
-  const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;
   obj5.children = intl.string(require("util").t.ZxBpLf);
   items1[1] = closure_7(require("Text/Text").Text, obj5);

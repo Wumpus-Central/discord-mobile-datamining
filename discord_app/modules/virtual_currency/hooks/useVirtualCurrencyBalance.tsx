@@ -1,8 +1,8 @@
-// === Module 15056: useVirtualCurrencyBalance ===
+// === Module 15197: useVirtualCurrencyBalance ===
 
-// Module 15056 (useVirtualCurrencyBalance)
+// Module 15197 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 504 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9555 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9687 */;
 
 const require = globalThis.__r;
 
@@ -11,12 +11,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
 
 export function useVirtualCurrencyBalance() {
-  const items = [VirtualCurrencyStore];
+  items = [VirtualCurrencyStore];
   return initialize.useStateFromStores(items, () => balance.balance);
 }
 export function useHasEnoughVirtualCurrency(arg0) {
   _require = arg0;
-  const items = [VirtualCurrencyStore];
+  items = [VirtualCurrencyStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

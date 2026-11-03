@@ -1,18 +1,18 @@
-// === Module 13912: SearchTabsLayoutStore ===
+// === Module 14043: SearchTabsLayoutStore ===
 
-// Module 13912 (SearchTabsLayoutStore)
+// Module 14043 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13889 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13890 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13891 */;
-import SearchUtils from "SearchUtils" /* 13893 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13913 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13914 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13915 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 14020 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14021 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 14022 */;
+import SearchUtils from "SearchUtils" /* 14024 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14044 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 14045 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14046 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -194,8 +194,8 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9827);
-({ SearchTabs: c10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
+const SearchConstants = fn(9958);
+({ SearchTabs: closure_10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -204,7 +204,7 @@ class SearchTabsLayoutStore extends Store {
 const prototype = SearchTabsLayoutStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(SearchQueryStore, SearchMessageStore, SearchMemberTabStore, SearchGuildChannelTabStore, SearchPeopleTabStore, ChannelStore, SmartSearchResultsStore);
-  const items = [SearchMessageStore, SearchMemberTabStore, SearchGuildChannelTabStore, SearchPeopleTabStore, SmartSearchResultsStore];
+  items = [SearchMessageStore, SearchMemberTabStore, SearchGuildChannelTabStore, SearchPeopleTabStore, SmartSearchResultsStore];
   this.syncWith(items, computeLayoutForAll);
 };
 prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {

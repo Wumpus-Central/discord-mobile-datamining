@@ -1,11 +1,11 @@
-// === Module 12354: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 12490: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 12354 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 12490 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12261 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12348 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12484 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function CollectionItem(arg0) {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
+  items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const singleStringOrSkeleton = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
   const singleStringOrSkeleton1 = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
@@ -57,7 +57,7 @@ function CollectionItem(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 }, item: null, itemImage: null, itemContent: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 };
 obj2.item = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -72,7 +72,7 @@ const result = size.fileFinishedImporting("modules/application_widget/native/Use
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
   const obj = { style: closure_6().grid, children: null };
-  const items = [React4(CollectionItem, { componentConfig: bottomConfig.components.item_1, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_2, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_4, resolveFieldValue })];
+  items = [React4(CollectionItem, { componentConfig: bottomConfig.components.item_1, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_2, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue }), React4(CollectionItem, { componentConfig: bottomConfig.components.item_4, resolveFieldValue })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

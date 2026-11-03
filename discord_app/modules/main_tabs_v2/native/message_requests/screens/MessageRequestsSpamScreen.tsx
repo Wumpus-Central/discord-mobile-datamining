@@ -1,7 +1,7 @@
-// === Module 18982: MessageRequestsSpamScreen ===
+// === Module 19140: MessageRequestsSpamScreen ===
 
-// Module 18982 (MessageRequestsSpamScreen)
-import SpamMessageListDefault from "SpamMessageList" /* 18980 */;
+// Module 19140 (MessageRequestsSpamScreen)
+import SpamMessageListDefault from "SpamMessageList" /* 19138 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_r
 
 export default function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;
-  const items = [navigation];
+  items = [navigation];
   const goToMessageRequestPreview = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
   return jsx(SpamMessageListDefault, { goToMessageRequestPreview });
 };

@@ -1,6 +1,6 @@
-// === Module 18024: ExternalLink ===
+// === Module 18168: ExternalLink ===
 
-// Module 18024 (ExternalLink)
+// Module 18168 (ExternalLink)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
   let str = "center";
@@ -34,7 +34,7 @@ export default function ExternalLink(externalURL) {
   let onPress;
   const tmp = closure_9(require("useWideAuthView")());
   importDefault = externalURL(onPress[6]).useNavigation();
-  const items = [externalURL];
+  items = [externalURL];
   onPress = noop.useCallback(() => {
     React4.openURL(externalURL);
   }, items);

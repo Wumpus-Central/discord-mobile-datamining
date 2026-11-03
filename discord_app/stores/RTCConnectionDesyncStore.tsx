@@ -1,17 +1,17 @@
-// === Module 15646: RTCConnectionDesyncStore ===
+// === Module 15789: RTCConnectionDesyncStore ===
 
-// Module 15646 (RTCConnectionDesyncStore)
+// Module 15789 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 2033 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6853 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5680 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 2162 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6973 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5800 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 require = fn;
 function retryFailedUsers() {
@@ -49,10 +49,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(5767).makeSortedVoiceState;
+const makeSortedVoiceState = fn(5887).makeSortedVoiceState;
 const Constants = fn(1072);
-({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = fn(5681).ParticipantTypes;
+({ ME: closure_9, RTCConnectionStates: closure_10 } = Constants);
+const ParticipantTypes = fn(5801).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
@@ -62,7 +62,7 @@ class RTCConnectionDesyncStore extends Store {
 const prototype = RTCConnectionDesyncStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(VoiceStateStore, UserStore, ChannelStore, RTCConnectionStore);
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, retryFailedUsers);
 };
 Object.defineProperty(prototype, "desyncedVoiceStatesCount", {

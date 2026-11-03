@@ -1,23 +1,23 @@
-// === Module 15466: useMarketablePowerupPerks ===
+// === Module 15607: useMarketablePowerupPerks ===
 
-// Module 15466 (useMarketablePowerupPerks)
-import Powerups from "Powerups" /* 5233 */;
+// Module 15607 (useMarketablePowerupPerks)
+import Powerups from "Powerups" /* 5356 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(5233).VANITY_URL_POWERUP_SKU_ID];
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(5356).VANITY_URL_POWERUP_SKU_ID];
 let set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
 
 export default function useMarketablePowerupPerks(guildId) {
   _require = guildId;
-  let items = [memo];
+  items = [memo];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
     let tmp2;
@@ -29,7 +29,7 @@ export default function useMarketablePowerupPerks(guildId) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(14150)(guildId);
+  let tmp2 = stateFromStores(14281)(guildId);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(guildId, "useMarketablePowerupPerks");
@@ -43,7 +43,7 @@ export default function useMarketablePowerupPerks(guildId) {
   }, items1);
   const items2 = [stateFromStores, tmp2, memo];
   return serverThemeRollbackEnabled.useMemo(() => {
-    let items = stateFromStores;
+    items = stateFromStores;
     if (stateFromStores == null) {
       items = [];
     }

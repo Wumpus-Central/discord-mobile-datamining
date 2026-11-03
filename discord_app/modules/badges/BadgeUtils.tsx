@@ -1,11 +1,11 @@
-// === Module 11460: BadgeUtils ===
+// === Module 11597: BadgeUtils ===
 
-// Module 11460 (BadgeUtils)
+// Module 11597 (BadgeUtils)
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2026 */;
-import Constants from "Constants" /* 8754 */;
-import BadgeId from "BadgeId" /* 8755 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8764 */;
+import StringUtils from "StringUtils" /* 2155 */;
+import Constants from "Constants" /* 8878 */;
+import BadgeId from "BadgeId" /* 8879 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8888 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -79,7 +79,7 @@ export function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;
   if (tenureBadgeHideable.tenureBadgeHideable) {
-    const items = [STAFF];
+    items = [STAFF];
     let _Set1 = new _Set(items);
   } else {
     const items1 = [STAFF, BadgeId.BadgeId.PREMIUM_TENURE];

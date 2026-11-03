@@ -1,10 +1,10 @@
-// === Module 19124: useFloatConjureAppsOffScreen ===
+// === Module 19282: useFloatConjureAppsOffScreen ===
 
-// Module 19124 (useFloatConjureAppsOffScreen)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6849 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16371 */;
+// Module 19282 (useFloatConjureAppsOffScreen)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6969 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16514 */;
 import noop from "module_19" /* 19 */;
-import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18604 */;
+import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18762 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/conjure/background_frames/nativ
 export default function useFloatConjureAppsOffScreen() {
   const tmp = VisibleChannelScreenStore((channelId) => channelId.channelId);
   _require = tmp;
-  const items = [require("initialize").useStateFromStoresArray(require("conjureAppPictureInPictureFrames").FLOATING_APP_STORES, getFloatableFrameIds), tmp];
+  items = [require("initialize").useStateFromStoresArray(require("conjureAppPictureInPictureFrames").FLOATING_APP_STORES, getFloatableFrameIds), tmp];
   const effect = noop.useEffect(() => {
     const floatableFrames = conjureAppPictureInPictureFrames.getFloatableFrames();
     for (const item10012 of floatableFrames) {

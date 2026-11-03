@@ -1,27 +1,27 @@
-// === Module 7772: UserProfileStore ===
+// === Module 7896: UserProfileStore ===
 
-// Module 7772 (UserProfileStore)
+// Module 7896 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import Timers from "Timers" /* 4858 */;
-import WidgetType from "WidgetType" /* 7773 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7774 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7777 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7780 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7781 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7782 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7783 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import Timers from "Timers" /* 4985 */;
+import WidgetType from "WidgetType" /* 7897 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7902 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7904 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7905 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7906 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7907 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
+import UserRecord from "UserRecord" /* 1399 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PresenceStore from "PresenceStore" /* 5761 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import PresenceStore from "PresenceStore" /* 5881 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -128,7 +128,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
     collectibles = value5.collectibles;
   }
   if (null != collectibles) {
-    const items = [];
+    items = [];
     const collectibles1 = value5.collectibles;
     const item = collectibles1.forEach((expiresAt) => {
       if (null != expiresAt.expiresAt) {
@@ -269,7 +269,7 @@ function handleProfileFetch(arg0) {
     const mutual_guilds = userProfile.mutual_guilds;
     const item = mutual_guilds.forEach((id) => {
       id = id.id;
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null != guild) {
         obj = { guild, nick: id.nick };
         set[id] = obj;
@@ -369,7 +369,7 @@ function handleProfileFetch(arg0) {
       }
       if (found1.length > 0) {
         const push = mapped1.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found1, 0);
         HermesBuiltin.apply(items, mapped1);
       }
@@ -534,7 +534,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   let value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "cix" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "assign" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -657,7 +657,7 @@ function handlePinBadgesToProfile(badges) {
       }
       if (found.length > 0) {
         const push = badges.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found, 0);
         HermesBuiltin.apply(items, badges);
       }
@@ -687,7 +687,7 @@ function handleUserUpdate(user) {
   return tmp2;
 }
 function handleGuildStatusChange() {
-  const items = [...map1.keys()];
+  items = [...map1.keys()];
   return items.reduce((acc, item) => resetProfileFetch(item) || acc, false);
 }
 function handleGuildMemberStatusChange(user) {
@@ -803,7 +803,7 @@ class UserProfileStore extends tmp2 {
 const prototype = UserProfileStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(SortedGuildStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleLocaleStoreChange);
   const Storage = Storage2.Storage;
   Storage.remove("ProfileReadStateStore");
@@ -905,14 +905,19 @@ prototype["getWishlistSettings"] = function getWishlistSettings(id, wishlistId) 
   }
   return tmp2;
 };
-prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(id, WISHLIST) {
-  value = map1.get(id);
-  let tmp2;
+prototype["getProfileReadState"] = function getProfileReadState(ownerId) {
+  value = map1.get(ownerId);
+  let profileReadState;
   if (value != null) {
-    const profileReadState = value.profileReadState;
-    if (profileReadState != null) {
-      tmp2 = profileReadState[WISHLIST];
-    }
+    profileReadState = value.profileReadState;
+  }
+  return profileReadState;
+};
+prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(id, WISHLIST) {
+  const profileReadState = this.getProfileReadState(id);
+  let tmp2;
+  if (profileReadState != null) {
+    tmp2 = profileReadState[WISHLIST];
   }
   if (tmp2 == null) {
     tmp2 = null;
@@ -925,7 +930,7 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   if (null != value) {
     const obj2 = { version: UserProfileStore.LATEST_SNAPSHOT_VERSION, data: null };
     const obj3 = { userId: id, profile: value };
-    const items = [obj3];
+    items = [obj3];
     obj2.data = items;
     obj = obj2;
   } else {

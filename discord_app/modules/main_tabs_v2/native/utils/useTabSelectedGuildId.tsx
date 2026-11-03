@@ -1,16 +1,16 @@
-// === Module 16569: useTabSelectedGuildId ===
+// === Module 16712: useTabSelectedGuildId ===
 
-// Module 16569 (useTabSelectedGuildId)
+// Module 16712 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import SortedGuildStore from "SortedGuildStore" /* 6892 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
 export default function useTabSelectedGuildId() {
-  const items = [SelectedGuildStore, SortedGuildStore];
+  items = [SelectedGuildStore, SortedGuildStore];
   return useStateFromStores.useStateFromStores(items, () => {
     let guildId = SelectedGuildStore.getGuildId();
     const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();

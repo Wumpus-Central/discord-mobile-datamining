@@ -1,6 +1,6 @@
-// === Module 5160: ? ===
+// === Module 5283: ? ===
 
-// Module 5160
+// Module 5283
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js");

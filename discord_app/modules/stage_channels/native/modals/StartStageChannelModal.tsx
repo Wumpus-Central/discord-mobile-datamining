@@ -1,24 +1,24 @@
-// === Module 9105: StartStageChannelModal ===
+// === Module 9233: StartStageChannelModal ===
 
-// Module 9105 (StartStageChannelModal)
+// Module 9233 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import GuildIcon from "GuildIcon" /* 6957 */;
-import Pressables from "Pressables" /* 6980 */;
-import _modDef7257 from "module_7257" /* 7257 */;
-import HotspotStore2 from "HotspotStore" /* 7381 */;
-import Form from "Form" /* 8177 */;
-import StageSparkleDefault from "StageSparkle" /* 9106 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import GuildIcon from "GuildIcon" /* 7083 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef7377 from "module_7377" /* 7377 */;
+import HotspotStore2 from "HotspotStore" /* 7501 */;
+import Form from "Form" /* 8301 */;
+import StageSparkleDefault from "StageSparkle" /* 9234 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -31,27 +31,27 @@ function NavigationBar(guild) {
   let tmp2 = null;
   if (null == guild.guild) {
     const obj = { style: null, children: null };
-    const items = [, ];
+    items = [, ];
     ({ contentContainer: arr[0], contentTopSpacing: arr[1] } = tmp);
     obj.style = items;
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7257 };
-    obj2.children = closure_1_14(native.Icon, obj3);
-    obj.children = closure_1_14(Pressables.PressableOpacity, obj2);
-    tmp2 = closure_1_14(React5, obj);
+    const obj3 = { source: _modDef7377 };
+    obj2.children = gesture(native.Icon, obj3);
+    obj.children = gesture(Pressables.PressableOpacity, obj2);
+    tmp2 = gesture(React5, obj);
   }
   return tmp2;
 }
 function HeaderIcon(guild) {
   guild = guild.guild;
   if (null == guild) {
-    let tmp7 = closure_1_14(StageSparkleDefault, {});
+    let tmp7 = gesture(StageSparkleDefault, {});
   } else {
     const obj = { style: tmp.guildIcon, size: GuildIcon.GuildIconSizes.LARGE, guild };
-    tmp7 = closure_1_14(GuildIconDefault, obj);
+    tmp7 = gesture(GuildIconDefault, obj);
   }
   return tmp7;
 }
@@ -82,7 +82,7 @@ class NotificationToggle {
     if (stateFromStores) {
       obj9 = { style: null, children: null };
       obj9.style = tmp.pill;
-      obj10 = { style: null, variant: "text-xxs/bold", color: "text-overlay-light", children: null };
+      obj10 = { style: null, variant: "text-xxs/semibold", color: "text-overlay-light", children: null };
       obj10.style = tmp.pillLabel;
       intl2 = tmp2(tmp3[13]).intl;
       obj10.children = intl2.string(tmp2(tmp3[13]).t.y2b7CA);
@@ -99,13 +99,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6709);
-({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
+const StageChannelsConstants = fn(6829);
+({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let constants = fn(4869).GuildScheduledEventPrivacyLevel;
+let constants = fn(4996).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { paddingHorizontal: 16 }, contentTopSpacing: { paddingTop: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.textInput = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
@@ -122,7 +122,7 @@ let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingHori
 obj2.notificationToggle = { marginTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 let obj7 = { marginTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 obj2.ageVerificationNotice = { marginBottom: nativeDefault.space.PX_16 };
-const __initData2 = createStyles.createStyles(obj2);
+const value2 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
 
@@ -153,7 +153,7 @@ export default function StartStageChannelModal(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -174,21 +174,21 @@ export default function StartStageChannelModal(arg0) {
               if (null != first2) {
                 React6(true);
                 StageInstanceStore(null);
-                const result = tmp66(1888).dismissGlobalKeyboard();
+                const result = tmp66(2017).dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(7945).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8069).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(7945);
+                  obj5 = tmp66(8069);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
                   return obj9;
                 }
-                const obj4 = tmp66(1888);
+                const obj4 = tmp66(2017);
               }
             }
           }
@@ -196,7 +196,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6446).APIError(closure_128_1);
+            const aPIError = new closure_0(6566).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -211,8 +211,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7385).hideHotspot(closure_0(7381).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7385);
+                  tmp66(7505).hideHotspot(closure_0(7501).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7505);
                 }
               }
             } else if (arg0 === 1) {
@@ -260,14 +260,14 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_7257");
+      obj.source = require("module_7377");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }
   }));
   const tmp4 = _slicedToArray(first2.useState(channel), 2);
   channel = tmp4[0];
-  const items = [channel.id];
+  items = [channel.id];
   const memo = first2.useMemo(() => StageInstanceStore.getStageInstanceByChannel(first.id), items);
   let str;
   if (memo != null) {

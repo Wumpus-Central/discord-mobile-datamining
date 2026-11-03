@@ -1,7 +1,7 @@
-// === Module 10974: conjureLinkEmbeds ===
+// === Module 11107: conjureLinkEmbeds ===
 
-// Module 10974 (conjureLinkEmbeds)
-import URLUtilsDefault from "URLUtils" /* 1377 */;
+// Module 11107 (conjureLinkEmbeds)
+import URLUtilsDefault from "URLUtils" /* 1378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ function conjureLinkUrls(arr) {
     }
     const _Set = Set;
     set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(set, 0);
     return items.slice(0, 4);
   } else {
@@ -43,7 +43,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -116,7 +116,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
                 if (value2 == null) {
                   closure_5 = [];
                 }
-                let items = [];
+                items = [];
                 let arraySpreadResult = HermesBuiltin.arraySpread(closure_5, closure_4);
                 closure_4 = arraySpreadResult;
                 items[arraySpreadResult] = closure_135_2;
@@ -139,9 +139,9 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
             let arraySpreadResult2 = HermesBuiltin.arraySpread(closure_135_1, 0);
             let result1 = closure_136_6.set(closure_135_0, items1.flatMap((item) => {
               [tmp, tmp2] = item;
-              let items = (function toConjureLinkEmbed(url, arr) {
+              items = (function toConjureLinkEmbed(url, arr) {
                 const first = closure_1_4(arr, 1)[0];
-                let items = [];
+                items = [];
                 function _loop(iter) {
                   let url;
                   if (iter != null) {
@@ -253,7 +253,7 @@ export function readyConjureLinkEmbeds(trimmed) {
     }
     const _Set = Set;
     set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(set, 0);
     let substr = items.slice(0, 4);
   } else {
@@ -270,7 +270,7 @@ export function readyConjureLinkEmbeds(trimmed) {
 }
 export function useConjureLinkPrefetch(arg0) {
   closure_0 = arg0;
-  let items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     if (timeout.includes("http")) {
       let match = str.match(URLUtilsDefault.URL_REGEX);
@@ -279,7 +279,7 @@ export function useConjureLinkPrefetch(arg0) {
       }
       const _Set = Set;
       set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(set, 0);
       let substr = items.slice(0, 4);
     } else {
@@ -298,7 +298,7 @@ export function useConjureLinkPrefetch(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -326,7 +326,7 @@ export function useConjureLinkPrefetch(arg0) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp7) {
             c0 = tmp;

@@ -1,12 +1,12 @@
-// === Module 10107: computeScrollData ===
+// === Module 10237: computeScrollData ===
 
-// Module 10107 (computeScrollData)
-import Client from "Client" /* 5249 */;
-import NativeChatUtils from "NativeChatUtils" /* 10108 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+// Module 10237 (computeScrollData)
+import Client from "Client" /* 5372 */;
+import NativeChatUtils from "NativeChatUtils" /* 10238 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");

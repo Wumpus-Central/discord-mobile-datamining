@@ -1,8 +1,8 @@
-// === Module 19216: useCanInviteMembers ===
+// === Module 19374: useCanInviteMembers ===
 
-// Module 19216 (useCanInviteMembers)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 19374 (useCanInviteMembers)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export function useCanInviteMembers(channelId) {
   _require = channelId;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   const items1 = [channelId];
   return require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);

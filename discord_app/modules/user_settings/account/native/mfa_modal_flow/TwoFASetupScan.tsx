@@ -1,15 +1,15 @@
-// === Module 16663: TwoFASetupScan ===
+// === Module 16806: TwoFASetupScan ===
 
-// Module 16663 (TwoFASetupScan)
+// Module 16806 (TwoFASetupScan)
 import nativeDefault from "native" /* 575 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: { color: nativeDefault.colors.TEXT_BRAND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,12 +20,12 @@ export default function TwoFASetupScan(totpSecret) {
   const tmp = closure_6();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp2[1];
-  const items = [totpSecret];
+  items = [totpSecret];
   const callback = noop.useCallback(() => {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  const twoFASetupStyles = totpSecret(16661).useTwoFASetupStyles();
+  const twoFASetupStyles = totpSecret(16804).useTwoFASetupStyles();
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { style: null, children: null };
   const items1 = [, ];
@@ -41,7 +41,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1113).intl;
   obj4.children = intl2.string(totpSecret(1113).t["UQR+Qy"]);
   items2[1] = closure_4(totpSecret(1187).LegacyText, obj4);
-  items2[2] = closure_4(totpSecret(5624).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
+  items2[2] = closure_4(totpSecret(5747).Text, { variant: "text-md/semibold", style: { textAlign: "center" }, children: totpSecret });
   const obj5 = { accessibilityRole: "button", onPress: callback, children: null };
   const obj6 = { style: tmp.copy, children: null };
   const intl3 = totpSecret(1113).intl;
@@ -55,8 +55,8 @@ export default function TwoFASetupScan(totpSecret) {
   const obj7 = { children: null };
   obj6.children = stringResult;
   obj5.children = closure_4(totpSecret(1187).LegacyText, obj6);
-  items2[3] = closure_4(totpSecret(6980).PressableOpacity, obj5);
+  items2[3] = closure_4(totpSecret(7106).PressableOpacity, obj5);
   obj2.children = items2;
-  obj7.children = closure_5(totpSecret(7292).SafeAreaPaddingView, obj2);
-  return closure_4(totpSecret(16657).TwoFASetupModalScreen, obj7);
+  obj7.children = closure_5(totpSecret(7412).SafeAreaPaddingView, obj2);
+  return closure_4(totpSecret(16800).TwoFASetupModalScreen, obj7);
 };

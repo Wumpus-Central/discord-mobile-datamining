@@ -1,19 +1,19 @@
-// === Module 15310: MarketingPageBannerTile ===
+// === Module 15451: MarketingPageBannerTile ===
 
-// Module 15310 (MarketingPageBannerTile)
+// Module 15451 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6028 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10290 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6148 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10420 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { width: "100%" }, card: { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" }, image: null, bodyText: null, ctaButton: null };
 let size = { width: "100%", maxWidth: 317, height: 144, borderRadius: nativeDefault.radii.md, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, alignSelf: "center" };
 obj2.image = size;
@@ -48,20 +48,20 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(15311);
+  const obj = helpArticleLinkProps(15452);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(15311).getButtonActionHandler(obj2);
+  const buttonActionHandler = helpArticleLinkProps(15452).getButtonActionHandler(obj2);
   obj3.type = helpArticleLinkProps(1260).ImpressionTypes.VIEW;
   obj3.name = helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
-  obj3.properties = { component_type: helpArticleLinkProps(10609).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  obj3.properties = { component_type: helpArticleLinkProps(10739).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj3);
-  const obj4 = { component_type: helpArticleLinkProps(10609).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15314).useFormatStringWithCommonPremiumParams(bannerFields.body);
-  const tmp4Result = helpArticleLinkProps(15314);
-  helpArticleLinkProps = helpArticleLinkProps(15314).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+  const obj4 = { component_type: helpArticleLinkProps(10739).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15455).useFormatStringWithCommonPremiumParams(bannerFields.body);
+  const tmp4Result = helpArticleLinkProps(15455);
+  helpArticleLinkProps = helpArticleLinkProps(15455).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj5 = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj5.style = items;
   const obj6 = { style: null, children: null };
   const items1 = [tmp.card, cardStyle];
@@ -74,7 +74,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj7.style = tmp.image;
     tmp12Result = closure_4(FastImageDefault, obj7);
   }
-  const items2 = [tmp12Result, closure_4(helpArticleLinkProps(5624).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
+  const items2 = [tmp12Result, closure_4(helpArticleLinkProps(5747).Text, { color: "mobile-text-heading-primary", variant: "text-lg/semibold", children: bannerFields.header }), , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "text-sm/medium", style: tmp.bodyText, children: null };
   const items3 = [formatStringWithCommonPremiumParams, " ", ];
   let tmp12Result3 = null != helpArticleLinkProps;
@@ -88,11 +88,11 @@ export default function MarketingPageBannerTile(bannerFields) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp12Result3 = closure_4(tmp4(5624).Text, obj11);
+    tmp12Result3 = closure_4(tmp4(5747).Text, obj11);
   }
   items3[2] = tmp12Result3;
   obj10.children = items3;
-  items2[2] = closure_5(helpArticleLinkProps(5624).Text, obj10);
+  items2[2] = closure_5(helpArticleLinkProps(5747).Text, obj10);
   let tmp12Result4 = null != bannerFields.button;
   if (tmp12Result4) {
     const obj12 = { style: tmp.ctaButton, children: null };

@@ -1,14 +1,14 @@
-// === Module 8006: AgeVerificationExpressiveV2Modal ===
+// === Module 8130: AgeVerificationExpressiveV2Modal ===
 
-// Module 8006 (AgeVerificationExpressiveV2Modal)
+// Module 8130 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7988 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7989 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8112 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ function MethodsScreen(onClose) {
   ({ footerMessage, outageBannerMessage, refetch, error } = ageVerificationMethodsV2);
   let obj2 = require("useAgeVerificationMethodsV2");
   const availableMethodsV2 = require("AgeVerificationMethodAvailability").useAvailableMethodsV2(methods);
-  let items = [onComplete, onClose];
+  items = [onComplete, onClose];
   onComplete = onComplete.useCallback(() => {
     if (onComplete != null) {
       tmp();
@@ -61,7 +61,7 @@ function MethodsScreen(onClose) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ function MethodsScreen(onClose) {
   } else {
     const obj10 = { align: "stretch", spacing: 24, style: tmp.container, children: null };
     const items7 = [tmp19(tmp2(tmp3[29]).AgeVerificationSpotIllustration, { width: 150, height: 100 }), ];
-    const obj11 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp2(tmp3[24]).getAgeVerificationGetStartedTitle(entryPoint, true) };
+    const obj11 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: tmp2(tmp3[24]).getAgeVerificationGetStartedTitle(entryPoint, true) };
     const items8 = [tmp19(tmp2(tmp3[30]).Text, obj11), ];
     const obj12 = { variant: "text-md/medium", color: "text-subtle", style: tmp.header, children: null };
     const tmp2Result2 = tmp2(tmp3[24]);
@@ -313,7 +313,7 @@ function MethodsScreen(onClose) {
                         tmp5Result = tmp5(tmp(onComplete[40]).ChevronSmallRightIcon, obj4);
                       }
                       const obj5 = { trailing: tmp5Result, disabled: null != c8, icon: tmp4, label: children.title, subLabel: null, onPress: null };
-                      const items = [tmp5(closure_0(onComplete[30]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
+                      items = [tmp5(closure_0(onComplete[30]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
                       let tmp5Result2 = null != children.providedBy;
                       if (tmp5Result2) {
                         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: children.providedBy };
@@ -383,11 +383,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6728).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6848).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };
@@ -406,7 +406,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   const tmp = closure_11();
   closure_3 = tmp;
   const memo = noop.useMemo(() => entryPoint(onComplete[45]).v4(), []);
-  const items = [tmp, memo, entryPoint, onClose, onComplete];
+  items = [tmp, memo, entryPoint, onClose, onComplete];
   const items1 = [memo, entryPoint];
   const memo1 = noop.useMemo(() => {
     const modalSessionId = memo;

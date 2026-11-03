@@ -1,8 +1,8 @@
-// === Module 16991: useFilteredAndSortedProducts ===
+// === Module 17134: useFilteredAndSortedProducts ===
 
-// Module 16991 (useFilteredAndSortedProducts)
+// Module 17134 (useFilteredAndSortedProducts)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 let closure_5 = fn(1074).CollectiblesMobileShopScreen;
@@ -19,7 +19,7 @@ export function useFilteredAndSortedProducts(products) {
   const androidUnsyncedFilter = products(bypassAndroidUnsyncedFilter[4]).useAndroidUnsyncedFilter();
   closure_129_0 = tmp3;
   const obj2 = products(bypassAndroidUnsyncedFilter[4]);
-  let items = [androidUnsyncedFilter];
+  items = [androidUnsyncedFilter];
   const stateFromStores = products(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () => androidUnsyncedFilter.getCurrentUser());
   const obj3 = products(bypassAndroidUnsyncedFilter[6]);
   const canUseShopDiscountsResult = maxProducts(bypassAndroidUnsyncedFilter[7]).canUseShopDiscounts(stateFromStores);
@@ -39,7 +39,7 @@ export function useFilteredAndSortedProducts(products) {
     } else {
       fn = androidUnsyncedFilter;
     }
-    const items = [fn, badBundleFilter, callback];
+    items = [fn, badBundleFilter, callback];
     return items.reduce((acc, fn) => fn(acc), products);
   }, items2);
   const obj4 = maxProducts(bypassAndroidUnsyncedFilter[7]);

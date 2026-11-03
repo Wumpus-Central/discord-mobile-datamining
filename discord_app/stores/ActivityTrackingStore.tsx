@@ -1,19 +1,19 @@
-// === Module 15634: ActivityTrackingStore ===
+// === Module 15777: ActivityTrackingStore ===
 
-// Module 15634 (ActivityTrackingStore)
+// Module 15777 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7891 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11544 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8015 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11681 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DetectableGameStore from "DetectableGameStore" /* 2032 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import DetectableGameStore from "DetectableGameStore" /* 2161 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 function stopActivity(applicationId) {
@@ -69,7 +69,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4858).Interval();
+    const interval = new tmp3(4985).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);
@@ -146,7 +146,7 @@ class ActivityTrackingStore extends Store {
 const prototype = ActivityTrackingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore, DetectableGameStore, LibraryApplicationStore, RTCConnectionStore, RunningGameStore, SelectedChannelStore, UserSettingsProtoStore);
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, handleRunningGamesChange);
 };
 prototype["getActivities"] = function getActivities() {

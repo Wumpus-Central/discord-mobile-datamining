@@ -1,38 +1,38 @@
-// === Module 8388: createMessageContent ===
+// === Module 8512: createMessageContent ===
 
-// Module 8388 (createMessageContent)
+// Module 8512 (createMessageContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6753 */;
-import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7766 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8378 */;
-import GuildTagConstants from "GuildTagConstants" /* 8393 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
-import MessageCountUtils from "MessageCountUtils" /* 8395 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
-import _modDef8397 from "module_8397" /* 8397 */;
-import transformMessageComponentsDefault from "transformMessageComponents" /* 8694 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8383 */;
-import InteractionStore from "InteractionStore" /* 8389 */;
-import LurkingStore from "LurkingStore" /* 4947 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8390 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7477 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6873 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7890 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8502 */;
+import GuildTagConstants from "GuildTagConstants" /* 8517 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8518 */;
+import MessageCountUtils from "MessageCountUtils" /* 8519 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8520 */;
+import _modDef8521 from "module_8521" /* 8521 */;
+import transformMessageComponentsDefault from "transformMessageComponents" /* 8818 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8507 */;
+import InteractionStore from "InteractionStore" /* 8513 */;
+import LurkingStore from "LurkingStore" /* 5074 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8514 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7601 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UploadStore from "UploadStore" /* 8392 */;
-import UserStore from "UserStore" /* 1383 */;
-import MessageConstants from "MessageConstants" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UploadStore from "UploadStore" /* 8516 */;
+import UserStore from "UserStore" /* 1385 */;
+import MessageConstants from "MessageConstants" /* 5146 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -69,7 +69,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 const obj3 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8397);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8521);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -185,7 +185,7 @@ function createMessageContent(message) {
   if (null != messageForward) {
     message2 = messageForward.messageSnapshot.message;
   }
-  let items = [];
+  items = [];
   if (renderReactions) {
     const obj2 = { reactions: message.reactions, animateEmoji };
     items = tmp4(tmp5[41])(obj2);
@@ -421,7 +421,7 @@ function createMessageContent(message) {
               if (message.type === constants.REPLY) {
                 if (renderReplies) {
                   const messageByReference1 = ReferencedMessageStore.getMessageByReference(message.messageReference);
-                  const state = messageByReference1.state;
+                  state = messageByReference1.state;
                   if (ReferencedMessageState.LOADED === state) {
                     const message3 = messageByReference1.message;
                     const result2 = tmp15(tmp5[40]).maybeCreateSingleForwardForMessage(message3);
@@ -710,7 +710,7 @@ function createMessageContent(message) {
                   }
                   const items4 = [];
                   if (hasFlagResult2) {
-                    const guild = GuildStore.getGuild(guildId1);
+                    guild = GuildStore.getGuild(guildId1);
                     if (null != guild) {
                       if (tmp15Result101.isGuildOfficialMessagesEnabled(guild, "createMessageContent")) {
                         let officialMessageColor = guild.officialMessageColor;

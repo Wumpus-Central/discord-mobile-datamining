@@ -1,7 +1,7 @@
-// === Module 7425: useIsCreatorMonetizationEnabledGuild ===
+// === Module 7549: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 7425 (useIsCreatorMonetizationEnabledGuild)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 7549 (useIsCreatorMonetizationEnabledGuild)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting("modules/creator_monetization_eligibil
 
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;

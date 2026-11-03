@@ -1,10 +1,10 @@
-// === Module 12652: useConjureProjectEventLine ===
+// === Module 12788: useConjureProjectEventLine ===
 
-// Module 12652 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12636 */;
+// Module 12788 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12772 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   _require = actor_user_id;
   importDefault = arg2;
   actor_user_id = actor_user_id.actor_user_id;
-  const items = [actor_user_id];
+  items = [actor_user_id];
   const effect = stateFromStores.useEffect(() => {
     const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
   }, items);
@@ -38,7 +38,7 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   let stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
     let tmp2 = null;
     if (null != actor_user_id.guild_id) {
-      const guild = GuildStore.getGuild(tmp.guild_id);
+      guild = GuildStore.getGuild(tmp.guild_id);
       name = undefined;
       if (guild != null) {
         name = guild.name;

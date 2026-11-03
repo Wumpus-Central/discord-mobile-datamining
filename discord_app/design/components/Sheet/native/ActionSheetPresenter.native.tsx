@@ -1,10 +1,10 @@
-// === Module 15824: ActionSheetPresenter ===
+// === Module 15967: ActionSheetPresenter ===
 
-// Module 15824 (ActionSheetPresenter)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 15967 (ActionSheetPresenter)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
 
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
@@ -27,7 +27,7 @@ function TrackedWrapperInner(sheetKey) {
     ref2.current();
   }, []);
   const obj = { type: sheetKey(1260).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  transitionState(6028)(obj);
+  transitionState(6148)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(ref, () => ({
     componentDidEnter() {
       closure_1_2("visible");
@@ -41,7 +41,7 @@ function TrackedWrapperInner(sheetKey) {
       ref2.current = callback2;
     }
   }), []);
-  const items = [sheetKey];
+  items = [sheetKey];
   callback2 = registerDismissHandler.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(sheetKey);
   }, items);
@@ -56,16 +56,16 @@ function TrackedWrapperInner(sheetKey) {
     callback2();
     return true;
   }, items2);
-  transitionState(6022)(callback3);
-  const tmp5 = transitionState(6028);
-  return jsx(transitionState(5591).Provider, { value: memo, children: jsx(sheetKey(6017).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+  transitionState(6142)(callback3);
+  const tmp5 = transitionState(6148);
+  return jsx(transitionState(5714).Provider, { value: memo, children: jsx(sheetKey(6137).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
 
 export function ActionSheetPresenter(appEntryKey) {
   appEntryKey = appEntryKey.appEntryKey;
-  const items = [appEntryKey];
+  items = [appEntryKey];
   const effect = noop.useEffect(() => () => {
     const result = ActionSheetActionCreatorsDefault.resetActionSheetsForAppEntryKey(appEntryKey);
   }, items);
@@ -74,5 +74,5 @@ export function ActionSheetPresenter(appEntryKey) {
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => <TrackedWrapperInner key={content.key} sheetKey={content.key} content={content.content} impressionName={content.impressionName} impressionProperties={content.impressionProperties} zIndex={content.zIndex} />);
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(13987).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(5965).TransitionGroupOverlayView, children: mapped });
+  return jsx(appEntryKey(14118).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(6085).TransitionGroupOverlayView, children: mapped });
 }

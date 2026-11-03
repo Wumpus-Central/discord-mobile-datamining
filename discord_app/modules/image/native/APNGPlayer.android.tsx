@@ -1,6 +1,6 @@
-// === Module 9504: APNGPlayer ===
+// === Module 9632: APNGPlayer ===
 
-// Module 9504 (APNGPlayer)
+// Module 9632 (APNGPlayer)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/image/native/APNGPlayer.andro
 export function useAPNGPlayerControls(ref) {
   closure_0 = ref;
   closure_1 = noop.useRef(false);
-  const items = [ref];
+  items = [ref];
   return noop.useMemo(() => ({
     play() {
       let current = null == closure_1_0.current;
@@ -58,7 +58,7 @@ export function APNGPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const merged = Object.assign(onLoad, Object.assign({ onLoad: 0, ref: 0 }));
   const ref = noop.useRef(null);
-  const items = [onLoad];
+  items = [onLoad];
   const callback = noop.useCallback((nativeEvent) => {
     if (onLoad != null) {
       tmp(nativeEvent.nativeEvent.url);
@@ -67,31 +67,31 @@ export function APNGPlayer(onLoad) {
   const imperativeHandle = noop.useImperativeHandle(onLoad.ref, () => ({
     play() {
       if (null != ref.current) {
-        const Commands = onLoad(9505).Commands;
+        const Commands = onLoad(9633).Commands;
         Commands.play(tmp.current);
       }
     },
     pause() {
       if (null != ref.current) {
-        const Commands = onLoad(9505).Commands;
+        const Commands = onLoad(9633).Commands;
         Commands.pause(tmp.current);
       }
     },
     stop() {
       if (null != ref.current) {
-        const Commands = onLoad(9505).Commands;
+        const Commands = onLoad(9633).Commands;
         Commands.seek(ref.current, 0);
-        const Commands2 = onLoad(9505).Commands;
+        const Commands2 = onLoad(9633).Commands;
         Commands2.pause(ref.current);
       }
     },
     seek(arg0) {
       if (null != ref.current) {
-        const Commands = onLoad(9505).Commands;
+        const Commands = onLoad(9633).Commands;
         Commands.seek(tmp.current, arg0);
       }
     }
   }));
   const merged1 = Object.assign(merged);
-  return jsx(ref(9505), { ref, onLoad: callback });
+  return jsx(ref(9633), { ref, onLoad: callback });
 }

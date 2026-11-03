@@ -1,10 +1,10 @@
-// === Module 5749: InviteStore ===
+// === Module 5869: InviteStore ===
 
-// Module 5749 (InviteStore)
+// Module 5869 (InviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5750 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5870 */;
 import size from "module_2" /* 2 */;
 
 function updateInvite(code, fn) {
@@ -24,7 +24,7 @@ function updateInvite(code, fn) {
   fn(obj3);
   map = new Map(map);
   const result1 = map.set(str, obj3);
-  const guild = obj3.guild;
+  guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;
@@ -108,7 +108,6 @@ const inviteStore = new InviteStore(DispatcherDefault, {
       arg0.roles = code.invite.roles;
       arg0.target_channel_id = code.invite.target_channel_id;
       arg0.target_message_id = code.invite.target_message_id;
-      arg0.liveliness = code.invite.liveliness;
       arg0.guild_experiments = code.invite.guild_experiments;
     });
   },

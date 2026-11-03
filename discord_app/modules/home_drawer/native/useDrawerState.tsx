@@ -1,7 +1,7 @@
-// === Module 18083: useDrawerState ===
+// === Module 18227: useDrawerState ===
 
-// Module 18083 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+// Module 18227 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export function useDrawerOpen() {
   navigation = flag(navigation[2]).useNavigation();
   const tmp2 = _slicedToArray(noop.useState(() => {
     if (flag) {
-      const state = navigation.getState();
+      state = navigation.getState();
       let tmp6;
       if (state != null) {
         const routes = state.routes;
@@ -48,10 +48,10 @@ export function useDrawerOpen() {
     }
   }), 2);
   _slicedToArray = tmp2[1];
-  const items = [navigation, flag];
+  items = [navigation, flag];
   const effect = noop.useEffect(() => {
     function handleStateChange(data) {
-      const state = data.data.state;
+      state = data.data.state;
       let tmp;
       if (state != null) {
         const routes = state.routes;

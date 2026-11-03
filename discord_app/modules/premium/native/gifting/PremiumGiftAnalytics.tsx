@@ -1,11 +1,11 @@
-// === Module 14519: PremiumGiftAnalytics ===
+// === Module 14650: PremiumGiftAnalytics ===
 
-// Module 14519 (PremiumGiftAnalytics)
+// Module 14650 (PremiumGiftAnalytics)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10560 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10677 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10690 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function PremiumGiftAnalytics(currentStep) {
   let timestamp = Date.now();
   const ref = basePurchaseAnalytics.useRef(timestamp);
   basePurchaseAnalytics.useRef(timestamp);
-  const items = [basePurchaseAnalytics, currentStep, ref, customGiftMessage, productId];
+  items = [basePurchaseAnalytics, currentStep, ref, customGiftMessage, productId];
   const effect = basePurchaseAnalytics.useEffect(() => {
     if (currentStep !== ref.current) {
       const _Date = Date;

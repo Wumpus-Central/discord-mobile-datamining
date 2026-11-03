@@ -1,22 +1,22 @@
-// === Module 9465: WishlistNUXAddedItemActionSheet ===
+// === Module 9593: WishlistNUXAddedItemActionSheet ===
 
-// Module 9465 (WishlistNUXAddedItemActionSheet)
+// Module 9593 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import SKUPreview from "SKUPreview" /* 9466 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import SKUPreview from "SKUPreview" /* 9594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8754).UserProfileSections;
+const UserProfileSections = fn(8878).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, textContainer: null, subtitle: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.textContainer = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
@@ -30,7 +30,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   require = product;
   let memo;
   const tmp = closure_10();
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser(), []);
   const items1 = [product];
   memo = noop.useMemo(() => {
@@ -56,7 +56,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     if (null != stateFromStores) {
       const obj2 = { userId: tmp4.id, sourceAnalyticsLocations: null, initialSection: null };
-      const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
+      items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
       obj2.sourceAnalyticsLocations = items;
       obj2.initialSection = UserProfileSections.WISHLIST;
       showUserProfileActionSheetDefault(obj2);
@@ -75,7 +75,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   const obj3 = { style: tmp.container, children: null };
   const items4 = [closure_8(stateFromStores(memo[15]), { renderPreview: callback2 }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
-  const obj5 = { variant: "heading-lg/extrabold", color: "text-strong", accessibilityRole: "header", children: null };
+  const obj5 = { variant: "heading-lg/semibold", color: "text-strong", accessibilityRole: "header", children: null };
   const intl = require("util").intl;
   obj5.children = intl.string(require("util").t["3T2jbf"]);
   const items5 = [closure_8(require("Text/Text").Text, obj5), ];

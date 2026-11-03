@@ -1,7 +1,7 @@
-// === Module 11003: useSelectedParticipant ===
+// === Module 11136: useSelectedParticipant ===
 
-// Module 11003 (useSelectedParticipant)
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+// Module 11136 (useSelectedParticipant)
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
 
 const require = globalThis.__r;
 
@@ -11,6 +11,6 @@ const result = size.fileFinishedImporting("modules/video_calls/useSelectedPartic
 
 export default function useSelectedParticipant(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore];
+  items = [ChannelRTCStore];
   return require("initialize").useStateFromStores(items, () => ChannelRTCStore.getSelectedParticipant(id.id));
 };

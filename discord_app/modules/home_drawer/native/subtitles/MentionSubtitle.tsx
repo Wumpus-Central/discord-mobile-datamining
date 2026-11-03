@@ -1,11 +1,11 @@
-// === Module 18398: MentionSubtitle ===
+// === Module 18543: MentionSubtitle ===
 
-// Module 18398 (MentionSubtitle)
+// Module 18543 (MentionSubtitle)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import TextIcon from "TextIcon" /* 8652 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 18399 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import TextIcon from "TextIcon" /* 8776 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 18544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function MentionSubtitle(channel) {
     channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   const obj2 = { style: subtitleStyles.subtitleRow, children: null };
-  const items = [React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }), ];
+  items = [React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }), ];
   const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   const intl = util.intl;
   obj4.children = intl.format(util.t.L9YdGH, {

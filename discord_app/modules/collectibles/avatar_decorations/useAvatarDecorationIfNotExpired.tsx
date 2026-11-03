@@ -1,8 +1,8 @@
-// === Module 8830: useAvatarDecorationIfNotExpired ===
+// === Module 8954: useAvatarDecorationIfNotExpired ===
 
-// Module 8830 (useAvatarDecorationIfNotExpired)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1979 */;
-import Timers from "Timers" /* 4858 */;
+// Module 8954 (useAvatarDecorationIfNotExpired)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
+import Timers from "Timers" /* 4985 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
   [first, _slicedToArray] = noop.useState(false);
   noop = noop.useRef(null);
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     function maybeScheduleExpirationCheck() {
       if (null != maybeScheduleExpirationCheck) {

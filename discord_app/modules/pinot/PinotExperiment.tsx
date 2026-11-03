@@ -1,18 +1,18 @@
-// === Module 9055: PinotExperiment ===
+// === Module 9183: PinotExperiment ===
 
-// Module 9055 (PinotExperiment)
+// Module 9183 (PinotExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let ApexExperiment = fn(1447);
+let ApexExperiment = fn(1449);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-admin", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-member", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const apexExperiment2 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-member-notice", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const apexExperiment3 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-channel-discoverable", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/PinotExperiment.tsx");
@@ -58,7 +58,7 @@ export function isPinotMemberEnabled(location, arg1) {
 }
 export function useIsPinotMemberEnabledWithoutExposure(mobile_member_coachmark) {
   _require = mobile_member_coachmark;
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   const items1 = [mobile_member_coachmark];
   return require("initialize").useStateFromStores(items, () => apexExperiment1.getConfig({ location: _location }, { autoTrackExposure: false }).enabled, items1);
 }

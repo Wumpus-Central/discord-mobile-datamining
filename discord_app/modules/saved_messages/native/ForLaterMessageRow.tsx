@@ -1,9 +1,9 @@
-// === Module 11177: ForLaterMessageRow ===
+// === Module 11314: ForLaterMessageRow ===
 
-// Module 11177 (ForLaterMessageRow)
+// Module 11314 (ForLaterMessageRow)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import RowGeneratorDefault from "RowGenerator" /* 8377 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import RowGeneratorDefault from "RowGenerator" /* 8501 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, flushToCardBottom: { marginBottom: -16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS }, footer: { paddingHorizontal: 16, paddingTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -35,7 +35,7 @@ export function ForLaterMessageRow(arg0) {
   const setting1 = InlineEmbedMedia.getSetting();
   const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
   const setting2 = InlineAttachmentMedia.getSetting();
-  const items = [setting, setting1, setting2];
+  items = [setting, setting1, setting2];
   const items1 = [tmp.preview, ];
   let flushToCardBottom = null;
   const memo = setting1.useMemo(() => {

@@ -1,9 +1,9 @@
-// === Module 16766: RequestDataContent ===
+// === Module 16909: RequestDataContent ===
 
-// Module 16766 (RequestDataContent)
+// Module 16909 (RequestDataContent)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 16767 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 16910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const constants = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
@@ -81,10 +81,10 @@ export default noop.memo(function RequestDataContent() {
       end: index === arg2.length - 1
     }, item);
   });
-  const obj12 = { style: tmp.title, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj12 = { style: tmp.title, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl8 = require("util").intl;
   obj12.children = intl8.string(require("util").t.jxXMEz);
-  const items = [closure_8(require("Text/Text").Text, obj12), ];
+  items = [closure_8(require("Text/Text").Text, obj12), ];
   const obj13 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl9 = require("util").intl;
   const obj14 = { helpdeskArticle: null };
@@ -149,8 +149,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1113).intl;
         obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(5958).show(obj2);
-        const obj = closure_1_1(5958);
+        closure_1_1(6078).show(obj2);
+        const obj = closure_1_1(6078);
       }).finally(() => closure_1_1(false));
       const nextPromise = dataHarvest.then((body) => {
         if (null != body) {
@@ -195,8 +195,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1113).intl;
         obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(5958).show(obj2);
-        const obj = closure_1_1(5958);
+        closure_1_1(6078).show(obj2);
+        const obj = closure_1_1(6078);
       });
     } else {
       let obj3 = { title: null, body: null };

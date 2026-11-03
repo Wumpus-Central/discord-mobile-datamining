@@ -1,13 +1,13 @@
-// === Module 8734: useTrackCollectiblesItemTryOut ===
+// === Module 8858: useTrackCollectiblesItemTryOut ===
 
-// Module 8734 (useTrackCollectiblesItemTryOut)
+// Module 8858 (useTrackCollectiblesItemTryOut)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import PremiumConstants from "PremiumConstants" /* 1385 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackCo
 
 export default function useTrackCollectiblesItemTryOut(location_stack) {
   _require = location_stack;
-  const items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores, location_stack];
   return useCallback((skuId) => {

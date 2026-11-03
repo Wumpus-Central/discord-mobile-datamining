@@ -1,9 +1,9 @@
-// === Module 11381: useGiftCodeErrorMessage ===
+// === Module 11519: useGiftCodeErrorMessage ===
 
-// Module 11381 (useGiftCodeErrorMessage)
+// Module 11519 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
-import GiftCodeStore from "GiftCodeStore" /* 11370 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
+import GiftCodeStore from "GiftCodeStore" /* 11508 */;
 
 const require = globalThis.__r;
 
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/premium/native/gift_code_moda
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
-  let items = [GiftCodeStore];
+  items = [GiftCodeStore];
   [first] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
+    items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
     return items;
   });
   const obj = require("initialize");

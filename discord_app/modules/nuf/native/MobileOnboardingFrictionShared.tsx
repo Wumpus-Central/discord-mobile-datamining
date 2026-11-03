@@ -1,6 +1,6 @@
-// === Module 18050: MobileOnboardingFrictionShared ===
+// === Module 18194: MobileOnboardingFrictionShared ===
 
-// Module 18050 (MobileOnboardingFrictionShared)
+// Module 18194 (MobileOnboardingFrictionShared)
 import size from "module_2" /* 2 */;
 
 const obj = { EXPLAINER: "explainer", OS_ONLY: "os_only", NONE: "none" };

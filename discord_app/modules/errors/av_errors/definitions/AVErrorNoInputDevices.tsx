@@ -1,11 +1,11 @@
-// === Module 20052: AVErrorNoInputDevices ===
+// === Module 20202: AVErrorNoInputDevices ===
 
-// Module 20052 (AVErrorNoInputDevices)
-import AVError from "AVError" /* 5947 */;
-import AVErrorContext from "AVErrorContext" /* 20051 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+// Module 20202 (AVErrorNoInputDevices)
+import AVError from "AVError" /* 6067 */;
+import AVErrorContext from "AVErrorContext" /* 20201 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 const size = fn(2);
@@ -32,7 +32,7 @@ export const AVErrorNoInputDevicesDefinition = {
           if (!isGuildStageVoiceResult) {
             const obj = { type: AVError.AVError.NO_INPUT_DEVICES };
             const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-            const items = [obj];
+            items = [obj];
             return items;
           }
         }

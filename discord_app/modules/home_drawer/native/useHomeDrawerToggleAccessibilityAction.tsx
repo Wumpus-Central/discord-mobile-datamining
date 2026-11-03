@@ -1,6 +1,6 @@
-// === Module 18372: useHomeDrawerToggleAccessibilityAction ===
+// === Module 18517: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 18372 (useHomeDrawerToggleAccessibilityAction)
+// Module 18517 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDra
 export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     if (closure_0) {
       let intl = util.intl;
@@ -27,7 +27,7 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
         name,
         label: stringResult,
         action() {
-            closure_0(5198).setHomeDrawerState(!dependencyMap);
+            closure_0(5321).setHomeDrawerState(!dependencyMap);
             const intl = closure_0(1113).intl;
             const string = intl.string;
             const t = closure_0(1113).t;
@@ -36,9 +36,9 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(5023).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(5150).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(5198);
+            const obj = closure_0(5321);
           }
       };
       return obj;

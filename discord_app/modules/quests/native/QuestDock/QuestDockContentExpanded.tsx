@@ -1,77 +1,85 @@
-// === Module 17159: QuestDockContentExpanded ===
+// === Module 17302: QuestDockContentExpanded ===
 
-// Module 17159 (QuestDockContentExpanded)
-import spring from "spring" /* 5637 */;
-import QuestDockUtils from "QuestDockUtils" /* 17071 */;
+// Module 17302 (QuestDockContentExpanded)
+import _mod1652 from "module_1652" /* 1652 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11381 */;
+import QuestDockUtils from "QuestDockUtils" /* 17214 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17216 */;
 import noop from "module_19" /* 19 */;
 
+const _modDef1652 = _mod1652;
+
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17072).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6901).QuestDockMode;
+let closure_5 = fn(17215).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj = { wrapper: null };
-let obj3 = {};
+const createStyles = fn(5141);
+const obj = { wrapper: null };
+const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.bottom = undefined;
 obj3.display = "flex";
 obj3.zIndex = 1;
 obj.wrapper = obj3;
 let closure_7 = createStyles.createStyles(obj);
-const __initData = { code: "function QuestDockContentExpandedTsx1(){const{expandedHeightMode,getQuestDockExpandedHeightLimits,windowDimensions,safeArea,expandedHeight,getQuestDockExpandedWidth,withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS,questDockWrapperSpecs}=this.__closure;return{height:expandedHeightMode==='content'?undefined:getQuestDockExpandedHeightLimits(windowDimensions.get().height,safeArea.get().top,expandedHeight).maxHeight,width:getQuestDockExpandedWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right),opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS),transform:[{translateX:withSpring((questDockWrapperSpecs.get().width-getQuestDockExpandedWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right))/2,QUEST_DOCK_MODE_CHANGE_PHYSICS)}]};}" };
+const constants = { code: "(function QuestDockContentExpandedTsx1(){let[expandedHeightMode,getQuestDockExpandedHeightLimits,windowDimensions,safeArea,expandedHeight,getQuestDockExpandedWidth,withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS,questDockWrapperSpecs]=this.__closure;return{height:expandedHeightMode==='content'?undefined:getQuestDockExpandedHeightLimits(windowDimensions.get().height,safeArea.get().top,expandedHeight).maxHeight,width:getQuestDockExpandedWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right),opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS),transform:[{translateX:withSpring((questDockWrapperSpecs.get().width-getQuestDockExpandedWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right))/2,QUEST_DOCK_MODE_CHANGE_PHYSICS)}]};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentExpanded.tsx");
 
-export default noop.memo(function QuestDockContentExpanded(children) {
-  const expandedHeightMode = children.expandedHeightMode;
-  const expandedHeight = children.expandedHeight;
-  const context = questDockWrapperSpecs.useContext(expandedHeightMode(activeQuestDockMode[6]).QuestDockGestureContext);
-  activeQuestDockMode = context.activeQuestDockMode;
-  questDockWrapperSpecs = context.questDockWrapperSpecs;
-  const windowDimensions = context.windowDimensions;
-  const tmp3 = expandedHeight(activeQuestDockMode[7])();
-  QUEST_DOCK_MODE_CHANGE_PHYSICS = tmp3;
-  const tmp = closure_7();
-  class D {
+export default noop.memo(function QuestDockContentExpanded(arg0) {
+  ({ children, expandedHeightMode, expandedHeight } = arg0);
+  const context = noop.useContext(QuestDockGestureContext.QuestDockGestureContext);
+  ({ activeQuestDockMode, questDockWrapperSpecs, windowDimensions } = context);
+  const tmp = _undefined5();
+  const tmp5 = useSafeAreaInsetsSharedValueDefault();
+  items = [constants, expandedHeightMode, QuestDockUtils.getQuestDockExpandedHeightLimits, windowDimensions, tmp5, expandedHeight, QuestDockUtils.getQuestDockExpandedWidth, spring_spring.withSpring, activeQuestDockMode, QuestDockMode, _undefined4, questDockWrapperSpecs];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  [tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items;
+  class QuestDockContentExpandedTsx1 {
     constructor() {
       maxHeight = undefined;
-      if ("content" !== expandedHeightMode) {
-        tmp2 = closure_0;
+      if ("content" !== closure_0) {
+        tmp2 = closure_1;
         tmp3 = closure_2;
-        obj = closure_0(closure_2[9]);
-        tmp4 = windowDimensions;
-        tmp5 = closure_5;
-        tmp6 = expandedHeight;
-        maxHeight = obj.getQuestDockExpandedHeightLimits(windowDimensions.get().height, closure_5.get().top, expandedHeight).maxHeight;
+        tmp4 = closure_3;
+        tmp5 = closure_4;
+        maxHeight = closure_1(closure_2.get().height, closure_3.get().top, closure_4).maxHeight;
       }
-      size = { height: maxHeight, width: null, opacity: null, transform: null };
-      obj3 = closure_0(closure_2[9]);
-      obj4 = windowDimensions;
-      obj5 = closure_5;
-      size.width = obj3.getQuestDockExpandedWidth(windowDimensions.get().width, closure_5.get().left, closure_5.get().right);
-      obj6 = closure_0(closure_2[10]);
+      size = { height: maxHeight, width: closure_5(closure_2.get().width, closure_3.get().left, closure_3.get().right), opacity: null, transform: null };
+      obj2 = closure_2;
+      tmp6 = closure_5;
+      obj3 = closure_3;
+      tmp7 = closure_6;
       num = 0;
-      if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+      if (closure_7.get() === closure_8.EXPANDED) {
         num = 1;
       }
-      size.opacity = obj6.withSpring(num, closure_5);
-      obj1 = { translateX: null };
-      obj8 = closure_0(closure_2[10]);
-      obj9 = closure_0(closure_2[9]);
-      obj1.translateX = obj8.withSpring((questDockWrapperSpecs.get().width - obj9.getQuestDockExpandedWidth(obj4.get().width, obj5.get().left, obj5.get().right)) / 2, closure_5);
+      size.opacity = tmp7(num, closure_9);
+      obj1 = { translateX: tmp7((closure_10.get().width - tmp6(obj2.get().width, obj3.get().left, obj3.get().right)) / 2, closure_9) };
       items = [];
       items[0] = obj1;
       size.transform = items;
       return size;
     }
   }
-  let obj = expandedHeightMode(activeQuestDockMode[8]);
-  D.__closure = { expandedHeightMode, getQuestDockExpandedHeightLimits: expandedHeightMode(activeQuestDockMode[9]).getQuestDockExpandedHeightLimits, windowDimensions, safeArea: tmp3, expandedHeight, getQuestDockExpandedWidth: expandedHeightMode(activeQuestDockMode[9]).getQuestDockExpandedWidth, withSpring: expandedHeightMode(activeQuestDockMode[10]).withSpring, activeQuestDockMode, QuestDockMode: windowDimensions, QUEST_DOCK_MODE_CHANGE_PHYSICS, questDockWrapperSpecs };
-  D.__workletHash = 16780670669392;
-  D.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(D);
-  let obj3 = { style: null, children: children.children };
-  let items = [tmp.wrapper, animatedStyle];
-  obj3.style = items;
-  return jsx(expandedHeight(activeQuestDockMode[11]), { style: null, children: children.children });
+  const items1 = [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  QuestDockContentExpandedTsx1.__closure = items1;
+  QuestDockContentExpandedTsx1.__workletHash = 5435658496809;
+  QuestDockContentExpandedTsx1.__initData = tmp6;
+  const animatedStyle = _mod1652.useAnimatedStyle(QuestDockContentExpandedTsx1);
+  const obj2 = { style: null, children };
+  const items2 = [tmp.wrapper, animatedStyle];
+  obj2.style = items2;
+  return jsx(_modDef1652.View, { style: null, children });
 });

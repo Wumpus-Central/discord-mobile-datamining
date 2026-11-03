@@ -1,29 +1,29 @@
-// === Module 7901: StreamActionCreators ===
+// === Module 8025: StreamActionCreators ===
 
-// Module 7901 (StreamActionCreators)
+// Module 8025 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5942 */;
-import ChannelUtils from "ChannelUtils" /* 6046 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7487 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7904 */;
-import transitionToStreamDefault from "transitionToStream" /* 7938 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 6062 */;
+import ChannelUtils from "ChannelUtils" /* 6166 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7611 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8028 */;
+import transitionToStreamDefault from "transitionToStream" /* 8062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7902 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7903 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8026 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8027 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -93,7 +93,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -195,7 +195,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -297,7 +297,7 @@ export function updateStreamSettings(noTrack) {
 }
 export function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: map1.STREAM(encodeStreamKeyResult), body: { region: preferredRegion }, oldFormErrors: true, rejectWithError: true };
+  const request = { url: state.STREAM(encodeStreamKeyResult), body: { region: preferredRegion }, oldFormErrors: true, rejectWithError: true };
   HTTP.patch(request);
 }
 export function stopOwnStream(arg0) {
@@ -342,15 +342,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7938)(closure_1_1);
+          closure_1(8062)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6046).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6046);
+          closure_0(6166).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6166);
         }
       }
     };

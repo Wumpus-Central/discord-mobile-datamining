@@ -1,19 +1,19 @@
-// === Module 13946: ChannelAutocompleteEmojiUpsell ===
+// === Module 14077: ChannelAutocompleteEmojiUpsell ===
 
-// Module 13946 (ChannelAutocompleteEmojiUpsell)
+// Module 14077 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, title: { lineHeight: 16, flex: 1 }, emojis: { height: 28 }, emojiWrapper: null, emoji: null };
 let size = { position: "absolute", width: 28, height: 28, padding: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderRadius: 14, borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
 obj2.emojiWrapper = size;
@@ -30,7 +30,7 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   let obj = { style: tmp.upsell, children: null };
   const mapped = substr.map((id, index) => {
     const obj = { style: null, children: null };
-    const items = [closure_0.emojiWrapper, { left: 24 * index }];
+    items = [closure_0.emojiWrapper, { left: 24 * index }];
     obj.style = items;
     const obj3 = { style: closure_0.emoji, source: null };
     if (null != id.id) {
@@ -50,7 +50,7 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
   const intl = require("util").intl;
   obj2.children = intl.format(require("util").t.uEky42, { count: results.length });
-  let items = [closure_5(require("Text/Text").Text, obj2), ];
+  items = [closure_5(require("Text/Text").Text, obj2), ];
   let obj4 = { style: null, children: mapped };
   const items1 = [tmp.emojis, { width: result + 16 }];
   obj4.style = items1;

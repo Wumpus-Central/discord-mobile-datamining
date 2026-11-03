@@ -1,8 +1,8 @@
-// === Module 14996: useUserProfileConnections ===
+// === Module 15132: useUserProfileConnections ===
 
-// Module 14996 (useUserProfileConnections)
+// Module 15132 (useUserProfileConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export default function useUserProfileConnections(arg0) {
   _require = arg0;
   const platformAllowed = require("ConnectionsHooks").usePlatformAllowed({ forUserProfile: true });
   const obj = require("ConnectionsHooks");
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let connectedAccounts;
   if (stateFromStores != null) {

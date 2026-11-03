@@ -1,17 +1,17 @@
-// === Module 14801: MediaViewerItem ===
+// === Module 14932: MediaViewerItem ===
 
-// Module 14801 (MediaViewerItem)
-import PlatformUtils2 from "PlatformUtils" /* 1375 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8834 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 14803 */;
+// Module 14932 (MediaViewerItem)
+import PlatformUtils2 from "PlatformUtils" /* 1377 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8958 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 14934 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
@@ -41,7 +41,7 @@ export const MediaViewerItem = noop.memo(function MediaViewerItem(index) {
   const tmp = panGesture(zoomed.useState(windowWidth), 2);
   [tmp4, c10] = panGesture(zoomed.useState(windowHeight), 2);
   const effect = zoomed.useEffect(() => index(panGestureConfig[5]).dismissKeyboard(), []);
-  const items = [windowWidth, windowHeight];
+  items = [windowWidth, windowHeight];
   const effect1 = zoomed.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_1_9(current);

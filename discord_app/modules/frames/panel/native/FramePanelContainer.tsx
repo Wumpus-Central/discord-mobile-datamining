@@ -1,21 +1,21 @@
-// === Module 19153: FramePanelContainer ===
+// === Module 19311: FramePanelContainer ===
 
-// Module 19153 (FramePanelContainer)
-import WakeLockDefault from "WakeLock" /* 11838 */;
-import FramePanelControllerDefault from "FramePanelController" /* 19154 */;
-import FramePanelUIDefault from "FramePanelUI" /* 19156 */;
+// Module 19311 (FramePanelContainer)
+import WakeLockDefault from "WakeLock" /* 11975 */;
+import FramePanelControllerDefault from "FramePanelController" /* 19312 */;
+import FramePanelUIDefault from "FramePanelUI" /* 19314 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = fn;
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
 
 export default noop.memo(function FramePanelContainer() {
-  const items = [FramesStore];
+  items = [FramesStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => isLaunched(mainFrame.getMainFrame()))) {
     const obj2 = { children: null };

@@ -1,14 +1,14 @@
-// === Module 5010: BurstReactionEffectUtils ===
+// === Module 5137: BurstReactionEffectUtils ===
 
-// Module 5010 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 5011 */;
+// Module 5137 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 5138 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
 
 export function replaceAnimationColors(str, arg1) {
-  const items = [, , ];
+  items = [, , ];
   ({ r: arr[0], g: arr[1], b: arr[2] } = arg1);
   const complimentaryPaletteForColor = ColorUtils.getComplimentaryPaletteForColor(items, 2);
   str = str.replace(/(\[1,0,0,)/g, "[" + complimentaryPaletteForColor[0][0] / 255 + "," + complimentaryPaletteForColor[0][1] / 255 + "," + complimentaryPaletteForColor[0][2] / 255 + ",");

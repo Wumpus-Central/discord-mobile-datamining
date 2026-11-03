@@ -1,6 +1,6 @@
-// === Module 8742: useShopProductItems ===
+// === Module 8866: useShopProductItems ===
 
-// Module 8742 (useShopProductItems)
+// Module 8866 (useShopProductItems)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -38,7 +38,7 @@ Object.defineProperty(prototype, "firstProfileFrame", {
 });
 prototype["getFirstItemByType"] = function getFirstItemByType(AVATAR_DECORATION) {
   const itemsByTypes = this.itemsByTypes;
-  let items = itemsByTypes.get(AVATAR_DECORATION);
+  items = itemsByTypes.get(AVATAR_DECORATION);
   if (items == null) {
     items = [];
   }
@@ -51,7 +51,7 @@ prototype["sortByTypes"] = function sortByTypes(arr) {
     if (null != value) {
       value.push(type);
     } else {
-      const items = [type];
+      items = [type];
       const result = get.set(type.type, items);
     }
     return get;
@@ -88,7 +88,7 @@ export function getPurchasedItem(arg0, firstAvatarDecoration) {
 }
 export function useShopProductItems(product) {
   closure_0 = product;
-  const items = [product];
+  items = [product];
   return noop.useMemo(() => {
     if (typeof ItemsSortingHat === "function") {
       const obj = Object.create(ItemsSortingHat.prototype);

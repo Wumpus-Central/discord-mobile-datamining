@@ -1,7 +1,7 @@
-// === Module 4906: Kv ===
+// === Module 5033: Kv ===
 
-// Module 4906 (Kv)
-import Host2 from "Host" /* 4901 */;
+// Module 5033 (Kv)
+import Host2 from "Host" /* 5028 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Kv.tsx");

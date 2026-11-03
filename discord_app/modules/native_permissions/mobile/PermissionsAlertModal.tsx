@@ -1,8 +1,8 @@
-// === Module 7965: PermissionsAlertModal ===
+// === Module 8089: PermissionsAlertModal ===
 
-// Module 7965 (PermissionsAlertModal)
+// Module 8089 (PermissionsAlertModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 5964 */;
+import AlertModal from "AlertModal" /* 6084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function PermissionsAlertModal(arg0) {
   const obj3 = { onPress: onConfirm, text: null };
   const intl = util.intl;
   obj3.text = intl.string(util.t.jVcuVY);
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
   const obj4 = { variant: "secondary", text: null };
   const intl2 = util.intl;
   obj4.text = intl2.string(util.t.cpT0Cq);

@@ -1,20 +1,20 @@
-// === Module 6550: StripeUtils ===
+// === Module 6670: StripeUtils ===
 
-// Module 6550 (StripeUtils)
+// Module 6670 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _mod6551 from "module_6551" /* 6551 */;
+import _mod6671 from "module_6671" /* 6671 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6551.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6671.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -33,7 +33,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -241,7 +241,7 @@ export function validateExpiry(arg0) {
         return parsed;
       });
       if (mapped[0] > 12) {
-        const items = [, ];
+        items = [, ];
         [arr3[1], arr3[0]] = mapped;
         let items1 = items;
       } else {
@@ -360,7 +360,7 @@ export function getStripeElementLocale(arg0) {
   return tmp;
 }
 export function useStripeLocale() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   return initialize.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = closure_1_12[locale];

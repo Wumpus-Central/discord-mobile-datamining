@@ -1,9 +1,9 @@
-// === Module 8961: ActivitiesInTextUtils ===
+// === Module 9089: ActivitiesInTextUtils ===
 
-// Module 8961 (ActivitiesInTextUtils)
+// Module 9089 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function isActivityInTextSupportedForChannel(channel) {
       hasItem = type === ChannelTypes.ChannelTypes.GUILD_CATEGORY;
     }
     if (hasItem) {
-      const items = [ChannelTypes.ChannelTypes.GUILD_TEXT, ChannelTypes.ChannelTypes.GUILD_VOICE, ChannelTypes.ChannelTypes.GROUP_DM, ChannelTypes.ChannelTypes.DM, ChannelTypes.ChannelTypes.GUILD_SPACE];
+      items = [ChannelTypes.ChannelTypes.GUILD_TEXT, ChannelTypes.ChannelTypes.GUILD_VOICE, ChannelTypes.ChannelTypes.GROUP_DM, ChannelTypes.ChannelTypes.DM, ChannelTypes.ChannelTypes.GUILD_SPACE];
       hasItem = items.includes(channel.type);
     }
     return hasItem;
@@ -54,7 +54,7 @@ export function isActivitiesInTextEnabled(channel) {
 }
 export function useIsActivitiesInTextEnabled(id) {
   _require = id;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let flag = false;
@@ -89,7 +89,7 @@ export function getIsAppLauncherEnabled(channel) {
 }
 export function useIsAppLauncherEnabled(id) {
   _require = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let tmp2 = null != channel;

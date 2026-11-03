@@ -1,11 +1,11 @@
-// === Module 12979: ConjureHomeBackdrop ===
+// === Module 13115: ConjureHomeBackdrop ===
 
-// Module 12979 (ConjureHomeBackdrop)
+// Module 13115 (ConjureHomeBackdrop)
 import nativeDefault from "native" /* 575 */;
-import useTheme from "useTheme" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import useToken from "useToken" /* 5596 */;
-import inlineStyles from "inlineStyles" /* 8031 */;
+import useTheme from "useTheme" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import useToken from "useToken" /* 5719 */;
+import inlineStyles from "inlineStyles" /* 8155 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -28,7 +28,7 @@ export default noop.memo(function ConjureHomeBackdrop() {
   if (obj3.isThemeDark(theme)) {
     const obj4 = { style: React3.absoluteFill, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     const obj5 = { style: React3.absoluteFill, colors, start, end };
-    const items = [hasOwnProperty(LinearGradientDefault, obj5), ];
+    items = [hasOwnProperty(LinearGradientDefault, obj5), ];
     const size = { style: React3.absoluteFill, width: "100%", height: "100%", children: null };
     const obj6 = { children: null };
     const obj7 = { id: "conjureHomeBackdropFalloff", cx: "0.5", cy: "1", rx: "1", ry: "1.04", fx: "0.5", fy: "1", children: null };

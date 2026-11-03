@@ -1,48 +1,53 @@
-// === Module 12388: SubmittingOverlay ===
+// === Module 12524: SubmittingOverlay ===
 
-// Module 12388 (SubmittingOverlay)
+// Module 12524 (SubmittingOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import springPresets from "springPresets" /* 5638 */;
-import createStyles from "createStyles" /* 5014 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import springPresets from "springPresets" /* 5758 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5767 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
+const _modDef1652 = _mod1652;
+
 const jsx = jsxProd.jsx;
-let obj = { ellipsis: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" } };
+const obj = { ellipsis: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" } };
 let closure_4 = createStyles.createStyles(obj);
-const __initData = { code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}" };
+let closure_5 = { code: "(function SubmittingOverlayTsx1(){let[withSpring,submitting,SUBTLE_SPRING]=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};})" };
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
 
 export function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
   const tmp = closure_4();
-  const tmp2 = submitting;
-  class S {
+  items = [closure_5, spring_spring.withSpring, submitting, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  class SubmittingOverlayTsx1 {
     constructor() {
-      tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[4]);
       num = 0;
-      if (submitting) {
+      tmp = closure_0;
+      if (closure_1) {
         num = 1;
       }
-      obj1 = { opacity: obj.withSpring(num, tmp(tmp2[5]).SUBTLE_SPRING, "animate-always") };
-      return obj1;
+      obj = { opacity: tmp(num, closure_2, "animate-always") };
+      return obj;
     }
   }
-  let obj = submitting(5095);
-  S.__closure = { withSpring: submitting(5637).withSpring, submitting, SUBTLE_SPRING: submitting(5638).SUBTLE_SPRING };
-  S.__workletHash = 492443733468;
-  S.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(S);
-  const obj3 = { style: null, children: null };
-  const items = [submitting.style, tmp.ellipsis, animatedStyle];
-  obj3.style = items;
+  const items1 = [tmp5, tmp6, tmp7];
+  SubmittingOverlayTsx1.__closure = items1;
+  SubmittingOverlayTsx1.__workletHash = 16951680167717;
+  SubmittingOverlayTsx1.__initData = tmp4;
+  const animatedStyle = _mod1652.useAnimatedStyle(SubmittingOverlayTsx1);
+  const obj2 = { style: null, children: null };
+  const items2 = [submitting.style, tmp.ellipsis, animatedStyle];
+  obj2.style = items2;
   if (submitting) {
-    submitting = jsx(tmp2(5647).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
-  obj3.children = submitting;
-  return jsx(ReanimatedRexportDefault.View, { style: null, children: null });
+  obj2.children = submitting;
+  return jsx(_modDef1652.View, { style: null, children: null });
 }

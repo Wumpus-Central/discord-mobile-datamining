@@ -1,7 +1,7 @@
-// === Module 18404: useGuildsBarGuildMediaState ===
+// === Module 18549: useGuildsBarGuildMediaState ===
 
-// Module 18404 (useGuildsBarGuildMediaState)
-import GuildMediaStateStore from "GuildMediaStateStore" /* 15600 */;
+// Module 18549 (useGuildsBarGuildMediaState)
+import GuildMediaStateStore from "GuildMediaStateStore" /* 15742 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/useGuildsBarGuildM
 
 export default function useGuildsBarGuildMediaState(arg0) {
   _require = arg0;
-  const items = [GuildMediaStateStore];
+  items = [GuildMediaStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => GuildMediaStateStore.getGuildMediaState(closure_0), items1);
 };

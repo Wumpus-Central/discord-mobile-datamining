@@ -1,9 +1,9 @@
-// === Module 15379: usePremiumGroupMembers ===
+// === Module 15520: usePremiumGroupMembers ===
 
-// Module 15379 (usePremiumGroupMembers)
+// Module 15520 (usePremiumGroupMembers)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 15376 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 15517 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ export default function usePremiumGroupMembers(subscriptionId, arg1) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [PremiumGroupStore];
+  items = [PremiumGroupStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ premiumGroupMembers: PremiumGroupStore.getMembers(), isFetchingMembers: PremiumGroupStore.isFetchingMembers(), isUpdatingMembers: PremiumGroupStore.isUpdatingMembers() }));
   let isFetchingMembers = stateFromStoresObject.isFetchingMembers;
   const items1 = [flag2, subscriptionId, flag];

@@ -1,9 +1,9 @@
-// === Module 16593: SettingTreeManager ===
+// === Module 16736: SettingTreeManager ===
 
-// Module 16593 (SettingTreeManager)
-import SettingRendererConstants from "SettingRendererConstants" /* 11541 */;
-import SettingHookHarness from "SettingHookHarness" /* 16436 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 16438 */;
+// Module 16736 (SettingTreeManager)
+import SettingRendererConstants from "SettingRendererConstants" /* 11678 */;
+import SettingHookHarness from "SettingHookHarness" /* 16580 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 16582 */;
 import size from "module_2" /* 2 */;
 
 const NodeType = SettingRendererConstants.NodeType;
@@ -55,7 +55,7 @@ prototype2["validate"] = function validate() {
 };
 prototype2["getAncestors"] = function getAncestors(field) {
   const self = this;
-  const items = [];
+  items = [];
   let transformParentResult = this.transformParent(SettingsRendererConfig.SETTING_RENDERER_CONFIG[field].parent);
   if (null != transformParentResult) {
     do {
@@ -108,7 +108,7 @@ prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncest
   }
 };
 prototype2["getBreadcrumbs"] = function getBreadcrumbs(setting) {
-  const items = [];
+  items = [];
   const ancestors = this.getAncestors(setting);
   while (tmp2 !== undefined) {
     let obj = SettingHookHarness;

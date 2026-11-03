@@ -1,8 +1,8 @@
-// === Module 2027: utils/StringUtils ===
+// === Module 2156: utils/StringUtils ===
 
-// Module 2027 (utils/StringUtils)
-import _mod2028 from "module_2028" /* 2028 */;
-import DOMUtils from "DOMUtils" /* 2029 */;
+// Module 2156 (utils/StringUtils)
+import _mod2157 from "module_2157" /* 2157 */;
+import DOMUtils from "DOMUtils" /* 2158 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
@@ -20,9 +20,9 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2028;
+    closure_0 = _mod2157;
     dependencyMap = "";
-    const items = [...str.normalize("NFD")];
+    items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {
       let tmp2 = closure_0[item];
       if (tmp2 == null) {
@@ -60,7 +60,7 @@ export (name, React6) => {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(concat, 0);
           const substr = items.slice(0, React6 - str.length);
           let str3 = substr.join("");

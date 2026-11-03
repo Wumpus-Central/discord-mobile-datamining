@@ -1,7 +1,7 @@
-// === Module 18919: useGuildEligibleForStageChannels ===
+// === Module 19077: useGuildEligibleForStageChannels ===
 
-// Module 18919 (useGuildEligibleForStageChannels)
-import GuildStore from "GuildStore" /* 4885 */;
+// Module 19077 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting("modules/stage_channels/useGuildEligib
 export function isGuildEligibleForStageChannels(id) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [GuildStore];
+    items = [GuildStore];
     tmp = items;
   }
   [obj] = tmp;
-  const guild = obj.getGuild(id);
+  guild = obj.getGuild(id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -27,12 +27,12 @@ export function isGuildEligibleForStageChannels(id) {
 }
 export function useGuildEligibleForStageChannels(arg0) {
   _require = arg0;
-  let items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
-    const items = [GuildStore];
+    items = [GuildStore];
     [obj] = items;
-    const guild = obj.getGuild(closure_0);
+    guild = obj.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

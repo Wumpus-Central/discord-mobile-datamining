@@ -1,14 +1,14 @@
-// === Module 18488: NotificationCenterItemsActions ===
+// === Module 18642: NotificationCenterItemsActions ===
 
-// Module 18488 (NotificationCenterItemsActions)
+// Module 18642 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6860 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6980 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6858 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6978 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
             event: closure_131_0(closure_131_2[5]).NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
             properties(body) {
                       body = body.body;
-                      let items;
+                      items = undefined;
                       if (body != null) {
                         items = body.items;
                       }
@@ -161,7 +161,7 @@ let closure_8 = async function _markNotificationCenterRemoteItemAcked(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const obj5 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
-  const items = [closure_0];
+  items = [closure_0];
   obj5.ids = items;
   DispatcherDefault.dispatch(obj5);
   const HTTP = HTTPUtils.HTTP;
@@ -228,7 +228,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -287,7 +287,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         } else {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         closure_3 = tmp19;
@@ -326,7 +326,7 @@ export function fetchNotificationCenterItems() {
 }
 export function markNotificationCenterItemAcked(local_id) {
   if (null != local_id.local_id) {
-    const items = [local_id.local_id];
+    items = [local_id.local_id];
     const obj3 = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: items };
     DispatcherDefault.dispatch(obj3);
   } else {
@@ -347,7 +347,7 @@ export function markNotificationCenterLocalItemsAcked(found) {
 export { markNotificationCenterRemoteItemAcked };
 export function markNotificationCenterMentionAcked(arg0) {
   const obj2 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
-  const items = [arg0];
+  items = [arg0];
   obj2.ids = items;
   DispatcherDefault.dispatch(obj2);
 }

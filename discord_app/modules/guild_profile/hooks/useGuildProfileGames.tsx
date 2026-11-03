@@ -1,10 +1,10 @@
-// === Module 14727: useGuildProfileGames ===
+// === Module 14858: useGuildProfileGames ===
 
-// Module 14727 (useGuildProfileGames)
-import GlobalUtils from "GlobalUtils" /* 1379 */;
+// Module 14858 (useGuildProfileGames)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
-import GameRecord from "GameRecord" /* 2015 */;
-import GameStore from "GameStore" /* 2014 */;
+import GameRecord from "GameRecord" /* 2144 */;
+import GameStore from "GameStore" /* 2143 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export default function useGuildProfileGames(games) {
   _require = games;
   let stateFromStoresArray;
   games = games.games;
-  let items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
   if (null != games) {
@@ -56,7 +56,7 @@ export default function useGuildProfileGames(games) {
     });
     const items4 = [stateFromStoresArray, games.gameActivity];
     memo = memo.useMemo(() => {
-      const items = [...stateFromStoresArray];
+      items = [...stateFromStoresArray];
       return items.sort((arg0, arg1) => {
         let num;
         if (dependencyMap[arg0.id] != null) {
@@ -102,7 +102,7 @@ export default function useGuildProfileGames(games) {
 export function useAllGuildProfileGames(profile) {
   _require = profile;
   const games = profile.games;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
   if (null != games) {

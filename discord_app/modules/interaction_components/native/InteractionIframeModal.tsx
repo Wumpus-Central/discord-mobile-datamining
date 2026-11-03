@@ -1,11 +1,11 @@
-// === Module 19508: InteractionIframeModal ===
+// === Module 19666: InteractionIframeModal ===
 
-// Module 19508 (InteractionIframeModal)
+// Module 19666 (InteractionIframeModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import makeIframeIdDefault from "makeIframeId" /* 11799 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 19509 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
+import makeIframeIdDefault from "makeIframeId" /* 11936 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 19667 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const BotTagTypes = fn(1360).BotTagTypes;
+const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function InteractionIframeModal(application) {
       const result = id2(callback[10]).restoreDefaultOrientation();
     };
   }, []);
-  const items = [id2];
+  items = [id2];
   onDisallowedNavigation = noop.useCallback(() => {
     closeIFrameModalDefault(id2, undefined);
   }, items);
@@ -61,11 +61,11 @@ export default function InteractionIframeModal(application) {
   const items3 = [closure_7(id2(onDisallowedNavigation[13]).PressableOpacity, obj4), , ];
   const obj5 = { style: tmp.headerCenterContainer, children: null };
   const obj6 = { style: tmp.headerTitleContainer, children: null };
-  const items4 = [closure_7(id2(onDisallowedNavigation[16]).Text, { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items4 = [closure_7(id2(onDisallowedNavigation[16]).Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: application.name }), ];
   const obj8 = { type: BotTagTypes.BOT, verified: null, style: null };
   const bot = application.bot;
   let verified;
-  const obj7 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name };
+  const obj7 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: application.name };
   const tmp6 = _slicedToArray(noop.useState(require("makeIframeId")), 2);
   if (bot != null) {
     verified = bot.verified;

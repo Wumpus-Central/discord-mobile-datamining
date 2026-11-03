@@ -1,8 +1,8 @@
-// === Module 11902: useLocalStorageState ===
+// === Module 12039: useLocalStorageState ===
 
-// Module 11902 (useLocalStorageState)
+// Module 12039 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5593 */;
+import useMountEffectDefault from "useMountEffect" /* 5716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ export function useLocalStorageState(arg0, arg1) {
       const result = Storage2.set(closure_0, closure_1);
     }
   });
-  const items = [tmp[0], ];
+  items = [tmp[0], ];
   const items1 = [arg0];
   items[1] = noop.useCallback((arg0) => {
     closure_2(arg0);

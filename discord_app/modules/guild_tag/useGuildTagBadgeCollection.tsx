@@ -1,10 +1,10 @@
-// === Module 19759: useGuildTagBadgeCollection ===
+// === Module 19909: useGuildTagBadgeCollection ===
 
-// Module 19759 (useGuildTagBadgeCollection)
+// Module 19909 (useGuildTagBadgeCollection)
 import _mod19 from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
-import GuildTagConstants from "GuildTagConstants" /* 8393 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import GuildTagConstants from "GuildTagConstants" /* 8517 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;
@@ -12,7 +12,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
 
 export default function useGuildTagBadgeCollection() {
-  let items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(items, () => guild.getGuild());
   const obj = stateFromStores(stateFromStores1[4]);
   let items1 = [GuildPowerupsStore];
@@ -56,7 +56,7 @@ export default function useGuildTagBadgeCollection() {
         const features = stateFromStores.features;
         if (features.has(item)) {
           const push2 = unlockedBadges.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(mapped, 0);
           HermesBuiltin.apply(items, unlockedBadges);
         } else {

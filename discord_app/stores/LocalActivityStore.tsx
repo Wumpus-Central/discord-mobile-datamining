@@ -1,31 +1,31 @@
-// === Module 11525: LocalActivityStore ===
+// === Module 11662: LocalActivityStore ===
 
-// Module 11525 (LocalActivityStore)
+// Module 11662 (LocalActivityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9738 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11534 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9870 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11671 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11526 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11527 */;
-import SpotifyStore from "SpotifyStore" /* 6571 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11663 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11664 */;
+import SpotifyStore from "SpotifyStore" /* 6691 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import DetectableGameStore from "DetectableGameStore" /* 2032 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11531 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import SessionsStore from "SessionsStore" /* 5766 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import DetectableGameStore from "DetectableGameStore" /* 2161 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11668 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import SessionsStore from "SessionsStore" /* 5886 */;
 
 require = fn;
 function updateActivities() {
-  const items = [];
+  items = [];
   const CustomStatusSetting = items(streamerActiveStreamMetadata[15]).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   let tmp4 = null != setting;
@@ -207,7 +207,7 @@ class LocalActivityStore extends Store {
 const prototype = LocalActivityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ApplicationStore, ApplicationStreamingStore, ChannelStore, EmbeddedActivitiesStore, ExternalStreamingStore, FirstPartyRichPresenceStore, DetectableGameStore, RunningGameStore, SelectedChannelStore, SessionsStore, SocialSdkApplicationStore, SpotifyStore, UserSettingsProtoStore);
-  const items = [FirstPartyRichPresenceStore];
+  items = [FirstPartyRichPresenceStore];
   this.syncWith(items, () => updateActivities());
 };
 prototype["getActivities"] = function getActivities() {
@@ -259,7 +259,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
     if (null == activity) {
       let tmp6 = null == dependencyMap[socketId];
     } else {
-      const items = [pid, activity, partyPrivacy];
+      items = [pid, activity, partyPrivacy];
       tmp6 = _modDef1342(dependencyMap[socketId], items);
     }
     if (!tmp6) {
@@ -321,7 +321,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
         let tmp13Result = ActivityFlagUtils;
         let activityFlags = obj2.computeActivityFlags(tmp9, hasFlagResult, tmp9.platform === ActivityGamePlatforms.ActivityGamePlatforms.EMBEDDED, tmp13Result.isContextlessEmbeddedActivity(tmp9), tmp11);
         if (activityFlags !== tmp12) {
-          let items = [tmp8, , ];
+          items = [tmp8, , ];
           let obj4 = {};
           let merged = Object.assign(tmp9);
           obj4.flags = tmp23;

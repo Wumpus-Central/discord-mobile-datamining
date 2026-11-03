@@ -1,34 +1,40 @@
-// === Module 17055: OrbsArcadeRewardRing ===
+// === Module 17198: OrbsArcadeRewardRing ===
 
-// Module 17055 (OrbsArcadeRewardRing)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
+// Module 17198 (OrbsArcadeRewardRing)
+import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexport = ReanimatedRexport2;
+const module_1652 = _mod1652;
 
 require = fn;
-function RingArc(progress) {
-  progress = progress.progress;
-  const arcLength = progress.arcLength;
-  ({ d, color, strokeWidth } = progress);
-  const fn = function u() {
-    const obj = { strokeDashoffset: arcLength * (1 - progress.get()), strokeOpacity: null };
-    let num = 0;
-    if (progress.get() > 0) {
-      num = 1;
+function RingArc(arcLength) {
+  arcLength = arcLength.arcLength;
+  ({ d, color, progress, strokeWidth } = arcLength);
+  items = [closure_5, arcLength, progress];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp, tmp2, tmp3] = items;
+  class OrbsArcadeRewardRingTsx1 {
+    constructor() {
+      obj = { strokeDashoffset: closure_0 * (1 - closure_1.get()), strokeOpacity: null };
+      num = 0;
+      if (closure_1.get() > 0) {
+        num = 1;
+      }
+      obj.strokeOpacity = num;
+      return obj;
     }
-    obj.strokeOpacity = num;
-    return obj;
-  };
-  fn.__closure = { arcLength, progress };
-  fn.__workletHash = 690721995284;
-  fn.__initData = __initData;
-  return <closure_4 d={d} fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeDasharray={arcLength} animatedProps={ReanimatedRexport2.useAnimatedProps(fn)} />;
+  }
+  const items1 = [tmp2, tmp3];
+  OrbsArcadeRewardRingTsx1.__closure = items1;
+  OrbsArcadeRewardRingTsx1.__workletHash = 15686336593485;
+  OrbsArcadeRewardRingTsx1.__initData = tmp;
+  return <closure_4 d={d} fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeDasharray={arcLength} animatedProps={_mod1652.useAnimatedProps(OrbsArcadeRewardRingTsx1)} />;
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(8031).Path);
-const __initData = { code: "function OrbsArcadeRewardRingTsx1(){const{arcLength,progress}=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};}" };
+let closure_4 = module_1652.createAnimatedComponent(fn(8155).Path);
+let closure_5 = { code: "(function OrbsArcadeRewardRingTsx1(){let[arcLength,progress]=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardRing.tsx");
 
@@ -40,7 +46,7 @@ export default function OrbsArcadeRewardRing(rewardSize) {
   c4 = diff;
   const arcLength = diff * Math.PI;
   const size = { width: rewardSize, height: rewardSize, style: StyleSheet.absoluteFill, children: null };
-  const items = [true, false];
+  items = [true, false];
   size.children = items.map((item) => {
     const result = rewardSize / 2;
     let num = 0;

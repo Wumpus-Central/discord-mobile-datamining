@@ -1,23 +1,23 @@
-// === Module 17234: PremiumRestoreSubscriptionSetting ===
+// === Module 17377: PremiumRestoreSubscriptionSetting ===
 
-// Module 17234 (PremiumRestoreSubscriptionSetting)
+// Module 17377 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7604 */;
-import UserStore from "UserStore" /* 1383 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7728 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9528).NitroWheelIcon,
+  IconComponent: fn(9656).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {
@@ -59,7 +59,7 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
-    const items = [UserStore];
+    items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {

@@ -1,11 +1,11 @@
-// === Module 15015: FriendRequestNote ===
+// === Module 15151: FriendRequestNote ===
 
-// Module 15015 (FriendRequestNote)
+// Module 15151 (FriendRequestNote)
 import nativeDefault from "native" /* 575 */;
-import PeopleListTracking from "PeopleListTracking" /* 15017 */;
+import PeopleListTracking from "PeopleListTracking" /* 15153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", position: "relative", padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" }, spoiler: null, hidden: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
 obj2.spoiler = rect;
@@ -30,7 +30,7 @@ export default function FriendRequestNote(styles) {
   const tmp = closure_10();
   const hideFriendRequestNotes = require("HideFriendRequestNotesUtils").useHideFriendRequestNotes();
   const obj = require("HideFriendRequestNotesUtils");
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ note: RelationshipStore.getNote(require), type: RelationshipStore.getRelationshipType(require) }));
   const note = stateFromStoresObject.note;
   let obj2 = require("initialize");
@@ -64,7 +64,7 @@ export default function FriendRequestNote(styles) {
           hidden = tmp.hidden;
         }
         const obj4 = { style: hidden, children: null };
-        const obj5 = { accessible: tmp7, accessibilityElementsHidden: !tmp7, accessibilityLabel: str, variant: "redesign/message-preview/normal", children: note };
+        const obj5 = { accessible: tmp7, accessibilityElementsHidden: !tmp7, accessibilityLabel: str, variant: "redesign/message-preview/medium", children: note };
         obj4.children = closure_8(require("Text/Text").Text, obj5);
         const items3 = [closure_8(closure_5, obj4), ];
         let tmp15Result = null;

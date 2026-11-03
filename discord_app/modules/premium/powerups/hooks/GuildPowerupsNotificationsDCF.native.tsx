@@ -1,17 +1,17 @@
-// === Module 14077: GuildPowerupsNotificationsDCF ===
+// === Module 14208: GuildPowerupsNotificationsDCF ===
 
-// Module 14077 (GuildPowerupsNotificationsDCF)
-import dismissible_content from "dismissible_content" /* 4847 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 14071 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 14078 */;
+// Module 14208 (GuildPowerupsNotificationsDCF)
+import dismissible_content from "dismissible_content" /* 4974 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 14202 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 14209 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 
 export function usePerksCoachmarkDCF(arg0) {
   if (arg0) {
-    const items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK];
+    items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
@@ -37,7 +37,7 @@ export function useGuildPowerupNotificationDCF(arg0) {
   return obj.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: GuildPowerupsNotification.GUILD_POWERUP_NOTIFICATION_COOLDOWN });
 }
 export function useNewGamesCoachmarkDC() {
-  const items = [
+  items = [
     null,
     () => {
 
@@ -62,7 +62,7 @@ export function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
   return obj2.useSelectedTimeRecurringGuildDismissibleContent(prop, id, { cooldownDurationMs: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR }, GUILD_HEADER_TOOLTIPS);
 }
 export function useExpiringPowerupCoachmarkDCF() {
-  const items = [
+  items = [
     null,
     () => {
 

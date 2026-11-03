@@ -1,7 +1,7 @@
-// === Module 18673: useFrame ===
+// === Module 18831: useFrame ===
 
-// Module 18673 (useFrame)
-import FramesStore from "FramesStore" /* 6846 */;
+// Module 18831 (useFrame)
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/frames/utils/useFrame.tsx");
 
 export default function useFrame(arg0) {
   _require = arg0;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => FramesStore.getFrame(closure_0), items1);
 };

@@ -1,16 +1,16 @@
-// === Module 15034: NameplateProductPreview ===
+// === Module 15176: NameplateProductPreview ===
 
-// Module 15034 (NameplateProductPreview)
+// Module 15176 (NameplateProductPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import utils from "utils" /* 1984 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRow from "TableRow" /* 6975 */;
-import useShopProductItems from "useShopProductItems" /* 8742 */;
+import utils from "utils" /* 2113 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRow from "TableRow" /* 7101 */;
+import useShopProductItems from "useShopProductItems" /* 8866 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 function NameplateUser(arg0) {
@@ -30,7 +30,7 @@ function NameplateUser(arg0) {
   const tmp5Result = tmp5(currentUser(stateFromStores[13]).getProfilePreviewValue(obj3));
   importDefault = tmp5Result;
   const obj2 = currentUser(stateFromStores[13]);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   stateFromStores = currentUser(stateFromStores[14]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmpResult = currentUser(stateFromStores[14]);
   const name = require("UserUtils").getName(currentUser);
@@ -42,7 +42,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": "\u{1F63E}" };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": "\u{1FAC6}" };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });
@@ -62,7 +62,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };
@@ -86,7 +86,7 @@ export default function NameplateProductPreview(arg0) {
     obj4.accessibilityLabel = intl.formatToPlainString(util.t.YJig7C, obj5);
     const obj6 = { style: tmp.memberListContainer, children: null };
     const obj7 = { user: nameplateSampleUsers.mallow, end: true };
-    const items = [timestampProducer(PlaceholderUser, obj7), , , , , , ];
+    items = [timestampProducer(PlaceholderUser, obj7), , , , , , ];
     const obj8 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: tmp.memberListTitle, children: null };
     const intl2 = util.intl;
     const items1 = [intl2.string(util.t["yzW/fZ"]), " \u2014 3"];

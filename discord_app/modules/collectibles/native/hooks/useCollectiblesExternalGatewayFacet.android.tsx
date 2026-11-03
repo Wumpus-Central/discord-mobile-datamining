@@ -1,9 +1,9 @@
-// === Module 14429: useCollectiblesExternalGatewayFacet ===
+// === Module 14560: useCollectiblesExternalGatewayFacet ===
 
-// Module 14429 (useCollectiblesExternalGatewayFacet)
+// Module 14560 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9551 */;
-import UserStore from "UserStore" /* 1383 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9679 */;
+import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
   _require = arg0;
-  let items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores, arg0];
   return useMemo(() => {
@@ -21,7 +21,7 @@ export default function useCollectiblesExternalGatewayFacet(arg0) {
     if (null != collectibleGoogleSkuId) {
       const obj2 = { line_items: null };
       const obj3 = { external_product_id: collectibleGoogleSkuId };
-      const items = [obj3];
+      items = [obj3];
       obj2.line_items = items;
       return obj2;
     }

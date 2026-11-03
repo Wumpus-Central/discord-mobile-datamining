@@ -1,9 +1,9 @@
-// === Module 11213: StatusBarManager ===
+// === Module 11350: StatusBarManager ===
 
-// Module 11213 (StatusBarManager)
+// Module 11350 (StatusBarManager)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1637 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1639 */;
 import size from "module_2" /* 2 */;
 
 const StatusBar = _mod17.StatusBar;
@@ -53,7 +53,7 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   const self = this;
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
-    const items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
+    items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
     const applyResult = _modDef12.merge.apply(items);
     StatusBar.setBarStyle(applyResult.barStyle);
     NativeSafeAreaInsetsModuleDefault.setStatusBarVisible(!applyResult.hidden);

@@ -1,15 +1,15 @@
-// === Module 11877: StageMusicManager ===
+// === Module 12014: StageMusicManager ===
 
-// Module 11877 (StageMusicManager)
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6713 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
-import StageMusicStore from "StageMusicStore" /* 11875 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+// Module 12014 (StageMusicManager)
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
+import StageMusicStore from "StageMusicStore" /* 12012 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 const require = globalThis.__r;
 
@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11030);
+const SoundUtils = fn(11163);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 class StageMusicManager extends tmp2 {
   constructor() {
@@ -134,7 +134,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageMusicMana
 export default stageMusicManager;
 export function useShowStageMusicMuteButton(channelId) {
   _require = channelId;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => SelectedChannelStore.getVoiceChannelId() === closure_0);
   const obj = require("initialize");
   const stageParticipants = require("StageChannelParticipantStoreHooks").useStageParticipants(channelId, require("StageChannelParticipants").StageChannelParticipantNamedIndex.SPEAKER);

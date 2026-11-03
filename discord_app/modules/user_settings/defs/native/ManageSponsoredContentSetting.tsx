@@ -1,11 +1,11 @@
-// === Module 17903: ManageSponsoredContentSetting ===
+// === Module 18046: ManageSponsoredContentSetting ===
 
-// Module 17903 (ManageSponsoredContentSetting)
+// Module 18046 (ManageSponsoredContentSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import _modDef2107 from "module_2107" /* 2107 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import _modDef2236 from "module_2236" /* 2236 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2107.yyhs9L);
+    return intl.string(_modDef2236.yyhs9L);
   },
   parent: SettingsConstants.MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
   screen: {

@@ -1,18 +1,18 @@
-// === Module 14737: GuildProfileCTA ===
+// === Module 14868: GuildProfileCTA ===
 
-// Module 14737 (GuildProfileCTA)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6906 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6908 */;
-import GuildProfileTypes from "GuildProfileTypes" /* 6925 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6944 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7521 */;
-import transitionToGuild from "transitionToGuild" /* 7522 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
-import handleNSFWGuildInvite from "handleNSFWGuildInvite" /* 10128 */;
+// Module 14868 (GuildProfileCTA)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7026 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7028 */;
+import GuildProfileTypes from "GuildProfileTypes" /* 7045 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7064 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7645 */;
+import transitionToGuild from "transitionToGuild" /* 7646 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
+import handleNSFWGuildInvite from "handleNSFWGuildInvite" /* 10258 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5749 */;
+import InviteStore from "InviteStore" /* 5869 */;
 
 require = fn;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
@@ -31,7 +31,7 @@ export default function GuildProfileCTA(profile) {
   validInviteKey = tmp2.validInviteKey;
   const ctaType = tmp2.ctaType;
   noop = guildId(validInviteKey[6])({ scrollPosition: constants.GUILD_TAG });
-  const items = [guildId];
+  items = [guildId];
   const items1 = [guildId, validInviteKey];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);

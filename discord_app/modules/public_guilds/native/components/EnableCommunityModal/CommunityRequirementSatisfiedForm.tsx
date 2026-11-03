@@ -1,7 +1,7 @@
-// === Module 19848: CommunityRequirementSatisfiedForm ===
+// === Module 19998: CommunityRequirementSatisfiedForm ===
 
-// Module 19848 (CommunityRequirementSatisfiedForm)
-import ToastUtils from "ToastUtils" /* 5711 */;
+// Module 19998 (CommunityRequirementSatisfiedForm)
+import ToastUtils from "ToastUtils" /* 5831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,9 +13,9 @@ let result = size.fileFinishedImporting("modules/public_guilds/native/components
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  const enableCommunitySharedStyles = formSwitchDisabled(19838).useEnableCommunitySharedStyles();
+  const enableCommunitySharedStyles = formSwitchDisabled(19988).useEnableCommunitySharedStyles();
   const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
-  const items = [formSwitchDisabled.children, ];
+  items = [formSwitchDisabled.children, ];
   let tmp6 = null;
   if (formSwitchDisabled) {
     const obj3 = {
@@ -27,7 +27,7 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
           }
         }
     };
-    tmp6 = closure_3(formSwitchDisabled(6980).PressableOpacity, obj3);
+    tmp6 = closure_3(formSwitchDisabled(7106).PressableOpacity, obj3);
   }
   items[1] = tmp6;
   obj2.children = items;

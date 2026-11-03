@@ -1,6 +1,6 @@
-// === Module 11837: useDispatchOpenActivity ===
+// === Module 11974: useDispatchOpenActivity ===
 
-// Module 11837 (useDispatchOpenActivity)
+// Module 11974 (useDispatchOpenActivity)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
   if (connectedEmbeddedActivity != null) {
     applicationId = connectedEmbeddedActivity.applicationId;
   }
-  const items = [applicationId, connectedEmbeddedActivity];
+  items = [applicationId, connectedEmbeddedActivity];
   const effect = noop.useEffect(() => {
     let tmp2 = null != connectedEmbeddedActivity;
     if (tmp2) {

@@ -1,10 +1,10 @@
-// === Module 16495: UserProfileEditTheme ===
+// === Module 16638: UserProfileEditTheme ===
 
-// Module 16495 (UserProfileEditTheme)
+// Module 16638 (UserProfileEditTheme)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import _modDef5854 from "module_5854" /* 5854 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import _modDef5974 from "module_5974" /* 5974 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, overflowMenu: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.overflowMenu = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
@@ -46,7 +46,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   if (tmp4 != null) {
     themeColors = tmp4.themeColors;
   }
-  const items = [themeColors, onProfileThemeColorsChanged];
+  items = [themeColors, onProfileThemeColorsChanged];
   onChangeColors = noop.useCallback((onChangeColors) => {
     themeColors = undefined;
     if (themeColors != null) {
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = onChangeColors;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5854;
+    tmp = _modDef5974;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16497, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16640, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

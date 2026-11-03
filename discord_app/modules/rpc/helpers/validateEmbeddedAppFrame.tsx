@@ -1,14 +1,14 @@
-// === Module 16293: validateEmbeddedAppFrame ===
+// === Module 16437: validateEmbeddedAppFrame ===
 
-// Module 16293 (validateEmbeddedAppFrame)
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2024 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9326 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9327 */;
-import RPCErrorDefault from "RPCError" /* 9333 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
-import RPCHelpers from "RPCHelpers" /* 11813 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16294 */;
+// Module 16437 (validateEmbeddedAppFrame)
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9454 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9455 */;
+import RPCErrorDefault from "RPCError" /* 9461 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11013 */;
+import RPCHelpers from "RPCHelpers" /* 11950 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11056 */;
 
 require = fn;
 function validateEmbeddedAppFrame(socket) {

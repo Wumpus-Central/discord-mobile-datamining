@@ -1,9 +1,9 @@
-// === Module 8192: FormRadioGroup ===
+// === Module 8316: FormRadioGroup ===
 
-// Module 8192 (FormRadioGroup)
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
-import RedesignCompat from "RedesignCompat" /* 7059 */;
-import FormSectionDefault from "FormSection" /* 8186 */;
+// Module 8316 (FormRadioGroup)
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
+import RedesignCompat from "RedesignCompat" /* 7185 */;
+import FormSectionDefault from "FormSection" /* 8310 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function FormRadioGroup(arg0) {
     const obj3 = { children: null };
     const obj4 = { defaultValue: value, hasIcons, title, accessibilityLabel, children };
     obj3.children = hasOwnProperty(TableRadioGroup.TableRadioGroup, obj4);
-    const items = [hasOwnProperty(View, obj3), ];
+    items = [hasOwnProperty(View, obj3), ];
     let tmp13Result = null;
     if (null != hint) {
       const obj5 = { style: { marginTop: 8 }, children: hint };

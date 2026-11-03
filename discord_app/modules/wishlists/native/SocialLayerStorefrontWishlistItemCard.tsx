@@ -1,17 +1,17 @@
-// === Module 14456: SocialLayerStorefrontWishlistItemCard ===
+// === Module 14587: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 14456 (SocialLayerStorefrontWishlistItemCard)
+// Module 14587 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9521 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9649 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import SentGiftsStore from "SentGiftsStore" /* 14454 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import SentGiftsStore from "SentGiftsStore" /* 14585 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, width: 24, height: 24, borderRadius: nativeDefault.radii.sm, zIndex: 1 };
 obj2.applicationIcon = size;
@@ -32,7 +32,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let stateFromStores1;
   let memo;
-  const items = [memo];
+  items = [memo];
   const items1 = [sku.id, wishlistOwnerId];
   const applicationId = sku.applicationId;
   const stateFromStores = sku(size[6]).useStateFromStores(items, () => {

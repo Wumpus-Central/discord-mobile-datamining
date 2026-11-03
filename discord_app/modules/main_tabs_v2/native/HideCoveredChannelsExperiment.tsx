@@ -1,7 +1,7 @@
-// === Module 18607: HideCoveredChannelsExperiment ===
+// === Module 18765: HideCoveredChannelsExperiment ===
 
-// Module 18607 (HideCoveredChannelsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 18765 (HideCoveredChannelsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-hide-covered-channels", kind: "user", defaultConfig: { enabled: false }, variations: null };

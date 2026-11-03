@@ -1,7 +1,7 @@
-// === Module 9676: ConjureMobileExperiment ===
+// === Module 9808: ConjureMobileExperiment ===
 
-// Module 9676 (ConjureMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 9808 (ConjureMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export default apexExperiment;
 export function useIsConjureMobileEnabled(canConjureCustomWidget, ConjureAppChannelSheet) {
   _require = canConjureCustomWidget;
   dependencyMap = ConjureAppChannelSheet;
-  const items = [require("ApexExperiment").ApexExperimentStore];
+  items = [require("ApexExperiment").ApexExperimentStore];
   const items1 = [canConjureCustomWidget, ConjureAppChannelSheet];
   return require("initialize").useStateFromStores(items, () => {
     let enabled = closure_0;

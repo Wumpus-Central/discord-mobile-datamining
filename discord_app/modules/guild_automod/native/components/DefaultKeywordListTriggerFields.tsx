@@ -1,10 +1,10 @@
-// === Module 19693: DefaultKeywordListTriggerFields ===
+// === Module 19843: DefaultKeywordListTriggerFields ===
 
-// Module 19693 (DefaultKeywordListTriggerFields)
+// Module 19843 (DefaultKeywordListTriggerFields)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const maxWordCount = fn(13292).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
+const maxWordCount = fn(13428).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function DefaultKeywordListTriggerFields(rule) {
       onPress(arg0) {
         const filter = presets.filter;
         if (arg0) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(filter((arg0) => arg0 !== closure_0), 0)] = tmp;
           let found = items;
         } else {
@@ -47,7 +47,7 @@ export default function DefaultKeywordListTriggerFields(rule) {
       }
     }, item);
   });
-  let items = [closure_4(rule(presets[3]).TableRowGroup, obj2), ];
+  items = [closure_4(rule(presets[3]).TableRowGroup, obj2), ];
   const obj3 = { label: null, description: null, type: "keywords", keywords: null, maxWordCount: null, onChangeKeywords: null, start: true, end: true };
   const intl2 = rule(presets[4]).intl;
   obj3.label = intl2.string(rule(presets[4]).t.lbE2Nm);

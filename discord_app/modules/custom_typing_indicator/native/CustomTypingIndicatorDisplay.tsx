@@ -1,19 +1,19 @@
-// === Module 13745: CustomTypingIndicatorDisplay ===
+// === Module 13876: CustomTypingIndicatorDisplay ===
 
-// Module 13745 (CustomTypingIndicatorDisplay)
+// Module 13876 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13733 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13746 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13864 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13877 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp3(5624);
-const Stack_Stack = tmp3(6027);
-const Pressables = tmp3(6980);
+const Text_Text = tmp3(5747);
+const Stack_Stack = tmp3(6147);
+const Pressables = tmp3(7106);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
@@ -53,7 +53,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
       const obj5 = { config, size: num };
       tmp10 = React3(CustomTypingIndicatorGlyphDefault, obj5);
     }
-    const items = [tmp10, ];
+    items = [tmp10, ];
     const obj6 = { style: tmp.text, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: formatResult };
     items[1] = React3(Text_Text.Text, obj6);
     obj4.children = items;

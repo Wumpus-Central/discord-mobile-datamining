@@ -1,16 +1,16 @@
-// === Module 5949: VideoQuality ===
+// === Module 6069: VideoQuality ===
 
-// Module 5949 (VideoQuality)
+// Module 6069 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import TimeUtils from "TimeUtils" /* 5772 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
-import Histogram from "Histogram" /* 5894 */;
-import NetworkQualityDefault from "NetworkQuality" /* 5900 */;
-import VideoQualityStats from "VideoQualityStats" /* 5950 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5926 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5792 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import TimeUtils from "TimeUtils" /* 5892 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import Histogram from "Histogram" /* 6014 */;
+import NetworkQualityDefault from "NetworkQuality" /* 6020 */;
+import VideoQualityStats from "VideoQualityStats" /* 6070 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 6046 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
 
 require = fn;
 function round(arg0) {
@@ -281,7 +281,7 @@ prototype["getEncoderUsageStats"] = function getEncoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    map1 = new Map();
+    let map1 = new Map();
     let obj3 = self.outboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -301,7 +301,7 @@ prototype["getDecoderUsageStats"] = function getDecoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    map1 = new Map();
+    let map1 = new Map();
     let obj3 = self.inboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -359,7 +359,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
   }
   const encoderUsageStats = self.getEncoderUsageStats();
   if (encoderUsageStats.size > 0) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(encoderUsageStats.keys(), 0);
     map = encoderUsageStats.get(items.sort()[0]);
   }
@@ -410,7 +410,7 @@ prototype["getCameraDurationStats"] = function getCameraDurationStats() {
 };
 prototype["getOutboundStats"] = function getOutboundStats() {
   const self = this;
-  let items = [];
+  items = [];
   let item = self(12).forEach(this.outboundStats, (vmafHistogram, arg1) => {
     closure_0 = arg1;
     const connection = self.connection;
@@ -890,7 +890,7 @@ prototype["updateSendState"] = function updateSendState(paused) {
   self.videoStopped.value = self.paused.value || self.zeroReceivers.value;
   if ((self.paused.value || self.zeroReceivers.value) !== self.videoStopped.value) {
     const item = _modDef12.forEach(self.outboundStats, (arg0) => {
-      const items = [];
+      items = [];
       arg0.statsWindow = items;
       return items;
     });
@@ -911,7 +911,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     }
     const _Math = Math;
     const result = Math.max(aggregationDuration.aggregationDuration, 0) / 1000;
-    const items = [1, 5, 10, 25, 50, 75];
+    items = [1, 5, 10, 25, 50, 75];
     const fpsHistogram = aggregationDuration.fpsHistogram;
     const report = fpsHistogram.getReport(items);
     const bitrateHistogram = aggregationDuration.bitrateHistogram;
@@ -1413,12 +1413,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     const set1 = new Set();
     const obj2 = { receivers: 1 };
     self.updateSendState(obj2);
-    let tmp23 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
+    let tmp23 = self.connection.context === tmp(5909).MediaEngineContextTypes.DEFAULT;
     if (tmp23) {
       tmp23 = null != transport.camera;
     }
     self.cameraDuration.value = tmp23;
-    let tmp25 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
+    let tmp25 = self.connection.context === tmp(5909).MediaEngineContextTypes.DEFAULT;
     if (tmp25) {
       tmp25 = null != transport.camera;
     }
@@ -1426,7 +1426,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       tmp25 = self.callUserIdsCount > 1;
     }
     self.cameraOpportunityDuration.value = tmp25;
-    let tmp27 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
+    let tmp27 = self.connection.context === tmp(5909).MediaEngineContextTypes.DEFAULT;
     if (tmp27) {
       tmp27 = null != transport.camera;
     }
@@ -1437,7 +1437,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     if (tmp29) {
       self.cameraToggles = self.cameraToggles + 1;
     }
-    let liveBackgroundEnabled = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(5909).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }
@@ -1769,7 +1769,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       } else {
         self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
       }
-      tmpResult = tmp(4880);
+      tmpResult = tmp(5007);
     }
   } else {
     const receiverReports2 = receiverReports.receiverReports;

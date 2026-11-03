@@ -1,9 +1,9 @@
-// === Module 13012: useConjureOwnProjectListState ===
+// === Module 13148: useConjureOwnProjectListState ===
 
-// Module 13012 (useConjureOwnProjectListState)
-import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 12985 */;
+// Module 13148 (useConjureOwnProjectListState)
+import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 13121 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = fn;
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/home/useConjureOwnPro
 
 export default function useConjureOwnProjectListState(str) {
   const arr = useConjureHomeOwnProjectsDefault();
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const stateFromStores = arr(504).useStateFromStores(items, () => ownedProjectsFetchState.getOwnedProjectsFetchState());
   const trimmed = str.trim();
   const toLocaleLowerCaseResult = trimmed.toLocaleLowerCase();

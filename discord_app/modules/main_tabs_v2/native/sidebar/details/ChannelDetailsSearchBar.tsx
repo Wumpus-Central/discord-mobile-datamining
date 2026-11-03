@@ -1,17 +1,17 @@
-// === Module 18685: ChannelDetailsSearchBar ===
+// === Module 18843: ChannelDetailsSearchBar ===
 
-// Module 18685 (ChannelDetailsSearchBar)
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
+// Module 18843 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13900 */;
+import SearchQueryStore from "SearchQueryStore" /* 14031 */;
 
 const require = fn;
-let closure_5 = fn(9825).setIsChannelDetailsSearchActive;
+let closure_5 = fn(9956).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj = { back: { justifyContent: "center", height: fn(13928).SEARCH_BAR_HEIGHT, paddingStart: fn(10137).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
+const createStyles = fn(5141);
+let obj = { back: { justifyContent: "center", height: fn(14059).SEARCH_BAR_HEIGHT, paddingStart: fn(10267).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
 let closure_7 = createStyles.createStyles(obj);
-let obj3 = { justifyContent: "center", height: fn(13928).SEARCH_BAR_HEIGHT, paddingStart: fn(10137).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+let obj3 = { justifyContent: "center", height: fn(14059).SEARCH_BAR_HEIGHT, paddingStart: fn(10267).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
 
@@ -26,7 +26,7 @@ export default noop.memo(function ChannelDetailsSearchBar(channelId) {
   let callback;
   const tmp = closure_7();
   channelDetailsSearchContext = channelId(channelDetailsSearchContext[7]).useChannelDetailsSearchContext(channelId, channelId.guildId);
-  const items = [channelId, channelDetailsSearchContext];
+  items = [channelId, channelDetailsSearchContext];
   const effect = callback.useEffect(() => () => {
     onBackPress(channelDetailsSearchContext[8]).trackSearchClosed({ searchContext });
   }, items);

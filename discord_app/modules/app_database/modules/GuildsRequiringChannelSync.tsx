@@ -1,21 +1,21 @@
-// === Module 7794: GuildsRequiringChannelSync ===
+// === Module 7918: GuildsRequiringChannelSync ===
 
-// Module 7794 (GuildsRequiringChannelSync)
+// Module 7918 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1083 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import ChannelConstants from "ChannelConstants" /* 4870 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4936 */;
-import ChannelRecord from "ChannelRecord" /* 4867 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import ChannelConstants from "ChannelConstants" /* 4997 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 5063 */;
+import ChannelRecord from "ChannelRecord" /* 4994 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -202,7 +202,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           }
         }
         const properties = item10008.properties;
-        const guild = GuildStore.getGuild(item10008.id);
+        guild = GuildStore.getGuild(item10008.id);
         let ownerId;
         if (guild != null) {
           ownerId = guild.ownerId;
@@ -263,7 +263,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
   const self = this;
   if ("full_sync" !== channels.channels.op) {
     const id = AuthenticationStore.getId();
-    const guild = GuildStore.getGuild(channels.id);
+    guild = GuildStore.getGuild(channels.id);
     if (null != guild) {
       const properties = channels.properties;
       let owner_id;
@@ -369,7 +369,7 @@ prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) 
   result.delete(id);
 };
 prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels) {
-  let items = deleted_channel_ids;
+  items = deleted_channel_ids;
   if (deleted_channel_ids === undefined) {
     items = [];
   }
@@ -430,7 +430,7 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
 prototype["gatewayGuildHasObfuscatedChannels"] = function gatewayGuildHasObfuscatedChannels(channels) {
   if ("full_sync" === channels.channels.op) {
     let writes = channels.channels.items;
-    let items = [];
+    items = [];
   } else {
     writes = channels.channels.writes;
     items = channels.channels.deletes;
@@ -448,7 +448,7 @@ prototype["backgroundSyncGuildHasObfuscatedChannels"] = function backgroundSyncG
     if (deleted_channel_ids == null) {
       deleted_channel_ids = [];
     }
-    let items = deleted_channel_ids;
+    items = deleted_channel_ids;
     let channels = channels1;
   } else {
     channels = data_mode.channels;

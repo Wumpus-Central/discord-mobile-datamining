@@ -1,20 +1,20 @@
-// === Module 20069: AVErrorAnalytics ===
+// === Module 20219: AVErrorAnalytics ===
 
-// Module 20069 (AVErrorAnalytics)
+// Module 20219 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1369 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5020 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5873 */;
-import VideoQualityStats from "VideoQualityStats" /* 5950 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1371 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5147 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5993 */;
+import VideoQualityStats from "VideoQualityStats" /* 6070 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5781 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5943 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import RTCRegionStore from "RTCRegionStore" /* 5863 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5901 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6063 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCRegionStore from "RTCRegionStore" /* 5983 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   if (null != connectionStats) {
     if (null != lastConnectionStats) {
       const obj = {};
-      const items = ["videohookFrames", "hybridDxgiFrames", "hybridGdiFrames", "hybridVideohookFrames", "hybridGraphicsCaptureFrames", "hybridGdiBitBltFrames", "hybridGdiPrintWindowFrames", "quartzFrames", "screenCaptureKitFrames"];
+      items = ["videohookFrames", "hybridDxgiFrames", "hybridGdiFrames", "hybridVideohookFrames", "hybridGraphicsCaptureFrames", "hybridGdiBitBltFrames", "hybridGdiPrintWindowFrames", "quartzFrames", "screenCaptureKitFrames"];
       const iter = items[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -72,9 +72,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5783).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5903).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Constants = fn(5768);
+const Constants = fn(5888);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
@@ -179,7 +179,7 @@ export function sendAVErrorAnalyticsEvent(error, context) {
     }
     tmp26 = streamApplication;
   }
-  const state = underlyingError.getState();
+  state = underlyingError.getState();
   ({ resolution: closure_21, fps: closure_22 } = state);
   let obj = require("AVError");
   const runningGameAnalytics = require("GameAnalyticsUtils").getRunningGameAnalytics(tmp26);

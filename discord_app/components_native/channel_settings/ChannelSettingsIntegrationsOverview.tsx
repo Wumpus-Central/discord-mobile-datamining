@@ -1,31 +1,31 @@
-// === Module 18926: ChannelSettingsIntegrationsOverview ===
+// === Module 19084: ChannelSettingsIntegrationsOverview ===
 
-// Module 18926 (ChannelSettingsIntegrationsOverview)
+// Module 19084 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import Form from "Form" /* 8177 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9041 */;
-import WebhookIcon from "WebhookIcon" /* 18809 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 18927 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import Form from "Form" /* 8301 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9169 */;
+import WebhookIcon from "WebhookIcon" /* 18967 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19085 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1497).useNavigation();
-  const obj = channel(1497);
+  importDefault = channel(1499).useNavigation();
+  const obj = channel(1499);
   const linkedLobby = channel.linkedLobby;
-  let application_id;
+  application_id = undefined;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7330).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7450).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -37,16 +37,16 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6975).TableRow, obj4);
-    tmp5 = closure_6(tmp(7060).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(7101).TableRow, obj4);
+    tmp5 = closure_6(tmp(7186).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(4867).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(4994).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -55,7 +55,7 @@ const result = size.fileFinishedImporting("components_native/channel_settings/Ch
 export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
   ({ channelId: require, canManageWebhooks, canUnlinkLobby } = arg0);
   importDefault = useNavigation.useNavigation();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(require));
   let tmp6Result = null;
   if (null != stateFromStores) {

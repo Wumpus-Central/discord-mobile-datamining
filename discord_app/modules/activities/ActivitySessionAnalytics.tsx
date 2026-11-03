@@ -1,29 +1,29 @@
-// === Module 16310: ActivitySessionAnalytics ===
+// === Module 16453: ActivitySessionAnalytics ===
 
-// Module 16310 (ActivitySessionAnalytics)
+// Module 16453 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import getPlatformDefault from "getPlatform" /* 5682 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5954 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9767 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10932 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11733 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11734 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11741 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14687 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import getPlatformDefault from "getPlatform" /* 5802 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6074 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7003 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9899 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11070 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11870 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11871 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11878 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14818 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import QuestStore from "QuestStore" /* 7846 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import UserStore from "UserStore" /* 1383 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16311 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import QuestStore from "QuestStore" /* 7970 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import UserStore from "UserStore" /* 1385 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16454 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
 require = fn;
 function resolveFrameLaunchContext(applicationId, arg1) {
@@ -71,7 +71,7 @@ function maybeEmitFrameSessionMetricsForQuest(applicationId, name) {
     const eligibleQuestsForApplicationId = QuestMatchingUtils.getEligibleQuestsForApplicationId(QuestStore.quests, applicationId, true);
     if (eligibleQuestsForApplicationId.length > 0) {
       const _HermesInternal2 = HermesInternal;
-      const items = ["application_id:" + applicationId];
+      items = ["application_id:" + applicationId];
       const found = eligibleQuestsForApplicationId.find((userStatus) => {
         userStatus = userStatus.userStatus;
         let enrolledAt;
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -284,7 +284,7 @@ export function trackFrameSessionStart(applicationId, analyticsContext) {
       }
       const mediaSessionId = RTCConnectionStore.getMediaSessionId();
       if (null != mediaSessionId) {
-        const items = [mediaSessionId];
+        items = [mediaSessionId];
         let items1 = items;
       } else {
         items1 = [];
@@ -484,7 +484,7 @@ export function trackFrameSessionEnd(applicationId) {
       const obj4 = { channel_id: frameChannelId, guild_id: frameGuildId, application_id: applicationId, instance_ids: null, media_session_ids: null, activity_user_session_id: null, raw_thermal_state: null, duration_ms: null, embedded_activity_location_kind: null };
       let tmp24;
       if (null != tmp3.launchId) {
-        const items = [tmp3.launchId];
+        items = [tmp3.launchId];
         tmp24 = items;
       }
       obj4.instance_ids = tmp24;

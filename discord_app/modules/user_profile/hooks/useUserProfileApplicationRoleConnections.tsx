@@ -1,8 +1,8 @@
-// === Module 14997: useUserProfileApplicationRoleConnections ===
+// === Module 15133: useUserProfileApplicationRoleConnections ===
 
-// Module 14997 (useUserProfileApplicationRoleConnections)
+// Module 15133 (useUserProfileApplicationRoleConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileApplicationRoleConnections(arg0) {
   _require = arg0;
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let prop;
   if (stateFromStores != null) {

@@ -1,17 +1,21 @@
-// === Module 17165: QuestDockBlurredHeaderPlaceholder ===
+// === Module 17308: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 17165 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 17166 */;
+// Module 17308 (QuestDockBlurredHeaderPlaceholder)
+import _modDef1652 from "module_1652" /* 1652 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import thumbHashToRGBA from "thumbHashToRGBA" /* 17309 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6781).QuestDockMode;
-const QuestDockConstants = fn(17072);
+const QuestDockMode = fn(6901).QuestDockMode;
+const QuestDockConstants = fn(17215);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -19,55 +23,59 @@ obj3.overflow = "hidden";
 obj3.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj3.top = -QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED;
 obj.imageContainer = obj3;
-let obj4 = {};
+const obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.backgroundColor = "rgba(38, 39, 50, 0.3)";
 obj4.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj.overlay = obj4;
 let closure_10 = createStyles.createStyles(obj);
-const __initData = { code: "function QuestDockBlurredHeaderPlaceholderTsx1(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs}=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};}" };
+let closure_11 = { code: "(function QuestDockBlurredHeaderPlaceholderTsx1(){let[activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs]=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
 
 export default noop.memo(function QuestDockBlurredHeaderPlaceholder(arg0) {
   ({ opacityAnimatedStyle, placeholder } = arg0);
+  _require = placeholder;
   ({ layoutAnimation, layoutAnimatedStyle } = arg0);
-  const context = noop.useContext(placeholder(activeQuestDockMode[6]).QuestDockGestureContext);
-  const questDockWrapperSpecs = context.questDockWrapperSpecs;
-  activeQuestDockMode = context.activeQuestDockMode;
-  const items = [placeholder];
+  const context = noop.useContext(require("QuestDockGestureContext").QuestDockGestureContext);
+  items = [placeholder];
+  ({ questDockWrapperSpecs, activeQuestDockMode } = context);
   const memo = noop.useMemo(() => {
-    const obj = { uri: thumbHashToRGBA.thumbHashToDataURL(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0))) };
+    const obj = { uri: thumbHashToRGBA.thumbHashToDataURL(Uint8Array.from(atob(c0), (str) => str.charCodeAt(0))) };
     return obj;
   }, items);
-  const tmp3 = closure_10();
-  class E {
+  const tmp4 = closure_10();
+  const items1 = [closure_11, activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED, questDockWrapperSpecs];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9] = items1;
+  class QuestDockBlurredHeaderPlaceholderTsx1 {
     constructor() {
       num = 0;
-      if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-        tmp = closure_6;
-        num = -closure_6;
+      if (closure_0.get() === closure_1.EXPANDED) {
+        tmp = closure_2;
+        num = -closure_2;
       }
-      obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
+      obj = { left: num, width: closure_3.get().width + closure_2 };
       return obj;
     }
   }
-  E.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED, questDockWrapperSpecs };
-  E.__workletHash = 11176778421725;
-  E.__initData = __initData;
-  const obj3 = { children: null };
-  const animatedStyle = placeholder(activeQuestDockMode[8]).useAnimatedStyle(E);
-  const obj4 = { style: null, layout: layoutAnimation, children: null };
-  const items1 = [tmp3.imageContainer, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
-  obj4.style = items1;
-  let obj = placeholder(activeQuestDockMode[8]);
-  const obj2 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED, questDockWrapperSpecs };
-  obj4.children = closure_7(questDockWrapperSpecs(activeQuestDockMode[10]), { source: memo, style: StyleSheet.absoluteFill });
-  const items2 = [closure_7(questDockWrapperSpecs(activeQuestDockMode[9]), obj4), ];
-  const obj6 = { style: null };
-  const items3 = [tmp3.overlay, opacityAnimatedStyle];
-  obj6.style = items3;
-  items2[1] = closure_7(questDockWrapperSpecs(activeQuestDockMode[9]), obj6);
-  obj3.children = items2;
-  return closure_9(closure_8, obj3);
+  const items2 = [tmp6, tmp7, tmp8, tmp9];
+  QuestDockBlurredHeaderPlaceholderTsx1.__closure = items2;
+  QuestDockBlurredHeaderPlaceholderTsx1.__workletHash = 16240509940580;
+  QuestDockBlurredHeaderPlaceholderTsx1.__initData = tmp5;
+  const obj2 = { children: null };
+  const animatedStyle = require("module_1652").useAnimatedStyle(QuestDockBlurredHeaderPlaceholderTsx1);
+  const obj3 = { style: null, layout: layoutAnimation, children: closure_7(FastImageDefault, { source: memo, style: StyleSheet.absoluteFill }) };
+  const items3 = [tmp4.imageContainer, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
+  obj3.style = items3;
+  const items4 = [closure_7(_modDef1652.View, obj3), ];
+  const obj5 = { style: null };
+  const items5 = [tmp4.overlay, opacityAnimatedStyle];
+  obj5.style = items5;
+  items4[1] = closure_7(_modDef1652.View, obj5);
+  obj2.children = items4;
+  return closure_9(closure_8, obj2);
 });

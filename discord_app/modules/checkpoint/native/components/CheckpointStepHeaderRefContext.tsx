@@ -1,6 +1,6 @@
-// === Module 13629: CheckpointStepHeaderRefContext ===
+// === Module 13600: CheckpointStepHeaderRefContext ===
 
-// Module 13629 (CheckpointStepHeaderRefContext)
+// Module 13600 (CheckpointStepHeaderRefContext)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ export function CheckpointStepFocusProvider(arg0) {
     closure_0.current = current;
   }, []);
   isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  const items = [route, isScreenReaderEnabled];
+  items = [route, isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
     if (isScreenReaderEnabled) {
       const _setTimeout = setTimeout;

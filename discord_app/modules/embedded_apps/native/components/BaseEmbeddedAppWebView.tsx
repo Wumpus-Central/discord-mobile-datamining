@@ -1,17 +1,17 @@
-// === Module 11821: BaseEmbeddedAppWebView ===
+// === Module 11958: BaseEmbeddedAppWebView ===
 
-// Module 11821 (BaseEmbeddedAppWebView)
+// Module 11958 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import WebView from "WebView" /* 7979 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 11822 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import WebView from "WebView" /* 8103 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 11959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5674 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5794 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -65,7 +65,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
   c10 = tmp6;
   c11 = tmp7;
   closure_12 = tmp9;
-  const items = [iframeId];
+  items = [iframeId];
   const memo = safeAreasConfig.useMemo(() => WebView.getWebViewProxy(iframeId), items);
   let rect = activityUrl(onActivityCrash[11])();
   const tmp5 = onInvalidUrl(safeAreasConfig.useState(false), 2);
@@ -299,7 +299,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -466,7 +466,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);
@@ -475,7 +475,7 @@ let result = size.fileFinishedImporting("modules/embedded_apps/native/components
 export function BaseEmbeddedAppWebView(onLoadError) {
   onLoadError = onLoadError.onLoadError;
   const tmp = useEmbeddedAppCSPDefault(onLoadError.activityUrl);
-  const items = [tmp.status, onLoadError];
+  items = [tmp.status, onLoadError];
   const effect = noop.useEffect(() => {
     if ("failed" === status.status) {
       onLoadError();

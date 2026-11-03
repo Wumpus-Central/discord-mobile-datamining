@@ -1,11 +1,11 @@
-// === Module 16715: SensitiveContentFilterSetting ===
+// === Module 16858: SensitiveContentFilterSetting ===
 
-// Module 16715 (SensitiveContentFilterSetting)
+// Module 16858 (SensitiveContentFilterSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ const route = SettingBuilders.createRoute({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.uEz8JF), , , , , ];
+    items = [intl.string(util.t.uEz8JF), , , , , ];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["N/oRI+"]);
     const intl3 = util.intl;

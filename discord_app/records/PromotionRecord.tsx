@@ -1,54 +1,60 @@
-// === Module 9627: PromotionRecord ===
+// === Module 9759: PromotionRecord ===
 
-// Module 9627 (PromotionRecord)
-import FlagUtils from "FlagUtils" /* 1396 */;
-import Record from "Record" /* 1398 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9628 */;
+// Module 9759 (PromotionRecord)
+import FlagUtils from "FlagUtils" /* 1398 */;
+import Record from "Record" /* 1400 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9760 */;
 
 require = fn;
 let PromotionRecord;
 class PromotionRecord extends tmp2 {
   constructor(arg0) {
-    tmp3 = new PromotionRecord(tmp2, new.target, tmp, new.target, global, PromotionRecord);
-    ({ id: tmp3.id, trialId: tmp3.trialId, startDate: tmp3.startDate, endDate: tmp3.endDate, outboundRedemptionEndDate: tmp3.outboundRedemptionEndDate, inboundHeaderText: tmp3.inboundHeaderText, inboundBodyText: tmp3.inboundBodyText, inboundHelpCenterLink: tmp3.inboundHelpCenterLink, outboundTitle: tmp3.outboundTitle, outboundRedemptionModalBody: tmp3.outboundRedemptionModalBody, outboundTermsAndConditions: tmp3.outboundTermsAndConditions, outboundRedemptionPageLink: tmp3.outboundRedemptionPageLink, outboundRedemptionUrlFormat: tmp3.outboundRedemptionUrlFormat, flags } = global);
+    tmp4 = new PromotionRecord(tmp3, tmp2, new.target, new.target, tmp, global);
+    ({ id: tmp4.id, trialId: tmp4.trialId, startDate: tmp4.startDate, endDate: tmp4.endDate, outboundRedemptionEndDate: tmp4.outboundRedemptionEndDate, inboundHeaderText: tmp4.inboundHeaderText, inboundBodyText: tmp4.inboundBodyText, inboundHelpCenterLink: tmp4.inboundHelpCenterLink, outboundTitle: tmp4.outboundTitle, outboundRedemptionModalBody: tmp4.outboundRedemptionModalBody, outboundTermsAndConditions: tmp4.outboundTermsAndConditions, outboundRedemptionPageLink: tmp4.outboundRedemptionPageLink, outboundRedemptionUrlFormat: tmp4.outboundRedemptionUrlFormat, flags } = global);
     if (flags == null) {
       flags = 0;
     }
-    tmp3.flags = flags;
+    tmp4.flags = flags;
     prop = global.inboundRestrictedCountries;
     if (prop == null) {
       prop = [];
     }
-    tmp3.inboundRestrictedCountries = prop;
+    tmp4.inboundRestrictedCountries = prop;
     prop1 = global.outboundRestrictedCountries;
     if (prop1 == null) {
       prop1 = [];
     }
-    tmp3.outboundRestrictedCountries = prop1;
+    tmp4.outboundRestrictedCountries = prop1;
     allowedCountries = global.allowedCountries;
     if (allowedCountries == null) {
       allowedCountries = [];
     }
-    tmp3.allowedCountries = allowedCountries;
+    tmp4.allowedCountries = allowedCountries;
     BLOCKLIST = global.countryListMode;
     if (BLOCKLIST == null) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
+      tmp5 = closure_0;
+      tmp6 = closure_1;
       BLOCKLIST = closure_0(closure_1[2]).CountryListMode.BLOCKLIST;
     }
-    tmp3.countryListMode = BLOCKLIST;
-    ({ promotionType: tmp3.promotionType, partnerId: tmp3.partnerId, marketingComponents: tmp3.marketingComponents, rewardSkuIds: tmp3.rewardSkuIds, bogoRewardEnabled } = global);
+    tmp4.countryListMode = BLOCKLIST;
+    ({ promotionType: tmp4.promotionType, partnerId: tmp4.partnerId, marketingComponents: tmp4.marketingComponents, rewardSkuIds: tmp4.rewardSkuIds, bogoRewardEnabled } = global);
     if (bogoRewardEnabled == null) {
       bogoRewardEnabled = false;
     }
-    tmp3.bogoRewardEnabled = bogoRewardEnabled;
+    tmp4.bogoRewardEnabled = bogoRewardEnabled;
     boostBogoMaxCredits = global.boostBogoMaxCredits;
     if (boostBogoMaxCredits == null) {
       boostBogoMaxCredits = null;
     }
-    tmp3.boostBogoMaxCredits = boostBogoMaxCredits;
-    tmp3.promotionKey = global.promotionKey;
-    return tmp3;
+    tmp4.boostBogoMaxCredits = boostBogoMaxCredits;
+    ({ promotionKey: tmp4.promotionKey, priority } = global);
+    if (priority == null) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      priority = closure_0(closure_1[2]).FALLBACK_PROMOTION_PRIORITY;
+    }
+    tmp4.priority = priority;
+    return tmp4;
   }
 }
 const prototype = PromotionRecord.prototype;
@@ -66,7 +72,11 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
       }
     }
   }
-  const obj = { id: id.id, trialId: id.trial_id, startDate: date, endDate: date1, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, boostBogoMaxCredits: null, promotionKey: null };
+  let FALLBACK_PROMOTION_PRIORITY = id.priority;
+  if (FALLBACK_PROMOTION_PRIORITY == null) {
+    FALLBACK_PROMOTION_PRIORITY = date(date1[2]).FALLBACK_PROMOTION_PRIORITY;
+  }
+  const obj = { id: id.id, trialId: id.trial_id, startDate: date, endDate: date1, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, boostBogoMaxCredits: null, promotionKey: null, priority: null };
   let date2 = null;
   if (null != id.outbound_redemption_end_date) {
     const _Date = Date;
@@ -132,7 +142,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (marketing_components == null) {
     marketing_components = [];
   }
-  obj.marketingComponents = marketing_components.map((item) => MarketingComponentRecord.createFromServer(item, { startDate: date, endDate: date1 }));
+  obj.marketingComponents = marketing_components.map((item) => MarketingComponentRecord.createFromServer(item, { startDate: date, endDate: date1, priority: FALLBACK_PROMOTION_PRIORITY }));
   const metadata2 = id.metadata;
   let reward_sku_ids;
   if (metadata2 != null) {
@@ -175,20 +185,21 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (boost_bogo != null) {
     enabled1 = boost_bogo.enabled;
   }
-  let tmp13 = null;
+  let tmp15 = null;
   if (true === enabled1) {
     let max_credits_per_user = boost_bogo.max_credits_per_user;
     if (max_credits_per_user == null) {
       max_credits_per_user = null;
     }
-    tmp13 = max_credits_per_user;
+    tmp15 = max_credits_per_user;
   }
-  obj.boostBogoMaxCredits = tmp13;
+  obj.boostBogoMaxCredits = tmp15;
   let str9 = id.promotion_key;
   if (str9 == null) {
     str9 = "";
   }
   obj.promotionKey = str9;
+  obj.priority = FALLBACK_PROMOTION_PRIORITY;
   return new PromotionRecord(obj);
 };
 Object.defineProperty(prototype, "isBogo", {

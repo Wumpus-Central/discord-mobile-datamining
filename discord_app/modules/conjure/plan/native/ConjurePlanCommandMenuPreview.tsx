@@ -1,19 +1,19 @@
-// === Module 12747: ConjurePlanCommandMenuPreview ===
+// === Module 12883: ConjurePlanCommandMenuPreview ===
 
-// Module 12747 (ConjurePlanCommandMenuPreview)
+// Module 12883 (ConjurePlanCommandMenuPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12748 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12884 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { sheet: { gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, row: null, muted: null, highlighted: null, label: null, appIcon: null };
 let obj3 = { gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent", backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT };
@@ -33,7 +33,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
   const tmp = closure_6();
   const obj = { style: tmp.sheet, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: null, children: null };
-  const items = [, ];
+  items = [, ];
   ({ row: arr[0], muted: arr[1] } = tmp);
   obj2.style = items;
   let tmp5 = null;

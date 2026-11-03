@@ -1,22 +1,22 @@
-// === Module 10729: useUserListData ===
+// === Module 10859: useUserListData ===
 
-// Module 10729 (useUserListData)
+// Module 10859 (useUserListData)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import GuildUtilsDefault from "GuildUtils" /* 6901 */;
-import UserSearchItemsDefault from "UserSearchItems" /* 7799 */;
-import UserSearchUtils from "UserSearchUtils" /* 7803 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9138 */;
+import GuildUtilsDefault from "GuildUtils" /* 7021 */;
+import UserSearchItemsDefault from "UserSearchItems" /* 7923 */;
+import UserSearchUtils from "UserSearchUtils" /* 7927 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9266 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7804 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
-import UserRecord from "UserRecord" /* 1397 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7928 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import UserRecord from "UserRecord" /* 1399 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -113,7 +113,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   }
   let id;
   ({ AffinitySuggestions, FriendRequests, FriendRequestsIncoming, FriendRequestsOutgoing, FriendRequestsSpam, FriendSuggestions, Friends, GuildMembers } = closure_16);
-  let items = data[AffinitySuggestions];
+  items = data[AffinitySuggestions];
   if (undefined === items) {
     items = [];
   }
@@ -247,7 +247,7 @@ class UserSearch {
     obj.userSearchContext = null;
     secondaryIndexMap = new closure_0(closure_2[10]).SecondaryIndexMap((arg0) => {
       ({ names, type } = arg0);
-      const items = [];
+      items = [];
       if (constants.PENDING_INCOMING === type) {
         items.push(closure_1_16.FriendRequests);
         const push = items.push;
@@ -419,7 +419,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   if (flag) {
     userSearchContext = UserSearchManagerDefault.getUserSearchContext((results) => {
       results = results.results;
-      let items;
+      items = undefined;
       if (items.currentQuery === results.query) {
         items = [];
         if (results.reduce((acc, id) => {
@@ -721,7 +721,7 @@ export default function useUserListData(query) {
   const tmp = withGameFriends(withFriendSuggestions.useState(0), 2);
   const first = tmp[0];
   closure_14 = tmp3;
-  const items = [tmp[1], withGameFriends];
+  items = [tmp[1], withGameFriends];
   const memo = withFriendSuggestions.useMemo(() => new UserSearch(() => closure_1_14(Date.now()), withGameFriends), items);
   const items1 = [first, memo, query];
   const memo1 = withFriendSuggestions.useMemo(() => memo.filter(query, first), items1);

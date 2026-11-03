@@ -1,6 +1,6 @@
-// === Module 17227: LayoutUtils ===
+// === Module 17370: LayoutUtils ===
 
-// Module 17227 (LayoutUtils)
+// Module 17370 (LayoutUtils)
 import noop from "module_19" /* 19 */;
 
 const jsxProd = fn(21);
@@ -21,7 +21,7 @@ export function SeparatedList(separator) {
       tmp3 = separator;
     }
     children[1] = tmp3;
-    return React2(framebus, { children });
+    return React2(duration, { children });
   });
   return closure_3(found, obj);
 }

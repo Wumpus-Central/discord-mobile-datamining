@@ -1,6 +1,6 @@
-// === Module 6997: ChangeEmailStore ===
+// === Module 7123: ChangeEmailStore ===
 
-// Module 6997 (ChangeEmailStore)
+// Module 7123 (ChangeEmailStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -27,7 +27,7 @@ export function setChangeEmailError(arg0, arg1) {
 }
 export function useChangeEmailError(arg0) {
   closure_0 = arg0;
-  const items = [
+  items = [
     obj((errors) => {
       errors = errors.errors;
       let tmp;

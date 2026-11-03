@@ -1,10 +1,10 @@
-// === Module 19729: GuildSettingsModalIntegrations ===
+// === Module 19879: GuildSettingsModalIntegrations ===
 
-// Module 19729 (GuildSettingsModalIntegrations)
+// Module 19879 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let items = [, ];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, screenContent: null, platformIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.screenContent = { paddingTop: nativeDefault.space.PX_16 };

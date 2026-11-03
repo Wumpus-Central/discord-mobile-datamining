@@ -1,7 +1,7 @@
-// === Module 6017: Dialog ===
+// === Module 6137: Dialog ===
 
-// Module 6017 (Dialog)
-import AccessibilityView from "AccessibilityView" /* 6018 */;
+// Module 6137 (Dialog)
+import AccessibilityView from "AccessibilityView" /* 6138 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ export function Dialog(dialogKey) {
   const merged = Object.assign(dialogKey, Object.assign({ dialogKey: 0, onDismiss: 0, zIndex: 0 }));
   const id = noop.useId();
   const obj = { style: null, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null };
-  const items = [StyleSheet.absoluteFill, { zIndex }];
+  items = [StyleSheet.absoluteFill, { zIndex }];
   obj.style = items;
   if (dialogKey == null) {
     dialogKey = id;

@@ -1,7 +1,7 @@
-// === Module 12646: useConjureTurnTraceId ===
+// === Module 12782: useConjureTurnTraceId ===
 
-// Module 12646 (useConjureTurnTraceId)
-import ConjureDebugStore from "ConjureDebugStore" /* 10857 */;
+// Module 12782 (useConjureTurnTraceId)
+import ConjureDebugStore from "ConjureDebugStore" /* 10987 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ export default function useConjureTurnTraceId(arg0, role) {
   }
   turn_id = tmp3;
   obj = require("useConjureDebugAccess");
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [arg0, tmp3];
   return require("initialize").useStateFromStores(items, () => {
     let findLastResult = null;

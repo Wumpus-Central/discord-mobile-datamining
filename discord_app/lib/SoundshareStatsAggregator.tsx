@@ -1,6 +1,6 @@
-// === Module 7888: SoundshareStatsAggregator ===
+// === Module 8012: SoundshareStatsAggregator ===
 
-// Module 7888 (SoundshareStatsAggregator)
+// Module 8012 (SoundshareStatsAggregator)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
@@ -49,7 +49,7 @@ prototype["restartForFragment"] = function restartForFragment() {
   const keys = Object.keys(this._report);
   const found = keys.filter((item) => item.endsWith("_count"));
   const merged = Object.assign(this._report, Object.fromEntries(found.map((item) => {
-    const items = [item, 0];
+    items = [item, 0];
     return items;
   })));
 };

@@ -1,13 +1,13 @@
-// === Module 18675: ConjureChannelChatToasts ===
+// === Module 18833: ConjureChannelChatToasts ===
 
-// Module 18675 (ConjureChannelChatToasts)
+// Module 18833 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Card from "Card" /* 6977 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18676 */;
+import UserUtils from "UserUtils" /* 5195 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Card from "Card" /* 7103 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function ChatToast(message) {
   const name = UserUtils.useName(message.author);
   const trimmed = message.content.replace(/\s+/g, " ").trim();
   if ("" !== trimmed) {
-    const items = [message, onOpenChat];
+    items = [message, onOpenChat];
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

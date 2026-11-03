@@ -1,13 +1,13 @@
-// === Module 14432: OrbCheckoutAmountTag ===
+// === Module 14563: OrbCheckoutAmountTag ===
 
-// Module 14432 (OrbCheckoutAmountTag)
+// Module 14563 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import OrbsIcon from "OrbsIcon" /* 9532 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import OrbsIcon from "OrbsIcon" /* 9660 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5014 */;
+import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -20,7 +20,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_5();
   const obj = { style: tmp.orbAmountTag, children: null };
-  const items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon }), ];
+  items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon }), ];
   if (null == orbAmount) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.pfChQr);

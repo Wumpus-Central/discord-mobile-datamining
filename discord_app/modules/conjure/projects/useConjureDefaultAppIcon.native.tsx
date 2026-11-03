@@ -1,7 +1,7 @@
-// === Module 11341: useConjureDefaultAppIcon ===
+// === Module 11478: useConjureDefaultAppIcon ===
 
-// Module 11341 (useConjureDefaultAppIcon)
-import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11342 */;
+// Module 11478 (useConjureDefaultAppIcon)
+import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11479 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ export default function useConjureDefaultAppIcon(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   token = require("useToken").useToken(require("native").colors.BACKGROUND_BASE_LOWER);
-  const items = [arg0, arg1, token];
+  items = [arg0, arg1, token];
   return noop.useMemo(() => {
     const conjureDefaultAppIcon = conjureDefaultAppIcon2.getConjureDefaultAppIcon(closure_0, closure_1);
     const obj2 = { character: conjureDefaultAppIcon.character };

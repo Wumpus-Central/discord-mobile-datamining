@@ -1,18 +1,18 @@
-// === Module 18278: ChannelBadge ===
+// === Module 18436: ChannelBadge ===
 
-// Module 18278 (ChannelBadge)
+// Module 18436 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import NumberUtils from "NumberUtils" /* 1895 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 13013 */;
-import NewBadgeDefault from "NewBadge" /* 13844 */;
+import NumberUtils from "NumberUtils" /* 2024 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import NewBadgeDefault from "NewBadge" /* 13975 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 18437 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2062 */;
+import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
@@ -21,7 +21,7 @@ export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = closure_6();
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {
     if (mentionCount > 0) {

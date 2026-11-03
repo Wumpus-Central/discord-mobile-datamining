@@ -1,12 +1,12 @@
-// === Module 14780: MediaModalOverlayFooterAction ===
+// === Module 14911: MediaModalOverlayFooterAction ===
 
-// Module 14780 (MediaModalOverlayFooterAction)
+// Module 14911 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14773 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -32,7 +32,7 @@ export function MediaModalOverlayFooterAction(arg0) {
       const obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
       isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
     }
-    const items = [isIOSResult, sliderElement, ];
+    items = [isIOSResult, sliderElement, ];
     let tmp12 = null;
     if (tmp2) {
       const obj2 = { syncer };

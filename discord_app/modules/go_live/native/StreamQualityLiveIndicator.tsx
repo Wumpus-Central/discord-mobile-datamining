@@ -1,12 +1,10 @@
-// === Module 11775: StreamQualityLiveIndicator ===
+// === Module 11912: StreamQualityLiveIndicator ===
 
-// Module 11775 (StreamQualityLiveIndicator)
+// Module 11912 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import timing from "timing" /* 5254 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: metroRequire, PremiumUpsellTypes: closure_7 } = PremiumConstants);
-const ResolutionTypes = fn(5768).ResolutionTypes;
+const ResolutionTypes = fn(5888).ResolutionTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" }, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
 let obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" };
 obj2.qualityTag = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };
@@ -28,7 +26,7 @@ let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius
 obj2.reducedQualityTagText = { color: nativeDefault.unsafe_rawColors.PRIMARY_300 };
 obj2.nitroWheel = { width: 20, marginLeft: -4 };
 let closure_11 = createStyles.createStyles(obj2);
-const __initData = { code: "function StreamQualityLiveIndicatorTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
+let closure_12 = { code: "(function StreamQualityLiveIndicatorTsx1(){let[withTiming,reveal,STANDARD_EASING]=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/native/StreamQualityLiveIndicator.tsx");
 
@@ -36,31 +34,36 @@ export default function StreamQualityLiveIndicator(arg0) {
   ({ participant, style } = arg0);
   _require = undefined;
   importDefault = undefined;
-  let reveal;
   let _location;
   let flag2;
   let tmp2 = closure_11();
-  reveal = _location.useContext(require("RevealProvider").RevealContext).reveal;
   _location = require("analytics").useAnalyticsContext().location;
   const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
-  _location.useRef(false);
+  const ref = analyticsLocations.useRef(false);
   let obj2 = require("analytics");
-  const fn = function f() {
-    let num = 0;
-    if (reveal) {
-      num = 1;
+  items = [closure_12, require("timing/timing").withTiming, analyticsLocations.useContext(require("RevealProvider").RevealContext).reveal, require("native").STANDARD_EASING];
+  const animatedStyle = require("module_1652").useAnimatedStyle((function StreamQualityLiveIndicatorTsx1Factory(items) {
+    [tmp, tmp2, tmp3, tmp4] = items;
+    class StreamQualityLiveIndicatorTsx1 {
+      constructor() {
+        num = 0;
+        tmp = closure_0;
+        if (closure_1) {
+          num = 1;
+        }
+        obj = { opacity: null };
+        obj1 = { easing: closure_2, duration: 250 };
+        obj.opacity = tmp(num, obj1);
+        return obj;
+      }
     }
-    const obj2 = { opacity: null };
-    const obj = timing;
-    obj2.opacity = obj.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 });
-    return obj2;
-  };
-  const obj3 = require("ReanimatedRexport");
-  fn.__closure = { withTiming: require("timing").withTiming, reveal, STANDARD_EASING: require("native").STANDARD_EASING };
-  fn.__workletHash = 14676679064575;
-  fn.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
-  const obj4 = { withTiming: require("timing").withTiming, reveal, STANDARD_EASING: require("native").STANDARD_EASING };
+    items = [tmp2, tmp3, tmp4];
+    StreamQualityLiveIndicatorTsx1.__closure = items;
+    StreamQualityLiveIndicatorTsx1.__workletHash = 10822735912166;
+    StreamQualityLiveIndicatorTsx1.__initData = tmp;
+    return StreamQualityLiveIndicatorTsx1;
+  })(items));
+  const obj3 = require("module_1652");
   const maxQuality = require("StreamQualityUtils").useMaxQuality(participant);
   try {
     const isPremiumFPSResult = tmp3(tmp4[14]).isPremiumFPS(maxQuality);
@@ -75,7 +78,7 @@ export default function StreamQualityLiveIndicator(arg0) {
         tmp21Result = flag2;
       }
       flag2 = tmp21Result;
-      const items = [analyticsLocations, tmp21Result, flag, flag2];
+      const items1 = [analyticsLocations, tmp21Result, flag, flag2];
       const effect = obj.useEffect(() => {
         const current = ref.current;
         let tmp2 = !current;
@@ -87,22 +90,21 @@ export default function StreamQualityLiveIndicator(arg0) {
           AnalyticsUtilsDefault.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj2);
           ref.current = true;
         }
-      }, items);
-      const items1 = [_location, analyticsLocations];
+      }, items1);
+      const items2 = [_location, analyticsLocations];
       const callback = obj.useCallback(() => {
         const obj = { analyticsLocation: _location, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_0_LEADING };
         openPremiumModalDefault(obj);
-      }, items1);
+      }, items2);
       const tmp3Result4 = tmp3(tmp4[14]);
-      const isPremiumResult = tmp5(tmp4[19]).isPremium(participant.user, flag2.TIER_1);
+      const isPremiumResult = tmp5(tmp4[19]).isPremium(participant.user, TIER_1.TIER_1);
       let tmp16 = !isPremiumResult;
       if (!isPremiumResult) {
         tmp16 = !tmp5(tmp4[19]).canStreamQuality(tmp5(tmp4[19]).StreamQuality.MID, participant.user);
         const tmp5Result5 = tmp5(tmp4[19]);
       }
-      const tmp14 = flag2;
       const tmp5Result = tmp5(tmp4[19]);
-      let isPremiumExactlyResult = tmp5(tmp4[19]).isPremiumExactly(participant.user, tmp14.TIER_1);
+      let isPremiumExactlyResult = tmp5(tmp4[19]).isPremiumExactly(participant.user, TIER_1.TIER_1);
       if (isPremiumExactlyResult) {
         let type;
         if (maxQuality != null) {
@@ -124,41 +126,41 @@ export default function StreamQualityLiveIndicator(arg0) {
             str2 = "none";
           }
         }
-        const obj6 = { pointerEvents: str2, style: null, children: null };
-        const items2 = [style, animatedStyle];
-        obj6.style = items2;
-        const obj7 = { accessibilityRole: "button", style: null, onPress: null, children: null };
-        const items3 = [tmp2.liveIndicator, style];
-        obj7.style = items3;
-        obj7.onPress = callback;
-        const obj8 = { style: tmp2.qualityTag, children: null };
+        const obj5 = { pointerEvents: str2, style: null, children: null };
+        const items3 = [style, animatedStyle];
+        obj5.style = items3;
+        const obj6 = { accessibilityRole: "button", style: null, onPress: null, children: null };
+        const items4 = [tmp2.liveIndicator, style];
+        obj6.style = items4;
+        obj6.onPress = callback;
+        const obj7 = { style: tmp2.qualityTag, children: null };
         if (tmp21Result) {
-          const obj9 = { source: tmp5(tmp4[22]), style: tmp2.nitroWheel, resizeMode: "contain" };
-          tmp21Result = closure_9(tmp5(tmp4[21]), obj9);
+          const obj8 = { source: tmp5(tmp4[22]), style: tmp2.nitroWheel, resizeMode: "contain" };
+          tmp21Result = closure_9(tmp5(tmp4[21]), obj8);
           const tmp5Result8 = tmp5(tmp4[21]);
         }
-        const items4 = [tmp21Result, ];
-        const items5 = [tmp2.qualityTagText, ];
+        const items5 = [tmp21Result, ];
+        const items6 = [tmp2.qualityTagText, ];
         let prop = null;
         if (tmp8) {
           prop = tmp2.reducedQualityTagText;
         }
-        const obj10 = { style: null, children: null };
-        items5[1] = prop;
-        obj10.style = items5;
+        const obj9 = { style: null, children: null };
+        items6[1] = prop;
+        obj9.style = items6;
         const resolutionText = tmp3(tmp4[14]).getResolutionText(maxQuality.maxResolution);
-        const tmp23 = analyticsLocations;
+        const tmp23 = ref;
         const tmp3Result5 = tmp3(tmp4[14]);
         const _HermesInternal = HermesInternal;
-        obj10.children = "" + resolutionText + " " + tmp3(tmp4[14]).getFPSText(maxQuality.maxFrameRate);
-        items4[1] = closure_9(tmp3(tmp4[13]).LegacyText, obj10);
-        obj8.children = items4;
-        const items6 = [closure_10(tmp23, obj8), ];
-        const obj11 = { style: tmp2.liveTag };
-        items6[1] = closure_9(tmp3(tmp4[13]).LiveTag, obj11);
-        obj7.children = items6;
-        obj6.children = closure_10(tmp3(tmp4[20]).PressableOpacity, obj7);
-        tmp21Result2 = closure_9(tmp5(tmp4[11]).View, obj6);
+        obj9.children = "" + resolutionText + " " + tmp3(tmp4[14]).getFPSText(maxQuality.maxFrameRate);
+        items5[1] = closure_9(tmp3(tmp4[13]).LegacyText, obj9);
+        obj7.children = items5;
+        const items7 = [closure_10(tmp23, obj7), ];
+        const obj10 = { style: tmp2.liveTag };
+        items7[1] = closure_9(tmp3(tmp4[13]).LiveTag, obj10);
+        obj6.children = items7;
+        obj5.children = closure_10(tmp3(tmp4[20]).PressableOpacity, obj6);
+        tmp21Result2 = closure_9(tmp5(tmp4[11]).View, obj5);
         const tmp3Result6 = tmp3(tmp4[14]);
       }
       return tmp21Result2;
@@ -171,5 +173,5 @@ export default function StreamQualityLiveIndicator(arg0) {
     flag = false;
     _require = tmp;
   }
-  const obj5 = require("StreamQualityUtils");
+  const obj4 = require("StreamQualityUtils");
 };

@@ -1,20 +1,20 @@
-// === Module 17946: ParentalControlsUseDataToCustomizeDiscordSetting ===
+// === Module 18089: ParentalControlsUseDataToCustomizeDiscordSetting ===
 
-// Module 17946 (ParentalControlsUseDataToCustomizeDiscordSetting)
+// Module 18089 (ParentalControlsUseDataToCustomizeDiscordSetting)
 import util from "util" /* 1113 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7717 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16721 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16864 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8432).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8556).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
   },
@@ -22,7 +22,7 @@ const toggle = SettingBuilders.createToggle({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (arg0) {
-        const items = [Consents.PERSONALIZATION];
+        items = [Consents.PERSONALIZATION];
         let items1 = items;
       } else {
         items1 = [];

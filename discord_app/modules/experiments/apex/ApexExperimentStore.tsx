@@ -3,7 +3,7 @@
 // Module 1246 (ApexExperimentStore)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1372 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import BaseApexExperimentStore from "BaseApexExperimentStore" /* 1247 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -61,7 +61,7 @@ class ApexExperimentStore extends tmp2 {
     tmp1 = new tmp(tmp2, obj, closure_0(closure_2[4]).DispatchBand.Early, new.target, tmp, tmp2, obj, new.target);
     closure_0 = tmp1;
     tmp1.track = () => {
-      const items = [...arguments];
+      items = [...arguments];
       const items1 = [...items];
       return AnalyticsUtilsDefault.track.apply(items1);
     };

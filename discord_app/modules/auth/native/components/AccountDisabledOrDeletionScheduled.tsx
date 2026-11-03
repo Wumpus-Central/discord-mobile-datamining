@@ -1,8 +1,8 @@
-// === Module 18020: AccountDisabledOrDeletionScheduled ===
+// === Module 18164: AccountDisabledOrDeletionScheduled ===
 
-// Module 18020 (AccountDisabledOrDeletionScheduled)
+// Module 18164 (AccountDisabledOrDeletionScheduled)
 import nativeDefault from "native" /* 575 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const LoginStates = fn(1072).LoginStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
   if (arg0) {
@@ -48,7 +48,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   let navigation;
   navigation = handleLogin(navigation[7]).useNavigation();
   let obj = handleLogin(navigation[7]);
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = handleLogin(navigation[8]).useStateFromStores(items, () => loginStatus.getLoginStatus());
   const ref = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
@@ -103,7 +103,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   const obj4 = { style: tmp9.container, children: null };
   const obj5 = { children: null };
   const obj2 = handleLogin(navigation[8]);
-  const items4 = [closure_7(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];
+  const items4 = [closure_7(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];
   obj5.children = items4;
   const items5 = [closure_8(ref, obj5), ];
   const obj9 = { children: null };

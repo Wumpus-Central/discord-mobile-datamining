@@ -1,9 +1,9 @@
-// === Module 13237: useExperimentAssignments ===
+// === Module 13373: useExperimentAssignments ===
 
-// Module 13237 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 5243 */;
+// Module 13373 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 5366 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5238 */;
+import ExperimentStore from "ExperimentStore" /* 5361 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 export function useExperimentAssignment(experiment, maybeExtractIdResult) {
   _require = experiment;
   dependencyMap = maybeExtractIdResult;
-  const items = [ExperimentStore, ApexExperimentStore];
+  items = [ExperimentStore, ApexExperimentStore];
   return require("initialize").useStateFromStores(items, () => {
     if (experiment.system === ExperimentManager.ExperimentSystem.LEGACY) {
       const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(experiment.name);
@@ -36,7 +36,7 @@ export function useExperimentAssignment(experiment, maybeExtractIdResult) {
 export function getExperimentServerAssignment(name, id) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [ExperimentStore, ApexExperimentStore];
+    items = [ExperimentStore, ApexExperimentStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -53,10 +53,10 @@ export function getExperimentServerAssignment(name, id) {
 export function useExperimentServerAssignment(experiment, maybeExtractIdResult) {
   _require = experiment;
   dependencyMap = maybeExtractIdResult;
-  let items = [ExperimentStore, ApexExperimentStore];
+  items = [ExperimentStore, ApexExperimentStore];
   return require("initialize").useStateFromStores(items, () => {
     let name = closure_0;
-    const items = [ExperimentStore, ApexExperimentStore];
+    items = [ExperimentStore, ApexExperimentStore];
     [obj, obj2] = items;
     if (null == closure_0) {
       return null;

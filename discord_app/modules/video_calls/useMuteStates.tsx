@@ -1,11 +1,11 @@
-// === Module 7526: useMuteStates ===
+// === Module 7650: useMuteStates ===
 
-// Module 7526 (useMuteStates)
-import ImpersonateStore from "ImpersonateStore" /* 4919 */;
+// Module 7650 (useMuteStates)
+import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 const require = globalThis.__r;
 
@@ -69,7 +69,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx
 
 export default function useMuteStates(channel) {
   _require = channel;
-  const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
+  items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
   return require("initialize").useStateFromStoresObject(items, () => getMuteStates({ channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore }));
 };
 export { getMuteStates };

@@ -1,6 +1,6 @@
-// === Module 1368: CommonSentryInitUtils ===
+// === Module 1370: CommonSentryInitUtils ===
 
-// Module 1368 (CommonSentryInitUtils)
+// Module 1370 (CommonSentryInitUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");

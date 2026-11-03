@@ -1,23 +1,23 @@
-// === Module 13806: ChatInputActionButtonGift ===
+// === Module 13937: ChatInputActionButtonGift ===
 
-// Module 13806 (ChatInputActionButtonGift)
+// Module 13937 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4847 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4848 */;
+import dismissible_content from "dismissible_content" /* 4974 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12809).ChatInputActionType;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ChatInputActionType = fn(12945).ChatInputActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
@@ -40,7 +40,7 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   let callback;
   ({ channel, style, styleButton } = arg0);
   const ref = stateFromStores2.useRef(null);
-  const items = [c6];
+  items = [c6];
   stateFromStores = require("initialize").useStateFromStores(items, () => _undefined.useReducedMotion);
   const tmp5 = closure_12();
   let obj2 = require("initialize");

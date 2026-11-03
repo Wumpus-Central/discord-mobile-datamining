@@ -1,21 +1,21 @@
-// === Module 8337: getChannelOpenedMetadata ===
+// === Module 8461: getChannelOpenedMetadata ===
 
-// Module 8337 (getChannelOpenedMetadata)
+// Module 8461 (getChannelOpenedMetadata)
 import DurationsDefault from "Durations" /* 1089 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8338 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 8339 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
-import UserStore from "UserStore" /* 1383 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8462 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 8463 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+({ ChannelTypes: closure_9, Permissions: closure_10 } = Constants);
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 
@@ -29,7 +29,7 @@ export function getChannelOpenedMetadata(selectedChannelId) {
       const obj2 = { channel_id: selectedChannelId };
       return obj2;
     } else {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         let flag = false;
         if (channel.isDM()) {

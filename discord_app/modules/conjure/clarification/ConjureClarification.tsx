@@ -1,29 +1,62 @@
-// === Module 12587: ConjureClarification ===
+// === Module 12723: ConjureClarification ===
 
-// Module 12587 (ConjureClarification)
+// Module 12723 (ConjureClarification)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
+function multiSelectAnswer(options, answeredOptionIdsResult, str, conjureOwnImages) {
+  const trimmed = str.trim();
+  options = options.options;
+  const found = options.filter((id) => answeredOptionIdsResult.includes(id.id));
+  const mapped = found.map((label) => label.label);
+  obj = { kind: "multi", optionIds: answeredOptionIdsResult };
+  if ("" === trimmed) {
+    let obj2 = {};
+  } else {
+    obj2 = { custom: trimmed };
+  }
+  const merged = Object.assign(obj2);
+  if (null == conjureOwnImages) {
+    let obj3 = {};
+  } else {
+    obj3 = { attachment: conjureOwnImages.attachment };
+  }
+  const merged1 = Object.assign(obj3);
+  items = [...mapped];
+  if (null == conjureOwnImages) {
+    let items1 = [];
+  } else {
+    items1 = [conjureOwnImages.text];
+  }
+  if ("" === trimmed) {
+    let items2 = [];
+  } else {
+    items2 = [trimmed];
+  }
+  HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, tmp6));
+  obj.text = items.join(", ");
+  return obj;
+}
 const ChannelTypes = fn(1072).ChannelTypes;
-let closure_6 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
-let closure_7 = { channel: "#", role: "@", user: "@", project: "", server: "" };
+let closure_7 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
+let closure_8 = { channel: "#", role: "@", user: "@", project: "", server: "" };
 let obj = { channel: null, role: null, user: null, project: null, server: null };
-let items = [_modDef3868["9+dfPT"], _modDef3868.pGSJqE];
+let items = [_modDef3995["9+dfPT"], _modDef3995.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3868["2VkCoD"], _modDef3868.c8YlX8];
+let items1 = [_modDef3995["2VkCoD"], _modDef3995.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3868.GZIAxl, _modDef3868["4bptbQ"]];
+let items2 = [_modDef3995.GZIAxl, _modDef3995["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3868.twlOb6, _modDef3868.twlOb6];
+const items3 = [_modDef3995.twlOb6, _modDef3995.twlOb6];
 obj.project = items3;
-const items4 = [_modDef3868.ZWXDeI, _modDef3868.ZWXDeI];
+const items4 = [_modDef3995.ZWXDeI, _modDef3995.ZWXDeI];
 obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -76,7 +109,7 @@ export function clarificationDraftPlaceholder(options) {
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3868;
+  const tmp4 = _modDef3995;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 }
 export function isClarificationComplete(questions, arg1) {
@@ -157,7 +190,7 @@ export function toggleClarificationOption(options, arr, id) {
   if (arr.includes(id)) {
     let found = arr.filter((item) => item !== closure_0);
   } else {
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(arr, 0)] = id;
     found = items;
   }
@@ -165,43 +198,71 @@ export function toggleClarificationOption(options, arr, id) {
   const found1 = options.filter((id) => found.includes(id.id));
   return found1.map((id) => id.id);
 }
-export function multiSelectAnswer(options, answeredOptionIdsResult, str, conjureOwnImages) {
-  const trimmed = str.trim();
-  options = options.options;
-  const found = options.filter((id) => answeredOptionIdsResult.includes(id.id));
-  const mapped = found.map((label) => label.label);
-  obj = { kind: "multi", optionIds: answeredOptionIdsResult };
-  if ("" === trimmed) {
-    let obj2 = {};
-  } else {
-    obj2 = { custom: trimmed };
+export { multiSelectAnswer };
+export function uploadNoteAnswer(upload, multi, str) {
+  str = multi;
+  let optionIds = multi;
+  let tmp = null;
+  let tmp2 = null;
+  if (true === upload.upload) {
+    tmp2 = null;
+    if (true !== upload.multi_select) {
+      tmp2 = null;
+      if (tmp != str) {
+        tmp2 = str;
+        if ("option" !== str.kind) {
+          tmp2 = str;
+          if ("image" !== str.kind) {
+            tmp2 = null;
+            if ("multi" === str.kind) {
+              if (tmp != str.attachment) {
+                const obj2 = { kind: "image", attachment: str.attachment, text: null };
+                const intl = util.intl;
+                obj2.text = intl.string(_modDef3995.wTsP5l);
+                tmp2 = obj2;
+              } else {
+                const options = upload.options;
+                const found = options.find((id) => {
+                  optionIds = optionIds.optionIds;
+                  return optionIds.includes(id.id);
+                });
+                let tmp4 = null;
+                if (tmp != found) {
+                  obj = { kind: "option", optionId: null, text: null };
+                  ({ id: obj.optionId, label: obj.text } = found);
+                  tmp4 = obj;
+                }
+                tmp2 = tmp4;
+              }
+            }
+          }
+        }
+      }
+    }
   }
-  const merged = Object.assign(obj2);
-  if (null == conjureOwnImages) {
-    let obj3 = {};
+  if (tmp == tmp2) {
+    return null;
+  } else if ("" === str.trim()) {
+    let kind;
+    if (str != tmp) {
+      kind = str.kind;
+    }
+    str = "multi";
+    tmp = null;
+    if ("multi" === kind) {
+      tmp = tmp2;
+    }
+  } else if ("option" === tmp2.kind) {
+    items = [tmp2.optionId];
+    let tmp13 = multiSelectAnswer(upload, items, str);
   } else {
-    obj3 = { attachment: conjureOwnImages.attachment };
+    tmp13 = multiSelectAnswer(upload, [], str, tmp2);
   }
-  const merged1 = Object.assign(obj3);
-  const items = [...mapped];
-  if (null == conjureOwnImages) {
-    let items1 = [];
-  } else {
-    items1 = [conjureOwnImages.text];
-  }
-  if ("" === trimmed) {
-    let items2 = [];
-  } else {
-    items2 = [trimmed];
-  }
-  HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, tmp6));
-  obj.text = items.join(", ");
-  return obj;
 }
 export function clarificationChannelType(arg0) {
   let tmp;
   if (null != arg0) {
-    tmp = closure_6[arg0];
+    tmp = closure_7[arg0];
   }
   return tmp;
 }
@@ -235,7 +296,7 @@ export function clarificationEntities(project, items, arg2, arg3) {
       }
       let tmp15;
       if (null != type) {
-        tmp15 = closure_6[type];
+        tmp15 = closure_7[type];
       }
       const obj2 = { kind: tmp5 };
       if (null == tmp15) {
@@ -269,7 +330,7 @@ export function clarificationEntities(project, items, arg2, arg3) {
 }
 export function clarificationChannelEntities(stateFromStores1, arg1) {
   closure_0 = stateFromStores1;
-  const items = [stateFromStores1.id];
+  items = [stateFromStores1.id];
   closure_129_0 = "channel";
   closure_129_1 = () => useChannelName.computeChannelName(closure_0, UserStore, RelationshipStore);
   closure_129_2 = arg1;
@@ -298,7 +359,7 @@ export function clarificationChannelEntities(stateFromStores1, arg1) {
       }
       let tmp15;
       if (null != type) {
-        tmp15 = closure_6[type];
+        tmp15 = closure_7[type];
       }
       const obj2 = { kind: tmp5 };
       if (null == tmp15) {
@@ -346,7 +407,7 @@ export function entityAnswer(input, c10, str, guildId) {
     obj3 = { custom: trimmed };
   }
   const merged1 = Object.assign(obj3);
-  const items = [
+  items = [
     ...c10.map((name) => {
       name = name.name;
       if (name.startsWith(dependencyMap[closure_0])) {
@@ -382,7 +443,7 @@ export function clarificationAnswerAttachments(questions, arg1) {
     if (null != dependencyMap[item.id]) {
       if ("" !== str.trim()) {
         if ("image" === tmp.kind) {
-          const items = [tmp.attachment];
+          items = [tmp.attachment];
           let items1 = items;
         } else {
           items1 = [];
@@ -399,7 +460,7 @@ export function clarificationAnswersPayload(questions, arg1) {
     if (null != dependencyMap[id.id]) {
       if ("" !== str9.trim()) {
         if ("option" === tmp.kind) {
-          const items = [tmp.optionId];
+          items = [tmp.optionId];
           let tmp2 = items;
         } else {
           tmp2 = "multi" === tmp.kind ? tmp.optionIds : [];
@@ -489,7 +550,7 @@ export function submitClarificationAnswers(projectId, clarification, arg2, first
         if (null != dependencyMap[id.id]) {
           if ("" !== str9.trim()) {
             if ("option" === tmp.kind) {
-              const items = [tmp.optionId];
+              items = [tmp.optionId];
               let tmp2 = items;
             } else {
               tmp2 = "multi" === tmp.kind ? tmp.optionIds : [];
@@ -556,7 +617,7 @@ export function submitClarificationAnswers(projectId, clarification, arg2, first
         if (null != dependencyMap[item.id]) {
           if ("" !== str.trim()) {
             if ("image" === tmp.kind) {
-              const items = [tmp.attachment];
+              items = [tmp.attachment];
               let items1 = items;
             } else {
               items1 = [];
@@ -568,17 +629,17 @@ export function submitClarificationAnswers(projectId, clarification, arg2, first
     });
   }
 }
-export function clarificationDraftAnswer(entityAnswerResult, multiSelectAnswerResult, str) {
+export function clarificationDraftAnswer(entityAnswerResult, uploadNoteAnswerResult, str) {
   if (null != entityAnswerResult) {
     let tmp6 = null;
     if ("" !== entityAnswerResult.text) {
       tmp6 = entityAnswerResult;
     }
     return tmp6;
-  } else if (null != multiSelectAnswerResult) {
+  } else if (null != uploadNoteAnswerResult) {
     let tmp5 = null;
-    if ("" !== multiSelectAnswerResult.text) {
-      tmp5 = multiSelectAnswerResult;
+    if ("" !== uploadNoteAnswerResult.text) {
+      tmp5 = uploadNoteAnswerResult;
     }
     return tmp5;
   } else {

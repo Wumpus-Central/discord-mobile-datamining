@@ -1,17 +1,17 @@
-// === Module 15195: JoinVoiceChannelButton ===
+// === Module 15336: JoinVoiceChannelButton ===
 
-// Module 15195 (JoinVoiceChannelButton)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1888 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11909 */;
+// Module 15336 (JoinVoiceChannelButton)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12046 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx");
@@ -20,7 +20,7 @@ export default function JoinVoiceChannelButton(channel) {
   channel = channel.channel;
   const tmp = closure_9();
   const tmp3 = useIsVoiceChannelFullDefault(channel);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => !PermissionStore.can(Permissions.CONNECT, channel));
   const intl = channel(1113).intl;
   let stringResult = intl.string(channel(1113).t.eIi3Om);
@@ -44,6 +44,6 @@ export default function JoinVoiceChannelButton(channel) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5634).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5754).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 };

@@ -1,19 +1,19 @@
-// === Module 14377: ForumTagFilterActionSheet ===
+// === Module 14508: ForumTagFilterActionSheet ===
 
-// Module 14377 (ForumTagFilterActionSheet)
+// Module 14508 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
-import EmojiDefault from "Emoji" /* 7300 */;
-import Tracking from "Tracking" /* 8204 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
+import EmojiDefault from "Emoji" /* 7420 */;
+import Tracking from "Tracking" /* 8328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiStore from "EmojiStore" /* 6916 */;
 
 require = fn;
 function EmojiIcon(arg0) {
   ({ emojiId: require, emojiName } = arg0);
   const tmp = closure_12();
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != require) {
@@ -36,12 +36,12 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-const ForumChannelStore = fn(13763);
+const ForumChannelStore = fn(13894);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
+({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
@@ -50,7 +50,7 @@ export default function ForumPostTagsActionSheet(channel) {
   channel = channel.channel;
   first = undefined;
   _slicedToArray = undefined;
-  let state = closure_7();
+  state = closure_7();
   [first, _slicedToArray] = noop.useState(new Set(closure_6(channel.id).tagFilter));
   let set = new Set(closure_6(channel.id).tagFilter);
   const unmountEffect = channel(first[8]).useUnmountEffect(() => {

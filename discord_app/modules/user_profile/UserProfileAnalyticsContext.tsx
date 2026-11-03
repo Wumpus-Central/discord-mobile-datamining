@@ -1,9 +1,9 @@
-// === Module 8761: UserProfileAnalyticsContext ===
+// === Module 8885: UserProfileAnalyticsContext ===
 
-// Module 8761 (UserProfileAnalyticsContext)
+// Module 8885 (UserProfileAnalyticsContext)
 import v1 from "v1" /* 1266 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export (children) => {
   const effect = obj.useEffect(() => {
     closure_6.current = obj2;
   });
-  const items = [isLoaded];
+  items = [isLoaded];
   const effect1 = obj.useEffect(() => {
     const timestamp = Date.now();
     let tmp3 = null == ref.current;
@@ -84,7 +84,7 @@ export function useCreateUserProfileAnalyticsContext(layout) {
   if (context != null) {
     sessionId = context.sessionId;
   }
-  const items = [sessionId, layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, flag];
+  items = [sessionId, layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, flag];
   return channelId.useMemo(() => {
     const obj = { sessionId: v1.v4(), sourceSessionId: null, layout: null, userId: null, guildId: null, channelId: null, messageId: null, roleId: null, showGuildProfile: null };
     let tmp = sourceSessionId;
@@ -104,9 +104,9 @@ export function useCreateUserProfileAnalyticsContext(layout) {
 }
 export function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
-  const items = [context, analyticsLocations];
+  items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {
     if (null != context) {
       const obj2 = { analyticsLocations };

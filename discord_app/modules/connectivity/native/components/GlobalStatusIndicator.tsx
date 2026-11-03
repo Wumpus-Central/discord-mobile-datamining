@@ -1,14 +1,14 @@
-// === Module 11863: GlobalStatusIndicator ===
+// === Module 12000: GlobalStatusIndicator ===
 
-// Module 11863 (GlobalStatusIndicator)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
+// Module 12000 (GlobalStatusIndicator)
+import _mod1652 from "module_1652" /* 1652 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8063 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5259 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import NativeMenuStore from "NativeMenuStore" /* 10204 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import ActionSheetStore from "ActionSheetStore" /* 5382 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import NativeMenuStore from "NativeMenuStore" /* 10334 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -23,7 +23,7 @@ function GlobalStatusIndicatorWrapper(onPress) {
   closure_6 = undefined;
   const tmp3 = require("useVoiceStateForRemoteSession")();
   importDefault = tmp3;
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const items1 = [tmp3];
   stateFromStores = onPress(stateFromStores[9]).useStateFromStores(items, () => {
     channelId = undefined;
@@ -108,7 +108,7 @@ export default function GlobalStatusIndicator(children) {
   const onPress = children.onPress;
   const globalStatusIndicatorState = children(onPress[15]).useGlobalStatusIndicatorState(flag);
   let obj = children(onPress[15]);
-  let items = [ActionSheetStore];
+  items = [ActionSheetStore];
   const stateFromStores = children(onPress[9]).useStateFromStores(items, () => null != content.getContent());
   let obj2 = children(onPress[9]);
   const items1 = [NativeMenuStore];
@@ -130,7 +130,7 @@ export default function GlobalStatusIndicator(children) {
       str = "no-hide-descendants";
     }
     const obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
-    const items = [absoluteFill.absoluteFill, ];
+    items = [absoluteFill.absoluteFill, ];
     let num = 0;
     if (!flag2) {
       num = height;
@@ -138,19 +138,19 @@ export default function GlobalStatusIndicator(children) {
     items[1] = { marginTop: num, overflow: "hidden" };
     obj.style = items;
     obj.children = children;
-    children = [closure_2_12(React4, obj), ];
+    children = [application_id(React4, obj), ];
     let tmp3Result = null;
     if (isVisible) {
       const obj2 = { onPress };
-      tmp3Result = closure_2_12(GlobalStatusIndicatorWrapper, obj2);
+      tmp3Result = application_id(GlobalStatusIndicatorWrapper, obj2);
     }
     children[1] = tmp3Result;
-    return closure_2_14(map1, { children });
+    return gesture(state, { children });
   }, items2);
 };
 export function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
-  const sharedValue = ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
-  const items = [globalStatusIndicatorState.height, sharedValue];
+  const sharedValue = _mod1652.useSharedValue(globalStatusIndicatorState.height);
+  items = [globalStatusIndicatorState.height, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);
   }, items);

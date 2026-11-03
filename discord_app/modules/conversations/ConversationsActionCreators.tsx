@@ -1,17 +1,17 @@
-// === Module 9849: ConversationsActionCreators ===
+// === Module 9980: ConversationsActionCreators ===
 
-// Module 9849 (ConversationsActionCreators)
+// Module 9980 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7928 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 7935 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9852 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 8052 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 8059 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9983 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7767 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9850 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9851 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9981 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9982 */;
 
 require = fn;
 let closure_10 = async function _fetchChannelConversations(arg0) {
@@ -142,7 +142,7 @@ let closure_12 = async function _fetchConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -247,7 +247,7 @@ let closure_13 = async function _hydrateSelectedConversation(arg0) {
       const obj5 = { includeReactions: true, includeMessageReferences: true, cacheType: closure_131_2 };
       closure_132_14(closure_131_0, closure_131_1, obj5);
       c6 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp14) {
       c6 = tmp;
       throw tmp14;
@@ -280,7 +280,7 @@ let closure_15 = async function _fetchConversationMessages() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (isFullyHydratedResult) {
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               if ("preview" === cacheType) {
@@ -323,7 +323,7 @@ let closure_15 = async function _fetchConversationMessages() {
               }
               if (null != hydratedMessages) {
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
             if ("preview" === cacheType) {
@@ -378,7 +378,7 @@ let closure_15 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(5655).FETCH_LIMIT;
+const FETCH_LIMIT = fn(5775).FETCH_LIMIT;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");

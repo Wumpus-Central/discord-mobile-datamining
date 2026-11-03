@@ -1,22 +1,22 @@
-// === Module 17812: UserSettingsDesignSystemBadge ===
+// === Module 17955: UserSettingsDesignSystemBadge ===
 
-// Module 17812 (UserSettingsDesignSystemBadge)
+// Module 17955 (UserSettingsDesignSystemBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import Card from "Card" /* 6977 */;
-import TableRadioGroup from "TableRadioGroup" /* 7058 */;
-import TextInput from "TextInput" /* 7082 */;
-import Badge from "Badge" /* 7306 */;
-import TableSwitchRow from "TableSwitchRow" /* 7369 */;
-import LockIcon from "LockIcon" /* 8667 */;
-import TagIcon from "TagIcon" /* 9566 */;
-import StarIcon3 from "StarIcon" /* 10063 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11470 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11472 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11474 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11476 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import Card from "Card" /* 7103 */;
+import TableRadioGroup from "TableRadioGroup" /* 7184 */;
+import TextInput from "TextInput" /* 7208 */;
+import Badge from "Badge" /* 7426 */;
+import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import LockIcon from "LockIcon" /* 8791 */;
+import TagIcon from "TagIcon" /* 9698 */;
+import StarIcon3 from "StarIcon" /* 10193 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11607 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11609 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11611 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11613 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ function Playground() {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const first3 = tmp7[0];
   const obj = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Playground" }), , , , , ];
+  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Playground" }), , , , , ];
   const obj2 = { style: closure_9().preview, children: null };
   let tmp15 = first1;
   if ("custom" === first1) {
@@ -84,7 +84,7 @@ function VariantMatrix() {
   let obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   items = [
-    closure_7(require("Text/Text").Heading, { variant: "text-lg/bold", children: "Variants" }),
+    closure_7(require("Text/Text").Heading, { variant: "text-lg/semibold", children: "Variants" }),
     closure_7(require("Text/Text").Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." }),
     closure_10.map((variant) => {
       const obj = { spacing: nativeDefault.space.PX_8, children: null };
@@ -141,7 +141,7 @@ function Truncation() {
   const tmp = closure_9();
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Long text" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Labels stay on one line and truncate with an ellipsis when space runs out. The icon never shrinks." }), , , ];
+  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Long text" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Labels stay on one line and truncate with an ellipsis when space runs out. The icon never shrinks." }), , , ];
   const obj3 = { style: tmp.narrow, children: null };
   const obj4 = { type: { text } };
   obj3.children = React5(Badge.Badge, obj4);
@@ -169,7 +169,7 @@ function LegacyComparison() {
   const tmp = closure_9();
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Legacy vs. Mana" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Legacy defaults on the left, the closest Mana Badge on the right. A bare type renders the grey default, so brand needs an explicit variant." }), , , , , , ];
+  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Legacy vs. Mana" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Legacy defaults on the left, the closest Mana Badge on the right. A bare type renders the grey default, so brand needs an explicit variant." }), , , , , , ];
   const obj3 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_12, children: null };
   const items1 = [React5(timestampProducer, { style: tmp.comparisonLabel }), React5(timestampProducer, { style: tmp.comparisonCell, children: React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: "Legacy" }) }), ];
   const obj4 = { style: tmp.comparisonLabel };
@@ -204,7 +204,7 @@ function ParentLayouts() {
   const tmp = closure_9();
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Parent layouts" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Legacy and Mana badges in the same parents. Both follow the parent's alignment; use parent/container layout to position Mana badges." }), , , , , ];
+  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Parent layouts" }), React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "Legacy and Mana badges in the same parents. Both follow the parent's alignment; use parent/container layout to position Mana badges." }), , , , , ];
   const obj3 = { title: "Row next to text (TextBadge, then Mana)", children: null };
   const obj4 = { style: tmp.inlineRow, children: null };
   const items1 = [React5(Text_Text.Text, { variant: "text-md/semibold", children: "Channel name" }), React5(native.TextBadge, { text: "New", style: tmp.inlineBadge })];
@@ -260,7 +260,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, preview: null, badgeRow: null, narrow: null, comparisonLabel: null, comparisonCell: null, layoutCase: null, inlineRow: null, trailingRow: null, inlineBadge: null, selfStart: null, selfStartParent: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.preview = { minHeight: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center" };

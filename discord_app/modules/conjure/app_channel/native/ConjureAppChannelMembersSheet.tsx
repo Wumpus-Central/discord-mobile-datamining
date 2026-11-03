@@ -1,16 +1,16 @@
-// === Module 14584: ConjureAppChannelMembersSheet ===
+// === Module 14715: ConjureAppChannelMembersSheet ===
 
-// Module 14584 (ConjureAppChannelMembersSheet)
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14583 */;
+// Module 14715 (ConjureAppChannelMembersSheet)
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14714 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
-const UsersFastListConstants = fn(10734);
+const UsersFastListConstants = fn(10864);
 ({ USERS_LIST_PADDING_BETWEEN_SECTIONS, USERS_LIST_SECTION_BOTTOM_PADDING } = UsersFastListConstants);
 const jsx = fn(21).jsx;
 const diff = USERS_LIST_PADDING_BETWEEN_SECTIONS - USERS_LIST_SECTION_BOTTOM_PADDING;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ body: { overflow: "hidden" }, list: { marginTop: -diff } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureAppChannelMembersSheet.tsx");
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/conjure/app_channel/native/Conj
 export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
   channelId = channelId.channelId;
   const tmp = closure_6();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let guild_id;
@@ -35,8 +35,8 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
   if (null != guild_id) {
     const obj2 = { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null };
     const obj3 = { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list };
-    obj2.children = jsx(guild_id(11621), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
-    tmp7 = jsx(channelId(5272).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
+    obj2.children = jsx(guild_id(11758), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
+    tmp7 = jsx(channelId(5395).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
   }
   return tmp7;
 });

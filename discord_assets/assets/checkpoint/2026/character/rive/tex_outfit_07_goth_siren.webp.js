@@ -1,6 +1,6 @@
-// === Module 13559: ? ===
+// === Module 13699: ? ===
 
-// Module 13559
+// Module 13699
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_07_goth_siren.webp.js");

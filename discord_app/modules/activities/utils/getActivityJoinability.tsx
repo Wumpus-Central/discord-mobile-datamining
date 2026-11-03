@@ -1,17 +1,17 @@
-// === Module 14890: getActivityJoinability ===
+// === Module 15021: getActivityJoinability ===
 
-// Module 14890 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import hasFlagDefault from "hasFlag" /* 7483 */;
-import getPartySize from "getPartySize" /* 11682 */;
-import isPartyFull from "isPartyFull" /* 11684 */;
-import getIsInParty from "getIsInParty" /* 11685 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11688 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11689 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11720 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11790 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14891 */;
+// Module 15021 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
+import hasFlagDefault from "hasFlag" /* 7607 */;
+import getPartySize from "getPartySize" /* 11819 */;
+import isPartyFull from "isPartyFull" /* 11821 */;
+import getIsInParty from "getIsInParty" /* 11822 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11825 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11826 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11857 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11927 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15022 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ export default function getActivityJoinability(arg0) {
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       let tmp15 = null != currentEmbeddedActivity;
       if (tmp15) {
-        let application_id;
+        application_id = undefined;
         if (activity != null) {
           application_id = activity.application_id;
         }
@@ -120,7 +120,7 @@ export default function getActivityJoinability(arg0) {
                 const type = channel1.type;
                 if (constants2.DM !== type) {
                   if (constants2.GROUP_DM !== type) {
-                    const guild = GuildStore.getGuild(channel1.getGuildId());
+                    guild = GuildStore.getGuild(channel1.getGuildId());
                     if (null != guild) {
                       const features = guild.features;
                       if (!features.has(constants3.COMMUNITY)) {

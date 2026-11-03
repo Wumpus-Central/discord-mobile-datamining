@@ -1,10 +1,10 @@
-// === Module 12099: conjurePublishAction ===
+// === Module 12235: conjurePublishAction ===
 
-// Module 12099 (conjurePublishAction)
+// Module 12235 (conjurePublishAction)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10960 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 12083 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11093 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 12219 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -28,7 +28,7 @@ export function resolveConjurePublishAction(input) {
   const obj3 = {};
   const merged1 = Object.assign(input);
   obj3.status = tmp;
-  const status2 = obj3.status;
+  ({ status: status2, usesAppChannels } = obj3);
   let tmp6 = "guild" !== obj3.installScope;
   ({ appChannelName, appChannelPending, botInGuild } = obj3);
   if (!tmp6) {
@@ -42,13 +42,13 @@ export function resolveConjurePublishAction(input) {
     let formatResult = null;
     if ("guild" === input.installScope) {
       formatResult = null;
-      if (false === tmp13) {
+      if (false === tmp12) {
         const intl = util.intl;
         if (str4 == null) {
           str4 = "";
         }
         const obj5 = { server: str4 };
-        formatResult = intl.format(_modDef3868.N4NkyR, obj5);
+        formatResult = intl.format(_modDef3995.N4NkyR, obj5);
       }
     }
     const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -76,36 +76,36 @@ export function resolveConjurePublishAction(input) {
       str6 = "consent_then_publish";
     }
     const obj8 = { intent: str6, isUpdate: "live_outdated" === tmp.publishState && !tmp9, upToDate: "live_current" === tmp.publishState && !tmp9, disabledReason: formatResult, confirmReason: null, missingSurface: null };
-    let tmp24 = null;
+    let tmp23 = null;
     if (null == formatResult) {
       let str8 = input.guildName;
       let formatResult1 = null;
       if ("guild" === input.installScope) {
         formatResult1 = null;
-        if (tmp26) {
+        if (tmp25) {
           formatResult1 = null;
-          if (false === tmp25) {
+          if (false === tmp24) {
             const intl2 = util.intl;
             if (str8 == null) {
               str8 = "";
             }
             const obj9 = { server: str8 };
-            formatResult1 = intl2.format(_modDef3868.eHYXFg, obj9);
+            formatResult1 = intl2.format(_modDef3995.eHYXFg, obj9);
           }
         }
       }
-      tmp24 = formatResult1;
+      tmp23 = formatResult1;
     }
-    obj8.confirmReason = tmp24;
-    let tmp29 = null;
+    obj8.confirmReason = tmp23;
+    let tmp28 = null;
     if (tmp9) {
       let str9 = "bot";
       if ("activity" === tmp.surface) {
         str9 = "channel";
       }
-      tmp29 = str9;
+      tmp28 = str9;
     }
-    obj8.missingSurface = tmp29;
+    obj8.missingSurface = tmp28;
     if (result) {
       let prop2;
       if (integrationStatus != null) {
@@ -115,7 +115,7 @@ export function resolveConjurePublishAction(input) {
         const obj10 = {};
         const merged2 = Object.assign(obj8);
         const intl4 = util.intl;
-        obj10.label = intl4.string(_modDef3868["tUeY/h"]);
+        obj10.label = intl4.string(_modDef3995["tUeY/h"]);
         obj10.action = "review_permissions";
         let obj11 = obj10;
       }
@@ -124,14 +124,16 @@ export function resolveConjurePublishAction(input) {
     obj11 = {};
     const merged3 = Object.assign(obj8);
     const intl3 = util.intl;
-    obj11.label = intl3.string(_modDef3868["120EFN"]);
+    obj11.label = intl3.string(_modDef3995["120EFN"]);
     obj11.action = "publish";
   } else if ("activity" === status2.surface) {
-    let tmp11 = null == appChannelName;
-    if (tmp11) {
-      tmp11 = true !== appChannelPending;
+    if (usesAppChannels) {
+      usesAppChannels = null == appChannelName;
     }
-    let tmp10 = tmp11;
+    if (usesAppChannels) {
+      usesAppChannels = true !== appChannelPending;
+    }
+    let tmp10 = usesAppChannels;
   } else {
     tmp10 = "bot" === status2.surface;
     if (tmp10) {

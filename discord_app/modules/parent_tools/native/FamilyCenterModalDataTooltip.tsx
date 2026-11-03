@@ -1,13 +1,13 @@
-// === Module 16795: FamilyCenterModalDataTooltip ===
+// === Module 16938: FamilyCenterModalDataTooltip ===
 
-// Module 16795 (FamilyCenterModalDataTooltip)
+// Module 16938 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2538 from "module_2538" /* 2538 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8370 */;
-import Modal from "Modal" /* 11482 */;
+import _modDef2667 from "module_2667" /* 2667 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
+import Modal from "Modal" /* 11619 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,9 +18,9 @@ function Row(arg0) {
   const tmp = closure_8();
   obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.iconContainer, children: hasOwnProperty(IconComponent, { style: tmp.icon }) };
-  const items = [hasOwnProperty(View, obj2), ];
+  items = [hasOwnProperty(View, obj2), ];
   const obj4 = { style: tmp.content, children: null };
-  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "text-sm/bold", color: "mobile-text-heading-primary", children: header }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: description })];
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: header }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: description })];
   obj4.children = items1;
   items[1] = timestampProducer(View, obj4);
   obj.children = items;
@@ -31,15 +31,15 @@ function FamilyCenterModalDataTooltipScreen() {
   const intl = require("util").intl;
   obj = require("useAgeSpecificText");
   const intl2 = require("util").intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2538.n6LOrh), intl2.string(_modDef2538.JNLpDZ));
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2667.n6LOrh), intl2.string(_modDef2667.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  const stringResult = intl.string(_modDef2538.n6LOrh);
+  const stringResult = intl.string(_modDef2667.n6LOrh);
   const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
   const obj3 = { children: null };
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
-  const items = [
-    closure_5(require("Text/Text").Text, { style: tmp.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText }),
+  items = [
+    closure_5(require("Text/Text").Text, { style: tmp.groupHeader, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: ageSpecificText }),
     sortedActivityTypeConfigs.map((item) => {
       [tmp, obj] = item;
       const obj2 = { IconComponent: obj[tmp], header: obj.tooltipHeader(), description: obj.tooltipDescription(closure_0) };
@@ -62,9 +62,9 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8643).ChatIcon, [USER_CALLED]: fn(13363).PhoneIcon, [USER_ADD]: fn(5715).FriendsIcon, [GUILD_ADD]: fn(15477).ServerGridIcon, [GUILD_INTERACTION]: fn(8645).ThreadIcon, [PURCHASES]: fn(8015).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5740).ClockIcon, [GIFTS]: fn(13365).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7716).TeenActionDisplayType);
-let createStyles = fn(5014);
+let obj = { [USER_INTERACTION]: fn(8767).ChatIcon, [USER_CALLED]: fn(13499).PhoneIcon, [USER_ADD]: fn(5835).FriendsIcon, [GUILD_ADD]: fn(15618).ServerGridIcon, [GUILD_INTERACTION]: fn(8769).ThreadIcon, [PURCHASES]: fn(8139).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5860).ClockIcon, [GIFTS]: fn(13501).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7840).TeenActionDisplayType);
+let createStyles = fn(5141);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };
 obj3.iconContainer = size;
@@ -73,7 +73,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

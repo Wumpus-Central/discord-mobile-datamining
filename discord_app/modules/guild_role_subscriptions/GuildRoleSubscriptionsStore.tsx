@@ -1,11 +1,11 @@
-// === Module 4939: GuildRoleSubscriptionsStore ===
+// === Module 5066: GuildRoleSubscriptionsStore ===
 
-// Module 4939 (GuildRoleSubscriptionsStore)
+// Module 5066 (GuildRoleSubscriptionsStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CreatorMonetizationReviewConstants from "CreatorMonetizationReviewConstants" /* 4940 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4941 */;
+import CreatorMonetizationReviewConstants from "CreatorMonetizationReviewConstants" /* 5067 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 5068 */;
 import size from "module_2" /* 2 */;
 
 function makeGroupListingIndexSubscriptionListingTag(arg0) {
@@ -41,12 +41,12 @@ function saveBenefitChannels(benefitChannels) {
 let closure_2 = CreatorMonetizationReviewConstants.DefaultCreatorMonetizationRestrictions;
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap((guild_id) => {
-  const items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
+  items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
   prop = guild_id.subscription_listings_ids;
   return items;
 }, (id) => id.id);
 const secondaryIndexMap1 = new SecondaryIndexMap.SecondaryIndexMap((application_id) => {
-  const items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
+  items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
   return items;
 }, (id) => id.id);
 let closure_7 = {};
@@ -88,7 +88,7 @@ prototype["getSubscriptionListing"] = function getSubscriptionListing(editStateI
 };
 prototype["getSubscriptionListingsForGuild"] = function getSubscriptionListingsForGuild(arg0) {
   const first = this.getSubscriptionGroupListingsForGuild(arg0)[0];
-  let application_id;
+  application_id = undefined;
   if (first != null) {
     application_id = first.application_id;
   }

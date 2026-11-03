@@ -1,9 +1,9 @@
-// === Module 18665: useSortedMemberApplications ===
+// === Module 18823: useSortedMemberApplications ===
 
-// Module 18665 (useSortedMemberApplications)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
+// Module 18823 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
 
 require = fn;
 const size = fn(2);
@@ -14,14 +14,14 @@ export function useSortedMemberApplications(guildId) {
   const applicationStatus = guildId.applicationStatus;
   const sortOrder = guildId.sortOrder;
   let stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   const items1 = [applicationStatus, guildId];
   stateFromStores = guildId(applicationStatus[2]).useStateFromStores(items, () => GuildJoinRequestStore.getRequests(guildId, applicationStatus), items1);
   const obj2 = { guildJoinRequests: null };
   const items2 = [sortOrder, stateFromStores];
   obj2.guildJoinRequests = sortOrder.useMemo(() => {
     if (sortOrder === MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(stateFromStores, 0);
       let reversed = items.reverse();
     } else {

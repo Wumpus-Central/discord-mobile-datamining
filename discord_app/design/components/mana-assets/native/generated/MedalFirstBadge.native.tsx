@@ -1,19 +1,19 @@
-// === Module 10785: MedalFirstBadge ===
+// === Module 10915: MedalFirstBadge ===
 
-// Module 10785 (MedalFirstBadge)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef10786 from "module_10786" /* 10786 */;
-import _modDef10787 from "module_10787" /* 10787 */;
-import _modDef10788 from "module_10788" /* 10788 */;
+// Module 10915 (MedalFirstBadge)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef10916 from "module_10916" /* 10916 */;
+import _modDef10917 from "module_10917" /* 10917 */;
+import _modDef10918 from "module_10918" /* 10918 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10786 }, 3: null };
-let obj2 = { uri: _modDef10786 };
-obj[2] = { uri: _modDef10787 };
-const obj3 = { uri: _modDef10787 };
-obj[3] = { uri: _modDef10788 };
+let obj = { 1: null, 2: { uri: _modDef10916 }, 3: null };
+let obj2 = { uri: _modDef10916 };
+obj[2] = { uri: _modDef10917 };
+const obj3 = { uri: _modDef10917 };
+obj[3] = { uri: _modDef10918 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 
@@ -25,7 +25,7 @@ export function MedalFirstBadge(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 24, intrinsicHeight: 24 };
     return assetHelpers.getAssetSizeStyle(size);

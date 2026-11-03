@@ -1,6 +1,6 @@
-// === Module 4840: UserSettingsOverridesStore ===
+// === Module 4967: UserSettingsOverridesStore ===
 
-// Module 4840 (UserSettingsOverridesStore)
+// Module 4967 (UserSettingsOverridesStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -47,7 +47,7 @@ prototype["initialize"] = function initialize(arg0) {
     obj = {};
   }
   closure_3 = obj;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, updateExistingSettings);
 };
 prototype["getState"] = function getState() {

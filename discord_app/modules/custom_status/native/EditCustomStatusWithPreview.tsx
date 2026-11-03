@@ -1,27 +1,27 @@
-// === Module 11398: EditCustomStatusWithPreview ===
+// === Module 11536: EditCustomStatusWithPreview ===
 
-// Module 11398 (EditCustomStatusWithPreview)
+// Module 11536 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import shared from "shared" /* 5021 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6021 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import Pressables from "Pressables" /* 6980 */;
-import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import _modDef7106 from "module_7106" /* 7106 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11402 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11404 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11407 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11409 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import shared from "shared" /* 5148 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6141 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import Pressables from "Pressables" /* 7106 */;
+import NavigatorHeader from "NavigatorHeader" /* 7124 */;
+import _modDef7232 from "module_7232" /* 7232 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11540 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11542 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11545 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function ClearInputButton(onPress) {
@@ -31,8 +31,8 @@ function ClearInputButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = map1(native.Icon, { source: _modDef7106, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
-  return map1(Pressables.PressableOpacity, obj);
+  obj.children = state(native.Icon, { source: _modDef7232, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  return state(Pressables.PressableOpacity, obj);
 }
 function EditCustomStatusWithPreview(navigation) {
   navigation = navigation.navigation;
@@ -60,7 +60,7 @@ function EditCustomStatusWithPreview(navigation) {
     _prompt = onClose(analyticsLocations[14])();
   }
   ref = stateFromStores.useRef(_prompt);
-  const items = [analyticsLocations];
+  items = [analyticsLocations];
   const effect = obj.useEffect(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: constants2.EDIT_CUSTOM_STATUS_MODAL_WITH_PREVIEW, location_stack: analyticsLocations });
   }, items);
@@ -120,7 +120,7 @@ function EditCustomStatusWithPreview(navigation) {
   const callback2 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(5021).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(5148).AccessibilityAnnouncer;
       const intl = navigation(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1113).t.YdUwBS));
     }, 300);
@@ -192,7 +192,7 @@ function EditCustomStatusWithPreview(navigation) {
     let tmp2 = null;
     if (null != stateFromStores) {
       const obj = { user: tmp, pendingStatusText, pendingStatusEmoji: first1, placeholderText };
-      tmp2 = map1(CustomStatusPreviewDefault, obj);
+      tmp2 = state(CustomStatusPreviewDefault, obj);
     }
     return tmp2;
   }, items11);
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11486, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11623, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);
@@ -306,13 +306,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11399).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11537).STATUS_MAX_LENGTH;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
-const EmojiIntention = fn(1386).EmojiIntention;
+({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, NOOP: closure_11, Fonts } = Constants);
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 }, statusInputRow: { flexDirection: "row", alignItems: "center" }, emoji: { marginRight: 8 }, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 let obj3 = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 obj2.status = { color: nativeDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
@@ -333,7 +333,7 @@ let result = size.fileFinishedImporting("modules/custom_status/native/EditCustom
 export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
-  const items = [analyticsLocations, _prompt];
+  items = [analyticsLocations, _prompt];
   const memo = noop.useMemo(() => {
     let obj = { root: null };
     const obj2 = { title: null, headerTitle: null, headerLeft: null, ignoreKeyboard: true, render: null };
@@ -343,7 +343,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1113).intl;
       obj.title = intl.string(analyticsLocations(1113).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9812).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9943).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -353,12 +353,12 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     return obj;
   }, items);
   let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: null, headerStyle: null };
-  analyticsLocations(1376);
+  analyticsLocations(1357);
   obj.headerStatusBarHeight = 12;
   let obj3;
   if (!tmp3Result.isAndroid()) {
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(7169).Navigator, obj);
+  return closure_13(analyticsLocations(7290).Navigator, obj);
 };

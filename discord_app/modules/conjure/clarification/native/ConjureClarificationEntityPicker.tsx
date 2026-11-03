@@ -1,21 +1,21 @@
-// === Module 12754: ConjureClarificationEntityPicker ===
+// === Module 12890: ConjureClarificationEntityPicker ===
 
-// Module 12754 (ConjureClarificationEntityPicker)
+// Module 12890 (ConjureClarificationEntityPicker)
 import util from "util" /* 1113 */;
-import _modDef3868 from "module_3868" /* 3868 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import TableRow from "TableRow" /* 6975 */;
-import TableRowGroup from "TableRowGroup" /* 7060 */;
-import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11200 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12154 */;
-import ConjureClarification from "ConjureClarification" /* 12587 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12598 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12755 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12756 */;
+import _modDef3995 from "module_3995" /* 3995 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
+import TableRow from "TableRow" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7186 */;
+import ConjureUtils from "ConjureUtils" /* 7543 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11337 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12290 */;
+import ConjureClarification from "ConjureClarification" /* 12723 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12734 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12891 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12892 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 function ServerPicker(onChange) {
@@ -62,7 +62,7 @@ function ServerPicker(onChange) {
           guilds: conjureEligibleGuilds,
           onPick(id) {
             const name = id;
-            const items = [id.id];
+            items = [id.id];
             return closure_1_2(require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1));
           }
         }),
@@ -104,7 +104,7 @@ function ProjectPicker(arg0) {
               title: question.question,
               projects,
               onPick(projectId) {
-                const items = [projectId.projectId];
+                items = [projectId.projectId];
                 return closure_1_2(ConjureClarification.clarificationEntities("project", items, () => projectId.name, closure_1_1));
               }
             }),
@@ -125,7 +125,7 @@ function ProjectPicker(arg0) {
               title: question.question,
               projects,
               onPick(projectId) {
-                const items = [projectId.projectId];
+                items = [projectId.projectId];
                 return closure_1_2(ConjureClarification.clarificationEntities("project", items, () => projectId.name, closure_1_1));
               }
             }),
@@ -149,7 +149,7 @@ function GuildEntityPicker(value) {
   require("useConjureSafetyAlertsChannelPick")({ projectId, guildId: conjureSettingsGuildId, question, value, disabled, onChange });
   const input = question.input;
   let obj = question(onChange[13]);
-  let items = [conjureSettingsGuildId];
+  items = [conjureSettingsGuildId];
   const items1 = [conjureSettingsGuildId, input];
   const stateFromStores = question(onChange[15]).useStateFromStores(items, () => {
     let channels = null;
@@ -207,10 +207,10 @@ function GuildEntityPicker(value) {
                                     let obj = { content: null, key: null, stackingBehavior: "stack" };
                                     obj4.selectedChannel = found;
                                     const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef3868["jtBVV+"]);
+                                    obj4.noChannelOptionLabel = intl.string(_modDef3995["jtBVV+"]);
                                     obj4.onSelect = function onSelect(stateFromStores1) {
                                       if (null == stateFromStores1) {
-                                        let items = [];
+                                        items = [];
                                       } else {
                                         items = question(onChange[7]).clarificationChannelEntities(stateFromStores1, closure_1_1);
                                         const obj = question(onChange[7]);

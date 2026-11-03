@@ -1,9 +1,9 @@
-// === Module 11452: BadgeArtImage ===
+// === Module 11589: BadgeArtImage ===
 
-// Module 11452 (BadgeArtImage)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import APNGPlayer2 from "APNGPlayer" /* 9504 */;
+// Module 11589 (BadgeArtImage)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import APNGPlayer2 from "APNGPlayer" /* 9632 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function BadgeArtImage(style) {
   }
   const size = { width, height };
   const obj = { style: null, "aria-hidden": true, children: null };
-  const items = [size, style.style];
+  items = [size, style.style];
   obj.style = items;
   const formatted = url.split(/[?#]/)[0].toLowerCase();
   if (formatted.endsWith(".svg")) {
@@ -44,9 +44,9 @@ export default function BadgeArtImage(style) {
         obj2.enableAnimation = animated;
         let tmpResult2 = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
       } else {
-        APNGPlayer(1375);
+        APNGPlayer(1377);
       }
-      APNGPlayer = APNGPlayer(9504).APNGPlayer;
+      APNGPlayer = APNGPlayer(9632).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

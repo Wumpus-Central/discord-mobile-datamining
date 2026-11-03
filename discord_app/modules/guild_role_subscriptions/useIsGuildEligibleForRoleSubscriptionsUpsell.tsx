@@ -1,10 +1,10 @@
-// === Module 18314: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 18459: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 18314 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 18459 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1072 */;
-import GuildRecord from "GuildRecord" /* 4881 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildRecord from "GuildRecord" /* 5008 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useI
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   require("initialize");
   [][0] = UserStore;

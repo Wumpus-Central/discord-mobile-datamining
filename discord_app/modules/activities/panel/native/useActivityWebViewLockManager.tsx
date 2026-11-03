@@ -1,7 +1,7 @@
-// === Module 19129: useActivityWebViewLockManager ===
+// === Module 19287: useActivityWebViewLockManager ===
 
-// Module 19129 (useActivityWebViewLockManager)
-import native from "native" /* 5080 */;
+// Module 19287 (useActivityWebViewLockManager)
+import native from "native" /* 5207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,7 +43,7 @@ export default function useActivityWebViewLockManager() {
         return tmp2;
       }), 2);
       let callback = tmp3;
-      const items = [id];
+      items = [id];
       const insertionEffect = getCanRender.useInsertionEffect(() => {
         set.add(closure_0);
         const obj2 = { callback, canRender: null };
@@ -91,7 +91,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(/* F138153 */ function() { ... });
+            closure_0 = resolved.then(/* F139104 */ function() { ... });
           }
         };
       }, items1);
@@ -105,7 +105,7 @@ export function useLockedWebView(transitionState) {
   let renderWebView;
   const shown = transitionState(hasActivity[2]).useSharedValue(false);
   renderWebView = renderWebView.useContext(transitionState.context).useActivityWebViewLock();
-  const items = [shown, transitionState, renderWebView, hasActivity];
+  items = [shown, transitionState, renderWebView, hasActivity];
   const effect = renderWebView.useEffect(() => {
     if (transitionState !== native.TransitionStates.YEETED) {
       if (renderWebView) {

@@ -1,11 +1,11 @@
-// === Module 4864: BasicChannelCacheStore ===
+// === Module 4991: BasicChannelCacheStore ===
 
-// Module 4864 (BasicChannelCacheStore)
+// Module 4991 (BasicChannelCacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4865 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4992 */;
 
 new LoggerDefault("BasicChannelCacheStore");
 const Store = initializeDefault.Store;
@@ -74,14 +74,14 @@ prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
   this.guilds = new Map();
   const map = new Map();
   this.channels = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let arr = tmp6[1];
     let guilds = self.guilds;
     let _Object = Object;
     let result = guilds.set(tmp6[0], Object.fromEntries(arr.map((id) => {
-      const items = [id.id, id];
+      items = [id.id, id];
       return items;
     })));
     for (const item10037 of arr) {

@@ -1,14 +1,14 @@
-// === Module 18132: HappeningNowCardUnifiedVC ===
+// === Module 18276: HappeningNowCardUnifiedVC ===
 
-// Module 18132 (HappeningNowCardUnifiedVC)
-import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 18123 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 18133 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 18145 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 18146 */;
+// Module 18276 (HappeningNowCardUnifiedVC)
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 18267 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 18277 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 18289 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 18290 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     panelVariant = false;
   }
   const channelId = voiceState.channelId;
-  const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
+  items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [channelId];
   const stateFromStoresObject = channelId(563).useStateFromStoresObject(items, () => {
     if (null == channelId) {
@@ -67,7 +67,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
 };
 export function useCallActivityData(channel_id) {
   _require = channel_id;
-  const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
+  items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [channel_id];
   return require("useStateFromStores").useStateFromStoresObject(items, () => {
     if (null == channelId) {

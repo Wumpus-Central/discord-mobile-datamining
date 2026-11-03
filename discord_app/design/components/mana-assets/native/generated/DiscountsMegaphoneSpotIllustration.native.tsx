@@ -1,19 +1,19 @@
-// === Module 15043: DiscountsMegaphoneSpotIllustration ===
+// === Module 15185: DiscountsMegaphoneSpotIllustration ===
 
-// Module 15043 (DiscountsMegaphoneSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef15044 from "module_15044" /* 15044 */;
-import _modDef15045 from "module_15045" /* 15045 */;
-import _modDef15046 from "module_15046" /* 15046 */;
+// Module 15185 (DiscountsMegaphoneSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7195 */;
+import _modDef15186 from "module_15186" /* 15186 */;
+import _modDef15187 from "module_15187" /* 15187 */;
+import _modDef15188 from "module_15188" /* 15188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15044 }, 3: null };
-let obj2 = { uri: _modDef15044 };
-obj[2] = { uri: _modDef15045 };
-const obj3 = { uri: _modDef15045 };
-obj[3] = { uri: _modDef15046 };
+let obj = { 1: null, 2: { uri: _modDef15186 }, 3: null };
+let obj2 = { uri: _modDef15186 };
+obj[2] = { uri: _modDef15187 };
+const obj3 = { uri: _modDef15187 };
+obj[3] = { uri: _modDef15188 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");
 
@@ -25,7 +25,7 @@ export function DiscountsMegaphoneSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

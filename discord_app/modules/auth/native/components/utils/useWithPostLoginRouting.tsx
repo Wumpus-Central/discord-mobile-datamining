@@ -1,7 +1,7 @@
-// === Module 7122: useWithPostLoginRouting ===
+// === Module 7248: useWithPostLoginRouting ===
 
-// Module 7122 (useWithPostLoginRouting)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
+// Module 7248 (useWithPostLoginRouting)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
   const tmp = loginStatus(noop.useState(), 2);
   const first = tmp[0];
   closure_3 = tmp[1];
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   loginStatus = require("initialize").useStateFromStoresObject(items, () => ({ loginStatus: authStore.getLoginStatus() })).loginStatus;
   const items1 = [arg0, handleLogin, loginStatus, first];
   const effect = noop.useEffect(() => {
@@ -76,7 +76,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

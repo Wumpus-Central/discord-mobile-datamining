@@ -1,6 +1,6 @@
-// === Module 15074: useCollectibleListLayout ===
+// === Module 15215: useCollectibleListLayout ===
 
-// Module 15074 (useCollectibleListLayout)
+// Module 15215 (useCollectibleListLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 const noop = fn(19);
@@ -13,7 +13,7 @@ export default function useCollectibleListLayout() {
   closure_0 = tmp[1];
   return {
     size: tmp[0],
-    onLayout: framebus((nativeEvent) => {
+    onLayout: duration((nativeEvent) => {
       closure_0((nativeEvent.nativeEvent.layout.width - 64) / 3);
     }, [])
   };

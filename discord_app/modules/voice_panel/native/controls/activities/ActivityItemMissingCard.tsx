@@ -1,8 +1,8 @@
-// === Module 19263: ActivityItemMissingCard ===
+// === Module 19421: ActivityItemMissingCard ===
 
-// Module 19263 (ActivityItemMissingCard)
+// Module 19421 (ActivityItemMissingCard)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 6960 */;
+import NativeViewDefault from "NativeView" /* 7086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ function ActivityItemEmptyCard(activity) {
   const targetDimensions = layoutManager.getTargetDimensions(undefined);
   ({ width, height } = targetDimensions);
   const analyticsLocations = application(channelId[7])().analyticsLocations;
-  const items = [activity.launchId, analyticsLocations, application, channelId];
+  items = [activity.launchId, analyticsLocations, application, channelId];
   const callback = noop.useCallback(analyticsLocations(function*() {
     if (v3 === 2) {
       v3 = 3;
@@ -29,7 +29,7 @@ function ActivityItemEmptyCard(activity) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ function ActivityItemEmptyCard(activity) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;
@@ -77,7 +77,7 @@ function ActivityItemEmptyCard(activity) {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.loadingActivity = size;

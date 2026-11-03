@@ -1,8 +1,8 @@
-// === Module 7853: getQuestLogger ===
+// === Module 7977: getQuestLogger ===
 
-// Module 7853 (getQuestLogger)
+// Module 7977 (getQuestLogger)
 import LoggerDefault from "Logger" /* 3 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 
 const NOOP = fn(1083).NOOP;
 const size = fn(2);

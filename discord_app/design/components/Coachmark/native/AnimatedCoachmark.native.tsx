@@ -1,11 +1,11 @@
-// === Module 9962: AnimatedCoachmark ===
+// === Module 10093: AnimatedCoachmark ===
 
-// Module 9962 (AnimatedCoachmark)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5028 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import TooltipConstants from "TooltipConstants" /* 9959 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9960 */;
-import Coachmark from "Coachmark" /* 9963 */;
+// Module 10093 (AnimatedCoachmark)
+import _modDef1652 from "module_1652" /* 1652 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
+import TooltipConstants from "TooltipConstants" /* 10090 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10091 */;
+import Coachmark from "Coachmark" /* 10094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {
   const obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
+  items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
   obj.style = items;
   let tmpResult = null;
   if (null != arg0) {
@@ -24,7 +24,7 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     tmpResult = jsx(Coachmark.CoachmarkContainer, {});
   }
   obj.children = tmpResult;
-  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
@@ -36,7 +36,7 @@ export function AnimatedCoachmark(visible) {
   [tmp3, c1] = noop.useState(visible);
   const tmp2 = _slicedToArray(noop.useState(visible), 2);
   const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);
-  const items = [visible];
+  items = [visible];
   const effect = noop.useEffect(() => {
     _undefined(visible);
   }, items);

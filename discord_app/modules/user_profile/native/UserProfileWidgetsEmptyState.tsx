@@ -1,17 +1,17 @@
-// === Module 16564: UserProfileWidgetsEmptyState ===
+// === Module 16707: UserProfileWidgetsEmptyState ===
 
-// Module 16564 (UserProfileWidgetsEmptyState)
+// Module 16707 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import components_Button_Button from "components/Button/Button" /* 5754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" }, textContainer: null, centeredText: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
@@ -27,7 +27,7 @@ export default function UserProfileWidgetsEmptyState() {
   const obj3 = { variant: "heading-md/semibold", color: "text-strong", style: tmp.centeredText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["oqalC+"]);
-  const items = [React3(Text_Text.Heading, obj3), ];
+  items = [React3(Text_Text.Heading, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.O9SQ1c);

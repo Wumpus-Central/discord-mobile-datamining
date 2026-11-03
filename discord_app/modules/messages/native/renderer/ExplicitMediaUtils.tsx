@@ -1,12 +1,12 @@
-// === Module 8709: ExplicitMediaUtils ===
+// === Module 8833: ExplicitMediaUtils ===
 
-// Module 8709 (ExplicitMediaUtils)
+// Module 8833 (ExplicitMediaUtils)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1396 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7469 */;
+import FlagUtils from "FlagUtils" /* 1398 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
 import size from "module_2" /* 2 */;
 
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;

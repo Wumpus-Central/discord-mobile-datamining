@@ -1,39 +1,43 @@
-// === Module 18733: MediaGridItem ===
+// === Module 18891: MediaGridItem ===
 
-// Module 18733 (MediaGridItem)
+// Module 18891 (MediaGridItem)
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5254 */;
-import timingPresets from "timingPresets" /* 5257 */;
+import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchMediaTypes = fn(9827).SearchMediaTypes;
+const SearchMediaTypes = fn(9958).SearchMediaTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
-let obj = { container: { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, avatar: { position: "absolute", top: 8, right: 8 }, card: { padding: 0 } };
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
+const obj = { container: { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, avatar: { position: "absolute", top: 8, right: 8 }, card: { padding: 0 } };
 let closure_11 = createStyles.createStyles(obj);
 let closure_12 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
-const __initData = { code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
-const obj3 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_13 = { code: "(function MediaGridItemTsx1(){let[withTiming,opacity,timingStandard]=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};})" };
+let obj3 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
 
 export default noop.memo(function MediaGridItem(media) {
   media = media.media;
+  _require = media;
   let size = media.size;
+  importDefault = size;
   const onPress = media.onPress;
+  dependencyMap = onPress;
   let ref;
   let sharedValue;
   ({ containerStyle, animate } = media);
   const tmp = closure_11();
   const scale = closure_6().scale;
   ref = ref.useRef(null);
-  const items = [ChannelStore];
-  const stateFromStores = media(onPress[7]).useStateFromStores(items, () => ChannelStore.getChannel(media.channelId));
+  items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(media.channelId));
   const items1 = [media.author, ];
   let guild_id;
   if (stateFromStores != null) {
@@ -50,86 +54,91 @@ export default noop.memo(function MediaGridItem(media) {
   }, items1);
   const items2 = [media, onPress];
   const callback = obj.useCallback(() => {
-    onPress({ media, originView: ref.current });
+    _undefined2({ media, originView: ref.current });
   }, items2);
-  const obj2 = media(onPress[7]);
-  sharedValue = media(onPress[8]).useSharedValue(animate ? constants.HIDDEN : constants.VISIBLE);
-  const tmp3Result = media(onPress[8]);
-  const fn = function f() {
-    const obj = { opacity: null };
-    value = sharedValue.get();
-    obj.opacity = timing.withTiming(value, timingPresets.timingStandard);
-    return obj;
-  };
-  const tmp3Result2 = media(onPress[8]);
-  fn.__closure = { withTiming: media(onPress[9]).withTiming, opacity: sharedValue, timingStandard: media(onPress[10]).timingStandard };
-  fn.__workletHash = 9644750191833;
-  fn.__initData = __initData;
-  const items3 = [sharedValue];
-  const animatedStyle = tmp3Result2.useAnimatedStyle(fn);
+  const obj2 = require("initialize");
+  sharedValue = require("module_1652").useSharedValue(animate ? constants.HIDDEN : constants.VISIBLE);
+  const tmp3Result = require("module_1652");
+  const items3 = [closure_13, require("timing/timing").withTiming, sharedValue, require("timingPresets").timingStandard];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp11, tmp12, tmp13, tmp14] = items3;
+  class MediaGridItemTsx1 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), closure_2) };
+      return obj;
+    }
+  }
+  const items4 = [tmp12, tmp13, tmp14];
+  MediaGridItemTsx1.__closure = items4;
+  MediaGridItemTsx1.__workletHash = 6522710444704;
+  MediaGridItemTsx1.__initData = tmp11;
+  const items5 = [sharedValue];
+  const animatedStyle = require("module_1652").useAnimatedStyle(MediaGridItemTsx1);
   const effect = obj.useEffect(() => {
     const result = sharedValue.set(constants.VISIBLE);
-  }, items3);
-  const items4 = [size];
+  }, items5);
+  const items6 = [size];
   const memo1 = obj.useMemo(() => {
-    size = { width: size, height: size };
+    const size = { width: _undefined, height: _undefined };
     return size;
-  }, items4);
-  const obj4 = { style: null, children: null };
-  const items5 = [tmp.container, containerStyle, memo1, animatedStyle];
-  obj4.style = items5;
-  const obj5 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
-  let tmp14Result = media.type === SearchMediaTypes.EMBED;
-  if (tmp14Result) {
-    const obj6 = { sources: null, embed: null, messageId: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ sources: obj8.sources, embed: obj8.embed, messageId: obj8.messageId, channelId: obj8.channelId } = media);
+  }, items6);
+  const obj3 = { style: null, children: null };
+  const items7 = [tmp.container, containerStyle, memo1, animatedStyle];
+  obj3.style = items7;
+  const obj4 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
+  let tmp18Result = media.type === SearchMediaTypes.EMBED;
+  if (tmp18Result) {
+    const obj5 = { sources: null, embed: null, messageId: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
+    ({ sources: obj7.sources, embed: obj7.embed, messageId: obj7.messageId, channelId: obj7.channelId } = media);
+    obj5.authorId = media.author.id;
+    obj5.scale = scale;
+    obj5.containerHeight = size;
+    obj5.containerWidth = size;
+    tmp18Result = closure_9(tmp3(18892).SearchEmbedMediaImage, obj5);
+  }
+  const items8 = [tmp18Result, , , , ];
+  let tmp18Result5 = media.type === SearchMediaTypes.ATTACHMENT;
+  if (tmp18Result5) {
+    const obj6 = { attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
+    ({ attachment: obj8.attachment, channelId: obj8.channelId } = media);
     obj6.authorId = media.author.id;
     obj6.scale = scale;
     obj6.containerHeight = size;
     obj6.containerWidth = size;
-    tmp14Result = closure_9(tmp3(tmp4[11]).SearchEmbedMediaImage, obj6);
+    tmp18Result5 = closure_9(tmp3(18892).SearchAttachmentMediaImage, obj6);
   }
-  const items6 = [tmp14Result, , , , ];
-  let tmp14Result5 = media.type === SearchMediaTypes.ATTACHMENT;
-  if (tmp14Result5) {
-    const obj7 = { attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ attachment: obj9.attachment, channelId: obj9.channelId } = media);
-    obj7.authorId = media.author.id;
-    obj7.scale = scale;
-    obj7.containerHeight = size;
-    obj7.containerWidth = size;
-    tmp14Result5 = closure_9(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj7);
-  }
-  items6[1] = tmp14Result5;
-  let tmp14Result6 = media.type === SearchMediaTypes.AUDIO;
-  if (tmp14Result6) {
+  items8[1] = tmp18Result5;
+  let tmp18Result6 = media.type === SearchMediaTypes.AUDIO;
+  if (tmp18Result6) {
     const size1 = { height: size, width: size };
-    tmp14Result6 = closure_9(tmp3(tmp4[11]).SearchSoundMediaImage, size1);
+    tmp18Result6 = closure_9(tmp3(18892).SearchSoundMediaImage, size1);
   }
-  items6[2] = tmp14Result6;
-  let tmp14Result7 = media.type === SearchMediaTypes.COMPONENT;
-  if (tmp14Result7) {
-    const obj10 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ unfurledMediaItem: obj11.unfurledMediaItem, sources: obj11.sources, channelId: obj11.channelId } = media);
-    obj10.authorId = media.author.id;
-    obj10.isBot = media.author.bot;
-    obj10.scale = scale;
-    obj10.containerHeight = size;
-    obj10.containerWidth = size;
-    tmp14Result7 = closure_9(tmp3(tmp4[11]).SearchComponentMediaImage, obj10);
+  items8[2] = tmp18Result6;
+  let tmp18Result7 = media.type === SearchMediaTypes.COMPONENT;
+  if (tmp18Result7) {
+    const obj9 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
+    ({ unfurledMediaItem: obj10.unfurledMediaItem, sources: obj10.sources, channelId: obj10.channelId } = media);
+    obj9.authorId = media.author.id;
+    obj9.isBot = media.author.bot;
+    obj9.scale = scale;
+    obj9.containerHeight = size;
+    obj9.containerWidth = size;
+    tmp18Result7 = closure_9(tmp3(18892).SearchComponentMediaImage, obj9);
   }
-  items6[3] = tmp14Result7;
-  let tmp14Result8 = null != memo;
-  if (tmp14Result8) {
-    const obj12 = { style: tmp.avatar, children: null };
-    const obj13 = { shadow: "low", style: tmp.card, children: null };
-    const obj14 = { source: memo, size: tmp3(tmp4[13]).AvatarSizes.XSMALL, avatarDecoration: media.author.avatarDecoration };
-    obj13.children = closure_9(tmp3(tmp4[13]).Avatar, obj14);
-    obj12.children = closure_9(tmp3(tmp4[12]).Card, obj13);
-    tmp14Result8 = closure_9(stateFromStores, obj12);
+  items8[3] = tmp18Result7;
+  let tmp18Result8 = null != memo;
+  if (tmp18Result8) {
+    const obj11 = { style: tmp.avatar, children: null };
+    const obj12 = { shadow: "low", style: tmp.card, children: null };
+    const obj13 = { source: memo, size: tmp3(1187).AvatarSizes.XSMALL, avatarDecoration: media.author.avatarDecoration };
+    obj12.children = closure_9(tmp3(1187).Avatar, obj13);
+    obj11.children = closure_9(tmp3(7103).Card, obj12);
+    tmp18Result8 = closure_9(stateFromStores, obj11);
   }
-  items6[4] = tmp14Result8;
-  obj5.children = items6;
-  obj4.children = closure_10(sharedValue, obj5);
-  return closure_9(size(onPress[8]).View, obj4);
+  items8[4] = tmp18Result8;
+  obj4.children = items8;
+  obj3.children = closure_10(sharedValue, obj4);
+  return closure_9(_modDef1652.View, obj3);
 });

@@ -1,18 +1,18 @@
-// === Module 16601: SettingsSearchEmptyState ===
+// === Module 16744: SettingsSearchEmptyState ===
 
-// Module 16601 (SettingsSearchEmptyState)
+// Module 16744 (SettingsSearchEmptyState)
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Stack_Stack from "Stack/Stack" /* 6027 */;
-import NoResultsAlt from "NoResultsAlt" /* 9067 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Stack_Stack from "Stack/Stack" /* 6147 */;
+import NoResultsAlt from "NoResultsAlt" /* 9195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
@@ -25,7 +25,7 @@ export default noop.memo(function SettingsSearchEmptyState() {
     AccessibilityAnnouncer.announce(intl.string(util.t.zihbmv), "polite");
   }, []);
   const obj = { style: tmp.container, children: null };
-  const items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" }), ];
+  items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" }), ];
   const obj2 = { style: tmp.textContainer, align: "center", justify: "center", children: null };
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;

@@ -1,12 +1,12 @@
-// === Module 9625: PromotionsHooks ===
+// === Module 9757: PromotionsHooks ===
 
-// Module 9625 (PromotionsHooks)
+// Module 9757 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
-import PromotionUtils from "PromotionUtils" /* 9667 */;
-import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9668 */;
+import PromotionUtils from "PromotionUtils" /* 9799 */;
+import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9800 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1383 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import UserStore from "UserStore" /* 1385 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
     flag = false;
   }
   let stateFromStores;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStoresArray = flag(stateFromStores[4]).useStateFromStoresArray(items, () => PromotionsStore.outboundPromotions);
   const obj2 = flag(stateFromStores[4]);
   const items1 = [PromotionsStore];
@@ -59,13 +59,13 @@ function useEligibleActiveOutboundPromotions(arg0) {
     });
   }, items3);
 }
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 
 export { useEligibleActiveOutboundPromotions };
 export function useOutboundPromotions() {
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   stateFromStores = stateFromStores(stateFromStores2[4]).useStateFromStores(items, () => PromotionsStore.lastFetchedActivePromotions);
   let obj = stateFromStores(stateFromStores2[4]);
   const items1 = [UserStore];
@@ -140,7 +140,7 @@ export function useOutboundPromotions() {
   return { promotionsLoaded, activeOutboundPromotions, claimedEndedOutboundPromotions, claimedOutboundPromotionCodeMap };
 }
 export function useUnseenOutboundPromotions() {
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => PromotionsStore.lastSeenOutboundPromotionStartDate);
   const tmp2 = useEligibleActiveOutboundPromotions();
   closure_1 = tmp2;
@@ -160,13 +160,13 @@ export function useUnseenOutboundPromotions() {
 }
 export function useIsInPromotion(arg0) {
   _require = arg0;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   return require("initialize").useStateFromStores(items, () => PromotionsStore.hasPromotion(closure_0));
 }
 export function useHasActiveBogoPromotion() {
   const effect = noop.useEffect(() => {
     const result = require("PromotionsActionCreators").maybeFetchActivePromotions();
   }, []);
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   return initialize.useStateFromStores(items, () => PromotionsStore.hasActiveBogoRewardPromotion());
 }

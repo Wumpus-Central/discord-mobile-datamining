@@ -1,7 +1,7 @@
-// === Module 11719: useIsActivitiesAvailableInShelf ===
+// === Module 11856: useIsActivitiesAvailableInShelf ===
 
-// Module 11719 (useIsActivitiesAvailableInShelf)
-import fetchShelf from "fetchShelf" /* 11722 */;
+// Module 11856 (useIsActivitiesAvailableInShelf)
+import fetchShelf from "fetchShelf" /* 11859 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
     tmp3 = tmp2;
   }
   dependencyMap = tmp3;
-  const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
+  items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
   const effect = noop.useEffect(() => {
     let tmp = closure_2;
     if (closure_2) {

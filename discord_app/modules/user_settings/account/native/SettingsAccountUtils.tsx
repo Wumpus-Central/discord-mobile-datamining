@@ -1,16 +1,16 @@
-// === Module 16583: SettingsAccountUtils ===
+// === Module 16726: SettingsAccountUtils ===
 
-// Module 16583 (SettingsAccountUtils)
+// Module 16726 (SettingsAccountUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export function useIs2FAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -24,11 +24,11 @@ export function useIs2FAEnabled() {
   });
 }
 export function useIsTOTPEnabled() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
 }
 export function useIsUserVerified() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

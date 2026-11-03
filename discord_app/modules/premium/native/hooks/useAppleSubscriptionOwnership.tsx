@@ -1,11 +1,11 @@
-// === Module 15273: useAppleSubscriptionOwnership ===
+// === Module 15414: useAppleSubscriptionOwnership ===
 
-// Module 15273 (useAppleSubscriptionOwnership)
+// Module 15414 (useAppleSubscriptionOwnership)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplePurchasesStore from "ApplePurchasesStore" /* 15274 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
-import IAPStore from "IAPStore" /* 7597 */;
+import ApplePurchasesStore from "ApplePurchasesStore" /* 15415 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
+import IAPStore from "IAPStore" /* 7721 */;
 
 const require = fn;
 const AppStates = fn(1072).AppStates;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useAppleSubscriptionOwnership.tsx");
 
 export function useAppleSubscriptionOwnership(subscription) {
-  const items = [IAPStore];
+  items = [IAPStore];
   const stateFromStores = stateFromStores1(prop[6]).useStateFromStores(items, () => ready.isReady());
   const obj = stateFromStores1(prop[6]);
   const items1 = [state];

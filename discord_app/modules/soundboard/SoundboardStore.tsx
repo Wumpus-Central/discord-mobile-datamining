@@ -1,19 +1,19 @@
-// === Module 6058: SoundboardStore ===
+// === Module 6178: SoundboardStore ===
 
-// Module 6058 (SoundboardStore)
+// Module 6178 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef2042 from "module_2042" /* 2042 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import FrecencyDefault from "Frecency" /* 5780 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5923 */;
+import _modDef2171 from "module_2171" /* 2171 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import FrecencyDefault from "Frecency" /* 5900 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import UserStore from "UserStore" /* 1383 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6059 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import UserStore from "UserStore" /* 1385 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6179 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function handleSoundCreateOrUpdate(sound) {
     if (null != findIndexResult) {
       if (-1 !== findIndexResult) {
         value[findIndexResult] = sound;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(value, 0);
         const result = map.set(sound.guildId, items);
       }
@@ -73,7 +73,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(6060);
+const SoundboardConstants = fn(6180);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
@@ -113,7 +113,7 @@ let closure_22 = new FrecencyDefault({
       }
       return num2;
     }
-    obj = _modDef2042();
+    obj = _modDef2171();
   },
   lookupKey(arg0) {
     return arg0;
@@ -169,7 +169,7 @@ prototype["getSoundsForGuild"] = function getSoundsForGuild(arg0) {
 };
 prototype["getSound"] = function getSound(arg0, arg1) {
   closure_0 = arg1;
-  let items = map.get(arg0);
+  items = map.get(arg0);
   if (items == null) {
     items = [];
   }
@@ -301,7 +301,7 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
     }
     if (!tmp2) {
       value.splice(findIndexResult, 1);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(value, 0);
       const result = map.set(guildId, items);
     }
@@ -456,8 +456,8 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef2042();
-    obj.topSoundsTTL = _modDef2042().add(1, "days").valueOf();
+    const obj2 = _modDef2171();
+    obj.topSoundsTTL = _modDef2171().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   }
 });

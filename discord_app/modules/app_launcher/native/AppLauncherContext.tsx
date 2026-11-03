@@ -1,9 +1,9 @@
-// === Module 11501: AppLauncherContext ===
+// === Module 11638: AppLauncherContext ===
 
-// Module 11501 (AppLauncherContext)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11502 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11503 */;
+// Module 11638 (AppLauncherContext)
+import _mod1652 from "module_1652" /* 1652 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,9 +54,9 @@ export function useRequiredAppLauncherContext() {
 export function useAppLauncherContext() {
   noop.useRef(obj.DISMISSED);
   const bottomSheetExpandReasonRef = noop.useRef(undefined);
-  obj = ReanimatedRexport;
+  obj = _mod1652;
   const sharedValue = obj.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const sharedValue1 = _mod1652.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;
@@ -83,7 +83,7 @@ export function useAppLauncherContext() {
       }
     }
   });
-  const items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
+  items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
   const memo = noop.useMemo(() => ({ keyboardCloseReasonRef, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef, chatInputRef: ref, width: defaultAppLauncherWidth, entrypoint: TEXT, onActivityItemSelected: "Boolean" }), items);
   context = noop.useContext(context);
   if (context == null) {

@@ -1,15 +1,15 @@
-// === Module 14797: MediaModalSpoilerOverlay ===
+// === Module 14928: MediaModalSpoilerOverlay ===
 
-// Module 14797 (MediaModalSpoilerOverlay)
+// Module 14928 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils2 from "PlatformUtils" /* 1375 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import useToken from "useToken" /* 5596 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14774 */;
+import PlatformUtils2 from "PlatformUtils" /* 1377 */;
+import _modDef1652 from "module_1652" /* 1652 */;
+import useToken from "useToken" /* 5719 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14905 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -41,7 +41,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     return null;
   } else {
     const obj3 = { style: null, children: null };
-    const items = [style, absoluteFill.absoluteFill, tmp6];
+    items = [style, absoluteFill.absoluteFill, tmp6];
     obj3.style = items;
     if (source.obscure) {
       let str = "dark";
@@ -76,7 +76,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    React5(ReanimatedRexportDefault.View, obj3);
+    React5(_modDef1652.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

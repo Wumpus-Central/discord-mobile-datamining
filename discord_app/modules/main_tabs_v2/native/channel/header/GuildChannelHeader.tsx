@@ -1,23 +1,23 @@
-// === Module 14581: GuildChannelHeader ===
+// === Module 14712: GuildChannelHeader ===
 
-// Module 14581 (GuildChannelHeader)
+// Module 14712 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import useChannelName from "useChannelName" /* 5652 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import ChannelHeader from "ChannelHeader" /* 14572 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14583 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import useChannelName from "useChannelName" /* 5772 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+import ChannelHeader from "ChannelHeader" /* 14703 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14714 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14582 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7446 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import UserStore from "UserStore" /* 1383 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14713 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7570 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function GuildChannelMemberCount(channel) {
@@ -26,9 +26,9 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5596).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5596);
-  const items = [ChannelMemberStore, ChannelMemberCountStore];
+  const token = channel(5719).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5719);
+  items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
     let flag2 = false;
@@ -69,8 +69,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11337);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7096).ICON_SIZE[token]);
+    const tmpResult = tmp(11474);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7222).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -103,10 +103,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   _slicedToArray = undefined;
-  const items = [guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7569).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  items = [guild(4974).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = _slicedToArray(guild(7693).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(4974).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
@@ -132,15 +132,15 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7569);
-  const coachmark = guild(9954).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7693);
+  const coachmark = guild(10085).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_15, HelpdeskArticles: closure_16, StatusTypes: closure_17 } = Constants);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const size = fn(2);
@@ -154,7 +154,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   let stateFromStores;
   let isConjureChannelCandidate;
   const ref = stateFromStores.useRef(null);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(guildId[17]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = stateFromStores;
   const obj2 = channelId(guildId[17]);

@@ -1,16 +1,16 @@
-// === Module 14079: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 14210: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 14079 (useGuildPowerupNewPerkMarketingVersion)
-import Powerups from "Powerups" /* 5233 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9077 */;
+// Module 14210 (useGuildPowerupNewPerkMarketingVersion)
+import Powerups from "Powerups" /* 5356 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9205 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);
@@ -23,9 +23,9 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId, stateFro
   const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
   let obj = require("GameServerExperiment");
   let tmp = _require;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

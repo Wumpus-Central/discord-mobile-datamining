@@ -1,6 +1,6 @@
-// === Module 5863: RTCRegionStore ===
+// === Module 5983: RTCRegionStore ===
 
-// Module 5863 (RTCRegionStore)
+// Module 5983 (RTCRegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -70,7 +70,7 @@ RTCRegionStore.persistKey = "RTCRegionStore";
 let items = [
   (preferredRegion) => {
     if (preferredRegion.preferredRegion) {
-      const items = [preferredRegion.preferredRegion];
+      items = [preferredRegion.preferredRegion];
       preferredRegion.preferredRegions = items;
     } else {
       preferredRegion.preferredRegions = null;

@@ -1,25 +1,26 @@
-// === Module 14783: MediaMessagePreview ===
+// === Module 14914: MediaMessagePreview ===
 
-// Module 14783 (MediaMessagePreview)
+// Module 14914 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import RowGeneratorDefault from "RowGenerator" /* 8377 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8405 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 10121 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10187 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14785 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import RowGeneratorDefault from "RowGenerator" /* 8501 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8529 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10025 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 10251 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10317 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14916 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7458 */;
-import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import MessageStore from "MessageStore" /* 6061 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8930 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
+import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import MessageStore from "MessageStore" /* 6181 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 9058 */;
 
 require = fn;
 function MeasureMessage(message) {
@@ -31,7 +32,7 @@ function MeasureMessage(message) {
   noop = tmp;
   const result = 0.5 * message(onMeasureTruncated[13]).useMediaViewerDimensions().height;
   c5 = result;
-  const items = [disableReactionCreates, result, message, onMeasureTruncated, onMeasure, tmp.dummyLayout];
+  items = [disableReactionCreates, result, message, onMeasureTruncated, onMeasure, tmp.dummyLayout];
   const memo = noop.useMemo(() => {
     const obj = {
       full: null,
@@ -97,33 +98,48 @@ function MeasureMessage(message) {
   return closure_15(closure_14, obj2);
 }
 function MeasureMessageAfterEntrance(entranceAnimationDriver) {
-  entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
-  let tmp = null;
   const merged = Object.assign(entranceAnimationDriver, Object.assign({ entranceAnimationDriver: 0 }));
-  const tmp3 = _slicedToArray(noop.useState(false), 2);
-  closure_1 = tmp4;
-  const fn = function l() {
-    return entranceAnimationDriver.get() >= 1;
-  };
-  fn.__closure = { entranceAnimationDriver };
-  fn.__workletHash = 9185320143951;
-  fn.__initData = __initData;
-  const fn2 = function s(arg0) {
-    if (arg0) {
-      ReanimatedRexport.runOnJS(closure_1)(true);
+  [tmp3, tmp4] = noop.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  items = [closure_19, entranceAnimationDriver.entranceAnimationDriver];
+  c0 = undefined;
+  [tmp7, tmp8] = items;
+  class MediaMessagePreviewTsx1 {
+    constructor() {
+      return closure_0.get() >= 1;
     }
-  };
-  let obj = entranceAnimationDriver(5095);
-  fn2.__closure = { runOnJS: entranceAnimationDriver(5095).runOnJS, setHasEntranceFinished: tmp3[1] };
-  fn2.__workletHash = 16173671243775;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  if (tmp3[0]) {
-    const obj3 = {};
-    const merged1 = Object.assign(merged);
-    tmp = closure_13(MeasureMessage, obj3);
   }
-  return tmp;
+  const items1 = [tmp8];
+  MediaMessagePreviewTsx1.__closure = items1;
+  MediaMessagePreviewTsx1.__workletHash = 9963261096022;
+  MediaMessagePreviewTsx1.__initData = tmp7;
+  const items2 = [closure_20, _mod1705.scheduleOnRN, tmp4];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp9, tmp10, tmp11] = items2;
+  class MediaMessagePreviewTsx2 {
+    constructor(arg0) {
+      if (entranceAnimationDriver) {
+        tmp = closure_0;
+        tmp2 = closure_1;
+        flag = true;
+        tmp3 = closure_0(closure_1, true);
+      }
+      return;
+    }
+  }
+  const items3 = [tmp10, tmp11];
+  MediaMessagePreviewTsx2.__closure = items3;
+  MediaMessagePreviewTsx2.__workletHash = 11835366583947;
+  MediaMessagePreviewTsx2.__initData = tmp9;
+  const animatedReaction = _mod1652.useAnimatedReaction(MediaMessagePreviewTsx1, MediaMessagePreviewTsx2);
+  let tmp13 = null;
+  if (tmp3) {
+    const obj2 = {};
+    const merged1 = Object.assign(merged);
+    tmp13 = state(MeasureMessage, obj2);
+  }
+  return tmp13;
 }
 get_ActivityIndicator = fn(17);
 ({ findNodeHandle: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
@@ -132,13 +148,13 @@ const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = new RowGeneratorDefault();
 obj.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderEmbeds: false, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: false, renderReactions: true, renderAttachments: false, renderReplies: false, renderThreadEmbeds: false, renderPolls: false, renderForumPostActions: false, forcedTheme: ThemeTypes.DARK, forceHideSimpleEmbedContent: true });
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({ dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 } });
-const __initData = { code: "function MediaMessagePreviewTsx1(){const{entranceAnimationDriver}=this.__closure;return entranceAnimationDriver.get()>=1;}" };
-const __initData2 = { code: "function MediaMessagePreviewTsx2(isFinished){const{runOnJS,setHasEntranceFinished}=this.__closure;if(isFinished){runOnJS(setHasEntranceFinished)(true);}}" };
-createStyles = fn(5014);
+let closure_19 = { code: "(function MediaMessagePreviewTsx1(){let[entranceAnimationDriver]=this.__closure;return entranceAnimationDriver.get()>=1;})" };
+let closure_20 = { code: "(function MediaMessagePreviewTsx2(isFinished){let[scheduleOnRN,setHasEntranceFinished]=this.__closure;if(isFinished){scheduleOnRN(setHasEntranceFinished,true);}})" };
+createStyles = fn(5141);
 let closure_22 = createStyles.createNativeStyleProperties({ reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, reactionTextColor: nativeDefault.colors.REACTION_TEXT_DEFAULT, activeReactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT, activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT, activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj2 = { renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderEmbeds: false, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: false, renderReactions: true, renderAttachments: false, renderReplies: false, renderThreadEmbeds: false, renderPolls: false, renderForumPostActions: false, forcedTheme: ThemeTypes.DARK, forceHideSimpleEmbedContent: true };
 let obj5 = { reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, reactionTextColor: nativeDefault.colors.REACTION_TEXT_DEFAULT, activeReactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT, activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT, activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT };
 let closure_23 = createStyles.createNativeStyleProperties({ editedColor: nativeDefault.colors.TEXT_MUTED, seeMoreLabelColor: nativeDefault.colors.TEXT_DEFAULT });
@@ -156,19 +172,19 @@ export default function MediaMessagePreview(channelId) {
   const animationDriver = channelId.animationDriver;
   ThemeTypes = undefined;
   closure_22 = undefined;
-  const isMediaViewerEntranceJankFixEnabled = channelId(onClose[17]).useIsMediaViewerEntranceJankFixEnabled();
-  let obj = channelId(onClose[17]);
+  const isMediaViewerEntranceJankFixEnabled = channelId(onClose[18]).useIsMediaViewerEntranceJankFixEnabled();
+  let obj = channelId(onClose[18]);
   let tmp = channelId;
-  const items = [animationDriver];
-  const stateFromStores = channelId(onClose[18]).useStateFromStores(items, () => {
+  items = [animationDriver];
+  const stateFromStores = channelId(onClose[19]).useStateFromStores(items, () => {
     let channel;
     if (null != channelId) {
       channel = ChannelStore.getChannel(tmp);
     }
     return channel;
   });
-  const disableReactionCreates = messageId(onClose[19])(stateFromStores).disableReactionCreates;
-  let obj2 = channelId(onClose[18]);
+  const disableReactionCreates = messageId(onClose[20])(stateFromStores).disableReactionCreates;
+  let obj2 = channelId(onClose[19]);
   [tmp7, c12] = onTapMessage(full.useState(false), 2);
   const tmp8 = onTapMessage(full.useState(false), 2);
   closure_13 = tmp8[1];
@@ -207,7 +223,7 @@ export default function MediaMessagePreview(channelId) {
   let tmp6 = onTapMessage(full.useState(false), 2);
   const items2 = [flingDownRef, stateFromStores, disableReactionCreates, flingUpRef];
   const items3 = [channelId, messageId];
-  const stateFromStores1 = channelId(onClose[18]).useStateFromStores(items2, () => {
+  const stateFromStores1 = channelId(onClose[19]).useStateFromStores(items2, () => {
     if (null != channelId) {
       if (null != messageId) {
         let message = MessageStore.getMessage(tmp, messageId);
@@ -290,7 +306,7 @@ export default function MediaMessagePreview(channelId) {
     }
     if (tmp) {
       const obj = { urlString: url };
-      messageId(onClose[26])(obj);
+      messageId(onClose[27])(obj);
     }
   }, []);
   let tmp27Result = null;
@@ -330,8 +346,8 @@ export default function MediaMessagePreview(channelId) {
                   channel = channel.getChannel(arg1);
                   if (null != channel) {
                     const obj2 = { source, navigationReplace: false };
-                    channelId(onClose[30]).transitionToThread(channel, obj2);
-                    const obj = channelId(onClose[30]);
+                    channelId(onClose[31]).transitionToThread(channel, obj2);
+                    const obj = channelId(onClose[31]);
                   }
                 },
                 message: stateFromStores1,
@@ -343,12 +359,12 @@ export default function MediaMessagePreview(channelId) {
             },
         inverted: false
       };
-      const items9 = [closure_13(tmp5(tmp2[28]), obj6), ];
+      const items9 = [closure_13(tmp5(tmp2[29]), obj6), ];
       const obj7 = { rowGenerator, modifyRow: callback, message: stateFromStores1 };
       items9[1] = closure_13(tmp5(tmp2[14]), obj7);
       obj5.children = items9;
       obj4.children = reactTag(closure_6, obj5);
-      const items10 = [closure_13(tmp(tmp2[27]).GestureDetector, obj4), ];
+      const items10 = [closure_13(tmp(tmp2[28]).GestureDetector, obj4), ];
       if (!tmp8[0]) {
         const obj8 = { children: null };
         items10[1] = null;

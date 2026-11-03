@@ -1,18 +1,18 @@
-// === Module 16623: DismissiblePremiumNewBadge ===
+// === Module 16766: DismissiblePremiumNewBadge ===
 
-// Module 16623 (DismissiblePremiumNewBadge)
+// Module 16766 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import native from "native" /* 1187 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10520 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10650 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { newTag: { backgroundColor: "transparent" }, newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,16 +30,16 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/bold";
+          let str = "text-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/bold";
+            str = "text-xxs/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;
         }
         if (dependencyMap) {
           const obj2 = { variant: tmp3, containerStyle: null };
-          const items = [closure_6.newTagContainer, closure_1_1];
+          items = [closure_6.newTagContainer, closure_1_1];
           obj2.containerStyle = items;
           let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
         } else if (closure_1_3) {
@@ -61,7 +61,7 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       }
     }
   };
-  let items = [dismissibleContent];
+  items = [dismissibleContent];
   obj.contentTypes = items;
   return jsx(SelectedDismissibleContentDefault, {
     contentTypes: null,
@@ -71,16 +71,16 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/bold";
+          let str = "text-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/bold";
+            str = "text-xxs/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;
         }
         if (dependencyMap) {
           const obj2 = { variant: tmp3, containerStyle: null };
-          const items = [closure_6.newTagContainer, closure_1_1];
+          items = [closure_6.newTagContainer, closure_1_1];
           obj2.containerStyle = items;
           let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
         } else if (closure_1_3) {

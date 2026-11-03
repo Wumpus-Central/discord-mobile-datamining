@@ -1,16 +1,16 @@
-// === Module 19382: useFormattedEndTime ===
+// === Module 19540: useFormattedEndTime ===
 
-// Module 19382 (useFormattedEndTime)
+// Module 19540 (useFormattedEndTime)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
 
 export default function useFormattedEndTime() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nextEndTime;

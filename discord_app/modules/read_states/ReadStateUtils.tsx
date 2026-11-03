@@ -1,13 +1,13 @@
-// === Module 9148: ReadStateUtils ===
+// === Module 9276: ReadStateUtils ===
 
-// Module 9148 (ReadStateUtils)
-import ReadStateStore from "ReadStateStore" /* 6842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+// Module 9276 (ReadStateUtils)
+import ReadStateStore from "ReadStateStore" /* 6962 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 
@@ -20,7 +20,7 @@ export function getHasImportantUnread(channel) {
 }
 export function useHasImportantUnread(arg0) {
   _require = arg0;
-  const items = [ReadStateStore, UserGuildSettingsStore];
+  items = [ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStores(items, () => {
     let hasUnreadResult = ReadStateStore.hasUnread(id.id);
     if (hasUnreadResult) {

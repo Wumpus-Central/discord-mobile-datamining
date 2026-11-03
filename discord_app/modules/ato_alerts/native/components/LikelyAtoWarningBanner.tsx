@@ -1,17 +1,17 @@
-// === Module 11267: LikelyAtoWarningBanner ===
+// === Module 11404: LikelyAtoWarningBanner ===
 
-// Module 11267 (LikelyAtoWarningBanner)
+// Module 11404 (LikelyAtoWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import LinkingDefault from "Linking" /* 5709 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7496 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 11071 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11270 */;
-import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11285 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import LinkingDefault from "Linking" /* 5829 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 11208 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
+import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ class LikelyAtoWarningBanner {
     items1[0] = channelId;
     items1[1] = warningId;
     callback = closure_3.useCallback(() => {
-      const items = [warningId];
+      items = [warningId];
       const result = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
       ModalActionCreatorsDefault.popWithKey(modalKey);
     }, items1);
@@ -73,10 +73,10 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11274, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11411, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
-        const items = [closure_1_10(channelId(5624).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5624).Text, { variant: "text-xs/medium", color: "text-subtle", children: children.description }, index)];
+        items = [closure_1_10(channelId(5747).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5747).Text, { variant: "text-xs/medium", color: "text-subtle", children: children.description }, index)];
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
@@ -115,16 +115,16 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
-const Constants = fn(11268);
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
+const Constants = fn(11405);
 ({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire, LEARN_MORE_HC_ARTICLE: closure_7 } = Constants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
-createStyles.createStyles(obj2);
+const state = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx");
 

@@ -1,37 +1,37 @@
-// === Module 13705: createAppMessageEmbed ===
+// === Module 13836: createAppMessageEmbed ===
 
-// Module 13705 (createAppMessageEmbed)
+// Module 13836 (createAppMessageEmbed)
 import util from "util" /* 1113 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import AvatarUtils from "AvatarUtils" /* 1409 */;
-import KeyboardTypes from "KeyboardTypes" /* 1623 */;
-import ChatInputUtils from "ChatInputUtils" /* 5207 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import activityBookmarkUtils from "activityBookmarkUtils" /* 7835 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8721 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9761 */;
-import ApplicationUtils from "ApplicationUtils" /* 10909 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11689 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11693 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13706 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 13707 */;
-import getPlayInContext from "getPlayInContext" /* 13708 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13709 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AvatarUtils from "AvatarUtils" /* 1411 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import ChatInputUtils from "ChatInputUtils" /* 5330 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 7959 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8518 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8845 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9893 */;
+import ApplicationUtils from "ApplicationUtils" /* 11039 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11826 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11830 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13837 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 13838 */;
+import getPlayInContext from "getPlayInContext" /* 13839 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13840 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1383 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8722 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
+import UserStore from "UserStore" /* 1385 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8846 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;
-const FetchState = fn(8722).FetchState;
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
+const FetchState = fn(8846).FetchState;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
+const CodedLinkExtendedType = fn(10247).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
@@ -114,7 +114,7 @@ export function createAppMessageEmbed(arg0) {
       const obj2 = { count: maxParticipants };
       let formatToPlainStringResult = intl2.formatToPlainString(util.t.z8EAJW, obj2);
     }
-    const items = [];
+    items = [];
     const tmp2Result9 = getFrameSurfaces;
     if (isActivityAppResult) {
       if (canOpenFrameResult) {
@@ -232,7 +232,7 @@ export function handleTapAppMessageEmbed(appId) {
   const actionId = appId.actionId;
   if ("play_in_channel" === actionId) {
     const obj3 = { applicationId: appId.appId, channelId: appId.message.channel_id, fromLink: true, linkChannelId, customId: value2, referrerId: id, analyticsLocations: null, commandOrigin: null };
-    const items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
+    items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
     obj3.analyticsLocations = items;
     obj3.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
     GamesActionCreatorsDefault.launch(obj3);

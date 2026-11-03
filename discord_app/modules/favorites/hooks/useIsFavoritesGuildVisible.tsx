@@ -1,9 +1,9 @@
-// === Module 17318: useIsFavoritesGuildVisible ===
+// === Module 17461: useIsFavoritesGuildVisible ===
 
-// Module 17318 (useIsFavoritesGuildVisible)
-import FavoritesUtils from "FavoritesUtils" /* 4888 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import FavoriteStore from "FavoriteStore" /* 4866 */;
+// Module 17461 (useIsFavoritesGuildVisible)
+import FavoritesUtils from "FavoritesUtils" /* 5015 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import FavoriteStore from "FavoriteStore" /* 4993 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useIsFavoritesGuildVisible() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const items = [FavoriteStore, SelectedGuildStore];
+  items = [FavoriteStore, SelectedGuildStore];
   const items1 = [flag];
   return flag(504).useStateFromStores(items, () => {
     let tmp2 = !flag;

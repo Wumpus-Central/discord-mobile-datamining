@@ -1,11 +1,11 @@
-// === Module 12764: conjurePickedFiles ===
+// === Module 12900: conjurePickedFiles ===
 
-// Module 12764 (conjurePickedFiles)
-import UploadDefault from "Upload" /* 8210 */;
-import UploadPlatform from "UploadPlatform" /* 8211 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8220 */;
-import ImagePickerDefault from "ImagePicker" /* 8221 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12586 */;
+// Module 12900 (conjurePickedFiles)
+import UploadDefault from "Upload" /* 8334 */;
+import UploadPlatform from "UploadPlatform" /* 8335 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8344 */;
+import ImagePickerDefault from "ImagePicker" /* 8345 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12722 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_4 = async function _pickConjurePhotos() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ let closure_4 = async function _pickConjurePhotos() {
             }
             c4 = 3;
           }
-          const items = [];
+          items = [];
         }
       } catch (tmp18) {
         c4 = tmp;
@@ -129,7 +129,7 @@ let closure_7 = async function _uploadConjurePickedFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

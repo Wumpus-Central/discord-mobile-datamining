@@ -1,15 +1,15 @@
-// === Module 12419: PlaceholderAppRow ===
+// === Module 12555: PlaceholderAppRow ===
 
-// Module 12419 (PlaceholderAppRow)
+// Module 12555 (PlaceholderAppRow)
 import nativeDefault from "native" /* 575 */;
-import TableRow from "TableRow" /* 6975 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12382 */;
+import TableRow from "TableRow" /* 7101 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.loadingAppIcon = size;
@@ -34,7 +34,7 @@ export default function PlaceholderAppRow(isFirstRow) {
   const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
   const obj3 = { icon: <View style={tmp.loadingAppIcon} />, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   const obj5 = { style: null };
-  const items = [tmp.loadingTextPlaceholder, ];
+  items = [tmp.loadingTextPlaceholder, ];
   const obj4 = { style: tmp.loadingAppIcon };
   items[1] = { width: "" + placeholderWidth + "%" };
   obj5.style = items;

@@ -1,11 +1,11 @@
-// === Module 6022: useBackPressHandler ===
+// === Module 6142: useBackPressHandler ===
 
-// Module 6022 (useBackPressHandler)
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import KeyCommands from "KeyCommands" /* 6023 */;
+// Module 6142 (useBackPressHandler)
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import KeyCommands from "KeyCommands" /* 6143 */;
 import noop from "module_19" /* 19 */;
 
-const BackPressTracking = tmp(6025);
+const BackPressTracking = tmp(6145);
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function useBackPressHandler(current) {
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     if (flag) {
       const fn = () => ref.current();

@@ -1,7 +1,7 @@
-// === Module 10257: GIFPickerResultsList ===
+// === Module 10387: GIFPickerResultsList ===
 
-// Module 10257 (GIFPickerResultsList)
-import GIFPickerItemView from "GIFPickerItemView" /* 10258 */;
+// Module 10387 (GIFPickerResultsList)
+import GIFPickerItemView from "GIFPickerItemView" /* 10388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,11 +10,11 @@ const GIFPickerItemViewDefault = GIFPickerItemView;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { list: { marginHorizontal: -fn(10247).GIF_PICKER_GUTTER_SPACING / 2 } };
+const createStyles = fn(5141);
+let obj2 = { list: { marginHorizontal: -fn(10377).GIF_PICKER_GUTTER_SPACING / 2 } };
 let closure_6 = createStyles.createStyles(obj2);
 const obj4 = { length: 20 };
-let obj3 = { marginHorizontal: -fn(10247).GIF_PICKER_GUTTER_SPACING / 2 };
+let obj3 = { marginHorizontal: -fn(10377).GIF_PICKER_GUTTER_SPACING / 2 };
 let closure_7 = Array.from(obj4).map(() => {
 
 });
@@ -37,7 +37,7 @@ export default function GIFPickerResultsList(columnWidth) {
   if (loading) {
     resultItems = closure_7;
   }
-  const items = [columnWidth];
+  items = [columnWidth];
   callback = noop.useCallback((arg0, arg1) => ({ height: c0 / (arg0 / arg1) }), items);
   _require = undefined;
   const callback1 = noop.useCallback((src, arg1) => {
@@ -94,7 +94,7 @@ export default function GIFPickerResultsList(columnWidth) {
       return tmp15Result;
     }
   }, items2);
-  const tmp11 = require("module_7294");
+  const tmp11 = require("module_7414");
   if (inActionSheet) {
     let MasonryFlashList = tmp11.BottomSheetMasonryFlashList;
     let tmp12 = tmp10;

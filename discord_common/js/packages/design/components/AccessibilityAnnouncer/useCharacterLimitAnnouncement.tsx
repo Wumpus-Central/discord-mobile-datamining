@@ -1,7 +1,7 @@
-// === Module 7255: useCharacterLimitAnnouncement ===
+// === Module 7375: useCharacterLimitAnnouncement ===
 
-// Module 7255 (useCharacterLimitAnnouncement)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+// Module 7375 (useCharacterLimitAnnouncement)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ export function useCharacterLimitAnnouncement(currentLength) {
   const maxLength = currentLength.maxLength;
   const message = currentLength.message;
   message.useRef(false);
-  const items = [currentLength, maxLength, message];
+  items = [currentLength, maxLength, message];
   const effect = message.useEffect(() => {
     if (null != maxLength) {
       if (currentLength >= tmp) {

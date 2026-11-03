@@ -1,7 +1,7 @@
-// === Module 7900: AndroidStopAndPauseVideoExperiment ===
+// === Module 8024: AndroidStopAndPauseVideoExperiment ===
 
-// Module 7900 (AndroidStopAndPauseVideoExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 8024 (AndroidStopAndPauseVideoExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-android-stop-and-pause-video", kind: "user", defaultConfig: { enabled: false }, variations: null };

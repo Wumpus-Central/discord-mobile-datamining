@@ -1,12 +1,12 @@
-// === Module 15135: GamePartyStore ===
+// === Module 15276: GamePartyStore ===
 
-// Module 15135 (GamePartyStore)
+// Module 15276 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {
@@ -147,7 +147,7 @@ class GamePartyStore extends Store {
 }
 const prototype = GamePartyStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   this.syncWith(items, handleLocalPresenceUpdate);
   this.waitFor(AuthenticationStore, RelationshipStore, SelfPresenceStore);
 };

@@ -1,8 +1,8 @@
-// === Module 7451: GuildSubscriptionsActionCreators ===
+// === Module 7575: GuildSubscriptionsActionCreators ===
 
-// Module 7451 (GuildSubscriptionsActionCreators)
+// Module 7575 (GuildSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7449 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7573 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
@@ -35,7 +35,7 @@ export function subscribeChannelDimensions(arg0) {
   if (bound === undefined) {
     num = 0;
   }
-  const items = [];
+  items = [];
   const bound2 = Math.max(0, Math.ceil(Math.ceil(sum / rowHeight)) + num);
   let bound3 = bound1;
   if (bound1 > 0) {

@@ -1,8 +1,8 @@
-// === Module 15214: isClipsEnabled ===
+// === Module 15355: isClipsEnabled ===
 
-// Module 15214 (isClipsEnabled)
-import ClipsExperiment from "ClipsExperiment" /* 15215 */;
-import ClipsStore from "ClipsStore" /* 2012 */;
+// Module 15355 (isClipsEnabled)
+import ClipsExperiment from "ClipsExperiment" /* 15356 */;
+import ClipsStore from "ClipsStore" /* 2141 */;
 
 require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export function isClipsEnabled() {
 }
 export function useIsClipsEnabled() {
   let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
-  const items = [ClipsStore];
+  items = [ClipsStore];
   if (isClipsAvailable) {
     isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }

@@ -1,16 +1,16 @@
-// === Module 14613: ApplicationEducation ===
+// === Module 14744: ApplicationEducation ===
 
-// Module 14613 (ApplicationEducation)
+// Module 14744 (ApplicationEducation)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FriendsIcon from "FriendsIcon" /* 5715 */;
-import SettingsIcon from "SettingsIcon" /* 7561 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
-import GameControllerIcon from "GameControllerIcon" /* 9727 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9748 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14614 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14616 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FriendsIcon from "FriendsIcon" /* 5835 */;
+import SettingsIcon from "SettingsIcon" /* 7685 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
+import GameControllerIcon from "GameControllerIcon" /* 9859 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9880 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14745 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function ApplicationEducationEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  const items = [iconComponentResult, hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", style: tmp.entryText, children: children.text })];
+  items = [iconComponentResult, hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", style: tmp.entryText, children: children.text })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
@@ -31,7 +31,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 20, height: 20, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationEduc
 
 export default function ApplicationEducation(arg0) {
   ({ application, accountScopes } = arg0);
-  const items = [];
+  items = [];
   const tmp3 = useIsSocialLayerParentApplicationDefault(application);
   if (accountScopes.includes(OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
     const intl5 = util.intl;

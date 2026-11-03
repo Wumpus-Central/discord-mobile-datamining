@@ -1,6 +1,6 @@
-// === Module 8722: ApplicationAssetsStore ===
+// === Module 8846: ApplicationAssetsStore ===
 
-// Module 8722 (ApplicationAssetsStore)
+// Module 8846 (ApplicationAssetsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -43,7 +43,7 @@ prototype["getFetchingIds"] = function getFetchingIds() {
     [, tmp] = item;
     return tmp === constants.FETCHING;
   });
-  const items = [
+  items = [
     ...found.map((item) => {
       [tmp] = item;
       return tmp;

@@ -1,22 +1,22 @@
-// === Module 12025: StageChannelCallList ===
+// === Module 12162: StageChannelCallList ===
 
-// Module 12025 (StageChannelCallList)
+// Module 12162 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6759 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11602 */;
-import SpeakerTile from "SpeakerTile" /* 12027 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 12034 */;
-import StageGridRowDefault from "StageGridRow" /* 12035 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 12049 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11739 */;
+import SpeakerTile from "SpeakerTile" /* 12164 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 12171 */;
+import StageGridRowDefault from "StageGridRow" /* 12172 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 12186 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(12026);
+const StageChannelListStore = fn(12163);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6709).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6829).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let cutout = { direction: fn(1187).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -39,13 +39,13 @@ let closure_12 = noop.memo(function StageChannelCallListRenderer(channel) {
   listSections(rowsBySection[8])(() => () => {
     closure_1_8(false);
   });
-  let items = [listSections];
+  items = [listSections];
   const sections = noop.useMemo(() => {
     let num = listSections[stageParticipantsCount.STREAM];
     if (num == null) {
       num = 1;
     }
-    const items = [Math.max(num, 1), , ];
+    items = [Math.max(num, 1), , ];
     let num2 = listSections[stageParticipantsCount.SPEAKER];
     if (num2 == null) {
       num2 = 1;
@@ -208,7 +208,7 @@ let closure_12 = noop.memo(function StageChannelCallListRenderer(channel) {
       const _HermesInternal3 = HermesInternal;
       return React6(noop.Fragment, obj2, "stream-" + arg0 + "-" + row);
     } else if (stageParticipantsCount.SPEAKER === arg0) {
-      const items = [tmp, ];
+      items = [tmp, ];
       let tmp19 = !first1;
       if (!first1) {
         const obj4 = { channel, participants: rowsBySection[arg0][row], row };
@@ -285,11 +285,11 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(12053).useThrottleDurationForChannel(channel.id);
-  width = isScreenLandscape(1491)().width;
-  let obj = width(12053);
-  isScreenLandscape = width(8773).useIsScreenLandscape();
-  const items = [width, isScreenLandscape];
+  const throttleDurationForChannel = width(12190).useThrottleDurationForChannel(channel.id);
+  width = isScreenLandscape(1493)().width;
+  let obj = width(12190);
+  isScreenLandscape = width(8897).useIsScreenLandscape();
+  items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
     if (isScreenLandscape) {
@@ -302,7 +302,7 @@ export default function StageChannelCallList(channel) {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8773);
-  const tmp4 = _slicedToArray(width(12053).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(8897);
+  const tmp4 = _slicedToArray(width(12190).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

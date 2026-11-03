@@ -1,6 +1,6 @@
-// === Module 14035: useCommunicationDisabledCountdownCleanup ===
+// === Module 14166: useCommunicationDisabledCountdownCleanup ===
 
-// Module 14035 (useCommunicationDisabledCountdownCleanup)
+// Module 14166 (useCommunicationDisabledCountdownCleanup)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export function useCommunicationDisabledCountdownCleanup(guildMember) {
   const tmpResult = require("useCountdown")(parsed);
   const seconds = tmpResult.seconds;
   seconds(null);
-  const items = [guildId, userId, seconds, communicationDisabledUntil, guildMember];
+  items = [guildId, userId, seconds, communicationDisabledUntil, guildMember];
   guildId(() => {
     if (null != closure_0) {
       if (null != guildId) {

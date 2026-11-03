@@ -1,6 +1,6 @@
-// === Module 11462: BadgeDirectorySeenStore ===
+// === Module 11599: BadgeDirectorySeenStore ===
 
-// Module 11462 (BadgeDirectorySeenStore)
+// Module 11599 (BadgeDirectorySeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -38,7 +38,7 @@ const badgeDirectorySeenStore = new BadgeDirectorySeenStore(DispatcherDefault, {
       obj = {};
       const merged = Object.assign(obj);
       const _Set = Set;
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(obj.seenBadgeIndicatorIds, 0)] = badgeId;
       const set = new Set(items);
       obj.seenBadgeIndicatorIds = set;

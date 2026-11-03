@@ -1,20 +1,20 @@
-// === Module 17001: QuestHomeOrbShopCarousel ===
+// === Module 17144: QuestHomeOrbShopCarousel ===
 
-// Module 17001 (QuestHomeOrbShopCarousel)
+// Module 17144 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AnalyticsActions from "AnalyticsActions" /* 7862 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9462 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9578 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16988 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 17002 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AnalyticsActions from "AnalyticsActions" /* 7986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9590 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9710 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 17131 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 17145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import BountyStore from "BountyStore" /* 7845 */;
+import BountyStore from "BountyStore" /* 7969 */;
 
 require = fn;
 function ListEdgeSpacer(width) {
@@ -63,7 +63,7 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   cardWidth = cardWidth.cardWidth;
   const cardHeight = cardWidth.cardHeight;
   const listEdgeSpacing = cardWidth.listEdgeSpacing;
-  const items = [cardWidth, cardHeight];
+  items = [cardWidth, cardHeight];
   ({ listStyle, cardStride } = cardWidth);
   const callback = noop.useCallback(() => {
     const size = { width: cardWidth, height: cardHeight };
@@ -91,14 +91,14 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6781).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6901).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(16988).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5014);
+const data = Array.from({ length: fn(17131).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };
@@ -158,7 +158,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   }
   const sum = COLLECTIBLES_SHOP_CARD_WIDTH + closure_12;
   c7 = sum;
-  const items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
+  items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
   const memo = flag4.useMemo(() => ({ height: COLLECTIBLES_SHOP_CARD_HEIGHT }), items);
   const items1 = [listEdgeSpacing];
   const items2 = [listEdgeSpacing];
@@ -265,7 +265,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
 };
 export function useQuestHomeOrbShopCarouselData(arg0) {
   ({ enabled, sortType } = arg0);
-  const items = [BountyStore];
+  items = [BountyStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let num = 0;
     for (const item10007 of tmp) {

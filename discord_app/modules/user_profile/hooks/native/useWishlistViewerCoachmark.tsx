@@ -1,7 +1,7 @@
-// === Module 14988: useWishlistViewerCoachmark ===
+// === Module 15124: useWishlistViewerCoachmark ===
 
-// Module 14988 (useWishlistViewerCoachmark)
-import dismissible_content from "dismissible_content" /* 4847 */;
+// Module 15124 (useWishlistViewerCoachmark)
+import dismissible_content from "dismissible_content" /* 4974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/native/use
 export function useWishlistViewerCoachmark(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
   const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
-  let items = [isCurrentUser, shouldShowWishlistTab];
+  items = [isCurrentUser, shouldShowWishlistTab];
   const memo = noop.useMemo(() => {
     if (!isCurrentUser) {
       if (shouldShowWishlistTab) {
-        let items = [dismissible_content.DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
+        items = [dismissible_content.DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
       }
       return items;
     }

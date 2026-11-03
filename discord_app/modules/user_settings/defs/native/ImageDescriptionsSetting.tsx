@@ -1,22 +1,22 @@
-// === Module 17455: ImageDescriptionsSetting ===
+// === Module 17598: ImageDescriptionsSetting ===
 
-// Module 17455 (ImageDescriptionsSetting)
+// Module 17598 (ImageDescriptionsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsText from "UserSettingsText" /* 17456 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import UserSettingsText from "UserSettingsText" /* 17599 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   UserSettingsText.setImageDescriptions({ videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode });
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(8432).MobileUserSettings.CHAT,
+  parent: fn(8556).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();

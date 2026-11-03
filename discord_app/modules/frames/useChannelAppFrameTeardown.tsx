@@ -1,16 +1,16 @@
-// === Module 18680: useChannelAppFrameTeardown ===
+// === Module 18838: useChannelAppFrameTeardown ===
 
-// Module 18680 (useChannelAppFrameTeardown)
-import leaveFrame from "leaveFrame" /* 10938 */;
+// Module 18838 (useChannelAppFrameTeardown)
+import leaveFrame from "leaveFrame" /* 11076 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import FramesStore from "FramesStore" /* 6846 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import FramesStore from "FramesStore" /* 6966 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(6847).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6967).getFrameSurfaceForChannel;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");
@@ -21,7 +21,7 @@ export default function useChannelAppFrameTeardown(id) {
   if (id != null) {
     id = id.id;
   }
-  const items = [id];
+  items = [id];
   memo = memo.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {

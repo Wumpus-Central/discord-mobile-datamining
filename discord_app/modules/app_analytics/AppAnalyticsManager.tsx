@@ -1,19 +1,19 @@
-// === Module 19400: AppAnalyticsManager ===
+// === Module 19558: AppAnalyticsManager ===
 
-// Module 19400 (AppAnalyticsManager)
+// Module 19558 (AppAnalyticsManager)
 import DurationsDefault from "Durations" /* 1089 */;
-import Timers from "Timers" /* 4858 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
-import ActivityTypes from "ActivityTypes" /* 5762 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7892 */;
-import getGamePlatformDefault from "getGamePlatform" /* 18827 */;
-import RunningGameStore from "RunningGameStore" /* 2013 */;
-import MediaEngineStore from "MediaEngineStore" /* 2006 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import SpeakingStore from "SpeakingStore" /* 6756 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
+import Timers from "Timers" /* 4985 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
+import ActivityTypes from "ActivityTypes" /* 5882 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 8016 */;
+import getGamePlatformDefault from "getGamePlatform" /* 18985 */;
+import RunningGameStore from "RunningGameStore" /* 2142 */;
+import MediaEngineStore from "MediaEngineStore" /* 2135 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import SpeakingStore from "SpeakingStore" /* 6876 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -117,7 +117,7 @@ prototype["getGameMetadata"] = function getGameMetadata() {
     exeName = currentGameForAnalytics.exeName;
   }
   obj.game_exe_name = exeName;
-  let application_id = null;
+  application_id = null;
   if (null != findActivityResult) {
     application_id = findActivityResult.application_id;
   }

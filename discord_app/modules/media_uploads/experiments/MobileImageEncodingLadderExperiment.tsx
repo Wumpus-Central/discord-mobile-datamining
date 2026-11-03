@@ -1,7 +1,7 @@
-// === Module 8237: MobileImageEncodingLadderExperiment ===
+// === Module 8361: MobileImageEncodingLadderExperiment ===
 
-// Module 8237 (MobileImageEncodingLadderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1447 */;
+// Module 8361 (MobileImageEncodingLadderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2026-01-image-optimized-encoding-ladder", kind: "user", defaultConfig: { useImageEncodingLadder: false }, variations: { 0: { useImageEncodingLadder: false }, 1: { useImageEncodingLadder: true } } });

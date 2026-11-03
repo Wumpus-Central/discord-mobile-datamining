@@ -1,13 +1,13 @@
-// === Module 20152: executeHeadlessTask ===
+// === Module 20331: executeHeadlessTask ===
 
-// Module 20152 (executeHeadlessTask)
+// Module 20331 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10212 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15560 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10342 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15701 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_10 = async function _executeHeadlessTask() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ let closure_10 = async function _executeHeadlessTask() {
             const obj14 = { client_app_state: closure_135_5.currentState, name: closure_136_0, success: closure_136_5, duration_ms: closure_136_6 };
             closure_136_7 = closure_135_1(closure_135_3[11]).track(closure_135_9.HEADLESS_TASK_COMPLETED, obj14, { flush: true });
             c9 = 2;
-            const items = [closure_136_7, ];
+            items = [closure_136_7, ];
             const obj37 = closure_135_1(closure_135_3[11]);
             items[1] = closure_135_0(closure_135_3[14]).timeoutPromise(1500);
             c11 = 14;
@@ -367,7 +367,7 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(19359);
+const NativeAppStartup = fn(19517);
 ({ initHeadlessTask: closure_7, applicationReady: closure_8 } = NativeAppStartup);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

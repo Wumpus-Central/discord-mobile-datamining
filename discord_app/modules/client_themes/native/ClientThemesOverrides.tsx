@@ -1,19 +1,19 @@
-// === Module 9821: ClientThemesOverrides ===
+// === Module 9952: ClientThemesOverrides ===
 
-// Module 9821 (ClientThemesOverrides)
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5192 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9822 */;
+// Module 9952 (ClientThemesOverrides)
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5315 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9953 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export function useGradientBottom() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
-  const items = [gradientValue];
+  items = [gradientValue];
   return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {
@@ -25,7 +25,7 @@ export function useGradientBottom() {
 }
 export function useGradientTop() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.START);
-  const items = [gradientValue];
+  items = [gradientValue];
   return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {
@@ -37,7 +37,7 @@ export function useGradientTop() {
 }
 export function useGradientMidpoint() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.MID);
-  const items = [gradientValue];
+  items = [gradientValue];
   return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {

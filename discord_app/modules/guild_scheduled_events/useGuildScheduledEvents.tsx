@@ -1,22 +1,22 @@
-// === Module 9090: useGuildScheduledEvents ===
+// === Module 9218: useGuildScheduledEvents ===
 
-// Module 9090 (useGuildScheduledEvents)
+// Module 9218 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6855 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9091 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6975 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9219 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6855);
+let GuildScheduledEventStore = fn(6975);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(4869);
+const GuildScheduledEventsConstants = fn(4996);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
 const Constants = fn(1072);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
@@ -28,10 +28,10 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuild
 export default function useGuildEvents(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildStore, GuildScheduledEventStore, PermissionStore, ChannelStore];
+  items = [GuildStore, GuildScheduledEventStore, PermissionStore, ChannelStore];
   const items1 = [arg1, arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     if (null == guild) {
       let found = closure_15;
     } else {
@@ -59,7 +59,7 @@ export default function useGuildEvents(arg0, arg1) {
 };
 export function useActiveEvent(id) {
   _require = id;
-  const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
+  items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const basicChannel = ChannelStore.getBasicChannel(closure_0);
@@ -86,7 +86,7 @@ export function useActiveEvent(id) {
 }
 export function useActiveEventsByChannel(arg0) {
   _require = arg0;
-  const items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   const items1 = [arg0];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => GuildScheduledEventStore.getGuildScheduledEventsForGuild(closure_0), items1);
   const items2 = [stateFromStoresArray];
@@ -103,7 +103,7 @@ export function useActiveEventsByChannel(arg0) {
 }
 export function useGuildUpcomingEvents(arg0) {
   _require = arg0;
-  const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
+  items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(items, () => {
     const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.GUILD_EVENT_UPCOMING(closure_0));
@@ -131,7 +131,7 @@ export function useGuildUpcomingEventsNotice(arg0) {
   let tmp8;
   _require = arg0;
   closure_129_0 = arg0;
-  const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
+  items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.GUILD_EVENT_UPCOMING(closure_0));
@@ -253,7 +253,7 @@ export function getGuildActiveEvent(guild_id) {
 }
 export function useGuildActiveEvent(guild_id) {
   _require = guild_id;
-  const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
+  items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [guild_id];
   return require("initialize").useStateFromStores(items, () => {
     if (GuildScheduledEventStore !== undefined) {
@@ -286,13 +286,13 @@ export function useGuildActiveEvent(guild_id) {
 }
 export function useGuildChannelScheduledEvents(id) {
   _require = id;
-  const items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
 }
 export function useFirstActiveEventChannel(id) {
   _require = id;
-  const items = [ChannelStore, GuildScheduledEventStore];
+  items = [ChannelStore, GuildScheduledEventStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.GUILD_EVENT_ACTIVE(closure_0));
@@ -314,11 +314,11 @@ export function useImminentUpcomingGuildEvents(id) {
     return () => clearInterval(closure_0);
   }, []);
   const tmp = stateFromStores(noop.useState(() => Date.now()), 2);
-  let items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   const items1 = [id, tmp2];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
-      let items = [];
+      items = [];
     } else {
       items = GuildScheduledEventStore.getGuildScheduledEventsByIndex(React6.CHANNEL_EVENT_UPCOMING(tmp));
     }
@@ -326,11 +326,11 @@ export function useImminentUpcomingGuildEvents(id) {
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = id(8977).getEventSchedule(status);
+    const eventSchedule = id(9105).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = id(8977);
+    const obj = id(9105);
     let toISOStringResult1;
-    const obj2 = id(8969);
+    const obj2 = id(9097);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

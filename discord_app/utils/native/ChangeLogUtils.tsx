@@ -1,12 +1,12 @@
-// === Module 8569: utils/ChangeLogUtils ===
+// === Module 8693: utils/ChangeLogUtils ===
 
-// Module 8569 (utils/ChangeLogUtils)
+// Module 8693 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8571 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8572 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8695 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8696 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 6031 */;
+import CustomMarkup from "CustomMarkup" /* 6151 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -27,7 +27,7 @@ function ChangeLogList(styling) {
     List = View;
   }
   let obj = { style: closure_6().list, children: null };
-  let items = styling.node.items;
+  items = styling.node.items;
   obj.children = items.map((item, index) => jsx(styling.components.ListItem, {
     children(arg0) {
       let obj = {};
@@ -35,7 +35,7 @@ function ChangeLogList(styling) {
       obj.changelogImagesDisabled = true;
       item = closure_2_0;
       closure_2 = arg0;
-      const items = [];
+      items = [];
       length = [];
       item = item.forEach((type, index) => {
         if ("list" === type.type) {
@@ -78,16 +78,16 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5624).Text;
+    Paragraph = output(5747).Text;
   }
-  const result = output(8570).splitParagraphAtImages(node.content);
+  const result = output(8694).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
         children: result.map((type, index) => {
               if ("image" === type.type) {
                 const obj2 = { children: null };
-                const items = [type.node];
+                items = [type.node];
                 const obj3 = {};
                 const merged = Object.assign(state);
                 obj3.changelogBlockImage = true;
@@ -103,7 +103,7 @@ function ChangeLogParagraph(state) {
       let tmp7 = <View key={state.key}>{result.map((type, index) => {
         if ("image" === type.type) {
           const obj2 = { children: null };
-          const items = [type.node];
+          items = [type.node];
           const obj3 = {};
           const merged = Object.assign(state);
           obj3.changelogBlockImage = true;
@@ -118,28 +118,22 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(8570);
+  let obj = output(8694);
   tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
 }
-function ChangeLogStrong(arg0) {
-  ({ node, output, state } = arg0);
-  if (obj.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
-    let str;
-    if (state != null) {
-      str = state.textColor;
-    }
-    if (str == null) {
-      str = "text-default";
-    }
-    const obj2 = { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) };
-    let reactResult = jsx(Text_Text.Text, { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) });
-    const tmpResult = MarkupRulesUtils;
-  } else {
-    const strong = rules.strong;
-    reactResult = strong.react(node, output, state);
+function ChangeLogStrong(state) {
+  state = state.state;
+  ({ node, output } = state);
+  let str;
+  if (state != null) {
+    str = state.textColor;
   }
-  return reactResult;
+  if (str == null) {
+    str = "text-default";
+  }
+  const obj = { variant: "body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) };
+  return jsx(Text_Text.Text, { variant: "body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) });
 }
 function ChangeLogBlockQuote(state) {
   state = state.state;
@@ -156,11 +150,11 @@ function ChangeLogBlockQuote(state) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6778).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6778).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

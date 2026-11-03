@@ -1,19 +1,19 @@
-// === Module 6757: StageChannelRoleStore ===
+// === Module 6877: StageChannelRoleStore ===
 
-// Module 6757 (StageChannelRoleStore)
+// Module 6877 (StageChannelRoleStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4871 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6758 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
-import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6878 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
+import VoiceStateStore from "VoiceStateStore" /* 5799 */;
 
 require = fn;
 function buildStageChannelUserRoles(user, id2) {
@@ -31,7 +31,7 @@ function buildStageChannelUserRoles(user, id2) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {

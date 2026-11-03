@@ -1,15 +1,15 @@
-// === Module 14979: useProfileNewContent ===
+// === Module 15115: useProfileNewContent ===
 
-// Module 14979 (useProfileNewContent)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7783 */;
-import WishlistStore from "WishlistStore" /* 9471 */;
-import UserStore from "UserStore" /* 1383 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
+// Module 15115 (useProfileNewContent)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7907 */;
+import WishlistStore from "WishlistStore" /* 9599 */;
+import UserStore from "UserStore" /* 1385 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
 let closure_7 = { hasNewWishlistItems: false, newWishlistItemCount: 0, shouldLogExposure: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileNewContent.tsx");
@@ -26,7 +26,7 @@ export default function useProfileNewContent(id) {
   const tmp2 = isItemShown(profileReadStateConfigPeek[5])(id);
   let wishlist = tmp2;
   let obj2 = require("ProfileReadStateExperiment");
-  let items = [UserProfileStore, UserStore];
+  items = [UserProfileStore, UserStore];
   let items1 = [id, profileReadStateConfigPeek];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != profileReadStateConfigPeek) {
@@ -76,7 +76,7 @@ export default function useProfileNewContent(id) {
           }
           if (null != firstWishlistId) {
             wishlist = wishlist.getWishlist(firstWishlistId);
-            let items;
+            items = undefined;
             if (wishlist != null) {
               items = wishlist.items;
             }

@@ -1,29 +1,22 @@
-// === Module 2014: GameStore ===
+// === Module 2143: GameStore ===
 
-// Module 2014 (GameStore)
+// Module 2143 (GameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import URLUtilsDefault from "URLUtils" /* 1377 */;
-import GameRecord from "GameRecord" /* 2015 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import GameRecord from "GameRecord" /* 2144 */;
 
 function createGamesFromMessage(referenced_message) {
   closure_0 = false;
   const mention_games = referenced_message.mention_games;
   if (mention_games != null) {
-    const item = mention_games.forEach((third_party_skus) => {
-      let isArray = "third_party_skus" in third_party_skus;
-      if (isArray) {
-        const _Array = Array;
-        isArray = Array.isArray(third_party_skus.third_party_skus);
-      }
-      if (isArray) {
-        if (!map.has(third_party_skus.id)) {
-          const tmp9 = new closure_2_2(third_party_skus);
-          const result = map.set(third_party_skus.id, tmp9);
-          closure_0 = true;
-          set2.delete(third_party_skus.id);
-          set.delete(third_party_skus.id);
-        }
+    const item = mention_games.forEach((id) => {
+      if (!map.has(id.id)) {
+        const tmp6 = new closure_2_2(id);
+        const result = map.set(id.id, tmp6);
+        closure_0 = true;
+        set2.delete(id.id);
+        set.delete(id.id);
       }
     });
   }
@@ -38,20 +31,13 @@ function createGamesFromMessage(referenced_message) {
       closure_0 = false;
       const mention_games = message.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -60,20 +46,13 @@ function createGamesFromMessage(referenced_message) {
         closure_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -88,20 +67,13 @@ function createGamesFromMessage(referenced_message) {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -110,20 +82,13 @@ function createGamesFromMessage(referenced_message) {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -138,20 +103,13 @@ function createGamesFromMessage(referenced_message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -160,20 +118,13 @@ function createGamesFromMessage(referenced_message) {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -188,14 +139,14 @@ function createGamesFromMessage(referenced_message) {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -203,7 +154,7 @@ function createGamesFromMessage(referenced_message) {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -213,7 +164,7 @@ function createGamesFromMessage(referenced_message) {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -235,14 +186,14 @@ function createGamesFromMessage(referenced_message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -250,7 +201,7 @@ function createGamesFromMessage(referenced_message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -260,7 +211,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -289,20 +240,13 @@ function createGamesFromMessage(referenced_message) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -311,20 +255,13 @@ function createGamesFromMessage(referenced_message) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -339,14 +276,14 @@ function createGamesFromMessage(referenced_message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -354,7 +291,7 @@ function createGamesFromMessage(referenced_message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -364,7 +301,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -386,14 +323,14 @@ function createGamesFromMessage(referenced_message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -401,7 +338,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -411,7 +348,7 @@ function createGamesFromMessage(referenced_message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -447,20 +384,13 @@ function createGamesFromMessage(referenced_message) {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -469,20 +399,13 @@ function createGamesFromMessage(referenced_message) {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -497,20 +420,13 @@ function createGamesFromMessage(referenced_message) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -519,20 +435,13 @@ function createGamesFromMessage(referenced_message) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -547,14 +456,14 @@ function createGamesFromMessage(referenced_message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -562,7 +471,7 @@ function createGamesFromMessage(referenced_message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -572,7 +481,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -594,14 +503,14 @@ function createGamesFromMessage(referenced_message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -609,7 +518,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -619,7 +528,7 @@ function createGamesFromMessage(referenced_message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -648,20 +557,13 @@ function createGamesFromMessage(referenced_message) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -670,20 +572,13 @@ function createGamesFromMessage(referenced_message) {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -698,14 +593,14 @@ function createGamesFromMessage(referenced_message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -713,7 +608,7 @@ function createGamesFromMessage(referenced_message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -723,7 +618,7 @@ function createGamesFromMessage(referenced_message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -745,14 +640,14 @@ function createGamesFromMessage(referenced_message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -760,7 +655,7 @@ function createGamesFromMessage(referenced_message) {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -770,7 +665,7 @@ function createGamesFromMessage(referenced_message) {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -808,20 +703,13 @@ function handleLoadMessages(messages) {
     closure_0 = false;
     mention_games = mention_games.mention_games;
     if (mention_games != null) {
-      const item = mention_games.forEach((third_party_skus) => {
-        let isArray = "third_party_skus" in third_party_skus;
-        if (isArray) {
-          const _Array = Array;
-          isArray = Array.isArray(third_party_skus.third_party_skus);
-        }
-        if (isArray) {
-          if (!map.has(third_party_skus.id)) {
-            const tmp9 = new closure_2_2(third_party_skus);
-            const result = map.set(third_party_skus.id, tmp9);
-            closure_0 = true;
-            set2.delete(third_party_skus.id);
-            set.delete(third_party_skus.id);
-          }
+      const item = mention_games.forEach((id) => {
+        if (!map.has(id.id)) {
+          const tmp6 = new closure_2_2(id);
+          const result = map.set(id.id, tmp6);
+          closure_0 = true;
+          set2.delete(id.id);
+          set.delete(id.id);
         }
       });
     }
@@ -830,20 +718,13 @@ function handleLoadMessages(messages) {
       closure_129_0 = false;
       const mention_games1 = referenced_message.mention_games;
       if (mention_games1 != null) {
-        const item1 = mention_games1.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item1 = mention_games1.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -858,20 +739,13 @@ function handleLoadMessages(messages) {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -880,20 +754,13 @@ function handleLoadMessages(messages) {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -908,20 +775,13 @@ function handleLoadMessages(messages) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -930,20 +790,13 @@ function handleLoadMessages(messages) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -958,14 +811,14 @@ function handleLoadMessages(messages) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -973,7 +826,7 @@ function handleLoadMessages(messages) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -983,7 +836,7 @@ function handleLoadMessages(messages) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -1005,14 +858,14 @@ function handleLoadMessages(messages) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1020,7 +873,7 @@ function handleLoadMessages(messages) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -1030,7 +883,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -1059,20 +912,13 @@ function handleLoadMessages(messages) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -1081,20 +927,13 @@ function handleLoadMessages(messages) {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -1109,14 +948,14 @@ function handleLoadMessages(messages) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1124,7 +963,7 @@ function handleLoadMessages(messages) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -1134,7 +973,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -1156,14 +995,14 @@ function handleLoadMessages(messages) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1171,7 +1010,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -1181,7 +1020,7 @@ function handleLoadMessages(messages) {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -1217,20 +1056,13 @@ function handleLoadMessages(messages) {
         closure_0 = false;
         const mention_games = message.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -1239,20 +1071,13 @@ function handleLoadMessages(messages) {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -1267,20 +1092,13 @@ function handleLoadMessages(messages) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -1289,20 +1107,13 @@ function handleLoadMessages(messages) {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -1317,14 +1128,14 @@ function handleLoadMessages(messages) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1332,7 +1143,7 @@ function handleLoadMessages(messages) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -1342,7 +1153,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -1364,14 +1175,14 @@ function handleLoadMessages(messages) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1379,7 +1190,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -1389,7 +1200,7 @@ function handleLoadMessages(messages) {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -1418,20 +1229,13 @@ function handleLoadMessages(messages) {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -1440,20 +1244,13 @@ function handleLoadMessages(messages) {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -1468,14 +1265,14 @@ function handleLoadMessages(messages) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1483,7 +1280,7 @@ function handleLoadMessages(messages) {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -1493,7 +1290,7 @@ function handleLoadMessages(messages) {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -1515,14 +1312,14 @@ function handleLoadMessages(messages) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach(/* F83011 */ function() { ... });
+                  const item = mention_games.forEach(/* F83436 */ function() { ... });
                 }
                 if (null != message.referenced_message) {
                   const referenced_message = message.referenced_message;
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                    const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != referenced_message.referenced_message) {
                     closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1530,7 +1327,7 @@ function handleLoadMessages(messages) {
                   }
                   const message_snapshots = referenced_message.message_snapshots;
                   if (message_snapshots != null) {
-                    const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                    const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp6 = closure_0;
                   if (!closure_0) {
@@ -1540,7 +1337,7 @@ function handleLoadMessages(messages) {
                 }
                 const message_snapshots1 = message.message_snapshots;
                 if (message_snapshots1 != null) {
-                  const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                  const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                 }
                 let tmp8 = closure_0;
                 if (!closure_0) {
@@ -1580,20 +1377,13 @@ function handleLoadSearchResults(data) {
         closure_0 = false;
         mention_games = mention_games.mention_games;
         if (mention_games != null) {
-          let item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          let item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -1602,20 +1392,13 @@ function handleLoadSearchResults(data) {
           closure_0 = false;
           let mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            let item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            let item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -1630,14 +1413,14 @@ function handleLoadSearchResults(data) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach(/* F83011 */ function() { ... });
+                const item = mention_games.forEach(/* F83436 */ function() { ... });
               }
               if (null != message.referenced_message) {
                 const referenced_message = message.referenced_message;
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                  const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                 }
                 if (null != referenced_message.referenced_message) {
                   closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1645,7 +1428,7 @@ function handleLoadSearchResults(data) {
                 }
                 const message_snapshots = referenced_message.message_snapshots;
                 if (message_snapshots != null) {
-                  const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                  const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                 }
                 let tmp6 = closure_0;
                 if (!closure_0) {
@@ -1655,7 +1438,7 @@ function handleLoadSearchResults(data) {
               }
               const message_snapshots1 = message.message_snapshots;
               if (message_snapshots1 != null) {
-                const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
               }
               let tmp8 = closure_0;
               if (!closure_0) {
@@ -1677,14 +1460,14 @@ function handleLoadSearchResults(data) {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach(/* F83011 */ function() { ... });
+              const item = mention_games.forEach(/* F83436 */ function() { ... });
             }
             if (null != message.referenced_message) {
               const referenced_message = message.referenced_message;
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
               }
               if (null != referenced_message.referenced_message) {
                 closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1692,7 +1475,7 @@ function handleLoadSearchResults(data) {
               }
               const message_snapshots = referenced_message.message_snapshots;
               if (message_snapshots != null) {
-                const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
               }
               let tmp6 = closure_0;
               if (!closure_0) {
@@ -1702,7 +1485,7 @@ function handleLoadSearchResults(data) {
             }
             const message_snapshots1 = message.message_snapshots;
             if (message_snapshots1 != null) {
-              const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+              const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
             }
             let tmp8 = closure_0;
             if (!closure_0) {
@@ -1726,20 +1509,13 @@ function handleIncomingMessage(message) {
   closure_0 = false;
   const mention_games = message.mention_games;
   if (mention_games != null) {
-    const item = mention_games.forEach((third_party_skus) => {
-      let isArray = "third_party_skus" in third_party_skus;
-      if (isArray) {
-        const _Array = Array;
-        isArray = Array.isArray(third_party_skus.third_party_skus);
-      }
-      if (isArray) {
-        if (!map.has(third_party_skus.id)) {
-          const tmp9 = new closure_2_2(third_party_skus);
-          const result = map.set(third_party_skus.id, tmp9);
-          closure_0 = true;
-          set2.delete(third_party_skus.id);
-          set.delete(third_party_skus.id);
-        }
+    const item = mention_games.forEach((id) => {
+      if (!map.has(id.id)) {
+        const tmp6 = new closure_2_2(id);
+        const result = map.set(id.id, tmp6);
+        closure_0 = true;
+        set2.delete(id.id);
+        set.delete(id.id);
       }
     });
   }
@@ -1748,20 +1524,13 @@ function handleIncomingMessage(message) {
     closure_129_0 = false;
     const mention_games1 = referenced_message.mention_games;
     if (mention_games1 != null) {
-      const item1 = mention_games1.forEach((third_party_skus) => {
-        let isArray = "third_party_skus" in third_party_skus;
-        if (isArray) {
-          const _Array = Array;
-          isArray = Array.isArray(third_party_skus.third_party_skus);
-        }
-        if (isArray) {
-          if (!map.has(third_party_skus.id)) {
-            const tmp9 = new closure_2_2(third_party_skus);
-            const result = map.set(third_party_skus.id, tmp9);
-            closure_0 = true;
-            set2.delete(third_party_skus.id);
-            set.delete(third_party_skus.id);
-          }
+      const item1 = mention_games1.forEach((id) => {
+        if (!map.has(id.id)) {
+          const tmp6 = new closure_2_2(id);
+          const result = map.set(id.id, tmp6);
+          closure_0 = true;
+          set2.delete(id.id);
+          set.delete(id.id);
         }
       });
     }
@@ -1776,20 +1545,13 @@ function handleIncomingMessage(message) {
         closure_0 = false;
         const mention_games = message.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -1798,20 +1560,13 @@ function handleIncomingMessage(message) {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -1826,20 +1581,13 @@ function handleIncomingMessage(message) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -1848,20 +1596,13 @@ function handleIncomingMessage(message) {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -1876,20 +1617,13 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item = mention_games.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -1898,20 +1632,13 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach((third_party_skus) => {
-                          let isArray = "third_party_skus" in third_party_skus;
-                          if (isArray) {
-                            const _Array = Array;
-                            isArray = Array.isArray(third_party_skus.third_party_skus);
-                          }
-                          if (isArray) {
-                            if (!map.has(third_party_skus.id)) {
-                              const tmp9 = new closure_2_2(third_party_skus);
-                              const result = map.set(third_party_skus.id, tmp9);
-                              closure_0 = true;
-                              set2.delete(third_party_skus.id);
-                              set.delete(third_party_skus.id);
-                            }
+                        const item1 = mention_games1.forEach((id) => {
+                          if (!map.has(id.id)) {
+                            const tmp6 = new closure_2_2(id);
+                            const result = map.set(id.id, tmp6);
+                            closure_0 = true;
+                            set2.delete(id.id);
+                            set.delete(id.id);
                           }
                         });
                       }
@@ -1926,14 +1653,14 @@ function handleIncomingMessage(message) {
                           closure_0 = false;
                           const mention_games = message.mention_games;
                           if (mention_games != null) {
-                            const item = mention_games.forEach(/* F83011 */ function() { ... });
+                            const item = mention_games.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != message.referenced_message) {
                             const referenced_message = message.referenced_message;
                             closure_0 = false;
                             const mention_games1 = referenced_message.mention_games;
                             if (mention_games1 != null) {
-                              const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                              const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                             }
                             if (null != referenced_message.referenced_message) {
                               closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1941,7 +1668,7 @@ function handleIncomingMessage(message) {
                             }
                             const message_snapshots = referenced_message.message_snapshots;
                             if (message_snapshots != null) {
-                              const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                              const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                             }
                             let tmp6 = closure_0;
                             if (!closure_0) {
@@ -1951,7 +1678,7 @@ function handleIncomingMessage(message) {
                           }
                           const message_snapshots1 = message.message_snapshots;
                           if (message_snapshots1 != null) {
-                            const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                            const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp8 = closure_0;
                           if (!closure_0) {
@@ -1973,14 +1700,14 @@ function handleIncomingMessage(message) {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -1988,7 +1715,7 @@ function handleIncomingMessage(message) {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -1998,7 +1725,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -2027,20 +1754,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -2049,20 +1769,13 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -2077,14 +1790,14 @@ function handleIncomingMessage(message) {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2092,7 +1805,7 @@ function handleIncomingMessage(message) {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -2102,7 +1815,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -2124,14 +1837,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2139,7 +1852,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -2149,7 +1862,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -2185,20 +1898,13 @@ function handleIncomingMessage(message) {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -2207,20 +1913,13 @@ function handleIncomingMessage(message) {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -2235,20 +1934,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -2257,20 +1949,13 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -2285,14 +1970,14 @@ function handleIncomingMessage(message) {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2300,7 +1985,7 @@ function handleIncomingMessage(message) {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -2310,7 +1995,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -2332,14 +2017,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2347,7 +2032,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -2357,7 +2042,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -2386,20 +2071,13 @@ function handleIncomingMessage(message) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -2408,20 +2086,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -2436,14 +2107,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2451,7 +2122,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -2461,7 +2132,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -2483,14 +2154,14 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2498,7 +2169,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -2508,7 +2179,7 @@ function handleIncomingMessage(message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -2551,20 +2222,13 @@ function handleIncomingMessage(message) {
       closure_0 = false;
       const mention_games = message.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -2573,20 +2237,13 @@ function handleIncomingMessage(message) {
         closure_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -2601,20 +2258,13 @@ function handleIncomingMessage(message) {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -2623,20 +2273,13 @@ function handleIncomingMessage(message) {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -2651,20 +2294,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -2673,20 +2309,13 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -2701,14 +2330,14 @@ function handleIncomingMessage(message) {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2716,7 +2345,7 @@ function handleIncomingMessage(message) {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -2726,7 +2355,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -2748,14 +2377,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2763,7 +2392,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -2773,7 +2402,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -2802,20 +2431,13 @@ function handleIncomingMessage(message) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -2824,20 +2446,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -2852,14 +2467,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2867,7 +2482,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -2877,7 +2492,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -2899,14 +2514,14 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -2914,7 +2529,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -2924,7 +2539,7 @@ function handleIncomingMessage(message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -2960,20 +2575,13 @@ function handleIncomingMessage(message) {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -2982,20 +2590,13 @@ function handleIncomingMessage(message) {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -3010,20 +2611,13 @@ function handleIncomingMessage(message) {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -3032,20 +2626,13 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -3060,14 +2647,14 @@ function handleIncomingMessage(message) {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3075,7 +2662,7 @@ function handleIncomingMessage(message) {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -3085,7 +2672,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -3107,14 +2694,14 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3122,7 +2709,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -3132,7 +2719,7 @@ function handleIncomingMessage(message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -3161,20 +2748,13 @@ function handleIncomingMessage(message) {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -3183,20 +2763,13 @@ function handleIncomingMessage(message) {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -3211,14 +2784,14 @@ function handleIncomingMessage(message) {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3226,7 +2799,7 @@ function handleIncomingMessage(message) {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -3236,7 +2809,7 @@ function handleIncomingMessage(message) {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -3258,14 +2831,14 @@ function handleIncomingMessage(message) {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3273,7 +2846,7 @@ function handleIncomingMessage(message) {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -3283,7 +2856,7 @@ function handleIncomingMessage(message) {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -3330,10 +2903,10 @@ prototype["isFetching"] = function isFetching(arg0) {
   }
   return hasItem;
 };
-prototype["didFetchingFail"] = function didFetchingFail(item) {
-  let hasItem = null != item;
+prototype["didFetchingFail"] = function didFetchingFail(nextResult) {
+  let hasItem = null != nextResult;
   if (hasItem) {
-    hasItem = set1.has(item);
+    hasItem = set1.has(nextResult);
   }
   return hasItem;
 };
@@ -3344,10 +2917,10 @@ prototype["getGame"] = function getGame(arg0) {
   }
   return value;
 };
-prototype["hasNoData"] = function hasNoData(item) {
-  let hasItem = null != item;
+prototype["hasNoData"] = function hasNoData(nextResult) {
+  let hasItem = null != nextResult;
   if (hasItem) {
-    hasItem = set2.has(item);
+    hasItem = set2.has(nextResult);
   }
   return hasItem;
 };
@@ -3426,20 +2999,13 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -3448,20 +3014,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -3476,20 +3035,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -3498,20 +3050,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -3526,20 +3071,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -3548,20 +3086,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -3576,14 +3107,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3591,7 +3122,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -3601,7 +3132,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -3623,14 +3154,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3638,7 +3169,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -3648,7 +3179,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -3677,20 +3208,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -3699,20 +3223,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -3727,14 +3244,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3742,7 +3259,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -3752,7 +3269,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -3774,14 +3291,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3789,7 +3306,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -3799,7 +3316,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -3835,20 +3352,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -3857,20 +3367,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -3885,20 +3388,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -3907,20 +3403,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -3935,14 +3424,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3950,7 +3439,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -3960,7 +3449,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -3982,14 +3471,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -3997,7 +3486,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -4007,7 +3496,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -4036,20 +3525,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -4058,20 +3540,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -4086,14 +3561,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4101,7 +3576,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -4111,7 +3586,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -4133,14 +3608,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4148,7 +3623,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -4158,7 +3633,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -4199,20 +3674,13 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -4221,20 +3689,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -4249,20 +3710,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -4271,20 +3725,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -4299,20 +3746,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -4321,20 +3761,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -4349,14 +3782,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4364,7 +3797,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -4374,7 +3807,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -4396,14 +3829,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4411,7 +3844,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -4421,7 +3854,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -4450,20 +3883,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -4472,20 +3898,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -4500,14 +3919,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4515,7 +3934,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -4525,7 +3944,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -4547,14 +3966,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4562,7 +3981,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -4572,7 +3991,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -4608,20 +4027,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -4630,20 +4042,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -4658,20 +4063,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -4680,20 +4078,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -4708,14 +4099,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4723,7 +4114,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -4733,7 +4124,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -4755,14 +4146,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4770,7 +4161,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -4780,7 +4171,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -4809,20 +4200,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -4831,20 +4215,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -4859,14 +4236,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4874,7 +4251,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -4884,7 +4261,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -4906,14 +4283,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -4921,7 +4298,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -4931,7 +4308,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -4971,20 +4348,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           mention_games = mention_games.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -4993,20 +4363,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -5021,20 +4384,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -5043,20 +4399,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -5071,14 +4420,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5086,7 +4435,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -5096,7 +4445,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -5118,14 +4467,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5133,7 +4482,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -5143,7 +4492,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -5172,20 +4521,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -5194,20 +4536,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -5222,14 +4557,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5237,7 +4572,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -5247,7 +4582,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -5269,14 +4604,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5284,7 +4619,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -5294,7 +4629,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -5327,20 +4662,13 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       const mention_games = message.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -5349,20 +4677,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -5377,20 +4698,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -5399,20 +4713,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -5427,20 +4734,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -5449,20 +4749,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -5477,14 +4770,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5492,7 +4785,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -5502,7 +4795,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -5524,14 +4817,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5539,7 +4832,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -5549,7 +4842,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -5578,20 +4871,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -5600,20 +4886,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -5628,14 +4907,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5643,7 +4922,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -5653,7 +4932,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -5675,14 +4954,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5690,7 +4969,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -5700,7 +4979,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -5736,20 +5015,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -5758,20 +5030,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -5786,20 +5051,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -5808,20 +5066,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -5836,14 +5087,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5851,7 +5102,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -5861,7 +5112,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -5883,14 +5134,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -5898,7 +5149,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -5908,7 +5159,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -5937,20 +5188,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -5959,20 +5203,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -5987,14 +5224,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6002,7 +5239,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -6012,7 +5249,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -6034,14 +5271,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6049,7 +5286,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -6059,7 +5296,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -6098,20 +5335,13 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((third_party_skus) => {
-          let isArray = "third_party_skus" in third_party_skus;
-          if (isArray) {
-            const _Array = Array;
-            isArray = Array.isArray(third_party_skus.third_party_skus);
-          }
-          if (isArray) {
-            if (!map.has(third_party_skus.id)) {
-              const tmp9 = new closure_2_2(third_party_skus);
-              const result = map.set(third_party_skus.id, tmp9);
-              closure_0 = true;
-              set2.delete(third_party_skus.id);
-              set.delete(third_party_skus.id);
-            }
+        const item = mention_games.forEach((id) => {
+          if (!map.has(id.id)) {
+            const tmp6 = new closure_2_2(id);
+            const result = map.set(id.id, tmp6);
+            closure_0 = true;
+            set2.delete(id.id);
+            set.delete(id.id);
           }
         });
       }
@@ -6120,20 +5350,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item1 = mention_games1.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -6148,20 +5371,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -6170,20 +5386,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -6198,20 +5407,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -6220,20 +5422,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -6248,14 +5443,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6263,7 +5458,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -6273,7 +5468,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -6295,14 +5490,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6310,7 +5505,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -6320,7 +5515,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -6349,20 +5544,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -6371,20 +5559,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -6399,14 +5580,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6414,7 +5595,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -6424,7 +5605,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -6446,14 +5627,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6461,7 +5642,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -6471,7 +5652,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -6507,20 +5688,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games = message.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item = mention_games.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -6529,20 +5703,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item1 = mention_games1.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -6557,20 +5724,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -6579,20 +5739,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -6607,14 +5760,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6622,7 +5775,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -6632,7 +5785,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -6654,14 +5807,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6669,7 +5822,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -6679,7 +5832,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -6708,20 +5861,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -6730,20 +5876,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -6758,14 +5897,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6773,7 +5912,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -6783,7 +5922,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -6805,14 +5944,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach(/* F83011 */ function() { ... });
+                    const item = mention_games.forEach(/* F83436 */ function() { ... });
                   }
                   if (null != message.referenced_message) {
                     const referenced_message = message.referenced_message;
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                      const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != referenced_message.referenced_message) {
                       closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -6820,7 +5959,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots = referenced_message.message_snapshots;
                     if (message_snapshots != null) {
-                      const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                      const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp6 = closure_0;
                     if (!closure_0) {
@@ -6830,7 +5969,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   }
                   const message_snapshots1 = message.message_snapshots;
                   if (message_snapshots1 != null) {
-                    const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                    const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                   }
                   let tmp8 = closure_0;
                   if (!closure_0) {
@@ -6871,20 +6010,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = first_message.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -6893,20 +6025,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -6921,20 +6046,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -6943,20 +6061,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -6971,20 +6082,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item = mention_games.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -6993,20 +6097,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach((third_party_skus) => {
-                          let isArray = "third_party_skus" in third_party_skus;
-                          if (isArray) {
-                            const _Array = Array;
-                            isArray = Array.isArray(third_party_skus.third_party_skus);
-                          }
-                          if (isArray) {
-                            if (!map.has(third_party_skus.id)) {
-                              const tmp9 = new closure_2_2(third_party_skus);
-                              const result = map.set(third_party_skus.id, tmp9);
-                              closure_0 = true;
-                              set2.delete(third_party_skus.id);
-                              set.delete(third_party_skus.id);
-                            }
+                        const item1 = mention_games1.forEach((id) => {
+                          if (!map.has(id.id)) {
+                            const tmp6 = new closure_2_2(id);
+                            const result = map.set(id.id, tmp6);
+                            closure_0 = true;
+                            set2.delete(id.id);
+                            set.delete(id.id);
                           }
                         });
                       }
@@ -7021,14 +6118,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                           closure_0 = false;
                           const mention_games = message.mention_games;
                           if (mention_games != null) {
-                            const item = mention_games.forEach(/* F83011 */ function() { ... });
+                            const item = mention_games.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != message.referenced_message) {
                             const referenced_message = message.referenced_message;
                             closure_0 = false;
                             const mention_games1 = referenced_message.mention_games;
                             if (mention_games1 != null) {
-                              const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                              const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                             }
                             if (null != referenced_message.referenced_message) {
                               closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7036,7 +6133,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                             }
                             const message_snapshots = referenced_message.message_snapshots;
                             if (message_snapshots != null) {
-                              const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                              const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                             }
                             let tmp6 = closure_0;
                             if (!closure_0) {
@@ -7046,7 +6143,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots1 = message.message_snapshots;
                           if (message_snapshots1 != null) {
-                            const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                            const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp8 = closure_0;
                           if (!closure_0) {
@@ -7068,14 +6165,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7083,7 +6180,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -7093,7 +6190,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -7122,20 +6219,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -7144,20 +6234,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -7172,14 +6255,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7187,7 +6270,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -7197,7 +6280,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -7219,14 +6302,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7234,7 +6317,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -7244,7 +6327,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -7280,20 +6363,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -7302,20 +6378,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -7330,20 +6399,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -7352,20 +6414,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -7380,14 +6435,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7395,7 +6450,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -7405,7 +6460,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -7427,14 +6482,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7442,7 +6497,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -7452,7 +6507,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -7481,20 +6536,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -7503,20 +6551,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -7531,14 +6572,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7546,7 +6587,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -7556,7 +6597,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -7578,14 +6619,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7593,7 +6634,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -7603,7 +6644,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -7636,20 +6677,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games2 = most_recent_message.mention_games;
         if (mention_games2 != null) {
-          const item4 = mention_games2.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item4 = mention_games2.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -7658,20 +6692,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games3 = referenced_message2.mention_games;
           if (mention_games3 != null) {
-            const item5 = mention_games3.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item5 = mention_games3.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -7686,20 +6713,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -7708,20 +6728,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -7736,20 +6749,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item = mention_games.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -7758,20 +6764,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach((third_party_skus) => {
-                          let isArray = "third_party_skus" in third_party_skus;
-                          if (isArray) {
-                            const _Array = Array;
-                            isArray = Array.isArray(third_party_skus.third_party_skus);
-                          }
-                          if (isArray) {
-                            if (!map.has(third_party_skus.id)) {
-                              const tmp9 = new closure_2_2(third_party_skus);
-                              const result = map.set(third_party_skus.id, tmp9);
-                              closure_0 = true;
-                              set2.delete(third_party_skus.id);
-                              set.delete(third_party_skus.id);
-                            }
+                        const item1 = mention_games1.forEach((id) => {
+                          if (!map.has(id.id)) {
+                            const tmp6 = new closure_2_2(id);
+                            const result = map.set(id.id, tmp6);
+                            closure_0 = true;
+                            set2.delete(id.id);
+                            set.delete(id.id);
                           }
                         });
                       }
@@ -7786,14 +6785,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                           closure_0 = false;
                           const mention_games = message.mention_games;
                           if (mention_games != null) {
-                            const item = mention_games.forEach(/* F83011 */ function() { ... });
+                            const item = mention_games.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != message.referenced_message) {
                             const referenced_message = message.referenced_message;
                             closure_0 = false;
                             const mention_games1 = referenced_message.mention_games;
                             if (mention_games1 != null) {
-                              const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                              const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                             }
                             if (null != referenced_message.referenced_message) {
                               closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7801,7 +6800,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                             }
                             const message_snapshots = referenced_message.message_snapshots;
                             if (message_snapshots != null) {
-                              const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                              const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                             }
                             let tmp6 = closure_0;
                             if (!closure_0) {
@@ -7811,7 +6810,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots1 = message.message_snapshots;
                           if (message_snapshots1 != null) {
-                            const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                            const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp8 = closure_0;
                           if (!closure_0) {
@@ -7833,14 +6832,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7848,7 +6847,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -7858,7 +6857,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -7887,20 +6886,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -7909,20 +6901,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -7937,14 +6922,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7952,7 +6937,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -7962,7 +6947,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -7984,14 +6969,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -7999,7 +6984,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -8009,7 +6994,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -8045,20 +7030,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -8067,20 +7045,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -8095,20 +7066,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -8117,20 +7081,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -8145,14 +7102,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8160,7 +7117,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -8170,7 +7127,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -8192,14 +7149,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8207,7 +7164,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -8217,7 +7174,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -8246,20 +7203,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -8268,20 +7218,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -8296,14 +7239,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8311,7 +7254,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -8321,7 +7264,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -8343,14 +7286,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8358,7 +7301,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -8368,7 +7311,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -8409,20 +7352,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = message_preview.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -8431,20 +7367,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -8459,20 +7388,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -8481,20 +7403,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -8509,20 +7424,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item = mention_games.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -8531,20 +7439,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach((third_party_skus) => {
-                          let isArray = "third_party_skus" in third_party_skus;
-                          if (isArray) {
-                            const _Array = Array;
-                            isArray = Array.isArray(third_party_skus.third_party_skus);
-                          }
-                          if (isArray) {
-                            if (!map.has(third_party_skus.id)) {
-                              const tmp9 = new closure_2_2(third_party_skus);
-                              const result = map.set(third_party_skus.id, tmp9);
-                              closure_0 = true;
-                              set2.delete(third_party_skus.id);
-                              set.delete(third_party_skus.id);
-                            }
+                        const item1 = mention_games1.forEach((id) => {
+                          if (!map.has(id.id)) {
+                            const tmp6 = new closure_2_2(id);
+                            const result = map.set(id.id, tmp6);
+                            closure_0 = true;
+                            set2.delete(id.id);
+                            set.delete(id.id);
                           }
                         });
                       }
@@ -8559,14 +7460,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                           closure_0 = false;
                           const mention_games = message.mention_games;
                           if (mention_games != null) {
-                            const item = mention_games.forEach(/* F83011 */ function() { ... });
+                            const item = mention_games.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != message.referenced_message) {
                             const referenced_message = message.referenced_message;
                             closure_0 = false;
                             const mention_games1 = referenced_message.mention_games;
                             if (mention_games1 != null) {
-                              const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                              const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                             }
                             if (null != referenced_message.referenced_message) {
                               closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8574,7 +7475,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                             }
                             const message_snapshots = referenced_message.message_snapshots;
                             if (message_snapshots != null) {
-                              const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                              const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                             }
                             let tmp6 = closure_0;
                             if (!closure_0) {
@@ -8584,7 +7485,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots1 = message.message_snapshots;
                           if (message_snapshots1 != null) {
-                            const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                            const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp8 = closure_0;
                           if (!closure_0) {
@@ -8606,14 +7507,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8621,7 +7522,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -8631,7 +7532,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -8660,20 +7561,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -8682,20 +7576,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -8710,14 +7597,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8725,7 +7612,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -8735,7 +7622,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -8757,14 +7644,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8772,7 +7659,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -8782,7 +7669,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -8818,20 +7705,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -8840,20 +7720,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -8868,20 +7741,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -8890,20 +7756,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -8918,14 +7777,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8933,7 +7792,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -8943,7 +7802,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -8965,14 +7824,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -8980,7 +7839,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -8990,7 +7849,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -9019,20 +7878,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -9041,20 +7893,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -9069,14 +7914,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9084,7 +7929,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -9094,7 +7939,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -9116,14 +7961,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9131,7 +7976,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -9141,7 +7986,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {
@@ -9182,20 +8027,13 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = message.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((third_party_skus) => {
-            let isArray = "third_party_skus" in third_party_skus;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(third_party_skus.third_party_skus);
-            }
-            if (isArray) {
-              if (!map.has(third_party_skus.id)) {
-                const tmp9 = new closure_2_2(third_party_skus);
-                const result = map.set(third_party_skus.id, tmp9);
-                closure_0 = true;
-                set2.delete(third_party_skus.id);
-                set.delete(third_party_skus.id);
-              }
+          const item = mention_games.forEach((id) => {
+            if (!map.has(id.id)) {
+              const tmp6 = new closure_2_2(id);
+              const result = map.set(id.id, tmp6);
+              closure_0 = true;
+              set2.delete(id.id);
+              set.delete(id.id);
             }
           });
         }
@@ -9204,20 +8042,13 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((third_party_skus) => {
-              let isArray = "third_party_skus" in third_party_skus;
-              if (isArray) {
-                const _Array = Array;
-                isArray = Array.isArray(third_party_skus.third_party_skus);
-              }
-              if (isArray) {
-                if (!map.has(third_party_skus.id)) {
-                  const tmp9 = new closure_2_2(third_party_skus);
-                  const result = map.set(third_party_skus.id, tmp9);
-                  closure_0 = true;
-                  set2.delete(third_party_skus.id);
-                  set.delete(third_party_skus.id);
-                }
+            const item1 = mention_games1.forEach((id) => {
+              if (!map.has(id.id)) {
+                const tmp6 = new closure_2_2(id);
+                const result = map.set(id.id, tmp6);
+                closure_0 = true;
+                set2.delete(id.id);
+                set.delete(id.id);
               }
             });
           }
@@ -9232,20 +8063,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games = message.mention_games;
               if (mention_games != null) {
-                const item = mention_games.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item = mention_games.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -9254,20 +8078,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games1 = referenced_message.mention_games;
                 if (mention_games1 != null) {
-                  const item1 = mention_games1.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item1 = mention_games1.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -9282,20 +8099,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item = mention_games.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -9304,20 +8114,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach((third_party_skus) => {
-                          let isArray = "third_party_skus" in third_party_skus;
-                          if (isArray) {
-                            const _Array = Array;
-                            isArray = Array.isArray(third_party_skus.third_party_skus);
-                          }
-                          if (isArray) {
-                            if (!map.has(third_party_skus.id)) {
-                              const tmp9 = new closure_2_2(third_party_skus);
-                              const result = map.set(third_party_skus.id, tmp9);
-                              closure_0 = true;
-                              set2.delete(third_party_skus.id);
-                              set.delete(third_party_skus.id);
-                            }
+                        const item1 = mention_games1.forEach((id) => {
+                          if (!map.has(id.id)) {
+                            const tmp6 = new closure_2_2(id);
+                            const result = map.set(id.id, tmp6);
+                            closure_0 = true;
+                            set2.delete(id.id);
+                            set.delete(id.id);
                           }
                         });
                       }
@@ -9332,14 +8135,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                           closure_0 = false;
                           const mention_games = message.mention_games;
                           if (mention_games != null) {
-                            const item = mention_games.forEach(/* F83011 */ function() { ... });
+                            const item = mention_games.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != message.referenced_message) {
                             const referenced_message = message.referenced_message;
                             closure_0 = false;
                             const mention_games1 = referenced_message.mention_games;
                             if (mention_games1 != null) {
-                              const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                              const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                             }
                             if (null != referenced_message.referenced_message) {
                               closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9347,7 +8150,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                             }
                             const message_snapshots = referenced_message.message_snapshots;
                             if (message_snapshots != null) {
-                              const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                              const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                             }
                             let tmp6 = closure_0;
                             if (!closure_0) {
@@ -9357,7 +8160,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots1 = message.message_snapshots;
                           if (message_snapshots1 != null) {
-                            const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                            const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp8 = closure_0;
                           if (!closure_0) {
@@ -9379,14 +8182,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9394,7 +8197,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -9404,7 +8207,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -9433,20 +8236,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -9455,20 +8251,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -9483,14 +8272,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9498,7 +8287,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -9508,7 +8297,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -9530,14 +8319,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9545,7 +8334,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -9555,7 +8344,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -9591,20 +8380,13 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games = message.mention_games;
             if (mention_games != null) {
-              const item = mention_games.forEach((third_party_skus) => {
-                let isArray = "third_party_skus" in third_party_skus;
-                if (isArray) {
-                  const _Array = Array;
-                  isArray = Array.isArray(third_party_skus.third_party_skus);
-                }
-                if (isArray) {
-                  if (!map.has(third_party_skus.id)) {
-                    const tmp9 = new closure_2_2(third_party_skus);
-                    const result = map.set(third_party_skus.id, tmp9);
-                    closure_0 = true;
-                    set2.delete(third_party_skus.id);
-                    set.delete(third_party_skus.id);
-                  }
+              const item = mention_games.forEach((id) => {
+                if (!map.has(id.id)) {
+                  const tmp6 = new closure_2_2(id);
+                  const result = map.set(id.id, tmp6);
+                  closure_0 = true;
+                  set2.delete(id.id);
+                  set.delete(id.id);
                 }
               });
             }
@@ -9613,20 +8395,13 @@ const gameStore = new GameStore(DispatcherDefault, {
               closure_0 = false;
               const mention_games1 = referenced_message.mention_games;
               if (mention_games1 != null) {
-                const item1 = mention_games1.forEach((third_party_skus) => {
-                  let isArray = "third_party_skus" in third_party_skus;
-                  if (isArray) {
-                    const _Array = Array;
-                    isArray = Array.isArray(third_party_skus.third_party_skus);
-                  }
-                  if (isArray) {
-                    if (!map.has(third_party_skus.id)) {
-                      const tmp9 = new closure_2_2(third_party_skus);
-                      const result = map.set(third_party_skus.id, tmp9);
-                      closure_0 = true;
-                      set2.delete(third_party_skus.id);
-                      set.delete(third_party_skus.id);
-                    }
+                const item1 = mention_games1.forEach((id) => {
+                  if (!map.has(id.id)) {
+                    const tmp6 = new closure_2_2(id);
+                    const result = map.set(id.id, tmp6);
+                    closure_0 = true;
+                    set2.delete(id.id);
+                    set.delete(id.id);
                   }
                 });
               }
@@ -9641,20 +8416,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games = message.mention_games;
                   if (mention_games != null) {
-                    const item = mention_games.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item = mention_games.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -9663,20 +8431,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games1 = referenced_message.mention_games;
                     if (mention_games1 != null) {
-                      const item1 = mention_games1.forEach((third_party_skus) => {
-                        let isArray = "third_party_skus" in third_party_skus;
-                        if (isArray) {
-                          const _Array = Array;
-                          isArray = Array.isArray(third_party_skus.third_party_skus);
-                        }
-                        if (isArray) {
-                          if (!map.has(third_party_skus.id)) {
-                            const tmp9 = new closure_2_2(third_party_skus);
-                            const result = map.set(third_party_skus.id, tmp9);
-                            closure_0 = true;
-                            set2.delete(third_party_skus.id);
-                            set.delete(third_party_skus.id);
-                          }
+                      const item1 = mention_games1.forEach((id) => {
+                        if (!map.has(id.id)) {
+                          const tmp6 = new closure_2_2(id);
+                          const result = map.set(id.id, tmp6);
+                          closure_0 = true;
+                          set2.delete(id.id);
+                          set.delete(id.id);
                         }
                       });
                     }
@@ -9691,14 +8452,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                         closure_0 = false;
                         const mention_games = message.mention_games;
                         if (mention_games != null) {
-                          const item = mention_games.forEach(/* F83011 */ function() { ... });
+                          const item = mention_games.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != message.referenced_message) {
                           const referenced_message = message.referenced_message;
                           closure_0 = false;
                           const mention_games1 = referenced_message.mention_games;
                           if (mention_games1 != null) {
-                            const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                            const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                           }
                           if (null != referenced_message.referenced_message) {
                             closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9706,7 +8467,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                           }
                           const message_snapshots = referenced_message.message_snapshots;
                           if (message_snapshots != null) {
-                            const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                            const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                           }
                           let tmp6 = closure_0;
                           if (!closure_0) {
@@ -9716,7 +8477,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots1 = message.message_snapshots;
                         if (message_snapshots1 != null) {
-                          const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                          const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp8 = closure_0;
                         if (!closure_0) {
@@ -9738,14 +8499,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9753,7 +8514,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -9763,7 +8524,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -9792,20 +8553,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                 closure_0 = false;
                 const mention_games = message.mention_games;
                 if (mention_games != null) {
-                  const item = mention_games.forEach((third_party_skus) => {
-                    let isArray = "third_party_skus" in third_party_skus;
-                    if (isArray) {
-                      const _Array = Array;
-                      isArray = Array.isArray(third_party_skus.third_party_skus);
-                    }
-                    if (isArray) {
-                      if (!map.has(third_party_skus.id)) {
-                        const tmp9 = new closure_2_2(third_party_skus);
-                        const result = map.set(third_party_skus.id, tmp9);
-                        closure_0 = true;
-                        set2.delete(third_party_skus.id);
-                        set.delete(third_party_skus.id);
-                      }
+                  const item = mention_games.forEach((id) => {
+                    if (!map.has(id.id)) {
+                      const tmp6 = new closure_2_2(id);
+                      const result = map.set(id.id, tmp6);
+                      closure_0 = true;
+                      set2.delete(id.id);
+                      set.delete(id.id);
                     }
                   });
                 }
@@ -9814,20 +8568,13 @@ const gameStore = new GameStore(DispatcherDefault, {
                   closure_0 = false;
                   const mention_games1 = referenced_message.mention_games;
                   if (mention_games1 != null) {
-                    const item1 = mention_games1.forEach((third_party_skus) => {
-                      let isArray = "third_party_skus" in third_party_skus;
-                      if (isArray) {
-                        const _Array = Array;
-                        isArray = Array.isArray(third_party_skus.third_party_skus);
-                      }
-                      if (isArray) {
-                        if (!map.has(third_party_skus.id)) {
-                          const tmp9 = new closure_2_2(third_party_skus);
-                          const result = map.set(third_party_skus.id, tmp9);
-                          closure_0 = true;
-                          set2.delete(third_party_skus.id);
-                          set.delete(third_party_skus.id);
-                        }
+                    const item1 = mention_games1.forEach((id) => {
+                      if (!map.has(id.id)) {
+                        const tmp6 = new closure_2_2(id);
+                        const result = map.set(id.id, tmp6);
+                        closure_0 = true;
+                        set2.delete(id.id);
+                        set.delete(id.id);
                       }
                     });
                   }
@@ -9842,14 +8589,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                       closure_0 = false;
                       const mention_games = message.mention_games;
                       if (mention_games != null) {
-                        const item = mention_games.forEach(/* F83011 */ function() { ... });
+                        const item = mention_games.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != message.referenced_message) {
                         const referenced_message = message.referenced_message;
                         closure_0 = false;
                         const mention_games1 = referenced_message.mention_games;
                         if (mention_games1 != null) {
-                          const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                          const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                         }
                         if (null != referenced_message.referenced_message) {
                           closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9857,7 +8604,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                         }
                         const message_snapshots = referenced_message.message_snapshots;
                         if (message_snapshots != null) {
-                          const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                          const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                         }
                         let tmp6 = closure_0;
                         if (!closure_0) {
@@ -9867,7 +8614,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots1 = message.message_snapshots;
                       if (message_snapshots1 != null) {
-                        const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                        const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp8 = closure_0;
                       if (!closure_0) {
@@ -9889,14 +8636,14 @@ const gameStore = new GameStore(DispatcherDefault, {
                     closure_0 = false;
                     const mention_games = message.mention_games;
                     if (mention_games != null) {
-                      const item = mention_games.forEach(/* F83011 */ function() { ... });
+                      const item = mention_games.forEach(/* F83436 */ function() { ... });
                     }
                     if (null != message.referenced_message) {
                       const referenced_message = message.referenced_message;
                       closure_0 = false;
                       const mention_games1 = referenced_message.mention_games;
                       if (mention_games1 != null) {
-                        const item1 = mention_games1.forEach(/* F83011 */ function() { ... });
+                        const item1 = mention_games1.forEach(/* F83436 */ function() { ... });
                       }
                       if (null != referenced_message.referenced_message) {
                         closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
@@ -9904,7 +8651,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                       }
                       const message_snapshots = referenced_message.message_snapshots;
                       if (message_snapshots != null) {
-                        const item2 = message_snapshots.forEach(/* F83012 */ function() { ... });
+                        const item2 = message_snapshots.forEach(/* F83437 */ function() { ... });
                       }
                       let tmp6 = closure_0;
                       if (!closure_0) {
@@ -9914,7 +8661,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     }
                     const message_snapshots1 = message.message_snapshots;
                     if (message_snapshots1 != null) {
-                      const item3 = message_snapshots1.forEach(/* F83012 */ function() { ... });
+                      const item3 = message_snapshots1.forEach(/* F83437 */ function() { ... });
                     }
                     let tmp8 = closure_0;
                     if (!closure_0) {

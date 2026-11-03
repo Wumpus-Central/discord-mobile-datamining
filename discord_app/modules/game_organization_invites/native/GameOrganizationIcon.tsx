@@ -1,14 +1,14 @@
-// === Module 13205: GameOrganizationIcon ===
+// === Module 13341: GameOrganizationIcon ===
 
-// Module 13205 (GameOrganizationIcon)
+// Module 13341 (GameOrganizationIcon)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5717 */;
+import FastImageDefault from "FastImage" /* 5837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width, borderRadius) => {
   const obj = { icon: null, placeholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL } };
   const size = { width, height: width, borderRadius, overflow: "hidden" };
@@ -44,7 +44,7 @@ export default function GameOrganizationIcon(iconUrl) {
     return tmp9;
   }
   const obj3 = { style: null };
-  const items = [, ];
+  items = [, ];
   ({ icon: arr[0], placeholder: arr[1] } = tmp3);
   obj3.style = items;
   tmp9 = <View style={null} />;

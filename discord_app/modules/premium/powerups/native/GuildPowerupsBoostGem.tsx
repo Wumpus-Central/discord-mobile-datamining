@@ -1,11 +1,11 @@
-// === Module 14095: GuildPowerupsBoostGem ===
+// === Module 14226: GuildPowerupsBoostGem ===
 
-// Module 14095 (GuildPowerupsBoostGem)
+// Module 14226 (GuildPowerupsBoostGem)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import BoostGemDefault from "BoostGem" /* 14096 */;
-import createStyles from "createStyles" /* 5014 */;
+import BoostGemDefault from "BoostGem" /* 14227 */;
+import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsBoostGem(arg0) {
   ({ style, gemWidth, gemHeight } = arg0);
   const obj = { style: null, children: null };
-  const items = [closure_4().boostGemContainer, style];
+  items = [closure_4().boostGemContainer, style];
   obj.style = items;
   obj.children = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;

@@ -1,8 +1,8 @@
-// === Module 14401: useFavoritesGuildCategoryAddAction ===
+// === Module 14532: useFavoritesGuildCategoryAddAction ===
 
-// Module 14401 (useFavoritesGuildCategoryAddAction)
-import _modDef3450 from "module_3450" /* 3450 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14402 */;
+// Module 14532 (useFavoritesGuildCategoryAddAction)
+import _modDef3577 from "module_3577" /* 3577 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14533 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesG
 
 export default function useFavoritesGuildCategoryAddAction(id) {
   _require = id;
-  const items = [id.id];
+  items = [id.id];
   const callback = noop.useCallback(() => {
     openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
   }, items);
@@ -24,7 +24,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       const obj2 = { label: null, perform: null };
       const intl = require("util").intl;
-      obj2.label = intl.string(_modDef3450["1QJmIL"]);
+      obj2.label = intl.string(_modDef3577["1QJmIL"]);
       obj2.perform = callback;
       tmp4 = obj2;
     }

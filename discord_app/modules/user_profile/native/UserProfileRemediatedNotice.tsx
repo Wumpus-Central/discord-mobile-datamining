@@ -1,19 +1,19 @@
-// === Module 15018: UserProfileRemediatedNotice ===
+// === Module 15154: UserProfileRemediatedNotice ===
 
-// Module 15018 (UserProfileRemediatedNotice)
+// Module 15154 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function RemediatedUserNotice(user) {
   user = user.user;
   const tmp = closure_9();
   const tmp3 = UserProfileSharedStylesDefault();
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStoresObject = user(563).useStateFromStoresObject(items, () => ({ isPendingIncoming: RelationshipStore.getRelationshipType(user.id) === RelationshipTypes.PENDING_INCOMING, isBlocked: RelationshipStore.isBlocked(user.id), isIgnored: RelationshipStore.isIgnored(user.id) }));
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   if (isBlocked) {
@@ -34,7 +34,7 @@ export default function RemediatedUserNotice(user) {
       const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1113).intl;
       obj3.children = intl.string(tmp4(1113).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(5624).Text, obj3);
+      isBlocked = closure_6(tmp4(5747).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
@@ -42,7 +42,7 @@ export default function RemediatedUserNotice(user) {
       const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl2 = tmp4(1113).intl;
       obj5.children = intl2.string(tmp4(1113).t.HXz5An);
-      const items3 = [closure_6(tmp4(5624).Text, obj5), closure_6(tmp4(5624).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const items3 = [closure_6(tmp4(5747).Text, obj5), closure_6(tmp4(5747).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
       const intl3 = tmp4(1113).intl;
       const obj6 = {
         unignoreHook(children) {

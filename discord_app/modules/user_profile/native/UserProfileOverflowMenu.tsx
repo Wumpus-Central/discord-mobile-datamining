@@ -1,34 +1,34 @@
-// === Module 14812: UserProfileOverflowMenu ===
+// === Module 14943: UserProfileOverflowMenu ===
 
-// Module 14812 (UserProfileOverflowMenu)
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import ToastUtils from "ToastUtils" /* 5711 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7487 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11648 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12462 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 14813 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14822 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14826 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14831 */;
+// Module 14943 (UserProfileOverflowMenu)
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ToastUtils from "ToastUtils" /* 5831 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7611 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11785 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12598 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 14944 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14953 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14957 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -51,7 +51,7 @@ export default function UserProfileOverflowMenu(user) {
   closure_15 = undefined;
   closure_16 = undefined;
   let installAppPropsFromProfileApplication;
-  let items = [analyticsLocations];
+  items = [analyticsLocations];
   const stateFromStoresObject = user(application[11]).useStateFromStoresObject(items, () => ({ relationshipType: RelationshipStore.getRelationshipType(user.id), isIgnored: RelationshipStore.isIgnored(user.id) }));
   ({ relationshipType, isIgnored } = stateFromStoresObject);
   let obj = user(application[11]);
@@ -303,7 +303,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14828, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14959, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -453,7 +453,7 @@ export default function UserProfileOverflowMenu(user) {
           trackUserProfileAction({ action: str, analyticsLocations });
           const obj2 = CallActionCreatorsDefault;
           if (userIsInCall) {
-            const items = [user.id];
+            items = [user.id];
             obj2.stopRinging(selectedVoiceChannelId, items);
           } else {
             const items1 = [user.id];

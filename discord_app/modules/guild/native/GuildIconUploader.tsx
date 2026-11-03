@@ -1,16 +1,16 @@
-// === Module 13225: GuildIconUploader ===
+// === Module 13361: GuildIconUploader ===
 
-// Module 13225 (GuildIconUploader)
+// Module 13361 (GuildIconUploader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5021 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import Pressables from "Pressables" /* 6980 */;
-import _modDef13226 from "module_13226" /* 13226 */;
-import _modDef13227 from "module_13227" /* 13227 */;
-import _modDef13228 from "module_13228" /* 13228 */;
-import _modDef13229 from "module_13229" /* 13229 */;
+import shared from "shared" /* 5148 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef13362 from "module_13362" /* 13362 */;
+import _modDef13363 from "module_13363" /* 13363 */;
+import _modDef13364 from "module_13364" /* 13364 */;
+import _modDef13365 from "module_13365" /* 13365 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildIcon: { width: 82, height: 82, borderRadius: 41 }, iconWrapperBorder: { position: "absolute", top: -8, right: -8, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center" }, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.filledIconWrapper = size;
@@ -38,7 +38,7 @@ prototype["renderIcon"] = function renderIcon() {
   const icon = this.props.icon;
   if (null != icon) {
     const obj2 = { style: null, source: null };
-    const items = [, ];
+    items = [, ];
     ({ guildIcon: arr2[0], guildPlaceholder: arr2[1] } = tmp);
     obj2.style = items;
     const obj3 = { uri: icon };
@@ -51,13 +51,13 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef13226;
+      let tmp10Result = _modDef13362;
     } else {
-      tmp10Result = _modDef13227;
+      tmp10Result = _modDef13363;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
-    const obj5 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
+    const obj5 = { style: tmp.emptyGuildIconText, variant: "text-xs/semibold", color: "text-default", children: null };
     const intl = util.intl;
     obj6 = shared;
     obj5.children = intl.string(util.t["3UB9ad"]).toUpperCase();
@@ -74,7 +74,7 @@ prototype["renderUpload"] = function renderUpload() {
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
     const obj2 = { style: null, children: null };
-    const items = [tmp.iconWrapperBorder, ];
+    items = [tmp.iconWrapperBorder, ];
     const obj3 = { backgroundColor: iconBackgroundColor };
     items[1] = obj3;
     obj2.style = items;
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef13228;
+    obj5.source = _modDef13364;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef13229 };
+    const obj7 = { source: _modDef13365 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);
@@ -108,14 +108,14 @@ prototype["render"] = function render() {
   }
   const obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj2.style = items;
   const items1 = [hasOwnProperty(View, { style: tmp.guildIcon, children: self.renderIcon() }), self.renderUpload()];
   obj2.children = items1;
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(5080).ThemeContext;
+GuildIconUploader.contextType = fn(5207).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

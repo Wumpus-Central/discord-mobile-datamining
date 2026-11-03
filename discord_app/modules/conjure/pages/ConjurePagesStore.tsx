@@ -1,14 +1,14 @@
-// === Module 11529: ConjurePagesStore ===
+// === Module 11666: ConjurePagesStore ===
 
-// Module 11529 (ConjurePagesStore)
+// Module 11666 (ConjurePagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let closure_0 = { chatOpen: true, debugOpen: false, previewSelection: null, chatScroll: null };
 let c1 = null;
-let c2 = false;
-let c3 = "";
-let c4 = null;
+let c2 = null;
+let c3 = false;
+let c4 = "";
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -17,23 +17,20 @@ class ConjurePagesStore extends Store {
 }
 const prototype = ConjurePagesStore.prototype;
 prototype["getProjectId"] = function getProjectId() {
-  return c1;
+  return c2;
 };
 prototype["isOnPage"] = function isOnPage() {
-  return c2;
+  return c3;
 };
 prototype["getShownProjectId"] = function getShownProjectId() {
   let tmp = null;
-  if (c2) {
+  if (c3) {
     tmp = c1;
   }
   return tmp;
 };
-prototype["getReturnRoute"] = function getReturnRoute() {
-  return c4;
-};
 prototype["getHomePrompt"] = function getHomePrompt() {
-  return c3;
+  return c4;
 };
 prototype["getScrollTop"] = function getScrollTop(arg0) {
   let num = map.get(arg0);
@@ -51,22 +48,25 @@ prototype["getProjectView"] = function getProjectView(arg0) {
 };
 ConjurePagesStore.displayName = "ConjurePagesStore";
 const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
-  CONJURE_PAGES_VISIT: function handleVisit(projectId) {
-    let flag = !c2;
-    if (c2) {
-      flag = projectId.projectId !== projectId;
+  CONJURE_PAGES_VISIT: function handleVisit(inServer) {
+    if (true !== inServer.inServer) {
+      const projectId = inServer.projectId;
+    }
+    let flag = !c3;
+    if (c3) {
+      flag = inServer.projectId !== projectId2;
     }
     if (flag) {
-      projectId = projectId.projectId;
-      c2 = true;
+      projectId2 = inServer.projectId;
+      c3 = true;
       flag = true;
     }
     return flag;
   },
   CONJURE_PAGES_LEAVE: function handleLeave() {
-    let flag = c2;
+    let flag = c3;
     if (flag) {
-      c2 = false;
+      c3 = false;
       flag = true;
     }
     return flag;
@@ -93,14 +93,13 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     }
     return false;
   },
-  CONJURE_PAGES_RETURN_ROUTE_SAVE: function handleReturnRouteSave(route) {
-    route = route.route;
-    return false;
-  },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
     projectId = projectId.projectId;
     set.add(projectId);
     map1.delete(projectId);
+    if (projectId === c2) {
+      c2 = null;
+    }
     let flag = projectId === c1;
     if (flag) {
       c1 = null;
@@ -110,9 +109,9 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     c1 = null;
-    c2 = false;
-    c3 = "";
-    c4 = null;
+    c2 = null;
+    c3 = false;
+    c4 = "";
     map.clear();
     map1.clear();
     set.clear();

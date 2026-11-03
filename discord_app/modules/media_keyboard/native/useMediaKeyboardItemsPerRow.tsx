@@ -1,7 +1,7 @@
-// === Module 10544: useMediaKeyboardItemsPerRow ===
+// === Module 10674: useMediaKeyboardItemsPerRow ===
 
-// Module 10544 (useMediaKeyboardItemsPerRow)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5202 */;
+// Module 10674 (useMediaKeyboardItemsPerRow)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5325 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
@@ -30,7 +30,7 @@ export function useMediaKeyboardItemsPerRow() {
   }
   const itemsPageSize = 17 * itemsPerRow;
   const itemsPageSizeRef = noop.useRef(itemsPageSize);
-  const items = [itemsPerRow];
+  items = [itemsPerRow];
   const effect = noop.useEffect(() => {
     itemsPageSizeRef.current = 17 * itemsPerRow;
   }, items);

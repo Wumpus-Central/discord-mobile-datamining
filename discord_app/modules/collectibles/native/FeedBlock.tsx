@@ -1,12 +1,12 @@
-// === Module 17869: FeedBlock ===
+// === Module 18012: FeedBlock ===
 
-// Module 17869 (FeedBlock)
+// Module 18012 (FeedBlock)
 import initializeDefault from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9551 */;
-import uniqByDefault from "uniqBy" /* 17850 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9679 */;
+import uniqByDefault from "uniqBy" /* 17993 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = [];
 let closure_11 = [];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { feedContainer: { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 }, feedHeader: null, feedTitle: null, feedFooter: null, feedFooterImage: null, feedFooterOrbImage: null };
 let obj3 = { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 };
 obj2.feedHeader = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -44,7 +44,7 @@ export default function _default(screen) {
   ({ feedBlock, preferVCPrice, disableBundleStaticBackground } = screen);
   let feedFooterOrbImage = closure_12();
   let tmp5Result11 = shownSkuIds;
-  let items = [loadedGoogleSkuIds];
+  items = [loadedGoogleSkuIds];
   const stateFromStores = isInImprovedMobileShopLoading(shownSkuIds[8]).useStateFromStores(items, () => isInImprovedMobileShopLoading(shownSkuIds[9]).isThemeDark(loadedGoogleSkuIds.theme));
   let obj = isInImprovedMobileShopLoading(shownSkuIds[8]);
   isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(shownSkuIds[10]).useIsInImprovedMobileShopLoading();
@@ -96,7 +96,7 @@ export default function _default(screen) {
   const memo2 = resolvedSkuIds.useMemo(() => {
     if (isInImprovedMobileShopLoading) {
       let found = memo.filter((item) => {
-        const items = [item];
+        items = [item];
         const googleSkuIds = isInImprovedMobileShopLoading(shownSkuIds[16]).getGoogleSkuIds(items);
         return googleSkuIds.every((item) => set.has(item));
       });
@@ -141,7 +141,7 @@ export default function _default(screen) {
   }
   function goToShopAll() {
     const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-    const items = [closure_1(shownSkuIds[19]).COLLECTIBLES_MOBILE_SHOP_ALL_BUTTON];
+    items = [closure_1(shownSkuIds[19]).COLLECTIBLES_MOBILE_SHOP_ALL_BUTTON];
     obj2.analyticsLocations = items;
     obj2.analyticsSource = closure_1(shownSkuIds[19]).COLLECTIBLES_MOBILE_SHOP_ALL_BUTTON;
     obj2.screen = constants.SHOP_ALL;
@@ -168,7 +168,7 @@ export default function _default(screen) {
   obj10.disableBundleStaticBackground = disableBundleStaticBackground;
   items8[1] = closure_8(require("FeedProductList"), obj10);
   const obj11 = { style: feedFooterOrbImage.feedFooter, children: null };
-  const obj12 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
+  const obj12 = { variant: "heading-lg/semibold", accessibilityRole: "header", children: null };
   const intl4 = tmp(tmp5Result11[21]).intl;
   obj12.children = intl4.string(isInImprovedMobileShopLoading(tmp5Result11[21]).t.Yr70c4);
   const items9 = [closure_8(isInImprovedMobileShopLoading(tmp5Result11[22]).Text, obj12), , ];

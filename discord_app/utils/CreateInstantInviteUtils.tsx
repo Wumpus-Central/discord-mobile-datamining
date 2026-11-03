@@ -1,9 +1,9 @@
-// === Module 20011: CreateInstantInviteUtils ===
+// === Module 20161: CreateInstantInviteUtils ===
 
-// Module 20011 (CreateInstantInviteUtils)
+// Module 20161 (CreateInstantInviteUtils)
 import Constants from "Constants" /* 1072 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4944 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 import size from "module_2" /* 2 */;
 
 let GuildChannelStore = GuildChannelStore_mod;
@@ -14,6 +14,6 @@ const result = size.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 
 export function getInvitableChannelForGuild(guildId) {
   const channels = GuildChannelStore.getChannels(guildId);
-  const items = [...channels[closure_1_1]];
+  items = [...channels[closure_1_1]];
   return items.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
 }

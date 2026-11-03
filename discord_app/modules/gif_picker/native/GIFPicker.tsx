@@ -1,22 +1,22 @@
-// === Module 10242: GIFPicker ===
+// === Module 10372: GIFPicker ===
 
-// Module 10242 (GIFPicker)
+// Module 10372 (GIFPicker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10244 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10247 */;
-import GifPickerUtils from "GifPickerUtils" /* 10250 */;
-import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10252 */;
+import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10374 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10377 */;
+import GifPickerUtils from "GifPickerUtils" /* 10380 */;
+import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10243 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10373 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: closure_11, TooltipNames: closure_12 } = Constants);
+({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9, GIF_FETCH_LIMIT_IOS: closure_10, GIFPickerResultTypes: closure_11, TooltipNames: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
@@ -35,7 +35,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   c13 = undefined;
   closure_15 = undefined;
   ({ selectedGifSrc, keyboardDismissMode } = bottomSheetRef);
-  const items = [channelId, guildId];
+  items = [channelId, guildId];
   const effect = onPressGIF.useEffect(() => {
     GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
@@ -179,7 +179,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   }, items7);
   const items8 = [callback2];
   const items9 = [onPressGIF, resultItems.length, resultQuery];
-  const memo2 = onPressGIF.useMemo(() => map1(GIFPickerSearchSuggestionsDefault, {
+  const memo2 = onPressGIF.useMemo(() => state(GIFPickerSearchSuggestionsDefault, {
     onClickSuggestion(dependencyMap) {
       return callback2(dependencyMap, false);
     }

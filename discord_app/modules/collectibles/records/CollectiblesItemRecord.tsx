@@ -1,12 +1,12 @@
-// === Module 7724: CollectiblesItemRecord ===
+// === Module 7848: CollectiblesItemRecord ===
 
-// Module 7724 (CollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7725 */;
-import NameplateRecord from "NameplateRecord" /* 1985 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7726 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7727 */;
-import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7728 */;
+// Module 7848 (CollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7849 */;
+import NameplateRecord from "NameplateRecord" /* 2114 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7850 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7851 */;
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7852 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/collectibles/records/Collecti
 function transformSKUToCollectiblesItem(productLine) {
   if (productLine.productLine === constants.COLLECTIBLES) {
     if (productLine.type === constants2.BUNDLE) {
-      const items = [];
+      items = [];
       let bundledSkus = productLine.bundledSkus;
       if (bundledSkus == null) {
         bundledSkus = [];
@@ -93,7 +93,7 @@ function transformSKUToCollectiblesItem(productLine) {
 
 export function createCollectiblesItemsFromServerResponse(arr) {
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.reduce((arr, type) => {
       type = type.type;

@@ -1,6 +1,6 @@
-// === Module 10666: useWishlistApplicationIds ===
+// === Module 10796: useWishlistApplicationIds ===
 
-// Module 10666 (useWishlistApplicationIds)
+// Module 10796 (useWishlistApplicationIds)
 import noop from "module_19" /* 19 */;
 
 let closure_1 = fn(1072).COLLECTIBLES_APPLICATION_ID;
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistAp
 
 export function useWishlistApplicationIds() {
   return noop.useMemo(() => {
-    const items = [closure_1_1];
+    items = [closure_1_1];
     return items;
   }, []);
 }

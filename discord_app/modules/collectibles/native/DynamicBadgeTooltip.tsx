@@ -1,9 +1,9 @@
-// === Module 15028: DynamicBadgeTooltip ===
+// === Module 15166: DynamicBadgeTooltip ===
 
-// Module 15028 (DynamicBadgeTooltip)
+// Module 15166 (DynamicBadgeTooltip)
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 6980 */;
-import useTooltip from "useTooltip" /* 9955 */;
+import Pressables from "Pressables" /* 7106 */;
+import useTooltip from "useTooltip" /* 10086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ export function DynamicBadgeTooltip(tooltipPosition) {
   const onPress = noop.useCallback(() => {
     closure_2(false);
   }, []);
-  const items = [str, stringResult, visible, onPress];
+  items = [str, stringResult, visible, onPress];
   const memo = noop.useMemo(() => ({ position: str, label, visible, onPress }), items);
   const tooltip = useTooltip.useTooltip(ref, memo);
   const items1 = [visible];

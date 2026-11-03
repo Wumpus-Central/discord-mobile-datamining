@@ -1,7 +1,7 @@
-// === Module 10809: LobbyUtils ===
+// === Module 10939: LobbyUtils ===
 
-// Module 10809 (LobbyUtils)
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 10939 (LobbyUtils)
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ export function canUnlinkLobbyChannel(channel, arg1) {
 }
 export function useCanUnlinkLobbyChannel(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     if (PermissionStore !== undefined) {
       let tmp3 = null != linkedLobby;

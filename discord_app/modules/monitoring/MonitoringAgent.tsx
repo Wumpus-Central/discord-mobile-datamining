@@ -1,14 +1,14 @@
-// === Module 6540: MonitoringAgent ===
+// === Module 6660: MonitoringAgent ===
 
-// Module 6540 (MonitoringAgent)
+// Module 6660 (MonitoringAgent)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6541 */;
-import ReleaseChannels from "ReleaseChannels" /* 6542 */;
-import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6543 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6544 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6661 */;
+import ReleaseChannels from "ReleaseChannels" /* 6662 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6663 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6664 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -106,11 +106,11 @@ prototype["distribution"] = function distribution(name, value) {
 prototype["_flush"] = function _flush() {
   const self = this;
   if (this._metrics.length > 0) {
-    let items = [];
+    items = [];
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1793600402036", build_number: "35420000000000" } };
+    const body = { metrics: items, client_info: { built_at: "1793686790395", build_number: "35420100000000" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {

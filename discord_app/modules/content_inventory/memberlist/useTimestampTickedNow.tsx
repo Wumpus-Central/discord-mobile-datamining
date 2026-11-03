@@ -1,10 +1,10 @@
-// === Module 14856: useTimestampTickedNow ===
+// === Module 14987: useTimestampTickedNow ===
 
-// Module 14856 (useTimestampTickedNow)
+// Module 14987 (useTimestampTickedNow)
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ export function useTimestampTickedNow() {
     return rounded * _undefined(1089).Millis.SECOND;
   }), 2);
   _require = now[1];
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
@@ -46,7 +46,7 @@ export function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(4858).Interval();
+    const interval = new closure_0(4985).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / c1(1089).Millis.SECOND);

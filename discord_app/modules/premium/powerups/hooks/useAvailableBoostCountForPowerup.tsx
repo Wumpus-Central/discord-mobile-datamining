@@ -1,14 +1,14 @@
-// === Module 14111: useAvailableBoostCountForPowerup ===
+// === Module 14242: useAvailableBoostCountForPowerup ===
 
-// Module 14111 (useAvailableBoostCountForPowerup)
+// Module 14242 (useAvailableBoostCountForPowerup)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ GuildPowerupType: metroRequire, POWERUPS_INCLUDED_IN_LEVEL: closure_7, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = GuildPowerupsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAva
 export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  let items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const obj = require("initialize");
   const items1 = [GuildPowerupsStore];
@@ -28,7 +28,7 @@ export default function useAvailableBoostCountForPowerup(arg0, arg1) {
         if (null != stateFromStores1) {
           closure_0 = tmp9;
           if (null == closure_1_8[closure_1.skuId]) {
-            let items = [];
+            items = [];
           } else {
             const _Object = Object;
             const entries = Object.entries(closure_1_7);

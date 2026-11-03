@@ -1,10 +1,10 @@
-// === Module 15459: renderPremiumButtonText ===
+// === Module 15600: renderPremiumButtonText ===
 
-// Module 15459 (renderPremiumButtonText)
+// Module 15600 (renderPremiumButtonText)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function PremiumText(basePlanId) {
     const obj4 = { product: title, description: text };
     obj3.accessibilityLabel = intl3.formatToPlainString(util.t.E0lS2r, obj4);
     obj3.children = text;
-    const items = [React5(native.LegacyText, obj3), ];
+    items = [React5(native.LegacyText, obj3), ];
     let tmp16Result = null;
     if (null != combined) {
       const obj5 = { style: tmp.discount, children: null };
@@ -75,14 +75,14 @@ function PremiumText(basePlanId) {
   }
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };

@@ -1,15 +1,15 @@
-// === Module 12730: useConjurePlanOverlaySlides ===
+// === Module 12866: useConjurePlanOverlaySlides ===
 
-// Module 12730 (useConjurePlanOverlaySlides)
-import _modDef3868 from "module_3868" /* 3868 */;
+// Module 12866 (useConjurePlanOverlaySlides)
+import _modDef3995 from "module_3995" /* 3995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let items = [_modDef3868["3eTjcV"], _modDef3868.l3j5nS];
+let items = [_modDef3995["3eTjcV"], _modDef3995.l3j5nS];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/useConjurePlanOverlaySlides.tsx");
 

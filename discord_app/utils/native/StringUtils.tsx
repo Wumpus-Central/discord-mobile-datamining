@@ -1,14 +1,14 @@
-// === Module 10779: ? ===
+// === Module 10909: ? ===
 
-// Module 10779
-import rawDefault from "raw" /* 10778 */;
+// Module 10909
+import rawDefault from "raw" /* 10908 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export function splitGraphemes(memo) {
   const obj = rawDefault();
-  const items = [];
+  items = [];
   let match = obj.exec(memo);
   let num = 0;
   let num2 = 0;

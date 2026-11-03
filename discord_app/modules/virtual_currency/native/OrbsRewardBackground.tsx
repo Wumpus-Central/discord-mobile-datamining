@@ -1,14 +1,14 @@
-// === Module 14706: OrbsRewardBackground ===
+// === Module 14837: OrbsRewardBackground ===
 
-// Module 14706 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 5717 */;
-import _modDef14707 from "module_14707" /* 14707 */;
+// Module 14837 (OrbsRewardBackground)
+import FastImageDefault from "FastImage" /* 5837 */;
+import _modDef14838 from "module_14838" /* 14838 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import AppStateStore from "AppStateStore" /* 1993 */;
+import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AppStateStore from "AppStateStore" /* 2122 */;
 
-const _modDef14708 = tmp15(14708);
+const _modDef14839 = tmp15(14839);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -21,7 +21,7 @@ export function OrbsRewardBackground(arg0) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = onReady(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj = onReady(504);
   const items1 = [AppStateStore];
@@ -51,7 +51,7 @@ export function OrbsRewardBackground(arg0) {
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef14707;
+  obj5.uri = _modDef14838;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -62,11 +62,11 @@ export function OrbsRewardBackground(arg0) {
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef14708 };
+    const obj7 = { uri: _modDef14839 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(8873).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8997).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

@@ -1,17 +1,17 @@
-// === Module 13715: createChannelStream ===
+// === Module 13846: createChannelStream ===
 
-// Module 13715 (createChannelStream)
+// Module 13846 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 10120 */;
-import tryInjectMessage from "tryInjectMessage" /* 13716 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11369 */;
-import EditMessageStore from "EditMessageStore" /* 7823 */;
-import UploadStore from "UploadStore" /* 8392 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 10250 */;
+import tryInjectMessage from "tryInjectMessage" /* 13847 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11507 */;
+import EditMessageStore from "EditMessageStore" /* 7947 */;
+import UploadStore from "UploadStore" /* 8516 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({ Changeset: metroRequire, LoadingType: closure_7, RowType: closure_8, SeparatorType: closure_9 } = RowGeneratorConstants);
 const MessageFlags = fn(1072).MessageFlags;
 const size = fn(2);
@@ -66,7 +66,7 @@ export default function createChannelStream(forceRender) {
     }
     return constants2.determineChangeType({ message, updateMessageIds, forceRender }, flag);
   }
-  let items = [];
+  items = [];
   const substr = uploads.slice();
   const reversed = substr.reverse();
   let iter = reversed[Symbol.iterator]();

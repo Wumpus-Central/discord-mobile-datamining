@@ -1,14 +1,13 @@
-// === Module 8988: EditGuildEventModalNavbar ===
+// === Module 9116: EditGuildEventModalNavbar ===
 
-// Module 8988 (EditGuildEventModalNavbar)
+// Module 9116 (EditGuildEventModalNavbar)
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import _modDef8359 from "module_8359" /* 8359 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8968 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
+import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import _modDef8483 from "module_8483" /* 8483 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,17 +15,16 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
-let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
+const createStyles = fn(5141);
+let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28 }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
 
 export default function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
   const tmp = closure_7();
-  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
-    let items = [1, 3];
+    items = [1, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.PREVIEW === screen) {
@@ -35,24 +33,22 @@ export default function EditGuildEventModalNavbar(screen) {
     GlobalUtils.assertNever(screen);
     const tmp2Result = GlobalUtils;
   }
-  [tmp7, tmp8] = items;
-  const obj2 = { top: true, style: tmp.header, children: null };
+  [tmp6, tmp7] = items;
+  const obj = { top: true, style: tmp.header, children: null };
   const items1 = [hasOwnProperty(View, { style: tmp.buttonContainer }), , ];
-  const obj4 = { style: null, variant: typeConsolidationEyebrow.variant, color: "text-default", children: null };
-  const items2 = [tmp.headerTitle, typeConsolidationEyebrow.style];
-  obj4.style = items2;
+  const obj3 = { style: tmp.headerTitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(util.t["42HaFY"], { step: tmp7, total: tmp8 });
-  items1[1] = hasOwnProperty(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.buttonContainer, children: null };
-  const obj6 = { accessibilityLabel: null, onPress: null, source: null, style: null };
+  obj3.children = intl.format(util.t["42HaFY"], { step: tmp6, total: tmp7 });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.buttonContainer, children: null };
+  const obj5 = { accessibilityLabel: null, onPress: null, source: null, style: null };
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
-  obj6.onPress = screen.onClose;
-  obj6.source = _modDef8359;
-  obj6.style = tmp.rightButton;
-  obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
-  items1[2] = hasOwnProperty(View, obj5);
-  obj2.children = items1;
-  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  obj5.accessibilityLabel = intl2.string(util.t.cpT0Cq);
+  obj5.onPress = screen.onClose;
+  obj5.source = _modDef8483;
+  obj5.style = tmp.rightButton;
+  obj4.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
+  items1[2] = hasOwnProperty(View, obj4);
+  obj.children = items1;
+  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj);
 };

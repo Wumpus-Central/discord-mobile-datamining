@@ -1,6 +1,6 @@
-// === Module 10946: UserApplicationIdentityStore ===
+// === Module 11084: UserApplicationIdentityStore ===
 
-// Module 10946 (UserApplicationIdentityStore)
+// Module 11084 (UserApplicationIdentityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -52,7 +52,7 @@ const userApplicationIdentityStore = new UserApplicationIdentityStore(Dispatcher
     const result = map1.set(userId.userId, obj.FETCHED);
     ({ userId, identities } = userId);
     map = new Map(identities.map((application_id) => {
-      const items = [application_id.application_id, application_id];
+      items = [application_id.application_id, application_id];
       return items;
     }));
     const result1 = map.set(userId, { identities, byApplication: map });
@@ -71,7 +71,7 @@ const userApplicationIdentityStore = new UserApplicationIdentityStore(Dispatcher
       const found = identities.filter((application_id) => application_id.application_id !== user_id.application_id);
       const _Map = Map;
       map = new Map(found.map((application_id) => {
-        const items = [application_id.application_id, application_id];
+        items = [application_id.application_id, application_id];
         return items;
       }));
       const obj2 = { identities: found, byApplication: map };

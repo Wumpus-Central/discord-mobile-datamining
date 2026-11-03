@@ -1,10 +1,10 @@
-// === Module 19169: useInviteMembersCallback ===
+// === Module 19327: useInviteMembersCallback ===
 
-// Module 19169 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11626 */;
+// Module 19327 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11763 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInv
 
 export function useInviteMembersCallback(channelId) {
   closure_0 = channelId;
-  const items = [channelId];
+  items = [channelId];
   return noop.useCallback(() => {
     let id = ChannelStore.getChannel(closure_0);
     if (null == id) {

@@ -1,22 +1,22 @@
-// === Module 15868: GhostInput ===
+// === Module 16011: GhostInput ===
 
-// Module 15868 (GhostInput)
+// Module 16011 (GhostInput)
 import nativeDefault from "native" /* 575 */;
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5083 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Input from "Input" /* 7083 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7084 */;
-import useTextField from "useTextField" /* 7090 */;
-import InputFieldContainer from "InputFieldContainer" /* 7097 */;
-import NativeTextInput from "NativeTextInput" /* 7100 */;
-import propsForNativeTextInput from "propsForNativeTextInput" /* 7103 */;
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5210 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Input from "Input" /* 7209 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7210 */;
+import useTextField from "useTextField" /* 7216 */;
+import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import NativeTextInput from "NativeTextInput" /* 7226 */;
+import propsForNativeTextInput from "propsForNativeTextInput" /* 7229 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["labelId", "accessibilityLabel"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -60,7 +60,7 @@ export function GhostInput(size) {
   const obj3 = {};
   const merged = Object.assign(size);
   obj3.labelId = fieldLabelA11yNative.labelId;
-  const items = [size.containerStyle, ];
+  items = [size.containerStyle, ];
   let prop;
   if (tmp6) {
     prop = tmp4.centeredContainerStyle;

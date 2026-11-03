@@ -1,8 +1,8 @@
-// === Module 7204: NavigatorScreen ===
+// === Module 7325: NavigatorScreen ===
 
-// Module 7204 (NavigatorScreen)
-import config from "config" /* 7205 */;
-import PostponeRender from "PostponeRender" /* 7206 */;
+// Module 7325 (NavigatorScreen)
+import config from "config" /* 7326 */;
+import PostponeRender from "PostponeRender" /* 7327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export const NavigatorScreen = noop.memo(function NavigatorScreen(arg0) {
     customNavbarResult = customNavbar();
   }
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
-  const items = [customNavbarResult, screen.render(route.params, navigation)];
+  items = [customNavbarResult, screen.render(route.params, navigation)];
   obj.children = items;
   return jsxs(PostponeRender.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
 });

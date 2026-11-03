@@ -1,15 +1,17 @@
-// === Module 13183: useModalPanGesture ===
+// === Module 13319: useModalPanGesture ===
 
-// Module 13183 (useModalPanGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import spring from "spring" /* 5637 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+// Module 13319 (useModalPanGesture)
+import _mod1652 from "module_1652" /* 1652 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import spring_spring from "spring/spring" /* 5757 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import size from "module_2" /* 2 */;
 
-let closure_3 = { code: "function useModalPanGestureTsx1({velocityY:velocityY}){const{translateY,thresholdTranslate,thresholdVelocity,withSpring,height,runOnJS,ModalActionCreators,onClose,onEnd}=this.__closure;const config={damping:15,mass:1,stiffness:250,overshootClamping:true,restSpeedThreshold:0.001,restDisplacementThreshold:0.001,velocity:velocityY};if(translateY.get()>=thresholdTranslate||velocityY>=thresholdVelocity){translateY.set(withSpring(height,config,'respect-motion-settings',function(){runOnJS(ModalActionCreators.pop)();}));if(onClose!=null){runOnJS(onClose)();}}else{translateY.set(withSpring(0,config));}if(onEnd!=null){runOnJS(onEnd)();}}" };
-let closure_4 = { code: "function useModalPanGestureTsx2({translationY:translationY}){const{translateY,interpolate,start,maxTranslate,Extrapolate}=this.__closure;translateY.set(interpolate(start.get().y+translationY,[0,maxTranslate],[0,maxTranslate],Extrapolate.CLAMP));}" };
-let closure_5 = { code: "function useModalPanGestureTsx3(){const{onStart,runOnJS,start,translateY}=this.__closure;if(onStart!=null){runOnJS(onStart)();}start.set({y:translateY.get()});}" };
-const __initData = { code: "function useModalPanGestureTsx4(){const{runOnJS,ModalActionCreators}=this.__closure;runOnJS(ModalActionCreators.pop)();}" };
+let closure_3 = { code: "(function useModalPanGestureTsx1(){let[onStart,scheduleOnRN,start,translateY]=this.__closure;if(onStart!=null){scheduleOnRN(onStart);}start.set({y:translateY.get()});})" };
+let closure_4 = { code: "(function useModalPanGestureTsx2({translationY:translationY}){let[translateY,interpolate,start,maxTranslate,Extrapolate]=this.__closure;translateY.set(interpolate(start.get().y+translationY,[0,maxTranslate],[0,maxTranslate],Extrapolate.CLAMP));})" };
+let closure_5 = { code: "(function useModalPanGestureTsx3(){let[scheduleOnRN,ModalActionCreators]=this.__closure;scheduleOnRN(ModalActionCreators.pop);})" };
+let closure_6 = { code: "(function useModalPanGestureTsx4({velocityY:velocityY}){let[translateY,thresholdTranslate,thresholdVelocity,withSpring,height,_worklet_7373190729132_init_data,scheduleOnRN,ModalActionCreators,onClose,onEnd]=this.__closure;const config={damping:15,mass:1,stiffness:250,overshootClamping:true,velocity:velocityY};if(translateY.get()>=thresholdTranslate||velocityY>=thresholdVelocity){translateY.set(withSpring(height,config,'respect-motion-settings',function useModalPanGestureTsx3Factory([_worklet_7373190729132_init_data,scheduleOnRN,ModalActionCreators]){const useModalPanGestureTsx3=function(){scheduleOnRN(ModalActionCreators.pop);};useModalPanGestureTsx3.__closure=[scheduleOnRN,ModalActionCreators];useModalPanGestureTsx3.__workletHash=7373190729132;useModalPanGestureTsx3.__initData=_worklet_7373190729132_init_data;return useModalPanGestureTsx3;}([_worklet_7373190729132_init_data,scheduleOnRN,ModalActionCreators])));if(onClose!=null){scheduleOnRN(onClose);}}else{translateY.set(withSpring(0,config));}if(onEnd!=null){scheduleOnRN(onEnd);}})" };
 let result = size.fileFinishedImporting("modules/video_calls/native/components/useModalPanGesture.tsx");
 
 export default function useModalPanGesture(thresholdVelocity) {
@@ -17,92 +19,81 @@ export default function useModalPanGesture(thresholdVelocity) {
   if (num === undefined) {
     num = 500;
   }
-  const maxTranslate = thresholdVelocity.maxTranslate;
-  const thresholdTranslate = thresholdVelocity.thresholdTranslate;
-  const height = thresholdVelocity.height;
   const translateY = thresholdVelocity.translateY;
-  const onStart = thresholdVelocity.onStart;
-  const onEnd = thresholdVelocity.onEnd;
-  const onClose = thresholdVelocity.onClose;
-  const sharedValue = num(thresholdTranslate[0]).useSharedValue({ y: 0 });
-  const Gesture = num(thresholdTranslate[1]).Gesture;
-  let obj = num(thresholdTranslate[0]);
+  ({ gestureEnabled, maxTranslate, thresholdTranslate, height, onStart, onEnd, onClose } = thresholdVelocity);
+  const sharedValue = _mod1652.useSharedValue({ y: 0 });
+  const Gesture = LegacyBaseButton.Gesture;
   const PanResult = Gesture.Pan();
-  class J {
-    constructor() {
-      if (null != onStart) {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj = closure_0(closure_2[0]);
-        tmp4 = obj.runOnJS(tmp)();
+  items = [_undefined4, onStart, _mod1705.scheduleOnRN, sharedValue, translateY];
+  [tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+  function useModalPanGestureTsx1() {
+    if (null != c0) {
+      _undefined2(tmp);
+    }
+    const result = _undefined3.set({ y: _undefined4.get() });
+    const obj = { y: _undefined4.get() };
+  }
+  let items1 = [tmp5, tmp6, tmp7, tmp8];
+  useModalPanGestureTsx1.__closure = items1;
+  useModalPanGestureTsx1.__workletHash = 8962705443819;
+  useModalPanGestureTsx1.__initData = tmp4;
+  const enabledResult = Gesture.Pan().enabled(gestureEnabled);
+  const items2 = [_undefined5, translateY, _mod1652.interpolate, sharedValue, maxTranslate, _mod1652.Extrapolate];
+  [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items2;
+  function useModalPanGestureTsx2(translationY) {
+    items = [0, c3];
+    const items1 = [0, c3];
+    const result = _undefined.set(_undefined2(_undefined3.get().y + translationY.translationY, items, items1, _undefined5.CLAMP));
+  }
+  const items3 = [tmp10, tmp11, tmp12, tmp13, tmp14];
+  useModalPanGestureTsx2.__closure = items3;
+  useModalPanGestureTsx2.__workletHash = 6248783476229;
+  useModalPanGestureTsx2.__initData = tmp9;
+  const onStartResult = Gesture.Pan().enabled(gestureEnabled).onStart(useModalPanGestureTsx1);
+  const items4 = [_undefined6, translateY, thresholdTranslate, num, spring_spring.withSpring, height, closure_5, _mod1705.scheduleOnRN, ModalActionCreatorsDefault, onClose, onEnd];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items4;
+  function useModalPanGestureTsx4(velocityY) {
+    velocityY = velocityY.velocityY;
+    const obj = { damping: 15, mass: 1, stiffness: 250, overshootClamping: true, velocity: velocityY };
+    if (_undefined.get() < c1) {
+      if (velocityY < c2) {
+        const result = obj2.set(_undefined4(0, obj));
       }
-      obj1 = { y: translateY.get() };
-      result = closure_8.set(obj1);
-      return;
+      if (null != c9) {
+        _undefined6(tmp11);
+      }
+    }
+    items = [c5, _undefined6, c7];
+    _undefined = undefined;
+    c1 = undefined;
+    [tmp6, tmp7, tmp8] = items;
+    function useModalPanGestureTsx3() {
+      _undefined(_undefined2.pop);
+    }
+    const items1 = [tmp7, tmp8];
+    useModalPanGestureTsx3.__closure = items1;
+    useModalPanGestureTsx3.__workletHash = 7373190729132;
+    useModalPanGestureTsx3.__initData = tmp6;
+    const result1 = obj2.set(_undefined4(c4, obj, "respect-motion-settings", useModalPanGestureTsx3));
+    if (null != c8) {
+      _undefined6(c8);
     }
   }
-  const enabledResult = Gesture.Pan().enabled(thresholdVelocity.gestureEnabled);
-  J.__closure = { onStart, runOnJS: num(thresholdTranslate[0]).runOnJS, start: sharedValue, translateY };
-  J.__workletHash = 15847989720945;
-  J.__initData = onStart;
-  let obj2 = { onStart, runOnJS: num(thresholdTranslate[0]).runOnJS, start: sharedValue, translateY };
-  let fn = function x(translationY) {
-    const sum = sharedValue.get().y + translationY.translationY;
-    const items = [0, maxTranslate];
-    const items1 = [0, maxTranslate];
-    const result = translateY.set(ReanimatedRexport.interpolate(sum, items, items1, ReanimatedRexport.Extrapolate.CLAMP));
-  };
-  const onStartResult = enabledResult.onStart(J);
-  fn.__closure = { translateY, interpolate: num(thresholdTranslate[0]).interpolate, start: sharedValue, maxTranslate, Extrapolate: num(thresholdTranslate[0]).Extrapolate };
-  fn.__workletHash = 6809176231356;
-  fn.__initData = translateY;
-  let obj3 = { translateY, interpolate: num(thresholdTranslate[0]).interpolate, start: sharedValue, maxTranslate, Extrapolate: num(thresholdTranslate[0]).Extrapolate };
-  class O {
-    constructor(arg0) {
-      velocityY = thresholdVelocity.velocityY;
-      obj = { damping: 15, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, velocity: velocityY };
-      obj2 = translateY;
-      if (translateY.get() < thresholdTranslate) {
-        tmp = c0;
-        if (velocityY < c0) {
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          obj3 = closure_0(closure_2[2]);
-          num = 0;
-          result = obj2.set(obj3.withSpring(0, obj));
-        }
-        tmp11 = null;
-        if (null != onEnd) {
-          tmp12 = closure_0;
-          tmp13 = closure_2;
-          obj7 = closure_0(closure_2[0]);
-          tmp14 = obj7.runOnJS(tmp10)();
-        }
-        return;
-      }
-      obj4 = closure_0(closure_2[2]);
-      fn = function n() {
-        num(5095).runOnJS(maxTranslate(6744).pop)();
-      };
-      obj1 = { runOnJS: closure_0(closure_2[0]).runOnJS, ModalActionCreators: closure_1(closure_2[3]) };
-      fn.__closure = obj1;
-      fn.__workletHash = 14223008059411;
-      fn.__initData = closure_6;
-      result1 = obj2.set(obj4.withSpring(height, obj, "respect-motion-settings", fn));
-      if (null != onClose) {
-        tmp7 = closure_0;
-        tmp8 = closure_2;
-        obj6 = closure_0(closure_2[0]);
-        tmp9 = obj6.runOnJS(tmp6)();
-      }
-      return;
-    }
-  }
-  const onUpdateResult = onStartResult.onUpdate(fn);
-  O.__closure = { translateY, thresholdTranslate, thresholdVelocity: num, withSpring: num(thresholdTranslate[2]).withSpring, height, runOnJS: num(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]), onClose, onEnd };
-  O.__workletHash = 16881029664873;
-  O.__initData = height;
-  let obj4 = { translateY, thresholdTranslate, thresholdVelocity: num, withSpring: num(thresholdTranslate[2]).withSpring, height, runOnJS: num(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]), onClose, onEnd };
-  const onEndResult = onUpdateResult.onEnd(O);
-  return onUpdateResult.onEnd(O).failOffsetY(-0.01).activeOffsetY([-5, 15]);
+  const items5 = [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25];
+  useModalPanGestureTsx4.__closure = items5;
+  useModalPanGestureTsx4.__workletHash = 15324722005675;
+  useModalPanGestureTsx4.__initData = tmp15;
+  const onUpdateResult = Gesture.Pan().enabled(gestureEnabled).onStart(useModalPanGestureTsx1).onUpdate(useModalPanGestureTsx2);
+  const onEndResult = Gesture.Pan().enabled(gestureEnabled).onStart(useModalPanGestureTsx1).onUpdate(useModalPanGestureTsx2).onEnd(useModalPanGestureTsx4);
+  return Gesture.Pan().enabled(gestureEnabled).onStart(useModalPanGestureTsx1).onUpdate(useModalPanGestureTsx2).onEnd(useModalPanGestureTsx4).failOffsetY(-0.01).activeOffsetY([-5, 15]);
 };

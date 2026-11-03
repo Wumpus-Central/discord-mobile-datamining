@@ -1,13 +1,13 @@
-// === Module 17528: LaunchpadSetting ===
+// === Module 17671: LaunchpadSetting ===
 
-// Module 17528 (LaunchpadSetting)
+// Module 17671 (LaunchpadSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4839 */;
-import SettingsConstants from "SettingsConstants" /* 8432 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11536 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11537 */;
-import SettingBuilders from "SettingBuilders" /* 11540 */;
+import UserSettings from "UserSettings" /* 4966 */;
+import SettingsConstants from "SettingsConstants" /* 8556 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11673 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11674 */;
+import SettingBuilders from "SettingBuilders" /* 11677 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
@@ -40,7 +40,7 @@ const radio = SettingBuilders.createRadio({
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t["/gdTGA"]);
     obj.value = LaunchPadTypes.GESTURE_FULL;
-    const items = [obj, , , ];
+    items = [obj, , , ];
     const obj2 = { label: null, subLabel: null, value: null };
     const intl3 = util.intl;
     obj2.label = intl3.string(util.t.dQN6qS);

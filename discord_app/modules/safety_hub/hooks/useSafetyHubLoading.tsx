@@ -1,14 +1,14 @@
-// === Module 16644: useSafetyHubLoading ===
+// === Module 16787: useSafetyHubLoading ===
 
-// Module 16644 (useSafetyHubLoading)
+// Module 16787 (useSafetyHubLoading)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubLoading.tsx");
 
 export default function useIsSafetyHubLoading() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => fetching.isFetching());
 };

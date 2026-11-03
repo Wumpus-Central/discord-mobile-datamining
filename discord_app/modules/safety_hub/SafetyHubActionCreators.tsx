@@ -1,11 +1,11 @@
-// === Module 13314: SafetyHubActionCreators ===
+// === Module 13450: SafetyHubActionCreators ===
 
-// Module 13314 (SafetyHubActionCreators)
+// Module 13450 (SafetyHubActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SafetyHubStore from "SafetyHubStore" /* 7994 */;
+import SafetyHubStore from "SafetyHubStore" /* 8118 */;
 
 require = fn;
 function getSafetyHubData() {
@@ -29,7 +29,7 @@ let closure_11 = async function _getSafetyHubData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -83,7 +83,7 @@ let closure_11 = async function _getSafetyHubData() {
                     return isImageFileResult;
                   });
                   if (obj.isFlaggedContentEmpty(first)) {
-                    let items = [];
+                    items = [];
                   } else {
                     items = [first];
                   }
@@ -150,7 +150,7 @@ let closure_11 = async function _getSafetyHubData() {
                     return isImageFileResult;
                   });
                   if (obj.isFlaggedContentEmpty(first)) {
-                    let items = [];
+                    items = [];
                   } else {
                     items = [first];
                   }
@@ -196,7 +196,7 @@ let closure_11 = async function _getSafetyHubData() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp11) {
       c0 = tmp;
@@ -218,7 +218,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -274,12 +274,12 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       return isImageFileResult;
                     });
                     if (obj3.isFlaggedContentEmpty(first)) {
-                      let items = [];
+                      items = [];
                     } else {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(7969);
+                    obj3 = classificationId(8093);
                   }
                 }
                 const obj2 = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -323,12 +323,12 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       return isImageFileResult;
                     });
                     if (obj3.isFlaggedContentEmpty(first)) {
-                      let items = [];
+                      items = [];
                     } else {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(7969);
+                    obj3 = classificationId(8093);
                   }
                 }
                 const obj2 = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: found, accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible };
@@ -350,7 +350,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c1 = tmp;
@@ -375,7 +375,7 @@ let closure_13 = async function _requestReview(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -443,7 +443,7 @@ let closure_13 = async function _requestReview(arg0) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -466,7 +466,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -550,7 +550,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -614,7 +614,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -646,7 +646,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -715,7 +715,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -724,7 +724,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({ AGE_CHECK_POLL_INTERVAL_MS: metroRequire, AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7, SuspendedAgeCheckStatus: closure_8 } = SafetyHubConstants);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

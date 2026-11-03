@@ -1,21 +1,21 @@
-// === Module 1383: UserStore ===
+// === Module 1385: UserStore ===
 
-// Module 1383 (UserStore)
+// Module 1385 (UserStore)
 import _mod12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import UserStoreUtils from "UserStoreUtils" /* 1394 */;
-import FlagUtilsAll from "FlagUtils" /* 1396 */;
-import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1399 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1400 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1405 */;
-import PremiumStateUtils from "PremiumStateUtils" /* 1406 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1407 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1979 */;
-import mappers from "mappers" /* 1980 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1991 */;
-import Server from "Server" /* 1992 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1384 */;
-import UserRecord from "UserRecord" /* 1397 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import UserStoreUtils from "UserStoreUtils" /* 1396 */;
+import FlagUtilsAll from "FlagUtils" /* 1398 */;
+import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1401 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1407 */;
+import PremiumStateUtils from "PremiumStateUtils" /* 1408 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1409 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
+import mappers from "mappers" /* 2109 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2120 */;
+import Server from "Server" /* 2121 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1386 */;
+import UserRecord from "UserRecord" /* 1399 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 
@@ -1030,7 +1030,7 @@ function handleGuildJoinRequest(request) {
   return tmp2;
 }
 function handleInitialFamilyCenterLoad(familyCenterTeenActivity) {
-  const items = [...familyCenterTeenActivity.familyCenterTeenActivity.users];
+  items = [...familyCenterTeenActivity.familyCenterTeenActivity.users];
   return items.reduce((acc, item) => mergeUser(item) || acc, false);
 }
 function handleLinkedUserFetch(users) {
@@ -1151,7 +1151,7 @@ function handleGuildStickersFetchSuccess(stickers) {
 }
 const Constants = fn(1072);
 ({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1385).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1387).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";
@@ -1179,6 +1179,9 @@ class UserStore extends tmp2 {
       LOAD_MESSAGES_SUCCESS: handleLoadMessages,
       LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
       LOAD_RECENT_MENTIONS_SUCCESS: handleLoadMessages,
+      SAVED_MESSAGES_UPDATE: handleLoadMessages,
+      BOOKMARKS_FETCH_SUCCESS: handleLoadMessages,
+      SAVED_MESSAGE_CREATE: handleLoadMessages,
       CONVERSATION_MESSAGES_FETCH_SUCCESS: handleConversationMessagesFetchSuccess,
       CHANNEL_CONVERSATIONS_FETCH_SUCCESS: handleChannelConversationsFetchSuccess,
       LOAD_PINNED_MESSAGES_SUCCESS: handleLoadPinnedMessages,
@@ -1245,7 +1248,7 @@ prototype["initialize"] = function initialize() {
 prototype["takeSnapshot"] = function takeSnapshot() {
   const obj = { version: UserStore.LATEST_SNAPSHOT_VERSION, data: null };
   const obj2 = { users: null };
-  const items = [this.getCurrentUser()];
+  items = [this.getCurrentUser()];
   obj2.users = items.filter(GlobalUtils.isNotNullish);
   obj.data = obj2;
   return obj;
@@ -1281,7 +1284,7 @@ prototype["handleLoadCache"] = function handleLoadCache(users) {
       continue;
     }
   }
-  const items = [, ];
+  items = [, ];
   ({ privateChannels: arr[0], initialGuildChannels: arr[1] } = users);
   for (const item10056 of items) {
     for (const item10061 of item10056) {
@@ -1342,7 +1345,7 @@ prototype["filter"] = function filter(fn) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [];
+  items = [];
   for (const key10006 in obj) {
     let tmp5 = obj[key10006];
     if (!arg0(tmp5)) {

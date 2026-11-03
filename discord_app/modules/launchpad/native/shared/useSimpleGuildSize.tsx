@@ -1,6 +1,6 @@
-// === Module 19078: useSimpleGuildSize ===
+// === Module 19236: useSimpleGuildSize ===
 
-// Module 19078 (useSimpleGuildSize)
+// Module 19236 (useSimpleGuildSize)
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);
@@ -14,7 +14,7 @@ export default function useSimpleGuildSize(size) {
   if (null != size) {
     num = size;
   }
-  let items = [num];
+  items = [num];
   memo = noop.useMemo(() => {
     size = { width: num, height: num };
     return size;
@@ -34,7 +34,7 @@ export default function useSimpleGuildSize(size) {
         num2 = 4;
       }
       obj.marginRight = num2;
-      const items = [obj, memo, style];
+      items = [obj, memo, style];
       return items;
     }, items1)
   };

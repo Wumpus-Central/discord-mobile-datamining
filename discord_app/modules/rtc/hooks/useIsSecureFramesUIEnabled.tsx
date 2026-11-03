@@ -1,20 +1,20 @@
-// === Module 9284: useIsSecureFramesUIEnabled ===
+// === Module 9412: useIsSecureFramesUIEnabled ===
 
-// Module 9284 (useIsSecureFramesUIEnabled)
-import ChannelStore from "ChannelStore" /* 4863 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+// Module 9412 (useIsSecureFramesUIEnabled)
+import ChannelStore from "ChannelStore" /* 4990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
 
 const require = fn;
-let closure_4 = fn(9266).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9394).END_TO_END_ENCRYPTION_DISABLED;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
 export function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
-  let items = [RTCConnectionStore, ChannelStore];
+  items = [RTCConnectionStore, ChannelStore];
   const items1 = [channelId];
   return channelId(504).useStateFromStores(items, () => {
-    const items = [RTCConnectionStore, ChannelStore];
+    items = [RTCConnectionStore, ChannelStore];
     [obj, obj2] = items;
     let flag = false;
     if (null != channelId) {

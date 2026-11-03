@@ -1,9 +1,9 @@
-// === Module 13853: GuildDirectoryConstants ===
+// === Module 13984: GuildDirectoryConstants ===
 
-// Module 13853 (GuildDirectoryConstants)
+// Module 13984 (GuildDirectoryConstants)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ export function getHubCategories(arg0) {
     const obj = { id: "club", value: obj2.SCHOOL_CLUB, label: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["Z+MPN/"]);
-    const items = [obj, , , ];
+    items = [obj, , , ];
     obj2 = { id: "class", value: null, label: null };
     obj2.value = obj2.CLASS;
     const intl2 = util.intl;
@@ -72,7 +72,7 @@ export function getHubGuildTemplatesMap() {
   const intl3 = util.intl;
   obj4.name = intl3.string(util.t["VCAA/X"]);
   obj4.type = constants.GUILD_CATEGORY;
-  const items = [obj4, , , , , , , , , , , ];
+  items = [obj4, , , , , , , , , , , ];
   const obj5 = { id: "01", parent_id: "00", name: null, type: null };
   const intl4 = util.intl;
   obj5.name = intl4.string(util.t.GHQoEd);

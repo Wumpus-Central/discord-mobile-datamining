@@ -1,15 +1,15 @@
-// === Module 9796: PremiumFeatureUpsellUtils ===
+// === Module 10104: PremiumFeatureUpsellUtils ===
 
-// Module 9796 (PremiumFeatureUpsellUtils)
+// Module 10104 (PremiumFeatureUpsellUtils)
 import Constants from "Constants" /* 1072 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5073 */;
-import SoundboardTypes from "SoundboardTypes" /* 7518 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5200 */;
+import SoundboardTypes from "SoundboardTypes" /* 7642 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;
-const items = [EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE, EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS];
+const items = [EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE, EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS, EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE];
 const set = new Set();
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
@@ -20,7 +20,7 @@ export function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
   }
   return tmp;
 }
-export function isEmojiPickerUpsellFeature(featureName) {
+export function isExpressionPickerUpsellFeature(featureName) {
   return items.includes(featureName);
 }
 export function getAnalyticsPage(featureName) {

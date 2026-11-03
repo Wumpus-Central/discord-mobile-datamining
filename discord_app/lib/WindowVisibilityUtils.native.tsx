@@ -1,7 +1,7 @@
-// === Module 5877: WindowVisibilityUtils ===
+// === Module 5997: WindowVisibilityUtils ===
 
-// Module 5877 (WindowVisibilityUtils)
-import AppStateStore from "AppStateStore" /* 1993 */;
+// Module 5997 (WindowVisibilityUtils)
+import AppStateStore from "AppStateStore" /* 2122 */;
 
 const AppStates = fn(1072).AppStates;
 const size = fn(2);

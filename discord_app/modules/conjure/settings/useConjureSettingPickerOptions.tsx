@@ -1,13 +1,13 @@
-// === Module 12152: useConjureSettingPickerOptions ===
+// === Module 12288: useConjureSettingPickerOptions ===
 
-// Module 12152 (useConjureSettingPickerOptions)
-import ConjureUtils from "ConjureUtils" /* 7419 */;
+// Module 12288 (useConjureSettingPickerOptions)
+import ConjureUtils from "ConjureUtils" /* 7543 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
-import UserStore from "UserStore" /* 1383 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
+import StreamerModeStore from "StreamerModeStore" /* 5196 */;
+import UserStore from "UserStore" /* 1385 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/conjure/settings/useConjureSett
 export default function useConjureSettingPickerOptions(arg0, type) {
   _require = arg0;
   dependencyMap = type;
-  const items = [conjureGuildRoles];
+  items = [conjureGuildRoles];
   const items1 = [arg0, type.type];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let channels = null;
@@ -58,7 +58,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       if (null != stateFromStores) {
         let result = ConjureUtils.conjureSettingChannels(tmp4, tmp.channel_filter);
         mapped = result.map((id) => {
-          const obj = { id: id.id, label: closure_1_0(5652).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
+          const obj = { id: id.id, label: closure_1_0(5772).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
           return obj;
         });
       }
@@ -67,10 +67,10 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(12153).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(12289).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(12153);
-        obj2.label = closure_0(6041).getName(closure_1_0, null, id);
+        const obj = closure_0(12289);
+        obj2.label = closure_0(6161).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {
@@ -90,7 +90,7 @@ export function conjureSettingPickedIds(value) {
     return value;
   } else {
     if (typeof value !== "string") {
-      let items = [];
+      items = [];
     }
     const items1 = [value];
     items = items1;
@@ -101,7 +101,7 @@ export function withSavedPicks(arr, value, arg2) {
   closure_1 = arg2;
   if (Array.isArray(value)) {
     if (0 === value.length) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(arr, 0);
       let items1 = items;
     } else {
@@ -135,7 +135,7 @@ export function withSavedPicks(arr, value, arg2) {
 export function withPickCap(arr, arg1) {
   closure_0 = arg1;
   if (arg1.length < 25) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr, 0);
     let mapped = items;
   } else {
@@ -155,7 +155,7 @@ export function withPickCap(arr, arg1) {
 export function useConjureSettingsGuildId(projectId, isPreview) {
   _require = projectId;
   dependencyMap = isPreview;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [isPreview, projectId];
   return require("initialize").useStateFromStores(items, () => ConjureUtils.conjureSettingsGuildId(ConjureProjectStore.getProject(closure_0), closure_1), items1);
 }

@@ -1,8 +1,8 @@
-// === Module 2055: InvoiceRecord ===
+// === Module 2184: InvoiceRecord ===
 
-// Module 2055 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2056 */;
-import Record from "Record" /* 1398 */;
+// Module 2184 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2185 */;
+import Record from "Record" /* 1400 */;
 
 require = fn;
 const PaymentGateways = fn(1072).PaymentGateways;
@@ -316,6 +316,13 @@ prototype2["getWalletAmount"] = function getWalletAmount() {
 prototype2["getAmountDue"] = function getAmountDue() {
   return this.total - this.getWalletAmount();
 };
+Object.defineProperty(prototype2, "isSplitWithGiftCard", {
+  get: function isSplitWithGiftCard() {
+    const walletAmount = this.getWalletAmount();
+    return walletAmount > 0 && walletAmount < this.total;
+  },
+  set: undefined
+});
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;
   const invoiceItems = this.invoiceItems;

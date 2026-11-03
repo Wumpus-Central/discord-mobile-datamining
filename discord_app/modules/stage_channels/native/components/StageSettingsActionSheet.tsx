@@ -1,26 +1,26 @@
-// === Module 8176: StageSettingsActionSheet ===
+// === Module 8300: StageSettingsActionSheet ===
 
-// Module 8176 (StageSettingsActionSheet)
+// Module 8300 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 575 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4871 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7941 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8199 */;
-import ReportModals from "ReportModals" /* 8352 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8065 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8323 */;
+import ReportModals from "ReportModals" /* 8476 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(6709).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(6829).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1072);
-({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
+({ ChannelSettingsSections: closure_10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -33,7 +33,7 @@ export default function StageSettingsActionSheet(channelId) {
   const onOpenRTCDebugOverlay = channelId.onOpenRTCDebugOverlay;
   let stateFromStores;
   const tmp = closure_14();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[12]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(stateFromStores[12]);
   const items1 = [PermissionStore];

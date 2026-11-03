@@ -1,14 +1,14 @@
-// === Module 14123: usePowerupGroupConfig ===
+// === Module 14254: usePowerupGroupConfig ===
 
-// Module 14123 (usePowerupGroupConfig)
+// Module 14254 (usePowerupGroupConfig)
 import util from "util" /* 1113 */;
-import GlobalUtils from "GlobalUtils" /* 1379 */;
-import _modDef2570 from "module_2570" /* 2570 */;
-import GuildTagUtils from "GuildTagUtils" /* 8736 */;
-import _modDef14124 from "module_14124" /* 14124 */;
-import _modDef14125 from "module_14125" /* 14125 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import _modDef2699 from "module_2699" /* 2699 */;
+import GuildTagUtils from "GuildTagUtils" /* 8860 */;
+import _modDef14255 from "module_14255" /* 14255 */;
+import _modDef14256 from "module_14256" /* 14256 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
 
@@ -19,9 +19,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks
 export default function usePowerupGroupConfig(arg0, arg1) {
   _require = arg0;
   const group = arg1;
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
       guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
@@ -31,17 +31,17 @@ export default function usePowerupGroupConfig(arg0, arg1) {
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "no-hide-descendants" };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "HermesInternal" };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2570.KC9HRW);
+      obj2.title = intl.string(_modDef2699.KC9HRW);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2570.GJiSmP);
-      const obj3 = { staticUrl: _modDef14124, animatedUrl: _modDef14125 };
+      obj2.description = intl2.string(_modDef2699.GJiSmP);
+      const obj3 = { staticUrl: _modDef14255, animatedUrl: _modDef14256 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef2570.lvk1Gc);
+        stringResult = intl3.string(_modDef2699.lvk1Gc);
       }
       obj2.disabledReason = stringResult;
       return obj2;

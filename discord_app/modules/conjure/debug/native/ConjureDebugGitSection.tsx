@@ -1,11 +1,11 @@
-// === Module 13035: ConjureDebugGitSection ===
+// === Module 13171: ConjureDebugGitSection ===
 
-// Module 13035 (ConjureDebugGitSection)
+// Module 13171 (ConjureDebugGitSection)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import AlertModal from "AlertModal" /* 5964 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13030 */;
-import ConjureDebugGit from "ConjureDebugGit" /* 13048 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import AlertModal from "AlertModal" /* 6084 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13166 */;
+import ConjureDebugGit from "ConjureDebugGit" /* 13184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,31 +16,31 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { controls: { gap: nativeDefault.space.PX_8 }, restartAgentRow: null, clearAlarm: null, disabled: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.restartAgentRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
 obj2.clearAlarm = { flexShrink: 1 };
 obj2.disabled = { opacity: 0.5 };
 let closure_9 = createStyles.createStyles(obj2);
-let obj5 = { checkout: fn(8646).FolderIcon, edit: fn(10232).PencilIcon, remote: fn(13036).CloudIcon, commits: fn(13038).ListNumberedIcon, calendar: fn(9115).CalendarIcon, save: fn(13040).SaveIcon, objects: fn(9758).ServerIcon, download: fn(13042).CloudDownloadIcon, size: fn(11927).SpeedometerIcon, file: fn(11062).FileIcon };
+let obj5 = { checkout: fn(8770).FolderIcon, edit: fn(10362).PencilIcon, remote: fn(13172).CloudIcon, commits: fn(13174).ListNumberedIcon, calendar: fn(9243).CalendarIcon, save: fn(13176).SaveIcon, objects: fn(9890).ServerIcon, download: fn(13178).CloudDownloadIcon, size: fn(12064).SpeedometerIcon, file: fn(11199).FileIcon };
 let obj6 = { ok: null, warning: null, error: null, ahead: null, behind: null };
-let items = [fn(7340).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
+let items = [fn(7460).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
 obj6.ok = items;
-let items1 = [fn(8026).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
+let items1 = [fn(8150).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
-let items2 = [fn(7092).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
+let items2 = [fn(7218).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(13044).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(13180).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(13046).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(13182).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugGitSection.tsx");
 
 export function ConjureDebugGitSection(projectId) {
   const tmp = closure_9();
-  const state = ConjureDebugGit.useConjureDebugGitInfo(projectId.projectId).state;
+  state = ConjureDebugGit.useConjureDebugGitInfo(projectId.projectId).state;
   const gitInfoStatusResult = ConjureDebugGit.gitInfoStatus(state);
   let obj3 = { style: tmp.controls, children: null };
   let tmp6Result = null;
@@ -61,7 +61,7 @@ export function ConjureDebugGitSection(projectId) {
       ({ label, state } = item);
       ({ value, hint } = item);
       if (null != state) {
-        let items = obj6[state];
+        items = obj6[state];
       } else {
         items = [null, undefined];
       }
@@ -92,7 +92,7 @@ export function ConjureDebugRestartAgent(projectId) {
   const restart = conjureRestartAgent.restart;
   const obj = clearAlarm(confirmCopy[21]);
   const checkboxA11yNative = clearAlarm(confirmCopy[24]).useCheckboxA11yNative({ checked: clearAlarm, disabled: busy });
-  const items = [confirmCopy, restart];
+  items = [confirmCopy, restart];
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const obj3 = { style: tmp.controls, children: null };
   const obj4 = { style: tmp.restartAgentRow, children: null };

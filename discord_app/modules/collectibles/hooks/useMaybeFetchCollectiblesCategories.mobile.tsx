@@ -1,9 +1,9 @@
-// === Module 10606: ? ===
+// === Module 10736: ? ===
 
-// Module 10606
+// Module 10736
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10607 */;
-import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10737 */;
+import DevSettingsStore from "DevSettingsStore" /* 5750 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway, arg1
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ noCache: DevSettingsStore.get("shop_disable_cache"), includeUnpublished: DevSettingsStore.get("shop_include_unpublished") }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
   const obj3 = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };

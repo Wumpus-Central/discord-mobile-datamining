@@ -1,10 +1,10 @@
-// === Module 18108: ChannelListPanelBackdrop ===
+// === Module 18252: ChannelListPanelBackdrop ===
 
-// Module 18108 (ChannelListPanelBackdrop)
+// Module 18252 (ChannelListPanelBackdrop)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import QuestHooks from "QuestHooks" /* 17068 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18080 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import QuestHooks from "QuestHooks" /* 17211 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18224 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const DM_WIDTH = fn(1072).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -33,10 +33,10 @@ export default function ChannelListPanelBackdrop(children) {
   const container = tmp;
   const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
   const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
-  let items = [tmp, contentInset, mobileQuestDockHeight, style];
+  items = [tmp, contentInset, mobileQuestDockHeight, style];
   const obj3 = {
     style: noop.useMemo(() => {
-      const items = [container.container, , ];
+      items = [container.container, , ];
       const rect = contentInset;
       let num;
       if (contentInset != null) {

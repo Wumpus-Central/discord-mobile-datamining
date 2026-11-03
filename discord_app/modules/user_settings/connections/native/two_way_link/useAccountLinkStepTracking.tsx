@@ -1,6 +1,6 @@
-// === Module 14635: useAccountLinkStepTracking ===
+// === Module 14766: useAccountLinkStepTracking ===
 
-// Module 14635 (useAccountLinkStepTracking)
+// Module 14766 (useAccountLinkStepTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ export function useAccountLinkStepTracking(CRUNCHYROLL, locationStack) {
   const platform_type = CRUNCHYROLL;
   const location_stack = locationStack;
   noop = noop.useRef(null);
-  let items = [locationStack, CRUNCHYROLL];
+  items = [locationStack, CRUNCHYROLL];
   const items1 = [locationStack, CRUNCHYROLL];
   const callback = noop.useCallback((index) => {
     if (null != index) {
@@ -30,7 +30,7 @@ export function useAccountLinkStepTracking(CRUNCHYROLL, locationStack) {
     }
   }, items);
   const effect = noop.useEffect(() => {
-    const items = ["landing"];
+    items = ["landing"];
     const obj2 = { location_stack, previous_step: null, current_step: null, platform_type: null };
     let tmp3;
     if (null != ref.current) {

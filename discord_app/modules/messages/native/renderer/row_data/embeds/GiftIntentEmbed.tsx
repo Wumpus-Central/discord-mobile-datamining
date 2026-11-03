@@ -1,20 +1,20 @@
-// === Module 8544: GiftIntentEmbed ===
+// === Module 8668: GiftIntentEmbed ===
 
-// Module 8544 (GiftIntentEmbed)
+// Module 8668 (GiftIntentEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import _modDef5720 from "module_5720" /* 5720 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8548 */;
-import _modDef8549 from "module_8549" /* 8549 */;
-import _modDef8550 from "module_8550" /* 8550 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8545 */;
-import UserStore from "UserStore" /* 1383 */;
+import UserUtilsDefault from "UserUtils" /* 5195 */;
+import _modDef5840 from "module_5840" /* 5840 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8520 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8672 */;
+import _modDef8673 from "module_8673" /* 8673 */;
+import _modDef8674 from "module_8674" /* 8674 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8669 */;
+import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const GiftIntentType = fn(1385).GiftIntentType;
-const createStyles = fn(5014);
+const GiftIntentType = fn(1387).GiftIntentType;
+const createStyles = fn(5141);
 let closure_6 = createStyles.createNativeStyleProperties({ headerTextColor: nativeDefault.colors.TEXT_STRONG, subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_MUTED });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
@@ -38,7 +38,7 @@ export function createGiftIntentEmbed(message, theme) {
         const intl2 = util.intl;
         const obj3 = { numberOfYears: tmp12 };
         obj2.text = intl2.formatToPlainString(util.t.PpG27s, obj3);
-        const items = [obj2];
+        items = [obj2];
         obj.subHeaderParts = items;
         let tmp = obj;
       } else {
@@ -65,11 +65,11 @@ export function createGiftIntentEmbed(message, theme) {
         obj9.giftIntentType = giftIntentType;
         ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5720);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5840);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8549);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8550);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8673);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8674);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

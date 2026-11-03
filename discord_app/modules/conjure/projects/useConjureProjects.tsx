@@ -1,16 +1,16 @@
-// === Module 12599: useConjureProjects ===
+// === Module 12735: useConjureProjects ===
 
-// Module 12599 (useConjureProjects)
+// Module 12735 (useConjureProjects)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2038 */;
-import UserProfileStore from "UserProfileStore" /* 7772 */;
-import GuildChannelStore from "GuildChannelStore" /* 4944 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ApplicationStore from "ApplicationStore" /* 2167 */;
+import UserProfileStore from "UserProfileStore" /* 7896 */;
+import GuildChannelStore from "GuildChannelStore" /* 5071 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
 
 const require = globalThis.__r;
 
@@ -33,22 +33,22 @@ let result = size.fileFinishedImporting("modules/conjure/projects/useConjureProj
 export function useConjureProjects(ConjureClarificationProjectPicker) {
   let nextExpiry = ConjureClarificationProjectPicker;
   const tmp = _slicedToArray(noop.useState(0), 2);
-  let items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, nextExpiry(1447).ApexExperimentStore];
+  items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, nextExpiry(1449).ApexExperimentStore];
   const items1 = [ConjureClarificationProjectPicker, tmp[0]];
   const stateFromStores = nextExpiry(504).useStateFromStores(items, () => (function collectEntries(nextExpiry) {
     const _location = nextExpiry;
     function add(item10063, owned) {
       if (!set.has(item10063.id)) {
-        const result = nextExpiry(12072).conjureProjectGuildId(item10063);
+        const result = nextExpiry(7517).conjureProjectGuildId(item10063);
         if (null == result) {
           set.add(item10063.id);
           let num = closure_2_10.getFinishedAt(item10063.id);
           const isThinkingResult = closure_2_10.isThinking(item10063.id);
           const obj4 = { thinking: isThinkingResult, finishedAt: num, now };
-          const conjureActivityResult = nextExpiry(12072).conjureActivity(obj4);
+          const conjureActivityResult = nextExpiry(7517).conjureActivity(obj4);
           if ("done" === conjureActivityResult) {
             if (null != num) {
-              const sum = num + nextExpiry(12072).CONJURE_DONE_WINDOW_MS;
+              const sum = num + nextExpiry(7517).CONJURE_DONE_WINDOW_MS;
               bound = sum;
               if (null != bound) {
                 const _Math = Math;
@@ -56,7 +56,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
               }
             }
           }
-          let guild = null;
+          guild = null;
           if (null != result) {
             guild = closure_2_7.getGuild(result);
           }
@@ -92,18 +92,18 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
           }
           obj5.sortTime = num;
           items.push(obj5);
-          const tmpResult = nextExpiry(12072);
+          const tmpResult = nextExpiry(7517);
         } else {
           value = map.get(result);
           if (null == value) {
             const obj6 = { guildId: result, location: _location };
-            const result1 = nextExpiry(6879).isConjureGuildEnabled(obj6);
+            const result1 = nextExpiry(6999).isConjureGuildEnabled(obj6);
             const result2 = map.set(result, result1);
             value = result1;
-            const tmpResult2 = nextExpiry(6879);
+            const tmpResult2 = nextExpiry(6999);
           }
         }
-        const obj2 = nextExpiry(12072);
+        const obj2 = nextExpiry(7517);
       }
     }
     function isEnabled(id) {
@@ -112,7 +112,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
         return value;
       } else {
         const obj3 = { guildId: id, location: _location };
-        const result = nextExpiry(6879).isConjureGuildEnabled(obj3);
+        const result = nextExpiry(6999).isConjureGuildEnabled(obj3);
         const result1 = map.set(id, result);
         return result;
       }
@@ -120,7 +120,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
     dependencyMap = Date.now();
     new Map();
     new Set();
-    const items = [];
+    items = [];
     let bound = null;
     const ownedProjects = closure_11.getOwnedProjects();
     const iter = ownedProjects[Symbol.iterator]();
@@ -144,7 +144,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
       }
       continue;
     }
-    let obj2 = { entries: _location(12072).sortConjureProjects(items), nextExpiry: bound };
+    let obj2 = { entries: _location(7517).sortConjureProjects(items), nextExpiry: bound };
     return obj2;
   })(nextExpiry), items1, conjureEntriesEqual);
   nextExpiry = stateFromStores.nextExpiry;
@@ -163,7 +163,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
 }
 export function useConjureEligibleGuilds(ConjureClarificationEntityPicker) {
   _require = ConjureClarificationEntityPicker;
-  const items = [GuildStore, require("ApexExperiment").ApexExperimentStore, PermissionStore];
+  items = [GuildStore, require("ApexExperiment").ApexExperimentStore, PermissionStore];
   const items1 = [ConjureClarificationEntityPicker];
   return require("initialize").useStateFromStores(items, () => {
     const values = Object.values(GuildStore.getGuilds());
@@ -176,10 +176,10 @@ export function useConjureEligibleGuilds(ConjureClarificationEntityPicker) {
 }
 export function useConjureForMeGuildId(ConjureHomeScreen) {
   _require = ConjureHomeScreen;
-  const items = [GuildStore, SelectedGuildStore, require("ApexExperiment").ApexExperimentStore];
+  items = [GuildStore, SelectedGuildStore, require("ApexExperiment").ApexExperimentStore];
   const items1 = [ConjureHomeScreen];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
+    guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
     if (null != guild) {
       if (obj2.canAccessConjure(guild, closure_0)) {
         let id = guild.id;

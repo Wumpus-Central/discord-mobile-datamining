@@ -1,11 +1,11 @@
-// === Module 7060: TableRowGroup ===
+// === Module 7186: TableRowGroup ===
 
-// Module 7060 (TableRowGroup)
+// Module 7186 (TableRowGroup)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5596 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import TableRowDivider from "TableRowDivider" /* 6972 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6976 */;
+import useToken from "useToken" /* 5719 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import TableRowDivider from "TableRowDivider" /* 7098 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexShrink: 0 }, content: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 }, title: { marginBottom: 8 }, description: { marginBottom: 8 }, hasTrailingText: null, helperText: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 obj2.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
@@ -53,7 +53,7 @@ export function TableRowGroup(accessibilityLabel) {
     } else if (c1) {
       const obj = { children: null };
       const obj2 = { adjustSpacingForIcon };
-      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
+      items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
       const tmp2 = React5(timestampProducer, obj);
     } else {
@@ -66,7 +66,7 @@ export function TableRowGroup(accessibilityLabel) {
     const obj3 = { title };
     tmp6Result = closure_5(TableRowGroupTitle, obj3);
   }
-  let items = [tmp6Result, , , ];
+  items = [tmp6Result, , , ];
   let tmp6Result3 = null != description;
   if (tmp6Result3) {
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };

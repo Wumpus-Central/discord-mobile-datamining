@@ -1,19 +1,19 @@
-// === Module 12347: UserProfileApplicationWidgetFieldUtils ===
+// === Module 12483: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 12347 (UserProfileApplicationWidgetFieldUtils)
+// Module 12483 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import FastImageDefault from "FastImage" /* 5717 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12348 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12349 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5837 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12484 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export function formatDurationNarrow(value) {
   const rounded = Math.floor(num / 3600000);
   const result = Math.floor(num / 60000) % 60;
   const result1 = Math.floor(num / 1000) % 60;
-  const items = [];
+  items = [];
   if (rounded > 0) {
     const intl = util.intl;
     const obj = { hours: rounded };
@@ -65,7 +65,7 @@ export function FieldText(arg0) {
     const obj4 = { variant, color, lineClamp: 2, children: null };
     const obj5 = { linkVariant: variant };
     obj4.children = ApplicationWidgetMarkupUtils.parseApplicationWidgetText(field.text, obj5);
-    const items = [React4(Text_Text.Text, obj4), ];
+    items = [React4(Text_Text.Text, obj4), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       const obj = { source: null, style: null, resizeMode: "contain" };

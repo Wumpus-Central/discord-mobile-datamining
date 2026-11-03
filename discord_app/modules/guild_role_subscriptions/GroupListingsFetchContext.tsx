@@ -1,14 +1,14 @@
-// === Module 17204: GroupListingsFetchContext ===
+// === Module 17347: GroupListingsFetchContext ===
 
-// Module 17204 (GroupListingsFetchContext)
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7429 */;
+// Module 17347 (GroupListingsFetchContext)
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7553 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */;
 
 const require = fn;
-const FetchState = fn(4939).FetchState;
+const FetchState = fn(5066).FetchState;
 let jsx = fn(21).jsx;
 const redux = noop.createContext(undefined);
 const size = fn(2);
@@ -26,7 +26,7 @@ export function useGroupListingsFetchContext(useGroupListingsForGuild) {
     throw error;
   } else {
     const fetchGroupListingsForGuild = context.fetchGroupListingsForGuild;
-    const items = [fetchGroupListingsForGuild];
+    items = [fetchGroupListingsForGuild];
     const effect = noop.useEffect(() => {
       fetchGroupListingsForGuild();
     }, items);
@@ -41,7 +41,7 @@ export function GroupListingsFetchContextProvider(guildId) {
   let first;
   closure_6 = undefined;
   ({ children, refetchOnMount } = guildId);
-  const items = [first];
+  items = [first];
   const stateFromStores = guildId(countryCode[5]).useStateFromStores(items, () => first.isConnected());
   let obj = guildId(countryCode[5]);
   const items1 = [closure_6];

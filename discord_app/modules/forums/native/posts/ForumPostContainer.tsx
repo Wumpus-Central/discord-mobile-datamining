@@ -1,19 +1,19 @@
-// === Module 13783: ForumPostContainer ===
+// === Module 13914: ForumPostContainer ===
 
-// Module 13783 (ForumPostContainer)
+// Module 13914 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import Card from "Card" /* 6977 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11132 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import Card from "Card" /* 7103 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11269 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7242);
+const ReanimatedHelperTypes = fn(7362);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
@@ -24,8 +24,8 @@ export function useForumPostContainerPressedIn() {
 export function ForumPostPressableContainer(arg0) {
   ({ threadId, children, style } = arg0);
   const tmp = closure_6();
-  const sharedValue = ReanimatedRexport.useSharedValue(false);
-  const items = [sharedValue];
+  const sharedValue = _mod1652.useSharedValue(false);
+  items = [sharedValue];
   const memo = noop.useMemo(() => ({
     onPressIn() {
       return sharedValue.set(true);
@@ -47,7 +47,7 @@ export function ForumPostPressableContainer(arg0) {
 export function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [closure_6().disabledContainer, style];
+  items = [closure_6().disabledContainer, style];
   obj.style = items;
   obj.children = children;
   return <View style={null} pointerEvents="none">{null}</View>;

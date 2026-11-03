@@ -1,20 +1,20 @@
-// === Module 13277: KickConfirm ===
+// === Module 13413: KickConfirm ===
 
-// Module 13277 (KickConfirm)
+// Module 13413 (KickConfirm)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import removeConjureServerAppDefault from "removeConjureServerApp" /* 13280 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import removeConjureServerAppDefault from "removeConjureServerApp" /* 13416 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import UserStore from "UserStore" /* 1383 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, iconLabelBlock: null, iconStyles: null, redText: null, conjureTitle: null, conjureServerName: null, blurb: null, removeEverything: null, errorText: null, actions: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.iconLabelBlock = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
@@ -55,7 +55,7 @@ export default noop.memo(function KickConfirm(guildId) {
   const ref1 = stateFromStores1.useRef(null);
   const insets = userId(onKick[8])({ includeKeyboardHeight: true }).insets;
   const obj2 = { insets, inputs: null, scrollViewRef: ref };
-  const items = [{ ref: ref1, offset: { type: "toBottom" } }];
+  items = [{ ref: ref1, offset: { type: "toBottom" } }];
   obj2.inputs = items;
   userId(onKick[9])(obj2);
   const items1 = [checked];
@@ -131,14 +131,14 @@ export default noop.memo(function KickConfirm(guildId) {
         const obj12 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj11.children = intl.formatToPlainString(tmp7(tmp5[16]).t["1Ie87p"], obj12);
         const items6 = [tmp20(tmp7(tmp5[15]).Text, obj11), ];
-        const obj13 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
+        const obj13 = { variant: "text-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
         items6[1] = tmp20(tmp7(tmp5[15]).Text, obj13);
         obj10.children = items6;
         let obj14 = obj10;
         const tmp4Result4 = tmp4(tmp5[17]);
       } else {
         obj14 = { children: null };
-        const obj15 = { style: tmp.conjureTitle, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName) };
+        const obj15 = { style: tmp.conjureTitle, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName) };
         const items7 = [tmp20(tmp7(tmp5[15]).Text, obj15), ];
         const obj16 = { style: tmp.conjureServerName, variant: "text-md/semibold", color: "text-muted", children: stateFromStores.name };
         items7[1] = tmp20(tmp7(tmp5[15]).Text, obj16);
@@ -148,7 +148,7 @@ export default noop.memo(function KickConfirm(guildId) {
       items5[1] = closure_11(c10, obj14);
       obj8.children = items5;
       const items8 = [closure_11(conjureServerApp, obj8), , , , , , ];
-      const obj17 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
+      const obj17 = { style: tmp.blurb, variant: "heading-md/medium", color: "text-feedback-warning", children: null };
       if (null == conjureServerApp) {
         const intl3 = tmp7(tmp5[16]).intl;
         const obj18 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };

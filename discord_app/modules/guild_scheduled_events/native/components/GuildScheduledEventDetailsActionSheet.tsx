@@ -1,21 +1,21 @@
-// === Module 8964: GuildScheduledEventDetailsActionSheet ===
+// === Module 9092: GuildScheduledEventDetailsActionSheet ===
 
-// Module 8964 (GuildScheduledEventDetailsActionSheet)
+// Module 9092 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8966 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(4869);
+const GuildScheduledEventsConstants = fn(4996);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { segmentedControl: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 }, header: { flexDirection: "column" } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   const tmp6 = _slicedToArray(noop.useState(eventId.recurrenceId), 2);
   const first = tmp6[0];
   let tmp4 = event(stateFromStores[10]);
-  let items = [c7];
+  items = [c7];
   const items1 = [eventId, event];
   stateFromStores = eventId(stateFromStores[12]).useStateFromStores(items, () => {
     let guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
@@ -78,7 +78,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     if (num > 0) {
       tmp4 = arr;
       if (arr.length > 0) {
-        const items = [];
+        items = [];
         const obj = { count: num };
         items[HermesBuiltin.arraySpread(arr, 0)] = obj;
         tmp4 = items;

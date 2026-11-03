@@ -1,11 +1,11 @@
-// === Module 15307: usePromotionMarketingComponent ===
+// === Module 15448: usePromotionMarketingComponent ===
 
-// Module 15307 (usePromotionMarketingComponent)
-import constants from "constants" /* 9665 */;
+// Module 15448 (usePromotionMarketingComponent)
+import constants from "constants" /* 9797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 7630 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
+import UserOfferStore from "UserOfferStore" /* 7754 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
   const effect = noop.useEffect(() => {
     const result = PREMIUM_TAB(stateFromStores[4]).maybeFetchActivePromotions();
   }, []);
-  const items = [PromotionsStore, ref];
+  items = [PromotionsStore, ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const marketingComponentByType = PromotionsStore.getMarketingComponentByType(closure_0);
     if (null == marketingComponentByType) {

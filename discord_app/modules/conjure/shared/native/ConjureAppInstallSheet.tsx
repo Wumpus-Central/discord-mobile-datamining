@@ -1,7 +1,7 @@
-// === Module 10904: ConjureAppInstallSheet ===
+// === Module 11034: ConjureAppInstallSheet ===
 
-// Module 10904 (ConjureAppInstallSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+// Module 11034 (ConjureAppInstallSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import noop from "module_19" /* 19 */;
 
 let jsx = fn(21).jsx;
@@ -15,7 +15,7 @@ export default function ConjureAppInstallSheet(sheetKey) {
   let context;
   context = context.useContext(sheetKey(dismissOAuthModal[2]));
   jsx = context.useRef(false);
-  const items = [dismissOAuthModal];
+  items = [dismissOAuthModal];
   const callback = context.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;

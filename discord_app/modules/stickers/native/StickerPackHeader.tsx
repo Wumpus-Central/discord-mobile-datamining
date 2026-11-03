@@ -1,25 +1,25 @@
-// === Module 10276: StickerPackHeader ===
+// === Module 10406: StickerPackHeader ===
 
-// Module 10276 (StickerPackHeader)
+// Module 10406 (StickerPackHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import StickersUtils from "StickersUtils" /* 6560 */;
-import Pressables from "Pressables" /* 6980 */;
-import _modDef10277 from "module_10277" /* 10277 */;
-import _modDef10278 from "module_10278" /* 10278 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10279 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import StickersUtils from "StickersUtils" /* 6680 */;
+import Pressables from "Pressables" /* 7106 */;
+import _modDef10407 from "module_10407" /* 10407 */;
+import _modDef10408 from "module_10408" /* 10408 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10236);
+const StickerPickerConstants = fn(10366);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { section: { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, label: { flex: -1 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, bannerContainer: { aspectRatio: 3.824074074074074, marginVertical: -8, width: "100%" }, banner: { height: "100%" }, headline: { height: 20, flex: 1, flexDirection: "row", alignItems: "center" }, iconContainer: null, icon: null, animatedIcon: null, premiumIcon: null };
 let size = { marginLeft: 8, height: 16, width: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -44,18 +44,18 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   const tmp = closure_7();
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headline, children: null };
-  const items = [React4(Text_Text.Text, { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name }), , ];
+  items = [React4(Text_Text.Text, { style: tmp.label, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stickerPack.name }), , ];
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef10277, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef10407, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = React4(native.Icon, obj6);
     result = React4(View, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
-  const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef10278, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stickerPack.name };
+  obj7.children = React4(native.Icon, { source: _modDef10408, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);

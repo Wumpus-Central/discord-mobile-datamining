@@ -1,8 +1,8 @@
-// === Module 16301: CONTEXT_MENU_ICON_NAMES ===
+// === Module 16444: CONTEXT_MENU_ICON_NAMES ===
 
-// Module 16301 (CONTEXT_MENU_ICON_NAMES)
-import helpers from "helpers" /* 16304 */;
-import contextMenuIcons from "contextMenuIcons" /* 16305 */;
+// Module 16444 (CONTEXT_MENU_ICON_NAMES)
+import discord_common_helpers from "discord_common/helpers" /* 16447 */;
+import contextMenuIcons from "contextMenuIcons" /* 16448 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
@@ -12,7 +12,7 @@ export function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, validateAccess: scope.validateAccess, handler: scope.handler };
-  const tmp = request(16302).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(16445).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;
@@ -21,7 +21,7 @@ export function createRPCCommand(AUTHENTICATE, scope) {
   if (null != request) {
     obj.validation = function validation(object) {
       if (null == closure_1) {
-        closure_1 = helpers.joiReqObj(object.object(request(object)));
+        closure_1 = discord_common_helpers.joiReqObj(object.object(request(object)));
       }
       return closure_1;
     };
@@ -32,7 +32,7 @@ export function createRPCEvent(ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, scope) {
   let subscribeArgs;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = subscribeArgs(16302).RPCEventSchemas[ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE];
+  const tmp = subscribeArgs(16445).RPCEventSchemas[ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE];
   subscribeArgs = undefined;
   if (tmp != null) {
     subscribeArgs = tmp.subscribeArgs;
@@ -41,7 +41,7 @@ export function createRPCEvent(ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, scope) {
   if (null != subscribeArgs) {
     obj.validation = function validation(object) {
       if (null == closure_1) {
-        closure_1 = helpers.joiReqObj(object.object(subscribeArgs(object)));
+        closure_1 = discord_common_helpers.joiReqObj(object.object(subscribeArgs(object)));
       }
       return closure_1;
     };

@@ -1,9 +1,9 @@
-// === Module 19882: useCreatorMonetizationEligibilityItems ===
+// === Module 20032: useCreatorMonetizationEligibilityItems ===
 
-// Module 19882 (useCreatorMonetizationEligibilityItems)
+// Module 20032 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 19885 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 20035 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
   const isMFAEnabled = require("useIsMFAEnabled").useIsMFAEnabled();
   const isUserMFAEnabled = isMFAEnabled.isUserMFAEnabled;
   const isModerationMFAEnabled = isMFAEnabled.isModerationMFAEnabled;
-  let items = [isUserMFAEnabled, isModerationMFAEnabled, onEligibilityBecameStale, actions];
+  items = [isUserMFAEnabled, isModerationMFAEnabled, onEligibilityBecameStale, actions];
   let onEnableMFAClick = isUserMFAEnabled.useCallback(sortedByIneligible(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -38,7 +38,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;
@@ -135,12 +135,12 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let handleContactSupportClick;
       if (!noRecentViolations) {
         handleContactSupportClick = function handleContactSupportClick() {
-          const tmp = onEligibilityBecameStale(5705);
-          return tmp(onEligibilityBecameStale(2061).getSubmitRequestURL());
+          const tmp = onEligibilityBecameStale(5825);
+          return tmp(onEligibilityBecameStale(2190).getSubmitRequestURL());
         };
       }
       obj2.actionHandler = handleContactSupportClick;
-      const items = [obj2];
+      items = [obj2];
       if (tmp3) {
         const obj = { key: "owner_age_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
         const intl2 = util.intl;

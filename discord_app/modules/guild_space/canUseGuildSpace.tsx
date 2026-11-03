@@ -1,8 +1,8 @@
-// === Module 7402: canUseGuildSpace ===
+// === Module 7526: canUseGuildSpace ===
 
-// Module 7402 (canUseGuildSpace)
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+// Module 7526 (canUseGuildSpace)
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ export function isGuildSpaceAdmin(arg0) {
 }
 export function useIsGuildSpaceAdmin(arg0) {
   _require = arg0;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
@@ -37,7 +37,7 @@ export function useCanUseGuildSpace(id, useGuildActionRows) {
   _require = id;
   const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   const obj = require("GuildSpaceExperiment");
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;

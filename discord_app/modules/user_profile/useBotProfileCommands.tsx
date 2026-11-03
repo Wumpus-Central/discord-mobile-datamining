@@ -1,7 +1,7 @@
-// === Module 11496: useBotProfileCommands ===
+// === Module 11633: useBotProfileCommands ===
 
-// Module 11496 (useBotProfileCommands)
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10316 */;
+// Module 11633 (useBotProfileCommands)
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10446 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ export default function useBotProfileCommands(channel, arg1, arg2) {
   const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(channel, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
   const obj2 = { application: accessibleCommandsForApplication.application, commands: null };
-  const items = [commands];
+  items = [commands];
   obj2.commands = noop.useMemo(() => {
     let found;
     if (commands != null) {

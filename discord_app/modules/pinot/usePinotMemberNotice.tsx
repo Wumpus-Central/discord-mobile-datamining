@@ -1,9 +1,9 @@
-// === Module 11322: usePinotMemberNotice ===
+// === Module 11459: usePinotMemberNotice ===
 
-// Module 11322 (usePinotMemberNotice)
-import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11329 */;
+// Module 11459 (usePinotMemberNotice)
+import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11466 */;
 import noop from "module_19" /* 19 */;
-import PinotMemberNoticeAckStore from "PinotMemberNoticeAckStore" /* 11323 */;
+import PinotMemberNoticeAckStore from "PinotMemberNoticeAckStore" /* 11460 */;
 
 require = fn;
 let closure_4 = { visible: false };
@@ -37,7 +37,7 @@ export function usePinotMemberNotice(channel, mobile_channel_header) {
   }
   pinotPromotableChannelId = tmp10;
   const tmpResult = pinotPromotableChannelId(stateFromStores[4]);
-  const items = [PinotMemberNoticeAckStore];
+  items = [PinotMemberNoticeAckStore];
   const items1 = [tmp10];
   stateFromStores = pinotPromotableChannelId(stateFromStores[6]).useStateFromStores(items, () => {
     let isHiddenResult = null != pinotPromotableChannelId;

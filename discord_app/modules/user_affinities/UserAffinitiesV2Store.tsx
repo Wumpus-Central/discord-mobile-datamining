@@ -1,15 +1,15 @@
-// === Module 7801: UserAffinitiesV2Store ===
+// === Module 7925: UserAffinitiesV2Store ===
 
-// Module 7801 (UserAffinitiesV2Store)
+// Module 7925 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RelationshipStore from "RelationshipStore" /* 4956 */;
+import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
   const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
   map = new Map(found.map((otherUserId) => {
-    const items = [otherUserId.otherUserId, otherUserId];
+    items = [otherUserId.otherUserId, otherUserId];
     return items;
   }));
   if (null != _null) {
@@ -21,7 +21,7 @@ function recomputeAffinities() {
     const result = map.set(_null.otherUserId, _null);
   }
 }
-const USER_AFFINITY_TTL = fn(7802).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7926).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 let c4 = null;
@@ -47,7 +47,7 @@ prototype["initialize"] = function initialize(userAffinities) {
     const userAffinities1 = obj.userAffinities;
     const found = userAffinities1.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
     map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
+      items = [otherUserId.otherUserId, otherUserId];
       return items;
     }));
     if (null != _null) {
@@ -59,7 +59,7 @@ prototype["initialize"] = function initialize(userAffinities) {
       const result = map.set(_null.otherUserId, _null);
     }
   }
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   self.syncWith(items, recomputeAffinities);
 };
 prototype["shouldFetch"] = function shouldFetch() {
@@ -148,7 +148,7 @@ const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, {
     const userAffinities = obj.userAffinities;
     const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
     map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
+      items = [otherUserId.otherUserId, otherUserId];
       return items;
     }));
     if (null != _null) {

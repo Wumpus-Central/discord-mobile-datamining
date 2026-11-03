@@ -1,11 +1,11 @@
-// === Module 8903: DeviceOrientation ===
+// === Module 9027: DeviceOrientation ===
 
-// Module 8903 (DeviceOrientation)
+// Module 9027 (DeviceOrientation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import PlatformUtils from "PlatformUtils" /* 1375 */;
-import DeviceUtils from "DeviceUtils" /* 4971 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import DeviceUtils from "DeviceUtils" /* 5098 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator_mod from "module_8904" /* 8904 */;
+import get_ActivityIndicator_mod from "module_9028" /* 9028 */;
 
 require = fn;
 function handleOrientationChange(initialOrientation) {
@@ -259,7 +259,7 @@ export function useOrientation() {
 }
 export function useOrientationListener(callback2) {
   closure_0 = callback2;
-  const items = [callback2];
+  items = [callback2];
   const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);
 }
 export function restoreDefaultOrientation() {

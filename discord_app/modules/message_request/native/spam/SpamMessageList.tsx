@@ -1,12 +1,12 @@
-// === Module 18980: SpamMessageList ===
+// === Module 19138: SpamMessageList ===
 
-// Module 18980 (SpamMessageList)
+// Module 19138 (SpamMessageList)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import transitionToChannel from "transitionToChannel" /* 5756 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
-import MetricEvents from "MetricEvents" /* 6545 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import transitionToChannel from "transitionToChannel" /* 5876 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
+import MetricEvents from "MetricEvents" /* 6665 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ function PendingSpamMessageRequestRow(isLastRow) {
   const channel = messageRequest.channel;
   const id = channel.id;
   closure_5 = require("useLongestChannelMessageBeforeReply").useLongestChannelMessageBeforeReply(id, channel.getRecipientId());
-  const items = [id, hasSingleMessageRequest];
+  items = [id, hasSingleMessageRequest];
   const callback = channel.useCallback(() => {
     const obj2 = { text: null, variant: "critical" };
     const intl = require("util").intl;
@@ -152,7 +152,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;
@@ -191,7 +191,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     let tmp10Result = closure_7(tmp2(tmp3[26]), obj3);
     const tmp2Result = tmp2(tmp3[26]);
   } else {
-    const items = [tmp.list, ];
+    items = [tmp.list, ];
     let num = 0;
     if (tmp4Result.isAndroid()) {
       num = bottom;

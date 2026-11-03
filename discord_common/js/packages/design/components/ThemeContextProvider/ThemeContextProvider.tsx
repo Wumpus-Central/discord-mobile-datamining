@@ -1,7 +1,7 @@
-// === Module 5032: ThemeContextProvider ===
+// === Module 5159: ThemeContextProvider ===
 
-// Module 5032 (ThemeContextProvider)
-import ThemeContext from "ThemeContext" /* 5031 */;
+// Module 5159 (ThemeContextProvider)
+import ThemeContext from "ThemeContext" /* 5158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export function ThemeContextProvider(children) {
   let reduceAdaptiveTheme = children.reduceAdaptiveTheme;
   const context = secondaryColor.useContext(theme(primaryColor[2]).ThemeContext);
   const FALLBACK_THEME_CONTEXT_VALUE = theme(primaryColor[2]).FALLBACK_THEME_CONTEXT_VALUE;
-  const items = [theme, , , , , , , , , , , , , , , , , , , , , ];
+  items = [theme, , , , , , , , , , , , , , , , , , , , , ];
   ({ theme: arr[1], primaryColor: arr[2], secondaryColor: arr[3], gradient: arr[4], flags: arr[5], contrast: arr[6], saturation: arr[7], enabledExperiments: arr[8], density: arr[9], disableAdaptiveTheme: arr[10], reduceAdaptiveTheme: arr[11] } = context);
   items[12] = primaryColor;
   items[13] = secondaryColor;

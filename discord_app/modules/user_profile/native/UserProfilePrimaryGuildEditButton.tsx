@@ -1,16 +1,16 @@
-// === Module 16514: UserProfilePrimaryGuildEditButton ===
+// === Module 16657: UserProfilePrimaryGuildEditButton ===
 
-// Module 16514 (UserProfilePrimaryGuildEditButton)
+// Module 16657 (UserProfilePrimaryGuildEditButton)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4885 */;
+import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
-const GuildTagBadgeSize = fn(8393).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -42,7 +42,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     pendingPrimaryGuildId = tmp4;
   }
   const tmp = closure_6();
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [pendingPrimaryGuildId];
   const stateFromStores = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]).useStateFromStores(items, () => GuildStore.getGuild(pendingPrimaryGuildId), items1);
   const obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]);
@@ -112,7 +112,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     const obj5 = { text: combined };
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16516, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16659, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
     };
     let tmp23Result = null;
     if (null != stateFromStores) {

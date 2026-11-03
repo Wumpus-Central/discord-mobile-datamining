@@ -1,6 +1,6 @@
-// === Module 9490: useWishlistGiftableItems ===
+// === Module 9618: useWishlistGiftableItems ===
 
-// Module 9490 (useWishlistGiftableItems)
+// Module 9618 (useWishlistGiftableItems)
 import noop from "module_19" /* 19 */;
 
 let items = [, , ];
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGi
 export const GIFTABLE_PRODUCT_LINES = set;
 export function useWishlistGiftableItems(wishlist) {
   noop = wishlist;
-  let items = [wishlist];
+  items = [wishlist];
   return noop.useMemo(() => {
     let found;
     if (wishlist != null) {
-      const items = wishlist.items;
+      items = wishlist.items;
       found = items.filter((skuProductLine) => set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned);
     }
     if (found == null) {

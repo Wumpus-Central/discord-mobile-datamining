@@ -1,41 +1,41 @@
-// === Module 11645: ChannelMembersActionSheet ===
+// === Module 11782: ChannelMembersActionSheet ===
 
-// Module 11645 (ChannelMembersActionSheet)
+// Module 11782 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useNavigation from "useNavigation" /* 1497 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
-import BottomSheetModal from "BottomSheetModal" /* 5275 */;
-import Text_Text from "Text/Text" /* 5624 */;
-import Pressables from "Pressables" /* 6980 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import SettingsIcon from "SettingsIcon" /* 7561 */;
-import InlineNotice from "InlineNotice" /* 8025 */;
-import RowButton from "RowButton" /* 8179 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8199 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9031 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9058 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10977 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11644 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11646 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11647 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import BottomSheetModal from "BottomSheetModal" /* 5398 */;
+import Text_Text from "Text/Text" /* 5747 */;
+import Pressables from "Pressables" /* 7106 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import SettingsIcon from "SettingsIcon" /* 7685 */;
+import InlineNotice from "InlineNotice" /* 8149 */;
+import RowButton from "RowButton" /* 8303 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8323 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9159 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9186 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 11110 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11781 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11783 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11784 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4863 */;
-import GuildMemberStore from "GuildMemberStore" /* 4926 */;
-import GuildRoleStore from "GuildRoleStore" /* 4920 */;
-import GuildStore from "GuildStore" /* 4885 */;
-import PermissionStore from "PermissionStore" /* 4946 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
+import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildRoleStore from "GuildRoleStore" /* 5047 */;
+import GuildStore from "GuildStore" /* 5012 */;
+import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
+({ ChannelSettingsSections: closure_9, Permissions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 }, warning: { margin: 16, marginBottom: 0 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -48,7 +48,7 @@ export default function ChannelMembersActionSheet(arg0) {
   const tmp = closure_13();
   dependencyMap = tmp;
   const tmp4 = useSafeAreaInsetsDefault();
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const items1 = [GuildStore, GuildRoleStore];
   const items2 = [stateFromStores];
@@ -57,7 +57,7 @@ export default function ChannelMembersActionSheet(arg0) {
     if (stateFromStores != null) {
       guildId = stateFromStores.getGuildId();
     }
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     const obj2 = { guild, sortedGuildRoles: null };
     let sortedRoles;
     if (null != guild) {

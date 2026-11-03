@@ -1,32 +1,32 @@
-// === Module 10562: NativeGiftContext ===
+// === Module 10692: NativeGiftContext ===
 
-// Module 10562 (NativeGiftContext)
+// Module 10692 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BillingUtils from "BillingUtils" /* 4827 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import ContextUtilsDefault from "ContextUtils" /* 7613 */;
-import BadgeId from "BadgeId" /* 8755 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10560 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10611 */;
+import BillingUtils from "BillingUtils" /* 4954 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
+import ContextUtilsDefault from "ContextUtils" /* 7737 */;
+import BadgeId from "BadgeId" /* 8879 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10690 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
-import PromotionsStore from "PromotionsStore" /* 9626 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10563 */;
-import UserStore from "UserStore" /* 1383 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import PromotionsStore from "PromotionsStore" /* 9758 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10693 */;
+import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-fn(7598).GPlayBillingResult;
-const PremiumConstants = fn(1385);
+fn(7722).GPlayBillingResult;
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
 const jsx = fn(21).jsx;
@@ -143,13 +143,13 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         payment_gateway = billing_facet.payment_gateway;
       }
     }
-    let items = [payment_gateway, productIdForGift];
+    items = [payment_gateway, productIdForGift];
     const memo = obj.useMemo(() => {
       let tmp;
       if (payment_gateway === PaymentGateways.GOOGLE) {
         const obj = { line_items: null };
         const obj2 = { external_product_id: productIdForGift };
-        const items = [obj2];
+        items = [obj2];
         obj.line_items = items;
         tmp = obj;
       }
@@ -228,7 +228,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
       obj.sound_id = soundId;
       if (null != closure_5) {
         if (first1 === TIER_2.TIER_2) {
-          const items = [tmp5];
+          items = [tmp5];
         }
         obj.reward_sku_ids = [];
         return obj;
@@ -272,7 +272,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: -3107209399708808500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, planSelection: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006694828970868179, giftInfo: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001974861990702193 };
+    let obj6 = { orderId: "a", planId: "dragoste", planSelection: "iubire", giftInfo: "m\u00E2ini care formeaz\u0103 o inim\u0103" };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -372,7 +372,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -396,7 +396,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                                 const obj6 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
                                 ({ sku_id: obj14.sku_id, quantity: obj14.quantity, purchase_type: obj14.purchase_type } = first);
                                 obj6.subscription_plan_id = planId;
-                                const items = [obj6];
+                                items = [obj6];
                                 obj4.orderLineItems = items;
                                 obj4.externalGatewayFacet = tmp57;
                                 planId = 2;
@@ -447,7 +447,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -467,7 +467,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -491,7 +491,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -513,7 +513,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -537,7 +537,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                                 const obj6 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
                                 ({ sku_id: obj14.sku_id, quantity: obj14.quantity, purchase_type: obj14.purchase_type } = first);
                                 obj6.subscription_plan_id = planId;
-                                const items = [obj6];
+                                items = [obj6];
                                 obj4.orderLineItems = items;
                                 obj4.externalGatewayFacet = tmp57;
                                 planId = 2;
@@ -588,7 +588,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -608,7 +608,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -632,7 +632,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -656,7 +656,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -680,7 +680,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                                 const obj6 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
                                 ({ sku_id: obj14.sku_id, quantity: obj14.quantity, purchase_type: obj14.purchase_type } = first);
                                 obj6.subscription_plan_id = planId;
-                                const items = [obj6];
+                                items = [obj6];
                                 obj4.orderLineItems = items;
                                 obj4.externalGatewayFacet = tmp57;
                                 planId = 2;
@@ -731,7 +731,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -751,7 +751,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -775,7 +775,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -859,7 +859,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -952,7 +952,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
