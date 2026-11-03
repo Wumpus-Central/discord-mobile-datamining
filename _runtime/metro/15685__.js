@@ -1,13 +1,10 @@
 // _runtime/metro/15685__.js
-import registerAsset from "01119__.js";
+import _mod15699 from "15699__.js";
+import assign from "15686__.js";
+import Deflate from "../15687_Deflate.js";
+import Inflate from "../15695_Inflate.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 120,
-  scales: [2, 3],
-  hash: "0242e2e3975e7ca5a2256573e276d96f",
-  name: "logo",
-  type: "png",
-});
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod15699);
+
+export default obj;

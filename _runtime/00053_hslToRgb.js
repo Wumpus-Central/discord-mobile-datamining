@@ -150,20 +150,20 @@ function hwbToRgb(arg0, arg1, arg2) {
   }
 }
 function call() {
-  const items = [...arguments];
+  items = [...arguments];
   return "\\(\\s*(" + items.join(")\\s*,?\\s*(") + ")\\s*\\)";
 }
 function callModern() {
-  const items = [...arguments];
+  items = [...arguments];
   return "\\(\\s*(" + items.join(")\\s*(") + ")\\s*\\)";
 }
 function callWithSlashSeparator() {
-  const items = [...arguments];
+  items = [...arguments];
   const substr = items.slice(0, items.length - 1);
   return "\\(\\s*(" + substr.join(")\\s*,?\\s*(") + ")\\s*/\\s*(" + items[items.length - 1] + ")\\s*\\)";
 }
 function commaSeparatedCall() {
-  const items = [...arguments];
+  items = [...arguments];
   return "\\(\\s*(" + items.join(")\\s*,\\s*(") + ")\\s*\\)";
 }
 

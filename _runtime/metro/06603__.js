@@ -1,13 +1,22 @@
 // _runtime/metro/06603__.js
-import registerAsset from "01119__.js";
+import _mod6604 from "06604__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "07d32c275cec4eea23627ed6a4c37375",
-  name: "img_account_sync_league_of_legends_light_and_dark",
-  type: "svg",
-});
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
+    }
+  }
+  trim5 = _mod6604;
+}

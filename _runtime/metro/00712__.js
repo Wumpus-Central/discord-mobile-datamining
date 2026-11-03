@@ -45,7 +45,7 @@ export function getTraceContextFromScope(getPropagationContext) {
   return obj;
 }
 export function withIsolationScope() {
-  const items = [...arguments];
+  items = [...arguments];
   const mainCarrier = _mod689.getMainCarrier();
   const asyncContextStrategy = _mod705.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
@@ -61,7 +61,7 @@ export function withIsolationScope() {
   }
 }
 export function withScope() {
-  const items = [...arguments];
+  items = [...arguments];
   const mainCarrier = _mod689.getMainCarrier();
   const asyncContextStrategy = _mod705.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {

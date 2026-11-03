@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "45844ffe000e8da4174843bafa8614af",
-  name: "SuperReactionIcon",
+  hash: "8c6e7658ce5157dd6c415ee437c71c87",
+  name: "img_nitro_animated_emoji",
   type: "png",
 });

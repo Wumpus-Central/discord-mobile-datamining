@@ -1,55 +1,26 @@
 // _runtime/metro/04783__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "pl" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-      short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4769_mod from "04769__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
+
+let module_4769 = module_4769_mod;
+if (!module_4769) {
+  const obj = { default: module_4769 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4769;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+module_4769 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-      short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-      short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "pl",
+requiredArgs = tmp5;
+
+export default function isThisWeek(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return module_4769.default(arg0, Date.now(), arg1);
 };
-prop.push(obj);
+export default exports.default;

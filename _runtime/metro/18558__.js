@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 46,
+  height: 46,
   scales: [2, 3],
-  hash: "308384ec5f601de5c19058de1122cf7d",
-  name: "PaintbrushThinIcon",
+  hash: "812d0ec6cbf43741fa947b18063ae5e5",
+  name: "server-error",
   type: "png",
 });

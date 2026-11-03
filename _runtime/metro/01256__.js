@@ -37,7 +37,7 @@ export (arg0, arg1, arg2, arg3, arg4) => {
   } else {
     current = tmp.current;
   }
-  let items = [arg1, arg2, arg3, arg4];
+  items = [arg1, arg2, arg3, arg4];
   const tmp2 = syncExternalStore(() => {
     c2 = false;
     let tmp = null;
@@ -45,7 +45,7 @@ export (arg0, arg1, arg2, arg3, arg4) => {
       tmp = closure_1;
     }
     closure_3 = tmp;
-    const items = [
+    items = [
       () => {
         const tmp = closure_0();
         if (c2) {

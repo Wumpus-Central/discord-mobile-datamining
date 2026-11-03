@@ -1,13 +1,33 @@
 // _runtime/metro/05524__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+const Platform = _mod17.Platform;
 
-export const RecyclerViewContextProvider = context.Provider;
-export function useRecyclerViewContext() {
-  return useContext(context);
+export function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
+  }
+  return obj;
 }
-export function useFlashListContext() {
-  return useContext(context);
+export function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
 }

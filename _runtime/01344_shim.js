@@ -1,6 +1,6 @@
 // _runtime/01344_shim.js
 function shim(obj) {
-  const items = [];
+  items = [];
   for (const key10003 in arg0) {
     let arr = items.push(key10003);
     continue;

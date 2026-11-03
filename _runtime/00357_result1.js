@@ -70,9 +70,9 @@ if (result) {
     do {
       closure_0 = num3 + 1;
       obj[items[num3]] = () => {
-        const items = [closure_0, ...HermesBuiltin.copyRestArgs()];
-        c10.push.apply(items);
-        if (value) {
+        items = [closure_0, ...HermesBuiltin.copyRestArgs()];
+        closure_10.push.apply(items);
+        if (value2) {
           const _clearImmediate = clearImmediate;
           clearImmediate(immediate);
           const _setImmediate = setImmediate;
@@ -91,12 +91,12 @@ if (result) {
       let tmp10 = items[num];
       closure_0 = tmp10;
       obj[tmp10] = () => {
-        const items = [...arguments];
+        items = [...arguments];
         const tmp = closure_0(70)(closure_4)[closure_0];
         closure_1 = tmp;
         if (!closure_8) {
           if (0 === closure_9.length) {
-            if (value) {
+            if (value2) {
               closure_9.push(() => closure_1(...items));
               const _clearImmediate = clearImmediate;
               clearImmediate(immediate);
@@ -184,7 +184,7 @@ const obj2 = {
             closure_15 = closure_0(92).addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
               let tmp3 = arg0;
               if (!Array.isArray(arg0)) {
-                const items = [arg0];
+                items = [arg0];
                 tmp3 = items;
               }
               for (const item10014 of tmp3) {

@@ -1,7 +1,4 @@
 // _runtime/metro/13082__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod13013 from "13013__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+export default { node: _mod13013 };

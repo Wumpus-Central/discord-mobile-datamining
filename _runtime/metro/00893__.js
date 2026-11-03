@@ -93,7 +93,7 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
     if (error.error) {
       const obj2 = { exception: null };
       const obj3 = { values: null };
-      const items = [exceptionFromError(arg0, error.error)];
+      items = [exceptionFromError(arg0, error.error)];
       obj3.values = items;
       obj2.exception = obj3;
       return obj2;
@@ -353,7 +353,7 @@ export function eventFromMessage(arg0, value, arg2) {
         const obj3 = { value, stacktrace: null };
         const obj4 = { frames: arr };
         obj3.stacktrace = obj4;
-        const items = [obj3];
+        items = [obj3];
         obj2.values = items;
         obj.exception = obj2;
       }

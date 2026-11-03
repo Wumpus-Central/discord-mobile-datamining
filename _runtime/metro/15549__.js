@@ -1,13 +1,13 @@
 // _runtime/metro/15549__.js
+import registerAsset from "01119__.js";
 
-export default {
-  2: "need dictionary",
-  1: "stream end",
-  0: "",
-  "-1": "file error",
-  "-2": "stream error",
-  "-3": "data error",
-  "-4": "insufficient memory",
-  "-5": "buffer error",
-  "-6": "incompatible version",
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 375,
+  height: 301,
+  scales: [2, 3],
+  hash: "7326675c9312971f0f528c74fa69a335",
+  name: "img_top_pattern_darker",
+  type: "png",
+});

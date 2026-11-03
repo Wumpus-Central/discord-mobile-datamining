@@ -1,13 +1,34 @@
 // _runtime/metro/13039__.js
-import registerAsset from "01119__.js";
+import _mod12972 from "12972__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e605304dde4d78202fb1f94d6df2847d",
-  name: "ListNumberedIcon",
-  type: "png",
-});
+const LeftParenthesis = _mod12972.TYPE.LeftParenthesis;
+const RightParenthesis = _mod12972.TYPE.RightParenthesis;
+const obj = {
+  name: "Parentheses",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    this.eat(LeftParenthesis);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightParenthesis);
+    }
+    const element = {
+      type: "Parentheses",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+    };
+    return element;
+  },
+  generate(arg0) {
+    this.chunk("(");
+    this.children(arg0);
+    this.chunk(")");
+  },
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

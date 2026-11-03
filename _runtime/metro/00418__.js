@@ -28,7 +28,7 @@ export default module_65.get("AndroidSwipeRefreshLayout", () => obj);
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
   setNativeRefreshing(_nativeRef, refreshing) {
-    const items = [refreshing];
+    items = [refreshing];
     renderElement.dispatchCommand(_nativeRef, "setNativeRefreshing", items);
   },
 };

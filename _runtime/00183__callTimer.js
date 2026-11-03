@@ -122,14 +122,14 @@ let obj = {
     closure_9.push(+closure_12);
     return +closure_12;
   },
-  requestAnimationFrame(scrollAnimation) {
+  requestAnimationFrame(arg0) {
     closure_12 = tmp + 1;
     let length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
     closure_7[length] = +closure_12;
-    closure_5[length] = scrollAnimation;
+    closure_5[length] = arg0;
     closure_6[length] = "requestAnimationFrame";
     const timestamp = Date.now();
     _mod38(TimingDefault, "NativeTiming is available");
@@ -277,9 +277,9 @@ let obj = {
       closure_9.splice(index1, 1);
     }
   },
-  cancelAnimationFrame(current) {
-    if (null != current) {
-      const index = closure_7.indexOf(current);
+  cancelAnimationFrame(arg0) {
+    if (null != arg0) {
+      const index = closure_7.indexOf(arg0);
       if (-1 !== index) {
         closure_7[index] = null;
         closure_5[index] = null;
@@ -291,7 +291,7 @@ let obj = {
         }
         if (tmp) {
           _mod38(TimingDefault, "NativeTiming is available");
-          TimingDefault.deleteTimer(current);
+          TimingDefault.deleteTimer(arg0);
         }
       }
     }

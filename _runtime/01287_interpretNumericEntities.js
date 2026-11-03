@@ -372,7 +372,7 @@ export default (str, allowEmptyArrays) => {
               if (arr11.indexOf("[]=") > -1) {
                 let tmp41 = replaced;
                 if (isArray(replaced)) {
-                  let items = [replaced];
+                  items = [replaced];
                   tmp41 = items;
                 }
                 tmp39 = tmp41;

@@ -22,7 +22,7 @@ function _INTERNAL_captureSerializedMetric(getOptions, arg1) {
   });
   value = globalSingleton1.get(getOptions);
   if (undefined === value) {
-    const items = [arg1];
+    items = [arg1];
     const result = globalSingleton.set(getOptions, items);
   } else if (value.length >= 1000) {
     _INTERNAL_flushMetricsBuffer(getOptions, value);
@@ -35,7 +35,7 @@ function _INTERNAL_captureSerializedMetric(getOptions, arg1) {
   }
 }
 function _INTERNAL_flushMetricsBuffer(getOptions, value) {
-  let items = value;
+  items = value;
   if (value == null) {
     const globalSingleton = _mod689.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();

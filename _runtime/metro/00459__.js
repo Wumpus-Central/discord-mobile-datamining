@@ -1,7 +1,7 @@
 // _runtime/metro/00459__.js
 
 export default function _default() {
-  const items = [...arguments];
+  items = [...arguments];
   if (1 === items.length) {
     const _Error = Error;
     if (items[0] instanceof Error) {

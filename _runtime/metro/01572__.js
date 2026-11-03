@@ -1,28 +1,54 @@
 // _runtime/metro/01572__.js
-import _slicedToArray from "00032__.js";
+import _mod1542 from "01542__.js";
 import noop from "00019__.js";
 
-const require = arg1;
+require = arg1;
 
-export function useRegisterNavigator() {
-  const first = _slicedToArray(
-    noop.useState(() => first(context[2]).nanoid()),
-    1,
-  )[0];
-  context = noop.useContext(first(context[3]).SingleNavigatorContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't register the navigator. Have you wrapped your app with 'NavigationContainer'?\n\nThis can also happen if there are multiple copies of '@react-navigation' packages installed.",
+export function useFocusEffect(noop) {
+  let navigation = _mod1542.useNavigation();
+  if (undefined !== arguments[1]) {
+    const _console = console;
+    console.error(
+      "You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect",
     );
-    throw error;
-  } else {
-    const items = [context, first];
-    const effect = noop.useEffect(() => {
-      const unregister = context.unregister;
-      context.register(unregister);
-      return () => unregister(first);
-    }, items);
-    return first;
   }
+  items = [noop, navigation];
+  const effect = noop.useEffect(() => {
+    navigation = false;
+    if (navigation.isFocused()) {
+      const tmp2 = noop();
+      if (undefined === tmp2) {
+        let tmp3 = tmp2;
+      }
+      noop = tmp3;
+      navigation = true;
+    }
+    closure_2 = obj.addListener("focus", () => {
+      if (!c1) {
+        if (undefined !== _undefined) {
+          _undefined();
+        }
+        const tmp3 = _undefined();
+        if (undefined === tmp3) {
+          const tmp4 = tmp3;
+        }
+        _undefined = tmp4;
+        c1 = true;
+      }
+    });
+    closure_3 = obj.addListener("blur", () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      _undefined = undefined;
+      c1 = false;
+    });
+    return () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      closure_2();
+      closure_3();
+    };
+  }, items);
 }

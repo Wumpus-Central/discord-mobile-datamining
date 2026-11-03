@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/community",
-  width: 120,
-  height: 80,
-  scales: [2, 3],
-  hash: "038b9efde4d99e1d058963891646a79a",
-  name: "customize_empty",
+  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
+  width: 99.66666666666667,
+  height: 66.66666666666667,
+  scales: [3],
+  hash: "0fef0a9d83d27dc691bf77b0bdae0680",
+  name: "asset_opal_badge_small",
   type: "png",
 });

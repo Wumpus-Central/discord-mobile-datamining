@@ -36,7 +36,7 @@ function wrap(__sentry_wrapped__) {
           return __sentry_wrapped__;
         } else {
           function sentryWrapped() {
-            const items = [...arguments];
+            items = [...arguments];
             try {
               const self = this;
               return items.apply(

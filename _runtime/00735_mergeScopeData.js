@@ -25,7 +25,7 @@ function mergeScopeData(extra, arg1) {
     extra.span = span;
   }
   if (breadcrumbs.length) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(breadcrumbs, HermesBuiltin.arraySpread(extra.breadcrumbs, 0));
     extra.breadcrumbs = items;
   }
@@ -113,7 +113,7 @@ export function applyScopeDataToEvent(extra, arg1) {
     const _Array = Array;
     const fingerprint2 = extra.fingerprint;
     if (Array.isArray(extra.fingerprint)) {
-      let items = fingerprint2;
+      items = fingerprint2;
     } else {
       items = [fingerprint2];
     }

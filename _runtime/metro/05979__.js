@@ -1,73 +1,29 @@
 // _runtime/metro/05979__.js
-import RNSLog2 from "../05971_RNSLog.js";
-import noop from "00019__.js";
+import _mod552 from "00552__.js";
+import baseClamp from "../05980_baseClamp.js";
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
-
-export function useTabsScreen(componentNodeRef) {
-  componentNodeRef = componentNodeRef.componentNodeRef;
-  const onDidAppear = componentNodeRef.onDidAppear;
-  const onDidDisappear = componentNodeRef.onDidDisappear;
-  const onWillAppear = componentNodeRef.onWillAppear;
-  const onWillDisappear = componentNodeRef.onWillDisappear;
-  const ref = onDidDisappear.useRef(-1);
-  const effect = onDidDisappear.useEffect(() => {
-    if (null != componentNodeRef.current) {
-      let num2 = findNodeHandle(tmp.current);
-      if (num2 == null) {
-        num2 = -1;
-      }
-      ref.current = num2;
-    } else {
-      ref.current = -1;
-    }
-  }, []);
-  const items = [onWillAppear];
-  const items1 = [onDidAppear];
-  const callback = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onWillAppear received");
-    if (onWillAppear != null) {
-      tmp2(arg0);
-    }
-  }, items);
-  const items2 = [onWillDisappear];
-  const callback1 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onDidAppear received");
-    if (onDidAppear != null) {
-      tmp2(arg0);
-    }
-  }, items1);
-  const items3 = [onDidDisappear];
-  const callback2 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onWillDisappear received");
-    if (onWillDisappear != null) {
-      tmp2(arg0);
-    }
-  }, items2);
-  const callback3 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onDidDisappear received");
-    if (onDidDisappear != null) {
-      tmp2(arg0);
-    }
-  }, items3);
-  let RNSLog = componentNodeRef(onDidAppear[2]).RNSLog;
-  let num = ref.current;
-  if (num == null) {
-    num = -1;
+export default function clamp(arg0, arg1, arg2) {
+  let tmp = arg2;
+  if (undefined === arg2) {
+    tmp = arg1;
   }
-  RNSLog.log("TabsScreen [" + num + "] render; screenKey: " + componentNodeRef.screenKey);
-  return {
-    componentNodeRef,
-    lifecycleCallbacks: {
-      onWillAppear: callback,
-      onDidAppear: callback1,
-      onWillDisappear: callback2,
-      onDidDisappear: callback3,
-    },
-  };
+  let tmp3 = tmp;
+  if (undefined !== tmp) {
+    const tmp6 = _mod552(tmp);
+    let num = 0;
+    if (tmp6 == tmp6) {
+      num = tmp6;
+    }
+    tmp3 = num;
+  }
+  let tmp7 = tmp2;
+  if (undefined !== arg1) {
+    const tmp10 = _mod552(tmp2);
+    let num2 = 0;
+    if (tmp10 == tmp10) {
+      num2 = tmp10;
+    }
+    tmp7 = num2;
+  }
+  return baseClamp(_mod552(arg0), tmp7, tmp3);
 }

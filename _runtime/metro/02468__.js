@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zcGFjZQ==",
+  httpServerLocation: "/assets/modules/go_live/web/modal",
   scales: [1],
-  hash: "33dadbe7c1829d034bdfe7af79a4e7e6",
-  name: "tr.messages.33dadbe7c1829d034bdfe7af79a4e7e6.compiled.messages",
+  hash: "cd2d5c0ef187afb877c9d94c96dd5098",
+  name: "GoLiveModal.compiled.messages",
   type: "jsona",
 });

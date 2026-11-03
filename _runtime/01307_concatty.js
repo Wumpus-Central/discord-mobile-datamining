@@ -9,7 +9,7 @@ export default function bind(self) {
   self = this;
   if (typeof this === "function") {
     if ("[object Function]" === toString.apply(self)) {
-      let items = [];
+      items = [];
       let num2 = 0;
       let num = 1;
       if (1 < arguments.length) {

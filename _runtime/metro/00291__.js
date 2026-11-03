@@ -40,7 +40,7 @@ class TouchableNativeFeedback {
     tmp2 = closure_7;
     obj = closure_7(TouchableNativeFeedback);
     tmp3 = metroRequire;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -162,7 +162,7 @@ let items = [
       const self = this;
       const Children = noop.Children;
       const onlyResult = Children.only(this.props.children);
-      const items = [onlyResult.props.children];
+      items = [onlyResult.props.children];
       const pressability = this.state.pressability;
       const eventHandlers = pressability.getEventHandlers();
       ({ onBlur, onFocus } = eventHandlers);

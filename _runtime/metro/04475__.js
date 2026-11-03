@@ -1,28 +1,12 @@
 // _runtime/metro/04475__.js
-import startOfDay_mod from "../04458_startOfDay.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import 02196__ from "02196__.js";
 
-let startOfDay = startOfDay_mod;
-if (!startOfDay) {
-  const obj = { default: startOfDay };
-  let tmp3 = obj;
+if (!module_2196) {
+  const obj2 = { default: module_2196 };
+  let obj = obj2;
 } else {
-  tmp3 = startOfDay;
+  obj = module_2196;
 }
-startOfDay = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isSameDay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
-};
+export default { date: obj.default({ formats: { full: "EEEE, d. MMMM y.", long: "d. MMMM y.", medium: "d. MMM y.", short: "dd. MM. y." }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss (zzzz)", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'u' {{time}}", long: "{{date}} 'u' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

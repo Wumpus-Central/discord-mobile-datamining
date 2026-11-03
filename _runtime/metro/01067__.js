@@ -73,7 +73,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -107,7 +107,7 @@ function takeScreenshot() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ function takeScreenshot() {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -175,7 +175,7 @@ function takeScreenshot() {
                   closure_129_11 = str2;
                   closure_129_0(closure_129_1[7]).showFeedbackWidget();
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -184,7 +184,7 @@ function takeScreenshot() {
             }
           }), 100);
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c0 = tmp;
@@ -202,7 +202,7 @@ class ScreenshotButton {
     tmp2 = closure_4;
     obj = closure_4(ScreenshotButton);
     tmp3 = closure_3;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

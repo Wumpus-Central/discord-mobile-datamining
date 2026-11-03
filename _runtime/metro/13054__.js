@@ -1,72 +1,38 @@
 // _runtime/metro/13054__.js
-import GLOBAL_OBJ from "13055__.js";
+import _mod13013 from "13013__.js";
+import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
+import _mod13068 from "13068__.js";
 
-const require = globalThis.__r;
+const obj = {
+  parseContext: {
+    default: "StyleSheet",
+    stylesheet: "StyleSheet",
+    atrule: "Atrule",
+    atrulePrelude(atrule) {
+      let StringResult = null;
+      if (atrule.atrule) {
+        const _String = String;
+        StringResult = String(atrule.atrule);
+      }
+      return this.AtrulePrelude(StringResult);
+    },
+    mediaQueryList: "MediaQueryList",
+    mediaQuery: "MediaQuery",
+    rule: "Rule",
+    selectorList: "SelectorList",
+    selector: "Selector",
+    block() {
+      return this.Block(true);
+    },
+    declarationList: "DeclarationList",
+    declaration: "Declaration",
+    value: "Value",
+  },
+  scope: _mod13055,
+  atrule: _mod13062,
+  pseudo: _mod13068,
+  node: _mod13013,
+};
 
-function consoleSandbox(fn) {
-  if ("console" in console(13055).GLOBAL_OBJ) {
-    console = tmp(13055).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
-    try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
-    }
-  } else {
-    return fn();
-  }
-  tmp = console;
-}
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
-  };
-  const forEach = items.forEach;
-  if (require("13053__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
-        }
-      };
-    });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
-  }
-  return obj;
-});
-export { originalConsoleMethods };
+export default obj;

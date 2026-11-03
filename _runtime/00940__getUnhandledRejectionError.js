@@ -25,9 +25,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export function _eventFromRejectionWithPrimitive(reason) {
   const obj = { exception: null };
   const obj2 = { values: null };
-  const items = [
-    { type: "UnhandledRejection", value: "Non-Error promise rejection captured with value: " + String(reason) },
-  ];
+  items = [{ type: "UnhandledRejection", value: "Non-Error promise rejection captured with value: " + String(reason) }];
   obj2.values = items;
   obj.exception = obj2;
   return obj;
@@ -159,7 +157,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
                 const _String = String;
                 const _HermesInternal = HermesInternal;
                 obj5.value = "Non-Error promise rejection captured with value: " + String(obj7);
-                const items = [obj5];
+                items = [obj5];
                 obj4.values = items;
                 obj3.exception = obj4;
                 let result = obj3;

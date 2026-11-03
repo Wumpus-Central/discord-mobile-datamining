@@ -7,10 +7,10 @@ export default function codegenNativeCommands(supportedCommands) {
   supportedCommands = supportedCommands.supportedCommands;
   const item = supportedCommands.forEach((item) => {
     closure_0 = item;
-    obj[item] = (arg0) => {
+    obj[item] = (nodeFromPublicInstance) => {
       const substr = [...arguments].slice();
       obj = obj(dependencyMap[0]);
-      obj.dispatchCommand(arg0, closure_0, substr);
+      obj.dispatchCommand(nodeFromPublicInstance, closure_0, substr);
     };
   });
   return obj;

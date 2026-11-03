@@ -13,7 +13,7 @@ export function getImageSourcesFromImageProps(source) {
     headers["Referrer-Policy"] = referrerPolicy;
   }
   if (null != srcSet) {
-    const items = [];
+    items = [];
     const parts = srcSet.split(", ");
     closure_4 = true;
     const item = parts.forEach((item) => {

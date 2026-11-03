@@ -8,7 +8,7 @@ export default function processTransformOrigin(str) {
   let tmp = str;
   if (typeof str === "string") {
     re2.lastIndex = 0;
-    const items = ["50%", "50%", 0];
+    items = ["50%", "50%", 0];
     let match = re2.exec(str);
     let num4 = 0;
     tmp = items;

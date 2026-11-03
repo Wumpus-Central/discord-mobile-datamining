@@ -1,285 +1,75 @@
 // _runtime/metro/04526__.js
-import throwProtectedError from "../04541_throwProtectedError.js";
-import module_4476_mod from "04476__.js";
-import subMilliseconds_mod from "../04527_subMilliseconds.js";
-import _typeof_mod from "04294__.js";
-import G from "../04528_G.js";
-import dateLongFormatter_mod from "../04539_dateLongFormatter.js";
-import module_4457_mod from "04457__.js";
-import module_4298_mod from "04298__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
-import code_mod from "04540__.js";
+import 02201__ from "02201__.js";
+import 02202__ from "02202__.js";
 
-const require = globalThis.__r;
-
-let module_4476 = module_4476_mod;
-if (!module_4476) {
-  const obj = { default: module_4476 };
-  let tmp3 = obj;
+if (!module_2201) {
+  const obj2 = { default: module_2201 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4476;
+  obj = module_2201;
 }
-module_4476 = tmp3;
-let subMilliseconds = subMilliseconds_mod;
-if (!subMilliseconds) {
-  let obj2 = { default: subMilliseconds };
-  let tmp5 = obj2;
+if (!module_2202) {
+  const obj4 = { default: module_2202 };
+  let obj3 = obj4;
 } else {
-  tmp5 = subMilliseconds;
+  obj3 = module_2202;
 }
-subMilliseconds = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-if (!G) {
-  const obj4 = { default: G };
-  let tmp9 = obj4;
-} else {
-  tmp9 = G;
-}
-let closure_5 = tmp9;
-let dateLongFormatter = dateLongFormatter_mod;
-if (!dateLongFormatter) {
-  const obj5 = { default: dateLongFormatter };
-  let tmp11 = obj5;
-} else {
-  tmp11 = dateLongFormatter;
-}
-dateLongFormatter = tmp11;
-let module_4457 = module_4457_mod;
-if (!module_4457) {
-  const obj6 = { default: module_4457 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4457;
-}
-module_4457 = tmp13;
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj7 = { default: module_4298 };
-  let tmp15 = obj7;
-} else {
-  tmp15 = module_4298;
-}
-module_4298 = tmp15;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj8 = { default: requiredArgs };
-  let tmp17 = obj8;
-} else {
-  tmp17 = requiredArgs;
-}
-requiredArgs = tmp17;
-let code = code_mod;
-if (!code) {
-  const obj9 = { default: code };
-  let tmp19 = obj9;
-} else {
-  tmp19 = code;
-}
-code = tmp19;
-const re11 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
-const re12 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
-const re13 = /^'([^]*?)'?$/;
-const re14 = /''/g;
-const re15 = /[a-zA-Z]/;
-
-export default function format(arg0, arg1, locale) {
-  _require = arg0;
-  dependencyMap = arg1;
-  module_4476 = locale;
-  requiredArgs.default(2, arguments);
-  const defaultOptions = require("04299__.js").getDefaultOptions();
-  let locale1;
-  if (null != locale) {
-    locale1 = locale.locale;
-  }
-  if (null === locale1) {
-    locale1 = defaultOptions.locale;
-  }
-  if (null === locale1) {
-    locale1 = code.default;
-  }
-  let prop;
-  if (null != locale) {
-    prop = locale.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != locale) {
-      locale = locale.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult1 = module_4298.default(num);
-  if (defaultResult1 >= 1) {
-    if (defaultResult1 <= 7) {
-      let weekStartsOn;
-      if (null != locale) {
-        weekStartsOn = locale.weekStartsOn;
-      }
-      if (null === weekStartsOn) {
-        let weekStartsOn1;
-        if (null != locale) {
-          const locale3 = locale.locale;
-          if (null !== locale3) {
-            if (undefined !== locale3) {
-              const options3 = locale3.options;
-              if (null !== options3) {
-                if (undefined !== options3) {
-                  weekStartsOn1 = options3.weekStartsOn;
-                }
-              }
-            }
-          }
-        }
-        weekStartsOn = weekStartsOn1;
-      }
-      if (null === weekStartsOn) {
-        weekStartsOn = defaultOptions.weekStartsOn;
-      }
-      if (null === weekStartsOn) {
-        const locale4 = defaultOptions.locale;
-        let weekStartsOn2;
-        if (null !== locale4) {
-          if (undefined !== locale4) {
-            const options4 = locale4.options;
-            if (null !== options4) {
-              if (undefined !== options4) {
-                weekStartsOn2 = options4.weekStartsOn;
-              }
-            }
-          }
-        }
-        weekStartsOn = weekStartsOn2;
-      }
-      let num4 = 0;
-      if (null !== weekStartsOn) {
-        num4 = 0;
-        if (undefined !== weekStartsOn) {
-          num4 = weekStartsOn;
-        }
-      }
-      const defaultResult2 = module_4298.default(num4);
-      if (defaultResult2 >= 0) {
-        if (defaultResult2 <= 6) {
-          if (locale1.localize) {
-            if (locale1.formatLong) {
-              const defaultResult3 = _typeof.default(arg0);
-              if (module_4476.default(defaultResult3)) {
-                _typeof = locale1.default(defaultResult3, module_4457.default(defaultResult3));
-                const obj2 = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale: locale1, _originalDate: defaultResult3 };
-                let match = str.match(closure_12);
-                const mapped = match.map((item) => {
-                  const first = item[0];
-                  if ("p" === first) {
-                    let tmp2 = dateLongFormatter.default[first](item, locale1.formatLong);
-                  } else {
-                    tmp2 = item;
-                  }
-                  return tmp2;
-                });
-                const match1 = mapped.join("").match(closure_11);
-                const mapped1 = match1.map((item) => {
-                  let str = item;
-                  if ("''" === item) {
-                    return "'";
-                  } else if ("'" === str[0]) {
-                    const match = str.match(re13);
-                    if (match) {
-                      str = match[1].replace(re14, "'");
-                    }
-                    return str;
-                  } else if (obj2.default[str6]) {
-                    let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
-                    if (!tmp9) {
-                      tmp9 = !throwProtectedError.isProtectedWeekYearToken(str);
-                    }
-                    if (!tmp9) {
-                      const _String = String;
-                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
-                    }
-                    let tmp18 = null != locale && locale.useAdditionalDayOfYearTokens;
-                    if (!tmp18) {
-                      tmp18 = !throwProtectedError.isProtectedDayOfYearToken(str);
-                    }
-                    if (!tmp18) {
-                      const _String2 = String;
-                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
-                    }
-                    return tmp35(closure_4, str, locale1.localize, obj2);
-                  } else if (str6.match(re15)) {
-                    const _RangeError = RangeError;
-                    const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
-                    throw rangeError;
-                  } else {
-                    return str;
-                  }
-                });
-                return mapped1.join("");
-              } else {
-                const _RangeError4 = RangeError;
-                let rangeError = new RangeError("Invalid time value");
-                throw rangeError;
-              }
-            } else {
-              const _RangeError3 = RangeError;
-              const rangeError1 = new RangeError("locale must contain formatLong property");
-              throw rangeError1;
-            }
-          } else {
-            const _RangeError2 = RangeError;
-            const rangeError2 = new RangeError("locale must contain localize property");
-            throw rangeError2;
-          }
-        }
-      }
-      let _RangeError = RangeError;
-      const rangeError3 = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-      throw rangeError3;
-    }
-  }
-  const rangeError4 = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError4;
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+const obj6 = { matchPatterns: { narrow: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i, abbreviated: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i, wide: /^(przed\s*nasz(ą|a)\s*er(ą|a)|naszej\s*ery)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^p/i, /^n/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^(I|II|III|IV)\s*kw\.?/i, wide: /^(I|II|III|IV)\s*kwarta(ł|l)/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { narrow: null, any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.narrow = items1;
+const items2 = [/^I kw/i, /^II kw/i, /^III kw/i, /^IV kw/i];
+obj9.any = items2;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[slmkcwpg]/i, abbreviated: /^(sty|lut|mar|kwi|maj|cze|lip|sie|wrz|pa(ź|z)|lis|gru)/i, wide: /^(stycznia|stycze(ń|n)|lutego|luty|marca|marzec|kwietnia|kwiecie(ń|n)|maja|maj|czerwca|czerwiec|lipca|lipiec|sierpnia|sierpie(ń|n)|wrze(ś|s)nia|wrzesie(ń|n)|pa(ź|z)dziernika|pa(ź|z)dziernik|listopada|listopad|grudnia|grudzie(ń|n))/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items3 = [/^s/i, /^l/i, /^m/i, /^k/i, /^m/i, /^c/i, /^l/i, /^s/i, /^w/i, /^p/i, /^l/i, /^g/i];
+obj11.narrow = items3;
+const items4 = [/^st/i, /^lu/i, /^mar/i, /^k/i, /^maj/i, /^c/i, /^lip/i, /^si/i, /^w/i, /^p/i, /^lis/i, /^g/i];
+obj11.any = items4;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[npwścs]/i, short: /^(nie|pon|wto|(ś|s)ro|czw|pi(ą|a)|sob)/i, abbreviated: /^(niedz|pon|wt|(ś|s)r|czw|pt|sob)\.?/i, wide: /^(niedziela|poniedzia(ł|l)ek|wtorek|(ś|s)roda|czwartek|pi(ą|a)tek|sobota)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, abbreviated: null, any: null };
+const items5 = [/^n/i, /^p/i, /^w/i, /^ś/i, /^c/i, /^p/i, /^s/i];
+obj13.narrow = items5;
+const items6 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pt/i, /^so/i];
+obj13.abbreviated = items6;
+const items7 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pi/i, /^so/i];
+obj13.any = items7;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(^a$|^p$|pó(ł|l)n\.?|o\s*pó(ł|l)n\.?|po(ł|l)\.?|w\s*po(ł|l)\.?|po\s*po(ł|l)\.?|rano|wiecz\.?|noc|w\s*nocy)/i, any: /^(am|pm|pó(ł|l)noc|o\s*pó(ł|l)nocy|po(ł|l)udnie|w\s*po(ł|l)udnie|popo(ł|l)udnie|po\s*po(ł|l)udniu|rano|wieczór|wieczorem|noc|w\s*nocy)/i }, defaultMatchWidth: "any", parsePatterns: { narrow: { am: /^a$/i, pm: /^p$/i, midnight: /pó(ł|l)n/i, noon: /po(ł|l)/i, morning: /rano/i, afternoon: /po\s*po(ł|l)/i, evening: /wiecz/i, night: /noc/i }, any: { am: /^am/i, pm: /^pm/i, midnight: /pó(ł|l)n/i, noon: /po(ł|l)/i, morning: /rano/i, afternoon: /po\s*po(ł|l)/i, evening: /wiecz/i, night: /noc/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

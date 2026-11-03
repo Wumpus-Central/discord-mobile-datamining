@@ -1,14 +1,12 @@
 // _runtime/metro/10510__.js
-import repeatedTimeunitPattern from "../10327_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10334_AbstractParserWithWordBoundaryChecking.js";
-import _mod10496 from "10496__.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ITRelativeDateFormatParser = require;
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,36 +25,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(questo|ultimo|scorso|prossimo|dopo\\s*questo|questa|ultima|scorsa|prossima\\s*questa)\\s*(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10496.TIME_UNIT_DICTIONARY) +
-    ")(?=\\s*)(?=\\W|$)",
-  "i",
-);
-class ITRelativeDateFormatParser {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ITRelativeDateFormatParser);
+    tmp = c2(this, DETimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ITRelativeDateFormatParser);
+    obj = closure_4(DETimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
+        DETimeUnitAgoFormatParser(10503).NUMBER_PATTERN +
+        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
+        DETimeUnitAgoFormatParser(10457).matchAnyPattern(DETimeUnitAgoFormatParser(10503).TIME_UNIT_DICTIONARY) +
+        ")",
+      "i",
+    );
     return regExp;
   },
 };
@@ -64,49 +61,34 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp3 = ITRelativeDateFormatParser(10496).TIME_UNIT_DICTIONARY[str3];
-      if ("prossimo" != formatted) {
-        if (!formatted.startsWith("dopo")) {
-          if ("prima" != formatted) {
-            if ("precedente" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
-              const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/settimana/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/mese/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/anno/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
-            }
-          }
-          const obj4 = {};
-          obj4[tmp3] = -1;
-          const ParsingComponents = ITRelativeDateFormatParser(10330).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
-        }
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(10503).parseNumberPattern(arg1[2]);
       }
-      const ParsingComponents2 = ITRelativeDateFormatParser(10330).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(10503).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = DETimeUnitAgoFormatParser(10459).reverseDuration(obj);
+        }
+        const ParsingComponents = DETimeUnitAgoFormatParser(10460).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
     },
   },
 ];
 
-export default _createClass(ITRelativeDateFormatParser, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

@@ -1,13 +1,35 @@
 // _runtime/metro/06579__.js
-import registerAsset from "01119__.js";
+import _mod1292 from "01292__.js";
+import requirePromise from "../06577_requirePromise.js";
+import PromiseResolve from "../06653_PromiseResolve.js";
+import callBind_mod from "../01470_callBind.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "344ee148b183cbe058428a0b2e53672e",
-  name: "img_account_sync_youtube_light_and_dark",
-  type: "png",
-});
+requirePromise();
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1292("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1292("%Promise.reject%"));
+
+export default function allSettled(arg0) {
+  const self = this;
+  if ("Object" !== self(6580)(this)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("`this` value must be an object");
+    throw typeError;
+  } else {
+    return closure_2(
+      this,
+      tmp(6586)(tmp(6583)(arg0), (arg0) => {
+        try {
+          return promise.then(
+            (value) => ({ status: "fulfilled", value }),
+            (reason) => ({ status: "rejected", reason }),
+          );
+        } catch (tmp3) {
+          return closure_3(tmp, tmp3);
+        }
+        promise = PromiseResolve(self, arg0);
+      }),
+    );
+  }
+}

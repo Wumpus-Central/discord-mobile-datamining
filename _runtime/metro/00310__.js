@@ -35,10 +35,10 @@ const module_65 = fn(65);
 export default module_65.get("AndroidDrawerLayout", () => obj);
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  openDrawer(arg0) {
-    renderElement.dispatchCommand(arg0, "openDrawer", []);
+  openDrawer(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "openDrawer", []);
   },
-  closeDrawer(arg0) {
-    renderElement.dispatchCommand(arg0, "closeDrawer", []);
+  closeDrawer(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "closeDrawer", []);
   },
 };

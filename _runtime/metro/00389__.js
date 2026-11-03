@@ -182,7 +182,7 @@ function createCompositeKeyForArray(arg0) {
   }
   return tmp2;
 }
-function createCompositeKeyForObject(arr2, D) {
+function createCompositeKeyForObject(arr2, buffer) {
   const keys = Object.keys(arr2);
   let num = 0;
   let tmp = null;
@@ -190,7 +190,7 @@ function createCompositeKeyForObject(arr2, D) {
   if (0 < keys.length) {
     do {
       let tmp3 = keys[num];
-      if (null == D) {
+      if (null == buffer) {
         arr2 = arr2[tmp3];
         let tmp10 = arr2;
         if (!(arr2 instanceof _assertNativeAnimatedModuleDefault)) {
@@ -297,23 +297,23 @@ function createCompositeKeyForObject(arr2, D) {
   }
   return tmp2;
 }
-function areCompositeKeysEqual(arg0, D, arg2) {
-  if (arg0 === D) {
+function areCompositeKeysEqual(arg0, buffer, arg2) {
+  if (arg0 === buffer) {
     return true;
   } else {
     if (null !== arg0) {
-      if (null !== D) {
+      if (null !== buffer) {
         const _Object = Object;
         const keys = Object.keys(arg0);
         const _Object2 = Object;
-        if (keys.length !== Object.keys(D).length) {
+        if (keys.length !== Object.keys(buffer).length) {
           return false;
         } else {
           let num = 0;
           if (0 < length) {
-            while (fn(D, keys[num])) {
+            while (fn(buffer, keys[num])) {
               let tmp4 = arg0[tmp];
-              let tmp5 = D[tmp];
+              let tmp5 = buffer[tmp];
               if ("style" === tmp) {
                 if (!areCompositeKeyComponentsEqual(tmp4, tmp5)) {
                   let flag5 = false;
@@ -421,7 +421,7 @@ export function createAnimatedPropsMemoHook(arg0) {
   closure_0 = arg0;
   return function useAnimatedPropsMemo(fn, arg1) {
     closure_0 = arg1;
-    const items = [arg1];
+    items = [arg1];
     const tmp2 = closure_1_5();
     closure_1 = tmp2;
     let current = tmp2.current;

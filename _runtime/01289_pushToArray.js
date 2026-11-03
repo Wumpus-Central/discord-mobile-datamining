@@ -145,7 +145,7 @@ function stringify(
   }
   if (!tmp9) {
     if (!obj3.isBuffer(str2)) {
-      const items = [];
+      items = [];
       if (undefined === str2) {
         return items;
       } else {
@@ -471,7 +471,7 @@ export default (arg0, allowEmptyArrays) => {
         if (obj2.sort) {
           const sorted = filter1.sort(obj2.sort);
         }
-        const items = [];
+        items = [];
         const tmp25 = _mod1290();
         let num3 = 0;
         if (0 < filter1.length) {

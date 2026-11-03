@@ -6,7 +6,7 @@ import setupIntegration from "00751_setupIntegration.js";
 function _wrapAndCaptureBooleanResult(arg0) {
   closure_0 = arg0;
   return function () {
-    const items = [...arguments];
+    items = [...arguments];
     const first = items[0];
     const applyResult = closure_0.apply(this, items);
     let tmp3 = typeof first === "string";

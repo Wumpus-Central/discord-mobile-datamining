@@ -31,7 +31,7 @@ export function mergeJsonOptions(typeRegistry, typeRegistry2) {
   if (null === typeRegistry) {
     typeRegistry = [];
   }
-  const items = [...typeRegistry];
+  items = [...typeRegistry];
   let typeRegistry1;
   if (null != typeRegistry2) {
     typeRegistry1 = typeRegistry2.typeRegistry;

@@ -1,11 +1,13 @@
 // _runtime/metro/10472__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10341_AbstractTimeExpressionParser.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10456 from "10456__.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,44 +26,54 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class ESTimeExpressionParser {
-  constructor() {
+const regExp = new RegExp("(" + _mod10456.TIME_UNITS_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)", "i");
+const regExp1 = new RegExp(
+  "(" + _mod10456.TIME_UNITS_NO_ABBR_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitAgoFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = closure_0(this, ESTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(ESTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, ENTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_classCallCheck = ESTimeExpressionParser;
-_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = ENTimeUnitAgoFormatParser(10456).parseDuration(arg1[1]);
+      let relativeFromReference = null;
+      if (parseDurationResult) {
+        const ParsingComponents = ENTimeUnitAgoFormatParser(10460).ParsingComponents;
+        relativeFromReference = ParsingComponents.createRelativeFromReference(
+          reference.reference,
+          ENTimeUnitAgoFormatParser(10459).reverseDuration(parseDurationResult),
+        );
+      }
+      return relativeFromReference;
     },
   },
 ];
 
-export default _createClass(ESTimeExpressionParser, items);
+export default _createClass(ENTimeUnitAgoFormatParser, items);

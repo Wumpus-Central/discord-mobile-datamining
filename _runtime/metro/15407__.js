@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 375,
-  height: 301,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108,
   scales: [2, 3],
-  hash: "c7a19747ab5ad0f69954f725ac48a489",
-  name: "img_top_pattern_dark",
+  hash: "2ef493c972c2da0faa0f370d1feb763b",
+  name: "img_what_you_lose_profile_tier1_dark",
   type: "png",
 });

@@ -43,7 +43,7 @@ function InternalTextInput(value) {
   let hitSlop = tmp17;
   const selection2 = tmp16[0].selection;
   let onPress = selection2;
-  const items = [mostRecentEventCount, tmp8, , , , , , , ];
+  items = [mostRecentEventCount, tmp8, , , , , , , ];
   ({ value: arr[2], defaultValue: arr[3] } = value);
   items[4] = first1;
   items[5] = tmp9;
@@ -451,11 +451,11 @@ function InternalTextInput(value) {
 let closure_2 = ["aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-selected", "accessibilityState", "id", "tabIndex", "selection", "selectionColor", "selectionHandleColor", "cursorColor"];
 let closure_3 = ["onBlur", "onFocus"];
 const noop = fn(19);
-({ useCallback: closure_9, useLayoutEffect: c10, useMemo: closure_11, useRef: closure_12, useState: map1 } = noop);
+({ useCallback: closure_9, useLayoutEffect: closure_10, useMemo: closure_11, useRef: closure_12, useState: map1 } = noop);
 const jsx = fn(21).jsx;
 let closure_4 = fn(145).default;
 const Commands = fn(145).Commands;
-const __initData2 = { done: "done", enter: "default", go: "go", next: "next", previous: "previous", search: "search", send: "send" };
+const value2 = { done: "done", enter: "default", go: "go", next: "next", previous: "previous", search: "search", send: "send" };
 let closure_17 = { decimal: "decimal-pad", email: "email-address", none: "default", numeric: "number-pad", search: "default", tel: "phone-pad", text: "default", url: "url" };
 const collapsedCategories = { "additional-name": "name-middle", "address-line1": "postal-address-region", "address-line2": "postal-address-locality", bday: "birthdate-full", "bday-day": "birthdate-day", "bday-month": "birthdate-month", "bday-year": "birthdate-year", "cc-csc": "cc-csc", "cc-exp": "cc-exp", "cc-exp-month": "cc-exp-month", "cc-exp-year": "cc-exp-year", "cc-number": "cc-number", country: "postal-address-country", "current-password": "password", email: "email", "family-name": "name-family", "given-name": "name-given", "honorific-prefix": "name-prefix", "honorific-suffix": "name-suffix", name: "name", "new-password": "password-new", off: "off", "one-time-code": "sms-otp", "postal-code": "postal-code", sex: "gender", "street-address": "street-address", tel: "tel", "tel-country-code": "tel-country-code", "tel-national": "tel-national", username: "username" };
 class TextInput {

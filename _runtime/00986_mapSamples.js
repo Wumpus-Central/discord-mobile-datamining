@@ -8,7 +8,7 @@ function mapSamples(samples) {
   if (arg1 === undefined) {
     tmp = closure_2;
   }
-  const items = [];
+  items = [];
   const set = new Set();
   const set1 = new Set();
   const first = samples[0];

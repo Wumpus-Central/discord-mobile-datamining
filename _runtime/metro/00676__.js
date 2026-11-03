@@ -16,7 +16,7 @@ function processEvent(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -50,7 +50,7 @@ function processEvent(arg0, arg1) {
                 entries = (function getExceptionGroup(originalException) {
                   let isErrorLikeResult;
                   let tmp = originalException;
-                  const items = [];
+                  items = [];
                   if (obj.isErrorLike(originalException)) {
                     do {
                       let arr = items.push(tmp);
@@ -77,7 +77,7 @@ function processEvent(arg0, arg1) {
                 const obj7 = (function getExceptionGroup(originalException) {
                   let isErrorLikeResult;
                   let tmp = originalException;
-                  const items = [];
+                  items = [];
                   if (obj.isErrorLike(originalException)) {
                     do {
                       let arr = items.push(tmp);
@@ -199,7 +199,7 @@ function symbolicate(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -288,7 +288,7 @@ function symbolicate(arg0) {
                         let obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -303,7 +303,7 @@ function symbolicate(arg0) {
                         } else {
                           _self = self;
                           c1 = 3;
-                          let obj = { value: Promise.all(_self.map(/* F140308 */ function() { ... })), done: true };
+                          let obj = { value: Promise.all(_self.map(/* F141695 */ function() { ... })), done: true };
                           return obj;
                         }
                       } catch (tmp7) {
@@ -420,7 +420,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }

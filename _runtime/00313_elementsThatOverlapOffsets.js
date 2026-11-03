@@ -85,7 +85,7 @@ export function computeWindowedRenderLimits(
       obj3.last = itemCount - 1;
       return obj3;
     } else {
-      const items = [bound1, bound, sum, bound2];
+      items = [bound1, bound, sum, bound2];
       [tmp61, tmp13, tmp14, tmp12] = elementsThatOverlapOffsets(items, getItemCount, _listMetrics, num);
       let num4 = 0;
       if (null != tmp61) {

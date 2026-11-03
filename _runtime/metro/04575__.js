@@ -1,48 +1,36 @@
 // _runtime/metro/04575__.js
-import startOfWeek_mod from "../04453_startOfWeek.js";
-import startOfWeekYear_mod from "../04576_startOfWeekYear.js";
-import _typeof_mod from "04294__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import module_4425_mod from "04425__.js";
+import module_4576_mod from "04576__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let module_4425 = module_4425_mod;
+if (!module_4425) {
+  const obj = { default: module_4425 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = module_4425;
 }
-startOfWeek = tmp3;
-let startOfWeekYear = startOfWeekYear_mod;
-if (!startOfWeekYear) {
-  const obj2 = { default: startOfWeekYear };
+module_4425 = tmp3;
+let module_4576 = module_4576_mod;
+if (!module_4576) {
+  const obj2 = { default: module_4576 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfWeekYear;
+  tmp5 = module_4576;
 }
-startOfWeekYear = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
+module_4576 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function getWeek(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+export default function addHours(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4576.default(interval, module_4425.default(arg1) * c3);
 };
 export default exports.default;

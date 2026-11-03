@@ -90,7 +90,7 @@ function compressFormatJsToAst(value) {
     if (obj.Literal === type) {
       return value.value;
     } else if (tmp.Argument === type) {
-      const items = [,];
+      items = [,];
       ({ type: arr6[0], value: arr6[1] } = value);
       return items;
     } else {

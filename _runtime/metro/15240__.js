@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "1e7b4b86ff7b632a5724a01e406c1753",
-  name: "img_subheader_error_mobile",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "8d849400b440a33fbe389f999a0310ea",
+  name: "cake_idle",
   type: "png",
 });

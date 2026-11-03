@@ -69,7 +69,7 @@ let items = [
         const result = self.__callReactNativeMicrotasks();
       });
       const _queue = this._queue;
-      const items = [[], [], [], this._callID];
+      items = [[], [], [], this._callID];
       this._queue = items;
       let tmp2 = null;
       if (_queue[0].length) {
@@ -306,7 +306,7 @@ let items = [
       if (value) {
         self._successCallbacks.delete(tmp);
         self._failureCallbacks.delete(tmp);
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(arg1, 0);
         HermesBuiltin.apply(items, undefined);
       }

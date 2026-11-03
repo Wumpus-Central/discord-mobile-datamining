@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/checkout/messages",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=",
   scales: [1],
-  hash: "6a429731d2a9e33e0bfb2eab2a72054e",
-  name: "GiftCard.compiled.messages",
+  hash: "b003d36a50f292353ad7fdccef063587",
+  name: "da.messages.b003d36a50f292353ad7fdccef063587.compiled.messages",
   type: "jsona",
 });

@@ -6,7 +6,7 @@ const noop = fn(19);
 
 export default function useWindowDimensions() {
   [first, dependencyMap] = closure_4(() => first(88).get("window"));
-  const items = [first];
+  items = [first];
   closure_3(() => {
     styles = first(88).addEventListener("change", function handleChange(event) {
       const _window = event.window;

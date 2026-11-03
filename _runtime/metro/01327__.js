@@ -168,7 +168,7 @@ function arrObjKeys(cause, inspect) {
     }
     tmp2 = tmp4;
   }
-  const items = [];
+  items = [];
   if (tmp2) {
     items.length = cause.length;
     for (let num = 0; num < cause.length; num = num + 1) {
@@ -956,7 +956,7 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                   return false;
                 })(cause)
               ) {
-                const items = [];
+                items = [];
                 if (items) {
                   const call31 = tmp129.call;
                   const fn2 = (cause, arg1) => {

@@ -16,7 +16,7 @@ export default function stackSet(arg0, arg1) {
         obj = tmp6;
       }
     }
-    const items = [arg0, arg1];
+    items = [arg0, arg1];
     __data__1.push(items);
     const sum = __data__.size + 1;
     __data__.size = sum;

@@ -131,7 +131,7 @@ let items = [
       return this.__isNative
         ? this._callListeners
         : () => {
-            const items = [...arguments];
+            items = [...arguments];
             function traverse(setValue, arg1) {
               if (setValue instanceof _modDef356) {
                 if (typeof arg1 === "number") {
@@ -249,7 +249,7 @@ let items = [
 export function attachNativeEventImpl(current, arg1, arg2, arg3) {
   AnimatedEvent = arg1;
   importDefault = arg3;
-  const items = [];
+  items = [];
   function traverse(nativeEvent, nativeEventPath) {
     if (nativeEvent instanceof _modDef356) {
       nativeEvent.__makeNative(__platformConfig);

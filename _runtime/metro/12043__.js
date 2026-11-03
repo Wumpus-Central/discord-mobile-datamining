@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ade8732f10573e5215aa029a138cb853",
-  name: "watch",
+  hash: "9bcd40cb62b748b314b1aa933da9be99",
+  name: "HandRequestDenyIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/shared_components/user_list/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d7e806908635ad007fa68ad7fb2ccc9f",
-  name: "ic_warning_24px",
+  scales: [2, 3, 4],
+  hash: "b49ac54ee052ec8e0d12b9dcde20cf19",
+  name: "icon-settings",
   type: "png",
 });

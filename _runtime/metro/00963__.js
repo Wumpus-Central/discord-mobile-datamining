@@ -117,7 +117,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
       obj7.active_thread_id = StringResult;
       const result1 = 1000000 * (result - arg1);
       obj7.relative_end_ns = result1.toFixed(0);
-      const items = [obj7];
+      items = [obj7];
       obj.transactions = items;
       return obj;
     } else if (typeof type.start_timestamp === "number") {
@@ -166,7 +166,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
         obj.samples[index] = obj2;
       } else {
         let tmp10 = samples.stacks[stackId.stackId];
-        const items = [];
+        items = [];
         if (tmp10) {
           do {
             let arr = items.push(tmp10.frameId);
@@ -396,7 +396,7 @@ export function addProfilesToEnvelope(arg0, arg1) {
     const tmp2 = arg1[Symbol.iterator]();
     while (tmp2 !== undefined) {
       let arr = arg0[1];
-      let items = [{ type: "profile" }, tmp4];
+      items = [{ type: "profile" }, tmp4];
       let arr2 = arr.push(items);
       continue;
     }
@@ -467,7 +467,7 @@ export function createProfileChunkPayload(frames, _client, _profilerId) {
     );
     throw typeError;
   } else {
-    const items = [];
+    items = [];
     for (let num = 0; num < frames.frames.length; num = num + 1) {
       let tmp = frames.frames[num];
       if (tmp) {
@@ -634,7 +634,7 @@ export function createProfilingEvent(event_id, arg1, samples, type) {
 }
 export { enrichWithThreadInformation };
 export function findProfiledTransactionsFromEnvelope(arg0) {
-  const items = [];
+  items = [];
   _mod681.forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if ("transaction" === arg1) {
       for (let num2 = 1; num2 < arg0.length; num2 = num2 + 1) {

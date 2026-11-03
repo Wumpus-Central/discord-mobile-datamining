@@ -1,13 +1,18 @@
 // _runtime/metro/06647__.js
-import registerAsset from "01119__.js";
+import _mod1292 from "01292__.js";
+import _mod6595 from "06595__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "2ebb6fd1431422af001c51b9dd778da6",
-  name: "img_account_sync_playstation_white",
-  type: "svg",
-});
+let closure_2 = _mod1292("%Object.isExtensible%", true);
+
+export default _mod1292("%Object.preventExtensions%", true)
+  ? function IsExtensible(arg0) {
+      const tmp = _mod6595(arg0);
+      let tmp2 = !tmp;
+      if (!tmp) {
+        tmp2 = closure_2(arg0);
+      }
+      return tmp2;
+    }
+  : function IsExtensible(arg0) {
+      return !_mod6595(arg0);
+    };

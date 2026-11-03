@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "f385b38a044809a0b451d707fc7cd058",
-  name: "BlurpleTwilightIcon",
+  hash: "94a3ac930e81037e0d0d694987ad1d50",
+  name: "PaperIcon",
   type: "png",
 });

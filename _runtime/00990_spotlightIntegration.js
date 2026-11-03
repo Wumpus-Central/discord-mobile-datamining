@@ -64,7 +64,7 @@ export function spotlightIntegration(arg0) {
       closure_0 = sidecarUrl;
       if (on.on) {
         on.on("beforeEnvelope", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           const items1 = [...arg0[1]];
           items[1] = items1.filter((item) => {
             const content_type = item[0].content_type;

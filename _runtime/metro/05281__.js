@@ -1,14 +1,11 @@
 // _runtime/metro/05281__.js
-import _mod19 from "00019__.js";
-import _mod5282 from "05282__.js";
+import registerAsset from "01119__.js";
 
-const useContext = _mod19.useContext;
-
-export () => {
-  const tmp = useContext(_mod5282.BottomSheetContext);
-  if (null === tmp) {
-    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "55f61166c3a14f05bf149ad73e3d6952",
+  name: "CheckpointCharacter",
+  type: "riv",
+});

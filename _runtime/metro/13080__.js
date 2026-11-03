@@ -1,19 +1,4 @@
 // _runtime/metro/13080__.js
-import _mod13055 from "13055__.js";
-import ScopeClass from "../13075_ScopeClass.js";
+import _mod13079 from "13079__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getDefaultCurrentScope() {
-  return _mod13055.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getDefaultIsolationScope() {
-  return _mod13055.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
+export default _mod13079;

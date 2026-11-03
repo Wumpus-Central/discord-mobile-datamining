@@ -138,7 +138,7 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
       if (Array.isArray(functionCalls.functionCalls)) {
         toolCalls = toolCalls.toolCalls;
         const push = toolCalls.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(functionCalls.functionCalls, 0);
         HermesBuiltin.apply(items, toolCalls);
       }
@@ -213,7 +213,7 @@ let closure_6 = async function _instrumentStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -442,7 +442,7 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
             break;

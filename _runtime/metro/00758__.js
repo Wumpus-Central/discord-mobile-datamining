@@ -26,7 +26,7 @@ export function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
   if (trace) {
     obj.trace = trace;
   }
-  const items = [{ type: "check_in" }, arg0];
+  items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);

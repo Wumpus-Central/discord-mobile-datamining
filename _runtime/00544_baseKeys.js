@@ -4,7 +4,7 @@ import overArg from "00546_overArg.js";
 
 export default function baseKeys(arg0) {
   if (_mod545(arg0)) {
-    const items = [];
+    items = [];
     const _Object = Object;
     for (const key10016 in Object(arg0)) {
       let call = hasOwnProperty.call;

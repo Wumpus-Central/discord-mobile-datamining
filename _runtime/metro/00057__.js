@@ -25,10 +25,10 @@ function getValidLengthPercentageSizeOrNull(str) {
 
 export default function processBackgroundSize(str) {
   if (null == str) {
-    let items = [];
+    items = [];
   } else if (typeof str === "string") {
     items = (function parseBackgroundSizeCSSString(str) {
-      const items = [];
+      items = [];
       const parts = str.split(",");
       const mapped = parts.map((item) => item.trim());
       const iter = mapped[Symbol.iterator]();

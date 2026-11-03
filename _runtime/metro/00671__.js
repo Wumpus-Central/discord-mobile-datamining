@@ -5,8 +5,8 @@ let fn = function n() {
   let length;
   let length2;
   let obj = {};
-  let f120441 = obj;
-  let items = ["Boolean", "Number", "String", "Function", "Array", "Date", "RegExp", "Undefined", "Null"];
+  let f120144 = obj;
+  items = ["Boolean", "Number", "String", "Function", "Array", "Date", "RegExp", "Undefined", "Null"];
   let num = 0;
   if (0 < items.length) {
     do {
@@ -76,7 +76,7 @@ let fn = function n() {
           return mapped;
         }
         mapped = arg0[0];
-        tmp4 = f120441[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
+        tmp4 = f120144[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -99,7 +99,7 @@ let fn = function n() {
       }
       first = items[0];
       if (typeof type$p === "function") {
-        tmp5 = f120441;
+        tmp5 = f120144;
         tmp6 = globalThis;
         _Object = Object;
         toString = Object.prototype.toString;
@@ -220,7 +220,7 @@ let fn = function n() {
         _Object = Object;
         toString = Object.prototype.toString;
         call = toString.call;
-        tmp = f120441;
+        tmp = f120144;
         tmp3 = tmp[typeof call === "unknown" ? toString(hex) : call(toString, hex)] || "object";
         str = "function";
         if ("function" == tmp3) {
@@ -356,7 +356,7 @@ let fn = function n() {
           _Object = Object;
           toString = Object.prototype.toString;
           call = toString.call;
-          tmp2 = f120441;
+          tmp2 = f120144;
           tmp4 = tmp2[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
           str = "number";
           if ("number" === tmp4) {
@@ -446,7 +446,7 @@ let fn = function n() {
           _Object = Object;
           toString = Object.prototype.toString;
           call = toString.call;
-          tmp2 = f120441;
+          tmp2 = f120144;
           tmp4 = tmp2[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
           str = "number";
           if ("number" === tmp4) {
@@ -698,7 +698,7 @@ let fn = function n() {
         if (-1 < diff) {
           if (typeof type$p === "function") {
             tmp12 = arg1;
-            tmp13 = f120441;
+            tmp13 = f120144;
             tmp14 = globalThis;
             _Object = Object;
             toString = Object.prototype.toString;
@@ -780,7 +780,7 @@ let fn = function n() {
   }
   function chroma$k() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -797,7 +797,7 @@ let fn = function n() {
   chroma$k.version = "2.4.2";
   function rgb2cmyk_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -821,7 +821,7 @@ let fn = function n() {
   }
   chroma$k.cmyk = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -836,7 +836,7 @@ let fn = function n() {
   };
   obj2.format.cmyk = function cmyk2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -884,7 +884,7 @@ let fn = function n() {
     p: 2,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -903,7 +903,7 @@ let fn = function n() {
             return "cmyk";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -912,7 +912,7 @@ let fn = function n() {
   function rnd(arg0) {}
   function rgb2hsl_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -961,7 +961,7 @@ let fn = function n() {
   }
   function hsl2css_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -984,7 +984,7 @@ let fn = function n() {
             formatted = items[diff1].toLowerCase();
           }
           str = formatted;
-          tmp9 = f120441[typeof call === "unknown" ? toString(tmp6) : call(toString, tmp6)] || "object";
+          tmp9 = f120144[typeof call === "unknown" ? toString(tmp6) : call(toString, tmp6)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -1030,7 +1030,7 @@ let fn = function n() {
   round = Math.round;
   function hsl2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1174,7 +1174,7 @@ let fn = function n() {
   };
   function rgb2css_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1197,7 +1197,7 @@ let fn = function n() {
             formatted = items[diff1].toLowerCase();
           }
           str = formatted;
-          tmp9 = f120441[typeof call === "unknown" ? toString(tmp6) : call(toString, tmp6)] || "object";
+          tmp9 = f120144[typeof call === "unknown" ? toString(tmp6) : call(toString, tmp6)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -1240,7 +1240,7 @@ let fn = function n() {
   }
   chroma$k.css = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1259,7 +1259,7 @@ let fn = function n() {
     p: 5,
     test(arg0) {
       let tmp3;
-      const items = [];
+      items = [];
       const diff = arguments.length - 1;
       let diff1 = diff - 1;
       if (0 < diff) {
@@ -1278,7 +1278,7 @@ let fn = function n() {
               return "css";
             }
           }
-          tmp8 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+          tmp8 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -1287,7 +1287,7 @@ let fn = function n() {
   });
   obj2.format.gl = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1305,7 +1305,7 @@ let fn = function n() {
   };
   chroma$k.gl = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1320,7 +1320,7 @@ let fn = function n() {
   };
   function rgb2hcg_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1361,7 +1361,7 @@ let fn = function n() {
   }
   chroma$k.hcg = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1376,7 +1376,7 @@ let fn = function n() {
   };
   obj2.format.hcg = function hcg2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1441,7 +1441,7 @@ let fn = function n() {
     p: 1,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -1460,7 +1460,7 @@ let fn = function n() {
             return "hcg";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1469,7 +1469,7 @@ let fn = function n() {
   round = Math.round;
   function rgb2hex_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1492,7 +1492,7 @@ let fn = function n() {
             formatted = items[diff1].toLowerCase();
           }
           str = formatted;
-          tmp13 = f120441[typeof call === "unknown" ? toString(tmp10) : call(toString, tmp10)] || "object";
+          tmp13 = f120144[typeof call === "unknown" ? toString(tmp10) : call(toString, tmp10)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -1550,7 +1550,7 @@ let fn = function n() {
       }
       const _parseInt2 = parseInt;
       const parsed = parseInt(sum, 16);
-      const items = [parsed >> 16, (parsed >> 8) & 255, 255 & parsed, 1];
+      items = [parsed >> 16, (parsed >> 8) & 255, 255 & parsed, 1];
       return items;
     } else if (str.match(re52)) {
       let tmp7 = 5 !== str.length;
@@ -1580,7 +1580,7 @@ let fn = function n() {
   }
   chroma$k.hex = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1599,7 +1599,7 @@ let fn = function n() {
     p: 4,
     test(arg0) {
       let tmp3;
-      const items = [];
+      items = [];
       const diff = arguments.length - 1;
       let diff1 = diff - 1;
       if (0 < diff) {
@@ -1619,7 +1619,7 @@ let fn = function n() {
               return "hex";
             }
           }
-          tmp8 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+          tmp8 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -1628,7 +1628,7 @@ let fn = function n() {
   });
   function rgb2hsi_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1663,7 +1663,7 @@ let fn = function n() {
   }
   chroma$k.hsi = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1678,7 +1678,7 @@ let fn = function n() {
   };
   obj2.format.hsi = function hsi2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1773,7 +1773,7 @@ let fn = function n() {
     p: 2,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -1792,7 +1792,7 @@ let fn = function n() {
             return "hsi";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1800,7 +1800,7 @@ let fn = function n() {
   });
   chroma$k.hsl = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1819,7 +1819,7 @@ let fn = function n() {
     p: 2,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -1838,7 +1838,7 @@ let fn = function n() {
             return "hsl";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1849,7 +1849,7 @@ let fn = function n() {
   floor = Math.floor;
   function rgb2hsv$1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1893,7 +1893,7 @@ let fn = function n() {
   }
   chroma$k.hsv = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1908,7 +1908,7 @@ let fn = function n() {
   };
   obj2.format.hsv = function hsv2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -1971,7 +1971,7 @@ let fn = function n() {
     p: 2,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -1990,7 +1990,7 @@ let fn = function n() {
             return "hsv";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2011,7 +2011,7 @@ let fn = function n() {
   function rgb2xyz(arg0, arg1, arg2) {}
   function rgb2lab_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2102,7 +2102,7 @@ let fn = function n() {
   function lab_xyz(arg0) {}
   function lab2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2194,7 +2194,7 @@ let fn = function n() {
   }
   chroma$k.lab = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2213,7 +2213,7 @@ let fn = function n() {
     p: 2,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -2232,7 +2232,7 @@ let fn = function n() {
             return "lab";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2242,7 +2242,7 @@ let fn = function n() {
   round = Math.round;
   function lab2lch_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2265,7 +2265,7 @@ let fn = function n() {
   cos = Math.cos;
   function lch2lab_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2288,7 +2288,7 @@ let fn = function n() {
   }
   function lch2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2311,7 +2311,7 @@ let fn = function n() {
   }
   function rgb2lch_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2327,7 +2327,7 @@ let fn = function n() {
   }
   chroma$k.lch = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2342,7 +2342,7 @@ let fn = function n() {
   };
   chroma$k.hcl = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2358,7 +2358,7 @@ let fn = function n() {
   obj2.format.lch = lch2rgb_1;
   obj2.format.hcl = function hcl2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2378,7 +2378,7 @@ let fn = function n() {
       p: 2,
       test() {
         let tmp3;
-        const items = [];
+        items = [];
         const tmp = +arguments.length;
         let diff = tmp - 1;
         if (tmp) {
@@ -2397,7 +2397,7 @@ let fn = function n() {
               return closure_0;
             }
           }
-          tmp7 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+          tmp7 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -2576,7 +2576,7 @@ let fn = function n() {
     p: 5,
     test(arg0) {
       let tmp3;
-      const items = [];
+      items = [];
       const diff = arguments.length - 1;
       let diff1 = diff - 1;
       if (0 < diff) {
@@ -2595,7 +2595,7 @@ let fn = function n() {
               return "named";
             }
           }
-          tmp8 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+          tmp8 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -2604,7 +2604,7 @@ let fn = function n() {
   });
   function rgb2num_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2619,7 +2619,7 @@ let fn = function n() {
   }
   chroma$k.num = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2639,7 +2639,7 @@ let fn = function n() {
       if ("number" == tmp4) {
         if (arg0 >= 0) {
           if (arg0 <= 16777215) {
-            const items = [arg0 >> 16, (arg0 >> 8) & 255, 255 & arg0, 1];
+            items = [arg0 >> 16, (arg0 >> 8) & 255, 255 & arg0, 1];
             return items;
           }
         }
@@ -2656,7 +2656,7 @@ let fn = function n() {
     p: 5,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -2678,7 +2678,7 @@ let fn = function n() {
               }
             }
           }
-          tmp8 = f120441[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
+          tmp8 = f120144[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -2688,7 +2688,7 @@ let fn = function n() {
   round = Math.round;
   chroma$k.rgb = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2703,7 +2703,7 @@ let fn = function n() {
   };
   obj2.format.rgb = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2724,7 +2724,7 @@ let fn = function n() {
     p: 3,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -2744,7 +2744,7 @@ let fn = function n() {
               if (typeof tmp4 === "function") {
                 const _Object2 = Object;
                 const call2 = toString2.call;
-                const tmp9 = f120441[typeof call2 === "unknown" ? toString2(tmp8) : call2(toString2, tmp8)] || "object";
+                const tmp9 = f120144[typeof call2 === "unknown" ? toString2(tmp8) : call2(toString2, tmp8)] || "object";
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -2752,7 +2752,7 @@ let fn = function n() {
           }
           return "rgb";
         }
-        tmp7 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp7 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2781,13 +2781,13 @@ let fn = function n() {
       diff4 = 325.4494125711974 + 0.07943456536662342 * diff3 - 28.0852963507957 * log(diff3);
       num14 = 255;
     }
-    const items = [num13, diff4, num14, 1];
+    items = [num13, diff4, num14, 1];
     return items;
   }
   round = Math.round;
   function rgb2temperature_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2849,7 +2849,7 @@ let fn = function n() {
   Color.prototype.temp = fn;
   const fn2 = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2871,7 +2871,7 @@ let fn = function n() {
   pow = Math.pow;
   function rgb2oklab_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2924,7 +2924,7 @@ let fn = function n() {
   sign = Math.sign;
   function oklab2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2975,7 +2975,7 @@ let fn = function n() {
   }
   chroma$k.oklab = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -2994,7 +2994,7 @@ let fn = function n() {
     p: 3,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -3013,7 +3013,7 @@ let fn = function n() {
             return "oklab";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -3021,7 +3021,7 @@ let fn = function n() {
   });
   function rgb2oklch_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -3037,7 +3037,7 @@ let fn = function n() {
   }
   chroma$k.oklch = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -3052,7 +3052,7 @@ let fn = function n() {
   };
   obj2.format.oklch = function oklch2rgb_1() {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -3078,7 +3078,7 @@ let fn = function n() {
     p: 3,
     test() {
       let tmp3;
-      const items = [];
+      items = [];
       const tmp = +arguments.length;
       let diff = tmp - 1;
       if (tmp) {
@@ -3097,7 +3097,7 @@ let fn = function n() {
             return "oklch";
           }
         }
-        tmp6 = f120441[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
+        tmp6 = f120144[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -3147,7 +3147,7 @@ let fn = function n() {
     if (undefined === arg2) {
       num = 0.5;
     }
-    const items = [];
+    items = [];
     const diff = arguments.length - 3;
     let diff1 = diff - 1;
     if (0 < diff) {
@@ -3177,14 +3177,14 @@ let fn = function n() {
           if ("object" !== tmp21) {
             obj2 = Color(arg1);
           }
-          tmp21 = f120441[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
+          tmp21 = f120144[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
           const obj3 = obj17[first](obj, obj2, num);
           const alphaResult = obj.alpha();
           return obj3.alpha(alphaResult + num * (obj2.alpha() - obj.alpha()));
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp17 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        tmp17 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -3201,7 +3201,7 @@ let fn = function n() {
     if (undefined === arg1) {
       num = 0.5;
     }
-    const items = [];
+    items = [];
     const diff = arguments.length - 2;
     let diff1 = diff - 1;
     if (0 < diff) {
@@ -3311,7 +3311,7 @@ let fn = function n() {
       }
       const sum1 = tmp5 + arg2 * (tmp4 - tmp5);
       if ("oklch" === str4) {
-        const items = [sum1, sum, _NaN];
+        items = [sum1, sum, _NaN];
         let items1 = items;
       } else {
         items1 = [_NaN, sum, sum1];
@@ -3407,8 +3407,8 @@ let fn = function n() {
           const _Object = Object;
           const call = toString.call;
           brewer =
-            "string" === (f120441[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object");
-          const tmp4 = f120441[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object";
+            "string" === (f120144[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object");
+          const tmp4 = f120144[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -3461,7 +3461,7 @@ let fn = function n() {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp10 = f120441[typeof call2 === "unknown" ? toString2(arr2) : call2(toString2, arr2)] || "object";
+        tmp10 = f120144[typeof call2 === "unknown" ? toString2(arr2) : call2(toString2, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -3567,7 +3567,7 @@ let fn = function n() {
               if ("function" === tmp31) {
                 interpolateResult = substr(bound);
               }
-              tmp31 = f120441[typeof call2 === "unknown" ? toString2(substr) : call2(toString2, substr)] || "object";
+              tmp31 = f120144[typeof call2 === "unknown" ? toString2(substr) : call2(toString2, substr)] || "object";
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -3576,7 +3576,7 @@ let fn = function n() {
               dependencyMap[rounded] = interpolateResult;
               tmp51 = interpolateResult;
             }
-            tmp29 = f120441[typeof call === "unknown" ? toString(substr) : call(toString, substr)] || "object";
+            tmp29 = f120144[typeof call === "unknown" ? toString(substr) : call(toString, substr)] || "object";
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -3795,7 +3795,7 @@ let fn = function n() {
           }
           items = tmp6;
           let tmp = fn;
-          tmp5 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+          tmp5 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -3940,34 +3940,34 @@ let fn = function n() {
     }
   }
   closure_129_0 = (arg0) => arg0;
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.normal = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_130_0 = (arg0, arg1) => (arg0 * arg1) / 255;
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.multiply = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_131_0 = (arg0, arg1) => 255 * (1 - (1 - arg0 / 255) * (1 - arg1 / 255));
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.screen = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_132_0 = (arg0, arg1) => {
     if (arg1 < 128) {
@@ -3977,14 +3977,14 @@ let fn = function n() {
     }
     return result;
   };
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.overlay = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_133_0 = (arg0, arg1) => {
     let tmp = arg0;
@@ -3993,14 +3993,14 @@ let fn = function n() {
     }
     return tmp;
   };
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.darken = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_134_0 = (arg0, arg1) => {
     let tmp = arg1;
@@ -4009,14 +4009,14 @@ let fn = function n() {
     }
     return tmp;
   };
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.lighten = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_135_0 = (arg0, arg1) => {
     let num = 255;
@@ -4029,24 +4029,24 @@ let fn = function n() {
     }
     return num;
   };
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.dodge = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   closure_136_0 = (arg0, arg1) => 255 * (1 - (1 - arg1 / 255) / (arg0 / 255));
-  f120441 = (arg0, arg1) => {
-    const items = [f120441(arg0[0], arg1[0]), f120441(arg0[1], arg1[1]), f120441(arg0[2], arg1[2])];
+  f120144 = (arg0, arg1) => {
+    items = [f120144(arg0[0], arg1[0]), f120144(arg0[1], arg1[1]), f120144(arg0[2], arg1[2])];
     return items;
   };
   blend.burn = (arg0, arg1) => {
     const obj = closure_2_206(arg1);
     const rgbResult = closure_2_206(arg1).rgb();
-    return closure_2_206.rgb(f120441(rgbResult, closure_2_206(arg0).rgb()));
+    return closure_2_206.rgb(f120144(rgbResult, closure_2_206(arg0).rgb()));
   };
   pow = Math.pow;
   sin = Math.sin;
@@ -4076,8 +4076,8 @@ let fn = function n() {
             const _Object = Object;
             const call = toString.call;
             tmp2 =
-              "object" === (f120441[typeof call === "unknown" ? toString(item) : call(toString, item)] || "object");
-            const tmp6 = f120441[typeof call === "unknown" ? toString(item) : call(toString, item)] || "object";
+              "object" === (f120144[typeof call === "unknown" ? toString(item) : call(toString, item)] || "object");
+            const tmp6 = f120144[typeof call === "unknown" ? toString(item) : call(toString, item)] || "object";
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -4104,7 +4104,7 @@ let fn = function n() {
           range.count = range.count + 1;
         }
       });
-      const items = [,];
+      items = [,];
       ({ min: arr2[0], max: arr2[1] } = range);
       range.domain = items;
       range.limits = (arg0, arg1) => limits(range, arg0, arg1);
@@ -4133,7 +4133,7 @@ let fn = function n() {
       ({ min, max, values } = tmp5);
       const sorted = values.sort((arg0, arg1) => arg0 - arg1);
       if (1 === num) {
-        const items = [min, max];
+        items = [min, max];
         return items;
       } else {
         const items1 = [];
@@ -4279,7 +4279,7 @@ let fn = function n() {
         }
         return items1;
       }
-      tmp4 = f120441[typeof call === "unknown" ? toString(dependencyMap) : call(toString, dependencyMap)] || "object";
+      tmp4 = f120144[typeof call === "unknown" ? toString(dependencyMap) : call(toString, dependencyMap)] || "object";
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -4504,7 +4504,7 @@ let fn = function n() {
     const mapped1 = arr.map((item) => Color(item));
     if ("lrgb" === str) {
       if (typeof _average_lrgb === "function") {
-        const items = [0, 0, 0, 0];
+        items = [0, 0, 0, 0];
         let num12 = 0;
         if (0 < mapped1.length) {
           do {
@@ -4616,10 +4616,10 @@ let fn = function n() {
     const mapped = arr.map((item) => Color(item));
     if (2 === mapped.length) {
       const mapped1 = mapped.map((lab) => lab.lab());
-      [f120441, type$p] = mapped1;
+      [f120144, type$p] = mapped1;
       let fn = function a(arg0) {
         closure_0 = arg0;
-        const items = [0, 1, 2];
+        items = [0, 1, 2];
         return Color(
           items.map((item) => dependencyMap[item] + closure_0 * (dependencyMap2[item] - dependencyMap[item])),
           "lab",
@@ -4627,10 +4627,10 @@ let fn = function n() {
       };
     } else if (3 === mapped.length) {
       const mapped2 = mapped.map((lab) => lab.lab());
-      [f120441, type$p, type$p] = mapped2;
+      [f120144, type$p, type$p] = mapped2;
       fn = function a(arg0) {
         closure_0 = arg0;
-        const items = [0, 1, 2];
+        items = [0, 1, 2];
         return Color(
           items.map(
             (item) =>
@@ -4643,10 +4643,10 @@ let fn = function n() {
       };
     } else if (4 === mapped.length) {
       const mapped3 = mapped.map((lab) => lab.lab());
-      [f120441, type$p, type$p, last] = mapped3;
+      [f120144, type$p, type$p, last] = mapped3;
       fn = function a(arg0) {
         closure_0 = arg0;
-        const items = [0, 1, 2];
+        items = [0, 1, 2];
         return Color(
           items.map(
             (item) =>
@@ -4661,7 +4661,7 @@ let fn = function n() {
     } else if (mapped.length >= 5) {
       closure_4 = mapped.map((lab) => lab.lab());
       const diff = mapped.length - 1;
-      let items = [1, 1];
+      items = [1, 1];
       let num2 = 1;
       let tmp7 = items;
       if (1 < diff) {
@@ -4683,7 +4683,7 @@ let fn = function n() {
       fn = function a(arg0) {
         closure_0 = arg0;
         closure_1 = 1 - arg0;
-        const items = [0, 1, 2];
+        items = [0, 1, 2];
         return Color(
           items.map((item) => {
             closure_0 = item;
@@ -4711,7 +4711,7 @@ let fn = function n() {
     dependencyMap = arg2;
     closure_3 = arg3;
     let tmp = arg4;
-    let items = arg4;
+    items = arg4;
     if (undefined === arg0) {
       closure_0 = 300;
     }
@@ -4805,7 +4805,7 @@ let fn = function n() {
               c6 = 0;
             }
             tmp8 = fn;
-            tmp3 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+            tmp3 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -4826,7 +4826,7 @@ let fn = function n() {
             c5 = 0;
           }
           tmp4 = fn;
-          tmp3 = f120441[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+          tmp3 = f120144[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -4974,7 +4974,7 @@ let fn = function n() {
   chroma$k.limits = limits;
   chroma$k.valid = () => {
     let tmp3;
-    const items = [];
+    items = [];
     const tmp = +arguments.length;
     let diff = tmp - 1;
     if (tmp) {
@@ -4995,7 +4995,7 @@ let fn = function n() {
   };
   chroma$k.scales = {
     cool() {
-      const items = [chroma$k.hsl(180, 1, 0.9), chroma$k.hsl(250, 0.7, 0.4)];
+      items = [chroma$k.hsl(180, 1, 0.9), chroma$k.hsl(250, 0.7, 0.4)];
       return scale$2(items);
     },
     hot() {

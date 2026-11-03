@@ -68,10 +68,10 @@ export function registerConfig(arr) {
     }
   });
 }
-export function registerComponent(Discord, arg1, arg2) {
-  closure_0 = Discord;
+export function registerComponent(LogBox, arg1, arg2) {
+  closure_0 = LogBox;
   closure_1 = arg1;
-  closure_5[Discord] = (arg0, displayMode) => {
+  closure_5[LogBox] = (arg0, displayMode) => {
     const obj = {
       RootComponent: closure_2_9(component, _modDef239),
       initialProps: null,
@@ -99,9 +99,9 @@ export function registerComponent(Discord, arg1, arg2) {
     require("renderApplication").default(obj);
   };
   if (arg2) {
-    closure_6[Discord] = tmp[Discord];
+    closure_6[LogBox] = tmp[LogBox];
   }
-  return Discord;
+  return LogBox;
 }
 export function registerRunnable(Discord, arg1) {
   closure_5[Discord] = arg1;

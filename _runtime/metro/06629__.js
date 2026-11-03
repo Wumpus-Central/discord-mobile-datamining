@@ -1,13 +1,9 @@
 // _runtime/metro/06629__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "9531281533f8a11dbbdded76baff0291",
-  name: "img_account_sync_spotify_light_and_dark",
-  type: "svg",
-});
+export default function isPropertyKey(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "symbol";
+  }
+  return tmp;
+}

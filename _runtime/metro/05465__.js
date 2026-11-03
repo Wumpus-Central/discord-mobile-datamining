@@ -1,9 +1,13 @@
 // _runtime/metro/05465__.js
-import _mod17 from "00017__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export const styles = StyleSheet.create({
-  container: StyleSheet.absoluteFillObject,
-  background: { backgroundColor: "white", borderRadius: 15 },
-});
+export default PlatformConstants;

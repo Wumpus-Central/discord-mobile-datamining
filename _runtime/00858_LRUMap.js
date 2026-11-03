@@ -80,7 +80,7 @@ let items = [
   {
     key: "values",
     value: function values() {
-      const items = [];
+      items = [];
       const _cache = this._cache;
       const item = _cache.forEach((item) => items.push(item));
       return items;

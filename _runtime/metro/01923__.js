@@ -1,24 +1,9 @@
 // _runtime/metro/01923__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "nl",
-  pluralRuleFunction(arg0, arg1) {
-    let str2 = "other";
-    if (!arg1) {
-      let str3 = "other";
-      if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
-      }
-      str2 = str3;
-    }
-    return str2;
-  },
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-AW", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BE", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BQ", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-CW", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SR", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SX", parentLocale: "nl" });
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
+
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "REASharedTransitionBoundary", validAttributes: { isActive: true } };
+
+export default module_65.get("REASharedTransitionBoundary", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

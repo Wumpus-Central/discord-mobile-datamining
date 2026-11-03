@@ -1,13 +1,32 @@
 // _runtime/metro/06592__.js
-import registerAsset from "01119__.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
+import _mod1460 from "01460__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
-  scales: [1],
-  hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc",
-  name: "img_bungie_dark",
-  type: "png",
-});
+let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1460();
+
+export default function isString(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    let tmp2 = !str;
+    if (str) {
+      tmp2 = typeof str !== "object";
+    }
+    if (tmp2) {
+      tmp = !tmp2;
+    } else if (closure_2) {
+      let tmp5 = (function tryStringObject(arg0) {
+        try {
+          closure_1_0(arg0);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      })(str);
+    } else {
+      tmp5 = "[object String]" === closure_1(str);
+    }
+  }
+  return tmp;
+}

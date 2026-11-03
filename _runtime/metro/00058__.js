@@ -27,7 +27,7 @@ function isValidPosition(str) {
   return !tmp2;
 }
 function parseBackgroundPositionCSSString(str) {
-  const items = [];
+  items = [];
   const parts = str.split(",");
   const mapped = parts.map((item) => item.trim());
   const iter = mapped[Symbol.iterator]();
@@ -325,7 +325,7 @@ function parseBackgroundPositionCSSString(str) {
 
 export default function processBackgroundPosition(str) {
   if (null == str) {
-    let items = [];
+    items = [];
   } else if (typeof str === "string") {
     items = parseBackgroundPositionCSSString(str.replace(/\n/g, " "));
   } else {

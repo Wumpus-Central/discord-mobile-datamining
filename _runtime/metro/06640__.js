@@ -1,13 +1,28 @@
 // _runtime/metro/06640__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "be629a43a1506b7ff0f25b34b78ebb11",
-  name: "img_account_sync_github_light",
-  type: "png",
-});
+export default function fromPropertyDescriptor(__Value__) {
+  if (undefined === __Value__) {
+    return __Value__;
+  } else {
+    const obj = {};
+    if ("[[Value]]" in __Value__) {
+      obj.value = __Value__["[[Value]]"];
+    }
+    if ("[[Writable]]" in __Value__) {
+      obj.writable = __Value__["[[Writable]]"];
+    }
+    if ("[[Get]]" in __Value__) {
+      obj.get = __Value__["[[Get]]"];
+    }
+    if ("[[Set]]" in __Value__) {
+      obj.set = __Value__["[[Set]]"];
+    }
+    if ("[[Enumerable]]" in __Value__) {
+      obj.enumerable = __Value__["[[Enumerable]]"];
+    }
+    if ("[[Configurable]]" in __Value__) {
+      obj.configurable = __Value__["[[Configurable]]"];
+    }
+    return obj;
+  }
+}

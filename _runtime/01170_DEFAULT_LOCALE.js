@@ -84,7 +84,7 @@ let items = [
     key: "setLocale",
     value: function setLocale(currentLocale) {
       this.currentLocale = currentLocale;
-      const items = [,];
+      items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
       this.data = IntlManager(1153).makeDataFormatters(items, this.formatConfig, this._forceLookupMatcher);
       this.emitLocaleChange(currentLocale);
@@ -139,7 +139,7 @@ let items = [
         values,
         keyPrefix: "",
       };
-      const items = [,];
+      items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
       obj.locales = items;
       return IntlManager(1156).bindFormatValues(obj);

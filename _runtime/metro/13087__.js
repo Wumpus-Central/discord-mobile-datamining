@@ -1,99 +1,116 @@
 // _runtime/metro/13087__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod13088 from "13088__.js";
 
-const SentryNonRecordingSpan = require;
-class SentryNonRecordingSpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
+function getProcedure(type) {
+  value = map.get(type.type);
+  let num = -1;
+  if (null !== value) {
+    num = -1;
+    if (undefined !== value) {
+      num = value;
     }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
+  }
+  if (type.type === _mod13088.SelectorType.Attribute) {
+    value2 = map1.get(type.action);
+    let num8 = 4;
+    if (null !== value2) {
+      num8 = 4;
+      if (undefined !== value2) {
+        num8 = value2;
+      }
     }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
+    let tmp7 = type.action === _mod13088.AttributeAction.Equals;
+    if (tmp7) {
+      tmp7 = "id" === type.name;
     }
-    self._spanId = spanId;
-    return;
+    if (tmp7) {
+      num8 = 9;
+    }
+    num = num8;
+    if (type.ignoreCase) {
+      num = num8 >> 1;
+    }
+  } else if (type.type === _mod13088.SelectorType.Pseudo) {
+    let num6 = 3;
+    if (type.data) {
+      let num3 = 0;
+      if ("has" !== type.name) {
+        num3 = 0;
+        if ("contains" !== type.name) {
+          const _Array = Array;
+          let num4 = 2;
+          if (Array.isArray(type.data)) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const data = type.data;
+            let num5 = min.apply(
+              Math,
+              data.map((arr) => {
+                return min.apply(Math, arr.map(getProcedure));
+              }),
+            );
+            if (num5 < 0) {
+              num5 = 0;
+            }
+            num4 = num5;
+          }
+          num3 = num4;
+        }
+      }
+      num6 = num3;
+    }
+    num = num6;
+  }
+  return num;
+}
+const items = [_mod13088.SelectorType.Universal, 50];
+const items1 = [items, , ,];
+const items2 = [_mod13088.SelectorType.Tag, 30];
+items1[1] = items2;
+const items3 = [_mod13088.SelectorType.Attribute, 1];
+items1[2] = items3;
+const items4 = [_mod13088.SelectorType.Pseudo, 0];
+items1[3] = items4;
+const map = new Map(items1);
+const items5 = [_mod13088.AttributeAction.Exists, 10];
+const items6 = [items5, , , , ,];
+const items7 = [_mod13088.AttributeAction.Equals, 8];
+items6[1] = items7;
+const items8 = [_mod13088.AttributeAction.Not, 7];
+items6[2] = items8;
+const items9 = [_mod13088.AttributeAction.Start, 6];
+items6[3] = items9;
+const items10 = [_mod13088.AttributeAction.End, 6];
+items6[4] = items10;
+const items11 = [_mod13088.AttributeAction.Any, 5];
+items6[5] = items11;
+const map1 = new Map(items6);
+
+export function isTraversal(type) {
+  return !map.has(type.type);
+}
+export default function sortByProcedure(arr) {
+  const mapped = arr.map(getProcedure);
+  for (let num = 1; num < arr.length; num = num + 1) {
+    let tmp2 = mapped[num];
+    if (tmp2 >= 0) {
+      let diff = num - 1;
+      if (0 <= diff) {
+        if (tmp2 < mapped[diff]) {
+          let sum = diff + 1;
+          arr[sum] = arr[diff];
+          arr[diff] = arr[sum];
+          mapped[sum] = mapped[diff];
+          mapped[diff] = tmp2;
+          let diff1 = diff - 1;
+          while (0 <= diff1) {
+            diff = diff1;
+            if (tmp2 >= mapped[diff1]) {
+              break;
+            }
+          }
+        }
+      }
+    }
   }
 }
-const entry = {
-  key: "spanContext",
-  value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(13059).TRACE_FLAG_NONE };
-  },
-};
-const items = [
-  entry,
-  {
-    key: "end",
-    value: function end(arg0) {},
-  },
-  {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      return this;
-    },
-  },
-  {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "setStatus",
-    value: function setStatus(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "updateName",
-    value: function updateName(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "isRecording",
-    value: function isRecording() {
-      return false;
-    },
-  },
-  {
-    key: "addEvent",
-    value: function addEvent(arg0, arg1, arg2) {
-      return this;
-    },
-  },
-  {
-    key: "addLink",
-    value: function addLink(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {},
-  },
-];
-
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

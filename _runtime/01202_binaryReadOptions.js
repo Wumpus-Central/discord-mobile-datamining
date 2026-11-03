@@ -39,7 +39,7 @@ const entry = {
     if (uint32Result >>> 3 > 0) {
       if (tmp3 >= 0) {
         if (5 >= tmp3) {
-          const items = [tmp2, tmp3];
+          items = [tmp2, tmp3];
           return items;
         }
       }

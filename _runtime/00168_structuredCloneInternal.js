@@ -170,10 +170,10 @@ WeakMap.prototype[SymbolResult] = true;
 WeakSet.prototype[SymbolResult] = true;
 Promise.prototype[SymbolResult] = true;
 
-export default function structuredClone(style) {
+export default function structuredClone(source) {
   try {
     map.clear();
-    return structuredCloneInternal(style);
+    return structuredCloneInternal(source);
   } catch (tmp6) {
     map.clear();
     throw tmp6;

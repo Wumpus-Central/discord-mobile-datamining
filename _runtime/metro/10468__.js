@@ -1,12 +1,14 @@
 // _runtime/metro/10468__.js
-import _mod10458 from "10458__.js";
+import _mod10456 from "10456__.js";
+import repeatedTimeunitPattern from "../10457_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitCasualRelativeFormatParser = require;
+const ENYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,54 +27,82 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeUnitCasualRelativeFormatParser {
-  constructor() {
+const regExp = new RegExp(
+  "([0-9]{4})[-\\.\\/\\s](?:(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10456.MONTH_DICTIONARY) +
+    ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
+  "i",
+);
+class ENYearMonthDayParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, RUTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ENYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENYearMonthDayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = global;
+    return tmp3Result;
   }
 }
-_inherits(RUTimeUnitCasualRelativeFormatParser, _mod10458.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
-      RUTimeUnitCasualRelativeFormatParser(10456).TIME_UNITS_PATTERN +
-      ")"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
-const items = [
+let items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(10456).parseDuration(arg1[2]);
-      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
-        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(10330).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+    value: function innerExtract(arg0, arg1) {
+      const parsed = parseInt(arg1[1]);
+      const parsed1 = parseInt(arg1[4]);
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed2 = parseInt(arg1[3]);
+      } else {
+        parsed2 = ENYearMonthDayParser(10456).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(10329).reverseDuration(parseDurationResult);
+      if (parsed2 < 1) {
+        const self = this;
+        if (this.strictMonthDateOrder) {
+          return null;
+        } else {
+          tmp6 = parsed2;
+          tmp7 = parsed1;
+          if (parsed1 >= 1) {
+            tmp6 = parsed2;
+            tmp7 = parsed1;
+            if (parsed1 <= 12) {
+              items = [parsed1, parsed2];
+              [tmp6, tmp7] = items;
+            }
+          }
+        }
+      } else {
+        tmp6 = parsed2;
+        tmp7 = parsed1;
+      }
+      let tmp8 = null;
+      if (tmp7 >= 1) {
+        tmp8 = null;
+        if (tmp7 <= 31) {
+          const date = { day: tmp7, month: tmp6, year: parsed };
+          tmp8 = date;
+        }
+      }
+      return tmp8;
     },
   },
 ];
 
-export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENYearMonthDayParser, items);

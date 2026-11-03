@@ -27,7 +27,7 @@ function notifyIntersectionObservers() {
           value = map.get(nextResult.intersectionObserverId);
           let arr = value;
           if (null == value) {
-            let items = [];
+            items = [];
             arr = items;
             let result = map.set(tmp7.intersectionObserverId, items);
           }

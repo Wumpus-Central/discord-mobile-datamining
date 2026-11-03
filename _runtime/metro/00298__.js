@@ -23,7 +23,7 @@ function useTextPressability(textPressabilityProps) {
   let onStartShouldSetResponder = textPressabilityProps.onStartShouldSetResponder;
   const pressRetentionOffset = textPressabilityProps.pressRetentionOffset;
   const first = _slicedToArray(React5(false), 2)[0];
-  let items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
+  items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
   const tmp = _slicedToArray(React5(false), 2);
   const tmp4 = _modDef301(timestampProducer(() => ({ disabled: false, pressRectOffset: pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut }), items));
   closure_12 = tmp4;
@@ -75,7 +75,7 @@ function useTextPressability(textPressabilityProps) {
   closure_13 = tmp5;
   const items2 = [first, tmp5];
   return timestampProducer(() => {
-    const items = [first, closure_13];
+    items = [first, closure_13];
     return items;
   }, items2);
 }
@@ -449,7 +449,8 @@ let closure_11 = noop.forwardRef(function PressableText_withRef(textPressability
   obj.ref = ref;
   return <NativeText />;
 });
-let closure_12 = { auto: true, text: true, none: false, contain: true, all: true };
-const value = get_hairlineWidth.create({ default: { overflow: "hidden" } });
+const application_id = { auto: true, text: true, none: false, contain: true, all: true };
+const state = { auto: "auto", top: "top", bottom: "bottom", middle: "center" };
+const gesture = get_hairlineWidth.create({ default: { overflow: "hidden" } });
 
 export default TextImpl;

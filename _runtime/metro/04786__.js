@@ -1,85 +1,26 @@
 // _runtime/metro/04786__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "ru" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4602_mod from "04602__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
+
+let module_4602 = module_4602_mod;
+if (!module_4602) {
+  const obj = { default: module_4602 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4602;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+module_4602 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-    },
-    unit: {
-      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-    },
-  },
-  locale: "ru",
+requiredArgs = tmp5;
+
+export default function isToday(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4602.default(arg0, Date.now());
 };
-prop.push(obj);
+export default exports.default;

@@ -1,53 +1,30 @@
 // _runtime/metro/01839__.js
-import _mod17 from "00017__.js";
-import _mod19 from "00019__.js";
-import _mod1840 from "01840__.js";
+import clamp from "../01840_clamp.js";
+import utilNative from "../01841_utilNative.js";
+import _mod1846 from "01846__.js";
+import delay from "../01852_delay.js";
+import repeat from "../01853_repeat.js";
+import sequence from "../01854_sequence.js";
+import _mod1855 from "01855__.js";
+import styleAnimation from "../01859_styleAnimation.js";
+import timing from "../01860_timing.js";
 
-const useRef = _mod19.useRef;
-const Animated = _mod17.Animated;
-
-export function useEventHandlerRegistration(arg0) {
-  return (workletEventHandler) => {
-    if (workletEventHandler.current) {
-      let findNodeHandleResult = ref(dependencyMap[2]).findNodeHandle(tmp.current);
-      if (findNodeHandleResult) {
-        if ("workletEventHandler" in workletEventHandler) {
-          workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
-        } else {
-          workletEventHandler.registerForEvents(findNodeHandleResult);
-        }
-      }
-      const obj = ref(dependencyMap[2]);
-    } else {
-      const _queueMicrotask = queueMicrotask;
-      queueMicrotask(function attachWorkletHandlers() {
-        const findNodeHandleResult = _mod1840.findNodeHandle(workletEventHandler.current);
-        if (findNodeHandleResult) {
-          if ("workletEventHandler" in workletEventHandler) {
-            obj2.workletEventHandler.registerForEvents(findNodeHandleResult);
-          } else {
-            obj2.registerForEvents(findNodeHandleResult);
-          }
-        }
-      });
-    }
-    return () => {
-      const findNodeHandleResult = _mod1840.findNodeHandle(workletEventHandler.current);
-      if (findNodeHandleResult) {
-        if ("workletEventHandler" in workletEventHandler) {
-          obj2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);
-        } else {
-          obj2.unregisterFromEvents(findNodeHandleResult);
-        }
-      }
-    };
-  };
-}
-export function useAnimatedValue(arg0, arg1) {
-  const tmp = useRef(null);
-  if (null === tmp.current) {
-    value = new Animated.Value(arg0, arg1);
-    tmp.current = value;
-  }
-  return tmp.current;
-}
+export const withClamp = clamp.withClamp;
+export const withDecay = _mod1846.withDecay;
+export const withDelay = delay.withDelay;
+export const withRepeat = repeat.withRepeat;
+export const withSequence = sequence.withSequence;
+export const GentleSpringConfig = _mod1855.GentleSpringConfig;
+export const GentleSpringConfigWithDuration = _mod1855.GentleSpringConfigWithDuration;
+export const Reanimated3DefaultSpringConfig = _mod1855.Reanimated3DefaultSpringConfig;
+export const Reanimated3DefaultSpringConfigWithDuration = _mod1855.Reanimated3DefaultSpringConfigWithDuration;
+export const SnappySpringConfig = _mod1855.SnappySpringConfig;
+export const SnappySpringConfigWithDuration = _mod1855.SnappySpringConfigWithDuration;
+export const WigglySpringConfig = _mod1855.WigglySpringConfig;
+export const WigglySpringConfigWithDuration = _mod1855.WigglySpringConfigWithDuration;
+export const withSpring = _mod1855.withSpring;
+export const withStyleAnimation = styleAnimation.withStyleAnimation;
+export const withTiming = timing.withTiming;
+export const cancelAnimation = utilNative.cancelAnimation;
+export const defineAnimation = utilNative.defineAnimation;
+export const initialUpdaterRun = utilNative.initialUpdaterRun;

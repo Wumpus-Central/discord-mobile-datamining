@@ -140,7 +140,7 @@ export function makeDsn(protocol) {
     let flag = true;
     if (url(687).DEBUG_BUILD) {
       ({ port, projectId, protocol } = url);
-      const items = ["protocol", "publicKey", "host", "projectId"];
+      items = ["protocol", "publicKey", "host", "projectId"];
       const found = items.find((item) => {
         let flag = !tmp;
         if (!url[item]) {

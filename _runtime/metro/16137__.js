@@ -1,7 +1,13 @@
 // _runtime/metro/16137__.js
-import _mod16135 from "16135__.js";
+import registerAsset from "01119__.js";
 
-let closure_0 = _mod16135({}.toString);
-let closure_1 = _mod16135("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "89ef758cad16b0f89bf10bf57ab078db",
+  name: "StatusDND",
+  type: "png",
+});

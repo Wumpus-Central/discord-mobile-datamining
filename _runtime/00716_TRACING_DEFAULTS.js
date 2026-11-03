@@ -107,7 +107,7 @@ export function startIdleSpan(arg0) {
   c2 = false;
   let heartbeatFailed = "externalFinish";
   closure_4 = !obj.disableAutoFinish;
-  let items = [];
+  items = [];
   let idleTimeout = obj.idleTimeout;
   if (undefined === idleTimeout) {
     idleTimeout = heartbeatFailed.idleTimeout;

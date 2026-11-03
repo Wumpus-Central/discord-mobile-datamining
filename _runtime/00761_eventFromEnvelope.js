@@ -37,7 +37,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
       }
       value = map.get(combined);
       if (value) {
-        const items = [arg0, value];
+        items = [arg0, value];
         return items;
       } else {
         const dsnFromStringResult = _mod701.dsnFromString(arg0);
@@ -67,7 +67,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -123,7 +123,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
         const mapped = fn({
           envelope,
           getEvent(arg0) {
-            let items = arg0;
+            items = arg0;
             let length;
             if (arg0 != null) {
               length = items.length;
@@ -131,7 +131,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F79323 */ function() { ... });
+            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F79483 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {
@@ -145,7 +145,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
         const found = mapped.filter((item) => item);
         let arr3 = found;
         if (!found.length) {
-          let items = ["", closure_2_1];
+          items = ["", closure_2_1];
           const items1 = [items];
           arr3 = items1;
         }
@@ -169,7 +169,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
       closure_2 = tmp2;
       closure_130_0 = closure_0;
       closure_1 = 0;
-      const items = [];
+      items = [];
       const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
       closure_1 = arraySpreadResult;
       items[arraySpreadResult] = closure_2_1;

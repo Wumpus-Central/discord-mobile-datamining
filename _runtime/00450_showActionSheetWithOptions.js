@@ -23,7 +23,7 @@ export default {
     if (!Array.isArray(destructiveButtonIndex)) {
       tmp11 = null;
       if (typeof destructiveButtonIndex === "number") {
-        const items = [destructiveButtonIndex];
+        items = [destructiveButtonIndex];
         tmp11 = items;
       }
     }

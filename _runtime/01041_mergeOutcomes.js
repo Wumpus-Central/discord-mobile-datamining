@@ -1,7 +1,7 @@
 // _runtime/01041_mergeOutcomes.js
 
 export function mergeOutcomes() {
-  const items = [...arguments];
+  items = [...arguments];
   const map = new Map();
   function process(reason) {
     const combined = "" + reason.reason + ":" + reason.category;

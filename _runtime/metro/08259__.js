@@ -1,67 +1,98 @@
 // _runtime/metro/08259__.js
-import _mod8251 from "08251__.js";
-import _mod8252 from "08252__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8179 from "08179__.js";
+import _modDef8260 from "08260__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function isAVI(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avi");
-}
-export function isFLV(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && _mod8251.isFlvStringIncluded(fileChunk);
-}
-export function isM4V(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod8251.isftypStringIncluded(fileChunk);
-}
-export function isMKV(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod8251.findMatroskaDocTypeElements(fileChunk);
-}
-export function isMOV(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mov");
-}
-export function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
-  if (!checkByFileTypeResult) {
-    excludeSimilarTypes = undefined;
-    if (null != excludeSimilarTypes) {
-      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+const Use = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    let tmp8 = !excludeSimilarTypes;
-    if (!excludeSimilarTypes) {
-      const fileChunk1 = _mod8251.getFileChunk(fileChunk);
-      const FileTypes2 = _mod8252.FileTypes;
-      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8251.isftypStringIncluded(fileChunk1);
-      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8251.isftypStringIncluded(fileChunk1);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Use {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Use);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Use);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    checkByFileTypeResult = tmp8;
+    return tmp3(self, constructResult);
   }
-  return checkByFileTypeResult;
 }
-export function isOGG(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ogg");
-}
-export function isSWF(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "swf");
-}
-export function isWEBM(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod8251.findMatroskaDocTypeElements(fileChunk);
-}
+_inherits(Use, _modDef8179);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    let str = props.href;
+    ({ children, x, y, width, height } = props);
+    if (undefined === str) {
+      str = props.xlinkHref;
+    }
+    let match = str;
+    if (str) {
+      match = str.match(Use(8171).idPattern);
+    }
+    let tmp4 = match;
+    if (match) {
+      tmp4 = match[1];
+    }
+    if (!tmp4) {
+      const _console = console;
+      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
+    }
+    const size = { href: tmp4, x, y, width, height };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(Use(8170).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = children;
+    return (
+      <tmp7
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Use, items);
+importDefaultResultResult.displayName = "Use";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+
+export default importDefaultResultResult;

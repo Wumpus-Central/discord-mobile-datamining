@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "dadf5e8629c7ac90f77087c81be9e773",
-  name: "UserIcon",
+  hash: "238a115f1ad03e07bad0181bb5c110d4",
+  name: "ic_playstation_device_ps5_32px",
   type: "png",
 });

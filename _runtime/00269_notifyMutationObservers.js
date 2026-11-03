@@ -21,7 +21,7 @@ function notifyMutationObservers() {
           value = map.get(item10013.mutationObserverId);
           let arr = value;
           if (null == value) {
-            let items = [];
+            items = [];
             arr = items;
             let result = map.set(item10013.mutationObserverId, items);
           }

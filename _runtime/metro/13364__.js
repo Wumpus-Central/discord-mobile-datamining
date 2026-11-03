@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "5b00e6abae27bddaf8498fd271ace686",
-  name: "PhoneIcon",
+  hash: "b62bcdbe576aad312fb756c1125d76bb",
+  name: "ic_upload",
   type: "png",
 });

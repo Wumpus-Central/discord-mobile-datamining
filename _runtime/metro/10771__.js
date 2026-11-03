@@ -1,13 +1,31 @@
 // _runtime/metro/10771__.js
-import registerAsset from "01119__.js";
+import Layouts5 from "../10772_Layouts.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f55d97ba12842f12a33d545b3d0fbaea",
-  name: "CrownIcon",
-  type: "png",
-});
+require = arg1;
+
+export function useLayoutConfig(size) {
+  size = size.size;
+  const vertical = size.vertical;
+  items = [, , ,];
+  ({ mode: arr[0], modeConfig: arr[1] } = size);
+  items[2] = size;
+  items[3] = vertical;
+  return vertical.useMemo(() => {
+    const obj = { size, vertical };
+    const mode = size.mode;
+    if ("parallax" === mode) {
+      const Layouts4 = Layouts5.Layouts;
+      return Layouts4.parallax(obj, size.modeConfig);
+    } else if ("horizontal-stack" === mode) {
+      const Layouts3 = Layouts5.Layouts;
+      return Layouts3.horizontalStack(size.modeConfig);
+    } else if ("vertical-stack" === mode) {
+      const Layouts2 = Layouts5.Layouts;
+      return Layouts2.verticalStack(size.modeConfig);
+    } else {
+      const Layouts = Layouts5.Layouts;
+      return Layouts.normal(obj);
+    }
+  }, items);
+}

@@ -1,11 +1,21 @@
 // _runtime/metro/02196__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L21lc3NhZ2Vz",
-  scales: [1],
-  hash: "0062629b858542b63d0b9375eca59c6d",
-  name: "sv-SE.messages.0062629b858542b63d0b9375eca59c6d.compiled.messages",
-  type: "jsona",
-});
+export default function buildFormatLongFn(arg0) {
+  closure_0 = arg0;
+  return () => {
+    if (arguments.length > 0) {
+      if (undefined !== arguments[0]) {
+        let first = arguments[0];
+      }
+      if (first.width) {
+        const _String = String;
+        let defaultWidth = String(first.width);
+      } else {
+        defaultWidth = closure_0.defaultWidth;
+      }
+      return closure_0.formats[defaultWidth] || closure_0.formats[closure_0.defaultWidth];
+    }
+    first = {};
+  };
+};
+export default exports.default;

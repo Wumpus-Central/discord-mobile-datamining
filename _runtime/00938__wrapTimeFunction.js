@@ -5,7 +5,7 @@ import registerSpanErrorInstrumentation from "metro/00681__.js";
 function _wrapTimeFunction(arg0) {
   closure_0 = arg0;
   return function() {
-    const items = [...arguments];
+    items = [...arguments];
     const obj2 = { mechanism: null };
     const obj3 = { handled: false, type: null };
     const obj = ignoreNextOnError;
@@ -25,7 +25,7 @@ function _wrapRAF(arg0) {
     obj4.handler = registerSpanErrorInstrumentation.getFunctionName(closure_0);
     obj3.data = obj4;
     obj2.mechanism = obj3;
-    const items = [obj.wrap(arg0, obj2)];
+    items = [obj.wrap(arg0, obj2)];
     return closure_0.apply(this, items);
   };
 }
@@ -33,7 +33,7 @@ function _wrapXHR(arg0) {
   closure_0 = arg0;
   return function() {
     const self = this;
-    const items = ["onload", "onerror", "onprogress", "onreadystatechange"];
+    items = ["onload", "onerror", "onprogress", "onreadystatechange"];
     const items1 = [...arguments];
     const item = items.forEach((item) => {
       _self = item;
@@ -132,7 +132,7 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
                 if (closure_1.unregisterOriginalCallbacks) {
                   (function unregisterOriginalCallback() { ... })(self, arg0, handleEvent);
                 }
-                const items = [arg0, , ];
+                items = [arg0, , ];
                 const obj7 = { mechanism: null };
                 const obj8 = { data: null, handled: false, type: "auto.browser.browserapierrors.addEventListener" };
                 const obj9 = { handler: null, target: null };

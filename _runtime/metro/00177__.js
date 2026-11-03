@@ -139,7 +139,7 @@ function handle(promise, _A) {
       tmp2._A = _A;
     } else if (1 === tmp2._x) {
       tmp2._x = 2;
-      const items = [tmp2._A, _A];
+      items = [tmp2._A, _A];
       tmp2._A = items;
     } else {
       _A = tmp2._A;

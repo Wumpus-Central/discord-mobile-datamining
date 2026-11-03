@@ -5,8 +5,8 @@ import noop from "00019__.js";
 
 export default function useRefEffect(arg0) {
   closure_0 = arg0;
-  framebus(undefined);
-  const items = [arg0];
+  duration(undefined);
+  items = [arg0];
   return React((arg0) => {
     if (ref.current) {
       ref.current();

@@ -1,58 +1,33 @@
 // _runtime/metro/04706__.js
-import _typeof_mod from "04294__.js";
-import module_4707_mod from "04707__.js";
-import module_4298_mod from "04298__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import differenceInCalendarWeeks_mod from "../04610_differenceInCalendarWeeks.js";
+import lastDayOfMonth_mod from "../04707_lastDayOfMonth.js";
+import startOfMonth_mod from "../04637_startOfMonth.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
+if (!differenceInCalendarWeeks) {
+  const obj = { default: differenceInCalendarWeeks };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = differenceInCalendarWeeks;
 }
-_typeof = tmp3;
-let module_4707 = module_4707_mod;
-if (!module_4707) {
-  const obj2 = { default: module_4707 };
+differenceInCalendarWeeks = tmp3;
+let lastDayOfMonth = lastDayOfMonth_mod;
+if (!lastDayOfMonth) {
+  const obj2 = { default: lastDayOfMonth };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4707;
+  tmp5 = lastDayOfMonth;
 }
-module_4707 = tmp5;
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj3 = { default: module_4298 };
+lastDayOfMonth = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4298;
+  tmp7 = startOfMonth;
 }
-module_4298 = tmp7;
+startOfMonth = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -62,44 +37,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp9;
 
-export default function set(arg0, year) {
-  requiredArgs.default(2, arguments);
-  if ("object" === _typeof(year)) {
-    if (null !== year) {
-      const defaultResult1 = _typeof.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult1.getTime())) {
-        const _Date = Date;
-        const date = new Date(NaN);
-        return date;
-      } else {
-        if (null != year.year) {
-          defaultResult1.setFullYear(year.year);
-        }
-        let defaultResult2 = defaultResult1;
-        if (null != year.month) {
-          defaultResult2 = module_4707.default(defaultResult1, year.month);
-        }
-        if (null != year.date) {
-          defaultResult2.setDate(module_4298.default(year.date));
-        }
-        if (null != year.hours) {
-          defaultResult2.setHours(module_4298.default(year.hours));
-        }
-        if (null != year.minutes) {
-          defaultResult2.setMinutes(module_4298.default(year.minutes));
-        }
-        if (null != year.seconds) {
-          defaultResult2.setSeconds(module_4298.default(year.seconds));
-        }
-        if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(module_4298.default(year.milliseconds));
-        }
-        return defaultResult2;
-      }
-    }
-  }
-  const rangeError = new RangeError("values parameter must be an object");
-  throw rangeError;
+export default function getWeeksInMonth(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
 };
 export default exports.default;

@@ -11,7 +11,7 @@ export default function callBoundIntrinsic(arg0, arg1) {
   if (typeof tmp3 === "function") {
     tmp4 = tmp3;
     if (closure_2(arg0, ".prototype.") > -1) {
-      const items = [tmp3];
+      items = [tmp3];
       tmp4 = callBindBasic(items);
     }
   }

@@ -5,7 +5,7 @@ import noop from "00019__.js";
 fn(19).useCallback;
 
 export default function useMergeRefs() {
-  const items = [...arguments];
+  items = [...arguments];
   const items1 = [...items];
   return _modDef335(
     useCallback((current) => {

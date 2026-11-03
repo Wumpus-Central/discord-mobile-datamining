@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "538100cf5ed1ed88cced15fcffad07fd",
-  name: "PiggyBankIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "be17daf6700f31399d629fee23cb9327",
+  name: "ic_text_channel_16px",
   type: "png",
 });

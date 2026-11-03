@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 
 export function getDefaultIntegrations(patchGlobalPromise) {
-  const items = [];
+  items = [];
   const push = items.push;
   const obj2 = debugSymbolicatorIntegration;
   if (notWebResult) {

@@ -24,7 +24,7 @@ function _INTERNAL_captureSerializedLog(getOptions, arg1) {
   });
   value = globalSingleton1.get(getOptions);
   if (undefined === value) {
-    const items = [arg1];
+    items = [arg1];
     const result = globalSingleton.set(getOptions, items);
   } else if (value.length >= 100) {
     _INTERNAL_flushLogsBuffer(getOptions, value);
@@ -37,7 +37,7 @@ function _INTERNAL_captureSerializedLog(getOptions, arg1) {
   }
 }
 function _INTERNAL_flushLogsBuffer(getOptions, value) {
-  let items = value;
+  items = value;
   if (value == null) {
     const globalSingleton = _mod689.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();

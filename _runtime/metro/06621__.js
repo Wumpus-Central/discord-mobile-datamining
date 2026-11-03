@@ -1,13 +1,16 @@
 // _runtime/metro/06621__.js
-import registerAsset from "01119__.js";
+import _mod1292 from "01292__.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "0d539ec6a23aeae492549e52511d1db8",
-  name: "img_account_sync_x_light",
-  type: "png",
-});
+const tmp = _mod1292("%Array%");
+const isArray = tmp.isArray;
+let tmp2 = !isArray;
+if (!isArray) {
+  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+}
+let closure_0 = tmp2;
+
+export default tmp.isArray ||
+  function IsArray(arg0) {
+    return "[object Array]" === closure_0(arg0);
+  };

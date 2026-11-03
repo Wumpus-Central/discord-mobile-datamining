@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 49,
+  height: 48.5,
   scales: [2, 3],
-  hash: "26d707b294c340a6d911d79614dfcf77",
-  name: "UserSquareIcon",
+  hash: "6922badb2f007833b3becc6f00bcb5a4",
+  name: "img_custom_app_icons",
   type: "png",
 });

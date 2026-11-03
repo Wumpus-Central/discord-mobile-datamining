@@ -250,7 +250,7 @@ export function instrumentOutgoingRequests(getOptions, arg1) {
                   const traceData = _mod681.getTraceData(obj16);
                   ({ sentry-trace: tmp65, baggage, traceparent } = traceData);
                   if (tmp65) {
-                    (function setHeaderOnXhr(xhr, StringResult, baggage, traceparent) {
+                    (function setHeaderOnXhr(xhr, arg1, baggage, traceparent) {
                       const __sentry_xhr_v3__ = xhr.__sentry_xhr_v3__;
                       let request_headers;
                       if (__sentry_xhr_v3__ != null) {
@@ -263,7 +263,7 @@ export function instrumentOutgoingRequests(getOptions, arg1) {
                       if (!prop) {
                         if (xhr.setRequestHeader) {
                           try {
-                            xhr.setRequestHeader("sentry-trace", StringResult);
+                            xhr.setRequestHeader("sentry-trace", arg1);
                             let tmp6 = traceparent;
                             if (traceparent) {
                               traceparent = undefined;

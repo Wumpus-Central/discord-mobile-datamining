@@ -11,7 +11,7 @@ const fn = function q(arg0) {
   let arr = arg0;
   const bound = Math.min(65536, arg0.length + 1);
   const uint16Array = new Uint16Array(bound);
-  const items = [];
+  items = [];
   let num = 0;
   let num2 = 0;
   while (true) {
@@ -294,7 +294,7 @@ if (typeof Buffer !== "function") {
   }
   if (tmp5) {
     t = function u(arg0) {
-      const items = [arg0];
+      items = [arg0];
       const blob = new Blob(items, { type: "text/plain;charset=UTF-8" });
       const objectURL = URL.createObjectURL(blob);
       try {

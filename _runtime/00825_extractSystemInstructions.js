@@ -43,7 +43,7 @@ export function extractSystemInstructions(arr) {
         const obj3 = { systemInstructions: null, filteredMessages: null };
         const _JSON2 = JSON;
         const obj4 = { type: "text", content };
-        const items = [obj4];
+        items = [obj4];
         obj3.systemInstructions = JSON.stringify(items);
         const items1 = [];
         HermesBuiltin.arraySpread(

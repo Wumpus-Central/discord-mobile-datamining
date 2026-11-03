@@ -910,7 +910,7 @@ export () => {
 export const serializeObject = function serialize(obj) {
   obj = str2(1284);
   if (obj.isObject(obj)) {
-    const items = [];
+    items = [];
     for (const key10012 in arg0) {
       let obj2 = str2(1284);
       if (!obj2.hasOwn(arg0, key10012)) {

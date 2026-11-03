@@ -239,7 +239,7 @@ const re6 = /\s+(?![^(]*\))/;
 const re7 = /([+-]?\d*(\.\d+)?)([\w\W]+)?/g;
 
 export default function processFilter(str) {
-  const items = [];
+  items = [];
   if (null == str) {
     return items;
   } else {

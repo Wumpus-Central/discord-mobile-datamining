@@ -28,7 +28,7 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 get_ActivityIndicator = fn(17);
-({ Appearance: closure_7, Image: closure_8, Keyboard: closure_9, Text: c10, TextInput: closure_11, TouchableOpacity: closure_12, TouchableWithoutFeedback: map1, View: closure_14 } = get_ActivityIndicator);
+({ Appearance: closure_7, Image: closure_8, Keyboard: closure_9, Text: closure_10, TextInput: closure_11, TouchableOpacity: closure_12, TouchableWithoutFeedback: map1, View: closure_14 } = get_ActivityIndicator);
 fn = this;
 if (this) {
   fn = this.__awaiter;
@@ -74,7 +74,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -145,7 +145,7 @@ class FeedbackWidget {
             if (state.state.filename) {
               if (state.state.attachment) {
                 const obj5 = { filename: state.state.filename, data: state.state.attachment };
-                const items = [obj5];
+                items = [obj5];
               }
             }
             const obj6 = { message: trimmed2, name: trimmed, email: trimmed1, associatedEventId: state(681).lastEventId() };
@@ -184,7 +184,7 @@ class FeedbackWidget {
       state(1059).feedbackAlertDialog(props2.errorTitle, props2.formError);
       const obj2 = state(1059);
     };
-    tmp4Result.onScreenshotButtonPress = () => value(closure_0, undefined, undefined, function() {
+    tmp4Result.onScreenshotButtonPress = () => value2(closure_0, undefined, undefined, function() {
       const self = this;
       c4 = 0;
       c5 = 0;
@@ -199,7 +199,7 @@ class FeedbackWidget {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "Boolean", attachment: "dispatch", attachmentUri: "isArray" });
+                  debug.setState({ filename: "replace", attachment: "r", attachmentUri: "isArray" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -462,7 +462,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, state.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "displayName", attachment: "Boolean", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== state.state.filename && undefined !== state.state.attachment && undefined !== state.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -616,7 +616,7 @@ let items = [
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -631,7 +631,7 @@ let items = [
                 } else {
                   v3(closure_1_2[7]).feedbackAlertDialog(props2.errorTitle, props2.captureScreenshotError);
                   v3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp8) {
                 v3 = tmp;
@@ -722,7 +722,7 @@ let items = [
         const _HermesInternal3 = HermesInternal;
         const element1 = <closure_10 style={reduced.label}>{props2.messageLabel}{" " + props2.isRequiredLabel}</closure_10>;
         const obj14 = { style: null, testID: "sentry-feedback-message-input", placeholder: null, value: null, onChangeText: null, multiline: true, autoCorrect: null, spellCheck: null };
-        const items = [, ];
+        items = [, ];
         ({ input: arr2[0], textArea: arr2[1] } = reduced);
         obj14.style = items;
         obj14.placeholder = props2.messagePlaceholder;
@@ -805,12 +805,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "displayName", attachment: "Boolean", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1064).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "displayName", attachment: "Boolean", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

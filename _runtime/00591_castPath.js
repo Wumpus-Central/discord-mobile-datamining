@@ -8,7 +8,7 @@ export default function castPath(arg0, arg1) {
   if (_mod514(arg0)) {
     return arg0;
   } else if (_mod585(arg0, arg1)) {
-    const items = [arg0];
+    items = [arg0];
     let tmpResultResult = items;
   } else {
     tmpResultResult = memoizeCapped(_mod625(arg0));

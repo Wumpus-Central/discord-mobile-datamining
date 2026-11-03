@@ -1,11 +1,13 @@
 // _runtime/metro/16138__.js
-import _mod16139 from "16139__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0) => {
-  if (_mod16139(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "7730e55139737e3f08bf4e9540ae6591",
+  name: "StatusOffline",
+  type: "png",
+});

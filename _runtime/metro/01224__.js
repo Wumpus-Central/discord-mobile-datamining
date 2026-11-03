@@ -52,7 +52,7 @@ function isEnumObject(obj) {
 }
 function listEnumValues(arg0) {
   if (isEnumObject(arg0)) {
-    const items = [];
+    items = [];
     const _Object = Object;
     const entries = Object.entries(arg0);
     const tmp7 = entries[Symbol.iterator]();

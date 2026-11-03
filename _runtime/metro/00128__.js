@@ -11,7 +11,7 @@ export function* createValueIterator(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ export function* createKeyIterator(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ export function* createEntriesIterator(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ export function* createEntriesIterator(arg0) {
           closure_129_0 = length;
           closure_129_1 = 0;
           if (closure_129_1 < length.length) {
-            const items = [closure_129_1, closure_129_0[closure_129_1]];
+            items = [closure_129_1, closure_129_0[closure_129_1]];
             c2 = 1;
             c3 = 1;
             const obj4 = { value: items, done: false };

@@ -1,7 +1,11 @@
 // _runtime/metro/04337__.js
-let closure_0 = { lastWeek: "'viime' eeee 'klo' p", yesterday: "'eilen klo' p", today: "'t\u00E4n\u00E4\u00E4n klo' p", tomorrow: "'huomenna klo' p", nextWeek: "'ensi' eeee 'klo' p", other: "P" };
+import registerAsset from "01119__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxl",
+  scales: [1],
+  hash: "2fc706af3a1606a0eac312e06fa42020",
+  name: "ru.messages.2fc706af3a1606a0eac312e06fa42020.compiled.messages",
+  type: "jsona",
+});

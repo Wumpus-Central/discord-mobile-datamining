@@ -12,7 +12,7 @@ export function VirtualizedListContextResetter(children) {
 }
 export function VirtualizedListContextProvider(children) {
   value = children.value;
-  const items = [, , , ,];
+  items = [, , , ,];
   ({
     getScrollMetrics: arr[0],
     horizontal: arr[1],
@@ -22,7 +22,7 @@ export function VirtualizedListContextProvider(children) {
   } = value);
   return (
     <context.Provider
-      value={framebus(
+      value={duration(
         () => ({
           cellKey: null,
           getScrollMetrics: value.getScrollMetrics,
@@ -42,10 +42,10 @@ export function VirtualizedListCellContextProvider(cellKey) {
   cellKey = cellKey.cellKey;
   const tmp = React(context);
   closure_1 = tmp;
-  const items = [tmp, cellKey];
+  items = [tmp, cellKey];
   return (
     <context.Provider
-      value={framebus(() => {
+      value={duration(() => {
         let tmp2 = null;
         if (null != closure_1) {
           const obj = {};

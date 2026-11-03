@@ -28,7 +28,7 @@ export function _getTraceInfoFromScope(client, currentScope) {
       } else {
         dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(closure_0, closure_1);
       }
-      const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
+      items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
       return items;
     });
     const obj = require("metro/00712__.js");

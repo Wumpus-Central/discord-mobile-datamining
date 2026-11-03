@@ -70,7 +70,7 @@ let items = [
     key: "forEachInCell",
     value: function forEachInCell(cellKey, fn) {
       const _cellKeyToChildren = this._cellKeyToChildren;
-      let items = _cellKeyToChildren.get(cellKey);
+      items = _cellKeyToChildren.get(cellKey);
       if (items == null) {
         items = [];
       }
@@ -84,7 +84,7 @@ let items = [
     key: "anyInCell",
     value: function anyInCell(value, fn) {
       const _cellKeyToChildren = this._cellKeyToChildren;
-      let items = _cellKeyToChildren.get(value);
+      items = _cellKeyToChildren.get(value);
       if (items == null) {
         items = [];
       }

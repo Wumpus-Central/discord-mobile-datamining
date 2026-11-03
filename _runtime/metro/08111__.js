@@ -1,8 +1,31 @@
 // _runtime/metro/08111__.js
-import _mod26 from "00026__.js";
-import 00065__ from "00065__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGMarker", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, refX: true, refY: true, markerHeight: true, markerWidth: true, markerUnits: true, orient: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true } };
+const NativeModules = get_ActivityIndicator.NativeModules;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
+class WebViewProxy {
+  constructor(arg0) {
+    this.webViewKey = global;
+    return;
+  }
+  injectJavaScript(arg0) {
+    RNCWebView = NativeModules.RNCWebView;
+    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
+  }
+  addOnMessageListener(arg0) {
+    closure_0 = global;
+    self = this;
+    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
+      if (webViewKey.webViewKey === self.webViewKey) {
+        closure_0(webViewKey);
+      }
+    });
+  }
+  releaseWebView() {
+    RNCWebView = NativeModules.RNCWebView;
+    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
+    return;
+  }
+}
 
-export default module_65.get("RNSVGMarker", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default WebViewProxy;

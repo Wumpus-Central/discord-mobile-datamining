@@ -3,9 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "a421bef75ae00154373ea36b10c7c903",
-  name: "Camera",
-  type: "lottie",
+  httpServerLocation: "/assets/images/native/icons/voice_calls/dark_theme",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "530ba220f07acfc32feb554b142fc895",
+  name: "voice_bar_mute_on",
+  type: "png",
 });

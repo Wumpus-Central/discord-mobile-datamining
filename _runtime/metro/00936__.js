@@ -25,7 +25,7 @@ export function createUserFeedbackEnvelope(event_id, tunnel) {
     tmp3 = obj4;
   }
   const merged1 = Object.assign(tmp3);
-  const items = [{ type: "user_report" }, event_id];
+  items = [{ type: "user_report" }, event_id];
   const date = new Date();
   const items1 = [items];
   return _mod681.createEnvelope(obj, items1);

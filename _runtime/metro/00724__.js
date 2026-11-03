@@ -73,7 +73,7 @@ const entry = {
       const _links = self._links;
       _links.push(arg0);
     } else {
-      const items = [arg0];
+      items = [arg0];
       self._links = items;
     }
     return self;
@@ -88,7 +88,7 @@ let items = [
       if (this._links) {
         _links = self._links;
         const push = _links.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(_links, 0);
         HermesBuiltin.apply(items, _links);
       } else {
@@ -292,7 +292,7 @@ let items = [
       if (self._isStandaloneSpan) {
         if (self._isStandaloneSpan) {
           if (self._sampled) {
-            const items = [self];
+            items = [self];
             const spanEnvelope = SentrySpan(727).createSpanEnvelope(items, client);
             const tmpResult = SentrySpan(727);
             const client1 = SentrySpan(712).getClient();

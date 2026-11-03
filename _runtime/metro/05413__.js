@@ -1,12 +1,15 @@
 // _runtime/metro/05413__.js
-import ComposedGestureName from "../05362_ComposedGestureName.js";
-import _mod5411 from "05411__.js";
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../05409_BottomSheetContext.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const useContext = _mod19.useContext;
 
-export function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod5411.useComposedGesture.apply(items1);
+export function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
 }

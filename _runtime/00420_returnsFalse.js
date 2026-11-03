@@ -51,7 +51,7 @@ export default function Switch(ref) {
   const tmp6 = closure_8(null);
   ref = tmp6;
   [first, _slicedToArray] = closure_9({ value: null });
-  const items = [value, first];
+  items = [value, first];
   closure_7(() => {
     let tmp2 = null != first.value && first.value !== tmp;
     if (tmp2) {

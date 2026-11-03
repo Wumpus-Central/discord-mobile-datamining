@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "f6149fc51c6f815b5a58a1e50a88555c",
-  name: "img_subheader_resub_mobile",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "8ea6c899915dc4dfb91fde69307aaf42",
+  name: "chest_idle",
   type: "png",
 });

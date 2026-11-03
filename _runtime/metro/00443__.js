@@ -8,8 +8,8 @@ const defaultItemToKey = fn(438);
 
 export default defaultItemToKey.createVirtualCollectionView(function VirtualRowLayout(arg0) {
   const obj = { children: null };
-  const items = [,];
+  items = [,];
   ({ children: arr[0], spacer: arr[1] } = arg0);
   obj.children = items;
-  return framebus(React, obj);
+  return duration(React, obj);
 }, _modDef444);

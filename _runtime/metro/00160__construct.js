@@ -13,7 +13,7 @@ export default function _construct(bind, arg1, arg2) {
     }
     return applyArgumentsResult;
   } else {
-    const items = [null];
+    items = [null];
     const push = items.push;
     push.apply(items, arg1);
     bind = bind.bind;

@@ -1,91 +1,156 @@
 // _runtime/metro/10500__.js
-import repeatedTimeunitPattern from "../10327_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10334_AbstractParserWithWordBoundaryChecking.js";
-import _mod10496 from "10496__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import _mod10486 from "10486__.js";
+import includeCommonConfiguration from "../10493_includeCommonConfiguration.js";
+import _mod10498 from "10498__.js";
+import _mod10501 from "10501__.js";
+import _mod10502 from "10502__.js";
+import _mod10504 from "10504__.js";
+import _mod10505 from "10505__.js";
+import _mod10506 from "10506__.js";
+import _mod10507 from "10507__.js";
+import _mod10508 from "10508__.js";
+import _mod10509 from "10509__.js";
+import _mod10510 from "10510__.js";
+import _mod10511 from "10511__.js";
 
-const ENCasualYearMonthDayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const regExp = new RegExp(
-  "([0-9]{4})[\\.\\/\\s](?:(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10496.MONTH_DICTIONARY) +
-    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
-  "i",
-);
-class ENCasualYearMonthDayParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENCasualYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENCasualYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  items = [new _isNativeReflectConstruct.default(), , , , , ,];
+  const _default = new _isNativeReflectConstruct.default();
+  items[1] = new regExp.default(flag2);
+  const _default1 = new regExp.default(flag2);
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new regExp.default();
+  const _default3 = new regExp.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
+  items[5] = new _isNativeReflectConstruct.default();
+  const _default5 = new _isNativeReflectConstruct.default();
+  items[6] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default6 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default()];
+  const _default7 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod10486);
+fn(_mod10498);
+fn(_mod10501);
+fn(_mod10502);
+const regExp = fn(_mod10504);
+fn(_mod10505);
+fn(_mod10506);
+fn(_mod10507);
+fn(_mod10508);
+fn(_mod10509);
+fn(_mod10510);
+const _isNativeReflectConstruct = fn(_mod10511);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("10453__.js").Chrono;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = ENCasualYearMonthDayParser(10496).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
-        }
-      }
-      return null;
-    },
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   },
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  },
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  },
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  },
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  },
+};
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+const chrono = new require("10453__.js").Chrono(configuration);
+const chrono1 = new require("10453__.js").Chrono(createConfiguration(true));
 
-export default _createClass(ENCasualYearMonthDayParser, items);
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("10453__.js").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

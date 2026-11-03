@@ -159,7 +159,7 @@ export function processResponderEvent(arg0, self, responderIgnoreScroll) {
           }
           let tmp21 = null;
           if (null != parentElement3) {
-            const items = [];
+            items = [];
             if (null != parentElement3) {
               do {
                 let arr = items.unshift(parentElement3);

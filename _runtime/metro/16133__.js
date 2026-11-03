@@ -1,5 +1,13 @@
 // _runtime/metro/16133__.js
-import _mod16134 from "16134__.js";
-import _mod16138 from "16138__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0) => _mod16134(_mod16138(arg0));
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "12a800ef241b26f28e2697e2835bd1ab",
+  name: "StatusStreaming",
+  type: "png",
+});

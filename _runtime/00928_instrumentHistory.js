@@ -19,7 +19,7 @@ function instrumentHistory() {
     function historyReplacementFunction(arg0) {
       closure_0 = arg0;
       return function () {
-        const items = [...arguments];
+        items = [...arguments];
         let tmp;
         if (items.length > 2) {
           tmp = items[2];

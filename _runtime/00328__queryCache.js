@@ -23,7 +23,7 @@ let closure_7 = async function _queryCache(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_7 = async function _queryCache(arg0) {
 const use = fn(19).use;
 const jsx = fn(21).jsx;
 let closure_6 = 1;
-let closure_8 = { uri: "Boolean", width: "dispatch", height: "isArray" };
+let closure_8 = { uri: "replace", width: "r", height: "isArray" };
 function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);
@@ -80,7 +80,7 @@ function _BaseImage(arg0) {
         const size = { width: width3, height: height3 };
         tmp18 = size;
       }
-      const items = [tmp18, closure_9.base, style];
+      items = [tmp18, closure_9.base, style];
       merged.style = items;
       merged.source = arr;
     } else {
@@ -254,12 +254,12 @@ resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn, ar
     sizeWithHeaders.then((width) => closure_1(width.width, width.height)).catch(fn);
   }
 };
-resultResult.prefetch = function prefetch(avatarURL, fn) {
+resultResult.prefetch = function prefetch(arg0, fn) {
   closure_6 = tmp + 1;
   if (fn) {
     fn(tmp);
   }
-  return ImageLoaderDefault.prefetchImage(avatarURL, +closure_6);
+  return ImageLoaderDefault.prefetchImage(arg0, +closure_6);
 };
 resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, fn) {
   closure_6 = tmp + 1;

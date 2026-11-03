@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "87455c29d9dd2f3e04ebd45e93b772ba",
-  name: "ListViewIcon",
+  hash: "14a4fdad987e2761599ba055042fdafa",
+  name: "EyeSlashIcon",
   type: "png",
 });

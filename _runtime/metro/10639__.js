@@ -1,48 +1,99 @@
 // _runtime/metro/10639__.js
-import cancelAnimation from "../01650_cancelAnimation.js";
-import noop from "00019__.js";
+import repeatedTimeunitPattern from "../10457_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
+import _mod10626 from "10626__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext({});
-const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
-const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
-
-export const GlobalStateContext = context;
-export (arg0) => {
-  ({ children, value } = arg0);
-  const sharedValue = cancelAnimation.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = cancelAnimation.useSharedValue({});
-  const fn = function c(arg0, arg1) {
-    const obj = {};
-    const merged = Object.assign(sharedValue1.value);
-    obj[arg0] = arg1;
-    sharedValue1.value = obj;
-  };
-  fn.__closure = { itemDimensions: sharedValue1 };
-  fn.__workletHash = 9846581158902;
-  fn.__initData = __initData;
-  const fn2 = function _(value) {
-    sharedValue.value = value;
-  };
-  fn2.__closure = { containerSize: sharedValue };
-  fn2.__workletHash = 5978604737778;
-  fn2.__initData = __initData2;
-  const obj3 = { value: null, children: null };
-  const obj4 = {};
-  let merged = Object.assign(value);
-  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };
-  obj3.value = obj4;
-  obj3.children = children;
-  return <context.Provider value={null}>{null}</context.Provider>;
+const ITWeekdayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-export () => {
-  context = noop.useContext(context);
-  if (context) {
-    return context;
-  } else {
-    const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
-    throw error;
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10626.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)",
+  "i",
+);
+class ITWeekdayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ITWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ITWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(ITWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
+      }
+      if (!str2) {
+        str2 = "";
+      }
+      const formatted1 = str2.toLowerCase();
+      let str3 = "ultima";
+      if ("ultima" != formatted1) {
+        str3 = "ultima";
+        if ("scorsa" != formatted1) {
+          str3 = "prossima";
+          if ("prossima" != formatted1) {
+            str3 = null;
+            if ("questa" == formatted1) {
+              str3 = "questa";
+            }
+          }
+        }
+      }
+      return ITWeekdayParser(10484).createParsingComponentsAtWeekday(
+        reference.reference,
+        ITWeekdayParser(10626).WEEKDAY_DICTIONARY[formatted],
+        str3,
+      );
+    },
+  },
+];
+
+export default _createClass(ITWeekdayParser, items);

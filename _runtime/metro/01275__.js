@@ -32,7 +32,7 @@ export default function md5(str) {
     }
   }
   if (0 === arr.length) {
-    let items = [];
+    items = [];
   } else {
     const result = 8 * arr.length;
     const _Uint32Array = Uint32Array;

@@ -3,8 +3,8 @@ import _mod681 from "metro/00681__.js";
 import _mod897 from "metro/00897__.js";
 import _slicedToArray from "metro/00032__.js";
 
-function serializeFormData(size) {
-  return new URLSearchParams(size).toString();
+function serializeFormData(arg0) {
+  return new URLSearchParams(arg0).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
@@ -18,7 +18,7 @@ export function getBodyString(fetchRequestArgBody, arg1) {
   }
   try {
     if (typeof fetchRequestArgBody === "string") {
-      const items = [fetchRequestArgBody];
+      items = [fetchRequestArgBody];
       return items;
     } else {
       const _URLSearchParams = URLSearchParams;
@@ -51,7 +51,7 @@ export function getBodyString(fetchRequestArgBody, arg1) {
   }
 }
 export function getFetchRequestArgBody() {
-  let items = input;
+  items = input;
   if (input === undefined) {
     items = [];
   }

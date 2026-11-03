@@ -7,7 +7,7 @@ export default function mapToArray(size) {
   const item = size.forEach((item, index) => {
     const sum = c0 + 1;
     c0 = sum;
-    const items = [index, item];
+    items = [index, item];
     ArrayResult[sum] = items;
   });
   return ArrayResult;

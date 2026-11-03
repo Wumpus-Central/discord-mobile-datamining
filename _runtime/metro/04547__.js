@@ -1,26 +1,12 @@
 // _runtime/metro/04547__.js
-import module_4545_mod from "04545__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import 02196__ from "02196__.js";
 
-let module_4545 = module_4545_mod;
-if (!module_4545) {
-  const obj = { default: module_4545 };
-  let tmp3 = obj;
+if (!module_2196) {
+  const obj2 = { default: module_2196 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4545;
+  obj = module_2196;
 }
-module_4545 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function formatDistanceToNowStrict(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  return module_4545.default(arg0, Date.now(), arg1);
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "y-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

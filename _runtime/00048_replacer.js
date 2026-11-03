@@ -33,7 +33,7 @@ function replacer(arg0, _default) {
             if (_default.length > POSITIVE_INFINITY3) {
               const substr = _default.slice(0, POSITIVE_INFINITY3);
               const _HermesInternal2 = HermesInternal;
-              const items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
+              items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
               combined = substr.concat(items);
             }
           }
@@ -143,7 +143,7 @@ export function createStringifySafeWithLimits(maxDepth) {
               if (_default.length > POSITIVE_INFINITY3) {
                 const substr = _default.slice(0, POSITIVE_INFINITY3);
                 const _HermesInternal2 = HermesInternal;
-                const items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
+                items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
                 combined = substr.concat(items);
               }
             }

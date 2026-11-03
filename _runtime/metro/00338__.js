@@ -86,7 +86,7 @@ let items = [
       const tmp3 = ImageBackground(108);
       const merged = Object.assign(tmp);
       obj2.importantForAccessibility = importantForAccessibility;
-      const items = [ImageBackground(254).absoluteFill, ,];
+      items = [ImageBackground(254).absoluteFill, ,];
       let width;
       if (size != null) {
         width = size.width;

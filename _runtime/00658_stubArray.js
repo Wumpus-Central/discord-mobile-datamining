@@ -7,7 +7,7 @@ if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     _require = arg0;
     if (null == arg0) {
-      let items = [];
+      items = [];
     } else {
       const _Object = Object;
       const ObjectResult = Object(arg0);

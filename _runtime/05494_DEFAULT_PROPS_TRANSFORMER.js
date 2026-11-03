@@ -1,0 +1,34 @@
+// _runtime/05494_DEFAULT_PROPS_TRANSFORMER.js
+import reanimatedUtils from "05483_reanimatedUtils.js";
+import allowedNativeProps from "05484_allowedNativeProps.js";
+import _mod5493 from "metro/05493__.js";
+import _mod5495 from "metro/05495__.js";
+import eventUtils from "05496_eventUtils.js";
+import _mod5497 from "metro/05497__.js";
+
+export const isGestureEnabled = _mod5495.isGestureEnabled;
+export const prepareConfigForNativeSide = _mod5495.prepareConfigForNativeSide;
+export const useClonedAndRemappedConfig = _mod5495.useClonedAndRemappedConfig;
+export const runCallback = _mod5497.runCallback;
+export const touchEventTypeToCallbackType = _mod5497.touchEventTypeToCallbackType;
+export const useMemoizedGestureCallbacks = _mod5497.useMemoizedGestureCallbacks;
+export const checkMappingForChangeProperties = eventUtils.checkMappingForChangeProperties;
+export const flattenAndFilterEvent = eventUtils.flattenAndFilterEvent;
+export const getChangeEventCalculator = eventUtils.getChangeEventCalculator;
+export const isEventForHandlerWithTag = eventUtils.isEventForHandlerWithTag;
+export const isNativeAnimatedEvent = eventUtils.isNativeAnimatedEvent;
+export const maybeExtractNativeEvent = eventUtils.maybeExtractNativeEvent;
+export const shouldHandleTouchEvents = eventUtils.shouldHandleTouchEvents;
+export const allowedNativeProps = allowedNativeProps.allowedNativeProps;
+export const EMPTY_WHITE_LIST = allowedNativeProps.EMPTY_WHITE_LIST;
+export const HandlerCallbacks = allowedNativeProps.HandlerCallbacks;
+export const NativeWrapperProps = allowedNativeProps.NativeWrapperProps;
+export const PropsToFilter = allowedNativeProps.PropsToFilter;
+export const PropsWhiteLists = allowedNativeProps.PropsWhiteLists;
+export const bindSharedValues = reanimatedUtils.bindSharedValues;
+export const hasWorkletEventHandlers = reanimatedUtils.hasWorkletEventHandlers;
+export const maybeUnpackValue = reanimatedUtils.maybeUnpackValue;
+export const unbindSharedValues = reanimatedUtils.unbindSharedValues;
+export const containsDuplicates = _mod5493.containsDuplicates;
+export const isComposedGesture = _mod5493.isComposedGesture;
+export const prepareRelations = _mod5493.prepareRelations;

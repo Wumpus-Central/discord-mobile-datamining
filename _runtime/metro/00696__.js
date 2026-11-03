@@ -33,7 +33,7 @@ export function isMatchingPattern(arr, test) {
 }
 export function safeJoin(__v_isVNode, arg1) {
   if (Array.isArray(__v_isVNode)) {
-    const items = [];
+    items = [];
     let num = 0;
     if (0 < __v_isVNode.length) {
       try {
@@ -92,7 +92,7 @@ export function snipLine(arr, lineno) {
   }
 }
 export function stringMatchesSomePattern(transaction) {
-  let items = allowUrls;
+  items = allowUrls;
   if (allowUrls === undefined) {
     items = [];
   }

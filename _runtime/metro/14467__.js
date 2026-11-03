@@ -1,31 +1,13 @@
 // _runtime/metro/14467__.js
-const require = globalThis.__r;
+import registerAsset from "01119__.js";
 
-for (const key10013 in require("14468__.js")) {
-  arg5[key10013] = require("14468__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("ReplacementModesAndroid")) {
-  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
-  continue;
-}
-for (const key10021 in require("purchaseUpdatedListener")) {
-  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
-  continue;
-}
-for (const key10025 in require("14482__.js")) {
-  arg5[key10025] = require("14482__.js")[key10025];
-  continue;
-}
-for (const key10029 in require("14483__.js")) {
-  arg5[key10029] = require("14483__.js")[key10029];
-  continue;
-}
-for (const key10033 in require("PurchaseError")) {
-  arg5[key10033] = require("PurchaseError")[key10033];
-  continue;
-}
-for (const key10037 in require("14484__.js")) {
-  arg5[key10037] = require("14484__.js")[key10037];
-  continue;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 192.33333333333334,
+  height: 416,
+  scales: [3],
+  hash: "313fd6dabf823cbd5c0b9608bb8b54d4",
+  name: "invite-bg",
+  type: "png",
+});

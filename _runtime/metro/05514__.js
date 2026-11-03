@@ -1,9 +1,17 @@
 // _runtime/metro/05514__.js
+import ComposedGestureName from "../05485_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05494_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5509 from "05509__.js";
 
-export default function _classCallCheck(arg0, arg1) {
-  if (!(arg0 instanceof arg1)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot call a class as a function");
-    throw typeError;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod5509.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 }

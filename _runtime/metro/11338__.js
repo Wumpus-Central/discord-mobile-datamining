@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [2, 3, 4],
-  hash: "61996c8880b718aa494df1b2d4a258fb",
-  name: "arrow-right",
+  scales: [2, 3],
+  hash: "bc68703a8162a8cd77c8d9dee0d592a8",
+  name: "ic_input_clear_24px",
   type: "png",
 });

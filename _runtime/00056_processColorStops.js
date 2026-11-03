@@ -4,7 +4,7 @@ import _slicedToArray from "metro/00032__.js";
 
 require = arg1;
 function processColorStops(nextResult) {
-  const items = [];
+  items = [];
   let num = 0;
   if (0 < nextResult.colorStops.length) {
     while (true) {
@@ -56,7 +56,7 @@ function parseRadialGradientCSSString(str) {
   const obj = {};
   const merged = Object.assign(closure_14);
   const parts = str.split(re5);
-  const items = [...parts];
+  items = [...parts];
   const parts1 = parts[0].trim().split(re6);
   let flag = false;
   let flag2 = false;
@@ -815,15 +815,15 @@ let c13 = "farthest-corner";
 let closure_14 = { top: "50%", left: "50%" };
 
 export default function processBackgroundImage(str) {
-  let items = [];
+  items = [];
   if (null == str) {
     return items;
   } else {
     if (typeof str === "string") {
       items = (function parseBackgroundImageCSSString(arg0) {
-        let items = [];
+        items = [];
         const iter = (function splitGradients(arg0) {
-          const items = [];
+          items = [];
           let num = 0;
           let num2 = 0;
           let str = "";
@@ -857,7 +857,7 @@ export default function processBackgroundImage(str) {
           return items;
         })(arg0)[Symbol.iterator]();
         const tmp = (function splitGradients(arg0) {
-          const items = [];
+          items = [];
           let num = 0;
           let num2 = 0;
           let str = "";

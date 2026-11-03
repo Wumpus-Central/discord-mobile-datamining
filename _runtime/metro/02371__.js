@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/go_live",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz",
   scales: [1],
-  hash: "f6e3c365e8a3adf05325d11d5ed6a02b",
-  name: "MobileGoLiveActionSheet.compiled.messages",
+  hash: "9d063d9aff2dec4349682240005b74cb",
+  name: "cs.messages.9d063d9aff2dec4349682240005b74cb.compiled.messages",
   type: "jsona",
 });

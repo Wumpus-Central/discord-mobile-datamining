@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9e19181651828ca952221179ae78d318",
-  name: "BadgeIcon",
+  hash: "06839429466f04b07ee5c7156e6fbf8c",
+  name: "MicrophoneIcon",
   type: "png",
 });

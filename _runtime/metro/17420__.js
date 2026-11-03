@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 216,
+  height: 216,
   scales: [1],
-  hash: "3590df6f2ae2f7202dab15c0bd3aca9a",
-  name: "da",
+  hash: "e8cc96dfc04f2226c8870fdf46cc16af",
+  name: "ExampleVoiceChatActivity",
   type: "png",
 });

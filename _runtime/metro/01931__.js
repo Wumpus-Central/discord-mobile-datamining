@@ -1,16 +1,31 @@
 // _runtime/metro/01931__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "tr",
-  pluralRuleFunction(arg0, arg1) {
-    let str = "other";
-    let str2 = "other";
-    if (!arg1) {
-      if (1 == arg0) {
-        str = "one";
-      }
-      str2 = str;
+function worklet(arg0) {
+  let fn = arg0;
+  if (arg0 == null) {
+    fn = () => {
+
+    };
+  }
+  fn.__workletHash = Math.random();
+  return fn;
+}
+
+export { worklet };
+export (__workletHash) => {
+  if (typeof worklet === "function") {
+    const fn = () => {
+
+    };
+    const _Math = Math;
+    fn.__workletHash = Math.random();
+    fn.__workletHash = __workletHash.__workletHash;
+    if (undefined !== __workletHash.__closure) {
+      items = [];
+      HermesBuiltin.arraySpread(__workletHash.__closure, 0);
+      fn.__closure = items;
     }
-    return str2;
-  },
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "tr-CY", parentLocale: "tr" });
+    return fn;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}

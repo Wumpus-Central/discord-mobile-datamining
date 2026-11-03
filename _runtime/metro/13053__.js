@@ -1,7 +1,18 @@
 // _runtime/metro/13053__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod12972 from "12972__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+const WhiteSpace = _mod12972.TYPE.WhiteSpace;
+let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
+const obj = {
+  name: "WhiteSpace",
+  structure: { value: String },
+  parse() {
+    this.eat(WhiteSpace);
+    return closure_1;
+  },
+  generate(value) {
+    this.chunk(value.value);
+  },
+};
+
+export default obj;

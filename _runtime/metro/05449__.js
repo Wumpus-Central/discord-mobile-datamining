@@ -1,96 +1,83 @@
 // _runtime/metro/05449__.js
-import _mod19 from "00019__.js";
-import value22 from "../05276_value2.js";
-import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _modDef5461 from "05461__.js";
+import attachHandlers from "../05474_attachHandlers.js";
+import noop_mod from "00019__.js";
 
-const useEffect = _mod19.useEffect;
-({ Keyboard: c3, Platform } = get_ActivityIndicator);
-const keyboardDidShow = "keyboardDidShow";
-const keyboardDidHide = "keyboardDidHide";
-let closure_6 = { code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}" };
-let closure_7 = { code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}" };
-const __initData = { code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}" };
+let noop = noop_mod;
+({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
 
-export (includeBottomOffset) => {
-  includeBottomOffset = includeBottomOffset.includeBottomOffset;
-  let shouldHandleKeyboardEvents;
-  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
-  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
-  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
-  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
-  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
-  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
-  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const fn = function v(value, arg1, value2, value3, arg4) {
-    value = arg1;
-    if (value === value22.KEYBOARD_STATE.SHOWN) {
-      if (!shouldHandleKeyboardEvents.value) {
-        const items = [value, value, value2, value3];
-        sharedValue5.value = items;
+export (gesture) => {
+  if (gesture.gesture) {
+    gesture = gesture.gesture;
+    (function propagateDetectorConfig(gesture, gesture) {
+      items = ["userSelect", "enableContextMenu", "touchAction"];
+      for (const item10008 of items) {
+        let tmp2 = arg0[item10008];
+        if (undefined !== tmp2) {
+          let toGestureArrayResult = arg1.toGestureArray();
+          for (const item10018 of toGestureArrayResult) {
+            item10018.config[tmp] = tmp3;
+            continue;
+          }
+        }
+        continue;
       }
+    })(gesture, gesture);
+    items = [gesture];
+    let gesturesToAttach = current2(() => gesture.toGestureArray(), items);
+    const someResult = gesturesToAttach.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+    webEventHandlers = gesture(webEventHandlers[2]).useWebEventHandlers();
+    const current = detectorUpdater({ firstRender: true, viewRef: null, previousViewTag: -1, forceRebuildReanimatedEvent: false }).current;
+    const obj3 = { attachedGestures: [], animatedEventHandler: null, animatedHandlers: null, shouldUseReanimated: someResult, isMounted: false };
+    current2 = noop.useRef(obj3).current;
+    const obj4 = gesture(webEventHandlers[3]);
+    detectorUpdater = obj4.useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers);
+    const obj2 = gesture(webEventHandlers[2]);
+    const viewRefHandler = gesture(webEventHandlers[4]).useViewRefHandler(current, detectorUpdater);
+    let needsToReattachResult = current.firstRender || current.forceRebuildReanimatedEvent;
+    if (!needsToReattachResult) {
+      needsToReattachResult = tmp9(tmp10[5]).needsToReattach(current2, gesturesToAttach);
+      const tmp9Result = tmp9(tmp10[5]);
     }
-    if (value !== value22.KEYBOARD_STATE.SHOWN) {
-      value = height.value;
+    current.forceRebuildReanimatedEvent = false;
+    const obj5 = gesture(webEventHandlers[4]);
+    const animatedGesture = gesture(webEventHandlers[6]).useAnimatedGesture(current2, needsToReattachResult);
+    const tmp9Result5 = gesture(webEventHandlers[6]);
+    const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
+      current2.isMounted = true;
+      gesturesToAttach = attachHandlers;
+      const tmp = _modDef5461(current.viewRef);
+      gesturesToAttach.attachHandlers({ preparedGesture: current2, gestureConfig: gesture, gesturesToAttach, webEventHandlersRef: webEventHandlers, viewTag: _modDef5461(current.viewRef) });
+      return () => {
+        current2.isMounted = false;
+        gesture(webEventHandlers[10]).dropHandlers(current2);
+      };
+    }, []);
+    const items1 = [gesture];
+    current(() => {
+      if (current.firstRender) {
+        tmp.firstRender = false;
+      } else {
+        detectorUpdater();
+      }
+    }, items1);
+    const tmp9Result6 = gesture(webEventHandlers[7]);
+    const mountReactions = gesture(webEventHandlers[11]).useMountReactions(detectorUpdater, current2);
+    const tmp9Result8 = gesture(webEventHandlers[12]);
+    if (someResult) {
+      const obj6 = { ref: viewRefHandler, onGestureHandlerEvent: current2.animatedEventHandler, children: gesture.children };
+      let tmp28Result = <tmp9Result8.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>{gesture.children}</tmp9Result8.AnimatedWrap>;
+    } else {
+      const obj7 = { ref: viewRefHandler, children: gesture.children };
+      tmp28Result = <tmp9Result8.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result8.Wrap>;
     }
-    height.value = value;
-    let tmp5 = arg4;
-    if (arg4) {
-      tmp5 = includeBottomOffset;
-    }
-    if (tmp5) {
-      height.value = height.value + arg4;
-    }
-    animationDuration.value = value2;
-    animationEasing.value = value3;
-    state.value = value;
-    sharedValue5.value = [];
-  };
-  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  fn.__closure = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
-  fn.__workletHash = 7905199978020;
-  fn.__initData = sharedValue5;
-  const workletCallback = obj7.useWorkletCallback(fn, []);
-  let items = [workletCallback];
-  state(() => {
-    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      ({ duration, easing } = endCoordinates);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN, endCoordinates.endCoordinates.height, duration, easing, includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT - endCoordinates.endCoordinates.height - endCoordinates.endCoordinates.screenY);
-    });
-    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN, endCoordinates.endCoordinates.height, endCoordinates.duration, endCoordinates.easing);
-    });
-    return () => {
-      closure_0.remove();
-      closure_1.remove();
-    };
-  }, items);
-  const obj8 = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
-  const fn2 = function b() {
-    return shouldHandleKeyboardEvents.value;
-  };
-  fn2.__closure = { shouldHandleKeyboardEvents };
-  fn2.__workletHash = 11615500623565;
-  fn2.__initData = workletCallback;
-  const fn3 = function y(arg0) {
-    let tmp = arg0;
-    value = sharedValue5.value;
-    if (arg0) {
-      tmp = value.length > 0;
-    }
-    if (tmp) {
-      workletCallback(value[0], value[1], value[2], value[3]);
-    }
-  };
-  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
-  fn3.__workletHash = 16636741173520;
-  fn3.__initData = __initData;
-  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
-  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
+    return tmp28Result;
+  } else {
+    const _Error = Error;
+    const error = new Error("GestureDetector must have a gesture prop provided.");
+    throw error;
+  }
 }

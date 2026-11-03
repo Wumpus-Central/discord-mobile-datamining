@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 119,
-  height: 83,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "0b100afac52015c470ea1ec3ef8acf50",
-  name: "redesign_email_header",
+  hash: "efd2f6e96d574d8c2d560cd22ba2302a",
+  name: "ChevronSmallUpIcon",
   type: "png",
 });

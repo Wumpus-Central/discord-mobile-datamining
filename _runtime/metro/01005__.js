@@ -39,7 +39,7 @@ export function createReduxEnhancer(arg0) {
               if (!attachments) {
                 attachments = [];
               }
-              const items = [];
+              items = [];
               obj = { filename: "redux_state.json", data: null };
               const _JSON = JSON;
               obj.data = JSON.stringify(type.contexts.state.state.value);
@@ -98,7 +98,7 @@ export function createReduxEnhancer(arg0) {
       const proxy = new Proxy(tmp4.replaceReducer, {
         apply(apply, arg1, arg2) {
           closure_0 = arg2[0];
-          const items = [
+          items = [
             (arg0, arg1) => {
               const tmp = closure_0(arg0, arg1);
               const currentScope = closure_0(dependencyMap[0]).getCurrentScope();

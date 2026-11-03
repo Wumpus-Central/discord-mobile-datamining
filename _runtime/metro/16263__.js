@@ -1,67 +1,25 @@
 // _runtime/metro/16263__.js
-import get_ActivityIndicator from "00017__.js";
+const require = globalThis.__r;
 
-function getDevMenu() {}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+export function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("16264__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
       }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
       }
-    }
-  },
-});
+    })(item, closure_0),
+  );
+}

@@ -5,7 +5,7 @@ export function utf8ToBytes(str, arg1) {
   if (!arg1) {
     num = Infinity;
   }
-  const items = [];
+  items = [];
   let num2 = 0;
   let tmp = null;
   if (0 < str.length) {

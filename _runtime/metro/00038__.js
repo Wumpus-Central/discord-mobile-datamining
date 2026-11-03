@@ -8,7 +8,7 @@ export default (arg0, str, arg2, arg3, arg4, arg5, arg6, arg7) => {
         "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
       );
     } else {
-      const items = [arg2, arg3, arg4, arg5, arg6, arg7];
+      items = [arg2, arg3, arg4, arg5, arg6, arg7];
       closure_1 = 0;
       const _Error2 = Error;
       const error1 = new Error(

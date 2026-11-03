@@ -1,25 +1,23 @@
 // _runtime/metro/16254__.js
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      apiResponse(request, response, tmp4Result) {
-        let status = response;
-        if (response) {
-          status = response.status;
-        }
-        if (status) {
-          status = typeof response.status === "number";
-        }
-        if (status) {
-          status = response.status >= 200;
-        }
-        if (status) {
-          status = response.status <= 299;
-        }
-        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
-      },
-    },
-  };
-};
+export const calendars = [
+  "buddhist",
+  "chinese",
+  "coptic",
+  "dangi",
+  "ethioaa",
+  "ethiopic",
+  "gregory",
+  "hebrew",
+  "indian",
+  "islamic",
+  "islamic-civil",
+  "islamic-rgsa",
+  "islamic-tbla",
+  "islamic-umalqura",
+  "islamicc",
+  "iso8601",
+  "japanese",
+  "persian",
+  "roc",
+];

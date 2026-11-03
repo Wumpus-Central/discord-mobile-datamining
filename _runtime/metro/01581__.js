@@ -1,37 +1,28 @@
 // _runtime/metro/01581__.js
-import NavigationBuilderContext from "../01527_NavigationBuilderContext.js";
+import NavigationBuilderContext from "../01529_NavigationBuilderContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useFocusedListenersChildrenAdapter(navigation) {
-  navigation = navigation.navigation;
-  const focusedListeners = navigation.focusedListeners;
-  const addListener = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).addListener;
-  const items = [focusedListeners, navigation];
-  const callback = noop.useCallback((fn) => {
-    if (navigation.isFocused()) {
-      for (const item10012 of focusedListeners) {
-        let item10012Result = item10012(arg0);
-        let handled = item10012Result.handled;
-        if (handled) {
-          let obj2 = { handled, result: tmp5 };
-          obj.return();
-          return obj2;
-        }
-      }
-      const obj3 = { handled: true, result: fn(navigation) };
-      return obj3;
-    } else {
-      return { handled: false, result: null };
+export function useOnRouteFocus(router) {
+  router = router.router;
+  const getState = router.getState;
+  const key = router.key;
+  const setState = router.setState;
+  const onRouteFocus = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onRouteFocus;
+  items = [getState, onRouteFocus, router, setState, key];
+  return noop.useCallback((arg0) => {
+    const tmp = getState();
+    const stateForRouteFocus = router.getStateForRouteFocus(tmp, arg0);
+    if (stateForRouteFocus !== tmp) {
+      setState(stateForRouteFocus);
+    }
+    let tmp6 = undefined !== onRouteFocus;
+    if (tmp6) {
+      tmp6 = undefined !== key;
+    }
+    if (tmp6) {
+      onRouteFocus(key);
     }
   }, items);
-  const items1 = [addListener, callback];
-  const effect = noop.useEffect(() => {
-    let tmpResult;
-    if (addListener != null) {
-      tmpResult = tmp("focus", callback);
-    }
-    return tmpResult;
-  }, items1);
 }

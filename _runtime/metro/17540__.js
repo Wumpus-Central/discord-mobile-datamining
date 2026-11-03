@@ -1,11 +1,13 @@
 // _runtime/metro/17540__.js
-import _mod17545 from "17545__.js";
-import 08853__ from "08853__.js";
+import registerAsset from "01119__.js";
 
-const require = globalThis.__r;
-
-
-export const getYoutubeMeta = require("17541__.js").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8853(_mod17545).default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "7902227dc6dc99bcea15f3cdebd9f65f",
+  name: "EmojiRollingOnTheFloorLaughingIcon",
+  type: "png",
+});

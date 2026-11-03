@@ -26,7 +26,7 @@ export default function TouchableWithoutFeedback(disabled) {
   const onPress = disabled.onPress;
   const onPressIn = disabled.onPressIn;
   const onPressOut = disabled.onPressOut;
-  const items = [rejectResponderTermination, disabled, prop, , , , , , , , , , , , , ];
+  items = [rejectResponderTermination, disabled, prop, , , , , , , , , , , , , ];
   let disabled1;
   if (accessibilityState != null) {
     disabled1 = accessibilityState.disabled;

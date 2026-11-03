@@ -25,7 +25,7 @@ function _onElementTiming(arg0) {
     if (identifier.identifier) {
       ({ name, renderTime, loadTime } = identifier);
       if (loadTime) {
-        const items = [extractNetworkProtocol.msToSec(loadTime), "load-time"];
+        items = [extractNetworkProtocol.msToSec(loadTime), "load-time"];
         let items2 = items;
         const tmpResult = extractNetworkProtocol;
       } else if (renderTime) {

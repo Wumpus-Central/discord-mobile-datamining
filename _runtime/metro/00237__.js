@@ -9,7 +9,7 @@ const obj = {
     const substr = [...arguments].slice();
     if (undefined === global.nativeLoggingHook) {
       const logToConsole = obj.logToConsole;
-      const items = [arg0];
+      items = [arg0];
       HermesBuiltin.arraySpread(substr, 1);
       HermesBuiltin.apply(items, obj);
     } else {
@@ -28,7 +28,7 @@ const obj = {
     const substr = [...arguments].slice();
     const tmp3 = _mod38;
     tmp3(dependencyMap[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(closure_3).toString()}`);
-    const items = [...substr];
+    items = [...substr];
     console[dependencyMap[arg0]].apply(items);
   },
   setWarningHandler(arg0) {

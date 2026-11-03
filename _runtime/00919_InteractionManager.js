@@ -74,7 +74,7 @@ let items = [
         value = _longestInteractionMap.get(interactionId.interactionId);
         if (value) {
           if (interactionId.duration > value._latency) {
-            const items = [interactionId];
+            items = [interactionId];
             value.entries = items;
             value._latency = interactionId.duration;
             let obj = value;

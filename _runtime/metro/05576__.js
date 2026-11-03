@@ -1,67 +1,47 @@
 // _runtime/metro/05576__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../05276_value2.js";
-import _mod5577 from "05577__.js";
-import noop_mod from "00019__.js";
+import noop from "00019__.js";
 
-let noop = noop_mod;
-({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
-let noop = noop_mod;
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
-  focusHook = focusHook.focusHook;
-  if (focusHook === undefined) {
-    focusHook = animatedScrollableType;
-  }
-  let flag = focusHook.enableFooterMarginAdjustment;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const onLayout = focusHook.onLayout;
-  ({ style, children } = focusHook);
-  const merged = Object.assign(
-    focusHook,
-    Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }),
-  );
-  let animatedScrollableContentOffsetY;
-  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
-  animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetContentContainerStyle = onLayout(
-    animatedScrollableContentOffsetY[3],
-  ).useBottomSheetContentContainerStyle(flag, style);
-  let items = [bottomSheetContentContainerStyle];
-  const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
-  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
-  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
-  const tmp4 = animatedContentHeight(() => {
-    const items = [bottomSheetContentContainerStyle, _mod5577.styles.container];
-    return items;
-  }, items);
-  const tmp5 = enableDynamicSizing(() => {
-    animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
-  }, items1);
-  focusHook(tmp5);
-  const obj3 = {};
-  const merged1 = Object.assign(merged);
-  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
-    }
-    if (onLayout) {
-      tmp3(nativeEvent);
-    }
-  }, items2);
-  obj3.style = tmp4;
-  obj3.children = children;
-  return <bottomSheetContentContainerStyle />;
-});
-memoResult.displayName = "BottomSheetView";
+const require = globalThis.__r;
 
-export default memoResult;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("01652__.js").makeMutable(obj2);
+        let obj = require("01652__.js");
+      } else {
+        mutable = require("01652__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("01652__.js");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
+}

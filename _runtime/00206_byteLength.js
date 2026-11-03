@@ -13,7 +13,7 @@ export function byteLength(arr) {
     if (-1 === index) {
       index = length;
     }
-    const items = [index];
+    items = [index];
     let num2 = 0;
     if (index !== length) {
       num2 = 4 - (index % 4);
@@ -32,7 +32,7 @@ export function toByteArray(arr) {
     if (-1 === index) {
       index = length;
     }
-    const items = [index];
+    items = [index];
     let num = 0;
     if (index !== length) {
       num = 4 - (index % 4);
@@ -89,7 +89,7 @@ export function toByteArray(arr) {
 export function fromByteArray(uint8Array) {
   let sum;
   const result = length % 3;
-  const items = [];
+  items = [];
   const diff = length - result;
   let num = 0;
   if (0 < diff) {

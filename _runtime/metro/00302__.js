@@ -41,7 +41,7 @@ let closure_3 = [
 ];
 const createRef = fn(19).createRef;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_12 = ["Idle", "Dragging", "Settling"];
 class DrawerLayoutAndroid {
   constructor() {
@@ -110,7 +110,7 @@ const entry = {
     ({ onDrawerStateChanged, onDrawerOpen, onDrawerClose } = props);
     let tmp2 = null != self.props.statusBarBackgroundColor;
     const obj = { style: null, pointerEvents: null, collapsable: false, children: null };
-    const items = [drawerSubview.drawerSubview, { width: self.props.drawerWidth, backgroundColor: str }];
+    items = [drawerSubview.drawerSubview, { width: self.props.drawerWidth, backgroundColor: str }];
     obj.style = items;
     let str2 = "none";
     const tmp = _objectWithoutProperties(props, closure_3);

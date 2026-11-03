@@ -131,7 +131,7 @@ export (arg0) => {
         const listener = document.addEventListener("readystatechange", () => {
           let hasItem = document;
           if (document) {
-            const items = ["interactive", "complete"];
+            items = ["interactive", "complete"];
             hasItem = items.includes(tmp.readyState);
           }
           if (hasItem) {
@@ -140,7 +140,7 @@ export (arg0) => {
         });
         let hasItem = document;
         if (document) {
-          let items = ["interactive", "complete"];
+          items = ["interactive", "complete"];
           hasItem = items.includes(document.readyState);
         }
         if (hasItem) {
@@ -159,7 +159,7 @@ export (arg0) => {
       const startInactiveSpanResult = _undefined(_undefined2[0]).startInactiveSpan(obj4);
     }
   }
-  closure_3 = { name: "raw", source: "cix" };
+  closure_3 = { name: "Array", source: "flexDirection" };
   const document = require("ignoreNextOnError").WINDOW.document;
   let obj2 = {};
   let merged = Object.assign(closure_3);
@@ -276,7 +276,7 @@ export (arg0) => {
                   }
                   obj4.propagationSpanId = spanId1;
                   const result1 = currentScope.setPropagationContext(obj4);
-                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "r" });
+                  const result2 = currentScope.setSDKProcessingMetadata({ normalizedRequest: "Array" });
                   const obj5 = { op: "navigation" };
                   const merged1 = Object.assign(arg0);
                   obj5.parentSpan = null;
@@ -470,7 +470,7 @@ export (arg0) => {
         if (_undefined(tmp2[2]).WINDOW.document) {
           const listener = globalThis.addEventListener("click", function registerInteractionTransaction() {
             if (emit[document]) {
-              const items = ["navigation", "pageload"];
+              items = ["navigation", "pageload"];
               if (items.includes(obj.spanToJSON(tmp).op)) {
                 if (emit(idleTimeout[4]).DEBUG_BUILD) {
                   const debug2 = emit(idleTimeout[0]).debug;
@@ -555,12 +555,12 @@ export function startBrowserTracingNavigationSpan(client, name, arg2) {
   }
   return client[_sentry_idleSpan];
 }
-export function startBrowserTracingPageLoadSpan(f120986, tmp2Result, arg2) {
-  f120986.emit("startPageLoadSpan", tmp2Result, arg2);
+export function startBrowserTracingPageLoadSpan(f120689, tmp2Result, arg2) {
+  f120689.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod681.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f120986[_sentry_idleSpan]) {
-    f120986.emit("afterStartPageLoadSpan", tmp3);
+  if (f120689[_sentry_idleSpan]) {
+    f120689.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f120986[_sentry_idleSpan];
+  return f120689[_sentry_idleSpan];
 }

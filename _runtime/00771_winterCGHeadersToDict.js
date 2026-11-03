@@ -41,7 +41,7 @@ function addSpanAttribute(arg0, formatted, str, arr, flag) {
   if (flag) {
     let someResult = closure_2.some((item) => closure_0.includes(item));
   } else {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(closure_2, HermesBuiltin.arraySpread(closure_3, 0));
     someResult = items.some((item) => closure_0.includes(item));
   }
@@ -132,7 +132,7 @@ export function httpHeadersToSpanAttributes(arg0) {
                 }
               }
               if ("set-cookie" === formatted) {
-                const items = [num];
+                items = [num];
                 let parts = items;
               } else {
                 parts = num.split("; ");

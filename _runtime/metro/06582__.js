@@ -1,13 +1,13 @@
 // _runtime/metro/06582__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "8ba3e8ee2991f198308400197cdb28bc",
-  name: "img_account_sync_youtube_white",
-  type: "svg",
-});
+export default function isObject(fn) {
+  let tmp = fn;
+  if (tmp) {
+    let tmp2 = typeof fn === "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn === "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}

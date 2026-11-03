@@ -46,7 +46,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -139,7 +139,7 @@ export () => {
             if (!packages) {
               packages = [];
             }
-            const items = [];
+            items = [];
             const arraySpreadResult = HermesBuiltin.arraySpread(packages, closure_0);
             closure_0 = arraySpreadResult;
             let items2 = closure_129_0;

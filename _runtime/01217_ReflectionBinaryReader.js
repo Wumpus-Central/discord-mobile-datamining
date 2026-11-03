@@ -23,7 +23,7 @@ const entry = {
       const _Map = Map;
       const map = new Map(
         fields.map((no) => {
-          const items = [no.no, no];
+          items = [no.no, no];
           return items;
         }),
       );
@@ -222,7 +222,7 @@ let items = [
           }
         }
       }
-      const items = [tmp5, num];
+      items = [tmp5, num];
       return items;
     },
   },

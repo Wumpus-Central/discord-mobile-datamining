@@ -3,8 +3,8 @@ import processColorDefault from "../00050_processColor.js";
 
 importDefault = arg2;
 const dependencyMap = arg6;
-function parseLength(arg0) {
-  const match = re4.exec(arg0);
+function parseLength(blurRadius) {
+  const match = re4.exec(blurRadius);
   if (match) {
     const _parseFloat = parseFloat;
     const parsed = parseFloat(match[1]);
@@ -24,14 +24,14 @@ const re4 = /^([+-]?\d*\.?\d+)(px)?$/;
 const re5 = /\n/g;
 
 export default function processBoxShadow(str) {
-  let items = [];
+  items = [];
   if (null == str) {
     return items;
   } else {
     let tmp48 = str;
     if (typeof str === "string") {
       tmp48 = (function parseBoxShadowString(str) {
-        const items = [];
+        items = [];
         const parts = str.split(closure_1_2);
         const mapped = parts.map((item) => item.trim());
         const found = mapped.filter((item) => "" !== item);

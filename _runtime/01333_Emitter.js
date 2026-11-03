@@ -76,7 +76,7 @@ if (undefined !== module) {
 const fn = function (arg0, arg1) {
   const self = this;
   self._callbacks = this._callbacks || {};
-  let items = self._callbacks["$" + arg0];
+  items = self._callbacks["$" + arg0];
   const text = `$${arg0}`;
   if (!items) {
     items = [];

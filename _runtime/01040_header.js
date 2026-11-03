@@ -28,7 +28,7 @@ export function createUserFeedbackEnvelope(event_id, tunnel) {
     const obj4 = { dsn: _mod681.dsnToString(dsn) };
     tunnel = obj4;
   }
-  const items = [{ type: "user_report" }, event_id];
+  items = [{ type: "user_report" }, event_id];
   const merged1 = Object.assign(merged, tunnel);
   const date = new Date();
   const items1 = [items];

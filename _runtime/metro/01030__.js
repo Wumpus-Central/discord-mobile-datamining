@@ -149,7 +149,7 @@ export () => {
     }
     if (flag4) {
       if (tmp4) {
-        const items = ["PRELOAD", "SET_PARAMS", "OPEN_DRAWER", "CLOSE_DRAWER", "TOGGLE_DRAWER"];
+        items = ["PRELOAD", "SET_PARAMS", "OPEN_DRAWER", "CLOSE_DRAWER", "TOGGLE_DRAWER"];
         if (items.includes(tmp4)) {
           const debug2 = num(flag[2]).debug;
           const _HermesInternal2 = HermesInternal;
@@ -262,10 +262,10 @@ export () => {
           let name = currentRoute.name;
           const hasItem = closure_14.includes(currentRoute.key);
           if (flag5) {
-            let state = current.getState();
+            state = current.getState();
             let name2;
             if (state) {
-              const items = [];
+              items = [];
               if (state) {
                 do {
                   let index = state.index;

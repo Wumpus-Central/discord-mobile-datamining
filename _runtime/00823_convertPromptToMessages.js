@@ -13,7 +13,7 @@ function convertPromptToMessages(data) {
     if (parsed) {
       if (typeof tmp4 === "object") {
         ({ prompt: _prompt, system } = tmp4);
-        const items = [];
+        items = [];
         if (typeof system === "string") {
           const obj = { role: "system", content: system };
           items.push(obj);

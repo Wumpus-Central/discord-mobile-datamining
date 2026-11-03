@@ -36,7 +36,7 @@ class FeedbackButton {
     tmp2 = closure_4;
     obj = closure_4(FeedbackButton);
     tmp3 = closure_3;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

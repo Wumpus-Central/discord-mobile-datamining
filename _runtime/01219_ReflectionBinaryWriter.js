@@ -332,7 +332,7 @@ let items = [
           }
         }
       }
-      const items = [Bit64, str];
+      items = [Bit64, str];
       if (!tmp3) {
         tmp3 = tmp5;
       }

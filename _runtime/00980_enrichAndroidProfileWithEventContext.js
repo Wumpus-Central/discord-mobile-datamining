@@ -201,7 +201,7 @@ export function isValidProfile(samples) {
   return samples.samples.length > 1;
 }
 export function findProfiledTransactionsFromEnvelope(arg0) {
-  const items = [];
+  items = [];
   _mod681.forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if ("transaction" === arg1) {
       for (let num = 1; num < arg0.length; num = num + 1) {
@@ -435,7 +435,7 @@ export function enrichCombinedProfileWithEventContext(profile_id, value, context
         }
         obj5.active_thread_id = str9;
         obj.transaction = obj5;
-        const items = [];
+        items = [];
         const arraySpreadResult = HermesBuiltin.arraySpread(DEFAULT_BUNDLE_NAME.getDebugMetadata(), 0);
         const debug_meta = value.debug_meta;
         let images;
@@ -471,7 +471,7 @@ export function addProfilesToEnvelope(arg0, arg1) {
     const tmp2 = arg1[Symbol.iterator]();
     while (tmp2 !== undefined) {
       let arr = arg0[1];
-      let items = [{ type: "profile" }, tmp4];
+      items = [{ type: "profile" }, tmp4];
       let arr2 = arr.push(items);
       continue;
     }

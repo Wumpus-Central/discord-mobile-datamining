@@ -1,7 +1,7 @@
 // _runtime/00788_resolve.js
 function resolve() {
   let tmp17;
-  const items = [...arguments];
+  items = [...arguments];
   let diff = items.length - 1;
   let flag = false;
   let str = "";
@@ -193,7 +193,7 @@ export function isAbsolute(str) {
   return "/" === str.charAt(0);
 }
 export function join() {
-  const items = [...arguments];
+  items = [...arguments];
   return normalizePath(items.join("/"));
 }
 export { normalizePath };
@@ -237,7 +237,7 @@ export function relative(root, replaced) {
     }
   }
   if (tmp3 < num) {
-    let items = [];
+    items = [];
   } else {
     items = parts.slice(num, tmp3 - num + 1);
   }

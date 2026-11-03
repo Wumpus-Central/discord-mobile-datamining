@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c6de0a8018201efe397c6bc1961474a0",
-  name: "ic_minus_circle_24px",
+  hash: "9dd37f954b23d7c3c7ed4428be93436f",
+  name: "ClydeIcon",
   type: "png",
 });

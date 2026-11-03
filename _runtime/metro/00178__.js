@@ -227,7 +227,7 @@ noop.any = function promiseAny(arg0) {
     }
     let arr = iterableToArray(closure_0);
     c3 = false;
-    const items = [];
+    items = [];
     if (0 === arr.length) {
       let aggregateError = globalThis;
       if (typeof globalThis.AggregateError === "function") {

@@ -33,7 +33,7 @@ function _addMeasureSpans(
       }
     })(entryType)
   ) {
-    const items = ["mark", "measure"];
+    items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
       const navigationEntry = _mod905.getNavigationEntry(false);
       let num = 0;
@@ -107,7 +107,7 @@ function _addNavigationSpans(activeSpan, requestStart, msToSecResult) {
   _require = activeSpan;
   dependencyMap = requestStart;
   closure_2 = msToSecResult;
-  const items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
+  items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
   const item = items.forEach((item) => {
     _addPerformanceNavigationTiming(closure_0, closure_1, item, closure_2);
   });
@@ -207,7 +207,7 @@ function _addResourceSpans(
           obj["server.address"] = url.host;
         }
         obj["url.same_origin"] = name.includes(_mod901.WINDOW.location.origin);
-        const items = [
+        items = [
           ["responseStatus", "http.response.status_code"],
           ["transferSize", "http.response_transfer_size"],
           ["encodedBodySize", "http.response_content_length"],

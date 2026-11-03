@@ -50,7 +50,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -209,7 +209,7 @@ export (arg0) => {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -290,7 +290,7 @@ export (arg0) => {
                       debug.error("[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.", arg0);
                     });
                     c3 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp40) {
                   c3 = tmp;

@@ -41,7 +41,7 @@ export function varint64read() {
           }
         }
         let assertBoundsResult = self.assertBounds();
-        let items = [tmp7, tmp13];
+        items = [tmp7, tmp13];
         return items;
       } else {
         let assertBoundsResult1 = self.assertBounds();
@@ -145,7 +145,7 @@ export function int64fromString(trimmed) {
     sum5 = result5 + ((sum4 / c0) | 0);
     result6 = sum4 % c0;
   }
-  const items = ["-" == trimmed[0], result6, sum5];
+  items = ["-" == trimmed[0], result6, sum5];
   return items;
 }
 export function int64toString(lo, hi) {

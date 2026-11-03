@@ -1,29 +1,33 @@
 // _runtime/metro/05511__.js
-import _mod5512 from "05512__.js";
+import _mod19 from "00019__.js";
 
-export default function _objectWithoutProperties(arg0, arr) {
-  if (null == arg0) {
-    return {};
-  } else {
-    const tmp8 = _mod5512(arg0, arr);
-    const _Object2 = Object;
-    if (Object.getOwnPropertySymbols) {
-      const _Object = Object;
-      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
-      let num = 0;
-      if (0 < ownPropertySymbols.length) {
-        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
-        while (!tmp2) {
-          if (tmp2) {
-            tmp8[tmp] = arg0[tmp];
-          }
-          num = num + 1;
-        }
-        const propertyIsEnumerable = {}.propertyIsEnumerable;
-        const call = propertyIsEnumerable.call;
-        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
-      }
-    }
-    return tmp8;
-  }
+let useMemo = _mod19.useMemo;
+
+export function useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = arg0;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
+  closure_3 = tmp;
+  items = [arg0, memoizedGestureCallbacks, , , ,];
+  ({
+    changeEventCalculator: arr[2],
+    dispatchesAnimatedEvents: arr[3],
+    fillInDefaultValues: arr[4],
+  } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(
+    () => (arg0) => {
+      closure_0(closure_1[1]).eventHandler(
+        closure_1_0,
+        arg0,
+        memoizedGestureCallbacks,
+        disableReanimated.changeEventCalculator,
+        closure_1_3,
+        disableReanimated.dispatchesAnimatedEvents,
+        disableReanimated.fillInDefaultValues,
+      );
+    },
+    items,
+  );
 }

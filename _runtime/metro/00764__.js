@@ -79,7 +79,7 @@ export function getHttpSpanDetailsFromUrlObject(hash, arg1, arg2, method, arg4) 
         const str16 = new URL(hash);
         str16.search = "";
         str16.hash = "";
-        const items = ["80", "443"];
+        items = ["80", "443"];
         if (items.includes(str16.port)) {
           str16.port = "";
         }
@@ -125,7 +125,7 @@ export function getSanitizedUrlStringFromUrlObject(pathname) {
     const str = new URL(pathname);
     str.search = "";
     str.hash = "";
-    const items = ["80", "443"];
+    items = ["80", "443"];
     if (items.includes(str.port)) {
       str.port = "";
     }

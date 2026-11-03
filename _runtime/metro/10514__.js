@@ -1,14 +1,12 @@
 // _runtime/metro/10514__.js
-import repeatedTimeunitPattern from "../10327_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10334_AbstractParserWithWordBoundaryChecking.js";
-import _mod10515 from "10515__.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVWeekdayParser = require;
+const FRCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,18 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10515.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)",
-  "i",
-);
-class SVWeekdayParser {
+class FRCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, FRCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(FRCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,41 +45,46 @@ class SVWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  value: function innerPattern(arg0) {
+    return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
+    value: function innerExtract(createParsingComponents, arg1) {
       const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      if ("apr\u00E8s-midi" !== formatted) {
+        if ("aprem" !== formatted) {
+          if ("soir" === formatted) {
+            parsingComponents.imply("hour", 18);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(10462).Meridiem.PM);
+          } else if ("matin" === formatted) {
+            parsingComponents.imply("hour", 8);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(10462).Meridiem.AM);
+          } else if ("a midi" === formatted) {
+            parsingComponents.imply("hour", 12);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(10462).Meridiem.AM);
+          } else if ("\u00E0 minuit" === formatted) {
+            parsingComponents.imply("hour", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(10462).Meridiem.AM);
+          }
         }
+        return parsingComponents;
       }
-      return SVWeekdayParser(10354).createParsingComponentsAtWeekday(
-        reference.reference,
-        SVWeekdayParser(10515).WEEKDAY_DICTIONARY[formatted],
-        str4,
-      );
+      parsingComponents.imply("hour", 14);
+      parsingComponents.imply("minute", 0);
+      parsingComponents.imply("meridiem", FRCasualTimeParser(10462).Meridiem.PM);
     },
   },
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(FRCasualTimeParser, items);

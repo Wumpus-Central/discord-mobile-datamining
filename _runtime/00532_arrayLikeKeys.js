@@ -41,7 +41,7 @@ export default function arrayLikeKeys(obj, arg1) {
   }
   if (tmp7) {
     const _String = String;
-    let items = baseTimes(obj.length, String);
+    items = baseTimes(obj.length, String);
   } else {
     items = [];
   }

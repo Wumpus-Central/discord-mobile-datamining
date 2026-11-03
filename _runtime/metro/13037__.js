@@ -1,13 +1,20 @@
 // _runtime/metro/13037__.js
-import registerAsset from "01119__.js";
+import _mod12972 from "12972__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "01cd25a11a733a16463d72c98cca83b7",
-  name: "CloudIcon",
-  type: "png",
-});
+const Number = _mod12972.TYPE.Number;
+const obj = {
+  name: "Number",
+  structure: { value: String },
+  parse() {
+    return {
+      type: "Number",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      value: this.consume(Number),
+    };
+  },
+  generate(value) {
+    this.chunk(value.value);
+  },
+};
+
+export default obj;

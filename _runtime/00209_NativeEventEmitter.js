@@ -68,7 +68,7 @@ let items = [
     key: "emit",
     value: function emit(arg0) {
       const substr = [...arguments].slice();
-      const items = [arg0, ...substr];
+      items = [arg0, ...substr];
       NativeEventEmitter(92).emit.apply(items);
     },
   },

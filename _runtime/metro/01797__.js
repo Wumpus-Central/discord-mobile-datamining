@@ -1,26 +1,55 @@
 // _runtime/metro/01797__.js
-import _mod19 from "00019__.js";
-import WorkletEventHandlerNative from "../01755_WorkletEventHandlerNative.js";
+const require = globalThis.__r;
 
-const useRef = _mod19.useRef;
-
-export function useEvent(fn) {
-  if (items === undefined) {
-    items = [];
-  }
-  let flag = doDependenciesDiffer;
-  if (doDependenciesDiffer === undefined) {
-    flag = false;
-  }
-  const tmp = useRef(null);
-  if (null === tmp.current) {
-    const workletEventHandler1 = new WorkletEventHandlerNative.WorkletEventHandler(fn, items);
-    const obj2 = { workletEventHandler: workletEventHandler1 };
-    tmp.current = obj2;
-  } else if (flag) {
-    tmp.current.workletEventHandler.updateEventHandler(fn, items);
-    const obj = { workletEventHandler: tmp.current.workletEventHandler };
-    tmp.current = obj;
-  }
-  return tmp.current;
+for (const key10013 in require("SVG_CIRCLE_PROPERTIES_CONFIG")) {
+  arg5[key10013] = require("SVG_CIRCLE_PROPERTIES_CONFIG")[key10013];
+  continue;
+}
+for (const key10017 in require("SVG_COMMON_PROPERTIES_CONFIG")) {
+  arg5[key10017] = require("SVG_COMMON_PROPERTIES_CONFIG")[key10017];
+  continue;
+}
+for (const key10021 in require("SVG_ELLIPSE_PROPERTIES_CONFIG")) {
+  arg5[key10021] = require("SVG_ELLIPSE_PROPERTIES_CONFIG")[key10021];
+  continue;
+}
+for (const key10025 in require("SVG_IMAGE_PROPERTIES_CONFIG")) {
+  arg5[key10025] = require("SVG_IMAGE_PROPERTIES_CONFIG")[key10025];
+  continue;
+}
+for (const key10029 in require("SVG_LINE_PROPERTIES_CONFIG")) {
+  arg5[key10029] = require("SVG_LINE_PROPERTIES_CONFIG")[key10029];
+  continue;
+}
+for (const key10033 in require("SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG")) {
+  arg5[key10033] = require("SVG_LINEAR_GRADIENT_PROPERTIES_CONFIG")[key10033];
+  continue;
+}
+for (const key10037 in require("SVG_PATH_PROPERTIES_CONFIG")) {
+  arg5[key10037] = require("SVG_PATH_PROPERTIES_CONFIG")[key10037];
+  continue;
+}
+for (const key10041 in require("01813__.js")) {
+  arg5[key10041] = require("01813__.js")[key10041];
+  continue;
+}
+for (const key10045 in require("SVG_POLYGON_PROPERTIES_CONFIG")) {
+  arg5[key10045] = require("SVG_POLYGON_PROPERTIES_CONFIG")[key10045];
+  continue;
+}
+for (const key10049 in require("SVG_POLYLINE_PROPERTIES_CONFIG")) {
+  arg5[key10049] = require("SVG_POLYLINE_PROPERTIES_CONFIG")[key10049];
+  continue;
+}
+for (const key10053 in require("SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG")) {
+  arg5[key10053] = require("SVG_RADIAL_GRADIENT_PROPERTIES_CONFIG")[key10053];
+  continue;
+}
+for (const key10057 in require("SVG_RECT_PROPERTIES_CONFIG")) {
+  arg5[key10057] = require("SVG_RECT_PROPERTIES_CONFIG")[key10057];
+  continue;
+}
+for (const key10061 in require("SVG_TEXT_PROPERTIES_CONFIG")) {
+  arg5[key10061] = require("SVG_TEXT_PROPERTIES_CONFIG")[key10061];
+  continue;
 }

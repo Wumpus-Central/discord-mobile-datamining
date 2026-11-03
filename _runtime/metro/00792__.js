@@ -17,7 +17,7 @@ function addConsoleBreadcrumb(level, args) {
     if (typeof _mod685.GLOBAL_OBJ.util.format === "function") {
       const util = _mod685.GLOBAL_OBJ.util;
       const format = util.format;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(args, 0);
       let applyResult = HermesBuiltin.apply(items, util);
     }

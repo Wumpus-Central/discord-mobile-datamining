@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleCheckIcon-secondary",
+  hash: "45c8ad8f30ca8563a8afaab90a692e66",
+  name: "MagnifyingGlassIcon",
   type: "png",
 });

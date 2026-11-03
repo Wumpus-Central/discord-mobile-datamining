@@ -13,7 +13,7 @@ function createImpl(arg0) {
       tmp = identity;
     }
     closure_1 = tmp;
-    const items = [store, tmp];
+    items = [store, tmp];
     const items1 = [store, tmp];
     const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
     const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
@@ -35,7 +35,7 @@ export (arg0) => {
           tmp = identity;
         }
         closure_1 = tmp;
-        const items = [store, tmp];
+        items = [store, tmp];
         const items1 = [store, tmp];
         const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
         const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
@@ -61,7 +61,7 @@ export function useStore(subscribe) {
     tmp = identity;
   }
   closure_1 = tmp;
-  const items = [subscribe, tmp];
+  items = [subscribe, tmp];
   const items1 = [subscribe, tmp];
   const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
   const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));

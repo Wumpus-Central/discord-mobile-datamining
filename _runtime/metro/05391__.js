@@ -1,17 +1,18 @@
 // _runtime/metro/05391__.js
-import ComposedGestureName from "../05362_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../05371_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod5386 from "05386__.js";
+import PATTERN_CHARS_mod from "../05392_PATTERN_CHARS.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.success = PATTERN_CHARS.pattern("oO.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.error = PATTERN_CHARS.pattern("OO.OO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.warning = PATTERN_CHARS.pattern("O.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.notification = PATTERN_CHARS.pattern("o-O=o");
 
-export function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod5386.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
-}
+export const Patterns = obj;

@@ -1,4 +1,6 @@
 // _runtime/metro/05456__.js
-import _modDef5457 from "05457__.js";
+import _mod17 from "00017__.js";
 
-export default _modDef5457;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

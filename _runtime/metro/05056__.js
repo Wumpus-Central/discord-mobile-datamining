@@ -1,4 +1,8 @@
 // _runtime/metro/05056__.js
-import _mod5057 from "05057__.js";
+const require = globalThis.__r;
 
-export default _mod5057;
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shallow = require("05057__.js").shallow;
+export const useShallow = require("05058__.js").useShallow;

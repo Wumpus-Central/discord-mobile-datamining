@@ -1,55 +1,35 @@
 // _runtime/metro/04787__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "sv" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-      short: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4569_mod from "04569__.js";
+import module_4602_mod from "04602__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
+
+let module_4569 = module_4569_mod;
+if (!module_4569) {
+  const obj = { default: module_4569 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4569;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+module_4569 = tmp3;
+let module_4602 = module_4602_mod;
+if (!module_4602) {
+  const obj2 = { default: module_4602 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4602;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-      short: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "sv",
+module_4602 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function isTomorrow(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4602.default(arg0, module_4569.default(Date.now(), 1));
 };
-prop.push(obj);
+export default exports.default;

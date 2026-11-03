@@ -78,7 +78,7 @@ let items = [
       if (typeof tmp === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_lastValue, _onUpdate, arg2, arg3, self];
+      items = [_lastValue, _onUpdate, arg2, arg3, self];
       fn(items);
       self._lastValue = _lastValue;
       self._fromValue = _lastValue;

@@ -1,13 +1,39 @@
 // _runtime/metro/09995__.js
-import registerAsset from "01119__.js";
+import Link from "../01500_Link.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "0e26d39cd35df5b70db021fff662c44e",
-  name: "Y2KIcon",
-  type: "png",
-});
+require = arg1;
+
+export function useInvalidPreventRemoveError(descriptors) {
+  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
+  let prop;
+  if (descriptors[first] != null) {
+    const options = tmp2.options;
+    if (options != null) {
+      prop = options.headerBackButtonMenuEnabled;
+    }
+  }
+  let name;
+  if (descriptors[first] != null) {
+    const route = tmp2.route;
+    if (route != null) {
+      name = route.name;
+    }
+  }
+  items = [first, prop, name];
+  const effect = noop.useEffect(() => {
+    if (null != first) {
+      if (prop) {
+        const _HermesInternal = HermesInternal;
+        const _console = console;
+        console.error(
+          "The screen " +
+            name +
+            " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " +
+            name +
+            " screen to get rid of this error.",
+        );
+      }
+    }
+  }, items);
+}

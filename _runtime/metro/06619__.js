@@ -1,13 +1,17 @@
 // _runtime/metro/06619__.js
-import registerAsset from "01119__.js";
+import _mod1317 from "01317__.js";
+import _mod1318 from "01318__.js";
+import _mod1324 from "01324__.js";
+import _mod6611 from "06611__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "51c56027f271f175240f0fff23cdb627",
-  name: "img_account_sync_twitter_light_and_dark",
-  type: "svg",
-});
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1324(num)) {
+      if (_mod6611(num)) {
+        const tmp = _mod1317(num);
+        return _mod1318(tmp) === tmp;
+      }
+    }
+  }
+  return false;
+}

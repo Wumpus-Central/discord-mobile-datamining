@@ -11,7 +11,7 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
   if (arg5.length >= arg2 + 1) {
     return arg5;
   } else {
-    let items = [];
+    items = [];
     HermesBuiltin.arraySpread(arg5, 0);
     length = items;
     const _Error = Error;
@@ -59,7 +59,7 @@ function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mec
           obj3.exception_id = length;
           obj3.parent_id = exception_id;
           tmp13.mechanism = obj3;
-          const items = [tmp13];
+          items = [tmp13];
           HermesBuiltin.arraySpread(length, 1);
           length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_4, items, tmp13, length);
         }

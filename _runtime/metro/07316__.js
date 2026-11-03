@@ -1,13 +1,17 @@
 // _runtime/metro/07316__.js
-import registerAsset from "01119__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "6c6de524d332332b9f4c75238dadd0f8",
-  name: "ic_selection_checked_24px",
-  type: "png",
-});
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
+}
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
+  }
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {}

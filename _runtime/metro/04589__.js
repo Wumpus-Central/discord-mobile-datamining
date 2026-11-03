@@ -1,28 +1,35 @@
 // _runtime/metro/04589__.js
-import _typeof_mod from "04294__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import module_4425_mod from "04425__.js";
+import module_4569_mod from "04569__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4425 = module_4425_mod;
+if (!module_4425) {
+  const obj = { default: module_4425 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4425;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4425 = tmp3;
+let module_4569 = module_4569_mod;
+if (!module_4569) {
+  const obj2 = { default: module_4569 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4569;
 }
-requiredArgs = tmp5;
+module_4569 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isBefore(arg0, arg1) {
+export default function addWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+  return module_4569.default(arg0, 7 * module_4425.default(arg1));
 };
 export default exports.default;

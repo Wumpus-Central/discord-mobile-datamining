@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "2d4d5e1376e3dc7d0fa68688da698fba",
-  name: "ic_community_guild_badge_light_24px",
+  httpServerLocation: "/assets/images/auth",
+  width: 100,
+  height: 100,
+  scales: [1],
+  hash: "2466a8cae3eebcc6d13072f6ff1957c4",
+  name: "img-auth-qrcode-overlay",
   type: "png",
 });

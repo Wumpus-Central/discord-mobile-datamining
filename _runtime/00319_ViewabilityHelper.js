@@ -47,7 +47,7 @@ let items = [
         tmp5,
         "Must set exactly one of itemVisiblePercentThreshold or viewAreaCoveragePercentThreshold",
       );
-      const items = [];
+      items = [];
       if (0 === itemCount) {
         return items;
       } else {
@@ -131,7 +131,7 @@ let items = [
       if (!this._config.waitForInteraction) {
         if (0 !== itemCount) {
           if (getCellMetrics.getCellMetrics(0, getItemCount)) {
-            let items = [];
+            items = [];
             let viewableItems = items;
             if (itemCount) {
               viewableItems = self.computeViewableItems(getItemCount, arg1, arg2, getCellMetrics, renderRange);
@@ -185,7 +185,7 @@ let items = [
       const map = new Map(
         found.map((item) => {
           const tmp = closure_0(item, true, closure_1);
-          const items = [tmp.key, tmp];
+          items = [tmp.key, tmp];
           return items;
         }),
       );

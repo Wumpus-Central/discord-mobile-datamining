@@ -1,14 +1,11 @@
 // _runtime/metro/10498__.js
-import repeatedTimeunitPattern from "../10327_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10334_AbstractParserWithWordBoundaryChecking.js";
-import _mod10496 from "10496__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractParserWithWordBoundaryChecking from "../10464_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameMiddleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,26 +24,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 const regExp = new RegExp(
-  "(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10496.MONTH_DICTIONARY) +
-    ")(?:-|/|\\s*,?\\s*)(" +
-    _mod10496.ORDINAL_NUMBER_PATTERN +
-    ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" +
-    _mod10496.ORDINAL_NUMBER_PATTERN +
-    ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" +
-    _mod10496.YEAR_PATTERN +
-    "))?(?=\\W|$)(?!\\:\\d)",
+  "([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)",
   "i",
 );
-class ENMonthNameMiddleEndianParser {
+class ISOFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ISOFormatParser);
+    tmp2 = c2;
+    obj = c2(ISOFormatParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -59,7 +50,8 @@ class ENMonthNameMiddleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ISOFormatParser;
+_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -70,36 +62,48 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10496).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10496).parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        if (index[4]) {
-          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10496).parseYear(index[4]));
-        } else {
-          parsingComponents.imply(
-            "year",
-            ENMonthNameMiddleEndianParser(10328).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
-          );
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents({
+        year: parseInt(arg1[1]),
+        month: parseInt(arg1[2]),
+        day: parseInt(arg1[3]),
+      });
+      if (null != arg1[4]) {
+        const _parseInt5 = parseInt;
+        parsingComponents.assign("hour", parseInt(arg1[4]));
+        const _parseInt6 = parseInt;
+        parsingComponents.assign("minute", parseInt(arg1[5]));
+        if (null != arg1[6]) {
+          const _parseInt = parseInt;
+          parsingComponents.assign("second", parseInt(arg1[6]));
         }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10496).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = parsingComponents;
-          parsingResult.end = parsingComponents.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return parsingComponents;
+        if (null != arg1[7]) {
+          const _parseInt2 = parseInt;
+          parsingComponents.assign("millisecond", parseInt(arg1[7]));
+        }
+        if (null != arg1[8]) {
+          let num2 = 0;
+          if (!arg1[9]) {
+            let num3 = parsingComponents.assign("timezoneOffset", num2);
+          } else {
+            const _parseInt3 = parseInt;
+            num3 = 0;
+            const parsed = parseInt(arg1[9]);
+            if (null != arg1[10]) {
+              const _parseInt4 = parseInt;
+              num3 = parseInt(arg1[10]);
+            }
+            const result = 60 * parsed;
+            if (result >= 0) {
+              num2 = result + num3;
+            }
+          }
+          num2 = result - num3;
         }
       }
+      return parsingComponents.addTag("parser/ISOFormatParser");
     },
   },
 ];
 
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export default _createClass(ISOFormatParser, items);

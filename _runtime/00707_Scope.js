@@ -48,7 +48,7 @@ const entry = {
     const obj2 = Scope(693);
     obj.sampleRand = Scope(695).safeMathRandom();
     obj4._propagationContext = obj;
-    const items = [...this._breadcrumbs];
+    items = [...this._breadcrumbs];
     obj4._breadcrumbs = items;
     const merged = Object.assign(this._tags);
     obj4._tags = {};
@@ -137,7 +137,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "Array", id: "Path", ip_address: "y", username: "HermesInternal" };
+        user = { email: "Array", id: "Path", ip_address: "disabled", username: "Map" };
       }
       const self = this;
       this._user = user;

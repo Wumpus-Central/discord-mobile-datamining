@@ -21,7 +21,7 @@ export function getDebugMetadata() {
         } else if (keys[0]) {
           if (_sentryDebugIds[keys[0]]) {
             const obj = { code_file: _mod982.DEFAULT_BUNDLE_NAME, debug_id: tmp4, type: "sourcemap" };
-            const items = [obj];
+            items = [obj];
             let items1 = items;
           } else {
             items1 = [];

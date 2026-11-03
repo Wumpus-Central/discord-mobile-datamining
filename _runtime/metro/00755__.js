@@ -115,7 +115,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0, mechanism, arg2];
+      items = [arg0, mechanism, arg2];
       return fn(items);
     },
   },
@@ -165,7 +165,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [type, mechanism, arg2];
+      items = [type, mechanism, arg2];
       return fn(items);
     },
   },
@@ -267,7 +267,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [platform, arg1, arg2, arg3];
+      items = [platform, arg1, arg2, arg3];
       return fn(items);
     },
   },

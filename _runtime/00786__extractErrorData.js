@@ -9,7 +9,7 @@ import setupIntegration from "00751_setupIntegration.js";
 
 function _extractErrorData(cause, arg1, arg2) {
   try {
-    const items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
+    items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
     const obj = {};
     const _Object = Object;
     const keys = Object.keys(cause);

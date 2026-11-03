@@ -165,7 +165,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
     },
   },
@@ -191,7 +191,7 @@ const entry1 = {
     if (null == arg0) {
       return null;
     } else {
-      const items = [];
+      items = [];
       const items1 = [];
       const obj3 = {};
       let construct = globalThis;
@@ -203,7 +203,7 @@ const entry1 = {
           let tmp = keys[num];
           tmp2 = arg0[tmp];
           if (null != arg1) {
-            if (!c10(arg1, tmp)) {
+            if (!closure_10(arg1, tmp)) {
               obj3[tmp] = tmp2;
             }
             num = num + 1;

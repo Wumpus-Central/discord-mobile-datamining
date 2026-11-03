@@ -52,7 +52,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -167,7 +167,7 @@ export () => {
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {

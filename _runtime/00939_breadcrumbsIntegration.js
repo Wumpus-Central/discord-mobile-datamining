@@ -80,7 +80,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             let tmp9 = serializeAttribute;
             if (typeof serializeAttribute === "string") {
-              const items = [serializeAttribute];
+              items = [serializeAttribute];
               tmp9 = items;
             }
             try {

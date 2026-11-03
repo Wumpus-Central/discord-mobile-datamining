@@ -93,7 +93,7 @@ function instrumentDOM() {
     const listener = _document.addEventListener("click", fn, false);
     const _document2 = tmp(901).WINDOW.document;
     const listener1 = _document2.addEventListener("keypress", fn, false);
-    const items = ["EventTarget", "Node"];
+    items = ["EventTarget", "Node"];
     const item = items.forEach((item) => {
       const tmp3 = _mod901.WINDOW[item];
       let prototype;

@@ -5,7 +5,7 @@ import _mod691 from "metro/00691__.js";
 require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {
-  let items = [];
+  items = [];
   tagName = undefined;
   if (tagName != null) {
     tagName = tagName.tagName;
@@ -125,7 +125,7 @@ export function htmlTreeAsString(arg0) {
   if (arg0) {
     try {
       let tmp = arg0;
-      const items = [];
+      items = [];
       let num2 = 0;
       const _Array = Array;
       let keyAttrs = obj;

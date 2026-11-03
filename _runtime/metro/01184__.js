@@ -16,7 +16,7 @@ export function parseNumberSkeletonFromString(str) {
   } else {
     const parts = str.split(_mod1185.WHITE_SPACE_REGEX);
     const found = parts.filter((item) => item.length > 0);
-    const items = [];
+    items = [];
     let num2 = 0;
     if (0 < found.length) {
       const parts1 = str.split("/");

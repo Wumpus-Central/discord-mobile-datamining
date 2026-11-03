@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels",
+  httpServerLocation: "/assets/modules/custom_typing_indicator/intl",
   scales: [1],
-  hash: "df1cef16fde0e6c3d55877cd503e7686",
-  name: "StageChannel.compiled.messages",
+  hash: "75485347ec24c5ba228339088310deee",
+  name: "CustomTypingIndicator.compiled.messages",
   type: "jsona",
 });

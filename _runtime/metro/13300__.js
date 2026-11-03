@@ -1,13 +1,18 @@
 // _runtime/metro/13300__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_automod/images",
-  width: 32,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "c1e94f3a9063956a896dc2a0d96e8ae1",
-  name: "ic_blocked_chat_bubble_icon",
-  type: "png",
-});
+export function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+  let tmp;
+  if (undefined !== arg0) {
+    if (arg0 < 400) {
+      let str2;
+      if (arg0 >= 500) {
+        str2 = "error";
+      }
+      let str = str2;
+    } else {
+      str = "warning";
+    }
+    tmp = str;
+  }
+  return tmp;
+}

@@ -60,8 +60,8 @@ function _getClientIntegration() {
 
 export const MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
 export () => {
-  let obj = D;
-  if (D === undefined) {
+  let obj = buffer;
+  if (buffer === undefined) {
     obj = {};
   }
   ({ buttonOptions, screenshotButtonOptions, colorScheme, themeLight, themeDark } = obj);

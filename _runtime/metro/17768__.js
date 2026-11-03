@@ -3,11 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0d0b8d91cad785fc29460e6b86930814",
-  name: "FolderPlusIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "1a2ed221615ffab4e022949f6b12481c",
+  name: "bg.messages.1a2ed221615ffab4e022949f6b12481c.compiled.messages",
+  type: "jsona",
 });

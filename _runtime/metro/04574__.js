@@ -1,15 +1,15 @@
 // _runtime/metro/04574__.js
-import module_4573_mod from "04573__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import _typeof_mod from "04421__.js";
+import requiredArgs_mod from "../04422_requiredArgs.js";
 
-let module_4573 = module_4573_mod;
-if (!module_4573) {
-  const obj = { default: module_4573 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4573;
+  tmp3 = _typeof;
 }
-module_4573 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function isSaturday(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_4573.default(arg0) / 1000);
+  return 6 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

@@ -116,7 +116,7 @@ function hookSetter(headers, arg1, arg2, arg3) {
           let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
           let _Object2 = window.Object;
           _Object2.defineProperty(closure_1_0, closure_1_1, obj);
-          return /* F80009 */ function() { ... };
+          return /* F80169 */ function() { ... };
         };
       };
     };
@@ -361,11 +361,11 @@ function getImplementation(arg0) {
   }
 }
 function onRequestAnimationFrame() {
-  const items = [...arguments];
+  items = [...arguments];
   return getImplementation("requestAnimationFrame")(...items);
 }
 function setTimeout$1() {
-  const items = [...arguments];
+  items = [...arguments];
   return getImplementation("setTimeout")(...items);
 }
 function serializeArg(buffer, arg1, arg2) {
@@ -425,7 +425,7 @@ function serializeArg(buffer, arg1, arg2) {
                         const _DataView = DataView;
                         if (buffer instanceof DataView) {
                           obj3 = { rr_type: buffer.constructor.name, args: null };
-                          const items = [serializeArg(buffer.buffer, arg1, arg2), , ];
+                          items = [serializeArg(buffer.buffer, arg1, arg2), , ];
                           ({ byteOffset: arr4[1], byteLength: arr4[2] } = buffer);
                           obj3.args = items;
                           return obj3;
@@ -485,7 +485,7 @@ function initCanvasContextObserver(HTMLCanvasElement, arg1, arg2, arg3, arg4) {
   closure_1 = arg2;
   closure_2 = arg3;
   closure_3 = arg4;
-  let items = [];
+  items = [];
   try {
     items.push(patch(HTMLCanvasElement.HTMLCanvasElement.prototype, "getContext", (arg0) => {
       closure_0 = arg0;
@@ -534,7 +534,7 @@ function patchGLPrototype(headers, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
   closure_4 = arg4;
   closure_5 = arg5;
   closure_6 = arg7;
-  let items = [];
+  items = [];
   const ownPropertyNames = Object.getOwnPropertyNames(headers);
   for (const item10017 of ownPropertyNames) {
     let tmp2 = (function _loop2(item10017) {
@@ -551,10 +551,10 @@ function patchGLPrototype(headers, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
               const self = this;
               items = [...arguments];
               const applyResult = property.apply(this, items);
-              __initData3(applyResult, closure_6, this);
+              dependencyMap2(applyResult, closure_6, this);
               if ("tagName" in this.canvas) {
                 if (!isBlocked(self.canvas, closure_3, closure_4, closure_5, true)) {
-                  if (typeof __initData4 === "function") {
+                  if (typeof closure_4_25 === "function") {
                     property = closure_6;
                     const obj = { type, property, args: items.map((item) => closure_2_24(item, closure_0, closure_1)) };
                     closure_2(self.canvas, obj);
@@ -651,7 +651,7 @@ let closure_8 = (() => {
       }
     }
   };
-  const items = [
+  items = [
     entry,
     {
       key: "getNode",

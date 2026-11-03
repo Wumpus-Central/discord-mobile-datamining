@@ -27,7 +27,7 @@ export function createTransport(bufferSize, arg1) {
   closure_3 = {};
   return {
     send(arg0) {
-      const items = [];
+      items = [];
       bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
         const result = forEachEnvelopeItem.envelopeItemTypeToDataCategory(arg1);
         if (obj2.isRateLimited(closure_3, result)) {

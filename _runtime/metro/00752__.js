@@ -2,7 +2,7 @@
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export function getPossibleEventMessages(message) {
-  const items = [];
+  items = [];
   if (message.message) {
     items.push(message.message);
   }

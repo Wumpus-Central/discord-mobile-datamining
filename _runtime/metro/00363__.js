@@ -39,7 +39,7 @@ function mapStringToNumericComponents(str) {
       num3 = 0;
     }
     const obj2 = { isColor: true, components: null };
-    const items = [(4278190080 & num3) >>> 24, (16711680 & num3) >>> 16, (65280 & num3) >>> 8, (255 & num3) / 255];
+    items = [(4278190080 & num3) >>> 24, (16711680 & num3) >>> 16, (65280 & num3) >>> 8, (255 & num3) / 255];
     obj2.components = items;
     return obj2;
   } else {
@@ -464,7 +464,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
     },
   },
@@ -485,7 +485,7 @@ let items = [
     value: function interpolate(_config) {
       const obj2 = Object.create(AnimatedInterpolation.prototype);
       _classCallCheck(obj2, AnimatedInterpolation);
-      const items = [_config];
+      items = [_config];
       const obj = _getPrototypeOf(AnimatedInterpolation);
       if (metroRequire()) {
         const _Reflect = Reflect;

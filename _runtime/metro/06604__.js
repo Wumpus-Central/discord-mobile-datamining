@@ -1,13 +1,17 @@
 // _runtime/metro/06604__.js
-import registerAsset from "01119__.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
+import RequireObjectCoercible from "../06591_RequireObjectCoercible.js";
+import ToString from "../06605_ToString.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "1fb128da69fdf1c55ef0fbbe555babd7",
-  name: "img_account_sync_league_of_legends_white",
-  type: "svg",
-});
+let closure_2 = callBoundIntrinsic("String.prototype.replace");
+const isMatch = /^\s$/.test("\u180E");
+let closure_3 = isMatch
+  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
+  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
+let closure_4 = isMatch
+  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
+  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+
+export default function trim() {
+  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
+}

@@ -11,7 +11,7 @@ let closure_3 = !(1 & uint8Array[0]);
 export function runtimeHashMessageKey(code) {
   let num = 0;
   const BigIntResult = BigInt(textEncoder.hash(code, 0));
-  const items = [];
+  items = [];
   const rounded = Math.ceil(Math.floor(Math.log2(Number(BigIntResult)) + 1) / 8);
   if (0 < rounded) {
     do {

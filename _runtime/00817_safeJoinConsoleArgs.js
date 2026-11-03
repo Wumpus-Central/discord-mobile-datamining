@@ -21,7 +21,7 @@ export function formatConsoleArgs(args, normalizeDepth, normalizeMaxBreadth) {
     if (typeof tmp(685).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(685).GLOBAL_OBJ.util;
       const format = util.format;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(args, 0);
       let applyResult = HermesBuiltin.apply(items, util);
     }

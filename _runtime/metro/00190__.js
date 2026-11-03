@@ -17,7 +17,7 @@ export default function parseErrorStack(arg0) {
     } else if (global.HermesInternal) {
       defaultResult = defaultResult(192).default(arg0);
       convertHermesStack = function convertHermesStack(defaultResult) {
-        const items = [];
+        items = [];
         const iter = defaultResult.entries[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {

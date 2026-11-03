@@ -249,9 +249,9 @@ const fn = function t(arg0) {
       return obj;
     }
   }
-  function readBlobAsArrayBuffer(response) {
+  function readBlobAsArrayBuffer(arg0) {
     const fileReader = new FileReader();
-    const asArrayBuffer = fileReader.readAsArrayBuffer(response);
+    const asArrayBuffer = fileReader.readAsArrayBuffer(arg0);
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
@@ -1454,7 +1454,7 @@ const fn = function t(arg0) {
                     }
                     self._bodyArrayBuffer = buffer2;
                     const _Blob2 = Blob;
-                    const items = [self._bodyArrayBuffer];
+                    items = [self._bodyArrayBuffer];
                     const blob = new Blob(items);
                     self._bodyInit = blob;
                     tmp = _bodyInit;
@@ -1521,7 +1521,7 @@ const fn = function t(arg0) {
                 return Promise.resolve(self._bodyBlob);
               } else if (self._bodyArrayBuffer) {
                 const _Blob2 = Blob;
-                const items = [self._bodyArrayBuffer];
+                items = [self._bodyArrayBuffer];
                 const blob = new Blob(items);
                 return Promise.resolve(blob);
               } else if (self._bodyFormData) {

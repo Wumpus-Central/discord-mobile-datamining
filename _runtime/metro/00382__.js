@@ -222,7 +222,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
     },
   },
@@ -246,7 +246,7 @@ const entry1 = {
     } else {
       const obj2 = Object.create(AnimatedObject.prototype);
       _classCallCheck(obj2, AnimatedObject);
-      const items = [undefined];
+      items = [undefined];
       let constructor = _getPrototypeOf;
       const obj = _getPrototypeOf(AnimatedObject);
       if (_isNativeReflectConstruct()) {

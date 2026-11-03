@@ -1,7 +1,7 @@
 // _runtime/01211_lowerCamelCase.js
 
 export function lowerCamelCase(name) {
-  const items = [];
+  items = [];
   let num = 0;
   let flag = false;
   if (0 < name.length) {

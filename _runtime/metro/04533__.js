@@ -1,54 +1,42 @@
 // _runtime/metro/04533__.js
-import _typeof_mod from "04294__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
-import startOfUTCISOWeek_mod from "../04531_startOfUTCISOWeek.js";
+import 04534__ from "04534__.js";
+import 04535__ from "04535__.js";
+import 04536__ from "04536__.js";
+import date_mod from "04537__.js";
+import date_mod from "04538__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!module_4534) {
+  const obj = { default: module_4534 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4534;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+if (!module_4535) {
+  const obj2 = { default: module_4535 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4535;
 }
-requiredArgs = tmp5;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj3 = { default: startOfUTCISOWeek };
+if (!module_4536) {
+  const obj3 = { default: module_4536 };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCISOWeek;
+  tmp7 = module_4536;
 }
-startOfUTCISOWeek = tmp7;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function getUTCISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const date = new Date(0);
-  date.setUTCFullYear(uTCFullYear + 1, 0, 4);
-  date.setUTCHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setUTCFullYear(uTCFullYear, 0, 4);
-  date1.setUTCHours(0, 0, 0, 0);
-  const defaultResult2 = startOfUTCISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = uTCFullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = uTCFullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = uTCFullYear - 1;
-    }
-  }
-  return sum;
-};
+export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

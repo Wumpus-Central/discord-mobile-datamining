@@ -18,7 +18,7 @@ export (arg0) => {
   let merged1;
   let fn2;
   let url;
-  let obj2 = { currentRoute: "r" };
+  let obj2 = { currentRoute: "Array" };
   let fn = obj.beforeStartSpan;
   const merged = Object.assign(Object.assign({}, url), obj);
   if (null === fn) {
@@ -69,7 +69,7 @@ export (arg0) => {
       if (!tracePropagationTargets) {
         let tmp5;
         if (!tmpResult.isWeb()) {
-          const items = [/.*/];
+          items = [/.*/];
           tmp5 = items;
         }
         tracePropagationTargets = tmp5;
@@ -86,7 +86,7 @@ export (arg0) => {
       if (currentRoute) {
         const _Object = Object;
         const obj = { view_names: null };
-        const items = [obj2.currentRoute];
+        items = [obj2.currentRoute];
         obj.view_names = items;
         contexts.contexts.app = Object.assign(obj, contexts.contexts.app);
       }

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 51,
-  height: 12,
-  scales: [2, 3],
-  hash: "762c9356acc18a559214b01d8cc7bf33",
-  name: "img_logo_nitro_small_light",
+  httpServerLocation: "/assets/modules/virtual_currency/images/native",
+  width: 576,
+  height: 324,
+  scales: [1],
+  hash: "83d6f52e41f68a6a0f493020b6be93e9",
+  name: "hero-orbs",
   type: "png",
 });

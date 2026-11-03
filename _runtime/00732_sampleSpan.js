@@ -49,7 +49,7 @@ export function sampleSpan(tracesSampler, parentSampled, sampleRand) {
             ".",
         );
       }
-      const items = [false];
+      items = [false];
       return items;
     } else if (parseSampleRateResult) {
       if (sampleRand >= parseSampleRateResult) {

@@ -8,7 +8,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export function applySdkMetadata(_metadata, arg1) {
   let arr = arg2;
   if (arg2 === undefined) {
-    const items = [arg1];
+    items = [arg1];
     arr = items;
   }
   let str = arg3;

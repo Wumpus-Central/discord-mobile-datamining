@@ -224,7 +224,7 @@ let items = [
       if (typeof tmp2 === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_startPosition, _onUpdate, arg2, getInternalState, self];
+      items = [_startPosition, _onUpdate, arg2, getInternalState, self];
       fn(items);
       self._startPosition = _startPosition;
       self._lastPosition = self._startPosition;

@@ -79,7 +79,7 @@ let items = [
   {
     key: "children",
     get() {
-      const items = [this.documentElement];
+      items = [this.documentElement];
       return ReactNativeDocument(129).createHTMLCollection(items);
     },
   },

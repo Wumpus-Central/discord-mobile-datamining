@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 20,
-  height: 20,
+  width: 24,
+  height: 24,
   scales: [1, 2, 3],
-  hash: "e0680d70864324adcf08b4b59ecd7a41",
-  name: "ic_minimize",
+  hash: "640773adfa92ac6570f53272a991a094",
+  name: "ic_move_to_audience",
   type: "png",
 });

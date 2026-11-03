@@ -35,7 +35,7 @@ function visit(arg0, __sentry_skip_normalization__) {
   if (arg4 === undefined) {
     tmp2 = (function memoBuilder() {
       const weakSet = new WeakSet();
-      const items = [
+      items = [
         function memoize(arg0) {
           let flag = weakSet.has(arg0);
           if (!flag) {
@@ -53,7 +53,7 @@ function visit(arg0, __sentry_skip_normalization__) {
   }
   _slicedToArray(tmp2, 2);
   if (null != __sentry_skip_normalization__) {
-    let items = ["boolean", "string"];
+    items = ["boolean", "string"];
     if (!items.includes(typeof __sentry_skip_normalization__)) {
       if (typeof __sentry_skip_normalization__ === "number") {
         let _Number = Number;

@@ -35,7 +35,7 @@ function getChildNodes(parentNode, fn) {
     return [];
   } else {
     const childNodes = require("NativeDOMCxx").getChildNodes(nativeNodeReference);
-    const items = [];
+    items = [];
     for (const item10013 of childNodes) {
       let obj2 = ReadOnlyNode(136);
       let publicInstanceFromInstanceHandle = obj2.getPublicInstanceFromInstanceHandle(item10013);
@@ -140,7 +140,7 @@ let items = [
       const self = this;
       const parentNode = this.parentNode;
       if (null == parentNode) {
-        const items = [self];
+        items = [self];
         const items1 = [items, 0];
         let items2 = items1;
       } else {
@@ -233,7 +233,7 @@ let items = [
       const self = this;
       const parentNode = this.parentNode;
       if (null == parentNode) {
-        const items = [self];
+        items = [self];
         const items1 = [items, 0];
         let items2 = items1;
       } else {

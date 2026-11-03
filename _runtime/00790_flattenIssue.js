@@ -126,7 +126,7 @@ function applyZodErrorsToEvent(arg0, arg1) {
             const obj5 = {};
             const merged2 = Object.assign(exception.exception.values[0]);
             obj5.value = formatIssueMessage(originalException.originalException);
-            const items = [obj5];
+            items = [obj5];
             const values2 = exception.exception.values;
             HermesBuiltin.arraySpread(values2.slice(1), 1);
             obj4.values = items;

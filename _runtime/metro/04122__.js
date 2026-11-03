@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/core/web/SystemTray",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "583747ddf8d5f6f15b7529afcdae5252",
-  name: "SystemTray.compiled.messages",
+  hash: "b438d5eb5cd193436347cd3d85939f38",
+  name: "zh-CN.messages.b438d5eb5cd193436347cd3d85939f38.compiled.messages",
   type: "jsona",
 });

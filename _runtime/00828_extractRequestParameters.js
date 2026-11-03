@@ -140,7 +140,7 @@ export function addResponsesApiAttributes(setAttributes, created_at, recordOutpu
   if (created_at.status) {
     const obj2 = {};
     const _JSON = JSON;
-    const items = [created_at.status];
+    items = [created_at.status];
     obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
     setAttributes.setAttributes(obj2);
   }

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated",
+  width: 64,
+  height: 64,
   scales: [2, 3],
-  hash: "e5fa0ec60fd37b3053a6ee815d7ed0e6",
-  name: "img_nitro_misc_perks_20px",
+  hash: "8c873b9cb75ee33da36a337b20746c97",
+  name: "feedback-modal-sad-desaturated",
   type: "png",
 });

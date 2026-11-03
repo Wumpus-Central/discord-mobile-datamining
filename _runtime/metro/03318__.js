@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3ByZW1pdW1fZ3JvdXA=",
+  httpServerLocation: "/assets/modules/pinot",
   scales: [1],
-  hash: "069e39fba2fabe3fa51e4feb932849eb",
-  name: "zh-TW.messages.069e39fba2fabe3fa51e4feb932849eb.compiled.messages",
+  hash: "87882f4286656bd92108a4f544ba88e5",
+  name: "Pinot.compiled.messages",
   type: "jsona",
 });

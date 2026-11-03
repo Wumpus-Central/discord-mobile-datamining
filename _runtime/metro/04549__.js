@@ -1,131 +1,34 @@
 // _runtime/metro/04549__.js
-import _typeof_mod from "04294__.js";
-import module_4537_mod from "04537__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import 02199__ from "02199__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2199) {
+  const obj2 = { default: module_2199 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2199;
 }
-_typeof = tmp3;
-let module_4537 = module_4537_mod;
-if (!module_4537) {
-  const obj2 = { default: module_4537 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4537;
-}
-module_4537 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function formatISO(arg0, format) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  if (isNaN(defaultResult1.getTime())) {
-    const _RangeError3 = RangeError;
-    const rangeError = new RangeError("Invalid time value");
-    throw rangeError;
-  } else {
-    format = undefined;
-    if (null != format) {
-      format = format.format;
+const date = {
+  ordinalNumber(arg0, arg1) {
+    const NumberResult = Number(arg0);
+    const result = NumberResult % 100;
+    if (20 < result) {
+      const result1 = result % 10;
+      return NumberResult + ":a";
     }
-    let str2 = "extended";
-    if (null !== format) {
-      str2 = "extended";
-      if (undefined !== format) {
-        str2 = format;
-      }
+    return NumberResult + ":e";
+  },
+  era: obj.default({ values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F6re Kristus", "efter Kristus"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1:a kvartalet", "2:a kvartalet", "3:e kvartalet", "4:e kvartalet"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    const StringResult = String(str2);
-    let representation;
-    if (null != format) {
-      representation = format.representation;
-    }
-    let str4 = "complete";
-    if (null !== representation) {
-      str4 = "complete";
-      if (undefined !== representation) {
-        str4 = representation;
-      }
-    }
-    const StringResult1 = String(str4);
-    if ("extended" !== StringResult) {
-      if ("basic" !== StringResult) {
-        const _RangeError2 = RangeError;
-        const rangeError1 = new RangeError("format must be 'extended' or 'basic'");
-        throw rangeError1;
-      }
-    }
-    if ("date" !== StringResult1) {
-      if ("time" !== StringResult1) {
-        if ("complete" !== StringResult1) {
-          const _RangeError = RangeError;
-          const rangeError2 = new RangeError("representation must be 'date', 'time', or 'complete'");
-          throw rangeError2;
-        }
-      }
-    }
-    let str9 = "";
-    if ("extended" === StringResult) {
-      str9 = "-";
-    }
-    let str10 = "";
-    if ("extended" === StringResult) {
-      str10 = ":";
-    }
-    let str12 = "";
-    if ("time" !== StringResult1) {
-      const defaultResult2 = module_4537.default(defaultResult1.getDate(), 2);
-      const concat2 = "".concat;
-      const combined = "".concat(module_4537.default(defaultResult1.getFullYear(), 4));
-      const combined1 = combined.concat(str9);
-      const combined2 = combined1.concat(module_4537.default(defaultResult1.getMonth() + 1, 2));
-      const combined3 = combined2.concat(str9);
-      str12 = combined3.concat(defaultResult2);
-      const defaultResult3 = module_4537.default(defaultResult1.getMonth() + 1, 2);
-    }
-    let combined9 = str12;
-    if ("date" !== StringResult1) {
-      const timezoneOffset = defaultResult1.getTimezoneOffset();
-      let str13 = "Z";
-      if (0 !== timezoneOffset) {
-        const _Math = Math;
-        const absolute = Math.abs(timezoneOffset);
-        const _Math2 = Math;
-        let str14 = "-";
-        const defaultResult4 = module_4537.default(Math.floor(absolute / 60), 2);
-        if (timezoneOffset < 0) {
-          str14 = "+";
-        }
-        const combined4 = "".concat(str14);
-        const combined5 = combined4.concat(defaultResult4, ":");
-        str13 = combined5.concat(module_4537.default(absolute % 60, 2));
-        const defaultResult5 = module_4537.default(absolute % 60, 2);
-      }
-      let str16 = "T";
-      if ("" === str12) {
-        str16 = "";
-      }
-      const items = [module_4537.default(defaultResult1.getHours(), 2), module_4537.default(defaultResult1.getMinutes(), 2), module_4537.default(defaultResult1.getSeconds(), 2)];
-      const concat = "".concat;
-      const joined = items.join(str10);
-      const combined6 = "".concat(str12);
-      const combined7 = combined6.concat(str16);
-      const combined8 = combined7.concat(joined);
-      combined9 = combined8.concat(str13);
-    }
-    return combined9;
-  }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mars", "apr.", "maj", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["S", "M", "T", "O", "T", "F", "L"], short: ["s\u00F6", "m\u00E5", "ti", "on", "to", "fr", "l\u00F6"], abbreviated: ["s\u00F6n", "m\u00E5n", "tis", "ons", "tors", "fre", "l\u00F6r"], wide: ["s\u00F6ndag", "m\u00E5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00F6rdag"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "morg.", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, abbreviated: { am: "f.m.", pm: "e.m.", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, wide: { am: "f\u00F6rmiddag", pm: "eftermiddag", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "eftermiddag", evening: "kv\u00E4ll", night: "natt" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, abbreviated: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, wide: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morgonen", afternoon: "p\u00E5 eftermiddagen", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

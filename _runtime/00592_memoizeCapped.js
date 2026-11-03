@@ -5,7 +5,7 @@ const re0 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|
 const re1 = /\\(\\)?/g;
 
 export default _mod593((str) => {
-  const items = [];
+  items = [];
   if (46 === str.charCodeAt(0)) {
     items.push("");
   }

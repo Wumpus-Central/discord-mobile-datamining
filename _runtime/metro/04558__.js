@@ -1,45 +1,23 @@
 // _runtime/metro/04558__.js
-import _typeof_mod from "04294__.js";
-import startOfYear_mod from "../04513_startOfYear.js";
-import differenceInCalendarDays_mod from "../04456_differenceInCalendarDays.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "bir saniyeden az", other: "{{count}} saniyeden az" }, xSeconds: { one: "1 saniye", other: "{{count}} saniye" }, halfAMinute: "yar\u0131m dakika", lessThanXMinutes: { one: "bir dakikadan az", other: "{{count}} dakikadan az" }, xMinutes: { one: "1 dakika", other: "{{count}} dakika" }, aboutXHours: { one: "yakla\u015F\u0131k 1 saat", other: "yakla\u015F\u0131k {{count}} saat" }, xHours: { one: "1 saat", other: "{{count}} saat" }, xDays: { one: "1 g\u00FCn", other: "{{count}} g\u00FCn" }, aboutXWeeks: { one: "yakla\u015F\u0131k 1 hafta", other: "yakla\u015F\u0131k {{count}} hafta" }, xWeeks: { one: "1 hafta", other: "{{count}} hafta" }, aboutXMonths: { one: "yakla\u015F\u0131k 1 ay", other: "yakla\u015F\u0131k {{count}} ay" }, xMonths: { one: "1 ay", other: "{{count}} ay" }, aboutXYears: { one: "yakla\u015F\u0131k 1 y\u0131l", other: "yakla\u015F\u0131k {{count}} y\u0131l" }, xYears: { one: "1 y\u0131l", other: "{{count}} y\u0131l" }, overXYears: { one: "1 y\u0131ldan fazla", other: "{{count}} y\u0131ldan fazla" }, almostXYears: { one: "neredeyse 1 y\u0131l", other: "neredeyse {{count}} y\u0131l" } };
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function getDayOfYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} önce`;
+        }
+        text = `${tmp} sonra`;
+      }
+    }
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
 export default exports.default;

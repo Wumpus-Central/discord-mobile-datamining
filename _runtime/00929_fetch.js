@@ -64,11 +64,11 @@ export function clearCachedImplementation(fetch) {
   closure_2[fetch] = undefined;
 }
 export function fetch() {
-  const items = [...arguments];
+  items = [...arguments];
   return getNativeImplementation("fetch")(...items);
 }
 export { getNativeImplementation };
 export function setTimeout() {
-  const items = [...arguments];
+  items = [...arguments];
   return getNativeImplementation("setTimeout")(...items);
 }

@@ -5,7 +5,7 @@ export default function arrayFilter(length, fn) {
   if (null != length) {
     num = length.length;
   }
-  const items = [];
+  items = [];
   let num2 = 0;
   let num3 = 0;
   if (0 < num) {
