@@ -24,7 +24,7 @@ export default {
         const obj = {};
         const merged = Object.assign(headers);
         headers = headers.headers;
-        const items = [];
+        items = [];
         for (const key10009 in headers) {
           let items1 = [key10009, headers[key10009]];
           let arr = items.push(items1);
@@ -40,7 +40,7 @@ export default {
     if (__NETWORK_REPORTER__ != null) {
       devToolsRequestId = __NETWORK_REPORTER__.createDevToolsRequestId();
     }
-    let items = [];
+    items = [];
     for (const key10028 in arg3) {
       let items1 = [key10028, arg3[key10028]];
       let arr = items.push(items1);

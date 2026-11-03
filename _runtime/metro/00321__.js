@@ -45,7 +45,7 @@ class CellRenderer {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(CellRenderer);
     tmp3 = closure_4;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -59,13 +59,13 @@ class CellRenderer {
     tmp3Result._separators = {
       highlight() {
             ({ props, props: props2 } = closure_0);
-            const items = [, ];
+            items = [, ];
             ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
             props2.onUpdateSeparators(items, { highlighted: true });
           },
       unhighlight() {
             ({ props, props: props2 } = closure_0);
-            const items = [, ];
+            items = [, ];
             ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
             props2.onUpdateSeparators(items, { highlighted: false });
           },
@@ -76,7 +76,7 @@ class CellRenderer {
             if ("leading" === arg0) {
               prevCellKey = props.prevCellKey;
             }
-            const items = [prevCellKey];
+            items = [prevCellKey];
             props2.onUpdateSeparators(items, arg1);
           }
     };
@@ -162,7 +162,7 @@ let items = [
         tmp2 = tmp3;
       }
       if (inversionStyle) {
-        let items = row;
+        items = row;
         if (horizontal) {
           items = [, ];
           items[0] = items.rowReverse;

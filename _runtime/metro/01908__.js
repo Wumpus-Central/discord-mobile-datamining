@@ -1,17 +1,10 @@
 // === Module 1908: ? ===
 
 // Module 1908
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "bg",
-  pluralRuleFunction(arg0, arg1) {
-    let str = "other";
-    let str2 = "other";
-    if (!arg1) {
-      if (1 == arg0) {
-        str = "one";
-      }
-      str2 = str;
-    }
-    return str2;
-  }
-});
+import mutablesNative from "module_1843" /* 1843 */;
+
+let closure_0 = mutablesNative.isReducedMotionEnabledInSystem();
+
+export function useReducedMotion() {
+  return closure_0;
+}

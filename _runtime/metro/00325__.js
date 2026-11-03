@@ -63,7 +63,7 @@ const entry = {
       if (typeof fn === "function") {
         fn = (items) => fn2.apply(self, items);
       }
-      const items = [
+      items = [
         (arg0, arg1) => {
             fn2._inAsyncStateUpdate = true;
             try {

@@ -141,7 +141,7 @@ export () => {
           const _Error = Error;
           if (obj.isInstanceOf(originalException.originalException, Error)) {
             ({ exceptions, debugImages } = walkErrorTree(getOptions.getOptions().stackParser, closure_1, originalException.originalException, closure_0));
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(exceptions, HermesBuiltin.arraySpread(exception.exception.values, 0));
             exception.exception.values = items;
             exception.debug_meta = exception.debug_meta || {};

@@ -57,7 +57,7 @@ const entry = {
     RCTDeviceEventEmitterImpl(46).beginEvent(() => "RCTDeviceEventEmitter.emit#" + closure_0);
     try {
       const self = this;
-      const items = [RCTDeviceEventEmitterImpl];
+      items = [RCTDeviceEventEmitterImpl];
       HermesBuiltin.arraySpread(substr, 1);
       !(function _superPropGet(RCTDeviceEventEmitterImpl, emit, arg2, arg3) {
         closure_0 = arg2;

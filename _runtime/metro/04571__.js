@@ -1,62 +1,119 @@
 // === Module 4571: ? ===
 
 // Module 4571
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4572_mod from "module_4572" /* 4572 */;
+import _typeof_mod from "module_4421" /* 4421 */;
+import module_4425_mod from "module_4425" /* 4425 */;
+import requiredArgs_mod from "requiredArgs" /* 4422 */;
+import module_4573_mod from "module_4573" /* 4573 */;
+import module_4574_mod from "module_4574" /* 4574 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  let obj = { default: _typeof };
+let module_4572 = module_4572_mod;
+if (!module_4572) {
+  const obj = { default: module_4572 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4572;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  let obj2 = { default: requiredArgs };
+module_4572 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  let obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
-let c2 = 86400000;
+_typeof = tmp5;
+let module_4425 = module_4425_mod;
+if (!module_4425) {
+  const obj3 = { default: module_4425 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4425;
+}
+module_4425 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let module_4573 = module_4573_mod;
+if (!module_4573) {
+  const obj5 = { default: module_4573 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4573;
+}
+module_4573 = tmp11;
+let module_4574 = module_4574_mod;
+if (!module_4574) {
+  const obj6 = { default: module_4574 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4574;
+}
+module_4574 = tmp13;
 
-export default function getOverlappingDaysInIntervals(arg0, arg1) {
-  let obj = arg0;
+export default function addBusinessDays(arg0, arg1) {
+  let diff;
   requiredArgs.default(2, arguments);
-  if (!arg0) {
-    obj = {};
-  }
-  let obj2 = arg1;
-  if (!arg1) {
-    obj2 = {};
-  }
-  const time = _typeof.default(obj.start).getTime();
-  const defaultResult1 = _typeof.default(obj.start);
-  const time1 = _typeof.default(obj.end).getTime();
-  const defaultResult2 = _typeof.default(obj.end);
-  let time2 = _typeof.default(obj2.start).getTime();
-  const defaultResult3 = _typeof.default(obj2.start);
-  let time3 = _typeof.default(obj2.end).getTime();
-  if (time <= time1) {
-    if (time2 <= time3) {
-      if (time < time3) {
-        if (time2 < time1) {
-          if (time3 > time1) {
-            time3 = time1;
-          }
-          if (time2 < time) {
-            time2 = time;
-          }
-          const _Math = Math;
-          return Math.ceil((time3 - time2) / c2);
-        }
-      }
-      return 0;
+  const defaultResult1 = _typeof.default(arg0);
+  let obj2 = module_4572;
+  let defaultResult2 = module_4572.default(defaultResult1);
+  const defaultResult3 = module_4425.default(arg1);
+  if (isNaN(defaultResult3)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    let num3 = 1;
+    const hours = defaultResult1.getHours();
+    if (defaultResult3 < 0) {
+      num3 = -1;
     }
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4425.default(defaultResult3 / 5));
+    const _Math = Math;
+    let absolute = Math.abs(defaultResult3 % 5);
+    if (absolute > 0) {
+      do {
+        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
+        diff = absolute;
+        if (!module_4572.default(defaultResult1)) {
+          diff = absolute - 1;
+        }
+        absolute = diff;
+        obj2 = module_4572;
+      } while (diff > 0);
+    }
+    if (defaultResult2) {
+      defaultResult2 = obj2.default(defaultResult1);
+    }
+    if (defaultResult2) {
+      defaultResult2 = 0 !== defaultResult3;
+    }
+    if (defaultResult2) {
+      if (module_4574.default(defaultResult1)) {
+        let num6 = -1;
+        if (num3 < 0) {
+          num6 = 2;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num6);
+        const date1 = defaultResult1.getDate();
+      }
+      if (module_4573.default(defaultResult1)) {
+        let num7 = -2;
+        if (num3 < 0) {
+          num7 = 1;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num7);
+        const date2 = defaultResult1.getDate();
+      }
+    }
+    defaultResult1.setHours(hours);
+    return defaultResult1;
   }
-  const rangeError = new RangeError("Invalid interval");
-  throw rangeError;
 };
 export default exports.default;

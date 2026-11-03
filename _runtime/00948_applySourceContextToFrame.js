@@ -43,7 +43,7 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
           }
           if (length) {
             if (_document.documentElement.innerHTML) {
-              const items = ["<!DOCTYPE html>", "<html>"];
+              items = ["<!DOCTYPE html>", "<html>"];
               items[HermesBuiltin.arraySpread(str.split("\n"), 2)] = "</html>";
               const item = values.forEach((stacktrace) => {
                 stacktrace = stacktrace.stacktrace;

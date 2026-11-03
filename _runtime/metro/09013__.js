@@ -1,37 +1,54 @@
 // === Module 9013: ? ===
 
 // Module 9013
-import _mod9014 from "module_9014" /* 9014 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod9011 from "module_9011" /* 9011 */;
+import _mod9016 from "module_9016" /* 9016 */;
+import _mod9020 from "module_9020" /* 9020 */;
+import flattenStyle from "module_9014" /* 9014 */;
+import emptyFunction_mod from "module_5180" /* 5180 */;
 
-({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
+const obj = { accessible: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, accessibilityIgnoresInvertColors: null, accessibilityRole: null, accessibilityState: null, accessibilityValue: null, accessibilityLiveRegion: null, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityElementsHidden: null, onAccessibilityAction: null, onAccessibilityTap: null, onMagicTap: null, testID: null, nativeID: null, onResponderGrant: null, onResponderMove: null, onResponderReject: null, onResponderRelease: null, onResponderTerminate: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null, onStartShouldSetResponderCapture: null, onMoveShouldSetResponder: null, onMoveShouldSetResponderCapture: null, hitSlop: null, onLayout: null, pointerEvents: null, style: null, removeClippedSubviews: null, renderToHardwareTextureAndroid: null, shouldRasterizeIOS: null, collapsable: null, needsOffscreenAlphaCompositing: null };
+const module_9016 = flattenStyle(_mod9016);
+obj.accessible = emptyFunction.bool;
+obj.accessibilityLabel = emptyFunction.node;
+obj.accessibilityHint = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
+obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityRole = emptyFunction.oneOf(_mod9020.DeprecatedAccessibilityRoles);
+obj.accessibilityState = emptyFunction.object;
+obj.accessibilityValue = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
+let emptyFunction = emptyFunction_mod;
+obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
+obj.accessibilityViewIsModal = emptyFunction.bool;
+obj.accessibilityElementsHidden = emptyFunction.bool;
+obj.onAccessibilityAction = emptyFunction.func;
+obj.onAccessibilityTap = emptyFunction.func;
+obj.onMagicTap = emptyFunction.func;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.onResponderGrant = emptyFunction.func;
+obj.onResponderMove = emptyFunction.func;
+obj.onResponderReject = emptyFunction.func;
+obj.onResponderRelease = emptyFunction.func;
+obj.onResponderTerminate = emptyFunction.func;
+obj.onResponderTerminationRequest = emptyFunction.func;
+obj.onStartShouldSetResponder = emptyFunction.func;
+obj.onStartShouldSetResponderCapture = emptyFunction.func;
+obj.onMoveShouldSetResponder = emptyFunction.func;
+obj.onMoveShouldSetResponderCapture = emptyFunction.func;
+obj.hitSlop = _mod9011;
+obj.onLayout = emptyFunction.func;
+let emptyFunction = emptyFunction_mod;
+obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
+obj.style = module_9016;
+obj.removeClippedSubviews = emptyFunction.bool;
+obj.renderToHardwareTextureAndroid = emptyFunction.bool;
+obj.shouldRasterizeIOS = emptyFunction.bool;
+obj.collapsable = emptyFunction.bool;
+obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
 
-export () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9014.getInstallationErrorMessage());
-    }
-  }
-}
-export () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9014.getInstallationErrorMessage());
-    }
-  }
-}
+export default obj;

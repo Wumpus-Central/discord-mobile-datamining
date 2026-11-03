@@ -1,7 +1,46 @@
 // === Module 6630: ? ===
 
 // Module 6630
-import registerAsset from "module_1119" /* 1119 */;
+import _mod6631 from "module_6631" /* 6631 */;
+import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 6632 */;
 
+const tmp = _mod6631("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "3aff35dbf63c31bb9e5c01dc80563b2f", name: "img_account_sync_spotify_white", type: "svg" });
+      }
+  };
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4({}, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
+        }
+      };
+      const obj2 = {};
+    }
+  }
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
+}

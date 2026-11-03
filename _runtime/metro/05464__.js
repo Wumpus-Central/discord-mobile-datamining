@@ -1,29 +1,96 @@
 // === Module 5464: ? ===
 
 // Module 5464
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod5465 from "module_5465" /* 5465 */;
-import noop_mod from "module_19" /* 19 */;
+import _modDef5453 from "module_5453" /* 5453 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import PlatformConstants from "module_5465" /* 5465 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod5465.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(5466).BottomSheetBackground;
+const ForceTouchFallback = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
+}
+class ForceTouchFallback {
+  constructor() {
+    self = this;
+    tmp = c2(this, ForceTouchFallback);
+    tmp2 = closure_4;
+    obj = closure_4(ForceTouchFallback);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ForceTouchFallback, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    console.warn(ForceTouchFallback(5431).tagMessage("ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase"));
+  }
+};
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      return this.props.children;
+    }
+  }
+];
+let importDefaultResultResult = _createClass(ForceTouchFallback, items);
+importDefaultResultResult.forceTouchAvailable = false;
+let forceTouchAvailable;
+if (PlatformConstants != null) {
+  forceTouchAvailable = PlatformConstants.forceTouchAvailable;
+}
+const items1 = ["minForce", "maxForce", "feedbackOnActivation"];
+if (forceTouchAvailable) {
+  let obj = { name: "ForceTouchGestureHandler", allowedProps: null, config: null };
+  const items2 = [];
+  HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(fn(5451).baseGestureHandlerProps, 0));
+  obj.allowedProps = items2;
+  obj.config = {};
+  importDefaultResultResult = _modDef5453(obj);
+  const importDefaultResult4 = _modDef5453;
+}
+let flag;
+if (PlatformConstants != null) {
+  flag = PlatformConstants.forceTouchAvailable;
+}
+if (!flag) {
+  flag = false;
+}
+importDefaultResultResult.forceTouchAvailable = flag;
 
-export const BottomSheetBackgroundContainer = memoResult;
+export const forceTouchGestureHandlerProps = items1;
+export const forceTouchHandlerName = "ForceTouchGestureHandler";
+export const ForceTouchGestureHandler = importDefaultResultResult;

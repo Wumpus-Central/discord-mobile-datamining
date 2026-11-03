@@ -1,42 +1,7 @@
 // === Module 12899: ? ===
 
 // Module 12899
-import _mod12836 from "module_12836" /* 12836 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const Comma = _mod12836.TYPE.Comma;
-const obj = {
-  name: "MediaQueryList",
-  structure: null,
-  parse(arg0) {
-    const self = this;
-    const list = this.createList();
-    const scanner = this.scanner;
-    scanner.skipSC();
-    if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
-  }
-};
-const obj2 = { children: null };
-const items = [["MediaQuery"]];
-obj2.children = items;
-obj.structure = obj2;
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "60fba9c9fcd0898552f16b04c6dc8ed1", name: "MaximizeIcon", type: "png" });

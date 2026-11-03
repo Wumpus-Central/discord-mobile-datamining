@@ -24,7 +24,7 @@ export function messagesFromParams(system) {
   ({ messages, input } = system);
   if (typeof system.system === "string") {
     const obj = { role: "system", content: system.system };
-    const items = [obj];
+    items = [obj];
     let items1 = items;
   } else {
     items1 = [];

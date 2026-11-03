@@ -9,7 +9,7 @@ import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
 require = fn;
 const noop = fn(19);
-({ cloneElement: hasOwnProperty, useCallback: metroRequire, useEffect: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10 } = noop);
+({ cloneElement: hasOwnProperty, useCallback: metroRequire, useEffect: closure_7, useMemo: closure_8, useRef: closure_9, useState: closure_10 } = noop);
 const jsx = fn(21).jsx;
 let closure_12 = get_hairlineWidth.create({ fill: { flex: 1 }, header: { zIndex: 10 } });
 
@@ -38,7 +38,7 @@ export default function ScrollViewStickyHeader(ref) {
   const tmp12 = hiddenOnScroll(closure_10(false), 2);
   const first5 = tmp12[0];
   closure_16 = tmp12[1];
-  let items = [scrollAnimatedValue, first2, first1, hiddenOnScroll];
+  items = [scrollAnimatedValue, first2, first1, hiddenOnScroll];
   const tmp14 = closure_6((nativeScrollRef) => {
     if (null != nativeScrollRef) {
       nativeScrollRef.setNextHeaderY = setNextHeaderY;
@@ -51,7 +51,7 @@ export default function ScrollViewStickyHeader(ref) {
     let diffClampResult = null;
     if (true === hiddenOnScroll) {
       const obj2 = { extrapolateLeft: "clamp", inputRange: null, outputRange: null };
-      const items = [first1, first1 + 1];
+      items = [first1, first1 + 1];
       obj2.inputRange = items;
       obj2.outputRange = [0, 1];
       const obj = get_FlatListDefault;
@@ -100,7 +100,7 @@ export default function ScrollViewStickyHeader(ref) {
   closure_21 = tmp21;
   const items2 = [first4, first, first2, first1, scrollViewHeight, scrollAnimatedValue, inverted, tmp18, tmp21, first5];
   first1(() => {
-    const items = [-1, 0];
+    items = [-1, 0];
     const items1 = [0, 0];
     if (first) {
       if (true === inverted) {

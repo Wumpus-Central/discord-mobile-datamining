@@ -45,7 +45,7 @@ export function sampleSpan(tracesSampler, parentSampled, sampleRand) {
         const _HermesInternal2 = HermesInternal;
         debug3.warn("[Tracing] Discarding root span because of invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof tracesSampleRate) + ".");
       }
-      const items = [false];
+      items = [false];
       return items;
     } else if (parseSampleRateResult) {
       if (sampleRand >= parseSampleRateResult) {

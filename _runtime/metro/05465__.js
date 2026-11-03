@@ -1,8 +1,15 @@
 // === Module 5465: ? ===
 
 // Module 5465
-import _mod17 from "module_17" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });
+export default PlatformConstants;

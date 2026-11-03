@@ -174,7 +174,7 @@ export function nodeStackLineParser(arg0) {
   const re1 = /^\s*[-]{4,}$/;
   const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
   const re3 = /at (?:async )?(.+?) \(data:(.*?),/;
-  const items = [
+  items = [
     90,
     (filename) => {
       const match = filename.match(re3);

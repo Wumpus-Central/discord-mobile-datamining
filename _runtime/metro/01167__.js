@@ -122,7 +122,7 @@ export function makeReactFormatter(arg0) {
       result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
     }
   };
-  const items = [
+  items = [
     entry,
     {
       key: "pushLiteralText",

@@ -8,7 +8,7 @@ export default function sha1(str) {
     const _unescape = unescape;
     const _encodeURIComponent = encodeURIComponent;
     const unescapeResult = unescape(encodeURIComponent(str));
-    const items = [];
+    items = [];
     let num = 0;
     let arr = items;
     if (0 < unescapeResult.length) {

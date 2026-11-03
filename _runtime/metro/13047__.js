@@ -1,7 +1,18 @@
 // === Module 13047: ? ===
 
 // Module 13047
-import registerAsset from "module_1119" /* 1119 */;
+import _mod12972 from "module_12972" /* 12972 */;
 
+const String = _mod12972.TYPE.String;
+const obj = {
+  name: "String",
+  structure: { value: String },
+  parse() {
+    return { type: "String", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(String) };
+  },
+  generate(value) {
+    this.chunk(value.value);
+  }
+};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3b7bd4c82e3e8c361f5983d530550253", name: "ArrowSmallDownIcon", type: "png" });
+export default obj;

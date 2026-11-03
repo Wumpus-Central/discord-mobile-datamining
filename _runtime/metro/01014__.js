@@ -64,7 +64,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -112,7 +112,7 @@ export function captureAppStart() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ export function captureAppStart() {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -221,7 +221,7 @@ export function _captureAppStart(_captureAppStartResult3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -258,7 +258,7 @@ export function _captureAppStart(_captureAppStartResult3) {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -374,7 +374,7 @@ export () => {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -596,7 +596,7 @@ export () => {
                         }
                         const obj = closure_1_0(1018);
                       })(closure_129_11, recordFirstStartedActiveRootSpanId);
-                      const items = [closure_129_11];
+                      items = [closure_129_11];
                       closure_0 = num6;
                       if (closure_129_14) {
                         const items1 = [closure_129_14];
@@ -741,7 +741,7 @@ export () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -799,7 +799,7 @@ export () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

@@ -78,7 +78,7 @@ let obj = {
       const result1 = _default.measureLayoutRelativeToParent(arg0, arg1, arg2);
     }
   },
-  dispatchViewManagerCommand(num, arg1, arg2) {
+  dispatchViewManagerCommand(num, arg1, items) {
     if (typeof num !== "number") {
       const _Error = Error;
       const error = new Error("dispatchViewManagerCommand: found null reactTag");
@@ -89,10 +89,10 @@ let obj = {
       const result = tmp5Result.findShadowNodeByTag_DEPRECATED(num);
       if (result) {
         const _HermesInternal = HermesInternal;
-        tmp5Result.dispatchCommand(result, "" + arg1, arg2);
+        tmp5Result.dispatchCommand(result, "" + arg1, items);
       }
     } else {
-      const result1 = _default.dispatchViewManagerCommand(num, arg1, arg2);
+      const result1 = _default.dispatchViewManagerCommand(num, arg1, items);
     }
   }
 };

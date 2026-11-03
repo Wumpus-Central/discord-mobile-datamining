@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 fn(19).useCallback;
 
 export default function useMergeRefs() {
-  const items = [...arguments];
+  items = [...arguments];
   const items1 = [...items];
   return _modDef335(useCallback((current) => {
     dependencyMap = items.map((fn) => {

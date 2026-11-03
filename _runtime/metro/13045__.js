@@ -1,7 +1,25 @@
 // === Module 13045: ? ===
 
 // Module 13045
-import registerAsset from "module_1119" /* 1119 */;
+const obj = {
+  name: "Selector",
+  structure: null,
+  parse() {
+    const self = this;
+    const sequence = this.readSequence(this.scope.Selector);
+    if (null === this.getFirstListNode(sequence)) {
+      self.error("Selector is expected");
+    }
+    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  }
+};
+const obj2 = { children: null };
+const items = [["TypeSelector", "IdSelector", "ClassSelector", "AttributeSelector", "PseudoClassSelector", "PseudoElementSelector", "Combinator", "WhiteSpace"]];
+obj2.children = items;
+obj.structure = obj2;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6f5a76861191f4dd121da59ef71950f", name: "ArrowSmallUpIcon", type: "png" });
+export default obj;

@@ -17,7 +17,7 @@ function processEvent(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -191,7 +191,7 @@ function processEvent(arg0, arg1, arg2) {
               fingerprint = closure_129_0.fingerprint;
               closure_129_2 = fingerprint;
               if (null === fingerprint) {
-                let items = [];
+                items = [];
                 tmp68.fingerprint = items.concat(fingerprint2.filter((item) => {
                   fingerprint = fingerprint.fingerprint;
                   if (null === fingerprint) {
@@ -265,7 +265,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }

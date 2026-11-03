@@ -41,7 +41,7 @@ export default function memoizeOne(arg0, arg1) {
   if (undefined === arg1) {
     closure_1 = areInputsEqual;
   }
-  let items = [];
+  items = [];
   c5 = false;
   return function memoized() {
     let length;

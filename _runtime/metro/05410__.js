@@ -1,14 +1,10 @@
 // === Module 5410: ? ===
 
 // Module 5410
-import ComposedGestureName from "ComposedGestureName" /* 5362 */;
-import _mod5411 from "module_5411" /* 5411 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod5411.useComposedGesture.apply(items1);
-}
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

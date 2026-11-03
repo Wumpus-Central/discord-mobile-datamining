@@ -6,7 +6,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export function severityLevelFromString(level) {
   let str = "warning";
   if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
+    items = ["fatal", "error", "warning", "log", "info", "debug"];
     let str2 = "log";
     if (items.includes(level)) {
       str2 = level;

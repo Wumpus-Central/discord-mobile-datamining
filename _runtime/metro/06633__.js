@@ -1,7 +1,41 @@
 // === Module 6633: ? ===
 
 // Module 6633
-import registerAsset from "module_1119" /* 1119 */;
+import _mod1293 from "module_1293" /* 1293 */;
+import _mod1325 from "module_1325" /* 1325 */;
 
+let closure_2 = Object.assign({ "[[Configurable]]": true, "[[Enumerable]]": true, "[[Get]]": true, "[[Set]]": true, "[[Value]]": true, "[[Writable]]": true });
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "71e7a705f0fc76c9ae279a3ce8454ef4", name: "img_account_sync_xbox_light", type: "svg" });
+export default function isPropertyDescriptor(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      for (const key10001 in arg0) {
+        if (!_mod1325(arg0, key10001)) {
+          continue;
+        } else if (closure_2[key10001]) {
+          continue;
+        } else {
+          let flag = false;
+          return false;
+        }
+        continue;
+      }
+      let tmp4 = _mod1325(obj, "[[Value]]");
+      if (!tmp4) {
+        tmp4 = _mod1325(obj, "[[Writable]]");
+      }
+      let tmp5 = _mod1325(obj, "[[Get]]");
+      if (!tmp5) {
+        tmp5 = _mod1325(obj, "[[Set]]");
+      }
+      if (tmp4) {
+        if (tmp5) {
+          const tmp8 = new _mod1293("Property Descriptors may not be both accessor and data descriptors");
+          throw tmp8;
+        }
+      }
+      return true;
+    }
+  }
+  return false;
+};

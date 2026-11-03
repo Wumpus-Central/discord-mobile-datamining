@@ -28,7 +28,7 @@ export function baggageHeaderToDynamicSamplingContext(arr) {
         const mapped = parts.map((arr) => {
           const index = arr.indexOf("=");
           if (-1 === index) {
-            let items = [];
+            items = [];
           } else {
             const items1 = [arr.slice(0, index), arr.slice(index + 1)];
             items = items1.map((item) => {
@@ -63,7 +63,7 @@ export function baggageHeaderToDynamicSamplingContext(arr) {
       let mapped = parts.map((arr) => {
         const index = arr.indexOf("=");
         if (-1 === index) {
-          let items = [];
+          items = [];
         } else {
           const items1 = [arr.slice(0, index), arr.slice(index + 1)];
           items = items1.map((item) => {
@@ -186,7 +186,7 @@ export function parseBaggageHeader(arr) {
         const mapped = parts.map((arr) => {
           const index = arr.indexOf("=");
           if (-1 === index) {
-            let items = [];
+            items = [];
           } else {
             const items1 = [arr.slice(0, index), arr.slice(index + 1)];
             items = items1.map((item) => {
@@ -221,7 +221,7 @@ export function parseBaggageHeader(arr) {
       const mapped = parts.map((arr) => {
         const index = arr.indexOf("=");
         if (-1 === index) {
-          let items = [];
+          items = [];
         } else {
           const items1 = [arr.slice(0, index), arr.slice(index + 1)];
           items = items1.map((item) => {

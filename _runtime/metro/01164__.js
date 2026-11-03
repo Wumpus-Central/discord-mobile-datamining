@@ -30,7 +30,7 @@ function _isNativeReflectConstruct() {
 function formatToAst(content, arg1) {
   if (typeof content === "string") {
     const obj = { type: AstBuilder.Text, content };
-    const items = [obj];
+    items = [obj];
     let bindFormatValuesResult = items;
   } else {
     const self = this;
@@ -101,7 +101,7 @@ const entry = {
       const result = this.result;
       const push = result.push;
       if (Array.isArray(tmp4)) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(tmp4, 0);
         HermesBuiltin.apply(items, result);
       } else {

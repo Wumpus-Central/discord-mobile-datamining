@@ -295,7 +295,7 @@ class IntersectionObserver {
                       }
                     }
                     if (1 === parts.length) {
-                      const items = [parts[0], parts[0], parts[0], parts[0]];
+                      items = [parts[0], parts[0], parts[0], parts[0]];
                       let obj = items;
                     } else if (2 === length) {
                       const items1 = [parts[0], parts[1], , ];

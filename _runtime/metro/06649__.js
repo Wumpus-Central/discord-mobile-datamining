@@ -1,7 +1,17 @@
 // === Module 6649: ? ===
 
 // Module 6649
-import registerAsset from "module_1119" /* 1119 */;
+import _mod6581 from "module_6581" /* 6581 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "f0c9d04e77af1368c39d93a975075c0b", name: "img_account_sync_epic_dark_and_white", type: "png" });
+export default function Type(arg0) {
+  let str = "Symbol";
+  if (typeof arg0 !== "symbol") {
+    let str2 = "BigInt";
+    if (typeof arg0 !== "bigint") {
+      str2 = _mod6581(arg0);
+    }
+    str = str2;
+  }
+  return str;
+};

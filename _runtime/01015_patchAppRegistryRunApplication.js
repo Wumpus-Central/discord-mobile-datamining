@@ -16,7 +16,7 @@ function patchAppRegistryRunApplication(arg0) {
     fillTyped.fillTyped(AppRegistry, "runApplication", (arg0) => {
       closure_0 = arg0;
       return () => {
-        const items = [...arguments];
+        items = [...arguments];
         const item = closure_0.forEach((fn) => fn());
         return closure_0(...items);
       };
@@ -38,7 +38,7 @@ export () => {
             fillTyped.fillTyped(AppRegistry, "runApplication", (arg0) => {
               closure_0 = arg0;
               return () => {
-                const items = [...arguments];
+                items = [...arguments];
                 const item = closure_0.forEach((fn) => fn());
                 return closure_0(...items);
               };

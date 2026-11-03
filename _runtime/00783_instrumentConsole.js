@@ -16,7 +16,7 @@ function instrumentConsole() {
         tmp(686).fill(tmp(685).GLOBAL_OBJ.console, item, (arg0) => {
           consoleSandbox.originalConsoleMethods[level] = arg0;
           return () => {
-            const items = [...arguments];
+            items = [...arguments];
             level(714).triggerHandlers("console", { args: items, level });
             const obj3 = level(688).originalConsoleMethods[level];
             if (obj3 != null) {

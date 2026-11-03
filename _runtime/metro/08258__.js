@@ -1,84 +1,14 @@
 // === Module 8258: ? ===
 
 // Module 8258
-import _mod8251 from "module_8251" /* 8251 */;
-import _mod8252 from "module_8252" /* 8252 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGTextPath", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const point = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, dx: true, dy: true, x: true, y: true, rotate: true, inlineSize: true, textLength: true, baselineShift: true, lengthAdjust: true, alignmentBaseline: true, verticalAlign: true, href: true, side: true, method: true, midLine: true, spacing: true, startOffset: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = point;
 
-export function isBLEND(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "blend");
-}
-export function isELF(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "elf");
-}
-export function isEXE(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exe");
-}
-export function isMACHO(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "macho");
-}
-export function isINDD(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "indd");
-}
-export function isORC(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "orc");
-}
-export function isPARQUET(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "parquet");
-}
-export function isPDF(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pdf");
-}
-export function isPS(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ps");
-}
-export function isRTF(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "rtf");
-}
-export function isSQLITE(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "sqlite");
-}
-export function isSTL(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "stl");
-}
-export function isTTF(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ttf");
-}
-export function isDOC(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "doc");
-}
-export function isPCAP(fileChunk) {
-  fileChunk = _mod8251.getFileChunk(fileChunk);
-  const FileTypes = _mod8252.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pcap");
-}
+export default module_65.get("RNSVGTextPath", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

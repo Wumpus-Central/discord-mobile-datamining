@@ -1,26 +1,30 @@
 // === Module 4774: ? ===
 
 // Module 4774
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "fr" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" }, narrow: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" }, short: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import startOfSecond_mod from "startOfSecond" /* 4775 */;
+import requiredArgs_mod from "requiredArgs" /* 4422 */;
+
+let startOfSecond = startOfSecond_mod;
+if (!startOfSecond) {
+  const obj = { default: startOfSecond };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfSecond;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+startOfSecond = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" }, narrow: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" }, short: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} et {1}", middle: "{0}, {1}", pair: "{0} et {1}", start: "{0}, {1}" } } }, locale: "fr" };
-prop.push(obj);
+requiredArgs = tmp5;
+
+export default function isSameSecond(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfSecond.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfSecond.default(arg1).getTime();
+};
+export default exports.default;

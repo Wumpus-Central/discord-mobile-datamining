@@ -96,7 +96,7 @@ const entry = {
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
-    const items = [arg0];
+    items = [arg0];
     fn(items);
   }
 };
@@ -164,7 +164,7 @@ let items = [
     value: function __getNativeConfig() {
       const obj = { type: "division", input: null, debugID: null };
       const _a = this._a;
-      const items = [_a.__getNativeTag(), ];
+      items = [_a.__getNativeTag(), ];
       const _b = this._b;
       items[1] = _b.__getNativeTag();
       obj.input = items;

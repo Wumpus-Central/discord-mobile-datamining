@@ -76,7 +76,7 @@ export (arg0) => {
       const tmp5Result = _mod984;
     }
     if (isRootSpanResult) {
-      const items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
+      items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
       const tmp5Result7 = _mod681;
       isRootSpanResult = items.includes(_mod681.spanToJSON(activeSpan).origin || "");
       const tmp10 = _mod681.spanToJSON(activeSpan).origin || "";
@@ -129,7 +129,7 @@ export function getDefaultIdleNavigationSpanOptions() {
   return obj;
 }
 export function isSentryInteractionSpan(activeSpan) {
-  const items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
+  items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
   return items.includes(_mod681.spanToJSON(activeSpan).origin || "");
 }
 export const SCOPE_SPAN_FIELD = "_sentrySpan";

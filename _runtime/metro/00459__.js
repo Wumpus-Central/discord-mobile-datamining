@@ -3,7 +3,7 @@
 // Module 459
 
 export default function _default() {
-  const items = [...arguments];
+  items = [...arguments];
   if (1 === items.length) {
     const _Error = Error;
     if (items[0] instanceof Error) {

@@ -1,58 +1,293 @@
 // === Module 1874: ? ===
 
 // Module 1874
-import _mod1842 from "module_1842" /* 1842 */;
-import "module_19";
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4 } = noop);
-get_ActivityIndicator = fn(17);
-({ StyleSheet, Text: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const doneButtonContainer = StyleSheet.create({ doneButton: { fontWeight: "600", fontSize: 15 }, doneButtonContainer: { marginRight: 16, marginLeft: 8 } });
-
-export default function _default(rippleRadius) {
-  ({ children, onPress } = rippleRadius);
-  let num = rippleRadius.rippleRadius;
-  if (num === undefined) {
-    num = 28;
-  }
-  ({ button, text } = rippleRadius);
-  if (button === undefined) {
-    button = keyboardState(theme[3]);
-  }
-  theme = undefined;
-  keyboardState = onPress(theme[4]).useKeyboardState((appearance) => appearance.appearance);
-  const obj = onPress(theme[4]);
-  theme = onPress(theme[5]).useToolbarContext().theme;
-  let items = [keyboardState, theme];
-  const items1 = [onPress];
-  const obj2 = onPress(theme[5]);
-  const obj3 = { accessibilityHint: "Closes the keyboard", accessibilityLabel: "Done", rippleRadius: num, style: doneButtonContainer.doneButtonContainer, testID: null, theme: null, onPress: null, children: null };
-  const tmp4 = closure_4(() => {
-    const items = [doneButton.doneButton, { color: theme[keyboardState].primary }];
-    return items;
-  }, items);
-  obj3.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
-  obj3.theme = theme;
-  obj3.onPress = closure_3((isDefaultPrevented) => {
-    if (onPress != null) {
-      tmp(isDefaultPrevented);
+let ComplexAnimationBuilder = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1842.KeyboardController;
-      KeyboardController.dismiss();
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class AnimationConfigBuilder {
+  constructor() {
+    self = this;
+    tmp = c2(this, ComplexAnimationBuilder);
+    tmp2 = closure_4;
+    obj = closure_4(ComplexAnimationBuilder);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-  }, items1);
-  const obj4 = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
-  if (children == null) {
-    children = text;
+    return tmp3(self, constructResult);
   }
-  if (children == null) {
-    children = "Done";
+}
+ComplexAnimationBuilder = AnimationConfigBuilder;
+_inherits(AnimationConfigBuilder, fn(1873).BaseAnimationBuilder);
+const entry = {
+  key: "easing",
+  value: function easing(easingV) {
+    this.easingV = easingV;
+    return this;
   }
-  obj4.children = children;
-  obj3.children = <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>{null}</closure_5>;
-  return <button accessibilityHint="Closes the keyboard" accessibilityLabel="Done" rippleRadius={num} style={doneButtonContainer.doneButtonContainer} testID={null} theme={null} onPress={null}>{null}</button>;
 };
+let items = [
+  entry,
+  {
+    key: "rotate",
+    value: function rotate(rotateV) {
+      this.rotateV = rotateV;
+      return this;
+    }
+  },
+  {
+    key: "springify",
+    value: function springify(durationV) {
+      return { durationV, type: ComplexAnimationBuilder(1839).withSpring };
+    }
+  },
+  {
+    key: "dampingRatio",
+    value: function dampingRatio(dampingRatioV) {
+      this.dampingRatioV = dampingRatioV;
+      return this;
+    }
+  },
+  {
+    key: "damping",
+    value: function damping(dampingV) {
+      this.dampingV = dampingV;
+      return this;
+    }
+  },
+  {
+    key: "mass",
+    value: function mass(massV) {
+      this.massV = massV;
+      return this;
+    }
+  },
+  {
+    key: "stiffness",
+    value: function stiffness(stiffnessV) {
+      this.stiffnessV = stiffnessV;
+      return this;
+    }
+  },
+  {
+    key: "overshootClamping",
+    value: function overshootClamping(overshootClampingV) {
+      this.overshootClampingV = overshootClampingV;
+      return this;
+    }
+  },
+  {
+    key: "restDisplacementThreshold",
+    value: function restDisplacementThreshold(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "restSpeedThreshold",
+    value: function restSpeedThreshold(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "energyThreshold",
+    value: function energyThreshold(energyThresholdV) {
+      this.energyThresholdV = energyThresholdV;
+      return this;
+    }
+  },
+  {
+    key: "getAnimationAndConfig",
+    value: function getAnimationAndConfig() {
+      const self = this;
+      ({ easingV, durationV, rotateV } = this);
+      if (this.type) {
+        let withTiming = self.type;
+      } else {
+        withTiming = ComplexAnimationBuilder(1839).withTiming;
+      }
+      const obj = {};
+      ({ dampingV, dampingRatioV, massV, stiffnessV, overshootClampingV, energyThresholdV } = self);
+      if (withTiming === ComplexAnimationBuilder(1839).withTiming) {
+        if (easingV) {
+          obj.easing = easingV;
+        }
+      }
+      items = [{ variableName: "damping", value: dampingV }, { variableName: "dampingRatio", value: dampingRatioV }, { variableName: "mass", value: massV }, { variableName: "stiffness", value: stiffnessV }, { variableName: "overshootClamping", value: overshootClampingV }, { variableName: "energyThreshold", value: energyThresholdV }, { variableName: "duration", value: durationV }, { variableName: "rotate", value: rotateV }];
+      const item = items.forEach((value) => {
+        value = value.value;
+        if (value) {
+          obj[tmp] = value;
+        }
+      });
+      const items1 = [withTiming, obj];
+      return items1;
+    }
+  }
+];
+const entry1 = {
+  key: "easing",
+  value: function easing(arg0) {
+    const instance = this.createInstance();
+    return instance.easing(arg0);
+  }
+};
+let items1 = [
+  entry1,
+  {
+    key: "rotate",
+    value: function rotate(arg0) {
+      const instance = this.createInstance();
+      return instance.rotate(arg0);
+    }
+  },
+  {
+    key: "springify",
+    value: function springify(arg0) {
+      const instance = this.createInstance();
+      return instance.springify(arg0);
+    }
+  },
+  {
+    key: "dampingRatio",
+    value: function dampingRatio(arg0) {
+      const instance = this.createInstance();
+      return instance.dampingRatio(arg0);
+    }
+  },
+  {
+    key: "damping",
+    value: function damping(arg0) {
+      const instance = this.createInstance();
+      return instance.damping(arg0);
+    }
+  },
+  {
+    key: "mass",
+    value: function mass(arg0) {
+      const instance = this.createInstance();
+      return instance.mass(arg0);
+    }
+  },
+  {
+    key: "stiffness",
+    value: function stiffness(arg0) {
+      const instance = this.createInstance();
+      return instance.stiffness(arg0);
+    }
+  },
+  {
+    key: "overshootClamping",
+    value: function overshootClamping(arg0) {
+      const instance = this.createInstance();
+      return instance.overshootClamping(arg0);
+    }
+  },
+  {
+    key: "restDisplacementThreshold",
+    value: function restDisplacementThreshold(arg0) {
+      return this.createInstance();
+    }
+  },
+  {
+    key: "restSpeedThreshold",
+    value: function restSpeedThreshold(arg0) {
+      return this.createInstance();
+    }
+  },
+  {
+    key: "energyThreshold",
+    value: function energyThreshold(arg0) {
+      const instance = this.createInstance();
+      return instance.energyThreshold(arg0);
+    }
+  }
+];
+const importDefaultResultResult = _createClass(AnimationConfigBuilder, items, items1);
+class ComplexAnimationBuilder {
+  constructor() {
+    self = this;
+    tmp = c2(this, ComplexAnimationBuilder);
+    tmp2 = closure_4;
+    obj = closure_4(ComplexAnimationBuilder);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ComplexAnimationBuilder, importDefaultResultResult);
+const entry2 = {
+  key: "withInitialValues",
+  value: function withInitialValues(initialValues) {
+    this.initialValues = initialValues;
+    return this;
+  }
+};
+const items2 = [
+  entry2,
+  {
+    key: "withTargetValues",
+    value: function withTargetValues(targetValues) {
+      this.targetValues = targetValues;
+      return this;
+    }
+  }
+];
+const entry3 = {
+  key: "withInitialValues",
+  value: function withInitialValues(arg0) {
+    const instance = this.createInstance();
+    return instance.withInitialValues(arg0);
+  }
+};
+const items3 = [
+  entry3,
+  {
+    key: "withTargetValues",
+    value: function withTargetValues(arg0) {
+      const instance = this.createInstance();
+      return instance.withTargetValues(arg0);
+    }
+  }
+];
+
+export const AnimationConfigBuilder = importDefaultResultResult;
+export const ComplexAnimationBuilder = _createClass(ComplexAnimationBuilder, items2, items3);

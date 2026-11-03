@@ -1,287 +1,204 @@
 // === Module 1773: ? ===
 
 // Module 1773
-import _slicedToArray_mod from "module_32" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c2 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod1665 from "module_1665" /* 1665 */;
+import _mod1758 from "module_1758" /* 1758 */;
+import normalizeDelay from "normalizeDelay" /* 1770 */;
+import VALID_ANIMATION_DIRECTIONS2 from "VALID_ANIMATION_DIRECTIONS" /* 1774 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _slicedToArray = _slicedToArray_mod;
-let closure_5 = { code: "function pnpm_RollTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{rotate:'-180deg'}],...initialValues},callback:callback};}" };
-class RollInLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: -translateX.windowWidth }, { rotate: "-180deg" }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 16303599954051;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = RollInLeft;
-_inherits(RollInLeft, fn(1720).ComplexAnimationBuilder);
-const entry = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
+require = arg1;
+const dependencyMap = arg6;
+const ERROR_MESSAGES = {
+  invalidAnimationDirection(animationDirection) {
+    return "Invalid animation direction \"" + animationDirection + "\".";
+  },
+  invalidIterationCount(animationIterationCount) {
+    return "Invalid iteration count \"" + animationIterationCount + "\". Expected a number or \"infinite\".";
+  },
+  negativeIterationCount(animationIterationCount) {
+    return "Iteration count cannot be negative, received \"" + animationIterationCount + "\".";
+  },
+  invalidFillMode(animationFillMode) {
+    return "Invalid fill mode \"" + animationFillMode + "\".";
+  },
+  invalidPlayState(animationPlayState) {
+    return "Invalid play state \"" + animationPlayState + "\".";
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(RollInLeft, null, items);
-importDefaultResultResult.presetName = "RollInLeft";
-let closure_6 = { code: "function pnpm_RollTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:values.windowWidth},{rotate:'180deg'}],...initialValues},callback:callback};}" };
-class RollInRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }, ];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: translateX.windowWidth }, { rotate: "180deg" }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 514820713152;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = RollInRight;
-_inherits(RollInRight, fn(1720).ComplexAnimationBuilder);
-const entry1 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-let items1 = [entry1];
-const importDefaultResultResult1 = _createClass(RollInRight, null, items1);
-importDefaultResultResult1.presetName = "RollInRight";
-let closure_7 = { code: "function pnpm_RollTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{rotate:delayFunction(delay,animation('-180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}" };
-class RollOutLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }, ];
-        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("-180deg", closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 1569061887041;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = RollOutLeft;
-_inherits(RollOutLeft, fn(1720).ComplexAnimationBuilder);
-const entry2 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-const items2 = [entry2];
-const importDefaultResultResult2 = _createClass(RollOutLeft, null, items2);
-importDefaultResultResult2.presetName = "RollOutLeft";
-let closure_8 = { code: "function pnpm_RollTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{rotate:delayFunction(delay,animation('180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}" };
-class RollOutRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, RollOutRight);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(RollOutRight);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }, ];
-        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first("180deg", closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9663216530406;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = RollOutRight;
-_inherits(RollOutRight, fn(1720).ComplexAnimationBuilder);
-const entry3 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-const items3 = [entry3];
-const importDefaultResultResult3 = _createClass(RollOutRight, null, items3);
-importDefaultResultResult3.presetName = "RollOutRight";
 
-export const RollInLeft = importDefaultResultResult;
-export const RollInRight = importDefaultResultResult1;
-export const RollOutLeft = importDefaultResultResult2;
-export const RollOutRight = importDefaultResultResult3;
+export { ERROR_MESSAGES };
+export function normalizeDirection() {
+  let str = animationDirection;
+  if (animationDirection === undefined) {
+    str = "normal";
+  }
+  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
+  if (VALID_ANIMATION_DIRECTIONS.has(str)) {
+    return str;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidAnimationDirection(str));
+    throw error;
+  }
+}
+export function normalizeIterationCount() {
+  let num = animationIterationCount;
+  if (animationIterationCount === undefined) {
+    num = 1;
+  }
+  if ("infinite" !== num) {
+    if (num !== Infinity) {
+      const obj = _mod1665;
+      if (obj.isNumber(num)) {
+        if (num < 0) {
+          const _Error2 = Error;
+          const _HermesInternal2 = HermesInternal;
+          const error = new Error("[Reanimated] " + obj.negativeIterationCount(num));
+          throw error;
+        } else {
+          return num;
+        }
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(num));
+        throw error1;
+      }
+    }
+  }
+  return -1;
+}
+export function normalizeFillMode() {
+  let str = animationFillMode;
+  if (animationFillMode === undefined) {
+    str = "none";
+  }
+  const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
+  if (VALID_FILL_MODES.has(str)) {
+    return str;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidFillMode(str));
+    throw error;
+  }
+}
+export function normalizePlayState() {
+  let str = animationPlayState;
+  if (animationPlayState === undefined) {
+    str = "running";
+  }
+  const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
+  if (VALID_PLAY_STATES.has(str)) {
+    return str;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidPlayState(str));
+    throw error;
+  }
+}
+export function normalizeSingleCSSAnimationSettings(animationName) {
+  ({ animationIterationCount, animationDirection, animationFillMode, animationPlayState } = animationName);
+  const obj = { duration: normalizeDelay.normalizeDuration(animationDuration), timingFunction: null, delay: null, iterationCount: null, direction: null, fillMode: null, playState: null };
+  ({ animationDuration, animationTimingFunction, animationDelay } = animationName);
+  obj.timingFunction = normalizeDelay.normalizeTimingFunction(animationTimingFunction);
+  obj.delay = normalizeDelay.normalizeDelay(animationDelay);
+  if (animationIterationCount === undefined) {
+    animationIterationCount = 1;
+  }
+  let num = -1;
+  if ("infinite" !== animationIterationCount) {
+    num = -1;
+    if (animationIterationCount !== Infinity) {
+      if (tmpResult.isNumber(animationIterationCount)) {
+        num = animationIterationCount;
+        if (animationIterationCount < 0) {
+          const _Error2 = Error;
+          const _HermesInternal2 = HermesInternal;
+          const error = new Error("[Reanimated] " + obj.negativeIterationCount(animationIterationCount));
+          throw error;
+        }
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(animationIterationCount));
+        throw error1;
+      }
+      tmpResult = _mod1665;
+    }
+  }
+  obj.iterationCount = num;
+  if (animationDirection === undefined) {
+    animationDirection = "normal";
+  }
+  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
+  if (VALID_ANIMATION_DIRECTIONS.has(animationDirection)) {
+    obj.direction = animationDirection;
+    if (animationFillMode === undefined) {
+      animationFillMode = "none";
+    }
+    const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
+    if (VALID_FILL_MODES.has(animationFillMode)) {
+      obj.fillMode = animationFillMode;
+      if (animationPlayState === undefined) {
+        animationPlayState = "running";
+      }
+      const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
+      if (VALID_PLAY_STATES.has(animationPlayState)) {
+        obj.playState = animationPlayState;
+        return obj;
+      } else {
+        const _Error5 = Error;
+        const _HermesInternal5 = HermesInternal;
+        const error2 = new Error("[Reanimated] " + obj.invalidPlayState(animationPlayState));
+        throw error2;
+      }
+    } else {
+      const _Error4 = Error;
+      const _HermesInternal4 = HermesInternal;
+      const error3 = new Error("[Reanimated] " + obj.invalidFillMode(animationFillMode));
+      throw error3;
+    }
+  } else {
+    const _Error3 = Error;
+    const _HermesInternal3 = HermesInternal;
+    const error4 = new Error("[Reanimated] " + obj.invalidAnimationDirection(animationDirection));
+    throw error4;
+  }
+}
+export function getAnimationSettingsUpdates(normalizedSettings, normalizedSettings2) {
+  const obj = {};
+  if (normalizedSettings.duration !== normalizedSettings2.duration) {
+    obj.duration = normalizedSettings2.duration;
+  }
+  let tmp = normalizedSettings.timingFunction === normalizedSettings2.timingFunction;
+  if (!tmp) {
+    const timingFunction = normalizedSettings.timingFunction;
+    let deepEqualResult = typeof timingFunction === "object";
+    if (typeof timingFunction === "object") {
+      deepEqualResult = _mod1758.deepEqual(normalizedSettings.timingFunction, normalizedSettings2.timingFunction);
+    }
+    tmp = deepEqualResult;
+  }
+  if (!tmp) {
+    obj.timingFunction = normalizedSettings2.timingFunction;
+  }
+  if (normalizedSettings.delay !== normalizedSettings2.delay) {
+    obj.delay = normalizedSettings2.delay;
+  }
+  if (normalizedSettings.iterationCount !== normalizedSettings2.iterationCount) {
+    obj.iterationCount = normalizedSettings2.iterationCount;
+  }
+  if (normalizedSettings.direction !== normalizedSettings2.direction) {
+    obj.direction = normalizedSettings2.direction;
+  }
+  if (normalizedSettings.fillMode !== normalizedSettings2.fillMode) {
+    obj.fillMode = normalizedSettings2.fillMode;
+  }
+  if (normalizedSettings.playState !== normalizedSettings2.playState) {
+    obj.playState = normalizedSettings2.playState;
+  }
+  return obj;
+}

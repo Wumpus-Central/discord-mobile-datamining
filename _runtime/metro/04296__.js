@@ -1,30 +1,7 @@
 // === Module 4296: ? ===
 
 // Module 4296
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 4297 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
-  let tmp3 = obj;
-} else {
-  tmp3 = requiredArgs;
-}
-requiredArgs = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfUTCWeek;
-}
-startOfUTCWeek = tmp5;
 
-export default function isSameUTCWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
-  const time = defaultResult1.getTime();
-  return time === startOfUTCWeek.default(arg1, arg2).getTime();
-};
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=", scales: [1], hash: "46c8788df37c3ca2f7cacf7cb4e086fa", name: "it.messages.46c8788df37c3ca2f7cacf7cb4e086fa.compiled.messages", type: "jsona" });

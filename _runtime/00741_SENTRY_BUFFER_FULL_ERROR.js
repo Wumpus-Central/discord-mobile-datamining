@@ -34,7 +34,7 @@ export function makePromiseBuffer() {
       const _Array = Array;
       const nextPromise = Promise.allSettled(Array.from(tmp)).then(() => true);
       if (arg0) {
-        const items = [nextPromise, ];
+        items = [nextPromise, ];
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
           return setTimeout(() => closure_0(false), closure_0);

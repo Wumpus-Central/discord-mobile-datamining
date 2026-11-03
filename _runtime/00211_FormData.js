@@ -17,7 +17,7 @@ const entry = {
   key: "append",
   value: function append(arg0, arg1) {
     const _parts = this._parts;
-    const items = [arg0, arg1];
+    items = [arg0, arg1];
     _parts.push(items);
   }
 };

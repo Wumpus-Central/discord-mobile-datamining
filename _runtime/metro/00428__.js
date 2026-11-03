@@ -32,7 +32,7 @@ function _isNativeReflectConstruct() {
 let closure_2 = ["onBlur", "onFocus"];
 const cloneElement = fn(19).cloneElement;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 class TouchableHighlightImpl {
   constructor() {
     self = this;
@@ -324,7 +324,7 @@ let items = [
         child = extraStyles2.child;
       }
       const tmp15Result2 = TouchableHighlightImpl(254);
-      const items = [cloneElement(onlyResult, { style: TouchableHighlightImpl(254).compose(onlyResult.props.style, child) }), null];
+      items = [cloneElement(onlyResult, { style: TouchableHighlightImpl(254).compose(onlyResult.props.style, child) }), null];
       obj2.children = items;
       return closure_1_10(tmp17, obj2);
     }

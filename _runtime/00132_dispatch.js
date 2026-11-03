@@ -14,7 +14,7 @@ function dispatch(self, bubbles) {
   setEventDispatchFlag(bubbles, true);
   let arr = (function getEventPath(self, arg1) {
     let tmp = self;
-    const items = [];
+    items = [];
     if (null != self) {
       do {
         let arr = items.push(tmp);
@@ -103,7 +103,7 @@ function invoke(_null, type, arg2) {
     if (obj4 != null) {
       value = obj4.get(type.type);
     }
-    const items = [];
+    items = [];
     if (null != tmp14) {
       const obj5 = { callback: tmp14, passive: false, once: false, removed: false };
       items.push(obj5);

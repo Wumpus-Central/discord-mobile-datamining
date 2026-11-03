@@ -133,7 +133,7 @@ function bindFormatValuesWithBuilder(builder) {
                 const _Array = Array;
                 let tmp55 = tmp12Result;
                 if (!Array.isArray(tmp12Result)) {
-                  const items = [tmp12Result];
+                  items = [tmp12Result];
                   tmp55 = items;
                 }
                 for (const item10128 of tmp55) {
@@ -315,7 +315,7 @@ function bindFormatValues(Builder) {
                   const _Array = Array;
                   let tmp55 = tmp12Result;
                   if (!Array.isArray(tmp12Result)) {
-                    const items = [tmp12Result];
+                    items = [tmp12Result];
                     tmp55 = items;
                   }
                   for (const item10128 of tmp55) {

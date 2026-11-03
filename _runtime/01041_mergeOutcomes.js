@@ -3,7 +3,7 @@
 // Module 1041 (mergeOutcomes)
 
 export function mergeOutcomes() {
-  const items = [...arguments];
+  items = [...arguments];
   const map = new Map();
   function process(reason) {
     const combined = "" + reason.reason + ":" + reason.category;

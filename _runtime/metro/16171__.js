@@ -1,5 +1,4 @@
 // === Module 16171: ? ===
 
 // Module 16171
-
-export default ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "toLocaleString", "toString", "valueOf"];
+Object.defineProperty(Intl, "Locale", { value: fn(16172).Locale, writable: true, enumerable: false, configurable: true });

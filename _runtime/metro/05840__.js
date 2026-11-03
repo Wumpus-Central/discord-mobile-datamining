@@ -1,17 +1,7 @@
 // === Module 5840: ? ===
 
 // Module 5840
-import identity from "identity" /* 549 */;
-import _mod668 from "module_668" /* 668 */;
-import constant from "constant" /* 5841 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
 
-export default fn;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b4d386a6c709f08f81d6e286fdb2ebc4", name: "FriendsIcon", type: "png" });

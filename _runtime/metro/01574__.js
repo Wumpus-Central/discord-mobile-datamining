@@ -1,18 +1,25 @@
 // === Module 1574: ? ===
 
 // Module 1574
-import NavigationBuilderContext from "NavigationBuilderContext" /* 1527 */;
-import _mod1575 from "module_1575" /* 1575 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = arg1;
 
-export function useScheduleUpdate(arg0) {
-  closure_0 = arg0;
-  const context = noop.useContext(NavigationBuilderContext.NavigationBuilderContext);
-  ({ scheduleUpdate: dependencyMap, flushUpdates } = context);
-  const insertionEffect = noop.useInsertionEffect(() => {
-    dependencyMap(closure_0);
-  });
-  const clientLayoutEffect = _mod1575.useClientLayoutEffect(flushUpdates);
+export function useRegisterNavigator() {
+  const first = _slicedToArray(noop.useState(() => first(context[2]).nanoid()), 1)[0];
+  context = noop.useContext(first(context[3]).SingleNavigatorContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't register the navigator. Have you wrapped your app with 'NavigationContainer'?\n\nThis can also happen if there are multiple copies of '@react-navigation' packages installed.");
+    throw error;
+  } else {
+    items = [context, first];
+    const effect = noop.useEffect(() => {
+      const unregister = context.unregister;
+      context.register(unregister);
+      return () => unregister(first);
+    }, items);
+    return first;
+  }
 }

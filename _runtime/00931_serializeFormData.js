@@ -5,8 +5,8 @@ import _mod681 from "module_681" /* 681 */;
 import _mod897 from "module_897" /* 897 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function serializeFormData(size) {
-  return new URLSearchParams(size).toString();
+function serializeFormData(arg0) {
+  return new URLSearchParams(arg0).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
@@ -20,7 +20,7 @@ export function getBodyString(fetchRequestArgBody, arg1) {
   }
   try {
     if (typeof fetchRequestArgBody === "string") {
-      const items = [fetchRequestArgBody];
+      items = [fetchRequestArgBody];
       return items;
     } else {
       const _URLSearchParams = URLSearchParams;
@@ -53,7 +53,7 @@ export function getBodyString(fetchRequestArgBody, arg1) {
   }
 }
 export function getFetchRequestArgBody() {
-  let items = input;
+  items = input;
   if (input === undefined) {
     items = [];
   }

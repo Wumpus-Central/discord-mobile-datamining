@@ -49,7 +49,7 @@ export () => {
       mask = [];
     }
     const obj4 = { mask: null, unmask: null };
-    const items = [".sentry-react-native-mask"];
+    items = [".sentry-react-native-mask"];
     HermesBuiltin.arraySpread(mask, 1);
     obj4.mask = items;
     const tmp8 = obj.unmask || [];

@@ -65,7 +65,7 @@ class FlatList {
         num = 1;
       }
       if (num > 1) {
-        const items = [];
+        items = [];
         for (let num2 = 0; num2 < num; num2 = num2 + 1) {
           let sum = arg1 * num + num2;
           if (sum < arg0.length) {
@@ -193,7 +193,7 @@ class FlatList {
       obj1 = { viewabilityConfig: null, onViewableItemsChanged: null };
       obj1.viewabilityConfig = tmp3Result.props.viewabilityConfig;
       obj1.onViewableItemsChanged = tmp3Result._createOnViewableItemsChanged(() => {
-        const items = [...arguments];
+        items = [...arguments];
         FlatList(38)(closure_0.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
         const props = closure_0.props;
         const items1 = [...items];

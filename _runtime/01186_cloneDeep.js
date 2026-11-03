@@ -62,7 +62,7 @@ function cloneDeep(arr) {
                                       if (typeof arr === "object") {
                                         let _Object = Object;
                                         let keys = Object.keys(arr);
-                                        __spreadArrayResult = keys.reduce(/* F80713 */ function() { ... }, {});
+                                        __spreadArrayResult = keys.reduce(/* F80873 */ function() { ... }, {});
                                       }
                                     }
                                   }
@@ -110,7 +110,7 @@ function hoistSelectors(arg0) {
         break;
       } else {
         if (tmp(tmp2[1]).isTagElement(arr)) {
-          let items = [arr];
+          items = [arr];
           if (items.find((children) => {
             let tmp4 = closure_1_0(closure_1_1[1]).isPluralElement(children) || closure_1_0(closure_1_1[1]).isSelectElement(children);
             if (!tmp4) {
@@ -135,7 +135,7 @@ function hoistSelectors(arg0) {
                                 let isTagElementResult = closure_1_0(closure_1_1[1]).isTagElement(children);
                                 if (isTagElementResult) {
                                   children = children.children;
-                                  isTagElementResult = children.find(/* F80715 */ function() { ... });
+                                  isTagElementResult = children.find(/* F80875 */ function() { ... });
                                 }
                                 tmp4 = isTagElementResult;
                               }
@@ -225,7 +225,7 @@ function hoistSelectors(arg0) {
                                         if (typeof arr === "object") {
                                           let _Object = Object;
                                           let keys = Object.keys(arr);
-                                          __spreadArrayResult = keys.reduce(/* F80713 */ function() { ... }, {});
+                                          __spreadArrayResult = keys.reduce(/* F80873 */ function() { ... }, {});
                                         }
                                       }
                                     }
@@ -272,7 +272,7 @@ function hoistSelectors(arg0) {
 export { hoistSelectors };
 export function isStructurallySame(arr, arr2) {
   const map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   closure_129_0 = map;
   const item = arr.forEach((value) => {
     options = value;
@@ -296,7 +296,7 @@ export function isStructurallySame(arr, arr2) {
                     let item = keys.forEach((item) => {
                       let value = options.options[item].value;
                       options = closure_2_0;
-                      item = value.forEach(/* F80716 */ function() { ... });
+                      item = value.forEach(/* F80876 */ function() { ... });
                     });
                   }
                   if (tmp(dependencyMap[1]).isTagElement(value)) {
@@ -310,12 +310,12 @@ export function isStructurallySame(arr, arr2) {
                             let result = options.set(value.value, value.type);
                             let _Object = Object;
                             let keys = Object.keys(value.options);
-                            let item = keys.forEach(/* F121186 */ function() { ... });
+                            let item = keys.forEach(/* F120889 */ function() { ... });
                           }
                           if (tmp(dependencyMap[1]).isTagElement(value)) {
                             let result1 = options.set(value.value, value.type);
                             let children = value.children;
-                            let item1 = children.forEach(/* F80716 */ function() { ... });
+                            let item1 = children.forEach(/* F80876 */ function() { ... });
                           }
                           tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                         }
@@ -368,12 +368,12 @@ export function isStructurallySame(arr, arr2) {
                             let result = options.set(value.value, value.type);
                             let _Object = Object;
                             let keys = Object.keys(value.options);
-                            let item = keys.forEach(/* F121186 */ function() { ... });
+                            let item = keys.forEach(/* F120889 */ function() { ... });
                           }
                           if (tmp(dependencyMap[1]).isTagElement(value)) {
                             let result1 = options.set(value.value, value.type);
                             let children = value.children;
-                            let item1 = children.forEach(/* F80716 */ function() { ... });
+                            let item1 = children.forEach(/* F80876 */ function() { ... });
                           }
                           tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                         }
@@ -404,7 +404,7 @@ export function isStructurallySame(arr, arr2) {
                           let item = keys.forEach((item) => {
                             let value = options.options[item].value;
                             options = closure_2_0;
-                            item = value.forEach(/* F80716 */ function() { ... });
+                            item = value.forEach(/* F80876 */ function() { ... });
                           });
                         }
                         if (tmp(dependencyMap[1]).isTagElement(value)) {
@@ -418,12 +418,12 @@ export function isStructurallySame(arr, arr2) {
                                   let result = options.set(value.value, value.type);
                                   let _Object = Object;
                                   let keys = Object.keys(value.options);
-                                  let item = keys.forEach(/* F121186 */ function() { ... });
+                                  let item = keys.forEach(/* F120889 */ function() { ... });
                                 }
                                 if (tmp(dependencyMap[1]).isTagElement(value)) {
                                   let result1 = options.set(value.value, value.type);
                                   let children = value.children;
-                                  let item1 = children.forEach(/* F80716 */ function() { ... });
+                                  let item1 = children.forEach(/* F80876 */ function() { ... });
                                 }
                                 tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                               }
@@ -503,7 +503,7 @@ export function isStructurallySame(arr, arr2) {
                     let item = keys.forEach((item) => {
                       let value = options.options[item].value;
                       options = closure_2_0;
-                      item = value.forEach(/* F80716 */ function() { ... });
+                      item = value.forEach(/* F80876 */ function() { ... });
                     });
                   }
                   if (tmp(dependencyMap[1]).isTagElement(value)) {
@@ -517,12 +517,12 @@ export function isStructurallySame(arr, arr2) {
                             let result = options.set(value.value, value.type);
                             let _Object = Object;
                             let keys = Object.keys(value.options);
-                            let item = keys.forEach(/* F121186 */ function() { ... });
+                            let item = keys.forEach(/* F120889 */ function() { ... });
                           }
                           if (tmp(dependencyMap[1]).isTagElement(value)) {
                             let result1 = options.set(value.value, value.type);
                             let children = value.children;
-                            let item1 = children.forEach(/* F80716 */ function() { ... });
+                            let item1 = children.forEach(/* F80876 */ function() { ... });
                           }
                           tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                         }
@@ -575,12 +575,12 @@ export function isStructurallySame(arr, arr2) {
                             let result = options.set(value.value, value.type);
                             let _Object = Object;
                             let keys = Object.keys(value.options);
-                            let item = keys.forEach(/* F121186 */ function() { ... });
+                            let item = keys.forEach(/* F120889 */ function() { ... });
                           }
                           if (tmp(dependencyMap[1]).isTagElement(value)) {
                             let result1 = options.set(value.value, value.type);
                             let children = value.children;
-                            let item1 = children.forEach(/* F80716 */ function() { ... });
+                            let item1 = children.forEach(/* F80876 */ function() { ... });
                           }
                           tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                         }
@@ -611,7 +611,7 @@ export function isStructurallySame(arr, arr2) {
                           let item = keys.forEach((item) => {
                             let value = options.options[item].value;
                             options = closure_2_0;
-                            item = value.forEach(/* F80716 */ function() { ... });
+                            item = value.forEach(/* F80876 */ function() { ... });
                           });
                         }
                         if (tmp(dependencyMap[1]).isTagElement(value)) {
@@ -625,12 +625,12 @@ export function isStructurallySame(arr, arr2) {
                                   let result = options.set(value.value, value.type);
                                   let _Object = Object;
                                   let keys = Object.keys(value.options);
-                                  let item = keys.forEach(/* F121186 */ function() { ... });
+                                  let item = keys.forEach(/* F120889 */ function() { ... });
                                 }
                                 if (tmp(dependencyMap[1]).isTagElement(value)) {
                                   let result1 = options.set(value.value, value.type);
                                   let children = value.children;
-                                  let item1 = children.forEach(/* F80716 */ function() { ... });
+                                  let item1 = children.forEach(/* F80876 */ function() { ... });
                                 }
                                 tmp4 = tmp(dependencyMap[1]).isPluralElement(value) || tmp(dependencyMap[1]).isSelectElement(value);
                               }

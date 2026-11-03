@@ -1,7 +1,12 @@
 // === Module 5421: ? ===
 
 // Module 5421
-import _modDef5422 from "module_5422" /* 5422 */;
+const global = arg0;
 
-
-export default _modDef5422;
+export function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+}

@@ -7,7 +7,7 @@ import registerSpanErrorInstrumentation from "module_681" /* 681 */;
 function _wrappedIsEnabled(arg0) {
   closure_0 = arg0;
   return function() {
-    const items = [...arguments];
+    items = [...arguments];
     const first = items[0];
     const applyResult = closure_0.apply(this, items);
     if (typeof first === "string") {

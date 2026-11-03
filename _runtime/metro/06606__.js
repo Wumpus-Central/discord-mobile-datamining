@@ -1,7 +1,52 @@
 // === Module 6606: ? ===
 
 // Module 6606
-import registerAsset from "module_1119" /* 1119 */;
+import _mod1472 from "module_1472" /* 1472 */;
+import defineDataProperty from "defineDataProperty" /* 1473 */;
+import keys2 from "keys2" /* 6607 */;
 
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  const _Symbol = Symbol;
+  tmp = typeof Symbol("foo") === "symbol";
+}
+let closure_2 = tmp;
+const tmp2 = _mod1472();
+let closure_5 = tmp2;
+function defineProperty(arg0, arg1, arg2, arg3) {
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "b8491165af3ebfd07b4e58fba6104e2b", name: "img_account_sync_steam_white", type: "png" });
+}
+function defineProperties(prototype, ownPropertyDescriptors) {
+  const arr = keys2(ownPropertyDescriptors);
+  if (!closure_2) {
+    let num = 0;
+    if (0 < arr.length) {
+      while (typeof defineProperty === "function") {
+        if (!(tmp7 in prototype)) {
+          let tmp14 = defineDataProperty;
+          if (closure_5) {
+            let flag2 = true;
+            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
+          } else {
+            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
+          }
+        } else if (true !== tmp9) {
+          if (typeof tmp9 === "function") {
+            let call2 = toString.call;
+          }
+        }
+        num = num + 1;
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    const call = concat.call;
+    const _Object = Object;
+    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
+    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
+  }
+  const tmp = arguments.length > 2 ? arguments[2] : {};
+}
+defineProperties.supportsDescriptors = tmp2;
+
+export default defineProperties;

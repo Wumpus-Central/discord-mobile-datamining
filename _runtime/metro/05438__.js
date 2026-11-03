@@ -1,122 +1,96 @@
 // === Module 5438: ? ===
 
 // Module 5438
-import _modDef5436 from "module_5436" /* 5436 */;
+import GestureDetectorType from "GestureDetectorType" /* 5439 */;
+import NativeDetector2 from "NativeDetector" /* 5481 */;
+import VirtualDetector from "VirtualDetector" /* 5505 */;
+import transformLongPressProps from "transformLongPressProps" /* 5507 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TouchableOpacity = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-class TouchableOpacity {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TouchableOpacity);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TouchableOpacity);
-    tmp3 = metroRequire;
-    if (closure_13()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
-      let flag = closure_0.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj.useNativeDriver = flag;
-      React6.timing(closure_0.opacity, obj).start();
-      const timingResult = React6.timing(closure_0.opacity, obj);
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableOpacity(5436).TOUCHABLE_STATE.BEGAN) {
-        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
-        }
-        tmp3 = arg1 !== TouchableOpacity(5436).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableOpacity(5436).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(TouchableOpacity, fn(19).Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
-    }
-    const obj = {};
-    const tmp = _objectWithoutProperties(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
-    } else {
-      children = <closure_1_11 />;
-    }
-    obj.children = children;
-    return jsx(_modDef5436, {});
-  }
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(TouchableOpacity, items);
-let obj = {};
-let merged = Object.assign(_modDef5436.defaultProps);
-obj.activeOpacity = 0.2;
-importDefaultResultResult.defaultProps = obj;
+const require = globalThis.__r;
 
-export default importDefaultResultResult;
+require = fn;
+let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+const useEffect = fn(19).useEffect;
+const jsx = fn(21).jsx;
+
+export default function createNativeWrapper(displayName, arg1) {
+  _require = displayName;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
+    Native = require("GestureDetectorType").GestureDetectorType.Native;
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
+    }
+    str = name;
+  }
+  if (!str) {
+    let tmp4 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp4 = displayName;
+    }
+    str = tmp4;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      keys = Object.keys(closure_3(displayName, closure_2));
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj1 = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj1;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(/* F122647 */ function() { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      if (undefined === gestureHandlerProps.disableReanimated) {
+        flag = true;
+        gestureHandlerProps.disableReanimated = true;
+      }
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj3 = closure_0(closure_1[5]);
+      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
+      closure_2 = nativeGesture;
+      items = [, ];
+      items[0] = nativeGesture;
+      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      tmp6 = useEffect(/* F122648 */ function() { ... }, items);
+      tmp7 = Native;
+      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
+      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
+        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
+      } else {
+        NativeDetector = tmp3(tmp4[7]).NativeDetector;
+      }
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
+      merged1 = Object.assign(childProps);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
+};

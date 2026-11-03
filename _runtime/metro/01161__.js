@@ -16,7 +16,7 @@ export function parseNumberSkeletonFromString(str) {
     const error = new Error("Number skeleton cannot be empty");
     throw error;
   } else {
-    const items = [];
+    items = [];
     const parts = str.split(WHITE_SPACE_REGEX.WHITE_SPACE_REGEX);
     const found = parts.filter((item) => item.length > 0);
     let num2 = 0;

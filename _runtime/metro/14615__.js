@@ -1,7 +1,21 @@
 // === Module 14615: ? ===
 
 // Module 14615
-import registerAsset from "module_1119" /* 1119 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "04e956cfab49d64a3f8a18b66aa5fc1e", name: "ChatSmileIcon", type: "png" });
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("module_14608")) {
+  arg5[key10017] = require("module_14608")[key10017];
+  continue;
+}
+for (const key10021 in require("module_14609")) {
+  arg5[key10021] = require("module_14609")[key10021];
+  continue;
+}
+for (const key10025 in require("module_14616")) {
+  arg5[key10025] = require("module_14616")[key10025];
+  continue;
+}

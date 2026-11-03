@@ -10,7 +10,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export function createClientReportEnvelope(discarded_events, dsn, arg2) {
   let result = arg2;
-  const items = [{ type: "client_report" }, ];
+  items = [{ type: "client_report" }, ];
   if (!arg2) {
     result = dateTimestampInSeconds.dateTimestampInSeconds();
   }

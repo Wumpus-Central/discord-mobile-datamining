@@ -91,7 +91,7 @@ class AnimatedProps {
     tmp2 = closure_7;
     obj = closure_7(AnimatedProps);
     tmp3 = metroRequire;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -243,7 +243,7 @@ let items = [
   {
     key: "__getNativeAnimatedEventTuples",
     value: function __getNativeAnimatedEventTuples() {
-      const items = [];
+      items = [];
       const keys = Object.keys(this._props);
       for (let num = 0; num < length; num = num + 1) {
         let tmp = keys[num];
@@ -335,7 +335,7 @@ let items = [
         if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
         }
-        const items = [arg0];
+        items = [arg0];
         fn(items);
         if (null != self._target) {
           const _target = self._target;

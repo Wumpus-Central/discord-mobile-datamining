@@ -1,38 +1,42 @@
 // === Module 4476: ? ===
 
 // Module 4476
-import _typeof_mod from "module_4477" /* 4477 */;
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
-
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'pro\u0161lu nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'pro\u0161lu srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'pro\u0161lu subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
     }
+  },
+  yesterday: "'ju\u010Der u' p",
+  today: "'danas u' p",
+  tomorrow: "'sutra u' p",
+  nextWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'idu\u0107u nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'idu\u0107u srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'idu\u0107u subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  other: "P"
+};
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
   }
-  return !isNaN(Number(_typeof.default(num)));
+  return tmpResult;
 };
 export default exports.default;

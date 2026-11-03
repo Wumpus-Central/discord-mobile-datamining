@@ -7,7 +7,7 @@ import _mod691 from "module_691" /* 691 */;
 require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {
-  let items = [];
+  items = [];
   tagName = undefined;
   if (tagName != null) {
     tagName = tagName.tagName;
@@ -127,7 +127,7 @@ export function htmlTreeAsString(arg0) {
   if (arg0) {
     try {
       let tmp = arg0;
-      const items = [];
+      items = [];
       let num2 = 0;
       const _Array = Array;
       let keyAttrs = obj;

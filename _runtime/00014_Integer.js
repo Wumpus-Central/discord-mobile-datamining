@@ -2208,7 +2208,7 @@ function multiplyKaratsuba(substr, substr2) {
     const substr3 = substr2.slice(0, rounded);
     const tmp22 = multiplyKaratsuba(substr1, substr3);
     const tmp23 = multiplyKaratsuba(substr, substr2);
-    const items = [];
+    items = [];
     let diff = tmp28 - 1;
     const tmp25 = addAny(substr1, substr);
     if (+rounded > 0) {
@@ -2278,7 +2278,7 @@ function multiplySmallAndArray(absolute, value, sign) {
     }
   } else {
     if (absolute < 10000000) {
-      const items = [absolute];
+      items = [absolute];
       let items2 = items;
     } else if (absolute < 100000000000000) {
       items1 = [absolute % 10000000, ];
@@ -2349,7 +2349,7 @@ function divModAny(self, items1) {
     const result = self.value / iter.value;
     const obj = Object.create(NativeBigInt.prototype);
     obj.value = result;
-    const items = [obj, ];
+    items = [obj, ];
     const result1 = self.value % iter.value;
     const obj2 = Object.create(NativeBigInt.prototype);
     obj2.value = result1;
@@ -2885,7 +2885,7 @@ function bitwise(isNegative, arg1, fn) {
   if (isNegativeResult1) {
     notResult1 = obj.not();
   }
-  const items = [];
+  items = [];
   let tmp3 = notResult1;
   let tmp4 = notResult;
   if (!notResult.isZero()) {
@@ -3283,7 +3283,7 @@ function parseStringValue(arr) {
           obj10.value = BigInt(text);
           return obj10;
         } else {
-          const items = [];
+          items = [];
           length = str2.length;
           let diff1 = length - 7;
           if (length > 0) {
@@ -5465,7 +5465,7 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     return tmpResult4.add(Math.floor(random() * addResult));
   } else {
     value = toBase(addResult, 10000000).value;
-    const items = [];
+    items = [];
     let num3 = 0;
     let flag2 = true;
     if (0 < value.length) {

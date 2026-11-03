@@ -51,7 +51,7 @@ export function parseDateTimeSkeleton(str) {
         throw rangeError1;
       case "M":
         let diff = length - 1;
-        let items = ["numeric", "2-digit", "short", "long", "narrow"];
+        items = ["numeric", "2-digit", "short", "long", "narrow"];
         obj.month = items[diff];
       break;
       case "L":

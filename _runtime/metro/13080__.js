@@ -1,21 +1,7 @@
 // === Module 13080: ? ===
 
 // Module 13080
-import _mod13055 from "module_13055" /* 13055 */;
-import ScopeClass from "ScopeClass" /* 13075 */;
+import _mod13079 from "module_13079" /* 13079 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getDefaultCurrentScope() {
-  return _mod13055.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getDefaultIsolationScope() {
-  return _mod13055.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
+export default _mod13079;

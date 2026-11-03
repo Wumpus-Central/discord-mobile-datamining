@@ -267,7 +267,7 @@ if (typeof performance === "object") {
   let c8 = 1;
   let c9 = null;
   let num2 = 3;
-  let c10 = 3;
+  let closure_10 = 3;
   let c11 = false;
   let c12 = false;
   let c13 = false;

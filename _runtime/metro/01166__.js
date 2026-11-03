@@ -27,11 +27,11 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToPlainString(k2UNz_, time) {
-  let first = k2UNz_;
-  if (typeof k2UNz_ !== "string") {
+function formatToPlainString(ZGVL3g, time) {
+  let first = ZGVL3g;
+  if (typeof ZGVL3g !== "string") {
     const self = this;
-    first = this.bindFormatValues(_moduleResult, k2UNz_, time)[0];
+    first = this.bindFormatValues(_moduleResult, ZGVL3g, time)[0];
   }
   return first;
 }
@@ -95,7 +95,7 @@ let items = [
   {
     key: "finish",
     value: function finish() {
-      const items = [this.result];
+      items = [this.result];
       return items;
     }
   }

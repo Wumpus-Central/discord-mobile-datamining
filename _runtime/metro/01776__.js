@@ -1,279 +1,103 @@
 // === Module 1776: ? ===
 
 // Module 1776
-import _slicedToArray_mod from "module_32" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c2 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import normalizeDelay from "normalizeDelay" /* 1770 */;
+import _mod1782 from "module_1782" /* 1782 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _slicedToArray = _slicedToArray_mod;
-let closure_5 = { code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}" };
-class StretchInX {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, StretchOutY);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(StretchOutY);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scaleX: delayFunction(delay, first(1, closure_2)) }];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj4 = { transform: null };
-        const items1 = [{ scaleX: 0 }];
-        obj4.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj4;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 8236429657427;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = StretchInX;
-_inherits(StretchInX, fn(1720).ComplexAnimationBuilder);
-const entry = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
+require = arg1;
+const ERROR_MESSAGES = {
+  invalidTransitionProperty(transitionProperty1) {
+    return "Invalid transition property \"" + JSON.stringify(transitionProperty1) + "\"";
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(StretchInX, null, items);
-importDefaultResultResult.presetName = "StretchInX";
-let closure_6 = { code: "function pnpm_StretchTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleY:0}],...initialValues},callback:callback};}" };
-class StretchInY {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, StretchOutY);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(StretchOutY);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scaleY: delayFunction(delay, first(1, closure_2)) }];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj4 = { transform: null };
-        const items1 = [{ scaleY: 0 }];
-        obj4.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj4;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 15758510181808;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = StretchInY;
-_inherits(StretchInY, fn(1720).ComplexAnimationBuilder);
-const entry1 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-let items1 = [entry1];
-const importDefaultResultResult1 = _createClass(StretchInY, null, items1);
-importDefaultResultResult1.presetName = "StretchInY";
-let closure_7 = { code: "function pnpm_StretchTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleX:1}],...initialValues},callback:callback};}" };
-class StretchOutX {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, StretchOutY);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(StretchOutY);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scaleX: delayFunction(delay, first(0, closure_2)) }];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj4 = { transform: null };
-        const items1 = [{ scaleX: 1 }];
-        obj4.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj4;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 2374207350737;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = StretchOutX;
-_inherits(StretchOutX, fn(1720).ComplexAnimationBuilder);
-const entry2 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-const items2 = [entry2];
-const importDefaultResultResult2 = _createClass(StretchOutX, null, items2);
-importDefaultResultResult2.presetName = "StretchOutX";
-let closure_8 = { code: "function pnpm_StretchTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleY:1}],...initialValues},callback:callback};}" };
-class StretchOutY {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, StretchOutY);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(StretchOutY);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function n() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scaleY: delayFunction(delay, first(0, closure_2)) }];
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj4 = { transform: null };
-        const items1 = [{ scaleY: 1 }];
-        obj4.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj4;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3228047902646;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = StretchOutY;
-_inherits(StretchOutY, fn(1720).ComplexAnimationBuilder);
-const entry3 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  }
-};
-const items3 = [entry3];
-const importDefaultResultResult3 = _createClass(StretchOutY, null, items3);
-importDefaultResultResult3.presetName = "StretchOutY";
 
-export const StretchInX = importDefaultResultResult;
-export const StretchInY = importDefaultResultResult1;
-export const StretchOutX = importDefaultResultResult2;
-export const StretchOutY = importDefaultResultResult3;
+export { ERROR_MESSAGES };
+export function normalizeCSSTransitionProperties(prevTransitionProperties) {
+  let tmp = (function getExpandedConfigProperties(transition) {
+    let tmp = transition;
+    obj = closure_0(dependencyMap[1]);
+    if (transition.transition) {
+      const result = obj.parseTransitionShorthand(tmp.transition);
+    } else {
+      const emptyTransitionConfig = obj.createEmptyTransitionConfig();
+    }
+    const entries = Object.entries(tmp);
+    tmp = entries;
+    entries[Symbol.iterator]();
+  })(prevTransitionProperties);
+  const transitionProperty1 = tmp.transitionProperty;
+  closure_0 = undefined;
+  if (transitionProperty1.length) {
+    closure_0 = tmp5;
+    if (transitionProperty1.some((item) => "none" === item !== closure_0)) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("[Reanimated] " + settings.invalidTransitionProperty(transitionProperty1));
+      throw error;
+    } else {
+      let someResult = !tmp5;
+    }
+  } else {
+    const _Object = Object;
+    const values = Object.values(tmp2);
+    someResult = values.some((item) => item.length);
+  }
+  if (someResult) {
+    ({ transitionProperty, transitionDuration, transitionTimingFunction, transitionDelay, transitionBehavior } = tmp);
+    const _Set = Set;
+    const set = new Set();
+    const _Set2 = Set;
+    const set1 = new Set();
+    if (!transitionProperty.length) {
+      transitionProperty.push("all");
+    }
+    settings = {};
+    let diff = transitionProperty.length - 1;
+    let flag = false;
+    if (0 <= diff) {
+      while (true) {
+        let tmp15 = transitionProperty[diff];
+        if (!set1.has(tmp15)) {
+          let addResult = set1.add(tmp15);
+          let obj5 = normalizeDelay;
+          let normalizeDurationResult = obj5.normalizeDuration(transitionDuration[diff % transitionDuration.length]);
+          let obj6 = normalizeDelay;
+          let normalizeDelayResult = obj6.normalizeDelay(transitionDelay[diff % transitionDelay.length]);
+          if (normalizeDurationResult + normalizeDelayResult > 0) {
+            let tmp18Result = normalizeDelay;
+            let result = tmp18Result.normalizeTimingFunction(transitionTimingFunction[diff % transitionTimingFunction.length]);
+            let tmp18Result2 = _mod1782;
+            let obj2 = { duration: normalizeDurationResult, timingFunction: result, delay: normalizeDelayResult, allowDiscrete: tmp18Result2.normalizeTransitionBehavior(transitionBehavior[diff % transitionBehavior.length]) };
+            settings[tmp15] = obj2;
+            flag = true;
+            if ("all" === tmp15) {
+              break;
+            } else {
+              let addResult1 = set.add(tmp15);
+            }
+          }
+          break;
+        }
+        diff = diff - 1;
+        flag = false;
+        if (0 > diff) {
+          break;
+        }
+      }
+    }
+    if (flag) {
+      const obj3 = { specificProperties: "Array", settings };
+      let tmp24 = obj3;
+    } else {
+      tmp24 = null;
+      if (set.size) {
+        const obj4 = { specificProperties: set, settings };
+        tmp24 = obj4;
+      }
+    }
+    return tmp24;
+  } else {
+    return null;
+  }
+}

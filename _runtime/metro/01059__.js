@@ -66,7 +66,7 @@ export (match) => {
     if (obj.isWeb()) {
       const _atob = atob;
       const _Uint8Array = Uint8Array;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(atob(match), 0);
       const uint8Array = new Uint8Array(items.map((item) => item.charCodeAt(0)));
       return uint8Array;

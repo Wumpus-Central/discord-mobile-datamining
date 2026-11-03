@@ -38,7 +38,7 @@ export const useSyncExternalStore = undefined !== noop.useSyncExternalStore ? no
   const tmp2 = getSnapshot({ inst: { value: tmp, getSnapshot } });
   const inst = tmp2[0].inst;
   closure_4 = tmp2[1];
-  const items = [arg0, tmp, getSnapshot];
+  items = [arg0, tmp, getSnapshot];
   inst(() => {
     inst.value = value;
     inst.getSnapshot = getSnapshot;

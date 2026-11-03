@@ -8,7 +8,7 @@ let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f20579 = () => {
+const f20758 = () => {
 
 };
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8, RN$discordUiManagerOptimization } = global);
@@ -18,7 +18,7 @@ if (RN$discordUiManagerOptimization == null) {
 let closure_9 = tmp2;
 c0 = false;
 c1 = null;
-const f77335 = () => {
+const f77495 = () => {
 
 };
 dependencyMap = {};
@@ -54,12 +54,12 @@ const merged1 = Object.assign({
   },
   getDefaultEventTypes() {
     if (React6) {
-      if (typeof f77335 === "function") {
+      if (typeof f77495 === "function") {
         if (!closure_138_0) {
           closure_138_1 = _null(70)(React6)();
           closure_138_0 = true;
         }
-        let items = closure_138_1;
+        items = closure_138_1;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -133,7 +133,7 @@ obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
         dependencyMap[arg0] = obj.getConstantsForViewManager(arg0);
       }
       return dependencyMap[arg0];
-    } else if (typeof f20579 === "function") {
+    } else if (typeof f20758 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
@@ -170,7 +170,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f20579 === "function") {
+    if (typeof f20758 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -224,7 +224,7 @@ obj.viewIsDescendantOf = function viewIsDescendantOf(arg0, arg1, fn) {
   if (result) {
     const result1 = tmpResult.findShadowNodeByTag_DEPRECATED(arg1);
     if (result1) {
-      const items = [16 & tmpResult.compareDocumentPosition(result1, result)];
+      items = [16 & tmpResult.compareDocumentPosition(result1, result)];
       fn(items);
     } else {
       const _console2 = console;
@@ -253,7 +253,7 @@ if (tmp6) {
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f20579 === "function") {
+    if (typeof f20758 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;

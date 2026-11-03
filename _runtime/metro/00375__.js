@@ -69,7 +69,7 @@ const entry = {
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
-    const items = [arg0];
+    items = [arg0];
     fn(items);
     const _value = this._value;
     _value.__makeNative(arg0);

@@ -70,7 +70,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
       } else {
         const _Array = Array;
         if (Array.isArray(headers)) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(headers, 0);
           if (!headers.find((item) => "sentry-trace" === item[0])) {
             const items1 = ["sentry-trace", tmp5];

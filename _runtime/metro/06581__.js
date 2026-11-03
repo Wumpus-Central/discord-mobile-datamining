@@ -1,7 +1,33 @@
 // === Module 6581: ? ===
 
 // Module 6581
-import registerAsset from "module_1119" /* 1119 */;
+import _mod6582 from "module_6582" /* 6582 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "8b42912ce44ddbe707d5a6f54419c49d", name: "img_account_sync_youtube_light_and_dark", type: "svg" });
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod6582(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
+          }
+          str4 = str5;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    str = str2;
+  }
+  return str;
+};

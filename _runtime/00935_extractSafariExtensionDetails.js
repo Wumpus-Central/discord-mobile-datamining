@@ -54,7 +54,7 @@ let items = [
             const tmp12 = -1 !== UNKNOWN_FUNCTION1.indexOf("safari-extension");
             if (!tmp12) {
               if (-1 === UNKNOWN_FUNCTION1.indexOf("safari-web-extension")) {
-                const items = [UNKNOWN_FUNCTION1, tmp11];
+                items = [UNKNOWN_FUNCTION1, tmp11];
                 const tmp19 = _slicedToArray(items, 2);
                 let UNKNOWN_FUNCTION2 = tmp19[0];
                 let tmp20;
@@ -128,7 +128,7 @@ let items1 = [
         const tmp9 = -1 !== UNKNOWN_FUNCTION1.indexOf("safari-extension");
         if (!tmp9) {
           if (-1 === UNKNOWN_FUNCTION1.indexOf("safari-web-extension")) {
-            const items = [UNKNOWN_FUNCTION1, tmp5];
+            items = [UNKNOWN_FUNCTION1, tmp5];
             const tmp16 = _slicedToArray(items, 2);
             let UNKNOWN_FUNCTION2 = tmp16[0];
             let tmp17;

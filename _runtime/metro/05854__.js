@@ -1,9 +1,7 @@
 // === Module 5854: ? ===
 
 // Module 5854
-import baseIsEqual from "baseIsEqual" /* 631 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default function isEqual(arg0, arg1) {
-  return baseIsEqual(arg0, arg1);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "69ad990cd3c9b3023cf6437375e2fe6f", name: "DownloadIcon", type: "png" });

@@ -43,7 +43,7 @@ export function createVirtualCollectionView(arg0, initial) {
           obj.SpacerView = React.forwardRef(function SpacerView_withRef(itemCount, ref) {
             itemCount = itemCount.itemCount;
             const merged = Object.assign(itemCount, Object.assign({ itemCount: 0 }));
-            const items = [itemCount];
+            items = [itemCount];
             const merged1 = Object.assign(merged);
             return closure_1_8(closure_1_6(() => virtualItemCount(closure_2[3]).createHiddenVirtualView(spacerStyle(itemCount)), items), { ref });
           });
@@ -60,7 +60,7 @@ export function createVirtualCollectionView(arg0, initial) {
     SpacerView: VirtualCollectionSpacer.forwardRef(function SpacerView_withRef(itemCount, ref) {
       itemCount = itemCount.itemCount;
       const merged = Object.assign(itemCount, Object.assign({ itemCount: 0 }));
-      const items = [itemCount];
+      items = [itemCount];
       const merged1 = Object.assign(merged);
       return closure_1_8(closure_1_6(() => virtualItemCount(closure_2[3]).createHiddenVirtualView(spacerStyle(itemCount)), items), { ref });
     })
@@ -69,7 +69,7 @@ export function createVirtualCollectionView(arg0, initial) {
   return function VirtualCollectionView(children) {
     children = children.children;
     closure_0 = children;
-    let items = children.items;
+    items = children.items;
     let itemToKey = children.itemToKey;
     if (itemToKey === undefined) {
       itemToKey = defaultItemToKey;

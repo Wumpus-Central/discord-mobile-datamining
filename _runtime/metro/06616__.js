@@ -1,7 +1,14 @@
 // === Module 6616: ? ===
 
 // Module 6616
-import registerAsset from "module_1119" /* 1119 */;
+import _mod1318 from "module_1318" /* 1318 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "b5850b914f9528f3de18a75020fab1b9", name: "img_account_sync_facebook_white", type: "svg" });
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
+  }
+  return _mod1318(sum);
+};

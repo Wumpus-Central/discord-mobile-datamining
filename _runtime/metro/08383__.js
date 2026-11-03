@@ -1,0 +1,69 @@
+// === Module 8383: ? ===
+
+// Module 8383
+import _mod8375 from "module_8375" /* 8375 */;
+import _mod8376 from "module_8376" /* 8376 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export function isAVI(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avi");
+}
+export function isFLV(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && _mod8375.isFlvStringIncluded(fileChunk);
+}
+export function isM4V(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod8375.isftypStringIncluded(fileChunk);
+}
+export function isMKV(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod8375.findMatroskaDocTypeElements(fileChunk);
+}
+export function isMOV(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mov");
+}
+export function isMP4(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
+  if (!checkByFileTypeResult) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let tmp8 = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8375.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8376.FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8375.isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8375.isftypStringIncluded(fileChunk1);
+    }
+    checkByFileTypeResult = tmp8;
+  }
+  return checkByFileTypeResult;
+}
+export function isOGG(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ogg");
+}
+export function isSWF(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "swf");
+}
+export function isWEBM(fileChunk) {
+  fileChunk = _mod8375.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8376.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod8375.findMatroskaDocTypeElements(fileChunk);
+}

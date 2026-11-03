@@ -67,7 +67,7 @@ let items = [
           }
         }
         self._sessionValue = hadRecentInput.value;
-        const items = [hadRecentInput];
+        items = [hadRecentInput];
         self._sessionEntries = items;
       }
     }

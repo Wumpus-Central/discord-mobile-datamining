@@ -110,7 +110,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
       if (self._listenerCount > 0) {
         const result = self.__ensureUpdateSubscriptionExists();
@@ -125,7 +125,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       self._listenerCount = self._listenerCount + 1;
       if (self.__isNative) {
         const result = self.__ensureUpdateSubscriptionExists();
@@ -141,7 +141,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
       self._listenerCount = self._listenerCount - 1;
       let __isNative = self.__isNative;

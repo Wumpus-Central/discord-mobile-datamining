@@ -1,193 +1,102 @@
 // === Module 8254: ? ===
 
 // Module 8254
-import _mod8251 from "module_8251" /* 8251 */;
-import _mod8252 from "module_8252" /* 8252 */;
-import _mod8255 from "module_8255" /* 8255 */;
-import is7Z from "is7Z" /* 8256 */;
-import _mod8257 from "module_8257" /* 8257 */;
-import _mod8258 from "module_8258" /* 8258 */;
-import _mod8259 from "module_8259" /* 8259 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 8163 */;
+import extractPropsDefault from "extractProps" /* 8170 */;
+import extractFontDefault from "extractFont" /* 8177 */;
+import _modDef8179 from "module_8179" /* 8179 */;
+import _modDef8255 from "module_8255" /* 8255 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
+const TSpan = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  let _Object2 = Object;
-  exports.validateFileType = undefined;
-  fn(_mod8255, exports);
-  fn(is7Z, exports);
-  fn(_mod8257, exports);
-  fn(_mod8258, exports);
-  fn(_mod8259, exports);
-  exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
-    let items = [];
-    const items1 = [
-      ...new Set(arr.map((item) => {
-        const parts = item.split(".");
-        const formatted = parts.join("").toUpperCase();
-        let combined = formatted;
-        if ("7Z" === formatted) {
-          const _HermesInternal = HermesInternal;
-          combined = "_" + formatted;
-        }
-        return combined;
-      }))
-    ];
-    for (const item10023 of items1) {
-      let _Object = Object;
-      hasOwnProperty = Object.prototype.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      let FileTypes = _mod8252.FileTypes;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(item10023);
-      } else {
-        hasOwnPropertyResult = call(FileTypes, item10023);
-      }
-      if (hasOwnPropertyResult) {
-        arr = items.push(item10023);
-        continue;
-      } else {
-        let _TypeError = TypeError;
-        let _HermesInternal = HermesInternal;
-        let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
-        let str3 = "Type `";
-        let tmp8 = new.target;
-        let tmp9 = new.target;
-        let typeError = new TypeError("Type `" + item10023.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
-        throw typeError;
-      }
-    }
-    if (chunkSize) {
-      const _Object2 = Object;
-      const call2 = hasOwnProperty2.call;
-      if (typeof call2 === "unknown") {
-        let hasOwnProperty2Result = hasOwnProperty2("chunkSize");
-      } else {
-        hasOwnProperty2Result = call2(chunkSize, "chunkSize");
-      }
-      if (hasOwnProperty2Result) {
-        chunkSize = undefined;
-        if (null != chunkSize) {
-          chunkSize = chunkSize.chunkSize;
-        }
-        let num = 0;
-        if (null !== chunkSize) {
-          num = 0;
-          if (undefined !== chunkSize) {
-            num = chunkSize;
-          }
-        }
-        if (num <= 0) {
-          const _RangeError = RangeError;
-          const rangeError = new RangeError("chunkSize must be bigger than zero");
-          throw rangeError;
-        }
-      }
-    }
-    if (!chunkSize) {
-      const arr3 = (function addSimilarTypes(items) {
-        if (items.some((item) => "MP4" === item)) {
-          items = ["M4V"];
-        } else {
-          items = items.some((item) => "AAC" === item) ? ["M4A"] : [];
-        }
-        return items;
-      })(items);
-      let combined = items;
-      if (arr3.length > 0) {
-        combined = items.concat(arr3);
-      }
-    } else {
-      let excludeSimilarTypes;
-      if (null != chunkSize) {
-        excludeSimilarTypes = chunkSize.excludeSimilarTypes;
-      }
-      combined = items;
-    }
-    let items2 = [];
-    const items3 = [];
-    for (const item10079 of combined) {
-      let tmp21 = require;
-      let FileTypes2 = _mod8252.FileTypes;
-      items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
-      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod8252.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
-      if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
-        let FileTypes3 = tmp21(8252).FileTypes;
-        let arr2 = items3.push(FileTypes3.getInfoByName(item10079));
-      }
-      continue;
-    }
-    let num2;
-    if (null != chunkSize) {
-      num2 = chunkSize.chunkSize;
-    }
-    if (!num2) {
-      num2 = 64;
-    }
-    fileChunk = _mod8251.getFileChunk(fileChunk, num2);
-    const FileTypes4 = _mod8252.FileTypes;
-    const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
-    require = detectSignatureResult;
-    if (detectSignatureResult) {
-      if (items3.length > 0) {
-        const found = items3.filter((signatures) => {
-          signatures = signatures.signatures;
-          return signatures.includes(detectSignatureResult);
-        });
-        if (found.length > 0) {
-          const FileTypes5 = _mod8252.FileTypes;
-          const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
-          dependencyMap = result;
-          return result && combined.some((item) => item.toLowerCase() === result);
-        }
-      }
-      return true;
-    } else {
-      return false;
-    }
-    const set = new Set(arr.map((item) => {
-      const parts = item.split(".");
-      const formatted = parts.join("").toUpperCase();
-      let combined = formatted;
-      if ("7Z" === formatted) {
-        const _HermesInternal = HermesInternal;
-        combined = "_" + formatted;
-      }
-      return combined;
-    }));
-  };
-} else {
-  let _Object = Object;
 }
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class TSpan {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, TSpan);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(TSpan);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = TSpan(8170).propsAndStyles(matrix);
+      const obj = TSpan(8170);
+      const merged = Object.assign(propsAndStylesResult, TSpan(8171).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = TSpan(8171);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(TSpan, _modDef8179);
+const entry = {
+  key: "render",
+  value: function render() {
+    const propsAndStylesResult = TSpan(8170).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = TSpan(8170);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef8255, {});
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(TSpan, items);
+importDefaultResultResult.displayName = "TSpan";
+const extractFont = fn(8177);
+extractFont.setTSpan(importDefaultResultResult);
+
+export default importDefaultResultResult;

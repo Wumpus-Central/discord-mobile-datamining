@@ -62,7 +62,7 @@ const entry = {
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
-    const items = [arg0];
+    items = [arg0];
     fn(items);
   }
 };

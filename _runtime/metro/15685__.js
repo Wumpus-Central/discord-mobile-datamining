@@ -1,7 +1,12 @@
 // === Module 15685: ? ===
 
 // Module 15685
-import registerAsset from "module_1119" /* 1119 */;
+import _mod15699 from "module_15699" /* 15699 */;
+import assign from "module_15686" /* 15686 */;
+import Deflate from "Deflate" /* 15687 */;
+import Inflate from "Inflate" /* 15695 */;
 
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod15699);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 120, scales: [2, 3], hash: "0242e2e3975e7ca5a2256573e276d96f", name: "logo", type: "png" });
+export default obj;

@@ -79,7 +79,7 @@ let items = [
     key: "__findAnimatedPropsNodes",
     value: function __findAnimatedPropsNodes(item10014) {
       const self = this;
-      const items = [];
+      items = [];
       if (item10014 instanceof Animation(380)) {
         items.push(item10014);
         return items;

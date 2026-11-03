@@ -2,9 +2,9 @@
 
 // Module 1264 (read)
 
-export (self, arg1, arg2, arg3, arg4) => {
+export (self, arg1, arg2, diff, arg4) => {
   let num = 0;
-  const diff = 8 * arg4 - arg3;
+  diff = 8 * arg4 - diff;
   if (arg2) {
     num = arg4 - 1;
   }
@@ -31,7 +31,7 @@ export (self, arg1, arg2, arg3, arg4) => {
     } while (0 < sum1);
   }
   let sum4 = tmp10 & (num3 << tmp12) - num3;
-  let sum3 = tmp11 + arg3;
+  let sum3 = tmp11 + diff;
   let tmp15 = sum4;
   if (sum3 > 0) {
     do {
@@ -57,18 +57,18 @@ export (self, arg1, arg2, arg3, arg4) => {
     return num6;
   } else {
     const _Math = Math;
-    sum6 = tmp15 + Math.pow(2, arg3);
+    sum6 = tmp15 + Math.pow(2, diff);
     diff3 = tmp18 - tmp17;
   }
   if (self[arg1 + num] >> 7) {
     num3 = -1;
   }
-  return num3 * sum6 * Math.pow(2, diff3 - arg3);
+  return num3 * sum6 * Math.pow(2, diff3 - diff);
 }
-export (self, arg1, arg2, arg3, arg4, arg5) => {
+export (self, arg1, arg2, arg3, diff, arg5) => {
   let num = 0;
-  const diff = 8 * arg5 - arg4;
-  if (23 === arg4) {
+  diff = 8 * arg5 - diff;
+  if (23 === diff) {
     const _Math = Math;
     const _Math2 = Math;
     num = Math.pow(2, -24) - Math.pow(2, -77);
@@ -126,24 +126,24 @@ export (self, arg1, arg2, arg3, arg4, arg5) => {
         if (sum1 + tmp9 >= 1) {
           const _Math6 = Math;
           const diff4 = sum * result2 - 1;
-          num11 = diff4 * Math.pow(2, arg4);
+          num11 = diff4 * Math.pow(2, diff);
           num12 = sum1 + tmp9;
         } else {
           const _Math4 = Math;
           const _Math5 = Math;
           const result3 = sum * Math.pow(2, tmp9 - 1);
-          num11 = result3 * Math.pow(2, arg4);
+          num11 = result3 * Math.pow(2, diff);
           num12 = 0;
         }
       }
     }
     let result4 = num11;
     let sum2 = num5;
-    let diff5 = arg4;
+    let diff5 = diff;
     let tmp21 = num5;
     let tmp22 = num11;
-    let tmp23 = arg4;
-    if (arg4 >= 8) {
+    let tmp23 = diff;
+    if (diff >= 8) {
       do {
         self[arg2 + sum2] = 255 & result4;
         sum2 = sum2 + num7;

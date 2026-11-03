@@ -126,7 +126,7 @@ let c5 = "Discarded session because of missing or non-string release";
 let closure_6 = Symbol.for("SentryInternalError");
 let closure_7 = Symbol.for("SentryDoNotSendEventError");
 let React;
-let dependencyMap;
+let duration;
 let _slicedToArray;
 let _classCallCheck;
 class Client {
@@ -231,8 +231,8 @@ class Client {
       flag2 = true;
     }
     if (flag2) {
-      tmp16 = c10;
-      closure_1 = c10;
+      tmp16 = closure_10;
+      closure_1 = closure_10;
       closure_2 = tmp2(tmp3[11])._INTERNAL_flushMetricsBuffer;
       c3 = undefined;
       c4 = 0;
@@ -523,7 +523,7 @@ items[14] = {
   value: function addIntegration(arg0) {
     closure_0(751).setupIntegration(this, arg0, this._integrations);
     if (!this._integrations[arg0.name]) {
-      const items = [arg0];
+      items = [arg0];
       const result = closure_0(751).afterSetupIntegrations(this, items);
       const tmpResult = closure_0(751);
     }
@@ -649,7 +649,7 @@ items[19] = {
   }
 };
 const entry3 = { key: "sendEnvelope", value: null };
-dependencyMap = asyncGeneratorStep(async function(arg0) {
+duration = asyncGeneratorStep(async function(arg0) {
   const self = this;
   dependencyMap = arg0;
   c6 = 0;
@@ -666,7 +666,7 @@ dependencyMap = asyncGeneratorStep(async function(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -836,7 +836,7 @@ React = asyncGeneratorStep(async function(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1092,7 +1092,7 @@ items[27] = {
               }
               let tmp2 = mergeResult;
               if (mergeResult.spans) {
-                const items = [];
+                items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
                   let length1;
@@ -1225,7 +1225,7 @@ items[27] = {
               }
               let tmp2 = mergeResult;
               if (mergeResult.spans) {
-                const items = [];
+                items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
                   let length1;

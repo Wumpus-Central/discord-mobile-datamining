@@ -14,16 +14,16 @@ export function VirtualizedListContextResetter(children) {
 }
 export function VirtualizedListContextProvider(children) {
   value = children.value;
-  const items = [, , , , ];
+  items = [, , , , ];
   ({ getScrollMetrics: arr[0], horizontal: arr[1], getOutermostParentListRef: arr[2], registerAsNestedChild: arr[3], unregisterAsNestedChild: arr[4] } = value);
-  return <context.Provider value={framebus(() => ({ cellKey: null, getScrollMetrics: value.getScrollMetrics, horizontal: value.horizontal, getOutermostParentListRef: value.getOutermostParentListRef, registerAsNestedChild: value.registerAsNestedChild, unregisterAsNestedChild: value.unregisterAsNestedChild }), items)}>{children.children}</context.Provider>;
+  return <context.Provider value={duration(() => ({ cellKey: null, getScrollMetrics: value.getScrollMetrics, horizontal: value.horizontal, getOutermostParentListRef: value.getOutermostParentListRef, registerAsNestedChild: value.registerAsNestedChild, unregisterAsNestedChild: value.unregisterAsNestedChild }), items)}>{children.children}</context.Provider>;
 }
 export function VirtualizedListCellContextProvider(cellKey) {
   cellKey = cellKey.cellKey;
   const tmp = React(context);
   closure_1 = tmp;
-  const items = [tmp, cellKey];
-  return <context.Provider value={framebus(() => {
+  items = [tmp, cellKey];
+  return <context.Provider value={duration(() => {
     let tmp2 = null;
     if (null != closure_1) {
       const obj = {};

@@ -47,7 +47,7 @@ function ItemWithSeparator(leadingItem) {
   const tmp6 = _slicedToArray(closure_1_11({ leadingItem: leadingItem.item, leadingSection: leadingItem.leadingSection, section: leadingItem.section, trailingItem: leadingItem.trailingItem, trailingSection: leadingItem.trailingSection }), 2);
   const first1 = tmp6[0];
   closure_13 = tmp8;
-  const items = [cellKey, setSelfHighlightCallback, tmp6[1], setSelfUpdatePropsCallback];
+  items = [cellKey, setSelfHighlightCallback, tmp6[1], setSelfUpdatePropsCallback];
   closure_1_10(() => {
     setSelfHighlightCallback(cellKey, closure_9);
     setSelfUpdatePropsCallback(cellKey, closure_13);
@@ -107,7 +107,7 @@ function ItemWithSeparator(leadingItem) {
     if (!noop.isValidElement(LeadingSeparatorComponent)) {
       const obj4 = { highlighted: tmp2 };
       let merged = Object.assign(first);
-      tmp13 = closure_1_12(LeadingSeparatorComponent, obj4);
+      tmp13 = application_id(LeadingSeparatorComponent, obj4);
     }
     tmp11 = tmp13;
   }
@@ -117,7 +117,7 @@ function ItemWithSeparator(leadingItem) {
     if (!noop.isValidElement(SeparatorComponent)) {
       const obj5 = { highlighted: tmp3[0] };
       let merged1 = Object.assign(first1);
-      tmp20 = closure_1_12(SeparatorComponent, obj5);
+      tmp20 = application_id(SeparatorComponent, obj5);
     }
     tmp18 = tmp20;
   }
@@ -192,12 +192,12 @@ function ItemWithSeparator(leadingItem) {
     tmp30 = tmp11;
   }
   children[2] = tmp30;
-  return closure_1_14(map1, { children });
+  return gesture(state, { children });
 }
 let closure_3 = ["ItemSeparatorComponent", "SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
 _possibleConstructorReturnDefault;
 const noop = fn(19);
-({ useEffect: c10, useState: closure_11 } = noop);
+({ useEffect: closure_10, useState: closure_11 } = noop);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 class VirtualizedSectionList {
@@ -317,7 +317,7 @@ class VirtualizedSectionList {
             obj7.renderItem = _subExtractorResult.section.renderItem || closure_0.props.renderItem;
             ({ section: obj2.section, trailingItem: obj2.trailingItem, trailingSection: obj2.trailingSection } = _subExtractorResult);
             obj7.inverted = closure_0.props.inverted;
-            return closure_3_12(ItemWithSeparator, obj7);
+            return application_id(ItemWithSeparator, obj7);
           }
         } else {
           return null;
@@ -413,7 +413,7 @@ let items = [
       if (this.props.ListHeaderComponent) {
         num = 1;
       }
-      let items;
+      items = undefined;
       if (self.props.stickySectionHeadersEnabled) {
         items = [];
       }
@@ -452,7 +452,7 @@ let items = [
       }
       obj.onViewableItemsChanged = prop;
       obj.ref = self._captureRef;
-      return closure_1_12(_modDef314, obj);
+      return application_id(_modDef314, obj);
     }
   },
   {

@@ -43,7 +43,7 @@ class KeyboardAvoidingView {
     tmp2 = closure_7;
     obj = closure_7(KeyboardAvoidingView);
     tmp3 = metroRequire;
-    if (c10()) {
+    if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -77,7 +77,7 @@ class KeyboardAvoidingView {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ class KeyboardAvoidingView {
             props.onLayout(closure_129_0);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp18) {
           c4 = tmp;
           throw tmp18;
@@ -163,7 +163,7 @@ class KeyboardAvoidingView {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -265,7 +265,7 @@ dependencyMap = asyncGeneratorStep(async function(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -349,7 +349,7 @@ let items = [
         self._setBottom(0);
       }
       obj = KeyboardAvoidingView(343);
-      const items = [KeyboardAvoidingView(343).addListener("keyboardDidHide", self._onKeyboardHide), ];
+      items = [KeyboardAvoidingView(343).addListener("keyboardDidHide", self._onKeyboardHide), ];
       const tmpResult = KeyboardAvoidingView(343);
       items[1] = KeyboardAvoidingView(343).addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;

@@ -13,7 +13,7 @@ const noop = fn(19);
 const jsx = fn(21).jsx;
 function AnimatedScrollViewWithInvertedRefreshControl(ref) {
   let merged = Object.assign(ref, Object.assign({ ref: 0 }));
-  const items = [merged];
+  items = [merged];
   ({ intermediatePropsForRefreshControl, intermediatePropsForScrollView } = closure_4(() => {
     const tmpResult = splitLayoutPropsDefault(flattenStyleDefault(merged.style));
     const obj = { intermediatePropsForRefreshControl: { style: tmpResult.outer }, intermediatePropsForScrollView: null };

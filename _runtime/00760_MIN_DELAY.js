@@ -12,7 +12,7 @@ export const START_DELAY = 5000;
 export function makeOfflineTransport(arg0) {
   closure_0 = arg0;
   function log() {
-    const items = [...arguments];
+    items = [...arguments];
     if (closure_0(log[1]).DEBUG_BUILD) {
       const debug = closure_0(tmp2[2]).debug;
       log = debug.log;
@@ -40,7 +40,7 @@ export function makeOfflineTransport(arg0) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -82,7 +82,7 @@ export function makeOfflineTransport(arg0) {
                 const promise = closure_129_7(closure_128_0, true);
               }
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp18) {
             c3 = tmp;
@@ -116,7 +116,7 @@ export function makeOfflineTransport(arg0) {
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -158,7 +158,7 @@ export function makeOfflineTransport(arg0) {
                   const promise = closure_129_7(closure_128_0, true);
                 }
                 c3 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp18) {
               c3 = tmp;
@@ -377,7 +377,7 @@ export function makeOfflineTransport(arg0) {
                 const obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -419,7 +419,7 @@ export function makeOfflineTransport(arg0) {
                     const promise = closure_129_7(closure_128_0, true);
                   }
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -459,7 +459,7 @@ export function makeOfflineTransport(arg0) {
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -501,7 +501,7 @@ export function makeOfflineTransport(arg0) {
                         const promise = closure_129_7(closure_128_0, true);
                       }
                       c3 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp18) {
                     c3 = tmp;

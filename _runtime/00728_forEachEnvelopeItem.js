@@ -22,7 +22,7 @@ let closure_4 = { session: "session", sessions: "session", attachment: "attachme
 
 export function addItemToEnvelope(arg0, arg1) {
   const tmp = _slicedToArray(arg0, 2);
-  const items = [tmp[0], ];
+  items = [tmp[0], ];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
   items[1] = items1;
@@ -43,12 +43,12 @@ export function createAttachmentEnvelopeItem(data) {
     const data1 = data.data;
     const obj2 = { type: "attachment", length: data1.length, filename: null, content_type: null, attachment_type: null };
     ({ filename: obj3.filename, contentType: obj3.content_type, attachmentType: obj3.attachment_type } = data);
-    const items = [obj2, data1];
+    items = [obj2, data1];
     return items;
   }
 }
 export function createEnvelope(eventEnvelopeHeaders) {
-  let items = items1;
+  items = items1;
   if (items1 === undefined) {
     items = [];
   }
@@ -83,7 +83,7 @@ export function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
   return obj;
 }
 export function createSpanEnvelopeItem(arg0) {
-  const items = [{ type: "span" }, arg0];
+  items = [{ type: "span" }, arg0];
   return items;
 }
 export function envelopeContainsItemType(arg0, arg1) {
@@ -125,7 +125,7 @@ export function parseEnvelope(arr) {
       return JSON.parse(decodePolyfillResult);
     }
     _require = arr;
-    const items = [];
+    items = [];
     const json = readJson();
     while (_require.length) {
       let json1 = readJson();

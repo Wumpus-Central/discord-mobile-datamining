@@ -136,7 +136,7 @@ function _startRootSpan(name, getPropagationContext, parentSampled) {
   const spanAttributes = obj2.spanAttributes;
   const propagationContext = getPropagationContext.getPropagationContext();
   if (getPropagationContext.getScopeData().sdkProcessingMetadata[__SENTRY_SUPPRESS_TRACING__]) {
-    const items = [false];
+    items = [false];
     let sampleSpanResult = items;
   } else {
     const obj4 = { name: str, parentSampled, attributes: spanAttributes, parentSampleRate: null };

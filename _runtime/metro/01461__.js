@@ -1,57 +1,43 @@
 // === Module 1461: ? ===
 
 // Module 1461
-import _mod1294 from "module_1294" /* 1294 */;
-import _mod1325 from "module_1325" /* 1325 */;
+import _mod1298 from "module_1298" /* 1298 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
+import _mod1460 from "module_1460" /* 1460 */;
+import regexTester from "regexTester" /* 1462 */;
 
-if (tmp) {
-  let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
-  let closure_3 = {};
-  function throwRegexMarker() {
-    throw closure_3;
-  }
-  const obj = { toString: throwRegexMarker, valueOf: throwRegexMarker };
-  const _Symbol = Symbol;
-  if (typeof Symbol.toPrimitive === "symbol") {
-    const _Symbol2 = Symbol;
-    obj[Symbol.toPrimitive] = throwRegexMarker;
-  }
-  function isRegex(obj) {
-    if (obj) {
-      if (typeof obj === "object") {
-        const tmp8 = _mod1294(obj, "lastIndex");
-        if (tmp8) {
-          if (_mod1325(tmp8, "value")) {
-            try {
-              closure_2(obj, obj);
-            } catch (tmp4) {
-              return tmp4 === closure_3;
-            }
-          }
-        }
-        return false;
-      }
-    }
+let closure_3 = regexTester(/^\s*(?:function)?\*/);
+let closure_4 = _mod1460();
+let closure_5 = callBoundIntrinsic("Object.prototype.toString");
+let closure_6 = callBoundIntrinsic("Function.prototype.toString");
+
+export default function isGeneratorFunction(fn) {
+  if (typeof fn !== "function") {
     return false;
-  }
-} else {
-  let closure_5 = callBoundIntrinsic("Object.prototype.toString");
-  isRegex = function isRegex(obj) {
-    let tmp = !obj;
-    if (obj) {
-      let tmp2 = typeof obj !== "object";
-      if (typeof obj !== "object") {
-        tmp2 = typeof obj !== "function";
+  } else if (closure_3(closure_6(fn))) {
+    return true;
+  } else if (closure_4) {
+    if (_mod1298) {
+      if (undefined === closure_2) {
+        const tmp6 = (() => {
+          if (closure_1_4) {
+            try {
+              const _Function = Function;
+              return Function("return function*() {}")();
+            } catch (err) {
+            }
+          } else {
+            return false;
+          }
+        })();
+        closure_2 = tmp6 && _mod1298(tmp6);
+        const tmp7 = tmp6 && _mod1298(tmp6);
       }
-      tmp = tmp2;
+      return _mod1298(fn) === closure_2;
+    } else {
+      return false;
     }
-    let tmp3 = !tmp;
-    if (!tmp) {
-      tmp3 = "[object RegExp]" === closure_5(obj);
-    }
-    return tmp3;
-  };
-}
-
-export default isRegex;
+  } else {
+    return "[object GeneratorFunction]" === closure_5(fn);
+  }
+};

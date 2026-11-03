@@ -18,7 +18,7 @@ export default function useAndroidRippleForView(arg0, arg1) {
   const radius = obj.radius;
   ({ cornerRadius: closure_4, foreground } = obj);
   const alpha = obj.alpha;
-  const items = [alpha, borderless, color, foreground, radius, arg1];
+  items = [alpha, borderless, color, foreground, radius, arg1];
   return radius(() => {
     if (null == color) {
       if (null == borderless) {

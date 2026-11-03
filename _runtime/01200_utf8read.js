@@ -9,7 +9,7 @@ export function utf8read(arg0) {
   if (arg0.length < 1) {
     return "";
   } else {
-    const items = [];
+    items = [];
     const items1 = [];
     let num2 = 0;
     let num4 = 0;

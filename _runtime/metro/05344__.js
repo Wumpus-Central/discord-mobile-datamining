@@ -1,95 +1,41 @@
 // === Module 5344: ? ===
 
 // Module 5344
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod5340 from "module_5340" /* 5340 */;
+import ACTIONS from "ACTIONS" /* 5341 */;
+import PortalHost from "PortalHost" /* 5342 */;
+import registerHost from "registerHost" /* 5345 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop_mod from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+require = fn;
+let noop = fn(19);
+({ useReducer: c3, memo } = noop);
+let noop = noop_mod;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const memoResult = memo((rootHostName) => {
+  let str = rootHostName.rootHostName;
+  if (str === undefined) {
+    str = "root";
   }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
+  let flag = rootHostName.shouldAddRootHost;
+  if (flag === undefined) {
+    flag = true;
   }
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
-class HoverGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, HoverGesture);
-    tmp2 = c2;
-    obj = c2(HoverGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
-    return tmp3Result;
+  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
+  const obj = { value: tmp5, children: null };
+  const obj2 = { value: tmp4, children: null };
+  items = [rootHostName.children, ];
+  if (flag) {
+    const obj3 = { name: str };
+    flag = React4(PortalHost.PortalHost, obj3);
   }
-}
-_classCallCheck = HoverGesture;
-_inherits(HoverGesture, fn(5324).ContinousBaseGesture);
-const entry = {
-  key: "effect",
-  value: function effect(hoverEffect) {
-    this.config.hoverEffect = hoverEffect;
-    return this;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
-    }
-  }
-];
+  items[1] = flag;
+  obj2.children = items;
+  obj.children = hasOwnProperty(_mod5340.PortalStateContext.Provider, obj2);
+  return React4(_mod5340.PortalDispatchContext.Provider, obj);
+});
+memoResult.displayName = "PortalProvider";
 
-export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = _createClass(HoverGesture, items);
+export const PortalProvider = memoResult;

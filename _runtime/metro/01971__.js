@@ -1,5 +1,109 @@
 // === Module 1971: ? ===
 
 // Module 1971
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-export default { COMMON_OPEN_DISCORD: "\u00D6ppna Discord", COMMON_SIGN_UP_NOW: "Registrera dig nu", FOOTER_READY_TO_TRY_DISCORD: "Redo att testa Discord? Det \u00E4r gratis!", FOOTER_JOIN_OVER_PLAYERS_TODAY: "ANSLUT DIG TILL \u00D6VER {num} MILJONER SPELARE IDAG", NAVIGATION_HOME: "Start", NAVIGATION_FEATURES: "Funktioner", NAVIGATION_NITRO: "Nitro", NAVIGATION_DOWNLOAD: "Ladda ned", NAVIGATION_PARTNERS: "Partner", NAVIGATION_BLOG: "Blogg", NAVIGATION_BUILD: "Version", NAVIGATION_MORE: "Mer", NAVIGATION_STATUS: "Status", NAVIGATION_HELP_AND_SUPPORT: "Hj\u00E4lp & Support", NAVIGATION_GUIDELINES: "Riktlinjer", NAVIGATION_HYPESQUAD: "HypeSquad", NAVIGATION_COMPANY: "F\u00F6retag", NAVIGATION_JOBS: "Jobb", NAVIGATION_SECURITY: "S\u00E4kerhet", NAVIGATION_DEVELOPERS: "Utvecklare", NAVIGATION_DOCUMENTATION: "Dokumentation", NAVIGATION_BRANDING: "Varum\u00E4rkning", NAVIGATION_LOGIN: "Logga in", NAVIGATION_OPEN: "\u00D6ppna", NAVIGATION_PRODUCT: "Produkt", NAVIGATION_RESOURCES: "Resurser", NAVIGATION_APPLICATIONS: "Applikationer", NAVIGATION_TERMS: "Villkor", NAVIGATION_PRIVACY: "Sekretess", NAVIGATION_ABOUT: "Om", NAVIGATION_VERIFICATION: "Verifiering", NAVIGATION_RICH_PRESENCE: "Rich Presence", NAVIGATION_PRESS_INQUIRIES: "Pressfr\u00E5gor", NAVIGATION_OPEN_SOURCE: "\u00D6ppen k\u00E4llkod", NAVIGATION_SUPPORT: "Support", NAVIGATION_DEVELOPER_PORTAL: "Utvecklarportal", NAVIGATION_COMMUNITY: "Community", NAVIGATION_SAFETY: "S\u00E4kerhet", NAVIGATION_SAFETY_CENTER: "S\u00E4kerhetscenter", NAVIGATION_MOD_ACADEMY: "Moderatorsakademien", NAVIGATION_DISCOVER: "Uppt\u00E4ck", NAVIGATION_SERVERS: "Servrar", NAVIGATION_CAREERS: "Karri\u00E4rer", NAVIGATION_QUESTS: "Uppdrag", STOREFRONT_BENEFITS_SUMMARY: "{count, plural, one {# exklusiv f\u00F6rm\u00E5n} other {# exklusiva f\u00F6rm\u00E5ner}}", STOREFRONT_BENEFITS_TITLE: "Exklusivt f\u00F6r den h\u00E4r niv\u00E5n", STOREFRONT_SERVER_SUBSCRIPTION: "Serverprenumeration", STOREFRONT_USER_SUBSCRIPTION: "Personlig prenumeration", STOREFRONT_MORE_BENEFITS: "+ {count, plural, one {# f\u00F6rm\u00E5n till} other {# f\u00F6rm\u00E5ner till}}", NUMBER_ABBREVIATIONS_MILLION: "{num}M", NUMBER_ABBREVIATIONS_THOUSAND: "{num}K", DYNAMIC_LINKS_IOS_APP_PREVIEW_DESCRIPTION: "St\u00E4llet d\u00E4r du kan prata med communityn och v\u00E4nner.", SELF_XSS_HEADER: "V\u00E4nta!", SELF_XSS_LINE_1: "Om n\u00E5gon ber dig att kopiera och klistra in n\u00E5got h\u00E4r s\u00E5 \u00E4r chansen 11/10 att du blir lurad.", SELF_XSS_LINE_2: "Allt som klistras in h\u00E4r kan ge angripare tillg\u00E5ng till ditt Discord-konto.", SELF_XSS_LINE_3: "Om du inte f\u00F6rst\u00E5r exakt vad du g\u00F6r, st\u00E4ng detta f\u00F6nster och h\u00E5ll dig p\u00E5 den s\u00E4kra sidan.", SELF_XSS_LINE_4: "Om du vet exakt vad du h\u00E5ller p\u00E5 med borde du komma och jobba med oss {url}" };
+let c2 = true;
+let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
+obj.timestamp = new Date().getTime();
+let global = obj;
+let KeyboardEvents = fn(1642).KeyboardEvents;
+KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
+  c2 = true;
+  global = arg0;
+});
+const KeyboardEvents2 = fn(1642).KeyboardEvents;
+KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
+  c2 = false;
+  global = arg0;
+});
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        let keepFocus;
+        if (closure_0 != null) {
+          keepFocus = tmp18.keepFocus;
+        }
+        c1 = keepFocus;
+        if (keepFocus == null) {
+          c1 = false;
+        }
+        closure_0 = c1;
+        let animated;
+        if (closure_0 != null) {
+          animated = tmp18.animated;
+        }
+        c2 = animated;
+        if (animated == null) {
+          c2 = true;
+        }
+        dependencyMap = c2;
+        const promise = new Promise((fn) => {
+          closure_0 = fn;
+          if (c2) {
+            fn();
+          } else {
+            const KeyboardEvents = closure_0(1642).KeyboardEvents;
+            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
+              closure_0(undefined);
+              closure_1.remove();
+            });
+            const KeyboardControllerNative = closure_0(1642).KeyboardControllerNative;
+            KeyboardControllerNative.dismiss(closure_0, closure_1);
+          }
+        });
+        c3 = 3;
+        const obj = { value: promise, done: true };
+        return obj;
+      }
+    } catch (tmp13) {
+      c3 = tmp;
+      throw tmp13;
+    }
+  }
+});
+const date = new Date();
+
+export const KeyboardController = {
+  setDefaultMode: fn(1642).KeyboardControllerNative.setDefaultMode,
+  setInputMode: fn(1642).KeyboardControllerNative.setInputMode,
+  setFocusTo: fn(1642).KeyboardControllerNative.setFocusTo,
+  preload: fn(1642).KeyboardControllerNative.preload,
+  dismiss(arg0) {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  },
+  isVisible() {
+    return !c2;
+  },
+  state() {
+    return global;
+  }
+};

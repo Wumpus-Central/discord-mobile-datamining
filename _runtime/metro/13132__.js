@@ -1,34 +1,7 @@
 // === Module 13132: ? ===
 
 // Module 13132
-import _mod13133 from "module_13133" /* 13133 */;
-import setupIntegration from "module_13110" /* 13110 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    const options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
-        }
-      });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod13133.addMetadataToStackFrames(options.getOptions().stackParser, type);
-      }
-    });
-  }
-}));
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c633d33c98eaf36e731a0f2d3f8db716", name: "ChatShieldIcon", type: "png" });

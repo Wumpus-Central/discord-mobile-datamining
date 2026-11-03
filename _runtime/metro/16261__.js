@@ -1,52 +1,25 @@
 // === Module 16261: ? ===
 
 // Module 16261
-import noop from "module_19" /* 19 */;
-import module_16243_mod from "module_16243" /* 16243 */;
-import _isNativeReflectConstruct_mod from "module_16262" /* 16262 */;
-import jsxProd from "jsxProd" /* 21 */;
+const require = globalThis.__r;
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_16243 = module_16243_mod;
-if (!module_16243) {
-  let obj = { default: module_16243 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_16243;
-}
-module_16243 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
+const require = arg1;
+const dependencyMap = arg6;
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
-          };
-        };
-      }
+export function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("module_16262").timezones;
+  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-  };
-};
+    try {
+      const obj = { timeZone };
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+}

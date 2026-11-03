@@ -1,108 +1,183 @@
 // === Module 1827: ? ===
 
 // Module 1827
-import _mod1654 from "module_1654" /* 1654 */;
-import module_1653_mod from "module_1653" /* 1653 */;
+import ReanimatedModule2 from "ReanimatedModule" /* 1663 */;
+import _mod1665 from "module_1665" /* 1665 */;
+import _mod1705 from "module_1705" /* 1705 */;
+import SensorContainer from "SensorContainer" /* 1829 */;
+import mutablesNative from "mutablesNative" /* 1831 */;
+import mappersNative from "mappersNative" /* 1834 */;
+import get_ActivityIndicator from "module_1828" /* 1828 */;
 
-function measureFabric(fn) {
-  if (globalThis._WORKLET) {
-    const tmp3 = fn();
-    if (-1 === tmp3) {
-      const logger4 = _mod1654.logger;
-      const _HermesInternal = HermesInternal;
-      logger4.warn("The view with tag " + tmp3 + " is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-      return null;
-    } else {
-      let _measureFabricResult = global._measureFabric(tmp3);
-      if (null === _measureFabricResult) {
-        const logger3 = _mod1654.logger;
-        logger3.warn("The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-        _measureFabricResult = null;
-      } else if (-1234567 === _measureFabricResult.x) {
-        const logger2 = _mod1654.logger;
-        logger2.warn("The view returned an invalid measurement response. Please make sure the view is currently rendered.");
-        _measureFabricResult = null;
-      } else {
-        const _isNaN = isNaN;
-        if (isNaN(_measureFabricResult.x)) {
-          const logger = _mod1654.logger;
-          logger.warn("The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.");
-          _measureFabricResult = null;
-        }
-      }
-      return _measureFabricResult;
-    }
-  } else {
-    return null;
-  }
+const require = globalThis.__r;
+
+let closure_2 = get_ActivityIndicator.isEdgeToEdge();
+function isReanimated3() {
+  const logger = _mod1665.logger;
+  logger.warn("The `isReanimated3` function is deprecated. Please use the exported variable `reanimatedVersion` instead.");
+  return false;
 }
-measureFabric.__closure = { logger: _mod1654.logger };
-measureFabric.__workletHash = 11588690892656;
-measureFabric.__initData = { code: "function measureFabric_Pnpm_measureTs1(animatedRef){const{logger}=this.__closure;if(!_WORKLET){return null;}const viewTag=animatedRef();if(viewTag===-1){logger.warn(\"The view with tag \"+viewTag+\" is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}const measured=global._measureFabric(viewTag);if(measured===null){logger.warn(\"The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}else if(measured.x===-1234567){logger.warn(\"The view returned an invalid measurement response. Please make sure the view is currently rendered.\");return null;}else if(isNaN(measured.x)){logger.warn(\"The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.\");return null;}else{return measured;}}" };
-function measurePaper(fn) {
-  if (globalThis._WORKLET) {
-    const tmp3 = fn();
-    if (-1 === tmp3) {
-      const logger4 = _mod1654.logger;
-      const _HermesInternal4 = HermesInternal;
-      logger4.warn("The view with tag " + tmp3 + " is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-      return null;
-    } else {
-      let _measurePaperResult = global._measurePaper(tmp3);
-      if (null === _measurePaperResult) {
-        const logger3 = _mod1654.logger;
-        const _HermesInternal3 = HermesInternal;
-        logger3.warn("The view with tag " + tmp3 + " has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");
-        _measurePaperResult = null;
-      } else if (-1234567 === _measurePaperResult.x) {
-        const logger2 = _mod1654.logger;
-        const _HermesInternal2 = HermesInternal;
-        logger2.warn("The view with tag " + tmp3 + " returned an invalid measurement response. Please make sure the view is currently rendered.");
-        _measurePaperResult = null;
-      } else {
-        const _isNaN = isNaN;
-        if (isNaN(_measurePaperResult.x)) {
-          const logger = _mod1654.logger;
-          const _HermesInternal = HermesInternal;
-          logger.warn("The view with tag " + tmp3 + " gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.");
-          _measurePaperResult = null;
+let closure_3 = { code: "(function handleEvent_Pnpm_coreTs1(_eventTimestamp,event){let[eventHandler]=this.__closure;eventHandler(event);if(globalThis.__mapperRun){globalThis.__mapperRun();}else{function runMappers(){if(globalThis.__mapperRun){globalThis.__mapperRun();}else{requestAnimationFrame(runMappers);}}requestAnimationFrame(runMappers);}})" };
+let closure_4 = { code: "(function handleEvent_Pnpm_coreTs2(state,height){let[eventHandler]=this.__closure;eventHandler(state,height);if(globalThis.__mapperRun){globalThis.__mapperRun();}else{function runMappers(){if(globalThis.__mapperRun){globalThis.__mapperRun();}else{requestAnimationFrame(runMappers);}}requestAnimationFrame(runMappers);}})" };
+
+export const startMapper = mappersNative.startMapper;
+export const stopMapper = mappersNative.stopMapper;
+export const makeMutable = mutablesNative.makeMutable;
+export { isReanimated3 };
+export const isConfigured = isReanimated3;
+export function getViewProp(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  if (arg2) {
+    const promise = new Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+      return ReanimatedModule.getViewProp(closure_0, closure_1, closure_2, (str) => {
+        if (typeof str === "string") {
+          if ("error:" === "error:".slice(0, 6)) {
+            closure_1(str);
+          }
         }
-      }
-      return _measurePaperResult;
-    }
-  } else {
-    return null;
-  }
-}
-const obj = { logger: _mod1654.logger };
-measurePaper.__closure = { logger: _mod1654.logger };
-measurePaper.__workletHash = 12497864483036;
-measurePaper.__initData = { code: "function measurePaper_Pnpm_measureTs2(animatedRef){const{logger}=this.__closure;if(!_WORKLET){return null;}const viewTag=animatedRef();if(viewTag===-1){logger.warn(\"The view with tag \"+viewTag+\" is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}const measured=global._measurePaper(viewTag);if(measured===null){logger.warn(\"The view with tag \"+viewTag+\" has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).\");return null;}else if(measured.x===-1234567){logger.warn(\"The view with tag \"+viewTag+\" returned an invalid measurement response. Please make sure the view is currently rendered.\");return null;}else if(isNaN(measured.x)){logger.warn(\"The view with tag \"+viewTag+\" gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.\");return null;}else{return measured;}}" };
-let module_1653 = module_1653_mod;
-module_1653.shouldBeUseWeb();
-let module_1653 = module_1653_mod;
-if (module_1653) {
-  if (module_1653.isJest()) {
-    function measureJest() {
-      const logger = _mod1654.logger;
-      logger.warn("measure() cannot be used with Jest.");
-      return null;
-    }
-  } else {
-    const _module2 = module_1653;
-    measureJest = _module2.isChromeDebugger() ? (function measureChromeDebugger() {
-      const logger = _mod1654.logger;
-      logger.warn("measure() cannot be used with Chrome Debugger.");
-      return null;
-    }) : (function measureDefault() {
-      const logger = _mod1654.logger;
-      logger.warn("measure() is not supported on this configuration.");
-      return null;
+        closure_0(str);
+      });
     });
+    return promise;
+  } else {
+    const _Error = Error;
+    const error = new Error("[Reanimated] Function `getViewProp` requires a component to be passed as an argument on Fabric.");
+    throw error;
   }
-} else {
-  if (module_1653.isFabric()) {
-    measurePaper = measureFabric;
+}
+export function registerEventHandler(arg0, arg1) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = -1;
   }
-  exports.measure = measurePaper;
+  items = [closure_3, arg0];
+  [tmp, tmp2] = items;
+  function handleEvent(arg0, arg1) {
+    require(arg1);
+    if (globalThis.__mapperRun) {
+      let _globalThis = globalThis;
+      globalThis.__mapperRun();
+    } else {
+      function runMappers() {
+        if (globalThis.__mapperRun) {
+          const _globalThis = globalThis;
+          globalThis.__mapperRun();
+        } else {
+          const _requestAnimationFrame = requestAnimationFrame;
+          const animationFrame = requestAnimationFrame(runMappers);
+        }
+      }
+      let _requestAnimationFrame = requestAnimationFrame;
+      let animationFrame = requestAnimationFrame(runMappers);
+    }
+  }
+  const items1 = [tmp2];
+  handleEvent.__closure = items1;
+  handleEvent.__workletHash = 11253634377280;
+  handleEvent.__initData = tmp;
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  return ReanimatedModule.registerEventHandler(_mod1705.createSerializable(handleEvent), arg1, num);
+}
+export function unregisterEventHandler(arg0) {
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  return ReanimatedModule.unregisterEventHandler(arg0);
+}
+export function subscribeForKeyboardEvents(pnpm_useAnimatedKeyboardTs1, isStatusBarTranslucentAndroid) {
+  items = [closure_4, pnpm_useAnimatedKeyboardTs1];
+  [tmp, tmp2] = items;
+  function handleEvent(arg0, arg1) {
+    require(arg0, arg1);
+    if (globalThis.__mapperRun) {
+      let _globalThis = globalThis;
+      globalThis.__mapperRun();
+    } else {
+      function runMappers() {
+        if (globalThis.__mapperRun) {
+          const _globalThis = globalThis;
+          globalThis.__mapperRun();
+        } else {
+          const _requestAnimationFrame = requestAnimationFrame;
+          const animationFrame = requestAnimationFrame(runMappers);
+        }
+      }
+      let _requestAnimationFrame = requestAnimationFrame;
+      let animationFrame = requestAnimationFrame(runMappers);
+    }
+  }
+  const items1 = [tmp2];
+  handleEvent.__closure = items1;
+  handleEvent.__workletHash = 4890967633970;
+  handleEvent.__initData = tmp;
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  let tmp4 = closure_2;
+  let tmp5 = closure_2;
+  const serializable = _mod1705.createSerializable(handleEvent);
+  if (!closure_2) {
+    let flag = isStatusBarTranslucentAndroid.isStatusBarTranslucentAndroid;
+    if (flag == null) {
+      flag = false;
+    }
+    tmp5 = flag;
+  }
+  if (!tmp4) {
+    let flag2 = isStatusBarTranslucentAndroid.isNavigationBarTranslucentAndroid;
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    tmp4 = flag2;
+  }
+  return ReanimatedModule.subscribeForKeyboardEvents(serializable, tmp5, tmp4);
+}
+export function unsubscribeFromKeyboardEvents(arg0) {
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  return ReanimatedModule.unsubscribeFromKeyboardEvents(arg0);
+}
+export function isSensorAvailable(arg0) {
+  if (!globalThis.__sensorContainer) {
+    const _globalThis = globalThis;
+    const sensorContainer = new SensorContainer.SensorContainer();
+    globalThis.__sensorContainer = sensorContainer;
+  }
+  return __sensorContainer.isSensorAvailable(arg0);
+}
+export function registerSensor(_undefined, config, __initData) {
+  if (!globalThis.__sensorContainer) {
+    const _globalThis = globalThis;
+    const sensorContainer = new SensorContainer.SensorContainer();
+    globalThis.__sensorContainer = sensorContainer;
+  }
+  return __sensorContainer.registerSensor(_undefined, config, _mod1705.createSerializable(__initData));
+}
+export function initializeSensor(arg0, arg1) {
+  if (!globalThis.__sensorContainer) {
+    const _globalThis = globalThis;
+    const sensorContainer = new SensorContainer.SensorContainer();
+    globalThis.__sensorContainer = sensorContainer;
+  }
+  return __sensorContainer.initializeSensor(arg0, arg1);
+}
+export function unregisterSensor(arg0) {
+  if (!globalThis.__sensorContainer) {
+    const _globalThis = globalThis;
+    const sensorContainer = new SensorContainer.SensorContainer();
+    globalThis.__sensorContainer = sensorContainer;
+  }
+  return __sensorContainer.unregisterSensor(arg0);
+}
+export function enableLayoutAnimations(arg0) {
+  const logger = _mod1665.logger;
+  logger.warn("`enableLayoutAnimations` is deprecated and will be removed in the future.");
+}
+export function configureLayoutAnimationBatch(arg0) {
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  const result = ReanimatedModule.configureLayoutAnimationBatch(arg0);
+}
+export function setShouldAnimateExitingForTag(arg0, arg1) {
+  const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
+  const result = ReanimatedModule.setShouldAnimateExitingForTag(arg0, arg1);
 }

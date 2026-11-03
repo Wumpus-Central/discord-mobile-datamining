@@ -132,7 +132,7 @@ let items = [
       let tmp = this.props.ignoreNames || [];
       let obj = tmp;
       if (self.props.ignoredDisplayNames) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
         obj = items;
       }
@@ -161,7 +161,7 @@ let items = [
       if (_targetInst._targetInst) {
         const self = this;
         _targetInst = _targetInst._targetInst;
-        const items = [];
+        items = [];
         if (_targetInst) {
           if (self.props.maxComponentTreeSize) {
             if (items.length < self.props.maxComponentTreeSize) {
@@ -208,14 +208,14 @@ let items = [
                   }
                 }
                 let tmp10 = typeof tmp9 === "string";
-                if (typeof tmp4[c10] === "string") {
-                  tmp10 = tmp4[c10].length > 0;
+                if (typeof tmp4[closure_10] === "string") {
+                  tmp10 = tmp4[closure_10].length > 0;
                 }
                 if (tmp10) {
-                  tmp10 = "unknown" !== tmp4[c10];
+                  tmp10 = "unknown" !== tmp4[closure_10];
                 }
                 if (tmp10) {
-                  tmp10 = tmp4[c10];
+                  tmp10 = tmp4[closure_10];
                 }
                 if (!tmp10) {
                   tmp10 = displayName;

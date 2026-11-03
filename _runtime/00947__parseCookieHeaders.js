@@ -21,7 +21,7 @@ function _parseCookieHeaders(Cookie, headers) {
     if (tmp4) {
       const tmp = _parseCookieString(tmp4);
     }
-    const items = [tmp2, tmp];
+    items = [tmp2, tmp];
     return items;
   } catch (err) {
   }
@@ -97,7 +97,7 @@ function _createEvent(error) {
   }
   const obj5 = { values: null };
   obj3.stacktrace = tmp7;
-  const items = [obj3];
+  items = [obj3];
   obj5.values = items;
   obj2.exception = obj5;
   obj2.request = { url: error.url, method: error.method, headers: error.requestHeaders, cookies: error.requestCookies };
@@ -133,7 +133,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
     obj = {};
   }
   let obj2 = { failedRequestStatusCodes: null, failedRequestTargets: null };
-  const items = [[500, 599]];
+  items = [[500, 599]];
   obj2.failedRequestStatusCodes = items;
   const items1 = [/.*/];
   obj2.failedRequestTargets = items1;
@@ -257,7 +257,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                             const str = getAllResponseHeaders.getAllResponseHeaders();
                             if (str) {
                               const parts = str.split("\r\n");
-                              return parts.reduce(/* F140324 */ function() { ... }, {});
+                              return parts.reduce(/* F141711 */ function() { ... }, {});
                             } else {
                               return {};
                             }

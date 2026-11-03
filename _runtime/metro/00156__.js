@@ -15,9 +15,9 @@ const require = globalThis.__r;
 const Performance = fn;
 let closure_6 = ["mark", "measure"];
 const NativePerformanceCxx = nullthrows(_modDef154);
-({ reportMark: closure_8, reportMeasure: closure_9, getMarkTime: c10, clearMarks: closure_11, clearMeasures: closure_12 } = NativePerformanceCxx);
-let closure_13 = { startTime: 0, detail: "applicationId" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "displayName" };
+({ reportMark: closure_8, reportMeasure: closure_9, getMarkTime: closure_10, clearMarks: closure_11, clearMeasures: closure_12 } = NativePerformanceCxx);
+let closure_13 = { startTime: 0, detail: "alignItems" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
 function getMarkTimeForMeasure(arg0) {
 
 }
@@ -371,7 +371,7 @@ let items = [
   {
     key: "clearMeasures",
     value: function clearMeasures(arg0) {
-      closure_1_12(arg0);
+      application_id(arg0);
     }
   },
   {
@@ -388,7 +388,7 @@ let items = [
         if (!closure_6.includes(type)) {
           const _console = console;
           console.warn("Deprecated API for given entry type.");
-          let items = [];
+          items = [];
         }
         return items;
       }
@@ -404,7 +404,7 @@ let items = [
         if (!closure_6.includes(type)) {
           const _console = console;
           console.warn("Deprecated API for given entry type.");
-          let items = [];
+          items = [];
         }
         return items;
       }

@@ -2,7 +2,7 @@
 
 // Module 697
 function createStackParser() {
-  let items = [...arguments];
+  items = [...arguments];
   const sorted = items.sort((arg0, arg1) => arg0[0] - arg1[0]);
   closure_0 = sorted.map((item) => item[1]);
   return (str) => {
@@ -14,7 +14,7 @@ function createStackParser() {
     if (arg2 === undefined) {
       num2 = 0;
     }
-    const items = [];
+    items = [];
     const parts = str.split("\n");
     if (num < parts.length) {
       while (true) {
@@ -106,7 +106,7 @@ export { createStackParser };
 export function getFramesFromEvent(exception) {
   exception = exception.exception;
   if (exception) {
-    let items = [];
+    items = [];
     try {
       const values = exception.values;
       const item = values.forEach((stacktrace) => {
@@ -170,7 +170,7 @@ export function normalizeStackTracePath(match1) {
 export function stackParserFromStackParserOptions(arg0) {
   let applyResult = arg0;
   if (Array.isArray(arg0)) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arg0, 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }

@@ -1,8 +1,7 @@
 // === Module 6794: ? ===
 
 // Module 6794
+import registerAsset from "module_1119" /* 1119 */;
 
-export default (arg0) => encodeURIComponent(arg0).replace(/[!'()*]/g, (str) => {
-  str = str.charCodeAt(0);
-  return "%" + str.toString(16).toUpperCase();
-});
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "659ba58a5945e0a8efee29d8d7d906ca", name: "img_account_sync_tiktok_dark", type: "svg" });

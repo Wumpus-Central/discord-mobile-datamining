@@ -1,127 +1,71 @@
 // === Module 4550: ? ===
 
 // Module 4550
-import _typeof_mod from "module_4294" /* 4294 */;
-import module_4476_mod from "module_4476" /* 4476 */;
-import module_4537_mod from "module_4537" /* 4537 */;
+import module_2201 from "module_2201" /* 2201 */;
+import module_2202 from "module_2202" /* 2202 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2201) {
+  const obj2 = { default: module_2201 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2201;
 }
-_typeof = tmp3;
-let module_4476 = module_4476_mod;
-if (!module_4476) {
-  const obj2 = { default: module_4476 };
-  let tmp5 = obj2;
+if (!module_2202) {
+  const obj4 = { default: module_2202 };
+  let obj3 = obj4;
 } else {
-  tmp5 = module_4476;
+  obj3 = module_2202;
 }
-module_4476 = tmp5;
-let module_4537 = module_4537_mod;
-if (!module_4537) {
-  const obj3 = { default: module_4537 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4537;
-}
-module_4537 = tmp7;
-
-export default function formatISO9075(arg0, format) {
-  if (arguments.length < 1) {
-    const _TypeError = TypeError;
-    const concat2 = "1 argument required, but only ".concat;
-    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
-    throw typeError;
-  } else {
-    const defaultResult = _typeof.default(arg0);
-    if (module_4476.default(defaultResult)) {
-      format = undefined;
-      if (null != format) {
-        format = format.format;
-      }
-      let str3 = "extended";
-      if (null !== format) {
-        str3 = "extended";
-        if (undefined !== format) {
-          str3 = format;
-        }
-      }
-      const StringResult = String(str3);
-      let representation;
-      if (null != format) {
-        representation = format.representation;
-      }
-      let str5 = "complete";
-      if (null !== representation) {
-        str5 = "complete";
-        if (undefined !== representation) {
-          str5 = representation;
-        }
-      }
-      const StringResult1 = String(str5);
-      if ("extended" !== StringResult) {
-        if ("basic" !== StringResult) {
-          const _RangeError3 = RangeError;
-          const rangeError = new RangeError("format must be 'extended' or 'basic'");
-          throw rangeError;
-        }
-      }
-      if ("date" !== StringResult1) {
-        if ("time" !== StringResult1) {
-          if ("complete" !== StringResult1) {
-            const _RangeError2 = RangeError;
-            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
-            throw rangeError1;
-          }
-        }
-      }
-      let str10 = "";
-      if ("extended" === StringResult) {
-        str10 = "-";
-      }
-      let str11 = "";
-      if ("extended" === StringResult) {
-        str11 = ":";
-      }
-      let str13 = "";
-      if ("time" !== StringResult1) {
-        const defaultResult1 = module_4537.default(defaultResult.getDate(), 2);
-        const concat3 = "".concat;
-        const combined = "".concat(module_4537.default(defaultResult.getFullYear(), 4));
-        const combined1 = combined.concat(str10);
-        const combined2 = combined1.concat(module_4537.default(defaultResult.getMonth() + 1, 2));
-        const combined3 = combined2.concat(str10);
-        str13 = combined3.concat(defaultResult1);
-        const defaultResult2 = module_4537.default(defaultResult.getMonth() + 1, 2);
-      }
-      let combined10 = str13;
-      if ("date" !== StringResult1) {
-        const defaultResult3 = module_4537.default(defaultResult.getHours(), 2);
-        let str14 = " ";
-        const defaultResult4 = module_4537.default(defaultResult.getMinutes(), 2);
-        if ("" === str13) {
-          str14 = "";
-        }
-        const concat = "".concat;
-        const combined4 = "".concat(str13);
-        const combined5 = combined4.concat(str14);
-        const combined6 = combined5.concat(defaultResult3);
-        const combined7 = combined6.concat(str11);
-        const combined8 = combined7.concat(defaultResult4);
-        const combined9 = combined8.concat(str11);
-        combined10 = combined9.concat(module_4537.default(defaultResult.getSeconds(), 2));
-        const defaultResult5 = module_4537.default(defaultResult.getSeconds(), 2);
-      }
-      return combined10;
-    } else {
-      const _RangeError = RangeError;
-      const rangeError2 = new RangeError("Invalid time value");
-      throw rangeError2;
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(:a|:e)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i, abbreviated: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i, wide: /^(före Kristus|före vår tid|efter Kristus|vår tid)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^f/i, /^[ev]/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](:a|:e)? kvartalet/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan|feb|mar[s]?|apr|maj|jun[i]?|jul[i]?|aug|sep|okt|nov|dec)\.?/i, wide: /^(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items2;
+const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^maj/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(sö|må|ti|on|to|fr|lö)/i, abbreviated: /^(sön|mån|tis|ons|tors|fre|lör)/i, wide: /^(söndag|måndag|tisdag|onsdag|torsdag|fredag|lördag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { any: null };
+const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
+obj13.any = items4;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^f/i, pm: /^e/i, midnight: /^midn/i, noon: /^midd/i, morning: /morgon/i, afternoon: /eftermiddag/i, evening: /kväll/i, night: /natt/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

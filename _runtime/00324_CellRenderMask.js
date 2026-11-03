@@ -55,7 +55,7 @@ let items = [
         [tmp24, tmp25] = self._findRegion(VirtualizedList.first);
         const tmp23 = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
         [last, splice] = self._findRegion(VirtualizedList.last);
-        const items = [];
+        items = [];
         const obj = {};
         const merged = Object.assign(VirtualizedList);
         obj.isSpacer = false;
@@ -141,7 +141,7 @@ let items = [
           diff = diff1;
           num = sum;
         }
-        const items = [tmp4, rounded];
+        items = [tmp4, rounded];
         return items;
       }
       CellRenderMask(38)(false, "A region was not found containing cellIdx " + VirtualizedList);

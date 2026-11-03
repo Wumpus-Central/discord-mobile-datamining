@@ -1,34 +1,49 @@
 // === Module 16238: ? ===
 
 // Module 16238
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 16239 */;
+import compareKV from "compareKV" /* 16240 */;
+import likelySubtags from "likelySubtags" /* 16243 */;
+import _mod16244 from "module_16244" /* 16244 */;
+import e_mod from "e" /* 1159 */;
 
-export function getReactNativeVersionWithModules(constants) {
-  try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod16244, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-  } catch (err) {
-    return null;
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_16242").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
+  return items;
 }
+export const isStructurallyValidLanguageTag = require("module_16242").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_16242").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_16242").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_16242").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_16242").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_16242").parseUnicodeLocaleId;

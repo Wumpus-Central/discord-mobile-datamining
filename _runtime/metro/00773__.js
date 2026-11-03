@@ -13,7 +13,7 @@ export const functionToStringIntegration = setupIntegration.defineIntegration(()
     try {
       const _Function = Function;
       Function.prototype.toString = function() {
-        const items = [...arguments];
+        items = [...arguments];
         const originalFunction = closure_1_0(686).getOriginalFunction(this);
         const obj = closure_1_0(686);
         let self = this;

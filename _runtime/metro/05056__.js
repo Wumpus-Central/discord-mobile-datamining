@@ -1,7 +1,10 @@
 // === Module 5056: ? ===
 
 // Module 5056
-import _mod5057 from "module_5057" /* 5057 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _mod5057;
+export const shallow = require("module_5057").shallow;
+export const useShallow = require("module_5058").useShallow;

@@ -1,126 +1,131 @@
 // === Module 1788: ? ===
 
 // Module 1788
+import _createClassDefault from "_createClass" /* 42 */;
+import CSSAnimationsManagerDefault from "CSSAnimationsManager" /* 1789 */;
+import CSSTransitionsManagerDefault from "CSSTransitionsManager" /* 1790 */;
+import nullifyUndefinedValuesDefault from "nullifyUndefinedValues" /* 1791 */;
+import _modDef1792 from "module_1792" /* 1792 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop_mod from "module_19" /* 19 */;
 
-const LayoutAnimationConfig = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const CSSManager = arg1;
+class CSSManager {
+  constructor(arg0) {
+    ({ shadowNodeWrapper, viewTag, reactViewName } = global);
+    if (reactViewName === undefined) {
+      reactViewName = "RCTView";
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-function SkipEntering(children) {
-  const tmp = React5(children.shouldSkip);
-  closure_0 = tmp;
-  const tmp2 = React5(children.itemKey);
-  if (children.itemKey !== tmp2.current) {
-    ({ shouldSkip: tmp.current, itemKey: tmp2.current } = children);
-  }
-  const items = [tmp, children.itemKey];
-  timestampProducer(() => {
-    closure_0.current = false;
-  }, items);
-  return jsx(closure_10 ? context : context.Provider, { value: tmp, children: children.children });
-}
-let noop = fn(19);
-({ Children: hasOwnProperty, useEffect: metroRequire, useRef: closure_7, Component, createContext } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-const module_1653 = fn(1653);
-let closure_10 = module_1653.isReact19();
-const context = createContext(null);
-class LayoutAnimationConfig {
-  constructor() {
-    self = this;
-    tmp = c2(this, LayoutAnimationConfig);
-    tmp2 = closure_4;
-    obj = closure_4(LayoutAnimationConfig);
-    tmp3 = closure_3;
-    if (closure_9()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    str = arg1;
+    if (arg1 === undefined) {
+      str = "";
     }
-    return tmp3(self, constructResult);
+    tmp = closure_4(this, CSSManager);
+    this.cssCallbacksManager = null;
+    this.hadTransitionLastUpdate = false;
+    this.viewTag = viewTag;
+    obj = closure_0(c2[3]);
+    compoundComponentName = obj.getCompoundComponentName(reactViewName, str);
+    obj2 = closure_0(c2[3]);
+    this.propsBuilder = obj2.getPropsBuilder(compoundComponentName);
+    tmp3 = new closure_1(c2[4])(shadowNodeWrapper, viewTag, compoundComponentName);
+    this.cssAnimationsManager = tmp3;
+    tmp4 = new closure_1(c2[5])(shadowNodeWrapper, viewTag);
+    this.cssTransitionsManager = tmp4;
+    tmp5 = new closure_1(c2[6])(shadowNodeWrapper, viewTag, this.propsBuilder, compoundComponentName);
+    this.cssPseudoStylesManager = tmp5;
+    return;
   }
 }
-_inherits(LayoutAnimationConfig, Component);
 const entry = {
-  key: "getMaybeWrappedChildren",
-  value: function getMaybeWrappedChildren() {
-    const self = this;
-    if (hasOwnProperty.count(this.props.children) > 1) {
-      if (self.props.skipExiting) {
-        let children = hasOwnProperty.map(self.props.children, (children) => closure_8(LayoutAnimationConfig, { itemKey: self.props.itemKey, skipExiting: true, children }));
-      }
-      return children;
+  key: "update",
+  value: function update(arg0) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
     }
-    children = self.props.children;
+    const self = this;
+    const tmp3 = _slicedToArray(CSSManager(1758).filterCSSAndStyleProperties(arg0), 4);
+    [tmp4, tmp5] = tmp3;
+    let tmp6 = null !== tmp4;
+    const cssAnimationsManager = this.cssAnimationsManager;
+    const result = cssAnimationsManager.hasAttachedAnimations();
+    const obj2 = CSSManager(1758);
+    const tmp9 = _slicedToArray(CSSManager(1758).splitCSSCallbacks(obj), 2);
+    this.syncCallbacks(tmp9[0], tmp9[1]);
+    if (!tmp6) {
+      if (!tmp7) {
+        const cssTransitionsManager = self.cssTransitionsManager;
+        let tmp15 = buildResult;
+        if (buildResult) {
+          if (!tmp6) {
+            tmp6 = result;
+          }
+          if (!tmp6) {
+            let IS_ANDROID = CSSManager(1665).IS_ANDROID;
+            if (IS_ANDROID) {
+              let tmp16 = tmp7;
+              if (!tmp7) {
+                tmp16 = tmp13;
+              }
+              IS_ANDROID = tmp16;
+            }
+            tmp6 = IS_ANDROID;
+          }
+          tmp15 = tmp6;
+        }
+        if (tmp15) {
+          CSSManager(1662).setViewStyle(self.viewTag, buildResult);
+          const tmpResult = CSSManager(1662);
+        }
+        const cssAnimationsManager2 = self.cssAnimationsManager;
+        cssAnimationsManager2.update(tmp4, tmp11);
+        const cssPseudoStylesManager = self.cssPseudoStylesManager;
+        cssPseudoStylesManager.update(tmp3[2], tmp5);
+        self.hadTransitionLastUpdate = tmp7;
+      }
+    }
+    const propsBuilder = self.propsBuilder;
+    buildResult = propsBuilder.build(tmp3[3]);
+    const obj3 = CSSManager(1758);
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "setShouldAnimateExiting",
-    value: function setShouldAnimateExiting() {
+    key: "unmountCleanup",
+    value: function unmountCleanup() {
       const self = this;
-      if (1 === hasOwnProperty.count(this.props.children)) {
-        const findNodeHandleResult = LayoutAnimationConfig(1758).findNodeHandle(self);
-        if (findNodeHandleResult) {
-          const result = LayoutAnimationConfig(1694).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
-          const tmpResult = LayoutAnimationConfig(1694);
+      if (this.cssCallbacksManager != null) {
+        cssCallbacksManager.retire();
+      }
+      const cssAnimationsManager = self.cssAnimationsManager;
+      cssAnimationsManager.unmountCleanup();
+      const cssTransitionsManager = self.cssTransitionsManager;
+      cssTransitionsManager.unmountCleanup();
+      const cssPseudoStylesManager = self.cssPseudoStylesManager;
+      cssPseudoStylesManager.unmountCleanup();
+    }
+  },
+  {
+    key: "syncCallbacks",
+    value: function syncCallbacks(arg0, arg1) {
+      const self = this;
+      if (!this.cssCallbacksManager) {
+        if (!arg0) {
+          if (!arg1) {
+            return { animationEventMask: 0, transitionEventMask: 0 };
+          }
         }
-        const obj = LayoutAnimationConfig(1758);
+        const tmp5 = new _modDef1792(self.viewTag);
+        self.cssCallbacksManager = tmp5;
       }
-    }
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      const self = this;
-      if (undefined !== this.props.skipExiting) {
-        const result = self.setShouldAnimateExiting();
-      }
-    }
-  },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const maybeWrappedChildren = this.getMaybeWrappedChildren();
-      let tmp2 = maybeWrappedChildren;
-      if (undefined !== this.props.skipEntering) {
-        const obj = { itemKey: self.props.itemKey, shouldSkip: self.props.skipEntering, children: maybeWrappedChildren };
-        tmp2 = <SkipEntering itemKey={self.props.itemKey} shouldSkip={self.props.skipEntering}>{maybeWrappedChildren}</SkipEntering>;
-      }
-      return tmp2;
+      const result = self.cssCallbacksManager.syncAnimationCallbacks(arg0);
+      const result1 = self.cssCallbacksManager.syncTransitionCallbacks(arg1);
+      const obj = { animationEventMask: self.cssCallbacksManager.getAnimationEventMask(), transitionEventMask: self.cssCallbacksManager.getTransitionEventMask() };
+      return obj;
     }
   }
 ];
 
-export const SkipEnteringContext = context;
-export const LayoutAnimationConfig = _createClass(LayoutAnimationConfig, items);
+export default _createClassDefault(CSSManager, items);

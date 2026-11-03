@@ -43,7 +43,7 @@ function _maybeLog(arg0) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
         const _console = _mod685.GLOBAL_OBJ.console;
-        const items = ["Sentry Logger [" + closure_0 + "]:", ...closure_1];
+        items = ["Sentry Logger [" + closure_0 + "]:", ...closure_1];
         _console[closure_0].apply(items);
       });
     }
@@ -93,17 +93,17 @@ export const debug = {
     return globalSingleton.enabled;
   },
   log() {
-    const items = ["log"];
+    items = ["log"];
     HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
     _maybeLog();
   },
   warn() {
-    const items = ["warn"];
+    items = ["warn"];
     HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
     _maybeLog();
   },
   error() {
-    const items = ["error"];
+    items = ["error"];
     HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
     _maybeLog();
   }

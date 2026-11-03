@@ -1,7 +1,18 @@
 // === Module 7138: ? ===
 
 // Module 7138
-import registerAsset from "module_1119" /* 1119 */;
+import Link from "Link" /* 1500 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1b06201c0ce237bba30c4db64f994263", name: "EyeIcon", type: "png" });
+export function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  const obj2 = {};
+  const merged1 = Object.assign(merged);
+  items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
+  obj2.style = items;
+  return <Animated.View />;
+}

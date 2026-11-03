@@ -356,7 +356,7 @@ closure_0 = asyncGeneratorStep(async function() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -479,7 +479,7 @@ items[14] = {
       const tmpResult4 = closure_0(UIProfiler[5]);
     }
     const merged1 = Object.assign(tmp8);
-    const items = [{ type: "profile_chunk", platform: "javascript" }, arg0];
+    items = [{ type: "profile_chunk", platform: "javascript" }, arg0];
     const items1 = [items];
     const date = new Date();
     _client.sendEnvelope(tmpResult.createEnvelope(obj2, items1)).then(null, (arg0) => {

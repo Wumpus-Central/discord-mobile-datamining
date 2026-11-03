@@ -1,44 +1,7 @@
 // === Module 4370: ? ===
 
 // Module 4370
-import module_4371 from "module_4371" /* 4371 */;
-import module_4372 from "module_4372" /* 4372 */;
-import module_4373 from "module_4373" /* 4373 */;
-import date_mod from "module_4374" /* 4374 */;
-import date_mod from "module_4375" /* 4375 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-if (!module_4371) {
-  const obj = { default: module_4371 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4371;
-}
-if (!module_4372) {
-  const obj2 = { default: module_4372 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4372;
-}
-if (!module_4373) {
-  const obj3 = { default: module_4373 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4373;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
 
-export default { code: "ko", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==", scales: [1], hash: "ce1baae39774c8bae91cb40873eda9c9", name: "sv-SE.messages.ce1baae39774c8bae91cb40873eda9c9.compiled.messages", type: "jsona" });

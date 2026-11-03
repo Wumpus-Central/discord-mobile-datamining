@@ -21,7 +21,7 @@ const entry = {
   value: function prepare() {
     const self = this;
     if (!this.data) {
-      const items = [];
+      items = [];
       const items1 = [];
       const items2 = [];
       const fields = self.fields;

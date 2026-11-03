@@ -1,7 +1,18 @@
 // === Module 6647: ? ===
 
 // Module 6647
-import registerAsset from "module_1119" /* 1119 */;
+import _mod1292 from "module_1292" /* 1292 */;
+import _mod6595 from "module_6595" /* 6595 */;
 
+let closure_2 = _mod1292("%Object.isExtensible%", true);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "2ebb6fd1431422af001c51b9dd778da6", name: "img_account_sync_playstation_white", type: "svg" });
+export default _mod1292("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
+  const tmp = _mod6595(arg0);
+  let tmp2 = !tmp;
+  if (!tmp) {
+    tmp2 = closure_2(arg0);
+  }
+  return tmp2;
+}) : (function IsExtensible(arg0) {
+  return !_mod6595(arg0);
+});

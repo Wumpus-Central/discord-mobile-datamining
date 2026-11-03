@@ -1,11 +1,12 @@
 // === Module 1872: ? ===
 
 // Module 1872
-import noop from "module_19" /* 19 */;
+import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1873 */;
+import _mod1874 from "module_1874" /* 1874 */;
+import Keyframe from "Keyframe" /* 1875 */;
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
 
-export default function _default(children) {
-  return framebus(React, { children: children.children });
-};
+export const BaseAnimationBuilder = BaseAnimationBuilder.BaseAnimationBuilder;
+export const AnimationConfigBuilder = _mod1874.AnimationConfigBuilder;
+export const ComplexAnimationBuilder = _mod1874.ComplexAnimationBuilder;
+export const Keyframe = Keyframe.Keyframe;

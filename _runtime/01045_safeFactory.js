@@ -13,7 +13,7 @@ export function safeFactory(beforeBreadcrumb, arg1) {
   }
   if (typeof fn === "function") {
     fn = () => {
-      const items = [...arguments];
+      items = [...arguments];
       try {
         const items1 = [];
         HermesBuiltin.arraySpread(items, 0);
@@ -38,7 +38,7 @@ export function safeTracesSampler(tracesSampler) {
   closure_0 = tracesSampler;
   if (tracesSampler) {
     fn = () => {
-      const items = [...arguments];
+      items = [...arguments];
       try {
         const items1 = [];
         HermesBuiltin.arraySpread(items, 0);

@@ -155,6 +155,7 @@ function getConfirmation(arg0, fn) {
 function getHistoryState() {
   try {
     const _window = window;
+    state = window.history.state;
     if (!state) {
       state = {};
     }
@@ -513,7 +514,7 @@ export function createBrowserHistory(props) {
     }
   }
   let tmp9 = str6(tmp6, state, key);
-  const items = [tmp9.key];
+  items = [tmp9.key];
   substr = items;
   c12 = 0;
   c13 = false;
@@ -1022,7 +1023,7 @@ export function createHashHistory(props) {
     }
     sum1 = sum + text1;
   }
-  const items = [sum1];
+  items = [sum1];
   substr = items;
   c11 = 0;
   c12 = false;

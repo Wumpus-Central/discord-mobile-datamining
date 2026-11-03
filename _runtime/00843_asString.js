@@ -451,7 +451,7 @@ export function extractLlmResponseAttributes(generations, flag2) {
         }
       }
       (function addToolCallsAttributes(generations, arg1) {
-        const items = [];
+        items = [];
         const iter = generations.flat()[Symbol.iterator]();
         while (iter !== undefined) {
           let message = iter.next().message;

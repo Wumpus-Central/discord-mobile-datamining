@@ -1,26 +1,9 @@
 // === Module 13055: ? ===
 
 // Module 13055
-import _mod13056 from "module_13056" /* 13056 */;
+import defaultRecognizer from "defaultRecognizer" /* 13056 */;
+import _mod13058 from "module_13058" /* 13058 */;
+import _mod13059 from "module_13059" /* 13059 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const GLOBAL_OBJ = globalThis;
-export function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod13056.SDK_VERSION] || {};
-  tmp2[_mod13056.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[globalMetricsAggregators];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[globalMetricsAggregators] = tmp6;
-    tmp4 = tmp6;
-  }
-  return tmp4;
-}
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod13058, Value: _mod13059 };

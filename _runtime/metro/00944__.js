@@ -27,7 +27,7 @@ export function checkAndWarnIfIsEmbeddedBrowserExtension() {
         const locationHref = _mod681.getLocationHref();
         let someResult = ignoreNextOnError.WINDOW === ignoreNextOnError.WINDOW.top;
         if (someResult) {
-          const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
+          items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
           someResult = items.some((item) => closure_0.startsWith("" + item + "://"));
         }
         flag = !someResult;

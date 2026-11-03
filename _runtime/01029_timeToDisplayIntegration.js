@@ -50,7 +50,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }
@@ -149,7 +149,7 @@ export () => {
                 let obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -192,7 +192,7 @@ export () => {
                   let found;
                   if (null !== spans) {
                     if (debug1 !== closure_129_4) {
-                      found = closure_129_4.find(/* F140419 */ function() { ... });
+                      found = closure_129_4.find(/* F141841 */ function() { ... });
                     }
                   }
                   closure_128_1 = found;
@@ -261,7 +261,7 @@ export () => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -308,7 +308,7 @@ export () => {
                       let found;
                       if (null !== spans) {
                         if (debug1 !== closure_129_4) {
-                          found = closure_129_4.find(/* F140421 */ function() { ... });
+                          found = closure_129_4.find(/* F141843 */ function() { ... });
                         }
                       }
                       closure_128_1 = found;
@@ -358,7 +358,7 @@ export () => {
                     }
                   }
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp83) {
                 c3 = tmp;

@@ -13,7 +13,7 @@ function contentUnionToMessages(contents) {
   }
   if (typeof contents === "string") {
     const obj2 = { role: str, content: contents };
-    const items = [obj2];
+    items = [obj2];
     let flatMapResult = items;
   } else {
     const _Array = Array;

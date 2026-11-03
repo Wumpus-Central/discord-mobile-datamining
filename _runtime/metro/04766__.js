@@ -1,26 +1,30 @@
 // === Module 4766: ? ===
 
 // Module 4766
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "cs" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import startOfHour_mod from "startOfHour" /* 4767 */;
+import requiredArgs_mod from "requiredArgs" /* 4422 */;
+
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfHour;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+startOfHour = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "cs" };
-prop.push(obj);
+requiredArgs = tmp5;
+
+export default function isSameHour(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
+};
+export default exports.default;

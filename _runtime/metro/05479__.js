@@ -1,7 +1,47 @@
 // === Module 5479: ? ===
 
 // Module 5479
-import _modDef5480 from "module_5480" /* 5480 */;
+import _mod19 from "module_19" /* 19 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5457 */;
+import MountRegistry2 from "MountRegistry" /* 5460 */;
 
+function shouldUpdateDetector(blocksHandlers, handlerTag) {
+  if (undefined === blocksHandlers) {
+    return false;
+  } else {
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
+    for (const item10012 of result) {
+      if (item10012 === arg1.handlerTag) {
+        obj2.return();
+        let flag = true;
+        return true;
+      }
+    }
+    return false;
+  }
+}
+const useEffect = _mod19.useEffect;
 
-export default _modDef5480;
+export function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((handlerTag) => {
+      if (current2.isMounted) {
+        const attachedGestures = current2.attachedGestures;
+        const iter = attachedGestures[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let requireToFail = nextResult.config.requireToFail;
+          let simultaneousWith = nextResult.config.simultaneousWith;
+          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
+          }
+          let tmp9 = detectorUpdater();
+          iter.return();
+        }
+      }
+    });
+  }, items);
+}

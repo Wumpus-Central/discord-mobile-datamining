@@ -29,7 +29,7 @@ const entry = {
       closure_0 = arg0;
       closure_1 = arg1;
       const _handlers = self._handlers;
-      const items = [
+      items = [
         false,
         (arg0) => {
           if (closure_1) {

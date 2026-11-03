@@ -18,7 +18,7 @@ function processEvent(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ function processEvent(arg0, arg1, arg2) {
           }
           if (tmp7) {
             value = 0;
-            const items = [];
+            items = [];
             value = HermesBuiltin.arraySpread(closure_129_0, 0);
             let attachments;
             if (null != closure_130_1) {
@@ -151,7 +151,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }

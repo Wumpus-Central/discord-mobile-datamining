@@ -14,7 +14,7 @@ export default function usePressability(arg0) {
     tmp.current = tmp8;
   }
   const current = tmp.current;
-  const items = [arg0, current];
+  items = [arg0, current];
   React2(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

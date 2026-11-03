@@ -1,72 +1,177 @@
 // === Module 5386: ? ===
 
 // Module 5386
-import handlerIDToTag from "handlerIDToTag" /* 5307 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5334 */;
-import _mod5347 from "module_5347" /* 5347 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5371 */;
-import noop from "module_19" /* 19 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 5387 */;
+import RNHapticFeedbackDefault from "RNHapticFeedback" /* 5388 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = globalThis.__r;
+require = arg1;
+let closure_4 = { [arg1(5387).HapticFeedbackTypes.impactLight]: 0.3, [arg1(5387).HapticFeedbackTypes.impactMedium]: 0.6, [arg1(5387).HapticFeedbackTypes.impactHeavy]: 0.8, [arg1(5387).HapticFeedbackTypes.rigid]: 1, [arg1(5387).HapticFeedbackTypes.soft]: 0.1, [arg1(5387).HapticFeedbackTypes.selection]: 0.3 };
+let closure_5 = { enableVibrateFallback: false, ignoreAndroidSystemSettings: false };
+let global = true;
 
-({ useEffect: c2, useMemo: c3 } = noop);
-
-export function useGesture(Fling, clonedAndRemappedConfig) {
-  _require = Fling;
-  dependencyMap = clonedAndRemappedConfig;
-  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
-  const handlerTag = tmp2;
-  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
-    const _Error2 = Error;
-    const error = new Error(require("tagMessage").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
-    throw error;
-  } else {
-    const gestureCallbacks = require("module_5387").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
-    jsEventHandler = gestureCallbacks.jsEventHandler;
-    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
-    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
-    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
-      if (!reanimatedEventHandler) {
-        const _Error = Error;
-        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
-        throw error1;
+export default {
+  setEnabled(arg0) {
+    global = arg0;
+  },
+  isEnabled() {
+    return global;
+  },
+  trigger() {
+    let selection = arg0;
+    if (arg0 === undefined) {
+      selection = HapticFeedbackTypes.HapticFeedbackTypes.selection;
+    }
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      try {
+        const obj3 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.trigger(selection, obj3);
+      } catch (tmp12) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
       }
     }
-    const items = [tmp2, , , ];
-    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
-    const tmpResult = tmp(() => DEFAULT_PROPS_TRANSFORMER.prepareRelations({ simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block }, closure_2), items);
-    const gestureRelations = tmpResult;
-    const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
-    const tmpResult2 = tmp(() => {
-      const obj = { handlerTag, type, config, detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler }, gestureRelations };
-      return obj;
-    }, items1);
-    closure_7 = tmpResult2;
-    const items2 = [Fling, tmp2];
-    handlerTag(() => {
-      let NativeProxy = _mod5347.NativeProxy;
-      NativeProxy.createGestureHandler(closure_0, closure_2, {});
-      let result = transformIntoHandlerTags.scheduleFlushOperations();
-      return () => {
-        const NativeProxy = closure_0(5347).NativeProxy;
-        NativeProxy.dropGestureHandler(handlerTag);
-        const result = closure_0(5334).scheduleFlushOperations();
-      };
-    }, items2);
-    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
-    handlerTag(() => {
-      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
-      const NativeProxy = _mod5347.NativeProxy;
-      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
-      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
-      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
-      handlerIDToTag.registerGesture(closure_2, closure_7);
-      return () => {
-        closure_0(5371).unbindSharedValues(dependencyMap, handlerTag);
-        const obj = closure_0(5371);
-        closure_0(5307).unregisterGesture(handlerTag);
-      };
-    }, items3);
-    return tmpResult2;
+  },
+  stop() {
+    if (global) {
+      try {
+        RNHapticFeedbackDefault.stop();
+      } catch (tmp4) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: stop failed \u2013", tmp4);
+      }
+    }
+  },
+  isSupported() {
+    try {
+      return RNHapticFeedbackDefault.isSupported();
+    } catch (err) {
+      return false;
+    }
+  },
+  triggerPattern(arg0) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      try {
+        const obj3 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.triggerPattern(arg0, obj3);
+      } catch (tmp11) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
+      }
+    }
+  },
+  playAHAP(arg0) {
+    if (global) {
+      try {
+        return RNHapticFeedbackDefault.playAHAP(arg0);
+      } catch (err) {
+        return Promise.resolve();
+      }
+    } else {
+      return Promise.resolve();
+    }
+  },
+  impact() {
+    let impactMedium = arg0;
+    if (arg0 === undefined) {
+      impactMedium = HapticFeedbackTypes.HapticFeedbackTypes.impactMedium;
+    }
+    let obj = arg2;
+    if (arg2 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      let num2 = closure_4[impactMedium];
+      if (num2 == null) {
+        num2 = 0.5;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      try {
+        const obj3 = { time: 0, intensity: tmp7, sharpness: num2 };
+        items = [obj3];
+        const obj4 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.triggerPattern(items, obj4);
+      } catch (tmp17) {
+        const _console = tmp.console;
+        _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);
+      }
+    }
+  },
+  getSystemHapticStatus() {
+    return (async () => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c2 = 1;
+              c1 = 2;
+              c0 = 1;
+              const obj5 = { value: RNHapticFeedbackDefault.getSystemHapticStatus(), done: false };
+              return obj5;
+            }
+          } else if (1 === tmp6) {
+            c2 = 0;
+            c0 = 3;
+            const obj6 = { value: { vibrationEnabled: false, ringerMode: null }, done: true };
+            return obj6;
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 0;
+            c0 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c2 = 0;
+            c0 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+        } catch (tmp9) {
+          if (tmp3 === c2) {
+            c0 = tmp2;
+            throw tmp9;
+          } else {
+            c1 = tmp;
+          }
+        }
+      }
+    })();
   }
-}
+};

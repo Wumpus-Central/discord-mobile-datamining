@@ -300,7 +300,7 @@ let items = [
         accessibilityElementsHidden = self.props.accessibilityElementsHidden;
       }
       obj3.accessibilityElementsHidden = accessibilityElementsHidden;
-      const items = [self.props.style, { opacity: self.state.anim }];
+      items = [self.props.style, { opacity: self.state.anim }];
       obj3.style = items;
       let nativeID = self.props.id;
       if (nativeID == null) {

@@ -47,7 +47,7 @@ export function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
       contexts.contexts = {};
     }
     const obj2 = { values: null };
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr, 0);
     obj2.values = items;
     contexts.contexts.flags = obj2;

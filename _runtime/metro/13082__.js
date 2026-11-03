@@ -1,9 +1,7 @@
 // === Module 13082: ? ===
 
 // Module 13082
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod13013 from "module_13013" /* 13013 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+
+export default { node: _mod13013 };

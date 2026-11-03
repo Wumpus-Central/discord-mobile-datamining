@@ -64,7 +64,7 @@ export function logSpanStart(spanContext) {
     const _HermesInternal = HermesInternal;
     const _HermesInternal2 = HermesInternal;
     const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
+    items = ["op: " + str2, , ];
     const _HermesInternal3 = HermesInternal;
     items[1] = "name: " + str;
     const _HermesInternal4 = HermesInternal;

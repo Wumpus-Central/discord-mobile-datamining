@@ -165,7 +165,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [platform, arg1, arg2, arg3];
+      items = [platform, arg1, arg2, arg3];
       return fn(items);
     }
   }

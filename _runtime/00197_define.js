@@ -76,12 +76,12 @@
                                       callResult = call(value, "__await");
                                     }
                                     if (callResult) {
-                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                       const resolveResult = closure_2_1.resolve(value.__await);
                                     }
                                   }
                                 }
-                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                 iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(value);
                               } else {
@@ -100,12 +100,12 @@
                                       callResult = call(value, "__await");
                                     }
                                     if (callResult) {
-                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                       const resolveResult = closure_2_1.resolve(value.__await);
                                     }
                                   }
                                 }
-                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                 iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(value);
                               } else {
@@ -132,11 +132,11 @@
                                 call(fn, "__await");
                               }
                             }
-                            fn = /* F134024 */ function() { ... };
-                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                            fn = /* F134796 */ function() { ... };
+                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                             const resolveResult = closure_2_1.resolve(fn.__await);
                           }
-                          nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                          nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                           iter = tmp2.arg;
                           const resolveResult1 = closure_2_1.resolve(fn);
                         } else {
@@ -193,12 +193,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -217,12 +217,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -249,11 +249,11 @@
                                         call(fn, "__await");
                                       }
                                     }
-                                    fn = /* F134024 */ function() { ... };
-                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                    fn = /* F134796 */ function() { ... };
+                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
-                                  nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                  nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                   iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
@@ -291,12 +291,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -315,12 +315,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -347,11 +347,11 @@
                                         call(fn, "__await");
                                       }
                                     }
-                                    fn = /* F134024 */ function() { ... };
-                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                    fn = /* F134796 */ function() { ... };
+                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
-                                  nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                  nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                   iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
@@ -397,12 +397,12 @@
                                     callResult = call(value, "__await");
                                   }
                                   if (callResult) {
-                                    closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                    closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
                                 }
                               }
-                              closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                              closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                               iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
@@ -422,12 +422,12 @@
                                     callResult = call(value, "__await");
                                   }
                                   if (callResult) {
-                                    closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                    closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
                                 }
                               }
-                              closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                              closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                               iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
@@ -452,11 +452,11 @@
                                   call(fn, "__await");
                                 }
                               }
-                              fn = /* F134024 */ function() { ... };
-                              nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                              fn = /* F134796 */ function() { ... };
+                              nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                               const resolveResult = closure_2_1.resolve(fn.__await);
                             }
-                            nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                            nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                             iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(fn);
                           } else {
@@ -479,7 +479,7 @@
               return nextPromise;
             }
       };
-      tmp = f77755(this, "_invoke", obj);
+      tmp = f77915(this, "_invoke", obj);
       return;
     }
   }
@@ -565,7 +565,7 @@
     }
   }
   function doneResult() {
-    return { value: "HermesInternal", done: "HermesInternal" };
+    return { value: "HermesInternal", done: null };
   }
   hasOwnProperty = prototype.hasOwnProperty;
   let tmp = Object.defineProperty || ((arg0, arg1, value) => {
@@ -623,7 +623,7 @@
       if (!arg1) {
         tmp = Generator;
       }
-      let items = arg3;
+      items = arg3;
       const obj2 = Object.create(tmp.prototype);
       if (!arg3) {
         items = [];
@@ -646,7 +646,7 @@
             if ("throw" === method) {
               throw arg;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             obj.method = method;
@@ -760,12 +760,12 @@
                                           callResult = call(value, "__await");
                                         }
                                         if (callResult) {
-                                          closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                          closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                           const resolveResult = closure_2_1.resolve(value.__await);
                                         }
                                       }
                                     }
-                                    closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                    closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                     iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(value);
                                   } else {
@@ -784,12 +784,12 @@
                                           callResult = call(value, "__await");
                                         }
                                         if (callResult) {
-                                          closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                          closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                           const resolveResult = closure_2_1.resolve(value.__await);
                                         }
                                       }
                                     }
-                                    closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                    closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                     iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(value);
                                   } else {
@@ -816,11 +816,11 @@
                                     call(fn, "__await");
                                   }
                                 }
-                                fn = /* F134024 */ function() { ... };
-                                nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                fn = /* F134796 */ function() { ... };
+                                nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                 const resolveResult = closure_2_1.resolve(fn.__await);
                               }
-                              nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                              nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                               iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(fn);
                             } else {
@@ -877,12 +877,12 @@
                                                   callResult = call(value, "__await");
                                                 }
                                                 if (callResult) {
-                                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
                                               }
                                             }
-                                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                             iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
@@ -901,12 +901,12 @@
                                                   callResult = call(value, "__await");
                                                 }
                                                 if (callResult) {
-                                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
                                               }
                                             }
-                                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                             iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
@@ -933,11 +933,11 @@
                                             call(fn, "__await");
                                           }
                                         }
-                                        fn = /* F134024 */ function() { ... };
-                                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                        fn = /* F134796 */ function() { ... };
+                                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                         const resolveResult = closure_2_1.resolve(fn.__await);
                                       }
-                                      nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                      nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                       iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(fn);
                                     } else {
@@ -975,12 +975,12 @@
                                                   callResult = call(value, "__await");
                                                 }
                                                 if (callResult) {
-                                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
                                               }
                                             }
-                                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                             iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
@@ -999,12 +999,12 @@
                                                   callResult = call(value, "__await");
                                                 }
                                                 if (callResult) {
-                                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
                                               }
                                             }
-                                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                             iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
@@ -1031,11 +1031,11 @@
                                             call(fn, "__await");
                                           }
                                         }
-                                        fn = /* F134024 */ function() { ... };
-                                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                        fn = /* F134796 */ function() { ... };
+                                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                         const resolveResult = closure_2_1.resolve(fn.__await);
                                       }
-                                      nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                      nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                       iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(fn);
                                     } else {
@@ -1081,12 +1081,12 @@
                                         callResult = call(value, "__await");
                                       }
                                       if (callResult) {
-                                        closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                        closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
                                     }
                                   }
-                                  closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                  closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                   iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
@@ -1106,12 +1106,12 @@
                                         callResult = call(value, "__await");
                                       }
                                       if (callResult) {
-                                        closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                        closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
                                     }
                                   }
-                                  closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                  closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                   iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
@@ -1136,11 +1136,11 @@
                                       call(fn, "__await");
                                     }
                                   }
-                                  fn = /* F134024 */ function() { ... };
-                                  nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                  fn = /* F134796 */ function() { ... };
+                                  nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                   const resolveResult = closure_2_1.resolve(fn.__await);
                                 }
-                                nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                 iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(fn);
                               } else {
@@ -1163,7 +1163,7 @@
                   return nextPromise;
                 }
         };
-        tmp = f77755(this, "_invoke", obj);
+        tmp = f77915(this, "_invoke", obj);
         return;
       }
     }
@@ -1197,7 +1197,7 @@
       }
       function defineIteratorMethods(arg0) {
         closure_0 = arg0;
-        const items = ["next", "throw", "return"];
+        items = ["next", "throw", "return"];
         const item = items.forEach((item) => {
           closure_0 = item;
           define2(closure_0, item, function(arg0) {
@@ -1265,12 +1265,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -1289,12 +1289,12 @@
                                               callResult = call(value, "__await");
                                             }
                                             if (callResult) {
-                                              closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                              closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
                                           }
                                         }
-                                        closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                        closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                         iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
@@ -1321,11 +1321,11 @@
                                         call(fn, "__await");
                                       }
                                     }
-                                    fn = /* F134024 */ function() { ... };
-                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                    fn = /* F134796 */ function() { ... };
+                                    nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
-                                  nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                  nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                   iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
@@ -1382,12 +1382,12 @@
                                                       callResult = call(value, "__await");
                                                     }
                                                     if (callResult) {
-                                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
                                                   }
                                                 }
-                                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                                 iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
@@ -1406,12 +1406,12 @@
                                                       callResult = call(value, "__await");
                                                     }
                                                     if (callResult) {
-                                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
                                                   }
                                                 }
-                                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                                 iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
@@ -1438,11 +1438,11 @@
                                                 call(fn, "__await");
                                               }
                                             }
-                                            fn = /* F134024 */ function() { ... };
-                                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                            fn = /* F134796 */ function() { ... };
+                                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                             const resolveResult = closure_2_1.resolve(fn.__await);
                                           }
-                                          nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                          nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                           iter = tmp2.arg;
                                           const resolveResult1 = closure_2_1.resolve(fn);
                                         } else {
@@ -1480,12 +1480,12 @@
                                                       callResult = call(value, "__await");
                                                     }
                                                     if (callResult) {
-                                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
                                                   }
                                                 }
-                                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                                 iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
@@ -1504,12 +1504,12 @@
                                                       callResult = call(value, "__await");
                                                     }
                                                     if (callResult) {
-                                                      closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                                      closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
                                                   }
                                                 }
-                                                closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                                closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                                 iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
@@ -1536,11 +1536,11 @@
                                                 call(fn, "__await");
                                               }
                                             }
-                                            fn = /* F134024 */ function() { ... };
-                                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                            fn = /* F134796 */ function() { ... };
+                                            nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                             const resolveResult = closure_2_1.resolve(fn.__await);
                                           }
-                                          nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                          nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                           iter = tmp2.arg;
                                           const resolveResult1 = closure_2_1.resolve(fn);
                                         } else {
@@ -1586,12 +1586,12 @@
                                             callResult = call(value, "__await");
                                           }
                                           if (callResult) {
-                                            closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                            closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
                                         }
                                       }
-                                      closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                      closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                       iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
@@ -1611,12 +1611,12 @@
                                             callResult = call(value, "__await");
                                           }
                                           if (callResult) {
-                                            closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                            closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
                                         }
                                       }
-                                      closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                      closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                       iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
@@ -1641,11 +1641,11 @@
                                           call(fn, "__await");
                                         }
                                       }
-                                      fn = /* F134024 */ function() { ... };
-                                      nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                                      fn = /* F134796 */ function() { ... };
+                                      nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                                       const resolveResult = closure_2_1.resolve(fn.__await);
                                     }
-                                    nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                                    nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                                     iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(fn);
                                   } else {
@@ -1668,7 +1668,7 @@
                       return nextPromise;
                     }
           };
-          tmp = f77755(this, "_invoke", obj);
+          tmp = f77915(this, "_invoke", obj);
           return;
         }
       }
@@ -1712,7 +1712,7 @@
         } else {
           tmp4 = fn;
         }
-        let items = arg3;
+        items = arg3;
         const obj2 = Object.create(tmp4.prototype);
         if (!arg3) {
           items = [];
@@ -1734,7 +1734,7 @@
               if ("throw" === method) {
                 throw arg;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               obj.method = method;
@@ -1818,12 +1818,12 @@
                           callResult = call(value, "__await");
                         }
                         if (callResult) {
-                          closure_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                          closure_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                           let resolveResult = closure_1.resolve(value.__await);
                         }
                       }
                     }
-                    closure_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                    closure_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                     iter = tmp.arg;
                     let resolveResult1 = closure_1.resolve(value);
                   } else {
@@ -1861,12 +1861,12 @@
                                   callResult = call(value, "__await");
                                 }
                                 if (callResult) {
-                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                   const resolveResult = closure_2_1.resolve(value.__await);
                                 }
                               }
                             }
-                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                             iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(value);
                           } else {
@@ -1885,12 +1885,12 @@
                                   callResult = call(value, "__await");
                                 }
                                 if (callResult) {
-                                  closure_2_1.resolve(value.__await).then(/* F134023 */ function() { ... }, /* F134024 */ function() { ... });
+                                  closure_2_1.resolve(value.__await).then(/* F134795 */ function() { ... }, /* F134796 */ function() { ... });
                                   const resolveResult = closure_2_1.resolve(value.__await);
                                 }
                               }
                             }
-                            closure_2_1.resolve(value).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                            closure_2_1.resolve(value).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                             iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(value);
                           } else {
@@ -1917,11 +1917,11 @@
                             call(fn, "__await");
                           }
                         }
-                        fn = /* F134024 */ function() { ... };
-                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134023 */ function() { ... }, fn);
+                        fn = /* F134796 */ function() { ... };
+                        nextPromise = closure_2_1.resolve(fn.__await).then(/* F134795 */ function() { ... }, fn);
                         const resolveResult = closure_2_1.resolve(fn.__await);
                       }
-                      nextPromise = closure_2_1.resolve(fn).then(/* F134025 */ function() { ... }, /* F134026 */ function() { ... });
+                      nextPromise = closure_2_1.resolve(fn).then(/* F134797 */ function() { ... }, /* F134798 */ function() { ... });
                       iter = tmp2.arg;
                       const resolveResult1 = closure_2_1.resolve(fn);
                     } else {
@@ -1961,7 +1961,7 @@
       arg0.keys = (arg0) => {
         const ObjectResult = Object(arg0);
         closure_0 = ObjectResult;
-        const items = [];
+        items = [];
         for (const key10008 in ObjectResult) {
           let arr = items.push(key10008);
           continue;

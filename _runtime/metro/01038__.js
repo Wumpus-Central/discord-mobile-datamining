@@ -236,7 +236,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0, arg1];
+      items = [arg0, arg1];
       return fn(items);
     }
   },
@@ -249,7 +249,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0, ...substr];
+      items = [arg0, ...substr];
       fn(items);
     }
   },
@@ -361,7 +361,7 @@ let items = [
     key: "_attachClientReportTo",
     value: function _attachClientReportTo(_outcomesBuffer, arg1) {
       if (_outcomesBuffer.length > 0) {
-        const items = [{ type: "client_report" }, ];
+        items = [{ type: "client_report" }, ];
         const obj = { timestamp: ReactNativeClient(681).dateTimestampInSeconds(), discarded_events: _outcomesBuffer };
         items[1] = obj;
         const obj2 = ReactNativeClient(681);

@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Animated: metroRequire, Appearance: closure_7, Dimensions: closure_8, Easing: closure_9, Modal: c10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
+({ Animated: metroRequire, Appearance: closure_7, Dimensions: closure_8, Easing: closure_9, Modal: closure_10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
 const module_1059 = fn(1059);
 const useNativeDriver = module_1059.isNativeDriverSupportedForColorAnimations();
 class FeedbackWidgetProvider {
@@ -110,7 +110,7 @@ class FeedbackWidgetProvider {
         obj.toValue = closure_1_8.get("screen").height;
         obj.duration = isVisible(1060).SLIDE_ANIMATION_DURATION;
         obj.easing = closure_1_9.out(closure_1_9.quad);
-        const items = [timing(isVisible.state.panY, obj), ];
+        items = [timing(isVisible.state.panY, obj), ];
         const obj3 = { toValue: 0, duration: isVisible(1060).BACKGROUND_ANIMATION_DURATION, useNativeDriver, easing: closure_1_9.out(closure_1_9.quad) };
         items[1] = RN.timing(isVisible.state.backgroundOpacity, obj3);
         parallel(items).start(() => {
@@ -170,7 +170,7 @@ let items = [
           obj.duration = FeedbackWidgetProvider(1060).BACKGROUND_ANIMATION_DURATION;
           obj.useNativeDriver = useNativeDriver;
           obj.easing = React7.in(React7.quad);
-          const items = [timing(self.state.backgroundOpacity, obj), ];
+          items = [timing(self.state.backgroundOpacity, obj), ];
           const obj2 = { toValue: 0, duration: FeedbackWidgetProvider(1060).SLIDE_ANIMATION_DURATION, useNativeDriver: true, easing: React7.in(React7.quad) };
           items[1] = RN.timing(self.state.panY, obj2);
           parallel(items).start(() => {
@@ -211,7 +211,7 @@ let items = [
         let element = isVisible;
         if (isVisible) {
           const obj3 = { style: null };
-          const items = [FeedbackWidgetProvider(1065).modalWrapper, ];
+          items = [FeedbackWidgetProvider(1065).modalWrapper, ];
           const obj5 = { backgroundColor: interpolateResult };
           items[1] = obj5;
           obj3.style = items;
@@ -219,7 +219,7 @@ let items = [
           const obj7 = { style: null };
           ({ createElement, createElement: createElement2 } = noop);
           obj7.style = FeedbackWidgetProvider(1065).topSpacer;
-          const element2 = createElement2(map1, obj7);
+          const element2 = createElement2(state, obj7);
           const _Object3 = Object;
           const obj8 = { style: null };
           const items1 = [FeedbackWidgetProvider(1065).modalSheetContainer(theme), ];
@@ -235,7 +235,7 @@ let items = [
           const _Object4 = Object;
           const tmpResult7 = FeedbackWidgetProvider(1065);
           ({ _handleClose: obj17.onFormClose, _handleClose: obj17.onFormSubmitted } = self);
-          element = <RN.View style={null}><closure_1_10 visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(closure_1_12, obj11, createElement4(FeedbackWidgetProvider(1068).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(995).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_1_10></RN.View>;
+          element = <RN.View style={null}><closure_1_10 visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(application_id, obj11, createElement4(FeedbackWidgetProvider(1068).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(995).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_1_10></RN.View>;
           const obj12 = { onFormClose: null, onFormSubmitted: null };
           const tmpResult8 = FeedbackWidgetProvider(995);
         }

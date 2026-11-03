@@ -95,15 +95,15 @@ const items = [
   },
   {
     key: "readAsArrayBuffer",
-    value: function readAsArrayBuffer(response) {
+    value: function readAsArrayBuffer(data) {
       const self = this;
       this._aborted = false;
-      if (null == response) {
+      if (null == data) {
         const _TypeError = TypeError;
         const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = FileReaderModuleDefault.readAsDataURL(response.data);
+        const asDataURL = FileReaderModuleDefault.readAsDataURL(data.data);
         asDataURL.then((result) => {
           if (!self._aborted) {
             self._result = FileReader(206).toByteArray(result.split(",")[1]).buffer;
@@ -146,19 +146,19 @@ const items = [
   },
   {
     key: "readAsText",
-    value: function readAsText(_bodyBlob) {
+    value: function readAsText(data) {
       const self = this;
-      let str = match;
-      if (match === undefined) {
+      let str = arg1;
+      if (arg1 === undefined) {
         str = "UTF-8";
       }
       this._aborted = false;
-      if (null == _bodyBlob) {
+      if (null == data) {
         const _TypeError = TypeError;
         const typeError = new TypeError("Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asText = FileReaderModuleDefault.readAsText(_bodyBlob.data, str);
+        const asText = FileReaderModuleDefault.readAsText(data.data, str);
         asText.then((_result) => {
           if (!self._aborted) {
             self._result = _result;

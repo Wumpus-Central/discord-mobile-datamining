@@ -1,7 +1,8 @@
 // === Module 5456: ? ===
 
 // Module 5456
-import _modDef5457 from "module_5457" /* 5457 */;
+import _mod17 from "module_17" /* 17 */;
 
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export default _modDef5457;
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

@@ -89,7 +89,7 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
       continue;
     }
   }
-  const items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((item) => item + length))];
+  items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((item) => item + length))];
   profile.stacks = items;
   const items1 = [...profile.samples || []];
   const found = profile2.samples || [].filter((thread_id) => thread_id.thread_id !== closure_0);
@@ -318,7 +318,7 @@ export () => {
                 if (PROFILE_QUEUE.size()) {
                   const result = c0(980).findProfiledTransactionsFromEnvelope(arg0);
                   if (result.length) {
-                    const items = [];
+                    items = [];
                     const tmp6 = result[Symbol.iterator]();
                     while (tmp6 !== undefined) {
                       let tmp11 = _createProfileEventFor(tmp8);

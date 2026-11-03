@@ -43,7 +43,7 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
     setupOnce() {
       let arr = worker;
       if (!Array.isArray(worker)) {
-        let items = [worker];
+        items = [worker];
         arr = items;
       }
       const item = arr.forEach((addEventListener) => {
@@ -123,11 +123,11 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               const found = _sentryWasmImages1.filter((code_file) => {
                 let tmp = closure_2_0(681).isPlainObject(code_file) && typeof code_file.code_file === "string";
                 if (tmp) {
-                  tmp = !code_file.some(/* F134358 */ function() { ... });
+                  tmp = !code_file.some(/* F135130 */ function() { ... });
                 }
                 return tmp;
               });
-              const items = [];
+              items = [];
               HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp16, 0));
               tmp(890).WINDOW._sentryWasmImages = items;
             }
@@ -254,7 +254,7 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               }
               return tmp;
             });
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp16, 0));
             tmp(890).WINDOW._sentryWasmImages = items;
           }

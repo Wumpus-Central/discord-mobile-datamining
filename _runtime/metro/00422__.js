@@ -15,7 +15,7 @@ export default module_65.get("AndroidSwitch", () => obj);
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
   setNativeValue(current, arg1) {
-    const items = [arg1];
+    items = [arg1];
     renderElement.dispatchCommand(current, "setNativeValue", items);
   }
 };

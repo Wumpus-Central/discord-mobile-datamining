@@ -17,7 +17,7 @@ function processEvent(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ function processEvent(arg0, arg1) {
           }
           if (closure_129_0) {
             const obj6 = { filename: "view-hierarchy.json", contentType: "application/json", attachmentType: "event.view_hierarchy", data: closure_129_0 };
-            const items = [obj6];
+            items = [obj6];
             value = 1;
             let attachments;
             if (null != closure_130_1) {
@@ -149,7 +149,7 @@ if (!fn) {
           tmp1.then(fulfilled, iter);
         }
       }
-      let items = closure_1;
+      items = closure_1;
       if (!closure_1) {
         items = [];
       }

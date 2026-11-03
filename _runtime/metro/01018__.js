@@ -81,7 +81,7 @@ export function getLatestChildSpanEndTimestamp(activeSpan) {
   let applyResult;
   if (found.length) {
     const _Math = Math;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(found, 0);
     const _Math2 = Math;
     applyResult = HermesBuiltin.apply(items, Math);

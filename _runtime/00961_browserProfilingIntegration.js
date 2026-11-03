@@ -68,7 +68,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
         if (obj.getActiveProfilesCount()) {
           const result = uIProfiler(963).findProfiledTransactionsFromEnvelope(arg0);
           if (result.length) {
-            const items = [];
+            items = [];
             const iter = result[Symbol.iterator]();
             const nextResult = iter.next();
             while (iter !== undefined) {

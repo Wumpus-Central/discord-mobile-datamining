@@ -1,196 +1,81 @@
 // === Module 4542: ? ===
 
 // Module 4542
-import _mod4299 from "module_4299" /* 4299 */;
-import compareAsc_mod from "compareAsc" /* 4470 */;
-import differenceInMonths_mod from "differenceInMonths" /* 4492 */;
-import differenceInSeconds_mod from "differenceInSeconds" /* 4497 */;
-import code_mod from "module_4540" /* 4540 */;
-import _typeof_mod from "module_4294" /* 4294 */;
-import cloneObject_mod from "cloneObject" /* 4543 */;
-import assign_mod from "assign" /* 4544 */;
-import module_4457_mod from "module_4457" /* 4457 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4423_mod from "module_4423" /* 4423 */;
 
-let compareAsc = compareAsc_mod;
-if (!compareAsc) {
-  let obj = { default: compareAsc };
+let module_4423 = module_4423_mod;
+if (!module_4423) {
+  const obj = { default: module_4423 };
   let tmp3 = obj;
 } else {
-  tmp3 = compareAsc;
+  tmp3 = module_4423;
 }
-compareAsc = tmp3;
-let differenceInMonths = differenceInMonths_mod;
-if (!differenceInMonths) {
-  const obj2 = { default: differenceInMonths };
-  let tmp5 = obj2;
-} else {
-  tmp5 = differenceInMonths;
-}
-differenceInMonths = tmp5;
-let differenceInSeconds = differenceInSeconds_mod;
-if (!differenceInSeconds) {
-  const obj3 = { default: differenceInSeconds };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInSeconds;
-}
-differenceInSeconds = tmp7;
-let code = code_mod;
-if (!code) {
-  const obj4 = { default: code };
-  let tmp9 = obj4;
-} else {
-  tmp9 = code;
-}
-code = tmp9;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj5 = { default: _typeof };
-  let tmp11 = obj5;
-} else {
-  tmp11 = _typeof;
-}
-_typeof = tmp11;
-let cloneObject = cloneObject_mod;
-if (!cloneObject) {
-  const obj6 = { default: cloneObject };
-  let tmp13 = obj6;
-} else {
-  tmp13 = cloneObject;
-}
-cloneObject = tmp13;
-let assign = assign_mod;
-if (!assign) {
-  const obj7 = { default: assign };
-  let tmp15 = obj7;
-} else {
-  tmp15 = assign;
-}
-assign = tmp15;
-let module_4457 = module_4457_mod;
-if (!module_4457) {
-  const obj8 = { default: module_4457 };
-  let tmp17 = obj8;
-} else {
-  tmp17 = module_4457;
-}
-module_4457 = tmp17;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj9 = { default: requiredArgs };
-  let tmp19 = obj9;
-} else {
-  tmp19 = requiredArgs;
-}
-requiredArgs = tmp19;
-let c11 = 1440;
-let c12 = 2520;
-let c13 = 43200;
-let c14 = 86400;
-
-export default function formatDistance(arg0, arg1, locale) {
-  requiredArgs.default(2, arguments);
-  locale = undefined;
-  const defaultOptions = _mod4299.getDefaultOptions();
-  if (null != locale) {
-    locale = locale.locale;
-  }
-  if (null === locale) {
-    locale = defaultOptions.locale;
-  }
-  if (null === locale) {
-    locale = code.default;
-  }
-  if (locale.formatDistance) {
-    const defaultResult1 = compareAsc.default(arg0, arg1);
-    const _isNaN = isNaN;
-    if (isNaN(defaultResult1)) {
-      const _RangeError2 = RangeError;
-      const rangeError = new RangeError("Invalid time value");
-      throw rangeError;
-    } else {
-      let addSuffix;
-      if (null != locale) {
-        addSuffix = locale.addSuffix;
-      }
-      const obj = { addSuffix: Boolean(addSuffix), comparison: defaultResult1 };
-      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
-      if (defaultResult1 > 0) {
-        let defaultResult4 = _typeof.default(arg1);
-        let defaultResult5 = _typeof.default(arg0);
+module_4423 = tmp3;
+const dependencyMap = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4423.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
       } else {
-        defaultResult4 = _typeof.default(arg0);
-        defaultResult5 = _typeof.default(arg1);
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
       }
-      const defaultResult6 = differenceInSeconds.default(defaultResult5, defaultResult4);
-      const defaultResult2 = cloneObject.default(locale);
-      const _Math = Math;
-      const rounded = Math.round((defaultResult6 - (module_4457.default(defaultResult5) - module_4457.default(defaultResult4)) / 1000) / 60);
-      if (rounded < 2) {
-        if (null != locale) {
-          if (locale.includeSeconds) {
-            if (defaultResult6 < 5) {
-              let formatDistanceResult = locale.formatDistance("lessThanXSeconds", 5, defaultResult3);
-            } else if (defaultResult6 < 10) {
-              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 10, defaultResult3);
-            } else if (defaultResult6 < 20) {
-              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 20, defaultResult3);
-            } else if (defaultResult6 < 40) {
-              formatDistanceResult = locale.formatDistance("halfAMinute", 0, defaultResult3);
-            } else if (defaultResult6 < 60) {
-              formatDistanceResult = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
-            } else {
-              formatDistanceResult = locale.formatDistance("xMinutes", 1, defaultResult3);
+    } else {
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u0443\u044E " + tmp2} в' p`;
             }
           }
         }
-        if (0 === rounded) {
-          let formatDistanceResult1 = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
-        } else {
-          formatDistanceResult1 = locale.formatDistance("xMinutes", rounded, defaultResult3);
-        }
-        return formatDistanceResult1;
-      } else if (rounded < 45) {
-        return locale.formatDistance("xMinutes", rounded, defaultResult3);
-      } else if (rounded < 90) {
-        return locale.formatDistance("aboutXHours", 1, defaultResult3);
-      } else if (rounded < c11) {
-        const _Math6 = Math;
-        return locale.formatDistance("aboutXHours", Math.round(rounded / 60), defaultResult3);
-      } else if (rounded < c12) {
-        return locale.formatDistance("xDays", 1, defaultResult3);
-      } else if (rounded < c13) {
-        const _Math5 = Math;
-        return locale.formatDistance("xDays", Math.round(rounded / tmp37), defaultResult3);
-      } else if (rounded < c14) {
-        const _Math4 = Math;
-        return locale.formatDistance("aboutXMonths", Math.round(rounded / c13), defaultResult3);
-      } else {
-        const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
-        if (defaultResult8 < 12) {
-          const _Math3 = Math;
-          return locale.formatDistance("xMonths", Math.round(rounded / c13), defaultResult3);
-        } else {
-          const result = defaultResult8 % 12;
-          const _Math2 = Math;
-          const rounded1 = Math.floor(defaultResult8 / 12);
-          if (result < 3) {
-            let formatDistanceResult2 = locale.formatDistance("aboutXYears", rounded1, defaultResult3);
-          } else if (result < 9) {
-            formatDistanceResult2 = locale.formatDistance("overXYears", rounded1, defaultResult3);
-          } else {
-            formatDistanceResult2 = locale.formatDistance("almostXYears", rounded1 + 1, defaultResult3);
-          }
-          return formatDistanceResult2;
-        }
+        text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u044B\u0439 " + tmp2} в' p`;
       }
-      const defaultResult7 = module_4457.default(defaultResult5);
+      return text2;
     }
-  } else {
-    const _RangeError = RangeError;
-    const rangeError1 = new RangeError("locale must contain formatDistance property");
-    throw rangeError1;
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u0432' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4423.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E " + tmp2} в' p`;
+            }
+          }
+        }
+        text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 " + tmp2} в' p`;
+      }
+      return text2;
+    }
+  },
+  other: "P"
+};
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
   }
+  return tmpResult;
 };
 export default exports.default;

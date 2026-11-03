@@ -1,16 +1,9 @@
 // === Module 5412: ? ===
 
 // Module 5412
-import ComposedGestureName from "ComposedGestureName" /* 5362 */;
-import _mod5411 from "module_5411" /* 5411 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export function useExclusiveGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5411.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
-}
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

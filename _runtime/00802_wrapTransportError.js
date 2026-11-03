@@ -37,7 +37,7 @@ export function wrapTransportOnClose(onclose) {
     _mod686.fill(onclose, "onclose", (arg0) => {
       closure_0 = arg0;
       return function() {
-        const items = [...arguments];
+        items = [...arguments];
         const result = require("module_810").cleanupPendingSpansForTransport(this);
         const obj = require("module_810");
         const result1 = require("module_804").cleanupSessionDataForTransport(this);
@@ -138,7 +138,7 @@ export function wrapTransportSend(send, arg1) {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -179,7 +179,7 @@ export function wrapTransportSend(send, arg1) {
                       c7 = 3;
                       const obj10 = {
                         value: obj7.createMcpOutgoingNotificationSpan(closure_130_2, closure_4, self, () => {
-                                      const items = [closure_1_3, ...closure_1_1];
+                                      items = [closure_1_3, ...closure_1_1];
                                       return self.call.apply(items);
                                     }),
                         done: true
@@ -227,7 +227,7 @@ export function wrapTransportSend(send, arg1) {
                         }
                       }
                       const call = closure_131_0.call;
-                      let items = [closure_4];
+                      items = [closure_4];
                       HermesBuiltin.arraySpread(closure_130_1, 1);
                       c7 = 3;
                       const obj11 = { value: HermesBuiltin.apply(items, closure_131_0), done: true };

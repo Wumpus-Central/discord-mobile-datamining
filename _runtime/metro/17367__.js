@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "11800cac78ee381d38bd7d0b06eed7b0", name: "EmojiFaceVomitingIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 99, height: 70, scales: [2, 3], hash: "67e9bc8b12cbc0fed84dfc34cd178623", name: "cactus", type: "png" });

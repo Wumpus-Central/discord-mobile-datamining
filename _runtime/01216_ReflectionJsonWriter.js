@@ -139,7 +139,7 @@ let items = [
         const _Array = Array;
         obj.assert(Array.isArray(obj));
         const kind2 = kind.kind;
-        const items = [];
+        items = [];
         if ("scalar" === kind2) {
           let num4 = 0;
           if (0 < obj.length) {

@@ -518,7 +518,7 @@ obj.composedPath = function composedPath() {
   console.assert(null != value, "'this' is expected an Event object, but got", this);
   const currentTarget = value.currentTarget;
   if (null == currentTarget) {
-    let items = [];
+    items = [];
   } else {
     items = [currentTarget];
   }

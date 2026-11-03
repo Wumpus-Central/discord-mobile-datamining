@@ -89,7 +89,7 @@ function sendIndexPath(arg0, pathname, basename) {
   if (tmp11) {
     substr1 = substr.slice(0, -1);
   }
-  const items = [substr1, "route"];
+  items = [substr1, "route"];
   return items;
 }
 function getNumberOfUrlSegments(str) {

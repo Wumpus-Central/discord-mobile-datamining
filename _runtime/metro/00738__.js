@@ -54,7 +54,7 @@ function getFilenameToDebugIdMap(arg0) {
           if (tmp3) {
             tmp8[tmp7[0]] = tmp3;
             if (React2) {
-              let items = [tmp7[0], ];
+              items = [tmp7[0], ];
               items[1] = tmp3;
               tmp31[tmp2] = items;
             }
@@ -103,7 +103,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export function getDebugImagesForResources(arg0, arg1) {
   const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
+  items = [];
   if (tmp) {
     const iter = arg1[Symbol.iterator]();
     const nextResult = iter.next();

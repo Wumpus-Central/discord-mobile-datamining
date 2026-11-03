@@ -67,7 +67,7 @@ function genModule(global, index) {
             });
           });
         }) : (function nonPromiseMethodWrapper() {
-          const items = [...arguments];
+          items = [...arguments];
           let tmp = null;
           if (items.length > 0) {
             tmp = items[items.length - 1];

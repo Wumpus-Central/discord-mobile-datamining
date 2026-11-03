@@ -1,26 +1,7 @@
 // === Module 5846: ? ===
 
 // Module 5846
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
 
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
-    }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "262032a99df43d5b5fc14dd6e335ec5e", name: "UserMinusIcon", type: "png" });

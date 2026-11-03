@@ -1,106 +1,71 @@
 // === Module 8250: ? ===
 
 // Module 8250
-import _mod8251 from "module_8251" /* 8251 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const _mod8252 = tmp5(8252);
-require = arg1;
-const dependencyMap = arg6;
-
-export function detectFile(uint8Array, chunkSize) {
-  if (chunkSize) {
-    const _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    const call = hasOwnProperty.call;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
     if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
+      let callResult = valueOf();
     } else {
-      hasOwnPropertyResult = call(chunkSize, "chunkSize");
+      callResult = call(constructResult);
     }
-    if (hasOwnPropertyResult) {
-      chunkSize = undefined;
-      if (null != chunkSize) {
-        chunkSize = chunkSize.chunkSize;
-      }
-      let num2 = 0;
-      if (null !== chunkSize) {
-        num2 = 0;
-        if (undefined !== chunkSize) {
-          num2 = chunkSize;
-        }
-      }
-      if (num2 <= 0) {
-        const _RangeError = RangeError;
-        const rangeError = new RangeError("chunkSize must be bigger than zero");
-        throw rangeError;
-      }
-    }
-  }
-  let num3;
-  if (null != chunkSize) {
-    num3 = chunkSize.chunkSize;
-  }
-  if (!num3) {
-    num3 = 64;
-  }
-  const fileChunk = _mod8251.getFileChunk(uint8Array, num3);
-  if (0 !== fileChunk.length) {
-    const items = [];
-    const items1 = [];
-    for (const key10027 in _mod8252.FileTypes) {
-      let _Object4 = Object;
-      let call2 = hasOwnProperty2.call;
-      let tmp23 = require;
-      let FileTypes5 = _mod8252.FileTypes;
-      if (typeof call2 === "unknown") {
-        let hasOwnProperty2Result = hasOwnProperty2(key10027);
-      } else {
-        hasOwnProperty2Result = call2(FileTypes5, key10027);
-      }
-      if (!hasOwnProperty2Result) {
-        continue;
-      } else {
-        let FileTypes = tmp23(8252).FileTypes;
-        let signaturesByName = FileTypes.getSignaturesByName(key10027);
-        let FileTypes2 = tmp23(8252).FileTypes;
-        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
-        if (!detectbBySignaturesResult) {
-          continue;
-        } else {
-          let FileTypes3 = tmp23(8252).FileTypes;
-          let infoByName = FileTypes3.getInfoByName(key10027);
-          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(8252).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
-          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
-            let arr = items1.push(infoByName.extension);
-          }
-          let obj = { extension: null, mimeType: null, description: null, signature: null };
-          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
-          let _Object2 = Object;
-          let _Object3 = Object;
-          let obj2 = { sequence: null };
-          let sequence = detectbBySignaturesResult.sequence;
-          let merged = Object.assign({}, detectbBySignaturesResult);
-          obj2.sequence = sequence.map((item) => item.toString(16));
-          obj.signature = Object.assign(merged, obj2);
-          let arr2 = items.push(obj);
-          continue;
-        }
-        continue;
-      }
-      continue;
-    }
-    if (0 !== items.length) {
-      if (1 === items.length) {
-        if (0 === items1.length) {
-          return items[0];
-        }
-      }
-      const FileTypes4 = _mod8252.FileTypes;
-      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
-      require = result;
-      if (result) {
-        return items.find((extension) => extension.extension === result);
-      }
-    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class Stop {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, Stop);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(Stop);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
+  }
+}
+_classCallCheck = Stop;
+_inherits(Stop, fn(19).Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    return null;
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(Stop, items);
+importDefaultResultResult.displayName = "Stop";
+
+export default importDefaultResultResult;

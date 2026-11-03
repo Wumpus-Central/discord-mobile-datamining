@@ -1,7 +1,7 @@
 // === Module 8880: ? ===
 
 // Module 8880
-import _modDef8881 from "module_8881" /* 8881 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _modDef8881({ contain: null, cover: null, stretch: null });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dc61f45d0cc4d873f94fb631a2db066a", name: "CircleCheckIcon", type: "png" });

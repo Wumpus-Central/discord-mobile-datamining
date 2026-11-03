@@ -388,20 +388,20 @@ export const Children = {
     if (null == element) {
       return element;
     } else {
-      const items = [];
+      items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f77289.call;
+        const call = f77449.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f77289(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77449(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f77287 = function() {
+    const f77447 = function() {
       const self = this;
-      const apply = f77287.apply;
+      const apply = f77447.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -412,9 +412,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f77289.call;
+        const call = f77449.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f77289(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77449(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -425,23 +425,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f77289.call;
+        const call = f77449.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f77289(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77449(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f77289 = (arg0) => arg0;
+    const f77449 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
-      const items = [];
+      items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f77289.call;
+        const call = f77449.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f77289(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77449(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -626,7 +626,7 @@ export (div, merged, element) => {
   return element;
 }
 export () => ({ current: null })
-export (render) => ({ $$typeof: _typeof4, render })
+export (BottomSheet) => ({ $$typeof: _typeof4, render: BottomSheet })
 export { isValidElement };
 export (_result) => {
   obj = { $$typeof: _typeof6, _payload: { _status: -1, _result }, _init: lazyInitializer };

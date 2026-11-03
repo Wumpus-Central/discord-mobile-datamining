@@ -72,7 +72,7 @@ export function eventFromMessage(fn, value, arg2) {
         const obj3 = { value, stacktrace: null };
         const obj4 = { frames: arr };
         obj3.stacktrace = obj4;
-        const items = [obj3];
+        items = [obj3];
         obj2.values = items;
         obj.exception = obj2;
         const result = uuid4.addExceptionMechanism(obj, { synthetic: true });
@@ -102,7 +102,7 @@ export function eventFromUnknownInput(getOptions, arg1, name, data) {
     data = { handled: true, type: "generic" };
   }
   if (obj2.isError(name)) {
-    const items = [name, undefined];
+    items = [name, undefined];
     let items3 = items;
   } else {
     data.synthetic = true;

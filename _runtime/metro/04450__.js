@@ -1,46 +1,26 @@
 // === Module 4450: ? ===
 
 // Module 4450
-import module_4298_mod from "module_4298" /* 4298 */;
-import module_4451_mod from "module_4451" /* 4451 */;
-import module_4454_mod from "module_4454" /* 4454 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    let str = "'\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7' eeee '\u03C3\u03C4\u03B9\u03C2' p";
+    if (6 === getUTCDay.getUTCDay()) {
+      str = "'\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF' eeee '\u03C3\u03C4\u03B9\u03C2' p";
+    }
+    return str;
+  },
+  yesterday: "'\u03C7\u03B8\u03B5\u03C2 \u03C3\u03C4\u03B9\u03C2' p",
+  today: "'\u03C3\u03AE\u03BC\u03B5\u03C1\u03B1 \u03C3\u03C4\u03B9\u03C2' p",
+  tomorrow: "'\u03B1\u03CD\u03C1\u03B9\u03BF \u03C3\u03C4\u03B9\u03C2' p",
+  nextWeek: "eeee '\u03C3\u03C4\u03B9\u03C2' p",
+  other: "P"
+};
 
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4298;
-}
-module_4298 = tmp3;
-let module_4451 = module_4451_mod;
-if (!module_4451) {
-  const obj2 = { default: module_4451 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4451;
-}
-module_4451 = tmp5;
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj3 = { default: module_4454 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4454;
-}
-module_4454 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4454.default(arg0, module_4451.default(arg0) + module_4298.default(arg1));
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

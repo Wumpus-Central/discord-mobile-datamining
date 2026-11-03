@@ -1,7 +1,15 @@
 // === Module 6578: ? ===
 
 // Module 6578
-import registerAsset from "module_1119" /* 1119 */;
+import requirePromise from "requirePromise" /* 6577 */;
+import _mod6579 from "module_6579" /* 6579 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "2735b94e62f2bc71613cf7e1aec9c3fe", name: "img_account_sync_twitch_white", type: "svg" });
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod6579;
+  }
+  return allSettled;
+};

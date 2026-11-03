@@ -1,44 +1,83 @@
 // === Module 5550: ? ===
 
 // Module 5550
-import _slicedToArray from "module_5505" /* 5505 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};})" }];
+[tmp4] = items;
+function changeEventCalculator(rotation, rotation2) {
+  if (undefined === rotation2) {
+    const obj2 = { rotationChange: rotation.rotation };
+    let obj = obj2;
+  } else {
+    obj = { rotationChange: rotation.rotation - rotation2.rotation };
+  }
+  const merged = Object.assign(rotation);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 6562048285106;
+changeEventCalculator.__initData = tmp4;
+class RotationGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, RotationGesture);
+    tmp2 = c2;
+    obj = c2(RotationGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "RotationGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = RotationGesture;
+_inherits(RotationGesture, fn(5447).ContinousBaseGesture);
+const entry = {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    items = [arg0];
+    return fn(items);
+  }
+};
+const items1 = [entry];
 
-export function useUnmountAwareTimeout() {
-  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
-  const items = [first];
-  closure_3(() => () => {
-    const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-    set.clear();
-  }, items);
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-}
-export function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
-  const items = [first];
-  closure_3(() => () => {
-    const item = set.forEach((item) => cancelAnimationFrame(item));
-    set.clear();
-  }, items);
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
-    });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
-}
+export const RotationGesture = _createClass(RotationGesture, items1);

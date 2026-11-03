@@ -1,37 +1,14 @@
 // === Module 4463: ? ===
 
 // Module 4463
-import module_4298_mod from "module_4298" /* 4298 */;
-import module_4443_mod from "module_4443" /* 4443 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_2196 from "module_2196" /* 2196 */;
 
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
-  let tmp3 = obj;
+if (!module_2196) {
+  const obj2 = { default: module_2196 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4298;
+  obj = module_2196;
 }
-module_4298 = tmp3;
-let module_4443 = module_4443_mod;
-if (!module_4443) {
-  const obj2 = { default: module_4443 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4443;
-}
-module_4443 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4443.default(interval, 12 * module_4298.default(arg1));
-};
+export default { date: obj.default({ formats: { full: "eeee d. MMMM y", long: "d. MMMM y", medium: "d. MMM y", short: "d.M.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH.mm.ss zzzz", long: "HH.mm.ss z", medium: "HH.mm.ss", short: "HH.mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'klo' {{time}}", long: "{{date}} 'klo' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

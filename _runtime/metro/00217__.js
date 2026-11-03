@@ -228,7 +228,7 @@ let items = [
     value: function _registerEvents() {
       const self = this;
       const _eventEmitter = this._eventEmitter;
-      const items = [
+      items = [
         _eventEmitter.addListener("websocketMessage", (id) => {
           let dispatchEventResult = id;
           if (id.id === self._socketId) {

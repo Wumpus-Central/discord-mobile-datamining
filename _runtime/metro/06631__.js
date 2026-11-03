@@ -1,7 +1,7 @@
 // === Module 6631: ? ===
 
 // Module 6631
-import registerAsset from "module_1119" /* 1119 */;
+import _mod1292 from "module_1292" /* 1292 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "cfcfafbb4f4daed7fd4c8d1f431ce58f", name: "img_account_sync_xbox_light", type: "png" });
+export default _mod1292;

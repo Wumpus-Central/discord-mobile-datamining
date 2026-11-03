@@ -9,7 +9,7 @@ import ChildListCollectionDefault from "ChildListCollection" /* 316 */;
 import InfoDefault from "Info" /* 318 */;
 import ViewabilityHelperDefault from "ViewabilityHelper" /* 319 */;
 import _modDef321 from "module_321" /* 321 */;
-import clampDefault from "clamp" /* 323 */;
+import _modDef323 from "module_323" /* 323 */;
 import _modDef325 from "module_325" /* 325 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -41,7 +41,7 @@ function _isNativeReflectConstruct() {
 let closure_4 = ["onContentSizeChange"];
 _possibleConstructorReturnDefault;
 const noop = fn(19);
-({ cloneElement: c10, isValidElement: closure_11 } = noop);
+({ cloneElement: closure_10, isValidElement: closure_11 } = noop);
 get_ActivityIndicator = fn(17);
 ({ I18nManager: closure_12, Platform, RefreshControl: map1, ScrollView: closure_14, StyleSheet } = get_ActivityIndicator);
 ({ View: closure_16, findNodeHandle: closure_17 } = get_ActivityIndicator);
@@ -142,7 +142,7 @@ class VirtualizedList {
         const onContentSizeChange = onRefresh.onContentSizeChange;
         const obj2 = {};
         const merged = Object.assign(hasOwnProperty(onRefresh, closure_4));
-        return collapsedCategories(__initData2, obj2);
+        return collapsedCategories(value2, obj2);
       } else if (progressViewOffset) {
         let str = onRefresh.refreshing;
         if (str == null) {
@@ -435,7 +435,7 @@ class VirtualizedList {
                 }
               }
               const obj = { first: tmp5, last: tmp13 };
-              const items = [obj];
+              items = [obj];
               return items;
             }
           }
@@ -971,7 +971,7 @@ let items = [
       this._checkProps(this.props);
       ({ ListEmptyComponent, ListFooterComponent, ListHeaderComponent } = this.props);
       if (!this.props.inverted) {
-        const items = [];
+        items = [];
         const _Set = Set;
         const set = new Set(self.props.stickyHeaderIndices);
         const items1 = [];
@@ -985,7 +985,7 @@ let items = [
           }
           const obj2 = { cellKey: `${self._getCellKey()}-header`, children: null };
           const obj3 = { collapsable: false, onLayout: self._onLayoutHeader, style: StyleSheet.compose(null, self.props.ListHeaderComponentStyle), children: tmp14 };
-          obj2.children = collapsedCategories(__initData2, obj3);
+          obj2.children = collapsedCategories(value2, obj3);
           items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj2, "$header"));
         }
         const props = self.props;
@@ -1024,7 +1024,7 @@ let items = [
                 if (tmp36 === tmp31) {
                   if (!self.props.getItemLayout) {
                     let _listMetrics = self._listMetrics;
-                    let tmp47 = clampDefault;
+                    let tmp47 = _modDef323;
                     let diff = tmp36.first - 1;
                     let last = tmp47(diff, tmp36.last, _listMetrics.getHighestMeasuredCellIndex());
                   }
@@ -1037,7 +1037,7 @@ let items = [
                   obj6[_getSpacerKeyResult] = cellMetricsApprox1.offset + cellMetricsApprox1.length - cellMetricsApprox.offset;
                   obj5.style = obj6;
                   let _HermesInternal = HermesInternal;
-                  let arr4 = items.push(collapsedCategories(__initData2, obj5, "$spacer-" + tmp36.first));
+                  let arr4 = items.push(collapsedCategories(value2, obj5, "$spacer-" + tmp36.first));
                 }
                 last = tmp36.last;
               }
@@ -1066,7 +1066,7 @@ let items = [
           }
           const obj7 = { cellKey: self._getFooterCellKey(), children: null };
           const obj8 = { onLayout: self._onLayoutFooter, style: StyleSheet.compose(null, self.props.ListFooterComponentStyle), children: tmp60 };
-          obj7.children = collapsedCategories(__initData2, obj8);
+          obj7.children = collapsedCategories(value2, obj8);
           items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj7, "$footer"));
         }
         const obj9 = {};
@@ -1121,7 +1121,7 @@ let items = [
           const obj29 = { style: debug.debug, children: null };
           const items3 = [tmp73Result, self._renderDebugOverlay()];
           obj29.children = items3;
-          tmp78 = closure_1_19(__initData2, obj29);
+          tmp78 = expandedHeight(value2, obj29);
         }
         return tmp78;
       } else {
@@ -1220,7 +1220,7 @@ let items = [
       const _listMetrics = this._listMetrics;
       const result = this._scrollMetrics.visibleLength / (_listMetrics.getContentLength() || 1);
       VirtualizedList = result;
-      let items = [];
+      items = [];
       const props = self.props;
       const itemCount = props.getItemCount(self.props.data);
       for (let num = 0; num < itemCount; num = num + 1) {
@@ -1242,11 +1242,11 @@ let items = [
       const items2 = [
         items.map((item, index) => {
           const obj = { style: null };
-          const items = [, , ];
+          items = [, , ];
           ({ debugOverlayBase: arr[0], debugOverlayFrame: arr[1] } = closure_23);
           items[2] = { top: item.offset * result, height: item.length * result };
           obj.style = items;
-          return collapsedCategories(__initData2, obj, "f" + index);
+          return collapsedCategories(value2, obj, "f" + index);
         }),
       ,
 
@@ -1578,7 +1578,7 @@ let items1 = [
       const cellRenderMask = new VirtualizedList(324).CellRenderMask(itemCount);
       if (itemCount > 0) {
         let items1 = arg2;
-        const items = [_initialRenderRegionResult];
+        items = [_initialRenderRegionResult];
         if (arg2 == null) {
           items1 = [];
         }
@@ -1694,7 +1694,7 @@ let items1 = [
       const diff = getItemCount.getItemCount(getItemCount.data) - 1;
       const obj2 = { first: null, last: null };
       const bound = Math.max(0, diff - VirtualizedList(320).maxToRenderPerBatchOrDefault(getItemCount.maxToRenderPerBatch));
-      obj2.first = clampDefault(0, cellsAroundViewport.first, bound);
+      obj2.first = _modDef323(0, cellsAroundViewport.first, bound);
       obj2.last = Math.min(diff, cellsAroundViewport.last);
       return obj2;
     }

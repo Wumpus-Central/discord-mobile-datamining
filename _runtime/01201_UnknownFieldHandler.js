@@ -20,7 +20,7 @@ UnknownFieldHandler.onRead = (arg0, arg1, no, wireType, data) => {
     }
     const symbol = UnknownFieldHandler.symbol;
     if (isArray) {
-      let items = arg1[symbol];
+      items = arg1[symbol];
     } else {
       items = [];
       arg1[symbol] = items;

@@ -52,7 +52,7 @@ export function wrapMcpServerWithSentry(arg0, recordInputs) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -86,7 +86,7 @@ export function wrapMcpServerWithSentry(arg0, recordInputs) {
                     return obj4;
                   } else {
                     const call = self.call;
-                    const items = [closure_5, closure_131_0];
+                    items = [closure_5, closure_131_0];
                     HermesBuiltin.arraySpread(closure_131_1, 2);
                     c6 = 2;
                     c7 = 1;

@@ -1,7 +1,11 @@
 // === Module 6584: ? ===
 
 // Module 6584
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "74748dfcc94ad61e313c4e70aacf64f7", name: "img_account_sync_battlenet_white", type: "png" });
+export default function getIterator(arg0) {
+  if (null != arg0) {
+    if (undefined !== arg0[iterator]) {
+      return arg0[iterator]();
+    }
+  }
+};

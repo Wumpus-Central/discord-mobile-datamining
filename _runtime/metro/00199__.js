@@ -370,7 +370,7 @@ const items1 = [
   },
   {
     key: "__didReceiveIncrementalData",
-    value: function __didReceiveIncrementalData(arg0, _response, loaded, total) {
+    value: function __didReceiveIncrementalData(arg0, _response, arg2, arg3) {
       const self = this;
       if (arg0 === this._requestId) {
         if (self._response) {
@@ -383,7 +383,7 @@ const items1 = [
           _interceptor.dataReceived(arg0, _response);
         }
         self.setReadyState(self.LOADING);
-        const result = self.__didReceiveDataProgress(arg0, loaded, total);
+        const result = self.__didReceiveDataProgress(arg0, arg2, arg3);
       }
     }
   },
@@ -476,7 +476,7 @@ const items1 = [
           }
           continue;
         }
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(map.values(), 0);
         const sorted = items.sort((upperHeaderName, upperHeaderName2) => {
           let num = -1;
@@ -509,15 +509,15 @@ const items1 = [
   },
   {
     key: "setRequestHeader",
-    value: function setRequestHeader(baggage, StringResult) {
+    value: function setRequestHeader(str, arg1) {
       if (this.readyState !== this.OPENED) {
         const _Error = Error;
         const error = new Error("Request has not been opened");
         throw error;
       } else {
         const _String = String;
-        const formatted = baggage.toLowerCase();
-        tmp._headers[formatted] = String(StringResult);
+        const formatted = str.toLowerCase();
+        tmp._headers[formatted] = String(arg1);
       }
     }
   },
@@ -580,37 +580,37 @@ const items1 = [
         self._sent = true;
         const _subscriptions = self._subscriptions;
         _subscriptions.push(XMLHttpRequest(208).default.addListener("didSendNetworkData", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didUploadProgress.apply(items);
         }));
         const _subscriptions1 = self._subscriptions;
         const _default = XMLHttpRequest(208).default;
         _subscriptions1.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkResponse", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didReceiveResponse.apply(items);
         }));
         const _subscriptions2 = self._subscriptions;
         const _default2 = XMLHttpRequest(208).default;
         _subscriptions2.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkData", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didReceiveData.apply(items);
         }));
         const _subscriptions3 = self._subscriptions;
         const _default3 = XMLHttpRequest(208).default;
         _subscriptions3.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkIncrementalData", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didReceiveIncrementalData.apply(items);
         }));
         const _subscriptions4 = self._subscriptions;
         const _default4 = XMLHttpRequest(208).default;
         _subscriptions4.push(XMLHttpRequest(208).default.addListener("didReceiveNetworkDataProgress", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didReceiveDataProgress.apply(items);
         }));
         const _subscriptions5 = self._subscriptions;
         const _default5 = XMLHttpRequest(208).default;
         _subscriptions5.push(XMLHttpRequest(208).default.addListener("didCompleteNetworkResponse", (arg0) => {
-          const items = [...arg0];
+          items = [...arg0];
           return self.__didCompleteResponse.apply(items);
         }));
         let str7 = "text";
@@ -685,13 +685,13 @@ const items1 = [
   },
   {
     key: "setReadyState",
-    value: function setReadyState(DONE) {
+    value: function setReadyState(readyState) {
       const self = this;
-      this.readyState = DONE;
+      this.readyState = readyState;
       let obj = XMLHttpRequest;
       const obj2 = XMLHttpRequest(135);
       obj2.dispatchTrustedEvent(this, new EventDefault("readystatechange"));
-      if (DONE === this.DONE) {
+      if (readyState === this.DONE) {
         if (self._aborted) {
           const tmp23 = new EventDefault("abort");
           obj(135).dispatchTrustedEvent(self, tmp23);
@@ -734,7 +734,7 @@ const items1 = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0, arg1];
+      items = [arg0, arg1];
       fn(items);
     }
   },

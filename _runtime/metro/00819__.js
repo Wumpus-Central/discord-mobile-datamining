@@ -60,7 +60,7 @@ export function createConsolaReporter() {
           if (undefined !== normalizeMaxBreadth) {
             num2 = normalizeMaxBreadth;
           }
-          const items = [];
+          items = [];
           if (message) {
             items.push(message);
           }

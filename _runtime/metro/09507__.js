@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 132, height: 132, scales: [1], hash: "e32a360d37f718d45e03d9f2fe827035", name: "avatar_placeholder", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guilds_bar/native/images", width: 59, height: 55, scales: [3], hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788", name: "wumpus_wave", type: "png" });

@@ -1,7 +1,37 @@
 // === Module 2202: ? ===
 
 // Module 2202
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L21lc3NhZ2Vz", scales: [1], hash: "79dcf62eefb1ecc8b8a0721b78c693f9", name: "zh-TW.messages.79dcf62eefb1ecc8b8a0721b78c693f9.compiled.messages", type: "jsona" });
+export default function buildMatchPatternFn(arg0) {
+  const matchPattern = arg0;
+  return (str) => {
+    if (arguments.length > 1) {
+      if (undefined !== arguments[1]) {
+        let obj = arguments[1];
+      }
+      const match = str.match(matchPattern.matchPattern);
+      if (match) {
+        const match1 = str.match(matchPattern.parsePattern);
+        if (match1) {
+          if (matchPattern.valueCallback) {
+            let first = matchPattern.valueCallback(match1[0]);
+          } else {
+            first = match1[0];
+          }
+          let valueCallbackResult2 = first;
+          if (obj.valueCallback) {
+            valueCallbackResult2 = obj.valueCallback(first);
+          }
+          const obj3 = { value: valueCallbackResult2, rest: str.slice(match[0].length) };
+          return obj3;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    }
+    obj = {};
+  };
+};
+export default exports.default;

@@ -30,7 +30,7 @@ function processEvent(tags, originalException) {
     }
     obj.hermes_debug_info = !(function isEventWithHermesBytecodeFrames(exception) {
       exception = exception.exception;
-      let items;
+      items = undefined;
       if (null !== exception) {
         if (undefined !== exception) {
           items = exception.values;

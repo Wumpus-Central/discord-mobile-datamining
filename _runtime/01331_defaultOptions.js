@@ -38,7 +38,7 @@ function setReplace(c0, toJSON, arg2, toJSON) {
       const _Object = Object;
       const obj = { value };
       Object.defineProperty(toJSON, arg2, obj);
-      const items = [toJSON, arg2, toJSON, ownPropertyDescriptor];
+      items = [toJSON, arg2, toJSON, ownPropertyDescriptor];
       closure_2.push(items);
     } else {
       const items1 = [toJSON, arg2, value];
@@ -69,7 +69,7 @@ function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
             const _Object7 = Object;
             const obj2 = { value: value2 };
             Object.defineProperty(arg4, arg1, obj2);
-            const items = [arg4, arg1, obj, ownPropertyDescriptor];
+            items = [arg4, arg1, obj, ownPropertyDescriptor];
             arr = closure_2.push(items);
           } else {
             const items1 = [obj, arg1, value2];
@@ -245,7 +245,7 @@ function deterministicDecirc(toJSON, arg1, arg2, arr, toJSON, sum, depthLimit) {
               } while (num < length);
             }
             if (undefined !== toJSON) {
-              const items = [toJSON, arg1, toJSON];
+              items = [toJSON, arg1, toJSON];
               closure_2.push(items);
               toJSON[arg1] = arr2;
             }
@@ -262,7 +262,7 @@ function replaceGetterValues(arg0) {
   if (undefined === arg0) {
     fn = (arg0, arg1) => arg1;
   }
-  return function(D, keys) {
+  return function(buffer, keys) {
     let tmp2;
     let tmp = keys;
     if (closure_3.length > 0) {
@@ -271,7 +271,7 @@ function replaceGetterValues(arg0) {
       if (0 < closure_3.length) {
         while (true) {
           tmp2 = closure_3[num2];
-          if (tmp2[1] === D) {
+          if (tmp2[1] === buffer) {
             if (tmp2[0] === keys) {
               break;
             }
@@ -285,7 +285,7 @@ function replaceGetterValues(arg0) {
     }
     const self = this;
     const call = fn.call;
-    return typeof call === "unknown" ? fn(D, tmp) : call(self, D, tmp);
+    return typeof call === "unknown" ? fn(buffer, tmp) : call(self, buffer, tmp);
   };
 }
 stringify.default = stringify;

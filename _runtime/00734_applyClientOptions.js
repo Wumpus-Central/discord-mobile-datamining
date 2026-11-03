@@ -177,7 +177,7 @@ export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, i
     if (!integrations2) {
       integrations2 = [];
     }
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(integrations2, 0));
     obj.sdk.integrations = items;
   }

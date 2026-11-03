@@ -133,7 +133,7 @@ function reportException(stack, isFatal, arg2) {
   })(error);
 }
 function reactConsoleErrorHandler() {
-  const items = [...arguments];
+  items = [...arguments];
   closure_0 = undefined;
   const items1 = [...items];
   console._errorOriginal.apply(items1);

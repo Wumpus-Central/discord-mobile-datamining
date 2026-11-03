@@ -40,7 +40,7 @@ function maybeVectorAnim(g, obj, timingImpl) {
       }
       continue;
     }
-    const items = [timingImpl(g.x, obj2), timingImpl(g.y, obj3)];
+    items = [timingImpl(g.x, obj2), timingImpl(g.y, obj3)];
     if (typeof parallelImpl === "function") {
       let items1 = items;
       c1 = 0;
@@ -261,7 +261,7 @@ function springImpl(g, arg1) {
       if (arg2) {
         if (onComplete.onComplete) {
           fn = () => {
-            const items = [...arguments];
+            items = [...arguments];
             if (onComplete.onComplete) {
               onComplete = tmp.onComplete;
               const items1 = [];
@@ -329,7 +329,7 @@ function timingImpl(g, arg1) {
       if (arg2) {
         if (onComplete.onComplete) {
           fn = () => {
-            const items = [...arguments];
+            items = [...arguments];
             if (onComplete.onComplete) {
               onComplete = tmp.onComplete;
               const items1 = [];
@@ -403,7 +403,7 @@ function decayImpl(g, arg1) {
             if (arg0) {
               if (tmp.onComplete) {
                 fn = () => {
-                  const items = [...arguments];
+                  items = [...arguments];
                   if (onComplete.onComplete) {
                     onComplete = tmp.onComplete;
                     const items1 = [];
@@ -606,7 +606,7 @@ function delayImpl(delay) {
         if (arg2) {
           if (onComplete.onComplete) {
             fn = () => {
-              const items = [...arguments];
+              items = [...arguments];
               if (onComplete.onComplete) {
                 onComplete = tmp.onComplete;
                 const items1 = [];
@@ -685,8 +685,8 @@ export default {
   subtract(arg0, arg1) {
     return new _modDef368(arg0, arg1);
   },
-  divide(arg0, arg1) {
-    return new _modDef369(arg0, arg1);
+  divide(absResult, arg1) {
+    return new _modDef369(absResult, arg1);
   },
   multiply(arg0, arg1) {
     return new _modDef370(arg0, arg1);
@@ -708,7 +708,7 @@ export default {
           const tmp8 = new _modDef356(0);
           obj = { toValue: 0, delay: tmp2, duration: 0, useNativeDriver: false };
           if (typeof timingImpl === "function") {
-            let items = tmp8;
+            items = tmp8;
             c1 = obj;
             function start(stopTracking, onComplete, arg2) {
               if (typeof closure_1_3 === "function") {
@@ -718,7 +718,7 @@ export default {
                 if (arg2) {
                   if (onComplete.onComplete) {
                     fn = () => {
-                      const items = [...arguments];
+                      items = [...arguments];
                       if (onComplete.onComplete) {
                         onComplete = tmp.onComplete;
                         const items1 = [];
@@ -1025,7 +1025,7 @@ export default {
       let fn = __addListener;
     } else {
       fn = () => {
-        const items = [...arguments];
+        items = [...arguments];
         if (typeof closure_0 === "function") {
           const items1 = [];
           HermesBuiltin.arraySpread(items, 0);

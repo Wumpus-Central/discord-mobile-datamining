@@ -1,65 +1,21 @@
 // === Module 1932: ? ===
 
 // Module 1932
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "uk",
-  pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    [arr, tmp2] = parts;
-    let substr1 = Number(parts[0]) == arg0;
-    let substr = substr1;
-    if (substr1) {
-      const first = parts[0];
-      substr = first.slice(-1);
-    }
-    if (substr1) {
-      const first1 = parts[0];
-      substr1 = first1.slice(-2);
-    }
-    const substr2 = arr.slice(-1);
-    const substr3 = arr.slice(-2);
-    if (arg1) {
-      let str8 = "other";
-      if (3 == substr) {
-        str8 = "other";
-        if (13 != substr1) {
-          str8 = "few";
-        }
-      }
-      let str2 = str8;
-    } else {
-      if (!tmp2) {
-        if (1 == substr2) {
-          str2 = "one";
-        }
-      }
-      if (!tmp2) {
-        if (substr2 >= 2) {
-          if (substr2 <= 4) {
-            let str4 = "few";
-            if (substr3 >= 12) {
-              str4 = "few";
-            }
-          }
-          str2 = str4;
-        }
-      }
-      if (tmp2) {
-        if (!tmp2) {
-          if (substr2 >= 5) {
-            str4 = str6;
-          }
-        }
-        str6 = "other";
-        if (!tmp2) {
-          str6 = "other";
-          if (substr3 >= 11) {
-            str6 = "other";
-          }
-        }
-      }
-      str6 = "many";
-    }
-    return str2;
-  }
-});
+const require = globalThis.__r;
+
+for (const key10013 in require("module_1872")) {
+  arg5[key10013] = require("module_1872")[key10013];
+  continue;
+}
+for (const key10017 in require("module_1933")) {
+  arg5[key10017] = require("module_1933")[key10017];
+  continue;
+}
+for (const key10021 in require("module_1945")) {
+  arg5[key10021] = require("module_1945")[key10021];
+  continue;
+}
+for (const key10025 in require("SharedTransition")) {
+  arg5[key10025] = require("SharedTransition")[key10025];
+  continue;
+}

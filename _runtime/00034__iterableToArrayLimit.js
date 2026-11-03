@@ -19,7 +19,7 @@ export default function _iterableToArrayLimit(iterable, arg1) {
   if (null != tmp7) {
     let flag2 = false;
     try {
-      const items = [];
+      items = [];
       try {
         const call = tmp10.call;
         if (typeof call === "unknown") {

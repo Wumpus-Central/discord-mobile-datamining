@@ -27,7 +27,7 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
             setExtra.setExtra("body", obj);
             if ("crash" === iter.type) {
               const body = iter.body;
-              const items = [body.crashId || "", body.reason || ""];
+              items = [body.crashId || "", body.reason || ""];
               const str5 = items.join(" ");
               const tmp7 = body.crashId || "";
               str = items.join(" ").trim() || "No details available";

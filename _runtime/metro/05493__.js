@@ -1,74 +1,102 @@
 // === Module 5493: ? ===
 
 // Module 5493
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 5276 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import noop_mod from "module_19" /* 19 */;
-import cancelAnimation from "cancelAnimation" /* 1650 */;
 
-let noop = noop_mod;
-({ useContext: c2, useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
-const __initData = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
-const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  ({ onRefresh, scrollableGesture } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
-  let iter;
-  const tmp4 = iter(scrollableGesture(5287).BottomSheetDraggableContext);
-  dependencyMap = tmp4;
-  const bottomSheetInternal = scrollableGesture(5280).useBottomSheetInternal();
-  iter = bottomSheetInternal.animatedScrollableState;
-  if (!tmp4) {
-    if (bottomSheetInternal.enableContentPanningGesture) {
-      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
+export function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
+}
+export function prepareRelations(config, handlerTag) {
+  const simultaneousWith1 = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith1) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith1)) {
+      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
+        } else {
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
+        }
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
+    } else {
+      if ("handlerTags" in simultaneousWith1) {
+        let prop = simultaneousWith1.externalSimultaneousHandlers;
+      } else {
+        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
+      }
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
+      }
     }
   }
-  const obj = scrollableGesture(5280);
-  const fn = function f() {
-    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
-  };
-  const tmp2Result = scrollableGesture(1650);
-  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(5276).SCROLLABLE_STATE };
-  fn.__workletHash = 8403038560398;
-  fn.__initData = __initData;
-  let items = [iter.value];
-  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
-  const items1 = [tmp4, scrollableGesture];
-  const tmp7 = closure_3(() => {
-    let result;
-    if (closure_1) {
-      const Gesture = LegacyBaseButton.Gesture;
-      const NativeResult = Gesture.Native();
-      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
-      const items = [];
-      HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0));
-      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
-      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
-      const applyResult = HermesBuiltin.apply(items, NativeResult);
+  const simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
+        }
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
     }
-    return result;
-  }, items1);
-  if (tmp7) {
-    const obj3 = { gesture: tmp7, children: null };
-    const obj4 = {};
-    const merged1 = Object.assign(merged);
-    obj4.onRefresh = onRefresh;
-    obj4.animatedProps = animatedProps;
-    obj3.children = <closure_5 />;
-    let tmp8Result = jsx(scrollableGesture(5303).GestureDetector, { gesture: tmp7, children: null });
   } else {
-    const obj5 = {};
-    const merged2 = Object.assign(merged);
-    obj5.onRefresh = onRefresh;
-    obj5.animatedProps = animatedProps;
-    tmp8Result = <closure_5 />;
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
+    }
   }
-  return tmp8Result;
-});
-memoResult.displayName = "BottomSheetRefreshControl";
-
-export default memoResult;
+}
+export function containsDuplicates(flatMapResult) {
+  return new Set(flatMapResult).size !== flatMapResult.length;
+}

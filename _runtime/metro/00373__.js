@@ -212,7 +212,7 @@ let items = [
   {
     key: "getTranslateTransform",
     value: function getTranslateTransform() {
-      const items = [{ translateX: this.x }, { translateY: this.y }];
+      items = [{ translateX: this.x }, { translateY: this.y }];
       return items;
     }
   },
@@ -258,7 +258,7 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [arg0];
+      items = [arg0];
       fn(items);
     }
   }

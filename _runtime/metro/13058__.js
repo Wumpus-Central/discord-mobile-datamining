@@ -1,32 +1,73 @@
 // === Module 13058: ? ===
 
 // Module 13058
-import _mod13052 from "module_13052" /* 13052 */;
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod12972 from "module_12972" /* 12972 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod13055.GLOBAL_OBJ.onunhandledrejection;
-  _mod13055.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
-    _mod13052.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const Delim = _mod12972.TYPE.Delim;
+const Ident = _mod12972.TYPE.Ident;
+const Dimension = _mod12972.TYPE.Dimension;
+const Percentage = _mod12972.TYPE.Percentage;
+const Number = _mod12972.TYPE.Number;
+const Hash = _mod12972.TYPE.Hash;
+const Colon = _mod12972.TYPE.Colon;
+const LeftSquareBracket = _mod12972.TYPE.LeftSquareBracket;
+
+export default {
+  getNode(arg0) {
+    const self = this;
+    const tokenType = this.scanner.tokenType;
+    if (LeftSquareBracket === tokenType) {
+      return self.AttributeSelector();
+    } else if (Hash === tokenType) {
+      return self.IdSelector();
+    } else if (Colon === tokenType) {
+      const scanner = self.scanner;
+      if (scanner.lookupType(1) === tmp6) {
+        let result = self.PseudoElementSelector();
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        result = self.PseudoClassSelector();
       }
+      return result;
+    } else if (Ident === tokenType) {
+      return self.TypeSelector();
+    } else {
+      if (Number !== tokenType) {
+        if (Percentage !== tokenType) {
+          if (Dimension === tokenType) {
+            const source = self.scanner.source;
+            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
+              self.error("Identifier is expected", self.scanner.tokenStart + 1);
+            }
+          } else if (Delim === tokenType) {
+            const source2 = self.scanner.source;
+            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
+            if (43 !== charCodeAtResult) {
+              if (62 !== charCodeAtResult) {
+                if (126 !== charCodeAtResult) {
+                  if (47 === charCodeAtResult) {
+                    return self.Combinator();
+                  } else if (46 === charCodeAtResult) {
+                    return self.ClassSelector();
+                  } else {
+                    if (42 !== charCodeAtResult) {
+                      if (124 !== charCodeAtResult) {
+                        if (35 === charCodeAtResult) {
+                          return self.IdSelector();
+                        }
+                      }
+                    }
+                    return self.TypeSelector();
+                  }
+                }
+              }
+            }
+            arg0.space = null;
+            arg0.ignoreWSAfter = true;
+            return self.Combinator();
+          }
+        }
+      }
+      return self.Percentage();
     }
-  };
-  _mod13055.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-  _mod13052.addHandler("unhandledrejection", errorCallback);
-  _mod13052.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-}
+  }
+};

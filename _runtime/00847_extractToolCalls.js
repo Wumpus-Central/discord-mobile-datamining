@@ -9,7 +9,7 @@ const dependencyMap = arg6;
 function extractToolCalls(substr) {
   if (substr) {
     if (0 !== substr.length) {
-      const items = [];
+      items = [];
       const iter = substr[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -109,7 +109,7 @@ function extractModelMetadata(setAttribute, item10050) {
         const attr = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE, response_metadata.model_name);
       }
       if (tmp6) {
-        const items = [response_metadata.finish_reason];
+        items = [response_metadata.finish_reason];
         const attr1 = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE, items);
       }
       tmp = response_metadata.model_name && typeof response_metadata.model_name === "string";

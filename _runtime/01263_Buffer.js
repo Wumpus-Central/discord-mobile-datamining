@@ -2971,7 +2971,7 @@ function bidirectionalIndexOf(arg0, str, str2, arg3, arg4) {
         const call2 = indexOf.call;
         typeof call2 === "unknown" ? indexOf(tmp6, num3) : call2(arg0, tmp6, num3);
       } else {
-        const items = [tmp6];
+        items = [tmp6];
         return arrayIndexOf(arg0, items, num3, tmp, arg4);
       }
     } else {
@@ -3104,7 +3104,7 @@ function utf8Slice(arg0, arg1, arg2) {
   let sum1;
   let sum = arg1;
   const bound = Math.min(arg0.length, arg2);
-  const items = [];
+  items = [];
   if (arg1 < bound) {
     do {
       let tmp4 = arg0[sum];
@@ -3246,7 +3246,7 @@ function utf8ToBytes(str, arg1) {
   if (!arg1) {
     num = Infinity;
   }
-  const items = [];
+  items = [];
   let num2 = 0;
   let tmp = null;
   if (0 < str.length) {

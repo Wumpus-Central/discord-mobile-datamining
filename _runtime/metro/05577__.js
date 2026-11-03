@@ -1,8 +1,30 @@
 // === Module 5577: ? ===
 
 // Module 5577
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5421 from "module_5421" /* 5421 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-export const styles = StyleSheet.create({ container: {} });
+export function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
+  }
+  obj = _mod5421;
+}

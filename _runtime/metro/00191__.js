@@ -39,7 +39,7 @@ export function parse(str) {
       }
       const obj = { file: tmp7, methodName: match[1] || closure_1_0, arguments: null, lineNumber: null, column: null };
       if (tmp3) {
-        const items = [match[2]];
+        items = [match[2]];
         let items1 = items;
       } else {
         items1 = [];

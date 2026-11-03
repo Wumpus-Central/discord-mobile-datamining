@@ -74,7 +74,7 @@ export function wrapAllMCPHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -85,7 +85,7 @@ export function wrapAllMCPHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
@@ -115,7 +115,7 @@ export function wrapAllMCPHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -126,7 +126,7 @@ export function wrapAllMCPHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
@@ -156,7 +156,7 @@ export function wrapAllMCPHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -167,7 +167,7 @@ export function wrapAllMCPHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
@@ -198,7 +198,7 @@ export function wrapPromptHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -209,7 +209,7 @@ export function wrapPromptHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
@@ -240,7 +240,7 @@ export function wrapResourceHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -251,7 +251,7 @@ export function wrapResourceHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
@@ -282,7 +282,7 @@ export function wrapToolHandlers(arg0) {
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
         let call = closure_0.call;
-        let items = [self, arg0];
+        items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
         return HermesBuiltin.apply(items, closure_0);
       } else {
@@ -293,7 +293,7 @@ export function wrapToolHandlers(arg0) {
         const items1 = [self, arg0, ];
         items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
           const self = this;
-          const items = [...arguments];
+          items = [...arguments];
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {

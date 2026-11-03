@@ -1,7 +1,9 @@
 // === Module 8196: ? ===
 
 // Module 8196
-import registerAsset from "module_1119" /* 1119 */;
+import module_65 from "module_65" /* 65 */;
 
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeColorMatrix", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, type: true, values: true } };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "c08dbe4e409a6c5d300d5c847a8685e2", name: "ic_stage_channel_24px", type: "png" });
+export default module_65.get("RNSVGFeColorMatrix", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

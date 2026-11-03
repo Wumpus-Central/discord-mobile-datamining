@@ -26,7 +26,7 @@ function _addMeasureSpans(activeSpan, entryType, msToSecResult, msToSecResult1, 
       }
     }
   })(entryType)) {
-    const items = ["mark", "measure"];
+    items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
       const navigationEntry = _mod905.getNavigationEntry(false);
       let num = 0;
@@ -103,7 +103,7 @@ function _addNavigationSpans(activeSpan, requestStart, msToSecResult) {
   _require = activeSpan;
   dependencyMap = requestStart;
   closure_2 = msToSecResult;
-  const items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
+  items = ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"];
   const item = items.forEach((item) => {
     _addPerformanceNavigationTiming(closure_0, closure_1, item, closure_2);
   });
@@ -195,7 +195,7 @@ function _addResourceSpans(activeSpan, initiatorType, name, msToSecResult, msToS
           obj["server.address"] = url.host;
         }
         obj["url.same_origin"] = name.includes(_mod901.WINDOW.location.origin);
-        const items = [["responseStatus", "http.response.status_code"], ["transferSize", "http.response_transfer_size"], ["encodedBodySize", "http.response_content_length"], ["decodedBodySize", "http.decoded_response_content_length"], ["renderBlockingStatus", "resource.render_blocking_status"], ["deliveryType", "http.response_delivery_type"]];
+        items = [["responseStatus", "http.response.status_code"], ["transferSize", "http.response_transfer_size"], ["encodedBodySize", "http.response_content_length"], ["decodedBodySize", "http.decoded_response_content_length"], ["renderBlockingStatus", "resource.render_blocking_status"], ["deliveryType", "http.response_delivery_type"]];
         closure_0 = initiatorType;
         const item = items.forEach((item) => {
           [tmp, tmp2] = item;

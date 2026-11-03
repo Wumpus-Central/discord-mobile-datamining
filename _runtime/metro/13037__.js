@@ -1,7 +1,18 @@
 // === Module 13037: ? ===
 
 // Module 13037
-import registerAsset from "module_1119" /* 1119 */;
+import _mod12972 from "module_12972" /* 12972 */;
 
+const Number = _mod12972.TYPE.Number;
+const obj = {
+  name: "Number",
+  structure: { value: String },
+  parse() {
+    return { type: "Number", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(Number) };
+  },
+  generate(value) {
+    this.chunk(value.value);
+  }
+};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "01cd25a11a733a16463d72c98cca83b7", name: "CloudIcon", type: "png" });
+export default obj;

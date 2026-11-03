@@ -81,7 +81,7 @@ const entry = {
   key: "__getNativeAnimationConfig",
   value: function __getNativeAnimationConfig() {
     const self = this;
-    const items = [];
+    items = [];
     const rounded = Math.round(this._duration / 16.666666666666668);
     for (let num = 0; num < rounded; num = num + 1) {
       let arr = items.push(self._easing(num / rounded));
@@ -102,7 +102,7 @@ let items = [
       if (typeof tmp === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_fromValue, _onUpdate, arg2, arg3, self];
+      items = [_fromValue, _onUpdate, arg2, arg3, self];
       fn(items);
       self._fromValue = _fromValue;
       self._onUpdate = _onUpdate;

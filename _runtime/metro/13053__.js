@@ -1,9 +1,20 @@
 // === Module 13053: ? ===
 
 // Module 13053
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod12972 from "module_12972" /* 12972 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+const WhiteSpace = _mod12972.TYPE.WhiteSpace;
+let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
+const obj = {
+  name: "WhiteSpace",
+  structure: { value: String },
+  parse() {
+    this.eat(WhiteSpace);
+    return closure_1;
+  },
+  generate(value) {
+    this.chunk(value.value);
+  }
+};
+
+export default obj;

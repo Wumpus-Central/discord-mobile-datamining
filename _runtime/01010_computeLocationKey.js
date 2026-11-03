@@ -149,7 +149,7 @@ function processResolvedRoutes(arr, children, arg2) {
       return tmp2;
     }));
     if (found.length > 0) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp3, 0));
       children.children = items;
     }
@@ -218,7 +218,7 @@ function updateNavigationSpan(activeRootSpan, _location, routes) {
   if (!spanToJSONResult.timestamp) {
     const tmp9 = fn(routes, _location);
     const tmpResult4 = pickSplat;
-    let items = tmp9;
+    items = tmp9;
     if (!tmp9) {
       items = [];
     }
@@ -401,7 +401,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -449,11 +449,11 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                                 set.add(children);
                                 if (tmp5) {
                                   children = children.children;
-                                  let item = children.forEach(/* F80235 */ function() { ... });
+                                  let item = children.forEach(/* F80395 */ function() { ... });
                                 }
                                 tmp5 = children.children && !children.index;
                               }
-                              let item1 = set.forEach(/* F120993 */ function() { ... });
+                              let item1 = set.forEach(/* F120696 */ function() { ... });
                             });
                           }
                           tmp2 = children.children && !children.index;
@@ -499,7 +499,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                                 return tmp2;
                               }));
                               if (found1.length > 0) {
-                                const items = [];
+                                items = [];
                                 HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(tmp6, 0));
                                 found.children = items;
                               }
@@ -545,7 +545,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -844,11 +844,11 @@ function addRoutesToAllRoutes(arr) {
                         set.add(children);
                         if (tmp5) {
                           children = children.children;
-                          let item = children.forEach(/* F80235 */ function() { ... });
+                          let item = children.forEach(/* F80395 */ function() { ... });
                         }
                         tmp5 = children.children && !children.index;
                       }
-                      let item1 = set.forEach(/* F120993 */ function() { ... });
+                      let item1 = set.forEach(/* F120696 */ function() { ... });
                     });
                   }
                   tmp5 = children.children && !children.index;
@@ -921,7 +921,7 @@ function updatePageloadTransaction(arg0) {
           closure_129_5 = end2.bind(activeRootSpan);
           closure_129_6 = false;
           activeRootSpan.end = function patchedEnd() {
-            const items = [...arguments];
+            items = [...arguments];
             let first;
             let cleanupNavigationSpan;
             if (!c6) {
@@ -1086,7 +1086,7 @@ function updatePageloadTransaction(arg0) {
         closure_5 = end.bind(activeRootSpan);
         c6 = false;
         activeRootSpan.end = function patchedEnd() {
-          const items = [...arguments];
+          items = [...arguments];
           let first;
           let cleanupNavigationSpan;
           if (!c6) {
@@ -1332,7 +1332,7 @@ function patchSpanEnd(result2, _location, routes, basename, navigation) {
       closure_5 = end.bind(result2);
       c6 = false;
       result2.end = function patchedEnd() {
-        const items = [...arguments];
+        items = [...arguments];
         let first;
         let cleanupNavigationSpan;
         if (!c6) {
@@ -1506,7 +1506,7 @@ export function addResolvedRoutesToParent(arr, children) {
     return tmp2;
   }));
   if (found.length > 0) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp, 0));
     children.children = items;
   }
@@ -1582,8 +1582,8 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f120986) {
-    result.afterAllSetup(f120986);
+  obj3.afterAllSetup = function afterAllSetup(f120689) {
+    result.afterAllSetup(f120689);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1600,11 +1600,11 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
       const _HermesInternal = HermesInternal;
       obj2[_mod681.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f120986, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f120689, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f120986);
+      weakSet.add(f120689);
     }
   };
   return obj3;
@@ -1628,7 +1628,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = closure_1_4(/* F120999 */ function() { ... }, items);
+                tmp3 = closure_1_4(/* F120702 */ function() { ... }, items);
                 obj = {};
                 merged = Object.assign(arg0);
                 return closure_1_9.createElement(closure_0, obj);
@@ -1653,7 +1653,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = closure_1_4(/* F120999 */ function() { ... }, items);
+        tmp3 = closure_1_4(/* F120702 */ function() { ... }, items);
         obj = {};
         merged = Object.assign(arg0);
         return closure_1_9.createElement(closure_0, obj);
@@ -1838,7 +1838,7 @@ export function createV6CompatibleWrapUseRoutes(arg0, _6) {
               }
             }
             locationArg = tmp2;
-            const items = [tmp3, tmp2];
+            items = [tmp3, tmp2];
             closure_1_4(() => {
               let tmp2 = locationArg;
               if (typeof locationArg === "string") {
@@ -1862,11 +1862,11 @@ export function createV6CompatibleWrapUseRoutes(arg0, _6) {
                           set.add(children);
                           if (tmp5) {
                             children = children.children;
-                            let item = children.forEach(/* F80235 */ function() { ... });
+                            let item = children.forEach(/* F80395 */ function() { ... });
                           }
                           tmp5 = children.children && !children.index;
                         }
-                        let item1 = set.forEach(/* F120993 */ function() { ... });
+                        let item1 = set.forEach(/* F120696 */ function() { ... });
                       });
                     }
                     tmp2 = children.children && !children.index;

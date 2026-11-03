@@ -7,7 +7,7 @@ const re2 = /^ {4}at .*$/;
 
 export default function parseHermesStack(str) {
   const parts = str.split(/\n/);
-  let items = [];
+  items = [];
   let num = -1;
   let num2 = 0;
   let num3 = -1;

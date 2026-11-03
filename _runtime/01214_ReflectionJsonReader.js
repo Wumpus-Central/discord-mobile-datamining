@@ -60,7 +60,7 @@ let items = [
     value: function read(arg0, arg1, ignoreUnknownFields) {
       const self = this;
       this.prepare();
-      const items = [];
+      items = [];
       const entries = Object.entries(arg0);
       while (tmp3 !== undefined) {
         let tmp6 = _slicedToArray(tmp4, 2);

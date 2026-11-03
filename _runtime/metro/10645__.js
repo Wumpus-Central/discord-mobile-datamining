@@ -1,325 +1,81 @@
 // === Module 10645: ? ===
 
 // Module 10645
-import _mod17 from "module_17" /* 17 */;
-import _mod19 from "module_19" /* 19 */;
-import cancelAnimation from "cancelAnimation" /* 1650 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10457 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 10458 */;
 
-const useMemo = _mod19.useMemo;
-const Dimensions = _mod17.Dimensions;
-const screen = Dimensions.get("window");
-const __initData = { code: "function pnpm_stackTs1(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,validLength*stackInterval],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[-validLength*stackInterval,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
-const __initData2 = { code: "function pnpm_stackTs2(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;let translateY;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,0],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[0,0,validLength*stackInterval],Extrapolation.CLAMP);}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[0,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[validLength*stackInterval,0,0],Extrapolation.CLAMP);}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ},{translateY:translateY}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
-function getCommonVariables(showLength) {
-  ({ value, snapDirection } = showLength);
-  let rounded = Math.floor(Math.abs(value));
-  const result = Math.abs(value) % 1;
-  if (value < 0) {
-    if (result < 0.5) {
-      let result1 = 4 * result * result * result;
-    } else {
-      result1 = 1 - (-2 * result + 2) ** 3 / 2;
-    }
-    rounded = rounded + result1;
-  } else {
-    if (result < 0.5) {
-      let result2 = 4 * result * result * result;
-    } else {
-      result2 = 1 - (-2 * result + 2) ** 3 / 2;
-    }
-    const diff = showLength.showLength - 1;
-    const sum = rounded + result2;
-    if ("left" === snapDirection) {
-      const items = [-1, 0, diff];
-      let items1 = items;
-    } else if ("right" !== snapDirection) {
-      const _Error = Error;
-      const error = new Error("snapDirection must be set to either left or right");
-      throw error;
-    } else {
-      items1 = [-diff, 0, 1];
-    }
-    const obj = { inputRange: items1, validLength: diff, value: sum };
-    return obj;
-  }
-}
-getCommonVariables.__closure = {};
-getCommonVariables.__workletHash = 9545327827217;
-getCommonVariables.__initData = { code: "function getCommonVariables_Pnpm_stackTs3(opts){const{showLength:showLength,value:_value,snapDirection:snapDirection}=opts;function easeInOutCubic(v){return v<0.5?4*v*v*v:1-(-2*v+2)**3/2;}const page=Math.floor(Math.abs(_value));const diff=Math.abs(_value)%1;const value=_value<0?-(page+easeInOutCubic(diff)):page+easeInOutCubic(diff);const validLength=showLength-1;let inputRange;if(snapDirection===\"left\")inputRange=[-1,0,validLength];else if(snapDirection===\"right\")inputRange=[-validLength,0,1];else throw new Error(\"snapDirection must be set to either left or right\");return{inputRange:inputRange,validLength:validLength,value:value};}" };
-function getCommonStyles(arg0) {
-  ({ snapDirection, validLength, value, opacityInterval } = arg0);
-  if ("left" === snapDirection) {
-    const _Math = Math;
-    const _Number = Number;
-    const items = [-1.5, -1, -1 + Number.MIN_VALUE, 0, validLength];
-    const _Number2 = Number;
-    const items1 = [Number.MIN_VALUE, validLength, validLength, validLength - 1, -1];
-    let result = Math.floor(10000 * cancelAnimation.interpolate(value, items, items1)) / 100;
-    const items2 = [-1, 0, validLength - 1, validLength];
-    const items3 = [0.25, 1, 1 - (validLength - 1) * opacityInterval, 0.25];
-    let interpolateResult = cancelAnimation.interpolate(value, items2, items3);
-  } else if ("right" !== snapDirection) {
-    const _Error = Error;
-    const error = new Error("snapDirection must be set to either left or right");
-    throw error;
-  } else {
-    const _Math2 = Math;
-    const items4 = [-validLength, 0, , , ];
-    const _Number3 = Number;
-    items4[2] = 1 - Number.MIN_VALUE;
-    items4[3] = 1;
-    items4[4] = 1.5;
-    const items5 = [1, validLength - 1, validLength, validLength];
-    const _Number4 = Number;
-    items5[4] = Number.MIN_VALUE;
-    result = Math.floor(10000 * cancelAnimation.interpolate(value, items4, items5)) / 100;
-    const items6 = [-validLength, 1 - validLength, 0, 1];
-    const items7 = [0.25, 1 - (validLength - 1) * opacityInterval, 1, 0.25];
-    interpolateResult = cancelAnimation.interpolate(value, items6, items7);
-  }
-  return { zIndex: Math.round(result), opacity: interpolateResult };
-}
-getCommonStyles.__closure = { interpolate: cancelAnimation.interpolate };
-getCommonStyles.__workletHash = 9067239849373;
-getCommonStyles.__initData = { code: "function getCommonStyles_Pnpm_stackTs4(opts){const{interpolate}=this.__closure;const{snapDirection:snapDirection,validLength:validLength,value:value,opacityInterval:opacityInterval}=opts;let zIndex;let opacity;if(snapDirection===\"left\"){zIndex=Math.floor(interpolate(value,[-1.5,-1,-1+Number.MIN_VALUE,0,validLength],[Number.MIN_VALUE,validLength,validLength,validLength-1,-1])*10000)/100;opacity=interpolate(value,[-1,0,validLength-1,validLength],[0.25,1,1-(validLength-1)*opacityInterval,0.25]);}else if(snapDirection===\"right\"){zIndex=Math.floor(interpolate(value,[-validLength,0,1-Number.MIN_VALUE,1,1.5],[1,validLength-1,validLength,validLength,Number.MIN_VALUE])*10000)/100;opacity=interpolate(value,[-validLength,1-validLength,0,1],[0.25,1-(validLength-1)*opacityInterval,1,0.25]);}else{throw new Error(\"snapDirection must be set to either left or right\");}return{zIndex:Math.round(zIndex),opacity:opacity};}" };
+const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
+const regExp = new RegExp(combined, "i");
+const combined1 = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_NO_ABBR_DICTIONARY) + ")\\s{0,5}";
 
-export function horizontalStackLayout() {
-  if (modeConfig === undefined) {
-    modeConfig = {};
+export function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[1];
+    let formatted = str2.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+    } else {
+      let _parseInt = parseInt;
+      parsed = parseInt(formatted);
+    }
+    let str3 = match[2];
+    obj[exports.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
+    let substr = str.substring(match[0].length);
+    match = regExp.exec(substr);
+    str = substr;
   }
-  const fn = function l(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
-    }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
-    }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      obj2 = cancelAnimation;
-      const items = [-width, 0, validLength * num];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    } else if ("right" === str) {
-      const obj6 = cancelAnimation;
-      const items3 = [-validLength * num, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-      const obj7 = cancelAnimation;
-      const items4 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    }
-    const obj5 = { transform: null, zIndex, opacity };
-    const items6 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }];
-    obj5.transform = items6;
-    return obj5;
-  };
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(1650).interpolate, Extrapolation: modeConfig(1650).Extrapolation };
-  fn.__workletHash = 13118376883684;
-  fn.__initData = __initData;
-  return fn;
+  return obj;
 }
-export function useHorizontalStackLayout() {
-  if (modeConfig === undefined) {
-    modeConfig = {};
+export function parseNumberPattern(match) {
+  const formatted = match.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+  } else {
+    const _parseInt = parseInt;
+    parsed = parseInt(formatted);
   }
-  let obj2 = arg1;
-  if (arg1 === undefined) {
-    obj2 = {};
-  }
-  let items = [modeConfig, obj2];
-  modeConfig = undefined;
-  if (modeConfig === undefined) {
-    modeConfig = {};
-  }
-  let obj3 = { layout: null, config: null };
-  const fn = function l(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
-    }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
-    }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      obj2 = cancelAnimation;
-      const items = [-width, 0, validLength * num];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    } else if ("right" === str) {
-      const obj6 = cancelAnimation;
-      const items3 = [-validLength * num, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-      const obj7 = cancelAnimation;
-      const items4 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP) + "deg";
-    }
-    const obj5 = { transform: null, zIndex, opacity };
-    const items6 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }];
-    obj5.transform = items6;
-    return obj5;
-  };
-  const tmp = useMemo(() => {
-    let str = "positive";
-    if ("right" === obj.snapDirection) {
-      str = "negative";
-    }
-    obj = { type: str, viewCount: obj.showLength };
-    const merged = Object.assign(obj2);
-    return obj;
-  }, items);
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(obj2[2]).interpolate, Extrapolation: modeConfig(obj2[2]).Extrapolation };
-  fn.__workletHash = 13118376883684;
-  fn.__initData = __initData;
-  obj3.layout = fn;
-  obj3.config = tmp;
-  return obj3;
+  return parsed;
 }
-export function verticalStackLayout() {
-  if (modeConfig === undefined) {
-    modeConfig = {};
+export function parseOrdinalNumberPattern(match) {
+  const formatted = match.toLowerCase();
+  if (undefined !== exports.ORDINAL_NUMBER_DICTIONARY[formatted]) {
+    return exports.ORDINAL_NUMBER_DICTIONARY[formatted];
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(formatted);
   }
-  const fn = function o(value) {
-    const snapDirection = obj.snapDirection;
-    let str = "left";
-    if (undefined !== snapDirection) {
-      str = snapDirection;
-    }
-    let width = tmp.moveSize;
-    if (undefined === width) {
-      width = styles.width;
-    }
-    const stackInterval = tmp.stackInterval;
-    let num = 18;
-    if (undefined !== stackInterval) {
-      num = stackInterval;
-    }
-    const scaleInterval = tmp.scaleInterval;
-    let num2 = 0.04;
-    if (undefined !== scaleInterval) {
-      num2 = scaleInterval;
-    }
-    const opacityInterval = tmp.opacityInterval;
-    let num3 = 0.1;
-    if (undefined !== opacityInterval) {
-      num3 = opacityInterval;
-    }
-    const rotateZDeg = tmp.rotateZDeg;
-    let num4 = 30;
-    if (undefined !== rotateZDeg) {
-      num4 = rotateZDeg;
-    }
-    obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = getCommonVariables(obj));
-    const tmp3 = getCommonVariables(obj);
-    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
-    if ("left" === str) {
-      const obj2 = cancelAnimation;
-      const items = [-width, 0, 0];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, cancelAnimation.Extrapolation.CLAMP);
-      const obj3 = cancelAnimation;
-      const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, cancelAnimation.Extrapolation.CLAMP);
-      const obj4 = cancelAnimation;
-      const items2 = [-num4, 0, 0];
-      const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, cancelAnimation.Extrapolation.CLAMP) + "deg";
-      const obj5 = cancelAnimation;
-      const items3 = [0, 0, validLength * num];
-      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, cancelAnimation.Extrapolation.CLAMP);
-    } else if ("right" === str) {
-      const obj7 = cancelAnimation;
-      const items4 = [0, 0, width];
-      interpolateResult = obj7.interpolate(value, inputRange, items4, cancelAnimation.Extrapolation.CLAMP);
-      const obj8 = cancelAnimation;
-      const items5 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj8.interpolate(value, inputRange, items5, cancelAnimation.Extrapolation.CLAMP);
-      const obj9 = cancelAnimation;
-      const items6 = [0, 0, num4];
-      const _HermesInternal2 = HermesInternal;
-      combined = "" + obj9.interpolate(value, inputRange, items6, cancelAnimation.Extrapolation.CLAMP) + "deg";
-      const obj10 = cancelAnimation;
-      const items7 = [validLength * num, 0, 0];
-      interpolateResult2 = obj10.interpolate(value, inputRange, items7, cancelAnimation.Extrapolation.CLAMP);
-    }
-    const obj6 = { transform: null, zIndex, opacity };
-    const items8 = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }, { translateY: interpolateResult2 }];
-    obj6.transform = items8;
-    return obj6;
-  };
-  fn.__closure = { screen, modeConfig, getCommonVariables, getCommonStyles, interpolate: modeConfig(1650).interpolate, Extrapolation: modeConfig(1650).Extrapolation };
-  fn.__workletHash = 9752649608963;
-  fn.__initData = __initData2;
-  return fn;
 }
+export function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt2 = parseInt;
+    const parsed = parseInt(match);
+    let findMostLikelyADYearResult = parsed;
+    if (parsed < 100) {
+      findMostLikelyADYearResult = findMostLikelyADYear.findMostLikelyADYear(parsed);
+    }
+    return findMostLikelyADYearResult;
+  } else {
+    const formatted = match.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+      return exports.INTEGER_WORD_DICTIONARY[formatted];
+    } else {
+      const _parseInt = parseInt;
+      return parseInt(match);
+    }
+  }
+  obj = /\d+/;
+}
+export const WEEKDAY_DICTIONARY = { "söndag": 0, "sön": 0, so: 0, "måndag": 1, "mån": 1, "må": 1, tisdag: 2, tis: 2, ti: 2, onsdag: 3, ons: 3, on: 3, torsdag: 4, tors: 4, to: 4, fredag: 5, fre: 5, fr: 5, "lördag": 6, "lör": 6, "lö": 6 };
+export const MONTH_DICTIONARY = { januari: 1, jan: 1, "jan.": 1, februari: 2, feb: 2, "feb.": 2, mars: 3, mar: 3, "mar.": 3, april: 4, apr: 4, "apr.": 4, maj: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, augusti: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, december: 12, dec: 12, "dec.": 12 };
+export const ORDINAL_NUMBER_DICTIONARY = { "första": 1, andra: 2, tredje: 3, "fjärde": 4, femte: 5, "sjätte": 6, sjunde: 7, "åttonde": 8, nionde: 9, tionde: 10, elfte: 11, tolfte: 12, trettonde: 13, fjortonde: 14, femtonde: 15, sextonde: 16, sjuttonde: 17, artonde: 18, nittonde: 19, tjugonde: 20, "tjugoförsta": 21, tjugoandra: 22, tjugotredje: 23, "tjugofjärde": 24, tjugofemte: 25, "tjugosjätte": 26, tjugosjunde: 27, "tjugoåttonde": 28, tjugonionde: 29, trettionde: 30, "trettioförsta": 31 };
+export const INTEGER_WORD_DICTIONARY = { en: 1, ett: 1, "två": 2, tre: 3, fyra: 4, fem: 5, sex: 6, sju: 7, "åtta": 8, nio: 9, tio: 10, elva: 11, tolv: 12, tretton: 13, fjorton: 14, femton: 15, sexton: 16, sjutton: 17, arton: 18, nitton: 19, tjugo: 20, "trettiо": 30, fyrtio: 40, femtio: 50, sextio: 60, sjuttio: 70, "åttio": 80, nittio: 90, hundra: 100, tusen: 1000 };
+export const TIME_UNIT_DICTIONARY = { sek: "second", sekund: "second", sekunder: "second", min: "minute", minut: "minute", minuter: "minute", tim: "hour", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", "mån": "month", "månad": "month", "månader": "month", "år": "year", "kvartаl": "quarter", kvartal: "quarter" };
+export const TIME_UNIT_NO_ABBR_DICTIONARY = { sekund: "second", sekunder: "second", minut: "minute", minuter: "minute", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", "månad": "month", "månader": "month", "år": "year", kvartal: "quarter" };
+export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|\\d+)";
+export const ORDINAL_NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_NUMBER_DICTIONARY) + "|\\d{1,2}(?:e|:e))";
+export const TIME_UNIT_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
+export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined1);

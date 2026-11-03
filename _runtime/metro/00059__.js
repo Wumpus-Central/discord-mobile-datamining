@@ -17,7 +17,7 @@ function isBackgroundRepeatKeyword(formatted1) {
 
 export default function processBackgroundRepeat(str) {
   if (null == str) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = str;
@@ -25,7 +25,7 @@ export default function processBackgroundRepeat(str) {
       let items1 = [];
       if (typeof str === "string") {
         items1 = (function parseBackgroundRepeatCSSString(str) {
-          const items = [];
+          items = [];
           const parts = str.split(",");
           const mapped = parts.map((item) => item.trim());
           const iter = mapped[Symbol.iterator]();

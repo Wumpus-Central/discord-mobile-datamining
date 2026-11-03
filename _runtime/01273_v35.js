@@ -20,7 +20,7 @@ export default function v35(v3, arg1, arg2) {
       const _unescape = unescape;
       const _encodeURIComponent = encodeURIComponent;
       const unescapeResult = unescape(encodeURIComponent(str));
-      const items = [];
+      items = [];
       let num = 0;
       arr = items;
       if (0 < unescapeResult.length) {

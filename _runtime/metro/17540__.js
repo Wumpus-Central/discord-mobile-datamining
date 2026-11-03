@@ -1,13 +1,7 @@
 // === Module 17540: ? ===
 
 // Module 17540
-import _mod17545 from "module_17545" /* 17545 */;
-import module_8853 from "module_8853" /* 8853 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export const getYoutubeMeta = require("module_17541").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8853(_mod17545).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7902227dc6dc99bcea15f3cdebd9f65f", name: "EmojiRollingOnTheFloorLaughingIcon", type: "png" });

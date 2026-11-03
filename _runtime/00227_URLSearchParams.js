@@ -63,7 +63,7 @@ let items = [
           value.push(arg1);
         }
       } else {
-        const items = [arg1];
+        items = [arg1];
         const result = _searchParams2.set(arg0, items);
       }
     }
@@ -91,7 +91,7 @@ let items = [
     key: "getAll",
     value: function getAll(arg0) {
       const _searchParams = this._searchParams;
-      let items = _searchParams.get(arg0);
+      items = _searchParams.get(arg0);
       if (items == null) {
         items = [];
       }
@@ -109,7 +109,7 @@ let items = [
     key: "set",
     value: function set(arg0, arg1) {
       const _searchParams = this._searchParams;
-      const items = [arg1];
+      items = [arg1];
       const result = _searchParams.set(arg0, items);
     }
   },
@@ -138,7 +138,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             while (true) {
@@ -160,7 +160,7 @@ let items = [
                   closure_1 = values[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c9 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp14;
@@ -224,7 +224,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             while (true) {
@@ -250,7 +250,7 @@ let items = [
                   closure_1 = dependencyMap[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp16;
@@ -287,7 +287,7 @@ let items = [
               } else {
                 c8 = 2;
                 closure_133_4 = tmp19;
-                let items = [closure_133_2, ];
+                items = [closure_133_2, ];
                 items[1] = closure_133_4;
                 c9 = 3;
                 c10 = 1;
@@ -319,7 +319,7 @@ let items = [
     key: "sort",
     value: function sort() {
       const _searchParams = this._searchParams;
-      const items = [..._searchParams.entries()];
+      items = [..._searchParams.entries()];
       this._searchParams = new Map(items.sort((arg0, arg1) => {
         [obj] = arg0;
         [tmp] = arg1;
@@ -333,7 +333,7 @@ let items = [
 const entry = {
   key: Symbol.iterator,
   value() {
-    const items = [];
+    items = [];
     while (tmp !== undefined) {
       let tmp4 = _slicedToArray(tmp2, 2);
       [tmp5, tmp6] = tmp4;

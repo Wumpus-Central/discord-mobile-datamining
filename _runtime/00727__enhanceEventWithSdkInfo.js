@@ -23,7 +23,7 @@ function _enhanceEventWithSdkInfo(sdk, name) {
     if (!integrations) {
       integrations = [];
     }
-    const items = [];
+    items = [];
     const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
     const tmp9 = name.integrations || [];
     HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
@@ -83,7 +83,7 @@ export function createEventEnvelope(type, url, sdk, arg3) {
   _enhanceEventWithSdkInfo(type, sdk);
   const eventEnvelopeHeaders = forEachEnvelopeItem.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
   delete tmp[tmp2];
-  const items = [{ type: str }, type];
+  items = [{ type: str }, type];
   const tmp3Result = forEachEnvelopeItem;
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(eventEnvelopeHeaders, items1);
@@ -106,7 +106,7 @@ export function createSessionEnvelope(toJSON, url, sdk, arg3) {
   }
   const merged1 = Object.assign(tmp6);
   if ("aggregates" in toJSON) {
-    const items = [{ type: "sessions" }, toJSON];
+    items = [{ type: "sessions" }, toJSON];
     let items1 = items;
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];

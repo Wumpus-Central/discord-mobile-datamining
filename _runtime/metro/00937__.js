@@ -16,7 +16,7 @@ import _mod944 from "module_944" /* 944 */;
 require = arg1;
 const dependencyMap = arg6;
 function getDefaultIntegrations(arg0) {
-  const items = [_mod681.inboundFiltersIntegration(), , , , , , , , , ];
+  items = [_mod681.inboundFiltersIntegration(), , , , , , , , , ];
   items[1] = _mod681.functionToStringIntegration();
   items[2] = _mod681.conversationIdIntegration();
   items[3] = _wrapTimeFunction.browserApiErrorsIntegration();
