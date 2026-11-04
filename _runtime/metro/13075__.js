@@ -1,266 +1,157 @@
 // === Module 13075: ? ===
 
 // Module 13075
-function getTrace(arg0) {
-  closure_0 = arg0;
-  c1 = null;
-  if (null !== this.matched) {
-    function hasMatch(matched) {
-      if (Array.isArray(matched.match)) {
-        let num = 0;
-        if (0 < matched.match.length) {
-          while (!hasMatch(matched.match[num])) {
-            num = num + 1;
-          }
-          const syntax = matched.syntax;
-          let tmp7 = null !== syntax;
-          if (tmp7) {
-            let tmp8 = "Type" === syntax.type;
-            if (!tmp8) {
-              tmp8 = "Property" === syntax.type;
-            }
-            if (!tmp8) {
-              tmp8 = "Keyword" === syntax.type;
-            }
-            tmp7 = tmp8;
-          }
-          if (tmp7) {
-            items1.unshift(matched.syntax);
-          }
-          return true;
+function noop(arg0) {
+  return arg0;
+}
+function generate(type, fn, arg2, arg3) {
+  let str = ",";
+  switch (type.type) {
+    case "Group":
+      closure_0 = fn;
+      generate = arg2;
+      closure_2 = arg3;
+      if (" " !== type.combinator) {
+        if (!arg3) {
+          let combinator = `${" " + type.combinator} `;
         }
-      } else if (matched.node === closure_0) {
-        const syntax2 = matched.syntax;
-        let tmp3 = null !== syntax2;
-        if (tmp3) {
-          let tmp2 = "Type" === syntax2.type;
-          if (!tmp2) {
-            tmp2 = "Property" === syntax2.type;
-          }
-          if (!tmp2) {
-            tmp2 = "Keyword" === syntax2.type;
-          }
-          tmp3 = tmp2;
+        const terms = type.terms;
+        const mapped = terms.map((item) => generate(item, closure_0, closure_1, closure_2));
+        const joined = mapped.join(combinator);
+        let explicit = type.explicit;
+        if (!explicit) {
+          explicit = arg2;
         }
-        if (tmp3) {
-          items = [matched.syntax];
-          items1 = items;
-        } else {
-          items1 = [];
+        let sum1 = joined;
+        if (explicit) {
+          if (arg3) {
+            let str27 = "[";
+          } else {
+            str27 = "[ ";
+          }
+          let str28 = " ]";
+          const sum = str27 + joined;
+          if (arg3) {
+            str28 = "]";
+          }
+          sum1 = sum + str28;
         }
-        return true;
+        let str29 = "";
+        if (type.disallowEmpty) {
+          str29 = "!";
+        }
+        str = sum1 + str29;
+        return fn(str, type);
       }
-      return false;
-    }
-    hasMatch(tmp.matched);
+      combinator = type.combinator;
+    break;
+    case "Multiplier":
+      if (0 !== type.min) {
+        if (0 === type.min) {
+          if (1 === type.max) {
+            let str16 = "?";
+          }
+        }
+        if (1 !== type.min) {
+          if (1 === type.min) {
+            const str18 = "";
+          }
+          let str19 = "";
+          let str20 = "";
+          if (type.comma) {
+            str20 = "#";
+          }
+          if (type.min === type.max) {
+            let text = `${"{" + type.min}}`;
+          } else {
+            const text1 = `{${type.min}`;
+            if (0 !== type.max) {
+              str19 = type.max;
+            }
+            text = `${tmp14 + "," + str19}}`;
+          }
+          const sum2 = str20 + text;
+        }
+        let str25 = "+";
+        if (type.comma) {
+          str25 = "#";
+        }
+      } else {
+        str16 = "*";
+      }
+      return generate(type.term, fn, arg2, arg3) + fn(str16, type);
+    case "Type":
+      let str7 = "";
+      const text2 = `<${type.name}`;
+      if (type.opts) {
+        const opts = type.opts;
+        if ("Range" === opts.type) {
+          let str11 = "-\u221E";
+          if (null !== opts.min) {
+            str11 = opts.min;
+          }
+          let str13 = "\u221E";
+          const text3 = ` [${str11}`;
+          if (null !== opts.max) {
+            str13 = opts.max;
+          }
+          str7 = fn(text3 + "," + str13 + "]", type.opts);
+        } else {
+          const _Error = Error;
+          const error = new Error("Unknown node type `" + opts.type + "`");
+          throw error;
+        }
+      }
+      str = `${tmp + str7}>`;
+    break;
+    case "Property":
+      str = `${"<'" + type.name}'>`;
+    break;
+    case "Keyword":
+      str = type.name;
+    break;
+    case "AtKeyword":
+      str = `@${type.name}`;
+    break;
+    case "Function":
+      str = `${type.name}(`;
+    break;
+    case "String":
+      str = type.value;
+    break;
+    case "Token":
+      str = type.value;
+    break;
+    case "Comma":
+    break;
+    default:
+      const _Error2 = Error;
+      const error1 = new Error("Unknown node type `" + type.type + "`");
+      throw error1;
   }
-  return c1;
 }
 
-export default {
-  getTrace,
-  isType(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
+export default (arg0, forceBraces) => {
+  let decorate = noop;
+  let flag = false;
+  let flag2 = false;
+  let tmp = forceBraces;
+  if (typeof forceBraces !== "function") {
+    flag = false;
+    flag2 = false;
+    tmp = decorate;
+    if (forceBraces) {
+      const _Boolean = Boolean;
+      const _Boolean2 = Boolean;
+      const BooleanResult = Boolean(forceBraces.forceBraces);
+      if (typeof forceBraces.decorate === "function") {
+        decorate = forceBraces.decorate;
       }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
+      tmp = decorate;
+      flag = Boolean(forceBraces.compact);
+      flag2 = BooleanResult;
+      const BooleanResult1 = Boolean(forceBraces.compact);
     }
-    return null !== callResult && callResult.some((type) => {
-      let tmp = "Type" === type.type;
-      if (tmp) {
-        tmp = type.name === closure_0;
-      }
-      return tmp;
-    });
-  },
-  isProperty(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
-    }
-    return null !== callResult && callResult.some((type) => {
-      let tmp = "Property" === type.type;
-      if (tmp) {
-        tmp = type.name === closure_0;
-      }
-      return tmp;
-    });
-  },
-  isKeyword(arg0) {
-    const self = this;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      let items1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = items1;
-    } else {
-      callResult = call(self, arg0);
-    }
-    let someResult = null !== callResult;
-    if (someResult) {
-      someResult = callResult.some((type) => "Keyword" === type.type);
-    }
-    return someResult;
   }
+  return generate(arg0, tmp, flag2, flag);
 };

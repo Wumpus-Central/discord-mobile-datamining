@@ -1,30 +1,10 @@
 // === Module 13087: ? ===
 
 // Module 13087
-import _mod13056 from "module_13056" /* 13056 */;
+import _mod13072 from "module_13072" /* 13072 */;
+import _mod13074 from "module_13074" /* 13074 */;
+import _mod13075 from "module_13075" /* 13075 */;
+import _mod13086 from "module_13086" /* 13086 */;
 
-function clone(obj) {
-  obj = {};
-  for (const key10006 in arg0) {
-    let arr = arg0[key10006];
-    if (!arr) {
-      obj[key10006] = arr;
-      continue;
-    } else {
-      let _Array = Array;
-      if (!Array.isArray(arr)) {
-        if (!(arr instanceof _mod13056)) {
-          let _Object = Object;
-          let mapped = arr;
-          if (arr.constructor === Object) {
-            mapped = clone(arr);
-          }
-        }
-      }
-      mapped = arr.map(clone);
-    }
-  }
-  return obj;
-}
 
-export default clone;
+export default { SyntaxError: _mod13074, parse: _mod13072, generate: _mod13075, walk: _mod13086 };

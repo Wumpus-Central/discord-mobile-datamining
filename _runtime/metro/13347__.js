@@ -1,33 +1,44 @@
 // === Module 13347: ? ===
 
 // Module 13347
-import setupIntegration from "module_13329" /* 13329 */;
+import _mod13274 from "module_13274" /* 13274 */;
+import _mod13288 from "module_13288" /* 13288 */;
+import _mod13301 from "module_13301" /* 13301 */;
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function() {
-        items = [...arguments];
-        const originalFunction = closure_1_0(13279).getOriginalFunction(this);
-        const obj = closure_1_0(13279);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {
+export function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod13301.getClient();
+  const isolationScope = _mod13301.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
     }
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod13288.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod13274.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod13274;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod13288;
+    }
   }
-}));
+}

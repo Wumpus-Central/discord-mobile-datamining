@@ -212,7 +212,7 @@ export (enabled) => {
     }
   }, items13);
   const obj10 = { value: tmp11, children: null };
-  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "Z", onKeyboardMoveInteractive: "onKeyboardMoveStart", onKeyboardMoveEnd: "onKeyboardMove", onFocusedInputLayoutChangedReanimated: "onKeyboardMoveEnd", children: "onKeyboardMoveInteractive" };
+  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: 8.333333333333334, onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: "lg", children: null };
   let tmp34 = closure_12;
   let tmp35 = closure_12;
   if (!closure_12) {

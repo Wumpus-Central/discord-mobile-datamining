@@ -1,9 +1,7 @@
 // === Module 13155: ? ===
 
 // Module 13155
+import _mod13156 from "module_13156" /* 13156 */;
 
-export default {
-  parse: function selectorList() {
-    return this.createSingleNodeList(this.SelectorList());
-  }
-};
+
+export default _mod13156;

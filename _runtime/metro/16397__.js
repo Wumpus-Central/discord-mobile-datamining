@@ -1,5 +1,7 @@
 // === Module 16397: ? ===
 
 // Module 16397
+import _mod16383 from "module_16383" /* 16383 */;
 
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+
+export default (arg0) => Object(_mod16383(arg0));

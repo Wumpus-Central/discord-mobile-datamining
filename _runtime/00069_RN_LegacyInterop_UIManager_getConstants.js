@@ -8,7 +8,7 @@ let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f20845 = () => {
+const f20858 = () => {
 
 };
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: metroImportDefault, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8, RN$discordUiManagerOptimization } = global);
@@ -18,7 +18,7 @@ if (RN$discordUiManagerOptimization == null) {
 let closure_9 = tmp2;
 c0 = false;
 c1 = null;
-const f77829 = () => {
+const f77959 = () => {
 
 };
 dependencyMap = {};
@@ -54,7 +54,7 @@ const merged1 = Object.assign({
   },
   getDefaultEventTypes() {
     if (React5) {
-      if (typeof f77829 === "function") {
+      if (typeof f77959 === "function") {
         if (!closure_138_0) {
           closure_138_1 = _null(70)(React5)();
           closure_138_0 = true;
@@ -133,7 +133,7 @@ obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
         dependencyMap[arg0] = obj.getConstantsForViewManager(arg0);
       }
       return dependencyMap[arg0];
-    } else if (typeof f20845 === "function") {
+    } else if (typeof f20858 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
@@ -170,7 +170,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f20845 === "function") {
+    if (typeof f20858 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -253,7 +253,7 @@ if (tmp6) {
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f20845 === "function") {
+    if (typeof f20858 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;

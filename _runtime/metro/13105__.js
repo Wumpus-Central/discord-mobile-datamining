@@ -1,25 +1,18 @@
 // === Module 13105: ? ===
 
 // Module 13105
-import _mod13054 from "module_13054" /* 13054 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
-const Ident = _mod13054.TYPE.Ident;
-const obj = {
-  name: "ClassSelector",
-  structure: { name: String },
+const CDO = _mod13055.TYPE.CDO;
+
+export default {
+  name: "CDO",
+  structure: [],
   parse() {
-    const self = this;
-    const scanner = this.scanner;
-    if (!scanner.isDelim(46)) {
-      self.error("Full stop is expected");
-    }
-    self.scanner.next();
-    return { type: "ClassSelector", loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd), name: self.consume(Ident) };
+    this.eat(CDO);
+    return { type: "CDO", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
   },
-  generate(name) {
-    this.chunk(".");
-    this.chunk(name.name);
+  generate() {
+    this.chunk("<!--");
   }
 };
-
-export default obj;

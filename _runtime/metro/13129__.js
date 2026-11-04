@@ -1,18 +1,41 @@
 // === Module 13129: ? ===
 
 // Module 13129
-import _mod13054 from "module_13054" /* 13054 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
-const String = _mod13054.TYPE.String;
+const Comma = _mod13055.TYPE.Comma;
 const obj = {
-  name: "String",
-  structure: { value: String },
+  name: "SelectorList",
+  structure: null,
   parse() {
-    return { type: "String", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(String) };
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      list.push(self.Selector());
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.Selector());
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
-  }
+  generate(arg0) {
+    this.children(arg0, function() {
+      this.chunk(",");
+    });
+  },
+  walkContext: "selector"
 };
+const obj2 = { children: null };
+const items = [["Selector", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

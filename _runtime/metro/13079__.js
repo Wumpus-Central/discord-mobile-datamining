@@ -1,299 +1,190 @@
 // === Module 13079: ? ===
 
 // Module 13079
-import _mod13056 from "module_13056" /* 13056 */;
+import _mod13059 from "module_13059" /* 13059 */;
+import _mod13075 from "module_13075" /* 13075 */;
 
-function isValidLocation(start) {
-  let BooleanResult = Boolean(start);
-  if (BooleanResult) {
-    const offset = start.offset;
-    let isFiniteResult = typeof offset === "number";
-    if (typeof offset === "number") {
-      const _isFinite = isFinite;
-      isFiniteResult = isFinite(offset);
-    }
-    if (isFiniteResult) {
-      const _Math = Math;
-      isFiniteResult = Math.floor(offset) === offset;
-    }
-    if (isFiniteResult) {
-      isFiniteResult = offset >= 0;
-    }
-    BooleanResult = isFiniteResult;
+function fromLoc(loc, start) {
+  if (loc) {
+    loc = loc.loc;
   }
-  if (BooleanResult) {
-    const line = start.line;
-    let isFiniteResult1 = typeof line === "number";
-    if (typeof line === "number") {
-      const _isFinite2 = isFinite;
-      isFiniteResult1 = isFinite(line);
-    }
-    if (isFiniteResult1) {
-      const _Math2 = Math;
-      isFiniteResult1 = Math.floor(line) === line;
-    }
-    if (isFiniteResult1) {
-      isFiniteResult1 = line >= 0;
-    }
-    BooleanResult = isFiniteResult1;
+  if (loc) {
+    loc = loc.loc[start];
   }
-  if (BooleanResult) {
-    const column = start.column;
-    let isFiniteResult2 = typeof column === "number";
-    if (typeof column === "number") {
-      const _isFinite3 = isFinite;
-      isFiniteResult2 = isFinite(column);
+  let tmp2 = null;
+  if (loc) {
+    let tmp3 = loc;
+    if ("line" in loc) {
+      const obj = { offset: null, line: null, column: null };
+      ({ offset: obj.offset, line: obj.line, column: obj.column } = loc);
+      tmp3 = obj;
     }
-    if (isFiniteResult2) {
-      const _Math3 = Math;
-      isFiniteResult2 = Math.floor(column) === column;
-    }
-    if (isFiniteResult2) {
-      isFiniteResult2 = column >= 0;
-    }
-    BooleanResult = isFiniteResult2;
+    tmp2 = tmp3;
   }
-  return BooleanResult;
+  return tmp2;
 }
+let closure_2 = { offset: 0, line: 1, column: 1 };
 
 export default {
-  getStructureFromConfig(node) {
-    const obj = {};
-    if (node.node) {
-      for (const key10016 in arg0.node) {
-        let call = hasOwnProperty.call;
-        node = arg0.node;
-        if (typeof call === "unknown") {
-          let callResult = hasOwnProperty(key10016);
-        } else {
-          callResult = call(node, key10016);
+  SyntaxReferenceError(arg0, reference) {
+    let str = "";
+    if (reference) {
+      str = `${" `" + reference}\``;
+    }
+    const tmpResult = _mod13059("SyntaxReferenceError", arg0 + str);
+    tmpResult.reference = reference;
+    return tmpResult;
+  },
+  SyntaxMatchError(reason, syntax, loc, arg3) {
+    const tmp3 = _mod13059("SyntaxMatchError", reason);
+    ({ tokens, longestMatch } = arg3);
+    let tmp5 = null;
+    if ((longestMatch < tokens.length && tokens[longestMatch].node || null) !== loc) {
+      tmp5 = tmp4;
+    }
+    let str = "";
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    let num4 = 0;
+    let str2 = "";
+    let num5 = 0;
+    let num6 = 0;
+    let num7 = 0;
+    if (0 < tokens.length) {
+      do {
+        value = tokens[num].value;
+        let length = num3;
+        let length2 = num4;
+        if (num === longestMatch) {
+          length = value.length;
+          length2 = ``.length;
         }
-        if (!callResult) {
-          continue;
-        } else {
-          let tmp4 = arg0.node[key10016];
-          if (tmp4.structure) {
-            let structure = tmp4.structure;
-            let obj2 = { type: null, loc: true };
-            let _String = String;
-            obj2.type = String;
-            let obj3 = { type: "\"" + key10016 + "\"" };
-            for (const key10038 in structure) {
-              let call2 = hasOwnProperty.call;
-              if (typeof call2 === "unknown") {
-                let call2Result = hasOwnProperty(key10038);
-              } else {
-                call2Result = call2(structure, key10038);
-              }
-              if (false === call2Result) {
-                continue;
-              } else {
-                let _Array = Array;
-                let arr = structure[key10038];
-                if (Array.isArray(structure[key10038])) {
-                  let substr = arr.slice();
-                } else {
-                  substr = [arr];
-                }
-                items = [];
-                obj2[key10038] = substr;
-                let num3 = 0;
-                if (0 < substr.length) {
-                  while (true) {
-                    let tmp11 = substr[num3];
-                    let _String2 = String;
-                    if (tmp11 !== String) {
-                      let _Boolean = Boolean;
-                      if (tmp11 !== Boolean) {
-                        if (null === tmp11) {
-                          let arr2 = items.push("null");
-                        } else if (typeof tmp11 === "string") {
-                          let arr3 = items.push("<" + tmp11 + ">");
-                        } else {
-                          let _Array2 = Array;
-                          if (Array.isArray(tmp11)) {
-                            let arr7 = items.push("List");
-                          } else {
-                            let _Error2 = Error;
-                            let str9 = "Wrong value `";
-                            let str10 = "` in `";
-                            let str11 = ".";
-                            let tmp13 = new.target;
-                            let str12 = "` structure definition";
-                            let tmp14 = new.target;
-                            let error = new Error("Wrong value `" + tmp11 + "` in `" + key10016 + "." + key10038 + "` structure definition");
-                            throw error;
-                          }
-                        }
-                      }
-                      num3 = num3 + 1;
-                      if (num3 >= substr.length) {
-                        break;
-                      }
-                    }
-                    let arr8 = items.push(tmp11.name);
-                  }
-                }
-                obj3[key10038] = items.join(" | ");
-                continue;
-              }
-              continue;
+        let tmp10 = tmp6;
+        if (tmp6) {
+          tmp10 = tokens[num].node === tmp5;
+        }
+        let tmp11 = num2;
+        if (tmp10) {
+          let num8 = 0;
+          if (num <= longestMatch) {
+            num8 = num2 + 1;
+          }
+          tmp11 = num8;
+        }
+        str = str + value;
+        num = num + 1;
+        num2 = tmp11;
+        num3 = length;
+        num4 = length2;
+        str2 = str;
+        num5 = tmp11;
+        num6 = length;
+        num7 = length2;
+      } while (num < tokens.length);
+    }
+    if (longestMatch !== tokens.length) {
+      if (1 >= num5) {
+        let tmp13 = fromLoc(tmp5, "start");
+        if (!tmp13) {
+          let str3 = str2.slice(0, num7);
+          const obj = { offset: null, line: null, column: null };
+          ({ offset: obj.offset, line: obj.line, column: obj.column } = fromLoc(loc, "start") || closure_2);
+          tmp13 = obj;
+          if (str3) {
+            const parts = str3.split(/\n|\r\n?|\f/);
+            obj.offset = obj.offset + str3.length;
+            obj.line = obj.line + (parts.length - 1);
+            if (1 === parts.length) {
+              str3 = str3.length;
+              let sum = obj.column + str3;
+            } else {
+              sum = parts.pop().length + 1;
             }
-            let obj4 = {
-              docs: obj3,
-              check: function checkNode(type, fn) {
-                        if (type) {
-                          const _Object = Object;
-                          if (type.constructor === Object) {
-                            for (const key10005 in arg0) {
-                              let call2 = hasOwnProperty.call;
-                              if (typeof call2 === "unknown") {
-                                let call2Result = hasOwnProperty(key10005);
-                              } else {
-                                call2Result = call2(arg0, key10005);
-                              }
-                              if (false === call2Result) {
-                                continue;
-                              } else {
-                                if ("type" === key10005) {
-                                  let flag = true;
-                                  let tmp5 = key10005;
-                                  if (arg0.type !== key10016) {
-                                    let tmp15 = arg1(arg0, "Wrong node type `" + arg0.type + "`, expected `" + tmp14 + "`");
-                                    flag = true;
-                                    tmp5 = key10005;
-                                  }
-                                  if (flag) {
-                                    continue;
-                                  } else {
-                                    let tmp17 = arg1(arg0, "Bad value for `" + key10016 + "." + tmp5 + "`");
-                                    continue;
-                                  }
-                                  continue;
-                                } else if ("loc" === key10005) {
-                                  if (null === arg0.loc) {
-                                    continue;
-                                  } else {
-                                    let text = key10005;
-                                    if (arg0.loc) {
-                                      let _Object2 = Object;
-                                      text = key10005;
-                                      if (arg0.loc.constructor === Object) {
-                                        if (typeof arg0.loc.source !== "string") {
-                                          text = `${key10005}.source`;
-                                        } else if (isValidLocation(arg0.loc.start)) {
-                                          if (isValidLocation(arg0.loc.end)) {
-                                            continue;
-                                          } else {
-                                            text = `${key10005}.end`;
-                                          }
-                                        } else {
-                                          text = `${key10005}.start`;
-                                        }
-                                        continue;
-                                      }
-                                    }
-                                    tmp5 = text;
-                                    flag = false;
-                                  }
-                                } else if (obj2.hasOwnProperty(key10005)) {
-                                  let num = 0;
-                                  let flag2 = false;
-                                  flag = false;
-                                  tmp5 = key10005;
-                                  if (0 < obj2[key10005].length) {
-                                    while (true) {
-                                      let tmp7 = obj2[key10005][num];
-                                      let _String = String;
-                                      let tmp9 = flag2;
-                                      if (String === tmp7) {
-                                        tmp9 = typeof arg0[key10005] === "string";
-                                      } else {
-                                        let _Boolean = Boolean;
-                                        if (Boolean === tmp7) {
-                                          tmp9 = typeof arg0[key10005] === "boolean";
-                                        } else if (null === tmp7) {
-                                          tmp9 = null === arg0[key10005];
-                                        } else if (typeof tmp7 === "string") {
-                                          let tmp12 = arg0[key10005];
-                                          if (tmp12) {
-                                            tmp12 = arg0[key10005].type === tmp7;
-                                          }
-                                          tmp9 = tmp12;
-                                        } else {
-                                          let _Array = Array;
-                                          if (Array.isArray(tmp7)) {
-                                            tmp9 = arg0[key10005] instanceof _mod13056;
-                                          }
-                                        }
-                                      }
-                                      flag = tmp9;
-                                      tmp5 = key10005;
-                                      if (tmp9) {
-                                        break;
-                                      } else {
-                                        num = num + 1;
-                                        flag2 = tmp9;
-                                        flag = tmp9;
-                                        tmp5 = key10005;
-                                        if (num < obj2[key10005].length) {
-                                          continue;
-                                        } else {
-                                          break;
-                                        }
-                                        break;
-                                      }
-                                    }
-                                  }
-                                } else {
-                                  let tmp4 = arg1(arg0, "Unknown field `" + key10005 + "` for " + key10016 + " node type");
-                                  flag = true;
-                                  tmp5 = key10005;
-                                }
-                                continue;
-                              }
-                              continue;
-                            }
-                            const keys = Object.keys();
-                            if (keys !== undefined) {
-                              const first = keys[0];
-                              while (first !== undefined) {
-                                let call3 = hasOwnProperty.call;
-                                let tmp21 = typeof call3 === "unknown" ? hasOwnProperty(first) : call3(obj2, first);
-                                if (!tmp21) {
-                                  if (!tmp21) {
-                                    continue;
-                                  } else {
-                                    let tmp25 = fn(type, `Field \`${key10016}.${tmp20}\` is missed`);
-                                    continue;
-                                  }
-                                  continue;
-                                } else {
-                                  let call = hasOwnProperty.call;
-                                  let tmp23 = false === (typeof call === "unknown" ? hasOwnProperty(first) : call(type, first));
-                                }
-                              }
-                            }
-                          }
-                        }
-                        return fn(type, "Type of node should be an Object");
-                      }
-            };
-            obj[key10016] = obj4;
-            continue;
-          } else {
-            let _Error = Error;
-            let str7 = "Missed `structure` field in `";
-            let tmp5 = new.target;
-            let str8 = "` node type definition";
-            let tmp6 = new.target;
-            let error1 = new Error("Missed `structure` field in `" + key10016 + "` node type definition");
-            throw error1;
+            obj.column = sum;
+          }
+          const tmp12 = fromLoc(loc, "start") || closure_2;
+        }
+        let tmp33Result = fromLoc(tmp5, "end");
+        if (!tmp33Result) {
+          let str5 = str2.substr(num7, num6);
+          const obj4 = { offset: null, line: null, column: null };
+          ({ offset: obj2.offset, line: obj2.line, column: obj2.column } = tmp13);
+          tmp33Result = obj4;
+          if (str5) {
+            const parts1 = str5.split(/\n|\r\n?|\f/);
+            obj4.offset = obj4.offset + str5.length;
+            obj4.line = obj4.line + (parts1.length - 1);
+            if (1 === parts1.length) {
+              str5 = str5.length;
+              let sum1 = obj4.column + str5;
+            } else {
+              sum1 = parts1.pop().length + 1;
+            }
+            obj4.column = sum1;
           }
         }
-        continue;
+      }
+      tmp3.rawMessage = reason;
+      let str6 = "<generic>";
+      if (syntax) {
+        str6 = _mod13075(syntax);
+      }
+      tmp3.syntax = str6;
+      tmp3.css = str2;
+      tmp3.mismatchOffset = num7;
+      tmp3.mismatchLength = num6;
+      let str8 = str2;
+      const text = `${reason}
+      syntax: ${tmp3.syntax}`;
+      if (!str2) {
+        str8 = "<empty string>";
+      }
+      const _HermesInternal = HermesInternal;
+      const _Array = Array;
+      const combined = `${tmp26}
+       value: ` + str8 + "\n  --------";
+      const array = new Array(tmp3.mismatchOffset + 1);
+      tmp3.message = `${tmp28}${obj5.join("-")}^`;
+      const _Object = Object;
+      const merged = Object.assign(tmp3, tmp13);
+      let str13 = loc;
+      if (loc) {
+        str13 = loc.loc;
+      }
+      if (str13) {
+        str13 = loc.loc.source;
+      }
+      if (!str13) {
+        str13 = "<unknown>";
+      }
+      const obj6 = { source: str13, start: tmp13, end: tmp33Result };
+      tmp3.loc = obj6;
+      return tmp3;
+    }
+    let tmp20 = tmp5;
+    if (!tmp5) {
+      tmp20 = loc;
+    }
+    let tmp19Result = fromLoc(tmp20, "end");
+    if (!tmp19Result) {
+      const obj10 = { offset: null, line: null, column: null };
+      ({ offset: obj3.offset, line: obj3.line, column: obj3.column } = closure_2);
+      tmp19Result = obj10;
+      if (str2) {
+        const parts2 = str2.split(/\n|\r\n?|\f/);
+        obj10.offset = obj10.offset + str2.length;
+        obj10.line = obj10.line + (parts2.length - 1);
+        if (1 === parts2.length) {
+          let sum2 = obj10.column + str2.length;
+        } else {
+          sum2 = parts2.pop().length + 1;
+        }
+        obj10.column = sum2;
       }
     }
-    return obj;
+    tmp13 = tmp19Result;
+    tmp33Result = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
+    const obj11 = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
   }
 };

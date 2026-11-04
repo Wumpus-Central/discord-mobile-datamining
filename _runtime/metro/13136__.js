@@ -1,40 +1,20 @@
 // === Module 13136: ? ===
 
 // Module 13136
-import _mod13095 from "module_13095" /* 13095 */;
-import _mod13137 from "module_13137" /* 13137 */;
-import _mod13144 from "module_13144" /* 13144 */;
-import _mod13150 from "module_13150" /* 13150 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
+const WhiteSpace = _mod13055.TYPE.WhiteSpace;
+let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
 const obj = {
-  parseContext: {
-    default: "StyleSheet",
-    stylesheet: "StyleSheet",
-    atrule: "Atrule",
-    atrulePrelude(atrule) {
-      let StringResult = null;
-      if (atrule.atrule) {
-        const _String = String;
-        StringResult = String(atrule.atrule);
-      }
-      return this.AtrulePrelude(StringResult);
-    },
-    mediaQueryList: "MediaQueryList",
-    mediaQuery: "MediaQuery",
-    rule: "Rule",
-    selectorList: "SelectorList",
-    selector: "Selector",
-    block() {
-      return this.Block(true);
-    },
-    declarationList: "DeclarationList",
-    declaration: "Declaration",
-    value: "Value"
+  name: "WhiteSpace",
+  structure: { value: String },
+  parse() {
+    this.eat(WhiteSpace);
+    return closure_1;
   },
-  scope: _mod13137,
-  atrule: _mod13144,
-  pseudo: _mod13150,
-  node: _mod13095
+  generate(value) {
+    this.chunk(value.value);
+  }
 };
 
 export default obj;

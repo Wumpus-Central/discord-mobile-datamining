@@ -111,7 +111,7 @@ function load(response) {
                     if (arg0) {
                       closure_1(arg0);
                     } else {
-                      obj.close(closure_0, /* F142575 */ function() { ... });
+                      obj.close(closure_0, /* F143138 */ function() { ... });
                     }
                   });
                 }
@@ -221,7 +221,7 @@ function load(response) {
 function loadView(byteLength) {
   let obj = response;
   if (response === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "id" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "children" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

@@ -235,7 +235,7 @@ const items = [
         }
       };
       if (obj3.shouldPressibilityUseW3CPointerEventsForHover()) {
-        const obj4 = { onPointerEnter: "PX_8", onPointerLeave: "__closure" };
+        const obj4 = { onPointerEnter: "Object", onPointerLeave: "Array" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;

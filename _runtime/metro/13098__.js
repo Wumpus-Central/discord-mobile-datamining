@@ -1,106 +1,148 @@
 // === Module 13098: ? ===
 
 // Module 13098
-import _mod13054 from "module_13054" /* 13054 */;
+import _mod13055 from "module_13055" /* 13055 */;
+import _mod13099 from "module_13099" /* 13099 */;
 
-function getOffsetExcludeWS() {
-  let self = this;
-  if (this.scanner.tokenIndex > 0) {
-    const scanner = self.scanner;
-    if (scanner.lookupType(-1) === WhiteSpace) {
-      let num2 = 1;
-      if (self.scanner.tokenIndex > 1) {
-        const scanner2 = self.scanner;
-        self = self.scanner.tokenIndex;
-        num2 = self - num2;
-        let firstCharOffset = scanner2.getTokenStart(num2);
-      } else {
-        firstCharOffset = self.scanner.firstCharOffset;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13099.mode.leftCurlyBracketOrSemicolon, true);
+}
+function isDeclarationBlockAtrule() {
+  const scanner = this.scanner;
+  let lookupTypeResult = scanner.lookupType(1);
+  let num = 1;
+  if (lookupTypeResult) {
+    while (lookupTypeResult !== RightCurlyBracket) {
+      if (lookupTypeResult !== LeftCurlyBracket) {
+        if (lookupTypeResult !== AtKeyword) {
+          let sum = num + 1;
+          let scanner2 = this.scanner;
+          lookupTypeResult = scanner2.lookupType(sum);
+          num = sum;
+        }
       }
+      let flag = false;
+      return false;
     }
+    return true;
   }
-  return self.scanner.tokenStart;
+  return false;
 }
-function balanceEnd() {
-  return 0;
-}
-const WhiteSpace = _mod13054.TYPE.WhiteSpace;
-const Semicolon = _mod13054.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13054.TYPE.LeftCurlyBracket;
-const Delim = _mod13054.TYPE.Delim;
+const AtKeyword = _mod13055.TYPE.AtKeyword;
+const Semicolon = _mod13055.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13055.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod13055.TYPE.RightCurlyBracket;
 let obj = {
-  name: "Raw",
-  structure: { value: String },
-  parse(arg0, balanceEnd, arg2) {
+  name: "Atrule",
+  structure: { name: String, prelude: ["AtrulePrelude", "Raw", null], block: ["Block", null] },
+  parse() {
     const self = this;
-    let tmp = balanceEnd;
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(AtKeyword);
     const scanner = this.scanner;
-    const tokenStart1 = scanner.getTokenStart(arg0);
-    ({ scanner: scanner2, scanner: scanner3 } = this);
-    if (!balanceEnd) {
-      tmp = balanceEnd;
+    const str = scanner.substrToCursor(tokenStart + 1);
+    const formatted = str.toLowerCase();
+    const scanner2 = this.scanner;
+    scanner2.skipSC();
+    let tmp4 = false === this.scanner.eof;
+    if (tmp4) {
+      tmp4 = self.scanner.tokenType !== LeftCurlyBracket;
     }
-    scanner2.skip(scanner3.getRawLength(arg0, tmp));
-    if (arg2) {
-      if (self.scanner.tokenStart > tokenStart1) {
-        const call = getOffsetExcludeWS.call;
-        if (typeof call !== "unknown") {
-          call(self);
-        }
-        if (self.scanner.tokenIndex <= 0) {
-          const tokenStart2 = self.scanner.tokenStart;
-        } else {
-          const scanner4 = self.scanner;
-        }
-        let num3 = 1;
-        if (self.scanner.tokenIndex > 1) {
-          const scanner5 = self.scanner;
-          num3 = self.scanner.tokenIndex - num3;
-          let firstCharOffset = scanner5.getTokenStart(num3);
-        } else {
-          firstCharOffset = self.scanner.firstCharOffset;
-        }
-      }
+    if (tmp4) {
+      tmp4 = self.scanner.tokenType !== Semicolon;
     }
-    const tokenStart = self.scanner.tokenStart;
-    const obj = { type: "Raw", loc: self.getLocation(tokenStart1, tokenStart), value: self.scanner.source.substring(tokenStart1, tokenStart) };
-    return obj;
-  },
-  generate(value) {
-    this.chunk(value.value);
-  },
-  mode: {
-    default: balanceEnd,
-    leftCurlyBracket(arg0) {
-      let num = 0;
-      if (arg0 === LeftCurlyBracket) {
-        num = 1;
-      }
-      return num;
-    },
-    leftCurlyBracketOrSemicolon(arg0) {
-      if (arg0 === LeftCurlyBracket) {
-        let num = 1;
+    if (!tmp4) {
+      const tokenType = self.scanner.tokenType;
+      if (Semicolon === tokenType) {
+        self.scanner.next();
+        let BlockResult = null;
+        const iter = self.scanner;
       } else {
-        num = 0;
+        BlockResult = null;
+        if (LeftCurlyBracket === tokenType) {
+          const atrule = self.atrule;
+          if (atrule.hasOwnProperty(formatted)) {
+            if (typeof self.atrule[formatted].block === "function") {
+              const block = self.atrule[formatted].block;
+              const call3 = block.call;
+              typeof call3 === "unknown" ? block() : call3(self);
+            }
+          }
+          const call2 = isDeclarationBlockAtrule.call;
+          if (typeof call2 === "unknown") {
+            const scanner4 = self.scanner;
+            let lookupTypeResult = scanner4.lookupType(1);
+            let num = 1;
+            let flag2 = false;
+            if (lookupTypeResult) {
+              flag2 = true;
+              while (lookupTypeResult !== RightCurlyBracket) {
+                flag2 = false;
+                if (lookupTypeResult === LeftCurlyBracket) {
+                  break;
+                } else {
+                  flag2 = false;
+                  if (lookupTypeResult === AtKeyword) {
+                    break;
+                  } else {
+                    let sum = num + 1;
+                    let scanner5 = self.scanner;
+                    lookupTypeResult = scanner5.lookupType(sum);
+                    num = sum;
+                    flag2 = false;
+                    if (!lookupTypeResult) {
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+            let call2Result = flag2;
+          } else {
+            call2Result = call2(self);
+          }
+          BlockResult = self.Block(call2Result);
+        }
       }
-      return num;
-    },
-    exclamationMarkOrSemicolon(arg0, str, sum) {
-      if (arg0 !== Delim) {
-        let num2 = 0;
-        return num2;
+      const obj = { type: "Atrule", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: str, prelude: null, block: BlockResult };
+      return obj;
+    } else {
+      if (self.parseAtrulePrelude) {
+        ({ AtrulePrelude, parseWithFallback } = self);
+        const element = parseWithFallback(AtrulePrelude.bind(self, str), consumeRaw);
+        let RawResult = element;
+        if (tmp12) {
+          RawResult = null;
+        }
+        tmp12 = "AtrulePrelude" === element.type && null === element.children.head;
+      } else {
+        const call = consumeRaw.call;
+        const tokenIndex = self.scanner.tokenIndex;
+        if (typeof call === "unknown") {
+          RawResult = self.Raw(tokenIndex, _mod13099.mode.leftCurlyBracketOrSemicolon, true);
+        } else {
+          RawResult = call(self, tokenIndex);
+        }
       }
-      num2 = 1;
-    },
-    semicolonIncluded(arg0) {
-      let num = 0;
-      if (arg0 === Semicolon) {
-        num = 2;
-      }
-      return num;
+      const scanner3 = self.scanner;
+      scanner3.skipSC();
     }
-  }
+  },
+  generate(name) {
+    const self = this;
+    this.chunk("@");
+    this.chunk(name.name);
+    if (null !== name.prelude) {
+      self.chunk(" ");
+      self.node(name.prelude);
+    }
+    if (name.block) {
+      self.node(name.block);
+    } else {
+      self.chunk(";");
+    }
+  },
+  walkContext: "atrule"
 };
 
 export default obj;

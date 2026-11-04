@@ -2,7 +2,7 @@
 
 // Module 5913 (baseFindIndex)
 
-export default function baseFindIndex(length, fn, arg2, arg3) {
+export default function baseFindIndex(f, fn, arg2, arg3) {
   let num = -1;
   if (arg3) {
     num = 1;
@@ -16,7 +16,7 @@ export default function baseFindIndex(length, fn, arg2, arg3) {
     tmp3 = diff < length;
   }
   if (tmp3) {
-    while (!fn(length[diff], diff, length)) {
+    while (!fn(f[diff], diff, f)) {
       if (arg3) {
         let tmp8 = +diff;
         let diff1 = tmp8 - 1;

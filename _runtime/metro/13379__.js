@@ -1,224 +1,262 @@
 // === Module 13379: ? ===
 
 // Module 13379
-import errorCallback from "errorCallback" /* 13269 */;
-import _mod13297 from "module_13297" /* 13297 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import "module_13272";
-import consoleSandbox from "module_13273" /* 13273 */;
-import __SENTRY_DEBUG__ from "module_13301" /* 13301 */;
-import dateTimestampInSeconds from "module_13287" /* 13287 */;
+import errorCallback from "errorCallback" /* 13270 */;
+import _mod13281 from "module_13281" /* 13281 */;
+import _mod13298 from "module_13298" /* 13298 */;
+import _mod13306 from "module_13306" /* 13306 */;
+import _mod13345 from "module_13345" /* 13345 */;
+import _toArray from "_toArray" /* 717 */;
+import "module_13273";
+import consoleSandbox from "module_13274" /* 13274 */;
+import dateTimestampInSeconds from "module_13288" /* 13288 */;
+import __SENTRY_DEBUG__ from "module_13302" /* 13302 */;
 
-errorCallback;
-_mod13297;
-let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
-
-export function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep(async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
+function _addTracingHeadersToFetchRequest(headers, headers2, span) {
+  const traceData = _mod13345.getTraceData({ span });
+  ({ sentry-trace: tmp4, baggage } = traceData);
+  if (tmp4) {
+    headers = headers2.headers;
+    if (!headers) {
+      const _Request = Request;
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
+        const _Request2 = Request;
+        isInstanceOfResult = _mod13281.isInstanceOf(headers, Request);
+        const tmpResult = _mod13281;
       }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
+      let headers1;
+      if (isInstanceOfResult) {
+        headers1 = headers.headers;
+      }
+      headers = headers1;
+    }
+    if (headers) {
+      const _Headers = Headers;
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
+        const _Headers3 = Headers;
+        isInstanceOfResult1 = _mod13281.isInstanceOf(headers, Headers);
+        const tmpResult2 = _mod13281;
+      }
+      if (isInstanceOfResult1) {
+        const _Headers2 = Headers;
+        headers2 = new Headers(headers);
+        const result = headers2.set("sentry-trace", tmp4);
+        if (baggage) {
+          const str6 = headers2.get("baggage");
+          if (str6) {
+            let parts = str6.split(",");
+            let found = parts.filter((item) => {
+              const first = item.split("=")[0];
+              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+            });
+            let joined = found.join(",");
+            let combined = baggage;
+            if (joined) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + joined + "," + baggage;
+            }
+            const result1 = headers2.set("baggage", combined);
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp5;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            const path = closure_0.path;
-            closure_129_0 = path;
-            ({ next: closure_129_1, rawInput, getRawInput } = closure_0);
-            const client = closure_0(13300).getClient();
-            let options = client;
-            if (client) {
-              options = client.getOptions();
-            }
-            let obj5 = { procedure_path: path, procedure_type: closure_0.type };
-            closure_129_2 = obj5;
-            if (undefined !== closure_0.attachRpcInput) {
-              let sendDefaultPii = closure_0.attachRpcInput;
-            } else {
-              sendDefaultPii = options;
-              if (options) {
-                sendDefaultPii = options.sendDefaultPii;
-              }
-            }
-            if (sendDefaultPii) {
-              if (undefined !== rawInput) {
-                const normalizer2 = closure_0(13318);
-                obj5.input = normalizer2.normalize(rawInput);
-              }
-              if (undefined !== getRawInput) {
-                if (typeof getRawInput === "function") {
-                  c4 = 1;
-                  c5 = 2;
-                  c6 = 1;
-                  let obj6 = { value: getRawInput(), done: false };
-                  return obj6;
-                }
-              }
-            }
-            const obj7 = closure_0(13300);
+            const result2 = headers2.set("baggage", baggage);
           }
-        } else {
-          if (1 === tmp8) {
-            c4 = 0;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_3 = value;
-            const normalizer = closure_0(13318);
-            closure_129_2.input = normalizer.normalize(closure_129_3);
-            c4 = 0;
-          }
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
         }
-        closure_0(13300).withScope((setContext) => {
-          setContext.setContext("trpc", closure_2);
-          obj = closure_1_0(dependencyMap[10]);
-          closure_0 = closure_1_2(function*(arg0) {
-            if (c6 === 2) {
-              c6 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp6 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c6 = 2;
-                if (0 === c5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_2 = tmp3;
-                    closure_1 = tmp7;
-                    closure_129_0 = closure_0;
-                    closure_129_1 = undefined;
-                    c4 = 1;
-                    c5 = 2;
-                    c6 = 1;
-                    const obj5 = { value: closure_1(), done: false };
-                    return obj5;
-                  }
-                } else if (1 === tmp7) {
-                  c4 = 0;
-                  closure_129_2 = closure_3;
-                  closure_0(dependencyMap[7]).captureException(closure_129_2, closure_2_3);
-                  closure_129_0.end();
-                  throw closure_129_2;
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  closure_129_1 = value;
-                  (function captureIfError(ok) {
-                    let tmp = typeof ok === "object";
-                    if (typeof ok === "object") {
-                      tmp = null !== ok;
-                    }
-                    if (tmp) {
-                      tmp = "ok" in ok;
-                    }
-                    if (tmp) {
-                      tmp = !ok.ok;
-                    }
-                    if (tmp) {
-                      tmp = "error" in ok;
-                    }
-                    if (tmp) {
-                      closure_1_0(dependencyMap[7]).captureException(ok.error, closure_1_3);
-                      obj = closure_1_0(dependencyMap[7]);
-                    }
-                  })(closure_129_1);
-                  closure_129_0.end();
-                  c4 = 0;
-                  c6 = 3;
-                  obj = { value: closure_129_1, done: true };
-                  return obj;
-                }
-              } catch (tmp27) {
-                closure_3 = tmp27;
-                if (tmp4 === c4) {
-                  c6 = tmp2;
-                  throw tmp27;
-                } else {
-                  c5 = tmp;
+        return headers2;
+      } else {
+        const _Array = Array;
+        if (Array.isArray(headers)) {
+          const found1 = headers.filter((item) => {
+            let isArray = Array.isArray(item);
+            if (isArray) {
+              isArray = "sentry-trace" === item[0];
+            }
+            return !isArray;
+          });
+          items = [];
+          const items1 = ["sentry-trace", tmp4];
+          items[HermesBuiltin.arraySpread(found1.map((item) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = _toArray(item);
+                  items = [arr[0], ];
+                  const substr = arr.slice(2);
+                  const parts = arr[1].split(",");
+                  const found = parts.filter((item) => {
+                    const first = item.split("=")[0];
+                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                  });
+                  items[1] = found.join(",");
+                  HermesBuiltin.arraySpread(substr, 2);
+                  return items;
                 }
               }
             }
-          });
-          return obj.startSpanManual({ name: "trpc/" + closure_0, op: "rpc.server", attributes: { [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } }, function(arg0) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          });
-        });
-        c6 = 3;
-        const obj3 = closure_0(13300);
-      } catch (tmp24) {
-        closure_3 = tmp24;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp24;
+            return item;
+          }), 0)] = items1;
+          if (baggage) {
+            const items2 = ["baggage", baggage];
+            items.push(items2);
+          }
+          return items;
         } else {
-          c5 = tmp;
+          let baggage1;
+          if ("baggage" in headers) {
+            baggage1 = headers.baggage;
+          }
+          const _Array2 = Array;
+          if (Array.isArray(baggage1)) {
+            const mapped = baggage1.map((item) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item) => {
+                  const first = item.split("=")[0];
+                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                });
+                joined = found.join(",");
+              }
+              return joined;
+            });
+            let found2 = mapped.filter((item) => "" === item);
+          } else {
+            const items3 = [];
+            found2 = items3;
+            if (baggage1) {
+              const parts1 = baggage1.split(",");
+              const found3 = parts1.filter((item) => {
+                const first = item.split("=")[0];
+                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+              });
+              items3.push(found3.join(","));
+              found2 = items3;
+            }
+          }
+          if (baggage) {
+            found2.push(baggage);
+          }
+          const obj3 = {};
+          const merged = Object.assign(headers);
+          obj3["sentry-trace"] = tmp4;
+          let joined1;
+          if (found2.length > 0) {
+            joined1 = found2.join(",");
+          }
+          obj3.baggage = joined1;
+          return obj3;
+        }
+      }
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(traceData);
+      return obj4;
+    }
+  }
+  const obj2 = { span };
+}
+errorCallback;
+_mod13298;
+
+export function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
+  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
+}
+export function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
+  let str = arg4;
+  if (arg4 === undefined) {
+    str = "auto.http.browser";
+  }
+  let endResult = fetchData;
+  if (fetchData.fetchData) {
+    let setHttpStatus = require;
+    let headers = dependencyMap;
+    let hasTracingEnabledResult = _mod13306.hasTracingEnabled();
+    if (hasTracingEnabledResult) {
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
+    }
+    if (endResult.endTimestamp) {
+      if (hasTracingEnabledResult) {
+        const __span = endResult.fetchData.__span;
+        if (__span) {
+          if (arg3[__span]) {
+            if (endResult.response) {
+              setHttpStatus = setHttpStatus(13291).setHttpStatus;
+              setHttpStatus(obj10, endResult.response.status);
+              headers = endResult.response;
+              if (headers) {
+                headers = endResult.response.headers;
+              }
+              if (headers) {
+                const headers2 = endResult.response.headers;
+                headers = headers2.get("content-length");
+              }
+              if (headers) {
+                const _parseInt = parseInt;
+                setHttpStatus = parseInt(headers);
+                if (setHttpStatus > 0) {
+                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+                }
+              }
+              const setHttpStatusResult = setHttpStatus(13291);
+            } else if (endResult.error) {
+              const obj2 = { code: setHttpStatus(13291).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj10.setStatus(obj2);
+            }
+            endResult = obj10.end();
+            delete tmp2[tmp];
+          }
         }
       }
     }
-  });
-  return function(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+    ({ method, url } = endResult.fetchData);
+    const tmp7 = (function getFullURL(url) {
+      try {
+        const _URL = URL;
+        const uRL = new URL(url);
+        return uRL.href;
+      } catch (err) {
+      }
+    })(url);
+    if (tmp7) {
+      const host = setHttpStatus(13356).parseUrl(tmp7).host;
+      const setHttpStatusResult2 = setHttpStatus(13356);
     }
-    return applyArgumentsResult;
-  };
+    const activeSpan = setHttpStatus(13279).getActiveSpan();
+    if (hasTracingEnabledResult) {
+      if (activeSpan) {
+        const obj3 = { name: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj3.name = "" + method + " " + url;
+        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
+        obj4[setHttpStatus(13289).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+        obj4[setHttpStatus(13289).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+        obj3.attributes = obj4;
+        let startInactiveSpanResult = setHttpStatus(13308).startInactiveSpan(obj3);
+        const setHttpStatusResult4 = setHttpStatus(13308);
+      }
+      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
+      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
+      if (fn2(endResult.fetchData.url)) {
+        let obj5 = endResult.args[1];
+        if (!obj5) {
+          obj5 = {};
+        }
+        let tmp14;
+        if (setHttpStatusResult5.hasTracingEnabled()) {
+          if (activeSpan) {
+            tmp14 = startInactiveSpanResult;
+          }
+        }
+        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
+        if (tmp13Result) {
+          endResult.args[1] = obj5;
+          obj5.headers = tmp13Result;
+        }
+        setHttpStatusResult5 = setHttpStatus(13306);
+      }
+      return startInactiveSpanResult;
+    }
+    startInactiveSpanResult = new setHttpStatus(13307).SentryNonRecordingSpan();
+    const setHttpStatusResult3 = setHttpStatus(13279);
+  }
 }

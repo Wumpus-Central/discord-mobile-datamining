@@ -1,18 +1,7 @@
 // === Module 16168: ? ===
 
 // Module 16168
-import _mod16161 from "module_16161" /* 16161 */;
+import _mod16159 from "module_16159" /* 16159 */;
 
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod16161(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
-};
+export default (arg0, arg1, arg2) => 0 !== _mod16159(arg0, arg1, arg2);

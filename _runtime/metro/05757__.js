@@ -35,7 +35,7 @@ _possibleConstructorReturnDefault;
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, processColor: closure_9 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let obj = { source: "dispatch", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: [] };
+let obj = { source: "displayName", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: [] };
 class LottieView {
   constructor(arg0) {
     self = this;

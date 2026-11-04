@@ -1,20 +1,23 @@
 // === Module 13135: ? ===
 
 // Module 13135
-import _mod13054 from "module_13054" /* 13054 */;
-
-const WhiteSpace = _mod13054.TYPE.WhiteSpace;
-let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
 const obj = {
-  name: "WhiteSpace",
-  structure: { value: String },
+  name: "Value",
+  structure: null,
   parse() {
-    this.eat(WhiteSpace);
-    return closure_1;
+    const element = { type: "Value", loc: null, children: null };
+    const sequence = this.readSequence(this.scope.Value);
+    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
+    element.children = sequence;
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
+  generate(arg0) {
+    this.children(arg0);
   }
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

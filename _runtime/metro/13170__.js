@@ -1,74 +1,115 @@
 // === Module 13170: ? ===
 
 // Module 13170
-import SelectorType from "SelectorType" /* 13171 */;
+import _mod13171 from "module_13171" /* 13171 */;
 
-const require = globalThis.__r;
-
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
+function getProcedure(type) {
+  value = map.get(type.type);
+  let num = -1;
+  if (null !== value) {
+    num = -1;
+    if (undefined !== value) {
+      num = value;
+    }
   }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
+  if (type.type === _mod13171.SelectorType.Attribute) {
+    value2 = map1.get(type.action);
+    let num8 = 4;
+    if (null !== value2) {
+      num8 = 4;
+      if (undefined !== value2) {
+        num8 = value2;
+      }
+    }
+    let tmp7 = type.action === _mod13171.AttributeAction.Equals;
+    if (tmp7) {
+      tmp7 = "id" === type.name;
+    }
+    if (tmp7) {
+      num8 = 9;
+    }
+    num = num8;
+    if (type.ignoreCase) {
+      num = num8 >> 1;
+    }
+  } else if (type.type === _mod13171.SelectorType.Pseudo) {
+    let num6 = 3;
+    if (type.data) {
+      let num3 = 0;
+      if ("has" !== type.name) {
+        num3 = 0;
+        if ("contains" !== type.name) {
+          const _Array = Array;
+          let num4 = 2;
+          if (Array.isArray(type.data)) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const data = type.data;
+            let num5 = min.apply(Math, data.map((arr) => {
+              return min.apply(Math, arr.map(getProcedure));
+            }));
+            if (num5 < 0) {
+              num5 = 0;
+            }
+            num4 = num5;
           }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
+          num3 = num4;
+        }
+      }
+      num6 = num3;
+    }
+    num = num6;
+  }
+  return num;
+}
+const items = [_mod13171.SelectorType.Universal, 50];
+const items1 = [items, , , ];
+const items2 = [_mod13171.SelectorType.Tag, 30];
+items1[1] = items2;
+const items3 = [_mod13171.SelectorType.Attribute, 1];
+items1[2] = items3;
+const items4 = [_mod13171.SelectorType.Pseudo, 0];
+items1[3] = items4;
+const map = new Map(items1);
+const items5 = [_mod13171.AttributeAction.Exists, 10];
+const items6 = [items5, , , , , ];
+const items7 = [_mod13171.AttributeAction.Equals, 8];
+items6[1] = items7;
+const items8 = [_mod13171.AttributeAction.Not, 7];
+items6[2] = items8;
+const items9 = [_mod13171.AttributeAction.Start, 6];
+items6[3] = items9;
+const items10 = [_mod13171.AttributeAction.End, 6];
+items6[4] = items10;
+const items11 = [_mod13171.AttributeAction.Any, 5];
+items6[5] = items11;
+const map1 = new Map(items6);
+
+export function isTraversal(type) {
+  return !map.has(type.type);
+}
+export default function sortByProcedure(arr) {
+  const mapped = arr.map(getProcedure);
+  for (let num = 1; num < arr.length; num = num + 1) {
+    let tmp2 = mapped[num];
+    if (tmp2 >= 0) {
+      let diff = num - 1;
+      if (0 <= diff) {
+        if (tmp2 < mapped[diff]) {
+          let sum = diff + 1;
+          arr[sum] = arr[diff];
+          arr[diff] = arr[sum];
+          mapped[sum] = mapped[diff];
+          mapped[diff] = tmp2;
+          let diff1 = diff - 1;
+          while (0 <= diff1) {
+            diff = diff1;
+            if (tmp2 >= mapped[diff1]) {
+              break;
+            }
           }
         }
       }
-    };
+    }
   }
-  const _Object2 = Object;
-  exports.isTraversal = undefined;
-  exports.parse = undefined;
-  exports.stringify = undefined;
-  fn(SelectorType, exports);
-  const _Object3 = Object;
-  let obj = {
-    enumerable: true,
-    get() {
-        return require("funescape").isTraversal;
-      }
-  };
-  Object.defineProperty(exports, "isTraversal", obj);
-  const _Object4 = Object;
-  const obj2 = {
-    enumerable: true,
-    get() {
-        return require("funescape").parse;
-      }
-  };
-  Object.defineProperty(exports, "parse", obj2);
-  const _Object5 = Object;
-  const obj3 = {
-    enumerable: true,
-    get() {
-        return require("stringifyToken").stringify;
-      }
-  };
-  Object.defineProperty(exports, "stringify", obj3);
-} else {
-  let _Object = Object;
-}
+};

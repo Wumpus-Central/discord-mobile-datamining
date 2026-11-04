@@ -1,40 +1,24 @@
 // === Module 13128: ? ===
 
 // Module 13128
-import _mod13054 from "module_13054" /* 13054 */;
-
-const Comma = _mod13054.TYPE.Comma;
 const obj = {
-  name: "SelectorList",
+  name: "Selector",
   structure: null,
   parse() {
     const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
+    const sequence = this.readSequence(this.scope.Selector);
+    if (null === this.getFirstListNode(sequence)) {
+      self.error("Selector is expected");
     }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
     return element;
   },
   generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
-  },
-  walkContext: "selector"
+    this.children(arg0);
+  }
 };
 const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
+const items = [["TypeSelector", "IdSelector", "ClassSelector", "AttributeSelector", "PseudoClassSelector", "PseudoElementSelector", "Combinator", "WhiteSpace"]];
 obj2.children = items;
 obj.structure = obj2;
 

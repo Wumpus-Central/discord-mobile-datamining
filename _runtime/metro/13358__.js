@@ -1,71 +1,45 @@
 // === Module 13358: ? ===
 
 // Module 13358
-import _mod13300 from "module_13300" /* 13300 */;
-import _mod13360 from "module_13360" /* 13360 */;
-import setupIntegration from "module_13329" /* 13329 */;
 
-
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod13300.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod13360.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod13360;
-            _mod13300.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(13321).captureException(found, obj2);
-                  const tmp14Result = args(13321);
-                } else {
-                  const tmp14Result2 = args(13282);
-                  const safeJoinResult = args(13282).safeJoin(args, " ");
-                  args(13321).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(13321);
-                }
-              } else if (!args[0]) {
-                const obj = args(13282);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(13282).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(13321);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(13282).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod13300;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+export function parseCookie(arr) {
+  const obj = {};
+  let num = 0;
+  if (0 < arr.length) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
+      let length = arr.indexOf(";", num);
+      if (-1 === length) {
+        length = arr.length;
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        num = sum;
+        if (sum >= arr.length) {
+          break;
+        }
       }
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
+      if (undefined === obj[trimmed]) {
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
+        if (34 === trimmed1.charCodeAt(0)) {
+          index = trimmed1.slice(1, -1);
+        }
+        try {
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
+          }
+          obj[trimmed] = decodeURIComponentResult;
+        } catch (err) {
+          obj[trimmed] = index;
+        }
+      }
+      let sum1 = length + 1;
     }
-  };
-});
+  }
+  return obj;
+}

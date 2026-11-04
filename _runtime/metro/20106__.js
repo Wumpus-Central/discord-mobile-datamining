@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "b14cf67ed38d1ab1d1a28d6633250b87", name: "safety_check_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 212, scales: [2, 3], hash: "13ff76500b381861f2432b0c193716ac", name: "img_bans_empty_darker", type: "png" });

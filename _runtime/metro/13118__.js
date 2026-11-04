@@ -1,54 +1,42 @@
 // === Module 13118: ? ===
 
 // Module 13118
+import _mod13055 from "module_13055" /* 13055 */;
 
-export default {
-  name: "Nth",
-  structure: { nth: ["AnPlusB", "Identifier"], selector: ["SelectorList", null] },
+const Comma = _mod13055.TYPE.Comma;
+const obj = {
+  name: "MediaQueryList",
+  structure: null,
   parse(arg0) {
     const self = this;
+    const list = this.createList();
     const scanner = this.scanner;
     scanner.skipSC();
-    const tokenStart = this.scanner.tokenStart;
-    const scanner2 = this.scanner;
-    if (!scanner2.lookupValue(0, "odd")) {
-      const scanner3 = self.scanner;
-      if (!scanner3.lookupValue(0, "even")) {
-        let AnPlusBResult = self.AnPlusB();
-      }
-      const scanner4 = self.scanner;
-      scanner4.skipSC();
-      if (arg0) {
-        const scanner5 = self.scanner;
-        if (scanner5.lookupValue(0, "of")) {
-          self.scanner.next();
-          const SelectorListResult = self.SelectorList();
-          let tmp5 = SelectorListResult;
-          let offset = tokenStart;
-          if (self.needPositions) {
-            offset = self.getLastListNode(SelectorListResult.children).loc.end.offset;
-            tmp5 = SelectorListResult;
+    if (!this.scanner.eof) {
+      list.push(self.MediaQuery(arg0));
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.MediaQuery(arg0));
+          if (self.scanner.tokenType !== Comma) {
+            break;
           }
-          const iter = self.scanner;
         }
-        const obj = { type: "Nth", loc: self.getLocation(tokenStart, offset), nth: AnPlusBResult, selector: tmp5 };
-        return obj;
-      }
-      tmp5 = null;
-      offset = tokenStart;
-      if (self.needPositions) {
-        offset = AnPlusBResult.loc.end.offset;
-        tmp5 = null;
+        const iter = self.scanner;
       }
     }
-    AnPlusBResult = self.Identifier();
+    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(nth) {
-    const self = this;
-    this.node(nth.nth);
-    if (null !== nth.selector) {
-      self.chunk(" of ");
-      self.node(nth.selector);
-    }
+  generate(arg0) {
+    this.children(arg0, function() {
+      this.chunk(",");
+    });
   }
 };
+const obj2 = { children: null };
+const items = [["MediaQuery"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

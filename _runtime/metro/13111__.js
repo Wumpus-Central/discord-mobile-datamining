@@ -1,39 +1,24 @@
 // === Module 13111: ? ===
 
 // Module 13111
-import _mod13054 from "module_13054" /* 13054 */;
+import _mod13051 from "module_13051" /* 13051 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
-const RightParenthesis = _mod13054.TYPE.RightParenthesis;
+const Dimension = _mod13055.TYPE.Dimension;
 const obj = {
-  name: "Function",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    const str = this.consumeFunctionName();
-    const formatted = str.toLowerCase();
-    if (arg1.hasOwnProperty(formatted)) {
-      const call2 = tmp4.call;
-      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
-    } else {
-      call = call.call;
-      if (!self.scanner.eof) {
-        self.eat(RightParenthesis);
-      }
-      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-      return element;
-    }
+  name: "Dimension",
+  structure: { value: String, unit: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = _mod13051.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
+    return obj2;
   },
-  generate(name) {
-    this.chunk(name.name);
-    this.chunk("(");
-    this.children(name);
-    this.chunk(")");
-  },
-  walkContext: "function"
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
+  }
 };
-const obj2 = { name: String, children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

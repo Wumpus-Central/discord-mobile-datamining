@@ -1,7 +1,15 @@
 // === Module 16152: ? ===
 
 // Module 16152
-import _mod16146 from "module_16146" /* 16146 */;
+import _mod16144 from "module_16144" /* 16144 */;
 
 
-export default (arg0, arg1, arg2) => _mod16146(arg0, arg1, arg2) > 0;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod16144(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};
