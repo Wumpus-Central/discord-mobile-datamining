@@ -1,13 +1,72 @@
 // === Module 8229: ? ===
 
 // Module 8229
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8210 from "module_8210" /* 8210 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGLine", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x1: true, y1: true, x2: true, y2: true };
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class FeMergeNode {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FeMergeNode);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FeMergeNode);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
+  }
+}
+_classCallCheck = FeMergeNode;
+_inherits(FeMergeNode, _modDef8210);
+const entry = {
+  key: "render",
+  value: function render() {
+    return null;
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
-export default module_65.get("RNSVGLine", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

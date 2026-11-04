@@ -31,13 +31,13 @@ function SkipEntering(children) {
   const tmp = closure_1_10(children.shouldSkip);
   closure_0 = tmp;
   items = [tmp];
-  React7(() => {
+  React6(() => {
     closure_0.current = false;
   }, items);
   return <context value={tmp}>{children.children}</context>;
 }
 const noop = fn(19);
-({ Children: hasOwnProperty, cloneElement: metroRequire, Fragment: closure_7, isValidElement: closure_8, useEffect: closure_9, useRef: closure_10, Component, createContext } = noop);
+({ Children: hasOwnProperty, cloneElement: closure_6, Fragment: metroImportDefault, isValidElement: closure_8, useEffect: closure_9, useRef: closure_10, Component, createContext } = noop);
 const jsx = fn(21).jsx;
 const context = createContext(null);
 class LayoutAnimationConfig {
@@ -112,9 +112,9 @@ let items = [
       let tmp = children;
       if (undefined !== this.props.skipExiting) {
         tmp = children;
-        if (React6(children)) {
+        if (React5(children)) {
           tmp = children;
-          if (children.type !== React5) {
+          if (children.type !== metroImportDefault) {
             const obj = { ref: self._getMergedRef(children.props.ref) };
             tmp = timestampProducer(children, obj);
           }

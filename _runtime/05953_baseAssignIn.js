@@ -1,0 +1,14 @@
+// === Module 5953: baseAssignIn ===
+
+// Module 5953 (baseAssignIn)
+import copyObject from "copyObject" /* 5950 */;
+import keysIn from "keysIn" /* 5954 */;
+
+
+export default function baseAssignIn(arg0, arg1) {
+  let tmp = arg0;
+  if (arg0) {
+    tmp = copyObject(arg1, keysIn(arg1), arg0);
+  }
+  return tmp;
+};

@@ -86,121 +86,121 @@ export function parseAnyDigitsSigned(str) {
 export function parseNDigits(length, str) {
   if (1 === length) {
     const match = str.match(numericPatterns.numericPatterns.singleDigit);
-    let tmp20 = null;
+    let tmp26 = null;
     if (match) {
       const obj2 = { value: null, rest: null };
       const _parseInt5 = parseInt;
       obj2.value = parseInt(match[0], 10);
       obj2.rest = str.slice(match[0].length);
-      tmp20 = obj2;
+      tmp26 = obj2;
     }
-    return tmp20;
+    return tmp26;
   } else if (2 === length) {
     const match1 = str.match(numericPatterns.numericPatterns.twoDigits);
-    let tmp15 = null;
+    let tmp21 = null;
     if (match1) {
       const obj3 = { value: null, rest: null };
       const _parseInt4 = parseInt;
       obj3.value = parseInt(match1[0], 10);
       obj3.rest = str.slice(match1[0].length);
-      tmp15 = obj3;
+      tmp21 = obj3;
     }
-    return tmp15;
+    return tmp21;
   } else if (3 === length) {
     const match2 = str.match(numericPatterns.numericPatterns.threeDigits);
-    let tmp10 = null;
+    let tmp16 = null;
     if (match2) {
       const obj4 = { value: null, rest: null };
       const _parseInt3 = parseInt;
       obj4.value = parseInt(match2[0], 10);
       obj4.rest = str.slice(match2[0].length);
-      tmp10 = obj4;
+      tmp16 = obj4;
     }
-    return tmp10;
+    return tmp16;
   } else if (4 === length) {
     const match3 = str.match(numericPatterns.numericPatterns.fourDigits);
-    let tmp5 = null;
+    let tmp11 = null;
     if (match3) {
       const obj5 = { value: null, rest: null };
       const _parseInt2 = parseInt;
       obj5.value = parseInt(match3[0], 10);
       obj5.rest = str.slice(match3[0].length);
-      tmp5 = obj5;
+      tmp11 = obj5;
     }
-    return tmp5;
+    return tmp11;
   } else {
     const _RegExp = RegExp;
     const regExp = new RegExp("^\\d{1," + length + "}");
     const match4 = str.match(regExp);
-    let tmp = null;
+    let tmp7 = null;
     if (match4) {
       const obj = { value: null, rest: null };
       const _parseInt = parseInt;
       obj.value = parseInt(match4[0], 10);
       obj.rest = str.slice(match4[0].length);
-      tmp = obj;
+      tmp7 = obj;
     }
-    return tmp;
+    return tmp7;
   }
 }
 export function parseNDigitsSigned(length, str) {
   if (1 === length) {
     const match = str.match(numericPatterns.numericPatterns.singleDigitSigned);
-    let tmp20 = null;
+    let tmp26 = null;
     if (match) {
       const obj2 = { value: null, rest: null };
       const _parseInt5 = parseInt;
       obj2.value = parseInt(match[0], 10);
       obj2.rest = str.slice(match[0].length);
-      tmp20 = obj2;
+      tmp26 = obj2;
     }
-    return tmp20;
+    return tmp26;
   } else if (2 === length) {
     const match1 = str.match(numericPatterns.numericPatterns.twoDigitsSigned);
-    let tmp15 = null;
+    let tmp21 = null;
     if (match1) {
       const obj3 = { value: null, rest: null };
       const _parseInt4 = parseInt;
       obj3.value = parseInt(match1[0], 10);
       obj3.rest = str.slice(match1[0].length);
-      tmp15 = obj3;
+      tmp21 = obj3;
     }
-    return tmp15;
+    return tmp21;
   } else if (3 === length) {
     const match2 = str.match(numericPatterns.numericPatterns.threeDigitsSigned);
-    let tmp10 = null;
+    let tmp16 = null;
     if (match2) {
       const obj4 = { value: null, rest: null };
       const _parseInt3 = parseInt;
       obj4.value = parseInt(match2[0], 10);
       obj4.rest = str.slice(match2[0].length);
-      tmp10 = obj4;
+      tmp16 = obj4;
     }
-    return tmp10;
+    return tmp16;
   } else if (4 === length) {
     const match3 = str.match(numericPatterns.numericPatterns.fourDigitsSigned);
-    let tmp5 = null;
+    let tmp11 = null;
     if (match3) {
       const obj5 = { value: null, rest: null };
       const _parseInt2 = parseInt;
       obj5.value = parseInt(match3[0], 10);
       obj5.rest = str.slice(match3[0].length);
-      tmp5 = obj5;
+      tmp11 = obj5;
     }
-    return tmp5;
+    return tmp11;
   } else {
     const _RegExp = RegExp;
     const regExp = new RegExp("^-?\\d{1," + length + "}");
     const match4 = str.match(regExp);
-    let tmp = null;
+    let tmp7 = null;
     if (match4) {
       const obj = { value: null, rest: null };
       const _parseInt = parseInt;
       obj.value = parseInt(match4[0], 10);
       obj.rest = str.slice(match4[0].length);
-      tmp = obj;
+      tmp7 = obj;
     }
-    return tmp;
+    return tmp7;
   }
 }
 export function parseNumericPattern(month, str) {

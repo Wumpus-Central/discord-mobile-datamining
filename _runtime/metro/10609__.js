@@ -1,163 +1,72 @@
 // === Module 10609: ? ===
 
 // Module 10609
-import _mod10486 from "module_10486" /* 10486 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10493 */;
-import _mod10498 from "module_10498" /* 10498 */;
-import _mod10610 from "module_10610" /* 10610 */;
-import _mod10612 from "module_10612" /* 10612 */;
-import _mod10614 from "module_10614" /* 10614 */;
-import _mod10615 from "module_10615" /* 10615 */;
-import _mod10616 from "module_10616" /* 10616 */;
-import _mod10617 from "module_10617" /* 10617 */;
-import _mod10618 from "module_10618" /* 10618 */;
-import _mod10619 from "module_10619" /* 10619 */;
-import _mod10620 from "module_10620" /* 10620 */;
-import _mod10621 from "module_10621" /* 10621 */;
-import _mod10622 from "module_10622" /* 10622 */;
-import _mod10623 from "module_10623" /* 10623 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
+import _mod10599 from "module_10599" /* 10599 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-
-function createConfiguration(flag) {
-  const obj = { parsers: null, refiners: null };
-  items = [new _isNativeReflectConstruct.default(), , , , , , ];
-  const _default = new _isNativeReflectConstruct.default();
-  items[1] = new regExp.default(true);
-  const _default1 = new regExp.default(true);
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default(flag);
-  const _default5 = new _isNativeReflectConstruct.default(flag);
-  items[6] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default6 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default7 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+const NLTimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      tmp = __esModule;
+      callResult = call(constructResult);
     }
-    return tmp;
-  };
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
+const regExp = new RegExp("(" + _mod10599.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod10599.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
+class NLTimeUnitAgoFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
+  }
 }
-fn(_mod10610);
-fn(_mod10612);
-fn(_mod10614);
-fn(_mod10615);
-fn(_mod10616);
-fn(_mod10617);
-fn(_mod10618);
-fn(_mod10619);
-fn(_mod10620);
-fn(_mod10621);
-fn(_mod10622);
-const regExp = fn(_mod10486);
-fn(_mod10623);
-const _isNativeReflectConstruct = fn(_mod10498);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10453").Chrono;
+_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
   }
 };
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = NLTimeUnitAgoFormatParser(10599).parseDuration(arg1[1]);
+      const ParsingComponents = NLTimeUnitAgoFormatParser(10508).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitAgoFormatParser(10507).reverseDuration(NLTimeUnitAgoFormatParser(10599).parseDuration(arg1[1])));
+    }
   }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  }
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  }
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-let parsers3 = configuration.parsers;
-let _default2 = new _isNativeReflectConstruct.default();
-parsers3.unshift(new _isNativeReflectConstruct.default());
-let parsers4 = configuration.parsers;
-let _default3 = new _isNativeReflectConstruct.default();
-parsers4.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10453").Chrono(configuration);
-const chrono1 = new require("module_10453").Chrono(createConfiguration(true));
+];
 
-export { createCasualConfiguration };
-export { createConfiguration };
-export function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-}
-export function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-}
-export const Chrono = require("module_10453").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(NLTimeUnitAgoFormatParser, items);

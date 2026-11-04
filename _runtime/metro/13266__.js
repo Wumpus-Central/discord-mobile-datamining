@@ -1,23 +1,7 @@
 // === Module 13266: ? ===
 
 // Module 13266
-import eventFromMessage from "eventFromMessage" /* 13250 */;
-import _mod13267 from "module_13267" /* 13267 */;
-import setupIntegration from "module_13246" /* 13246 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod13267.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
-    }
-  };
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3b7bd4c82e3e8c361f5983d530550253", name: "ArrowSmallDownIcon", type: "png" });

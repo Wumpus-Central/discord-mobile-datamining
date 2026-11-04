@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
 const wrapperView = StyleSheet.create({ wrapperView: { flex: 1 } });
 let c9 = "sentry-label";
 let c10 = "data-sentry-component";
@@ -42,7 +42,7 @@ class TouchEventBoundary {
     tmp2 = closure_4;
     obj = closure_4(TouchEventBoundary);
     tmp3 = closure_3;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;

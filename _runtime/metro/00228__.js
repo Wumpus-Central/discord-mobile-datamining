@@ -69,7 +69,6 @@ const items = [
   }
 ];
 const _moduleResult = _createClass(AbortSignal, items);
-const metroRequire = _moduleResult;
 Event.defineEventAttribute(_moduleResult.prototype, "abort");
 const weakMap = new WeakMap();
 Object.defineProperties(_moduleResult.prototype, { aborted: { enumerable: true } });
@@ -87,7 +86,7 @@ class AbortController {
   constructor() {
     tmp = c2(this, AbortController);
     tmp2 = closure_8;
-    obj = Object.create(metroRequire.prototype);
+    obj = Object.create(closure_6.prototype);
     _EventTarget = closure_0(closure_1[5]).EventTarget;
     call = _EventTarget.call;
     if (typeof call === "unknown") {
@@ -95,7 +94,7 @@ class AbortController {
     } else {
       callResult = call(obj);
     }
-    result = closure_7.set(obj, false);
+    result = metroImportDefault.set(obj, false);
     result1 = closure_8.set(this, obj);
     return;
   }

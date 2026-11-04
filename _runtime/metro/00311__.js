@@ -2,12 +2,12 @@
 
 // Module 311
 import _modAll27 from "module_27" /* 27 */;
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
 import areInputsEqualDefault from "areInputsEqual" /* 327 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import metroImportDefault from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
@@ -35,17 +35,16 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_4 = ["numColumns", "columnWrapperStyle", "removeClippedSubviews", "strictMode"];
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
 class FlatList {
   constructor(arg0) {
     self = this;
-    tmp = metroRequire(this, FlatList);
+    tmp = closure_6(this, FlatList);
     items = [];
     items[0] = global;
     tmp2 = closure_8;
     obj = closure_8(FlatList);
-    tmp3 = closure_7;
+    tmp3 = metroImportDefault;
     if (closure_11()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

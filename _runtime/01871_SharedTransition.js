@@ -40,7 +40,7 @@ class SharedTransition {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(SharedTransition);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);

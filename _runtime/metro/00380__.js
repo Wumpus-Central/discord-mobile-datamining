@@ -3,6 +3,7 @@
 // Module 380
 import _modAll27 from "module_27" /* 27 */;
 import _modDef38 from "module_38" /* 38 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import flattenStyleDefault from "flattenStyle" /* 148 */;
 import result1Default from "result1" /* 357 */;
 import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
@@ -11,7 +12,6 @@ import _modDef382 from "module_382" /* 382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
@@ -79,6 +79,7 @@ function _disconnectAnimatedView2(connectedViewTag) {
     connectedViewTag.connectedViewTag = null;
   }
 }
+_possibleConstructorReturnDefault;
 let closure_11 = _classPrivateFieldKey("connectAnimatedView");
 let closure_12 = _classPrivateFieldKey("connectShadowNode");
 let closure_13 = _classPrivateFieldKey("disconnectAnimatedView");
@@ -88,9 +89,9 @@ class AnimatedProps {
     tmp = hasOwnProperty(this, AnimatedProps);
     items = [];
     items[0] = module;
-    tmp2 = closure_7;
-    obj = closure_7(AnimatedProps);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(AnimatedProps);
+    tmp3 = closure_6;
     if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -281,7 +282,7 @@ let items = [
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      fn = _get(_getPrototypeOf(AnimatedProps.prototype), "__attach", self);
+      fn = _get(metroImportDefault(AnimatedProps.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -306,7 +307,7 @@ let items = [
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      fn = _get(_getPrototypeOf(AnimatedProps.prototype), "__detach", self);
+      fn = _get(metroImportDefault(AnimatedProps.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -331,7 +332,7 @@ let items = [
       }
       if (!self.__isNative) {
         self.__isNative = true;
-        fn = _get(_getPrototypeOf(AnimatedProps.prototype), "__setPlatformConfig", self);
+        fn = _get(metroImportDefault(AnimatedProps.prototype), "__setPlatformConfig", self);
         if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
         }

@@ -1,71 +1,101 @@
 // === Module 16406: ? ===
 
 // Module 16406
-import get_ActivityIndicator from "module_17" /* 17 */;
+let c0 = false;
 
-function getDevMenu() {
-
-}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(16365)(arg0);
+    const tmp4 = closure_0(16407)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
       }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
+      return num3;
+    } else {
+      let sum = closure_0(16411)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
         }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(16365)(arg0);
+    const tmp4 = closure_0(16407)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = closure_0(16411)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
       }
     }
   }
-});
+};

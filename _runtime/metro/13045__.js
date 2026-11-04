@@ -1,25 +1,22 @@
 // === Module 13045: ? ===
 
 // Module 13045
-const obj = {
-  name: "Selector",
-  structure: null,
-  parse() {
-    const self = this;
-    const sequence = this.readSequence(this.scope.Selector);
-    if (null === this.getFirstListNode(sequence)) {
-      self.error("Selector is expected");
-    }
-    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  }
-};
-const obj2 = { children: null };
-const items = [["TypeSelector", "IdSelector", "ClassSelector", "AttributeSelector", "PseudoClassSelector", "PseudoElementSelector", "Combinator", "WhiteSpace"]];
-obj2.children = items;
-obj.structure = obj2;
+import _mod13164 from "module_13164" /* 13164 */;
+import _mod13165 from "module_13165" /* 13165 */;
+import module_13046 from "module_13046" /* 13046 */;
+import patchDictionary from "patchDictionary" /* 13089 */;
+import module_13136 from "module_13136" /* 13136 */;
 
-export default obj;
+module.exports.version = _mod13165.version;
+
+export default module_13046.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
+    }
+  }
+  return obj;
+})(patchDictionary, module_13136, _mod13164));

@@ -11,7 +11,7 @@ import "module_19";
 
 let closure_2 = ["accessible", "accessibilityState", "aria-live", "android_disableSound", "android_ripple", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-label", "aria-selected", "blockNativeResponder", "cancelable", "children", "delayHoverIn", "delayHoverOut", "delayLongPress", "disabled", "focusable", "hitSlop", "onBlur", "onFocus", "onHoverIn", "onHoverOut", "onLongPress", "onPress", "onPressIn", "onPressMove", "onPressOut", "pressRetentionOffset", "style", "testOnly_pressed", "unstable_pressDelay"];
 const noop = fn(19);
-({ useMemo: hasOwnProperty, useRef: metroRequire, useState: closure_7, memo } = noop);
+({ useMemo: hasOwnProperty, useRef: closure_6, useState: metroImportDefault, memo } = noop);
 const jsxProd = fn(21);
 ({ jsx, jsxs: closure_8 } = jsxProd);
 const memoResult = memo(function Pressable(ref) {
@@ -46,9 +46,9 @@ const memoResult = memo(function Pressable(ref) {
   const tmp12 = _modDef415(android_ripple, tmp8);
   closure_19 = tmp12;
   const tmp11 = _modDef334(ref.ref, tmp8);
-  [tmp15, tmp16] = React5(false);
+  [tmp15, tmp16] = metroImportDefault(false);
   items = [tmp15, tmp16];
-  const tmp14 = _slicedToArray(React5(false), 2);
+  const tmp14 = _slicedToArray(metroImportDefault(false), 2);
   [tmp18, tmp19] = items;
   c20 = tmp19;
   let tmp20 = typeof children === "function";
@@ -283,7 +283,7 @@ const memoResult = memo(function Pressable(ref) {
   }
   const items2 = [childrenResult, null];
   obj4.children = items2;
-  return React6(ViewDefault, obj4);
+  return React5(ViewDefault, obj4);
 });
 memoResult.displayName = "Pressable";
 

@@ -7,11 +7,11 @@ const require = globalThis.__r;
 
 ({ useEffect: c2, useRef: c3 } = noop);
 
-export function useHandler(memoizedGestureCallbacks, items26) {
-  _require = memoizedGestureCallbacks;
+export function useHandler(ChannelListLegendListTsx1, items26) {
+  _require = ChannelListLegendListTsx1;
   const tmp = closure_3(null);
   if (null === tmp.current) {
-    tmp.current = { context: "Array", prevHandlers: "flexDirection" };
+    tmp.current = { context: "PX_8", prevHandlers: "__closure" };
   }
   const current = tmp.current;
   let obj = require("areDependenciesEqual");
@@ -29,6 +29,6 @@ export function useHandler(memoizedGestureCallbacks, items26) {
     },
     set: undefined
   });
-  obj2.doDependenciesDiffer = !require("areDependenciesEqual").areWorkletHandlersEqual(memoizedGestureCallbacks, current.prevHandlers);
+  obj2.doDependenciesDiffer = !require("areDependenciesEqual").areWorkletHandlersEqual(ChannelListLegendListTsx1, current.prevHandlers);
   return obj2;
 }

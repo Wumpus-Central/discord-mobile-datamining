@@ -1,7 +1,5 @@
 // === Module 9318: ? ===
 
 // Module 9318
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

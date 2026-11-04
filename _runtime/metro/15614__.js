@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple", width: 32, height: 32, scales: [2, 3], hash: "b352e1ffa0afe53b75c17fb675b513d6", name: "tier_1_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 351, height: 100, scales: [2, 3], hash: "4890b29f84548b0e4f661e3894e1136c", name: "img_subheader_error_mobile_v2", type: "png" });

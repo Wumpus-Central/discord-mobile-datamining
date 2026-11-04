@@ -1,30 +1,7 @@
 // === Module 17684: ? ===
 
 // Module 17684
-import _regeneratorRuntime2 from "_regeneratorRuntime" /* 17685 */;
-import module_8977 from "module_8977" /* 8977 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let _regeneratorRuntime = module_8977(_regeneratorRuntime2);
 
-export function getYoutubeMeta(arg0) {
-  _regeneratorRuntime = arg0;
-  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
-    next = next.next;
-    next.prev = next;
-    while (0 !== next) {
-      if (2 === next) {
-        sent = next.sent;
-        next.next = 5;
-        let _default = _regeneratorRuntime.default;
-        return _default.awrap(sent.json());
-      } else if (5 === next) {
-        let str = "return";
-        return next.abrupt("return", next.sent);
-      } else {
-        return next.stop();
-      }
-    }
-    next.next = 2;
-    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
-  }, null, null, null, Promise);
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b191595a7f3df6e7807ea696cffe591c", name: "ImageTextIcon", type: "png" });

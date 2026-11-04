@@ -1,102 +1,30 @@
 // === Module 13291: ? ===
 
 // Module 13291
-import _mod13196 from "module_13196" /* 13196 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod13274 from "module_13274" /* 13274 */;
+import _mod13275 from "module_13275" /* 13275 */;
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+require = arg1;
+const dependencyMap = arg6;
 
-export function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod13196.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
+export function getMainCarrier() {
+  const GLOBAL_OBJ = _mod13274.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod13275.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod13275.SDK_VERSION;
+  tmp3[_mod13275.SDK_VERSION] = tmp3[_mod13275.SDK_VERSION] || {};
+  return _mod13274.GLOBAL_OBJ;
 }
-export function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-}
-export function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
-          }
-        }
-        return item;
-      })(item), "");
-      continue;
-    }
-    continue;
+export function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod13275.SDK_VERSION;
   }
-  return obj;
-}
-export function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-}
-export function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
-    }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
-  }
-  return str;
-}
-export function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod13275.SDK_VERSION] || {};
+  tmp[_mod13275.SDK_VERSION] = tmp4;
+  return tmp4;
 }

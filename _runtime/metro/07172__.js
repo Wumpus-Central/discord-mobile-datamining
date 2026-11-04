@@ -1,18 +1,7 @@
 // === Module 7172: ? ===
 
 // Module 7172
-import HeaderHeightContext from "HeaderHeightContext" /* 7171 */;
-import noop from "module_19" /* 19 */;
+import _mod7173 from "module_7173" /* 7173 */;
 
-require = arg1;
 
-export function useHeaderHeight() {
-  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default _mod7173;

@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 let noop = fn(19);
-({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useRef: closure_7, useState: closure_8 } = noop);
+({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: closure_6, useRef: metroImportDefault, useState: closure_8 } = noop);
 let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 let Animated = get_ActivityIndicator.Animated;
@@ -212,7 +212,7 @@ export (enabled) => {
     }
   }, items13);
   const obj10 = { value: tmp11, children: null };
-  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "manifest", onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: "zh-Hans-MO", children: "zh-Hans" };
+  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "Z", onKeyboardMoveInteractive: "onKeyboardMoveStart", onKeyboardMoveEnd: "onKeyboardMove", onFocusedInputLayoutChangedReanimated: "onKeyboardMoveEnd", children: "onKeyboardMoveInteractive" };
   let tmp34 = closure_12;
   let tmp35 = closure_12;
   if (!closure_12) {

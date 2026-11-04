@@ -1,5 +1,7 @@
 // === Module 9310: ? ===
 
 // Module 9310
+import registerAsset from "module_1119" /* 1119 */;
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 32, height: 32, scales: [2, 3], hash: "6745f221b3e662876db35721a519454b", name: "copy", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_q346zepp7a6ehccmv4cim36l24/node_modules/@react-navigation/elements/lib/module/assets", width: 96, height: 96, scales: [1, 1, 2, 3, 4], hash: "3162e8a244d8f6fbd259e79043e23ce4", name: "close-icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5a0d5d16e378eea1c4baa447014a7b8d", name: "CheckmarkLargeIcon", type: "png" });

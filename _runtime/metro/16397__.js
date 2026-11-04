@@ -2,26 +2,4 @@
 
 // Module 16397
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      apiResponse(request, response, tmp4Result) {
-        let status = response;
-        if (response) {
-          status = response.status;
-        }
-        if (status) {
-          status = typeof response.status === "number";
-        }
-        if (status) {
-          status = response.status >= 200;
-        }
-        if (status) {
-          status = response.status <= 299;
-        }
-        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
-      }
-    }
-  };
-};
+export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });

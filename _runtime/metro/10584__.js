@@ -1,20 +1,15 @@
 // === Module 10584: ? ===
 
 // Module 10584
-import _mod10486 from "module_10486" /* 10486 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10493 */;
+import _mod10534 from "module_10534" /* 10534 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10541 */;
 import _mod10585 from "module_10585" /* 10585 */;
 import _mod10587 from "module_10587" /* 10587 */;
+import _mod10588 from "module_10588" /* 10588 */;
 import _mod10589 from "module_10589" /* 10589 */;
 import _mod10590 from "module_10590" /* 10590 */;
 import _mod10591 from "module_10591" /* 10591 */;
 import _mod10592 from "module_10592" /* 10592 */;
-import _mod10593 from "module_10593" /* 10593 */;
-import _mod10594 from "module_10594" /* 10594 */;
-import _mod10595 from "module_10595" /* 10595 */;
-import _mod10596 from "module_10596" /* 10596 */;
-import _mod10597 from "module_10597" /* 10597 */;
-import _mod10598 from "module_10598" /* 10598 */;
 
 const require = globalThis.__r;
 
@@ -22,22 +17,22 @@ function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
+  }
   const obj = { parsers: null, refiners: null };
-  items = [new regExp.default(true), , , , , ];
-  const _default = new regExp.default(true);
+  items = [new regExp.default(flag2), , , ];
+  const _default = new regExp.default(flag2);
   items[1] = new _isNativeReflectConstruct.default();
   const _default1 = new _isNativeReflectConstruct.default();
   items[2] = new _isNativeReflectConstruct.default();
   const _default2 = new _isNativeReflectConstruct.default();
   items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default(flag);
-  const _default4 = new _isNativeReflectConstruct.default(flag);
-  items[5] = new _isNativeReflectConstruct.default();
   obj.parsers = items;
-  const _default5 = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
   const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default6 = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
   items1[1] = new _isNativeReflectConstruct.default();
   obj.refiners = items1;
   return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
@@ -58,45 +53,35 @@ if (!fn) {
   };
 }
 function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
   const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
+  parsers.push(new _isNativeReflectConstruct.default());
   const parsers1 = tmp.parsers;
   const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
+  parsers1.push(new _isNativeReflectConstruct.default());
   return tmp;
 }
+const regExp = fn(_mod10534);
 fn(_mod10585);
 fn(_mod10587);
+fn(_mod10588);
 fn(_mod10589);
 fn(_mod10590);
 fn(_mod10591);
-fn(_mod10592);
-fn(_mod10593);
-fn(_mod10594);
-fn(_mod10595);
-fn(_mod10596);
-fn(_mod10597);
-const regExp = fn(_mod10486);
-const _isNativeReflectConstruct = fn(_mod10598);
-const configuration = createConfiguration(false);
+const _isNativeReflectConstruct = fn(_mod10592);
+const configuration = createConfiguration(false, true);
 let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
+parsers.push(new _isNativeReflectConstruct.default());
 let parsers1 = configuration.parsers;
 let _default = new _isNativeReflectConstruct.default();
 let obj = {
   enumerable: true,
   get() {
-    return require("module_10453").Chrono;
+    return require("module_10501").Chrono;
   }
 };
 const obj2 = {
@@ -129,18 +114,9 @@ const obj6 = {
     return require("Meridiem").Weekday;
   }
 };
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-let parsers3 = configuration.parsers;
-let _default2 = new _isNativeReflectConstruct.default();
-parsers3.unshift(new _isNativeReflectConstruct.default());
-let parsers4 = configuration.parsers;
-let _default3 = new _isNativeReflectConstruct.default();
-parsers4.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10453").Chrono(configuration);
-const chrono1 = new require("module_10453").Chrono(createConfiguration(true));
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10501").Chrono(configuration);
+const chrono1 = new require("module_10501").Chrono(createConfiguration(true));
 
 export function parse(arg0, arg1, arg2) {
   const casual = exports.casual;
@@ -152,7 +128,7 @@ export function parseDate(arg0, arg1, arg2) {
 }
 export { createCasualConfiguration };
 export { createConfiguration };
-export const Chrono = require("module_10453").Chrono;
+export const Chrono = require("module_10501").Chrono;
 export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
 export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
 export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;

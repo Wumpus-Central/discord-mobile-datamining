@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Animated: metroRequire, Appearance: closure_7, Dimensions: closure_8, Easing: closure_9, Modal: closure_10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
+({ Animated: closure_6, Appearance: metroImportDefault, Dimensions: closure_8, Easing: closure_9, Modal: closure_10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
 const module_1059 = fn(1059);
 const useNativeDriver = module_1059.isNativeDriverSupportedForColorAnimations();
 class FeedbackWidgetProvider {
@@ -51,9 +51,9 @@ class FeedbackWidgetProvider {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     obj1 = { isButtonVisible: false, isScreenshotButtonVisible: false, isVisible: false, backgroundOpacity: null, panY: null, isScrollAtTop: true };
-    value = new metroRequire.Value(0);
+    value = new closure_6.Value(0);
     obj1.backgroundOpacity = value;
-    value1 = new metroRequire.Value(closure_8.get("screen").height);
+    value1 = new closure_6.Value(closure_8.get("screen").height);
     obj1.panY = value1;
     tmp3Result.state = obj1;
     obj4 = {
@@ -85,7 +85,7 @@ class FeedbackWidgetProvider {
           },
       onPanResponderRelease(arg0, dy) {
             if (dy.dy > FeedbackWidgetProvider(1060).PULL_DOWN_CLOSE_THRESHOLD) {
-              const obj = { toValue: React6.get("screen").height, duration: FeedbackWidgetProvider(1060).SLIDE_ANIMATION_DURATION, useNativeDriver: true };
+              const obj = { toValue: React5.get("screen").height, duration: FeedbackWidgetProvider(1060).SLIDE_ANIMATION_DURATION, useNativeDriver: true };
               RN.timing(closure_0.state.panY, obj).start(() => {
                 closure_1_0._handleClose();
               });
@@ -143,7 +143,7 @@ const entry = {
   key: "componentDidMount",
   value: function componentDidMount() {
     const self = this;
-    this._themeListener = React5.addChangeListener(() => {
+    this._themeListener = metroImportDefault.addChangeListener(() => {
       self.forceUpdate();
     });
   }
@@ -169,9 +169,9 @@ let items = [
           ({ parallel, timing } = RN);
           obj.duration = FeedbackWidgetProvider(1060).BACKGROUND_ANIMATION_DURATION;
           obj.useNativeDriver = useNativeDriver;
-          obj.easing = React7.in(React7.quad);
+          obj.easing = React6.in(React6.quad);
           items = [timing(self.state.backgroundOpacity, obj), ];
-          const obj2 = { toValue: 0, duration: FeedbackWidgetProvider(1060).SLIDE_ANIMATION_DURATION, useNativeDriver: true, easing: React7.in(React7.quad) };
+          const obj2 = { toValue: 0, duration: FeedbackWidgetProvider(1060).SLIDE_ANIMATION_DURATION, useNativeDriver: true, easing: React6.in(React6.quad) };
           items[1] = RN.timing(self.state.panY, obj2);
           parallel(items).start(() => {
             const debug = FeedbackWidgetProvider(dependencyMap[10]).debug;

@@ -1,8 +1,7 @@
 // === Module 6126: ? ===
 
 // Module 6126
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const Platform = _mod17.Platform;
 
-export const isIOS26OrHigher = false;
+export default noop.createContext(undefined);

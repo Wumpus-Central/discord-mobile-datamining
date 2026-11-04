@@ -42,7 +42,7 @@ class Modal {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(Modal);
     tmp3 = closure_4;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

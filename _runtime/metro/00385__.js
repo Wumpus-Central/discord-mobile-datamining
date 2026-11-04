@@ -37,8 +37,8 @@ class TimingAnimation {
     tmp = closure_4(this, TimingAnimation);
     items = [];
     items[0] = global;
-    tmp2 = metroRequire;
-    obj = metroRequire(TimingAnimation);
+    tmp2 = closure_6;
+    obj = closure_6(TimingAnimation);
     tmp3 = hasOwnProperty;
     if (closure_8()) {
       tmp5 = globalThis;
@@ -96,7 +96,7 @@ let items = [
     key: "start",
     value: function start(_fromValue, _onUpdate, arg2, arg3, self) {
       self = this;
-      const tmp = _get(metroRequire(TimingAnimation.prototype), "start", this);
+      const tmp = metroImportDefault(_getPrototypeOf(TimingAnimation.prototype), "start", this);
       closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
@@ -163,7 +163,7 @@ let items = [
     key: "stop",
     value: function stop() {
       const self = this;
-      let fn = _get(metroRequire(TimingAnimation.prototype), "stop", this);
+      let fn = metroImportDefault(_getPrototypeOf(TimingAnimation.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

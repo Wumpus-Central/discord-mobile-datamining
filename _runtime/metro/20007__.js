@@ -1,8 +1,7 @@
 // === Module 20007: ? ===
 
 // Module 20007
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 181, height: 141, scales: [2, 3], hash: "c7648e89b902e67df37080bfc90491c5", name: "empty_server_settings_emoji_light", type: "png" });

@@ -1,52 +1,40 @@
 // === Module 16404: ? ===
 
 // Module 16404
-import noop from "module_19" /* 19 */;
-import module_16386_mod from "module_16386" /* 16386 */;
-import _isNativeReflectConstruct_mod from "module_16405" /* 16405 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _mod16365 from "module_16365" /* 16365 */;
+import _mod16367 from "module_16367" /* 16367 */;
+import _mod16383 from "module_16383" /* 16383 */;
+import _mod16405 from "module_16405" /* 16405 */;
+import _mod16406 from "module_16406" /* 16406 */;
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_16386 = module_16386_mod;
-if (!module_16386) {
-  let obj = { default: module_16386 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_16386;
-}
-module_16386 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
+let closure_2 = _mod16367([].push);
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
-          };
-        };
+export default (arg0, arg1) => {
+  const tmp = _mod16365(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16383;
+    let tmp14Result = tmp14(_mod16405, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16383(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16383(tmp, tmp7)) {
+      let tmp5Result = _mod16406;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
       }
     }
-  };
+  }
+  return items;
 };

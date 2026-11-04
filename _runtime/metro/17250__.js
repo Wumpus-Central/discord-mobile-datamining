@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 375, height: 58, scales: [1, 2, 3], hash: "e5d497e242dfffadb8102108e8df2b1a", name: "clouds_background", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign/images", width: 32, height: 32, scales: [2, 3, 4], hash: "4135aa1407cb9dccb86248e1e9e37285", name: "hexagon_campaign_legal_logo", type: "png" });

@@ -45,7 +45,7 @@ class PerformanceEventTiming {
     tmp2 = closure_3;
     obj = closure_3(EventCounts);
     tmp3 = c2;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -54,11 +54,11 @@ class PerformanceEventTiming {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp7 = closure_9;
-    definePropertyResult = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
     tmp9 = closure_10;
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "Array" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "a" });
     tmp11 = closure_11;
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "Array" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
     tmp13 = hasOwnProperty;
     num = global.processingStart;
     tmp14 = hasOwnProperty(tmp3Result, closure_9);

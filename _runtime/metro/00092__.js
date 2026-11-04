@@ -36,7 +36,7 @@ class RCTDeviceEventEmitterImpl {
     tmp2 = closure_4;
     obj = closure_4(RCTDeviceEventEmitterImpl);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;

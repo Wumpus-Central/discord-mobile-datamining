@@ -1,6 +1,7 @@
 // === Module 16340: ? ===
 
 // Module 16340
-import _mod17 from "module_17" /* 17 */;
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export function shouldPolyfill() {
+  return !("supportedValuesOf" in Intl);
+}

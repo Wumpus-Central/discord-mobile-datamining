@@ -1,7 +1,5 @@
 // === Module 16134: ? ===
 
 // Module 16134
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 36, height: 24, scales: [2, 3], hash: "48a492306912f6e40271e3f606596ed0", name: "StatusVROnline", type: "png" });
+export default { MAX_LENGTH: 256, MAX_SAFE_COMPONENT_LENGTH: 16, MAX_SAFE_BUILD_LENGTH: 250, MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991, RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"], SEMVER_SPEC_VERSION: "2.0.0", FLAG_INCLUDE_PRERELEASE: 1, FLAG_LOOSE: 2 };

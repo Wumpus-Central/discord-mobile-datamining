@@ -1,11 +1,35 @@
 // === Module 5532: ? ===
 
 // Module 5532
-import _mod5533 from "module_5533" /* 5533 */;
-import _mod5535 from "module_5535" /* 5535 */;
-import _mod5536 from "module_5536" /* 5536 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Platform = _mod17.Platform;
 
-export const useCompetingGestures = _mod5533.useCompetingGestures;
-export const useExclusiveGestures = _mod5535.useExclusiveGestures;
-export const useSimultaneousGestures = _mod5536.useSimultaneousGestures;
+export function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
+  }
+  return obj;
+}
+export function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
+}

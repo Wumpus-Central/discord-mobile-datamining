@@ -1,16 +1,28 @@
 // === Module 8431: ? ===
 
 // Module 8431
-import _mod8428 from "module_8428" /* 8428 */;
+import findOffsets from "findOffsets" /* 8428 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
-obj[45056] = {
-  name: "MPFVersion",
-  description(value) {
-    return _mod8428.getStringValue(value);
+
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
   }
 };
-
-export default obj;

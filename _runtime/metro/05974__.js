@@ -1,9 +1,17 @@
 // === Module 5974: ? ===
 
 // Module 5974
-import baseIsEqual from "baseIsEqual" /* 631 */;
+import identity from "identity" /* 549 */;
+import _mod668 from "module_668" /* 668 */;
+import constant from "constant" /* 5975 */;
 
+if (_mod668) {
+  let fn = (arg0, arg1) => {
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
+    return _mod668(arg0, "toString", obj);
+  };
+} else {
+  fn = identity;
+}
 
-export default function isEqual(arg0, arg1) {
-  return baseIsEqual(arg0, arg1);
-};
+export default fn;

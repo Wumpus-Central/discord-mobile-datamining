@@ -1,16 +1,14 @@
 // === Module 10644: ? ===
 
 // Module 10644
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10457 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import _mod10645 from "module_10645" /* 10645 */;
+import _mod10636 from "module_10636" /* 10636 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const SVWeekdayParser = require;
+const RUWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10645.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)", "i");
-class SVWeekdayParser {
+class RUWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, RUWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(RUWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,11 +48,11 @@ class SVWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUWeekdayParser, _mod10636.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" + RUWeekdayParser(10505).matchAnyPattern(RUWeekdayParser(10634).WEEKDAY_DICTIONARY) + ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?";
   }
 };
 const items = [
@@ -71,17 +68,42 @@ const items = [
       if (!str2) {
         str2 = "";
       }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
+      const formatted1 = str2.toLowerCase();
+      let str3 = "last";
+      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
+        str3 = "last";
+        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
+          str3 = "last";
+          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
+            str3 = "next";
+            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
+              str3 = "next";
+              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
+                str3 = "next";
+                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
+                  str3 = "next";
+                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
+                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
+                    if (tmp5) {
+                      tmp5 = "\u044D\u0442\u0443" != formatted1;
+                    }
+                    if (tmp5) {
+                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
+                    }
+                    str3 = null;
+                    if (!tmp5) {
+                      str3 = "this";
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
-      return SVWeekdayParser(10484).createParsingComponentsAtWeekday(reference.reference, SVWeekdayParser(10645).WEEKDAY_DICTIONARY[formatted], str4);
+      return RUWeekdayParser(10532).createParsingComponentsAtWeekday(reference.reference, RUWeekdayParser(10634).WEEKDAY_DICTIONARY[formatted], str3);
     }
   }
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(RUWeekdayParser, items);

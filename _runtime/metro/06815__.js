@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "79308515b9134f67f900ad544808aa3a", name: "img_domain_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 500, height: 500, scales: [1], hash: "59966e5b844184ad532c25b89628277b", name: "img_account_sync_letterboxd_dark", type: "png" });

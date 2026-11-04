@@ -2,6 +2,7 @@
 
 // Module 217
 import _modDef38 from "module_38" /* 38 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import dispatchDefault from "dispatch" /* 132 */;
 import EventDefault from "Event" /* 133 */;
 import BlobManagerDefault from "BlobManager" /* 200 */;
@@ -15,7 +16,6 @@ import _modDef221 from "module_221" /* 221 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -40,14 +40,15 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_3 = ["headers"];
+_possibleConstructorReturnDefault;
 let c9 = 0;
 class WebSocket {
   constructor(arg0, arg1, arg2) {
     self = this;
     tmp3 = hasOwnProperty(this, WebSocket);
-    tmp4 = closure_7;
-    obj = closure_7(WebSocket);
-    tmp5 = metroRequire;
+    tmp4 = metroImportDefault;
+    obj = metroImportDefault(WebSocket);
+    tmp5 = closure_6;
     if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;

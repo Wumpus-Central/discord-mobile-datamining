@@ -1,11 +1,11 @@
 // === Module 416: ? ===
 
 // Module 416
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef417 from "module_417" /* 417 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
@@ -31,6 +31,7 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_3 = ["tintColor", "titleColor", "title"];
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
 class RefreshControl {
   constructor() {
@@ -39,9 +40,9 @@ class RefreshControl {
     closure_0 = undefined;
     tmp = hasOwnProperty(this, RefreshControl);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(RefreshControl);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(RefreshControl);
+    tmp3 = closure_6;
     if (closure_9()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

@@ -1,68 +1,40 @@
 // === Module 13308: ? ===
 
 // Module 13308
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 13193 */;
-import _mod13196 from "module_13196" /* 13196 */;
-import _mod13306 from "module_13306" /* 13306 */;
+import _mod13280 from "module_13280" /* 13280 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
+export function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {
+
+    };
   }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod13196;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod13306.filenameIsInApp(replaced);
-    const tmp4Result = _mod13306;
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
-}
-export function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
-    }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then((result) => {
+          closure_1();
+          return result;
+        }, (arg0) => {
+          closure_0(arg0);
+          closure_1();
+          throw arg0;
+        });
+      } else {
+        fn();
+        return promise;
       }
-    }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    }
-  };
+      obj = _mod13280;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
+  }
 }

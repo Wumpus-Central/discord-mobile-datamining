@@ -2,12 +2,12 @@
 
 // Module 326
 import _modDef38 from "module_38" /* 38 */;
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef314 from "module_314" /* 314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import metroImportDefault from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import "module_19";
@@ -195,7 +195,6 @@ function ItemWithSeparator(leadingItem) {
   return gesture(state, { children });
 }
 let closure_3 = ["ItemSeparatorComponent", "SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
-_possibleConstructorReturnDefault;
 const noop = fn(19);
 ({ useEffect: closure_10, useState: closure_11 } = noop);
 const jsxProd = fn(21);
@@ -205,11 +204,11 @@ class VirtualizedSectionList {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = metroRequire(this, VirtualizedSectionList);
+    tmp = closure_6(this, VirtualizedSectionList);
     items1 = [...items];
     tmp2 = closure_8;
     obj = closure_8(VirtualizedSectionList);
-    tmp3 = closure_7;
+    tmp3 = metroImportDefault;
     if (closure_2_15()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

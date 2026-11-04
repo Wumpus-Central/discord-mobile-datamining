@@ -1,11 +1,11 @@
 // === Module 341: ? ===
 
 // Module 341
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
@@ -31,6 +31,7 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_2 = ["behavior", "children", "contentContainerStyle", "enabled", "keyboardVerticalOffset", "style", "onLayout"];
+_possibleConstructorReturnDefault;
 const createRef = fn(19).createRef;
 const jsx = fn(21).jsx;
 let dependencyMap;
@@ -40,9 +41,9 @@ class KeyboardAvoidingView {
     tmp = hasOwnProperty(this, KeyboardAvoidingView);
     items = [];
     items[0] = global;
-    tmp2 = closure_7;
-    obj = closure_7(KeyboardAvoidingView);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(KeyboardAvoidingView);
+    tmp3 = closure_6;
     if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

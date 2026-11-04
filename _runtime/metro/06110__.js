@@ -1,23 +1,39 @@
 // === Module 6110: ? ===
 
 // Module 6110
-import get_ActivityIndicator from "module_17" /* 17 */;
+import RNSLog2 from "RNSLog" /* 6106 */;
+import noop from "module_19" /* 19 */;
 
-({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
-const items = ["ios", "android"];
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
-export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
-export function executeNativeBackPress() {
-  React.exitApp();
-  return true;
-}
-export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
-  if (undefined === fullScreenSwipeEnabled) {
-    return "undefined";
-  } else if (true === fullScreenSwipeEnabled) {
-    return "true";
-  } else if (false === fullScreenSwipeEnabled) {
-    return "false";
-  }
+export function useTabsHost(arg0) {
+  ({ componentNodeRef: require, onTabSelected } = arg0);
+  noop = undefined;
+  noop = noop.useRef(-1);
+  const effect = noop.useEffect(() => {
+    if (null != ref.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      closure_2.current = num2;
+    } else {
+      closure_2.current = -1;
+    }
+  }, []);
+  const obj = { onTabSelected: null };
+  items = [onTabSelected];
+  obj.onTabSelected = noop.useCallback((nativeEvent) => {
+    const RNSLog = RNSLog2.RNSLog;
+    let num = ref2.current;
+    if (num == null) {
+      num = -1;
+    }
+    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+    if (onTabSelected != null) {
+      onTabSelected(nativeEvent);
+    }
+  }, items);
+  return obj;
 }

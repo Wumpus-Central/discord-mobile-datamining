@@ -1,61 +1,13 @@
 // === Module 13048: ? ===
 
 // Module 13048
-import _mod12972 from "module_12972" /* 12972 */;
+const TYPE = { EOF: 0, Ident: 1, Function: 2, AtKeyword: 3, Hash: 4, String: 5, BadString: 6, Url: 7, BadUrl: 8, Delim: 9, Number: 10, Percentage: 11, Dimension: 12, WhiteSpace: 13, CDO: 14, CDC: 15, Colon: 16, Semicolon: 17, Comma: 18, LeftSquareBracket: 19, RightSquareBracket: 20, LeftParenthesis: 21, RightParenthesis: 22, LeftCurlyBracket: 23, RightCurlyBracket: 24, Comment: 25 };
+const keys = Object.keys(TYPE);
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, null, false);
-}
-const WhiteSpace = _mod12972.TYPE.WhiteSpace;
-const Comment = _mod12972.TYPE.Comment;
-const AtKeyword = _mod12972.TYPE.AtKeyword;
-const CDO = _mod12972.TYPE.CDO;
-const CDC = _mod12972.TYPE.CDC;
-const obj = {
-  name: "StyleSheet",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      do {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace === tokenType) {
-          let iter2 = self.scanner;
-          let nextResult = iter2.next();
-        } else {
-          if (Comment === tokenType) {
-            let source = self.scanner.source;
-            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
-              let iter = self.scanner;
-              let nextResult1 = iter.next();
-            } else {
-              let CommentResult = self.Comment();
-            }
-          } else if (CDO === tokenType) {
-            CommentResult = self.CDO();
-          } else if (CDC === tokenType) {
-            CommentResult = self.CDC();
-          } else if (AtKeyword === tokenType) {
-            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
-          } else {
-            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
-          }
-          let arr = list.push(CommentResult);
-        }
-      } while (!self.scanner.eof);
-    }
-    const element = { type: "StyleSheet", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  },
-  walkContext: "stylesheet"
+export default {
+  TYPE,
+  NAME: keys.reduce((acc, item) => {
+    acc[obj[item]] = item;
+    return acc;
+  }, {})
 };
-const obj2 = { children: null };
-const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;

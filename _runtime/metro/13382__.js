@@ -1,7 +1,33 @@
 // === Module 13382: ? ===
 
 // Module 13382
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2bf7738cbb1d2827663b492fedbd65fb", name: "MedalIcon", type: "png" });
+export function flatten(arr) {
+  items = [];
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(/* F128878 */ function() { ... });
+                } else {
+                  arr = closure_1_0.push(arr);
+                }
+              });
+            } else {
+              arr = closure_1_0.push(arr);
+            }
+          });
+        } else {
+          arr = closure_1_0.push(arr);
+        }
+      });
+    } else {
+      arr = closure_1_0.push(arr);
+    }
+  });
+  return items;
+}

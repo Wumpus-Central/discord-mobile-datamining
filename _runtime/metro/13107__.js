@@ -1,7 +1,39 @@
 // === Module 13107: ? ===
 
 // Module 13107
-import registerAsset from "module_1119" /* 1119 */;
+import _mod13054 from "module_13054" /* 13054 */;
 
+const Comment = _mod13054.TYPE.Comment;
+let obj = {
+  name: "Comment",
+  structure: { value: String },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    }
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    }
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
+    }
+    const obj = { type: "Comment", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: self.scanner.source.substring(tokenStart + 2, diff) };
+    return obj;
+  },
+  generate(value) {
+    this.chunk("/*");
+    this.chunk(value.value);
+    this.chunk("*/");
+  }
+};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/home/images", width: 640, height: 360, scales: [1], hash: "c0003a72b8ff1b39e6b2cebe0eda12b2", name: "conjure-home-flappy", type: "svg" });
+export default obj;

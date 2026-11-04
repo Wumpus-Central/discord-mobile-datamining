@@ -1,13 +1,14 @@
 // === Module 8213: ? ===
 
 // Module 8213
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8194 from "module_8194" /* 8194 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef8210 from "module_8210" /* 8210 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,46 +28,38 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FeMergeNode {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FeMergeNode);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FeMergeNode);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = c2(this, FeComponentTransfer);
+    tmp2 = closure_4;
+    obj = closure_4(FeComponentTransfer);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FeMergeNode;
-_inherits(FeMergeNode, _modDef8194);
+_inherits(FeComponentTransfer, _modDef8210);
 const entry = {
   key: "render",
   value: function render() {
+    const result = FeComponentTransfer(8187).warnUnimplementedFilter();
     return null;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,70 +1,49 @@
 // === Module 10539: ? ===
 
 // Module 10539
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10471 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod10504 from "module_10504" /* 10504 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class PTTimeExpressionParser {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + _mod10504.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    self = this;
-    tmp = closure_0(this, PTTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(PTTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, ENExtractYearSuffixRefiner);
+    return;
   }
 }
-_classCallCheck = PTTimeExpressionParser;
-_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (start.isDateWithUnknownYear()) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          if (str2.trim().length > 3) {
+            obj.debug(() => {
+              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+            });
+            const parseYearResult = ENExtractYearSuffixRefiner(10504).parseYear(match[1]);
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("year", parseYearResult);
+            }
+            const start2 = start.start;
+            start2.assign("year", parseYearResult);
+            start.text = start.text + match[0];
+          }
+          str2 = match[0];
+        }
+        obj = text;
+      }
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(PTTimeExpressionParser, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

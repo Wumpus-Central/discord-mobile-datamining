@@ -1,25 +1,36 @@
 // === Module 5661: ? ===
 
 // Module 5661
-import _mod5662 from "module_5662" /* 5662 */;
+import RecyclerViewManager from "RecyclerViewManager" /* 5662 */;
+import _slicedToArray from "module_5641" /* 5641 */;
 
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
-    }
-  }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod5662(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
-};
+export (data) => {
+  let recyclerViewManager = velocityTracker(closure_5(() => {
+    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+    return recyclerViewManager;
+  }), 1)[0];
+  velocityTracker = velocityTracker(closure_5(() => {
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    return velocityTracker;
+  }), 1)[0];
+  items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
+}

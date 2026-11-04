@@ -1,12 +1,7 @@
 // === Module 7151: ? ===
 
 // Module 7151
+import registerAsset from "module_1119" /* 1119 */;
 
-export (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_q346zepp7a6ehccmv4cim36l24/node_modules/@react-navigation/elements/lib/module/assets", width: 64, height: 64, scales: [1, 1, 2, 3, 4], hash: "61378328a719f21f093de82dd89ecfb0", name: "clear-icon", type: "png" });

@@ -2,7 +2,8 @@
 
 // Module 5700
 import _mod17 from "module_17" /* 17 */;
+import FlashList from "FlashList" /* 5639 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const Animated = _mod17.Animated;
 
-export const styles = StyleSheet.create({ container: {} });
+export default Animated.createAnimatedComponent(FlashList.FlashList);

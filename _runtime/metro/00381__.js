@@ -38,8 +38,8 @@ class AnimatedStyle {
     tmp = closure_4(this, AnimatedStyle);
     items = [];
     items[0] = module;
-    tmp2 = metroRequire;
-    obj = metroRequire(AnimatedStyle);
+    tmp2 = closure_6;
+    obj = closure_6(AnimatedStyle);
     tmp3 = hasOwnProperty;
     if (closure_8()) {
       tmp5 = globalThis;
@@ -132,7 +132,7 @@ let items = [
         let obj = _nodes[num];
         let __addChildResult = obj.__addChild(self);
       }
-      fn = _get(metroRequire(AnimatedStyle.prototype), "__attach", self);
+      fn = metroImportDefault(_getPrototypeOf(AnimatedStyle.prototype), "__attach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -148,7 +148,7 @@ let items = [
         let obj = _nodes[num];
         let __removeChildResult = obj.__removeChild(self);
       }
-      fn = _get(metroRequire(AnimatedStyle.prototype), "__detach", self);
+      fn = metroImportDefault(_getPrototypeOf(AnimatedStyle.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -164,7 +164,7 @@ let items = [
         let obj = _nodes[num];
         let __makeNativeResult = obj.__makeNative(arg0);
       }
-      fn = _get(metroRequire(AnimatedStyle.prototype), "__makeNative", self);
+      fn = metroImportDefault(_getPrototypeOf(AnimatedStyle.prototype), "__makeNative", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -249,8 +249,8 @@ const entry1 = {
         const obj4 = Object.create(AnimatedStyle.prototype);
         _classCallCheck(obj4, AnimatedStyle);
         const items3 = [undefined];
-        let constructor = metroRequire;
-        const obj5 = metroRequire(AnimatedStyle);
+        let constructor = _getPrototypeOf;
+        const obj5 = _getPrototypeOf(AnimatedStyle);
         if (_isNativeReflectConstruct()) {
           const _Reflect = construct.Reflect;
           construct = _Reflect.construct;

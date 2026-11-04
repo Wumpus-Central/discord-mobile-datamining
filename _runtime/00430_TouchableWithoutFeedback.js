@@ -7,7 +7,7 @@ import "module_19";
 
 let closure_2 = ["onBlur", "onFocus"];
 const noop = fn(19);
-({ cloneElement: hasOwnProperty, useMemo: metroRequire } = noop);
+({ cloneElement: hasOwnProperty, useMemo: closure_6 } = noop);
 const jsx = fn(21).jsx;
 let closure_7 = ["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityLanguage", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLiveRegion", "accessibilityRole", "accessibilityValue", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "accessibilityViewIsModal", "aria-modal", "hitSlop", "importantForAccessibility", "nativeID", "onAccessibilityAction", "onBlur", "onFocus", "onLayout", "testID"];
 

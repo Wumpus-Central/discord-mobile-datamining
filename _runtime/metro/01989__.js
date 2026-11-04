@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 let noop = fn(19);
-({ useCallback: closure_4, useEffect: hasOwnProperty, useImperativeHandle: metroRequire, useMemo: closure_7, forwardRef } = noop);
+({ useCallback: closure_4, useEffect: hasOwnProperty, useImperativeHandle: closure_6, useMemo: metroImportDefault, forwardRef } = noop);
 let noop = noop_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

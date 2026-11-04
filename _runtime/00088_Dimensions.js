@@ -59,7 +59,6 @@ const items = [
   }
 ];
 const importDefaultResultResult = _createClass(Dimensions, null, items);
-const metroRequire = importDefaultResultResult;
 _isNativeReflectConstruct.addListener("didUpdateDimensions", (arg0) => {
   const result = importDefaultResultResult.set(arg0);
 });

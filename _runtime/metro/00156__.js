@@ -16,8 +16,8 @@ const Performance = fn;
 let closure_6 = ["mark", "measure"];
 const NativePerformanceCxx = nullthrows(_modDef154);
 ({ reportMark: closure_8, reportMeasure: closure_9, getMarkTime: closure_10, clearMarks: closure_11, clearMeasures: closure_12 } = NativePerformanceCxx);
-let closure_13 = { startTime: 0, detail: "alignItems" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
+let closure_13 = { startTime: 0, detail: "id" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "dispatch" };
 function getMarkTimeForMeasure(arg0) {
 
 }
@@ -131,7 +131,7 @@ let items = [
         closure_13.startTime = currentTimeStamp;
         closure_13.detail = tmp7;
         const performanceMark = new Performance(169).PerformanceMark(StringResult, closure_13);
-        React6(StringResult, currentTimeStamp, performanceMark);
+        React5(StringResult, currentTimeStamp, performanceMark);
         return performanceMark;
       }
     }
@@ -363,7 +363,7 @@ let items = [
         closure_14.duration = currentTimeStamp;
         closure_14.detail = tmp10;
         const performanceMeasure = new Performance(169).PerformanceMeasure(closure_14);
-        React7(StringResult, num3, currentTimeStamp, performanceMeasure);
+        React6(StringResult, num3, currentTimeStamp, performanceMeasure);
         return performanceMeasure;
       }
     }

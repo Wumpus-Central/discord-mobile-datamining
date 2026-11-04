@@ -1,16 +1,13 @@
 // === Module 5560: ? ===
 
 // Module 5560
-import _modDef5559 from "module_5559" /* 5559 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,78 +27,180 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};})" }];
+[tmp4] = items;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: translationX.translationX - translationX2.translationX, changeY: translationX.translationY - translationX2.translationY };
+  }
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 9504511538526;
+changeEventCalculator.__initData = tmp4;
+class PanGesture {
   constructor() {
     self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
   }
 }
-_inherits(TouchableNativeFeedback, fn(19).Component);
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(5448).ContinousBaseGesture);
 const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
+  key: "activeOffsetY",
+  value: function activeOffsetY(items23) {
+    const self = this;
+    if (Array.isArray(items23)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items23;
+    } else if (items23 < 0) {
+      self.config.activeOffsetYStart = items23;
     } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
+      self.config.activeOffsetYEnd = items23;
     }
+    return self;
   }
 };
-const items = [
+const items1 = [
   entry,
   {
-    key: "render",
-    value: function render() {
+    key: "activeOffsetX",
+    value: function activeOffsetX(items18) {
       const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
+      if (Array.isArray(items18)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items18;
+      } else if (items18 < 0) {
+        self.config.activeOffsetXStart = items18;
+      } else {
+        self.config.activeOffsetXEnd = items18;
       }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
-      const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(5559), {});
+      return self;
+    }
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.failOffsetXStart = items;
+      } else {
+        self.config.failOffsetXEnd = items;
+      }
+      return self;
+    }
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    }
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    }
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(MIN_PAN_GESTURE_MOVE) {
+      this.config.minDist = MIN_PAN_GESTURE_MOVE;
+      return this;
+    }
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    }
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    }
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    }
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
     }
   }
 ];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
-let obj = {};
-let merged = Object.assign(_modDef5559.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
-importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
-export default importDefaultResultResult;
+export const PanGesture = _createClass(PanGesture, items1);

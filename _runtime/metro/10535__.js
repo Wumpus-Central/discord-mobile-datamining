@@ -1,38 +1,87 @@
 // === Module 10535: ? ===
 
 // Module 10535
-import alphaNum from "alphaNum" /* 10527 */;
+import _mod10504 from "module_10504" /* 10504 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const JPWeekdayWithParenthesesParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\\(|\\\uFF08)(?<weekday>" + keys.join("|") + ")(?:\\)|\\\uFF09)", "i");
-class JPWeekdayWithParenthesesParser {
-  constructor() {
-    tmp = c2(this, JPWeekdayWithParenthesesParser);
-    return;
+const ENTimeUnitCasualRelativeFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10504.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10504.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
+  constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
+    self = this;
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
+  }
+}
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.allowAbbreviations ? regExp : regExp1;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(reference, arg1) {
-      const tmp3 = JPWeekdayWithParenthesesParser(10527).WEEKDAY_OFFSET[arg1.groups.weekday];
-      let parsingComponentsAtWeekday = null;
-      if (undefined !== tmp3) {
-        parsingComponentsAtWeekday = JPWeekdayWithParenthesesParser(10484).createParsingComponentsAtWeekday(reference.reference, tmp3);
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10504).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10508).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        }
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10507).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      return parsingComponentsAtWeekday;
     }
   }
 ];
 
-export default _createClass(JPWeekdayWithParenthesesParser, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

@@ -11,7 +11,7 @@ import noop_mod from "module_19" /* 19 */;
 require = fn;
 let closure_3 = ["children", "content", "theme", "doneText", "button", "icon", "showArrows", "onNextCallback", "onPrevCallback", "onDoneCallback", "blur", "opacity", "offset", "enabled", "insets"];
 let noop = fn(19);
-({ useEffect: metroRequire, useMemo: closure_7, useState: closure_8 } = noop);
+({ useEffect: closure_6, useMemo: metroImportDefault, useState: closure_8 } = noop);
 let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_10 } = get_ActivityIndicator);

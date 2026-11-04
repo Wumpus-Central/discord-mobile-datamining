@@ -1,15 +1,13 @@
 // === Module 10641: ? ===
 
 // Module 10641
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import _mod10626 from "module_10626" /* 10626 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod10526 from "module_10526" /* 10526 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +27,31 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" + _mod10626.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-class ENTimeUnitCasualRelativeFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class RUMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, RUMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(RUMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +64,15 @@ class ENTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = RUMergeDateTimeRefiner;
+_inherits(RUMergeDateTimeRefiner, fn(_mod10526).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
     return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10626).parseDuration(arg1[2]);
-      if ("last" !== formatted) {
-        if ("past" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10460).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10459).reverseDuration(parseDurationResult);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(RUMergeDateTimeRefiner, items);

@@ -1,17 +1,7 @@
 // === Module 14601: ? ===
 
 // Module 14601
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-for (const key10013 in require("enhancedFetch")) {
-  arg5[key10013] = require("enhancedFetch")[key10013];
-  continue;
-}
-for (const key10017 in require("fillProductsWithAdditionalData")) {
-  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
-  continue;
-}
-for (const key10021 in require("RNIapIos")) {
-  arg5[key10021] = require("RNIapIos")[key10021];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "9a553b5676f66b916dad899877998f41", name: "ic_home", type: "png" });

@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Appearance: metroRequire, Image: closure_7, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
+({ Appearance: closure_6, Image: metroImportDefault, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
 fn = this;
 if (this) {
   fn = this.__awaiter;
@@ -280,8 +280,8 @@ let items = [
       obj5.uri = ScreenshotButton(1066).screenshotIcon;
       obj4.source = obj5;
       obj4.style = merged6;
-      const element2 = createElement2(React5, obj4);
-      return <React7 style={merged2} onPress={takeScreenshot} accessibilityLabel={merged.triggerAriaLabel}>{element2}<React6 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</React6></React7>;
+      const element2 = createElement2(metroImportDefault, obj4);
+      return <React6 style={merged2} onPress={takeScreenshot} accessibilityLabel={merged.triggerAriaLabel}>{element2}<React5 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</React5></React6>;
     }
   }
 ];

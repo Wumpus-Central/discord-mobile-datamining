@@ -1,14 +1,16 @@
 // === Module 8221: ? ===
 
 // Module 8221
-import _modDef8194 from "module_8194" /* 8194 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8210 from "module_8210" /* 8210 */;
+import _modDef8222 from "module_8222" /* 8222 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeTurbulence = arg1;
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
-    tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeGaussianBlur);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,33 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef8194);
+_inherits(FeGaussianBlur, _modDef8210);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(8171).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeGaussianBlur(8209).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(8209);
+    const merged1 = Object.assign(FeGaussianBlur(8209).extractIn(this.props));
+    const obj3 = FeGaussianBlur(8209);
+    const merged2 = Object.assign(FeGaussianBlur(8209).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

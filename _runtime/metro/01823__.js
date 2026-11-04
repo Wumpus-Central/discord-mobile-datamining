@@ -104,7 +104,7 @@ const entry = {
   key: "componentDidMount",
   value: function componentDidMount() {
     const self = this;
-    let fn = metroRequire(hasOwnProperty(AnimatedComponent.prototype), "componentDidMount", this);
+    let fn = _get(hasOwnProperty(AnimatedComponent.prototype), "componentDidMount", this);
     if (typeof fn === "function") {
       fn = (items1) => fn.apply(self, items1);
     }
@@ -162,7 +162,7 @@ let items = [
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const self = this;
-      let fn = metroRequire(hasOwnProperty(AnimatedComponent.prototype), "componentWillUnmount", this);
+      let fn = _get(hasOwnProperty(AnimatedComponent.prototype), "componentWillUnmount", this);
       if (typeof fn === "function") {
         fn = (items1) => fn.apply(self, items1);
       }
@@ -639,8 +639,8 @@ let items = [
                                           } else {
                                             const _Array = Array;
                                             if (Array.isArray(viewDescriptors)) {
-                                              const found = viewDescriptors.filter(/* F82453 */ function() { ... });
-                                              let mapped = found.map(/* F82454 */ function() { ... });
+                                              const found = viewDescriptors.filter(/* F82788 */ function() { ... });
+                                              let mapped = found.map(/* F82789 */ function() { ... });
                                             } else {
                                               viewDescriptors = undefined;
                                               if (viewDescriptors != null) {
@@ -721,12 +721,12 @@ let items = [
       }
       if (!tmp11) {
         if (undefined === result.children) {
-          result.children = <closure_7 />;
+          result.children = <metroImportDefault />;
         }
       }
       if (closure_11) {
         if (self.state.settledStyle) {
-          let fn2 = metroRequire(hasOwnProperty(AnimatedComponent.prototype), "render", self);
+          let fn2 = _get(hasOwnProperty(AnimatedComponent.prototype), "render", self);
           let fn = fn2;
           if (typeof fn2 === "function") {
             fn2 = (items1) => fn.apply(self, items1);
@@ -744,7 +744,7 @@ let items = [
         }
         return fn2Result;
       }
-      fn = metroRequire(hasOwnProperty(AnimatedComponent.prototype), "render", self);
+      fn = _get(hasOwnProperty(AnimatedComponent.prototype), "render", self);
       if (typeof fn === "function") {
         fn = (items1) => fn.apply(self, items1);
       }

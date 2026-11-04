@@ -1,16 +1,14 @@
 // === Module 10646: ? ===
 
 // Module 10646
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10457 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import _mod10645 from "module_10645" /* 10645 */;
+import _mod10636 from "module_10636" /* 10636 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const SVMonthNameLittleEndianParser = require;
+const RUTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:den\\s*?)?([0-9]{1,2})(?:\\s*(?:till|\\-|\\\u2013|\\s)\\s*([0-9]{1,2}))?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10645.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)([0-9]{4}(?![^\\s]\\d)))?(?=\\W|$)", "i");
-class SVMonthNameLittleEndianParser {
+class RUTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVMonthNameLittleEndianParser);
+    tmp = c2(this, RUTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(SVMonthNameLittleEndianParser);
+    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,48 +48,30 @@ class SVMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitCasualRelativeFormatParser, _mod10636.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + RUTimeUnitCasualRelativeFormatParser(10634).TIME_UNITS_PATTERN + ")";
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = SVMonthNameLittleEndianParser(10645).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", SVMonthNameLittleEndianParser(10645).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", SVMonthNameLittleEndianParser(10458).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(10634).parseDuration(arg1[2]);
+      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
+        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
+        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(10508).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
+      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(10507).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(SVMonthNameLittleEndianParser, items);
+export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);

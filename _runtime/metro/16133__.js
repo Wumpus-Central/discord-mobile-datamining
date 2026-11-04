@@ -1,7 +1,18 @@
 // === Module 16133: ? ===
 
 // Module 16133
-import registerAsset from "module_1119" /* 1119 */;
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "12a800ef241b26f28e2697e2835bd1ab", name: "StatusStreaming", type: "png" });
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
+  }
+  return tmp2;
+};

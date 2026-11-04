@@ -1,155 +1,58 @@
 // === Module 10543: ? ===
 
 // Module 10543
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import now from "now" /* 10481 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
 let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
+  constructor() {
+    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
+    return;
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function u(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
+}
+_classCallCheck = ExtractTimezoneOffsetRefiner;
+const entry = {
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (!start.isCertain("timezoneOffset")) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + parseInt(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
             }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("timezoneOffset", tmp7);
+            }
+            const start2 = start.start;
+            start2.assign("timezoneOffset", tmp7);
+            start.text = start.text + match[0];
           }
         }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_7 = fn(now);
-    class PTCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = closure_0(this, PTCasualDateParser);
-        tmp2 = c2;
-        obj = c2(PTCasualDateParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+        obj = text;
       }
-    }
-    _classCallCheck = PTCasualDateParser;
-    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-            const formatted = arg1[0].toLowerCase();
-            if ("agora" === formatted) {
-              return closure_7.now(reference.reference);
-            } else if ("hoje" === formatted) {
-              return closure_7.today(reference.reference);
-            } else {
-              if ("amanha" !== formatted) {
-                if ("amanh\u00E3" !== formatted) {
-                  if ("ontem" === formatted) {
-                    return closure_7.yesterday(reference.reference);
-                  } else {
-                    return tmp2;
-                  }
-                }
-              }
-              return closure_7.tomorrow(reference.reference);
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(PTCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
+    });
+    return arr;
   }
-} else {
-  let _Object = Object;
-}
+};
+const items = [entry];
+
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

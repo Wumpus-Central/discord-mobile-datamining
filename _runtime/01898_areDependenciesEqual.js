@@ -60,15 +60,15 @@ export function ensureWorkletHandlers(arg0) {
     throw error;
   }
 }
-export function areWorkletHandlersEqual(memoizedGestureCallbacks, prevHandlers) {
-  if (memoizedGestureCallbacks) {
+export function areWorkletHandlersEqual(ChannelListLegendListTsx1, prevHandlers) {
+  if (ChannelListLegendListTsx1) {
     if (prevHandlers) {
       const _Object = Object;
-      const keys = Object.keys(memoizedGestureCallbacks);
+      const keys = Object.keys(ChannelListLegendListTsx1);
       const _Object2 = Object;
       return keys.length === Object.keys(prevHandlers).length && keys.every((item) => {
         let tmp3 = !tmp;
-        if (memoizedGestureCallbacks[item]) {
+        if (ChannelListLegendListTsx1[item]) {
           tmp3 = !tmp2;
         }
         let tmp4 = !tmp3;

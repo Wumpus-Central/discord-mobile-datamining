@@ -1,18 +1,7 @@
 // === Module 13022: ? ===
 
 // Module 13022
-import _mod12972 from "module_12972" /* 12972 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const CDO = _mod12972.TYPE.CDO;
 
-export default {
-  name: "CDO",
-  structure: [],
-  parse() {
-    this.eat(CDO);
-    return { type: "CDO", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
-  },
-  generate() {
-    this.chunk("<!--");
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7036049d54a4b04a2af6c92d50fc7e6d", name: "ImagesIcon", type: "png" });

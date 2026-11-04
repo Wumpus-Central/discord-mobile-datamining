@@ -1,224 +1,148 @@
 // === Module 13296: ? ===
 
 // Module 13296
-import errorCallback from "errorCallback" /* 13186 */;
-import _mod13214 from "module_13214" /* 13214 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import "module_13189";
-import consoleSandbox from "module_13190" /* 13190 */;
-import __SENTRY_DEBUG__ from "module_13218" /* 13218 */;
-import dateTimestampInSeconds from "module_13204" /* 13204 */;
+import _mod13279 from "module_13279" /* 13279 */;
+import _mod13284 from "module_13284" /* 13284 */;
+import _mod13287 from "module_13287" /* 13287 */;
+import _mod13297 from "module_13297" /* 13297 */;
+import __SENTRY_DEBUG__ from "module_13272" /* 13272 */;
+import consoleSandbox from "module_13273" /* 13273 */;
 
-errorCallback;
-_mod13214;
-let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
-
-export function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep(async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp3;
-            closure_1 = tmp5;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            const path = closure_0.path;
-            closure_129_0 = path;
-            ({ next: closure_129_1, rawInput, getRawInput } = closure_0);
-            const client = closure_0(13217).getClient();
-            let options = client;
-            if (client) {
-              options = client.getOptions();
-            }
-            let obj5 = { procedure_path: path, procedure_type: closure_0.type };
-            closure_129_2 = obj5;
-            if (undefined !== closure_0.attachRpcInput) {
-              let sendDefaultPii = closure_0.attachRpcInput;
-            } else {
-              sendDefaultPii = options;
-              if (options) {
-                sendDefaultPii = options.sendDefaultPii;
-              }
-            }
-            if (sendDefaultPii) {
-              if (undefined !== rawInput) {
-                const normalizer2 = closure_0(13235);
-                obj5.input = normalizer2.normalize(rawInput);
-              }
-              if (undefined !== getRawInput) {
-                if (typeof getRawInput === "function") {
-                  c4 = 1;
-                  c5 = 2;
-                  c6 = 1;
-                  let obj6 = { value: getRawInput(), done: false };
-                  return obj6;
-                }
-              }
-            }
-            const obj7 = closure_0(13217);
-          }
-        } else {
-          if (1 === tmp8) {
-            c4 = 0;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_3 = value;
-            const normalizer = closure_0(13235);
-            closure_129_2.input = normalizer.normalize(closure_129_3);
-            c4 = 0;
-          }
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-        closure_0(13217).withScope((setContext) => {
-          setContext.setContext("trpc", closure_2);
-          obj = closure_1_0(dependencyMap[10]);
-          closure_0 = closure_1_2(function*(arg0) {
-            if (c6 === 2) {
-              c6 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp6 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c6 = 2;
-                if (0 === c5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_2 = tmp3;
-                    closure_1 = tmp7;
-                    closure_129_0 = closure_0;
-                    closure_129_1 = undefined;
-                    c4 = 1;
-                    c5 = 2;
-                    c6 = 1;
-                    const obj5 = { value: closure_1(), done: false };
-                    return obj5;
-                  }
-                } else if (1 === tmp7) {
-                  c4 = 0;
-                  closure_129_2 = closure_3;
-                  closure_0(dependencyMap[7]).captureException(closure_129_2, closure_2_3);
-                  closure_129_0.end();
-                  throw closure_129_2;
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  closure_129_1 = value;
-                  (function captureIfError(ok) {
-                    let tmp = typeof ok === "object";
-                    if (typeof ok === "object") {
-                      tmp = null !== ok;
-                    }
-                    if (tmp) {
-                      tmp = "ok" in ok;
-                    }
-                    if (tmp) {
-                      tmp = !ok.ok;
-                    }
-                    if (tmp) {
-                      tmp = "error" in ok;
-                    }
-                    if (tmp) {
-                      closure_1_0(dependencyMap[7]).captureException(ok.error, closure_1_3);
-                      obj = closure_1_0(dependencyMap[7]);
-                    }
-                  })(closure_129_1);
-                  closure_129_0.end();
-                  c4 = 0;
-                  c6 = 3;
-                  obj = { value: closure_129_1, done: true };
-                  return obj;
-                }
-              } catch (tmp27) {
-                closure_3 = tmp27;
-                if (tmp4 === c4) {
-                  c6 = tmp2;
-                  throw tmp27;
-                } else {
-                  c5 = tmp;
-                }
-              }
-            }
-          });
-          return obj.startSpanManual({ name: "trpc/" + closure_0, op: "rpc.server", attributes: { [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } }, function(arg0) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          });
-        });
-        c6 = 3;
-        const obj3 = closure_0(13217);
-      } catch (tmp24) {
-        closure_3 = tmp24;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp24;
-        } else {
-          c5 = tmp;
-        }
-      }
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
     }
-  });
-  return function(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
     }
-    return applyArgumentsResult;
-  };
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
+    }
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod13287.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
+    }
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
+    }
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
+    }
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
+    }
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
+    } else {
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
+      }
+      ipAddress.duration = num2;
+    }
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
+  } else {
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod13284.uuid4();
+    }
+    ipAddress.sid = sid;
+  }
 }
+_mod13297;
+
+export function closeSession(status, status2) {
+  if (status2) {
+    const obj2 = { status: status2 };
+    let obj = obj2;
+  } else {
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
+    }
+  }
+  updateSession(status, obj);
+}
+export function makeSession(arg0) {
+  const timestampInSecondsResult = obj2(13287).timestampInSeconds();
+  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
+  let obj = obj2(13287);
+  obj2.sid = obj2(13284).uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+    const obj = _mod13279;
+    obj3.started = new Date(1000 * obj2.started).toISOString();
+    const date = new Date(1000 * obj2.started);
+    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj2.status, errors: obj2.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
+    }
+    obj3.did = combined;
+    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
+    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
+    return obj.dropUndefinedKeys(obj3);
+  };
+  if (arg0) {
+    updateSession(obj2, arg0);
+  }
+  return obj2;
+}
+export { updateSession };

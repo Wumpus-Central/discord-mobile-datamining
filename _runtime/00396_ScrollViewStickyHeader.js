@@ -9,7 +9,7 @@ import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
 require = fn;
 const noop = fn(19);
-({ cloneElement: hasOwnProperty, useCallback: metroRequire, useEffect: closure_7, useMemo: closure_8, useRef: closure_9, useState: closure_10 } = noop);
+({ cloneElement: hasOwnProperty, useCallback: closure_6, useEffect: metroImportDefault, useMemo: closure_8, useRef: closure_9, useState: closure_10 } = noop);
 const jsx = fn(21).jsx;
 let closure_12 = get_hairlineWidth.create({ fill: { flex: 1 }, header: { zIndex: 10 } });
 

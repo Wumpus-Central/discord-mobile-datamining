@@ -1,16 +1,14 @@
 // === Module 10639: ? ===
 
 // Module 10639
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10457 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import _mod10626 from "module_10626" /* 10626 */;
+import _mod10636 from "module_10636" /* 10636 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ITWeekdayParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10626.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)", "i");
-class ITWeekdayParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ITWeekdayParser);
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ITWeekdayParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,11 +48,11 @@ class ITWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _mod10636.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + RUTimeUnitAgoFormatParser(10634).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   }
 };
 const items = [
@@ -63,31 +60,11 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "ultima";
-      if ("ultima" != formatted1) {
-        str3 = "ultima";
-        if ("scorsa" != formatted1) {
-          str3 = "prossima";
-          if ("prossima" != formatted1) {
-            str3 = null;
-            if ("questa" == formatted1) {
-              str3 = "questa";
-            }
-          }
-        }
-      }
-      return ITWeekdayParser(10484).createParsingComponentsAtWeekday(reference.reference, ITWeekdayParser(10626).WEEKDAY_DICTIONARY[formatted], str3);
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10634).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10508).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10507).reverseDuration(RUTimeUnitAgoFormatParser(10634).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(ITWeekdayParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

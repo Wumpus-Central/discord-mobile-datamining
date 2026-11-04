@@ -24,7 +24,7 @@ if (typeof Object.is === "function") {
     return tmp;
   };
 }
-({ useRef: c3, useEffect: closure_4, useMemo: hasOwnProperty, useDebugValue: metroRequire } = noop);
+({ useRef: c3, useEffect: closure_4, useMemo: hasOwnProperty, useDebugValue: closure_6 } = noop);
 
 export (arg0, arg1, arg2, arg3, arg4) => {
   _require = arg1;

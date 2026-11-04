@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "0e971a927dbdc3183654a0324b5f2831", name: "ic_partnered_guild_icon_black_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 480, height: 413, scales: [2, 3], hash: "b25b2e24db6c14f15201cb7533aed65e", name: "register-background-dark", type: "png" });

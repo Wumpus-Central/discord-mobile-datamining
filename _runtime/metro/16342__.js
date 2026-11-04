@@ -1,34 +1,30 @@
 // === Module 16342: ? ===
 
 // Module 16342
-import _mod17 from "module_17" /* 17 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 16343 */;
+const require = globalThis.__r;
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_16343").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
 }
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
-
-};
-
-export const URL = replaceByteInByteSequence.URL;

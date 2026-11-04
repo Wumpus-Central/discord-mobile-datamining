@@ -1,7 +1,17 @@
 // === Module 13179: ? ===
 
 // Module 13179
-import registerAsset from "module_1119" /* 1119 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "66946e5f24d9f7d485f69d93acc2bd06", name: "CloudDownloadIcon", type: "png" });
+export const parse = require("module_13180").parse;
+export const compile = require("compile").compile;
+export const generate = require("compile").generate;
+export default function nthCheck(arg0) {
+  return require("compile").compile(require("module_13180").parse(arg0));
+};
+export function sequence(arg0) {
+  return require("compile").generate(require("module_13180").parse(arg0));
+}

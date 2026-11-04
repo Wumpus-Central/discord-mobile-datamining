@@ -1,38 +1,7 @@
 // === Module 7147: ? ===
 
 // Module 7147
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function isArrayish(str) {
-  let tmp = !str;
-  if (str) {
-    tmp = typeof str === "string";
-  }
-  let tmp2 = !tmp;
-  if (!tmp) {
-    const _Array = Array;
-    let isArray = str instanceof Array;
-    if (!isArray) {
-      const _Array2 = Array;
-      isArray = Array.isArray(str);
-    }
-    if (!isArray) {
-      let tmp5 = str.length >= 0;
-      if (tmp5) {
-        const _Function = Function;
-        let tmp6 = str.splice instanceof Function;
-        if (!tmp6) {
-          const _Object = Object;
-          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(str, str.length - 1);
-          if (ownPropertyDescriptor) {
-            ownPropertyDescriptor = "String" !== str.constructor.name;
-          }
-          tmp6 = ownPropertyDescriptor;
-        }
-        tmp5 = tmp6;
-      }
-      isArray = tmp5;
-    }
-    tmp2 = isArray;
-  }
-  return tmp2;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_q346zepp7a6ehccmv4cim36l24/node_modules/@react-navigation/elements/lib/module/assets", width: 24, height: 24, scales: [1, 2, 3, 4], hash: "dbc3af23c3cbbe45d326afc1d31c2e92", name: "back-icon", type: "png" });

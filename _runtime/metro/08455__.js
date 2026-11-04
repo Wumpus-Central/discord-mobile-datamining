@@ -1,44 +1,24 @@
 // === Module 8455: ? ===
 
 // Module 8455
-const require = globalThis.__r;
-
-const require = arg1;
-const dependencyMap = arg6;
-let closure_2 = [6, 7, 99];
 
 export default {
-  get(buffer, Compression, arg2) {
-    let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
+  get(arg0) {
+    if (arg0) {
+      return arg0;
+    } else {
+      if (typeof globalThis.DOMParser !== "undefined") {
+        const dOMParser = new globalThis.DOMParser();
+        return dOMParser;
+      } else {
+        try {
+          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
+          const obj = { onError: result.onErrorStopParsing };
+          const dOMParser1 = new result.DOMParser(obj);
+          return dOMParser1;
+        } catch (err) {
+        }
       }
-      prop = hasItem;
     }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat.value;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength.value;
-    }
-    if (prop) {
-      Compression.type = "image/jpeg";
-      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
-      buffer = buffer.buffer;
-      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("module_8403").deferInit(Compression, "base64", function() {
-        return require("module_8403").getBase64Image(this.image);
-      });
-      const obj = require("module_8403");
-    }
-    return Compression;
   }
 };

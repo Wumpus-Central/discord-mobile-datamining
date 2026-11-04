@@ -8,10 +8,10 @@ const dependencyMap = arg6;
 let closure_2 = { code: "(function pnpm_reanimatedNativeTs1(event){let[handlers,context]=this.__closure;const{onKeyboardMoveStart:onKeyboardMoveStart,onKeyboardMove:onKeyboardMove,onKeyboardMoveEnd:onKeyboardMoveEnd,onKeyboardMoveInteractive:onKeyboardMoveInteractive}=handlers;if(onKeyboardMoveStart&&event.eventName.endsWith(\"onKeyboardMoveStart\")){onKeyboardMoveStart(event,context);}if(onKeyboardMove&&event.eventName.endsWith(\"onKeyboardMove\")){onKeyboardMove(event,context);}if(onKeyboardMoveEnd&&event.eventName.endsWith(\"onKeyboardMoveEnd\")){onKeyboardMoveEnd(event,context);}if(onKeyboardMoveInteractive&&event.eventName.endsWith(\"onKeyboardMoveInteractive\")){onKeyboardMoveInteractive(event,context);}})" };
 let closure_3 = { code: "(function pnpm_reanimatedNativeTs2(event){let[handlers,context]=this.__closure;const{onFocusedInputLayoutChanged:onFocusedInputLayoutChanged}=handlers;if(onFocusedInputLayoutChanged&&event.eventName.endsWith(\"onFocusedInputLayoutChanged\")){onFocusedInputLayoutChanged(event,context);}})" };
 
-export (memoizedGestureCallbacks, items26) => {
-  const handler = _mod1652.useHandler(memoizedGestureCallbacks, items26);
+export (ChannelListLegendListTsx1, items26) => {
+  const handler = _mod1652.useHandler(ChannelListLegendListTsx1, items26);
   ({ context, doDependenciesDiffer } = handler);
-  items = [closure_2, memoizedGestureCallbacks, context];
+  items = [closure_2, ChannelListLegendListTsx1, context];
   c0 = undefined;
   c1 = undefined;
   [tmp2, tmp3, tmp4] = items;
@@ -56,10 +56,10 @@ export (memoizedGestureCallbacks, items26) => {
   pnpm_reanimatedNativeTs1.__initData = tmp2;
   return _mod1652.useEvent(pnpm_reanimatedNativeTs1, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], doDependenciesDiffer);
 }
-export (memoizedGestureCallbacks, items26) => {
-  const handler = _mod1652.useHandler(memoizedGestureCallbacks, items26);
+export (ChannelListLegendListTsx1, items26) => {
+  const handler = _mod1652.useHandler(ChannelListLegendListTsx1, items26);
   ({ context, doDependenciesDiffer } = handler);
-  items = [closure_3, memoizedGestureCallbacks, context];
+  items = [closure_3, ChannelListLegendListTsx1, context];
   c0 = undefined;
   c1 = undefined;
   [tmp2, tmp3, tmp4] = items;

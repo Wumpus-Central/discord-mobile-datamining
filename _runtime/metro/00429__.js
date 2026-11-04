@@ -31,15 +31,15 @@ function _isNativeReflectConstruct() {
 }
 let closure_2 = ["onBlur", "onFocus"];
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 class TouchableOpacity {
   constructor() {
     self = this;
     items = [...arguments];
     tmp = closure_4(this, TouchableOpacity);
     items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableOpacity);
+    tmp2 = closure_6;
+    obj = closure_6(TouchableOpacity);
     tmp3 = hasOwnProperty;
     if (closure_9()) {
       tmp5 = globalThis;
@@ -321,7 +321,7 @@ let items = [
       const merged1 = Object.assign(_objectWithoutProperties(eventHandlers, closure_2));
       const items1 = [self.props.children, null];
       obj3.children = items1;
-      return React6(TouchableOpacity(397).View, obj3);
+      return React5(TouchableOpacity(397).View, obj3);
     }
   },
   {

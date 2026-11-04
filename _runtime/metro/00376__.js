@@ -38,8 +38,8 @@ class SpringAnimation {
     tmp = closure_4(this, SpringAnimation);
     items = [];
     items[0] = global;
-    tmp2 = metroRequire;
-    obj = metroRequire(SpringAnimation);
+    tmp2 = closure_6;
+    obj = closure_6(SpringAnimation);
     tmp3 = hasOwnProperty;
     if (closure_8()) {
       tmp5 = globalThis;
@@ -201,7 +201,7 @@ let items = [
     key: "start",
     value: function start(_startPosition, _onUpdate, arg2, getInternalState, self) {
       self = this;
-      const tmp2 = _get(metroRequire(SpringAnimation.prototype), "start", this);
+      const tmp2 = metroImportDefault(_getPrototypeOf(SpringAnimation.prototype), "start", this);
       closure_1 = tmp2;
       let fn = tmp2;
       if (typeof tmp2 === "function") {
@@ -316,7 +316,7 @@ let items = [
     key: "stop",
     value: function stop() {
       const self = this;
-      let fn = _get(metroRequire(SpringAnimation.prototype), "stop", this);
+      let fn = metroImportDefault(_getPrototypeOf(SpringAnimation.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

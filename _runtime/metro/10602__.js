@@ -1,13 +1,16 @@
 // === Module 10602: ? ===
 
 // Module 10602
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10471 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10505 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
+import _mod10599 from "module_10599" /* 10599 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const NLMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +30,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class ESTimeExpressionParser {
+const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10599.MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + _mod10599.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class NLMonthNameParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ESTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(ESTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, NLMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,22 +51,30 @@ class ESTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ESTimeExpressionParser;
-_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(NLMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      parsingComponents.imply("day", 1);
+      const tmp4 = NLMonthNameParser(10599).MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
+      parsingComponents.assign("month", tmp4);
+      if (arg1[2]) {
+        parsingComponents.assign("year", NLMonthNameParser(10599).parseYear(arg1[2]));
+      } else {
+        parsingComponents.imply("year", NLMonthNameParser(10506).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
+      }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(ESTimeExpressionParser, items);
+export default _createClass(NLMonthNameParser, items);

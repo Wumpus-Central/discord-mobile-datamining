@@ -1,5 +1,7 @@
 // === Module 9301: ? ===
 
 // Module 9301
+import registerAsset from "module_1119" /* 1119 */;
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 251, height: 147, scales: [2, 3], hash: "c013c533d835389917bf422e9978d1be", name: "img_app_crash_light", type: "png" });

@@ -141,7 +141,7 @@ class AnimatedObject {
     tmp2 = closure_4;
     obj = closure_4(AnimatedObject);
     tmp3 = closure_3;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -248,7 +248,7 @@ const entry1 = {
       items = [undefined];
       let constructor = _getPrototypeOf;
       const obj = _getPrototypeOf(AnimatedObject);
-      if (_isNativeReflectConstruct()) {
+      if (metroImportDefault()) {
         const _Reflect = Reflect;
         constructor = constructor(obj2).constructor;
         let constructResult = Reflect.construct(obj, items, constructor);

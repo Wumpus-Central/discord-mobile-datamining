@@ -13,13 +13,13 @@ let closure_6 = _classPrivateFieldKey("eventViewTag");
 class NativeEventsManager {
   constructor(arg0, arg1) {
     tmp = c2(this, NativeEventsManager);
-    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "Array" });
-    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Array" });
-    definePropertyResult2 = Object.defineProperty(this, metroRequire, { writable: true, value: -1 });
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(this, closure_6, { writable: true, value: -1 });
     closure_3(this, closure_4)[closure_4] = global;
     closure_3(this, hasOwnProperty)[hasOwnProperty] = arg1;
-    tmp5 = closure_3(this, metroRequire);
-    tmp5[metroRequire] = this.getEventViewTag();
+    tmp5 = closure_3(this, closure_6);
+    tmp5[closure_6] = this.getEventViewTag();
     return;
   }
 }

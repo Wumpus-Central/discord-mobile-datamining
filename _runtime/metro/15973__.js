@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "42c5142fba4f2f3f3d86c5b7ea6fd4ac", name: "YouTab", type: "lottie" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "39cdeaab77d36adb2361dc5c033acede", name: "locke_2", type: "png" });

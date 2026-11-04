@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "581f8c52f7fbe4b74bb81eae47db1969", name: "EmojiFaceWithMonocleIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "4410c16931512594c3c3f276c24fe456", name: "nelly_1", type: "png" });

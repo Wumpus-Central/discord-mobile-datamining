@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/favorites/intl", scales: [1], hash: "aa0a82d83dc9fb4fa46ecf6b99e72ff6", name: "FavoritesGuild.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/favorites/intl", scales: [1], hash: "665b24974d7109727579654c6314d9bf", name: "FavoritesGuild.compiled.messages", type: "jsona" });

@@ -30,7 +30,7 @@ function _isNativeReflectConstruct() {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const unknown = "unknown";
-const React6 = { componentStack: null, error: null, eventId: null };
+const React5 = { componentStack: null, error: null, eventId: null };
 class ErrorBoundary {
   constructor(arg0) {
     self = this;

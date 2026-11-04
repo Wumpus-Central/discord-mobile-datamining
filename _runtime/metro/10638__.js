@@ -1,14 +1,15 @@
 // === Module 10638: ? ===
 
 // Module 10638
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10519 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ITCasualTimeParser = require;
+const RUTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,72 +29,107 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
-class ITCasualTimeParser {
-  constructor() {
+class RUTimeExpressionParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, ITCasualTimeParser);
+    tmp = c2(this, RUTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(ITCasualTimeParser);
+    obj = closure_4(RUTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    if (closure_6()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return re6;
+  key: "patternFlags",
+  value: function patternFlags() {
+    return RUTimeExpressionParser(10634).REGEX_PARTS.flags;
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(refDate, arg1) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const formatted = arg1[1].toLowerCase();
-      if ("pomeriggio" === formatted) {
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10451).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else {
-        if ("sera" !== formatted) {
-          if ("notte" !== formatted) {
-            if ("mezzanotte" === formatted) {
-              const _Date = Date;
-              const date = new Date(refDate.getTime());
-              date.setDate(date.getDate() + 1);
-              ITCasualTimeParser(10463).assignSimilarDate(parsingComponents, date);
-              ITCasualTimeParser(10463).implySimilarTime(parsingComponents, date);
-              parsingComponents.imply("hour", 0);
-              parsingComponents.imply("minute", 0);
-              parsingComponents.imply("second", 0);
-            } else if ("mattina" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10451).Meridiem.AM);
-              parsingComponents.imply("hour", 6);
-            } else if ("mezzogiorno" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10451).Meridiem.AM);
-              parsingComponents.imply("hour", 12);
+    key: "primaryPatternLeftBoundary",
+    value: function primaryPatternLeftBoundary() {
+      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
+    }
+  },
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0438|\u043F\u043E|\\?)\\s*";
+    }
+  },
+  {
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:\u0432|\u0441)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" + RUTimeExpressionParser(10634).REGEX_PARTS.rightBoundary;
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(_getPrototypeOf(RUTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => closure_1.apply(self, items);
+      }
+      items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", RUTimeExpressionParser(10510).Meridiem.PM);
             }
           }
+          if (value < 6) {
+            fnResult.assign("meridiem", RUTimeExpressionParser(10510).Meridiem.AM);
+          }
         }
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10451).Meridiem.PM);
-        parsingComponents.imply("hour", 20);
+        const first1 = arg1[0];
+        if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
+          fnResult.assign("meridiem", RUTimeExpressionParser(10510).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        }
+        const first2 = arg1[0];
+        if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
+          fnResult.assign("meridiem", RUTimeExpressionParser(10510).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
+        }
       }
-      return parsingComponents;
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(ITCasualTimeParser, items);
+export default _createClass(RUTimeExpressionParser, items);

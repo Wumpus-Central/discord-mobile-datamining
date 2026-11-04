@@ -857,7 +857,7 @@ if (0 < items.length) {
   do {
     str2 = items[num2];
     _mod1335.prototype[str2.toLowerCase()] = function(arg0, arg1) {
-      const request = new metroRequire.Request(str2, arg0);
+      const request = new _Request.Request(str2, arg0);
       this._setDefaults(request);
       if (arg1) {
         request.end(arg1);

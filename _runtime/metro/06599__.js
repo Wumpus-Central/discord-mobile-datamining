@@ -1,41 +1,11 @@
 // === Module 6599: ? ===
 
 // Module 6599
-import _Symbol from "_Symbol" /* 1296 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
-import regexTester from "regexTester" /* 1462 */;
 
-let closure_0 = callBoundIntrinsic("Object.prototype.toString");
-if (_Symbol()) {
-  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
-  let closure_2 = regexTester(/^Symbol\(.*\)$/);
-  module.exports = function isSymbol(obj) {
-    if (typeof obj === "symbol") {
-      return true;
-    } else {
-      if (obj) {
-        if (typeof obj === "object") {
-          if ("[object Symbol]" === closure_0(obj)) {
-            try {
-              return (function isRealSymbolObject(arg0) {
-                const valueOfResult = arg0.valueOf();
-                let tmp2 = typeof valueOfResult === "symbol";
-                if (typeof valueOfResult === "symbol") {
-                  tmp2 = closure_1_2(closure_1_1(arg0));
-                }
-                return tmp2;
-              })(obj);
-            } catch (err) {
-              return false;
-            }
-          }
-        }
-      }
-      return false;
+export default function getIterator(arg0) {
+  if (null != arg0) {
+    if (undefined !== arg0[iterator]) {
+      return arg0[iterator]();
     }
-  };
-} else {
-  module.exports = function isSymbol(arg0) {
-    return false;
-  };
-}
+  }
+};

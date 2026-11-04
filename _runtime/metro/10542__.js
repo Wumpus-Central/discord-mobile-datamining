@@ -1,98 +1,80 @@
 // === Module 10542: ? ===
 
 // Module 10542
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10457 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10464 */;
-import _mod10538 from "module_10538" /* 10538 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const PTMonthNameLittleEndianParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const ExtractTimezoneAbbrRefiner = require;
+const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
+class ExtractTimezoneAbbrRefiner {
+  constructor(arg0) {
+    tmp = c2(this, ExtractTimezoneAbbrRefiner);
+    this.timezoneOverrides = global;
+    return;
   }
 }
-const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10538.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10538.YEAR_PATTERN + "))?(?=\\W|$)", "i");
-class PTMonthNameLittleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, PTMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(PTMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "refine",
+  value: function refine(option, arr) {
+    let self = this;
+    let timezones = option.option.timezones;
+    if (null === timezones) {
+      timezones = {};
+    }
+    const item = arr.forEach((item) => {
+      const match = regExp.exec(option.text.substring(item.index + item.text.length));
+      if (match) {
+        const formatted = match[1].toUpperCase();
+        const start = item.start;
+        let refDate = start.date();
+        if (null === refDate) {
+          refDate = item.refDate;
+        }
+        if (null === refDate) {
+          const _Date = Date;
+          refDate = new Date();
+        }
+        const _Object = Object;
+        const _Object2 = Object;
+        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
+        const toTimezoneOffsetResult = ExtractTimezoneAbbrRefiner(10509).toTimezoneOffset(formatted, refDate, merged);
+        self = toTimezoneOffsetResult;
+        if (null != toTimezoneOffsetResult) {
+          option.debug(() => {
+            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + item.start);
+          });
+          const start6 = item.start;
+          value = start6.get("timezoneOffset");
+          if (null !== value) {
+            if (toTimezoneOffsetResult != value) {
+              const start2 = item.start;
+            }
+          }
+          const start3 = item.start;
+          if (!tmp14) {
+            item.text = item.text + match[0];
+            const start4 = item.start;
+            if (!start4.isCertain("timezoneOffset")) {
+              const start5 = item.start;
+              start5.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+            let isCertainResult = null == item.end;
+            if (!isCertainResult) {
+              const end = item.end;
+              isCertainResult = end.isCertain("timezoneOffset");
+            }
+            if (!isCertainResult) {
+              const end2 = item.end;
+              end2.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+          }
+          tmp14 = start3.isOnlyDate() && formatted != match[1];
+        }
+      }
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = PTMonthNameLittleEndianParser(10538).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", PTMonthNameLittleEndianParser(10538).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", PTMonthNameLittleEndianParser(10458).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
-        }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
-      }
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(PTMonthNameLittleEndianParser, items);
+export default _createClass(ExtractTimezoneAbbrRefiner, items);

@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Appearance: metroRequire, Image: closure_7, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
+({ Appearance: closure_6, Image: metroImportDefault, Text: closure_8, TouchableOpacity: closure_9 } = get_ActivityIndicator);
 class FeedbackButton {
   constructor(arg0) {
     self = this;
@@ -116,8 +116,8 @@ let items = [
       const tmpResult2 = FeedbackButton(1065);
       obj4.source = { uri: FeedbackButton(1066).feedbackIcon };
       obj4.style = merged6;
-      const element = <React5 source={null} style={null} />;
-      return <React7 style={merged2} onPress={null} accessibilityLabel={null}>{element}<React6 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</React6></React7>;
+      const element = <metroImportDefault source={null} style={null} />;
+      return <React6 style={merged2} onPress={null} accessibilityLabel={null}>{element}<React5 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</React5></React6>;
     }
   }
 ];

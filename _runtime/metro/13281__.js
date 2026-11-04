@@ -1,154 +1,192 @@
 // === Module 13281: ? ===
 
 // Module 13281
-import _mod13282 from "module_13282" /* 13282 */;
-import setupIntegration from "module_13246" /* 13246 */;
+import _mod13274 from "module_13274" /* 13274 */;
+import _mod13280 from "module_13280" /* 13280 */;
 
-
-export function generateIteratee(arg0) {
-  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (root) => {
-    if (root.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-      if (!isMatch) {
-        const filename = root.filename;
-        let hasItem = filename.includes("\\");
-        if (hasItem) {
-          const filename2 = root.filename;
-          hasItem = !filename2.includes("/");
-        }
-        isMatch = hasItem;
-      }
-      if (fn) {
-        if (root) {
-          const filename1 = root.filename;
-          if (0 === filename1.indexOf(root)) {
-            root.filename = filename1.replace(root, prefix);
-          }
-        }
-      } else if (isMatch) {
-        if (isMatch) {
-          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-          const str5 = str3.replace(/^[a-zA-Z]:/, "");
-        } else {
-          replaced = str3;
-        }
-        const obj2 = _mod13282;
-        if (root) {
-          let relativeResult = obj2.relative(root, replaced);
-        } else {
-          relativeResult = obj2.basename(replaced);
-        }
-        const _HermesInternal = HermesInternal;
-        root.filename = "" + prefix + relativeResult;
-      }
-      return root;
-    } else {
-      return root;
-    }
-  };
-}
-export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let fn;
-  ({ prefix, root } = obj);
-  if (!prefix) {
-    prefix = "app:///";
-  }
-  fn = obj.iteratee;
-  if (!fn) {
-    fn = (root) => {
-      if (root.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-        if (!isMatch) {
-          const filename = root.filename;
-          let hasItem = filename.includes("\\");
-          if (hasItem) {
-            const filename2 = root.filename;
-            hasItem = !filename2.includes("/");
-          }
-          isMatch = hasItem;
-        }
-        if (fn) {
-          if (root) {
-            const filename1 = root.filename;
-            if (0 === filename1.indexOf(root)) {
-              root.filename = filename1.replace(root, prefix);
+require = arg1;
+const dependencyMap = arg6;
+function _htmlElementAsString(tagName, arr) {
+  items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod13274.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
             }
           }
-        } else if (isMatch) {
-          if (isMatch) {
-            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-            const str5 = str3.replace(/^[a-zA-Z]:/, "");
-          } else {
-            replaced = str3;
-          }
-          const obj2 = _mod13282;
-          if (root) {
-            let relativeResult = obj2.relative(root, replaced);
-          } else {
-            relativeResult = obj2.basename(replaced);
-          }
-          const _HermesInternal = HermesInternal;
-          root.filename = "" + prefix + relativeResult;
         }
-        return root;
-      } else {
-        return root;
       }
-    };
-  }
-  return {
-    name: "RewriteFrames",
-    processEvent(exception) {
-      exception = exception.exception;
-      if (exception) {
-        const _Array = Array;
-        exception = Array.isArray(exception.exception.values);
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
       }
-      let tmp2 = exception;
-      if (exception) {
-        tmp2 = (function _processExceptionsEvent(exception) {
-          try {
-            const obj = {};
-            let merged = Object.assign(exception);
-            let obj2 = {};
-            let merged1 = Object.assign(exception.exception);
-            const values = exception.exception.values;
-            obj2.values = values.map((stacktrace) => {
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
-              if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
-                const obj2 = {};
-                const merged1 = Object.assign(stacktrace2);
-                let frames = stacktrace2;
-                if (stacktrace2) {
-                  frames = stacktrace2.frames;
-                }
-                if (frames) {
-                  const frames1 = stacktrace2.frames;
-                  frames = frames1.map((item) => closure_1_0(item));
-                }
-                const obj3 = { stacktrace: null };
-                obj2.frames = frames;
-                obj3.stacktrace = obj2;
-                stacktrace = obj3;
-              }
-              const merged2 = Object.assign(stacktrace);
-              return {};
-            });
-            obj.exception = obj2;
-            return obj;
-          } catch (err) {
-            return tmp;
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + "=\"" + item[1] + "\"]");
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = "=\"";
+            let str10 = "\"]";
+            let arr2 = items.push("[" + tmp22 + "=\"" + tmp24 + "\"]");
           }
-        })(exception);
+          continue;
+        }
+        return items.join("");
       }
-      return tmp2;
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr7 = items.push("." + tmp14);
+            continue;
+          }
+        }
+        tmpResult = _mod13280;
+      }
     }
-  };
-});
+  }
+  return "";
+}
+
+export function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod13274.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
+  }
+}
+export function getDomElement(arg0) {
+  let element = null;
+  if (_mod13274.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod13274.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod13274.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
+    }
+  }
+  return element;
+}
+export function getLocationHref() {
+  try {
+    return _mod13274.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
+    return "";
+  }
+}
+export function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
+    }
+  } else {
+    return "<unknown>";
+  }
+}

@@ -1,7 +1,21 @@
 // === Module 8136: ? ===
 
 // Module 8136
-import registerAsset from "module_1119" /* 1119 */;
+import _mod514 from "module_514" /* 514 */;
+import baseIteratee from "baseIteratee" /* 583 */;
+import arrayAggregator from "arrayAggregator" /* 8137 */;
+import baseAggregator from "baseAggregator" /* 8138 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f6beefc7c46ba35914164c9b6ddbe0f6", name: "GoogleNeutralIcon", type: "png" });
+export default function createAggregator(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (arg0, arg1) => {
+    if (_mod514(arg0)) {
+      let tmpResult = arrayAggregator;
+    } else {
+      tmpResult = baseAggregator;
+    }
+    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
+  };
+};

@@ -1,17 +1,32 @@
 // === Module 13277: ? ===
 
 // Module 13277
+import _mod13271 from "module_13271" /* 13271 */;
+import _mod13274 from "module_13274" /* 13274 */;
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
+require = arg1;
+const dependencyMap = arg6;
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod13274.GLOBAL_OBJ.onunhandledrejection;
+  _mod13274.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+    _mod13271.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
     }
-    str = str2;
-  }
-  return str;
+  };
+  _mod13274.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+let onunhandledrejection = null;
+
+export function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod13271.addHandler("unhandledrejection", errorCallback);
+  _mod13271.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+}

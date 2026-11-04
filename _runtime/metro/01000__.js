@@ -41,7 +41,7 @@ class Profiler {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(Profiler);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

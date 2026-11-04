@@ -9,10 +9,10 @@ import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-function useGenericKeyboardHandler(memoizedGestureCallbacks, items2) {
+function useGenericKeyboardHandler(ChannelListLegendListTsx1, items2) {
   NOOP.useKeyboardContext();
   const obj2 = _mod1652;
-  items = [closure_5, memoizedGestureCallbacks];
+  items = [closure_5, ChannelListLegendListTsx1];
   c0 = undefined;
   [tmp, tmp2] = items;
   function pnpm_indexTs1(eventName) {
@@ -49,7 +49,7 @@ function useGenericKeyboardHandler(memoizedGestureCallbacks, items2) {
   pnpm_indexTs1.__closure = items1;
   pnpm_indexTs1.__workletHash = 82243721795;
   pnpm_indexTs1.__initData = tmp;
-  closure_1 = _mod1652.useEvent(pnpm_indexTs1, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(memoizedGestureCallbacks, items2).doDependenciesDiffer);
+  closure_1 = _mod1652.useEvent(pnpm_indexTs1, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(ChannelListLegendListTsx1, items2).doDependenciesDiffer);
   React3(() => {
     _undefined.setKeyboardHandlers(closure_1);
     return () => closure_0();
@@ -109,7 +109,7 @@ export () => {
   }
 }
 export { useGenericKeyboardHandler };
-export function useKeyboardHandler(memoizedGestureCallbacks, items2) {
+export function useKeyboardHandler(ChannelListLegendListTsx1, items2) {
   if (typeof useResizeMode === "function") {
     React2(() => {
       let KeyboardController = _mod1971.KeyboardController;
@@ -119,7 +119,7 @@ export function useKeyboardHandler(memoizedGestureCallbacks, items2) {
         return KeyboardController.setDefaultMode();
       };
     }, []);
-    useGenericKeyboardHandler(memoizedGestureCallbacks, items2);
+    useGenericKeyboardHandler(ChannelListLegendListTsx1, items2);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -132,10 +132,10 @@ export function useReanimatedFocusedInput() {
   const keyboardContext = NOOP.useKeyboardContext();
   return { input: keyboardContext.layout, update: keyboardContext.update };
 }
-export function useFocusedInputHandler(memoizedGestureCallbacks, items26) {
+export function useFocusedInputHandler(ChannelListLegendListTsx1, items26) {
   NOOP.useKeyboardContext();
   const obj2 = _mod1652;
-  items = [closure_7, memoizedGestureCallbacks];
+  items = [closure_7, ChannelListLegendListTsx1];
   c0 = undefined;
   [tmp, tmp2] = items;
   function pnpm_indexTs2(eventName) {
@@ -158,7 +158,7 @@ export function useFocusedInputHandler(memoizedGestureCallbacks, items26) {
   pnpm_indexTs2.__closure = items1;
   pnpm_indexTs2.__workletHash = 3141072070902;
   pnpm_indexTs2.__initData = tmp;
-  closure_1 = _mod1652.useEvent(pnpm_indexTs2, ["onFocusedInputTextChanged", "onFocusedInputSelectionChanged"], obj2.useHandler(memoizedGestureCallbacks, items26).doDependenciesDiffer);
+  closure_1 = _mod1652.useEvent(pnpm_indexTs2, ["onFocusedInputTextChanged", "onFocusedInputSelectionChanged"], obj2.useHandler(ChannelListLegendListTsx1, items26).doDependenciesDiffer);
   React3(() => {
     _undefined.setInputHandlers(closure_1);
     return () => closure_0();

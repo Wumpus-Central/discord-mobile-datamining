@@ -1,9 +1,57 @@
 // === Module 13055: ? ===
 
 // Module 13055
-import defaultRecognizer from "defaultRecognizer" /* 13056 */;
-import _mod13058 from "module_13058" /* 13058 */;
-import _mod13059 from "module_13059" /* 13059 */;
+import _mod13054 from "module_13054" /* 13054 */;
 
+const WhiteSpace = _mod13054.TYPE.WhiteSpace;
+const Comment = _mod13054.TYPE.Comment;
 
-export default { AtrulePrelude: defaultRecognizer, Selector: _mod13058, Value: _mod13059 };
+export default function readSequence(recognizer) {
+  const self = this;
+  const list = this.createList();
+  const obj = { recognizer, space: null, ignoreWS: false, ignoreWSAfter: false };
+  const scanner = this.scanner;
+  scanner.skipSC();
+  if (!this.scanner.eof) {
+    while (true) {
+      let tokenType = self.scanner.tokenType;
+      if (Comment === tokenType) {
+        let iter2 = self.scanner;
+        let nextResult = iter2.next();
+      } else {
+        if (WhiteSpace === tokenType) {
+          if (obj.ignoreWS) {
+            let iter = self.scanner;
+            let nextResult1 = iter.next();
+          } else {
+            obj.space = self.WhiteSpace();
+          }
+        } else {
+          let getNode = recognizer.getNode;
+          let call = getNode.call;
+          let tmp3 = typeof call === "unknown" ? getNode(obj) : call(self, obj);
+          if (undefined === tmp3) {
+            break;
+          } else {
+            if (null !== obj.space) {
+              let arr = list.push(obj.space);
+              obj.space = null;
+            }
+            let arr3 = list.push(tmp3);
+            if (obj.ignoreWSAfter) {
+              obj.ignoreWSAfter = false;
+              obj.ignoreWS = true;
+            } else {
+              obj.ignoreWS = false;
+            }
+          }
+        }
+        break;
+      }
+      if (self.scanner.eof) {
+        break;
+      }
+    }
+  }
+  return list;
+};

@@ -1,7 +1,14 @@
 // === Module 16138: ? ===
 
 // Module 16138
-import registerAsset from "module_1119" /* 1119 */;
+import _mod16131 from "module_16131" /* 16131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "7730e55139737e3f08bf4e9540ae6591", name: "StatusOffline", type: "png" });
+export default (arg0, arg1) => {
+  const tmp = _mod16131(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

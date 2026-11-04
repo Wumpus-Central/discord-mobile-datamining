@@ -41,7 +41,7 @@ function addListenersToPropsValue(propValue, arr) {
   }
 }
 const noop = fn(19);
-({ useCallback: hasOwnProperty, useContext: metroRequire, useEffect: closure_7, useInsertionEffect: closure_8, useReducer: closure_9, useRef: closure_10 } = noop);
+({ useCallback: hasOwnProperty, useContext: closure_6, useEffect: metroImportDefault, useInsertionEffect: closure_8, useReducer: closure_9, useRef: closure_10 } = noop);
 
 export default function createAnimatedPropsHook(arg0) {
   _require = arg0;

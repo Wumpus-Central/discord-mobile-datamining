@@ -1,53 +1,114 @@
 // === Module 10531: ? ===
 
 // Module 10531
+import _mod10504 from "module_10504" /* 10504 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10505 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
-class JPSlashDateFormatParser {
-  constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+const ENWeekdayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10504.WEEKDAY_DICTIONARY) + "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)", "i");
+class ENWeekdayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10527).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10527).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10527).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10458).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply("year", JPSlashDateFormatParser(10458).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
-              }
-              return parsingComponents;
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      let str2 = "last";
+      if ("last" != formatted) {
+        str2 = "last";
+        if ("past" != formatted) {
+          str2 = "next";
+          if ("next" != formatted) {
+            str2 = null;
+            if ("this" == formatted) {
+              str2 = "this";
             }
           }
-          return null;
         }
       }
-      return null;
+      const formatted1 = arg1[2].toLowerCase();
+      if (undefined !== ENWeekdayParser(10504).WEEKDAY_DICTIONARY[formatted1]) {
+        let sum = ENWeekdayParser(10504).WEEKDAY_DICTIONARY[formatted1];
+      } else if ("weekend" == formatted1) {
+        if ("last" == str2) {
+          let SATURDAY = ENWeekdayParser(10510).Weekday.SUNDAY;
+        } else {
+          SATURDAY = ENWeekdayParser(10510).Weekday.SATURDAY;
+        }
+        sum = SATURDAY;
+      } else if ("weekday" != formatted1) {
+        return null;
+      } else {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const day = dateWithAdjustedTimezone.getDay();
+        if (day != ENWeekdayParser(10510).Weekday.SUNDAY) {
+          if (day != ENWeekdayParser(10510).Weekday.SATURDAY) {
+            const diff = day - 1;
+            sum = ("last" == str2 ? diff - 1 : diff + 1) % 5 + 1;
+          }
+        }
+        if ("last" == str2) {
+          let MONDAY = ENWeekdayParser(10510).Weekday.FRIDAY;
+        } else {
+          MONDAY = ENWeekdayParser(10510).Weekday.MONDAY;
+        }
+        sum = MONDAY;
+      }
+      return ENWeekdayParser(10532).createParsingComponentsAtWeekday(reference.reference, sum, str2);
     }
   }
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(ENWeekdayParser, items);

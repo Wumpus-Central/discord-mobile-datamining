@@ -1,20 +1,15 @@
 // === Module 8257: ? ===
 
 // Module 8257
-import appendTransformPropsDefault from "appendTransformProps" /* 8163 */;
-import extractFontDefault from "extractFont" /* 8177 */;
-import _modDef8179 from "module_8179" /* 8179 */;
-import _modDef8254 from "module_8254" /* 8254 */;
-import _modDef8258 from "module_8258" /* 8258 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _modDef8195 from "module_8195" /* 8195 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TextPath = fn;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,92 +29,75 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
 const jsx = fn(21).jsx;
-class TextPath {
+class Pattern {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TextPath);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TextPath);
-    tmp3 = metroRequire;
-    if (closure_9()) {
-      tmp5 = globalThis;
+    tmp = c2(this, Pattern);
+    tmp2 = closure_4;
+    obj = closure_4(Pattern);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const merged = Object.assign(matrix, TextPath(8171).pickNotNil(extractFontDefault(matrix, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(matrix);
-      }
-      const obj = TextPath(8171);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TextPath, _modDef8179);
+_inherits(Pattern, _modDef8195);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ children, href } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
     }
-    const startOffset = props.startOffset;
-    let num = 0;
-    if (undefined !== startOffset) {
-      num = startOffset;
+    if (!patternTransform) {
+      patternTransform = props;
     }
-    ({ method, spacing, side, alignmentBaseline, midLine } = props);
-    let match = href;
-    if (href) {
-      match = href.match(TextPath(8171).idPattern);
+    const tmp3Result = Pattern(8179)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(8249)[patternUnits];
     }
-    let tmp5 = match;
-    if (match) {
-      tmp5 = match[1];
+    if (!num) {
+      num = 0;
     }
-    if (tmp5) {
-      const withoutXYResult = TextPath(8170).withoutXY(self, tmp);
-      const _Object = Object;
-      const obj3 = { children };
-      const obj4 = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
-      const merged = Object.assign(withoutXYResult, extractFontDefault(obj3, true), obj4);
-      withoutXYResult.ref = self.refMethod;
-      const obj5 = {};
-      const obj2 = TextPath(8170);
-      const merged1 = Object.assign(withoutXYResult);
-      return jsx(_modDef8258, {});
-    } else {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-      const obj = { ref: self.refMethod, children };
-      return jsx(_modDef8254, { ref: self.refMethod, children });
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(8249)[patternContentUnits];
     }
-    tmp = _objectWithoutProperties(props, closure_3);
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp3 = Pattern(8179);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(8184)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8258), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+const items = [entry];
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

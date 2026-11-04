@@ -1,123 +1,162 @@
 // === Module 10632: ? ===
 
 // Module 10632
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10471 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10534 from "module_10534" /* 10534 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10541 */;
+import _mod10633 from "module_10633" /* 10633 */;
+import _mod10635 from "module_10635" /* 10635 */;
+import _mod10637 from "module_10637" /* 10637 */;
+import _mod10638 from "module_10638" /* 10638 */;
+import _mod10639 from "module_10639" /* 10639 */;
+import _mod10640 from "module_10640" /* 10640 */;
+import _mod10641 from "module_10641" /* 10641 */;
+import _mod10642 from "module_10642" /* 10642 */;
+import _mod10643 from "module_10643" /* 10643 */;
+import _mod10644 from "module_10644" /* 10644 */;
+import _mod10645 from "module_10645" /* 10645 */;
+import _mod10646 from "module_10646" /* 10646 */;
 
-const ENTimeExpressionParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  const obj = { parsers: null, refiners: null };
+  items = [new regExp.default(true), , , , , ];
+  const _default = new regExp.default(true);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default(flag);
+  const _default4 = new _isNativeReflectConstruct.default(flag);
+  items[5] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default5 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-class ENTimeExpressionParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeExpressionParser);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      constructResult = obj.apply(self, items);
+      tmp = __esModule;
     }
-    return tmp3(self, constructResult);
-  }
+    return tmp;
+  };
 }
-_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-const entry = {
-  key: "followingPhase",
-  value: function followingPhase() {
-    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|\\?)\\s*";
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod10633);
+fn(_mod10635);
+fn(_mod10637);
+fn(_mod10638);
+fn(_mod10639);
+fn(_mod10640);
+fn(_mod10641);
+fn(_mod10642);
+fn(_mod10643);
+fn(_mod10644);
+fn(_mod10645);
+const regExp = fn(_mod10534);
+const _isNativeReflectConstruct = fn(_mod10646);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10501").Chrono;
   }
 };
-let items = [
-  entry,
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:alle|dalle)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:o\\W*in punto|alle\\s*sera|in\\s*del\\s*(?:mattina|pomeriggio)))?(?!/)(?=\\W|$)";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
-      }
-      items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("sera")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", ENTimeExpressionParser(10451).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", ENTimeExpressionParser(10451).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("pomeriggio")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10451).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("mattina")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10451).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-      }
-      return fnResult;
-    }
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   }
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10501").Chrono(configuration);
+const chrono1 = new require("module_10501").Chrono(createConfiguration(true));
 
-export default _createClass(ENTimeExpressionParser, items);
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10501").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

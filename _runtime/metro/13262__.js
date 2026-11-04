@@ -1,16 +1,7 @@
 // === Module 13262: ? ===
 
 // Module 13262
-import _mod13261 from "module_13261" /* 13261 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getTraceMetaTags() {
-  const entries = Object.entries(_mod13261.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "66946e5f24d9f7d485f69d93acc2bd06", name: "CloudDownloadIcon", type: "png" });

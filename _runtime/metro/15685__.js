@@ -1,12 +1,7 @@
 // === Module 15685: ? ===
 
 // Module 15685
-import _mod15699 from "module_15699" /* 15699 */;
-import assign from "module_15686" /* 15686 */;
-import Deflate from "Deflate" /* 15687 */;
-import Inflate from "Inflate" /* 15695 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod15699);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 185, height: 32, scales: [2, 3], hash: "dba969ce1008f0b8964b0d6bd348ad3e", name: "img_logo_premium_tier_1_full", type: "png" });

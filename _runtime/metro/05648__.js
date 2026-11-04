@@ -1,36 +1,33 @@
 // === Module 5648: ? ===
 
 // Module 5648
-import RecyclerViewManager from "RecyclerViewManager" /* 5649 */;
-import _slicedToArray from "module_5628" /* 5628 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
-
-export (data) => {
-  let recyclerViewManager = velocityTracker(closure_5(() => {
-    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-    return recyclerViewManager;
-  }), 1)[0];
-  velocityTracker = velocityTracker(closure_5(() => {
-    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-    return velocityTracker;
-  }), 1)[0];
-  items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
-}
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    return obj;
+  }
+};
