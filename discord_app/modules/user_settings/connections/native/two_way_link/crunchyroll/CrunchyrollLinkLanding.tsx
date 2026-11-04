@@ -1,12 +1,12 @@
-// === Module 14861: CrunchyrollLinkLanding ===
+// === Module 14862: CrunchyrollLinkLanding ===
 
-// Module 14861 (CrunchyrollLinkLanding)
+// Module 14862 (CrunchyrollLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import _modDef14862 from "module_14862" /* 14862 */;
+import _modDef14863 from "module_14863" /* 14863 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14860).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14861).CrunchyrollLinkModalScenes;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
@@ -30,7 +30,7 @@ export default function CrunchyrollLinkLanding() {
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14862, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14863, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1113).intl;
   obj2.headerConnect = intl.string(navigation(1113).t["Da+3NJ"]);
   const intl2 = navigation(1113).intl;
@@ -39,5 +39,5 @@ export default function CrunchyrollLinkLanding() {
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9879).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14862, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9879).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14863, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

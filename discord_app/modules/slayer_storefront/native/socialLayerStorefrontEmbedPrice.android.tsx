@@ -1,6 +1,6 @@
-// === Module 11750: socialLayerStorefrontEmbedPrice ===
+// === Module 11751: socialLayerStorefrontEmbedPrice ===
 
-// Module 11750 (socialLayerStorefrontEmbedPrice)
+// Module 11751 (socialLayerStorefrontEmbedPrice)
 import IAPStoreDefault from "IAPStore" /* 7737 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 10090 */;
 import noop from "module_19" /* 19 */;

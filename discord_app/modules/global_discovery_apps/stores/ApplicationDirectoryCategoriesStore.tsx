@@ -1,6 +1,6 @@
-// === Module 12616: ApplicationDirectoryCategoriesStore ===
+// === Module 12617: ApplicationDirectoryCategoriesStore ===
 
-// Module 12616 (ApplicationDirectoryCategoriesStore)
+// Module 12617 (ApplicationDirectoryCategoriesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

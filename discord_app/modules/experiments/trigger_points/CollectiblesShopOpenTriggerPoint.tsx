@@ -1,6 +1,6 @@
-// === Module 18069: CollectiblesShopOpenTriggerPoint ===
+// === Module 18081: CollectiblesShopOpenTriggerPoint ===
 
-// Module 18069 (CollectiblesShopOpenTriggerPoint)
+// Module 18081 (CollectiblesShopOpenTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5363 */;
 import Helpers from "Helpers" /* 10856 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 18010: UserSettingsDesignSystemLegacyButton ===
+// === Module 18022: UserSettingsDesignSystemLegacyButton ===
 
-// Module 18010 (UserSettingsDesignSystemLegacyButton)
+// Module 18022 (UserSettingsDesignSystemLegacyButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5761 */;

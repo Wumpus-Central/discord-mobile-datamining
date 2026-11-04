@@ -1,6 +1,6 @@
-// === Module 20430: GenerateInvite ===
+// === Module 20443: GenerateInvite ===
 
-// Module 20430 (GenerateInvite)
+// Module 20443 (GenerateInvite)
 import _mod17 from "module_17" /* 17 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9091 */;
 import size from "module_2" /* 2 */;
@@ -12,7 +12,7 @@ export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    channelId(20422).awaitStorage(() => {
+    channelId(20435).awaitStorage(() => {
       const invite = InstantInviteActionCreatorsDefault.createInvite(channelId, {}, "Mobile Voice Overlay");
       invite.then((code) => {
         RNCClipboard = RNCClipboard.RNCClipboard;

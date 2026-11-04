@@ -1,13 +1,13 @@
-// === Module 19474: VoicePanelDockControls ===
+// === Module 19488: VoicePanelDockControls ===
 
-// Module 19474 (VoicePanelDockControls)
+// Module 19488 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5384 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
 import _modDef10015 from "module_10015" /* 10015 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12166 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19473 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12167 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19487 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import VoicePanelStore from "VoicePanelStore" /* 7010 */;
@@ -79,7 +79,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
-let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11428).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
+let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11429).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
 const size = fn(2);

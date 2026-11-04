@@ -1,9 +1,9 @@
-// === Module 20296: OrbsArcadeFetchManager ===
+// === Module 20310: OrbsArcadeFetchManager ===
 
-// Module 20296 (OrbsArcadeFetchManager)
+// Module 20310 (OrbsArcadeFetchManager)
 import DurationsDefault from "Durations" /* 1089 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17264 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17276 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17270 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
@@ -62,13 +62,13 @@ class OrbsArcadeFetchManager extends tmp2 {
         }
         let result = !tmp4;
         if (!tmp4) {
-          const obj = applyArgumentsResult(17265);
-          result = obj.isOrbsArcadeEnrollmentOver(applyArgumentsResult(17259).orbsArcadeGameStateFromServer(game_state));
-          const obj2 = applyArgumentsResult(17259);
+          const obj = applyArgumentsResult(17277);
+          result = obj.isOrbsArcadeEnrollmentOver(applyArgumentsResult(17271).orbsArcadeGameStateFromServer(game_state));
+          const obj2 = applyArgumentsResult(17271);
         }
         if (tmp8) {
-          const orbsArcadeGames = applyArgumentsResult(17264).fetchOrbsArcadeGames();
-          const obj3 = applyArgumentsResult(17264);
+          const orbsArcadeGames = applyArgumentsResult(17276).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(17276);
         }
         tmp8 = game.versionId !== game_state.game_version_id || result;
       }
@@ -123,7 +123,7 @@ class OrbsArcadeFetchManager extends tmp2 {
           applyArgumentsResult.boundaryRefetchTimerId = window.setTimeout(() => {
             closure_0.boundaryRefetchTimerId = null;
             closure_0.scheduledBoundaryAt = null;
-            const orbsArcadeGames = applyArgumentsResult(17264).fetchOrbsArcadeGames();
+            const orbsArcadeGames = applyArgumentsResult(17276).fetchOrbsArcadeGames();
           }, Math.min(diff + Math.floor(Math.random() * closure_5), DAY));
         }
       }

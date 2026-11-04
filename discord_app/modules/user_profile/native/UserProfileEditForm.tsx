@@ -1,20 +1,20 @@
-// === Module 16677: UserProfileEditForm ===
+// === Module 16689: UserProfileEditForm ===
 
-// Module 16677 (UserProfileEditForm)
+// Module 16689 (UserProfileEditForm)
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8878 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 15201 */;
-import _modDef16679 from "module_16679" /* 16679 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16680 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16693 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16695 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 15202 */;
+import _modDef16691 from "module_16691" /* 16691 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16692 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16705 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16707 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11647 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11648 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -585,10 +585,10 @@ const Constants = fn(1072);
 const HexagonCampaignConstants = fn(5166);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-const constants3 = fn(16678).UserProfileEditAutoFocusElement;
+const constants3 = fn(16690).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let obj = { assetOrigin: fn(7297).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16679, staticImageUri: _modDef16679, description: "", originalAsset: "children" };
+let obj = { assetOrigin: fn(7297).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16691, staticImageUri: _modDef16691, description: "", originalAsset: "children" };
 let closure_21 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

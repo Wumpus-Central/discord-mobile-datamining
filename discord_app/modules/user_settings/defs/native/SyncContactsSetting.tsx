@@ -1,15 +1,15 @@
-// === Module 16982: SyncContactsSetting ===
+// === Module 16994: SyncContactsSetting ===
 
-// Module 16982 (SyncContactsSetting)
+// Module 16994 (SyncContactsSetting)
 import util from "util" /* 1113 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 16983 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14463 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 16995 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const PlatformTypes = fn(1072).PlatformTypes;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

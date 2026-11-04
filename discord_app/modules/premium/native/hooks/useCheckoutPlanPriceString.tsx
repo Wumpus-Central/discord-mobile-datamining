@@ -1,6 +1,6 @@
-// === Module 15453: useCheckoutPlanPriceString ===
+// === Module 15454: useCheckoutPlanPriceString ===
 
-// Module 15453 (useCheckoutPlanPriceString)
+// Module 15454 (useCheckoutPlanPriceString)
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7732 */;
 import noop from "module_19" /* 19 */;
 

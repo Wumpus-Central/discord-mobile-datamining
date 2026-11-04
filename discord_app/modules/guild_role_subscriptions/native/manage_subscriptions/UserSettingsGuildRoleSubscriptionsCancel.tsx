@@ -1,6 +1,6 @@
-// === Module 17449: UserSettingsGuildRoleSubscriptionsCancel ===
+// === Module 17461: UserSettingsGuildRoleSubscriptionsCancel ===
 
-// Module 17449 (UserSettingsGuildRoleSubscriptionsCancel)
+// Module 17461 (UserSettingsGuildRoleSubscriptionsCancel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,13 +8,13 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import GuildIconDefault from "GuildIcon" /* 7098 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17437 */;
-import FormSeparatorDefault from "FormSeparator" /* 17442 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 17446 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17450 */;
-import _modDef17458 from "module_17458" /* 17458 */;
-import FastAssetImageDefault from "FastAssetImage" /* 17459 */;
-import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 17460 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17449 */;
+import FormSeparatorDefault from "FormSeparator" /* 17454 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 17458 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17462 */;
+import _modDef17470 from "module_17470" /* 17470 */;
+import FastAssetImageDefault from "FastAssetImage" /* 17471 */;
+import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 17472 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function WhatYouLose(subscription) {
   const obj13 = { source: null, style: null };
   const formatToPlainStringResult = intl2.formatToPlainString(util.t.OVlNGT, { numEmojis: _slicedToArray(obj.useTierEmojiIds(listingId, guild.id), 1)[0].size, numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length, numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length });
   const obj10 = { variant: "body-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef17458;
+  obj13.source = _modDef17470;
   obj13.style = tmp.cactus;
   items2[6] = closure_1_10(FastImageDefault, obj13);
   obj7.children = items2;

@@ -1,11 +1,11 @@
-// === Module 11604: useTieredTenureBadgeClickHandler ===
+// === Module 11605: useTieredTenureBadgeClickHandler ===
 
-// Module 11604 (useTieredTenureBadgeClickHandler)
+// Module 11605 (useTieredTenureBadgeClickHandler)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import openUserSettings from "openUserSettings" /* 7703 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11606 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11607 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -56,7 +56,7 @@ export function useTieredTenureBadgeClickHandler(id, userId, themeType) {
         openUserSettings.openUserSettings(obj2);
       } else {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp4 = asyncRequireImpl(11606, dependencyMap.paths);
+        const tmp4 = asyncRequireImpl(11607, dependencyMap.paths);
         const obj4 = { userId };
         obj.openLazy(tmp4, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj4, "stack");
       }

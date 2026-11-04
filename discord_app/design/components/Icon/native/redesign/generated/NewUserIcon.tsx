@@ -1,9 +1,9 @@
-// === Module 15070: NewUserIcon ===
+// === Module 15071: NewUserIcon ===
 
-// Module 15070 (NewUserIcon)
+// Module 15071 (NewUserIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod15071 from "module_15071" /* 15071 */;
+import _mod15072 from "module_15072" /* 15072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function NewUserIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15071, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15072, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,6 +1,6 @@
-// === Module 14748: EditAttachmentActionSheet ===
+// === Module 14749: EditAttachmentActionSheet ===
 
-// Module 14748 (EditAttachmentActionSheet)
+// Module 14749 (EditAttachmentActionSheet)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
@@ -20,7 +20,7 @@ import MessageStore from "MessageStore" /* 6196 */;
 require = fn;
 let closure_7 = fn(5146).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14735).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14736).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);

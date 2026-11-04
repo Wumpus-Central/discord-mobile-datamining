@@ -1,6 +1,6 @@
-// === Module 17071: UserSettingsFamilyCenterParentalControls ===
+// === Module 17083: UserSettingsFamilyCenterParentalControls ===
 
-// Module 17071 (UserSettingsFamilyCenterParentalControls)
+// Module 17083 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
@@ -100,7 +100,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "PX_8", headerRight: "__closure" });
+    stackNavigation.setOptions({ title: "Object", headerRight: "Array" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

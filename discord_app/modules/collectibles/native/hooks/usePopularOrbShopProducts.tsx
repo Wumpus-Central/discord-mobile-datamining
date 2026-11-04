@@ -1,6 +1,6 @@
-// === Module 17223: usePopularOrbShopProducts ===
+// === Module 17235: usePopularOrbShopProducts ===
 
-// Module 17223 (usePopularOrbShopProducts)
+// Module 17235 (usePopularOrbShopProducts)
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -70,11 +70,11 @@ export function usePopularOrbShopProducts(enabled) {
                 closure_1 = tmp8;
                 closure_129_0 = undefined;
                 let v0 = 2;
-                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(17225).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(1078).CollectibleSearchSortDirection.DESC };
+                const obj4 = { item_types: [], colors: [], themes: [], orbs_eligible: true, currency: _true(17237).CollectibleSearchCurrencyFilter.ORBS, offset: 0, limit: 10, sort_type, sort_direction: _true(1078).CollectibleSearchSortDirection.DESC };
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(17224).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(17236).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {

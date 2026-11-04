@@ -1,6 +1,6 @@
-// === Module 14837: XboxLinkSuccess ===
+// === Module 14838: XboxLinkSuccess ===
 
-// Module 14837 (XboxLinkSuccess)
+// Module 14838 (XboxLinkSuccess)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -58,7 +58,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("module_14838");
+  obj5.source = require("module_14839");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -73,7 +73,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj10 = { source: null, style: null };
   const tmp15 = require("FastImage");
-  obj10.source = require("module_12241");
+  obj10.source = require("module_12242");
   obj10.style = tmp.appLogo;
   obj9.children = closure_12(require("FastImage"), obj10);
   const items3 = [closure_12(closure_5, obj9), , ];

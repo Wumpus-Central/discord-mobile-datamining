@@ -1,6 +1,6 @@
-// === Module 18820: useICYMIReloadHandler ===
+// === Module 18834: useICYMIReloadHandler ===
 
-// Module 18820 (useICYMIReloadHandler)
+// Module 18834 (useICYMIReloadHandler)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export function useICYMIReloadHandler(showDot) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const ICYMIAnalytics = tmp2(16464).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(16477).ICYMIAnalytics;
             let str = "NoDotShown";
             if (tmp2) {
               str = "DotShown";

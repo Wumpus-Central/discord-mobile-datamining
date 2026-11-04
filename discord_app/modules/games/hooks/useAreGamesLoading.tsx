@@ -1,6 +1,6 @@
-// === Module 15175: useAreGamesLoading ===
+// === Module 15176: useAreGamesLoading ===
 
-// Module 15175 (useAreGamesLoading)
+// Module 15176 (useAreGamesLoading)
 import GameStore from "GameStore" /* 2143 */;
 
 const require = globalThis.__r;

@@ -1,20 +1,20 @@
-// === Module 18968: useOnPressSearchItem ===
+// === Module 18982: useOnPressSearchItem ===
 
-// Module 18968 (useOnPressSearchItem)
+// Module 18982 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import LinkingDefault from "Linking" /* 5843 */;
 import ToastUtils from "ToastUtils" /* 5845 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 9085 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
-import TrackingDefault from "Tracking" /* 14124 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14104 */;
+import TrackingDefault from "Tracking" /* 14125 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 7910 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import SearchQueryStore from "SearchQueryStore" /* 14117 */;
+import SearchQueryStore from "SearchQueryStore" /* 14118 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -95,7 +95,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(9976);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18969).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18983).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(14103).delayUntilNavigationComplete(() => {
+      const result = searchContext(14104).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(14103);
+      let obj2 = searchContext(14104);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

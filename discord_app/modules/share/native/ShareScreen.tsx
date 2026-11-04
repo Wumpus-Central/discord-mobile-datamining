@@ -1,10 +1,10 @@
-// === Module 15957: ShareScreen ===
+// === Module 15970: ShareScreen ===
 
-// Module 15957 (ShareScreen)
+// Module 15970 (ShareScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 15961 */;
-import ShareEmbedDefault from "ShareEmbed" /* 15962 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 15974 */;
+import ShareEmbedDefault from "ShareEmbed" /* 15975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ const ChannelRecord = fn(4994);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(13603).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(13604).MAX_DESTINATION_COUNT;
 const UserRowModes = fn(10905).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
@@ -227,7 +227,7 @@ export default function ShareScreen(appEntryKey) {
                                       let channel2;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "flexDirection", done: true };
+                                      return { value: "flexDirection", done: null };
                                     }
                                   } else if (1 === tmp7) {
                                     if (arg0 === 1) {

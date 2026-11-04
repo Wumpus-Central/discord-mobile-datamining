@@ -1,6 +1,6 @@
-// === Module 20379: QuestProgressManager ===
+// === Module 20392: QuestProgressManager ===
 
-// Module 20379 (QuestProgressManager)
+// Module 20392 (QuestProgressManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import QuestVariants from "QuestVariants" /* 6917 */;
@@ -14,7 +14,7 @@ import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8031 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 8032 */;
 import RobloxSubgameTypes from "RobloxSubgameTypes" /* 8033 */;
 import QuestActionCreators from "QuestActionCreators" /* 9832 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14898 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
@@ -24,7 +24,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 import QuestStore from "QuestStore" /* 7986 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19409 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19423 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
@@ -312,20 +312,77 @@ class QuestProgressManager extends tmp4 {
     closure_129_0 = undefined;
     closure_129_1 = applyArgumentsResult;
     closure_129_0 = closure_3(async (arg0) => {
-      await closure_1_18(applicationId);
-      items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-      closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
-        let hasItem = null != config;
-        if (hasItem) {
-          const features = config.config.features;
-          hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        return !hasItem;
-      });
-      await "HermesInternal";
-      closure_1 = tmp2;
-      applicationId = applyArgumentsResult.applicationId;
-      return "flexDirection";
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              dependencyMap = tmp5;
+              closure_1 = tmp2;
+              applicationId = undefined;
+              applicationId = applyArgumentsResult.applicationId;
+              c3 = 1;
+              c4 = 1;
+              return { value: "flexDirection", done: null };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c3 = 2;
+              c4 = 1;
+              const obj5 = { value: handleEmbeddedActivityLaunchSuccess(applicationId), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+            closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
+              let hasItem = null != config;
+              if (hasItem) {
+                const features = config.config.features;
+                hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+              }
+              return !hasItem;
+            });
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp17) {
+          c4 = tmp;
+          throw tmp17;
+        }
+      }
     });
     obj1.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;

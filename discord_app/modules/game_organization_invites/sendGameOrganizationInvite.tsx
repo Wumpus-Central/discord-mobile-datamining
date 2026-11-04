@@ -1,9 +1,9 @@
-// === Module 11852: sendGameOrganizationInvite ===
+// === Module 11853: sendGameOrganizationInvite ===
 
-// Module 11852 (sendGameOrganizationInvite)
+// Module 11853 (sendGameOrganizationInvite)
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5148 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11853 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

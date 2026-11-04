@@ -1,9 +1,9 @@
-// === Module 18672: InterestGameCover ===
+// === Module 18686: InterestGameCover ===
 
-// Module 18672 (InterestGameCover)
+// Module 18686 (InterestGameCover)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import useInterestCoverColor from "useInterestCoverColor" /* 18673 */;
+import useInterestCoverColor from "useInterestCoverColor" /* 18687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function NoCover(arg0) {
   if (tmp13) {
     tmp13 = iconURL !== tmp9;
   }
-  const tmp14 = tmp4(18673)(game.id, iconURL);
+  const tmp14 = tmp4(18687)(game.id, iconURL);
   let tmp15 = !compact;
   if (!compact) {
     tmp15 = tmp13;
@@ -115,9 +115,9 @@ function NoCover(arg0) {
       tmp30 = tmp12;
     }
     obj10.onHeightChange = tmp30;
-    obj9.children = React5(tmp4(18674), obj10);
+    obj9.children = React5(tmp4(18688), obj10);
     tmp27Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(18674);
+    const tmp4Result = tmp4(18688);
   }
   items1[3] = tmp27Result;
   obj.children = items1;
@@ -125,7 +125,7 @@ function NoCover(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(18671).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(18685).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
@@ -145,7 +145,7 @@ let obj4 = { flex: 1, justifyContent: "center", alignItems: "center", gap: nativ
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(18673).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(18687).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = { position: "absolute", top: 0, left: 0, right: 0, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.art = rect;

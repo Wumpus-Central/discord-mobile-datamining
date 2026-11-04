@@ -1,6 +1,6 @@
-// === Module 18480: ChannelsUnreadBar ===
+// === Module 18494: ChannelsUnreadBar ===
 
-// Module 18480 (ChannelsUnreadBar)
+// Module 18494 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9971 */;
@@ -41,7 +41,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1) => {
   if (obj3.isAndroid()) {
     num2 = -1;
   }
-  obj2.text = { textTransform: "uppercase", marginTop: num2, marginLeft: 2, marginRight: 0 };
+  obj2.text = { marginTop: num2, marginLeft: 2, marginRight: 0 };
   return obj2;
 });
 let c12 = "body-xs/semibold";
@@ -269,9 +269,9 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   if (first) {
     let ArrowSmallUpIcon = tmp7(8803).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13265).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(13266).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13263).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(13264).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {
@@ -300,8 +300,11 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   }
   obj10.color = str3;
   const intl = tmp7(1113).intl;
-  obj10.children = intl.string(require("util").t.y2b7CA);
+  const tmp44Result = c8(ArrowSmallUpIcon, { color: MOBILE_UNREADBAR_TEXT_DEFAULT, size: "xxs" });
+  const tmp47 = c9;
+  const tmp48 = c10;
+  obj10.children = intl.string(require("util").t.y2b7CA).toLocaleUpperCase(require("util").intl.currentLocale);
   items11[1] = c8(require("Text/Text").Text, obj10);
   obj9.children = items11;
-  return c9(c10, obj9);
+  return tmp47(tmp48, obj9);
 });

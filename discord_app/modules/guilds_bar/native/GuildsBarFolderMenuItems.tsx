@@ -1,6 +1,6 @@
-// === Module 18603: GuildsBarFolderMenuItems ===
+// === Module 18617: GuildsBarFolderMenuItems ===
 
-// Module 18603 (GuildsBarFolderMenuItems)
+// Module 18617 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 

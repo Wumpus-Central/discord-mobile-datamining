@@ -1,9 +1,9 @@
-// === Module 12968: useConjureScopeCards ===
+// === Module 12969: useConjureScopeCards ===
 
-// Module 12968 (useConjureScopeCards)
+// Module 12969 (useConjureScopeCards)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import conjureScopeSetup from "conjureScopeSetup" /* 12800 */;
+import conjureScopeSetup from "conjureScopeSetup" /* 12801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -200,7 +200,7 @@ export function useConjureScopeSetupCard(projectId) {
         }
       }
     }
-    let obj5 = { clarification: tmp(12800).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
+    let obj5 = { clarification: tmp(12801).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
     return obj5;
   }
   const tmp8 = _slicedToArray(noop.useState(null), 2);
@@ -249,8 +249,8 @@ export function useConjureScopeSwitchCard(merged) {
   let items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(12816).useConjureEligibleGuilds("ConjureScopeSwitchCard");
-  let obj2 = projectId(12816);
+  const conjureEligibleGuilds = projectId(12817).useConjureEligibleGuilds("ConjureScopeSwitchCard");
+  let obj2 = projectId(12817);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -360,6 +360,6 @@ export function useConjureScopeSwitchCard(merged) {
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(12800).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12801).ownerOnlyClarification(memo);
   return obj5;
 }

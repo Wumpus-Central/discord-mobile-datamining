@@ -1,6 +1,6 @@
-// === Module 15634: TopPattern ===
+// === Module 15635: TopPattern ===
 
-// Module 15634 (TopPattern)
+// Module 15635 (TopPattern)
 import shared from "shared" /* 5148 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import _mod8947 from "module_8947" /* 8947 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getTopPatternSource(theme) {
   return _mod8947.getIllustrationSource(theme, {
     dark() {
-      return require("module_15635");
-    },
-    darker() {
       return require("module_15636");
     },
-    light() {
+    darker() {
       return require("module_15637");
+    },
+    light() {
+      return require("module_15638");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useTopPatternSource() {
   const obj = shared;
   return _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15635");
-    },
-    darker() {
       return require("module_15636");
     },
-    light() {
+    darker() {
       return require("module_15637");
+    },
+    light() {
+      return require("module_15638");
     }
   });
 }
@@ -44,25 +44,25 @@ export function TopPattern(arg0) {
   const obj = shared;
   const illustrationSource = _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15635");
-    },
-    darker() {
       return require("module_15636");
     },
-    light() {
+    darker() {
       return require("module_15637");
+    },
+    light() {
+      return require("module_15638");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_15635");
-    },
-    darker() {
       return require("module_15636");
     },
-    light() {
+    darker() {
       return require("module_15637");
+    },
+    light() {
+      return require("module_15638");
     }
   };
   const merged = Object.assign(arg0);

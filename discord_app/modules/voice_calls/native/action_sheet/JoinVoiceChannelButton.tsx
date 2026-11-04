@@ -1,9 +1,9 @@
-// === Module 15423: JoinVoiceChannelButton ===
+// === Module 15424: JoinVoiceChannelButton ===
 
-// Module 15423 (JoinVoiceChannelButton)
+// Module 15424 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12105 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12106 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 

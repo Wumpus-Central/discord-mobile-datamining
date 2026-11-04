@@ -28,10 +28,10 @@ import QuestActionCreators from "QuestActionCreators" /* 9832 */;
 import AssetUtils from "AssetUtils" /* 9845 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9850 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14895 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14898 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 14899 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14900 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14896 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14899 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 14900 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14901 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -2059,13 +2059,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(14902).fetchBountyPreview(arr, previewAdCreativeIds(6919).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(14903).fetchBountyPreview(arr, previewAdCreativeIds(6919).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(14902).fetchQuestHomeBounties(previewAdCreativeIds(6919).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(14903).fetchQuestHomeBounties(previewAdCreativeIds(6919).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

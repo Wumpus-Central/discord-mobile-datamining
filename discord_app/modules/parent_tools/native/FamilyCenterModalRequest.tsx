@@ -1,6 +1,6 @@
-// === Module 13577: FamilyCenterModalRequest ===
+// === Module 13578: FamilyCenterModalRequest ===
 
-// Module 13577 (FamilyCenterModalRequest)
+// Module 13578 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
@@ -20,10 +20,10 @@ import ModalContent from "ModalContent" /* 8113 */;
 import _modDef8499 from "module_8499" /* 8499 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8511 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 8513 */;
-import _modDef11784 from "module_11784" /* 11784 */;
-import ModalFooter from "ModalFooter" /* 13427 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 13578 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 13588 */;
+import _modDef11785 from "module_11785" /* 11785 */;
+import ModalFooter from "ModalFooter" /* 13428 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 13579 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 13589 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -478,7 +478,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
-  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(13592).FamilyShieldSpotIllustration, {}) }), , ];
+  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(13593).FamilyShieldSpotIllustration, {}) }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1113).intl;
   let str;
@@ -520,7 +520,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5768).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6902).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(13427).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(13428).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(8112).ModalScreen, obj6);
 }
@@ -768,10 +768,10 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.ERROR] = obj11;
     return obj;
   }, items);
-  let obj = { initialRouteName: userId(13578).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  let obj = { initialRouteName: userId(13579).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1113).intl;
   obj.headerBackTitle = intl.string(userId(1113).t["13/7kX"]);
-  return closure_11(userId(11670).Modal, obj);
+  return closure_11(userId(11671).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

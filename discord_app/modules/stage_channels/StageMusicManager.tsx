@@ -1,6 +1,6 @@
-// === Module 12073: StageMusicManager ===
+// === Module 12074: StageMusicManager ===
 
-// Module 12073 (StageMusicManager)
+// Module 12074 (StageMusicManager)
 import StageChannelParticipants from "StageChannelParticipants" /* 6894 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -8,7 +8,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6848 */;
 import StageInstanceStore from "StageInstanceStore" /* 4995 */;
-import StageMusicStore from "StageMusicStore" /* 12071 */;
+import StageMusicStore from "StageMusicStore" /* 12072 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 const require = globalThis.__r;

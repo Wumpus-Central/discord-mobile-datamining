@@ -1,6 +1,6 @@
-// === Module 15683: PremiumTierCard ===
+// === Module 15684: PremiumTierCard ===
 
-// Module 15683 (PremiumTierCard)
+// Module 15684 (PremiumTierCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
@@ -9,10 +9,10 @@ import FastImageDefault from "FastImage" /* 5851 */;
 import Card from "Card" /* 7118 */;
 import _modDef8676 from "module_8676" /* 8676 */;
 import _modDef10109 from "module_10109" /* 10109 */;
-import _modDef10763 from "module_10763" /* 10763 */;
 import _modDef10764 from "module_10764" /* 10764 */;
-import _modDef15684 from "module_15684" /* 15684 */;
+import _modDef10765 from "module_10765" /* 10765 */;
 import _modDef15685 from "module_15685" /* 15685 */;
+import _modDef15686 from "module_15686" /* 15686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,9 +45,9 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef15684;
+    let tmp5Result = _modDef15685;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef15685;
+    tmp5Result = _modDef15686;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8676;
   }
@@ -67,9 +67,9 @@ export default function _default(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     let tmp5Result4 = _modDef10109;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result4 = _modDef10763;
-  } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result4 = _modDef10764;
+  } else if (PremiumTypes.TIER_2 === premiumType) {
+    tmp5Result4 = _modDef10765;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result4;

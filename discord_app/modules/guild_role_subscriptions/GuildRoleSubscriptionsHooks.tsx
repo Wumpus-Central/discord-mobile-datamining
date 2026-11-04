@@ -1,10 +1,10 @@
-// === Module 17437: GuildRoleSubscriptionsHooks ===
+// === Module 17449: GuildRoleSubscriptionsHooks ===
 
-// Module 17437 (GuildRoleSubscriptionsHooks)
+// Module 17449 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7569 */;
-import useRequestDefault from "useRequest" /* 12758 */;
-import subscriptionUtils from "subscriptionUtils" /* 17439 */;
+import useRequestDefault from "useRequest" /* 12759 */;
+import subscriptionUtils from "subscriptionUtils" /* 17451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -524,7 +524,7 @@ export function usePublishSubscriptionListing() {
             ({ guildId: closure_129_0, groupListingId: closure_129_1, listingId: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {

@@ -1,11 +1,11 @@
-// === Module 12824: ConjureShellGlow ===
+// === Module 12825: ConjureShellGlow ===
 
-// Module 12824 (ConjureShellGlow)
+// Module 12825 (ConjureShellGlow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
-import ConjureDitherDefault from "ConjureDither" /* 12825 */;
+import ConjureDitherDefault from "ConjureDither" /* 12826 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;

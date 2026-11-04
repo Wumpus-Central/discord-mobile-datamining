@@ -1,8 +1,8 @@
-// === Module 19455: useIsVoicePanelParticipantFocusable ===
+// === Module 19469: useIsVoicePanelParticipantFocusable ===
 
-// Module 19455 (useIsVoicePanelParticipantFocusable)
+// Module 19469 (useIsVoicePanelParticipantFocusable)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import participantHasVideo from "participantHasVideo" /* 11415 */;
+import participantHasVideo from "participantHasVideo" /* 11416 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;

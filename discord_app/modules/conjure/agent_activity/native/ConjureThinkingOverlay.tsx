@@ -1,10 +1,10 @@
-// === Module 12997: ConjureThinkingOverlay ===
+// === Module 12998: ConjureThinkingOverlay ===
 
-// Module 12997 (ConjureThinkingOverlay)
+// Module 12998 (ConjureThinkingOverlay)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12398 */;
-import conjureThinkingTail from "conjureThinkingTail" /* 12998 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12399 */;
+import conjureThinkingTail from "conjureThinkingTail" /* 12999 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 11029 */;
 
@@ -89,12 +89,12 @@ export default function ConjureThinkingOverlay(projectId) {
   if (tmp5) {
     tmp5 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(12400).useConjureRevealedText(str, { streaming: tmp5 }).text;
+  const text = projectId(12401).useConjureRevealedText(str, { streaming: tmp5 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(12400);
+  const obj2 = projectId(12401);
   const items2 = [closure_7(projectId(10252).LightbulbIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj8 = { variant: "body-sm/semibold", color: "text-strong", children: null };
   const intl = tmp2(1113).intl;

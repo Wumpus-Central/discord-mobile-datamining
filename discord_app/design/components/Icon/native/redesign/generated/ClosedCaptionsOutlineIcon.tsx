@@ -1,9 +1,9 @@
-// === Module 17186: ClosedCaptionsOutlineIcon ===
+// === Module 17198: ClosedCaptionsOutlineIcon ===
 
-// Module 17186 (ClosedCaptionsOutlineIcon)
+// Module 17198 (ClosedCaptionsOutlineIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod17187 from "module_17187" /* 17187 */;
+import _mod17199 from "module_17199" /* 17199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ClosedCaptionsOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17187, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17199, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

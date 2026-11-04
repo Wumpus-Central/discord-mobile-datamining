@@ -1,6 +1,6 @@
-// === Module 16923: WebAuthnRegisterStep ===
+// === Module 16935: WebAuthnRegisterStep ===
 
-// Module 16923 (WebAuthnRegisterStep)
+// Module 16935 (WebAuthnRegisterStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -72,10 +72,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1377);
-  const announceError = navigation(16924).useAnnounceError(tmp10);
+  const announceError = navigation(16936).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(16925).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(16937).KeyImage, {}), , ];
   obj5 = { style: tmp4.margin, variant: "body-md/normal", children: null };
   const intl = tmp(1113).intl;
   const string = intl.string;

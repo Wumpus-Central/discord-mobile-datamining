@@ -1,6 +1,6 @@
-// === Module 12195: FocusedExpandedControls ===
+// === Module 12196: FocusedExpandedControls ===
 
-// Module 12195 (FocusedExpandedControls)
+// Module 12196 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,13 +9,13 @@ import FastImageDefault from "FastImage" /* 5851 */;
 import Form from "Form" /* 8317 */;
 import CallsUtils from "CallsUtils" /* 9366 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9373 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 12116 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12145 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12166 */;
-import _modDef12196 from "module_12196" /* 12196 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 12117 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12146 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12167 */;
 import _modDef12197 from "module_12197" /* 12197 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12198 */;
-import useDeafStatesDefault from "useDeafStates" /* 12199 */;
+import _modDef12198 from "module_12198" /* 12198 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12199 */;
+import useDeafStatesDefault from "useDeafStates" /* 12200 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -33,10 +33,10 @@ function ExpandedControlItemIcon(iconSource) {
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef12196 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef12197 };
       items[1] = metroImportDefault(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef12197;
+      obj4.source = _modDef12198;
       items[2] = metroImportDefault(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = React5(View, obj);
@@ -152,7 +152,7 @@ export function DeafenButton(disabled) {
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12200 : 12201), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12201 : 12202), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return metroImportDefault(ExpandedControlItem, obj2);

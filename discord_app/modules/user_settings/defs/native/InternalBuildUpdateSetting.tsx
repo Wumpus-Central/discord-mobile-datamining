@@ -1,17 +1,17 @@
-// === Module 17994: InternalBuildUpdateSetting ===
+// === Module 18006: InternalBuildUpdateSetting ===
 
-// Module 17994 (InternalBuildUpdateSetting)
+// Module 18006 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import DownloadIcon from "DownloadIcon" /* 5867 */;
-import RefreshIcon2 from "RefreshIcon" /* 12420 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15964 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16981 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 16457 */;
+import RefreshIcon2 from "RefreshIcon" /* 12421 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15977 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16993 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 16470 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";

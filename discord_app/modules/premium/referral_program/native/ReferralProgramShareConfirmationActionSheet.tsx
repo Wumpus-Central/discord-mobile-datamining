@@ -1,6 +1,6 @@
-// === Module 15559: ReferralProgramShareConfirmationActionSheet ===
+// === Module 15560: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 15559 (ReferralProgramShareConfirmationActionSheet)
+// Module 15560 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
@@ -92,9 +92,9 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7457).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1113).t.AwGSWl, obj);
-  items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15560).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5761).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5761).Text, { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15561).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5761).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5761).Text, { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15560).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15561).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(SharedUser, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));

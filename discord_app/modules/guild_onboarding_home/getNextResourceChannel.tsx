@@ -1,6 +1,6 @@
-// === Module 14049: getNextResourceChannel ===
+// === Module 14050: getNextResourceChannel ===
 
-// Module 14049 (getNextResourceChannel)
+// Module 14050 (getNextResourceChannel)
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7538 */;
 
 const require = globalThis.__r;

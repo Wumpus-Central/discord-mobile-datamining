@@ -1,6 +1,6 @@
-// === Module 12238: useFetchStreamPreview ===
+// === Module 12239: useFetchStreamPreview ===
 
-// Module 12238 (useFetchStreamPreview)
+// Module 12239 (useFetchStreamPreview)
 import StreamActionCreators from "StreamActionCreators" /* 8041 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8043 */;
@@ -78,5 +78,5 @@ export default function useFetchStreamPreview(guildId, channelId, ownerId) {
     }
     return obj5;
   }
-  obj5 = { previewUrl: "flexDirection", isLoading: true };
+  obj5 = { previewUrl: "flexDirection", isLoading: null };
 };

@@ -1,6 +1,6 @@
-// === Module 14998: MediaModalYoutube ===
+// === Module 14999: MediaModalYoutube ===
 
-// Module 14998 (MediaModalYoutube)
+// Module 14999 (MediaModalYoutube)
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8976 */;
 import MediaModalWebViewBase from "MediaModalWebViewBase" /* 9012 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -163,7 +163,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
     if (playerState === tmp(9012).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return jsx(tmp6(14999), { videoId: youtubeVideoIdFromURI.videoId });
+        return jsx(tmp6(15000), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
     const isAndroidResult = tmp(1377).isAndroid();

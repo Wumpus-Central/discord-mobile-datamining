@@ -1,12 +1,12 @@
-// === Module 13661: CheckpointShareActionSheet ===
+// === Module 13662: CheckpointShareActionSheet ===
 
-// Module 13661 (CheckpointShareActionSheet)
+// Module 13662 (CheckpointShareActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef3219 from "module_3219" /* 3219 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6222 */;
 import CheckpointCardTypes from "CheckpointCardTypes" /* 6225 */;
-import CheckpointShareCardDefault from "CheckpointShareCard" /* 13662 */;
+import CheckpointShareCardDefault from "CheckpointShareCard" /* 13663 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,7 +63,7 @@ export default function CheckpointShareActionSheet(character) {
   }, items);
   if (null != character) {
     if (tmp11) {
-      const items1 = [tmp6(tmp3[5]).CheckpointCardTypes.CHARACTER_ONLY, tmp6(tmp3[5]).CheckpointCardTypes.DEFAULT, tmp6(tmp3[5]).CheckpointCardTypes.STATS_ONLY];
+      const items1 = [tmp6(tmp3[5]).CheckpointCardTypes.DEFAULT, tmp6(tmp3[5]).CheckpointCardTypes.CHARACTER_ONLY, tmp6(tmp3[5]).CheckpointCardTypes.STATS_ONLY];
       items7 = items1;
     }
     mapped = items7.map((item) => character(onForward[12]).getCheckpointShareCardSize(item).width);

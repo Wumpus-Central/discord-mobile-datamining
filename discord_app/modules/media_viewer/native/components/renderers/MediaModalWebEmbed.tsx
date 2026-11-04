@@ -1,10 +1,10 @@
-// === Module 15000: MediaModalWebEmbed ===
+// === Module 15001: MediaModalWebEmbed ===
 
-// Module 15000 (MediaModalWebEmbed)
+// Module 15001 (MediaModalWebEmbed)
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import MediaModalWebViewBase from "MediaModalWebViewBase" /* 9012 */;
-import escapeDefault from "escape" /* 15001 */;
-import EmbedIFrameConfig from "EmbedIFrameConfig" /* 15004 */;
+import escapeDefault from "escape" /* 15002 */;
+import EmbedIFrameConfig from "EmbedIFrameConfig" /* 15005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function WebEmbed(onLoad) {
   }, []);
   const obj = { style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, onError: null, onLoad: null, onLoadStart: null };
   const obj2 = { html: null, baseUrl: null };
-  obj2.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"" + escapeDefault(src) + "\" allow=\"autoplay\" sandbox=\"" + onLoad(15004).EMBED_IFRAME_SANDBOX + "\" scrolling=\"no\"></iframe>\n  </body>\n</html>\n";
+  obj2.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"" + escapeDefault(src) + "\" allow=\"autoplay\" sandbox=\"" + onLoad(15005).EMBED_IFRAME_SANDBOX + "\" scrolling=\"no\"></iframe>\n  </body>\n</html>\n";
   obj2.baseUrl = baseURL;
   obj.source = obj2;
   obj.baseURL = baseURL;

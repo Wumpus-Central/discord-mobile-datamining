@@ -1,6 +1,6 @@
-// === Module 14710: useAvatarDecorationPreviewSizes ===
+// === Module 14711: useAvatarDecorationPreviewSizes ===
 
-// Module 14710 (useAvatarDecorationPreviewSizes)
+// Module 14711 (useAvatarDecorationPreviewSizes)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9653 */;
 import size from "module_2" /* 2 */;

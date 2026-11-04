@@ -1,6 +1,6 @@
-// === Module 11537: ForumPostReactions ===
+// === Module 11538: ForumPostReactions ===
 
-// Module 11537 (ForumPostReactions)
+// Module 11538 (ForumPostReactions)
 import ForumHooks from "ForumHooks" /* 10017 */;
 import ForumPostReactionButton from "ForumPostReactionButton" /* 11318 */;
 import useReactionPermissionsDefault from "useReactionPermissions" /* 11332 */;

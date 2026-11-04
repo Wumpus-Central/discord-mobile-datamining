@@ -1,6 +1,6 @@
-// === Module 14185: DescriptionEllipsis ===
+// === Module 14186: DescriptionEllipsis ===
 
-// Module 14185 (DescriptionEllipsis)
+// Module 14186 (DescriptionEllipsis)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

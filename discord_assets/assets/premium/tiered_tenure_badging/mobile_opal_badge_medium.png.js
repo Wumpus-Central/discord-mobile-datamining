@@ -1,6 +1,6 @@
-// === Module 11630: ? ===
+// === Module 11631: ? ===
 
-// Module 11630
+// Module 11631
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_medium.png.js");

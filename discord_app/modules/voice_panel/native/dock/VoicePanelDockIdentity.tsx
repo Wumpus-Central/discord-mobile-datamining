@@ -1,14 +1,14 @@
-// === Module 19472: VoicePanelDockIdentity ===
+// === Module 19486: VoicePanelDockIdentity ===
 
-// Module 19472 (VoicePanelDockIdentity)
+// Module 19486 (VoicePanelDockIdentity)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
 import useChannelName from "useChannelName" /* 5786 */;
 import GuildIcon from "GuildIcon" /* 7098 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7411 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19473 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19487 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -72,7 +72,7 @@ function DockChannelIcon() {
   return tmp12;
 }
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11428);
+const VoicePanelDockConstants = fn(11429);
 ({ DOCK_TILE_RADIUS, DOCK_TILE_SIZE, DOCK_GAP, DOCK_GLYPH_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

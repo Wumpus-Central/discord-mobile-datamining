@@ -1,8 +1,8 @@
-// === Module 17391: useQuestDockAnimatedBorderRadius ===
+// === Module 17403: useQuestDockAnimatedBorderRadius ===
 
-// Module 17391 (useQuestDockAnimatedBorderRadius)
+// Module 17403 (useQuestDockAnimatedBorderRadius)
 import _mod1652 from "module_1652" /* 1652 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17311 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

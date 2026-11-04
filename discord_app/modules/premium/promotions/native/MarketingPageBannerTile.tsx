@@ -1,6 +1,6 @@
-// === Module 15538: MarketingPageBannerTile ===
+// === Module 15539: MarketingPageBannerTile ===
 
-// Module 15538 (MarketingPageBannerTile)
+// Module 15539 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 575 */;
 import LinkingDefault from "Linking" /* 5843 */;
 import FastImageDefault from "FastImage" /* 5851 */;
@@ -48,18 +48,18 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(15539);
+  const obj = helpArticleLinkProps(15540);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(15539).getButtonActionHandler(obj2);
+  const buttonActionHandler = helpArticleLinkProps(15540).getButtonActionHandler(obj2);
   obj3.type = helpArticleLinkProps(1260).ImpressionTypes.VIEW;
   obj3.name = helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
-  obj3.properties = { component_type: helpArticleLinkProps(10787).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  obj3.properties = { component_type: helpArticleLinkProps(10788).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj3);
-  const obj4 = { component_type: helpArticleLinkProps(10787).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15542).useFormatStringWithCommonPremiumParams(bannerFields.body);
-  const tmp4Result = helpArticleLinkProps(15542);
-  helpArticleLinkProps = helpArticleLinkProps(15542).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+  const obj4 = { component_type: helpArticleLinkProps(10788).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15543).useFormatStringWithCommonPremiumParams(bannerFields.body);
+  const tmp4Result = helpArticleLinkProps(15543);
+  helpArticleLinkProps = helpArticleLinkProps(15543).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj5 = { style: null, children: null };
   items = [tmp.container, style];
   obj5.style = items;

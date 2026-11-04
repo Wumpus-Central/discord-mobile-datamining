@@ -1,12 +1,12 @@
-// === Module 19054: ThreadListEmpty ===
+// === Module 19068: ThreadListEmpty ===
 
-// Module 19054 (ThreadListEmpty)
+// Module 19068 (ThreadListEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
-import _modDef14016 from "module_14016" /* 14016 */;
+import _modDef14017 from "module_14017" /* 14017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default noop.memo(function ThreadListEmpty(onCreateThreadPress) {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef14016, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef14017, size: native.Icon.Sizes.MEDIUM }) };
   items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

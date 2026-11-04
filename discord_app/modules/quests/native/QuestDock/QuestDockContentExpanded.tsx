@@ -1,18 +1,18 @@
-// === Module 17394: QuestDockContentExpanded ===
+// === Module 17406: QuestDockContentExpanded ===
 
-// Module 17394 (QuestDockContentExpanded)
+// Module 17406 (QuestDockContentExpanded)
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5771 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11431 */;
-import QuestDockUtils from "QuestDockUtils" /* 17306 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17308 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11432 */;
+import QuestDockUtils from "QuestDockUtils" /* 17318 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17320 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const QuestDockMode = fn(6916).QuestDockMode;
-let closure_5 = fn(17307).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_5 = fn(17319).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 const obj = { wrapper: null };

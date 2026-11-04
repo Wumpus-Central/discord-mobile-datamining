@@ -1,6 +1,6 @@
-// === Module 20265: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 20279: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 20265 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 20279 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,9 +9,9 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15690 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20269 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 20271 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15691 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20283 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 20285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -126,7 +126,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20270, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20284, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -136,7 +136,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20266, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20280, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

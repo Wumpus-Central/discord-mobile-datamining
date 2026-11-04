@@ -1,6 +1,6 @@
-// === Module 16682: ProfilePendingImageUtils ===
+// === Module 16694: ProfilePendingImageUtils ===
 
-// Module 16682 (ProfilePendingImageUtils)
+// Module 16694 (ProfilePendingImageUtils)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7297 */;
 import size from "module_2" /* 2 */;

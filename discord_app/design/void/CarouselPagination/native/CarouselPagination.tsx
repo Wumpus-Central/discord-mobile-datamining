@@ -1,10 +1,10 @@
-// === Module 16241: CarouselPagination ===
+// === Module 16254: CarouselPagination ===
 
-// Module 16241 (CarouselPagination)
+// Module 16254 (CarouselPagination)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5378 */;
-import Easing_Easing from "Easing/Easing" /* 16050 */;
+import Easing_Easing from "Easing/Easing" /* 16063 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

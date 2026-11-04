@@ -1,6 +1,6 @@
-// === Module 16849: AccountPhoneSetting ===
+// === Module 16861: AccountPhoneSetting ===
 
-// Module 16849 (AccountPhoneSetting)
+// Module 16861 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let closure_4 = fn(7348).PHONE_VERIFICATION_MODAL_KEY;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

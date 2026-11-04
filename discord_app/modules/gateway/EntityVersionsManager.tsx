@@ -1,6 +1,6 @@
-// === Module 19712: EntityVersionsManager ===
+// === Module 19726: EntityVersionsManager ===
 
-// Module 19712 (EntityVersionsManager)
+// Module 19726 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;

@@ -1,6 +1,6 @@
-// === Module 12376: conjureExternalConnectionRequests ===
+// === Module 12377: conjureExternalConnectionRequests ===
 
-// Module 12376 (conjureExternalConnectionRequests)
+// Module 12377 (conjureExternalConnectionRequests)
 import conjureWorkerFetch from "conjureWorkerFetch" /* 11134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -48,7 +48,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
           closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

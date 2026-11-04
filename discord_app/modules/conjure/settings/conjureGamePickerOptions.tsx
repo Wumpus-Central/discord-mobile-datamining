@@ -1,10 +1,10 @@
-// === Module 12350: conjureGamePickerOptions ===
+// === Module 12351: conjureGamePickerOptions ===
 
-// Module 12350 (conjureGamePickerOptions)
+// Module 12351 (conjureGamePickerOptions)
 import initialize from "initialize" /* 504 */;
 import _mod7651 from "module_7651" /* 7651 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11887 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 12351 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11888 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 12352 */;
 import noop from "module_19" /* 19 */;
 import RunningGameStore from "RunningGameStore" /* 2142 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;

@@ -1,16 +1,16 @@
-// === Module 18149: ContentAndSocialScreen ===
+// === Module 18161: ContentAndSocialScreen ===
 
-// Module 18149 (ContentAndSocialScreen)
+// Module 18161 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import SettingBuilders from "SettingBuilders" /* 11728 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
-import SettingLayoutDefault from "SettingLayout" /* 16823 */;
-import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 16954 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18150 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18156 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14463 */;
+import SettingLayoutDefault from "SettingLayout" /* 16835 */;
+import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 16966 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18162 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 17395: QuestDockDragHandle ===
+// === Module 17407: QuestDockDragHandle ===
 
-// Module 17395 (QuestDockDragHandle)
+// Module 17407 (QuestDockDragHandle)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5731 */;
 import spring_spring from "spring/spring" /* 5771 */;
-import QuestDockUtils from "QuestDockUtils" /* 17306 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17308 */;
+import QuestDockUtils from "QuestDockUtils" /* 17318 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17320 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const QuestDockMode = fn(6916).QuestDockMode;
-let closure_6 = fn(17307).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_6 = fn(17319).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);

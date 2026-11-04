@@ -1,16 +1,16 @@
-// === Module 19326: LaunchPadContainer ===
+// === Module 19340: LaunchPadContainer ===
 
-// Module 19326 (LaunchPadContainer)
+// Module 19340 (LaunchPadContainer)
 import _mod1652 from "module_1652" /* 1652 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5328 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import spring_spring from "spring/spring" /* 5771 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11725 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13032 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18299 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19327 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19329 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19330 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11726 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13033 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18313 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19341 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19343 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19344 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -18,7 +18,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11724);
+const LaunchPadConstants = fn(11725);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 19551: StreamEnded ===
+// === Module 19565: StreamEnded ===
 
-// Module 19551 (StreamEnded)
+// Module 19565 (StreamEnded)
 import shared from "shared" /* 5148 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import _mod8947 from "module_8947" /* 8947 */;
@@ -16,10 +16,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getStreamEndedSource(theme) {
   return _mod8947.getIllustrationSource(theme, {
     dark() {
-      return require("module_19552");
+      return require("module_19566");
     },
     darker() {
-      return require("module_19553");
+      return require("module_19567");
     }
   });
 }
@@ -27,10 +27,10 @@ export function useStreamEndedSource() {
   const obj = shared;
   return _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19552");
+      return require("module_19566");
     },
     darker() {
-      return require("module_19553");
+      return require("module_19567");
     }
   });
 }
@@ -38,19 +38,19 @@ export function StreamEnded(arg0) {
   const obj = shared;
   const illustrationSource = _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19552");
+      return require("module_19566");
     },
     darker() {
-      return require("module_19553");
+      return require("module_19567");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_19552");
+      return require("module_19566");
     },
     darker() {
-      return require("module_19553");
+      return require("module_19567");
     }
   };
   const merged = Object.assign(arg0);

@@ -1,25 +1,25 @@
-// === Module 18228: RegistrationStepsUtils ===
+// === Module 18242: RegistrationStepsUtils ===
 
-// Module 18228 (RegistrationStepsUtils)
+// Module 18242 (RegistrationStepsUtils)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import Link from "Link" /* 1500 */;
 import LoginDefault from "Login" /* 7254 */;
-import WelcomeDefault from "Welcome" /* 18231 */;
-import RegistrationUtils from "RegistrationUtils" /* 18238 */;
-import RegisterIdentity from "RegisterIdentity" /* 18239 */;
-import auth_register from "auth/register" /* 18241 */;
-import RegisterDisplayNameDefault from "RegisterDisplayName" /* 18251 */;
-import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 18252 */;
-import components_VerifyPhoneDefault from "components/VerifyPhone" /* 18258 */;
-import components_MFADefault from "components/MFA" /* 18260 */;
-import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 18261 */;
-import ExternalLinkDefault from "ExternalLink" /* 18265 */;
-import RegisterAgeGateDefault from "RegisterAgeGate" /* 18266 */;
-import AgeGateUnderageDefault from "AgeGateUnderage" /* 18272 */;
-import CompanionRemoteAuth from "CompanionRemoteAuth" /* 18273 */;
+import WelcomeDefault from "Welcome" /* 18245 */;
+import RegistrationUtils from "RegistrationUtils" /* 18252 */;
+import RegisterIdentity from "RegisterIdentity" /* 18253 */;
+import auth_register from "auth/register" /* 18255 */;
+import RegisterDisplayNameDefault from "RegisterDisplayName" /* 18265 */;
+import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 18266 */;
+import components_VerifyPhoneDefault from "components/VerifyPhone" /* 18272 */;
+import components_MFADefault from "components/MFA" /* 18274 */;
+import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 18275 */;
+import ExternalLinkDefault from "ExternalLink" /* 18279 */;
+import RegisterAgeGateDefault from "RegisterAgeGate" /* 18280 */;
+import AgeGateUnderageDefault from "AgeGateUnderage" /* 18286 */;
+import CompanionRemoteAuth from "CompanionRemoteAuth" /* 18287 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16844 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16856 */;
 
 require = fn;
 function headerTitle() {
@@ -105,21 +105,21 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   closure_131_2 = closure_2;
   const result = UniqueUsernamesStore.registrationUsernameSuggestion();
   const registrationOptions = state2.getState().registrationOptions;
-  let tmp37 = null;
+  let tmp49 = null;
   if (!obj10.isNullOrEmpty(result)) {
-    tmp37 = registrationOptions.username === result;
+    tmp49 = registrationOptions.username === result;
   }
-  const obj6 = {};
+  const obj5 = {};
   const merged = Object.assign(registrationOptions);
-  obj6.usedUsernameSuggestion = tmp37;
-  closure_131_3 = obj6;
+  obj5.usedUsernameSuggestion = tmp49;
+  closure_131_3 = obj5;
   state = state.getState();
   if (state.required) {
-    obj6.promoEmailConsent = state;
+    obj5.promoEmailConsent = state;
   }
   metroImportDefault(true);
   timestampProducer({});
-  await auth_register.registerFull(obj6);
+  await auth_register.registerFull(obj5);
   if (1 === tmp7) {
     c6 = 0;
     closure_131_6 = closure_5;
@@ -149,9 +149,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6876).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18229);
+const RegistrationUIStore = fn(18243);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18230);
+const RegistrationConstants = fn(18244);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;

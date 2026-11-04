@@ -1,21 +1,21 @@
-// === Module 18608: useGuildsBarProps ===
+// === Module 18622: useGuildsBarProps ===
 
-// Module 18608 (useGuildsBarProps)
+// Module 18622 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 18661 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 18675 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import MessageRequestStore from "MessageRequestStore" /* 6991 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6992 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 15867 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 15880 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6909 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15875 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15888 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 import SortedGuildStore from "SortedGuildStore" /* 6907 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18601 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18615 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   return tmp;
 }
 const GuildsNodeType = fn(6907).GuildsNodeType;
-const GuildsBarConstants = fn(18598);
+const GuildsBarConstants = fn(18612);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -456,26 +456,26 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18662), {}, item);
+              return closure_1_19(closure_1_1(18676), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18663), {}, item);
+              return closure_1_19(closure_1_1(18677), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18664), {}, item);
+              return closure_1_19(closure_1_1(18678), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18679), {}, item);
+              return closure_1_19(closure_1_1(18693), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18662), {}, item);
+              return closure_1_19(closure_1_1(18676), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18663), {}, item);
+              return closure_1_19(closure_1_1(18677), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18664), {}, item);
+              return closure_1_19(closure_1_1(18678), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18679), {}, item);
+              return closure_1_19(closure_1_1(18693), {}, item);
             }
           })
         });

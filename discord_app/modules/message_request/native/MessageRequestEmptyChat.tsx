@@ -1,6 +1,6 @@
-// === Module 14417: MessageRequestEmptyChat ===
+// === Module 14418: MessageRequestEmptyChat ===
 
-// Module 14417 (MessageRequestEmptyChat)
+// Module 14418 (MessageRequestEmptyChat)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;

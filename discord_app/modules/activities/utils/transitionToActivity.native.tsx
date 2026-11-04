@@ -1,6 +1,6 @@
-// === Module 11894: transitionToActivity ===
+// === Module 11895: transitionToActivity ===
 
-// Module 11894 (transitionToActivity)
+// Module 11895 (transitionToActivity)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -10,9 +10,9 @@ import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 *
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6986 */;
 import ChannelCallStore from "ChannelCallStore" /* 11181 */;
 import ChannelCallConstants from "ChannelCallConstants" /* 11182 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11895 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11922 */;
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 13403 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11896 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11923 */;
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 13404 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import size from "module_2" /* 2 */;
 

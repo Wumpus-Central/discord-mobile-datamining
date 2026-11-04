@@ -1,22 +1,22 @@
-// === Module 16795: UserProfileEditFormTabs ===
+// === Module 16807: UserProfileEditFormTabs ===
 
-// Module 16795 (UserProfileEditFormTabs)
+// Module 16807 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ChatInputUtils from "ChatInputUtils" /* 5331 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15159 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15166 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16794 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16796 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16797 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15160 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15167 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16806 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16808 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const UserProfileTabPagesDefault = tmp2(15226);
+const UserProfileTabPagesDefault = tmp2(15227);
 require = fn;
 function MainPage() {
   const tmp = closure_9();
@@ -136,7 +136,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     str = "overlay";
   }
   obj6.variant = str;
-  const items7 = [closure_6(tmp11(12371).Tabs, obj6), closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  const items7 = [closure_6(tmp11(12372).Tabs, obj6), closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj5.children = items7;
   return closure_8(first, obj5);
 });

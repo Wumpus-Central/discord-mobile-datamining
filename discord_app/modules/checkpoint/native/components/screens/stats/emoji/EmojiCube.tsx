@@ -1,6 +1,6 @@
-// === Module 13892: EmojiCube ===
+// === Module 13893: EmojiCube ===
 
-// Module 13892 (EmojiCube)
+// Module 13893 (EmojiCube)
 import nativeDefault from "native" /* 575 */;
 import EmojiDefault from "Emoji" /* 7436 */;
 import _slicedToArray from "module_32" /* 32 */;

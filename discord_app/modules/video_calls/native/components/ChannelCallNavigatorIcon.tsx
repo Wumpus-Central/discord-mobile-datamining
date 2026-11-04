@@ -1,6 +1,6 @@
-// === Module 12092: ChannelCallNavigatorIcon ===
+// === Module 12093: ChannelCallNavigatorIcon ===
 
-// Module 12092 (ChannelCallNavigatorIcon)
+// Module 12093 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;

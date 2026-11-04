@@ -1,13 +1,13 @@
-// === Module 17635: YouBarNameplateAccessibilitySetting ===
+// === Module 17647: YouBarNameplateAccessibilitySetting ===
 
-// Module 17635 (YouBarNameplateAccessibilitySetting)
+// Module 17647 (YouBarNameplateAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16502 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16515 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

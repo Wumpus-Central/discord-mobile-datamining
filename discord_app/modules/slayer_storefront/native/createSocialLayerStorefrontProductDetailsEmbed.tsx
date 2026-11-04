@@ -1,6 +1,6 @@
-// === Module 15355: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 15356: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 15355 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 15356 (createSocialLayerStorefrontProductDetailsEmbed)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
@@ -13,11 +13,11 @@ import Constants from "Constants" /* 8019 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8535 */;
 import _modDef9680 from "module_9680" /* 9680 */;
 import CodedLinksConstants from "CodedLinksConstants" /* 10295 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11750 */;
-import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11752 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 14390 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 15353 */;
-import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 15354 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11751 */;
+import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11753 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 14391 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 15354 */;
+import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors" /* 15355 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import UserProfileStore from "UserProfileStore" /* 7912 */;
 import WishlistStore from "WishlistStore" /* 9618 */;

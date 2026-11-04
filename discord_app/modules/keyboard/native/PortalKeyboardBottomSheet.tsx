@@ -1,6 +1,6 @@
-// === Module 12623: PortalKeyboardBottomSheet ===
+// === Module 12624: PortalKeyboardBottomSheet ===
 
-// Module 12623 (PortalKeyboardBottomSheet)
+// Module 12624 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -12,8 +12,8 @@ import BottomSheetModal from "BottomSheetModal" /* 5400 */;
 import useMountEffectDefault from "useMountEffect" /* 5729 */;
 import isChannelFocused from "isChannelFocused" /* 7008 */;
 import native from "native" /* 9137 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12624 */;
-import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 12625 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12625 */;
+import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 12626 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 10382 */;

@@ -10,13 +10,13 @@ import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
 import getPlatformDefault from "getPlatform" /* 5816 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7018 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7840 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11934 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11691 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11935 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9912 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;
-import AppLauncherStore from "AppLauncherStore" /* 12633 */;
+import AppLauncherStore from "AppLauncherStore" /* 12634 */;
 
 const require = globalThis.__r;
 

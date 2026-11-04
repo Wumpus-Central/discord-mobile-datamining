@@ -1,6 +1,6 @@
-// === Module 19839: InterestGuildJoinButton ===
+// === Module 19853: InterestGuildJoinButton ===
 
-// Module 19839 (InterestGuildJoinButton)
+// Module 19853 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2537 from "module_2537" /* 2537 */;

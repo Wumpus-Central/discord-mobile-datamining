@@ -1,6 +1,6 @@
-// === Module 18370: HappeningNowCardPlaceholder ===
+// === Module 18384: HappeningNowCardPlaceholder ===
 
-// Module 18370 (HappeningNowCardPlaceholder)
+// Module 18384 (HappeningNowCardPlaceholder)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(17521).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(17533).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);

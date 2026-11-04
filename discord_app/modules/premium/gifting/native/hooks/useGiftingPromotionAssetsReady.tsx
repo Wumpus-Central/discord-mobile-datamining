@@ -1,6 +1,6 @@
-// === Module 19320: useGiftingPromotionAssetsReady ===
+// === Module 19334: useGiftingPromotionAssetsReady ===
 
-// Module 19320 (useGiftingPromotionAssetsReady)
+// Module 19334 (useGiftingPromotionAssetsReady)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

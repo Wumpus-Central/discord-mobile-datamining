@@ -1,6 +1,6 @@
-// === Module 14451: HubProgressBarUtils ===
+// === Module 14452: HubProgressBarUtils ===
 
-// Module 14451 (HubProgressBarUtils)
+// Module 14452 (HubProgressBarUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;

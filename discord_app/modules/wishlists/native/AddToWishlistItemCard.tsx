@@ -1,6 +1,6 @@
-// === Module 15225: AddToWishlistItemCard ===
+// === Module 15226: AddToWishlistItemCard ===
 
-// Module 15225 (AddToWishlistItemCard)
+// Module 15226 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
 import SKUPreviewDefault from "SKUPreview" /* 9613 */;
 import HeartOutlineIcon from "HeartOutlineIcon" /* 9682 */;

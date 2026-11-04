@@ -1,6 +1,6 @@
-// === Module 16554: invites ===
+// === Module 16566: invites ===
 
-// Module 16554 (invites)
+// Module 16566 (invites)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -10,7 +10,7 @@ const InstantInviteSources = fn(1072).InstantInviteSources;
 const Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16536);
+const CONTEXT_MENU_ICON_NAMES = fn(16548);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(9051).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(9051).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
@@ -57,10 +57,10 @@ obj3.handler = function handler(arg0) {
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (tmp3(11930).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (tmp3(11930).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (tmp3(11930).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (tmp3(11930).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                if (tmp3(11931).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (tmp3(11931).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (tmp3(11931).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (tmp3(11931).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
                         const obj8 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
                         const rPCError2 = new tmp3(9480).RPCError(obj8, "Unsupported activity location");
                         throw rPCError2;
@@ -83,11 +83,11 @@ obj3.handler = function handler(arg0) {
                   obj11.inviteAnalyticsMetadata = obj12;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
-                  const obj13 = { value: tmp3(11922).sendEmbeddedActivityInviteUser(obj11), done: false };
+                  const obj13 = { value: tmp3(11923).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(16555).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(16555);
+                channel = tmp3(16567).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(16567);
               }
             }
           }

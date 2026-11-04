@@ -1,6 +1,6 @@
-// === Module 14828: AuthorizeScopes ===
+// === Module 14829: AuthorizeScopes ===
 
-// Module 14828 (AuthorizeScopes)
+// Module 14829 (AuthorizeScopes)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;

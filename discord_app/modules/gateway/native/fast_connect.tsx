@@ -10,14 +10,14 @@ import QosToken from "QosToken" /* 500 */;
 import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1260 */;
 import isCacheEnabled from "isCacheEnabled" /* 7931 */;
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10390 */;
-import GatewayCapabilities from "GatewayCapabilities" /* 15790 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16256 */;
+import GatewayCapabilities from "GatewayCapabilities" /* 15791 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16269 */;
 import checkEnv from "checkEnv" /* 16 */;
 import size from "module_2" /* 2 */;
 
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = obj3(15772);
+    let obj = obj3(15773);
     constants = obj.getConstants();
     let flag;
     if (constants != null) {
@@ -37,14 +37,14 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp7}`);
     const _Date = Date;
     closure_0 = Date.now();
-    const tmp9 = obj3(15759)(combined);
+    const tmp9 = obj3(15760)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp9._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj2.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp9._socketId);
     } else {
-      const tmp3Result = tmp3(15772);
+      const tmp3Result = tmp3(15773);
       if (flag) {
         const result = tmp3Result.enableZstdStreamSupport(parsed);
       } else {

@@ -12,7 +12,7 @@ import ContextUtilsDefault from "ContextUtils" /* 7753 */;
 import BadgeId from "BadgeId" /* 8896 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10738 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10789 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -65,6 +65,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
   let first10;
   closure_25 = undefined;
   let orderContext;
+  let setOrder;
   let planIdForPremiumType;
   let productIdForGift;
   let skuId;
@@ -72,7 +73,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
   let handlePremiumPurchase;
   let stateFromStoresArray;
   let fetchClaimableGiftingPromotionRewardSkuIds;
-  closure_34 = undefined;
+  closure_35 = undefined;
   let enabled;
   let stateFromStores;
   let memo1;
@@ -124,6 +125,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
   closure_25 = tmp2Result19[1];
   let obj2 = require("useGiftStyles");
   orderContext = require("useOrderContext").useOrderContext(initialOrder, "NativeGiftContext");
+  setOrder = orderContext.setOrder;
   let obj3 = require("useOrderContext");
   planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, first1);
   let obj4 = require("PremiumUtils");
@@ -165,7 +167,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     if (tmp41) {
       tmp41 = fetchClaimableGiftingPromotionRewardSkuIds.length > 0;
     }
-    closure_34 = tmp41;
+    closure_35 = tmp41;
     const tmp10Result5 = tmp10(tmp11[24]);
     const tmp42 = recipientUserId;
     enabled = recipientUserId(tmp11[25]).useConfig({ location: "NativeGiftContext" }).enabled;
@@ -248,7 +250,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     }, items5);
     const items6 = [first9, tmp41];
     const effect2 = obj.useEffect(() => {
-      if (closure_34) {
+      if (closure_35) {
         const currentUser = UserStore.getCurrentUser();
         let id;
         if (currentUser != null) {
@@ -258,11 +260,11 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         AnalyticsUtilsDefault.track(AnalyticEvents.GIFT_PROMOTION_REWARD_SELECTED, obj2);
       }
     }, items6);
-    ({ order, revision, setRevision, setOrder } = orderContext);
+    ({ order, revision, setRevision, setOrder: setOrder2 } = orderContext);
     closure_130_0 = order;
     closure_130_1 = revision;
     closure_130_2 = setRevision;
-    closure_130_3 = setOrder;
+    closure_130_3 = setOrder2;
     closure_130_4 = planIdForPremiumType;
     closure_130_5 = memo;
     closure_130_6 = memo1;
@@ -272,7 +274,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "count", giftInfo: 263 };
+    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "create", giftInfo: 263 };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -291,7 +293,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_20 = resolveSyncs;
     const isAwaitingSync = tmp54.isAwaitingSync;
     closure_130_21 = isAwaitingSync;
-    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder, tmp26, tmp2Result20[0], resolveSyncs, waitForPause, isAwaitingSync];
+    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder2, tmp26, tmp2Result20[0], resolveSyncs, waitForPause, isAwaitingSync];
     const effect3 = obj.useEffect(() => {
       let id;
       if (id != null) {
@@ -942,90 +944,118 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
       closure_19(false);
     }, items11);
     _require = setCurrentAnalyticsStep(function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
+      if (c7 === 2) {
+        c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          c5 = 2;
-          if (0 === c4) {
+          c7 = 2;
+          if (0 === c6) {
             if (arg0 === 1) {
-              c5 = 3;
+              c7 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              c7 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              closure_2 = tmp3;
+              closure_2 = tmp7;
               closure_130_0 = closure_0;
-              closure_130_1 = undefined;
+              let orderId;
               closure_130_2 = undefined;
-              let obj7 = first1;
-              let tmp50 = null;
+              closure_130_3 = undefined;
+              let obj16 = first1;
               if (null != first1.getNextTier(closure_0(onClose[27]).BadgeId.GIFTING)) {
-                const singleRequirementProgress = obj7.getSingleRequirementProgress(closure_0(onClose[27]).BadgeId.GIFTING);
-                obj7 = singleRequirementProgress == tmp50;
+                const singleRequirementProgress = obj16.getSingleRequirementProgress(closure_0(onClose[27]).BadgeId.GIFTING);
+                obj16 = singleRequirementProgress == null;
                 let current;
-                if (!obj7) {
+                if (!obj16) {
                   current = singleRequirementProgress.current;
                 }
                 c1 = current;
-                if (current == tmp50) {
-                  c1 = tmp50;
+                if (current == null) {
+                  c1 = null;
                 }
                 closure_1_25(c1);
               } else {
-                closure_1_25(tmp50);
+                closure_1_25(null);
               }
-              tmp50 = closure_1_19(true);
+              closure_1_19(true);
               callback();
-              c4 = 1;
-              c5 = 1;
+              c6 = 1;
+              c7 = 1;
             }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
           } else {
-            if (value) {
-              closure_130_2 = callback1(closure_130_0);
-              if (obj.isAndroid()) {
-                closure_130_3 = function handleGPlayUpdatePurchaseAction(isActivePurchase) {
-                  if (isActivePurchase.isActivePurchase) {
-                    recipientUserId(onClose[32]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_1_3);
-                    if (isActivePurchase.billingResult !== constants.OK) {
-                      callback3(closure_1_2);
-                    }
-                    const obj = recipientUserId(onClose[32]);
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj5 = { value, done: true };
+                return obj5;
+              } else {
+                if (value) {
+                  closure_130_3 = callback1(closure_130_0);
+                  enabled = closure_0(onClose[33]).isAndroid();
+                  if (enabled) {
+                    const AndroidNitroGiftOrdersExperiment = closure_0(onClose[35]).AndroidNitroGiftOrdersExperiment;
+                    enabled = AndroidNitroGiftOrdersExperiment.getConfig({ location: "NativeGiftContext" }).enabled;
                   }
-                };
-                const subscription = recipientUserId(onClose[32]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_130_3);
-                const obj2 = recipientUserId(onClose[32]);
+                  if (enabled) {
+                    orderId = orderContext.orderId;
+                  }
+                  if (null != orderId) {
+                    c5 = 1;
+                    c6 = 3;
+                    c7 = 1;
+                    const obj6 = { value: closure_0(onClose[15]).markOrderAsSigningInProgress(orderId), done: false };
+                    return obj6;
+                  }
+                  const obj7 = closure_0(onClose[33]);
+                } else {
+                  closure_1_19(false);
+                }
+                c7 = 3;
               }
-              tmp2(closure_0(onClose[34]).PaymentFlowStep.REVIEW);
-              const obj8 = { productId, isGift: true, analyticsLoadId: null, analyticsLocation: null, analyticsLocations: null, allowPlanChange: false, giftInfoOptions: null, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
-              ({ load_id: obj3.analyticsLoadId, location: obj3.analyticsLocation, location_stack: obj3.analyticsLocations } = closure_0);
-              obj8.giftInfoOptions = giftInfoOptions;
-              closure_130_1 = setCurrentAnalyticsStep(function*() {
-                yield closure_1_40(closure_2_2);
-                return value;
-              });
-              obj8.onPurchaseComplete = function onPurchaseComplete() {
+            } else if (2 === tmp7) {
+              c5 = 0;
+              closure_130_4 = closure_4;
+              const obj11 = { tags: { source: "NativeGiftContext_onPurchase_sign" }, extra: null };
+              const obj12 = { skuId, orderId };
+              obj11.extra = obj12;
+              let result = closure_0(onClose[16]).captureBillingException(closure_130_4, obj11);
+              const obj14 = { error: closure_130_4, skuId, orderId };
+              logger.error("Failed to mark order signing-in-progress", obj14);
+              closure_1_19(false);
+              closure_1_21(closure_130_4);
+              c7 = 3;
+              const obj15 = { value: undefined, done: true };
+              return obj15;
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              c5 = 0;
+            }
+            if (obj8.isAndroid()) {
+              closure_130_5 = function handleGPlayUpdatePurchaseAction() {
                 const self = this;
-                const apply = closure_1_1.apply;
+                const apply = closure_6.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                 } else {
@@ -1033,30 +1063,104 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                 }
                 return applyArgumentsResult;
               };
-              obj8.onPurchaseError = function onPurchaseError() {
-                return callback3(closure_1_2);
+              closure_130_6 = function _handleGPlayUpdatePurchaseAction() {
+                const self = this;
+                const tmp = setCurrentAnalyticsStep((arg0) => {
+                  const isActivePurchase = arg0;
+                  c6 = 0;
+                  c7 = 0;
+                  c4 = 0;
+                  return (function*(arg0) {
+                    closure_3 = tmp3;
+                    if (isActivePurchase.isActivePurchase) {
+                      closure_2_1(572).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_2_5);
+                      if (isActivePurchase.billingResult !== constants.OK) {
+                        if (null != closure_2_1) {
+                          if (isActivePurchase.billingResult === tmp28.USER_CANCELED) {
+                            c4 = 1;
+                            closure_1 = closure_1_27;
+                            c6 = 2;
+                            c7 = 1;
+                            return { value: closure_2_0(7754).cancelOrderSigning(closure_2_1), done: false };
+                          }
+                        }
+                      }
+                      closure_2_1(572);
+                    }
+                    yield "HermesInternal";
+                    if (1 === tmp7) {
+                      c4 = 0;
+                      closure_130_0 = closure_5;
+                      const obj8 = { tags: { source: "NativeGiftContext_cancelOrderSigning" }, extra: null };
+                      obj8.extra = { skuId, orderId: closure_131_1 };
+                      const result = closure_2_0(4954).captureBillingException(closure_130_0, obj8);
+                      logger.error("Failed to cancel order signing", { error: closure_130_0, skuId, orderId: closure_131_1 });
+                      closure_2_0(4954);
+                    } else if (arg0 === 1) {
+                      c7 = 3;
+                      throw value;
+                    } else if (arg0 !== 2) {
+                      closure_1(value);
+                      c4 = 0;
+                    }
+                    return value;
+                  })();
+                });
+                closure_6 = tmp;
+                const apply = tmp.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
               };
-              obj8.orderId = orderId.orderId;
-              const obj9 = { load_id: closure_0.load_id, succeededOnlyFields: null };
-              const obj15 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
-              const intl = closure_0(onClose[18]).intl;
-              obj15.is_custom_message_edited = first3 !== intl.string(closure_0(onClose[18]).t.ZkOo1U);
-              obj9.succeededOnlyFields = obj15;
-              obj8.analyticsData = obj9;
-              handlePremiumPurchase(obj8);
-              obj = closure_0(onClose[33]);
-            } else {
-              closure_1_19(false);
+              const subscription = recipientUserId(onClose[32]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_130_5);
+              const obj9 = recipientUserId(onClose[32]);
             }
-            c5 = 3;
+            tmp3(closure_0(onClose[34]).PaymentFlowStep.REVIEW);
+            const obj17 = { productId, isGift: true, analyticsLoadId: null, analyticsLocation: null, analyticsLocations: null, allowPlanChange: false, giftInfoOptions: null, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
+            ({ load_id: obj10.analyticsLoadId, location: obj10.analyticsLocation, location_stack: obj10.analyticsLocations } = closure_0);
+            obj17.giftInfoOptions = giftInfoOptions;
+            closure_130_2 = setCurrentAnalyticsStep(function*() {
+              yield closure_1_41(closure_2_3);
+              return value;
+            });
+            obj17.onPurchaseComplete = function onPurchaseComplete() {
+              const self = this;
+              const apply = closure_1_2.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            obj17.onPurchaseError = function onPurchaseError() {
+              return callback3(closure_1_3);
+            };
+            obj17.orderId = orderContext.orderId;
+            const obj18 = { load_id: closure_0.load_id, succeededOnlyFields: null };
+            const obj29 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
+            const intl = closure_0(onClose[18]).intl;
+            obj29.is_custom_message_edited = first3 !== intl.string(closure_0(onClose[18]).t.ZkOo1U);
+            obj18.succeededOnlyFields = obj29;
+            obj17.analyticsData = obj18;
+            handlePremiumPurchase(obj17);
+            obj8 = closure_0(onClose[33]);
           }
-        } catch (tmp53) {
-          c5 = tmp;
-          throw tmp53;
+        } catch (tmp89) {
+          closure_4 = tmp89;
+          if (tmp4 === c5) {
+            c7 = tmp2;
+            throw tmp89;
+          } else {
+            c6 = tmp;
+          }
         }
       }
     });
-    const items12 = [callback, callback1, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, basePurchaseAnalytics, callback2, callback3, orderContext.orderId, first3];
+    const items12 = [callback, callback1, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, basePurchaseAnalytics, callback2, callback3, orderContext.orderId, setOrder, first3, skuId];
     callback4 = obj.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;

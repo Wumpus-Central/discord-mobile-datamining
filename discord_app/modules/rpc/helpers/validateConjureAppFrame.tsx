@@ -1,11 +1,11 @@
-// === Module 16528: validateConjureAppFrame ===
+// === Module 16540: validateConjureAppFrame ===
 
-// Module 16528 (validateConjureAppFrame)
+// Module 16540 (validateConjureAppFrame)
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5785 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
 import isConjureApplicationDefault from "isConjureApplication" /* 6989 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16529 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16541 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

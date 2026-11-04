@@ -1,7 +1,7 @@
-// === Module 18493: ShowAllVoiceChannelsButton ===
+// === Module 18507: ShowAllVoiceChannelsButton ===
 
-// Module 18493 (ShowAllVoiceChannelsButton)
-import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 18494 */;
+// Module 18507 (ShowAllVoiceChannelsButton)
+import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 18508 */;
 import noop from "module_19" /* 19 */;
 import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7852 */;
 

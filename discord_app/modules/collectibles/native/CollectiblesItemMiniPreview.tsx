@@ -1,6 +1,6 @@
-// === Module 15253: CollectiblesItemMiniPreview ===
+// === Module 15254: CollectiblesItemMiniPreview ===
 
-// Module 15253 (CollectiblesItemMiniPreview)
+// Module 15254 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 575 */;
 import utils from "utils" /* 2113 */;
 import FastImageDefault from "FastImage" /* 5851 */;

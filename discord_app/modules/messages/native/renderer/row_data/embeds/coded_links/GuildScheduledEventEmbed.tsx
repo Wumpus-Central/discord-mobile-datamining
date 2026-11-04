@@ -1,6 +1,6 @@
-// === Module 15341: GuildScheduledEventEmbed ===
+// === Module 15342: GuildScheduledEventEmbed ===
 
-// Module 15341 (GuildScheduledEventEmbed)
+// Module 15342 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
@@ -18,8 +18,8 @@ import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9127 */;
 import GuildEventUtils from "GuildEventUtils" /* 9229 */;
 import icons_ShareDefault from "icons/Share" /* 9306 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9356 */;
-import _modDef15342 from "module_15342" /* 15342 */;
 import _modDef15343 from "module_15343" /* 15343 */;
+import _modDef15344 from "module_15344" /* 15344 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6990 */;
@@ -79,7 +79,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15342);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15343);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -153,7 +153,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15343);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15344);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);

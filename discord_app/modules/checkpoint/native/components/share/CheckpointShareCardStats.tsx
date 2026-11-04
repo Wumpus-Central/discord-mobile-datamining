@@ -1,6 +1,6 @@
-// === Module 13669: CheckpointShareCardStats ===
+// === Module 13670: CheckpointShareCardStats ===
 
-// Module 13669 (CheckpointShareCardStats)
+// Module 13670 (CheckpointShareCardStats)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
@@ -11,7 +11,7 @@ import ChatIcon from "ChatIcon" /* 8784 */;
 import ReactionIcon from "ReactionIcon" /* 9599 */;
 import GameControllerIcon from "GameControllerIcon" /* 9877 */;
 import ServerIcon from "ServerIcon" /* 9908 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12168 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

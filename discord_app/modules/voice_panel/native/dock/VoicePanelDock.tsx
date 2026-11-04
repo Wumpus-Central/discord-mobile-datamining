@@ -1,6 +1,6 @@
-// === Module 19471: VoicePanelDock ===
+// === Module 19485: VoicePanelDock ===
 
-// Module 19471 (VoicePanelDock)
+// Module 19485 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -9,11 +9,11 @@ import timing_timing from "timing/timing" /* 5378 */;
 import HapticUtils from "HapticUtils" /* 5384 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import ExternalPipDefault from "ExternalPip" /* 6008 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11414 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11436 */;
-import VoicePanelDockIdentityDefault from "VoicePanelDockIdentity" /* 19472 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19474 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11415 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11437 */;
+import VoicePanelDockIdentityDefault from "VoicePanelDockIdentity" /* 19486 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19488 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,10 +21,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelDockConstants = fn(11428);
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelDockConstants = fn(11429);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: metroImportDefault, DOCK_PULL_SNAP_DISTANCE: closure_8, DOCK_PULL_SNAP_GIVE: closure_9, DOCK_TAP_MAX_MOVEMENT: closure_10, getDockInset: closure_11, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11429);
+const GestureConstants = fn(11430);
 ({ FLING_MIN_DISTANCE: closure_12, FLING_MIN_VELOCITY: map1, PULL_GESTURE_ACTIVATION_DISTANCE: closure_14, PULL_GESTURE_RESISTANCE: closure_15, PULL_GESTURE_SNAP_TIMING: closure_16, PULL_GESTURE_UNSNAP_TIMING: closure_17 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);

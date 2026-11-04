@@ -1,27 +1,27 @@
-// === Module 13894: CheckpointGamesStatsScreen ===
+// === Module 13895: CheckpointGamesStatsScreen ===
 
-// Module 13894 (CheckpointGamesStatsScreen)
+// Module 13895 (CheckpointGamesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef3219 from "module_3219" /* 3219 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import CheckpointTextDefault from "CheckpointText" /* 13865 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13879 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13886 */;
+import CheckpointTextDefault from "CheckpointText" /* 13866 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13880 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13887 */;
 import GameStore from "GameStore" /* 2143 */;
-import CheckpointStore from "CheckpointStore" /* 13656 */;
+import CheckpointStore from "CheckpointStore" /* 13657 */;
 import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
-const CheckpointApngPlayerDefault = items9(13870);
-const _modDef13871 = items9(13871);
+const CheckpointApngPlayerDefault = items9(13871);
 const _modDef13872 = items9(13872);
-const CheckpointCountUpStatNumberDefault = items9(13878);
-const CheckpointDisplayTextDefault = items9(13884);
+const _modDef13873 = items9(13873);
+const CheckpointCountUpStatNumberDefault = items9(13879);
+const CheckpointDisplayTextDefault = items9(13885);
 function GameCard(game) {
   game = game.game;
   const id = game.id;
@@ -171,7 +171,7 @@ export default function CheckpointGamesStatsScreen() {
       obj7.style = items3;
       const obj8 = { style: map.header, children: null };
       const obj9 = { style: map.globalHeading, children: null };
-      const obj10 = { animatedUri: _modDef13871, staticUri: _modDef13872, style: map.globe };
+      const obj10 = { animatedUri: _modDef13872, staticUri: _modDef13873, style: map.globe };
       const items4 = [closure_8(CheckpointApngPlayerDefault, obj10), ];
       const obj11 = { isStepHeading: true, children: null };
       const items9Result = CheckpointApngPlayerDefault;

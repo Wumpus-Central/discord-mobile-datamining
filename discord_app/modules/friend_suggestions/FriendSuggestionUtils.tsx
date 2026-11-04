@@ -1,6 +1,6 @@
-// === Module 18341: FriendSuggestionUtils ===
+// === Module 18355: FriendSuggestionUtils ===
 
-// Module 18341 (FriendSuggestionUtils)
+// Module 18355 (FriendSuggestionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");

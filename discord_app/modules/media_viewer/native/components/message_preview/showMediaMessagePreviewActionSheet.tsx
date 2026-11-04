@@ -1,6 +1,6 @@
-// === Module 14996: showMediaMessagePreviewActionSheet ===
+// === Module 14997: showMediaMessagePreviewActionSheet ===
 
-// Module 14996 (showMediaMessagePreviewActionSheet)
+// Module 14997 (showMediaMessagePreviewActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -18,7 +18,7 @@ export default function showMediaMessagePreviewActionSheet(message) {
       const user = UserStore.getUser(message.author.id);
       if (null != user) {
         const obj2 = { channel, message, user, closeMediaModal: message.closeMediaModal };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14997, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14998, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj2);
       }
     }
   }

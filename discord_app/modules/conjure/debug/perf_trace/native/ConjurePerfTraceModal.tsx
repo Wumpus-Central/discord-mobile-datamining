@@ -1,15 +1,15 @@
-// === Module 13235: ConjurePerfTraceModal ===
+// === Module 13236: ConjurePerfTraceModal ===
 
-// Module 13235 (ConjurePerfTraceModal)
+// Module 13236 (ConjurePerfTraceModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import NavigatorHeader from "NavigatorHeader" /* 7139 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
-import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 13236 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13237 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 13239 */;
-import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 13240 */;
+import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 13237 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13238 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 13240 */;
+import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 13241 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 11035 */;
 
@@ -20,11 +20,11 @@ function WaterfallRow(node) {
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(13236).usePerfCategoryColors();
+  const perfCategoryColors = node(13237).usePerfCategoryColors();
   if (collapsed) {
     let ChevronSmallDownIcon = tmp2(7514).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(11602).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(11603).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -64,7 +64,7 @@ function WaterfallRow(node) {
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop, ];
-  let obj = node(13236);
+  let obj = node(13237);
   items1[1] = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -124,7 +124,7 @@ function WaterfallRow(node) {
   const obj11 = { variant: "body-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = { variant: "body-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
-  obj16.children = node(13237).perfNodeDuration(node);
+  obj16.children = node(13238).perfNodeDuration(node);
   items2[7] = tmp13(node(5761).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), , ];
@@ -141,8 +141,8 @@ function WaterfallRow(node) {
     const obj21 = { paddingLeft: node.depth * selected(575).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(13237);
-    obj20.children = tmp2(13237).perfNodeSections(node).map((item) => {
+    const tmp2Result2 = tmp2(13238);
+    obj20.children = tmp2(13238).perfNodeSections(node).map((item) => {
       ({ title, rows } = item);
       let obj = { style: detail.detail, children: null };
       let tmp3 = null;
@@ -174,7 +174,7 @@ function WaterfallRow(node) {
       return React6(timestampProducer, obj, title);
     });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(13237).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(13238).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -264,9 +264,9 @@ function Waterfall(trace) {
   if (0 !== trace.dropped) {
     const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(13237).formatSpanCount(trace.dropped) + " not recorded";
+    obj10.children = "" + tmp4(13238).formatSpanCount(trace.dropped) + " not recorded";
     tmp8Result2 = closure_8(tmp4(5761).Text, obj10);
-    const tmp4Result = tmp4(13237);
+    const tmp4Result = tmp4(13238);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;

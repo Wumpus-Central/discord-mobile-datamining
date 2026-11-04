@@ -1,6 +1,6 @@
-// === Module 11893: handleJoinEmbeddedActivity ===
+// === Module 11894: handleJoinEmbeddedActivity ===
 
-// Module 11893 (handleJoinEmbeddedActivity)
+// Module 11894 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -59,7 +59,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           closure_129_17 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

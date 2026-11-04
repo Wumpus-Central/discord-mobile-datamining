@@ -9,7 +9,7 @@ require = fn;
 const MessageType = fn(1197).MessageType;
 class GiftIcon$Type extends MessageType {
   constructor() {
-    items = [, , , ];
+    items = [, , , , ];
     items[0] = { no: 1, name: "box_animation_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "trinket_animation_url", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "trinket_glow_animation_url", kind: "scalar", T: 9 };
@@ -21,13 +21,14 @@ class GiftIcon$Type extends MessageType {
             return gradient.Gradient;
           }
     };
+    items[4] = { no: 5, name: "trinket_rive_animation_url", kind: "scalar", T: 9 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.GiftIcon", items, new.target);
     return tmp1;
   }
 }
 const prototype = GiftIcon$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "" };
+  const obj = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "", trinketRiveAnimationUrl: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -56,6 +57,8 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let Gradient = gradient.Gradient;
         obj.gradient = Gradient.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.gradient);
+      } else if (5 === tmp5) {
+        obj.trinketRiveAnimationUrl = pos.string();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -102,6 +105,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl,
     const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if ("" !== boxAnimationUrl.trinketRiveAnimationUrl) {
+    tag.tag(5, _mod1197.WireType.LengthDelimited).string(boxAnimationUrl.trinketRiveAnimationUrl);
+    const tagResult4 = tag.tag(5, _mod1197.WireType.LengthDelimited);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -123,7 +130,8 @@ let items = [
     T() {
       return gradient.Gradient;
     }
-  }
+  },
+  { no: 5, name: "trinket_rive_animation_url", kind: "scalar", T: 9 }
 ];
 const prototype1 = new prototype("discord_protos.premium_marketing.v1.GiftIcon", items, tmp, GiftIcon$Type, prototype, items, fn);
 const size = fn(2);

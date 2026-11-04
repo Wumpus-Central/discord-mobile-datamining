@@ -21,6 +21,7 @@ const obj3 = { TEXT: "text", IMAGE: "image" };
 const obj4 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const obj6 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const result4 = 14 * DurationsDefault.Millis.DAY;
+({ NONE, SMALL } = obj6);
 const size = fn(2);
 const result5 = size.fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
@@ -146,7 +147,16 @@ export function getDefaultImageTrackWidthFraction(arg0, arg1) {
 export const ImageTrackShadow = obj6;
 export const IMAGE_TRACK_SHADOW_TO_WIDTH_RATIO = { [obj6.NONE]: 0, [obj6.SMALL]: 0.02, [obj6.MEDIUM]: 0.05, [obj6.LARGE]: 0.1 };
 export const IMAGE_TRACK_SHADOW_OFFSET_TO_BLUR_RATIO = 0.4;
-export const DEFAULT_IMAGE_TRACK_SHADOW = obj6.NONE;
+export const DEFAULT_IMAGE_TRACK_SHADOW = NONE;
 export const DEFAULT_IMAGE_TRACK_SHADOW_COLOR = "#000000";
+export const CLIP_SHARE_WATERMARK_TRACK_ID = "clip-share-watermark";
+export const CLIP_SHARE_WATERMARK_LANDSCAPE_WIDTH_TO_SHORT_EDGE_RATIO = 0.19722222222222222;
+export const CLIP_SHARE_WATERMARK_LANDSCAPE_PADDING_TO_SHORT_EDGE_RATIO = 0.022222222222222223;
+export const CLIP_SHARE_WATERMARK_PORTRAIT_WIDTH_TO_SHORT_EDGE_RATIO = 0.21875;
+export const CLIP_SHARE_WATERMARK_PORTRAIT_PADDING_TO_SHORT_EDGE_RATIO = 0.06578947368421052;
+export const CLIP_SHARE_WATERMARK_VERTICAL_CENTER_FRACTION = 0.75;
+export const CLIP_SHARE_WATERMARK_SHADOW = SMALL;
+export const CLIP_SHARE_WATERMARK_SHADOW_COLOR = "#00000024";
+export const CLIP_SHARE_WATERMARK_OPACITY = 0.65;
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
 export const GameEventType = { UNCLASSIFIED: "unclassified", KILL: "kill", MULTIKILL: "multikill", DEATH: "death", ASSIST: "assist", ITEM: "item", VICTORY: "victory", DEFEAT: "defeat", LEVEL_UP: "level_up", TREASURE: "treasure", OBJECTIVE_KILL: "objective_kill" };

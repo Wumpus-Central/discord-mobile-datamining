@@ -1,19 +1,19 @@
-// === Module 19099: NewGroupDMScreen ===
+// === Module 19113: NewGroupDMScreen ===
 
-// Module 19099 (NewGroupDMScreen)
+// Module 19113 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ToastUtils from "ToastUtils" /* 5845 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
 import HeaderShared from "HeaderShared" /* 9961 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11824 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19098 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11825 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15876 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15889 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -84,7 +84,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else {
         if (1 === tmp5) {
@@ -189,7 +189,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(13403)(closure_128_3);
+                            v3(13404)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }

@@ -1,6 +1,6 @@
-// === Module 15264: ShopNitroUpsellPromoSheet ===
+// === Module 15265: ShopNitroUpsellPromoSheet ===
 
-// Module 15264 (ShopNitroUpsellPromoSheet)
+// Module 15265 (ShopNitroUpsellPromoSheet)
 import util from "util" /* 1113 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5200 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
@@ -11,7 +11,7 @@ import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10152 */;
 import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10209 */;
 import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10468 */;
 import PromoSheet from "PromoSheet" /* 11015 */;
-import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 15265 */;
+import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 15266 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18451: FavoritesGuildAddCategoryActionSheet ===
+// === Module 18465: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 18451 (FavoritesGuildAddCategoryActionSheet)
+// Module 18465 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 11009 */;

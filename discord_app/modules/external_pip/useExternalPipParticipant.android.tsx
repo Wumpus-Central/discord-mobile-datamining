@@ -1,11 +1,11 @@
-// === Module 19375: useExternalPipParticipant ===
+// === Module 19389: useExternalPipParticipant ===
 
-// Module 19375 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 11415 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19376 */;
+// Module 19389 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 11416 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19390 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15862 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15875 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -44,8 +44,8 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
   }
 }
 const ParticipantTypes = fn(5815).ParticipantTypes;
-const VoicePanelModes = fn(11410).VoicePanelModes;
-let closure_9 = { participantType: "flexDirection", selectedParticipantId: "create", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
+const VoicePanelModes = fn(11411).VoicePanelModes;
+let closure_9 = { participantType: "flexDirection", selectedParticipantId: "createStyles", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");

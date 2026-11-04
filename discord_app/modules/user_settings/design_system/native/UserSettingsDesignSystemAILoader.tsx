@@ -1,10 +1,10 @@
-// === Module 18060: UserSettingsDesignSystemAILoader ===
+// === Module 18072: UserSettingsDesignSystemAILoader ===
 
-// Module 18060 (UserSettingsDesignSystemAILoader)
+// Module 18072 (UserSettingsDesignSystemAILoader)
 import Text_Text from "Text/Text" /* 5761 */;
 import Stack_Stack from "Stack/Stack" /* 6162 */;
 import Card from "Card" /* 7118 */;
-import AILoader from "AILoader" /* 12445 */;
+import AILoader from "AILoader" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

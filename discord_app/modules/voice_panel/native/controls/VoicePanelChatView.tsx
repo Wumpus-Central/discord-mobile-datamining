@@ -1,21 +1,21 @@
-// === Module 14044: VoicePanelChatView ===
+// === Module 14045: VoicePanelChatView ===
 
-// Module 14044 (VoicePanelChatView)
+// Module 14045 (VoicePanelChatView)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
 import _modDef10947 from "module_10947" /* 10947 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 14042 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 14043 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11408).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11409).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1072);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

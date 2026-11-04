@@ -1,6 +1,6 @@
-// === Module 18802: ? ===
+// === Module 18816: ? ===
 
-// Module 18802
+// Module 18816
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/icymi/bg-fade-3x.png.js");

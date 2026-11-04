@@ -1,13 +1,13 @@
-// === Module 18663: GuildsBarItemEmptyNUX ===
+// === Module 18677: GuildsBarItemEmptyNUX ===
 
-// Module 18663 (GuildsBarItemEmptyNUX)
+// Module 18677 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import NativeViewDefault from "NativeView" /* 7101 */;
 import transitionToGuild from "transitionToGuild" /* 7662 */;
 import _modDef9525 from "module_9525" /* 9525 */;
-import usePressabilityDefault from "usePressability" /* 18611 */;
+import usePressabilityDefault from "usePressability" /* 18625 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
@@ -19,10 +19,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18598);
+const GuildsBarConstants = fn(18612);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1072).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11702).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11703).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -117,7 +117,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const intl2 = tmp(1113).intl;
     obj17.children = intl2.string(tmp(1113).t["3S2xmm"]);
     obj16.title = closure_11(tmp(5761).Text, obj17);
-    obj15.children = closure_11(tmp(18622).HomeDrawerSharedItem, obj16);
+    obj15.children = closure_11(tmp(18636).HomeDrawerSharedItem, obj16);
     tmp21Result = closure_11(tmp3(7101), obj15);
     const tmp3Result4 = tmp3(7101);
   }

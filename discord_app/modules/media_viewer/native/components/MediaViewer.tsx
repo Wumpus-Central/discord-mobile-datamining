@@ -1,16 +1,16 @@
-// === Module 15010: MediaViewer ===
+// === Module 15011: MediaViewer ===
 
-// Module 15010 (MediaViewer)
+// Module 15011 (MediaViewer)
 import _modDef1652 from "module_1652" /* 1652 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6157 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import useVideoControls from "useVideoControls" /* 8977 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 9008 */;
-import StatusBarDefault from "StatusBar" /* 11399 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11899 */;
-import MediaViewerItem from "MediaViewerItem" /* 15012 */;
-import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15017 */;
+import StatusBarDefault from "StatusBar" /* 11400 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11900 */;
+import MediaViewerItem from "MediaViewerItem" /* 15013 */;
+import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -297,7 +297,7 @@ function MediaViewer(arg0) {
   obj14.style = items17;
   if (isMediaViewerImprovementsEnabled) {
     const obj15 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp63Result = tmp63(tmp(15019), obj15);
+    tmp63Result = tmp63(tmp(15020), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1652.View, obj14);

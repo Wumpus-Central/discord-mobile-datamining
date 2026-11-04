@@ -1,18 +1,18 @@
-// === Module 12611: AppLauncherSearchUtils ===
+// === Module 12612: AppLauncherSearchUtils ===
 
-// Module 12611 (AppLauncherSearchUtils)
+// Module 12612 (AppLauncherSearchUtils)
 import Server from "Server" /* 2121 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5785 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9911 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9917 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12613 */;
-import ArraySearch from "ArraySearch" /* 12614 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12615 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12614 */;
+import ArraySearch from "ArraySearch" /* 12615 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12616 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9914 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9913 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12612 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 12613 */;
 
 const require = globalThis.__r;
 
@@ -135,7 +135,7 @@ function sortCommandsAlpha(displayName, displayName2) {
 }
 const ApplicationCommandIndexStore = fn(9912);
 ({ appLauncherOnlyCompareNames: metroImportDefault, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: closure_10 } = ApplicationCommandIndexStore);
-const FetchState = fn(12612).FetchState;
+const FetchState = fn(12613).FetchState;
 const BuiltInSectionId = fn(6170).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(6171).COMMAND_SENTINEL;
 const size = fn(2);
@@ -1207,7 +1207,7 @@ export function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(11690).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(11691).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

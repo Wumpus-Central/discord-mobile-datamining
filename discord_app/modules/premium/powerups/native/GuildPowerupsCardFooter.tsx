@@ -1,6 +1,6 @@
-// === Module 14315: GuildPowerupsCardFooter ===
+// === Module 14316: GuildPowerupsCardFooter ===
 
-// Module 14315 (GuildPowerupsCardFooter)
+// Module 14316 (GuildPowerupsCardFooter)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5761 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
 import BoostGemIcon from "BoostGemIcon" /* 10099 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14291 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 14316 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14292 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 14317 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;

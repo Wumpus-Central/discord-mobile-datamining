@@ -1,10 +1,10 @@
-// === Module 18182: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
+// === Module 18194: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 18182 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+// Module 18194 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1113 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8828 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16960 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16972 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1113).intl;
-    const obj = selectedTeenId(16960);
+    const obj = selectedTeenId(16972);
     const stringResult = intl.string(selectedTeenId(1113).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1113).intl;
@@ -36,11 +36,11 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, { explicitContentNonFriendDm });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(16965).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16965);
+    let result = selectedTeenId(16977).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16977);
   }
 }
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;

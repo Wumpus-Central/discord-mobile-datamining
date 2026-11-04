@@ -18,9 +18,9 @@ import utils_QuestUtils from "utils/QuestUtils" /* 8006 */;
 import QuestActionCreators from "QuestActionCreators" /* 9832 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9850 */;
 import GameControllerIcon from "GameControllerIcon" /* 9877 */;
-import CloudIcon from "CloudIcon" /* 13255 */;
-import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 14912 */;
-import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 14920 */;
+import CloudIcon from "CloudIcon" /* 13256 */;
+import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 14913 */;
+import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 14921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9829 */;
@@ -28,14 +28,14 @@ import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9829 */;
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14905, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14906, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14905, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14906, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -161,7 +161,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
           closure_129_9 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

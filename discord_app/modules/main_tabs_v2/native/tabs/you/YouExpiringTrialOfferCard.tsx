@@ -1,15 +1,15 @@
-// === Module 19140: YouExpiringTrialOfferCard ===
+// === Module 19154: YouExpiringTrialOfferCard ===
 
-// Module 19140 (YouExpiringTrialOfferCard)
+// Module 19154 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import useCountdownDefault from "useCountdown" /* 7764 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19141 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19155 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 15841 */;
+import NoticeStore from "NoticeStore" /* 15854 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -49,7 +49,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(19139).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(19153).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -164,5 +164,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(19139);
+  const tmp4Result = navigateToPremium(19153);
 };

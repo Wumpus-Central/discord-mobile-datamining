@@ -1,6 +1,6 @@
-// === Module 18589: useFavoritesPruneInactiveThreads ===
+// === Module 18603: useFavoritesPruneInactiveThreads ===
 
-// Module 18589 (useFavoritesPruneInactiveThreads)
+// Module 18603 (useFavoritesPruneInactiveThreads)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;

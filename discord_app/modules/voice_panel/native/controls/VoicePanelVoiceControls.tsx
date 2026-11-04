@@ -1,20 +1,20 @@
-// === Module 19599: VoicePanelVoiceControls ===
+// === Module 19613: VoicePanelVoiceControls ===
 
-// Module 19599 (VoicePanelVoiceControls)
+// Module 19613 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import TableRowGroup from "TableRowGroup" /* 7201 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11944 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12139 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12151 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15434 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19477 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19594 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19600 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11945 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12140 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12152 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15435 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19491 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19608 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19614 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -26,7 +26,7 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11408).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11409).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);

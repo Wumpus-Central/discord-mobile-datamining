@@ -1,9 +1,9 @@
-// === Module 14425: ChatPlaceholder ===
+// === Module 14426: ChatPlaceholder ===
 
-// Module 14425 (ChatPlaceholder)
+// Module 14426 (ChatPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14427 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14428 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14428 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14429 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

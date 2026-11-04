@@ -1,10 +1,10 @@
-// === Module 19480: useStableParticipant ===
+// === Module 19494: useStableParticipant ===
 
-// Module 19480 (useStableParticipant)
+// Module 19494 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import NicknameUtils from "NicknameUtils" /* 6176 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 6988 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11415 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11416 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -40,7 +40,7 @@ export default function useStableParticipant(id, channelId, guildId) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: "2026-04-voice-gateway-protocol-version", isSelf: "user" };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: "image_0", isSelf: 128 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

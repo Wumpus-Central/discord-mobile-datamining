@@ -1,15 +1,15 @@
-// === Module 14029: ChatInputSendButton ===
+// === Module 14030: ChatInputSendButton ===
 
-// Module 14029 (ChatInputSendButton)
+// Module 14030 (ChatInputSendButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import useToken from "useToken" /* 5732 */;
 import SendMessageIcon from "SendMessageIcon" /* 5863 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13023 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13026 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14030 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14034 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13024 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13027 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14031 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14035 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -145,7 +145,7 @@ function FloatingSlot(arg0) {
   return jsx(_modDef1652.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(13027).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(13028).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
 const createStyles = fn(5141);

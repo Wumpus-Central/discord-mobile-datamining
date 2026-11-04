@@ -1,6 +1,6 @@
-// === Module 15363: GamePartyStore ===
+// === Module 15364: GamePartyStore ===
 
-// Module 15363 (GamePartyStore)
+// Module 15364 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

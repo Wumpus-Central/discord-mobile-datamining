@@ -1,6 +1,6 @@
-// === Module 19866: PromotionsManager ===
+// === Module 19880: PromotionsManager ===
 
-// Module 19866 (PromotionsManager)
+// Module 19880 (PromotionsManager)
 import EntitlementTypes from "EntitlementTypes" /* 2175 */;
 import PromotionsActionCreators from "PromotionsActionCreators" /* 9818 */;
 import LocaleStore from "LocaleStore" /* 2191 */;

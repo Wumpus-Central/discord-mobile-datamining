@@ -1,6 +1,6 @@
-// === Module 15099: UserProfileActivityButtons ===
+// === Module 15100: UserProfileActivityButtons ===
 
-// Module 15099 (UserProfileActivityButtons)
+// Module 15100 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,10 +16,10 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
 import isStreamingDefault from "isStreaming" /* 8972 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9870 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11887 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 15100 */;
-import getActivityJoinability from "getActivityJoinability" /* 15101 */;
-import getStreamURLDefault from "getStreamURL" /* 15103 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11888 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 15101 */;
+import getActivityJoinability from "getActivityJoinability" /* 15102 */;
+import getStreamURLDefault from "getStreamURL" /* 15104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5366 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import LocalActivityStore from "LocalActivityStore" /* 11713 */;
+import LocalActivityStore from "LocalActivityStore" /* 11714 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;

@@ -1,6 +1,6 @@
-// === Module 15066: UserProfileActivityBadges ===
+// === Module 15067: UserProfileActivityBadges ===
 
-// Module 15066 (UserProfileActivityBadges)
+// Module 15067 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import ActivityTypes from "ActivityTypes" /* 5896 */;
@@ -12,10 +12,10 @@ import GameControllerIcon from "GameControllerIcon" /* 9877 */;
 import TvIcon from "TvIcon" /* 10930 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
 import MusicIcon from "MusicIcon" /* 10936 */;
-import TopicsIcon from "TopicsIcon" /* 11861 */;
-import HourglassIcon from "HourglassIcon" /* 12576 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 15068 */;
-import Badges from "Badges" /* 15069 */;
+import TopicsIcon from "TopicsIcon" /* 11862 */;
+import HourglassIcon from "HourglassIcon" /* 12577 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 15069 */;
+import Badges from "Badges" /* 15070 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

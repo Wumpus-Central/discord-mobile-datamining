@@ -1,6 +1,6 @@
-// === Module 13585: GiftIcon ===
+// === Module 13586: GiftIcon ===
 
-// Module 13585 (GiftIcon)
+// Module 13586 (GiftIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
 import _mod8690 from "module_8690" /* 8690 */;

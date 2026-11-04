@@ -1,6 +1,6 @@
-// === Module 14607: getConjureAppSoundButton ===
+// === Module 14608: getConjureAppSoundButton ===
 
-// Module 14607 (getConjureAppSoundButton)
+// Module 14608 (getConjureAppSoundButton)
 import _modDef3995 from "module_3995" /* 3995 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ export default function getConjureAppSoundButton(arg0, arg1) {
   if (arg1) {
     let VoiceXIcon = tmp(8814).VoiceNormalIcon;
   } else {
-    VoiceXIcon = tmp(12146).VoiceXIcon;
+    VoiceXIcon = tmp(12147).VoiceXIcon;
   }
   obj.IconComponent = VoiceXIcon;
   obj.onPress = function onPress() {

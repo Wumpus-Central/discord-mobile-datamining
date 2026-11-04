@@ -1,6 +1,6 @@
-// === Module 10785: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10786: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10785 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 10786 (useMaybeFetchCollectiblesCategoriesShared)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7902 */;
 import _slicedToArray from "module_32" /* 32 */;

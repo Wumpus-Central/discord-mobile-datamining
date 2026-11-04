@@ -1,6 +1,6 @@
-// === Module 13470: StringSelectComponentActionSheet ===
+// === Module 13471: StringSelectComponentActionSheet ===
 
-// Module 13470 (StringSelectComponentActionSheet)
+// Module 13471 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2121 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -136,5 +136,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12355), obj2);
+  return tmp9(onSubmit(12356), obj2);
 };

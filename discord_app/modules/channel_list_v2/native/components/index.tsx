@@ -1,11 +1,11 @@
-// === Module 14056: renderChannelBadge ===
+// === Module 14057: renderChannelBadge ===
 
-// Module 14056 (renderChannelBadge)
-import components_ChannelBadge from "components/ChannelBadge" /* 14057 */;
-import VocalChannelJoinButtonDefault from "VocalChannelJoinButton" /* 14058 */;
-import Divider from "Divider" /* 14060 */;
-import NewBadgeDefault from "NewBadge" /* 14061 */;
-import GuildSearchAndInviteDefault from "GuildSearchAndInvite" /* 14062 */;
+// Module 14057 (renderChannelBadge)
+import components_ChannelBadge from "components/ChannelBadge" /* 14058 */;
+import VocalChannelJoinButtonDefault from "VocalChannelJoinButton" /* 14059 */;
+import Divider from "Divider" /* 14061 */;
+import NewBadgeDefault from "NewBadge" /* 14062 */;
+import GuildSearchAndInviteDefault from "GuildSearchAndInvite" /* 14063 */;
 import size from "module_2" /* 2 */;
 
 const DividerDefault = Divider;

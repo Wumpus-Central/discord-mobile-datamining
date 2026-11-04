@@ -1,6 +1,6 @@
-// === Module 11922: EmbeddedActivitiesActionCreators ===
+// === Module 11923: EmbeddedActivitiesActionCreators ===
 
-// Module 11922 (EmbeddedActivitiesActionCreators)
+// Module 11923 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
@@ -79,7 +79,7 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           closure_140_25 = undefined;
           c16 = 1;
           c17 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -460,7 +460,7 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
           let currentUser;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -745,7 +745,7 @@ let closure_28 = async function _joinEmbeddedActivity(arg0) {
           closure_130_15 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1080,39 +1080,184 @@ let closure_30 = async function _uploadImageAttachment(arg0) {
     }
   })();
 };
-let closure_31 = async function _sendEmbeddedActivityInvite() {
-  await closure_130_1(closure_130_2[54]).createInvite(closure_129_0, { target_type: closure_130_0(closure_130_2[55]).InviteTargetTypes.EMBEDDED_APPLICATION, target_application_id: closure_129_2 }, closure_129_3);
-  closure_129_5 = value;
-  if (null != closure_130_10.getChannel(closure_129_1)) {
-    closure_130_1(closure_130_2[56]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
-    closure_130_1(closure_130_2[56]);
+let closure_31 = async function _sendEmbeddedActivityInvite(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
+          closure_129_5 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flexDirection", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj5 = { target_type: closure_130_0(closure_130_2[55]).InviteTargetTypes.EMBEDDED_APPLICATION, target_application_id: closure_129_2 };
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: closure_130_1(closure_130_2[54]).createInvite(closure_129_0, obj5, closure_129_3), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_129_5 = value;
+        if (null != closure_130_10.getChannel(closure_129_1)) {
+          const obj = closure_130_1(closure_130_2[56]);
+          obj.sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
+        }
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp22) {
+      c4 = tmp;
+      throw tmp22;
+    }
   }
-  await "HermesInternal";
-  closure_1 = tmp2;
-  ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
-  return "flexDirection";
 };
-let closure_32 = async function _sendEmbeddedActivityInviteUser() {
-  await closure_130_1(closure_130_2[54]).createInvite(closure_129_0, { target_type: closure_130_0(closure_130_2[55]).InviteTargetTypes.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
-  closure_129_6 = value;
-  await closure_130_1(closure_130_2[57]).ensurePrivateChannel(closure_129_2);
-  closure_129_7 = value;
-  const channel = closure_130_10.getChannel(closure_129_7);
-  if (null == channel) {
-    const _Error = Error;
-    const error = new Error("Private channel not found");
-    throw error;
+let closure_32 = async function _sendEmbeddedActivityInviteUser(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          let channel;
+          let content;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flexDirection", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          const obj7 = { target_type: closure_130_0(closure_130_2[55]).InviteTargetTypes.EMBEDDED_APPLICATION, target_application_id: closure_129_1 };
+          c3 = 2;
+          c4 = 1;
+          const obj8 = { value: closure_130_1(closure_130_2[54]).createInvite(closure_129_0, obj7, closure_129_3), done: false };
+          return obj8;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_129_6 = value;
+          c3 = 3;
+          c4 = 1;
+          const obj10 = { value: closure_130_1(closure_130_2[57]).ensurePrivateChannel(closure_129_2), done: false };
+          return obj10;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        closure_129_7 = value;
+        channel = closure_130_10.getChannel(closure_129_7);
+        if (null == channel) {
+          const _Error = Error;
+          const error = new Error("Private channel not found");
+          throw error;
+        } else {
+          content = undefined;
+          if (null != closure_129_5) {
+            content = closure_130_1(closure_130_2[58]).parse(channel, closure_129_5).content;
+            const obj = closure_130_1(closure_130_2[58]);
+          }
+          const obj2 = closure_130_1(closure_130_2[56]);
+          obj2.sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      }
+    } catch (tmp33) {
+      c4 = tmp;
+      throw tmp33;
+    }
   }
-  if (null != closure_129_5) {
-    const content = closure_130_1(closure_130_2[58]).parse(channel, closure_129_5).content;
-    closure_130_1(closure_130_2[58]);
-  }
-  { target_type: closure_130_0(closure_130_2[55]).InviteTargetTypes.EMBEDDED_APPLICATION, target_application_id: closure_129_1 };
-  closure_130_1(closure_130_2[56]).sendInvite(closure_129_7, closure_129_6.code, closure_129_3, closure_129_4, content);
-  await "HermesInternal";
-  closure_1 = tmp2;
-  ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
-  return "flexDirection";
 };
 let closure_33 = async function _validateTestMode(arg0) {
   if (c1 === 2) {

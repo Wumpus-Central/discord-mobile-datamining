@@ -1,9 +1,9 @@
-// === Module 15043: ShopThisLookMarketingCoachmark ===
+// === Module 15044: ShopThisLookMarketingCoachmark ===
 
-// Module 15043 (ShopThisLookMarketingCoachmark)
+// Module 15044 (ShopThisLookMarketingCoachmark)
 import util from "util" /* 1113 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15037 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 15044 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15038 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 15045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

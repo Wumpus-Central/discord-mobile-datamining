@@ -1,6 +1,6 @@
-// === Module 13879: CheckpointEmphasis ===
+// === Module 13880: CheckpointEmphasis ===
 
-// Module 13879 (CheckpointEmphasis)
+// Module 13880 (CheckpointEmphasis)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import useFontScale from "useFontScale" /* 5776 */;

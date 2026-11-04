@@ -1,6 +1,6 @@
-// === Module 18923: useOtherGuildJoinRequestsForUser ===
+// === Module 18937: useOtherGuildJoinRequestsForUser ===
 
-// Module 18923 (useOtherGuildJoinRequestsForUser)
+// Module 18937 (useOtherGuildJoinRequestsForUser)
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7051 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7052 */;

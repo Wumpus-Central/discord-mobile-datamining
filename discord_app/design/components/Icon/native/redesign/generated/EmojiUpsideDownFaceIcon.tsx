@@ -1,9 +1,9 @@
-// === Module 17623: EmojiUpsideDownFaceIcon ===
+// === Module 17635: EmojiUpsideDownFaceIcon ===
 
-// Module 17623 (EmojiUpsideDownFaceIcon)
+// Module 17635 (EmojiUpsideDownFaceIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod17624 from "module_17624" /* 17624 */;
+import _mod17636 from "module_17636" /* 17636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiUpsideDownFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17624, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17636, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

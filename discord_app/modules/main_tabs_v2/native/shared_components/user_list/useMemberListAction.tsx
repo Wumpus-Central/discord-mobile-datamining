@@ -1,8 +1,8 @@
-// === Module 11814: useMemberListAction ===
+// === Module 11815: useMemberListAction ===
 
-// Module 11814 (useMemberListAction)
-import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11815 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11819 */;
+// Module 11815 (useMemberListAction)
+import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11816 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11820 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -17,7 +17,7 @@ const Constants = fn(1072);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "PX_8", listActionHeight: "__closure" };
+let closure_16 = { listActionRenderer: "Object", listActionHeight: "Array" };
 const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);

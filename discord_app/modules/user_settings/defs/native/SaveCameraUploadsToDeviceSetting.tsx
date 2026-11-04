@@ -1,13 +1,13 @@
-// === Module 17692: SaveCameraUploadsToDeviceSetting ===
+// === Module 17704: SaveCameraUploadsToDeviceSetting ===
 
-// Module 17692 (SaveCameraUploadsToDeviceSetting)
+// Module 17704 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6067 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

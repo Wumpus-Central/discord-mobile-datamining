@@ -1,9 +1,9 @@
-// === Module 19545: VoicePanelSystemUIManager ===
+// === Module 19559: VoicePanelSystemUIManager ===
 
-// Module 19545 (VoicePanelSystemUIManager)
+// Module 19559 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11899 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
@@ -11,8 +11,8 @@ import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
 const ParticipantTypes = fn(5815).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -160,7 +160,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(11399), obj2);
+    tmp25 = closure_9(tmp(11400), obj2);
   }
   const obj3 = { children: null };
   const items6 = [tmp25, closure_9(HomeIndicatorDefault, { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] })];

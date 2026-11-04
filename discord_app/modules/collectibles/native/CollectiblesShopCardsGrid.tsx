@@ -1,6 +1,6 @@
-// === Module 18105: CollectiblesShopCardsGrid ===
+// === Module 18117: CollectiblesShopCardsGrid ===
 
-// Module 18105 (CollectiblesShopCardsGrid)
+// Module 18117 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9606 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9609 */;
@@ -33,14 +33,14 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(18104).useCardLayout();
+  const cardLayout = products(18116).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   items = [products, columns];
   ({ rowWidth, ref, onLayout } = cardLayout);
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, ref, onLayout, contentContainerStyle: null, children: null };
-  let obj = products(18104);
+  let obj = products(18116);
   obj2.contentContainerStyle = { gap: products(9606).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;

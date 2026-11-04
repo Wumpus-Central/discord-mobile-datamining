@@ -18,7 +18,7 @@ import MarkupListRuleDefault from "MarkupListRule" /* 8715 */;
 import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8716 */;
 import TimestampUtils from "TimestampUtils" /* 8741 */;
 import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8743 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15889 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 15902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -40,7 +40,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "id" };
+    obj3 = { type: "link", content: null, target: null, title: "children" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     items = [obj4];
     obj3.content = items;

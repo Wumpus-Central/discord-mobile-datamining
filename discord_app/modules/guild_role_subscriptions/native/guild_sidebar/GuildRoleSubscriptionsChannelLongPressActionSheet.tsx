@@ -1,6 +1,6 @@
-// === Module 18504: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 18518: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 18504 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 18518 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,8 +8,8 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
 import ActionSheet from "ActionSheet" /* 7502 */;
 import Form from "Form" /* 8317 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11162 */;
-import _modDef14603 from "module_14603" /* 14603 */;
-import _modDef18399 from "module_18399" /* 18399 */;
+import _modDef14604 from "module_14604" /* 14604 */;
+import _modDef18413 from "module_18413" /* 18413 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,14 +31,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14603 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14604 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef14603 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef18399 });
+  const obj4 = { disableColor: true, source: _modDef14604 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef18413 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

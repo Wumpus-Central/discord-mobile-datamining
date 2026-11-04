@@ -1,12 +1,12 @@
-// === Module 18436: FavoritesGuildActionSheet ===
+// === Module 18450: FavoritesGuildActionSheet ===
 
-// Module 18436 (FavoritesGuildActionSheet)
+// Module 18450 (FavoritesGuildActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import _modDef3577 from "module_3577" /* 3577 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18437 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18438 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18441 */;
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18451 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18452 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18455 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4993 */;
 
@@ -37,7 +37,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj5.icon = closure_4(onClose(7504).ActionSheetRow.Icon, { IconComponent: onClose(8786).ThreadIcon });
   obj5.onPress = function onPress() {
     onClose();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18439, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18453, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
   };
   obj4.children = closure_4(onClose(7504).ActionSheetRow, obj5);
   const items1 = [closure_4(onClose(7504).ActionSheetRow.Group, obj4), , ];
@@ -47,7 +47,7 @@ export default function FavoritesGuildActionSheet(onClose) {
     const obj8 = { label: null, icon: null, onPress: null };
     const intl3 = tmp4(1113).intl;
     obj8.label = intl3.string(tmp4(1113).t["0dOFq+"]);
-    const obj9 = { IconComponent: tmp4(12699).ArrowsUpDownIcon };
+    const obj9 = { IconComponent: tmp4(12700).ArrowsUpDownIcon };
     obj8.icon = closure_4(tmp4(7504).ActionSheetRow.Icon, obj9);
     obj8.onPress = function onPress() {
       onClose();

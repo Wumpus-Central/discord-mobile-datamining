@@ -1,6 +1,6 @@
-// === Module 12587: useDeveloperActivityShelfItems ===
+// === Module 12588: useDeveloperActivityShelfItems ===
 
-// Module 12587 (useDeveloperActivityShelfItems)
+// Module 12588 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5808 */;
 

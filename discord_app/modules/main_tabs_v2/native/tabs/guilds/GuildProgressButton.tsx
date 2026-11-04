@@ -1,11 +1,11 @@
-// === Module 18495: GuildProgressButton ===
+// === Module 18509: GuildProgressButton ===
 
-// Module 18495 (GuildProgressButton)
+// Module 18509 (GuildProgressButton)
 import nativeDefault from "native" /* 575 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12739 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14264 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14267 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12740 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14265 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds
 
 export default function GuildProgressButton(guild) {
   guild = guild.guild;
-  const guildProgressStep = guild(14264).useGuildProgressStep(guild);
+  const guildProgressStep = guild(14265).useGuildProgressStep(guild);
   const completed = guildProgressStep.completed;
   items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
@@ -32,13 +32,13 @@ export default function GuildProgressButton(guild) {
     GuildProgressUtils.openActionSheet(guild);
   }, items1);
   let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-  let obj = guild(14264);
-  obj2.icon = jsx(guild(8319).RowButton.Icon, { source: completed(18496) });
+  let obj = guild(14265);
+  obj2.icon = jsx(guild(8319).RowButton.Icon, { source: completed(18510) });
   const intl = guild(1113).intl;
   obj2.label = intl.string(guild(1113).t.o3HK3d);
   obj2.subLabel = subtitle;
   obj2.onPress = callback;
-  obj2.trailing = jsx(completed(14382), { percent: percentComplete });
+  obj2.trailing = jsx(completed(14383), { percent: percentComplete });
   return jsx(guild(8319).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
 };
 export function getScaledGuildProgressButtonHeight(fontScale) {

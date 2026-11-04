@@ -1,6 +1,6 @@
-// === Module 13510: GuildRaidResolveActionSheet ===
+// === Module 13511: GuildRaidResolveActionSheet ===
 
-// Module 13510 (GuildRaidResolveActionSheet)
+// Module 13511 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;

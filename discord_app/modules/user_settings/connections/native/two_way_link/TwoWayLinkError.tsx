@@ -1,6 +1,6 @@
-// === Module 14844: TwoWayLinkError ===
+// === Module 14845: TwoWayLinkError ===
 
-// Module 14844 (TwoWayLinkError)
+// Module 14845 (TwoWayLinkError)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
@@ -8,7 +8,7 @@ import FastImageDefault from "FastImage" /* 5851 */;
 import Stack_Stack from "Stack/Stack" /* 6162 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9880 */;
-import _modDef14845 from "module_14845" /* 14845 */;
+import _modDef14846 from "module_14846" /* 14846 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14845;
+  obj4.source = _modDef14846;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), React4(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), React4(Text_Text.Text, { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;

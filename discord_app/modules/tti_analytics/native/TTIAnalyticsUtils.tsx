@@ -330,8 +330,8 @@ let closure_28 = async function _trackAppUIViewed() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj9 = { value, done: true };
-      return obj9;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -344,8 +344,8 @@ let closure_28 = async function _trackAppUIViewed() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -393,78 +393,92 @@ let closure_28 = async function _trackAppUIViewed() {
           };
           return obj14;
         }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj15 = { value, done: true };
+          return obj15;
+        } else {
+          const cumulativeCPUUsage = closure_132_1(closure_132_2[25]).getCumulativeCPUUsage();
+          let usage;
+          if (cumulativeCPUUsage != null) {
+            usage = cumulativeCPUUsage.usage;
+          }
+          c1 = usage;
+          if (usage == null) {
+            c1 = null;
+          }
+          closure_131_5 = c1;
+          const obj16 = {};
+          let merged = Object.assign(closure_132_15());
+          let paths = extraProperties;
+          if (extraProperties == null) {
+            paths = {};
+          }
+          const merged1 = Object.assign(paths);
+          const obj19 = closure_132_1(closure_132_2[25]);
+          const merged2 = Object.assign(closure_132_1(closure_132_2[23]).serializeTTITracker(appFirstVisibleTime));
+          obj16.load_id = closure_132_16;
+          obj16.screen_name = closure_131_0;
+          obj16.has_cached_data = closure_132_4.hasCache();
+          obj16.startup_cpu_usage_cumulative = closure_131_5;
+          obj16.theme = closure_132_6.theme;
+          const obj3 = closure_132_1(closure_132_2[23]);
+          let result = null;
+          if (obj4.isIOS()) {
+            result = closure_132_0(closure_132_2[27]).isIOSAnchoredChatScrollerEnabled();
+            const obj5 = closure_132_0(closure_132_2[27]);
+          }
+          obj16.ios_using_anchored_scroller = result;
+          closure_131_6 = obj16;
+          obj4 = closure_132_0(closure_132_2[26]);
+          closure_132_1(closure_132_2[17]).mark("\u2757", "Track app_ui_viewed2");
+          const obj6 = closure_132_1(closure_132_2[17]);
+          closure_132_1(closure_132_2[19]).track(closure_132_10.APP_UI_VIEWED2, closure_131_6, { logEventProperties: true });
+          const obj7 = closure_132_1(closure_132_2[19]);
+          const result1 = closure_132_0(closure_132_2[28]).trackAndroidArtProfileSnapshot(closure_132_16, closure_132_15());
+          closure_132_26 = closure_131_6;
+          if (closure_132_9.alertStartupMetrics) {
+            const obj17 = {
+              importer() {
+                          return unknown(paths[31])(paths[30], paths.paths).then((result) => {
+                            closure_0 = result.default;
+                            return (arg0) => {
+                              let str = closure_2_6.app_launch_scenario;
+                              if (str == null) {
+                                str = "-";
+                              }
+                              obj = { title: "App start times", body: null };
+                              const combined = "\nFirstContentfulPaint (TTI): " + closure_2_6.time_first_contentful_paint + "ms\n  \u2022 App start \u2192 JS bundle start: " + closure_2_6.time_before_js_bundle_start + "ms\n  \u2022 MainAppl. \u2192 MainActivity start: " + closure_2_6.android_time_creation_to_create_main_activity + "ms\n    \u2022 Start type: " + closure_2_6.app_start_type + "\n    \u2022 Launch scenario: " + str + "\n(legacy) Cached msg render: " + closure_2_6.time_display_messages_with_cache_end + "ms\n              ";
+                              obj.body = combined.trimStart();
+                              const merged = Object.assign(arg0);
+                              return closure_3_13(closure_0, obj);
+                            };
+                          });
+                        },
+              isDismissable: false
+            };
+            closure_132_1(closure_132_2[29]).openLazy(obj17);
+            const obj9 = closure_132_1(closure_132_2[29]);
+          }
+          const obj8 = closure_132_0(closure_132_2[28]);
+          c5 = 3;
+          c6 = 1;
+          const obj18 = { value: closure_132_1(closure_132_2[21]).logToDeviceEnabled(), done: false };
+          return obj18;
+        }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj15 = { value, done: true };
-        return obj15;
+        obj = { value, done: true };
+        return obj;
       } else {
-        const cumulativeCPUUsage = closure_132_1(closure_132_2[25]).getCumulativeCPUUsage();
-        let usage;
-        if (cumulativeCPUUsage != null) {
-          usage = cumulativeCPUUsage.usage;
-        }
-        c1 = usage;
-        if (usage == null) {
-          c1 = null;
-        }
-        closure_131_5 = c1;
-        obj = {};
-        let merged = Object.assign(closure_132_15());
-        let paths = extraProperties;
-        if (extraProperties == null) {
-          paths = {};
-        }
-        const merged1 = Object.assign(paths);
-        const obj17 = closure_132_1(closure_132_2[25]);
-        const merged2 = Object.assign(closure_132_1(closure_132_2[23]).serializeTTITracker(appFirstVisibleTime));
-        obj.load_id = closure_132_16;
-        obj.screen_name = closure_131_0;
-        obj.has_cached_data = closure_132_4.hasCache();
-        obj.startup_cpu_usage_cumulative = closure_131_5;
-        obj.theme = closure_132_6.theme;
-        let obj2 = closure_132_1(closure_132_2[23]);
-        let result = null;
-        if (obj3.isIOS()) {
-          result = closure_132_0(closure_132_2[27]).isIOSAnchoredChatScrollerEnabled();
-          const obj4 = closure_132_0(closure_132_2[27]);
-        }
-        obj.ios_using_anchored_scroller = result;
-        closure_131_6 = obj;
-        obj3 = closure_132_0(closure_132_2[26]);
-        closure_132_1(closure_132_2[17]).mark("\u2757", "Track app_ui_viewed2");
-        const obj5 = closure_132_1(closure_132_2[17]);
-        closure_132_1(closure_132_2[19]).track(closure_132_10.APP_UI_VIEWED2, closure_131_6, { logEventProperties: true });
-        const obj6 = closure_132_1(closure_132_2[19]);
-        const result1 = closure_132_0(closure_132_2[28]).trackAndroidArtProfileSnapshot(closure_132_16, closure_132_15());
-        closure_132_26 = closure_131_6;
-        if (closure_132_9.alertStartupMetrics) {
-          const obj16 = {
-            importer() {
-                      return unknown(paths[31])(paths[30], paths.paths).then((result) => {
-                        closure_0 = result.default;
-                        return (arg0) => {
-                          let str = closure_2_6.app_launch_scenario;
-                          if (str == null) {
-                            str = "-";
-                          }
-                          obj = { title: "App start times", body: null };
-                          const combined = "\nFirstContentfulPaint (TTI): " + closure_2_6.time_first_contentful_paint + "ms\n  \u2022 App start \u2192 JS bundle start: " + closure_2_6.time_before_js_bundle_start + "ms\n  \u2022 MainAppl. \u2192 MainActivity start: " + closure_2_6.android_time_creation_to_create_main_activity + "ms\n    \u2022 Start type: " + closure_2_6.app_start_type + "\n    \u2022 Launch scenario: " + str + "\n(legacy) Cached msg render: " + closure_2_6.time_display_messages_with_cache_end + "ms\n              ";
-                          obj.body = combined.trimStart();
-                          const merged = Object.assign(arg0);
-                          return closure_3_13(closure_0, obj);
-                        };
-                      });
-                    },
-            isDismissable: false
-          };
-          closure_132_1(closure_132_2[29]).openLazy(obj16);
-          const obj8 = closure_132_1(closure_132_2[29]);
-        }
-        const obj7 = closure_132_0(closure_132_2[28]);
-        if (obj10.runningTTIAutomation()) {
+        if (value) {
           (function logToDevice(json) {
             obj = {};
             let merged = Object.assign(json);

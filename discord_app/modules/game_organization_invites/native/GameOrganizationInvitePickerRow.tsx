@@ -1,6 +1,6 @@
-// === Module 11843: GameOrganizationInvitePickerRow ===
+// === Module 11844: GameOrganizationInvitePickerRow ===
 
-// Module 11843 (GameOrganizationInvitePickerRow)
+// Module 11844 (GameOrganizationInvitePickerRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2533 from "module_2533" /* 2533 */;
@@ -11,7 +11,7 @@ import TableRow from "TableRow" /* 7116 */;
 import _modDef7474 from "module_7474" /* 7474 */;
 import GroupIcon from "GroupIcon" /* 8802 */;
 import InviteButtonDefault from "InviteButton" /* 9349 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11844 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11845 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;

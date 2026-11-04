@@ -1,6 +1,6 @@
-// === Module 11595: maybeShowUnsavedChangesAlert ===
+// === Module 11596: maybeShowUnsavedChangesAlert ===
 
-// Module 11595 (maybeShowUnsavedChangesAlert)
+// Module 11596 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1113 */;
 import AlertModal from "AlertModal" /* 6099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -163,7 +163,7 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       tmp7(6094).show(obj4);
       const tmp7Result4 = tmp7(6094);
     }
-    obj2 = onReset(11596);
+    obj2 = onReset(11597);
   } else {
     onContinue();
   }

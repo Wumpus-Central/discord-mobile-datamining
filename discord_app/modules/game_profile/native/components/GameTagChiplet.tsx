@@ -1,6 +1,6 @@
-// === Module 19537: GameTagChiplet ===
+// === Module 19551: GameTagChiplet ===
 
-// Module 19537 (GameTagChiplet)
+// Module 19551 (GameTagChiplet)
 import FastImageDefault from "FastImage" /* 5851 */;
 import GuildTag from "GuildTag" /* 9440 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9462 */;

@@ -1,6 +1,6 @@
-// === Module 18716: YouBarAvatar ===
+// === Module 18730: YouBarAvatar ===
 
-// Module 18716 (YouBarAvatar)
+// Module 18730 (YouBarAvatar)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -372,7 +372,7 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const YouBarConstants = fn(17310);
+const YouBarConstants = fn(17322);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);

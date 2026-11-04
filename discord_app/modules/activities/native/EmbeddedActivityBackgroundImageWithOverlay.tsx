@@ -1,9 +1,9 @@
-// === Module 12037: EmbeddedActivityBackgroundImageWithOverlay ===
+// === Module 12038: EmbeddedActivityBackgroundImageWithOverlay ===
 
-// Module 12037 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 12038 (EmbeddedActivityBackgroundImageWithOverlay)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12038 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12039 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

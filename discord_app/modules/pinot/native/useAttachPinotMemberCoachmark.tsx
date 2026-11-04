@@ -1,12 +1,12 @@
-// === Module 11519: useAttachPinotMemberCoachmark ===
+// === Module 11520: useAttachPinotMemberCoachmark ===
 
-// Module 11519 (useAttachPinotMemberCoachmark)
+// Module 11520 (useAttachPinotMemberCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3287 from "module_3287" /* 3287 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11520 */;
-import PinotAnalytics from "PinotAnalytics" /* 11522 */;
+import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11521 */;
+import PinotAnalytics from "PinotAnalytics" /* 11523 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

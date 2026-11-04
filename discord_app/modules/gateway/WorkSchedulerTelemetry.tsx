@@ -1,6 +1,6 @@
-// === Module 15765: WorkSchedulerTelemetry ===
+// === Module 15766: WorkSchedulerTelemetry ===
 
-// Module 15765 (WorkSchedulerTelemetry)
+// Module 15766 (WorkSchedulerTelemetry)
 import _mod12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 

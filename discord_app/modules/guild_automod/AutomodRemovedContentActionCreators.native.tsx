@@ -1,6 +1,6 @@
-// === Module 19665: AutomodRemovedContentActionCreators ===
+// === Module 19679: AutomodRemovedContentActionCreators ===
 
-// Module 19665 (AutomodRemovedContentActionCreators)
+// Module 19679 (AutomodRemovedContentActionCreators)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -30,5 +30,5 @@ export function showRemovedMessageToast(arg0, channel_id) {
   }
 }
 export function openRemovedContentModal(action) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19666, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19680, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
 }

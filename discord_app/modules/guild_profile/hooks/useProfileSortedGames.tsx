@@ -1,6 +1,6 @@
-// === Module 15173: useProfileSortedGames ===
+// === Module 15174: useProfileSortedGames ===
 
-// Module 15173 (useProfileSortedGames)
+// Module 15174 (useProfileSortedGames)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;

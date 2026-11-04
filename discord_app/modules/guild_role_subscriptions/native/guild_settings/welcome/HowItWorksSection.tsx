@@ -1,13 +1,13 @@
-// === Module 20153: HowItWorksSection ===
+// === Module 20167: HowItWorksSection ===
 
-// Module 20153 (HowItWorksSection)
+// Module 20167 (HowItWorksSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 20154 */;
-import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 20158 */;
-import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 20162 */;
+import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 20168 */;
+import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 20172 */;
+import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 20176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

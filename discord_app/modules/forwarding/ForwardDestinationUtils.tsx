@@ -1,11 +1,11 @@
-// === Module 13606: ForwardDestinationUtils ===
+// === Module 13607: ForwardDestinationUtils ===
 
-// Module 13606 (ForwardDestinationUtils)
+// Module 13607 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import StickersUtils from "StickersUtils" /* 6695 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7971 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 13607 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 13608 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6972 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(13604).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(13605).getChannelIdFromDestinationId);
   found = mapped.find(found(1380).isNotNullish);
   items = [ChannelStore];
   const items1 = [found];

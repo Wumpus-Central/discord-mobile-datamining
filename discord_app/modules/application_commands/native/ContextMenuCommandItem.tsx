@@ -1,12 +1,12 @@
-// === Module 19219: ContextMenuCommandItem ===
+// === Module 19233: ContextMenuCommandItem ===
 
-// Module 19219 (ContextMenuCommandItem)
+// Module 19233 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import TableRow from "TableRow" /* 7116 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14010 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(14010).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(14011).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {

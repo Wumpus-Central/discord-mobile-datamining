@@ -1,6 +1,6 @@
-// === Module 17517: SettingsAppearanceChannelRowItem ===
+// === Module 17529: SettingsAppearanceChannelRowItem ===
 
-// Module 17517 (SettingsAppearanceChannelRowItem)
+// Module 17529 (SettingsAppearanceChannelRowItem)
 import nativeDefault from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
 import GroupDMAvatar from "GroupDMAvatar" /* 10977 */;

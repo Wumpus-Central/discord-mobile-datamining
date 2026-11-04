@@ -1,6 +1,6 @@
-// === Module 11732: ActivitiesActionCreators ===
+// === Module 11733: ActivitiesActionCreators ===
 
-// Module 11732 (ActivitiesActionCreators)
+// Module 11733 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
 import ActivityTypes from "ActivityTypes" /* 5896 */;

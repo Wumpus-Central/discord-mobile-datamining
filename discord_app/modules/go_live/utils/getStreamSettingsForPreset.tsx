@@ -1,9 +1,9 @@
-// === Module 12118: getStreamSettingsForPreset ===
+// === Module 12119: getStreamSettingsForPreset ===
 
-// Module 12118 (getStreamSettingsForPreset)
+// Module 12119 (getStreamSettingsForPreset)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6044 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 12119 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 12120 */;
 import StreamSettingsConstants from "StreamSettingsConstants" /* 5998 */;
 import size from "module_2" /* 2 */;
 

@@ -87,7 +87,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

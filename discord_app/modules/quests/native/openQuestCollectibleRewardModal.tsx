@@ -1,6 +1,6 @@
-// === Module 14920: openQuestCollectibleRewardModal ===
+// === Module 14921: openQuestCollectibleRewardModal ===
 
-// Module 14920 (openQuestCollectibleRewardModal)
+// Module 14921 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5761 */;
 import getQuestLogger from "getQuestLogger" /* 7993 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9831 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9850 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14706 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14707 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

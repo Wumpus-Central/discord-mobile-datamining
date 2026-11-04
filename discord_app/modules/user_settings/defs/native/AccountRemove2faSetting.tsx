@@ -1,10 +1,10 @@
-// === Module 16904: AccountRemove2faSetting ===
+// === Module 16916: AccountRemove2faSetting ===
 
-// Module 16904 (AccountRemove2faSetting)
+// Module 16916 (AccountRemove2faSetting)
 import util from "util" /* 1113 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import account_MFAUtils from "account/MFAUtils" /* 16905 */;
-import MfaFactorUtils from "MfaFactorUtils" /* 16906 */;
+import account_MFAUtils from "account/MFAUtils" /* 16917 */;
+import MfaFactorUtils from "MfaFactorUtils" /* 16918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -172,7 +172,7 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj3 = module_560.create(() => ({ isCheckingLastFactor: false }));
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
@@ -200,8 +200,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16905).use2FARemoveDisableReason,
-  usePredicate: fn(16818).useIsTOTPEnabled
+  useDescription: fn(16917).use2FARemoveDisableReason,
+  usePredicate: fn(16830).useIsTOTPEnabled
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

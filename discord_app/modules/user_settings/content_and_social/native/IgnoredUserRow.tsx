@@ -1,6 +1,6 @@
-// === Module 16946: IgnoredUserRow ===
+// === Module 16958: IgnoredUserRow ===
 
-// Module 16946 (IgnoredUserRow)
+// Module 16958 (IgnoredUserRow)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -37,7 +37,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16943).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16955).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

@@ -1,6 +1,6 @@
-// === Module 17281: openOrbsArcadeRewardsCollectedModal ===
+// === Module 17293: openOrbsArcadeRewardsCollectedModal ===
 
-// Module 17281 (openOrbsArcadeRewardsCollectedModal)
+// Module 17293 (openOrbsArcadeRewardsCollectedModal)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

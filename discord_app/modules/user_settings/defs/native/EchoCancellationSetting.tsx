@@ -1,12 +1,12 @@
-// === Module 17482: EchoCancellationSetting ===
+// === Module 17494: EchoCancellationSetting ===
 
-// Module 17482 (EchoCancellationSetting)
+// Module 17494 (EchoCancellationSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -17,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
-  onValueChange: fn(12152).handleEchoCancellationChange
+  onValueChange: fn(12153).handleEchoCancellationChange
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

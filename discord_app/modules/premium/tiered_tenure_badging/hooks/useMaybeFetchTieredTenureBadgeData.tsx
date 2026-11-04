@@ -1,6 +1,6 @@
-// === Module 15577: useMaybeFetchTieredTenureBadgeData ===
+// === Module 15578: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 15577 (useMaybeFetchTieredTenureBadgeData)
+// Module 15578 (useMaybeFetchTieredTenureBadgeData)
 import useMountEffectDefault from "useMountEffect" /* 5729 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
 import UserStore from "UserStore" /* 1385 */;

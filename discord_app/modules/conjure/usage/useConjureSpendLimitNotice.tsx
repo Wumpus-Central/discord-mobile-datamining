@@ -1,6 +1,6 @@
-// === Module 12794: useConjureSpendLimitNotice ===
+// === Module 12795: useConjureSpendLimitNotice ===
 
-// Module 12794 (useConjureSpendLimitNotice)
+// Module 12795 (useConjureSpendLimitNotice)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 11048 */;

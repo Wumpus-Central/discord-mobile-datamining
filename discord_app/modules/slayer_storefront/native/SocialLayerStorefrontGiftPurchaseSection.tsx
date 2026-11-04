@@ -1,6 +1,6 @@
-// === Module 14635: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 14636: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 14635 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 14636 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;

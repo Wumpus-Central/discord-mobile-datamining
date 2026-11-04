@@ -1,6 +1,6 @@
-// === Module 15618: SubscriptionPlaceholderPattern ===
+// === Module 15619: SubscriptionPlaceholderPattern ===
 
-// Module 15618 (SubscriptionPlaceholderPattern)
+// Module 15619 (SubscriptionPlaceholderPattern)
 import shared from "shared" /* 5148 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import _mod8947 from "module_8947" /* 8947 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getSubscriptionPlaceholderPatternSource(theme) {
   return _mod8947.getIllustrationSource(theme, {
     dark() {
-      return require("module_15619");
-    },
-    darker() {
       return require("module_15620");
     },
-    light() {
+    darker() {
       return require("module_15621");
+    },
+    light() {
+      return require("module_15622");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useSubscriptionPlaceholderPatternSource() {
   const obj = shared;
   return _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15619");
-    },
-    darker() {
       return require("module_15620");
     },
-    light() {
+    darker() {
       return require("module_15621");
+    },
+    light() {
+      return require("module_15622");
     }
   });
 }
@@ -44,25 +44,25 @@ export function SubscriptionPlaceholderPattern(arg0) {
   const obj = shared;
   const illustrationSource = _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15619");
-    },
-    darker() {
       return require("module_15620");
     },
-    light() {
+    darker() {
       return require("module_15621");
+    },
+    light() {
+      return require("module_15622");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_15619");
-    },
-    darker() {
       return require("module_15620");
     },
-    light() {
+    darker() {
       return require("module_15621");
+    },
+    light() {
+      return require("module_15622");
     }
   };
   const merged = Object.assign(arg0);

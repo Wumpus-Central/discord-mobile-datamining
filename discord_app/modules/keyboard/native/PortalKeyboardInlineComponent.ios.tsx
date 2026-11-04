@@ -1,6 +1,6 @@
-// === Module 14424: PortalKeyboardInlineComponent ===
+// === Module 14425: PortalKeyboardInlineComponent ===
 
-// Module 14424 (PortalKeyboardInlineComponent)
+// Module 14425 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -58,8 +58,8 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
                 ref.current = true;
                 const obj2 = messagesRef(5334);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11434).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(11434);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11435).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(11435);
               }
             }
           }

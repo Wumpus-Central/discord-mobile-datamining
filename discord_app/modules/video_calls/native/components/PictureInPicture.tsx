@@ -1,16 +1,16 @@
-// === Module 11903: PictureInPicture ===
+// === Module 11904: PictureInPicture ===
 
-// Module 11903 (PictureInPicture)
+// Module 11904 (PictureInPicture)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
 import spring_spring from "spring/spring" /* 5771 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11904 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11907 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11908 */;
-import useDraggablePip from "useDraggablePip" /* 11909 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11905 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11908 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11909 */;
+import useDraggablePip from "useDraggablePip" /* 11910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13909: TraitOptionList ===
+// === Module 13910: TraitOptionList ===
 
-// Module 13909 (TraitOptionList)
+// Module 13910 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -8,7 +8,7 @@ import HapticUtils from "HapticUtils" /* 5384 */;
 import useInitialValueDefault from "useInitialValue" /* 5749 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
 import inlineStyles from "inlineStyles" /* 8171 */;
-import TraitOptionItem from "TraitOptionItem" /* 13910 */;
+import TraitOptionItem from "TraitOptionItem" /* 13911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -77,7 +77,7 @@ export default function TraitOptionList(size) {
   }
   const tmp8Result = useInitialValueDefault(bound);
   [tmp11, c13] = disabled(noop.useState(useWindowDimensionsDefault().width), 2);
-  const width = tmp2(13910).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = tmp2(13911).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + animatedRef;
   c14 = sum;
   const bound1 = Math.max(ref, tmp11 - ref - width);

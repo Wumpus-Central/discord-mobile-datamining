@@ -1,6 +1,6 @@
-// === Module 19315: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 19329: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 19315 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 19329 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
@@ -8,22 +8,22 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 517
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7767 */;
 import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8665 */;
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8669 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10786 */;
-import MarketingComponentType from "MarketingComponentType" /* 10787 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10794 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13948 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15535 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19287 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19316 */;
-import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19317 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19318 */;
-import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 19319 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19320 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19321 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10787 */;
+import MarketingComponentType from "MarketingComponentType" /* 10788 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10795 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13949 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15536 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19301 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19330 */;
+import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19331 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19332 */;
+import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 19333 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19334 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19335 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7772 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19289 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19303 */;
 import PromotionsStore from "PromotionsStore" /* 9776 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
@@ -143,7 +143,7 @@ export function useMainViewTooltipActionSheetMap() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: MainViewTooltipActionSheets }).enabled;
   const tmpResult29 = initialize;
-  const giftingBadgeCoachmarkVariant = GiftingBadgesUtils.useGiftingBadgeCoachmarkVariant({ platform: "native", location: MainViewTooltipActionSheets });
+  const giftingBadgeCoachmarkVariant = GiftingBadgesUtils.useGiftingBadgeCoachmarkVariant({ location: MainViewTooltipActionSheets });
   let isDismissed = null != stateFromStores3;
   if (isDismissed) {
     isDismissed = DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET, stateFromStores3).isDismissed;

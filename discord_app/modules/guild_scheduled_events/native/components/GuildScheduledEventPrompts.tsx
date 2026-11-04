@@ -1,6 +1,6 @@
-// === Module 12069: GuildScheduledEventPrompts ===
+// === Module 12070: GuildScheduledEventPrompts ===
 
-// Module 12069 (GuildScheduledEventPrompts)
+// Module 12070 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Form from "Form" /* 8317 */;

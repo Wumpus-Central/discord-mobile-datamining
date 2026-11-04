@@ -136,7 +136,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -250,7 +250,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -651,7 +651,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

@@ -1,14 +1,14 @@
-// === Module 17418: QuestDockBountyIllustration ===
+// === Module 17430: QuestDockBountyIllustration ===
 
-// Module 17418 (QuestDockBountyIllustration)
+// Module 17430 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 5207 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import APNGPlayer from "APNGPlayer" /* 9651 */;
 import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9841 */;
-import QuestDockHooks from "QuestDockHooks" /* 17304 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 17414 */;
-import _modDef17419 from "module_17419" /* 17419 */;
+import QuestDockHooks from "QuestDockHooks" /* 17316 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 17426 */;
+import _modDef17431 from "module_17431" /* 17431 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -87,7 +87,7 @@ function QuestDock3DOrbsAPNGPlayer(shouldAnimate) {
       aPNGPlayerControls.pause();
     }
   }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef17419, style: tmp.fill, autoplay: false });
+  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef17431, style: tmp.fill, autoplay: false });
 }
 function QuestDock3DOrbsIllustration() {
   const tmp = closure_8();
@@ -107,7 +107,7 @@ function QuestDock3DOrbsIllustration() {
     let tmp8Result = <QuestDock3DOrbsAPNGPlayer shouldAnimate={tmp7} />;
   } else {
     const obj4 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
-    const obj5 = { uri: _modDef17419 };
+    const obj5 = { uri: _modDef17431 };
     obj4.source = obj5;
     obj4.style = tmp.fill;
     obj4.enableAnimation = !stateFromStores;
@@ -125,7 +125,7 @@ function QuestDockOrbHandsIllustration() {
 }
 const View = fn(17).View;
 const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
-const QuestDockConstants = fn(17307);
+const QuestDockConstants = fn(17319);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

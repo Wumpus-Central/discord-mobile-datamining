@@ -1,6 +1,6 @@
-// === Module 20272: GuildSettingsModalOfficialMessages ===
+// === Module 20286: GuildSettingsModalOfficialMessages ===
 
-// Module 20272 (GuildSettingsModalOfficialMessages)
+// Module 20286 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382
 import Text_Text from "Text/Text" /* 5761 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7581 */;
 import HeaderActionButton from "HeaderActionButton" /* 7698 */;
-import _modDef17509 from "module_17509" /* 17509 */;
+import _modDef17521 from "module_17521" /* 17521 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(closure_1_10).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(closure_1_10).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef17509 }), ];
+  const items2 = [application_id(native.Avatar, { source: _modDef17521 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "body-md/semibold", lineClamp: 1, children: null };
@@ -182,7 +182,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       _undefined2(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(18607, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(18621, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp2Result = require("initialize");
   [tmp14, c6] = hasChanges(officialMessageColor.useState(0), 2);

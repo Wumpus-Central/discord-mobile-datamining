@@ -1,14 +1,14 @@
-// === Module 18415: ChannelItem ===
+// === Module 18429: ChannelItem ===
 
-// Module 18415 (ChannelItem)
+// Module 18429 (ChannelItem)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 8788 */;
-import BaseChannelItem from "BaseChannelItem" /* 14154 */;
-import _modDef18416 from "module_18416" /* 18416 */;
+import BaseChannelItem from "BaseChannelItem" /* 14155 */;
+import _modDef18430 from "module_18430" /* 18430 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5895 */;
@@ -65,7 +65,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18416;
+      let tmp12 = _modDef18430;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -89,7 +89,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(14154).BaseChannelIcon, obj10);
+    return state(tmp9(14155).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 117.3 };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "teapot" };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

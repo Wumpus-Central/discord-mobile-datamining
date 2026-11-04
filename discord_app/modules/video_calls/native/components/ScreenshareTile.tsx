@@ -1,14 +1,14 @@
-// === Module 11950: ScreenshareTile ===
+// === Module 11951: ScreenshareTile ===
 
-// Module 11950 (ScreenshareTile)
+// Module 11951 (ScreenshareTile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 11951 */;
-import _modDef11952 from "module_11952" /* 11952 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 11952 */;
+import _modDef11953 from "module_11953" /* 11953 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export default function ScreenShareTile(onSingleTap) {
   items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), , ];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef11952;
+  obj4.source = _modDef11953;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "body-xs/semibold", color: "text-overlay-light", children: null };

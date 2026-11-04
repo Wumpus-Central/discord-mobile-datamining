@@ -1,15 +1,15 @@
-// === Module 18723: YouBarNotificationsButton ===
+// === Module 18737: YouBarNotificationsButton ===
 
-// Module 18723 (YouBarNotificationsButton)
+// Module 18737 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 575 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 18724 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 18738 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 10369 */;
 
 const _modDef1652 = tmp2(1652);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17310);
+const YouBarConstants = fn(17322);
 ({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -115,7 +115,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   obj4.variant = str4;
   const obj6 = { style: tmp.iconContainer, children: null };
   const tmp16Result = closure_8(onLongPress(9353).BellIcon, obj2);
-  const items4 = [closure_8(onLongPress(18720).YouBarButtonIcon, { icon: closure_8(onLongPress(9353).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
+  const items4 = [closure_8(onLongPress(18734).YouBarButtonIcon, { icon: closure_8(onLongPress(9353).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
   const obj7 = { icon: closure_8(onLongPress(9353).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
   items4[1] = closure_8(_modDef1652.View, { style: animatedStyle, children: closure_8(onLongPress(1187).Badge, { value }) });
   obj6.children = items4;
@@ -129,5 +129,5 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   obj4.onLongPress = onLongPress;
   obj4.hitSlop = hitSlop;
   obj5.children = closure_8(onLongPress(8168).IconButton, obj4);
-  return closure_8(onLongPress(18720).YouBarButtonContainer, obj5);
+  return closure_8(onLongPress(18734).YouBarButtonContainer, obj5);
 });

@@ -1,9 +1,9 @@
-// === Module 20419: BackgroundSync ===
+// === Module 20432: BackgroundSync ===
 
-// Module 20419 (BackgroundSync)
+// Module 20432 (BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 5036 */;
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19673 */;
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19687 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 2122 */;

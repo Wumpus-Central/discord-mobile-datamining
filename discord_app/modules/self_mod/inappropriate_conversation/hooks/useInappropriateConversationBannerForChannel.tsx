@@ -1,11 +1,11 @@
-// === Module 11449: useInappropriateConversationBannerForChannel ===
+// === Module 11450: useInappropriateConversationBannerForChannel ===
 
-// Module 11449 (useInappropriateConversationBannerForChannel)
+// Module 11450 (useInappropriateConversationBannerForChannel)
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10982 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11447 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11448 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11450 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11451 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11448 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11449 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11451 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11452 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;

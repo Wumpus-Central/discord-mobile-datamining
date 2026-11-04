@@ -1,6 +1,6 @@
-// === Module 20239: ChannelSelectorActionSheet ===
+// === Module 20253: ChannelSelectorActionSheet ===
 
-// Module 20239 (ChannelSelectorActionSheet)
+// Module 20253 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
@@ -25,7 +25,7 @@ function ChannelRow(channel) {
   ({ selected, guild, start, end } = channel);
   let str = onChannelSelected(5786)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(17467).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(17479).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
@@ -125,7 +125,7 @@ export default function ChannelSelectorActionSheet(guildId) {
   if (!hideCreateChannel) {
     const obj7 = { style: tmp.createChannelRow, children: null };
     const obj8 = { start: true, end: true, icon: null, label: null, onPress: null };
-    const obj9 = { IconComponent: tmp6(11672).PlusMediumIcon };
+    const obj9 = { IconComponent: tmp6(11673).PlusMediumIcon };
     obj8.icon = closure_13(tmp6(7116).TableRow.Icon, obj9);
     const intl3 = tmp6(1113).intl;
     obj8.label = intl3.string(tmp6(1113).t.d7AN7W);

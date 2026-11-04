@@ -1,17 +1,17 @@
-// === Module 17640: ReduceSaturationSetting ===
+// === Module 17652: ReduceSaturationSetting ===
 
-// Module 17640 (ReduceSaturationSetting)
+// Module 17652 (ReduceSaturationSetting)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11677 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16502 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17539 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11678 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16515 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17551 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 19314: ReferralProgramEntryPointActionSheet ===
+// === Module 19328: ReferralProgramEntryPointActionSheet ===
 
-// Module 19314 (ReferralProgramEntryPointActionSheet)
+// Module 19328 (ReferralProgramEntryPointActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -33,7 +33,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15555, dependencyMap.paths), "referral-program-share-action-sheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15556, dependencyMap.paths), "referral-program-share-action-sheet");
   }, items);
   const callback1 = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);

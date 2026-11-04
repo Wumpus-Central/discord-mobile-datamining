@@ -1,6 +1,6 @@
-// === Module 20115: ChannelSetupScreen ===
+// === Module 20129: ChannelSetupScreen ===
 
-// Module 20115 (ChannelSetupScreen)
+// Module 20129 (ChannelSetupScreen)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -25,8 +25,8 @@ export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
   const token = guild(5732).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(5732);
-  const enableCommunitySharedStyles = guild(20104).useEnableCommunitySharedStyles();
-  let obj3 = guild(20104);
+  const enableCommunitySharedStyles = guild(20118).useEnableCommunitySharedStyles();
+  let obj3 = guild(20118);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -139,13 +139,13 @@ export default function ChannelSetupScreen() {
         obj2.selectedItem = prop;
         obj.openLazy(asyncRequireImpl(9147, dependencyMap.paths), "SelectUpdatesChannel", obj2);
       }, items4);
-      const obj6 = { headerRef: ref, disableNextStep: false, currentStep: tmp2(20102).EnableCommunityModalSteps.STEP_2, children: null };
+      const obj6 = { headerRef: ref, disableNextStep: false, currentStep: tmp2(20116).EnableCommunityModalSteps.STEP_2, children: null };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
       const obj8 = { ref, accessibilityRole: "header", variant: "body-md/semibold", color: "text-subtle", children: null };
       const intl4 = tmp2(1113).intl;
       obj8.children = intl4.formatToPlainString(tmp2(1113).t.tInpJj, { number: 2, total: 3 });
       const items5 = [closure_13(tmp2(5761).Text, obj8), , , ];
-      const obj9 = { resizeMode: "contain", source: tmp4(20105)().channelSetup };
+      const obj9 = { resizeMode: "contain", source: tmp4(20119)().channelSetup };
       items5[1] = closure_13(tmp4(5851), obj9);
       const obj10 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
       const intl5 = tmp2(1113).intl;
@@ -210,7 +210,7 @@ export default function ChannelSetupScreen() {
       obj12.children = items7;
       items6[1] = closure_14(tmp2(6162).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(20102).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(20116).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {

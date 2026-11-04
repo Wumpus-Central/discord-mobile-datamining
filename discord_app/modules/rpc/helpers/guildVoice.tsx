@@ -1,6 +1,6 @@
-// === Module 16532: guildVoice ===
+// === Module 16544: guildVoice ===
 
-// Module 16532 (guildVoice)
+// Module 16544 (guildVoice)
 import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

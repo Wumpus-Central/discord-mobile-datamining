@@ -1,6 +1,6 @@
-// === Module 19156: ThreadAutoArchiveBottomSheet ===
+// === Module 19170: ThreadAutoArchiveBottomSheet ===
 
-// Module 19156 (ThreadAutoArchiveBottomSheet)
+// Module 19170 (ThreadAutoArchiveBottomSheet)
 import TableRadioRow from "TableRadioRow" /* 7202 */;
 import noop from "module_19" /* 19 */;
 

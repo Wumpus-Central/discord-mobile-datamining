@@ -1,6 +1,6 @@
-// === Module 16111: ClipsDefaultSettingsUtils ===
+// === Module 16124: ClipsDefaultSettingsUtils ===
 
-// Module 16111 (ClipsDefaultSettingsUtils)
+// Module 16124 (ClipsDefaultSettingsUtils)
 import ClipsConstants from "ClipsConstants" /* 8354 */;
 import size from "module_2" /* 2 */;
 

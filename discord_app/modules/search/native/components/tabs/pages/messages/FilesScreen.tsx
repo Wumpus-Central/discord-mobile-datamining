@@ -1,8 +1,8 @@
-// === Module 19047: FilesScreen ===
+// === Module 19061: FilesScreen ===
 
-// Module 19047 (FilesScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 19042 */;
+// Module 19061 (FilesScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14104 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 19056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

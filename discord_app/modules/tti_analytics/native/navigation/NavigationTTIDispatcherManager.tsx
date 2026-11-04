@@ -1,9 +1,9 @@
-// === Module 20344: NavigationTTIDispatcherManager ===
+// === Module 20357: NavigationTTIDispatcherManager ===
 
-// Module 20344 (NavigationTTIDispatcherManager)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13550 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13937 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 18864 */;
+// Module 20357 (NavigationTTIDispatcherManager)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13551 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13938 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 18878 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MessageStore from "MessageStore" /* 6196 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;

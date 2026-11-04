@@ -1,8 +1,8 @@
-// === Module 15197: useCanViewOthersWishlist ===
+// === Module 15198: useCanViewOthersWishlist ===
 
-// Module 15197 (useCanViewOthersWishlist)
-import useCanDMDefault from "useCanDM" /* 13901 */;
-import WishlistVisibility from "WishlistVisibility" /* 15198 */;
+// Module 15198 (useCanViewOthersWishlist)
+import useCanDMDefault from "useCanDM" /* 13902 */;
+import WishlistVisibility from "WishlistVisibility" /* 15199 */;
 import WishlistStore from "WishlistStore" /* 9618 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserProfileStore from "UserProfileStore" /* 7912 */;

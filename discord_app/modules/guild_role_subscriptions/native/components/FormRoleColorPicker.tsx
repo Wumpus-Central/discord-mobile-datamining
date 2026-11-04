@@ -1,6 +1,6 @@
-// === Module 20252: FormRoleColorPicker ===
+// === Module 20266: FormRoleColorPicker ===
 
-// Module 20252 (FormRoleColorPicker)
+// Module 20266 (FormRoleColorPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import noop from "module_19" /* 19 */;
@@ -25,13 +25,13 @@ export default function FormRoleColorPicker(color) {
   const onChange = color.onChange;
   items = [color, onChange];
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18607, dependencyMap.paths), "RoleColorPicker", { color, onSelect: onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18621, dependencyMap.paths), "RoleColorPicker", { color, onSelect: onChange });
   }, items);
   const obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = closure_6();
-  obj.leading = jsx(onChange(16686), { color, style: tmp.rowColorBlock, onSelect: callback });
+  obj.leading = jsx(onChange(16698), { color, style: tmp.rowColorBlock, onSelect: callback });
   const obj2 = { color, style: tmp.rowColorBlock, onSelect: callback };
-  const tmp3 = onChange(15955);
+  const tmp3 = onChange(15968);
   obj.label = color(1090).int2hex(color);
   obj.disabled = flag;
   obj.onPress = callback;

@@ -1,6 +1,6 @@
-// === Module 12204: SingleScreenshare ===
+// === Module 12205: SingleScreenshare ===
 
-// Module 12204 (SingleScreenshare)
+// Module 12205 (SingleScreenshare)
 import nativeDefault from "native" /* 575 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj.containerStyle = stageStreamContainer;
-  return jsx(channel(12205), {
+  return jsx(channel(12206), {
     participant: channel.participant,
     onSingleTap() {
       closure_1_3();

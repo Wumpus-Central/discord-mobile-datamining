@@ -1,10 +1,10 @@
-// === Module 13932: createChannelStream ===
+// === Module 13933: createChannelStream ===
 
-// Module 13932 (createChannelStream)
+// Module 13933 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import isNewMessageGroupDefault from "isNewMessageGroup" /* 10298 */;
-import tryInjectMessage from "tryInjectMessage" /* 13933 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11557 */;
+import tryInjectMessage from "tryInjectMessage" /* 13934 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11558 */;
 import EditMessageStore from "EditMessageStore" /* 7963 */;
 import UploadStore from "UploadStore" /* 8533 */;
 
@@ -375,9 +375,9 @@ export default function createChannelStream(forceRender) {
       if (tmp19) {
         const obj21 = { rowType: roleStyle.UNREAD, changeType: determineChangeType(message), roleStyle, text: null };
         const intl5 = require("util").intl;
-        obj21.text = intl5.string(require("util").t.q7hm3m).toUpperCase();
+        obj21.text = intl5.string(require("util").t.q7hm3m).toLocaleUpperCase(require("util").intl.currentLocale);
         items.push(obj21);
-        const str2 = intl5.string(require("util").t.q7hm3m);
+        const stringResult = intl5.string(require("util").t.q7hm3m);
       }
       if (tmp17) {
         tmp17 = !renderContentOnly;

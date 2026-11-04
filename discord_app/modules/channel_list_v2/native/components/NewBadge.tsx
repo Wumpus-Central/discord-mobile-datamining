@@ -1,6 +1,6 @@
-// === Module 14061: NewBadge ===
+// === Module 14062: NewBadge ===
 
-// Module 14061 (NewBadge)
+// Module 14062 (NewBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles((arg0, arg1) => {
   if (obj.isIOS()) {
     num = 1;
   }
-  const obj2 = { text: { textAlign: "center", textTransform: "uppercase", marginTop: num }, base: null };
+  const obj2 = { text: { textAlign: "center", marginTop: num }, base: null };
   const obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, paddingHorizontal: 6, paddingVertical: 3, backgroundColor: null };
   obj = PlatformUtils;
   if (tmpResult.isThemeLight(arg1)) {
@@ -49,7 +49,8 @@ export default function NewBadge() {
   }
   obj2.color = str;
   const intl = util.intl;
-  obj2.children = intl.string(util.t.y2b7CA);
+  obj3 = shared;
+  obj2.children = intl.string(util.t.y2b7CA).toLocaleUpperCase(util.intl.currentLocale);
   obj.children = jsx(Text_Text.Text, { variant: "footnote/semibold", style: tmp4.text, color: null, children: null });
   return <View style={tmp4.base}>{null}</View>;
 };

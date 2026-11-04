@@ -1,6 +1,6 @@
-// === Module 11718: StageChannelSelfRichPresenceStore ===
+// === Module 11719: StageChannelSelfRichPresenceStore ===
 
-// Module 11718 (StageChannelSelfRichPresenceStore)
+// Module 11719 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;

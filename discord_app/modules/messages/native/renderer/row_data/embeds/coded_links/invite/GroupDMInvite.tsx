@@ -1,6 +1,6 @@
-// === Module 15339: GroupDMInvite ===
+// === Module 15340: GroupDMInvite ===
 
-// Module 15339 (GroupDMInvite)
+// Module 15340 (GroupDMInvite)
 import util from "util" /* 1113 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8535 */;
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10296 */;
@@ -53,8 +53,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   }
   let channelIconSource = null;
   if (null != channel) {
-    channelIconSource = tmp8(15097).getChannelIconSource(channel);
-    const tmp8Result = tmp8(15097);
+    channelIconSource = tmp8(15098).getChannelIconSource(channel);
+    const tmp8Result = tmp8(15098);
   }
   let uri = null;
   if (null != channelIconSource) {

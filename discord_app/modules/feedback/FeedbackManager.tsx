@@ -1,12 +1,12 @@
-// === Module 19719: feedback/FeedbackManager ===
+// === Module 19733: feedback/FeedbackManager ===
 
-// Module 19719 (feedback/FeedbackManager)
+// Module 19733 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import FeedbackConfig from "FeedbackConfig" /* 19721 */;
+import FeedbackConfig from "FeedbackConfig" /* 19735 */;
 import HotspotStore from "hotspot/HotspotStore" /* 7518 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19720 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19734 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;

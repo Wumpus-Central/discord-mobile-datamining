@@ -1,6 +1,6 @@
-// === Module 19632: CaptchaModal ===
+// === Module 19646: CaptchaModal ===
 
-// Module 19632 (CaptchaModal)
+// Module 19646 (CaptchaModal)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
@@ -8,16 +8,16 @@ import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import Stack_Stack from "Stack/Stack" /* 6162 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
-import RegistrationUtils from "RegistrationUtils" /* 18238 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 19634 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 19638 */;
+import RegistrationUtils from "RegistrationUtils" /* 18252 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 19648 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 19652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(18229).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18230);
+let closure_6 = fn(18243).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18244);
 ({ RegisterTransitionSteps: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -56,7 +56,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(19633)({ onReject, analyticsType: memo });
+  closure_9 = onReject(19647)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);

@@ -1,6 +1,6 @@
-// === Module 17709: AndroidNotificationSettingsStore ===
+// === Module 17721: AndroidNotificationSettingsStore ===
 
-// Module 17709 (AndroidNotificationSettingsStore)
+// Module 17721 (AndroidNotificationSettingsStore)
 import _mod5056 from "module_5056" /* 5056 */;
 import PushNotificationDefault from "PushNotification" /* 11093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -127,7 +127,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   }
 };
 const identity = fn(1254);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "cix", isVibrationsEnabled: "construct", isSoundsEnabled: "Button", isNotifyEveryTime: "c" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "Path", isSoundsEnabled: "children", isNotifyEveryTime: "guildId" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16253: awaitExperiments ===
+// === Module 16266: awaitExperiments ===
 
-// Module 16253 (awaitExperiments)
+// Module 16266 (awaitExperiments)
 import Future from "Future" /* 9915 */;
 import size from "module_2" /* 2 */;
 

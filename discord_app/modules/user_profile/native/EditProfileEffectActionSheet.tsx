@@ -1,6 +1,6 @@
-// === Module 16734: EditProfileEffectActionSheet ===
+// === Module 16746: EditProfileEffectActionSheet ===
 
-// Module 16734 (EditProfileEffectActionSheet)
+// Module 16746 (EditProfileEffectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
@@ -8,7 +8,7 @@ import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8879 */;
 import useShopProductItems from "useShopProductItems" /* 8883 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 16736 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 16748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7875 */;
@@ -133,7 +133,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11580), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(11581), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;

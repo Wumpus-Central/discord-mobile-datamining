@@ -1,15 +1,15 @@
-// === Module 13431: OutcomeStep ===
+// === Module 13432: OutcomeStep ===
 
-// Module 13431 (OutcomeStep)
+// Module 13432 (OutcomeStep)
 import transitionToGuild from "transitionToGuild" /* 7662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11551);
+const GameOrganizationInviteConstants = fn(11552);
 ({ GameOrganizationInviteAcceptFailureReason: closure_6, GameOrganizationInviteAcceptStatus: metroImportDefault, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(13420).closeGameOrganizationJoinModal;
+const onPress = fn(13421).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -23,7 +23,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13422)(code.code);
+  const tmp4 = stateFromStores(13423)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -82,7 +82,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13423)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13424)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -203,9 +203,9 @@ export function OutcomeStep(code) {
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
     obj28.children = closure_10(tmp6(5768).Button, obj56);
-    items4[1] = closure_10(tmp6(13427).ModalFooter, obj28);
+    items4[1] = closure_10(tmp6(13428).ModalFooter, obj28);
     obj26.children = items4;
     return closure_11(tmp6(8112).ModalScreen, obj26);
   }
-  const tmp2Result = stateFromStores(13423);
+  const tmp2Result = stateFromStores(13424);
 }

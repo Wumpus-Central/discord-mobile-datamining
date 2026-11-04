@@ -1,19 +1,19 @@
-// === Module 19133: DisplayNameLockeAbstractUI ===
+// === Module 19147: DisplayNameLockeAbstractUI ===
 
-// Module 19133 (DisplayNameLockeAbstractUI)
+// Module 19147 (DisplayNameLockeAbstractUI)
 import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef19134 from "module_19134" /* 19134 */;
-import _modDef19135 from "module_19135" /* 19135 */;
-import _modDef19136 from "module_19136" /* 19136 */;
+import _modDef19148 from "module_19148" /* 19148 */;
+import _modDef19149 from "module_19149" /* 19149 */;
+import _modDef19150 from "module_19150" /* 19150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19134 }, 3: null };
-let obj2 = { uri: _modDef19134 };
-obj[2] = { uri: _modDef19135 };
-const obj3 = { uri: _modDef19135 };
-obj[3] = { uri: _modDef19136 };
+let obj = { 1: null, 2: { uri: _modDef19148 }, 3: null };
+let obj2 = { uri: _modDef19148 };
+obj[2] = { uri: _modDef19149 };
+const obj3 = { uri: _modDef19149 };
+obj[3] = { uri: _modDef19150 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx");
 

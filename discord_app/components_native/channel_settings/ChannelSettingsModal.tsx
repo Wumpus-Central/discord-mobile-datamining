@@ -1,20 +1,20 @@
-// === Module 19148: ChannelSettingsModal ===
+// === Module 19162: ChannelSettingsModal ===
 
-// Module 19148 (ChannelSettingsModal)
+// Module 19162 (ChannelSettingsModal)
 import nativeDefault from "native" /* 575 */;
 import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 11255 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 19059 */;
-import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 19149 */;
-import MessagePreviewDefault from "MessagePreview" /* 19167 */;
-import EasyChannelPermissionSettingsDefault from "EasyChannelPermissionSettings" /* 19170 */;
-import ChannelSettingsPermissionsListDefault from "ChannelSettingsPermissionsList" /* 19177 */;
-import ChannelSettingsPermissionsOverridesDefault from "ChannelSettingsPermissionsOverrides" /* 19178 */;
-import ChannelSettingsIntegrationsOverviewDefault from "ChannelSettingsIntegrationsOverview" /* 19187 */;
-import IntegrationsSettingsWebhooksOverviewDefault from "IntegrationsSettingsWebhooksOverview" /* 19190 */;
-import ChannelSettingsChangeCategoryDefault from "ChannelSettingsChangeCategory" /* 19202 */;
-import ChannelSettingsChangeRTCRegionDefault from "ChannelSettingsChangeRTCRegion" /* 19203 */;
-import ChannelSettingsEditForumTagDefault from "ChannelSettingsEditForumTag" /* 19204 */;
-import ChannelSettingsChangeDefaultForumLayoutDefault from "ChannelSettingsChangeDefaultForumLayout" /* 19205 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 19073 */;
+import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 19163 */;
+import MessagePreviewDefault from "MessagePreview" /* 19181 */;
+import EasyChannelPermissionSettingsDefault from "EasyChannelPermissionSettings" /* 19184 */;
+import ChannelSettingsPermissionsListDefault from "ChannelSettingsPermissionsList" /* 19191 */;
+import ChannelSettingsPermissionsOverridesDefault from "ChannelSettingsPermissionsOverrides" /* 19192 */;
+import ChannelSettingsIntegrationsOverviewDefault from "ChannelSettingsIntegrationsOverview" /* 19201 */;
+import IntegrationsSettingsWebhooksOverviewDefault from "IntegrationsSettingsWebhooksOverview" /* 19204 */;
+import ChannelSettingsChangeCategoryDefault from "ChannelSettingsChangeCategory" /* 19216 */;
+import ChannelSettingsChangeRTCRegionDefault from "ChannelSettingsChangeRTCRegion" /* 19217 */;
+import ChannelSettingsEditForumTagDefault from "ChannelSettingsEditForumTag" /* 19218 */;
+import ChannelSettingsChangeDefaultForumLayoutDefault from "ChannelSettingsChangeDefaultForumLayout" /* 19219 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

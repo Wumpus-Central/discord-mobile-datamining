@@ -1,14 +1,14 @@
-// === Module 15693: GuildPowerupsMarketingHeader ===
+// === Module 15694: GuildPowerupsMarketingHeader ===
 
-// Module 15693 (GuildPowerupsMarketingHeader)
+// Module 15694 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef2699 from "module_2699" /* 2699 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14281 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14304 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15694 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15695 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14282 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14305 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15695 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15696 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
 

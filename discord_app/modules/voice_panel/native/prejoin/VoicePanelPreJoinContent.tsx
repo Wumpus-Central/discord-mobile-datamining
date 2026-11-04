@@ -1,6 +1,6 @@
-// === Module 19538: VoicePanelPreJoinContent ===
+// === Module 19552: VoicePanelPreJoinContent ===
 
-// Module 19538 (VoicePanelPreJoinContent)
+// Module 19552 (VoicePanelPreJoinContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -17,15 +17,15 @@ import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7466
 import StreamActionCreators from "StreamActionCreators" /* 8041 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
 import FormComponents from "FormComponents" /* 9377 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19528 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12629 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19542 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import GameConsoleStore from "GameConsoleStore" /* 5899 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15851 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15864 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -184,7 +184,7 @@ function ActivityInfo(activity) {
               if (null != inputApplication) {
                 const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                 v3 = num3;
-                const obj7 = { value: v3(11989).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(11990).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
@@ -233,7 +233,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7101);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19526), obj10);
+    obj9.children = closure_25(tmp2(19540), obj10);
     const items7 = [closure_25(tmp2(7101), obj9), ];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7101);
@@ -512,17 +512,17 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(11410).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11411).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11414).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15855).VoiceChannelWarningSurfaces;
+const constants4 = fn(15868).VoiceChannelWarningSurfaces;
 const Features = fn(5902).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
 const createStyles = fn(5141);
-let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(11416).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
-let obj3 = { paddingTop: EDGE_GUTTER + fn(11416).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
+let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(11417).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
+let obj3 = { paddingTop: EDGE_GUTTER + fn(11417).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
 obj.previewImageWrapper = { position: "relative", width: "100%", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.lg, overflow: "hidden", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -709,10 +709,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(11409));
+  const context = noop.useContext(guildId(11410));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19413)(channelId);
+  const tmp2 = guildId(19427)(channelId);
   dependencyMap = tmp2;
   items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -752,6 +752,6 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       };
       return obj;
     }
-  }, items1, channelId(19541).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(19555).areVoicePanelPreJoinContentPropsEqual);
   return closure_25(channelId(5207).TransitionItem, { item: stateFromStores, renderItem });
 });

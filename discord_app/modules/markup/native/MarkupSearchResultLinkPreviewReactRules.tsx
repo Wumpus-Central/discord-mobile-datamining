@@ -1,6 +1,6 @@
-// === Module 19006: MarkupSearchResultLinkPreviewReactRules ===
+// === Module 19020: MarkupSearchResultLinkPreviewReactRules ===
 
-// Module 19006 (MarkupSearchResultLinkPreviewReactRules)
+// Module 19020 (MarkupSearchResultLinkPreviewReactRules)
 import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 11235 */;
 import size from "module_2" /* 2 */;
 

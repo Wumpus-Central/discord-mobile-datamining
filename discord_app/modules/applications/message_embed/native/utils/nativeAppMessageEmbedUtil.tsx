@@ -1,6 +1,6 @@
-// === Module 13926: nativeAppMessageEmbedUtil ===
+// === Module 13927: nativeAppMessageEmbedUtil ===
 
-// Module 13926 (nativeAppMessageEmbedUtil)
+// Module 13927 (nativeAppMessageEmbedUtil)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import useAvatarColor from "useAvatarColor" /* 8856 */;

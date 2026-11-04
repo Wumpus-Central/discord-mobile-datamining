@@ -1,6 +1,6 @@
-// === Module 18104: useCardLayout ===
+// === Module 18116: useCardLayout ===
 
-// Module 18104 (useCardLayout)
+// Module 18116 (useCardLayout)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ export function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "r", rowWidth: "__closure", ref: callback, onLayout: callback1 };
+    const obj2 = { columns: num, cardWidth: "r", rowWidth: "isArray", ref: callback, onLayout: callback1 };
     return obj2;
   } else {
     let num2 = 2;
@@ -98,7 +98,7 @@ export function useCardLayout() {
     const diff2 = tmp17 - 1;
     if (result3 + (bound + tmp15(9606).COLLECTIBLES_SHOP_CARD_GAP * diff2) > tmp3) {
       if (1 < tmp17) {
-        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "id", ref: callback, onLayout: callback1 };
+        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "children", ref: callback, onLayout: callback1 };
         let obj = obj3;
       }
       return obj;

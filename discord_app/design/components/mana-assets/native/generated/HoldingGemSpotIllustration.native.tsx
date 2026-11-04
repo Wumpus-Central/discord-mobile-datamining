@@ -1,19 +1,19 @@
-// === Module 15746: HoldingGemSpotIllustration ===
+// === Module 15747: HoldingGemSpotIllustration ===
 
-// Module 15746 (HoldingGemSpotIllustration)
+// Module 15747 (HoldingGemSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef15747 from "module_15747" /* 15747 */;
 import _modDef15748 from "module_15748" /* 15748 */;
 import _modDef15749 from "module_15749" /* 15749 */;
+import _modDef15750 from "module_15750" /* 15750 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15747 }, 3: null };
-let obj2 = { uri: _modDef15747 };
-obj[2] = { uri: _modDef15748 };
-const obj3 = { uri: _modDef15748 };
-obj[3] = { uri: _modDef15749 };
+let obj = { 1: null, 2: { uri: _modDef15748 }, 3: null };
+let obj2 = { uri: _modDef15748 };
+obj[2] = { uri: _modDef15749 };
+const obj3 = { uri: _modDef15749 };
+obj[3] = { uri: _modDef15750 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HoldingGemSpotIllustration.native.tsx");
 

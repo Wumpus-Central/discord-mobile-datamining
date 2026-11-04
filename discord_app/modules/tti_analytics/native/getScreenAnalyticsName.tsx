@@ -1,6 +1,6 @@
-// === Module 18305: getScreenAnalyticsName ===
+// === Module 18319: getScreenAnalyticsName ===
 
-// Module 18305 (getScreenAnalyticsName)
+// Module 18319 (getScreenAnalyticsName)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
 import RootNavigationRef from "RootNavigationRef" /* 5323 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

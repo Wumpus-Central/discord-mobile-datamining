@@ -1,6 +1,6 @@
-// === Module 14087: GuildDirectoryAddAlert ===
+// === Module 14088: GuildDirectoryAddAlert ===
 
-// Module 14087 (GuildDirectoryAddAlert)
+// Module 14088 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;

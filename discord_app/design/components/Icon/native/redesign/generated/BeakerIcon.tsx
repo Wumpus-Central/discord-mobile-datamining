@@ -1,9 +1,9 @@
-// === Module 17823: BeakerIcon ===
+// === Module 17835: BeakerIcon ===
 
-// Module 17823 (BeakerIcon)
+// Module 17835 (BeakerIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod17824 from "module_17824" /* 17824 */;
+import _mod17836 from "module_17836" /* 17836 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BeakerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17824, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17836, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

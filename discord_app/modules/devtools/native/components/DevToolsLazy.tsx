@@ -1,6 +1,6 @@
-// === Module 16669: DevToolsLazy ===
+// === Module 16681: DevToolsLazy ===
 
-// Module 16669 (DevToolsLazy)
+// Module 16681 (DevToolsLazy)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ let items = [
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(16670, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(16682, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -49,7 +49,7 @@ export default function DevToolsLazy() {
   const keyCommands = stateFromStores(6158).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(18216).default, {});
+      return jsx(tmp(18230).default, {});
     }
   }
   return null;

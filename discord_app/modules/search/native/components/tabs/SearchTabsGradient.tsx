@@ -1,9 +1,9 @@
-// === Module 19062: SearchTabsGradient ===
+// === Module 19076: SearchTabsGradient ===
 
-// Module 19062 (SearchTabsGradient)
+// Module 19076 (SearchTabsGradient)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import TabsGradientDefault from "TabsGradient" /* 14583 */;
+import TabsGradientDefault from "TabsGradient" /* 14584 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

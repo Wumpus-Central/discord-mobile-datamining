@@ -1,11 +1,11 @@
-// === Module 16567: providers ===
+// === Module 16579: providers ===
 
-// Module 16567 (providers)
+// Module 16579 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7483 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12006 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12007 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 
@@ -187,7 +187,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

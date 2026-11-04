@@ -1,15 +1,15 @@
-// === Module 16911: AccountSmsBackupSetting ===
+// === Module 16923: AccountSmsBackupSetting ===
 
-// Module 16911 (AccountSmsBackupSetting)
+// Module 16923 (AccountSmsBackupSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import PhoneActionCreators from "PhoneActionCreators" /* 7350 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 16900 */;
-import account_MFAUtils from "account/MFAUtils" /* 16905 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16908 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 16912 */;
+import account_MFAUtils from "account/MFAUtils" /* 16917 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16920 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -52,7 +52,7 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const tmp5 = asyncRequireImpl(7347, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -98,7 +98,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(16818).useIsTOTPEnabled
+  usePredicate: fn(16830).useIsTOTPEnabled
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

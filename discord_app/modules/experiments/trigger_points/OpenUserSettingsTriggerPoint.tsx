@@ -1,6 +1,6 @@
-// === Module 19255: OpenUserSettingsTriggerPoint ===
+// === Module 19269: OpenUserSettingsTriggerPoint ===
 
-// Module 19255 (OpenUserSettingsTriggerPoint)
+// Module 19269 (OpenUserSettingsTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5363 */;
 import Helpers from "Helpers" /* 10856 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 19464: usePanelOpenState ===
+// === Module 19478: usePanelOpenState ===
 
-// Module 19464 (usePanelOpenState)
+// Module 19478 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import VoicePanelStore from "VoicePanelStore" /* 7010 */;
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11410).VoicePanelModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
 const Constants = fn(1072);
 ({ ComponentActions: metroImportDefault, Routes: closure_8 } = Constants);
 let closure_9 = { code: "(function usePanelOpenStateTsx1(){let[connected]=this.__closure;return{connected:connected.get()};})" };
@@ -88,10 +88,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items4);
-  [first, closure_5] = first.useState(() => _undefined2(12262).getHistory().location.pathname);
+  [first, closure_5] = first.useState(() => _undefined2(12263).getHistory().location.pathname);
   const items5 = [arg0, first];
   const effect1 = first.useEffect(() => {
-    closure_0 = _undefined2(12262).addRouteChangeListener((pathname) => {
+    closure_0 = _undefined2(12263).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
@@ -110,7 +110,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
             c1(11115)();
           }
         }
-        obj3 = c0(12255);
+        obj3 = c0(12256);
       }
     });
     return () => {

@@ -1,6 +1,6 @@
-// === Module 19299: GiftingBadgesCoachmarkActionSheet ===
+// === Module 19313: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 19299 (GiftingBadgesCoachmarkActionSheet)
+// Module 19313 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2763 from "module_2763" /* 2763 */;
@@ -11,7 +11,7 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import BadgeId from "BadgeId" /* 8896 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10736 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10797 */;
-import _modDef19300 from "module_19300" /* 19300 */;
+import _modDef19314 from "module_19314" /* 19314 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 
@@ -20,7 +20,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_9();
-  const giftingBadgeTierIconUrl = markAsDismissed(10794).getGiftingBadgeTierIconUrl(currentTier);
+  const giftingBadgeTierIconUrl = markAsDismissed(10795).getGiftingBadgeTierIconUrl(currentTier);
   items = [markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -100,7 +100,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19300 };
+  const obj5 = { uri: _modDef19314 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -120,7 +120,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1113).intl;
   obj10.text = intl3.string(_modDef2763.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(13585).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.icon = closure_7(markAsDismissed(13586).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_7(markAsDismissed(5768).Button, obj10);
   items2[2] = closure_7(View, obj9);

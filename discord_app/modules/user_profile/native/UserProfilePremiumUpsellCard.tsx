@@ -1,6 +1,6 @@
-// === Module 16799: UserProfilePremiumUpsellCard ===
+// === Module 16811: UserProfilePremiumUpsellCard ===
 
-// Module 16799 (UserProfilePremiumUpsellCard)
+// Module 16811 (UserProfilePremiumUpsellCard)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
@@ -8,7 +8,7 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16726 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

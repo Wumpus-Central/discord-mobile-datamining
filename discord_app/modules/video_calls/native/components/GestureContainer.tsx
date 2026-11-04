@@ -1,6 +1,6 @@
-// === Module 12202: GestureContainer ===
+// === Module 12203: GestureContainer ===
 
-// Module 12202 (GestureContainer)
+// Module 12203 (GestureContainer)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -16,7 +16,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const useChannelCallStore = fn(11181).useChannelCallStore;
-const Constants = fn(11896);
+const Constants = fn(11897);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

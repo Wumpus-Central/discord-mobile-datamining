@@ -1,13 +1,13 @@
-// === Module 20243: GuildRoleSubscriptionBenefitTableRow ===
+// === Module 20257: GuildRoleSubscriptionBenefitTableRow ===
 
-// Module 20243 (GuildRoleSubscriptionBenefitTableRow)
+// Module 20257 (GuildRoleSubscriptionBenefitTableRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import TableRow from "TableRow" /* 7116 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17456 */;
-import EmojiIconDefault from "EmojiIcon" /* 17464 */;
-import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17467 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17468 */;
+import EmojiIconDefault from "EmojiIcon" /* 17476 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ function ChannelBenefitLabel(benefit) {
   return tmp8;
 }
 const View = fn(17).View;
-const constants = fn(17430).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17442).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);

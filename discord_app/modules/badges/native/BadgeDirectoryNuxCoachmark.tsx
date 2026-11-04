@@ -1,11 +1,11 @@
-// === Module 15134: BadgeDirectoryNuxCoachmark ===
+// === Module 15135: BadgeDirectoryNuxCoachmark ===
 
-// Module 15134 (BadgeDirectoryNuxCoachmark)
+// Module 15135 (BadgeDirectoryNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11639 */;
-import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 15135 */;
-import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 15139 */;
-import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 15143 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11640 */;
+import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 15136 */;
+import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 15140 */;
+import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 15144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function ProgressGraphic(badgeIconUrls) {
   const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls.badgeIconUrls);
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
-    items = [closure_6(tmp2(15147).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(15151).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(15143).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
+    items = [closure_6(tmp2(15148).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(15152).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(15144).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
     obj2.children = items;
     return closure_7(View, obj2);
   } else {

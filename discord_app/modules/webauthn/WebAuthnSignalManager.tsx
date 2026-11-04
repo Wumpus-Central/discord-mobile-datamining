@@ -1,6 +1,6 @@
-// === Module 20309: WebAuthnSignalManager ===
+// === Module 20322: WebAuthnSignalManager ===
 
-// Module 20309 (WebAuthnSignalManager)
+// Module 20322 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;

@@ -1,6 +1,6 @@
-// === Module 12264: convertRouteToNavigation ===
+// === Module 12265: convertRouteToNavigation ===
 
-// Module 12264 (convertRouteToNavigation)
+// Module 12265 (convertRouteToNavigation)
 import Constants from "Constants" /* 1072 */;
 import matchPathCompat from "matchPathCompat" /* 5177 */;
 import RouteUtils from "RouteUtils" /* 5190 */;
@@ -10,7 +10,7 @@ import useChatLayout from "useChatLayout" /* 5325 */;
 import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7014 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9978 */;
 import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11157 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 12265 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 12266 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

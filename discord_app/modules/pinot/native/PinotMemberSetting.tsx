@@ -1,6 +1,6 @@
-// === Module 18140: PinotMemberSetting ===
+// === Module 18152: PinotMemberSetting ===
 
-// Module 18140 (PinotMemberSetting)
+// Module 18152 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
@@ -11,10 +11,10 @@ import Text_Text from "Text/Text" /* 5761 */;
 import InlineNotice from "InlineNotice" /* 8165 */;
 import SettingsConstants from "SettingsConstants" /* 8573 */;
 import PinotExperiment from "PinotExperiment" /* 9200 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 11514 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 11515 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
-import SettingBuilders from "SettingBuilders" /* 11728 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
 import size from "module_2" /* 2 */;
 
 function PinotMemberSettingFooter() {

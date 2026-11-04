@@ -1,6 +1,6 @@
-// === Module 19467: VoicePanelUI ===
+// === Module 19481: VoicePanelUI ===
 
-// Module 19467 (VoicePanelUI)
+// Module 19481 (VoicePanelUI)
 import LoggerDefault from "Logger" /* 3 */;
 import native from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -14,23 +14,23 @@ import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6676 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10267 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11414 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11416 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11436 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 12054 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19376 */;
-import PanelSizeUtils from "PanelSizeUtils" /* 19453 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19466 */;
-import useControlsLockDefault from "useControlsLock" /* 19468 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19469 */;
-import VoicePanelDockSheet from "VoicePanelDockSheet" /* 19470 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19473 */;
-import VoicePanelHeaderDefault from "VoicePanelHeader" /* 19476 */;
-import VoicePanelCardViewDefault from "VoicePanelCardView" /* 19508 */;
-import VoicePanelPreJoinContentDefault from "VoicePanelPreJoinContent" /* 19538 */;
-import VoicePanelVoiceChannelAppDefault from "VoicePanelVoiceChannelApp" /* 19542 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11415 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11417 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11437 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 12055 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12629 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19390 */;
+import PanelSizeUtils from "PanelSizeUtils" /* 19467 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19480 */;
+import useControlsLockDefault from "useControlsLock" /* 19482 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19483 */;
+import VoicePanelDockSheet from "VoicePanelDockSheet" /* 19484 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19487 */;
+import VoicePanelHeaderDefault from "VoicePanelHeader" /* 19490 */;
+import VoicePanelCardViewDefault from "VoicePanelCardView" /* 19522 */;
+import VoicePanelPreJoinContentDefault from "VoicePanelPreJoinContent" /* 19552 */;
+import VoicePanelVoiceChannelAppDefault from "VoicePanelVoiceChannelApp" /* 19556 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
@@ -623,13 +623,13 @@ function AnimatedWrapper(wrapperOffset) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 ({ BORDER_RADIUS_PHYSICS: closure_10, DEFAULT_BORDER_RADIUS, DRAWER_SPRING_PHYSICS, IS_IOS: closure_11, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
 const isActivityParticipant = fn(5815).isActivityParticipant;
-const POP_RESISTANCE = fn(11411).POP_RESISTANCE;
+const POP_RESISTANCE = fn(11412).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
@@ -2026,7 +2026,7 @@ export default noop.memo(function VoicePanelUI() {
   let tmp105Result2 = null;
   if (tmp6[0]) {
     const obj18 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
-    const items36 = [closure_18(tmp2(19545), {}), , ];
+    const items36 = [closure_18(tmp2(19559), {}), , ];
     const obj19 = { opacity: derivedValue, onPress: dismissPanel };
     items36[1] = closure_18(closure_68, obj19);
     const obj20 = { gesture: tmp103, children: null };
@@ -2035,26 +2035,26 @@ export default noop.memo(function VoicePanelUI() {
     obj21.nativeID = "voice-panel-ui-" + channelId;
     obj21.layout = layoutTransition;
     obj21.onAccessibilityEscape = tmp2(11115);
-    const items37 = [closure_18(tmp2(19547), {}), , , ];
+    const items37 = [closure_18(tmp2(19561), {}), , , ];
     const obj22 = { wrapperOffset, children: null };
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19470).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19484).VoicePanelContentWithDock, obj23);
     }
     const obj24 = { children: null };
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
-    items37[2] = closure_18(tmp2(19549), {});
+    items37[2] = closure_18(tmp2(19563), {});
     const obj25 = { gestureState: sharedValue4 };
-    items37[3] = closure_18(tmp2(19557), obj25);
+    items37[3] = closure_18(tmp2(19571), obj25);
     obj21.children = items37;
-    obj20.children = closure_19(tmp2(19546), obj21);
+    obj20.children = closure_19(tmp2(19560), obj21);
     items36[2] = closure_18(tmp13(5428).GestureDetector, obj20);
     obj24.children = items36;
     obj18.children = closure_19(tmp13(5748).LayerScope, obj24);
     tmp105Result2 = closure_18(tmp13(7462).AnalyticsLocationProvider, obj18);
-    const tmp2Result = tmp2(19546);
+    const tmp2Result = tmp2(19560);
   }
   return tmp105Result2;
 });

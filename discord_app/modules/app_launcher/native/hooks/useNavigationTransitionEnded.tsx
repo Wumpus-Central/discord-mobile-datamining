@@ -1,6 +1,6 @@
-// === Module 12675: useNavigationTransitionEnded ===
+// === Module 12676: useNavigationTransitionEnded ===
 
-// Module 12675 (useNavigationTransitionEnded)
+// Module 12676 (useNavigationTransitionEnded)
 import Link from "Link" /* 1500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

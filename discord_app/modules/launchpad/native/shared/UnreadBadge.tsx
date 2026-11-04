@@ -1,9 +1,9 @@
-// === Module 19344: UnreadBadge ===
+// === Module 19358: UnreadBadge ===
 
-// Module 19344 (UnreadBadge)
+// Module 19358 (UnreadBadge)
 import useFontScale from "useFontScale" /* 5776 */;
 import shared_components_Badge from "shared_components/Badge" /* 9967 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18988 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19002 */;
 import noop from "module_19" /* 19 */;
 
 const shared_components_BadgeDefault = shared_components_Badge;

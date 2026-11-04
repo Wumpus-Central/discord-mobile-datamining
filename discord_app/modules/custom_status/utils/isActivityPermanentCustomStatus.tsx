@@ -1,6 +1,6 @@
-// === Module 18365: isActivityPermanentCustomStatus ===
+// === Module 18379: isActivityPermanentCustomStatus ===
 
-// Module 18365 (isActivityPermanentCustomStatus)
+// Module 18379 (isActivityPermanentCustomStatus)
 import ActivityTypes from "ActivityTypes" /* 5896 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 17756: HighlightNotificationsSetting ===
+// === Module 17768: HighlightNotificationsSetting ===
 
-// Module 17756 (HighlightNotificationsSetting)
+// Module 17768 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -10,7 +10,7 @@ function useHighlightNotifications() {
   items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

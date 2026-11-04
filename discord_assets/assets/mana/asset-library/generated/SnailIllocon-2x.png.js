@@ -1,6 +1,6 @@
-// === Module 12891: ? ===
+// === Module 12892: ? ===
 
-// Module 12891
+// Module 12892
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SnailIllocon-2x.png.js");

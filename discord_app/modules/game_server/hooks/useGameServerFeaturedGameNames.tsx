@@ -1,6 +1,6 @@
-// === Module 14368: useGameServerFeaturedGameNames ===
+// === Module 14369: useGameServerFeaturedGameNames ===
 
-// Module 14368 (useGameServerFeaturedGameNames)
+// Module 14369 (useGameServerFeaturedGameNames)
 import useGame from "useGame" /* 7620 */;
 import GameServerConstants from "GameServerConstants" /* 5355 */;
 import size from "module_2" /* 2 */;

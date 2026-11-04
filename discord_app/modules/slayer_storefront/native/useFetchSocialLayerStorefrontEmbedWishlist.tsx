@@ -1,6 +1,6 @@
-// === Module 11754: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 11755: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 11754 (useFetchSocialLayerStorefrontEmbedWishlist)
+// Module 11755 (useFetchSocialLayerStorefrontEmbedWishlist)
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
 import WishlistFetchSource from "WishlistFetchSource" /* 9624 */;
 import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9625 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1385 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "count", wishlist: 263, updatedAt: null, storedUpdatedAt: 1, fetching: true, error: true };
+let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "create", wishlist: 263, updatedAt: null, storedUpdatedAt: 1, fetching: "not_implemented", error: null };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

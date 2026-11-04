@@ -1,8 +1,8 @@
-// === Module 14791: ForumChannelHeader ===
+// === Module 14792: ForumChannelHeader ===
 
-// Module 14791 (ForumChannelHeader)
-import ForumChannelSearch from "ForumChannelSearch" /* 14777 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14792 */;
+// Module 14792 (ForumChannelHeader)
+import ForumChannelSearch from "ForumChannelSearch" /* 14778 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14793 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

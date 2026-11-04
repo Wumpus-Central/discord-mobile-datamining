@@ -1,6 +1,6 @@
-// === Module 20393: LocalPushNotificationActionCreators ===
+// === Module 20406: LocalPushNotificationActionCreators ===
 
-// Module 20393 (LocalPushNotificationActionCreators)
+// Module 20406 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
@@ -35,8 +35,8 @@ export function receiveLocalNotification(getData) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2123)(13403, dependencyMap.paths).then((result) => result.default(projectId.channelId));
-        const promise2 = data(2123)(13403, dependencyMap.paths);
+        data(2123)(13404, dependencyMap.paths).then((result) => result.default(projectId.channelId));
+        const promise2 = data(2123)(13404, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(2123)(5890, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);

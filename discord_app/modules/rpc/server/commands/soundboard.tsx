@@ -1,8 +1,8 @@
-// === Module 16585: soundboard ===
+// === Module 16597: soundboard ===
 
-// Module 16585 (soundboard)
+// Module 16597 (soundboard)
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7657 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12006 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12007 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SoundboardStore from "SoundboardStore" /* 6193 */;
 import UserStore from "UserStore" /* 1385 */;

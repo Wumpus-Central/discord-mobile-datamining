@@ -1,6 +1,6 @@
-// === Module 11808: PlaintextFilePreviewModal ===
+// === Module 11809: PlaintextFilePreviewModal ===
 
-// Module 11808 (PlaintextFilePreviewModal)
+// Module 11809 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
@@ -8,8 +8,8 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
 import NavigatorHeader from "NavigatorHeader" /* 7139 */;
 import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7439 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11807 */;
-import useDownloadedFile from "useDownloadedFile" /* 11811 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11808 */;
+import useDownloadedFile from "useDownloadedFile" /* 11812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -137,5 +137,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11670).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11671).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 };

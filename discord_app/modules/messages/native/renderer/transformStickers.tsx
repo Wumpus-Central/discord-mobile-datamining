@@ -1,6 +1,6 @@
-// === Module 15375: transformStickers ===
+// === Module 15376: transformStickers ===
 
-// Module 15375 (transformStickers)
+// Module 15376 (transformStickers)
 import util from "util" /* 1113 */;
 import StickersUtils from "StickersUtils" /* 6695 */;
 import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8542 */;

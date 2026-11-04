@@ -1,11 +1,11 @@
-// === Module 17299: OrbsArcadeGameContextMenu ===
+// === Module 17311: OrbsArcadeGameContextMenu ===
 
-// Module 17299 (OrbsArcadeGameContextMenu)
+// Module 17311 (OrbsArcadeGameContextMenu)
 import util from "util" /* 1113 */;
 import _modDef9352 from "module_9352" /* 9352 */;
-import RefreshIcon from "RefreshIcon" /* 12420 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 14727 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17264 */;
+import RefreshIcon from "RefreshIcon" /* 12421 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 14728 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17276 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -55,7 +55,7 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      return game(17276).openOrbsArcadeInfoSheet(id.id);
+      return game(17288).openOrbsArcadeInfoSheet(id.id);
     };
     items = [obj];
     return items;

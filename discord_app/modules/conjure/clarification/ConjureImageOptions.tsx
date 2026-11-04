@@ -1,6 +1,6 @@
-// === Module 12976: ConjureImageOptions ===
+// === Module 12977: ConjureImageOptions ===
 
-// Module 12976 (ConjureImageOptions)
+// Module 12977 (ConjureImageOptions)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 9088 */;

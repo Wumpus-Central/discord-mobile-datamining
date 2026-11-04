@@ -1,9 +1,9 @@
-// === Module 15506: SubscriptionAccountHoldNotice ===
+// === Module 15507: SubscriptionAccountHoldNotice ===
 
-// Module 15506 (SubscriptionAccountHoldNotice)
+// Module 15507 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 575 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
-import _modDef15507 from "module_15507" /* 15507 */;
+import _modDef15508 from "module_15508" /* 15508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1187).IconSizes.MEDIUM, style: tmp.icon, source: _modDef15507 };
+    const obj3 = { size: subscription(1187).IconSizes.MEDIUM, style: tmp.icon, source: _modDef15508 };
     items = [closure_6(subscription(1187).Icon, obj3), ];
     const obj4 = { style: tmp.text, variant: "body-sm/medium", children: null };
     const intl = subscription(1113).intl;

@@ -1,6 +1,6 @@
-// === Module 16878: useShouldShowInitialGoogleWalletBanner ===
+// === Module 16890: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 16878 (useShouldShowInitialGoogleWalletBanner)
+// Module 16890 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

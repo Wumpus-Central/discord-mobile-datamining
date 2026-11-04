@@ -1,6 +1,6 @@
-// === Module 15157: ConjureCustomWidget ===
+// === Module 15158: ConjureCustomWidget ===
 
-// Module 15157 (ConjureCustomWidget)
+// Module 15158 (ConjureCustomWidget)
 import ConjureUtils from "ConjureUtils" /* 7559 */;
 import GuildStore from "GuildStore" /* 5012 */;
 

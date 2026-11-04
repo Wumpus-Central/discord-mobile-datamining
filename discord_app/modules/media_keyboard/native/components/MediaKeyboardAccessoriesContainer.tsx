@@ -1,6 +1,6 @@
-// === Module 12787: MediaKeyboardAccessoriesContainer ===
+// === Module 12788: MediaKeyboardAccessoriesContainer ===
 
-// Module 12787 (MediaKeyboardAccessoriesContainer)
+// Module 12788 (MediaKeyboardAccessoriesContainer)
 import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 10382 */;

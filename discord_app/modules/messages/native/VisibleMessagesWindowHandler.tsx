@@ -1,6 +1,6 @@
-// === Module 11419: VisibleMessagesWindowHandler ===
+// === Module 11420: VisibleMessagesWindowHandler ===
 
-// Module 11419 (VisibleMessagesWindowHandler)
+// Module 11420 (VisibleMessagesWindowHandler)
 import RowGeneratorConstants from "RowGeneratorConstants" /* 8519 */;
 import size from "module_2" /* 2 */;
 

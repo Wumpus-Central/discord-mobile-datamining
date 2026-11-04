@@ -1,6 +1,6 @@
-// === Module 19888: StageChannelRequestToSpeakMessageManager ===
+// === Module 19902: StageChannelRequestToSpeakMessageManager ===
 
-// Module 19888 (StageChannelRequestToSpeakMessageManager)
+// Module 19902 (StageChannelRequestToSpeakMessageManager)
 import MessageTypes from "MessageTypes" /* 1088 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -32,8 +32,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(19889).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(19889);
+                  const result = userId(19903).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(19903);
                 }
               } else {
                 messages = messages.getMessages(channelId);

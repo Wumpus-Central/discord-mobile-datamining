@@ -1,8 +1,7 @@
-// === Module 11607: useMobileTenureBadgeImages ===
+// === Module 11608: useMobileTenureBadgeImages ===
 
-// Module 11607 (useMobileTenureBadgeImages)
+// Module 11608 (useMobileTenureBadgeImages)
 import PremiumConstants from "PremiumConstants" /* 1387 */;
-import _modDef11608 from "module_11608" /* 11608 */;
 import _modDef11609 from "module_11609" /* 11609 */;
 import _modDef11610 from "module_11610" /* 11610 */;
 import _modDef11611 from "module_11611" /* 11611 */;
@@ -26,25 +25,26 @@ import _modDef11628 from "module_11628" /* 11628 */;
 import _modDef11629 from "module_11629" /* 11629 */;
 import _modDef11630 from "module_11630" /* 11630 */;
 import _modDef11631 from "module_11631" /* 11631 */;
+import _modDef11632 from "module_11632" /* 11632 */;
 import size from "module_2" /* 2 */;
 
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 const obj = {};
-obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = { small: _modDef11608, medium: _modDef11609, large: _modDef11610 };
-const obj2 = { small: _modDef11608, medium: _modDef11609, large: _modDef11610 };
-obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = { small: _modDef11611, medium: _modDef11612, large: _modDef11613 };
-const obj3 = { small: _modDef11611, medium: _modDef11612, large: _modDef11613 };
-obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: _modDef11614, medium: _modDef11615, large: _modDef11616 };
-const obj4 = { small: _modDef11614, medium: _modDef11615, large: _modDef11616 };
-obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: _modDef11617, medium: _modDef11618, large: _modDef11619 };
-const obj5 = { small: _modDef11617, medium: _modDef11618, large: _modDef11619 };
-obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: _modDef11620, medium: _modDef11621, large: _modDef11622 };
-const obj6 = { small: _modDef11620, medium: _modDef11621, large: _modDef11622 };
-obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: _modDef11623, medium: _modDef11624, large: _modDef11625 };
-const obj7 = { small: _modDef11623, medium: _modDef11624, large: _modDef11625 };
-obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: _modDef11626, medium: _modDef11627, large: _modDef11628 };
-const obj8 = { small: _modDef11626, medium: _modDef11627, large: _modDef11628 };
-obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: _modDef11629, medium: _modDef11630, large: _modDef11631 };
+obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = { small: _modDef11609, medium: _modDef11610, large: _modDef11611 };
+const obj2 = { small: _modDef11609, medium: _modDef11610, large: _modDef11611 };
+obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = { small: _modDef11612, medium: _modDef11613, large: _modDef11614 };
+const obj3 = { small: _modDef11612, medium: _modDef11613, large: _modDef11614 };
+obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: _modDef11615, medium: _modDef11616, large: _modDef11617 };
+const obj4 = { small: _modDef11615, medium: _modDef11616, large: _modDef11617 };
+obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: _modDef11618, medium: _modDef11619, large: _modDef11620 };
+const obj5 = { small: _modDef11618, medium: _modDef11619, large: _modDef11620 };
+obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: _modDef11621, medium: _modDef11622, large: _modDef11623 };
+const obj6 = { small: _modDef11621, medium: _modDef11622, large: _modDef11623 };
+obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: _modDef11624, medium: _modDef11625, large: _modDef11626 };
+const obj7 = { small: _modDef11624, medium: _modDef11625, large: _modDef11626 };
+obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: _modDef11627, medium: _modDef11628, large: _modDef11629 };
+const obj8 = { small: _modDef11627, medium: _modDef11628, large: _modDef11629 };
+obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: _modDef11630, medium: _modDef11631, large: _modDef11632 };
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
 
 export function useMobileTenureBadgeImages(id) {

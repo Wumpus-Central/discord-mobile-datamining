@@ -1,12 +1,12 @@
-// === Module 17143: getShouldFetchProgramRewards ===
+// === Module 17155: getShouldFetchProgramRewards ===
 
-// Module 17143 (getShouldFetchProgramRewards)
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15848 */;
-import shouldAggressivelyFetchNitroRewards from "shouldAggressivelyFetchNitroRewards" /* 17144 */;
-import ProgramRewardsStore from "ProgramRewardsStore" /* 15845 */;
+// Module 17155 (getShouldFetchProgramRewards)
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15861 */;
+import shouldAggressivelyFetchNitroRewards from "shouldAggressivelyFetchNitroRewards" /* 17156 */;
+import ProgramRewardsStore from "ProgramRewardsStore" /* 15858 */;
 
 require = fn;
-const DidNotFetchReason = fn(15845).DidNotFetchReason;
+const DidNotFetchReason = fn(15858).DidNotFetchReason;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/getShouldFetchProgramRewards.tsx");
 

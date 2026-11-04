@@ -1,9 +1,9 @@
-// === Module 12002: PostMessageTransport ===
+// === Module 12003: PostMessageTransport ===
 
-// Module 12002 (PostMessageTransport)
+// Module 12003 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1089 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 12003 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 12004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;

@@ -1,9 +1,9 @@
-// === Module 17545: useLatestChannelMessage ===
+// === Module 17557: useLatestChannelMessage ===
 
-// Module 17545 (useLatestChannelMessage)
-import MessagePreviewManagerDefault from "MessagePreviewManager" /* 17546 */;
+// Module 17557 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 17558 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15837 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15850 */;
 
 const require = fn;
 const useEffect = fn(19).useEffect;

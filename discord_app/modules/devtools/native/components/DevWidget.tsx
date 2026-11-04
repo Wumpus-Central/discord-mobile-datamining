@@ -1,6 +1,6 @@
-// === Module 18216: DevWidget ===
+// === Module 18230: DevWidget ===
 
-// Module 18216 (DevWidget)
+// Module 18230 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
@@ -8,10 +8,10 @@ import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import spring_spring from "spring/spring" /* 5771 */;
 import springPresets from "springPresets" /* 5772 */;
 import Pressables from "Pressables" /* 7121 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11431 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13032 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17815 */;
-import VEVOODefault from "VEVOO" /* 18217 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11432 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13033 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17827 */;
+import VEVOODefault from "VEVOO" /* 18231 */;
 import noop from "module_19" /* 19 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8003 */;
 

@@ -1,6 +1,6 @@
-// === Module 16861: AgeNoticeAgeGroupHeader ===
+// === Module 16873: AgeNoticeAgeGroupHeader ===
 
-// Module 16861 (AgeNoticeAgeGroupHeader)
+// Module 16873 (AgeNoticeAgeGroupHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3255 from "module_3255" /* 3255 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10310 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16862 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16874 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

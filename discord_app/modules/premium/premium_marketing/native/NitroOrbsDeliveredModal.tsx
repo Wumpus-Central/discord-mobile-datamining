@@ -1,6 +1,6 @@
-// === Module 15457: NitroOrbsDeliveredModal ===
+// === Module 15458: NitroOrbsDeliveredModal ===
 
-// Module 15457 (NitroOrbsDeliveredModal)
+// Module 15458 (NitroOrbsDeliveredModal)
 import nativeDefault from "native" /* 575 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6163 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
@@ -59,7 +59,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
   const obj2 = { style: tmp.root, children: null };
   const obj3 = { style: StyleSheet.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const callback2 = noop.useCallback(() => _undefined(true), []);
-  obj3.children = closure_10(onClose(14917).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+  obj3.children = closure_10(onClose(14918).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
   const items2 = [closure_10(View, obj3), , ];
   let tmp14Result = !tmp12Result;
   if (!tmp12Result) {
@@ -74,7 +74,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     obj6.children = closure_10(onClose(7503).ActionSheetCloseButton, obj7);
     const items3 = [closure_10(View, obj6), , ];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: tmp2(15458), style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: tmp2(15459), style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_10(tmp2(5851), obj9), ];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/semibold", color: "text-overlay-light", style: tmp.title, children: null };

@@ -1,14 +1,14 @@
-// === Module 17533: DarkModeThemeSetting ===
+// === Module 17545: DarkModeThemeSetting ===
 
-// Module 17533 (DarkModeThemeSetting)
+// Module 17545 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17531 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17543 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const SystemTheme = fn(1195).SystemTheme;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

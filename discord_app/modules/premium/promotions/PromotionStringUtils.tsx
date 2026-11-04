@@ -1,6 +1,6 @@
-// === Module 15542: PromotionStringUtils ===
+// === Module 15543: PromotionStringUtils ===
 
-// Module 15542 (PromotionStringUtils)
+// Module 15543 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;

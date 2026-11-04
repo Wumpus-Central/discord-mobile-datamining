@@ -1,14 +1,14 @@
-// === Module 12213: ChannelCallHeaderButtons ===
+// === Module 12214: ChannelCallHeaderButtons ===
 
-// Module 12213 (ChannelCallHeaderButtons)
+// Module 12214 (ChannelCallHeaderButtons)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
 import useSelectedParticipantDefault from "useSelectedParticipant" /* 11184 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12092 */;
-import _modDef12214 from "module_12214" /* 12214 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12093 */;
 import _modDef12215 from "module_12215" /* 12215 */;
+import _modDef12216 from "module_12216" /* 12216 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
@@ -26,7 +26,7 @@ export function CameraButton() {
     const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj2.source = _modDef12214;
+    obj2.source = _modDef12215;
     obj2.onPress = function handleCamera() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
@@ -47,7 +47,7 @@ export function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1113).intl;
       obj.accessibilityLabel = intl.string(channel(1113).t.HK4JIu);
-      obj.source = _modDef12215;
+      obj.source = _modDef12216;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };

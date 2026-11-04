@@ -1,12 +1,12 @@
-// === Module 17303: QuestHooks ===
+// === Module 17315: QuestHooks ===
 
-// Module 17303 (QuestHooks)
+// Module 17315 (QuestHooks)
 import QuestTypes from "QuestTypes" /* 6919 */;
 import AdCreativeType from "AdCreativeType" /* 6923 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7016 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 8008 */;
 import AssetUtils from "AssetUtils" /* 9845 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 17330 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 17342 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5383 */;

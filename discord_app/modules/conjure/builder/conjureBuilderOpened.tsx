@@ -1,6 +1,6 @@
-// === Module 12274: conjureBuilderOpened ===
+// === Module 12275: conjureBuilderOpened ===
 
-// Module 12274 (conjureBuilderOpened)
+// Module 12275 (conjureBuilderOpened)
 import ConjureAnalytics from "ConjureAnalytics" /* 11051 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;

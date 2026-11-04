@@ -1,6 +1,6 @@
-// === Module 16596: AuthCommandsFactory ===
+// === Module 16608: AuthCommandsFactory ===
 
-// Module 16596 (AuthCommandsFactory)
+// Module 16608 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 import UserStore from "UserStore" /* 1385 */;
-import LeakyBucket from "LeakyBucket" /* 12012 */;
+import LeakyBucket from "LeakyBucket" /* 12013 */;
 
 const require = globalThis.__r;
 
@@ -93,7 +93,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
           closure_135_31 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else {
         if (1 === tmp10) {

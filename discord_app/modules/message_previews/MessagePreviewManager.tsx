@@ -1,15 +1,15 @@
-// === Module 17546: MessagePreviewManager ===
+// === Module 17558: MessagePreviewManager ===
 
-// Module 17546 (MessagePreviewManager)
+// Module 17558 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17547 */;
+import RemoteFetchData from "RemoteFetchData" /* 17559 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15837 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15850 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
@@ -103,7 +103,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "flexDirection", done: true };
+              return { value: "flexDirection", done: null };
             }
           } else {
             if (1 === tmp4) {

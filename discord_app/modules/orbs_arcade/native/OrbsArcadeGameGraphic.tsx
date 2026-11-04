@@ -1,6 +1,6 @@
-// === Module 17278: OrbsArcadeGameGraphic ===
+// === Module 17290: OrbsArcadeGameGraphic ===
 
-// Module 17278 (OrbsArcadeGameGraphic)
+// Module 17290 (OrbsArcadeGameGraphic)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;

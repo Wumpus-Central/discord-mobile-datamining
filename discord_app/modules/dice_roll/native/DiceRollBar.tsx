@@ -1,6 +1,6 @@
-// === Module 14159: DiceRollBar ===
+// === Module 14160: DiceRollBar ===
 
-// Module 14159 (DiceRollBar)
+// Module 14160 (DiceRollBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5378 */;
@@ -12,7 +12,7 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(13941).useDiceRollState;
+const useDiceRollState = fn(13942).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
@@ -135,7 +135,7 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14160).getBarText(flag, tmp2.results);
+    const barText = tmp3(14161).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;

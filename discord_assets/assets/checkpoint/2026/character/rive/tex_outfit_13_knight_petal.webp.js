@@ -1,6 +1,6 @@
-// === Module 13815: ? ===
+// === Module 13816: ? ===
 
-// Module 13815
+// Module 13816
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_13_knight_petal.webp.js");

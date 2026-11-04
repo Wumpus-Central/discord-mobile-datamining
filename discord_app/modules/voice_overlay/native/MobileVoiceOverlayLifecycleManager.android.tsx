@@ -1,13 +1,13 @@
-// === Module 16618: MobileVoiceOverlayLifecycleManager ===
+// === Module 16630: MobileVoiceOverlayLifecycleManager ===
 
-// Module 16618 (MobileVoiceOverlayLifecycleManager)
+// Module 16630 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useChannelName from "useChannelName" /* 5786 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6914 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10389 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 12150 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16625 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 12151 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16637 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -17,21 +17,21 @@ import RelationshipStore from "RelationshipStore" /* 5083 */;
 import SpeakingStore from "SpeakingStore" /* 6891 */;
 import UserStore from "UserStore" /* 1385 */;
 import VoiceStateStore from "VoiceStateStore" /* 5813 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 12137 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 12138 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(16619);
-fn(16620);
-fn(16621);
-fn(16622);
+fn(16631);
+fn(16632);
+fn(16633);
+fn(16634);
 fn(8499);
-fn(15428);
-fn(16623);
-fn(16624);
+fn(15429);
+fn(16635);
+fn(16636);
 const registerAsset = fn(8337);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };

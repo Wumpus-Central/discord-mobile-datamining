@@ -1,6 +1,6 @@
-// === Module 17325: QuestDisclosureModalInner ===
+// === Module 17337: QuestDisclosureModalInner ===
 
-// Module 17325 (QuestDisclosureModalInner)
+// Module 17337 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import Text_Text from "Text/Text" /* 5761 */;
@@ -49,7 +49,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     const intl = tmp2(1113).intl;
     obj.text = intl.string(tmp2(1113).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: closure_6(tmp2(12322).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(12323).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1113).intl;
     obj2.text = intl2.string(tmp2(1113).t.mYt7hQ);
     items1[1] = obj2;

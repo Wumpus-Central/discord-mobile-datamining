@@ -1,9 +1,9 @@
-// === Module 19378: ConjureAppPictureInPictures ===
+// === Module 19392: ConjureAppPictureInPictures ===
 
-// Module 19378 (ConjureAppPictureInPictures)
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16606 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19382 */;
-import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19386 */;
+// Module 19392 (ConjureAppPictureInPictures)
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16618 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19396 */;
+import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19400 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6981 */;
 

@@ -1,6 +1,6 @@
-// === Module 20212: CreatorMonetizationSettingsDisabledContext ===
+// === Module 20226: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 20212 (CreatorMonetizationSettingsDisabledContext)
+// Module 20226 (CreatorMonetizationSettingsDisabledContext)
 import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7567 */;
 import noop from "module_19" /* 19 */;
 

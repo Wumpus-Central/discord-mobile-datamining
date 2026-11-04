@@ -1,12 +1,12 @@
-// === Module 15583: premium/Header ===
+// === Module 15584: premium/Header ===
 
-// Module 15583 (premium/Header)
+// Module 15584 (premium/Header)
 import util from "util" /* 1113 */;
 import useThemeDefault from "useTheme" /* 5377 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import _modDef15584 from "module_15584" /* 15584 */;
 import _modDef15585 from "module_15585" /* 15585 */;
+import _modDef15586 from "module_15586" /* 15586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,9 +29,9 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef15584;
+    let tmp2Result = _modDef15585;
   } else {
-    tmp2Result = _modDef15585;
+    tmp2Result = _modDef15586;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

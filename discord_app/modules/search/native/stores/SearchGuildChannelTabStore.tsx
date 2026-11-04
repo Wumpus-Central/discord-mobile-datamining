@@ -1,6 +1,6 @@
-// === Module 14130: SearchGuildChannelTabStore ===
+// === Module 14131: SearchGuildChannelTabStore ===
 
-// Module 14130 (SearchGuildChannelTabStore)
+// Module 14131 (SearchGuildChannelTabStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

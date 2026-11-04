@@ -1,6 +1,6 @@
-// === Module 12653: ApplicationCommandOptionValueParser ===
+// === Module 12654: ApplicationCommandOptionValueParser ===
 
-// Module 12653 (ApplicationCommandOptionValueParser)
+// Module 12654 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import Server from "Server" /* 2121 */;

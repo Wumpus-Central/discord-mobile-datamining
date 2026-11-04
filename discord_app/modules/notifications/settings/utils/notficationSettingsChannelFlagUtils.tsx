@@ -1,6 +1,6 @@
-// === Module 11505: notficationSettingsChannelFlagUtils ===
+// === Module 11506: notficationSettingsChannelFlagUtils ===
 
-// Module 11505 (notficationSettingsChannelFlagUtils)
+// Module 11506 (notficationSettingsChannelFlagUtils)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7419 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7424 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11256 */;

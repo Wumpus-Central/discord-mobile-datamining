@@ -1,20 +1,20 @@
-// === Module 12925: BeeIllocon ===
+// === Module 12926: BeeIllocon ===
 
-// Module 12925 (BeeIllocon)
+// Module 12926 (BeeIllocon)
 import FastImageDefault from "FastImage" /* 5851 */;
 import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef12926 from "module_12926" /* 12926 */;
 import _modDef12927 from "module_12927" /* 12927 */;
 import _modDef12928 from "module_12928" /* 12928 */;
+import _modDef12929 from "module_12929" /* 12929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12926 }, 3: null };
-const obj2 = { uri: _modDef12926 };
-obj[2] = { uri: _modDef12927 };
-const obj3 = { uri: _modDef12927 };
-obj[3] = { uri: _modDef12928 };
+let obj = { 1: null, 2: { uri: _modDef12927 }, 3: null };
+const obj2 = { uri: _modDef12927 };
+obj[2] = { uri: _modDef12928 };
+const obj3 = { uri: _modDef12928 };
+obj[3] = { uri: _modDef12929 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 

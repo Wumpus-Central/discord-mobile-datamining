@@ -1,6 +1,6 @@
-// === Module 10791: createOrReuseGiftOrder ===
+// === Module 10792: createOrReuseGiftOrder ===
 
-// Module 10791 (createOrReuseGiftOrder)
+// Module 10792 (createOrReuseGiftOrder)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -50,7 +50,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
             let skuId;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp7) {
           if (_location === 1) {

@@ -1,8 +1,8 @@
-// === Module 14931: CollectiblesShopEntryButton ===
+// === Module 14932: CollectiblesShopEntryButton ===
 
-// Module 14931 (CollectiblesShopEntryButton)
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14924 */;
-import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 14932 */;
+// Module 14932 (CollectiblesShopEntryButton)
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14925 */;
+import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 14933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5818 */;
@@ -18,7 +18,7 @@ function CoachmarkVariant(shopButtonRef) {
   const obj2 = { children: null };
   const obj3 = { ref: shopButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
   const obj = navigateToShop(7709);
-  obj3.IconComponent = navigateToShop(12685).ShopIcon;
+  obj3.IconComponent = navigateToShop(12686).ShopIcon;
   const intl = navigateToShop(1113).intl;
   obj3.accessibilityLabel = intl.string(navigateToShop(1113).t.pWG4ze);
   obj3.onPress = function onPress() {
@@ -61,7 +61,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
     function content(openReplyActionSheet) {
       const visibleContent = openReplyActionSheet.visibleContent;
       const markAsDismissed = openReplyActionSheet.markAsDismissed;
-      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(12685).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(12686).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
       const intl = navigateToShop(1113).intl;
       obj.accessibilityLabel = intl.string(navigateToShop(1113).t.pWG4ze);
       obj.onPress = function onPress() {
@@ -71,7 +71,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(14924), obj);
+      return closure_1_6(shopButtonRef(14925), obj);
     }
     if (tmp4) {
       let type1;

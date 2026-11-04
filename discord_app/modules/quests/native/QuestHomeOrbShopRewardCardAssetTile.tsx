@@ -1,6 +1,6 @@
-// === Module 17238: QuestHomeOrbShopRewardCardAssetTile ===
+// === Module 17250: QuestHomeOrbShopRewardCardAssetTile ===
 
-// Module 17238 (QuestHomeOrbShopRewardCardAssetTile)
+// Module 17250 (QuestHomeOrbShopRewardCardAssetTile)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;

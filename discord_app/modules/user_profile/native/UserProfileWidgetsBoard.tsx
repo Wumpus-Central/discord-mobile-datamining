@@ -1,6 +1,6 @@
-// === Module 15159: UserProfileWidgetsBoard ===
+// === Module 15160: UserProfileWidgetsBoard ===
 
-// Module 15159 (UserProfileWidgetsBoard)
+// Module 15160 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,13 +10,13 @@ import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9462 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9486 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12459 */;
-import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15164 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15167 */;
-import GameCoverImageDefault from "GameCoverImage" /* 15168 */;
-import QuoteIcon from "QuoteIcon" /* 15169 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15171 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15184 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12460 */;
+import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15165 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15168 */;
+import GameCoverImageDefault from "GameCoverImage" /* 15169 */;
+import QuoteIcon from "QuoteIcon" /* 15170 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15172 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -398,10 +398,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   ({ cardStyle: importDefault, isEditing: dependencyMap } = userId);
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(15188).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(15189).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(15188);
+  let obj = userId(15189);
   const trackUserProfileAction = userId(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

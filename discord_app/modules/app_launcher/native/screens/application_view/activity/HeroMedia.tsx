@@ -1,12 +1,12 @@
-// === Module 12629: HeroMedia ===
+// === Module 12630: HeroMedia ===
 
-// Module 12629 (HeroMedia)
+// Module 12630 (HeroMedia)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7466 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11691 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12038 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12603 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11692 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12039 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12604 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 

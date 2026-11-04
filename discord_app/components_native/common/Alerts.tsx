@@ -1,6 +1,6 @@
-// === Module 19271: Alerts ===
+// === Module 19285: Alerts ===
 
-// Module 19271 (Alerts)
+// Module 19285 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -9,11 +9,11 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 6100 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6157 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7096 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19272 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19286 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15873 */;
-import PermissionVADStore from "PermissionVADStore" /* 16460 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15886 */;
+import PermissionVADStore from "PermissionVADStore" /* 16473 */;
 import SurveyStore from "SurveyStore" /* 8069 */;
 import AlertStore from "AlertStore" /* 10313 */;
 
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return application_id(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "id", props: "error" });
+let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "children", props: "i" });
 let tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "id", props: "error" };
+        return { renderAlert: "Array", renderKey: "children", props: "i" };
       }
     }
   });

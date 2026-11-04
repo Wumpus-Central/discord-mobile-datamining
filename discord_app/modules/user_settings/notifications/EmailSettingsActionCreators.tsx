@@ -1,6 +1,6 @@
-// === Module 17723: EmailSettingsActionCreators ===
+// === Module 17735: EmailSettingsActionCreators ===
 
-// Module 17723 (EmailSettingsActionCreators)
+// Module 17735 (EmailSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
@@ -96,7 +96,7 @@ let closure_8 = async function _updateMarketingEmailSettings() {
   }
   return value;
 };
-const MarketingEmailCategories = fn(17724).MarketingEmailCategories;
+const MarketingEmailCategories = fn(17736).MarketingEmailCategories;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/EmailSettingsActionCreators.tsx");

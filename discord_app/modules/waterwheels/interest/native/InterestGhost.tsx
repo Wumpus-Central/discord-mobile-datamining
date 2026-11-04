@@ -1,6 +1,6 @@
-// === Module 18677: InterestGhost ===
+// === Module 18691: InterestGhost ===
 
-// Module 18677 (InterestGhost)
+// Module 18691 (InterestGhost)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

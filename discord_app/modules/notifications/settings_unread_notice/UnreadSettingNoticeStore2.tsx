@@ -1,12 +1,12 @@
-// === Module 11504: UnreadSettingNoticeStore2 ===
+// === Module 11505: UnreadSettingNoticeStore2 ===
 
-// Module 11504 (UnreadSettingNoticeStore2)
+// Module 11505 (UnreadSettingNoticeStore2)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11505 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11506 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;

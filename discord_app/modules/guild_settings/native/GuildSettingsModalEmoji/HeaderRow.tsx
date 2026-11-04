@@ -1,13 +1,13 @@
-// === Module 20003: HeaderRow ===
+// === Module 20017: HeaderRow ===
 
-// Module 20003 (HeaderRow)
+// Module 20017 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19997 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20011 */;
 
 require = fn;
 function HeaderRow(guild) {

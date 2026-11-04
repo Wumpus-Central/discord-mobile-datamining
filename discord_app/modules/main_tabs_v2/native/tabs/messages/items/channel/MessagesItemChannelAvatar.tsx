@@ -1,13 +1,13 @@
-// === Module 18333: MessagesItemChannelAvatar ===
+// === Module 18347: MessagesItemChannelAvatar ===
 
-// Module 18333 (MessagesItemChannelAvatar)
+// Module 18347 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 575 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 5895 */;
-import TypingStore from "TypingStore" /* 13946 */;
+import TypingStore from "TypingStore" /* 13947 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
@@ -105,7 +105,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "93983f3e4a2bf8524d344985a03dccf2", style: "ko.messages.93983f3e4a2bf8524d344985a03dccf2.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "fd4876fc0c74ae2b11153528c606b051", style: "pl.messages.fd4876fc0c74ae2b11153528c606b051.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -116,7 +116,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "93983f3e4a2bf8524d344985a03dccf2", style: "ko.messages.93983f3e4a2bf8524d344985a03dccf2.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
+      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "fd4876fc0c74ae2b11153528c606b051", style: "pl.messages.fd4876fc0c74ae2b11153528c606b051.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
     }
   }
   return tmp11Result;

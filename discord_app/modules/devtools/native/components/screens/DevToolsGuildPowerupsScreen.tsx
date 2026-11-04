@@ -1,6 +1,6 @@
-// === Module 17953: DevToolsGuildPowerupsScreen ===
+// === Module 17965: DevToolsGuildPowerupsScreen ===
 
-// Module 17953 (DevToolsGuildPowerupsScreen)
+// Module 17965 (DevToolsGuildPowerupsScreen)
 import nativeDefault from "native" /* 575 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,12 +8,12 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import TableSwitchRow from "TableSwitchRow" /* 7505 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 14287 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17856 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 14288 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14353 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 14354 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
@@ -164,7 +164,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(17954);
+const DevToolsGuildPowerupsConstants = fn(17966);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, getGuildDCString: closure_14, getUserDCString: closure_15 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);

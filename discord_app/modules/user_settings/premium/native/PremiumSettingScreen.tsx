@@ -1,6 +1,6 @@
-// === Module 17122: PremiumSettingScreen ===
+// === Module 17134: PremiumSettingScreen ===
 
-// Module 17122 (PremiumSettingScreen)
+// Module 17134 (PremiumSettingScreen)
 import useNavigation from "useNavigation" /* 1499 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7301 */;

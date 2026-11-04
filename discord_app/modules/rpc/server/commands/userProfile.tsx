@@ -1,13 +1,13 @@
-// === Module 16580: commands/userProfile ===
+// === Module 16592: commands/userProfile ===
 
-// Module 16580 (commands/userProfile)
+// Module 16592 (commands/userProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const RPCCommands = fn(1072).RPCCommands;
 const weakMap = new WeakMap();
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16536);
+const CONTEXT_MENU_ICON_NAMES = fn(16548);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
   scope: fn(6585).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {

@@ -1,6 +1,6 @@
-// === Module 18241: auth/register ===
+// === Module 18255: auth/register ===
 
-// Module 18241 (auth/register)
+// Module 18255 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -8,9 +8,9 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import APIErrorDefault from "APIError" /* 6582 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18243 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 18244 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18245 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18257 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 18258 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18259 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -124,7 +124,7 @@ let closure_12 = async function _registerPhone(arg0) {
             phone2 = phone.phone;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -278,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(18242);
+const ParentalConsentStore = fn(18256);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1097);

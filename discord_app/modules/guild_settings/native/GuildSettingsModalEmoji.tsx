@@ -1,18 +1,18 @@
-// === Module 19996: GuildSettingsModalEmoji ===
+// === Module 20010: GuildSettingsModalEmoji ===
 
-// Module 19996 (GuildSettingsModalEmoji)
+// Module 20010 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5095 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19999 */;
-import HeaderRow from "HeaderRow" /* 20003 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 20004 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 20013 */;
+import HeaderRow from "HeaderRow" /* 20017 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 20018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19997 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20011 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;

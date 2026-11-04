@@ -1,6 +1,6 @@
-// === Module 17778: ChangeLogModal ===
+// === Module 17790: ChangeLogModal ===
 
-// Module 17778 (ChangeLogModal)
+// Module 17790 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FastImageDefault from "FastImage" /* 5851 */;
@@ -12,7 +12,7 @@ import openMediaModal from "openMediaModal" /* 8974 */;
 import common_VideoDefault from "common/Video" /* 9014 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
 import _modDef10455 from "module_10455" /* 10455 */;
-import _modDef17779 from "module_17779" /* 17779 */;
+import _modDef17791 from "module_17791" /* 17791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef17779, obj4), ];
+      items = [closure_7(_modDef17791, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };

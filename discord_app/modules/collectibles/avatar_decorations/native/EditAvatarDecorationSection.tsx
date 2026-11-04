@@ -1,11 +1,11 @@
-// === Module 15297: EditAvatarDecorationSection ===
+// === Module 15298: EditAvatarDecorationSection ===
 
-// Module 15297 (EditAvatarDecorationSection)
+// Module 15298 (EditAvatarDecorationSection)
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9655 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 15291 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15298 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15299 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 15292 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15299 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15300 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ const AVATAR_DECORATION_SIZE = fn(1412).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15298).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15299).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);

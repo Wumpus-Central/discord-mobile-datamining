@@ -1,7 +1,7 @@
-// === Module 11426: useChannelDockHeight ===
+// === Module 11427: useChannelDockHeight ===
 
-// Module 11426 (useChannelDockHeight)
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11430 */;
+// Module 11427 (useChannelDockHeight)
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11431 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

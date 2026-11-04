@@ -1,12 +1,12 @@
-// === Module 18165: GuildSettingActivityJoining ===
+// === Module 18177: GuildSettingActivityJoining ===
 
-// Module 18165 (GuildSettingActivityJoining)
+// Module 18177 (GuildSettingActivityJoining)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
 import SettingsConstants from "SettingsConstants" /* 8573 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 18151 */;
-import SettingBuilders from "SettingBuilders" /* 11728 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 18163 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);

@@ -1,6 +1,6 @@
-// === Module 11639: BadgeArtImage ===
+// === Module 11640: BadgeArtImage ===
 
-// Module 11639 (BadgeArtImage)
+// Module 11640 (BadgeArtImage)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import APNGPlayer2 from "APNGPlayer" /* 9651 */;

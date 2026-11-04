@@ -1,9 +1,9 @@
-// === Module 18208: RedesignSettingsCategoryCallsMessagesScreen ===
+// === Module 18222: RedesignSettingsCategoryCallsMessagesScreen ===
 
-// Module 18208 (RedesignSettingsCategoryCallsMessagesScreen)
-import SettingBuilders from "SettingBuilders" /* 11728 */;
-import SettingLayoutDefault from "SettingLayout" /* 16823 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18203 */;
+// Module 18222 (RedesignSettingsCategoryCallsMessagesScreen)
+import SettingBuilders from "SettingBuilders" /* 11729 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18215 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,5 +19,5 @@ export default noop.memo(function RedesignSettingsCategoryCallsMessagesScreen() 
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);
-  return jsx(SettingLayoutDefault, { node });
+  return jsx(EffectiveNotifSettingsLayoutDefault, { node });
 });

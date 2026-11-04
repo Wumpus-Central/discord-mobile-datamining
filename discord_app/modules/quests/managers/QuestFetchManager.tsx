@@ -1,6 +1,6 @@
-// === Module 20297: QuestFetchManager ===
+// === Module 20311: QuestFetchManager ===
 
-// Module 20297 (QuestFetchManager)
+// Module 20311 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;

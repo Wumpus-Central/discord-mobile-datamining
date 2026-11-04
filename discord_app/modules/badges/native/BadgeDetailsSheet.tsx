@@ -1,13 +1,13 @@
-// === Module 11652: BadgeDetailsSheet ===
+// === Module 11653: BadgeDetailsSheet ===
 
-// Module 11652 (BadgeDetailsSheet)
+// Module 11653 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11651 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11667 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11652 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11668 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import UserStore from "UserStore" /* 1385 */;

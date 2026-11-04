@@ -1,6 +1,6 @@
-// === Module 15030: SafetyExperienceIarUserReportingExperiment ===
+// === Module 15031: SafetyExperienceIarUserReportingExperiment ===
 
-// Module 15030 (SafetyExperienceIarUserReportingExperiment)
+// Module 15031 (SafetyExperienceIarUserReportingExperiment)
 import createExperiment from "module_5360" /* 5360 */;
 import size from "module_2" /* 2 */;
 

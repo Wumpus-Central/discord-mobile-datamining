@@ -1,11 +1,11 @@
-// === Module 11532: PinotMemberNoticeBar ===
+// === Module 11533: PinotMemberNoticeBar ===
 
-// Module 11532 (PinotMemberNoticeBar)
+// Module 11533 (PinotMemberNoticeBar)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import LinkingDefault from "Linking" /* 5843 */;
-import PinotAnalytics from "PinotAnalytics" /* 11522 */;
+import PinotAnalytics from "PinotAnalytics" /* 11523 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

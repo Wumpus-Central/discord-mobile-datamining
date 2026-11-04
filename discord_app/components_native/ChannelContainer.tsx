@@ -6,7 +6,7 @@ import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import useChatLayoutDefault from "useChatLayout" /* 5325 */;
 import common_NotificationsDefault from "common/Notifications" /* 11189 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 11380 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11381 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -51,7 +51,7 @@ export function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(11379)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11380)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -104,13 +104,13 @@ export function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(11381), obj4);
+      tmp15 = closure_10(channelId(11382), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11397), obj5);
+    tmp5 = closure_10(channelId(11398), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

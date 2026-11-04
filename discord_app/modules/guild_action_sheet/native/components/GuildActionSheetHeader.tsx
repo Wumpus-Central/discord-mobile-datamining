@@ -1,12 +1,12 @@
-// === Module 16031: GuildActionSheetHeader ===
+// === Module 16044: GuildActionSheetHeader ===
 
-// Module 16031 (GuildActionSheetHeader)
+// Module 16044 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16033 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16046 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 16032 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16045 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7585 */;
 
@@ -22,7 +22,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11520).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11521).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,

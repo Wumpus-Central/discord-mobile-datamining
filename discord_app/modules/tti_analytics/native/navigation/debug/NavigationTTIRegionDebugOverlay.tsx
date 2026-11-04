@@ -1,11 +1,11 @@
-// === Module 18873: NavigationTTIRegionDebugOverlay ===
+// === Module 18887: NavigationTTIRegionDebugOverlay ===
 
-// Module 18873 (NavigationTTIRegionDebugOverlay)
+// Module 18887 (NavigationTTIRegionDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13550 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13552 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18871 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13551 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13553 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -213,16 +213,16 @@ export function NavigationTTIRegionDebugOverlay(name) {
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_11();
-  const navTTISurface = name(13549).useNavTTISurface();
-  let obj = name(13549);
+  const navTTISurface = name(13550).useNavTTISurface();
+  let obj = name(13550);
   const tmp2 = name;
   [tmp6, c2] = noop.useState(false);
-  const syncExternalStore = noop.useSyncExternalStore(name(13552).subscribeNavigationTTIDebugFreezeTarget, name(13552).getNavigationTTIDebugFreezeTarget, name(13552).getNavigationTTIDebugFreezeTarget);
+  const syncExternalStore = noop.useSyncExternalStore(name(13553).subscribeNavigationTTIDebugFreezeTarget, name(13553).getNavigationTTIDebugFreezeTarget, name(13553).getNavigationTTIDebugFreezeTarget);
   closure_129_0 = name;
   closure_129_1 = regionId;
   closure_129_2 = tracking;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const navTTISurface1 = name(13549).useNavTTISurface();
+  const navTTISurface1 = name(13550).useNavTTISurface();
   closure_129_3 = navTTISurface1;
   items = [name, regionId, navTTISurface1, tracking];
   const callback = noop.useCallback((arg0) => {
@@ -504,5 +504,5 @@ export function NavigationTTIRegionDebugOverlay(name) {
     return closure_7(closure_6, obj3);
   }
   str21 = " \u00B7 " + combined;
-  let obj2 = name(13549);
+  let obj2 = name(13550);
 }

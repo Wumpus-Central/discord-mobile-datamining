@@ -1,11 +1,11 @@
-// === Module 15110: UserProfileVoiceSettings ===
+// === Module 15111: UserProfileVoiceSettings ===
 
-// Module 15110 (UserProfileVoiceSettings)
+// Module 15111 (UserProfileVoiceSettings)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9414 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12568 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12569 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6193 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -232,7 +232,7 @@ function CurrentUserVoiceSettings(channel) {
     if (stateFromStores) {
       let MicrophoneIcon = tmp2(9387).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(12168).MicrophoneIcon;
+      MicrophoneIcon = tmp2(12169).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;

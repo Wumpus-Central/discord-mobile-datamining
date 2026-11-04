@@ -1,22 +1,22 @@
-// === Module 15282: FractionalNitroCollectedActionSheet ===
+// === Module 15283: FractionalNitroCollectedActionSheet ===
 
-// Module 15282 (FractionalNitroCollectedActionSheet)
+// Module 15283 (FractionalNitroCollectedActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5148 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9688 */;
-import _modDef10772 from "module_10772" /* 10772 */;
 import _modDef10773 from "module_10773" /* 10773 */;
-import _modDef15283 from "module_15283" /* 15283 */;
+import _modDef10774 from "module_10774" /* 10774 */;
+import _modDef15284 from "module_15284" /* 15284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef15283 };
+  const obj2 = { source: _modDef15284 };
   items = [React6(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };
@@ -72,9 +72,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj3 = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef10772;
+        let tmp8Result = _modDef10773;
       } else {
-        tmp8Result = _modDef10773;
+        tmp8Result = _modDef10774;
       }
       obj3 = { source: tmp8Result };
       React6(tmp10, obj3);
@@ -133,7 +133,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const items2 = [tmp12Result, ];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(7901);
-  obj5.children = tmp15(skuId(14727).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
+  obj5.children = tmp15(skuId(14728).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
   items2[1] = tmp15(skuId(7121).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), , ];

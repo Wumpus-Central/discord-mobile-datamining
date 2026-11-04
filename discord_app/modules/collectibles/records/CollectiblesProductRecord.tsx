@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "id", items: "ZodSet", categorySkuId: "GOOGLE_WALLET_VERIFY", categoryWillUnpublishAt: "TransitionGroup", isCategoryReward: "o", prices: "isArray", previewAssets: "pluralType", googleSkuIds: "flag_sr", eligibleOffers: "getNextIndex", variants: null, bundledProducts: "\u{1F1F8}\u{1F1FF}", isFirstParty: 6 };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "ix", items: "<string:587742472>", categorySkuId: "<string:1502171498>", categoryWillUnpublishAt: "<string:138217539>", isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: true, bundledProducts: true, isFirstParty: true };
               let str;
               if (first != null) {
                 str = first.optionValue;

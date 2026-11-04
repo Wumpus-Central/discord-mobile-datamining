@@ -1,6 +1,6 @@
-// === Module 14769: useConjureDevicePermissions ===
+// === Module 14770: useConjureDevicePermissions ===
 
-// Module 14769 (useConjureDevicePermissions)
+// Module 14770 (useConjureDevicePermissions)
 import conjureDevicePermissions from "conjureDevicePermissions" /* 11108 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;

@@ -1,6 +1,6 @@
-// === Module 15275: OrbCheckoutHooks ===
+// === Module 15276: OrbCheckoutHooks ===
 
-// Module 15275 (OrbCheckoutHooks)
+// Module 15276 (OrbCheckoutHooks)
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7871 */;
 import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 9710 */;
 import noop from "module_19" /* 19 */;

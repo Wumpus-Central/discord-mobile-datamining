@@ -1,6 +1,6 @@
-// === Module 16945: IgnoredUsersList ===
+// === Module 16957: IgnoredUsersList ===
 
-// Module 16945 (IgnoredUsersList)
+// Module 16957 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5761 */;
 import TableRowGroup from "TableRowGroup" /* 7201 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
-import Blocked from "Blocked" /* 16938 */;
-import IgnoredUserRowDefault from "IgnoredUserRow" /* 16946 */;
+import Blocked from "Blocked" /* 16950 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 16958 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 

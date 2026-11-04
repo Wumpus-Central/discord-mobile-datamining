@@ -1,6 +1,6 @@
-// === Module 19112: UsernameSearchScreen ===
+// === Module 19126: UsernameSearchScreen ===
 
-// Module 19112 (UsernameSearchScreen)
+// Module 19126 (UsernameSearchScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -78,7 +78,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1113).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(15909), obj7);
+  obj5.children = closure_8(ref(15922), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

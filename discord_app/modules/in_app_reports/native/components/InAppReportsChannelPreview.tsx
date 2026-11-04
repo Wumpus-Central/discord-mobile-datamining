@@ -1,6 +1,6 @@
-// === Module 15388: InAppReportsChannelPreview ===
+// === Module 15389: InAppReportsChannelPreview ===
 
-// Module 15388 (InAppReportsChannelPreview)
+// Module 15389 (InAppReportsChannelPreview)
 import nativeDefault from "native" /* 575 */;
 import GuildIconDefault from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;

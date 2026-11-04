@@ -1,13 +1,13 @@
-// === Module 17792: AppVersionSetting ===
+// === Module 17804: AppVersionSetting ===
 
-// Module 17792 (AppVersionSetting)
+// Module 17804 (AppVersionSetting)
 import util from "util" /* 1113 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17793 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17805 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1376 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;

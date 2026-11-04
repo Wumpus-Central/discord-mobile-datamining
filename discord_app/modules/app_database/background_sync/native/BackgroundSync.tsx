@@ -1,6 +1,6 @@
-// === Module 19673: background_sync/BackgroundSync ===
+// === Module 19687: background_sync/BackgroundSync ===
 
-// Module 19673 (background_sync/BackgroundSync)
+// Module 19687 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
@@ -76,7 +76,7 @@ let closure_17 = async function _backgroundSync(arg0) {
             closure_130_7 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {

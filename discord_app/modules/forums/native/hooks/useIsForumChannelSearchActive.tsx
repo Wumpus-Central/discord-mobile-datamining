@@ -1,6 +1,6 @@
-// === Module 11534: useIsForumChannelSearchActive ===
+// === Module 11535: useIsForumChannelSearchActive ===
 
-// Module 11534 (useIsForumChannelSearchActive)
+// Module 11535 (useIsForumChannelSearchActive)
 import ForumSearchStore from "ForumSearchStore" /* 8345 */;
 
 const require = globalThis.__r;

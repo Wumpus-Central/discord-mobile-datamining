@@ -1,19 +1,19 @@
-// === Module 19824: NewUserUtils ===
+// === Module 19838: NewUserUtils ===
 
-// Module 19824 (NewUserUtils)
+// Module 19838 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Link from "Link" /* 1500 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8103 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14465 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14571 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18290 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 18667 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 19823 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14466 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14572 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18304 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 18681 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19837 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 18242 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 18256 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -138,7 +138,7 @@ let closure_21 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -227,11 +227,11 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14191);
+const NotificationPermissionConstants = fn(14192);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14460).ContactPermissions;
+const ContactPermissions = fn(14461).ContactPermissions;
 let closure_12 = fn(8080).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };

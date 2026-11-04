@@ -1,6 +1,6 @@
-// === Module 15390: InAppReportsGuildScheduledEventPreview ===
+// === Module 15391: InAppReportsGuildScheduledEventPreview ===
 
-// Module 15390 (InAppReportsGuildScheduledEventPreview)
+// Module 15391 (InAppReportsGuildScheduledEventPreview)
 import nativeDefault from "native" /* 575 */;
 import GuildIconDefault from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;

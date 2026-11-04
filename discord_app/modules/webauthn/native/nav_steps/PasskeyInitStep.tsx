@@ -1,12 +1,12 @@
-// === Module 16913: PasskeyInitStep ===
+// === Module 16925: PasskeyInitStep ===
 
-// Module 16913 (PasskeyInitStep)
+// Module 16925 (PasskeyInitStep)
 import nativeDefault from "native" /* 575 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 16816 */;
+import WebAuthnStore from "WebAuthnStore" /* 16828 */;
 
 require = fn;
 function CredentialList(navigation) {
@@ -21,7 +21,7 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(16914).PasskeysSpotIllustration, { scale: 0.6 }), ];
+    const items1 = [closure_9(tmp(16926).PasskeysSpotIllustration, { scale: 0.6 }), ];
     let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1113).intl;
     obj3.children = intl2.string(tmp(1113).t.FSNwFW);

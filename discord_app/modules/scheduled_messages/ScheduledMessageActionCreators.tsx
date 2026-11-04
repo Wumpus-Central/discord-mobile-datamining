@@ -1,6 +1,6 @@
-// === Module 14803: ScheduledMessageActionCreators ===
+// === Module 14804: ScheduledMessageActionCreators ===
 
-// Module 14803 (ScheduledMessageActionCreators)
+// Module 14804 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -42,7 +42,7 @@ let closure_7 = async function _createScheduledMessage(arg0) {
           closure_131_4 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -157,7 +157,7 @@ let closure_8 = async function _updateScheduledMessage(arg0) {
           closure_131_9 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,7 +1,7 @@
-// === Module 14795: ConjureAppChannelMembersSheet ===
+// === Module 14796: ConjureAppChannelMembersSheet ===
 
-// Module 14795 (ConjureAppChannelMembersSheet)
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14794 */;
+// Module 14796 (ConjureAppChannelMembersSheet)
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14795 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -35,7 +35,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
   if (null != guild_id) {
     const obj2 = { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null };
     const obj3 = { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list };
-    obj2.children = jsx(guild_id(11813), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
+    obj2.children = jsx(guild_id(11814), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
     tmp7 = jsx(channelId(5396).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
   }
   return tmp7;

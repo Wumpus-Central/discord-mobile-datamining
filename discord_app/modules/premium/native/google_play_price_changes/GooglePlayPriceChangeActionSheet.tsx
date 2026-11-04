@@ -1,11 +1,11 @@
-// === Module 19288: GooglePlayPriceChangeActionSheet ===
+// === Module 19302: GooglePlayPriceChangeActionSheet ===
 
-// Module 19288 (GooglePlayPriceChangeActionSheet)
+// Module 19302 (GooglePlayPriceChangeActionSheet)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19289 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19303 */;
 
 const require = fn;
 const View = fn(17).View;

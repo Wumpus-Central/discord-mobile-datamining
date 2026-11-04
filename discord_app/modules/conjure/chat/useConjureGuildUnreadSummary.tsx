@@ -1,6 +1,6 @@
-// === Module 18515: useConjureGuildUnreadSummary ===
+// === Module 18529: useConjureGuildUnreadSummary ===
 
-// Module 18515 (useConjureGuildUnreadSummary)
+// Module 18529 (useConjureGuildUnreadSummary)
 import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6977 */;

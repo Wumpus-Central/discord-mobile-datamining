@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
-let obj4 = module_560.create(() => ({ controls: "flexDirection", paused: true }));
+let obj4 = module_560.create(() => ({ controls: "flexDirection", paused: null }));
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
@@ -72,7 +72,7 @@ export default function useVideoControls(index, portal, controls) {
 export const useVideoStateStore = obj4;
 export function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "flexDirection", paused: true });
+    state.setState({ controls: "flexDirection", paused: null });
   });
 }
 export function setMuted(isMuted) {

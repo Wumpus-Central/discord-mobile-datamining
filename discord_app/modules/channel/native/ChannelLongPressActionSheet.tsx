@@ -35,10 +35,10 @@ import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11166
 import markChannelUnreadDefault from "markChannelUnread" /* 11171 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11177 */;
 import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 11178 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12021 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14605 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 14606 */;
-import closeFrameDefault from "closeFrame" /* 14608 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12022 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14606 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 14607 */;
+import closeFrameDefault from "closeFrame" /* 14609 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6889 */;

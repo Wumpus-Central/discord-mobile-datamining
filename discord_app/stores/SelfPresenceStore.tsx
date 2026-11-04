@@ -9,7 +9,7 @@ import UserSettings from "UserSettings" /* 4966 */;
 import ActivityTypes from "ActivityTypes" /* 5896 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7720 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10940 */;
-import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15753 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15754 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import SpotifyStore from "SpotifyStore" /* 6706 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -17,7 +17,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;
 import IdleStore from "IdleStore" /* 6840 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
-import LocalActivityStore from "LocalActivityStore" /* 11713 */;
+import LocalActivityStore from "LocalActivityStore" /* 11714 */;
 import PresenceStore from "PresenceStore" /* 5895 */;
 import SessionsStore from "SessionsStore" /* 5900 */;
 

@@ -1,6 +1,6 @@
-// === Module 17445: LabeledDataBlock ===
+// === Module 17457: LabeledDataBlock ===
 
-// Module 17445 (LabeledDataBlock)
+// Module 17457 (LabeledDataBlock)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import Pressables from "Pressables" /* 7121 */;

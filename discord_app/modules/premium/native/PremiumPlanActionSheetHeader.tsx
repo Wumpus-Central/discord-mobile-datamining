@@ -13,7 +13,7 @@ import _modDef7762 from "module_7762" /* 7762 */;
 import PremiumPill from "PremiumPill" /* 7763 */;
 import _modDef10109 from "module_10109" /* 10109 */;
 import _modDef10114 from "module_10114" /* 10114 */;
-import _modDef10763 from "module_10763" /* 10763 */;
+import _modDef10764 from "module_10764" /* 10764 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -101,7 +101,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     if (TIER_0.TIER_0 === premiumType) {
       let tmp13Result10 = _modDef10109;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef10763;
+      tmp13Result10 = _modDef10764;
     } else if (TIER_0.TIER_2 === premiumType) {
       tmp13Result10 = _modDef10114;
     }

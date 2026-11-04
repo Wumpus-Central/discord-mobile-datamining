@@ -1,9 +1,9 @@
-// === Module 17362: VideoQuestModalReward ===
+// === Module 17374: VideoQuestModalReward ===
 
-// Module 17362 (VideoQuestModalReward)
+// Module 17374 (VideoQuestModalReward)
 import nativeDefault from "native" /* 575 */;
 import QuestUtils from "QuestUtils" /* 9828 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17345 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17357 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(17340).useVideoQuestModalContext().quest;
-  const obj = quest(17340);
+  quest = quest(17352).useVideoQuestModalContext().quest;
+  const obj = quest(17352);
   items = [quest.id];
   const questTaskDetails = quest(9831).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {

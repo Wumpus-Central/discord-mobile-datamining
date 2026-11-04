@@ -1,6 +1,6 @@
-// === Module 14754: DoubleTapEmojiEditNudge ===
+// === Module 14755: DoubleTapEmojiEditNudge ===
 
-// Module 14754 (DoubleTapEmojiEditNudge)
+// Module 14755 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8567 */;

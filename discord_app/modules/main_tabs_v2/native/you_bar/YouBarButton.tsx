@@ -1,6 +1,6 @@
-// === Module 18720: YouBarButton ===
+// === Module 18734: YouBarButton ===
 
-// Module 18720 (YouBarButton)
+// Module 18734 (YouBarButton)
 import nativeDefault from "native" /* 575 */;
 import IconButton from "IconButton" /* 8168 */;
 import ClipView from "ClipView" /* 9656 */;
@@ -85,7 +85,7 @@ class YouBarButtonIcon {
     items2[0] = memo;
     items2[1] = hasBadge;
     memo1 = obj2.useMemo(() => {
-      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "it", padding: "Icon", minWidth: "y" };
+      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "children", bottom: "getGuild", padding: "call", minWidth: "Array" };
       return rect;
     }, items1);
     obj6 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
@@ -123,7 +123,7 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17310);
+const YouBarConstants = fn(17322);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

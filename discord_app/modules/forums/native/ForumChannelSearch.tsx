@@ -1,6 +1,6 @@
-// === Module 14777: ForumChannelSearch ===
+// === Module 14778: ForumChannelSearch ===
 
-// Module 14777 (ForumChannelSearch)
+// Module 14778 (ForumChannelSearch)
 import Tracking from "Tracking" /* 8344 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 10019 */;
 import noop from "module_19" /* 19 */;
@@ -52,8 +52,8 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(11535).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(11535);
+  const canSearchForumPostsByChannelId = channelId(11536).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(11536);
   items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {

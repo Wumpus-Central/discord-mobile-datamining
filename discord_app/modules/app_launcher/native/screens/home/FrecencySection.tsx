@@ -1,6 +1,6 @@
-// === Module 12597: FrecencySection ===
+// === Module 12598: FrecencySection ===
 
-// Module 12597 (FrecencySection)
+// Module 12598 (FrecencySection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -8,14 +8,14 @@ import _modDef1652 from "module_1652" /* 1652 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9911 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11602 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12599 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12600 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11603 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11691 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12600 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12598 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12599 */;
 
 const require = globalThis.__r;
 
@@ -104,7 +104,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12596).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12597).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -129,14 +129,14 @@ function FrecentApp(app) {
     }
     items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12605).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12606).SubmittingOverlay, obj3);
     obj.children = items;
     return closure_12(app(7121).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12598).FrecencySectionSelection;
+let FrecencySectionSelection = fn(12599).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

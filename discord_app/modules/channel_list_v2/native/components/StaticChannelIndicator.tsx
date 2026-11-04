@@ -1,6 +1,6 @@
-// === Module 14155: StaticChannelIndicator ===
+// === Module 14156: StaticChannelIndicator ===
 
-// Module 14155 (StaticChannelIndicator)
+// Module 14156 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5732 */;

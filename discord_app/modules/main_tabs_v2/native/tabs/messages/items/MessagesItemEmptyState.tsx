@@ -1,6 +1,6 @@
-// === Module 18395: MessagesItemEmptyState ===
+// === Module 18409: MessagesItemEmptyState ===
 
-// Module 18395 (MessagesItemEmptyState)
+// Module 18409 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import RootNavigationRef from "RootNavigationRef" /* 5323 */;

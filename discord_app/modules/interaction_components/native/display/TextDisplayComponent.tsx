@@ -1,6 +1,6 @@
-// === Module 17966: TextDisplayComponent ===
+// === Module 17978: TextDisplayComponent ===
 
-// Module 17966 (TextDisplayComponent)
+// Module 17978 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 8723 */;
 import handleMessagesTapLink from "handleMessagesTapLink" /* 10299 */;

@@ -1,6 +1,6 @@
-// === Module 12324: ConjureSettingsSheet ===
+// === Module 12325: ConjureSettingsSheet ===
 
-// Module 12324 (ConjureSettingsSheet)
+// Module 12325 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -50,7 +50,7 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12371).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12372).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
     tmp10Result = closure_12(tmp5(9359).SegmentedControl, obj5);

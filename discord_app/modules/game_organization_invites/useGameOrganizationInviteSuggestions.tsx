@@ -1,6 +1,6 @@
-// === Module 16022: useGameOrganizationInviteSuggestions ===
+// === Module 16035: useGameOrganizationInviteSuggestions ===
 
-// Module 16022 (useGameOrganizationInviteSuggestions)
+// Module 16035 (useGameOrganizationInviteSuggestions)
 import InstantInviteUtils from "InstantInviteUtils" /* 9265 */;
 import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

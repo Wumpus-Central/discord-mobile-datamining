@@ -55,7 +55,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     id = currentUser.id;
   }
   const result = map2.set(nonce, id);
-  const obj3 = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null, held: "sa" };
+  const obj3 = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null, held: "dispatch" };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
   if (currentUser1 != null) {

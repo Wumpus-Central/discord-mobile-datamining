@@ -36,6 +36,9 @@ function handleProjectEvent(event, projectId) {
     tmp3 = "voice_channel_pin" !== event.type;
   }
   if (tmp3) {
+    tmp3 = "staff_notice" !== event.type;
+  }
+  if (tmp3) {
     const result = ConjureActionCreators.refreshConjureInstallState(projectId);
   }
   const obj2 = { type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event };
@@ -63,6 +66,7 @@ let obj = {
   app_channel_deleted: handleProjectEvent,
   remixed: handleProjectEvent,
   voice_channel_pin: handleProjectEvent,
+  staff_notice: handleProjectEvent,
   side_reply(id, projectId) {
     DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDE_REPLY", projectId: projectId.projectId, id: id.id, inReplyTo: id.in_reply_to, content: id.content, timestamp: id.ts });
   },

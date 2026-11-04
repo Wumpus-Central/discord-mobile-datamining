@@ -1,6 +1,6 @@
-// === Module 14659: GiftBadgePostPurchase ===
+// === Module 14660: GiftBadgePostPurchase ===
 
-// Module 14659 (GiftBadgePostPurchase)
+// Module 14660 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -13,10 +13,10 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import Text_Text from "Text/Text" /* 5761 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import BadgeId from "BadgeId" /* 8896 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10794 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10795 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10797 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 14661 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 14662 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 14662 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 14663 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 
@@ -38,7 +38,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13585).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(13586).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1113).intl;
   obj2.text = intl.string(_modDef2763.g86YiI);
   obj2.onPress = callback;
@@ -122,7 +122,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj2);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14660);
+const GiftingBadgeConstants = fn(14661);
 ({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: metroImportDefault, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);

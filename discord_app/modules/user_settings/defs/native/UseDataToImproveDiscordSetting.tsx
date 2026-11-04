@@ -1,18 +1,18 @@
-// === Module 16993: UseDataToImproveDiscordSetting ===
+// === Module 17005: UseDataToImproveDiscordSetting ===
 
-// Module 16993 (UseDataToImproveDiscordSetting)
+// Module 17005 (UseDataToImproveDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
 import common_AlertDefault from "common/Alert" /* 6165 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16994 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16995 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 17006 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 17007 */;
 import ConsentStore from "ConsentStore" /* 6877 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

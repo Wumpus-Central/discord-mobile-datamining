@@ -1,6 +1,6 @@
-// === Module 12332: host_approval/ConjureHostApproval ===
+// === Module 12333: host_approval/ConjureHostApproval ===
 
-// Module 12332 (host_approval/ConjureHostApproval)
+// Module 12333 (host_approval/ConjureHostApproval)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import Stack_Stack from "Stack/Stack" /* 6162 */;
 import ConjureHostApproval from "ConjureHostApproval" /* 11074 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12333 */;
-import ConjureAwaitingUser from "ConjureAwaitingUser" /* 12334 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12334 */;
+import ConjureAwaitingUser from "ConjureAwaitingUser" /* 12335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

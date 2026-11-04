@@ -1,6 +1,6 @@
-// === Module 17803: UserSettingsStartupTimings ===
+// === Module 17815: UserSettingsStartupTimings ===
 
-// Module 17803 (UserSettingsStartupTimings)
+// Module 17815 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import Stack_Stack from "Stack/Stack" /* 6162 */;
@@ -8,7 +8,7 @@ import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
 import TableRow from "TableRow" /* 7116 */;
 import TableRowGroup from "TableRowGroup" /* 7201 */;
 import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 11282 */;
-import ShareIcon from "ShareIcon" /* 14978 */;
+import ShareIcon from "ShareIcon" /* 14979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

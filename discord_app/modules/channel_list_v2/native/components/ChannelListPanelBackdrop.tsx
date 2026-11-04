@@ -1,10 +1,10 @@
-// === Module 18349: ChannelListPanelBackdrop ===
+// === Module 18363: ChannelListPanelBackdrop ===
 
-// Module 18349 (ChannelListPanelBackdrop)
+// Module 18363 (ChannelListPanelBackdrop)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import QuestHooks from "QuestHooks" /* 17303 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18321 */;
+import QuestHooks from "QuestHooks" /* 17315 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18335 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

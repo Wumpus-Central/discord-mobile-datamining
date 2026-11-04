@@ -1,6 +1,6 @@
-// === Module 16984: ContactSyncNameUpdateModal ===
+// === Module 16996: ContactSyncNameUpdateModal ===
 
-// Module 16984 (ContactSyncNameUpdateModal)
+// Module 16996 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import Navigator from "Navigator" /* 7306 */;
@@ -25,7 +25,7 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0) {
     _require(true);
-    await tmp3(14466).updateName(closure_0);
+    await tmp3(14467).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null, variant: "critical" };
@@ -67,7 +67,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(14480), {
+  obj2.children = jsx(onNext(14481), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -78,7 +78,7 @@ function ContactSyncNameInputScreen() {
   return <View style={tmp.container}>{null}</View>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(14460).ContactSyncScenes;
+const ContactSyncScenes = fn(14461).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5722).NAV_BAR_HEIGHT + 32 } };

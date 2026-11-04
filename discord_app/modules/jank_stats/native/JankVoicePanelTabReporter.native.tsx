@@ -1,14 +1,14 @@
-// === Module 19595: JankVoicePanelTabReporter ===
+// === Module 19609: JankVoicePanelTabReporter ===
 
-// Module 19595 (JankVoicePanelTabReporter)
-import getJankSurfaceName from "getJankSurfaceName" /* 18308 */;
+// Module 19609 (JankVoicePanelTabReporter)
+import getJankSurfaceName from "getJankSurfaceName" /* 18322 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
 const map = new Map();
 let items = [{ code: "(function isDrawerShown_JankVoicePanelTabReporterNativeTsx1(wrapperSpecs,panelMode){let[VoicePanelModes]=this.__closure;return wrapperSpecs.drawerMode&&!wrapperSpecs.hidden&&panelMode===VoicePanelModes.PANEL;})" }, VoicePanelModes];
 let closure_129_0;

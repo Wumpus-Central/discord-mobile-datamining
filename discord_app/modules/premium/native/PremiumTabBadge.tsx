@@ -1,6 +1,6 @@
-// === Module 17118: PremiumTabBadge ===
+// === Module 17130: PremiumTabBadge ===
 
-// Module 17118 (PremiumTabBadge)
+// Module 17130 (PremiumTabBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -21,10 +21,10 @@ import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7767 */;
 import ReferralProgramUtils from "ReferralProgramUtils" /* 8664 */;
 import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8665 */;
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8669 */;
-import MarketingComponentType from "MarketingComponentType" /* 10787 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15535 */;
-import _modDef17119 from "module_17119" /* 17119 */;
-import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 17120 */;
+import MarketingComponentType from "MarketingComponentType" /* 10788 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15536 */;
+import _modDef17131 from "module_17131" /* 17131 */;
+import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 17132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
@@ -57,7 +57,7 @@ function OfferBadge(componentId) {
   tmp4(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj4 = { style: tmp.acked, children: null };
-    const obj5 = { source: _modDef17119, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj5 = { source: _modDef17131, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj5), ];
     const obj6 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [, ];
@@ -215,7 +215,7 @@ export default function PremiumTabBadge() {
           const items4 = [, ];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
-          const obj11 = { source: _modDef17119, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+          const obj11 = { source: _modDef17131, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
           const items5 = [React5(native.Icon, obj11), ];
           const obj12 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
           const items6 = [, ];

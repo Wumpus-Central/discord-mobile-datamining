@@ -1,14 +1,14 @@
-// === Module 16602: conjureBackgroundFrameRules ===
+// === Module 16614: conjureBackgroundFrameRules ===
 
-// Module 16602 (conjureBackgroundFrameRules)
+// Module 16614 (conjureBackgroundFrameRules)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12288 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 16528 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12289 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16540 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import FramesStore from "FramesStore" /* 6981 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 16603 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 16615 */;
 import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11105 */;
 
 require = fn;

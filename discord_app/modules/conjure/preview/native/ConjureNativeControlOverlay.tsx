@@ -1,13 +1,13 @@
-// === Module 12443: ConjureNativeControlOverlay ===
+// === Module 12444: ConjureNativeControlOverlay ===
 
-// Module 12443 (ConjureNativeControlOverlay)
+// Module 12444 (ConjureNativeControlOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import timing_timing from "timing/timing" /* 5378 */;
 import spring_spring from "spring/spring" /* 5771 */;
 import springPresets from "springPresets" /* 5772 */;
-import useConjureControlBar from "useConjureControlBar" /* 12444 */;
+import useConjureControlBar from "useConjureControlBar" /* 12445 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -195,10 +195,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp46Result = closure_6(tmp2(12445).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(12446).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp46Result = closure_6(tmp2(12449).SparklesIcon, obj8);
+          tmp46Result = closure_6(tmp2(12450).SparklesIcon, obj8);
         }
         const items11 = [tmp46Result, , ];
         const obj9 = { variant: "body-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: tmp.title, accessibilityLabel: null, children: null };

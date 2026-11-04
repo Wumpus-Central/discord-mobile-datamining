@@ -1,6 +1,6 @@
-// === Module 14538: AcceptInvite ===
+// === Module 14539: AcceptInvite ===
 
-// Module 14538 (AcceptInvite)
+// Module 14539 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -10,7 +10,7 @@ import useToken from "useToken" /* 5732 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import Card from "Card" /* 7118 */;
-import _modDef14547 from "module_14547" /* 14547 */;
+import _modDef14548 from "module_14548" /* 14548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -84,12 +84,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_8(first(14539), obj2);
+    return closure_8(first(14540), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_8(first(14542), obj);
+    return closure_8(first(14543), obj);
   } else {
     return closure_8(InviteResolving, {});
   }
@@ -130,7 +130,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14547;
+    let guildSplashSource = _modDef14548;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

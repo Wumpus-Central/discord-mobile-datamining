@@ -1,14 +1,14 @@
-// === Module 12660: NoPermsState ===
+// === Module 12661: NoPermsState ===
 
-// Module 12660 (NoPermsState)
+// Module 12661 (NoPermsState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5148 */;
 import useThemeDefault from "useTheme" /* 5377 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12596 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11691 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12661 : 12662);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12662 : 12663);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

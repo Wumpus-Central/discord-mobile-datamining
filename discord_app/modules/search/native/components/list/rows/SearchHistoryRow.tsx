@@ -1,11 +1,11 @@
-// === Module 18979: SearchHistoryRow ===
+// === Module 18993: SearchHistoryRow ===
 
-// Module 18979 (SearchHistoryRow)
+// Module 18993 (SearchHistoryRow)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import UserActionCreators from "UserActionCreators" /* 8893 */;
-import TrackingDefault from "Tracking" /* 14124 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
+import TrackingDefault from "Tracking" /* 14125 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -27,7 +27,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const onPressSearchHistoryText = searchContext(18968).useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = searchContext(18982).useOnPressSearchHistoryText({ searchContext });
   items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = noop.useCallback(() => {
@@ -50,10 +50,10 @@ function SearchHistoryTextRow(searchContext) {
   obj3.onPress = callback;
   obj3.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj3.iconContainerStyle = tmp.textIconContainer;
-  let obj = searchContext(18968);
+  let obj = searchContext(18982);
   const obj4 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text };
   obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7356).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(18963).SearchListRow, obj3);
+  return closure_10(searchContext(18977).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

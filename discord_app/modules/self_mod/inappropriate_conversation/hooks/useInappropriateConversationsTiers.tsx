@@ -1,9 +1,9 @@
-// === Module 14611: useInappropriateConversationsTiers ===
+// === Module 14612: useInappropriateConversationsTiers ===
 
-// Module 14611 (useInappropriateConversationsTiers)
+// Module 14612 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11449 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11450 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11450 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11451 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

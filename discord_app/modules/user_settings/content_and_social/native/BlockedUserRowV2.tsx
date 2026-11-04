@@ -1,6 +1,6 @@
-// === Module 16942: BlockedUserRowV2 ===
+// === Module 16954: BlockedUserRowV2 ===
 
-// Module 16942 (BlockedUserRowV2)
+// Module 16954 (BlockedUserRowV2)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,9 @@ function BlockedUserRow(userRecord) {
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
   const formatToPlainStringResult = intl.formatToPlainString(userRecord(1113).t.izBDZN, { name: username });
-  let obj = { accessible: false, icon: jsx(userRecord(1187).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
+  let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
+  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1187).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 });
   const obj3 = {
     userRecord,
     accessibilityActions: null,
@@ -36,7 +38,7 @@ function BlockedUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16943).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16955).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -49,6 +51,7 @@ function BlockedUserRow(userRecord) {
       }
     }
   });
+  obj.onPress = handleOpenProfile;
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl2 = tmp2(1113).intl;
   obj4.text = intl2.string(userRecord(1113).t["PR/xUz"]);
@@ -57,7 +60,7 @@ function BlockedUserRow(userRecord) {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
   obj.trailing = jsx(userRecord(5768).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(7116).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  return jsx(userRecord(7116).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

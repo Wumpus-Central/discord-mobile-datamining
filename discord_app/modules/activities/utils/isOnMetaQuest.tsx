@@ -1,6 +1,6 @@
-// === Module 15078: isOnMetaQuest ===
+// === Module 15079: isOnMetaQuest ===
 
-// Module 15078 (isOnMetaQuest)
+// Module 15079 (isOnMetaQuest)
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9888 */;
 import size from "module_2" /* 2 */;
 

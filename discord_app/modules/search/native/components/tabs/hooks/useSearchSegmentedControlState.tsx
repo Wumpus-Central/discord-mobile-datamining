@@ -1,6 +1,6 @@
-// === Module 19060: useSearchSegmentedControlState ===
+// === Module 19074: useSearchSegmentedControlState ===
 
-// Module 19060 (useSearchSegmentedControlState)
+// Module 19074 (useSearchSegmentedControlState)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import SegmentedControlState from "SegmentedControlState" /* 9125 */;

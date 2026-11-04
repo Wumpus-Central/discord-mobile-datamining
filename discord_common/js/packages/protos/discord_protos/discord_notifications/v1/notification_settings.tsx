@@ -1,10 +1,10 @@
-// === Module 15801: notification_settings ===
+// === Module 15802: notification_settings ===
 
-// Module 15801 (notification_settings)
+// Module 15802 (notification_settings)
 import _mod1197 from "module_1197" /* 1197 */;
 import user_settings_shared from "user_settings_shared" /* 1225 */;
 import wrappers from "wrappers" /* 1227 */;
-import mute from "mute" /* 15802 */;
+import mute from "mute" /* 15803 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

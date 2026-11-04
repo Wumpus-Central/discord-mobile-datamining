@@ -1,6 +1,6 @@
-// === Module 16632: MediaPlayerManager ===
+// === Module 16644: MediaPlayerManager ===
 
-// Module 16632 (MediaPlayerManager)
+// Module 16644 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -18,7 +18,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 import MessageStore from "MessageStore" /* 6196 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16633 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16645 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 import size from "module_2" /* 2 */;
@@ -36,12 +36,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
   const obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "PX_8",
-    canAccessMedia: "sa",
+    canAccessMedia: "dispatch",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "flexDirection",
-    showPip: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430",
+    showPip: "Token",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "_invalidateIfOrientationChanged" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "dispatch", rate: false, isPlaying: false, wasPipClosedByUser: "forEachInCell" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

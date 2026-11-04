@@ -1,6 +1,6 @@
-// === Module 12308: useConjurePublishPanel ===
+// === Module 12309: useConjurePublishPanel ===
 
-// Module 12308 (useConjurePublishPanel)
+// Module 12309 (useConjurePublishPanel)
 import _modDef3995 from "module_3995" /* 3995 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

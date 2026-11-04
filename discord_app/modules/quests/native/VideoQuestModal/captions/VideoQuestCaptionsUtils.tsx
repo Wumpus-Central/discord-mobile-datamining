@@ -1,6 +1,6 @@
-// === Module 17360: VideoQuestCaptionsUtils ===
+// === Module 17372: VideoQuestCaptionsUtils ===
 
-// Module 17360 (VideoQuestCaptionsUtils)
+// Module 17372 (VideoQuestCaptionsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");

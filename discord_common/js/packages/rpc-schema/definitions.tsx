@@ -1,6 +1,6 @@
-// === Module 16537: definitions ===
+// === Module 16549: definitions ===
 
-// Module 16537 (definitions)
+// Module 16549 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2148 */;
@@ -11,12 +11,12 @@ import InviteTargetTypes from "InviteTargetTypes" /* 8020 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9888 */;
 import StatusDisplayTypes from "StatusDisplayTypes" /* 10938 */;
-import ActivityPlatform from "ActivityPlatform" /* 12005 */;
-import ThermalStates from "ThermalStates" /* 16534 */;
-import SKUTypes from "SKUTypes" /* 16538 */;
-import discord_common_helpers from "discord_common/helpers" /* 16539 */;
-import contextMenuIcons from "contextMenuIcons" /* 16540 */;
-import Constants from "Constants" /* 11888 */;
+import ActivityPlatform from "ActivityPlatform" /* 12006 */;
+import ThermalStates from "ThermalStates" /* 16546 */;
+import SKUTypes from "SKUTypes" /* 16550 */;
+import discord_common_helpers from "discord_common/helpers" /* 16551 */;
+import contextMenuIcons from "contextMenuIcons" /* 16552 */;
+import Constants from "Constants" /* 11889 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -1145,6 +1145,25 @@ let obj14 = {
     return obj;
   }
 };
+let obj15 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { image_url: string.string().required() };
+    return obj;
+  }
+};
+let obj16 = {
+  embeddedAppSDK: true,
+  response: "Array",
+  request(string) {
+    const obj = { mediaUrl: null };
+    const stringResult = string.string();
+    obj.mediaUrl = string.string().required().max(1024);
+    return obj;
+  }
+};
+let obj18 = { embeddedAppSDK: true, request: "Array", response: ActivityInstanceParticipants };
 let obj20 = {
   request: "Array",
   response(boolean) {
@@ -1230,6 +1249,77 @@ const obj39 = {
     return obj;
   }
 };
+const obj42 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { relationships: null };
+    const arrayResult = array.array();
+    const obj2 = { type: null, user: null, presence: null };
+    const requiredResult = array.array().required();
+    obj2.type = array.number().required();
+    const numberResult = array.number();
+    obj2.user = User(array).required();
+    const obj3 = { status: null, activity: null };
+    const obj6 = User(array);
+    obj3.status = array.string().required();
+    const stringResult = array.string();
+    obj3.activity = Activity(array).allow(null);
+    obj2.presence = array.object(obj3);
+    obj.relationships = requiredResult.items(array.object(obj2));
+    return obj;
+  }
+};
+const obj44 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
+    const obj3 = { custom_id: null, referrer_id: null, interaction_id: null };
+    const obj2 = EmbeddedSurface(string);
+    obj3.custom_id = string.string().optional();
+    const stringResult = string.string();
+    obj3.referrer_id = string.string().optional();
+    const stringResult1 = string.string();
+    obj3.interaction_id = string.string().optional();
+    const stringResult2 = string.string();
+    obj.launch = string.object(obj3).required();
+    const objectResult = string.object(obj3);
+    obj.platform = joiEnum(string, "ActivityPlatform").required();
+    return obj;
+  }
+};
+const obj46 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(arg0) {
+    return User(arg0).allow(null);
+  }
+};
+const obj49 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
+    const stringResult = string.string();
+    const stringResult1 = string.string();
+    obj.enrolled_at = string.string().allow(null).optional();
+    const allowResult = string.string().allow(null);
+    const stringResult2 = string.string();
+    obj.completed_at = string.string().allow(null).optional();
+    const allowResult1 = string.string().allow(null);
+    obj.external_cta_url = string.string().required();
+    return obj;
+  }
+};
+const obj50 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { ticket: string.string().required() };
+    return obj;
+  }
+};
 const obj53 = {
   request: "Array",
   response(number) {
@@ -1241,6 +1331,61 @@ const obj54 = {
   request: "Array",
   response(boolean) {
     const obj = { opened: boolean.boolean().required() };
+    return obj;
+  }
+};
+const obj57 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(boolean) {
+    const obj = { enabled: boolean.boolean().required() };
+    return obj;
+  }
+};
+const obj58 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(boolean) {
+    const obj = { iosKeyboardResizesView: boolean.boolean().optional() };
+    return obj;
+  }
+};
+const obj59 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { locale: string.string().required() };
+    return obj;
+  }
+};
+const obj63 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { permissions: null };
+    const stringResult = string.string();
+    const regexResult = string.string().regex(/^\d+$/);
+    obj.permissions = string.string().regex(/^\d+$/).meta({ format: "bigint", className: "SerializedBigFlag" }).required();
+    return obj;
+  }
+};
+const obj64 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { skus: null };
+    const arrayResult = array.array();
+    obj.skus = array.array().items(Sku(array)).required();
+    return obj;
+  }
+};
+const obj65 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { entitlements: null };
+    const arrayResult = array.array();
+    obj.entitlements = array.array().items(RPCEntitlement(array)).required();
     return obj;
   }
 };
@@ -1265,6 +1410,66 @@ const obj74 = {
     obj2.icon_url = array.string().allow(null).required();
     const allowResult = array.string().allow(null);
     obj.guilds = arrayResult.items(array.object(obj2)).required();
+    return obj;
+  }
+};
+const obj81 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload(number) {
+    const obj = { layout_mode: joiEnum(number, "ActivityLayoutMode").required() };
+    return obj;
+  }
+};
+const obj82 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload(arg0) {
+    return User(arg0);
+  }
+};
+const obj84 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload(string) {
+    const obj = { entitlement: RPCEntitlement(string).required() };
+    return obj;
+  }
+};
+const obj85 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload(number) {
+    const obj = { thermal_state: joiEnum(number, "ThermalStates").required() };
+    return obj;
+  }
+};
+const obj86 = { embeddedAppSDK: true, subscribeArgs: "Array", payload: ActivityInstanceParticipants };
+const obj87 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload: function Relationship(number) {
+    const obj = { type: number.number().required(), user: null, presence: null };
+    const numberResult = number.number();
+    obj.user = User(number).required();
+    const obj2 = { status: null, activity: null };
+    const obj3 = User(number);
+    obj2.status = number.string().required();
+    const stringResult = number.string();
+    obj2.activity = Activity(number).allow(null);
+    obj.presence = number.object(obj2);
+    return number.object(obj);
+  }
+};
+const obj88 = {
+  embeddedAppSDK: true,
+  subscribeArgs: "Array",
+  payload(string) {
+    const obj = { application_id: string.string().required(), secret: null, intent: null };
+    const stringResult = string.string();
+    obj.secret = string.string().required();
+    const stringResult1 = string.string();
+    obj.intent = joiEnum(string, "ActivityIntent").optional();
     return obj;
   }
 };
@@ -1298,24 +1503,8 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-sch
 
 export { RPCEnums };
 export const RPCCommandSchemas = {
-  [discord_common_helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { image_url: string.string().required() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: {
-    embeddedAppSDK: true,
-    response: "Array",
-    request(string) {
-      const obj = { mediaUrl: null };
-      const stringResult = string.string();
-      obj.mediaUrl = string.string().required().max(1024);
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj15,
+  [discord_common_helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj16,
   [discord_common_helpers.RPCCommand.AUTHENTICATE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1363,7 +1552,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: { embeddedAppSDK: true, request: "Array", response: ActivityInstanceParticipants },
+  [discord_common_helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj18,
   [discord_common_helpers.RPCCommand.RELAUNCH_FRAME]: {
     request(string) {
       const obj = { build: null };
@@ -2027,27 +2216,7 @@ export const RPCCommandSchemas = {
       return size;
     }
   },
-  [discord_common_helpers.RPCCommand.GET_RELATIONSHIPS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { relationships: null };
-      const arrayResult = array.array();
-      const obj2 = { type: null, user: null, presence: null };
-      const requiredResult = array.array().required();
-      obj2.type = array.number().required();
-      const numberResult = array.number();
-      obj2.user = User(array).required();
-      const obj3 = { status: null, activity: null };
-      const obj6 = User(array);
-      obj3.status = array.string().required();
-      const stringResult = array.string();
-      obj3.activity = Activity(array).allow(null);
-      obj2.presence = array.object(obj3);
-      obj.relationships = requiredResult.items(array.object(obj2));
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.GET_RELATIONSHIPS]: obj42,
   [discord_common_helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2059,25 +2228,7 @@ export const RPCCommandSchemas = {
     },
     response: "flexDirection"
   },
-  [discord_common_helpers.RPCCommand.GET_CONTEXT]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
-      const obj3 = { custom_id: null, referrer_id: null, interaction_id: null };
-      const obj2 = EmbeddedSurface(string);
-      obj3.custom_id = string.string().optional();
-      const stringResult = string.string();
-      obj3.referrer_id = string.string().optional();
-      const stringResult1 = string.string();
-      obj3.interaction_id = string.string().optional();
-      const stringResult2 = string.string();
-      obj.launch = string.object(obj3).required();
-      const objectResult = string.object(obj3);
-      obj.platform = joiEnum(string, "ActivityPlatform").required();
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.GET_CONTEXT]: obj44,
   [discord_common_helpers.RPCCommand.GET_USER]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2090,13 +2241,7 @@ export const RPCCommandSchemas = {
       return User(arg0).allow(null);
     }
   },
-  [discord_common_helpers.RPCCommand.GET_CURRENT_USER]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(arg0) {
-      return User(arg0).allow(null);
-    }
-  },
+  [discord_common_helpers.RPCCommand.GET_CURRENT_USER]: obj46,
   [discord_common_helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2120,30 +2265,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.GET_QUEST]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
-      const stringResult = string.string();
-      const stringResult1 = string.string();
-      obj.enrolled_at = string.string().allow(null).optional();
-      const allowResult = string.string().allow(null);
-      const stringResult2 = string.string();
-      obj.completed_at = string.string().allow(null).optional();
-      const allowResult1 = string.string().allow(null);
-      obj.external_cta_url = string.string().required();
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { ticket: string.string().required() };
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.GET_QUEST]: obj49,
+  [discord_common_helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj50,
   [discord_common_helpers.RPCCommand.SET_RUNS_IN_BACKGROUND]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };
@@ -2196,30 +2319,9 @@ export const RPCCommandSchemas = {
     },
     response: "flexDirection"
   },
-  [discord_common_helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(boolean) {
-      const obj = { enabled: boolean.boolean().required() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(boolean) {
-      const obj = { iosKeyboardResizesView: boolean.boolean().optional() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { locale: string.string().required() };
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
+  [discord_common_helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
+  [discord_common_helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj59,
   [discord_common_helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
     embeddedAppSDK: true,
     request(number) {
@@ -2243,7 +2345,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "colors", response: "done" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "cix", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2260,37 +2362,9 @@ export const RPCCommandSchemas = {
       return boolean.object(obj).default({ opened: null });
     }
   },
-  [discord_common_helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { permissions: null };
-      const stringResult = string.string();
-      const regexResult = string.string().regex(/^\d+$/);
-      obj.permissions = string.string().regex(/^\d+$/).meta({ format: "bigint", className: "SerializedBigFlag" }).required();
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.GET_SKUS_EMBEDDED]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { skus: null };
-      const arrayResult = array.array();
-      obj.skus = array.array().items(Sku(array)).required();
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { entitlements: null };
-      const arrayResult = array.array();
-      obj.entitlements = array.array().items(RPCEntitlement(array)).required();
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj63,
+  [discord_common_helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj64,
+  [discord_common_helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj65,
   [discord_common_helpers.RPCCommand.START_PURCHASE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2731,21 +2805,8 @@ export const RPCEventSchemas = {
   },
   [discord_common_helpers.RPCEvent.SPEAKING_START]: obj14,
   [discord_common_helpers.RPCEvent.SPEAKING_STOP]: obj14,
-  [discord_common_helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload(number) {
-      const obj = { layout_mode: joiEnum(number, "ActivityLayoutMode").required() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCEvent.CURRENT_USER_UPDATE]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload(arg0) {
-      return User(arg0);
-    }
-  },
+  [discord_common_helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: obj81,
+  [discord_common_helpers.RPCEvent.CURRENT_USER_UPDATE]: obj82,
   [discord_common_helpers.RPCEvent.CURRENT_GUILD_MEMBER_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {
@@ -2758,51 +2819,11 @@ export const RPCEventSchemas = {
       return GuildMember(string, { legacyCompat: true });
     }
   },
-  [discord_common_helpers.RPCEvent.ENTITLEMENT_CREATE]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload(string) {
-      const obj = { entitlement: RPCEntitlement(string).required() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCEvent.THERMAL_STATE_UPDATE]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload(number) {
-      const obj = { thermal_state: joiEnum(number, "ThermalStates").required() };
-      return obj;
-    }
-  },
-  [discord_common_helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: { embeddedAppSDK: true, subscribeArgs: "Array", payload: ActivityInstanceParticipants },
-  [discord_common_helpers.RPCEvent.RELATIONSHIP_UPDATE]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload: function Relationship(number) {
-      const obj = { type: number.number().required(), user: null, presence: null };
-      const numberResult = number.number();
-      obj.user = User(number).required();
-      const obj2 = { status: null, activity: null };
-      const obj3 = User(number);
-      obj2.status = number.string().required();
-      const stringResult = number.string();
-      obj2.activity = Activity(number).allow(null);
-      obj.presence = number.object(obj2);
-      return number.object(obj);
-    }
-  },
-  [discord_common_helpers.RPCEvent.ACTIVITY_JOIN]: {
-    embeddedAppSDK: true,
-    subscribeArgs: "Array",
-    payload(string) {
-      const obj = { application_id: string.string().required(), secret: null, intent: null };
-      const stringResult = string.string();
-      obj.secret = string.string().required();
-      const stringResult1 = string.string();
-      obj.intent = joiEnum(string, "ActivityIntent").optional();
-      return obj;
-    }
-  },
+  [discord_common_helpers.RPCEvent.ENTITLEMENT_CREATE]: obj84,
+  [discord_common_helpers.RPCEvent.THERMAL_STATE_UPDATE]: obj85,
+  [discord_common_helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: obj86,
+  [discord_common_helpers.RPCEvent.RELATIONSHIP_UPDATE]: obj87,
+  [discord_common_helpers.RPCEvent.ACTIVITY_JOIN]: obj88,
   [discord_common_helpers.RPCEvent.QUEST_ENROLLMENT_STATUS_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {

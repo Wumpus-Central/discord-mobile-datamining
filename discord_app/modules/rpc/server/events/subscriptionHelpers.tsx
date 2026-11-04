@@ -1,12 +1,12 @@
-// === Module 16579: subscriptionHelpers ===
+// === Module 16591: subscriptionHelpers ===
 
-// Module 16579 (subscriptionHelpers)
+// Module 16591 (subscriptionHelpers)
 import QuestTaskUtils from "QuestTaskUtils" /* 8008 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8914 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9472 */;
-import useThermalState from "useThermalState" /* 16533 */;
-import ThermalStates from "ThermalStates" /* 16534 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16535 */;
+import useThermalState from "useThermalState" /* 16545 */;
+import ThermalStates from "ThermalStates" /* 16546 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16547 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11105 */;
 import QuestStore from "QuestStore" /* 7986 */;
@@ -15,7 +15,7 @@ require = fn;
 const RPCEvents = fn(1072).RPCEvents;
 const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
 const FrameLayoutModes = fn(6982).FrameLayoutModes;
-const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11889).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

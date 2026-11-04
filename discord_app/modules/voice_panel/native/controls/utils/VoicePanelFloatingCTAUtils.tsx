@@ -1,6 +1,6 @@
-// === Module 19428: VoicePanelFloatingCTAUtils ===
+// === Module 19442: VoicePanelFloatingCTAUtils ===
 
-// Module 19428 (VoicePanelFloatingCTAUtils)
+// Module 19442 (VoicePanelFloatingCTAUtils)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
@@ -8,23 +8,23 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382
 import getDeviceSpecificString from "getDeviceSpecificString" /* 5395 */;
 import XSmallIcon from "XSmallIcon" /* 7195 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9130 */;
-import SoundboardIcon from "SoundboardIcon" /* 14319 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 19430 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19433 */;
+import SoundboardIcon from "SoundboardIcon" /* 14320 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 19444 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
-import EventBannerStore from "EventBannerStore" /* 19429 */;
+import EventBannerStore from "EventBannerStore" /* 19443 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function useFloatingCTAProps(stateFromStores) {
-  let tmp3 = setShowFloatingCTA(8982)(noop.useContext(setShowFloatingCTA(11409)).showFloatingCTA);
+  let tmp3 = setShowFloatingCTA(8982)(noop.useContext(setShowFloatingCTA(11410)).showFloatingCTA);
   _require = tmp3;
   setShowFloatingCTA = undefined;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11409)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11410)).setShowFloatingCTA;
   items = [setShowFloatingCTA, tmp3];
   let memo = noop.useMemo(() => {
     let tmp = null;
@@ -37,7 +37,7 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   const tmp5 = setShowFloatingCTA(5377)();
-  const tmp6 = setShowFloatingCTA(19413)(noop.useContext(setShowFloatingCTA(11409)).channelId);
+  const tmp6 = setShowFloatingCTA(19427)(noop.useContext(setShowFloatingCTA(11410)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -115,7 +115,7 @@ function useFloatingCTAProps(stateFromStores) {
   }
   closure_130_0 = stateFromStores;
   tmpResultResult = setShowFloatingCTA(9110)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp26 = setShowFloatingCTA(19413)(noop.useContext(setShowFloatingCTA(11409)).channelId);
+  const tmp26 = setShowFloatingCTA(19427)(noop.useContext(setShowFloatingCTA(11410)).channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;

@@ -1,6 +1,6 @@
-// === Module 17633: FloatingApplyButton ===
+// === Module 17645: FloatingApplyButton ===
 
-// Module 17633 (FloatingApplyButton)
+// Module 17645 (FloatingApplyButton)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;

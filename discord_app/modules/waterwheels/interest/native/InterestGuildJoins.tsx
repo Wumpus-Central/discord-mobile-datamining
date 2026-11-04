@@ -1,6 +1,6 @@
-// === Module 19834: InterestGuildJoins ===
+// === Module 19848: InterestGuildJoins ===
 
-// Module 19834 (InterestGuildJoins)
+// Module 19848 (InterestGuildJoins)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);

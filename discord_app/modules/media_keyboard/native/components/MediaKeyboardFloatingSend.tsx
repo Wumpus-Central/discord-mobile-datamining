@@ -1,6 +1,6 @@
-// === Module 12788: MediaKeyboardFloatingSend ===
+// === Module 12789: MediaKeyboardFloatingSend ===
 
-// Module 12788 (MediaKeyboardFloatingSend)
+// Module 12789 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;

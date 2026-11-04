@@ -1,15 +1,15 @@
-// === Module 19738: GameConsoleManager ===
+// === Module 19752: GameConsoleManager ===
 
-// Module 19738 (GameConsoleManager)
+// Module 19752 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import Timers from "Timers" /* 4985 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12175 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 12179 */;
-import _modDef19739 from "module_19739" /* 19739 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12176 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 12180 */;
+import _modDef19753 from "module_19753" /* 19753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -225,8 +225,8 @@ const prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      closure_1_0(12175).disconnectRemote();
-      const obj = closure_1_0(12175);
+      closure_1_0(12176).disconnectRemote();
+      const obj = closure_1_0(12176);
       const obj3 = { title: null, body: null };
       const intl = closure_1_0(1113).intl;
       obj3.title = intl.string(closure_1_0(1113).t.wGMxr3);
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef19739(device, result, error);
+          const tmp8Result = _modDef19753(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

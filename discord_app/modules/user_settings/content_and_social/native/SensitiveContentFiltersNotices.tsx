@@ -1,11 +1,11 @@
-// === Module 16962: SensitiveContentFiltersNotices ===
+// === Module 16974: SensitiveContentFiltersNotices ===
 
-// Module 16962 (SensitiveContentFiltersNotices)
+// Module 16974 (SensitiveContentFiltersNotices)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import LinkingDefault from "Linking" /* 5843 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16821 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16833 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("AgeNoticeSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16954).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16966).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1113).t.EUo0yj,

@@ -1,6 +1,6 @@
-// === Module 11475: BlockConfirmationActionSheet ===
+// === Module 11476: BlockConfirmationActionSheet ===
 
-// Module 11475 (BlockConfirmationActionSheet)
+// Module 11476 (BlockConfirmationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -34,7 +34,7 @@ function BlockedInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(7629).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11474);
+const RestrictionConfirmationConstants = fn(11475);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_11, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_12, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: map1 } = RestrictionConfirmationConstants);
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_14, AnalyticEvents: closure_15, RelationshipTypes: closure_16 } = Constants);
@@ -256,7 +256,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         AnalyticsUtilsDefault.track(constants.USER_REMEDIATION_ACTION, { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" });
         const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        const tmp2 = asyncRequireImpl(11476, dependencyMap.paths);
+        const tmp2 = asyncRequireImpl(11477, dependencyMap.paths);
         obj3.openLazy(tmp2, application_id, { userId, channelId, onBlock, onSuccess, onIgnore, impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION }, "replaceTopSheet");
       };
       obj17.children = closure_18(tmp7(7116).TableRow, obj18);

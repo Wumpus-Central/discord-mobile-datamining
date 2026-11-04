@@ -1,12 +1,12 @@
-// === Module 16936: AccountBlockedUsersSetting ===
+// === Module 16948: AccountBlockedUsersSetting ===
 
-// Module 16936 (AccountBlockedUsersSetting)
+// Module 16948 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

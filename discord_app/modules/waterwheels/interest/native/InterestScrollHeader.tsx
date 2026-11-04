@@ -1,6 +1,6 @@
-// === Module 18676: InterestScrollHeader ===
+// === Module 18690: InterestScrollHeader ===
 
-// Module 18676 (InterestScrollHeader)
+// Module 18690 (InterestScrollHeader)
 import _mod1652 from "module_1652" /* 1652 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;

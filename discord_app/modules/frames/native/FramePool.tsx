@@ -1,12 +1,12 @@
-// === Module 19360: FramePool ===
+// === Module 19374: FramePool ===
 
-// Module 19360 (FramePool)
+// Module 19374 (FramePool)
 import initialize from "initialize" /* 504 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
-import makeIframeIdDefault from "makeIframeId" /* 11995 */;
-import WebViewContext from "WebViewContext" /* 12019 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12453 */;
+import makeIframeIdDefault from "makeIframeId" /* 11996 */;
+import WebViewContext from "WebViewContext" /* 12020 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6981 */;
@@ -22,7 +22,7 @@ function PooledFrame(frame) {
   [tmp2, tmp3] = iframeId(noop.useState(() => ({ iframeId: makeIframeIdDefault(), proxyTicket })), 2);
   dependencyMap = tmp3;
   if (tmp2.proxyTicket !== proxyTicket) {
-    const obj2 = { iframeId: proxyTicket(11995)(), proxyTicket };
+    const obj2 = { iframeId: proxyTicket(11996)(), proxyTicket };
     tmp3(obj2);
   }
   iframeId = tmp2.iframeId;
@@ -46,7 +46,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(12453).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(12454).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
   const tmp = iframeId(noop.useState(() => ({ iframeId: makeIframeIdDefault(), proxyTicket })), 2);
   if (syncExternalStore == null) {
@@ -54,7 +54,7 @@ function PooledFrame(frame) {
     syncExternalStore = obj4;
   }
   obj3.presentation = syncExternalStore;
-  return jsx(proxyTicket(19361), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(proxyTicket(19375), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
 const FramesConstants = fn(6982);

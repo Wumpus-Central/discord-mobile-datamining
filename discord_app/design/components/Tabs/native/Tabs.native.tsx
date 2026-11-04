@@ -1,6 +1,6 @@
-// === Module 12371: Tabs/Tabs ===
+// === Module 12372: Tabs/Tabs ===
 
-// Module 12371 (Tabs/Tabs)
+// Module 12372 (Tabs/Tabs)
 import nativeDefault from "native" /* 575 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import noop from "module_19" /* 19 */;
@@ -412,7 +412,7 @@ export function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return _undefined7(state(12372).TabItem, obj, id);
+      return _undefined7(state(12373).TabItem, obj, id);
     })
   }), items19);
   const memo1 = obj2.useMemo(() => {

@@ -1,6 +1,6 @@
-// === Module 18334: MessagesItemChannelContent ===
+// === Module 18348: MessagesItemChannelContent ===
 
-// Module 18334 (MessagesItemChannelContent)
+// Module 18348 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -16,9 +16,9 @@ import ActivityStatusDefault from "ActivityStatus" /* 10923 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10950 */;
 import _modDef11161 from "module_11161" /* 11161 */;
 import _modDef11260 from "module_11260" /* 11260 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 17544 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 18336 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 18338 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 17556 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 18350 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 18352 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6977 */;
 
@@ -139,7 +139,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(18335);
+  const tmpResult3 = channel(18349);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;

@@ -1,13 +1,13 @@
-// === Module 14590: ForumChannelEmptyState ===
+// === Module 14591: ForumChannelEmptyState ===
 
-// Module 14590 (ForumChannelEmptyState)
+// Module 14591 (ForumChannelEmptyState)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import shared from "shared" /* 5148 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import _modDef14591 from "module_14591" /* 14591 */;
 import _modDef14592 from "module_14592" /* 14592 */;
+import _modDef14593 from "module_14593" /* 14593 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,9 +33,9 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14591;
+    let tmp4Result = _modDef14592;
   } else {
-    tmp4Result = _modDef14592;
+    tmp4Result = _modDef14593;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

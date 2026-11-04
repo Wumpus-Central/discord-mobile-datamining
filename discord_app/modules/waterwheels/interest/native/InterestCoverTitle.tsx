@@ -1,6 +1,6 @@
-// === Module 18674: InterestCoverTitle ===
+// === Module 18688: InterestCoverTitle ===
 
-// Module 18674 (InterestCoverTitle)
+// Module 18688 (InterestCoverTitle)
 import Text_Text from "Text/Text" /* 5761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

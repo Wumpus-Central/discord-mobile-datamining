@@ -1,6 +1,6 @@
-// === Module 17361: VideoQuestModalCloseButton ===
+// === Module 17373: VideoQuestModalCloseButton ===
 
-// Module 17361 (VideoQuestModalCloseButton)
+// Module 17373 (VideoQuestModalCloseButton)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

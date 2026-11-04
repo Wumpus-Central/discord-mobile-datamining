@@ -1,6 +1,6 @@
-// === Module 12372: TabItem ===
+// === Module 12373: TabItem ===
 
-// Module 12372 (TabItem)
+// Module 12373 (TabItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;

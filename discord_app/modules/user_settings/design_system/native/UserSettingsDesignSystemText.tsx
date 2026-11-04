@@ -1,6 +1,6 @@
-// === Module 18003: UserSettingsDesignSystemText ===
+// === Module 18015: UserSettingsDesignSystemText ===
 
-// Module 18003 (UserSettingsDesignSystemText)
+// Module 18015 (UserSettingsDesignSystemText)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5732 */;
 import Text_Text from "Text/Text" /* 5761 */;

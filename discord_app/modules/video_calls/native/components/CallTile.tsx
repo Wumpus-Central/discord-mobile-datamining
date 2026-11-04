@@ -1,6 +1,6 @@
-// === Module 12233: CallTile ===
+// === Module 12234: CallTile ===
 
-// Module 12233 (CallTile)
+// Module 12234 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,14 +8,14 @@ import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5378 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
-import RevealProvider from "RevealProvider" /* 11897 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12234 */;
-import _modDef12239 from "module_12239" /* 12239 */;
+import RevealProvider from "RevealProvider" /* 11898 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12235 */;
 import _modDef12240 from "module_12240" /* 12240 */;
 import _modDef12241 from "module_12241" /* 12241 */;
 import _modDef12242 from "module_12242" /* 12242 */;
 import _modDef12243 from "module_12243" /* 12243 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 12244 */;
+import _modDef12244 from "module_12244" /* 12244 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 12245 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -32,7 +32,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "sa", borderRadius: false },
+      style: { aspectRatio: "dispatch", borderRadius: false },
       disableTransition: true,
       onPress() {
             return closure_1_8();
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12239;
+    let tmp3 = _modDef12240;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12240;
-    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12241;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12242;
-    } else if (constants2.QUEST === voicePlatform) {
+    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = _modDef12243;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef12244;
     }
   }
   let tmp14 = null;

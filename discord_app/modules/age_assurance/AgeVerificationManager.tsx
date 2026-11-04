@@ -1,13 +1,13 @@
-// === Module 19661: AgeVerificationManager ===
+// === Module 19675: AgeVerificationManager ===
 
-// Module 19661 (AgeVerificationManager)
+// Module 19675 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 6698 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8312 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13572 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13573 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6997 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MessageStore from "MessageStore" /* 6196 */;

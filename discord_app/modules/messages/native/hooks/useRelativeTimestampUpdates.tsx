@@ -1,6 +1,6 @@
-// === Module 11764: useRelativeTimestampUpdates ===
+// === Module 11765: useRelativeTimestampUpdates ===
 
-// Module 11764 (useRelativeTimestampUpdates)
+// Module 11765 (useRelativeTimestampUpdates)
 import DurationsDefault from "Durations" /* 1089 */;
 import MarkupTypes from "MarkupTypes" /* 6167 */;
 import TimestampUtils from "TimestampUtils" /* 8741 */;

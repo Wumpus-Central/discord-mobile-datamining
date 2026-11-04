@@ -1,6 +1,6 @@
-// === Module 17935: PremiumTrialOfferActionSheetContent ===
+// === Module 17947: PremiumTrialOfferActionSheetContent ===
 
-// Module 17935 (PremiumTrialOfferActionSheetContent)
+// Module 17947 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
@@ -9,10 +9,10 @@ import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import FolderIcon from "FolderIcon" /* 8787 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
-import UserIcon from "UserIcon" /* 12322 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14825 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17936 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 17940 */;
+import UserIcon from "UserIcon" /* 12323 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14826 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17948 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 17952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 20274: NotificationSettingsModal ===
+// === Module 20288: NotificationSettingsModal ===
 
-// Module 20274 (NotificationSettingsModal)
+// Module 20288 (NotificationSettingsModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -28,14 +28,14 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11256 */;
 import MutedUntilTextDefault from "MutedUntilText" /* 11261 */;
 import notifications_NotificationUtils from "notifications/NotificationUtils" /* 11262 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11672 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11673 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7416 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5366 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19907 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19921 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -504,7 +504,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(20275), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20289), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };

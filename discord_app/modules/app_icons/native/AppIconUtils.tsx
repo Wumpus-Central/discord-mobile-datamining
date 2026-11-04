@@ -1,13 +1,13 @@
-// === Module 15572: AppIconUtils ===
+// === Module 15573: AppIconUtils ===
 
-// Module 15572 (AppIconUtils)
+// Module 15573 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import useMountEffectDefault from "useMountEffect" /* 5729 */;
 import openUserSettings from "openUserSettings" /* 7703 */;
 import AppIconTypes from "AppIconTypes" /* 10160 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15573 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ let closure_16 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

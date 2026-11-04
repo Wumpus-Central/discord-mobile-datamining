@@ -1,6 +1,6 @@
-// === Module 13023: ChatInputActionButton ===
+// === Module 13024: ChatInputActionButton ===
 
-// Module 13023 (ChatInputActionButton)
+// Module 13024 (ChatInputActionButton)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5732 */;
 import Pressables from "Pressables" /* 7121 */;

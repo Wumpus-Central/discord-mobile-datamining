@@ -1,14 +1,14 @@
-// === Module 11424: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11425: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 11424 (ChatViewWrapperAnimatedKeyboard)
+// Module 11425 (ChatViewWrapperAnimatedKeyboard)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5378 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5746 */;
 import LayerScope from "LayerScope" /* 5748 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11425 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11437 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11439 */;
-import StickyWrapper from "StickyWrapper" /* 11440 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11426 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11438 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11440 */;
+import StickyWrapper from "StickyWrapper" /* 11441 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

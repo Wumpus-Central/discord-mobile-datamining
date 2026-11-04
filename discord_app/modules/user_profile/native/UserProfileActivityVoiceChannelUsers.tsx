@@ -1,9 +1,9 @@
-// === Module 15093: UserProfileActivityVoiceChannelUsers ===
+// === Module 15094: UserProfileActivityVoiceChannelUsers ===
 
-// Module 15093 (UserProfileActivityVoiceChannelUsers)
+// Module 15094 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1113 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11600 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11601 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5895 */;
 

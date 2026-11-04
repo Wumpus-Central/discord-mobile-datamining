@@ -1,9 +1,9 @@
-// === Module 11512: usePinotMemberCoachmark ===
+// === Module 11513: usePinotMemberCoachmark ===
 
-// Module 11512 (usePinotMemberCoachmark)
+// Module 11513 (usePinotMemberCoachmark)
 import dismissible_content from "dismissible_content" /* 4974 */;
-import useIsPinotMemberCoachmarkEligible from "useIsPinotMemberCoachmarkEligible" /* 11513 */;
-import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11516 */;
+import useIsPinotMemberCoachmarkEligible from "useIsPinotMemberCoachmarkEligible" /* 11514 */;
+import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotMemberCoachmark.tsx");
 
 export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
-  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11513).useIsPinotMemberCoachmarkEligible(channel, mobile_member_coachmark);
-  let obj = pinotPromotableChannelId(11513);
-  pinotPromotableChannelId = pinotPromotableChannelId(11508).usePinotPromotableChannelId(channel, mobile_member_coachmark);
-  const obj2 = pinotPromotableChannelId(11508);
+  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11514).useIsPinotMemberCoachmarkEligible(channel, mobile_member_coachmark);
+  let obj = pinotPromotableChannelId(11514);
+  pinotPromotableChannelId = pinotPromotableChannelId(11509).usePinotPromotableChannelId(channel, mobile_member_coachmark);
+  const obj2 = pinotPromotableChannelId(11509);
   if (isPinotMemberCoachmarkEligible) {
     items = [tmp(4974).DismissibleContent.PINOT_MEMBER_COACHMARK];
     let items1 = items;

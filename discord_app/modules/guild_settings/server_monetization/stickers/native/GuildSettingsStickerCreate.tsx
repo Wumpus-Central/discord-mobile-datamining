@@ -1,6 +1,6 @@
-// === Module 20014: GuildSettingsStickerCreate ===
+// === Module 20028: GuildSettingsStickerCreate ===
 
-// Module 20014 (GuildSettingsStickerCreate)
+// Module 20028 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
@@ -10,7 +10,7 @@ import useInitialValueDefault from "useInitialValue" /* 5749 */;
 import EmojiDefault from "Emoji" /* 7436 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
 import StickerDefault from "Sticker" /* 10460 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11593 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -212,17 +212,17 @@ export default function GuildSettingsStickerCreate(stickerId) {
                   c4 = 0;
                   closure_1_18.current = false;
                   closure_1_19(false);
-                  const result = closure_2_0(20015).showGuildSettingsStickerError();
+                  const result = closure_2_0(20029).showGuildSettingsStickerError();
                   c5 = 3;
-                  closure_2_0(20015);
+                  closure_2_0(20029);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
                   v2();
-                  const result1 = closure_2_0(20015).showGuildSettingsStickerSuccess();
+                  const result1 = closure_2_0(20029).showGuildSettingsStickerSuccess();
                   c4 = 0;
-                  closure_2_0(20015);
+                  closure_2_0(20029);
                 }
                 return value;
               });
@@ -485,7 +485,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp35Result = tmp35(first, obj18);
   } else {
-    tmp35Result = tmp35(tmp34(20016).StickerPlusIcon, { size: "lg" });
+    tmp35Result = tmp35(tmp34(20030).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp35Result;
   items4[1] = onPressEmoji(stickerId(7121).PressableHighlight, obj16);

@@ -1,8 +1,8 @@
-// === Module 18993: GuildTextChannelRow ===
+// === Module 19007: GuildTextChannelRow ===
 
-// Module 18993 (GuildTextChannelRow)
-import SearchUtils from "SearchUtils" /* 14110 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18981 */;
+// Module 19007 (GuildTextChannelRow)
+import SearchUtils from "SearchUtils" /* 14111 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 18995 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

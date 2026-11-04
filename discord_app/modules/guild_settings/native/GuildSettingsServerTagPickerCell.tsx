@@ -1,6 +1,6 @@
-// === Module 20026: GuildSettingsServerTagPickerCell ===
+// === Module 20040: GuildSettingsServerTagPickerCell ===
 
-// Module 20026 (GuildSettingsServerTagPickerCell)
+// Module 20040 (GuildSettingsServerTagPickerCell)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
 import noop from "module_19" /* 19 */;

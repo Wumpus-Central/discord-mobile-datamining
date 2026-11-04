@@ -1,6 +1,6 @@
-// === Module 18126: CollectiblesProgressiveImage ===
+// === Module 18138: CollectiblesProgressiveImage ===
 
-// Module 18126 (CollectiblesProgressiveImage)
+// Module 18138 (CollectiblesProgressiveImage)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5378 */;
 import FastImageDefault from "FastImage" /* 5851 */;

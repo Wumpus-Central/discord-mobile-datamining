@@ -1,9 +1,9 @@
-// === Module 19589: MobilePhoneShareIcon ===
+// === Module 19603: MobilePhoneShareIcon ===
 
-// Module 19589 (MobilePhoneShareIcon)
+// Module 19603 (MobilePhoneShareIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod19590 from "module_19590" /* 19590 */;
+import _mod19604 from "module_19604" /* 19604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MobilePhoneShareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19590, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19604, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

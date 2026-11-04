@@ -1,9 +1,9 @@
-// === Module 13583: PhoneIcon ===
+// === Module 13584: PhoneIcon ===
 
-// Module 13583 (PhoneIcon)
+// Module 13584 (PhoneIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod13584 from "module_13584" /* 13584 */;
+import _mod13585 from "module_13585" /* 13585 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PhoneIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13584, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13585, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

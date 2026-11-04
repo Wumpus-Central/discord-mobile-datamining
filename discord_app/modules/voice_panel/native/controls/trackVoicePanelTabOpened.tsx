@@ -1,6 +1,6 @@
-// === Module 19559: trackVoicePanelTabOpened ===
+// === Module 19573: trackVoicePanelTabOpened ===
 
-// Module 19559 (trackVoicePanelTabOpened)
+// Module 19573 (trackVoicePanelTabOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ReadStateStore from "ReadStateStore" /* 6977 */;
 

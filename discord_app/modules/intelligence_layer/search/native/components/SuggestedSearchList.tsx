@@ -1,8 +1,8 @@
-// === Module 18960: SuggestedSearchList ===
+// === Module 18974: SuggestedSearchList ===
 
-// Module 18960 (SuggestedSearchList)
+// Module 18974 (SuggestedSearchList)
 import nativeDefault from "native" /* 575 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18962 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18976 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

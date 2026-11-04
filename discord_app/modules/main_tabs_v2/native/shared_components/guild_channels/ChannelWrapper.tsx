@@ -1,6 +1,6 @@
-// === Module 18768: ChannelWrapper ===
+// === Module 18782: ChannelWrapper ===
 
-// Module 18768 (ChannelWrapper)
+// Module 18782 (ChannelWrapper)
 import ChannelListLayout from "ChannelListLayout" /* 11227 */;
 import noop from "module_19" /* 19 */;
 

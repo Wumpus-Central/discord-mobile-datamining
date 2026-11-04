@@ -1,6 +1,6 @@
-// === Module 14058: VocalChannelJoinButton ===
+// === Module 14059: VocalChannelJoinButton ===
 
-// Module 14058 (VocalChannelJoinButton)
+// Module 14059 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
@@ -87,9 +87,9 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     tmp12 = tmp8;
   }
   const tmp3Result = channel(563);
-  const connectedUserLimit = channel(14059).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(14059);
-  let connectedUserLimitFormatted = channel(14059).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(14060).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(14060);
+  let connectedUserLimitFormatted = channel(14060).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -158,5 +158,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(14059);
+  const tmp3Result4 = channel(14060);
 });

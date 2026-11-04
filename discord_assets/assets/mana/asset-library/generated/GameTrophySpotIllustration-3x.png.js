@@ -1,6 +1,6 @@
-// === Module 17297: ? ===
+// === Module 17309: ? ===
 
-// Module 17297
+// Module 17309
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameTrophySpotIllustration-3x.png.js");

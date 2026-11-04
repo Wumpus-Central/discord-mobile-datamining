@@ -1,17 +1,17 @@
-// === Module 16606: conjureAppPictureInPictureFrames ===
+// === Module 16618: conjureAppPictureInPictureFrames ===
 
-// Module 16606 (conjureAppPictureInPictureFrames)
+// Module 16618 (conjureAppPictureInPictureFrames)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12288 */;
-import closeFrameDefault from "closeFrame" /* 14608 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16602 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16605 */;
-import isLeftBuilderPreviewFrameDefault from "isLeftBuilderPreviewFrame" /* 16607 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 12289 */;
+import closeFrameDefault from "closeFrame" /* 14609 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16614 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16617 */;
+import isLeftBuilderPreviewFrameDefault from "isLeftBuilderPreviewFrame" /* 16619 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import FramesStore from "FramesStore" /* 6981 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;

@@ -1,6 +1,6 @@
-// === Module 15277: MobileOrbCheckoutFlow ===
+// === Module 15278: MobileOrbCheckoutFlow ===
 
-// Module 15277 (MobileOrbCheckoutFlow)
+// Module 15278 (MobileOrbCheckoutFlow)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/checkout/native/MobileOrbCheckoutFlow.tsx");

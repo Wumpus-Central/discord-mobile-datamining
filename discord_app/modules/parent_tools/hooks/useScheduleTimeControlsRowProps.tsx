@@ -1,6 +1,6 @@
-// === Module 17049: useScheduleTimeControlsRowProps ===
+// === Module 17061: useScheduleTimeControlsRowProps ===
 
-// Module 17049 (useScheduleTimeControlsRowProps)
+// Module 17061 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;

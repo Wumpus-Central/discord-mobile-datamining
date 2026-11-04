@@ -1,13 +1,13 @@
-// === Module 15401: InAppReportsSettingsUpsellsElement ===
+// === Module 15402: InAppReportsSettingsUpsellsElement ===
 
-// Module 15401 (InAppReportsSettingsUpsellsElement)
+// Module 15402 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 575 */;
 import useMountEffectDefault from "useMountEffect" /* 5729 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
 import SettingsIcon from "SettingsIcon" /* 7701 */;
 import openUserSettings from "openUserSettings" /* 7703 */;
 import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8496 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15395 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

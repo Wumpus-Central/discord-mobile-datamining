@@ -1,6 +1,6 @@
-// === Module 17483: SidechainCompressionSetting ===
+// === Module 17495: SidechainCompressionSetting ===
 
-// Module 17483 (SidechainCompressionSetting)
+// Module 17495 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
@@ -8,7 +8,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
 const Features = fn(5902).Features;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,18 +1,18 @@
-// === Module 19908: VerificationModal ===
+// === Module 19922: VerificationModal ===
 
-// Module 19908 (VerificationModal)
+// Module 19922 (VerificationModal)
 import Link from "Link" /* 1500 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PhoneVerificationStore from "PhoneVerificationStore" /* 19909 */;
+import PhoneVerificationStore from "PhoneVerificationStore" /* 19923 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
-  const obj = { Illustration: navigation(19910).VerifyPhone, title: null, body: null, children: null };
+  const obj = { Illustration: navigation(19924).VerifyPhone, title: null, body: null, children: null };
   const intl = navigation(1113).intl;
   obj.title = intl.string(navigation(1113).t.KLnLIP);
   const intl2 = navigation(1113).intl;
@@ -37,7 +37,7 @@ function PhoneThenEmailInterstitial(navigation) {
   };
   obj2.children = jsx(navigation(5768).Button, { text: null, onPress: null });
   obj.children = <View style={closure_12().button}>{null}</View>;
-  return jsx(navigation(1187).EmptyState, { Illustration: navigation(19910).VerifyPhone, title: null, body: null, children: null });
+  return jsx(navigation(1187).EmptyState, { Illustration: navigation(19924).VerifyPhone, title: null, body: null, children: null });
 }
 const View = fn(17).View;
 const Constants = fn(1072);
@@ -110,7 +110,7 @@ export default function VerificationModal() {
         return closure_1_11(stateFromStores(7698).HeaderActionButton, obj);
       };
       obj8.render = function render() {
-        return closure_1_11(closure_1_1(19914), {});
+        return closure_1_11(closure_1_1(19928), {});
       };
       obj[constants.OVERVIEW] = obj8;
       const obj11 = { impressionName: stateFromStores(1260).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -174,9 +174,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               closure_0 = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F142547 */ function() { ... });
+              closure_2 = closure_1_3(/* F143110 */ function() { ... });
               obj.onSubmit = function onSubmit() { ... };
-              closure_1 = closure_1_3(/* F142549 */ function() { ... });
+              closure_1 = closure_1_3(/* F143112 */ function() { ... });
               obj.onSuccess = function onSuccess() { ... };
               closure_0.push(constants.VERIFY_PASSWORD, obj);
             }
@@ -267,7 +267,7 @@ export default function VerificationModal() {
         return closure_1_11(stateFromStores(7698).HeaderActionButton, obj);
       };
       obj8.render = function render() {
-        return closure_1_11(closure_1_1(19914), {});
+        return closure_1_11(closure_1_1(19928), {});
       };
       obj[constants.OVERVIEW] = obj8;
       const obj11 = { impressionName: stateFromStores(1260).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -331,9 +331,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               closure_0 = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F142547 */ function() { ... });
+              closure_2 = closure_1_3(/* F143110 */ function() { ... });
               obj.onSubmit = function onSubmit() { ... };
-              closure_1 = closure_1_3(/* F142549 */ function() { ... });
+              closure_1 = closure_1_3(/* F143112 */ function() { ... });
               obj.onSuccess = function onSuccess() { ... };
               closure_0.push(constants.VERIFY_PASSWORD, obj);
             }

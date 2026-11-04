@@ -1,10 +1,10 @@
-// === Module 17249: HexagonCampaignThemeLegal ===
+// === Module 17261: HexagonCampaignThemeLegal ===
 
-// Module 17249 (HexagonCampaignThemeLegal)
+// Module 17261 (HexagonCampaignThemeLegal)
 import nativeDefault from "native" /* 575 */;
 import _modDef4412 from "module_4412" /* 4412 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16718 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: tmp7(17250), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const obj4 = { source: tmp7(17262), style: tmp.logo, resizeMode: "contain", accessible: false };
     const items1 = [closure_6(tmp7(5851), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);

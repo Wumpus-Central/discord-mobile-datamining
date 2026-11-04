@@ -1,15 +1,15 @@
-// === Module 12184: GameConsoleDeviceListActionSheet ===
+// === Module 12185: GameConsoleDeviceListActionSheet ===
 
-// Module 12184 (GameConsoleDeviceListActionSheet)
+// Module 12185 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12175 */;
-import _modDef12185 from "module_12185" /* 12185 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12176 */;
 import _modDef12186 from "module_12186" /* 12186 */;
+import _modDef12187 from "module_12187" /* 12187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef12185 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef12186 };
   items = [closure_1_11(FastImageDefault, obj2), closure_1_11(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "body-md/semibold", children: children.name })];
   obj.children = items;
   return application_id(metroImportDefault, obj);
@@ -43,7 +43,7 @@ function DeviceOption(children) {
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef12186, style: tmp.emptyArt };
+  const obj2 = { source: _modDef12187, style: tmp.emptyArt };
   items = [closure_1_11(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -113,7 +113,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(12177).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(12178).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {

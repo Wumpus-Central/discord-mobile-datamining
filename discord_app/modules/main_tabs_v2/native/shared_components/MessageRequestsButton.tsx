@@ -1,13 +1,13 @@
-// === Module 18327: MessageRequestsButton ===
+// === Module 18341: MessageRequestsButton ===
 
-// Module 18327 (MessageRequestsButton)
+// Module 18341 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import IconButton from "IconButton" /* 8168 */;
 import _modDef9333 from "module_9333" /* 9333 */;
-import IconActionButton from "IconActionButton" /* 14766 */;
-import _mod18328 from "module_18328" /* 18328 */;
+import IconActionButton from "IconActionButton" /* 14767 */;
+import _mod18342 from "module_18342" /* 18342 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 6991 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6992 */;
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod18328.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod18342.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

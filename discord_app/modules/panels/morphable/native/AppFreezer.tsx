@@ -1,6 +1,6 @@
-// === Module 18855: AppFreezer ===
+// === Module 18869: AppFreezer ===
 
-// Module 18855 (AppFreezer)
+// Module 18869 (AppFreezer)
 import Suspender from "Suspender" /* 6124 */;
 import NativeViewDefault from "NativeView" /* 7101 */;
 import noop from "module_19" /* 19 */;

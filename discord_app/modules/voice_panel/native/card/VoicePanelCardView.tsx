@@ -1,13 +1,13 @@
-// === Module 19508: VoicePanelCardView ===
+// === Module 19522: VoicePanelCardView ===
 
-// Module 19508 (VoicePanelCardView)
+// Module 19522 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
 import native from "native" /* 5207 */;
 import Suspender from "Suspender" /* 6124 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19509 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19523 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
@@ -270,11 +270,11 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19391).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11414).EDGE_GUTTER;
 const isUserParticipant = fn(5815).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};

@@ -1,13 +1,13 @@
-// === Module 19718: FeedbackManager ===
+// === Module 19732: FeedbackManager ===
 
-// Module 19718 (FeedbackManager)
+// Module 19732 (FeedbackManager)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8025 */;
-import FeedbackManager from "feedback/FeedbackManager" /* 19719 */;
+import FeedbackManager from "feedback/FeedbackManager" /* 19733 */;
 
 require = fn;
 const FeedbackType = fn(10336).FeedbackType;

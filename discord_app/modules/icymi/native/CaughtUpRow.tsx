@@ -1,6 +1,6 @@
-// === Module 18846: CaughtUpRow ===
+// === Module 18860: CaughtUpRow ===
 
-// Module 18846 (CaughtUpRow)
+// Module 18860 (CaughtUpRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = module_1652.createAnimatedComponent(fn(5761).Text);
-const createICYMIStyles = fn(18783);
+const createICYMIStyles = fn(18797);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -92,7 +92,7 @@ export default function ExploreServersRow(visible) {
             const obj6 = v1(9065);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18800).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18814).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {

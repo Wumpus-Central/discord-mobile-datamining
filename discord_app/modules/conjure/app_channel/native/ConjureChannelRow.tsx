@@ -1,12 +1,12 @@
-// === Module 18514: ConjureChannelRow ===
+// === Module 18528: ConjureChannelRow ===
 
-// Module 18514 (ConjureChannelRow)
+// Module 18528 (ConjureChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13232 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 14154 */;
-import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 18515 */;
+import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13233 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 14155 */;
+import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 18529 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,10 +32,10 @@ export default function ConjureChannelRow(selected) {
   }, items);
   ({ hasUnread, badgeCount } = useConjureGuildUnreadSummaryDefault(id));
   if (true === selected) {
-    let DEFAULT = id(14154).ChannelModes.SELECTED;
+    let DEFAULT = id(14155).ChannelModes.SELECTED;
     let tmp7 = id;
   } else {
-    const ChannelModes = id(14154).ChannelModes;
+    const ChannelModes = id(14155).ChannelModes;
     if (hasUnread) {
       DEFAULT = ChannelModes.UNREAD_IMPORTANT;
       tmp7 = tmp6;
@@ -55,9 +55,9 @@ export default function ConjureChannelRow(selected) {
   const intl2 = tmp7(1113).intl;
   obj2.name = intl2.string(_modDef3995.uk6jhJ);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp7(14154).BaseChannelName, { name: null, mode: null });
+  obj.name = jsx(tmp7(14155).BaseChannelName, { name: null, mode: null });
   const tmp3Result = BaseChannelItemDefault;
-  obj.icon = jsx(tmp7(14154).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12320).MagicWandIcon });
+  obj.icon = jsx(tmp7(14155).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12321).MagicWandIcon });
   let tmp9Result = null;
   if (badgeCount > 0) {
     const obj4 = { style: tmp.badge, children: null };

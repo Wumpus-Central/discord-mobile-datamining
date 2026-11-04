@@ -1,12 +1,12 @@
-// === Module 13428: AcceptStep ===
+// === Module 13429: AcceptStep ===
 
-// Module 13428 (AcceptStep)
+// Module 13429 (AcceptStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13420);
+const GameOrganizationJoinModalConstants = fn(13421);
 ({ closeGameOrganizationJoinModal: closure_6, GameOrganizationJoinScenes: metroImportDefault } = GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -116,7 +116,7 @@ export function AcceptStep(code) {
     }
   };
   const tmp = closure_10();
-  const tmp4 = character(13422)(code);
+  const tmp4 = character(13423)(code);
   dependencyMap = code(1499).useNavigation();
   let obj = code(1499);
   [tmp7, c3] = noop.useState(false);
@@ -137,14 +137,14 @@ export function AcceptStep(code) {
     obj4.children = intl4.formatToPlainString(tmp2(2533).WmxMAI, obj7);
     items = [closure_8(tmp5(5761).Text, obj4), ];
     const obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_8(tmp2(13429), obj8);
+    items[1] = closure_8(tmp2(13430), obj8);
     obj3.children = items;
     const items1 = [closure_9(tmp5(6162).Stack, obj3), ];
     const obj9 = { spacing: tmp2(575).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(1113).intl;
     obj10.children = intl.string(tmp2(2533).yFqGy8);
-    const items2 = [closure_8(tmp5(5761).Text, obj10), closure_8(tmp2(13430), {})];
+    const items2 = [closure_8(tmp5(5761).Text, obj10), closure_8(tmp2(13431), {})];
     obj9.children = items2;
     items1[1] = closure_9(tmp5(6162).Stack, obj9);
     obj2.children = items1;
@@ -176,7 +176,7 @@ export function AcceptStep(code) {
     items4[1] = closure_8(tmp5(5768).Button, obj14);
     obj12.children = items4;
     obj11.children = closure_9(tmp5(6902).ButtonGroup, obj12);
-    items3[1] = closure_8(tmp5(13427).ModalFooter, obj11);
+    items3[1] = closure_8(tmp5(13428).ModalFooter, obj11);
     obj5.children = items3;
     return closure_9(tmp5(8112).ModalScreen, obj5);
   }

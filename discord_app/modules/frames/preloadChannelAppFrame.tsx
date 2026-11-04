@@ -1,6 +1,6 @@
-// === Module 18524: preloadChannelAppFrame ===
+// === Module 18538: preloadChannelAppFrame ===
 
-// Module 18524 (preloadChannelAppFrame)
+// Module 18538 (preloadChannelAppFrame)
 import getURLForApplicationDefault from "getURLForApplication" /* 5806 */;
 import AgeGateUtils from "AgeGateUtils" /* 6869 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6888 */;

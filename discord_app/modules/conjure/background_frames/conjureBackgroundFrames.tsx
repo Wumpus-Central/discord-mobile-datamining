@@ -1,14 +1,14 @@
-// === Module 16601: conjureBackgroundFrames ===
+// === Module 16613: conjureBackgroundFrames ===
 
-// Module 16601 (conjureBackgroundFrames)
+// Module 16613 (conjureBackgroundFrames)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6984 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
 import leaveFrame from "leaveFrame" /* 11125 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 16528 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16602 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 16604 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16540 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16614 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 16616 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6981 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

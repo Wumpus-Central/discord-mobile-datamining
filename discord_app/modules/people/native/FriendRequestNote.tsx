@@ -1,8 +1,8 @@
-// === Module 15231: FriendRequestNote ===
+// === Module 15232: FriendRequestNote ===
 
-// Module 15231 (FriendRequestNote)
+// Module 15232 (FriendRequestNote)
 import nativeDefault from "native" /* 575 */;
-import PeopleListTracking from "PeopleListTracking" /* 15233 */;
+import PeopleListTracking from "PeopleListTracking" /* 15234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;

@@ -1,10 +1,10 @@
-// === Module 11887: GamesActionCreators ===
+// === Module 11888: GamesActionCreators ===
 
-// Module 11887 (GamesActionCreators)
+// Module 11888 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LinkingDefault from "Linking" /* 5843 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11889 */;
-import fetchDetectableGamesDefault from "fetchDetectableGames" /* 11890 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11890 */;
+import fetchDetectableGamesDefault from "fetchDetectableGames" /* 11891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -105,7 +105,7 @@ function fetchJoinSecret(applicationId, arg1) {
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: closure_6, ActivityFlags: metroImportDefault } = Constants);
-const ActivityIntent = fn(11888).ActivityIntent;
+const ActivityIntent = fn(11889).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

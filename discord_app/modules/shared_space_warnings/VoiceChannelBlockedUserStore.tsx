@@ -1,9 +1,9 @@
-// === Module 15851: VoiceChannelBlockedUserStore ===
+// === Module 15864: VoiceChannelBlockedUserStore ===
 
-// Module 15851 (VoiceChannelBlockedUserStore)
+// Module 15864 (VoiceChannelBlockedUserStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import handleBlockedOrIgnoredUserVoiceChannelJoinDefault from "handleBlockedOrIgnoredUserVoiceChannelJoin" /* 15852 */;
+import handleBlockedOrIgnoredUserVoiceChannelJoinDefault from "handleBlockedOrIgnoredUserVoiceChannelJoin" /* 15865 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 

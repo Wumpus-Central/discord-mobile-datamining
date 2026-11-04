@@ -1,10 +1,10 @@
-// === Module 15188: useDisplayableBoardWidgets ===
+// === Module 15189: useDisplayableBoardWidgets ===
 
-// Module 15188 (useDisplayableBoardWidgets)
+// Module 15189 (useDisplayableBoardWidgets)
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7917 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15166 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

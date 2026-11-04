@@ -1,6 +1,6 @@
-// === Module 19487: VoicePanelSettingsOverview ===
+// === Module 19501: VoicePanelSettingsOverview ===
 
-// Module 19487 (VoicePanelSettingsOverview)
+// Module 19501 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -23,15 +23,15 @@ import FormComponents from "FormComponents" /* 9377 */;
 import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9391 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9414 */;
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9429 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 12135 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14950 */;
-import WrenchIcon from "WrenchIcon" /* 17798 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19485 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19488 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 12136 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14951 */;
+import WrenchIcon from "WrenchIcon" /* 17810 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19499 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19502 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11901 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11902 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -239,7 +239,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19489, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19503, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

@@ -1,14 +1,14 @@
-// === Module 11409: VoicePanelStateContext ===
+// === Module 11410: VoicePanelStateContext ===
 
-// Module 11409 (VoicePanelStateContext)
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11412 */;
-import VoicePanelPIPHandoffDefault from "VoicePanelPIPHandoff" /* 11418 */;
+// Module 11410 (VoicePanelStateContext)
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11413 */;
+import VoicePanelPIPHandoffDefault from "VoicePanelPIPHandoff" /* 11419 */;
 import noop from "module_19" /* 19 */;
 
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11408);
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelControlsConstants = fn(11409);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
-const obj = { channelId: "context-not-initialized", channelType: "filter", connected: "r", contentDimensions: false, controlsSpecs: null, committedMode: false, dismissPanel: null, dockContentSwap: null, dockEntryProgress: null, dockHeight: null, dockJoinMorphOrigin: null, dockMinimizeProgress: null, dockPressProgress: null, dockPressed: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, handleDockSheetLayout: null, hideControls: null, isCall: null, isDockConnected: null, isDockEnabled: null, isDockExpanding: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: "http://dis.gd/contact", refreshIdleTimeout: "https://api.krisp.ai/v2/resource/link/discord", safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: "http://dis.gd/importantupdates", setIsFocusedVideoZoomed: "https://dis.gd/phish", setMode: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps", setShowFloatingCTA: "https://support.discord.com/hc/en-us/articles/10394859532823", sheetExitProgress: null, showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101", showFloatingCTA: null, streamOutputSinkStack: "\u{1F426}", windowDimensions: 6, wrapperDimensions: 270, useReducedMotion: "/developers", wrapperOffset: null, pipHandoff: "/developers/teams" };
+const obj = { channelId: "context-not-initialized", channelType: "find", connected: "r", contentDimensions: false, controlsSpecs: null, committedMode: false, dismissPanel: null, dockContentSwap: null, dockEntryProgress: null, dockHeight: null, dockJoinMorphOrigin: null, dockMinimizeProgress: null, dockPressProgress: null, dockPressed: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, handleDockSheetLayout: null, hideControls: null, isCall: null, isDockConnected: null, isDockEnabled: null, isDockExpanding: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: "http://dis.gd/contact", refreshIdleTimeout: "https://api.krisp.ai/v2/resource/link/discord", safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: "http://dis.gd/importantupdates", setIsFocusedVideoZoomed: "https://dis.gd/phish", setMode: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps", setShowFloatingCTA: "https://support.discord.com/hc/en-us/articles/10394859532823", sheetExitProgress: null, showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101", showFloatingCTA: null, streamOutputSinkStack: "\u{1F428}", windowDimensions: 6, wrapperDimensions: 256, useReducedMotion: "/developers", wrapperOffset: null, pipHandoff: "/developers/teams" };
 let ReanimatedHelperTypes = fn(7378);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7378);
@@ -35,7 +35,7 @@ ReanimatedHelperTypes = fn(7378);
 obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7378);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
-obj.dismissToPIPGestureRef = { current: "r" };
+obj.dismissToPIPGestureRef = { current: "Array" };
 ReanimatedHelperTypes = fn(7378);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7378);
@@ -62,7 +62,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(7378);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(7378);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11411).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11412).MorphablePanelModes.PANEL);
 const obj2 = { mode: VoicePanelControlsModes.FLOATING_DEFAULT, locked: false, height: CONTROLS_HEIGHT, pushToTalk: false };
 const tmp3 = new VoicePanelCardLayoutManagerDefault("invalid");
 obj.mountedCards = new Set();

@@ -1,10 +1,10 @@
-// === Module 12417: conjureChatMoreSections ===
+// === Module 12418: conjureChatMoreSections ===
 
-// Module 12417 (conjureChatMoreSections)
+// Module 12418 (conjureChatMoreSections)
 import conjureProjectMute from "conjureProjectMute" /* 11057 */;
-import conjureProjectActions from "conjureProjectActions" /* 12422 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12424 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12428 */;
+import conjureProjectActions from "conjureProjectActions" /* 12423 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12425 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12429 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 import size from "module_2" /* 2 */;
 

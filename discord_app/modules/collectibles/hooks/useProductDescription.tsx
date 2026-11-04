@@ -1,6 +1,6 @@
-// === Module 15262: useProductDescription ===
+// === Module 15263: useProductDescription ===
 
-// Module 15262 (useProductDescription)
+// Module 15263 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1113 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;

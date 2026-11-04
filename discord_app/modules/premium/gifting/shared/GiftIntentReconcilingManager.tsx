@@ -1,11 +1,11 @@
-// === Module 19865: GiftIntentReconcilingManager ===
+// === Module 19879: GiftIntentReconcilingManager ===
 
-// Module 19865 (GiftIntentReconcilingManager)
+// Module 19879 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10789 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10790 */;
 import EphemeralMessageStore from "EphemeralMessageStore" /* 6197 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

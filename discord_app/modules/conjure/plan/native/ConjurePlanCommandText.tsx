@@ -1,6 +1,6 @@
-// === Module 12959: ConjurePlanCommandText ===
+// === Module 12960: ConjurePlanCommandText ===
 
-// Module 12959 (ConjurePlanCommandText)
+// Module 12960 (ConjurePlanCommandText)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
@@ -37,9 +37,9 @@ export { ConjurePlanCommandMention };
 export function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(12948).useConjurePlanCommandPattern(commandNames);
-  const obj = size(12948);
-  const result = size(12948).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(12949).useConjurePlanCommandPattern(commandNames);
+  const obj = size(12949);
+  const result = size(12949).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {
@@ -119,7 +119,7 @@ export function ConjurePlanCommandMarkup(markup) {
                           size = closure_1;
                           const result = markup(size[6]).splitConjurePlanCommandText(mapped, size);
                           if (null != result) {
-                            mapped = result.map(/* F103715 */ function() { ... });
+                            mapped = result.map(/* F103847 */ function() { ... });
                           }
                           let cloneElementResult = mapped;
                           let obj = markup(size[6]);
@@ -129,7 +129,7 @@ export function ConjurePlanCommandMarkup(markup) {
                             cloneElementResult = mapped;
                             if (null != mapped.props.children) {
                               ({ Children, cloneElement } = conjurePlanCommandPattern);
-                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F103716 */ function() { ... }));
+                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F103848 */ function() { ... }));
                             }
                           }
                         }

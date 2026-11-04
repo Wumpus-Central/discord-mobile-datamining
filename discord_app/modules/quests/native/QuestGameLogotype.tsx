@@ -1,6 +1,6 @@
-// === Module 17363: QuestGameLogotype ===
+// === Module 17375: QuestGameLogotype ===
 
-// Module 17363 (QuestGameLogotype)
+// Module 17375 (QuestGameLogotype)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import FastImageDefault from "FastImage" /* 5851 */;

@@ -1,6 +1,6 @@
-// === Module 20087: getGuildTemplateUrl ===
+// === Module 20101: getGuildTemplateUrl ===
 
-// Module 20087 (getGuildTemplateUrl)
+// Module 20101 (getGuildTemplateUrl)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_templates/getGuildTemplateUrl.tsx");

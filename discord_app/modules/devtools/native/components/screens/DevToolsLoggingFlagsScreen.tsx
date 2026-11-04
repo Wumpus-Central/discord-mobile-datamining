@@ -1,6 +1,6 @@
-// === Module 17825: DevToolsLoggingFlagsScreen ===
+// === Module 17837: DevToolsLoggingFlagsScreen ===
 
-// Module 17825 (DevToolsLoggingFlagsScreen)
+// Module 17837 (DevToolsLoggingFlagsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;

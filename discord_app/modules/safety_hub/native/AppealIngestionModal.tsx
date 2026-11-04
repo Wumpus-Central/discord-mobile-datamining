@@ -1,11 +1,11 @@
-// === Module 13539: AppealIngestionModal ===
+// === Module 13540: AppealIngestionModal ===
 
-// Module 13539 (AppealIngestionModal)
+// Module 13540 (AppealIngestionModal)
 import nativeDefault from "native" /* 575 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13538 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13539 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+          return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
         },
         render() {
           return closure_2_12(flag(flag3[22]), { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
@@ -84,7 +84,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
       };
       obj4.render = function render() {
         return closure_2_12(flag(flag3[24]), { isDsaEligible });
@@ -95,7 +95,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj6 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
       };
       obj6.render = function render() {
         return closure_2_12(flag(flag3[25]), { isDsaEligible });
@@ -106,7 +106,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj8 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
       };
       obj8.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[26]), {});
@@ -117,7 +117,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj10 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
       };
       obj10.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[27]), {});
@@ -128,7 +128,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj12 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj12.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj12.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ti" });
       };
       obj12.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[28]), {});
@@ -280,7 +280,7 @@ export function AppealIngestionModalScreen(children) {
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(13534).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(13535).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }

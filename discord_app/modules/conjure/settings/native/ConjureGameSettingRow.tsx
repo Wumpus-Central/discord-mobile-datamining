@@ -1,10 +1,10 @@
-// === Module 12349: ConjureGameSettingRow ===
+// === Module 12350: ConjureGameSettingRow ===
 
-// Module 12349 (ConjureGameSettingRow)
+// Module 12350 (ConjureGameSettingRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
-import ConjureGamePickerSheetDefault from "ConjureGamePickerSheet" /* 12354 */;
+import ConjureGamePickerSheetDefault from "ConjureGamePickerSheet" /* 12355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function ConjureGameSettingRow(def) {
   def = def.def;
   ({ hint, value, pickingEmpty, disabled, onChange: importDefault, onPickingEmptyChange: dependencyMap } = def);
   let tmp = closure_6();
-  closure_3 = def(12350).useConjureGameNameLookup();
+  closure_3 = def(12351).useConjureGameNameLookup();
   items = value;
   if (!Array.isArray(value)) {
     items = [];
@@ -33,7 +33,7 @@ export default function ConjureGameSettingRow(def) {
   if (isArray) {
     isArray = !pickingEmpty;
   }
-  if (def.key === def(12353).CONJURE_OVERLAY_GAMES_SETTING_KEY) {
+  if (def.key === def(12354).CONJURE_OVERLAY_GAMES_SETTING_KEY) {
     const intl = tmp2(1113).intl;
     hint = intl.string(_modDef3995.cqWCNY);
   } else if (hint == null) {

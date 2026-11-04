@@ -1,6 +1,6 @@
-// === Module 18600: useGuildsBarGesture ===
+// === Module 18614: useGuildsBarGesture ===
 
-// Module 18600 (useGuildsBarGesture)
+// Module 18614 (useGuildsBarGesture)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
@@ -12,12 +12,12 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5398 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import FastList from "FastList" /* 7377 */;
 import ContextMenuState from "ContextMenuState" /* 10054 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SortedGuildStore from "SortedGuildStore" /* 6907 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18601 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18615 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -244,7 +244,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "sa", positionPercentage: false };
+    sectionItemFromPosition = { item: "dispatch", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -277,7 +277,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6907).GuildsNodeType;
-const GuildsBarConstants = fn(18598);
+const GuildsBarConstants = fn(18612);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -592,7 +592,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "PX_8", overSpecs: "__closure" });
+    state1.setStateShallow({ dragSpecs: "Object", overSpecs: "Array" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -992,7 +992,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("module_1652");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(17311).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(17323).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [dragDropInProgress, dragRegion, gestureState, callback3, state, callback4, callback2, callback1, listInsets, scrollPosition, scrollerRef, windowSize, gesture];
   const onFastListScroll = obj4.useCallback(() => {
     const gestureState = GuildsBarDnDStore.getState().gestureState;

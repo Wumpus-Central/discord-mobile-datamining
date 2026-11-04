@@ -1,6 +1,6 @@
-// === Module 13410: useCanFulfillStreamRequest ===
+// === Module 13411: useCanFulfillStreamRequest ===
 
-// Module 13410 (useCanFulfillStreamRequest)
+// Module 13411 (useCanFulfillStreamRequest)
 import ActivityTypes from "ActivityTypes" /* 5896 */;
 import RunningGameStore from "RunningGameStore" /* 2142 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
@@ -45,18 +45,18 @@ function canFulfillStreamRequest(channel_id) {
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(12111).getVideoPermission(channel);
+    const videoPermission = flag(12112).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
     tmp19(9888).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(12111);
+    const obj8 = flag(12112);
     const tmp19Result = flag(1377);
     const ActivityGamePlatforms = tmp19(9888).ActivityGamePlatforms;
     dependencyMap = flag(1377).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
     const isAndroidResult = flag(1377).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11875).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11876).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

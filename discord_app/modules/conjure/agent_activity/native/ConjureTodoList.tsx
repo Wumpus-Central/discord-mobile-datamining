@@ -1,13 +1,13 @@
-// === Module 12937: ConjureTodoList ===
+// === Module 12938: ConjureTodoList ===
 
-// Module 12937 (ConjureTodoList)
+// Module 12938 (ConjureTodoList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import ConjureTodoState from "ConjureTodoState" /* 12806 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12821 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12842 */;
+import ConjureTodoState from "ConjureTodoState" /* 12807 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12822 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12843 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -160,8 +160,8 @@ export default function ConjureTodoList(announceProgress) {
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12806);
-  ({ completed, total } = agents(12806).todoProgress(todos));
+  let obj = agents(12807);
+  ({ completed, total } = agents(12807).todoProgress(todos));
   items = [agents];
   noop = noop.useMemo(() => {
     items = agents;
@@ -174,7 +174,7 @@ export default function ConjureTodoList(announceProgress) {
     return null;
   }
   const intl = agents(1113).intl;
-  const todoProgressResult = agents(12806).todoProgress(todos);
+  const todoProgressResult = agents(12807).todoProgress(todos);
   const intl2 = agents(1113).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3995)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -188,7 +188,7 @@ export default function ConjureTodoList(announceProgress) {
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12938).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12939).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -243,5 +243,5 @@ export default function ConjureTodoList(announceProgress) {
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12938), obj2);
+  return closure_6(flag2(12939), obj2);
 };

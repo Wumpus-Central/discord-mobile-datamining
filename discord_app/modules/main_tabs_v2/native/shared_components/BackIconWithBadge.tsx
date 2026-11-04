@@ -1,6 +1,6 @@
-// === Module 18733: BackIconWithBadge ===
+// === Module 18747: BackIconWithBadge ===
 
-// Module 18733 (BackIconWithBadge)
+// Module 18747 (BackIconWithBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7143 */;
@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(18724)().value;
+    num2 = memo(18738)().value;
   }
   const sum = num + num2;
   _require = sum;

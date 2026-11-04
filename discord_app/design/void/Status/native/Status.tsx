@@ -1,21 +1,21 @@
-// === Module 16221: Status ===
+// === Module 16234: Status ===
 
-// Module 16221 (Status)
+// Module 16234 (Status)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5771 */;
 import FastImageDefault from "FastImage" /* 5851 */;
-import EllipsisDefault from "Ellipsis" /* 16207 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 16219 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16220 */;
-import _modDef16222 from "module_16222" /* 16222 */;
-import _modDef16223 from "module_16223" /* 16223 */;
-import _modDef16224 from "module_16224" /* 16224 */;
-import _modDef16225 from "module_16225" /* 16225 */;
-import _modDef16226 from "module_16226" /* 16226 */;
-import _modDef16227 from "module_16227" /* 16227 */;
-import _modDef16228 from "module_16228" /* 16228 */;
-import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16229 */;
+import EllipsisDefault from "Ellipsis" /* 16220 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 16232 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16233 */;
+import _modDef16235 from "module_16235" /* 16235 */;
+import _modDef16236 from "module_16236" /* 16236 */;
+import _modDef16237 from "module_16237" /* 16237 */;
+import _modDef16238 from "module_16238" /* 16238 */;
+import _modDef16239 from "module_16239" /* 16239 */;
+import _modDef16240 from "module_16240" /* 16240 */;
+import _modDef16241 from "module_16241" /* 16241 */;
+import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(15096);
+const ChannelAnimationConstants = fn(15097);
 ({ TYPING_ENTERING: metroImportDefault, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -85,23 +85,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef16222;
+    let tmp4Result = _modDef16235;
   } else if (flag2) {
-    tmp4Result = _modDef16223;
+    tmp4Result = _modDef16236;
   } else if (flag) {
-    tmp4Result = _modDef16224;
+    tmp4Result = _modDef16237;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef16225;
+    tmp4Result = _modDef16238;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef16226;
+    tmp4Result = _modDef16239;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef16228;
+        tmp4Result = _modDef16241;
       }
     }
-    tmp4Result = _modDef16227;
+    tmp4Result = _modDef16240;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_10(FastImageDefault, obj2);
@@ -212,23 +212,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1652;
   if (streaming) {
-    let tmp3Result2 = _modDef16222;
+    let tmp3Result2 = _modDef16235;
   } else if (flag2) {
-    tmp3Result2 = _modDef16223;
+    tmp3Result2 = _modDef16236;
   } else if (flag) {
-    tmp3Result2 = _modDef16224;
+    tmp3Result2 = _modDef16237;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef16225;
+    tmp3Result2 = _modDef16238;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef16226;
+    tmp3Result2 = _modDef16239;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef16228;
+        tmp3Result2 = _modDef16241;
       }
     }
-    tmp3Result2 = _modDef16227;
+    tmp3Result2 = _modDef16240;
   }
   obj6.source = tmp3Result2;
   obj5.children = closure_1_10(FastImageDefault, obj6);

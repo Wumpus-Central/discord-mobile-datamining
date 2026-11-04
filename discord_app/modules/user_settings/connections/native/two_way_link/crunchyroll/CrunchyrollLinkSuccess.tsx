@@ -1,13 +1,13 @@
-// === Module 14866: CrunchyrollLinkSuccess ===
+// === Module 14867: CrunchyrollLinkSuccess ===
 
-// Module 14866 (CrunchyrollLinkSuccess)
+// Module 14867 (CrunchyrollLinkSuccess)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9880 */;
-import _modDef14867 from "module_14867" /* 14867 */;
+import _modDef14868 from "module_14868" /* 14868 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14867;
+  obj4.source = _modDef14868;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };

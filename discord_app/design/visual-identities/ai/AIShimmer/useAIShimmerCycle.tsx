@@ -1,7 +1,7 @@
-// === Module 13006: useAIShimmerCycle ===
+// === Module 13007: useAIShimmerCycle ===
 
-// Module 13006 (useAIShimmerCycle)
-import waveTransition from "waveTransition" /* 13005 */;
+// Module 13007 (useAIShimmerCycle)
+import waveTransition from "waveTransition" /* 13006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

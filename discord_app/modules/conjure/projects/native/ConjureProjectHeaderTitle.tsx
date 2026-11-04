@@ -1,12 +1,12 @@
-// === Module 12434: ConjureProjectHeaderTitle ===
+// === Module 12435: ConjureProjectHeaderTitle ===
 
-// Module 12434 (ConjureProjectHeaderTitle)
+// Module 12435 (ConjureProjectHeaderTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import Pressables from "Pressables" /* 7121 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12319 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12320 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

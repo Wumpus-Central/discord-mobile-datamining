@@ -1,6 +1,6 @@
-// === Module 18417: GuildRoleSubscriptionGatedChannelIcon ===
+// === Module 18431: GuildRoleSubscriptionGatedChannelIcon ===
 
-// Module 18417 (GuildRoleSubscriptionGatedChannelIcon)
+// Module 18431 (GuildRoleSubscriptionGatedChannelIcon)
 import native from "native" /* 1187 */;
 import _modDef10157 from "module_10157" /* 10157 */;
 import noop from "module_19" /* 19 */;

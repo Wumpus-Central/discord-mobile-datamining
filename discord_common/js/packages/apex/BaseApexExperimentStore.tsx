@@ -435,14 +435,14 @@ prototype["trackExposureSuppression"] = function trackExposureSuppression(name, 
   if (null != closure_10[name]) {
     const self = this;
     if ("user" === tmp.kind) {
-      obj = { experiment: name, unit_type: tmp.kind, suppression_source: client_override };
-      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj, { flush: true });
+      const obj2 = { experiment: name, unit_type: tmp.kind, suppression_source: client_override };
+      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj2, { flush: true });
     } else if ("installation" === tmp.kind) {
       const _Object = Object;
       const first = Object.keys(obj.installation)[0];
       if (null != first) {
-        const obj2 = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, installation_id: first };
-        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj2, { flush: true });
+        obj = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, installation_id: first };
+        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj, { flush: true });
       }
     } else if ("guild" === tmp.kind) {
       const _Object2 = Object;

@@ -1,11 +1,11 @@
-// === Module 20024: GuildSettingsServerTagBadgeGrid ===
+// === Module 20038: GuildSettingsServerTagBadgeGrid ===
 
-// Module 20024 (GuildSettingsServerTagBadgeGrid)
+// Module 20038 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 575 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14272 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 20025 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 20026 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 20027 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14273 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 20039 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 20040 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 20041 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -52,7 +52,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(15974).GuildBadge, size);
+      obj.children = closure_1_7(guildId(15987).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
   });
@@ -67,7 +67,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(15974).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(15987).GuildBadge, size, badge.kind);
     });
     const items2 = [closure_7(closure_5, obj5), , ];
     const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

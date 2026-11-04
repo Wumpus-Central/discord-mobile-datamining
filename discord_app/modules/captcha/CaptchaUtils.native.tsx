@@ -1,6 +1,6 @@
-// === Module 19631: captcha/CaptchaUtils ===
+// === Module 19645: captcha/CaptchaUtils ===
 
-// Module 19631 (captcha/CaptchaUtils)
+// Module 19645 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
@@ -34,7 +34,7 @@ export default {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(19632, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(19646, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {

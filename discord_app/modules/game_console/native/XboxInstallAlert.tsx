@@ -1,11 +1,11 @@
-// === Module 12189: XboxInstallAlert ===
+// === Module 12190: XboxInstallAlert ===
 
-// Module 12189 (XboxInstallAlert)
+// Module 12190 (XboxInstallAlert)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LinkingDefault from "Linking" /* 5843 */;
 import common_AlertDefault from "common/Alert" /* 6165 */;
-import _modDef12190 from "module_12190" /* 12190 */;
+import _modDef12191 from "module_12191" /* 12191 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef12190, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef12191, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1377);

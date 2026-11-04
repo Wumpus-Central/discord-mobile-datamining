@@ -1,6 +1,6 @@
-// === Module 20305: ApiRequestConfigManager ===
+// === Module 20318: ApiRequestConfigManager ===
 
-// Module 20305 (ApiRequestConfigManager)
+// Module 20318 (ApiRequestConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

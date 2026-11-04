@@ -1,6 +1,6 @@
-// === Module 18825: openDetailsActionSheet ===
+// === Module 18839: openDetailsActionSheet ===
 
-// Module 18825 (openDetailsActionSheet)
+// Module 18839 (openDetailsActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
@@ -13,5 +13,5 @@ export function openDetailsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
   ICYMIActionCreatorsDefault.itemInteracted(id, type, "overflow_menu");
   ICYMIActionCreatorsDefault.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18789, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18803, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 }

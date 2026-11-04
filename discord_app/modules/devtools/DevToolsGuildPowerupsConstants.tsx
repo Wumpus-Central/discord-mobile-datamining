@@ -1,6 +1,6 @@
-// === Module 17954: DevToolsGuildPowerupsConstants ===
+// === Module 17966: DevToolsGuildPowerupsConstants ===
 
-// Module 17954 (DevToolsGuildPowerupsConstants)
+// Module 17966 (DevToolsGuildPowerupsConstants)
 import dismissible_content from "dismissible_content" /* 4974 */;
 import size from "module_2" /* 2 */;
 

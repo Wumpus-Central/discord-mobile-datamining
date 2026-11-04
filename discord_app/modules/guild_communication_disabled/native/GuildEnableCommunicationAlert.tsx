@@ -1,6 +1,6 @@
-// === Module 13491: GuildEnableCommunicationAlert ===
+// === Module 13492: GuildEnableCommunicationAlert ===
 
-// Module 13491 (GuildEnableCommunicationAlert)
+// Module 13492 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import CountDownDefault from "CountDown" /* 10327 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -52,7 +52,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(13490).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(13491).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

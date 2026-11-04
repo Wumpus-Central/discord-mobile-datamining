@@ -1,6 +1,6 @@
-// === Module 19853: ParentalConsentManager ===
+// === Module 19867: ParentalConsentManager ===
 
-// Module 19853 (ParentalConsentManager)
+// Module 19867 (ParentalConsentManager)
 import Constants from "Constants" /* 1072 */;
 import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 8295 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;

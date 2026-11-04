@@ -1,6 +1,6 @@
-// === Module 14019: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 14020: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 14019 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 14020 (AppLauncherOnboardingChatInputButtonAnimation)
 import Discord from "Discord" /* 0 */;
 import logAppStart from "logAppStart" /* 1 */;
 import initialize from "initialize" /* 504 */;
@@ -9,9 +9,9 @@ import _modDef1652 from "module_1652" /* 1652 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5755 */;
 import ButtonConstants from "ButtonConstants" /* 5774 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 9970 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12582 */;
-import _mod12607 from "module_12607" /* 12607 */;
-import _mod14020 from "module_14020" /* 14020 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12583 */;
+import _mod12608 from "module_12608" /* 12608 */;
+import _mod14021 from "module_14021" /* 14021 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -80,7 +80,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod14020;
+  obj5.source = _mod14021;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), , ];
   const obj6 = { collapsable: false, style: null };
@@ -92,7 +92,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items4 = [metroImportDefault(_modDef1652.View, obj4), ];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod12607;
+  obj8.source = _mod12608;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

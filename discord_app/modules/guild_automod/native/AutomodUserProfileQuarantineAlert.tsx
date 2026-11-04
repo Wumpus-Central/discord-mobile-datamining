@@ -1,6 +1,6 @@
-// === Module 13519: AutomodUserProfileQuarantineAlert ===
+// === Module 13520: AutomodUserProfileQuarantineAlert ===
 
-// Module 13519 (AutomodUserProfileQuarantineAlert)
+// Module 13520 (AutomodUserProfileQuarantineAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,7 +9,7 @@ import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5079 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import common_AlertDefault from "common/Alert" /* 6165 */;
 import openUserSettings from "openUserSettings" /* 7703 */;
-import _modDef13520 from "module_13520" /* 13520 */;
+import _modDef13521 from "module_13521" /* 13521 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ function ChatBlockedAlert(arg0) {
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
   const tmp6 = common_AlertDefault;
-  items = [value2(native.Icon, { source: _modDef13520, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), value2(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title }), value2(Text_Text.Text, { style: tmp2.description, variant: "body-sm/medium", color: "text-default", children: description })];
+  items = [value2(native.Icon, { source: _modDef13521, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), value2(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title }), value2(Text_Text.Text, { style: tmp2.description, variant: "body-sm/medium", color: "text-default", children: description })];
   obj2.children = items;
   obj.children = closure_1_17(View, obj2);
   return value2(tmp6, obj);
@@ -53,8 +53,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(util.t.TBeZmG);
   }
   const tmp = _objectWithoutProperties(arg0, closure_4);
-  const tmp2Result = tmp2(13521);
-  [require, tmp8] = tmp2(13521).useOpenFixQuarantinedProfileModal({ guildId });
+  const tmp2Result = tmp2(13522);
+  [require, tmp8] = tmp2(13522).useOpenFixQuarantinedProfileModal({ guildId });
   if (!tmp8) {
     const intl3 = tmp2(1113).intl;
     stringResult = intl3.string(tmp2(1113).t.FFj5Dt);
@@ -96,7 +96,7 @@ let closure_3 = ["title", "description", "buttonCta", "onConfirm"];
 let closure_4 = ["guildId", "guildName", "automodReason"];
 let closure_5 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(13512).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(13513).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
 const GuildMemberFlags = fn(5059).GuildMemberFlags;

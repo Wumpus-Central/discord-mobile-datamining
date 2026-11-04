@@ -1,6 +1,6 @@
-// === Module 11708: GuildIdentityActionCreators ===
+// === Module 11709: GuildIdentityActionCreators ===
 
-// Module 11708 (GuildIdentityActionCreators)
+// Module 11709 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -48,7 +48,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

@@ -1,7 +1,7 @@
-// === Module 19664: AutomodRemovedContentManager ===
+// === Module 19678: AutomodRemovedContentManager ===
 
-// Module 19664 (AutomodRemovedContentManager)
-import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 19665 */;
+// Module 19678 (AutomodRemovedContentManager)
+import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 19679 */;
 import MessageStore from "MessageStore" /* 6196 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;

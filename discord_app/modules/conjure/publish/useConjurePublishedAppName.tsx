@@ -1,6 +1,6 @@
-// === Module 12870: useConjurePublishedAppName ===
+// === Module 12871: useConjurePublishedAppName ===
 
-// Module 12870 (useConjurePublishedAppName)
+// Module 12871 (useConjurePublishedAppName)
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 

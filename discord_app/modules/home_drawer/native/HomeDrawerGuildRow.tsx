@@ -1,15 +1,15 @@
-// === Module 18631: HomeDrawerGuildRow ===
+// === Module 18645: HomeDrawerGuildRow ===
 
-// Module 18631 (HomeDrawerGuildRow)
+// Module 18645 (HomeDrawerGuildRow)
 import Text_Text from "Text/Text" /* 5761 */;
 import useChannelName from "useChannelName" /* 5786 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 11173 */;
 import BellZIcon from "BellZIcon" /* 11359 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 18636 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 18637 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 18638 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 18640 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 18641 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 18650 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 18651 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 18652 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 18654 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 18655 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -144,7 +144,7 @@ function GuildRowWrapper(guild) {
     const tmp = unreadChannel.getMutableGuildStates()[guild.id];
     guild = tmp;
     if (null == tmp) {
-      return { mentionChannel: "sa", mentionChannelName: "isArray", mentionChannelCount: null };
+      return { mentionChannel: "dispatch", mentionChannelName: "isArray", mentionChannelCount: null };
     } else {
       const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
       const found = keys.filter((item) => {

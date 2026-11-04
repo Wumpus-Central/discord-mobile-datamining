@@ -11,7 +11,7 @@ import Pressables from "Pressables" /* 7121 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9963 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9968 */;
 import ChannelActionsDefault from "ChannelActions" /* 9973 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14783 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14784 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

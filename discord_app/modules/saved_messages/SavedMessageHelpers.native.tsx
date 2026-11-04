@@ -45,7 +45,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
             closure_129_4 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -191,7 +191,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
           closure_129_4 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

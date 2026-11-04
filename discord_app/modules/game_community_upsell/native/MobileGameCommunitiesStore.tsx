@@ -1,6 +1,6 @@
-// === Module 17860: MobileGameCommunitiesStore ===
+// === Module 17872: MobileGameCommunitiesStore ===
 
-// Module 17860 (MobileGameCommunitiesStore)
+// Module 17872 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7661 */;

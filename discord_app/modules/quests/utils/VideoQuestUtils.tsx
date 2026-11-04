@@ -1,6 +1,6 @@
-// === Module 14895: VideoQuestUtils ===
+// === Module 14896: VideoQuestUtils ===
 
-// Module 14895 (VideoQuestUtils)
+// Module 14896 (VideoQuestUtils)
 import util from "util" /* 1113 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
 import QuestExpirationUtils from "QuestExpirationUtils" /* 7992 */;
@@ -17,7 +17,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(14896).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(14897).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {

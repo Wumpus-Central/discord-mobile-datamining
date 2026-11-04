@@ -1,9 +1,9 @@
-// === Module 13531: ClassificationDetailModal ===
+// === Module 13532: ClassificationDetailModal ===
 
-// Module 13531 (ClassificationDetailModal)
+// Module 13532 (ClassificationDetailModal)
 import nativeDefault from "native" /* 575 */;
 import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13534 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13535 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,14 +24,14 @@ export default function ClassificationDetailModal(classificationId) {
   }
   const tmp = closure_7();
   dependencyMap = tmp;
-  const safetyHubInitialized = classificationId(13569).useSafetyHubInitialized();
+  const safetyHubInitialized = classificationId(13570).useSafetyHubInitialized();
   items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
     if (!safetyHubInitialized) {
       const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
     }
   }, items);
-  let obj = classificationId(13569);
+  let obj = classificationId(13570);
   const isFocused = classificationId(1500).useIsFocused();
   const items1 = [classificationId, flag, tmp, source];
   const memo = safetyHubInitialized.useMemo(() => {
@@ -46,21 +46,21 @@ export default function ClassificationDetailModal(classificationId) {
         return closure_1(6879).pop();
       }),
       render() {
-        return jsx(source(13532), {
+        return jsx(source(13533), {
           classificationId,
           source,
           onClose() {
             closure_1(6879).pop();
             if (closure_1_1) {
-              closure_0(13568).openAccountStanding();
-              const obj = closure_0(13568);
+              closure_0(13569).openAccountStanding();
+              const obj = closure_0(13569);
             }
             const arr = closure_1(6879);
           },
           onError() {
             closure_1_1(6879).pop();
             const arr = closure_1_1(6879);
-            classificationId(13568).openAccountStanding();
+            classificationId(13569).openAccountStanding();
           }
         });
       }

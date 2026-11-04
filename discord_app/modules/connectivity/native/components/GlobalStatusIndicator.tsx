@@ -1,6 +1,6 @@
-// === Module 12059: GlobalStatusIndicator ===
+// === Module 12060: GlobalStatusIndicator ===
 
-// Module 12059 (GlobalStatusIndicator)
+// Module 12060 (GlobalStatusIndicator)
 import _mod1652 from "module_1652" /* 1652 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
 import noop from "module_19" /* 19 */;

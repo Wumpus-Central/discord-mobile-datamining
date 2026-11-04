@@ -1,6 +1,6 @@
-// === Module 11454: LikelyAtoWarningBanner ===
+// === Module 11455: LikelyAtoWarningBanner ===
 
-// Module 11454 (LikelyAtoWarningBanner)
+// Module 11455 (LikelyAtoWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
@@ -9,9 +9,9 @@ import LinkingDefault from "Linking" /* 5843 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
 import MuteSettingsUtils from "MuteSettingsUtils" /* 11258 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11456 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11457 */;
-import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11472 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11457 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11458 */;
+import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11473 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,7 +73,7 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11461, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11462, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         items = [closure_1_10(channelId(5761).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5761).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
@@ -116,7 +116,7 @@ class LikelyAtoWarningBanner {
   }
 }
 const SafetyWarningTypes = fn(10982).SafetyWarningTypes;
-const Constants = fn(11455);
+const Constants = fn(11456);
 ({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6, LEARN_MORE_HC_ARTICLE: metroImportDefault } = Constants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;

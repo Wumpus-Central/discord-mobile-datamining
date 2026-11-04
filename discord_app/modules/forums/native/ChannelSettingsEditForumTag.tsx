@@ -1,6 +1,6 @@
-// === Module 19204: ChannelSettingsEditForumTag ===
+// === Module 19218: ChannelSettingsEditForumTag ===
 
-// Module 19204 (ChannelSettingsEditForumTag)
+// Module 19218 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
@@ -214,7 +214,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "r" });
+      setOptions({ headerRight: "Array" });
     }
   }, items5);
   const obj5 = { style: tmp.container, children: null };

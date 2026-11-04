@@ -1,12 +1,12 @@
-// === Module 20250: GuildRoleSubscriptionBenefitPreview ===
+// === Module 20264: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 20250 (GuildRoleSubscriptionBenefitPreview)
+// Module 20264 (GuildRoleSubscriptionBenefitPreview)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17456 */;
-import EmojiIconDefault from "EmojiIcon" /* 17464 */;
-import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17467 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17468 */;
+import EmojiIconDefault from "EmojiIcon" /* 17476 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,7 +84,7 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(17430).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17442).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);

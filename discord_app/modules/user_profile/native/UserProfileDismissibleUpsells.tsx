@@ -1,6 +1,6 @@
-// === Module 15206: UserProfileDismissibleUpsells ===
+// === Module 15207: UserProfileDismissibleUpsells ===
 
-// Module 15206 (UserProfileDismissibleUpsells)
+// Module 15207 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const components_Button_Button = ShopIcon(5768);
 const Pressables = ShopIcon(7121);
 const XSmallIcon = ShopIcon(7195);
 const NitroWheelIcon = ShopIcon(9675);
-const ShopIcon2 = ShopIcon(12685);
+const ShopIcon2 = ShopIcon(12686);
 require = fn;
 const View = fn(17).View;
 const TrackUserProfileActions = fn(8895).TrackUserProfileActions;

@@ -1,6 +1,6 @@
-// === Module 17791: LogoutSetting ===
+// === Module 17803: LogoutSetting ===
 
-// Module 17791 (LogoutSetting)
+// Module 17803 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -10,9 +10,9 @@ import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators"
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6875 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
 import PushNotificationDefault from "PushNotification" /* 11093 */;
-import DoorExitIcon from "DoorExitIcon" /* 12080 */;
+import DoorExitIcon from "DoorExitIcon" /* 12081 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11728 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
 import size from "module_2" /* 2 */;
 
 function handleLogout() {

@@ -1,6 +1,6 @@
-// === Module 18293: MainTabs ===
+// === Module 18307: MainTabs ===
 
-// Module 18293 (MainTabs)
+// Module 18307 (MainTabs)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import native from "native" /* 5207 */;
@@ -9,7 +9,7 @@ import useChatLayoutDefault from "useChatLayout" /* 5325 */;
 import useToken from "useToken" /* 5732 */;
 import useActiveTheme from "useActiveTheme" /* 9972 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18294 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

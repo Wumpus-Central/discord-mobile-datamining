@@ -1,14 +1,14 @@
-// === Module 18876: GuildRoleSubscriptionPurchasePage ===
+// === Module 18890: GuildRoleSubscriptionPurchasePage ===
 
-// Module 18876 (GuildRoleSubscriptionPurchasePage)
+// Module 18890 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import LinkingDefault from "Linking" /* 5843 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
-import _modDef12107 from "module_12107" /* 12107 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18886 */;
+import _modDef12108 from "module_12108" /* 12108 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18900 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -40,7 +40,7 @@ function SocialBadge(onPress) {
   obj.onPress = onPress;
   items = [gesture(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12107, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12108, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;

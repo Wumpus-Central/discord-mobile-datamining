@@ -1,9 +1,9 @@
-// === Module 11892: _tryJoinAsFrame ===
+// === Module 11893: _tryJoinAsFrame ===
 
-// Module 11892 (_tryJoinAsFrame)
+// Module 11893 (_tryJoinAsFrame)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11883 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11889 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11884 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
@@ -265,7 +265,7 @@ let closure_12 = async function _startFrame(arg0) {
           let frameParticipantId;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 20360: UpdateAppScreen ===
+// === Module 20373: UpdateAppScreen ===
 
-// Module 20360 (UpdateAppScreen)
+// Module 20373 (UpdateAppScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2963 from "module_2963" /* 2963 */;

@@ -1,16 +1,16 @@
-// === Module 19082: AutoAnalytics ===
+// === Module 19096: AutoAnalytics ===
 
-// Module 19082 (AutoAnalytics)
+// Module 19096 (AutoAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import FavoritesUtils from "FavoritesUtils" /* 5015 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
 import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8477 */;
 import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8481 */;
-import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19083 */;
-import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19084 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19085 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19086 */;
+import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19097 */;
+import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19098 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19099 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19100 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;

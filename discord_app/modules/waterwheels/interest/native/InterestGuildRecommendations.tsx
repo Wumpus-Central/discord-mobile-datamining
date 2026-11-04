@@ -1,6 +1,6 @@
-// === Module 19835: InterestGuildRecommendations ===
+// === Module 19849: InterestGuildRecommendations ===
 
-// Module 19835 (InterestGuildRecommendations)
+// Module 19849 (InterestGuildRecommendations)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2537 from "module_2537" /* 2537 */;
@@ -9,10 +9,10 @@ import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
 import HeaderShared from "HeaderShared" /* 9961 */;
-import InterestScrollHeader from "InterestScrollHeader" /* 18676 */;
-import InterestGhostDefault from "InterestGhost" /* 18677 */;
-import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 19836 */;
-import InterestPickedGamesDefault from "InterestPickedGames" /* 19840 */;
+import InterestScrollHeader from "InterestScrollHeader" /* 18690 */;
+import InterestGhostDefault from "InterestGhost" /* 18691 */;
+import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 19850 */;
+import InterestPickedGamesDefault from "InterestPickedGames" /* 19854 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -238,7 +238,7 @@ let closure_14 = noop.memo(function InterestGuildRow(guild) {
   items6[1] = tmp10Result;
   obj5.children = items6;
   const items7 = [closure_9(guild(7121).PressableHighlight, obj5), ];
-  const obj24 = { style: tmp.joinTarget, children: closure_8(joins(19839), { guildId: guild.id, guildName: guild.name, joins }) };
+  const obj24 = { style: tmp.joinTarget, children: closure_8(joins(19853), { guildId: guild.id, guildName: guild.name, joins }) };
   items7[1] = closure_8(closure_6, obj24);
   obj23.children = items7;
   return closure_9(closure_6, obj23);

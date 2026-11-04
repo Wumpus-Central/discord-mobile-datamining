@@ -1,6 +1,6 @@
-// === Module 17247: AppIcon ===
+// === Module 17259: AppIcon ===
 
-// Module 17247 (AppIcon)
+// Module 17259 (AppIcon)
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5377 */;
 import FastImageDefault from "FastImage" /* 5851 */;

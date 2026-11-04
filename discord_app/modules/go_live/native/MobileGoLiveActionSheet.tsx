@@ -1,6 +1,6 @@
-// === Module 12117: MobileGoLiveActionSheet ===
+// === Module 12118: MobileGoLiveActionSheet ===
 
-// Module 12117 (MobileGoLiveActionSheet)
+// Module 12118 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -17,9 +17,9 @@ import MobilePhoneIcon from "MobilePhoneIcon" /* 7273 */;
 import StreamActionCreators from "StreamActionCreators" /* 8041 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9935 */;
 import _modDef10226 from "module_10226" /* 10226 */;
-import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 12118 */;
-import SpeedometerIcon from "SpeedometerIcon" /* 12123 */;
-import ImageSparkleIcon from "ImageSparkleIcon" /* 12125 */;
+import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 12119 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 12124 */;
+import ImageSparkleIcon from "ImageSparkleIcon" /* 12126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6078 */;
@@ -312,5 +312,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(12117, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(12118, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

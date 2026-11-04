@@ -1,12 +1,12 @@
-// === Module 20266: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 20280: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 20266 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 20280 (GuildRoleSubscriptionTierTemplateFullCard)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17460 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18417 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20269 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17472 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18431 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20283 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

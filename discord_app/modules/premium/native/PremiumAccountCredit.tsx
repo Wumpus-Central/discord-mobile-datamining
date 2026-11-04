@@ -1,6 +1,6 @@
-// === Module 15510: PremiumAccountCredit ===
+// === Module 15511: PremiumAccountCredit ===
 
-// Module 15510 (PremiumAccountCredit)
+// Module 15511 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

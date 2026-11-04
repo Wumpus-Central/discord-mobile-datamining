@@ -1,6 +1,6 @@
-// === Module 11586: EditCustomStatusWithPreview ===
+// === Module 11587: EditCustomStatusWithPreview ===
 
-// Module 11586 (EditCustomStatusWithPreview)
+// Module 11587 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -15,10 +15,10 @@ import Pressables from "Pressables" /* 7121 */;
 import NavigatorHeader from "NavigatorHeader" /* 7139 */;
 import _modDef7252 from "module_7252" /* 7252 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11590 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11592 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11595 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11597 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11591 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11593 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11596 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11674, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11675, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "body-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);
@@ -306,7 +306,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11587).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11588).STATUS_MAX_LENGTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;

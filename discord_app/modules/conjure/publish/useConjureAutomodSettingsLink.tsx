@@ -1,6 +1,6 @@
-// === Module 12878: useConjureAutomodSettingsLink ===
+// === Module 12879: useConjureAutomodSettingsLink ===
 
-// Module 12878 (useConjureAutomodSettingsLink)
+// Module 12879 (useConjureAutomodSettingsLink)
 import _modDef3995 from "module_3995" /* 3995 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;

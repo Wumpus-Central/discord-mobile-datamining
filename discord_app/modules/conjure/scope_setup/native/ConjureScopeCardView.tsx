@@ -1,10 +1,10 @@
-// === Module 12969: ConjureScopeCardView ===
+// === Module 12970: ConjureScopeCardView ===
 
-// Module 12969 (ConjureScopeCardView)
+// Module 12970 (ConjureScopeCardView)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12970 */;
-import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12975 */;
+import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12971 */;
+import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

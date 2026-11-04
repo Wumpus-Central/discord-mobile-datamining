@@ -1,6 +1,6 @@
-// === Module 11524: ChannelHeaderShared ===
+// === Module 11525: ChannelHeaderShared ===
 
-// Module 11524 (ChannelHeaderShared)
+// Module 11525 (ChannelHeaderShared)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -15,9 +15,9 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
 import BotTagDefault from "BotTag" /* 9347 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10950 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
-import _modDef11525 from "module_11525" /* 11525 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11526 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11527 */;
+import _modDef11526 from "module_11526" /* 11526 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11527 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -75,7 +75,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef11525, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11526, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

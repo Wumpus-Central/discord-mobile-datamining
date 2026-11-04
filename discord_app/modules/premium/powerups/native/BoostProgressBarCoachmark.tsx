@@ -1,6 +1,6 @@
-// === Module 18465: BoostProgressBarCoachmark ===
+// === Module 18479: BoostProgressBarCoachmark ===
 
-// Module 18465 (BoostProgressBarCoachmark)
+// Module 18479 (BoostProgressBarCoachmark)
 import util from "util" /* 1113 */;
 import _modDef2699 from "module_2699" /* 2699 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;

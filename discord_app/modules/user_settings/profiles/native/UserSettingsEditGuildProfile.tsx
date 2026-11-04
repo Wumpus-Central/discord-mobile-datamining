@@ -1,10 +1,10 @@
-// === Module 16800: UserSettingsEditGuildProfile ===
+// === Module 16812: UserSettingsEditGuildProfile ===
 
-// Module 16800 (UserSettingsEditGuildProfile)
+// Module 16812 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 575 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11595 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11708 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11596 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11709 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -37,7 +37,7 @@ export default function UserSettingsEditGuildProfile(showGuildSelector) {
   const tmp4 = guild(7462);
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(16801)();
+  const tmp7 = guild(16813)();
   guild = tmp7.guild;
   ({ resetPending: c2, handleSubmit: c3 } = tmp7);
   let obj = stateFromStores(504);
@@ -91,10 +91,10 @@ export default function UserSettingsEditGuildProfile(showGuildSelector) {
       const obj7 = { currentUser: stateFromStores };
       const _HermesInternal = HermesInternal;
       tmp14 = closure_7(hasUnsavedChanges, obj3);
-      items3[1] = closure_7(tmp2(16806), obj7, "" + stateFromStores.id + "-" + guild.id);
+      items3[1] = closure_7(tmp2(16818), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj6.children = items3;
       return closure_8(tmp5(7462).AnalyticsLocationProvider, obj6);
     }
   }
-  return closure_7(guild(16803), {});
+  return closure_7(guild(16815), {});
 };

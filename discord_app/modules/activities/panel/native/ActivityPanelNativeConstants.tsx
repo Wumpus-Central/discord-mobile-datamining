@@ -1,6 +1,6 @@
-// === Module 19261: ActivityPanelNativeConstants ===
+// === Module 19275: ActivityPanelNativeConstants ===
 
-// Module 19261 (ActivityPanelNativeConstants)
+// Module 19275 (ActivityPanelNativeConstants)
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5791 */;
 import size from "module_2" /* 2 */;
 

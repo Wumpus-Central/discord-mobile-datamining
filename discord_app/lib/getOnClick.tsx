@@ -15,9 +15,9 @@ import activityBookmarkUtils from "activityBookmarkUtils" /* 7975 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9091 */;
 import QuestUtils from "QuestUtils" /* 9828 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10847 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11751 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11809 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11887 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11752 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11810 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
@@ -73,7 +73,7 @@ let closure_18 = async function _openInviteModal() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "ao", invite_instance_id };
+            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "ti", invite_instance_id };
             c3 = 1;
             c2 = 1;
             const obj6 = { value: DispatcherDefault.dispatch(obj5), done: false };
@@ -306,7 +306,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "PX_8", skuId: "__closure" };
+            result = { applicationId: "Object", skuId: "Array" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14968, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14969, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;

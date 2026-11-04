@@ -1,17 +1,17 @@
-// === Module 12045: StageChannelCallNavigator ===
+// === Module 12046: StageChannelCallNavigator ===
 
-// Module 12045 (StageChannelCallNavigator)
+// Module 12046 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5771 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
 import MessageManagerDefault from "MessageManager" /* 9979 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11415 */;
-import ModeratorOverlayState from "ModeratorOverlayState" /* 12046 */;
-import ModeratorStartStageViewDefault from "ModeratorStartStageView" /* 12047 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 12070 */;
-import JoinStageViewDefault from "JoinStageView" /* 12108 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12253 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11416 */;
+import ModeratorOverlayState from "ModeratorOverlayState" /* 12047 */;
+import ModeratorStartStageViewDefault from "ModeratorStartStageView" /* 12048 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 12071 */;
+import JoinStageViewDefault from "JoinStageView" /* 12109 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 14362: GuildPowerupsPerkCard ===
+// === Module 14363: GuildPowerupsPerkCard ===
 
-// Module 14362 (GuildPowerupsPerkCard)
+// Module 14363 (GuildPowerupsPerkCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,9 +8,9 @@ import shared from "shared" /* 5148 */;
 import useThemeDefault from "useTheme" /* 5377 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14314 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14315 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14359 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14315 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14316 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

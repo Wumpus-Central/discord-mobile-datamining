@@ -1,6 +1,6 @@
-// === Module 13904: CheckpointCustomizationStat ===
+// === Module 13905: CheckpointCustomizationStat ===
 
-// Module 13904 (CheckpointCustomizationStat)
+// Module 13905 (CheckpointCustomizationStat)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -12,13 +12,13 @@ import ChatIcon from "ChatIcon" /* 8784 */;
 import CalendarIcon from "CalendarIcon" /* 9260 */;
 import GameControllerIcon from "GameControllerIcon" /* 9877 */;
 import ServerIcon from "ServerIcon" /* 9908 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12168 */;
-import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13665 */;
-import CheckpointTextDefault from "CheckpointText" /* 13865 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13868 */;
-import CheckpointTagDefault from "CheckpointTag" /* 13887 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12169 */;
+import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13666 */;
+import CheckpointTextDefault from "CheckpointText" /* 13866 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13869 */;
+import CheckpointTagDefault from "CheckpointTag" /* 13888 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13656 */;
+import CheckpointStore from "CheckpointStore" /* 13657 */;
 
 require = fn;
 const View = fn(17).View;

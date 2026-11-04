@@ -1,9 +1,9 @@
-// === Module 18592: ChannelAffinitiesV2Store ===
+// === Module 18606: ChannelAffinitiesV2Store ===
 
-// Module 18592 (ChannelAffinitiesV2Store)
+// Module 18606 (ChannelAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18593 */;
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18607 */;
 import size from "module_2" /* 2 */;
 
 const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;

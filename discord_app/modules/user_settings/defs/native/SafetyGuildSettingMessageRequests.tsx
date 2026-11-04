@@ -1,6 +1,6 @@
-// === Module 18161: SafetyGuildSettingMessageRequests ===
+// === Module 18173: SafetyGuildSettingMessageRequests ===
 
-// Module 18161 (SafetyGuildSettingMessageRequests)
+// Module 18173 (SafetyGuildSettingMessageRequests)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
@@ -8,10 +8,10 @@ import common_AlertDefault from "common/Alert" /* 6165 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 18154 */;
-import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 18162 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18163 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 18166 */;
+import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 18174 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18175 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
@@ -44,10 +44,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(18151);
+const UserSettingsSafetySelectedGuildStore = fn(18163);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11729).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11728);
+let closure_6 = fn(11730).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

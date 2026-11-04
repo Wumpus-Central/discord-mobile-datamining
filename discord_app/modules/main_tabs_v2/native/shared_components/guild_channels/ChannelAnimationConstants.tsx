@@ -1,6 +1,6 @@
-// === Module 15096: ChannelAnimationConstants ===
+// === Module 15097: ChannelAnimationConstants ===
 
-// Module 15096 (ChannelAnimationConstants)
+// Module 15097 (ChannelAnimationConstants)
 import spring_spring from "spring/spring" /* 5771 */;
 import size from "module_2" /* 2 */;
 

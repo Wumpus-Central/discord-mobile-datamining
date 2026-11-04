@@ -1,6 +1,6 @@
-// === Module 12872: useConjureVoiceChannelPin ===
+// === Module 12873: useConjureVoiceChannelPin ===
 
-// Module 12872 (useConjureVoiceChannelPin)
+// Module 12873 (useConjureVoiceChannelPin)
 import useChannelName from "useChannelName" /* 5786 */;
 import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

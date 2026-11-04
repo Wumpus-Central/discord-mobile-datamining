@@ -1,10 +1,10 @@
-// === Module 17020: ConnectGuardianCard ===
+// === Module 17032: ConnectGuardianCard ===
 
-// Module 17020 (ConnectGuardianCard)
+// Module 17032 (ConnectGuardianCard)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5845 */;
 import ClipboardUtils from "ClipboardUtils" /* 7494 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17017 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17029 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 

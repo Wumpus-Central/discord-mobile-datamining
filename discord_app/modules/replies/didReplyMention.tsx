@@ -1,6 +1,6 @@
-// === Module 15305: didReplyMention ===
+// === Module 15306: didReplyMention ===
 
-// Module 15305 (didReplyMention)
+// Module 15306 (didReplyMention)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/replies/didReplyMention.tsx");

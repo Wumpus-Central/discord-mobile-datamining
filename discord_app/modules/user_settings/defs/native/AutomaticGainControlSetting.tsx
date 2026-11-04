@@ -1,12 +1,12 @@
-// === Module 17484: AutomaticGainControlSetting ===
+// === Module 17496: AutomaticGainControlSetting ===
 
-// Module 17484 (AutomaticGainControlSetting)
+// Module 17496 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -17,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   },
-  onValueChange: fn(12152).handleAutomaticGainControlChange,
+  onValueChange: fn(12153).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

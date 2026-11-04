@@ -1,11 +1,11 @@
-// === Module 17722: SettingsEmailNotificationsScreen ===
+// === Module 17734: SettingsEmailNotificationsScreen ===
 
-// Module 17722 (SettingsEmailNotificationsScreen)
+// Module 17734 (SettingsEmailNotificationsScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 11728 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17723 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17735 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15858 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15871 */;
 
 require = fn;
 function initializeEmailSettings() {
@@ -27,9 +27,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsEmailNotificationsScreen.tsx");
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16515).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
-  obj = isDeclarativeSettingsUIAvailable(16515);
-  enabled = enabled(17725).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16528).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
+  obj = isDeclarativeSettingsUIAvailable(16528);
+  enabled = enabled(17737).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
   items = [isDeclarativeSettingsUIAvailable, enabled];
   const node = noop.useMemo(() => {
     const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
@@ -51,5 +51,5 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     return obj.createList(obj3);
   }, items);
   enabled(5729)(initializeEmailSettings);
-  return jsx(enabled(16823), { node });
+  return jsx(enabled(16835), { node });
 });

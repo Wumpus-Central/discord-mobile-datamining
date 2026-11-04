@@ -1,11 +1,11 @@
-// === Module 16803: GuildProfileEmptyState ===
+// === Module 16815: GuildProfileEmptyState ===
 
-// Module 16803 (GuildProfileEmptyState)
+// Module 16815 (GuildProfileEmptyState)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16804 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16816 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

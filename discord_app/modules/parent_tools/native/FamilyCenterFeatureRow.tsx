@@ -1,6 +1,6 @@
-// === Module 17024: FamilyCenterFeatureRow ===
+// === Module 17036: FamilyCenterFeatureRow ===
 
-// Module 17024 (FamilyCenterFeatureRow)
+// Module 17036 (FamilyCenterFeatureRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
@@ -10,11 +10,11 @@ import TableRow from "TableRow" /* 7116 */;
 import TableRowGroup from "TableRowGroup" /* 7201 */;
 import EyeIcon from "EyeIcon" /* 7239 */;
 import _modDef9311 from "module_9311" /* 9311 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13582 */;
-import _modDef14151 from "module_14151" /* 14151 */;
-import QrCodeIcon from "QrCodeIcon" /* 17021 */;
-import _modDef17025 from "module_17025" /* 17025 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 17026 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13583 */;
+import _modDef14152 from "module_14152" /* 14152 */;
+import QrCodeIcon from "QrCodeIcon" /* 17033 */;
+import _modDef17037 from "module_17037" /* 17037 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 17038 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,13 +44,13 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2667["+pi4Yt"]), intl6.string(_modDef2667["1xPTwE"]));
-  obj4.icon = _modDef17025;
+  obj4.icon = _modDef17037;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2667["001l3m"]);
   obj4.description = ageSpecificText;
   items = [obj4, , ];
-  const obj5 = { icon: _modDef14151, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef14152, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2667.yipAeP);
   obj5.description = ageSpecificText1;

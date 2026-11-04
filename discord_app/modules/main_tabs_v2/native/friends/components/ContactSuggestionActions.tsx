@@ -1,10 +1,10 @@
-// === Module 18770: ContactSuggestionActions ===
+// === Module 18784: ContactSuggestionActions ===
 
-// Module 18770 (ContactSuggestionActions)
+// Module 18784 (ContactSuggestionActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18342 */;
-import _modDef18771 from "module_18771" /* 18771 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18356 */;
+import _modDef18785 from "module_18785" /* 18785 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -312,7 +312,7 @@ export function ContactSuggestionActions(user) {
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
   const tmp2Result2 = require("module_1652");
-  obj8.children = c5(require("native").Icon, { source: _modDef18771, color: tmp.icon.color });
+  obj8.children = c5(require("native").Icon, { source: _modDef18785, color: tmp.icon.color });
   const items11 = [c5(_modDef1652.View, obj8), ];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };

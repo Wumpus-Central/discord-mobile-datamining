@@ -1,6 +1,6 @@
-// === Module 11738: useLegacyExperiments ===
+// === Module 11739: useLegacyExperiments ===
 
-// Module 11738 (useLegacyExperiments)
+// Module 11739 (useLegacyExperiments)
 import ExperimentManager from "ExperimentManager" /* 5367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5362 */;

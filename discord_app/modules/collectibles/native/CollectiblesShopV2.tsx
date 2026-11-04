@@ -1,6 +1,6 @@
-// === Module 18068: CollectiblesShopV2 ===
+// === Module 18080: CollectiblesShopV2 ===
 
-// Module 18068 (CollectiblesShopV2)
+// Module 18080 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2188 */;
@@ -12,11 +12,11 @@ import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9
 import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 9719 */;
 import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9732 */;
 import NativePaymentHooksDefault from "NativePaymentHooks" /* 10089 */;
-import takeWhileDefault from "takeWhile" /* 18075 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18078 */;
-import ShopCategory from "ShopCategory" /* 18080 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18082 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18083 */;
+import takeWhileDefault from "takeWhile" /* 18087 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18090 */;
+import ShopCategory from "ShopCategory" /* 18092 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18094 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5764 */;

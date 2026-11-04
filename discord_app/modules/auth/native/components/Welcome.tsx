@@ -1,6 +1,6 @@
-// === Module 18231: Welcome ===
+// === Module 18245: Welcome ===
 
-// Module 18231 (Welcome)
+// Module 18245 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
@@ -13,12 +13,12 @@ import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7258 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7794 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 14447 */;
-import _modDef15348 from "module_15348" /* 15348 */;
-import _mod15917 from "module_15917" /* 15917 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18228 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 14448 */;
+import _modDef15349 from "module_15349" /* 15349 */;
+import _mod15930 from "module_15930" /* 15930 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18242 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 18232 */;
+import AgeGateStore from "AgeGateStore" /* 18246 */;
 import ExperimentStore from "ExperimentStore" /* 5362 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7777 */;
 import UserRecord from "UserRecord" /* 1399 */;
@@ -89,7 +89,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15348 };
+  const obj2 = { source: _modDef15349 };
   const items1 = [expandedHeight(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -111,7 +111,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod15917 }), , ];
+  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod15930 }), , ];
   const obj4 = { style: tmp4.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
   if (tmp3) {

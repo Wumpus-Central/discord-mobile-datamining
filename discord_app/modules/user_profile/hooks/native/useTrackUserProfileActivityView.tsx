@@ -1,6 +1,6 @@
-// === Module 15082: useTrackUserProfileActivityView ===
+// === Module 15083: useTrackUserProfileActivityView ===
 
-// Module 15082 (useTrackUserProfileActivityView)
+// Module 15083 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9634 */;
 

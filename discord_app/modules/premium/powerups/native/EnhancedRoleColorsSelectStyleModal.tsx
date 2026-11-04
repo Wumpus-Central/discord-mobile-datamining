@@ -1,6 +1,6 @@
-// === Module 20064: EnhancedRoleColorsSelectStyleModal ===
+// === Module 20078: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 20064 (EnhancedRoleColorsSelectStyleModal)
+// Module 20078 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
@@ -15,10 +15,10 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
 import RowGeneratorDefault from "RowGenerator" /* 8518 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8560 */;
 import _modDef11374 from "module_11374" /* 11374 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20043 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20044 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20046 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20065 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20057 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20058 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20060 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20079 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;

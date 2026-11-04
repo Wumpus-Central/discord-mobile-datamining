@@ -1,6 +1,6 @@
-// === Module 18868: StandaloneChannelScreen ===
+// === Module 18882: StandaloneChannelScreen ===
 
-// Module 18868 (StandaloneChannelScreen)
+// Module 18882 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 575 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9963 */;
@@ -190,9 +190,9 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
   dependencyMap = tmp;
   noop = channelId(1500).useNavigation();
   const obj = channelId(1500);
-  const isSwipeToMemberListEnabled = channelId(11726).useIsSwipeToMemberListEnabled();
+  const isSwipeToMemberListEnabled = channelId(11727).useIsSwipeToMemberListEnabled();
   const needSubscriptionToAccess = frame(6180)(channelId).needSubscriptionToAccess;
-  const obj2 = channelId(11726);
+  const obj2 = channelId(11727);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_8;
@@ -232,7 +232,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
   }, items1);
   const ref = noop.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = channelId(11534).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(11535).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -240,7 +240,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  const tmp2Result = channelId(11534);
+  const tmp2Result = channelId(11535);
   const items2 = [isChatBesideChannelList];
   const items3 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items2, () => {
@@ -274,7 +274,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
             let tmp41Result = null;
             if (canSeeOnboardingHome) {
               const obj7 = { guildId };
-              tmp41Result = closure_12(frame(18891), obj7);
+              tmp41Result = closure_12(frame(18905), obj7);
             }
             obj6.children = tmp41Result;
             items4[1] = closure_12(closure_4, obj6);
@@ -284,18 +284,18 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
             const obj8 = { style: tmp.container, children: null };
             const items5 = [closure_12(frame(10914), { absolute: true }), ];
             const obj9 = { guildId };
-            items5[1] = closure_12(frame(18908), obj9);
+            items5[1] = closure_12(frame(18922), obj9);
             obj8.children = items5;
             return closure_13(closure_4, obj8);
           } else if (channelId === StaticChannelRoute.CONJURE) {
             const obj10 = { guildId, inline: true };
-            return closure_12(frame(12267), obj10);
+            return closure_12(frame(12268), obj10);
           } else if (showCreateThread) {
             const obj11 = { style: memo1, children: null };
             const obj12 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14, measureNavigationTTI: false };
             const items6 = [closure_12(Header, obj12), ];
             const obj13 = { channelId, screenIndex };
-            items6[1] = closure_12(channelId(18926).CreateThreadView, obj13);
+            items6[1] = closure_12(channelId(18940).CreateThreadView, obj13);
             obj11.children = items6;
             return closure_13(closure_4, obj11);
           } else {
@@ -306,7 +306,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
                 const items7 = [closure_12(Header, obj15), ];
                 const obj16 = { style: memo1, children: null };
                 const obj17 = { channel: stateFromStores };
-                obj16.children = closure_12(frame(18930), obj17);
+                obj16.children = closure_12(frame(18944), obj17);
                 items7[1] = closure_12(closure_4, obj16);
                 obj14.children = items7;
                 return closure_13(closure_4, obj14);
@@ -317,18 +317,18 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
             const items8 = [closure_12(Header, obj19), ];
             const obj20 = { name: "chat_container", tracking: "include", style: memo1, children: null };
             const obj21 = { guildId, channelId, isActive: isActive.isActive, chatInputRef: ref, screenIndex };
-            obj20.children = closure_12(frame(11401), obj21);
-            items8[1] = closure_12(channelId(18869).NavTTIView, obj20);
+            obj20.children = closure_12(frame(11402), obj21);
+            items8[1] = closure_12(channelId(18883).NavTTIView, obj20);
             obj18.children = items8;
             const tmp25 = closure_13(closure_14, obj18);
             if (isSwipeToMemberListEnabled) {
               const obj22 = { style: memo, channelId, isNavigationTTIVisible, screenIndex, isBackEnabled: tmp14, children: tmp25 };
-              let tmp23Result = closure_12(frame(18942), obj22);
+              let tmp23Result = closure_12(frame(18956), obj22);
             } else {
               const obj23 = {
                 name: "channel_screen",
                 navigationKey: channelId,
-                definition: channelId(13937).CHANNEL_NAVIGATION_TTI,
+                definition: channelId(13938).CHANNEL_NAVIGATION_TTI,
                 visibilityMode: "prerendered",
                 isVisible: isNavigationTTIVisible,
                 descendantTracking: "included",
@@ -341,7 +341,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
                 style: memo,
                 children: tmp25
               };
-              tmp23Result = closure_12(channelId(18943).NavTTISurfaceProvider, obj23);
+              tmp23Result = closure_12(channelId(18957).NavTTISurfaceProvider, obj23);
             }
             return tmp23Result;
           }
@@ -358,7 +358,7 @@ export default noop.memo(function StandaloneChannelScreen(isActive) {
         tmp49 = channelId;
       }
       obj27.gatedChannelId = tmp49;
-      items10[1] = closure_12(frame(18874), obj27);
+      items10[1] = closure_12(frame(18888), obj27);
       obj26.children = items10;
       items9[1] = closure_13(closure_4, obj26);
       obj24.children = items9;

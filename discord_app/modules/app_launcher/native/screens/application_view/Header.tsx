@@ -1,6 +1,6 @@
-// === Module 12677: application_view/Header ===
+// === Module 12678: application_view/Header ===
 
-// Module 12677 (application_view/Header)
+// Module 12678 (application_view/Header)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -8,11 +8,11 @@ import ToastUtils from "ToastUtils" /* 5845 */;
 import ClipboardUtils from "ClipboardUtils" /* 7494 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8856 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9911 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12678 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12679 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12679 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12680 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import AppLauncherStore from "AppLauncherStore" /* 12633 */;
+import AppLauncherStore from "AppLauncherStore" /* 12634 */;
 
 const require = globalThis.__r;
 
@@ -56,8 +56,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12596).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12596);
+    appLauncherIconSource = tmp(12597).getAppLauncherIconSource(application);
+    const tmpResult = tmp(12597);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -76,7 +76,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(12601), obj2);
+    let tmp12 = closure_7(tmp5(12602), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -258,7 +258,7 @@ export default function Header(application) {
       obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
       const items15 = [tmp13(tmp(8168).IconButton, obj11), ];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(12680), obj12);
+      items15[1] = tmp13(tmp5(12681), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }

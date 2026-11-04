@@ -1,6 +1,6 @@
-// === Module 20241: FormEmojiPicker ===
+// === Module 20255: FormEmojiPicker ===
 
-// Module 20241 (FormEmojiPicker)
+// Module 20255 (FormEmojiPicker)
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,17 +21,17 @@ export default function FormEmojiPicker(emoji) {
     emojiId = onChange(5087).convertSurrogateToName(emojiName, false);
     let obj = onChange(5087);
   }
-  const emojiByIdOrName = guildId(17465).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(17477).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
     allEmojiNamesString = tmp3(5091).getAllEmojiNamesString(emojiByIdOrName);
     const tmp3Result = tmp3(5091);
   }
   const intl = tmp3(1113).intl;
-  let obj2 = guildId(17465);
+  let obj2 = guildId(17477);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(17464), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(17476), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;

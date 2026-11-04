@@ -1,6 +1,6 @@
-// === Module 18497: GuildMFAWarning ===
+// === Module 18511: GuildMFAWarning ===
 
-// Module 18497 (GuildMFAWarning)
+// Module 18511 (GuildMFAWarning)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5761 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import Pressables from "Pressables" /* 7121 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
-import _modDef18498 from "module_18498" /* 18498 */;
+import _modDef18512 from "module_18512" /* 18512 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18498 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18512 };
   items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 15904: handleSupportedURL ===
+// === Module 15917: handleSupportedURL ===
 
-// Module 15904 (handleSupportedURL)
+// Module 15917 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
@@ -23,17 +23,17 @@ import QuestUtils from "QuestUtils" /* 9828 */;
 import ApplicationUtils from "ApplicationUtils" /* 11088 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 11090 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 11115 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13438 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13576 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14491 */;
-import BountyActionCreators from "BountyActionCreators" /* 14902 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15914 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15947 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 16044 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13439 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13577 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14492 */;
+import BountyActionCreators from "BountyActionCreators" /* 14903 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15927 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15960 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 16057 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6990 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15512 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15513 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -48,7 +48,7 @@ const NativePermissionTypes = fn(8080).NativePermissionTypes;
 let closure_21 = fn(11089).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7856).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(5881).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15905).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15918).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8573).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -248,7 +248,7 @@ export default function handleSupportedURL(payload) {
                 ({ guildId, skuId } = payload);
                 c2 = 1;
                 dependencyMap = 1;
-                const obj4 = { value: tmp3(10848).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15912).default()), done: false };
+                const obj4 = { value: tmp3(10848).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15925).default()), done: false };
                 return obj4;
               } else {
                 const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
@@ -358,7 +358,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15918, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15931, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[45]);
             const tmp3 = payload(inviteCode[45]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;

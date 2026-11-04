@@ -1,13 +1,13 @@
-// === Module 18187: ParentalControlsUseDataForQuestsSetting ===
+// === Module 18199: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 18187 (ParentalControlsUseDataForQuestsSetting)
+// Module 18199 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16957 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16969 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;

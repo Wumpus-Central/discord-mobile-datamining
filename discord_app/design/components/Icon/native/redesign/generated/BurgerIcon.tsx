@@ -1,9 +1,9 @@
-// === Module 17843: BurgerIcon ===
+// === Module 17855: BurgerIcon ===
 
-// Module 17843 (BurgerIcon)
+// Module 17855 (BurgerIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod17844 from "module_17844" /* 17844 */;
+import _mod17856 from "module_17856" /* 17856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BurgerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17844, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17856, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,10 +1,10 @@
-// === Module 16597: screenCapture ===
+// === Module 16609: screenCapture ===
 
-// Module 16597 (screenCapture)
+// Module 16609 (screenCapture)
 import Constants2 from "Constants" /* 1072 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16528 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16540 */;
 import Constants from "Constants" /* 6585 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16536 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16548 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);

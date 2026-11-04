@@ -1,6 +1,6 @@
-// === Module 18731: notifications/Notifications ===
+// === Module 18745: notifications/Notifications ===
 
-// Module 18731 (notifications/Notifications)
+// Module 18745 (notifications/Notifications)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import native from "native" /* 5207 */;
@@ -12,13 +12,13 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 7258 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13555 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18312 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18732 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18734 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18735 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18739 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 18740 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13556 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18326 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18746 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18748 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18749 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18753 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 18754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -127,7 +127,7 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11702).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11703).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -163,7 +163,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(18733).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(18747).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(7121).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1113).intl;

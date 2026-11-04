@@ -1,9 +1,9 @@
-// === Module 13533: useSafetyHubClassifications ===
+// === Module 13534: useSafetyHubClassifications ===
 
-// Module 13533 (useSafetyHubClassifications)
+// Module 13534 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13534 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 13535 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8134 */;
 

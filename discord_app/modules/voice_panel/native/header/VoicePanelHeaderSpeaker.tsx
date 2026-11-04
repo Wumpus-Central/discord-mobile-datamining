@@ -1,27 +1,27 @@
-// === Module 19494: VoicePanelHeaderSpeaker ===
+// === Module 19508: VoicePanelHeaderSpeaker ===
 
-// Module 19494 (VoicePanelHeaderSpeaker)
+// Module 19508 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import NativeViewDefault from "NativeView" /* 7101 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9373 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14953 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19412 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19497 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14954 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19426 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19511 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 import AudioRouteStore from "AudioRouteStore" /* 5918 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19496 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19510 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SessionsStore from "SessionsStore" /* 5900 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19495).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(19509).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);

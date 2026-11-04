@@ -1,6 +1,6 @@
-// === Module 13635: Checkpoint2026ForwardPreview ===
+// === Module 13636: Checkpoint2026ForwardPreview ===
 
-// Module 13635 (Checkpoint2026ForwardPreview)
+// Module 13636 (Checkpoint2026ForwardPreview)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6222 */;
@@ -57,7 +57,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
       });
     } else {
       const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(13636).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      mapped = jsx(tmp2(13637).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

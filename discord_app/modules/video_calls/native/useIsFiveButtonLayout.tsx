@@ -1,6 +1,6 @@
-// === Module 11914: useIsFiveButtonLayout ===
+// === Module 11915: useIsFiveButtonLayout ===
 
-// Module 11914 (useIsFiveButtonLayout)
+// Module 11915 (useIsFiveButtonLayout)
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
@@ -36,8 +36,8 @@ export function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp6 = guild_id(11915);
-  const tmp6Result = guild_id(11915)(guild_id1, id);
+  const tmp6 = guild_id(11916);
+  const tmp6Result = guild_id(11916)(guild_id1, id);
   const items1 = [GuildStore];
   const items2 = [guild_id];
   const stateFromStores1 = tmp(504).useStateFromStores(items1, () => GuildStore.getGuild(guild_id), items2);
@@ -56,8 +56,8 @@ export function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp5Result = guild_id(11917);
-  const tmp5ResultResult = guild_id(11917)(id1);
+  const tmp5Result = guild_id(11918);
+  const tmp5ResultResult = guild_id(11918)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp6Result;
   }

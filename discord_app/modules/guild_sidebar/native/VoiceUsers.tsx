@@ -1,13 +1,13 @@
-// === Module 18420: VoiceUsers ===
+// === Module 18434: VoiceUsers ===
 
-// Module 18420 (VoiceUsers)
+// Module 18434 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9971 */;
 import ChannelListLayout from "ChannelListLayout" /* 11227 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 14321 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 14322 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18421), obj7, user.id);
+  obj4.children = closure_6(tmp(18435), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

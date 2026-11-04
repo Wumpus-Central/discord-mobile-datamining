@@ -1,6 +1,6 @@
-// === Module 15178: useGameCoverLayout ===
+// === Module 15179: useGameCoverLayout ===
 
-// Module 15178 (useGameCoverLayout)
+// Module 15179 (useGameCoverLayout)
 import nativeDefault from "native" /* 575 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9531 */;
 

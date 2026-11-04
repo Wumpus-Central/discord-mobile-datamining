@@ -1,9 +1,9 @@
-// === Module 13979: ForumPost ===
+// === Module 13980: ForumPost ===
 
-// Module 13979 (ForumPost)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 13981 */;
-import ForumPostGridBodyDefault from "ForumPostGridBody" /* 13985 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 13997 */;
+// Module 13980 (ForumPost)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 13982 */;
+import ForumPostGridBodyDefault from "ForumPostGridBody" /* 13986 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 13998 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -97,7 +97,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(13980).useForumChannelStore;
+const useForumChannelStore = fn(13981).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -133,8 +133,8 @@ export function ForumPostListDisabled(threadId) {
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = { thread: stateFromStores, parentChannel: stateFromStores1, firstMessage, messageContent: tmp10, media: localDeviceMedia, hasUnreads: true, isNew: false, firstMessageLoaded: loaded, isLocalDeviceMedia: true };
-    obj4.children = closure_6(tmp4(14001), obj5);
-    tmp5 = closure_6(tmp(14000).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(14002), obj5);
+    tmp5 = closure_6(tmp(14001).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 }

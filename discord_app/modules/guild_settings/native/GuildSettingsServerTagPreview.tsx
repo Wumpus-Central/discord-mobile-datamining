@@ -1,6 +1,6 @@
-// === Module 15971: GuildSettingsServerTagPreview ===
+// === Module 15984: GuildSettingsServerTagPreview ===
 
-// Module 15971 (GuildSettingsServerTagPreview)
+// Module 15984 (GuildSettingsServerTagPreview)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -98,7 +98,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             dependencyMap(true);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(15972).adoptGuildIdentity(guildId, true), done: false };
+            const obj5 = { value: tmp2(15985).adoptGuildIdentity(guildId, true), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -143,7 +143,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   obj6.style = items3;
   const obj7 = { source: null, style: null, importantForAccessibility: "no" };
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  obj7.source = onAdopted(15973);
+  obj7.source = onAdopted(15986);
   obj7.style = tmp.avatar;
   const items4 = [closure_9(onAdopted(5851), obj7), ];
   const obj8 = { style: tmp.messageBody, children: null };
@@ -171,7 +171,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
     if (null != badge) {
       const size = { badge, primaryTintColor: primaryColor, secondaryTintColor: secondaryColor, width: null, height: null };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_9(tmp2(15974).GuildBadge, size);
+      tmp15Result = closure_9(tmp2(15987).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
     tmp15Result3 = closure_9(tmp2(9440).BaseGuildTagChiplet, obj14);
@@ -194,7 +194,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj18 = { source: null, style: null, importantForAccessibility: "no" };
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp4Result = onAdopted(5851);
-  obj18.source = onAdopted(16018);
+  obj18.source = onAdopted(16031);
   obj18.style = tmp.avatar;
   const items11 = [closure_9(onAdopted(5851), obj18), ];
   const obj19 = { style: tmp.messageBody, children: null };

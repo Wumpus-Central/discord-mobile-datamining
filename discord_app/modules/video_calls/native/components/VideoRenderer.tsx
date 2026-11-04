@@ -1,6 +1,6 @@
-// === Module 11961: VideoRenderer ===
+// === Module 11962: VideoRenderer ===
 
-// Module 11961 (VideoRenderer)
+// Module 11962 (VideoRenderer)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -50,8 +50,8 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   closure_8 = tmp15;
   let obj = resizeMode(6023);
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(11962)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(11964)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(11963)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(11965)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -202,7 +202,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   }, items9);
   if (tmp17) {
     const obj3 = { animate: true, style: tmp2.spinner };
-    tmp35 = closure_8(tmp18(11966), obj3);
+    tmp35 = closure_8(tmp18(11967), obj3);
   }
   const tmp37 = store === resizeMode(9044).OrientationType.PORTRAIT;
   const obj2 = resizeMode(9044);
@@ -215,10 +215,10 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
     let size = { width, height: first1, alignItems: "center", justifyContent: "center" };
     obj6.style = size;
     const obj7 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo2 };
-    const items11 = [closure_8(tmp18(11969), obj7), tmp35];
+    const items11 = [closure_8(tmp18(11970), obj7), tmp35];
     obj6.children = items11;
     obj5.children = c9(first2, obj6);
-    const items12 = [closure_8(tmp18(11967), obj5), ];
+    const items12 = [closure_8(tmp18(11968), obj5), ];
     const obj8 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -238,13 +238,13 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
     items12[1] = closure_8(first2, obj8);
     obj4.children = items12;
     let tmp43Result1 = c9(tmp52, obj4);
-    const tmp18Result = tmp18(11967);
+    const tmp18Result = tmp18(11968);
   } else if (flag) {
     const obj9 = { ref, onLayout: callback2, style: closure_6.absoluteFillObject, contentContainerStyle: memo4, bounces: false, pinchGestureEnabled: !tmp17, maximumZoomScale: 8, minimumZoomScale: 1, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, scrollEventThrottle: 16, children: null };
     const obj10 = { collapsable: false, style: memo4, onLayout: callback3, children: null };
     const obj11 = { style: memo3, children: null };
     const obj12 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    const items13 = [closure_8(tmp18(11969), obj12), ];
+    const items13 = [closure_8(tmp18(11970), obj12), ];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -274,7 +274,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
     const items16 = [tmp2.center, closure_6.absoluteFillObject];
     obj14.style = items16;
     const obj15 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    const items17 = [closure_8(tmp18(11969), obj15), tmp35];
+    const items17 = [closure_8(tmp18(11970), obj15), tmp35];
     obj14.children = items17;
     tmp43Result1 = c9(first2, obj14);
   }

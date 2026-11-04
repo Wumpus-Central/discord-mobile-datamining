@@ -1,13 +1,13 @@
-// === Module 16975: DirectMessageSpamFilterSetting ===
+// === Module 16987: DirectMessageSpamFilterSetting ===
 
-// Module 16975 (DirectMessageSpamFilterSetting)
+// Module 16987 (DirectMessageSpamFilterSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import ModerationUtils from "ModerationUtils" /* 16976 */;
+import ModerationUtils from "ModerationUtils" /* 16988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
@@ -20,7 +20,7 @@ const radio = SettingBuilders.createRadio({
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: fn(16978).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(16990).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

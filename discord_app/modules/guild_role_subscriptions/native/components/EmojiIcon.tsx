@@ -1,11 +1,11 @@
-// === Module 17464: EmojiIcon ===
+// === Module 17476: EmojiIcon ===
 
-// Module 17464 (EmojiIcon)
+// Module 17476 (EmojiIcon)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import EmojiDefault from "Emoji" /* 7436 */;
 import _modDef10157 from "module_10157" /* 10157 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 17465 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 17477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

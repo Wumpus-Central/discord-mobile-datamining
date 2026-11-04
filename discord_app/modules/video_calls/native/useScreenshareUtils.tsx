@@ -1,6 +1,6 @@
-// === Module 12116: useScreenshareUtils ===
+// === Module 12117: useScreenshareUtils ===
 
-// Module 12116 (useScreenshareUtils)
+// Module 12117 (useScreenshareUtils)
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import inject from "inject" /* 2137 */;
@@ -10,8 +10,8 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
 import StreamActionCreators from "StreamActionCreators" /* 8041 */;
 import CallsUtils from "CallsUtils" /* 9366 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10389 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 12111 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 12122 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 12112 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 12123 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -97,7 +97,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(12117).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(12118).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -118,12 +118,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 12127 : 12128);
+        importDefault(tmp ? 12128 : 12129);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 12129;
+          let tmp20 = 12130;
         } else {
-          tmp20 = tmp ? 12130 : 12129;
+          tmp20 = tmp ? 12131 : 12130;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -159,7 +159,7 @@ export function getStreamPressHandler(analyticsLocations) {
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(12117).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(12118).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;

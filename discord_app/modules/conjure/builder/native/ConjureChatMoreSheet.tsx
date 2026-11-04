@@ -1,6 +1,6 @@
-// === Module 12414: ConjureChatMoreSheet ===
+// === Module 12415: ConjureChatMoreSheet ===
 
-// Module 12414 (ConjureChatMoreSheet)
+// Module 12415 (ConjureChatMoreSheet)
 import _modDef3995 from "module_3995" /* 3995 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ function MoreRow(row) {
     return jsx(row(7116).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(12415);
+const conjureDesignFeedbackStore = fn(12416);
 ({ enterConjureDesignFeedback: c3, exitConjureDesignFeedback: closure_4, useConjureDesignFeedback: hasOwnProperty } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";
@@ -74,7 +74,7 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(12417).conjureChatMoreSections(obj4);
+  const result = id(12418).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1113).intl;
   obj6.dismissAccessibilityLabel = intl.string(_modDef3995.OsD9T0);

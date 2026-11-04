@@ -1,8 +1,8 @@
-// === Module 11381: AnnouncementChannelLurkerBar ===
+// === Module 11382: AnnouncementChannelLurkerBar ===
 
-// Module 11381 (AnnouncementChannelLurkerBar)
+// Module 11382 (AnnouncementChannelLurkerBar)
 import nativeDefault from "native" /* 575 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11382 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15192: ContentInventoryHttpApi ===
+// === Module 15193: ContentInventoryHttpApi ===
 
-// Module 15192 (ContentInventoryHttpApi)
+// Module 15193 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -42,7 +42,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

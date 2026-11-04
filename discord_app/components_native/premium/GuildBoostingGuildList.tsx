@@ -1,6 +1,6 @@
-// === Module 15653: GuildBoostingGuildList ===
+// === Module 15654: GuildBoostingGuildList ===
 
-// Module 15653 (GuildBoostingGuildList)
+// Module 15654 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5377 */;
@@ -11,7 +11,7 @@ import transitionToGuild from "transitionToGuild" /* 7662 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8609 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
 import _modDef10472 from "module_10472" /* 10472 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15622 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15623 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SortedGuildStore from "SortedGuildStore" /* 6907 */;

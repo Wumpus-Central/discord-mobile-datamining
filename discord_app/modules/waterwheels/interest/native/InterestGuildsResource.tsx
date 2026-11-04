@@ -1,6 +1,6 @@
-// === Module 19832: InterestGuildsResource ===
+// === Module 19846: InterestGuildsResource ===
 
-// Module 19832 (InterestGuildsResource)
+// Module 19846 (InterestGuildsResource)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function availableInterestGuilds(degraded) {

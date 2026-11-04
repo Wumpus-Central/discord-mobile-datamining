@@ -1,6 +1,6 @@
-// === Module 16724: CustomizeBadgesSheet ===
+// === Module 16736: CustomizeBadgesSheet ===
 
-// Module 16724 (CustomizeBadgesSheet)
+// Module 16736 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -28,12 +28,12 @@ import ContextMenuState from "ContextMenuState" /* 10054 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 10055 */;
 import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11638 */;
-import BadgeManagementExperimentDefault from "BadgeManagementExperiment" /* 11640 */;
-import BadgeUtils from "BadgeUtils" /* 11648 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 15201 */;
-import BadgeGrid from "BadgeGrid" /* 16725 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11639 */;
+import BadgeManagementExperimentDefault from "BadgeManagementExperiment" /* 11641 */;
+import BadgeUtils from "BadgeUtils" /* 11649 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12629 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 15202 */;
+import BadgeGrid from "BadgeGrid" /* 16737 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -154,7 +154,7 @@ let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDef
 obj10.indicator = size;
 obj10.iconHidden = { opacity: 0.3 };
 let closure_18 = createStyles.createStyles(obj10);
-let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(16725).BADGE_GRID_COLUMNS, fn(16725).BADGE_GRID_GAP];
+let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(16737).BADGE_GRID_COLUMNS, fn(16737).BADGE_GRID_GAP];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -381,7 +381,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx3.__workletHash = 7747025592280;
     CustomizeBadgesSheetTsx3.__initData = tmp23;
     const animatedReaction = tmp2(1652).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
-    let items4 = [items15, orderShared, tileSize, tmp2(16725).BADGE_GRID_GAP, tmp2(1652).clamp, sharedValue2, tmp2(16725).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15201).moveBadgeInDisplayOrder, badge_id, tmp2(1705).scheduleOnRN, tmp2(5384).triggerHapticFeedback, tmp2(5384).HapticFeedbackTypes];
+    let items4 = [items15, orderShared, tileSize, tmp2(16737).BADGE_GRID_GAP, tmp2(1652).clamp, sharedValue2, tmp2(16737).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15202).moveBadgeInDisplayOrder, badge_id, tmp2(1705).scheduleOnRN, tmp2(5384).triggerHapticFeedback, tmp2(5384).HapticFeedbackTypes];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -967,12 +967,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(16725).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(16737).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(16725).BADGE_GRID_GAP;
+    num = result + diff * tmp5(16737).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
   animatedRef = require("module_1652").useAnimatedRef();
@@ -1085,8 +1085,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
       obj6.children = memo2(tmp5(5761).Text, obj7);
-      tmp56 = memo2(tmp2(16726), obj6);
-      const tmp2Result = tmp2(16726);
+      tmp56 = memo2(tmp2(16738), obj6);
+      const tmp2Result = tmp2(16738);
     }
     const items22 = [tmp56, ];
     const obj8 = { accessibilityRole: "list", style: null, children: null };

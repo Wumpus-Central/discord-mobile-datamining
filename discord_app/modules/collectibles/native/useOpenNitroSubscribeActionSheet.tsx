@@ -1,6 +1,6 @@
-// === Module 15269: useOpenNitroSubscribeActionSheet ===
+// === Module 15270: useOpenNitroSubscribeActionSheet ===
 
-// Module 15269 (useOpenNitroSubscribeActionSheet)
+// Module 15270 (useOpenNitroSubscribeActionSheet)
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7747 */;
 import noop from "module_19" /* 19 */;
 

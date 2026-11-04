@@ -1,6 +1,6 @@
-// === Module 18234: ChooseAccount ===
+// === Module 18248: ChooseAccount ===
 
-// Module 18234 (ChooseAccount)
+// Module 18248 (ChooseAccount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -12,8 +12,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(14194).MultiAccountTokenStatus;
-let Constants = fn(14195);
+const MultiAccountTokenStatus = fn(14195).MultiAccountTokenStatus;
+let Constants = fn(14196);
 ({ MAX_ACCOUNTS: metroImportDefault, MultiAccountSwitchLocation: closure_8 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AuthStates: closure_10 } = Constants);
@@ -94,8 +94,8 @@ export default function ChooseAccount() {
           if (value) {
             tmp2(5382).hideActionSheet();
             const obj = tmp2(5382);
-            tmp5(14198).removeAccount(closure_129_0.id);
-            const obj2 = tmp5(14198);
+            tmp5(14199).removeAccount(closure_129_0.id);
+            const obj2 = tmp5(14199);
           }
           c4 = 3;
           return { value: "HermesInternal", done: null };
@@ -131,8 +131,8 @@ export default function ChooseAccount() {
             multiAccountUsers(1252).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
             const obj2 = multiAccountUsers(1252);
           } else {
-            closure_1_2(14198).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-            const obj = closure_1_2(14198);
+            closure_1_2(14199).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+            const obj = closure_1_2(14199);
           }
           return tmp4;
         },
@@ -153,8 +153,8 @@ export default function ChooseAccount() {
               closure_1_1(1252).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
               const obj2 = closure_1_1(1252);
             } else {
-              closure_1_2(14198).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-              const obj = closure_1_2(14198);
+              closure_1_2(14199).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+              const obj = closure_1_2(14199);
             }
             return tmp4;
           };
@@ -180,7 +180,7 @@ export default function ChooseAccount() {
         },
         children: null
       };
-      const tmp = multiAccountUsers(18236);
+      const tmp = multiAccountUsers(18250);
       obj2.children = closure_1_11(user(1187).Icon, { size: user(1187).Icon.Sizes.SMALL_20, source: multiAccountUsers(9245), disableColor: true });
       obj.trailing = closure_1_11(user(7121).PressableOpacity, obj2);
       return closure_1_11(tmp, obj, user.id);
@@ -189,7 +189,7 @@ export default function ChooseAccount() {
   ];
   let obj6 = { leading: null, label: null, labelStyle: null, onPress: null };
   const tmp2 = multiAccountUsers(7281);
-  obj6.leading = closure_11(require("Form").FormRow.Icon, { themedColor: multiAccountUsers(575).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(18237) });
+  obj6.leading = closure_11(require("Form").FormRow.Icon, { themedColor: multiAccountUsers(575).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(18251) });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);
   obj6.labelStyle = tmp.addAccountLabel;

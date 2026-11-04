@@ -1,12 +1,12 @@
-// === Module 16740: EditProfileFrameSection ===
+// === Module 16752: EditProfileFrameSection ===
 
-// Module 16740 (EditProfileFrameSection)
+// Module 16752 (EditProfileFrameSection)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9665 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15298 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15299 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 16739 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15299 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15300 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 16751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(5141);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15298).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15299).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {

@@ -1,6 +1,6 @@
-// === Module 14378: GuildPowerupsBoostButton ===
+// === Module 14379: GuildPowerupsBoostButton ===
 
-// Module 14378 (GuildPowerupsBoostButton)
+// Module 14379 (GuildPowerupsBoostButton)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;

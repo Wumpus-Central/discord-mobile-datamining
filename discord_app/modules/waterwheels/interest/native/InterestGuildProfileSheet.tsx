@@ -1,6 +1,6 @@
-// === Module 19836: InterestGuildProfileSheet ===
+// === Module 19850: InterestGuildProfileSheet ===
 
-// Module 19836 (InterestGuildProfileSheet)
+// Module 19850 (InterestGuildProfileSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -11,7 +11,7 @@ import BottomSheetModal from "BottomSheetModal" /* 5400 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5731 */;
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 9442 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19839 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19853 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -66,7 +66,7 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(19837).getInterestGuildProfileSheetLayout(obj6);
+  interestGuildProfileSheetLayout = guildId(19851).getInterestGuildProfileSheetLayout(obj6);
   closure_10 = interestGuildProfileSheetLayout(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = obj4.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);

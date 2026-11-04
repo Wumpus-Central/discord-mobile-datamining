@@ -1,9 +1,9 @@
-// === Module 15604: PremiumGroupStore ===
+// === Module 15605: PremiumGroupStore ===
 
-// Module 15604 (PremiumGroupStore)
+// Module 15605 (PremiumGroupStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 15605 */;
+import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 15606 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 
 require = fn;

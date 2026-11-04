@@ -1,16 +1,16 @@
-// === Module 17114: FriendRequestsMutualFriendsSetting ===
+// === Module 17126: FriendRequestsMutualFriendsSetting ===
 
-// Module 17114 (FriendRequestsMutualFriendsSetting)
+// Module 17126 (FriendRequestsMutualFriendsSetting)
 import util from "util" /* 1113 */;
 import FlagUtilsAll from "FlagUtils" /* 1398 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

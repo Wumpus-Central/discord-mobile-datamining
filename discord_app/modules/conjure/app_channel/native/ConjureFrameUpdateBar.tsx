@@ -1,13 +1,13 @@
-// === Module 18935: ConjureFrameUpdateBar ===
+// === Module 18949: ConjureFrameUpdateBar ===
 
-// Module 18935 (ConjureFrameUpdateBar)
+// Module 18949 (ConjureFrameUpdateBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import Pressables from "Pressables" /* 7121 */;
 import restartFrames from "restartFrames" /* 11113 */;
-import RefreshIcon from "RefreshIcon" /* 12420 */;
+import RefreshIcon from "RefreshIcon" /* 12421 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6981 */;
 
@@ -32,7 +32,7 @@ class ConjureFrameUpdateBarContent {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(18931).useConjureFrameUpdateAvailable;
+let closure_6 = fn(18945).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);

@@ -1,10 +1,10 @@
-// === Module 18184: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
+// === Module 18196: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
 
-// Module 18184 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
+// Module 18196 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1113 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8828 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16960 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16972 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(16960);
+    const obj = selectedTeenId(16972);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1113).intl;
     obj3.title = intl.string(selectedTeenId(1113).t["16/3Bi"]);
@@ -36,11 +36,11 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     items = [selectedTeenId(1196).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(16965).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16965);
+    const result = selectedTeenId(16977).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16977);
   }
 }
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;

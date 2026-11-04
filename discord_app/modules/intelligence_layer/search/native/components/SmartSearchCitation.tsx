@@ -1,7 +1,7 @@
-// === Module 19018: SmartSearchCitation ===
+// === Module 19032: SmartSearchCitation ===
 
-// Module 19018 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19019 */;
+// Module 19032 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export function SmartSearchCitation(smartSearchQuery) {
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(14127).trackSmartSearchCitationOpened(obj4, v2(14125));
+            const result = v2(14128).trackSmartSearchCitationOpened(obj4, v2(14126));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -58,7 +58,7 @@ export function SmartSearchCitation(smartSearchQuery) {
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(14127);
+            const obj6 = v2(14128);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

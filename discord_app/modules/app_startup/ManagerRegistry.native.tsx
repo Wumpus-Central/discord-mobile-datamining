@@ -1,8 +1,8 @@
-// === Module 19648: ManagerRegistry ===
+// === Module 19662: ManagerRegistry ===
 
-// Module 19648 (ManagerRegistry)
+// Module 19662 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20383 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20396 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -599,7 +599,7 @@ obj.NotificationsManager = {
   neverLoadBeforeConnectionOpen: true
 };
 obj.NotifSettingsProtoManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "APP_STATE_UPDATE"],
+  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "APP_STATE_UPDATE", "USER_SETTINGS_PROTO_UPDATE", "NOTIFICATION_SETTINGS_UPDATE", "EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_OPEN", "EFFECTIVE_NOTIFICATION_SETTINGS_ARM_CHANGE", "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE", "LOGOUT"],
   inlineRequire() {
     return require("NotifSettingsProtoManager").default;
   },

@@ -1,9 +1,9 @@
-// === Module 12223: SpeakerTile ===
+// === Module 12224: SpeakerTile ===
 
-// Module 12223 (SpeakerTile)
+// Module 12224 (SpeakerTile)
 import nativeDefault from "native" /* 575 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
-import StageTileTypes from "StageTileTypes" /* 12224 */;
+import StageTileTypes from "StageTileTypes" /* 12225 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 

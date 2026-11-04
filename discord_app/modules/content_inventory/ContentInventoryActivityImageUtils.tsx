@@ -1,6 +1,6 @@
-// === Module 15056: ContentInventoryActivityImageUtils ===
+// === Module 15057: ContentInventoryActivityImageUtils ===
 
-// Module 15056 (ContentInventoryActivityImageUtils)
+// Module 15057 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,9 +14,9 @@ import ContentInventoryTypes from "ContentInventoryTypes" /* 9053 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9056 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10941 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 15057 */;
-import isOnXboxDefault from "isOnXbox" /* 15063 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 15064 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 15058 */;
+import isOnXboxDefault from "isOnXbox" /* 15064 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 15065 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -214,7 +214,7 @@ function useRichImageForActivity(activity, activityApplication) {
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == activity) {
-    return { largeImage: "PX_8", smallImage: "__closure" };
+    return { largeImage: "Object", smallImage: "Array" };
   } else {
     let large_image;
     if (activity != null) {

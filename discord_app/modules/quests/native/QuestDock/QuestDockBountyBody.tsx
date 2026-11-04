@@ -1,6 +1,6 @@
-// === Module 17420: QuestDockBountyBody ===
+// === Module 17432: QuestDockBountyBody ===
 
-// Module 17420 (QuestDockBountyBody)
+// Module 17432 (QuestDockBountyBody)
 import util from "util" /* 1113 */;
 import QuestTypes from "QuestTypes" /* 6919 */;
 import AdCreativeType from "AdCreativeType" /* 6923 */;
@@ -9,9 +9,9 @@ import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
 import captureAdUserAction from "captureAdUserAction" /* 9834 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9837 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14896 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17156 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 17158 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14897 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17168 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 17170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

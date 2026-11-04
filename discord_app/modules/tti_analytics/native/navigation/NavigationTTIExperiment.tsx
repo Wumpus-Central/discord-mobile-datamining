@@ -1,6 +1,6 @@
-// === Module 18865: NavigationTTIExperiment ===
+// === Module 18879: NavigationTTIExperiment ===
 
-// Module 18865 (NavigationTTIExperiment)
+// Module 18879 (NavigationTTIExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

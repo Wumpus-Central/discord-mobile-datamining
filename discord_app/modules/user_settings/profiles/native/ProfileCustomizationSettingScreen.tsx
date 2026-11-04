@@ -1,21 +1,21 @@
-// === Module 16675: ProfileCustomizationSettingScreen ===
+// === Module 16687: ProfileCustomizationSettingScreen ===
 
-// Module 16675 (ProfileCustomizationSettingScreen)
+// Module 16687 (ProfileCustomizationSettingScreen)
 import util from "util" /* 1113 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7289 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11595 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11708 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12566 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16676 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16800 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11596 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11709 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12567 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16688 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16812 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11647 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11648 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
-import WidgetStore from "WidgetStore" /* 12564 */;
+import WidgetStore from "WidgetStore" /* 12565 */;
 import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 
 const require = globalThis.__r;

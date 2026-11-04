@@ -1,9 +1,9 @@
-// === Module 17956: DevToolsGuildTagBadgesScreen ===
+// === Module 17968: DevToolsGuildTagBadgesScreen ===
 
-// Module 17956 (DevToolsGuildTagBadgesScreen)
+// Module 17968 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5761 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 15974 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 15987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ let closure_9 = found.map((item) => {
   [tmp, tmp2] = item;
   return { name, value };
 });
-let items = [{ label: "Untinted", primary: "displayName", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
+let items = [{ label: "Untinted", primary: "diversity", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
 const dependencyMap = [24, 48, 72];
 const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };

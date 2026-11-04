@@ -1,6 +1,6 @@
-// === Module 12741: GroupDMNitroCapInfoActionSheet ===
+// === Module 12742: GroupDMNitroCapInfoActionSheet ===
 
-// Module 12741 (GroupDMNitroCapInfoActionSheet)
+// Module 12742 (GroupDMNitroCapInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11822).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11823).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);

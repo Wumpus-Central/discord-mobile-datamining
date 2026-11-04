@@ -1,16 +1,16 @@
-// === Module 14792: GuildChannelHeader ===
+// === Module 14793: GuildChannelHeader ===
 
-// Module 14792 (GuildChannelHeader)
+// Module 14793 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import useChannelName from "useChannelName" /* 5786 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
-import ChannelHeader from "ChannelHeader" /* 14783 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14794 */;
+import ChannelHeader from "ChannelHeader" /* 14784 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14793 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14794 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7586 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -69,7 +69,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11524);
+    const tmpResult = tmp(11525);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(7242).ICON_SIZE[token]);
   }
   const obj2 = channel(504);

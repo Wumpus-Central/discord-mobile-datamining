@@ -1,6 +1,6 @@
-// === Module 17230: BountiesCtaHeader ===
+// === Module 17242: BountiesCtaHeader ===
 
-// Module 17230 (BountiesCtaHeader)
+// Module 17242 (BountiesCtaHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,12 +10,12 @@ import AdCreativeType from "AdCreativeType" /* 6923 */;
 import AnalyticsActions from "AnalyticsActions" /* 8002 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
 import common_Video from "common/Video" /* 9014 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17156 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 17158 */;
-import _modDef17209 from "module_17209" /* 17209 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17217 */;
-import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 17232 */;
-import _modDef17233 from "module_17233" /* 17233 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17168 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 17170 */;
+import _modDef17221 from "module_17221" /* 17221 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17229 */;
+import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 17244 */;
+import _modDef17245 from "module_17245" /* 17245 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import AdContentSeenStore from "AdContentSeenStore" /* 9822 */;
@@ -27,7 +27,7 @@ function StarfieldBackground() {
   items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = { source: null, style: null, resizeMode: "cover", muted: true, disableFocus: true, paused: null, importantForAccessibility: "no-hide-descendants" };
-  obj2.source = { uri: _modDef17209 };
+  obj2.source = { uri: _modDef17221 };
   obj2.style = absoluteFillObject.absoluteFillObject;
   obj2.paused = stateFromStores;
   return closure_1_10(common_Video.VideoComponent, obj2);
@@ -94,8 +94,8 @@ function BountiesCtaHeaderInner(bounties) {
   const tmp = closure_16();
   let tmp9Result2 = null != footer;
   let tmp11Result6 = !flag;
-  const bountiesEntryPointButtonVariant = bounties(17231).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
-  let obj = bounties(17231);
+  const bountiesEntryPointButtonVariant = bounties(17243).getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
+  let obj = bounties(17243);
   items = [AdContentSeenStore];
   const items1 = [bounties];
   let stateFromStores = bounties(504).useStateFromStores(items, () => bounties.some((id) => !closure_1_7.hasSeen(bounties(closure_1_2[17]).AdCreativeType.BOUNTY, id.id)), items1);
@@ -155,7 +155,7 @@ function BountiesCtaHeaderInner(bounties) {
     obj6.children = items5;
     let tmp9Result = closure_11(closure_5, obj6);
   } else {
-    const obj15 = { uri: _modDef17233, style: null, children: null };
+    const obj15 = { uri: _modDef17245, style: null, children: null };
     const items7 = [tmp.header, , ];
     let headerWithFooter = tmp9Result2;
     if (tmp9Result2) {
@@ -268,7 +268,7 @@ let result = size.fileFinishedImporting("modules/quests/native/BountiesCtaHeader
 
 export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(17234)();
+  const tmp2 = containerRef(17246)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -298,7 +298,7 @@ export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
               return closure_2_10(BountiesCtaHeaderInner, obj);
             }
       };
-      tmp9Result = closure_10(tmp7(14910).QuestContentImpressionTrackerNative, obj4);
+      tmp9Result = closure_10(tmp7(14911).QuestContentImpressionTrackerNative, obj4);
     }
     obj2.children = tmp9Result;
     return closure_10(require("native").ThemeContextProvider, obj2);

@@ -1,19 +1,19 @@
-// === Module 19067: AutocompleteScreen ===
+// === Module 19081: AutocompleteScreen ===
 
-// Module 19067 (AutocompleteScreen)
+// Module 19081 (AutocompleteScreen)
 import UserUtilsDefault from "UserUtils" /* 5195 */;
 import useChannelName from "useChannelName" /* 5786 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14103 */;
-import TrackingDefault from "Tracking" /* 14124 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 19069 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14104 */;
+import TrackingDefault from "Tracking" /* 14125 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14129 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 19083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 19068 */;
-import SearchQueryStore from "SearchQueryStore" /* 14117 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 19082 */;
+import SearchQueryStore from "SearchQueryStore" /* 14118 */;
 
 require = fn;
 const SearchConstants = fn(9976);

@@ -1,6 +1,6 @@
-// === Module 18596: NsfwGateGuildSidebar ===
+// === Module 18610: NsfwGateGuildSidebar ===
 
-// Module 18596 (NsfwGateGuildSidebar)
+// Module 18610 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7525 */;

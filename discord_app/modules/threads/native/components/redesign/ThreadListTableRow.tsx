@@ -1,8 +1,8 @@
-// === Module 19052: ThreadListTableRow ===
+// === Module 19066: ThreadListTableRow ===
 
-// Module 19052 (ThreadListTableRow)
+// Module 19066 (ThreadListTableRow)
 import TableRow from "TableRow" /* 7116 */;
-import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 19053 */;
+import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 19067 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 

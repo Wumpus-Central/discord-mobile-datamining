@@ -1,9 +1,9 @@
-// === Module 11712: ActivityLauncherStore ===
+// === Module 11713: ActivityLauncherStore ===
 
-// Module 11712 (ActivityLauncherStore)
+// Module 11713 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocalActivityStore from "LocalActivityStore" /* 11713 */;
+import LocalActivityStore from "LocalActivityStore" /* 11714 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6705 */;
 
 const require = fn;

@@ -1,6 +1,6 @@
-// === Module 15167: useGameNameAndCoverImage ===
+// === Module 15168: useGameNameAndCoverImage ===
 
-// Module 15167 (useGameNameAndCoverImage)
+// Module 15168 (useGameNameAndCoverImage)
 import util from "util" /* 1113 */;
 import useGame from "useGame" /* 7620 */;
 import size from "module_2" /* 2 */;

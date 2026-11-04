@@ -1,6 +1,6 @@
-// === Module 17225: CollectibleSearchCurrencyFilter ===
+// === Module 17237: CollectibleSearchCurrencyFilter ===
 
-// Module 17225 (CollectibleSearchCurrencyFilter)
+// Module 17237 (CollectibleSearchCurrencyFilter)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchCurrencyFilter.tsx");

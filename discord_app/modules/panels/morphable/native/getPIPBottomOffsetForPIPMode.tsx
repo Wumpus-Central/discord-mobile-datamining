@@ -1,7 +1,7 @@
-// === Module 19266: getPIPBottomOffsetForPIPMode ===
+// === Module 19280: getPIPBottomOffsetForPIPMode ===
 
-// Module 19266 (getPIPBottomOffsetForPIPMode)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11411 */;
+// Module 19280 (getPIPBottomOffsetForPIPMode)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11412 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getPIPBottomOffsetForPIPMode_getPIPBottomOffsetForPIPModeTsx1(screenName){let[DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,PIP_AVOIDANCE_TAB_BAR_HEIGHT]=this.__closure;switch(screenName){case'panels':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'channel':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'notifications':case'main_tab':case'guilds':return PIP_AVOIDANCE_TAB_BAR_HEIGHT+PIP_WINDOW_OFFSET;default:return 0;}})" }, 60, MorphablePanelConstants.PIP_WINDOW_OFFSET, 46];

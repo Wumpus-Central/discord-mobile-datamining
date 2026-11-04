@@ -1,6 +1,6 @@
-// === Module 12564: WidgetStore ===
+// === Module 12565: WidgetStore ===
 
-// Module 12564 (WidgetStore)
+// Module 12565 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

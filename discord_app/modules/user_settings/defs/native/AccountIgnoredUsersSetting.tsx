@@ -1,12 +1,12 @@
-// === Module 16944: AccountIgnoredUsersSetting ===
+// === Module 16956: AccountIgnoredUsersSetting ===
 
-// Module 16944 (AccountIgnoredUsersSetting)
+// Module 16956 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   IconComponent: fn(7237).EyeSlashIcon,
   useTitle() {

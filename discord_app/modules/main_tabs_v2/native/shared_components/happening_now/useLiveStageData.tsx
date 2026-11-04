@@ -1,6 +1,6 @@
-// === Module 18372: useLiveStageData ===
+// === Module 18386: useLiveStageData ===
 
-// Module 18372 (useLiveStageData)
+// Module 18386 (useLiveStageData)
 import _modDef12 from "module_12" /* 12 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6894 */;
 import noop from "module_19" /* 19 */;

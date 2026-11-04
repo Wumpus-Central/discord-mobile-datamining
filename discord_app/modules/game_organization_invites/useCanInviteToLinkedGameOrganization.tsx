@@ -1,6 +1,6 @@
-// === Module 11818: useCanInviteToLinkedGameOrganization ===
+// === Module 11819: useCanInviteToLinkedGameOrganization ===
 
-// Module 11818 (useCanInviteToLinkedGameOrganization)
+// Module 11819 (useCanInviteToLinkedGameOrganization)
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

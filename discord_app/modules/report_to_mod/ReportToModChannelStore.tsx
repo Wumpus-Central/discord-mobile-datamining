@@ -1,6 +1,6 @@
-// === Module 14586: ReportToModChannelStore ===
+// === Module 14587: ReportToModChannelStore ===
 
-// Module 14586 (ReportToModChannelStore)
+// Module 14587 (ReportToModChannelStore)
 import module_560 from "module_560" /* 560 */;
 import "module_5336";
 import module_5336 from "module_5336" /* 5336 */;

@@ -1,13 +1,13 @@
-// === Module 18704: ManageAccountsModal ===
+// === Module 18718: ManageAccountsModal ===
 
-// Module 18704 (ManageAccountsModal)
+// Module 18718 (ManageAccountsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
 import HeaderShared from "HeaderShared" /* 9961 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10322 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 14198 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 14199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -71,8 +71,8 @@ function RemoveMultiAccountUserButton(user) {
           return obj8;
         } else {
           if (value) {
-            v3(14198).removeAccount(closure_128_0.id);
-            const obj = v3(14198);
+            v3(14199).removeAccount(closure_128_0.id);
+            const obj = v3(14199);
           }
           v3 = 3;
           return { value: "HermesInternal", done: null };
@@ -118,7 +118,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_18(tmp(17539).CircleMinusIcon, obj4);
+    obj3.children = closure_18(tmp(17551).CircleMinusIcon, obj4);
     return closure_18(tmp(7121).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -271,10 +271,10 @@ function ManageAccounts(isEditing) {
   return closure_18(require("common/SafeAreaView").SafeAreaPaddingView, obj5);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(14194).MultiAccountTokenStatus;
-let Constants = fn(14195);
+const MultiAccountTokenStatus = fn(14195).MultiAccountTokenStatus;
+let Constants = fn(14196);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_12, MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
-const ManageAccountsScreens = fn(18705).ManageAccountsScreens;
+const ManageAccountsScreens = fn(18719).ManageAccountsScreens;
 Constants = fn(1072);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
@@ -361,7 +361,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(18261), {
+        return closure_1_18(isEditing(18275), {
           handleLogin(login, password, undelete) {
             isEditing(6875).login({ login, password, undelete });
           },
@@ -386,7 +386,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(18260), { isMultiAccount: true });
+        return closure_1_18(isEditing(18274), { isMultiAccount: true });
       }
     })
   ];

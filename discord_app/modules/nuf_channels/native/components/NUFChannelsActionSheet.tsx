@@ -1,8 +1,8 @@
-// === Module 15411: NUFChannelsActionSheet ===
+// === Module 15412: NUFChannelsActionSheet ===
 
-// Module 15411 (NUFChannelsActionSheet)
+// Module 15412 (NUFChannelsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import NUFTemplateV2Default from "NUFTemplateV2" /* 15412 */;
+import NUFTemplateV2Default from "NUFTemplateV2" /* 15413 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -31,7 +31,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     startExpanded: true,
     children: null
   };
-  const obj2 = { illustration: jsx(markAsDismissed(15413).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
+  const obj2 = { illustration: jsx(markAsDismissed(15414).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
   const intl = markAsDismissed(1113).intl;
   obj2.title = intl.string(markAsDismissed(1113).t.Ay9424);
   const intl2 = markAsDismissed(1113).intl;
@@ -39,7 +39,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1113).intl;
   obj2.CTALabel = intl3.string(markAsDismissed(1113).t.BddRzS);
   obj2.onCTAPress = callback;
-  obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(markAsDismissed(15413).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(markAsDismissed(15414).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
   return jsx(markAsDismissed(5396).BottomSheet, {
     onDismiss() {
       let tmpResult;

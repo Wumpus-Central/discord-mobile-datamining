@@ -1,8 +1,8 @@
-// === Module 16005: GuildBadgeTrophy ===
+// === Module 16018: GuildBadgeTrophy ===
 
-// Module 16005 (GuildBadgeTrophy)
+// Module 16018 (GuildBadgeTrophy)
 import inlineStyles from "inlineStyles" /* 8171 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15976 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

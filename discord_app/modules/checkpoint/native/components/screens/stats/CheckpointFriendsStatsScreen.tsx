@@ -1,6 +1,6 @@
-// === Module 13898: CheckpointFriendsStatsScreen ===
+// === Module 13899: CheckpointFriendsStatsScreen ===
 
-// Module 13898 (CheckpointFriendsStatsScreen)
+// Module 13899 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3187 from "module_3187" /* 3187 */;
@@ -8,17 +8,17 @@ import FriendsIcon from "FriendsIcon" /* 5849 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import ChatIcon from "ChatIcon" /* 8784 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10736 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12168 */;
-import Tracking from "Tracking" /* 13654 */;
-import CheckpointTextDefault from "CheckpointText" /* 13865 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13868 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13884 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12169 */;
+import Tracking from "Tracking" /* 13655 */;
+import CheckpointTextDefault from "CheckpointText" /* 13866 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13869 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13885 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 13656 */;
+import CheckpointStore from "CheckpointStore" /* 13657 */;
 
 const require = globalThis.__r;
 
@@ -201,7 +201,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1113).intl;
     obj5.accessibilityLabel = intl2.string(user(1113).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(13585).GiftIcon, obj6);
+    obj5.children = closure_13(user(13586).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {

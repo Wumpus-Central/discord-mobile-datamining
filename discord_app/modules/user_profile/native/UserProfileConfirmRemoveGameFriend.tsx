@@ -1,6 +1,6 @@
-// === Module 12571: UserProfileConfirmRemoveGameFriend ===
+// === Module 12572: UserProfileConfirmRemoveGameFriend ===
 
-// Module 12571 (UserProfileConfirmRemoveGameFriend)
+// Module 12572 (UserProfileConfirmRemoveGameFriend)
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8903 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10918 */;
 import noop from "module_19" /* 19 */;

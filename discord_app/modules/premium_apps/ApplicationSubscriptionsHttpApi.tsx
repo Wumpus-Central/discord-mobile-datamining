@@ -1,6 +1,6 @@
-// === Module 11938: ApplicationSubscriptionsHttpApi ===
+// === Module 11939: ApplicationSubscriptionsHttpApi ===
 
-// Module 11938 (ApplicationSubscriptionsHttpApi)
+// Module 11939 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import APIErrorDefault from "APIError" /* 6582 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

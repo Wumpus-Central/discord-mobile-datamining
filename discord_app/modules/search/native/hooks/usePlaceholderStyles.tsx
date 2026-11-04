@@ -1,6 +1,6 @@
-// === Module 18972: usePlaceholderStyles ===
+// === Module 18986: usePlaceholderStyles ===
 
-// Module 18972 (usePlaceholderStyles)
+// Module 18986 (usePlaceholderStyles)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;

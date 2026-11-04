@@ -1,6 +1,6 @@
-// === Module 12866: ConjureAgentReaction ===
+// === Module 12867: ConjureAgentReaction ===
 
-// Module 12866 (ConjureAgentReaction)
+// Module 12867 (ConjureAgentReaction)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import UserSettings from "UserSettings" /* 4966 */;

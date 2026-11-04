@@ -7,7 +7,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 const Constants = fn(1072);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = { VIEWER_SWIPE: "number_viewer_swipes", THUMBNAIL_SWIPE: "number_thumbnail_swipes", SELECTED_ITEM_CHANGE: "number_selected_item_changes", ZOOM_IN_BUTTON_PRESSED: "number_zoom_in_button_pressed", ZOOM_IN_IMAGE_PRESSED: "number_zoom_in_image_pressed", ZOOM_OUT_BUTTON_PRESSED: "number_zoom_out_button_pressed", ZOOM_OUT_IMAGE_PRESSED: "number_zoom_out_image_pressed", FORWARD_PRESSED: "number_forward_button_pressed", SAVE_MEDIA_PRESSED: "number_save_media_button_pressed", OPEN_LINK_PRESSED: "number_open_link_button_pressed", MORE_BUTTON_PRESSED: "number_more_button_pressed", COPY_IMAGE_PRESSED: "number_copy_image_more_menu_pressed", COPY_LINK_PRESSED: "number_copy_link_more_menu_pressed", CONTEXT_MENU_OPENED: "number_context_menu_opened" };
-let obj2 = { guildId: "sa", channelId: "isArray", channelType: "isArray", numMediaItems: "Array", hasMediaOptions: "id", source: true, incrementableActions: true };
+let obj2 = { guildId: "dispatch", channelId: "isArray", channelType: "isArray", numMediaItems: "Array", hasMediaOptions: "children", source: "<string:175178001>", incrementableActions: "<string:1912602624>" };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(values.map((item) => {
   items = [item, 0];

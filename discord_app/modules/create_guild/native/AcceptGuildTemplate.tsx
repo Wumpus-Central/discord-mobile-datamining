@@ -1,6 +1,6 @@
-// === Module 13441: AcceptGuildTemplate ===
+// === Module 13442: AcceptGuildTemplate ===
 
-// Module 13441 (AcceptGuildTemplate)
+// Module 13442 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -13,10 +13,10 @@ import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndic
 import FormDividerDefault from "FormDivider" /* 8323 */;
 import _modDef9150 from "module_9150" /* 9150 */;
 import RolePillDefault from "RolePill" /* 11002 */;
-import InvalidLink from "InvalidLink" /* 13442 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 13444 */;
-import _modDef13449 from "module_13449" /* 13449 */;
+import InvalidLink from "InvalidLink" /* 13443 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 13445 */;
 import _modDef13450 from "module_13450" /* 13450 */;
+import _modDef13451 from "module_13451" /* 13451 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 6858 */;
 
@@ -143,9 +143,9 @@ function Channels(channels) {
       if (isGuildVocalChannelType(type)) {
         let tmp10Result = _modDef9150;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef13449;
-      } else {
         tmp10Result = _modDef13450;
+      } else {
+        tmp10Result = _modDef13451;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];

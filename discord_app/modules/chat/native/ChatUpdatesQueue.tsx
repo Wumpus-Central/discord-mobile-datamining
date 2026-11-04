@@ -1,6 +1,6 @@
-// === Module 11736: ChatUpdatesQueue ===
+// === Module 11737: ChatUpdatesQueue ===
 
-// Module 11736 (ChatUpdatesQueue)
+// Module 11737 (ChatUpdatesQueue)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

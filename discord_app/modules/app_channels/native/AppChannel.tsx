@@ -1,6 +1,6 @@
-// === Module 18930: AppChannel ===
+// === Module 18944: AppChannel ===
 
-// Module 18930 (AppChannel)
+// Module 18944 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -12,11 +12,11 @@ import conjureDMAppChannel from "conjureDMAppChannel" /* 7013 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7016 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9978 */;
 import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11079 */;
-import useChannelContentGate from "useChannelContentGate" /* 11402 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11527 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12441 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18939 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18941 */;
+import useChannelContentGate from "useChannelContentGate" /* 11403 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11528 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12442 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18953 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,7 +171,7 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(18931).useConjureFrameUpdateAvailable;
+let closure_5 = fn(18945).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);

@@ -1,14 +1,14 @@
-// === Module 19384: conjureAppPictureInPictureActions ===
+// === Module 19398: conjureAppPictureInPictureActions ===
 
-// Module 19384 (conjureAppPictureInPictureActions)
+// Module 19398 (conjureAppPictureInPictureActions)
 import _modDef3995 from "module_3995" /* 3995 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7500 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12021 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14393 */;
-import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14607 */;
-import closeFrameDefault from "closeFrame" /* 14608 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16601 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12022 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14394 */;
+import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14608 */;
+import closeFrameDefault from "closeFrame" /* 14609 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16613 */;
 import FramesStore from "FramesStore" /* 6981 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 

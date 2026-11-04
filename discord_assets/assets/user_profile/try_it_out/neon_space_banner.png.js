@@ -1,6 +1,6 @@
-// === Module 16772: ? ===
+// === Module 16784: ? ===
 
-// Module 16772
+// Module 16784
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/user_profile/try_it_out/neon_space_banner.png.js");

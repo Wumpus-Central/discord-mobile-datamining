@@ -1,6 +1,6 @@
-// === Module 15230: useFriendRequestActions ===
+// === Module 15231: useFriendRequestActions ===
 
-// Module 15230 (useFriendRequestActions)
+// Module 15231 (useFriendRequestActions)
 import PeopleUtilsDefault from "PeopleUtils" /* 10918 */;
 import noop from "module_19" /* 19 */;
 

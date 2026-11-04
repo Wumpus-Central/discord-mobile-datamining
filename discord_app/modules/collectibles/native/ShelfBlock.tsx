@@ -1,6 +1,6 @@
-// === Module 18114: ShelfBlock ===
+// === Module 18126: ShelfBlock ===
 
-// Module 18114 (ShelfBlock)
+// Module 18126 (ShelfBlock)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;

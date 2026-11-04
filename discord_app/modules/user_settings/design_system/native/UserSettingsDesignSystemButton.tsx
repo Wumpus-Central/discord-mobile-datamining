@@ -1,6 +1,6 @@
-// === Module 18005: UserSettingsDesignSystemButton ===
+// === Module 18017: UserSettingsDesignSystemButton ===
 
-// Module 18005 (UserSettingsDesignSystemButton)
+// Module 18017 (UserSettingsDesignSystemButton)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import components_Button_Button from "components/Button/Button" /* 5768 */;
@@ -17,11 +17,11 @@ import ImageButton from "ImageButton" /* 9340 */;
 import _modDef9388 from "module_9388" /* 9388 */;
 import _modDef10727 from "module_10727" /* 10727 */;
 import _modDef11174 from "module_11174" /* 11174 */;
-import ToggleIconButton from "ToggleIconButton" /* 13000 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 13001 */;
-import ToggleButton from "ToggleButton" /* 16088 */;
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 18006 */;
-import _modDef18007 from "module_18007" /* 18007 */;
+import ToggleIconButton from "ToggleIconButton" /* 13001 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 13002 */;
+import ToggleButton from "ToggleButton" /* 16101 */;
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 18018 */;
+import _modDef18019 from "module_18019" /* 18019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,7 +71,7 @@ function ExampleButton(arg0) {
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef18007;
+    tmpResult = _modDef18019;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;

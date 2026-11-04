@@ -1,6 +1,6 @@
-// === Module 19826: RedesignSkipAvatarUploadAlertModal ===
+// === Module 19840: RedesignSkipAvatarUploadAlertModal ===
 
-// Module 19826 (RedesignSkipAvatarUploadAlertModal)
+// Module 19840 (RedesignSkipAvatarUploadAlertModal)
 import util from "util" /* 1113 */;
 import AlertModal from "AlertModal" /* 6099 */;
 import noop from "module_19" /* 19 */;

@@ -1,14 +1,14 @@
-// === Module 18893: GuildFeedBanner ===
+// === Module 18907: GuildFeedBanner ===
 
-// Module 18893 (GuildFeedBanner)
+// Module 18907 (GuildFeedBanner)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import timing_timing from "timing/timing" /* 5378 */;
 import timingPresets from "timingPresets" /* 5381 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16033 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16046 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 16032 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16045 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
@@ -156,7 +156,7 @@ function GuildFeedBanner(guild) {
                   const obj2 = { text: null, icon: null };
                   const intl = _undefined(1113).intl;
                   obj2.text = intl.string(_undefined(1113).t.O8lDI2);
-                  obj2.icon = _undefined(11520).ExperimentalWebIcon;
+                  obj2.icon = _undefined(11521).ExperimentalWebIcon;
                   sharedValue(5846).open("DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO", obj2);
                 },
           children: null
@@ -200,16 +200,16 @@ function GuildFeedBanner(guild) {
     return closure_11(tmp18, obj4);
   } else {
     if (tmp2Result6.isThemeDark(tmp10)) {
-      let tmp8Result2 = tmp8(18895);
+      let tmp8Result2 = tmp8(18909);
     } else {
-      tmp8Result2 = tmp8(18896);
+      tmp8Result2 = tmp8(18910);
     }
     tmp2Result6 = tmp2(5148);
   }
   const tmp2Result5 = require("useDrawerWidth");
 }
 const View = fn(17).View;
-const GuildFeedConstants = fn(18894);
+const GuildFeedConstants = fn(18908);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1072).GuildFeatures;

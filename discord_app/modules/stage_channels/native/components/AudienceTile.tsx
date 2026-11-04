@@ -1,6 +1,6 @@
-// === Module 12247: AudienceTile ===
+// === Module 12248: AudienceTile ===
 
-// Module 12247 (AudienceTile)
+// Module 12248 (AudienceTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6183 */;
@@ -24,7 +24,7 @@ function RaisedHandIcon(rtsState) {
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12100), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12101), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 }

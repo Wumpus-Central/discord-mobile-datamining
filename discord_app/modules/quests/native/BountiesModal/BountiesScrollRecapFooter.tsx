@@ -1,6 +1,6 @@
-// === Module 17205: BountiesScrollRecapFooter ===
+// === Module 17217: BountiesScrollRecapFooter ===
 
-// Module 17205 (BountiesScrollRecapFooter)
+// Module 17217 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

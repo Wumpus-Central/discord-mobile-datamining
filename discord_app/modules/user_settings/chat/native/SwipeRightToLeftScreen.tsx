@@ -1,8 +1,8 @@
-// === Module 17702: SwipeRightToLeftScreen ===
+// === Module 17714: SwipeRightToLeftScreen ===
 
-// Module 17702 (SwipeRightToLeftScreen)
-import SettingBuilders from "SettingBuilders" /* 11728 */;
-import SettingLayoutDefault from "SettingLayout" /* 16823 */;
+// Module 17714 (SwipeRightToLeftScreen)
+import SettingBuilders from "SettingBuilders" /* 11729 */;
+import SettingLayoutDefault from "SettingLayout" /* 16835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

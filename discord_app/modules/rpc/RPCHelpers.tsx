@@ -1,6 +1,6 @@
-// === Module 12009: RPCHelpers ===
+// === Module 12010: RPCHelpers ===
 
-// Module 12009 (RPCHelpers)
+// Module 12010 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
@@ -12,8 +12,8 @@ import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
 import transformUserDefault from "transformUser" /* 9477 */;
 import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9478 */;
 import RPCErrorDefault from "RPCError" /* 9479 */;
-import transformMessage from "transformMessage" /* 12010 */;
-import LeakyBucketDefault from "LeakyBucket" /* 12012 */;
+import transformMessage from "transformMessage" /* 12011 */;
+import LeakyBucketDefault from "LeakyBucket" /* 12013 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;

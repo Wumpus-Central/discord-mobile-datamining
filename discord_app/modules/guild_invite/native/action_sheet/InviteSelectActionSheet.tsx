@@ -1,6 +1,6 @@
-// === Module 20282: InviteSelectActionSheet ===
+// === Module 20296: InviteSelectActionSheet ===
 
-// Module 20282 (InviteSelectActionSheet)
+// Module 20296 (InviteSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;

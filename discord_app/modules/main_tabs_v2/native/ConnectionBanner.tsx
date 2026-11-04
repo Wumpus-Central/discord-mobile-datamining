@@ -1,6 +1,6 @@
-// === Module 18726: ConnectionBanner ===
+// === Module 18740: ConnectionBanner ===
 
-// Module 18726 (ConnectionBanner)
+// Module 18740 (ConnectionBanner)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
@@ -12,11 +12,11 @@ import useToken from "useToken" /* 5732 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import spring_spring from "spring/spring" /* 5771 */;
 import _modDef7179 from "module_7179" /* 7179 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 18727 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 18729 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 18741 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 18743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 15807 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 15820 */;
 
 require = fn;
 function ConnectionBannerIcon(state) {
@@ -191,8 +191,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const constants = fn(15807).ConnectivityIndicatorState;
-const YouBarConstants = fn(17310);
+const constants = fn(15820).ConnectivityIndicatorState;
+const YouBarConstants = fn(17322);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -221,10 +221,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(15808).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(15821).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(15808);
+  let obj = stateFromStores(15821);
   items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

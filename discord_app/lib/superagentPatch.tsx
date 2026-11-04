@@ -1,11 +1,11 @@
-// === Module 19624: superagentPatch ===
+// === Module 19638: superagentPatch ===
 
-// Module 19624 (superagentPatch)
+// Module 19638 (superagentPatch)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1283 */;
-import getTimeZoneDefault from "getTimeZone" /* 19627 */;
-import trackHttpRequestDefault from "trackHttpRequest" /* 19628 */;
+import getTimeZoneDefault from "getTimeZone" /* 19641 */;
+import trackHttpRequestDefault from "trackHttpRequest" /* 19642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ExperimentStore from "ExperimentStore" /* 5362 */;
 import Dispatcher from "Dispatcher" /* 572 */;
@@ -22,7 +22,7 @@ function isAnalyticsEndpoint(pathname) {
 const AbortCodes = fn(1072).AbortCodes;
 let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(19625).IdGenerator();
+const idGenerator = new fn(19639).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 const ApexExperiment = fn(1449);
 let obj2 = { name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: null };
@@ -66,7 +66,7 @@ HTTPUtils.setRequestPatch({
         const result = promise.set("Authorization", _default.getToken());
       }
       const tmpResult = tmp(1282);
-      const result1 = tmp(19626).updateDynamicSuperProperties();
+      const result1 = tmp(19640).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -163,7 +163,7 @@ HTTPUtils.setRequestPatch({
         } catch (err) {
         }
       }
-      const tmpResult2 = tmp(19626);
+      const tmpResult2 = tmp(19640);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
@@ -266,7 +266,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        items = [statusCode(2123)(19631, dependencyMap.paths), statusCode(2123)(6673, dependencyMap.paths)];
+        items = [statusCode(2123)(19645, dependencyMap.paths), statusCode(2123)(6673, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -365,12 +365,12 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2123)(17907, dependencyMap.paths);
-          statusCode(2123)(17907, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = statusCode(2123)(17919, dependencyMap.paths);
+          statusCode(2123)(17919, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2123)(17907, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2123)(17919, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -415,14 +415,14 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2123)(19642, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(2123)(19656, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2123)(19642, dependencyMap.paths);
+          const promise = tmp7(2123)(19656, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(19641);
+      tmp7Result = tmp7(19655);
     }
     obj = statusCode(7632);
   }

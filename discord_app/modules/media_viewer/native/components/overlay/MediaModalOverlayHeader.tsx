@@ -1,6 +1,6 @@
-// === Module 14986: MediaModalOverlayHeader ===
+// === Module 14987: MediaModalOverlayHeader ===
 
-// Module 14986 (MediaModalOverlayHeader)
+// Module 14987 (MediaModalOverlayHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -14,8 +14,8 @@ import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 9
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 9084 */;
 import ContextMenu from "ContextMenu" /* 10053 */;
 import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10372 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 14983 */;
-import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 14987 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 14984 */;
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 14988 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -117,7 +117,7 @@ export function MediaModalOverlayHeader(arg0) {
               obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
               const tmp4 = _undefined2(9084);
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_6(_undefined(14988).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = closure_1_6(_undefined(14989).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
                 tmp2Result = closure_1_6(_undefined(9906).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }

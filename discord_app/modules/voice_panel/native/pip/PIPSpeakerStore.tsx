@@ -1,6 +1,6 @@
-// === Module 15862: PIPSpeakerStore ===
+// === Module 15875: PIPSpeakerStore ===
 
-// Module 15862 (PIPSpeakerStore)
+// Module 15875 (PIPSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import throttleDefault from "throttle" /* 550 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

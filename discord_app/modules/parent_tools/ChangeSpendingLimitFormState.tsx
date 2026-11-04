@@ -1,7 +1,7 @@
-// === Module 17047: ChangeSpendingLimitFormState ===
+// === Module 17059: ChangeSpendingLimitFormState ===
 
-// Module 17047 (ChangeSpendingLimitFormState)
-import SpendingLimitUtils from "SpendingLimitUtils" /* 16959 */;
+// Module 17059 (ChangeSpendingLimitFormState)
+import SpendingLimitUtils from "SpendingLimitUtils" /* 16971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -121,13 +121,13 @@ export function useChangeSpendingLimitFormState(teenId) {
               closure_8(true);
               c3 = 1;
               if (closure_5) {
-                const ParentalControlledSpendingLimit2 = tmp3(16957).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit2 = tmp3(16969).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
                 const obj4 = { value: ParentalControlledSpendingLimit2.updateControlledSetting(tmp3, null), done: false };
                 return obj4;
               } else if (null != rounded) {
-                const ParentalControlledSpendingLimit = tmp3(16957).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit = tmp3(16969).ParentalControlledSpendingLimit;
                 const obj5 = { amount: tmp16, currency: formatted };
                 dependencyMap = 3;
                 c4 = 1;

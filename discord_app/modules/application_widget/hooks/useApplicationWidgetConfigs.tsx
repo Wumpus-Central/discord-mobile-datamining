@@ -1,6 +1,6 @@
-// === Module 12277: useApplicationWidgetConfigs ===
+// === Module 12278: useApplicationWidgetConfigs ===
 
-// Module 12277 (useApplicationWidgetConfigs)
+// Module 12278 (useApplicationWidgetConfigs)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11129 */;
 import noop from "module_19" /* 19 */;

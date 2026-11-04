@@ -1,13 +1,13 @@
-// === Module 16752: usePremiumTryItOutPresetShuffle ===
+// === Module 16764: usePremiumTryItOutPresetShuffle ===
 
-// Module 16752 (usePremiumTryItOutPresetShuffle)
+// Module 16764 (usePremiumTryItOutPresetShuffle)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import shared from "shared" /* 5148 */;
 import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7297 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8879 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16682 */;
-import TryItOutPresets from "TryItOutPresets" /* 16753 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16694 */;
+import TryItOutPresets from "TryItOutPresets" /* 16765 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
 
@@ -26,7 +26,7 @@ export default function usePremiumTryItOutPresetShuffle() {
     const obj2 = { banner: null, themeColors: null, displayNameStyles: null, lastPreset: null };
     const obj3 = UserProfileActionCreators;
     const obj5 = ProfilePendingImageUtils;
-    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "filter" });
+    obj2.banner = obj5.createPendingImage({ assetOrigin: ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET, imageUri: tryItOutPresetConfig.getBannerSrc(false), staticImageUri: tryItOutPresetConfig.getBannerSrc(true), description: tryItOutPresetConfig.getBannerAltText(), originalAsset: "find" });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;
     obj2.displayNameStyles = tryItOutPresetConfig.displayNameStyles;

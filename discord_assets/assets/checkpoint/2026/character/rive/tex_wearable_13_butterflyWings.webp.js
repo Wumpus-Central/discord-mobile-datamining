@@ -1,6 +1,6 @@
-// === Module 13850: ? ===
+// === Module 13851: ? ===
 
-// Module 13850
+// Module 13851
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_13_butterflyWings.webp.js");

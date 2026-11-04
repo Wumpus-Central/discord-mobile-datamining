@@ -1,10 +1,10 @@
-// === Module 18325: useMessagesSpecs ===
+// === Module 18339: useMessagesSpecs ===
 
-// Module 18325 (useMessagesSpecs)
+// Module 18339 (useMessagesSpecs)
 import nativeDefault from "native" /* 575 */;
-import MessagesHeader from "MessagesHeader" /* 18326 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 18329 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18340 */;
+import MessagesHeader from "MessagesHeader" /* 18340 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 18343 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18354 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

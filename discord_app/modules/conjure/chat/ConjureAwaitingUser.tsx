@@ -1,6 +1,6 @@
-// === Module 12885: chat/ConjureAwaitingUser ===
+// === Module 12886: chat/ConjureAwaitingUser ===
 
-// Module 12885 (chat/ConjureAwaitingUser)
+// Module 12886 (chat/ConjureAwaitingUser)
 import conjureChatTurns from "conjureChatTurns" /* 11030 */;
 import size from "module_2" /* 2 */;
 

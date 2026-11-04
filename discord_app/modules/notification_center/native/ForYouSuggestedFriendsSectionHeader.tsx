@@ -1,6 +1,6 @@
-// === Module 18765: ForYouSuggestedFriendsSectionHeader ===
+// === Module 18779: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 18765 (ForYouSuggestedFriendsSectionHeader)
+// Module 18779 (ForYouSuggestedFriendsSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5761 */;

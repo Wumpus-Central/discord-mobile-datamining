@@ -1,6 +1,6 @@
-// === Module 19229: MessageRequestMutualServers ===
+// === Module 19243: MessageRequestMutualServers ===
 
-// Module 19229 (MessageRequestMutualServers)
+// Module 19243 (MessageRequestMutualServers)
 import GuildIconDefault from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(19230).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(19244).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1113).intl;
@@ -41,7 +41,7 @@ export default function MessageRequestMutualServers(textVariant) {
   let tmp9 = length > 0;
   if (tmp9) {
     const obj4 = { size: iconSize, names: substr.map((name) => name.name), children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)) };
-    tmp9 = closure_4(tmp4(14412).GuildIconPile, obj4);
+    tmp9 = closure_4(tmp4(14413).GuildIconPile, obj4);
   }
   const items1 = [tmp9, ];
   const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

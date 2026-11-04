@@ -1,6 +1,6 @@
-// === Module 15435: VoiceChannelHeader ===
+// === Module 15436: VoiceChannelHeader ===
 
-// Module 15435 (VoiceChannelHeader)
+// Module 15436 (VoiceChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -10,11 +10,11 @@ import Pressables from "Pressables" /* 7121 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7411 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
 import _modDef11159 from "module_11159" /* 11159 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11819 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12105 */;
-import CallStateHooks from "CallStateHooks" /* 15436 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 15437 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 15438 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11820 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12106 */;
+import CallStateHooks from "CallStateHooks" /* 15437 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 15438 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 15439 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5012 */;

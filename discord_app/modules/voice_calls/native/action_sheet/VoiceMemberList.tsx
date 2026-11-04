@@ -1,6 +1,6 @@
-// === Module 15424: VoiceMemberList ===
+// === Module 15425: VoiceMemberList ===
 
-// Module 15424 (VoiceMemberList)
+// Module 15425 (VoiceMemberList)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import Text_Text from "Text/Text" /* 5761 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
@@ -8,9 +8,9 @@ import Form from "Form" /* 8317 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
 import _modDef11159 from "module_11159" /* 11159 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11819 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15420 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 15427 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11820 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15421 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 15428 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -141,13 +141,13 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(15426), obj2);
+    return closure_21(tmp2(15427), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(15427), obj3);
+    return closure_21(tmp2(15428), obj3);
   }
   let obj = isActionSheet(10227);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -181,8 +181,8 @@ let closure_26 = noop.memo(function Footer(channel) {
       const intl = tmp4(1113).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1113).t["6Qgrev"]);
       obj3.source = _modDef11159;
-      obj3.size = tmp4(15425).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(15425).CircularIconButton, obj3);
+      obj3.size = tmp4(15426).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(15426).CircularIconButton, obj3);
       const intl2 = tmp4(1113).intl;
       obj2.label = intl2.string(tmp4(1113).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -364,7 +364,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(15426);
+                tmp4 = tmp4(15427);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

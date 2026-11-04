@@ -1,6 +1,6 @@
-// === Module 13424: GameOrganizationIcon ===
+// === Module 13425: GameOrganizationIcon ===
 
-// Module 13424 (GameOrganizationIcon)
+// Module 13425 (GameOrganizationIcon)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5851 */;
 import _slicedToArray from "module_32" /* 32 */;

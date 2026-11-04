@@ -1,6 +1,6 @@
-// === Module 14076: GuildDirectoryCreateOrAdd ===
+// === Module 14077: GuildDirectoryCreateOrAdd ===
 
-// Module 14076 (GuildDirectoryCreateOrAdd)
+// Module 14077 (GuildDirectoryCreateOrAdd)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -12,7 +12,7 @@ import SegmentedControlState from "SegmentedControlState" /* 9125 */;
 import SegmentedControl from "SegmentedControl" /* 9359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 14077 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 14078 */;
 
 const require = globalThis.__r;
 
@@ -61,7 +61,7 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(14075).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(14076).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -80,7 +80,7 @@ let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
   const tmp = closure_11();
   items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(7098), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(14078), { entry: stateFromStores }), start, end };
+  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(7098), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(14079), { entry: stateFromStores }), start, end };
   return closure_9(guild(7116).TableRow, obj2);
 });
 let closure_13 = noop.memo(function GuildDirectoryEntryAddRow(guild) {

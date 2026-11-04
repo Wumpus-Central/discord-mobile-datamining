@@ -1,6 +1,6 @@
-// === Module 17345: QuestProgressIndicator ===
+// === Module 17357: QuestProgressIndicator ===
 
-// Module 17345 (QuestProgressIndicator)
+// Module 17357 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5378 */;

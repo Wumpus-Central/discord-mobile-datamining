@@ -1,10 +1,10 @@
-// === Module 16642: CollectiblesMarketingManager ===
+// === Module 16654: CollectiblesMarketingManager ===
 
-// Module 16642 (CollectiblesMarketingManager)
+// Module 16654 (CollectiblesMarketingManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
 import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7904 */;
-import CollectiblesMarketingCacheExperiment from "CollectiblesMarketingCacheExperiment" /* 16643 */;
+import CollectiblesMarketingCacheExperiment from "CollectiblesMarketingCacheExperiment" /* 16655 */;
 import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 

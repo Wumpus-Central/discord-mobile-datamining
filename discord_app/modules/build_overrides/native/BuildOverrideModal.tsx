@@ -1,10 +1,10 @@
-// === Module 15929: BuildOverrideModal ===
+// === Module 15942: BuildOverrideModal ===
 
-// Module 15929 (BuildOverrideModal)
+// Module 15942 (BuildOverrideModal)
 import nativeDefault from "native" /* 575 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13411 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13412 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11549 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11550 */;
 
 require = fn;
 const View = fn(17).View;
@@ -33,9 +33,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = closure_8();
   const tmp4 = stateFromStores(5377)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(15930);
+    let tmp2Result = tmp2(15943);
   } else {
-    tmp2Result = tmp2(15931);
+    tmp2Result = tmp2(15944);
   }
   obj = str(5148);
   items = [BuildOverrideStore];
@@ -46,7 +46,7 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 13411).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 13412).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }

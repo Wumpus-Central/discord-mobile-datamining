@@ -1,6 +1,6 @@
-// === Module 19072: ChannelDetailsNavigationBar ===
+// === Module 19086: ChannelDetailsNavigationBar ===
 
-// Module 19072 (ChannelDetailsNavigationBar)
+// Module 19086 (ChannelDetailsNavigationBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
@@ -9,10 +9,10 @@ import timing_timing from "timing/timing" /* 5378 */;
 import _modDef7357 from "module_7357" /* 7357 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8339 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11840 */;
-import useSearchContext from "useSearchContext" /* 14064 */;
-import TrackingDefault from "Tracking" /* 14124 */;
-import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 18946 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11841 */;
+import useSearchContext from "useSearchContext" /* 14065 */;
+import TrackingDefault from "Tracking" /* 14125 */;
+import ChannelDetailsSearchBarDefault from "ChannelDetailsSearchBar" /* 18960 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
@@ -302,11 +302,11 @@ let closure_14 = fn(9975).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5141);
-let obj = { container: { position: "relative", zIndex: 1, height: fn(14145).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, backButton: null, buttonsContainer: null, searchHeader: null };
-let obj3 = { position: "relative", zIndex: 1, height: fn(14145).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
-obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(14145).SEARCH_BAR_HEIGHT };
+let obj = { container: { position: "relative", zIndex: 1, height: fn(14146).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, backButton: null, buttonsContainer: null, searchHeader: null };
+let obj3 = { position: "relative", zIndex: 1, height: fn(14146).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
+obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(14146).SEARCH_BAR_HEIGHT };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
-let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(14145).SEARCH_BAR_HEIGHT };
+let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(14146).SEARCH_BAR_HEIGHT };
 obj.buttonsContainer = { flex: 1, flexDirection: "row", gap: nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_BUTTONS_GAP, justifyContent: "flex-end" };
 obj.searchHeader = { position: "absolute" };
 let closure_17 = createStyles.createStyles(obj);

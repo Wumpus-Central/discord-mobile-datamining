@@ -479,28 +479,90 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   const iter = (async (arg0, value) => {
-    const tmp49 = closure_133_13(closure_132_0, "name");
-    c2 = tmp49;
-    if (tmp49 == null) {
-      c2 = "";
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_5 = tmp5;
+            closure_4 = tmp2;
+            let channel2;
+            closure_132_0 = closure_0;
+            channel2 = channel.channel;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "flexDirection", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            const tmp49 = closure_133_13(closure_132_0, "name");
+            c2 = tmp49;
+            if (tmp49 == null) {
+              c2 = "";
+            }
+            closure_132_2 = c2;
+            const tmp11 = closure_133_13(closure_132_0, "message");
+            c3 = tmp11;
+            if (tmp11 == null) {
+              c3 = "";
+            }
+            closure_132_3 = c3;
+            const obj2 = closure_133_0(closure_133_2[17]);
+            c6 = 2;
+            c7 = 1;
+            const obj7 = { value: obj2.createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null), "Slash Command"), done: false };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_132_4 = value;
+          const obj8 = closure_133_1(closure_133_2[20]);
+          const id = closure_132_4.id;
+          const obj10 = { location: closure_133_12.THREAD_CREATION };
+          obj8.sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, obj10);
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp27) {
+        c7 = tmp;
+        throw tmp27;
+      }
     }
-    closure_132_2 = c2;
-    const tmp11 = closure_133_13(closure_132_0, "message");
-    c3 = tmp11;
-    if (tmp11 == null) {
-      c3 = "";
-    }
-    closure_132_3 = c3;
-    await closure_133_0(closure_133_2[17]).createThread(channel2, closure_132_2, closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD, closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null), "Slash Command");
-    closure_132_4 = value;
-    closure_133_0(closure_133_2[17]);
-    const id = closure_132_4.id;
-    closure_133_1(closure_133_2[20]).sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, { location: closure_133_12.THREAD_CREATION });
-    await "HermesInternal";
-    closure_4 = tmp2;
-    closure_132_0 = closure_0;
-    channel2 = channel.channel;
-    return "flexDirection";
   })();
   iter.next();
   return iter;
